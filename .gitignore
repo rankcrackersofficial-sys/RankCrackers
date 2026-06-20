@@ -1,3 +1,5 @@
+# 🔱 RANKCRACKERS SOVEREIGN GITIGNORE
+
 # Miscellaneous
 *.class
 *.log
@@ -10,37 +12,40 @@
 .history
 .svn/
 .swiftpm/
-migrate_working_dir/
 
-# IntelliJ related
+# Dependency Directories
+node_modules/
+functions/node_modules/
+rankcrackers/node_modules/
+.pub-cache/
+.pub/
+.dart_tool/
+
+# Build Artifacts
+build/
+android/app/build/
+android/.gradle/
+ios/Flutter/.last_build_id
+ios/Pods/
+ios/.symlinks/
+.firebase/
+*.symbols
+*.map.json
+
+# Environment & Secrets
+.env
+.env.local
+functions/.env
+service-account.json
+
+# IDE Related
 *.iml
 *.ipr
 *.iws
 .idea/
+.vscode/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
-/android/app/build/
-/coverage/
-
-# Symbolication related
-app.*.symbols
-
-# Obfuscation related
-app.*.map.json
-
-# Android Studio will place build artifacts here
+# Local Testing
 /android/app/debug
 /android/app/profile
 /android/app/release
