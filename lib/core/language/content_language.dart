@@ -1,0 +1,4 @@
+enum ContentLanguage {
+  english,
+  hindi,
+}

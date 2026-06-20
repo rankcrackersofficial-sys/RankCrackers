@@ -1,0 +1,171 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // 🔱 CONSTITUTIONAL HELPERS
+    function isFounder() {
+      return request.auth != null &&
+             (request.auth.token.admin == true || request.auth.token.founder == true);
+    }
+
+    // 🔱 FOUNDER GOVERNANCE RULES
+    match /system_config/global {
+      allow read: if isFounder();
+      allow write: if false; // Only via Cloud Functions
+    }
+
+    match /founder_activity_log/{logId} {
+      // 🔱 AUDIT IMMUTABILITY: Immutable Ledger (Document 102)
+      // Clients can only read logs. Writes must originate from Admin SDK / Cloud Functions.
+      allow read: if isFounder();
+      allow write: if false;
+    }
+
+    match /worker_registry/{workerId} {
+      allow read, write: if isFounder();
+    }
+
+    match /system_budget/{monthId} {
+      allow read: if isFounder();
+      allow write: if false; // Only via workers/services
+    }
+
+    match /system_health_pings/{docId} {
+      allow read, write: if isFounder();
+    }
+
+    match /system_metrics/{docId} {
+      allow read: if isFounder();
+      allow write: if false; // Worker generated
+    }
+
+    // 🔱 MISSION REGISTRY RULES
+    match /recruitments/{recruitmentId} {
+      allow read: if resource.data.status == 'published' || isFounder();
+      allow write: if isFounder();
+    }
+
+    match /mission_realms/{realmId} {
+      allow read: if isFounder();
+      allow write: if isFounder();
+
+      match /participants/{userId} {
+        allow read: if isFounder() || (request.auth != null && request.auth.uid == userId);
+        allow write: if isFounder() || (request.auth != null && request.auth.uid == userId);
+      }
+
+      match /timeline/{milestoneId} {
+        allow read: if isFounder() || request.auth != null;
+        allow write: if isFounder();
+      }
+
+      match /updates/{updateId} {
+        allow read: if isFounder() || request.auth != null;
+        allow write: if isFounder();
+      }
+    }
+
+    match /mission_variants/{variantId} {
+      allow read: if resource.data.status == 'published' || isFounder();
+      allow write: if isFounder();
+    }
+
+    match /blueprints/{blueprintId} {
+      allow read: if request.auth != null;
+      allow write: if isFounder();
+    }
+
+    // 🔱 CONTENT MATRIX RULES
+    match /micro_nodes/{nodeId} {
+      allow read: if request.auth != null;
+      allow write: if isFounder();
+    }
+
+    match /digibook_refinery/{blockId} {
+      allow read: if resource.data.status == 'published' || isFounder();
+      allow write: if isFounder();
+    }
+
+    match /question_bank/{questionId} {
+      allow read: if resource.data.status == 'published' || isFounder();
+      allow write: if isFounder();
+    }
+
+    match /ai_queue/{taskId} {
+      // 🔱 HARDENED: AI Queue is restricted to Founder/Admin.
+      // Traffic from Citizens is routed through secure Cloud Functions.
+      allow read, write: if isFounder();
+    }
+
+    match /sentinel_drafts/{draftId} {
+      allow read, write: if isFounder();
+    }
+
+    match /ingestion_refinery/{recordId} {
+      allow read, write: if isFounder();
+    }
+
+    match /semantic_units/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /atomic_facts/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /fact_relationships/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /transformation_lineage/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /verified_facts/{id} {
+      allow read: if resource.data.status == 'published' || isFounder();
+      allow write: if isFounder();
+    }
+
+    match /fact_intelligence/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /verification_candidates/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /scout_downloads/{downloadId} {
+      allow read, write: if isFounder();
+    }
+
+    match /telemetry_nexus/{telemetryId} {
+      // 🔱 AUDIT LOCK: Authenticated users can write performance events.
+      // Founder/Admin can read for strategic optimization.
+      allow create: if request.auth != null;
+      allow read: if isFounder();
+      allow update, delete: if false;
+    }
+
+    // 🔱 USER PERSONAL TRUTH RULES
+    match /users/{userId} {
+      // 🔱 Audit Fix: Users cannot write to their own role or sensitive fields
+      allow read: if isFounder() || (request.auth != null && request.auth.uid == userId);
+      allow update: if request.auth != null && request.auth.uid == userId
+                    && !request.resource.data.diff(resource.data).affectedKeys().hasAny(['role', 'accessLevel', 'founder', 'admin']);
+      allow create: if request.auth != null && request.auth.uid == userId;
+
+      match /progress/{nodeId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      match /atomic_mastery/{atomicId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      match /notifications/{notificationId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      match /mission_stats/{realmId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+  }
+}

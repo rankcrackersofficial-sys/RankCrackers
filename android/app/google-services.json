@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "667342482948",
+    "project_id": "rankcrackers-55",
+    "storage_bucket": "rankcrackers-55.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667342482948:android:9f9baa91a9ec3164cecf51",
+        "android_client_info": {
+          "package_name": "com.rankcrackers.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667342482948-1kn5hh1bp5bbfrh6r39dtbbv0lmraca4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rankcrackers.app",
+            "certificate_hash": "d8fa249636ed3ce0ed47282c10237aec4021a15d"
+          }
+        },
+        {
+          "client_id": "667342482948-vlpo3bflcff82d58qs95fa7tlq66jdd4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVcd4Am6ug5j92T6HmGiEXFbmlsKhTmnA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667342482948-vlpo3bflcff82d58qs95fa7tlq66jdd4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

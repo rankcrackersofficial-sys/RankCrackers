@@ -1,0 +1,62 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "sentinel_drafts",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "audit.processedAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "ai_queue",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "processedAt", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "sentinel_drafts",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "audit.impactLevel", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "sentinel_drafts",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "audit.createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "participants",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "attempts.FINAL_RESULT.status", "order": "ASCENDING" },
+        { "fieldPath": "environment", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "ingestion_refinery",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "ingestion_refinery",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "assetType", "order": "ASCENDING" },
+        { "fieldPath": "status", "order": "ASCENDING" },
+        { "fieldPath": "createdAt", "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

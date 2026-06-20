@@ -1,0 +1,184 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    UPLOAD PIPELINE BLOCKAGE DIAGNOSIS                         ║
+║                              2026-06-16                                        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📍 BLOCKAGE LOCATION IDENTIFIED
+═══════════════════════════════════════════════════════════════════════════════
+
+Your upload pipeline is stuck at 4 different failure points:
+
+┌─ POINT 1: PDF EXTRACTION ─────────────────────────────────────────────────┐
+│                                                                              │
+│  ❌ ERROR: "pdf is not a function"                                         │
+│  📍 LOCATION: functions/workers/sentinel_worker.js:4,111                   │
+│  🔢 COUNT: 23 failed tasks                                                 │
+│                                                                              │
+│  PROBLEM: Incorrect import of pdf-parse library                            │
+│    Line 4:    const { PDFParse } = require("pdf-parse");  ❌               │
+│    Line 111:  const data = await new PDFParse({...})      ❌               │
+│                                                                              │
+│  FIX APPLIED: ✅                                                           │
+│    Line 4:    const PDFParse = require("pdf-parse");      ✅               │
+│    Line 111:  const data = await PDFParse(fileBuffer);    ✅               │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌─ POINT 2: BUDGET SYSTEM DISABLED ─────────────────────────────────────────┐
+│                                                                              │
+│  ❌ ERROR: system_budget document missing                                  │
+│  📍 LOCATION: Firestore → system_budget/current                            │
+│  🔢 IMPACT: All workers returning early                                    │
+│                                                                              │
+│  PROBLEM: Budget control document didn't exist                             │
+│    Workers check if AI is enabled before processing                        │
+│    Missing document = no budget document = AI disabled                     │
+│                                                                              │
+│  FIX APPLIED: ✅                                                           │
+│    Created system_budget/current with:                                     │
+│    - aiEnabled: true                                                       │
+│    - monthlyTokenLimit: 1,000,000                                          │
+│    - tokensUsedThisMonth: 0                                                │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌─ POINT 3: GROQ API RATE LIMITING ──────────────────────────────────────────┐
+│                                                                              │
+│  ❌ ERROR: "Request failed with status code 429"                           │
+│  📍 LOCATION: functions/services/groq_service.js                           │
+│  🔢 COUNT: 7+ failures from rate limiting                                  │
+│                                                                              │
+│  PROBLEM: No retry logic for temporary rate limits                         │
+│    GROQ free tier: ~30 requests/min limit                                  │
+│    No backoff = immediate failure = all retries exhausted                  │
+│                                                                              │
+│  FIX APPLIED: ✅                                                           │
+│    Added exponential backoff retry logic:                                  │
+│    - Detect HTTP 429 and 5xx errors                                        │
+│    - Retry 1: immediate                                                    │
+│    - Retry 2: after 500ms + jitter                                         │
+│    - Retry 3: after 1000ms + jitter                                        │
+│    - Retry 4: after 2000ms + jitter                                        │
+│    - Max: 3 attempts before fallback                                       │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+┌─ POINT 4: GEMINI API AUTHENTICATION ───────────────────────────────────────┐
+│                                                                              │
+│  ⚠️  STATUS: NEEDS VERIFICATION                                            │
+│  📍 LOCATION: functions/services/vertex_ai_service.js                      │
+│  🔢 COUNT: 2 failures from Gemini errors                                   │
+│                                                                              │
+│  PROBLEM: process.env.GEMINI_API_KEY missing or expired                   │
+│    Functions expect key in functions/.env file                             │
+│    Exposed keys were deleted (security fix)                                │
+│    Old .env file deleted to prevent secrets in git                         │
+│                                                                              │
+│  ACTION REQUIRED: ⏳                                                        │
+│    1. Get fresh API key: https://aistudio.google.com/app/apikey           │
+│    2. Create functions/.env with:                                          │
+│       GEMINI_API_KEY=your_key_here                                         │
+│    3. Deploy functions: firebase deploy --only functions                  │
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+📊 CURRENT QUEUE STATE
+═════════════════════════════════════════════════════════════════════════════
+
+┌─ AI_QUEUE (20 total tasks) ──────────────────────────────────────────────┐
+│                                                                            │
+│  🔴 classified:        1 task (has embedded error)                       │
+│  🔴 failed:            1 task (HTTP 403)                                 │
+│  🔴 pending:           2 tasks ← STUCK SINCE JUNE 13 (72+ HOURS)         │
+│  ✅ completed:         1 task (but with error)                           │
+│  ⏭️  skipped_duplicate: 15 tasks                                          │
+│                                                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+
+┌─ SENTINEL_DRAFTS (output) ───────────────────────────────────────────────┐
+│                                                                            │
+│  ⏳ under_review: 1 draft (waiting for downstream processing)             │
+│     - ID: draft_7c70e0                                                    │
+│     - Type: recruitment_notification                                      │
+│     - Stuck since: 2026-06-16 06:34                                       │
+│                                                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+
+┌─ WORKER HEALTH ──────────────────────────────────────────────────────────┐
+│                                                                            │
+│  sentinel_worker:   23 errors ❌ (pdf is not a function)                 │
+│  structural_worker: 2 errors ⚠️  (Gemini API failure)                    │
+│  svo_worker:        34 errors ❌ (GROQ rate limited)                     │
+│                                                                            │
+│  Last Heartbeats:                                                         │
+│  - sentinel_worker:   2026-06-16 06:34 (1 hour ago) ✅                   │
+│  - structural_worker: 2026-06-13 15:01 (3 days ago) ❌ STALE            │
+│  - svo_worker:        2026-06-13 14:48 (3 days ago) ❌ STALE            │
+│                                                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+
+
+🔧 REMEDIATION SUMMARY
+═════════════════════════════════════════════════════════════════════════════
+
+✅ ALREADY FIXED (Ready to Deploy)
+   [1] PDF parsing import/usage (sentinel_worker.js)
+   [2] Budget system initialized (Firestore document)
+   [3] GROQ retry logic added (groq_service.js)
+
+⏳ REQUIRES YOUR ACTION
+   [4] Set GEMINI_API_KEY in functions/.env
+   [5] Run: firebase deploy --only functions
+   [6] Run: node recover_pipeline.js (auto-resets stuck tasks)
+
+
+🚀 DEPLOYMENT CHECKLIST
+═════════════════════════════════════════════════════════════════════════════
+
+□ Step 1: Create functions/.env
+  cd functions
+  echo "GEMINI_API_KEY=<your-key>" > .env
+  echo "GROQAI_API_KEY=<your-key>" >> .env
+
+□ Step 2: Deploy Functions
+  firebase deploy --only functions
+
+□ Step 3: Wait 2-3 minutes (deployment in progress)
+
+□ Step 4: Run Recovery Script
+  node recover_pipeline.js
+
+□ Step 5: Verify Recovery (Run after 5 min)
+  $env:NODE_PATH = 'functions/node_modules'
+  node pipeline_diagnosis.js
+
+Expected Results After Deployment:
+  ✅ sentinel_worker error count should drop
+  ✅ Pending tasks should change to "received"
+  ✅ New drafts should appear in sentinel_drafts
+  ✅ Worker heartbeats should be recent
+
+
+📖 COMPREHENSIVE GUIDE
+═════════════════════════════════════════════════════════════════════════════
+
+For detailed instructions and troubleshooting:
+→ See: PIPELINE_RECOVERY_GUIDE.md
+
+
+💡 NEED HELP WITH API KEYS?
+═════════════════════════════════════════════════════════════════════════════
+
+Get Free API Keys:
+  • Gemini (Google):    https://aistudio.google.com/app/apikey
+  • GROQ:               https://console.groq.com/keys
+  • OpenAI:             https://platform.openai.com/api-keys
+  • Cerebras:           https://console.cerebras.ai/
+
+All are free tier available. Just sign up and generate keys.
+
+
+═════════════════════════════════════════════════════════════════════════════
+Pipeline Ready for Recovery. Deploy when ready. 🚀
+═════════════════════════════════════════════════════════════════════════════
