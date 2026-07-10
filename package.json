@@ -5,7 +5,8 @@
                     "audit:rankcrackers:guard":  "node functions/audit_rankcrackers_path_and_rules.js",
                     "audit:notification:schema":  "node functions/audit_notification_schema_system.js",
                     "audit:notification:contract":  "node functions/audit_notification_extraction_contract.js",
-                    "audit:notification:source":  "node functions/audit_notification_source_readiness.js"
+                    "audit:notification:source":  "node functions/audit_notification_source_readiness.js",
+                    "plan:notification:pagewise":  "node functions/plan_notification_pagewise_batch_queue.js --dry-run"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",
