@@ -167,6 +167,9 @@ function main() {
   if (!exists('functions/audit_page_count_queue_state.js')) {
     blockers.push('Missing audit_page_count_queue_state.js.');
   }
+  if (!exists('functions/plan_official_document_metadata_repair.js')) {
+    blockers.push('Missing plan_official_document_metadata_repair.js.');
+  }
 
   const filesToScan = [
     ...listFiles(path.join(ROOT, 'functions')),
@@ -194,6 +197,7 @@ function main() {
   console.log(`- Atomic linkage integrity audit exists: ${exists('functions/audit_atomic_linkage_integrity.js') ? 'YES' : 'NO'}`);
   console.log(`- Universal page count queue apply script: ${exists('functions/apply_universal_page_count_queue.js') ? 'PRESENT' : 'MISSING'}`);
   console.log(`- Page count queue state audit exists: ${exists('functions/audit_page_count_queue_state.js') ? 'YES' : 'NO'}`);
+  console.log(`- Metadata repair planner exists: ${exists('functions/plan_official_document_metadata_repair.js') ? 'YES' : 'NO'}`);
   console.log(`- Notification dynamic schema system: ${warnings.includes('MISSING_NOTIFICATION_DYNAMIC_SCHEMA_SYSTEM') ? 'MISSING' : 'PRESENT'}`);
   console.log(`- Notification page count queue apply script: ${exists('functions/apply_notification_page_count_queue.js') ? 'PRESENT' : 'MISSING'}`);
 

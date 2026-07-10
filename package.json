@@ -11,7 +11,8 @@
                     "audit:official:pages": "node functions/audit_universal_official_document_page_completeness.js",
                     "audit:atomic:linkage": "node functions/audit_atomic_linkage_integrity.js",
                     "queue:official:pagecount": "node functions/apply_universal_page_count_queue.js --dry-run",
-                    "audit:pagecount:queue": "node functions/audit_page_count_queue_state.js"
+                    "audit:pagecount:queue": "node functions/audit_page_count_queue_state.js",
+                    "plan:official:metadata-repair": "node functions/plan_official_document_metadata_repair.js --dry-run"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",
