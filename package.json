@@ -13,7 +13,8 @@
                     "queue:official:pagecount": "node functions/apply_universal_page_count_queue.js --dry-run",
                     "audit:pagecount:queue": "node functions/audit_page_count_queue_state.js",
                     "plan:official:metadata-repair": "node functions/plan_official_document_metadata_repair.js --dry-run",
-                    "repair:official:metadata": "node functions/apply_official_document_metadata_repair.js --dry-run"
+                    "repair:official:metadata": "node functions/apply_official_document_metadata_repair.js --dry-run",
+                    "queue:official:pagecount:repaired": "node functions/apply_repaired_docs_page_count_queue.js --dry-run"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",

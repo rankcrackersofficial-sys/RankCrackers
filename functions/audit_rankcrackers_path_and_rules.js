@@ -173,6 +173,9 @@ function main() {
   if (!exists('functions/apply_official_document_metadata_repair.js')) {
     blockers.push('Missing apply_official_document_metadata_repair.js.');
   }
+  if (!exists('functions/apply_repaired_docs_page_count_queue.js')) {
+    blockers.push('Missing apply_repaired_docs_page_count_queue.js.');
+  }
 
   const filesToScan = [
     ...listFiles(path.join(ROOT, 'functions')),
@@ -202,6 +205,7 @@ function main() {
   console.log(`- Page count queue state audit exists: ${exists('functions/audit_page_count_queue_state.js') ? 'YES' : 'NO'}`);
   console.log(`- Metadata repair planner exists: ${exists('functions/plan_official_document_metadata_repair.js') ? 'YES' : 'NO'}`);
   console.log(`- Metadata repair apply script exists: ${exists('functions/apply_official_document_metadata_repair.js') ? 'YES' : 'NO'}`);
+  console.log(`- Repaired docs page count queue apply script: ${exists('functions/apply_repaired_docs_page_count_queue.js') ? 'PRESENT' : 'MISSING'}`);
   console.log(`- Notification dynamic schema system: ${warnings.includes('MISSING_NOTIFICATION_DYNAMIC_SCHEMA_SYSTEM') ? 'MISSING' : 'PRESENT'}`);
   console.log(`- Notification page count queue apply script: ${exists('functions/apply_notification_page_count_queue.js') ? 'PRESENT' : 'MISSING'}`);
 
