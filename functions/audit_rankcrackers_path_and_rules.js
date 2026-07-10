@@ -123,8 +123,12 @@ function main() {
     }
   }
 
-  if (!exists('functions/notification_schemas') && !exists('functions/schemas/notification')) {
-    warnings.push('MISSING_NOTIFICATION_DYNAMIC_SCHEMA_SYSTEM');
+  const notificationSchemaPresent = exists('functions/notification_schemas') || exists('functions/schemas/notification');
+  if (!notificationSchemaPresent) {
+    blockers.push('MISSING_NOTIFICATION_DYNAMIC_SCHEMA_SYSTEM');
+  }
+  if (!exists('functions/audit_notification_schema_system.js')) {
+    blockers.push('Missing audit_notification_schema_system.js.');
   }
 
   if (!exists('functions/audit_s1_rpsc_syllabus_extraction_pipeline.js')) {
@@ -173,6 +177,7 @@ function main() {
 }
 
 main();
+
 
 
 

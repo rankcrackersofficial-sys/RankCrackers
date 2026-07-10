@@ -1,4 +1,5 @@
-const SCHEMA_VERSION = 'notification_schema_v1';
+﻿const SCHEMA_VERSION = 'notification_schema_v1';
+const VERIFICATION_ACTIONS = ['approve', 'edit', 'send_back'];
 
 function field(fieldKey, label, dataType, requiredLevel = 'optional', allowedEmptyReason = 'not_present_in_notification') {
   return {
@@ -8,31 +9,36 @@ function field(fieldKey, label, dataType, requiredLevel = 'optional', allowedEmp
     required_level: requiredLevel,
     source_proof_required: true,
     allowed_empty_reason: allowedEmptyReason,
-    verification_action: ['approve', 'edit', 'send_back'],
+    verification_action: VERIFICATION_ACTIONS,
   };
 }
 
-const baseNotificationFields = [
-  field('exam_title', 'Exam Title', 'string', 'required'),
-  field('authority', 'Authority', 'string', 'required'),
-  field('recruiting_body', 'Recruiting Body', 'string', 'conditional'),
-  field('notification_number', 'Notification Number', 'string', 'conditional'),
-  field('notification_release_date', 'Notification Release Date', 'date', 'conditional'),
-  field('document_type', 'Document Type', 'enum', 'required'),
-  field('official_website', 'Official Website', 'url', 'conditional'),
-  field('application_start_date', 'Application Start Date', 'date', 'conditional'),
-  field('application_end_date', 'Application End Date', 'date', 'conditional'),
-  field('correction_window_start', 'Correction Window Start', 'date', 'optional'),
-  field('correction_window_end', 'Correction Window End', 'date', 'optional'),
-  field('admit_card_date', 'Admit Card Date', 'date', 'optional'),
-  field('exam_date', 'Exam Date', 'date', 'conditional'),
-  field('result_date', 'Result Date', 'date', 'optional'),
-  field('important_links', 'Important Links', 'link_array', 'conditional'),
-  field('source_document_id', 'Source Document ID', 'string', 'required'),
-  field('source_pages', 'Source Pages', 'page_array', 'required'),
-  field('extraction_confidence', 'Extraction Confidence', 'confidence', 'required'),
-  field('founder_verification_status', 'Founder Verification Status', 'enum', 'required'),
-];
+const BASE_NOTIFICATION_SCHEMA = {
+  schema_version: SCHEMA_VERSION,
+  schema_name: 'base_notification_schema',
+  description: 'Universal source-proofed notification form fields required for every official notification extraction.',
+  fields: [
+    field('exam_title', 'Exam Title', 'string', 'required'),
+    field('authority', 'Authority', 'string', 'required'),
+    field('recruiting_body', 'Recruiting Body', 'string', 'conditional'),
+    field('notification_number', 'Notification Number', 'string', 'conditional'),
+    field('notification_release_date', 'Notification Release Date', 'date', 'conditional'),
+    field('document_type', 'Document Type', 'enum', 'required'),
+    field('official_website', 'Official Website', 'url', 'conditional'),
+    field('application_start_date', 'Application Start Date', 'date', 'conditional'),
+    field('application_end_date', 'Application End Date', 'date', 'conditional'),
+    field('correction_window_start', 'Correction Window Start', 'date', 'optional'),
+    field('correction_window_end', 'Correction Window End', 'date', 'optional'),
+    field('admit_card_date', 'Admit Card Date', 'date', 'optional'),
+    field('exam_date', 'Exam Date', 'date', 'conditional'),
+    field('result_date', 'Result Date', 'date', 'optional'),
+    field('important_links', 'Important Links', 'link_array', 'conditional'),
+    field('source_document_id', 'Source Document ID', 'string', 'required'),
+    field('source_pages', 'Source Pages', 'page_array', 'required'),
+    field('extraction_confidence', 'Extraction Confidence', 'confidence', 'required'),
+    field('founder_verification_status', 'Founder Verification Status', 'enum', 'required'),
+  ],
+};
 
 const sourceProofContract = {
   source_document_id: 'string',
@@ -42,6 +48,20 @@ const sourceProofContract = {
   page_extraction_id: 'string',
 };
 
+function validateSourceProofRequirement(schema) {
+  const blockers = [];
+  const fields = Array.isArray(schema?.fields) ? schema.fields : [];
+  for (const item of fields) {
+    if (item.source_proof_required !== true) {
+      blockers.push(`${item.field_key || 'unknown_field'} is missing source_proof_required: true`);
+    }
+    if (!Array.isArray(item.verification_action) || !VERIFICATION_ACTIONS.every(action => item.verification_action.includes(action))) {
+      blockers.push(`${item.field_key || 'unknown_field'} is missing approve/edit/send_back verification actions`);
+    }
+  }
+  return blockers;
+}
+
 function requireSourceProofForVerification(fieldValue) {
   return Boolean(
     fieldValue
@@ -49,14 +69,18 @@ function requireSourceProofForVerification(fieldValue) {
     && fieldValue.source_proof.source_document_id
     && fieldValue.source_proof.source_page_number
     && fieldValue.source_proof.source_text_excerpt
+    && fieldValue.source_proof.extraction_confidence !== undefined
     && fieldValue.source_proof.page_extraction_id
   );
 }
 
 module.exports = {
+  BASE_NOTIFICATION_SCHEMA,
   SCHEMA_VERSION,
-  baseNotificationFields,
+  VERIFICATION_ACTIONS,
+  baseNotificationFields: BASE_NOTIFICATION_SCHEMA.fields,
   field,
   requireSourceProofForVerification,
   sourceProofContract,
+  validateSourceProofRequirement,
 };

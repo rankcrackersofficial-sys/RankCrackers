@@ -1,20 +1,14 @@
-const { field } = require('./base_notification_schema');
+﻿const { field } = require('./base_notification_schema');
 
 function section(name, label, fields) {
   return { name, label, fields };
 }
 
-const archetypeSchemas = {
-  base_notification_only: {
-    archetype: 'base_notification_only',
-    label: 'Base Notification Only',
-    example_use: ['unknown official notification'],
-    sections: [],
-  },
+const EXAM_ARCHETYPE_SCHEMAS = {
   entrance_exam_single: {
     archetype: 'entrance_exam_single',
     label: 'Entrance Exam - Single Exam',
-    example_use: ['JEE', 'NEET'],
+    use_cases: ['JEE', 'NEET'],
     sections: [
       section('eligibility', 'Eligibility', [field('eligibility', 'Eligibility', 'structured_text', 'required')]),
       section('age_or_attempt_rules', 'Age / Attempt Rules', [field('age_or_attempt_rules', 'Age / Attempt Rules', 'structured_text', 'conditional')]),
@@ -31,7 +25,7 @@ const archetypeSchemas = {
   recruitment_single_exam: {
     archetype: 'recruitment_single_exam',
     label: 'Recruitment - Single Exam',
-    example_use: ['simple RPSC single exam'],
+    use_cases: ['simple RPSC single recruitment'],
     sections: [
       section('post_name', 'Post Name', [field('post_name', 'Post Name', 'string', 'required')]),
       section('total_vacancies', 'Total Vacancies', [field('total_vacancies', 'Total Vacancies', 'number', 'conditional')]),
@@ -47,7 +41,7 @@ const archetypeSchemas = {
   recruitment_variable_heavy: {
     archetype: 'recruitment_variable_heavy',
     label: 'Recruitment - Variable Heavy',
-    example_use: ['RPSC multi-post', 'subject-wise recruitment', 'department-wise recruitment'],
+    use_cases: ['RPSC multi-post', 'subject-wise recruitment', 'department-wise recruitment', 'category-wise breakup recruitment'],
     sections: [
       section('post_wise_vacancies', 'Post-wise Vacancies', [field('post_wise_vacancies', 'Post-wise Vacancies', 'array', 'conditional')]),
       section('subject_wise_posts', 'Subject-wise Posts', [field('subject_wise_posts', 'Subject-wise Posts', 'array', 'conditional')]),
@@ -63,7 +57,7 @@ const archetypeSchemas = {
   amendment_notice: {
     archetype: 'amendment_notice',
     label: 'Amendment / Correction Notice',
-    example_use: ['amendment notice', 'correction notice'],
+    use_cases: ['amendment notice', 'correction notice'],
     sections: [
       section('parent_notification_id', 'Parent Notification ID', [field('parent_notification_id', 'Parent Notification ID', 'string', 'conditional')]),
       section('amendment_type', 'Amendment Type', [field('amendment_type', 'Amendment Type', 'string', 'required')]),
@@ -77,7 +71,7 @@ const archetypeSchemas = {
   result_cutoff_answer_key_notice: {
     archetype: 'result_cutoff_answer_key_notice',
     label: 'Result / Cutoff / Answer Key Notice',
-    example_use: ['result notice', 'cutoff notice', 'answer key notice'],
+    use_cases: ['result notice', 'cutoff notice', 'answer key notice'],
     sections: [
       section('result_date', 'Result Date', [field('result_date', 'Result Date', 'date', 'conditional')]),
       section('cutoff_details', 'Cutoff Details', [field('cutoff_details', 'Cutoff Details', 'array', 'conditional')]),
@@ -87,6 +81,23 @@ const archetypeSchemas = {
       section('next_stage_info', 'Next Stage Info', [field('next_stage_info', 'Next Stage Info', 'structured_text', 'conditional')]),
     ],
   },
+  base_notification_only: {
+    archetype: 'base_notification_only',
+    label: 'Base Notification Only',
+    use_cases: ['unknown official notification'],
+    sections: [],
+    variable_packs_allowed: true,
+  },
 };
 
-module.exports = { archetypeSchemas };
+function getArchetypeFields(archetype) {
+  const schema = EXAM_ARCHETYPE_SCHEMAS[archetype];
+  if (!schema) return [];
+  return schema.sections.flatMap(sectionItem => sectionItem.fields || []);
+}
+
+module.exports = {
+  EXAM_ARCHETYPE_SCHEMAS,
+  archetypeSchemas: EXAM_ARCHETYPE_SCHEMAS,
+  getArchetypeFields,
+};
