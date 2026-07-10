@@ -130,6 +130,15 @@ function main() {
   if (!exists('functions/audit_notification_schema_system.js')) {
     blockers.push('Missing audit_notification_schema_system.js.');
   }
+  if (!exists('functions/audit_notification_extraction_contract.js')) {
+    blockers.push('Missing audit_notification_extraction_contract.js.');
+  }
+  if (!exists('functions/notification_schemas/notification_extraction_contract.js')) {
+    blockers.push('Missing notification_extraction_contract.js.');
+  }
+  if (!exists('functions/notification_schemas/notification_form_draft_builder.js')) {
+    blockers.push('Missing notification_form_draft_builder.js.');
+  }
 
   if (!exists('functions/audit_s1_rpsc_syllabus_extraction_pipeline.js')) {
     blockers.push('Missing audit_s1_rpsc_syllabus_extraction_pipeline.js.');
@@ -177,6 +186,7 @@ function main() {
 }
 
 main();
+
 
 
 
