@@ -139,6 +139,9 @@ function main() {
   if (!exists('functions/plan_notification_pagewise_batch_queue.js')) {
     blockers.push('Missing plan_notification_pagewise_batch_queue.js.');
   }
+  if (!exists('functions/apply_notification_page_count_queue.js')) {
+    blockers.push('Missing apply_notification_page_count_queue.js.');
+  }
   if (!exists('functions/notification_schemas/notification_extraction_contract.js')) {
     blockers.push('Missing notification_extraction_contract.js.');
   }
@@ -176,6 +179,7 @@ function main() {
   console.log(`- Extraction policy documented: ${exists('docs/RANKCRACKERS_FINAL_OPERATION_RULES.md') ? 'YES' : 'NO'}`);
   console.log(`- Universal extraction audit exists: ${exists('functions/audit_universal_extraction_completeness.js') ? 'YES' : 'NO'}`);
   console.log(`- Notification dynamic schema system: ${warnings.includes('MISSING_NOTIFICATION_DYNAMIC_SCHEMA_SYSTEM') ? 'MISSING' : 'PRESENT'}`);
+  console.log(`- Notification page count queue apply script: ${exists('functions/apply_notification_page_count_queue.js') ? 'PRESENT' : 'MISSING'}`);
 
   if (warnings.length > 0) {
     console.log('\nWarnings:');
@@ -192,6 +196,8 @@ function main() {
 }
 
 main();
+
+
 
 
 
