@@ -133,6 +133,9 @@ function main() {
   if (!exists('functions/audit_notification_extraction_contract.js')) {
     blockers.push('Missing audit_notification_extraction_contract.js.');
   }
+  if (!exists('functions/audit_notification_source_readiness.js')) {
+    blockers.push('Missing audit_notification_source_readiness.js.');
+  }
   if (!exists('functions/notification_schemas/notification_extraction_contract.js')) {
     blockers.push('Missing notification_extraction_contract.js.');
   }
@@ -186,6 +189,7 @@ function main() {
 }
 
 main();
+
 
 
 

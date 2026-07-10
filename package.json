@@ -4,7 +4,8 @@
                     "deploy:web:founder":  "flutter build web -t lib/main_web.dart --release \u0026\u0026 firebase deploy --only hosting",
                     "audit:rankcrackers:guard":  "node functions/audit_rankcrackers_path_and_rules.js",
                     "audit:notification:schema":  "node functions/audit_notification_schema_system.js",
-                    "audit:notification:contract":  "node functions/audit_notification_extraction_contract.js"
+                    "audit:notification:contract":  "node functions/audit_notification_extraction_contract.js",
+                    "audit:notification:source":  "node functions/audit_notification_source_readiness.js"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",
