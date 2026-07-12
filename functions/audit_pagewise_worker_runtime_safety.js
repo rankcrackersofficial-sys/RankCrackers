@@ -146,7 +146,7 @@ async function audit() {
 
   if (blockers.length === 0) {
     console.log('\nRC_X4W_RUNTIME_SAFETY_AUDIT_READY');
-    console.log('Recommended next patch: RC-X4W-FIX (to address warnings) or RC-X4E-P1 (to implement apply)');
+    console.log('Recommended next patch: RC-X4E-P1 — Pagewise Extraction Apply Implementation, Batch 1 Safety');
   } else {
     console.error('\nRC_X4W_RUNTIME_SAFETY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));

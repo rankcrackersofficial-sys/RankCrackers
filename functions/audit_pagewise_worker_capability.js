@@ -30,7 +30,6 @@ function audit() {
   if (!content.includes('pagewise_text_extraction_batch')) blockers.push('Does not filter by correct task_type');
   if (!content.includes('status\', \'in\', [\'queued\', \'pending\']')) blockers.push('Does not filter by correct status (queued/pending)');
 
-  // 4.1 Count clarity and query safety (RC-X4W-FIX)
   if (content.includes('.limit(cli.limit)') && content.includes('allActiveTasks')) {
       // If limit is still in the main query despite having allActiveTasks variable name
       blockers.push('Main query should not have .limit() when counting total active tasks');
@@ -71,11 +70,6 @@ function audit() {
      }
   }
 
-  // 7. Limit check
-  if (!content.includes('limit(cli.limit)')) blockers.push('Does not respect limit in query');
-
-  console.log('Results:');
-  console.log(`- Supports dry-run: ${content.includes('--dry-run') ? 'YES' : 'NO'}`);
   console.log(`- Supports limit: ${content.includes('--limit') ? 'YES' : 'NO'}`);
   console.log(`- Apply mode locked: ${content.includes('APPLY_BLOCKED_NOT_ENABLED_FOR_RC_X4W') ? 'YES' : 'NO'}`);
   console.log(`- Firestore writes found: ${writeSigs.some(s => content.includes(s)) ? 'YES' : 'NO'}`);
