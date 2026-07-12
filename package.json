@@ -18,6 +18,7 @@
     "audit:pagecount:worker": "node functions/audit_page_count_worker_capability.js",
     "audit:pagecount:final": "node functions/audit_final_page_count_results.js",
     "plan:official:pagewise": "node functions/plan_universal_pagewise_extraction_queue.js --dry-run",
+    "queue:official:pagewise": "node functions/apply_universal_pagewise_extraction_queue.js --dry-run",
     "process:pagecount": "node functions/process_page_count_detection_tasks.js --dry-run --limit 5"
   },
   "dependencies": {
