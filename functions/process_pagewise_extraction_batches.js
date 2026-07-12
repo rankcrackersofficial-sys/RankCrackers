@@ -1,6 +1,4 @@
 const admin = require('firebase-admin');
-const { Firestore } = require('@google-cloud/firestore');
-const { OAuth2Client } = require('google-auth-library');
 const cp = require('child_process');
 const axios = require('axios');
 const { PDFParse } = require('pdf-parse');
@@ -102,7 +100,7 @@ async function extractPagesNatively(bytes, start, end) {
 
 async function main() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P1-FIX1 - PAGEWISE EXTRACTION WORKER');
+  console.log('PATCH RC-X4E-P1-FIX2 - PAGEWISE EXTRACTION WORKER');
   console.log('==============================================');
   console.log(`Mode: ${cli.isApplyMode ? 'APPLY' : 'DRY-RUN'}`);
   console.log(`Limit: ${cli.limit} tasks`);
@@ -114,14 +112,11 @@ async function main() {
 
   const token = getAccessToken();
 
-  // Initialize firebase-admin for server timestamp etc.
+  // Initialize firebase-admin consistently
   if (!admin.apps.length) {
     admin.initializeApp({ projectId: PROJECT_ID });
   }
-
-  const auth = new OAuth2Client();
-  auth.setCredentials({ access_token: token });
-  const db = new Firestore({ projectId: PROJECT_ID, authClient: auth });
+  const db = admin.firestore();
 
   const queueSnap = await db.collection('ai_queue')
     .where('task_type', '==', 'pagewise_text_extraction_batch')
@@ -159,7 +154,7 @@ async function main() {
           failure_reason: 'INVALID_TASK_SHAPE',
           error_message: shape.reason,
           updated_at: admin.firestore.FieldValue.serverTimestamp(),
-          created_by_patch_failed: 'RC-X4E-P1-FIX1'
+          created_by_patch_failed: 'RC-X4E-P1-FIX2'
         });
       }
       continue;
@@ -178,7 +173,7 @@ async function main() {
           failure_reason: 'SOURCE_ACCESS_FAILED',
           error_message: e.message,
           updated_at: admin.firestore.FieldValue.serverTimestamp(),
-          created_by_patch_failed: 'RC-X4E-P1-FIX1'
+          created_by_patch_failed: 'RC-X4E-P1-FIX2'
         });
       }
       continue;
@@ -192,7 +187,7 @@ async function main() {
           status: 'failed',
           failure_reason: 'INVALID_PAGE_RANGE',
           updated_at: admin.firestore.FieldValue.serverTimestamp(),
-          created_by_patch_failed: 'RC-X4E-P1-FIX1'
+          created_by_patch_failed: 'RC-X4E-P1-FIX2'
         });
       }
       continue;
@@ -204,7 +199,7 @@ async function main() {
         console.log('   - Extracting text natively...');
         const { result: extractedTexts } = await extractPagesNatively(bytes, task.page_start, task.page_end);
 
-        // Part D: Empty Text Safety
+        // Empty Text Safety
         const emptyPages = [];
         for (let p = task.page_start; p <= task.page_end; p++) {
           if (!extractedTexts[p] || extractedTexts[p].trim().length === 0) {
@@ -219,12 +214,12 @@ async function main() {
             failure_reason: 'NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED',
             error_message: `Empty text on pages: ${emptyPages.join(', ')}`,
             updated_at: admin.firestore.FieldValue.serverTimestamp(),
-            created_by_patch_failed: 'RC-X4E-P1-FIX1'
+            created_by_patch_failed: 'RC-X4E-P1-FIX2'
           });
           continue;
         }
 
-        // Part E: Duplicate Page Extraction Safety
+        // Duplicate Page Extraction Safety
         const docRef = db.collection('mission_realms').doc(task.mission_id)
           .collection('official_documents').doc(task.document_id);
 
@@ -241,7 +236,7 @@ async function main() {
             failure_reason: 'PAGE_EXTRACTION_ALREADY_EXISTS',
             error_message: `Duplicate page records: ${duplicatePages.join(', ')}`,
             updated_at: admin.firestore.FieldValue.serverTimestamp(),
-            created_by_patch_failed: 'RC-X4E-P1-FIX1'
+            created_by_patch_failed: 'RC-X4E-P1-FIX2'
           });
           continue;
         }
@@ -280,7 +275,7 @@ async function main() {
             },
             created_at: admin.firestore.FieldValue.serverTimestamp(),
             updated_at: admin.firestore.FieldValue.serverTimestamp(),
-            created_by_patch: 'RC-X4E-P1-FIX1'
+            created_by_patch: 'RC-X4E-P1-FIX2'
           };
 
           if (task.mission_id === 'AUTO_DETECT') {
@@ -304,7 +299,7 @@ async function main() {
             page_start: task.page_start,
             page_end: task.page_end
           },
-          created_by_patch_completed: 'RC-X4E-P1-FIX1'
+          created_by_patch_completed: 'RC-X4E-P1-FIX2'
         });
 
         console.log(`   - Committing ${pagesInBatch} page extractions...`);
@@ -318,7 +313,7 @@ async function main() {
           failure_reason: 'NATIVE_TEXT_EXTRACTION_ERROR',
           error_message: e.message,
           updated_at: admin.firestore.FieldValue.serverTimestamp(),
-          created_by_patch_failed: 'RC-X4E-P1-FIX1'
+          created_by_patch_failed: 'RC-X4E-P1-FIX2'
         });
       }
     } else {
@@ -335,7 +330,7 @@ async function main() {
   console.log('    - task limit is not page limit: YES');
 
   if (cli.isApplyMode) {
-    console.log('\nRC_X4E_P1_FIX1_APPLY_FINISHED');
+    console.log('\nRC_X4E_P1_FIX2_APPLY_FINISHED');
   } else {
     console.log('\nRC_X4W_PAGEWISE_WORKER_DRY_RUN_READY');
   }

@@ -16,7 +16,7 @@ function getAccessToken() {
 
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P1-FIX1 - PAGEWISE WORKER RUNTIME SAFETY');
+  console.log('PATCH RC-X4E-P1-FIX2 - PAGEWISE WORKER RUNTIME SAFETY');
   console.log('==============================================');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -33,6 +33,14 @@ async function audit() {
   if (!workerContent.includes('--limit')) blockers.push('Worker missing --limit');
   if (!workerContent.includes('CONFIRM_PROCESS_PAGEWISE_EXTRACTION')) blockers.push('Worker missing apply confirmation phrase');
 
+  // SDK Unification Check (FIX2)
+  if (workerContent.includes("require('@google-cloud/firestore')") || workerContent.includes('new Firestore')) {
+      blockers.push('Worker uses mixed/incorrect Firestore SDK. Must use firebase-admin.');
+  }
+  if (!workerContent.includes('admin.firestore()')) {
+      blockers.push('Worker missing admin.firestore() call.');
+  }
+
   const writeSigs = ['.set(', '.update(', '.add(', 'batch.commit()'];
   for (const sig of writeSigs) {
     if (workerContent.includes(sig)) {
@@ -40,7 +48,7 @@ async function audit() {
         const badLines = lines.filter(l => {
             if (!l.includes(sig) || l.trim().startsWith('//')) return false;
             if (sig === '.add(' && (l.includes('Represented.add') || l.includes('Set'))) return false;
-            // Allowed writes in RC-X4E-P1-FIX1
+            // Allowed writes in RC-X4E-P1-FIX2
             if (l.includes('db.collection(\'ai_queue\').doc(task.id).update')) return false;
             if (l.includes('batch.set(extractionRef')) return false;
             if (l.includes('batch.update(taskRef')) return false;
@@ -88,9 +96,9 @@ async function audit() {
     }
 
     if (dryRunOutput.includes('FAILED')) {
-        blockers.push('Dry-run reported source access failure.');
+        blockers.push('Dry-run reported failure during processing.');
     } else {
-        console.log('Source access sample: PASSED');
+        console.log('Dry-run sample: PASSED');
     }
 
   } catch (e) {
@@ -99,9 +107,9 @@ async function audit() {
   }
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_P1_FIX1_RUNTIME_SAFETY_AUDIT_READY');
+    console.log('\nRC_X4E_P1_FIX2_RUNTIME_SAFETY_AUDIT_READY');
   } else {
-    console.error('\nRC_X4E_P1_FIX1_RUNTIME_SAFETY_BLOCKED:');
+    console.error('\nRC_X4E_P1_FIX2_RUNTIME_SAFETY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }
