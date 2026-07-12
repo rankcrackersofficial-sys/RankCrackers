@@ -111,9 +111,15 @@ async function audit() {
     if (!dryRunOutput.includes('no Firestore write: YES')) blockers.push('Dry-run output missing no-write confirmation');
     if (!dryRunOutput.includes('no AI extraction: YES')) blockers.push('Dry-run output missing no-AI confirmation');
 
-    // E. Output Count Clarity Warning
-    if (dryRunOutput.includes('Active pagewise tasks found: 3')) {
-        warnings.push('Worker logging uses limited query size for "Active pagewise tasks found". Should count separately.');
+    // Check for fixed logging
+    if (!dryRunOutput.includes('Total active pagewise tasks found: 104')) {
+        blockers.push('Dry-run output missing correct total active tasks count (104).');
+    }
+    if (!dryRunOutput.includes('Tasks selected by limit: 3')) {
+        blockers.push('Dry-run output missing tasks selected by limit (3).');
+    }
+    if (!dryRunOutput.includes('task limit is not page limit: YES')) {
+        blockers.push('Dry-run output missing task limit policy confirmation.');
     }
 
     // D. Source Access Sample

@@ -91,14 +91,18 @@ async function main() {
   const queueSnap = await db.collection('ai_queue')
     .where('task_type', '==', 'pagewise_text_extraction_batch')
     .where('status', 'in', ['queued', 'pending'])
-    .limit(cli.limit)
     .get();
 
-  console.log(`\n1. Active pagewise tasks found: ${queueSnap.size} (matching criteria)`);
-  if (queueSnap.empty) {
+  const allActiveTasks = queueSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+  console.log(`\n1. Total active pagewise tasks found: ${allActiveTasks.length}`);
+
+  if (allActiveTasks.length === 0) {
     console.log('\nRC_X4W_PAGEWISE_WORKER_DRY_RUN_READY (No tasks to process)');
     return;
   }
+
+  const selectedTasks = allActiveTasks.slice(0, cli.limit);
+  console.log(`2. Tasks selected by limit: ${selectedTasks.length}`);
 
   const selectedTaskIds = [];
   const documentsRepresented = new Set();
@@ -109,8 +113,7 @@ async function main() {
   const rangeResults = [];
   let expectedPageExtractionsCount = 0;
 
-  for (const doc of queueSnap.docs) {
-    const task = { id: doc.id, ...doc.data() };
+  for (const task of selectedTasks) {
     selectedTaskIds.push(task.id);
     documentsRepresented.add(task.document_id);
     pageRanges.push(`${task.page_start}-${task.page_end}`);
@@ -135,12 +138,9 @@ async function main() {
     // 4. Expected Output Preview (Virtual)
     for (let p = task.page_start; p <= task.page_end; p++) {
        expectedPageExtractionsCount++;
-       // Future shape preview (Internal Function Only)
-       // function buildRecord(p) { return { mission_id: task.mission_id, page_number: p, ... } }
     }
   }
 
-  console.log(`2. Tasks selected by limit: ${selectedTaskIds.length}`);
   console.log(`3. Selected task IDs: ${selectedTaskIds.join(', ')}`);
   console.log(`4. Documents represented: ${[...documentsRepresented].join(', ')}`);
   console.log(`5. Page ranges selected: ${pageRanges.join(', ')}`);

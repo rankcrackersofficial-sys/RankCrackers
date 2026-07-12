@@ -30,6 +30,17 @@ function audit() {
   if (!content.includes('pagewise_text_extraction_batch')) blockers.push('Does not filter by correct task_type');
   if (!content.includes('status\', \'in\', [\'queued\', \'pending\']')) blockers.push('Does not filter by correct status (queued/pending)');
 
+  // 4.1 Count clarity and query safety (RC-X4W-FIX)
+  if (content.includes('.limit(cli.limit)') && content.includes('allActiveTasks')) {
+      // If limit is still in the main query despite having allActiveTasks variable name
+      blockers.push('Main query should not have .limit() when counting total active tasks');
+  }
+  if (!content.includes('allActiveTasks.length')) blockers.push('Missing total active tasks count logic');
+  if (!content.includes('.slice(0, cli.limit)')) blockers.push('Missing in-memory selection by limit');
+  if (!content.includes('Total active pagewise tasks found')) blockers.push('Missing logging for total active tasks');
+  if (!content.includes('Tasks selected by limit')) blockers.push('Missing logging for selected tasks count');
+  if (!content.includes('task limit is not page limit')) blockers.push('Missing task limit policy logging');
+
   // 5. NO WRITES in RC-X4W
   const writeSigs = ['.set(', '.update(', '.add(', 'batch.commit()'];
   for (const sig of writeSigs) {
