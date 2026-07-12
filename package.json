@@ -14,7 +14,9 @@
                     "audit:pagecount:queue": "node functions/audit_page_count_queue_state.js",
                     "plan:official:metadata-repair": "node functions/plan_official_document_metadata_repair.js --dry-run",
                     "repair:official:metadata": "node functions/apply_official_document_metadata_repair.js --dry-run",
-                    "queue:official:pagecount:repaired": "node functions/apply_repaired_docs_page_count_queue.js --dry-run"
+                    "queue:official:pagecount:repaired": "node functions/apply_repaired_docs_page_count_queue.js --dry-run",
+                    "audit:pagecount:worker": "node functions/audit_page_count_worker_capability.js",
+                    "process:pagecount": "node functions/process_page_count_detection_tasks.js --dry-run --limit 5"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",

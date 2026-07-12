@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 
 const OFFICIAL_PATH = 'C:\\RankCrackers\\RankCrackers-55';
@@ -176,6 +176,12 @@ function main() {
   if (!exists('functions/apply_repaired_docs_page_count_queue.js')) {
     blockers.push('Missing apply_repaired_docs_page_count_queue.js.');
   }
+  if (!exists('functions/process_page_count_detection_tasks.js')) {
+    blockers.push('Missing process_page_count_detection_tasks.js.');
+  }
+  if (!exists('functions/audit_page_count_worker_capability.js')) {
+    blockers.push('Missing audit_page_count_worker_capability.js.');
+  }
 
   const filesToScan = [
     ...listFiles(path.join(ROOT, 'functions')),
@@ -206,6 +212,8 @@ function main() {
   console.log(`- Metadata repair planner exists: ${exists('functions/plan_official_document_metadata_repair.js') ? 'YES' : 'NO'}`);
   console.log(`- Metadata repair apply script exists: ${exists('functions/apply_official_document_metadata_repair.js') ? 'YES' : 'NO'}`);
   console.log(`- Repaired docs page count queue apply script: ${exists('functions/apply_repaired_docs_page_count_queue.js') ? 'PRESENT' : 'MISSING'}`);
+  console.log(`- Page count detection worker exists: ${exists('functions/process_page_count_detection_tasks.js') ? 'YES' : 'NO'}`);
+  console.log(`- Page count worker capability audit exists: ${exists('functions/audit_page_count_worker_capability.js') ? 'YES' : 'NO'}`);
   console.log(`- Notification dynamic schema system: ${warnings.includes('MISSING_NOTIFICATION_DYNAMIC_SCHEMA_SYSTEM') ? 'MISSING' : 'PRESENT'}`);
   console.log(`- Notification page count queue apply script: ${exists('functions/apply_notification_page_count_queue.js') ? 'PRESENT' : 'MISSING'}`);
 
@@ -224,6 +232,7 @@ function main() {
 }
 
 main();
+
 
 
 
