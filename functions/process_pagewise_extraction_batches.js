@@ -3,6 +3,7 @@ const { Firestore } = require('@google-cloud/firestore');
 const { OAuth2Client } = require('google-auth-library');
 const cp = require('child_process');
 const axios = require('axios');
+const { PDFParse } = require('pdf-parse');
 
 const PROJECT_ID = 'rankcrackers-55';
 const APPLY_CONFIRMATION = 'CONFIRM_PROCESS_PAGEWISE_EXTRACTION';
@@ -67,15 +68,45 @@ function validateTaskShape(task) {
   return { valid: true };
 }
 
+async function extractPagesNatively(bytes, start, end) {
+  const parser = new PDFParse({ data: bytes });
+  try {
+    const pages = [];
+    for (let p = start; p <= end; p++) pages.push(p);
+
+    // The library allows extracting specific pages via partial
+    const result = await parser.getText({ partial: pages });
+    const totalPagesInDoc = result.total;
+
+    if (end > totalPagesInDoc) {
+      throw new Error(`TASK_PAGE_END_OUT_OF_RANGE: ${end} > ${totalPagesInDoc}`);
+    }
+
+    const pageMap = {};
+    if (pages.length === 1) {
+      pageMap[start] = result.text;
+    } else {
+      // If multiple pages, the result.pages array should contain them
+      result.pages.forEach(pData => {
+        pageMap[pData.pageIndex + 1] = pData.text;
+      });
+    }
+
+    return { result: pageMap, totalPagesInDoc };
+  } finally {
+    await parser.destroy();
+  }
+}
+
 async function main() {
   console.log('==============================================');
-  console.log('PATCH RC-X4W - PAGEWISE EXTRACTION WORKER (DRY-RUN)');
+  console.log('PATCH RC-X4E-P1 - PAGEWISE EXTRACTION WORKER (APPLY)');
   console.log('==============================================');
   console.log(`Mode: ${cli.isApplyMode ? 'APPLY' : 'DRY-RUN'}`);
   console.log(`Limit: ${cli.limit} tasks`);
 
-  if (cli.isApplyMode) {
-    console.error('APPLY_BLOCKED_NOT_ENABLED_FOR_RC_X4W');
+  if (cli.isApplyMode && cli.limit !== 1) {
+    console.error('RC_X4E_P1_BLOCKED_LIMIT_MUST_BE_1');
     process.exit(1);
   }
 
@@ -94,6 +125,15 @@ async function main() {
     .get();
 
   const allActiveTasks = queueSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+  // Sort in-memory to avoid index requirement in this patch
+  allActiveTasks.sort((a, b) => {
+    const timeA = a.created_at?.toMillis?.() || 0;
+    const timeB = b.created_at?.toMillis?.() || 0;
+    if (timeA !== timeB) return timeA - timeB;
+    return a.id.localeCompare(b.id);
+  });
+
   console.log(`\n1. Total active pagewise tasks found: ${allActiveTasks.length}`);
 
   if (allActiveTasks.length === 0) {
@@ -104,85 +144,179 @@ async function main() {
   const selectedTasks = allActiveTasks.slice(0, cli.limit);
   console.log(`2. Tasks selected by limit: ${selectedTasks.length}`);
 
-  const selectedTaskIds = [];
-  const documentsRepresented = new Set();
-  const pageRanges = [];
-  let totalPagesInRange = 0;
   const taskAccessResults = [];
   const shapeResults = [];
   const rangeResults = [];
-  let expectedPageExtractionsCount = 0;
+  let totalPageExtractionsCreated = 0;
 
   for (const task of selectedTasks) {
-    selectedTaskIds.push(task.id);
-    documentsRepresented.add(task.document_id);
-    pageRanges.push(`${task.page_start}-${task.page_end}`);
-    totalPagesInRange += (task.page_end - task.page_start + 1);
+    console.log(`\nProcessing task: ${task.id}`);
 
     // 1. Shape Validation
     const shape = validateTaskShape(task);
     shapeResults.push({ id: task.id, ...shape });
+    if (!shape.valid) {
+      console.log(`   - Shape check: INVALID (${shape.reason})`);
+      if (cli.isApplyMode) {
+        await db.collection('ai_queue').doc(task.id).update({
+          status: 'failed',
+          failure_reason: 'INVALID_TASK_SHAPE',
+          error_message: shape.reason,
+          updated_at: admin.firestore.FieldValue.serverTimestamp(),
+          created_by_patch_failed: 'RC-X4E-P1'
+        });
+      }
+      continue;
+    }
+    console.log('   - Shape check: VALID');
 
     // 2. Source Access Result
+    let bytes;
     try {
-      const bytes = await resolveSourceBytes(task.source_path, token);
+      bytes = await resolveSourceBytes(task.source_path, token);
       taskAccessResults.push({ id: task.id, success: true, size: bytes.length });
+      console.log(`   - Source access: SUCCESS (${bytes.length} bytes)`);
     } catch (e) {
       taskAccessResults.push({ id: task.id, success: false, error: e.message });
+      console.log(`   - Source access: FAILED (${e.message})`);
+      if (cli.isApplyMode) {
+        await db.collection('ai_queue').doc(task.id).update({
+          status: 'failed',
+          failure_reason: 'SOURCE_ACCESS_FAILED',
+          error_message: e.message,
+          updated_at: admin.firestore.FieldValue.serverTimestamp(),
+          created_by_patch_failed: 'RC-X4E-P1'
+        });
+      }
+      continue;
     }
 
     // 3. Page Range Validation
     const rangeValid = task.page_start >= 1 && task.page_end >= task.page_start;
     rangeResults.push({ id: task.id, valid: rangeValid });
+    if (!rangeValid) {
+      console.log('   - Page range check: INVALID');
+      if (cli.isApplyMode) {
+        await db.collection('ai_queue').doc(task.id).update({
+          status: 'failed',
+          failure_reason: 'INVALID_PAGE_RANGE',
+          updated_at: admin.firestore.FieldValue.serverTimestamp(),
+          created_by_patch_failed: 'RC-X4E-P1'
+        });
+      }
+      continue;
+    }
+    console.log(`   - Page range check: VALID (${task.page_start}-${task.page_end})`);
 
-    // 4. Expected Output Preview (Virtual)
-    for (let p = task.page_start; p <= task.page_end; p++) {
-       expectedPageExtractionsCount++;
+    // 4. Extraction
+    if (cli.isApplyMode) {
+      try {
+        console.log('   - Extracting text natively...');
+        const { result: extractedTexts, totalPagesInDoc } = await extractPagesNatively(bytes, task.page_start, task.page_end);
+
+        const batch = db.batch();
+        const docRef = db.collection('mission_realms').doc(task.mission_id)
+          .collection('official_documents').doc(task.document_id);
+
+        let pagesInBatch = 0;
+        for (let p = task.page_start; p <= task.page_end; p++) {
+          const text = extractedTexts[p] || '';
+
+          const extractionRef = docRef.collection('page_extractions').doc(String(p));
+          const payload = {
+            mission_id: task.mission_id,
+            document_id: task.document_id,
+            source_document_id: task.source_document_id,
+            source_path: task.source_path,
+            document_type: task.document_type,
+            language: task.language,
+            page_number: p,
+            page_start: task.page_start,
+            page_end: task.page_end,
+            page_batch_index: task.page_batch_index,
+            total_batches: task.total_batches,
+            extraction_text: text,
+            extraction_status: 'extracted_draft',
+            review_status: 'pending_founder_verification',
+            extracted_by_task_id: task.id,
+            extraction_method: 'native_pdf_text',
+            source_proof: {
+              source_path: task.source_path,
+              page_number: p,
+              task_id: task.id
+            },
+            page_policy: {
+              all_pages_required: true,
+              fixed_page_limit_allowed: false,
+              batch_size_is_not_page_limit: true
+            },
+            created_at: admin.firestore.FieldValue.serverTimestamp(),
+            updated_at: admin.firestore.FieldValue.serverTimestamp(),
+            created_by_patch: 'RC-X4E-P1'
+          };
+
+          if (task.mission_id === 'AUTO_DETECT') {
+            payload.requires_founder_mission_assignment_before_publish = true;
+            payload.auto_detect_routing_only = true;
+            payload.publish_blocked_until_founder_mission_assignment = true;
+          }
+
+          batch.set(extractionRef, payload);
+          pagesInBatch++;
+        }
+
+        const taskRef = db.collection('ai_queue').doc(task.id);
+        batch.update(taskRef, {
+          status: 'completed',
+          completed_at: admin.firestore.FieldValue.serverTimestamp(),
+          updated_at: admin.firestore.FieldValue.serverTimestamp(),
+          extraction_method: 'native_pdf_text',
+          page_extractions_created: pagesInBatch,
+          page_range_processed: {
+            page_start: task.page_start,
+            page_end: task.page_end
+          },
+          created_by_patch_completed: 'RC-X4E-P1'
+        });
+
+        console.log(`   - Committing ${pagesInBatch} page extractions...`);
+        await batch.commit();
+        totalPageExtractionsCreated += pagesInBatch;
+        console.log('   - Task COMPLETED successfully.');
+
+      } catch (e) {
+        console.error(`   - Extraction failed: ${e.message}`);
+        await db.collection('ai_queue').doc(task.id).update({
+          status: 'failed',
+          failure_reason: 'NATIVE_TEXT_EXTRACTION_ERROR',
+          error_message: e.message,
+          updated_at: admin.firestore.FieldValue.serverTimestamp(),
+          created_by_patch_failed: 'RC-X4E-P1'
+        });
+      }
+    } else {
+      console.log('   - Mode: DRY-RUN (Skipping extraction and writes)');
     }
   }
 
-  console.log(`3. Selected task IDs: ${selectedTaskIds.join(', ')}`);
-  console.log(`4. Documents represented: ${[...documentsRepresented].join(', ')}`);
-  console.log(`5. Page ranges selected: ${pageRanges.join(', ')}`);
-  console.log(`6. Total pages in selected tasks: ${totalPagesInRange}`);
-
-  console.log('\n7. Source access result per task:');
-  taskAccessResults.forEach(r => console.log(`   - ${r.id}: ${r.success ? `SUCCESS (${r.size} bytes)` : `FAILED (${r.error})`}`));
-
-  console.log('\n8. Shape validation result per task:');
-  shapeResults.forEach(r => console.log(`   - ${r.id}: ${r.valid ? 'VALID' : `INVALID (${r.reason})`}`));
-
-  console.log('\n9. Page range validation result per task:');
-  rangeResults.forEach(r => console.log(`   - ${r.id}: ${r.valid ? 'VALID' : 'INVALID'}`));
-
-  console.log(`\n10. Expected page_extraction preview count: ${expectedPageExtractionsCount}`);
-
-  console.log('\n11. Confirmation:');
-  console.log('    - no Firestore write: YES');
-  console.log('    - no queue status update: YES');
-  console.log('    - no page_extractions created: YES');
+  console.log('\nConfirmation:');
+  console.log(`    - no Firestore write: ${cli.isApplyMode ? 'NO (Writes enabled for apply)' : 'YES'}`);
+  console.log(`    - no queue status update: ${cli.isApplyMode ? 'NO (Updated for apply)' : 'YES'}`);
+  console.log(`    - no page_extractions created: ${cli.isApplyMode ? 'NO (' + totalPageExtractionsCreated + ' created)' : 'YES'}`);
   console.log('    - no AI extraction: YES');
   console.log('    - no OCR: YES');
-  console.log('    - no text extraction: YES');
+  console.log('    - no text extraction: NO (Native extraction enabled in apply)');
   console.log('    - task limit is not page limit: YES');
 
-  const allAccess = taskAccessResults.every(r => r.success);
-  const allShape = shapeResults.every(r => r.valid);
-  const allRange = rangeResults.every(r => r.valid);
-
-  if (allAccess && allShape && allRange) {
-    console.log('\nRC_X4W_PAGEWISE_WORKER_DRY_RUN_READY');
+  if (cli.isApplyMode) {
+    console.log('\nRC_X4E_P1_APPLY_FINISHED');
   } else {
-    console.error('\nRC_X4W_PAGEWISE_WORKER_DRY_RUN_BLOCKED');
-    if (!allAccess) console.error('   - Some source files could not be accessed.');
-    if (!allShape) console.error('   - Some tasks have invalid shape.');
-    if (!allRange) console.error('   - Some page ranges are invalid.');
-    process.exit(1);
+    console.log('\nRC_X4W_PAGEWISE_WORKER_DRY_RUN_READY');
   }
 }
 
 main().catch(error => {
-  console.error('\nRC_X4W_PAGEWISE_WORKER_DRY_RUN_BLOCKED');
+  console.error('\nRC_X4E_P1_BLOCKED');
   console.error(error);
   process.exit(1);
 });

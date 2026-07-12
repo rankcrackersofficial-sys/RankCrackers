@@ -203,6 +203,9 @@ function main() {
   if (!exists('functions/audit_pagewise_worker_runtime_safety.js')) {
     blockers.push('Missing audit_pagewise_worker_runtime_safety.js.');
   }
+  if (!exists('functions/audit_pagewise_extraction_apply_capability.js')) {
+    blockers.push('Missing audit_pagewise_extraction_apply_capability.js.');
+  }
 
   const filesToScan = [
     ...listFiles(path.join(ROOT, 'functions')),
@@ -242,6 +245,7 @@ function main() {
   console.log(`- Pagewise worker exists: ${exists('functions/process_pagewise_extraction_batches.js') ? 'YES' : 'NO'}`);
   console.log(`- Pagewise worker capability audit exists: ${exists('functions/audit_pagewise_worker_capability.js') ? 'YES' : 'NO'}`);
   console.log(`- Pagewise worker runtime safety audit exists: ${exists('functions/audit_pagewise_worker_runtime_safety.js') ? 'YES' : 'NO'}`);
+  console.log(`- Pagewise extraction apply audit exists: ${exists('functions/audit_pagewise_extraction_apply_capability.js') ? 'YES' : 'NO'}`);
   console.log(`- Notification dynamic schema system: ${warnings.includes('MISSING_NOTIFICATION_DYNAMIC_SCHEMA_SYSTEM') ? 'MISSING' : 'PRESENT'}`);
   console.log(`- Notification page count queue apply script: ${exists('functions/apply_notification_page_count_queue.js') ? 'PRESENT' : 'MISSING'}`);
 
