@@ -20,6 +20,8 @@
     "plan:official:pagewise": "node functions/plan_universal_pagewise_extraction_queue.js --dry-run",
     "queue:official:pagewise": "node functions/apply_universal_pagewise_extraction_queue.js --dry-run",
     "audit:pagewise:queue": "node functions/audit_pagewise_queue_state.js",
+    "audit:pagewise:worker": "node functions/audit_pagewise_worker_capability.js",
+    "process:pagewise": "node functions/process_pagewise_extraction_batches.js --dry-run --limit 3",
     "process:pagecount": "node functions/process_page_count_detection_tasks.js --dry-run --limit 5"
   },
   "dependencies": {

@@ -194,6 +194,12 @@ function main() {
   if (!exists('functions/audit_pagewise_queue_state.js')) {
     blockers.push('Missing audit_pagewise_queue_state.js.');
   }
+  if (!exists('functions/process_pagewise_extraction_batches.js')) {
+    blockers.push('Missing process_pagewise_extraction_batches.js.');
+  }
+  if (!exists('functions/audit_pagewise_worker_capability.js')) {
+    blockers.push('Missing audit_pagewise_worker_capability.js.');
+  }
 
   const filesToScan = [
     ...listFiles(path.join(ROOT, 'functions')),
@@ -230,6 +236,8 @@ function main() {
   console.log(`- Universal pagewise planner exists: ${exists('functions/plan_universal_pagewise_extraction_queue.js') ? 'YES' : 'NO'}`);
   console.log(`- Universal pagewise apply exists: ${exists('functions/apply_universal_pagewise_extraction_queue.js') ? 'YES' : 'NO'}`);
   console.log(`- Pagewise queue audit exists: ${exists('functions/audit_pagewise_queue_state.js') ? 'YES' : 'NO'}`);
+  console.log(`- Pagewise worker exists: ${exists('functions/process_pagewise_extraction_batches.js') ? 'YES' : 'NO'}`);
+  console.log(`- Pagewise worker capability audit exists: ${exists('functions/audit_pagewise_worker_capability.js') ? 'YES' : 'NO'}`);
   console.log(`- Notification dynamic schema system: ${warnings.includes('MISSING_NOTIFICATION_DYNAMIC_SCHEMA_SYSTEM') ? 'MISSING' : 'PRESENT'}`);
   console.log(`- Notification page count queue apply script: ${exists('functions/apply_notification_page_count_queue.js') ? 'PRESENT' : 'MISSING'}`);
 
