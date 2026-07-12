@@ -16,7 +16,7 @@ function getAccessToken() {
 
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P1 - PAGEWISE WORKER RUNTIME SAFETY');
+  console.log('PATCH RC-X4E-P1-FIX1 - PAGEWISE WORKER RUNTIME SAFETY');
   console.log('==============================================');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -27,7 +27,6 @@ async function audit() {
 
   const workerContent = fs.readFileSync(workerPath, 'utf8');
   const blockers = [];
-  const warnings = [];
 
   // A. Static Worker Safety
   if (!workerContent.includes('--dry-run')) blockers.push('Worker missing --dry-run');
@@ -40,9 +39,8 @@ async function audit() {
         const lines = workerContent.split('\n');
         const badLines = lines.filter(l => {
             if (!l.includes(sig) || l.trim().startsWith('//')) return false;
-            // Exclude Set.add
             if (sig === '.add(' && (l.includes('Represented.add') || l.includes('Set'))) return false;
-            // Allowed writes in RC-X4E-P1
+            // Allowed writes in RC-X4E-P1-FIX1
             if (l.includes('db.collection(\'ai_queue\').doc(task.id).update')) return false;
             if (l.includes('batch.set(extractionRef')) return false;
             if (l.includes('batch.update(taskRef')) return false;
@@ -51,20 +49,6 @@ async function audit() {
         });
         if (badLines.length > 0) blockers.push(`Potentially dangerous write signature found: ${sig}`);
     }
-  }
-
-  const aiSigs = ['VertexAI', 'GenerativeModel', 'Gemini', 'documentai', 'vision', 'OCR', 'processDocument'];
-  for (const sig of aiSigs) {
-     if (workerContent.includes(sig)) {
-         const lines = workerContent.split('\n');
-         const badLines = lines.filter(l => {
-             if (!l.includes(sig)) return false;
-             if (l.trim().startsWith('//') || l.includes('/*') || l.includes('*/')) return false;
-             if (l.includes(`no ${sig}`)) return false;
-             return true;
-         });
-         if (badLines.length > 0) blockers.push(`AI/OCR signature found: ${sig}`);
-     }
   }
 
   // B. Runtime Queue Safety
@@ -96,7 +80,6 @@ async function audit() {
 
     if (!dryRunOutput.includes('RC_X4W_PAGEWISE_WORKER_DRY_RUN_READY')) blockers.push('Dry-run output missing success verdict');
 
-    // Check for fixed logging
     if (!dryRunOutput.includes('Total active pagewise tasks found:')) {
         blockers.push('Dry-run output missing total active tasks count.');
     }
@@ -104,7 +87,6 @@ async function audit() {
         blockers.push('Dry-run output missing tasks selected by limit (1).');
     }
 
-    // D. Source Access Sample
     if (dryRunOutput.includes('FAILED')) {
         blockers.push('Dry-run reported source access failure.');
     } else {
@@ -117,10 +99,9 @@ async function audit() {
   }
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_P1_RUNTIME_SAFETY_AUDIT_READY');
-    console.log('Recommended next patch: RC-X4E-P1 — Pagewise Extraction Apply Implementation, Batch 1 Safety');
+    console.log('\nRC_X4E_P1_FIX1_RUNTIME_SAFETY_AUDIT_READY');
   } else {
-    console.error('\nRC_X4E_P1_RUNTIME_SAFETY_BLOCKED:');
+    console.error('\nRC_X4E_P1_FIX1_RUNTIME_SAFETY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }

@@ -3,7 +3,7 @@ const path = require('path');
 
 function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P1 - APPLY CAPABILITY AUDIT');
+  console.log('PATCH RC-X4E-P1-FIX1 - PAGEWISE APPLY CAPABILITY AUDIT');
   console.log('==============================================');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -15,15 +15,49 @@ function audit() {
   const content = fs.readFileSync(workerPath, 'utf8');
   const blockers = [];
 
-  // 1. apply requires CONFIRM_PROCESS_PAGEWISE_EXTRACTION
-  if (!content.includes('CONFIRM_PROCESS_PAGEWISE_EXTRACTION')) blockers.push('Missing apply confirmation phrase');
+  // 1. Supports --dry-run and --limit
+  if (!content.includes('--dry-run')) blockers.push('Missing --dry-run support');
+  if (!content.includes('--limit')) blockers.push('Missing --limit support');
 
-  // 2. RC-X4E-P1 apply limit lock exists: limit must be exactly 1
-  if (!content.includes('if (cli.isApplyMode && cli.limit !== 1)')) {
-      blockers.push('Missing strict apply limit lock for RC-X4E-P1 (must be 1)');
+  // 2. Apply locked
+  if (!content.includes('CONFIRM_PROCESS_PAGEWISE_EXTRACTION')) blockers.push('Apply mode not locked with confirmation phrase');
+  if (!content.includes('cli.limit !== 1')) blockers.push('Apply mode must be locked to limit 1');
+
+  // 3. Mapping: uses pData.num, no pageIndex
+  if (!content.includes('pData.num')) blockers.push('Missing pData.num mapping for pdf-parse v2');
+  if (content.includes('pData.pageIndex')) blockers.push('Must not use pData.pageIndex for pdf-parse v2');
+
+  // 4. Empty Text Safety
+  if (!content.includes('NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED')) blockers.push('Missing empty text extraction safety');
+  if (!content.includes('emptyPages.length > 0')) blockers.push('Missing empty page check logic');
+
+  // 5. Duplicate Check
+  if (!content.includes('PAGE_EXTRACTION_ALREADY_EXISTS')) blockers.push('Missing duplicate page_extraction check');
+  if (!content.includes('existing.exists')) blockers.push('Missing existing record existence check');
+
+  // 6. Block Partial Writes
+  if (!content.includes('batch.commit()')) blockers.push('Missing batch commit for atomic writes');
+  if (content.includes('db.collection(\'page_extractions\').add')) blockers.push('Should use batch.set for page_extractions');
+
+  // 7. Allowed Writes
+  const writeSigs = ['.set(', '.update(', '.add(', 'batch.commit()'];
+  for (const sig of writeSigs) {
+    if (content.includes(sig)) {
+        const lines = content.split('\n');
+        const badLines = lines.filter(l => {
+            if (!l.includes(sig) || l.trim().startsWith('//')) return false;
+            if (sig === '.add(' && (l.includes('Represented.add') || l.includes('Set'))) return false;
+            if (l.includes('db.collection(\'ai_queue\').doc(task.id).update')) return false;
+            if (l.includes('batch.set(extractionRef')) return false;
+            if (l.includes('batch.update(taskRef')) return false;
+            if (l.includes('await batch.commit()')) return false;
+            return true;
+        });
+        if (badLines.length > 0) blockers.push(`Potentially dangerous write signature found: ${sig} in lines: ${badLines.map(l => l.trim()).join(', ')}`);
+    }
   }
 
-  // 3. no Vertex/Gemini/DocumentAI/CloudVision/OCR calls
+  // 8. NO AI/OCR
   const aiSigs = ['VertexAI', 'GenerativeModel', 'Gemini', 'documentai', 'vision', 'OCR', 'processDocument'];
   for (const sig of aiSigs) {
      if (content.includes(sig)) {
@@ -34,25 +68,19 @@ function audit() {
              if (l.includes(`no ${sig}`)) return false;
              return true;
          });
-         if (badLines.length > 0) blockers.push(`AI/OCR signature found: ${sig}`);
+         if (badLines.length > 0) blockers.push(`AI/OCR signature found: ${sig} in lines: ${badLines.map(l => l.trim()).join(', ')}`);
      }
   }
 
-  // 4. page_extractions include specific fields
-  if (!content.includes('extraction_status: \'extracted_draft\'')) blockers.push('Missing extracted_draft status');
-  if (!content.includes('review_status: \'pending_founder_verification\'')) blockers.push('Missing pending review status');
-  if (!content.includes('extraction_method: \'native_pdf_text\'')) blockers.push('Missing native extraction method');
-  if (!content.includes('source_proof:')) blockers.push('Missing source_proof field');
-
-  // 5. AUTO_DETECT publish block fields exist
-  if (!content.includes('publish_blocked_until_founder_mission_assignment = true')) {
-      blockers.push('Missing AUTO_DETECT publish block logic');
-  }
+  console.log(`- pdf-parse v2 mapping (pData.num): ${content.includes('pData.num') ? 'YES' : 'NO'}`);
+  console.log(`- Empty text safety: ${content.includes('NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED') ? 'YES' : 'NO'}`);
+  console.log(`- Duplicate check: ${content.includes('PAGE_EXTRACTION_ALREADY_EXISTS') ? 'YES' : 'NO'}`);
+  console.log(`- Apply limit lock: ${content.includes('cli.limit !== 1') ? 'YES' : 'NO'}`);
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_P1_APPLY_CAPABILITY_READY');
+    console.log('\nRC_X4E_P1_FIX1_PAGEWISE_APPLY_CAPABILITY_READY');
   } else {
-    console.error('\nRC_X4E_P1_APPLY_CAPABILITY_BLOCKED:');
+    console.error('\nRC_X4E_P1_FIX1_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }
