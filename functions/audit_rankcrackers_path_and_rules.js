@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 
 const OFFICIAL_PATH = 'C:\\RankCrackers\\RankCrackers-55';
@@ -182,6 +182,9 @@ function main() {
   if (!exists('functions/audit_page_count_worker_capability.js')) {
     blockers.push('Missing audit_page_count_worker_capability.js.');
   }
+  if (!exists('functions/audit_final_page_count_results.js')) {
+    blockers.push('Missing audit_final_page_count_results.js.');
+  }
 
   const filesToScan = [
     ...listFiles(path.join(ROOT, 'functions')),
@@ -214,6 +217,7 @@ function main() {
   console.log(`- Repaired docs page count queue apply script: ${exists('functions/apply_repaired_docs_page_count_queue.js') ? 'PRESENT' : 'MISSING'}`);
   console.log(`- Page count detection worker exists: ${exists('functions/process_page_count_detection_tasks.js') ? 'YES' : 'NO'}`);
   console.log(`- Page count worker capability audit exists: ${exists('functions/audit_page_count_worker_capability.js') ? 'YES' : 'NO'}`);
+  console.log(`- Final page count result audit exists: ${exists('functions/audit_final_page_count_results.js') ? 'YES' : 'NO'}`);
   console.log(`- Notification dynamic schema system: ${warnings.includes('MISSING_NOTIFICATION_DYNAMIC_SCHEMA_SYSTEM') ? 'MISSING' : 'PRESENT'}`);
   console.log(`- Notification page count queue apply script: ${exists('functions/apply_notification_page_count_queue.js') ? 'PRESENT' : 'MISSING'}`);
 
@@ -232,13 +236,3 @@ function main() {
 }
 
 main();
-
-
-
-
-
-
-
-
-
-
