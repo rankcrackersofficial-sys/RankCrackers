@@ -34,15 +34,14 @@ function audit() {
   const writeSigs = ['.set(', '.update(', '.add(', 'batch.commit()'];
   for (const sig of writeSigs) {
     if (content.includes(sig)) {
-        // Exclude Set.add
-        if (sig === '.add(' && (content.includes('Set()') || content.includes('new Set'))) {
-            // Simple check: if .add is used on something that looks like a Set
-            const lines = content.split('\n');
-            const badLines = lines.filter(l => l.includes('.add(') && !l.includes('Represented.add') && !l.trim().startsWith('//'));
-            if (badLines.length > 0) blockers.push(`Potentially dangerous write signature found: ${sig} in lines: ${badLines.join(', ')}`);
-        } else {
-            blockers.push(`Potentially dangerous write signature found: ${sig}`);
-        }
+        const lines = content.split('\n');
+        const badLines = lines.filter(l => {
+            if (!l.includes(sig) || l.trim().startsWith('//')) return false;
+            // Exclude Set.add
+            if (sig === '.add(' && (l.includes('Represented.add') || l.includes('Set'))) return false;
+            return true;
+        });
+        if (badLines.length > 0) blockers.push(`Potentially dangerous write signature found: ${sig} in lines: ${badLines.map(l => l.trim()).join(', ')}`);
     }
   }
 
@@ -50,11 +49,14 @@ function audit() {
   const aiSigs = ['VertexAI', 'GenerativeModel', 'Gemini', 'documentai', 'vision', 'OCR', 'processDocument'];
   for (const sig of aiSigs) {
      if (content.includes(sig)) {
-         // Check if it's inside a comment or a log message confirming "no AI"
-         const regex = new RegExp(`//.*${sig}|/\\*[\\s\\S]*?${sig}[\\s\\S]*?\\*/|console\\.log\\(.*no ${sig}`);
-         if (!regex.test(content)) {
-             blockers.push(`AI/OCR signature found: ${sig}`);
-         }
+         const lines = content.split('\n');
+         const badLines = lines.filter(l => {
+             if (!l.includes(sig)) return false;
+             if (l.trim().startsWith('//') || l.includes('/*') || l.includes('*/')) return false;
+             if (l.includes(`no ${sig}`)) return false;
+             return true;
+         });
+         if (badLines.length > 0) blockers.push(`AI/OCR signature found: ${sig} in lines: ${badLines.map(l => l.trim()).join(', ')}`);
      }
   }
 
