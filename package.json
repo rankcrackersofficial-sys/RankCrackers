@@ -1,26 +1,27 @@
 {
-    "scripts":  {
-                    "build:web:founder":  "flutter build web -t lib/main_web.dart --release",
-                    "deploy:web:founder":  "flutter build web -t lib/main_web.dart --release \u0026\u0026 firebase deploy --only hosting",
-                    "audit:rankcrackers:guard":  "node functions/audit_rankcrackers_path_and_rules.js",
-                    "audit:notification:schema":  "node functions/audit_notification_schema_system.js",
-                    "audit:notification:contract":  "node functions/audit_notification_extraction_contract.js",
-                    "audit:notification:source":  "node functions/audit_notification_source_readiness.js",
-                    "plan:notification:pagewise":  "node functions/plan_notification_pagewise_batch_queue.js --dry-run",
-                    "queue:notification:pagecount":  "node functions/apply_notification_page_count_queue.js --dry-run",
-                    "audit:official:pages":  "node functions/audit_universal_official_document_page_completeness.js",
-                    "audit:atomic:linkage":  "node functions/audit_atomic_linkage_integrity.js",
-                    "queue:official:pagecount":  "node functions/apply_universal_page_count_queue.js --dry-run",
-                    "audit:pagecount:queue":  "node functions/audit_page_count_queue_state.js",
-                    "plan:official:metadata-repair":  "node functions/plan_official_document_metadata_repair.js --dry-run",
-                    "repair:official:metadata":  "node functions/apply_official_document_metadata_repair.js --dry-run",
-                    "queue:official:pagecount:repaired":  "node functions/apply_repaired_docs_page_count_queue.js --dry-run",
-                    "audit:pagecount:worker":  "node functions/audit_page_count_worker_capability.js",
-                    "audit:pagecount:final":  "node functions/audit_final_page_count_results.js",
-                    "process:pagecount":  "node functions/process_page_count_detection_tasks.js --dry-run --limit 5"
-                },
-    "dependencies":  {
-                         "firebase-admin":  "^12.7.0",
-                         "firebase-functions":  "^4.9.0"
-                     }
+  "scripts": {
+    "build:web:founder": "flutter build web -t lib/main_web.dart --release",
+    "deploy:web:founder": "flutter build web -t lib/main_web.dart --release && firebase deploy --only hosting",
+    "audit:rankcrackers:guard": "node functions/audit_rankcrackers_path_and_rules.js",
+    "audit:notification:schema": "node functions/audit_notification_schema_system.js",
+    "audit:notification:contract": "node functions/audit_notification_extraction_contract.js",
+    "audit:notification:source": "node functions/audit_notification_source_readiness.js",
+    "plan:notification:pagewise": "node functions/plan_notification_pagewise_batch_queue.js --dry-run",
+    "queue:notification:pagecount": "node functions/apply_notification_page_count_queue.js --dry-run",
+    "audit:official:pages": "node functions/audit_universal_official_document_page_completeness.js",
+    "audit:atomic:linkage": "node functions/audit_atomic_linkage_integrity.js",
+    "queue:official:pagecount": "node functions/apply_universal_page_count_queue.js --dry-run",
+    "audit:pagecount:queue": "node functions/audit_page_count_queue_state.js",
+    "plan:official:metadata-repair": "node functions/plan_official_document_metadata_repair.js --dry-run",
+    "repair:official:metadata": "node functions/apply_official_document_metadata_repair.js --dry-run",
+    "queue:official:pagecount:repaired": "node functions/apply_repaired_docs_page_count_queue.js --dry-run",
+    "audit:pagecount:worker": "node functions/audit_page_count_worker_capability.js",
+    "audit:pagecount:final": "node functions/audit_final_page_count_results.js",
+    "plan:official:pagewise": "node functions/plan_universal_pagewise_extraction_queue.js --dry-run",
+    "process:pagecount": "node functions/process_page_count_detection_tasks.js --dry-run --limit 5"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^4.9.0"
+  }
 }
