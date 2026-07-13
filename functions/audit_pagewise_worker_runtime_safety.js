@@ -5,13 +5,13 @@ const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P6 = {
+const EXPECTED_AFTER_P7 = {
   total: 104,
-  active: 94,
-  completed: 7,
+  active: 91,
+  completed: 10,
   failed: 3,
   processing: 0,
-  pageExtractions: 26
+  pageExtractions: 35
 };
 
 async function audit() {
@@ -105,20 +105,20 @@ async function audit() {
   console.log(`- Global Page Extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P6.total ||
-    actualCounts.active !== EXPECTED_AFTER_P6.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P6.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P6.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P6.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P7.total ||
+    actualCounts.active !== EXPECTED_AFTER_P7.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P7.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P7.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P7.pageExtractions;
 
   if (mismatch) {
       console.error('RC_X4E_P5_FIX2_RUNTIME_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P6);
+      console.error('Expected:', EXPECTED_AFTER_P7);
       console.error('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R5_FIX1_BASELINE_AFTER_P6_CONFIRMED');
+  console.log('RC_X4E_R6_FIX1_BASELINE_AFTER_P7_CONFIRMED');
 
   // D. Hardened Selector Dry-Run Behavior
   console.log('\nRunning Hardened Selector Dry-Run Check...');

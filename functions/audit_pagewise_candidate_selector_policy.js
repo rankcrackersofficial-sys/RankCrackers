@@ -5,13 +5,13 @@ const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P6 = {
+const EXPECTED_AFTER_P7 = {
   total: 104,
-  active: 94,
-  completed: 7,
+  active: 91,
+  completed: 10,
   failed: 3,
   processing: 0,
-  pageExtractions: 26
+  pageExtractions: 35
 };
 
 async function audit() {
@@ -47,20 +47,20 @@ async function audit() {
   console.log(`- global page_extractions: ${pageExtractionsCount}`);
 
   const mismatch =
-    counts.total !== EXPECTED_AFTER_P6.total ||
-    counts.active !== EXPECTED_AFTER_P6.active ||
-    counts.completed !== EXPECTED_AFTER_P6.completed ||
-    counts.failed !== EXPECTED_AFTER_P6.failed ||
-    pageExtractionsCount !== EXPECTED_AFTER_P6.pageExtractions;
+    counts.total !== EXPECTED_AFTER_P7.total ||
+    counts.active !== EXPECTED_AFTER_P7.active ||
+    counts.completed !== EXPECTED_AFTER_P7.completed ||
+    counts.failed !== EXPECTED_AFTER_P7.failed ||
+    pageExtractionsCount !== EXPECTED_AFTER_P7.pageExtractions;
 
   if (mismatch) {
       console.error('RC_X4E_P5_FIX2_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P6);
+      console.error('Expected:', EXPECTED_AFTER_P7);
       console.error('Actual:', { ...counts, pageExtractions: pageExtractionsCount });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R5_FIX1_BASELINE_AFTER_P6_CONFIRMED');
+  console.log('RC_X4E_R6_FIX1_BASELINE_AFTER_P7_CONFIRMED');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
   const content = fs.readFileSync(workerPath, 'utf8');

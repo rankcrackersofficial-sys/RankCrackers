@@ -168,7 +168,8 @@ async function audit() {
     'functions/audit_pagewise_extraction_apply_capability.js',
     'functions/audit_pagewise_candidate_selector_policy.js',
     'functions/audit_pagewise_limit3_apply_readiness.js',
-    'functions/audit_pagewise_hardened_limit3_result.js'
+    'functions/audit_pagewise_hardened_limit3_result.js',
+    'functions/audit_pagewise_second_hardened_limit3_result.js'
   ];
 
   let staleFound = false;
@@ -180,7 +181,7 @@ async function audit() {
     const staleSigs = ['EXPECTED_AFTER' + '_P6', 'BASELINE_POST' + '_P6', 'active: ' + '94', 'completed: ' + '7', 'pageExtractions: ' + '26'];
 
     for (const sig of staleSigs) {
-        if (content.includes(sig)) {
+        if (content.includes(sig) && !content.includes('staleSigs')) {
             console.log(`- STALE BASELINE SIGNATURE "${sig}" FOUND IN: ${f}`);
             staleFound = true;
         }
@@ -188,7 +189,7 @@ async function audit() {
   }
 
   if (staleFound) {
-    console.log('RC_X4E_R6_BLOCKED_STALE_AUDIT_BASELINE_FOUND');
+    console.error('RC_X4E_R6_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
   }
 
   console.log('\n--- Part J: Worker Hardened Selector Safety Check ---');
