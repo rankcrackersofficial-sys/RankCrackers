@@ -16,7 +16,7 @@ const EXPECTED_AFTER_R4 = {
 
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P5 - CANDIDATE SELECTOR POLICY AUDIT');
+  console.log('PATCH RC-X4E-P5-FIX2 - CANDIDATE SELECTOR POLICY AUDIT');
   console.log('==============================================');
 
   if (!admin.apps.length) {
@@ -35,14 +35,28 @@ async function audit() {
       processing: allTasks.filter(t => ['processing', 'running'].includes(t.status)).length
   };
 
+  const extractionsSnap = await db.collectionGroup('page_extractions').get();
+  const pageExtractionsCount = extractionsSnap.size;
+
   console.log('Queue State Verification:');
   console.log(`- total: ${counts.total}`);
   console.log(`- active: ${counts.active}`);
-  const extractionsSnap = await db.collectionGroup('page_extractions').get();
-  console.log(`- global page_extractions: ${extractionsSnap.size}`);
+  console.log(`- completed: ${counts.completed}`);
+  console.log(`- failed: ${counts.failed}`);
+  console.log(`- processing: ${counts.processing}`);
+  console.log(`- global page_extractions: ${pageExtractionsCount}`);
 
-  if (counts.total !== EXPECTED_AFTER_R4.total || extractionsSnap.size !== EXPECTED_AFTER_R4.pageExtractions) {
-      console.error('BLOCKER: Queue/Records mismatch expected baseline');
+  const mismatch =
+    counts.total !== EXPECTED_AFTER_R4.total ||
+    counts.active !== EXPECTED_AFTER_R4.active ||
+    counts.completed !== EXPECTED_AFTER_R4.completed ||
+    counts.failed !== EXPECTED_AFTER_R4.failed ||
+    pageExtractionsCount !== EXPECTED_AFTER_R4.pageExtractions;
+
+  if (mismatch) {
+      console.error('RC_X4E_P5_FIX2_BASELINE_MISMATCH');
+      console.error('Expected:', EXPECTED_AFTER_R4);
+      console.error('Actual:', { ...counts, pageExtractions: pageExtractionsCount });
       process.exit(1);
   }
 
@@ -100,7 +114,7 @@ async function audit() {
 
     // Verify none of the selected tasks are AUTO_DETECT
     for (const sid of selectedIds) {
-        if (sid.includes('auto_detect')) {
+        if (sid.toLowerCase().includes('auto_detect')) {
             console.error(`BLOCKER: AUTO_DETECT task ${sid} was selected in prefer-native-digital mode`);
             process.exit(1);
         }
@@ -126,7 +140,7 @@ async function audit() {
     process.exit(1);
   }
 
-  console.log('\nRC_X4E_P5_CANDIDATE_SELECTOR_POLICY_READY');
+  console.log('\nRC_X4E_P5_FIX2_CANDIDATE_SELECTOR_POLICY_READY');
 }
 
 audit().catch(e => {

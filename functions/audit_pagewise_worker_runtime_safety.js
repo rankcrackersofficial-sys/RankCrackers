@@ -1,22 +1,22 @@
+const admin = require('firebase-admin');
 const fs = require('fs');
 const path = require('path');
 const cp = require('child_process');
-const { Firestore } = require('@google-cloud/firestore');
-const { OAuth2Client } = require('google-auth-library');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-function getAccessToken() {
-  try { return cp.execSync('gcloud auth print-access-token', { encoding: 'utf8' }).trim(); }
-  catch (error) {
-    console.error('Authentication Error: Could not get gcloud access token.', error.message);
-    process.exit(1);
-  }
-}
+const EXPECTED_AFTER_R4 = {
+  total: 104,
+  active: 97,
+  completed: 4,
+  failed: 3,
+  processing: 0,
+  pageExtractions: 17
+};
 
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P1-FIX2 - PAGEWISE WORKER RUNTIME SAFETY');
+  console.log('PATCH RC-X4E-P5-FIX2 - PAGEWISE WORKER RUNTIME SAFETY');
   console.log('==============================================');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -26,9 +26,21 @@ async function audit() {
   }
 
   const workerContent = fs.readFileSync(workerPath, 'utf8');
+  const auditContent = fs.readFileSync(__filename, 'utf8');
   const blockers = [];
 
-  // A. Static Worker Safety
+  // A. Static Self-Check (No mixed SDK)
+  const mixedSigs = ['@google-cloud' + '/firestore', 'google-auth' + '-library', 'new Fire' + 'store(', 'auth' + 'Client', 'OAuth2' + 'Client'];
+  const lines = auditContent.split('\n');
+  for (const sig of mixedSigs) {
+      // Find occurrences that are NOT in comments or part of the check logic itself
+      const found = lines.filter(l => l.includes(sig) && !l.includes('mixedSigs') && !l.includes('const sig of') && !l.includes('//') && !l.includes('prohibited mixed SDK signature'));
+      if (found.length > 0) {
+          blockers.push(`Audit file itself contains prohibited mixed SDK signature: ${sig}`);
+      }
+  }
+
+  // B. Static Worker Safety
   if (!workerContent.includes('--dry-run')) blockers.push('Worker missing --dry-run');
   if (!workerContent.includes('--limit')) blockers.push('Worker missing --limit');
   if (!workerContent.includes('CONFIRM_PROCESS_PAGEWISE_EXTRACTION')) blockers.push('Worker missing apply confirmation phrase');
@@ -48,57 +60,94 @@ async function audit() {
         const badLines = lines.filter(l => {
             if (!l.includes(sig) || l.trim().startsWith('//')) return false;
             if (sig === '.add(' && (l.includes('Represented.add') || l.includes('Set'))) return false;
-            // Allowed writes in RC-X4E-P1-FIX2
+            // Allowed writes in RC-X4E-P5
             if (l.includes('db.collection(\'ai_queue\').doc(task.id).update')) return false;
             if (l.includes('batch.set(extractionRef')) return false;
             if (l.includes('batch.update(taskRef')) return false;
             if (l.includes('await batch.commit()')) return false;
             return true;
         });
-        if (badLines.length > 0) blockers.push(`Potentially dangerous write signature found: ${sig}`);
+        if (badLines.length > 0) blockers.push(`Potentially dangerous write signature found in worker: ${sig}`);
     }
   }
 
-  // B. Runtime Queue Safety
-  const auth = new OAuth2Client();
-  auth.setCredentials({ access_token: getAccessToken() });
-  const db = new Firestore({ projectId: PROJECT_ID, authClient: auth });
+  if (blockers.length > 0) {
+      console.error('RC_X4E_P5_FIX2_RUNTIME_AUDIT_MIXED_SDK_BLOCKED');
+      blockers.forEach(b => console.error(`- ${b}`));
+      process.exit(1);
+  }
+
+  // C. Runtime Queue Safety
+  if (!admin.apps.length) {
+    admin.initializeApp({ projectId: PROJECT_ID });
+  }
+  const db = admin.firestore();
 
   const tasksSnap = await db.collection('ai_queue').where('task_type', '==', 'pagewise_text_extraction_batch').get();
   const tasks = tasksSnap.docs.map(d => d.data());
-  const totalActive = tasks.filter(t => ['queued', 'pending'].includes(t.status?.toLowerCase())).length;
-  const totalProcessing = tasks.filter(t => ['processing', 'running'].includes(t.status?.toLowerCase())).length;
-  const totalCompleted = tasks.filter(t => ['completed', 'done', 'success'].includes(t.status?.toLowerCase())).length;
-  const totalFailed = tasks.filter(t => ['failed', 'error', 'dead_letter'].includes(t.status?.toLowerCase())).length;
+  const actualCounts = {
+      total: tasks.length,
+      active: tasks.filter(t => ['queued', 'pending'].includes(t.status?.toLowerCase())).length,
+      completed: tasks.filter(t => ['completed', 'done', 'success'].includes(t.status?.toLowerCase())).length,
+      failed: tasks.filter(t => ['failed', 'error', 'dead_letter'].includes(t.status?.toLowerCase())).length,
+      processing: tasks.filter(t => ['processing', 'running'].includes(t.status?.toLowerCase())).length
+  };
+
+  const extractionsGlobalSnap = await db.collectionGroup('page_extractions').get();
+  const actualPageExtractions = extractionsGlobalSnap.size;
 
   console.log('Runtime Queue State:');
-  console.log(`- Total pagewise tasks: ${tasks.length}`);
-  console.log(`- Queued/Pending: ${totalActive}`);
-  console.log(`- Processing/Running: ${totalProcessing}`);
-  console.log(`- Completed: ${totalCompleted}`);
-  console.log(`- Failed: ${totalFailed}`);
+  console.log(`- Total pagewise tasks: ${actualCounts.total}`);
+  console.log(`- Queued/Pending: ${actualCounts.active}`);
+  console.log(`- Processing/Running: ${actualCounts.processing}`);
+  console.log(`- Completed: ${actualCounts.completed}`);
+  console.log(`- Failed: ${actualCounts.failed}`);
+  console.log(`- Global Page Extractions: ${actualPageExtractions}`);
 
-  // C. Dry-Run Behavior
-  console.log('\nRunning Worker Dry-Run Check...');
+  const mismatch =
+    actualCounts.total !== EXPECTED_AFTER_R4.total ||
+    actualCounts.active !== EXPECTED_AFTER_R4.active ||
+    actualCounts.completed !== EXPECTED_AFTER_R4.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_R4.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_R4.pageExtractions;
+
+  if (mismatch) {
+      console.error('RC_X4E_P5_FIX2_RUNTIME_BASELINE_MISMATCH');
+      console.error('Expected:', EXPECTED_AFTER_R4);
+      console.error('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
+      process.exit(1);
+  }
+
+  // D. Hardened Selector Dry-Run Behavior
+  console.log('\nRunning Hardened Selector Dry-Run Check...');
   try {
-    const dryRunOutput = cp.execSync(`node "${workerPath}" --dry-run --limit 1`, { encoding: 'utf8' });
+    const dryRunOutput = cp.execSync(`node "${workerPath}" --dry-run --limit 3 --prefer-native-digital`, { encoding: 'utf8' });
     console.log('--- Dry-Run Output Start ---');
     console.log(dryRunOutput);
     console.log('--- Dry-Run Output End ---');
 
     if (!dryRunOutput.includes('RC_X4W_PAGEWISE_WORKER_DRY_RUN_READY')) blockers.push('Dry-run output missing success verdict');
+    if (!dryRunOutput.includes('Mode: DRY-RUN')) blockers.push('Output missing Mode: DRY-RUN');
+    if (!dryRunOutput.includes('Limit: 3 tasks')) blockers.push('Output missing Limit: 3 tasks');
+    if (!dryRunOutput.includes('Prefer Native Digital: YES')) blockers.push('Output missing Prefer Native Digital: YES');
+    if (!dryRunOutput.includes('Allow AUTO_DETECT: NO')) blockers.push('Output missing Allow AUTO_DETECT: NO');
 
-    if (!dryRunOutput.includes('Total active pagewise tasks found:')) {
-        blockers.push('Dry-run output missing total active tasks count.');
-    }
-    if (!dryRunOutput.includes('Tasks selected by limit')) {
-        blockers.push('Dry-run output missing tasks selected count.');
+    if (dryRunOutput.includes('Selected IDs:')) {
+        const selectedLine = dryRunOutput.split('\n').find(l => l.includes('Selected IDs:'));
+        if (selectedLine.toLowerCase().includes('auto_detect')) {
+            blockers.push('AUTO_DETECT task selected in hardened dry-run');
+        }
     }
 
-    if (dryRunOutput.includes('FAILED')) {
-        blockers.push('Dry-run reported failure during processing.');
-    } else {
-        console.log('Dry-run sample: PASSED');
+    const forbiddenDryRun = ['Writes enabled for apply', 'Task COMPLETED successfully', 'Committing', 'RC_X4E_P5_CANDIDATE_FIX_APPLY_FINISHED'];
+    for (const f of forbiddenDryRun) {
+        if (dryRunOutput.includes(f)) {
+            blockers.push(`Dry-run output contains prohibited string: ${f}`);
+        }
+    }
+
+    if (blockers.length === 0) {
+        console.log('Dry-run validation: PASSED');
     }
 
   } catch (e) {
@@ -107,12 +156,15 @@ async function audit() {
   }
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_P1_FIX2_RUNTIME_SAFETY_AUDIT_READY');
+    console.log('\nRC_X4E_P5_FIX2_RUNTIME_SAFETY_AUDIT_READY');
   } else {
-    console.error('\nRC_X4E_P1_FIX2_RUNTIME_SAFETY_BLOCKED:');
+    console.error('\nRC_X4E_P5_FIX2_RUNTIME_SAFETY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }
 }
 
-audit();
+audit().catch(e => {
+    console.error(e);
+    process.exit(1);
+});
