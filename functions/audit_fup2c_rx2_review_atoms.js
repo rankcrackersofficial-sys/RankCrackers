@@ -66,7 +66,8 @@ async function main() {
 
   const schemaChecks = {
     atom_id: all(rx2Atoms, (a) => nonEmpty(a.atom_id) || nonEmpty(a.atomId)),
-    mission_id: all(rx2Atoms, (a) => a.mission_id === MISSION_ID || a.missionId === MISSION_ID),
+    missionId: all(rx2Atoms, (a) => a.missionId === MISSION_ID),
+    mission_id_compat: all(rx2Atoms, (a) => a.mission_id == null || a.mission_id === MISSION_ID),
     subject: all(rx2Atoms, (a) => nonEmpty(a.subject)),
     hierarchyPath: all(rx2Atoms, (a) => nonEmpty(a.hierarchyPath)),
     hierarchy_path: all(rx2Atoms, (a) => nonEmpty(a.hierarchy_path)),
