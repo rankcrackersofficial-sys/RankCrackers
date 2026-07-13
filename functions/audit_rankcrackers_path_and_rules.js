@@ -230,6 +230,9 @@ function main() {
   if (!exists('functions/audit_pagewise_second_hardened_limit3_result.js')) {
     blockers.push('Missing audit_pagewise_second_hardened_limit3_result.js.');
   }
+  if (!exists('functions/audit_pagewise_third_hardened_limit3_result.js')) {
+    blockers.push('Missing audit_pagewise_third_hardened_limit3_result.js.');
+  }
 
   const filesToScan = [
     ...listFiles(path.join(ROOT, 'functions')),
