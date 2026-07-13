@@ -10,13 +10,13 @@ const EXPECTED_P6_TASKS = [
   'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b11_p31_33'
 ];
 
-const EXPECTED_AFTER_P7 = {
+const EXPECTED_AFTER_P8 = {
   total: 104,
-  active: 91,
-  completed: 10,
+  active: 88,
+  completed: 13,
   failed: 3,
   processing: 0,
-  pageExtractions: 35
+  pageExtractions: 44
 };
 
 async function audit() {
@@ -52,20 +52,20 @@ async function audit() {
   console.log(`- total page_extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P7.total ||
-    actualCounts.active !== EXPECTED_AFTER_P7.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P7.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P7.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P7.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P8.total ||
+    actualCounts.active !== EXPECTED_AFTER_P8.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P8.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P8.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P8.pageExtractions;
 
   if (mismatch) {
-    console.error('RC_X4E_R6_QUEUE_BASELINE_MISMATCH');
-    console.log('Expected:', EXPECTED_AFTER_P7);
+    console.error('RC_X4E_R7_QUEUE_BASELINE_MISMATCH');
+    console.log('Expected:', EXPECTED_AFTER_P8);
     console.log('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
     // This is a blocker if we want to proceed to another apply.
   }
 
-  console.log('RC_X4E_R6_FIX1_BASELINE_AFTER_P7_CONFIRMED');
+  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P8_CONFIRMED');
 
   console.log('\n--- Part C: Verify P6 Task Results ---');
   for (const tid of EXPECTED_P6_TASKS) {
@@ -183,8 +183,11 @@ async function audit() {
     if (!fs.existsSync(filePath)) continue;
     const content = fs.readFileSync(filePath, 'utf8');
 
-    // Detect stale Post-P6 baselines
-    const staleSigs = ['EXPECTED_AFTER' + '_P6', 'BASELINE_POST' + '_P6', 'active: ' + '94', 'completed: ' + '7', 'pageExtractions: ' + '26'];
+    // Detect stale Post-P6/Post-P7 baselines
+    const staleSigs = [
+      'EXPECTED_AFTER' + '_P6', 'BASELINE_POST' + '_P6', 'active: ' + '94', 'completed: ' + '7', 'pageExtractions: ' + '26',
+      'Post-P7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'
+    ];
 
     for (const sig of staleSigs) {
         if (content.includes(sig) && !content.includes('staleSigs')) {
@@ -195,7 +198,7 @@ async function audit() {
   }
 
   if (staleFound) {
-    console.error('RC_X4E_R6_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_R7_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
   }
 
   console.log('\n--- Part J: Worker Hardened Selector Safety Check ---');
@@ -207,7 +210,7 @@ async function audit() {
   console.log(`- worker skips auto-detect by default: ${hasSkipAutoDetect}`);
 
   if (staleFound) {
-    console.error('\nRC_X4E_R5_BLOCKED_STALE_AUDIT_BASELINE_FOUND');
+    console.error('\nRC_X4E_R7_FIX1_BLOCKED_STALE_AUDIT_BASELINE_FOUND');
     process.exit(1);
   }
 
@@ -218,3 +221,4 @@ audit().catch(e => {
   console.error(e);
   process.exit(1);
 });
+

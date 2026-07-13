@@ -5,16 +5,31 @@ const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P7 = {
+const EXPECTED_AFTER_P8 = {
   total: 104,
-  active: 91,
-  completed: 10,
+  active: 88,
+  completed: 13,
   failed: 3,
   processing: 0,
-  pageExtractions: 35
+  pageExtractions: 44
 };
+function assertNoPostP7BaselineSignature() {
+  const auditLines = fs.readFileSync(__filename, 'utf8').split('\n');
+  const staleSigs = ['Post-P7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'];
+  const staleFound = staleSigs.filter(sig => auditLines.some(line =>
+    line.includes(sig) &&
+    !line.includes('staleSigs') &&
+    !line.includes("'Post-P7'")
+  ));
+  if (staleFound.length > 0) {
+    console.error('RC_X4E_R7_FIX1_STALE_POST_P7_BASELINE_SIGNATURE_FOUND');
+    staleFound.forEach(sig => console.error(`- ${sig}`));
+    process.exit(1);
+  }
+}
 
 async function audit() {
+  assertNoPostP7BaselineSignature();
   console.log('==============================================');
   console.log('PATCH RC-X4E-P5-FIX2 - PAGEWISE WORKER RUNTIME SAFETY');
   console.log('==============================================');
@@ -105,20 +120,20 @@ async function audit() {
   console.log(`- Global Page Extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P7.total ||
-    actualCounts.active !== EXPECTED_AFTER_P7.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P7.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P7.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P7.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P8.total ||
+    actualCounts.active !== EXPECTED_AFTER_P8.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P8.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P8.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P8.pageExtractions;
 
   if (mismatch) {
       console.error('RC_X4E_P5_FIX2_RUNTIME_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P7);
+      console.error('Expected:', EXPECTED_AFTER_P8);
       console.error('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R6_FIX1_BASELINE_AFTER_P7_CONFIRMED');
+  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P8_CONFIRMED');
 
   // D. Hardened Selector Dry-Run Behavior
   console.log('\nRunning Hardened Selector Dry-Run Check...');
@@ -170,3 +185,4 @@ audit().catch(e => {
     console.error(e);
     process.exit(1);
 });
+

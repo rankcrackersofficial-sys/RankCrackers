@@ -1,0 +1,613 @@
+﻿ D AUDIT_REPORT.md
+ D BLOCKAGE_SUMMARY.txt
+ D FUNCTIONS_RUNTIME_AUDIT.md
+ D GARBAGE_REPORT.md
+ D LEVEL_12_FORENSIC_REPORT.md
+ D PIPELINE_AUDIT_REPORT.md
+ D PIPELINE_BLOCKAGE_REPORT.md
+ D PIPELINE_RECOVERY_GUIDE.md
+ D RANKCRACKERS_FIREBASE_MIGRATION_AUDIT.md
+ D SVO_QUALITY_REPORT.md
+ D WORKER_STATUS_REPORT.md
+ M android/app/build.gradle.kts
+ M android/app/google-services.json
+ M android/app/src/main/AndroidManifest.xml
+ M android/app/src/main/res/drawable-hdpi/android12splash.png
+ M android/app/src/main/res/drawable-hdpi/ic_launcher_foreground.png
+ M android/app/src/main/res/drawable-hdpi/splash.png
+ M android/app/src/main/res/drawable-mdpi/android12splash.png
+ M android/app/src/main/res/drawable-mdpi/ic_launcher_foreground.png
+ M android/app/src/main/res/drawable-mdpi/splash.png
+ M android/app/src/main/res/drawable-night-hdpi/android12splash.png
+ M android/app/src/main/res/drawable-night-mdpi/android12splash.png
+ M android/app/src/main/res/drawable-night-xhdpi/android12splash.png
+ M android/app/src/main/res/drawable-night-xxhdpi/android12splash.png
+ M android/app/src/main/res/drawable-night-xxxhdpi/android12splash.png
+ M android/app/src/main/res/drawable-v21/launch_background.xml
+ M android/app/src/main/res/drawable-xhdpi/android12splash.png
+ M android/app/src/main/res/drawable-xhdpi/ic_launcher_foreground.png
+ M android/app/src/main/res/drawable-xhdpi/splash.png
+ M android/app/src/main/res/drawable-xxhdpi/android12splash.png
+ M android/app/src/main/res/drawable-xxhdpi/ic_launcher_foreground.png
+ M android/app/src/main/res/drawable-xxhdpi/splash.png
+ M android/app/src/main/res/drawable-xxxhdpi/android12splash.png
+ M android/app/src/main/res/drawable-xxxhdpi/ic_launcher_foreground.png
+ M android/app/src/main/res/drawable-xxxhdpi/splash.png
+ M android/app/src/main/res/drawable/launch_background.xml
+ M android/app/src/main/res/mipmap-hdpi/ic_launcher.png
+ M android/app/src/main/res/mipmap-mdpi/ic_launcher.png
+ M android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+ M android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+ M android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+ M android/app/src/main/res/values-night-v31/styles.xml
+ M android/app/src/main/res/values-v31/styles.xml
+ M android/build.gradle.kts
+ M android/gradle.properties
+ M android/settings.gradle.kts
+ M assets/images/logo.png
+ D cd
+ D check_pdf_exports.js
+ D comprehensive_audit.js
+ D dashboard_structure.txt
+ D debug_launch.txt
+ D deps.txt
+ D deps_compact.txt
+ D deps_list.txt
+ D dir
+ D eDYJbwq9KeSF2s39wYv1ujFnjin2
+ M firebase.json
+ M firestore.indexes.json
+ M firestore.rules
+ M functions/audit_pagewise_candidate_selector_policy.js
+ M functions/audit_pagewise_hardened_limit3_result.js
+ M functions/audit_pagewise_limit3_apply_readiness.js
+ M functions/audit_pagewise_worker_runtime_safety.js
+ M functions/callable/handle_mission_action.js
+ M functions/callable/handle_sentinel_action.js
+ M functions/callable/manage_access.js
+ M functions/callable/process_ai_task.js
+ M functions/callable/secure_download.js
+ M functions/callable/system_health.js
+ M functions/callable/toggle_ai_system.js
+ M functions/create_worker.js
+ M functions/grant_admin.js
+ M functions/helpers/blueprints.js
+ M functions/helpers/prompts.js
+ M functions/helpers/sanitizer.js
+ M functions/helpers/token_estimator.js
+ M functions/helpers/validation.js
+ M functions/index.js
+ M functions/index_legacy.js
+ M functions/lib/parsers/pdfParser.js
+ M functions/lib/providers/providerExecutor.js
+ M functions/lib/workers/queueWorker.js
+ M functions/lib/workers/storageTrigger.js
+ M functions/package.json
+ M functions/refinery_benchmark.js
+ M functions/revoke_old_founder.js
+ M functions/services/audit_service.js
+ M functions/services/budget_service.js
+ M functions/services/encoding_service.js
+ M functions/services/gemini_service.js
+ M functions/services/llm_orchestrator.js
+ M functions/services/rendering_service.js
+ M functions/services/scout_service.js
+ M functions/services/worker_service.js
+ M functions/src/parsers/pdfParser.ts
+ M functions/src/providers/providerExecutor.ts
+ M functions/src/workers/queueWorker.ts
+ M functions/src/workers/storageTrigger.ts
+ M functions/structural_validation_suite.js
+ M functions/svo_validation_suite.js
+ M functions/trigger_test_ingestion.js
+ M functions/utils/sovereign_logic.js
+ M functions/verify_claims.js
+ M functions/workers/alert_worker.js
+ M functions/workers/certificate_worker.js
+ M functions/workers/cleanup_worker.js
+ M functions/workers/encoding_worker.js
+ M functions/workers/manifestation_worker.js
+ M functions/workers/promotion_worker.js
+ M functions/workers/recruitment_engine_worker.js
+ M functions/workers/renderer_worker.js
+ M functions/workers/scout_worker.js
+ M functions/workers/sentinel_worker.js
+ M functions/workers/structural_worker.js
+ M functions/workers/svo_worker.js
+ D init_budget.js
+ M lib/core/admin/admin_guard.dart
+ M lib/core/ai/ai_provider_config.dart
+ M lib/core/ai/ai_queue_service.dart
+ M lib/core/ai/ai_worker_router.dart
+ M lib/core/ai/local_repair_engine.dart
+ M lib/core/ai/models/ai_task_type.dart
+ M lib/core/ai/refinery_ai_orchestrator.dart
+ M lib/core/ai/token_control_engine.dart
+ M lib/core/ai/workers/atomic_rule_engine.dart
+ M lib/core/ai/workers/battle_outcome_worker.dart
+ M lib/core/ai/workers/campaign_adaptation_engine.dart
+ M lib/core/ai/workers/campaign_engine.dart
+ M lib/core/ai/workers/canonical_correction_worker.dart
+ M lib/core/ai/workers/constitutional_compliance_engine.dart
+ M lib/core/ai/workers/coverage_update_worker.dart
+ M lib/core/ai/workers/crucible_assembly_worker.dart
+ M lib/core/ai/workers/decision_trace_engine.dart
+ M lib/core/ai/workers/digibook_assembly_worker.dart
+ M lib/core/ai/workers/digibook_factory_worker.dart
+ M lib/core/ai/workers/document_intelligence_workers.dart
+ M lib/core/ai/workers/docx_parse_worker.dart
+ M lib/core/ai/workers/duplicate_detection_worker.dart
+ M lib/core/ai/workers/eligibility_engine.dart
+ M lib/core/ai/workers/exam_clock_engine.dart
+ M lib/core/ai/workers/explainability_engine.dart
+ M lib/core/ai/workers/forecast_engine.dart
+ M lib/core/ai/workers/founder_oversight_engine.dart
+ M lib/core/ai/workers/fusion_engine.dart
+ M lib/core/ai/workers/intervention_engine.dart
+ M lib/core/ai/workers/knowledge_expansion_worker.dart
+ M lib/core/ai/workers/learning_validation_engine.dart
+ M lib/core/ai/workers/mastery_update_worker.dart
+ M lib/core/ai/workers/mcq_factory_worker.dart
+ M lib/core/ai/workers/mission_planner_worker.dart
+ M lib/core/ai/workers/momentum_engine.dart
+ M lib/core/ai/workers/node_factory_worker.dart
+ M lib/core/ai/workers/notice_detection_worker.dart
+ M lib/core/ai/workers/notification_pipeline_workers.dart
+ M lib/core/ai/workers/optimization_engine.dart
+ M lib/core/ai/workers/pdf_parse_worker.dart
+ M lib/core/ai/workers/pyq_detection_worker.dart
+ M lib/core/ai/workers/pyq_linkage_engine.dart
+ M lib/core/ai/workers/recommendation_confidence_engine.dart
+ M lib/core/ai/workers/recruitment_detection_worker.dart
+ M lib/core/ai/workers/risk_worker.dart
+ M lib/core/ai/workers/scenario_simulator.dart
+ M lib/core/ai/workers/sentinel_extraction_worker.dart
+ M lib/core/ai/workers/strategic_drift_detector.dart
+ M lib/core/ai/workers/study_material_detection_worker.dart
+ M lib/core/ai/workers/success_probability_engine.dart
+ M lib/core/ai/workers/syllabus_detection_worker.dart
+ M lib/core/ai/workers/syllabus_pipeline_workers.dart
+ M lib/core/ai/workers/time_budget_engine.dart
+ M lib/core/ai/workers/trust_safety_engine.dart
+ M lib/core/ai/workers/xlsx_parse_worker.dart
+ M lib/core/analytics/performance_engine.dart
+ M lib/core/backend/atomic_coverage_repository.dart
+ M lib/core/backend/atomic_mastery_repository.dart
+ M lib/core/backend/atomic_risk_repository.dart
+ M lib/core/backend/backend_provider.dart
+ M lib/core/backend/blueprint_repository.dart
+ M lib/core/backend/crucible_repository.dart
+ M lib/core/backend/digibook_repository.dart
+ M lib/core/backend/mission_variant_repository.dart
+ M lib/core/backend/notification_repository.dart
+ M lib/core/backend/offline_cache.dart
+ M lib/core/backend/question_repository.dart
+ M lib/core/backend/realm_repository.dart
+ M lib/core/backend/recruitment_repository.dart
+ M lib/core/backend/sentinel_repository.dart
+ M lib/core/backend/storage_adapter.dart
+ M lib/core/backend/sync_manager.dart
+ D lib/core/constants/founder_identity.dart
+ M lib/core/diagnostic/diagnostic_engine.dart
+ M lib/core/engines/chunking_engine.dart
+ M lib/core/engines/coverage_engine.dart
+ M lib/core/engines/coverage_validation_engine.dart
+ M lib/core/engines/crucible_coverage_engine.dart
+ M lib/core/engines/digibook_publication_engine.dart
+ M lib/core/engines/forecasting_engine.dart
+ M lib/core/engines/mastery_engine.dart
+ M lib/core/engines/mission_seed_engine.dart
+ M lib/core/engines/publish_eligibility_engine.dart
+ M lib/core/engines/pyq_linkage_engine.dart
+ M lib/core/engines/question_engine/difficulty_engine.dart
+ M lib/core/engines/question_engine/distractor_engine.dart
+ M lib/core/engines/question_engine/mcq_generator.dart
+ M lib/core/engines/question_engine/template_engine.dart
+ M lib/core/engines/readiness_engine.dart
+ M lib/core/engines/realm_constitution_engine.dart
+ M lib/core/engines/realm_creation_engine.dart
+ M lib/core/engines/recruitment_gate_engine.dart
+ M lib/core/engines/risk_engine.dart
+ M lib/core/engines/sentinel_seed_engine.dart
+ M lib/core/engines/stress_test_engine.dart
+ M lib/core/engines/write_buffer_engine.dart
+ M lib/core/errors/global_error_handler.dart
+ M lib/core/firebase/firestore_service.dart
+ M lib/core/knowledge/adaptive_mapper.dart
+ M lib/core/knowledge/atomic_risk_analyzer.dart
+ M lib/core/knowledge/completion_engine.dart
+ M lib/core/knowledge/coverage_aggregation_engine.dart
+ M lib/core/knowledge/coverage_engine.dart
+ M lib/core/knowledge/hierarchical_aggregation_engine.dart
+ M lib/core/knowledge/knowledge_cache.dart
+ M lib/core/knowledge/knowledge_engine.dart
+ M lib/core/knowledge/knowledge_engine_provider.dart
+ M lib/core/knowledge/knowledge_graph.dart
+ M lib/core/knowledge/mastery_aggregation_engine.dart
+ M lib/core/knowledge/mastery_decay_engine.dart
+ M lib/core/knowledge/mastery_engine.dart
+ M lib/core/knowledge/mastery_propagation_engine.dart
+ M lib/core/knowledge/momentum_engine.dart
+ M lib/core/knowledge/node_linker.dart
+ M lib/core/knowledge/performance_engine.dart
+ M lib/core/knowledge/rebuild_engine.dart
+ M lib/core/knowledge/risk_engine.dart
+ M lib/core/knowledge/search_intelligence_engine.dart
+ M lib/core/knowledge/weak_node_detector.dart
+ M lib/core/learning/learning_state_engine.dart
+ M lib/core/models/apos_decision_ledger_node.dart
+ M lib/core/models/atomic_coverage_state.dart
+ M lib/core/models/atomic_fact.dart
+ M lib/core/models/atomic_mastery_state.dart
+ M lib/core/models/atomic_risk_state.dart
+ M lib/core/models/atomic_topic.dart
+ M lib/core/models/audit_record.dart
+ M lib/core/models/battle_session.dart
+ M lib/core/models/campaign_node.dart
+ M lib/core/models/coverage_node.dart
+ M lib/core/models/decision_trace_node.dart
+ M lib/core/models/digibook_block.dart
+ M lib/core/models/drift_detection_node.dart
+ M lib/core/models/exam_blueprint.dart
+ M lib/core/models/exam_clock_node.dart
+ M lib/core/models/fact_intelligence.dart
+ M lib/core/models/fact_relationship.dart
+ M lib/core/models/forecast_node.dart
+ M lib/core/models/fusion_node.dart
+ M lib/core/models/ingestion_record.dart
+ M lib/core/models/mastery_node.dart
+ M lib/core/models/micro_topic_node.dart
+ M lib/core/models/mission_context.dart
+ M lib/core/models/mission_node.dart
+ M lib/core/models/mission_variant.dart
+ M lib/core/models/momentum_node.dart
+ M lib/core/models/node_runtime_state.dart
+ M lib/core/models/notification/notification_evidence.dart
+ M lib/core/models/notification/notification_feedback.dart
+ M lib/core/models/notification/notification_graph.dart
+ M lib/core/models/notification/notification_identity.dart
+ M lib/core/models/notification/notification_intelligence.dart
+ M lib/core/models/notification_candidate.dart
+ M lib/core/models/notification_canonical.dart
+ M lib/core/models/notification_event.dart
+ M lib/core/models/notification_item.dart
+ M lib/core/models/optimization_node.dart
+ M lib/core/models/publish_eligibility_state.dart
+ M lib/core/models/question_model.dart
+ M lib/core/models/question_outcome.dart
+ M lib/core/models/readiness_state.dart
+ M lib/core/models/rebuild_candidate.dart
+ M lib/core/models/rebuild_item.dart
+ M lib/core/models/recruitment.dart
+ M lib/core/models/recruitment_realm.dart
+ M lib/core/models/risk_node.dart
+ M lib/core/models/semantic_unit.dart
+ M lib/core/models/sentinel_draft.dart
+ M lib/core/models/success_probability_node.dart
+ M lib/core/models/syllabus_canonical.dart
+ M lib/core/models/time_budget_node.dart
+ M lib/core/models/transformation_lineage.dart
+ M lib/core/models/verification_candidate.dart
+ M lib/core/models/worker_registry.dart
+ M lib/core/navigation/main_navigation_shell.dart
+ M lib/core/network/network_exceptions.dart
+ M lib/core/notifications/notification_engine.dart
+ M lib/core/notifications/notification_importance_engine.dart
+ M lib/core/router/app_router.dart
+ M lib/core/services/ai_gateway_service.dart
+ M lib/core/services/content_governance_service.dart
+ M lib/core/services/docx_extraction_service.dart
+ M lib/core/services/knowledge_content_service.dart
+ M lib/core/services/pdf_extraction_service.dart
+ M lib/core/services/sentinel_notification_service.dart
+ M lib/core/services/sentinel_validation_service.dart
+ M lib/core/services/support_service.dart
+ M lib/core/services/truth_validation_service.dart
+ M lib/core/services/universal_ingestion_service.dart
+ M lib/core/telemetry/models/telemetry_record.dart
+ M lib/core/telemetry/telemetry_engine.dart
+ M lib/core/theme/app_colors.dart
+ M lib/core/theme/tactical_noir_background.dart
+ M lib/core/utils/app_routes.dart
+ M lib/core/utils/benchmark_util.dart
+ M lib/core/utils/notification_weight_util.dart
+ D lib/core/utils/responsive_helper.dart
+ M lib/core/widgets/dark_card.dart
+ M lib/core/widgets/paywall/premium_paywall_widget.dart
+ M lib/core/widgets/premium_button.dart
+ D lib/core/widgets/tactical_autocomplete_field.dart
+ M lib/database/local/dashboard_local_datasource.dart
+ M lib/features/admin/core/admin_storage_service.dart
+ M lib/features/admin/core/admin_upload_service.dart
+ M lib/features/admin/data/admin_upload_engine.dart
+ M lib/features/admin/data/command_center_repository.dart
+ M lib/features/admin/data/repositories/access_repository.dart
+ M lib/features/admin/data/repositories/health_repository.dart
+ M lib/features/admin/data/repositories/sentinel_admin_repository.dart
+ M lib/features/admin/data/repositories/worker_registry_repository.dart
+ D lib/features/admin/presentation/screens/admin_screen.dart
+ M lib/features/admin/presentation/widgets/dashboard/founder_activity_ledger.dart
+ M lib/features/admin/presentation/widgets/dashboard/founder_dashboard.dart
+ M lib/features/admin/presentation/widgets/intelligence/intelligence_command_center.dart
+ M lib/features/admin/presentation/widgets/intelligence/screens/intelligence_review_workspace.dart
+ M lib/features/admin/presentation/widgets/intelligence/widgets/intelligence_feed_tile.dart
+ M lib/features/admin/presentation/widgets/intelligence/widgets/worker_card.dart
+ M lib/features/admin/presentation/widgets/intelligence/widgets/worker_control_sheet.dart
+ M lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart
+ M lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart
+ M lib/features/admin/presentation/widgets/people_access/widgets/access_role_card.dart
+ M lib/features/admin/presentation/widgets/review_queue/digibook_center.dart
+ M lib/features/admin/presentation/widgets/review_queue/outcome_verification_center.dart
+ M lib/features/admin/presentation/widgets/review_queue/review_queue.dart
+ M lib/features/admin/presentation/widgets/review_queue/verification_workspace.dart
+ M lib/features/admin/presentation/widgets/sentinel/widgets/discovery_tile.dart
+ M lib/features/admin/presentation/widgets/shared/founder_bottom_navigation.dart
+ M lib/features/admin/presentation/widgets/shared/founder_header.dart
+ M lib/features/admin/presentation/widgets/system_health/ai_worker_center.dart
+ M lib/features/admin/presentation/widgets/system_health/analytics_center.dart
+ M lib/features/admin/presentation/widgets/system_health/dead_letter_queue.dart
+ M lib/features/admin/presentation/widgets/system_health/system_vitals.dart
+ M lib/features/admin/presentation/widgets/upload_center/governance_center.dart
+ M lib/features/admin/presentation/widgets/upload_center/recruitment_intelligence_center.dart
+ M lib/features/admin/presentation/widgets/upload_center/study_material_center.dart
+ M lib/features/admin/presentation/widgets/upload_center/upload_queue_panel.dart
+ M lib/features/admin/presentation/widgets/upload_center/widgets/file_metadata_pills.dart
+ M lib/features/admin/presentation/widgets/upload_center/widgets/mission_asset_form.dart
+ M lib/features/admin/presentation/widgets/upload_center/widgets/mission_category_selector.dart
+ M lib/features/admin/presentation/widgets/upload_center/widgets/pipeline_progress_steps.dart
+ M lib/features/admin/presentation/widgets/upload_center/widgets/upload_action_card.dart
+ M lib/features/admin/presentation/widgets/upload_factory/upload_factory_center.dart
+ M lib/features/analytics/core/adaptive_difficulty_engine.dart
+ M lib/features/analytics/core/importance_engine.dart
+ M lib/features/analytics/core/weakness_detector.dart
+ M lib/features/archive/data/archive_repository.dart
+ M lib/features/archive/presentation/screens/archive_screen.dart
+ M lib/features/assessment/core/diagnostic_engine.dart
+ M lib/features/assessment/presentation/screens/diagnostic_result_screen.dart
+ M lib/features/auth/data/auth_repository.dart
+ M lib/features/auth/data/auth_service.dart
+ M lib/features/auth/presentation/auth_gate.dart
+ M lib/features/auth/presentation/providers/auth_provider.dart
+ M lib/features/auth/presentation/providers/mission_realm_provider.dart
+ M lib/features/auth/presentation/screens/mission_realm_screen.dart
+ D lib/features/auth/presentation/screens/unified_identity_screen.dart
+ M lib/features/courses/data/course_repository.dart
+ M lib/features/crucible/core/battle_engine.dart
+ M lib/features/crucible/core/crucible_engine.dart
+ M lib/features/crucible/core/crucible_master_engine.dart
+ M lib/features/crucible/core/leaderboard_engine.dart
+ M lib/features/crucible/core/micro_test_engine.dart
+ M lib/features/crucible/engine/logic/tactical_schedule_engine.dart
+ M lib/features/crucible/models/crucible_cluster.dart
+ M lib/features/crucible/models/crucible_node.dart
+ M lib/features/crucible/models/crucible_protocol_state.dart
+ M lib/features/crucible/models/crucible_schedule.dart
+ M lib/features/crucible/models/tactical_schedule.dart
+ M lib/features/crucible/presentation/screens/crucible_screen.dart
+ M lib/features/crucible/presentation/widgets/battle_engine_card.dart
+ M lib/features/crucible/presentation/widgets/blueprint_node.dart
+ M lib/features/crucible/presentation/widgets/mission_blueprint_card.dart
+ M lib/features/crucible/presentation/widgets/rebuild_zone_card.dart
+ M lib/features/crucible/presentation/widgets/tactical_progress_bar.dart
+ M lib/features/crucible/presentation/widgets/tactical_roadmap_card.dart
+ M lib/features/crucible/presentation/widgets/tactical_schedule_card.dart
+ M lib/features/dashboard/data/repositories/dashboard_repository.dart
+ M lib/features/dashboard/presentation/providers/dashboard_provider.dart
+ M lib/features/dashboard/presentation/screens/dashboard_screen.dart
+ M lib/features/dashboard/presentation/widgets/archive/archive_preview_card.dart
+ M lib/features/dashboard/presentation/widgets/battle_tools/battle_tool_card.dart
+ M lib/features/dashboard/presentation/widgets/battle_tools/battle_tools_grid.dart
+ M lib/features/dashboard/presentation/widgets/battle_tools/test_arena_card.dart
+ M lib/features/dashboard/presentation/widgets/crucible/macro_war_status_card.dart
+ M lib/features/dashboard/presentation/widgets/notifications/latest_updates_card.dart
+ M lib/features/dashboard/presentation/widgets/syllabus/syllabus_constellation_card.dart
+ M lib/features/deep_profile/data/subject_master.dart
+ M lib/features/deep_profile/models/professional_credential.dart
+ M lib/features/deep_profile/models/warrior_profile.dart
+ M lib/features/deep_profile/services/profile_completion_engine.dart
+ M lib/features/deep_profile/services/warrior_profile_service.dart
+ M lib/features/digibook/core/digibook_engine.dart
+ M lib/features/digibook/core/digibook_worker_trigger.dart
+ M lib/features/digibook/data/models/digibook_chapter.dart
+ M lib/features/digibook/data/models/digibook_revision.dart
+ M lib/features/digibook/data/models/digibook_unit.dart
+ M lib/features/digibook/data/repositories/digibook_repository.dart
+ M lib/features/digibook/models/digibook_content.dart
+ M lib/features/digibook/models/digibook_session.dart
+ M lib/features/digibook/presentation/widgets/live_digibook_card.dart
+ M lib/features/exam/core/final_exam_engine.dart
+ M lib/features/exam/models/final_exam.dart
+ M lib/features/home/presentation/screens/digi_book_screen.dart
+ M lib/features/mcq/core/mcq_fetch_engine.dart
+ M lib/features/mcq/core/mcq_worker_trigger.dart
+ M lib/features/mcq/presentation/widgets/mcq_card.dart
+ M lib/features/onboarding/presentation/screens/diagnostic_test_screen.dart
+ M lib/features/onboarding/presentation/screens/login_screen.dart
+ D lib/features/onboarding/presentation/screens/splash_screen.dart
+ M lib/features/opportunities/data/repositories/sentinel_repository.dart
+ M lib/features/opportunities/models/opportunity.dart
+ M lib/features/opportunities/models/opportunity_match.dart
+ M lib/features/opportunities/presentation/widgets/sentinel_intelligence_card.dart
+ M lib/features/opportunities/providers/opportunities_provider.dart
+ M lib/features/opportunities/providers/opportunity_match_provider.dart
+ M lib/features/opportunities/providers/sentinel_intelligence_provider.dart
+ M lib/features/opportunities/screens/opportunities_screen.dart
+ M lib/features/opportunities/services/eligibility_alert_generator.dart
+ M lib/features/opportunities/services/notification_builder.dart
+ M lib/features/opportunities/services/opportunity_filter_service.dart
+ M lib/features/opportunities/services/opportunity_matching_service.dart
+ M lib/features/opportunities/services/opportunity_stats_service.dart
+ M lib/features/opportunities/services/recruitment_alert_service.dart
+ M lib/features/opportunities/services/sentinel_metrics_aggregator.dart
+ M lib/features/opportunities/services/sentinel_metrics_service.dart
+ M lib/features/opportunities/widgets/opportunity_card.dart
+ M lib/features/profile/presentation/screens/profile_screen.dart
+ M lib/features/profile/presentation/widgets/smart_search_field.dart
+ M lib/features/progress/data/models/user_progress.dart
+ M lib/features/progress/data/progress_cloud_engine.dart
+ M lib/features/pyq/presentation/screens/pyq_vault_screen.dart
+ M lib/features/pyq/presentation/widgets/pyq_card.dart
+ M lib/features/rebuild/core/rebuild_priority_engine.dart
+ M lib/features/revision/core/retention_engine.dart
+ M lib/features/revision/core/revision_worker_trigger.dart
+ M lib/features/revision/data/priority_engine.dart
+ M lib/features/revision/data/revision_engine.dart
+ M lib/features/revision/presentation/widgets/revision_card.dart
+ M lib/features/syllabus/core/node_factory_worker.dart
+ M lib/features/syllabus/core/syllabus_breakdown_engine.dart
+ M lib/features/syllabus/data/syllabus_repository.dart
+ M lib/features/syllabus/presentation/controllers/syllabus_controller.dart
+ M lib/features/syllabus/presentation/screens/syllabus_screen.dart
+ M lib/features/test_engine/core/result_engine.dart
+ M lib/features/test_engine/core/test_submit_engine.dart
+ M lib/features/test_engine/core/test_timer_engine.dart
+ M lib/firebase_options.dart
+ M lib/main.dart
+ M lib/shared/session/session_manager.dart
+ M lib/shared/widgets/command_header.dart
+ D list-models.js
+ D main_trace.txt
+ D main_trace_v2.txt
+ M new.sh
+ D pipeline_diagnosis.js
+ D project_structure.txt
+ M pubspec.lock
+ M pubspec.yaml
+ D recover_pipeline.js
+ D run_output.txt
+ D run_output_2.txt
+ M storage.rules
+ D structure.txt
+ D test-gemini.js
+ M test/benchmark_test.dart
+ M test/seeding_test.dart
+ M test/smoke_test.dart
+ D tree.txt
+ M users.json
+ M web/favicon.png
+ M web/icons/Icon-192.png
+ M web/icons/Icon-512.png
+ M web/icons/Icon-maskable-192.png
+ M web/icons/Icon-maskable-512.png
+ M web/index.html
+ M web/manifest.json
+ M web/splash/img/dark-1x.png
+ M web/splash/img/dark-2x.png
+ M web/splash/img/dark-3x.png
+ M web/splash/img/dark-4x.png
+ M web/splash/img/light-1x.png
+ M web/splash/img/light-2x.png
+ M web/splash/img/light-3x.png
+ M web/splash/img/light-4x.png
+?? .agents/AGENTS.md
+?? .firebase-cli-config/
+?? .flutter-plugins-dependencies
+?? .npm-cache/
+?? .npm-home/
+?? android/app/src/main/res/drawable/transparent_splash.xml
+?? assets/images/logo_original_black_bg.png
+?? assets/images/splash_mark.png
+?? docs/delivery/
+?? docs/patch_safety/FUP_2C_RX6_review_policy.md
+?? docs/patch_safety/RC_G2_status_after_commit.txt
+?? docs/patch_safety/RC_X3W_status_before.txt
+?? docs/patch_safety/RC_X4E_R7_FIX1_status_before.txt
+?? functions/archive_legacy_crucible_days.js
+?? functions/audit_crucible_days_duplicates.js
+?? functions/audit_digibook_source_and_atom_format.js
+?? functions/audit_extra_digibook_drafts.js
+?? functions/audit_fup2c_rx6_review_policy.js
+?? functions/audit_rpsc_mission_metadata.js
+?? functions/audit_rpsc_official_documents.js
+?? functions/callable/payments.js
+?? functions/callable/webhooks.js
+?? functions/check_emulator.js
+?? functions/check_live_plan_contents.js
+?? functions/check_live_syllabus_atoms.js
+?? functions/compute_live_registry_alignment.js
+?? functions/debug_days_atoms.js
+?? functions/discover_digibook_source_registry.js
+?? functions/generate_missing_digibook_range.js
+?? functions/helpers/normalization.js
+?? functions/helpers/student_delivery_contract.js
+?? functions/helpers/student_delivery_contract.test.js
+?? functions/helpers/text_quality.js
+?? functions/inspect_crucible.js
+?? functions/inspect_days_schedule_atoms.js
+?? functions/inspect_db_unit_atoms.js
+?? functions/inspect_live_day1.js
+?? functions/inspect_live_missions.js
+?? functions/inspect_plan_days_directly.js
+?? functions/inspect_plan_digibook_units.js
+?? functions/inspect_reconciler_logic.js
+?? functions/inspect_rpsc_official_documents_details.js
+?? functions/inspect_syllabus_atom_fields.js
+?? functions/inspect_unit_fields.js
+?? functions/list_plans.js
+?? functions/list_real_plans.js
+?? functions/print_rpsc_root_fields.js
+?? functions/reconcile_legacy_digibook_drafts.js
+?? functions/repair_rpsc_document_metadata.js
+?? functions/repair_source_document_ids.js
+?? functions/reset_budget.js
+?? functions/scratch_query.js
+?? functions/search_notification_candidate.js
+?? functions/seed_live_crucible_spine.js
+?? functions/services/adaptive_scheduler_service.js
+?? functions/services/analytics_cache_service.js
+?? functions/services/analytics_orchestrator_service.js
+?? functions/services/battle_engine_service.js
+?? functions/services/config_service.js
+?? functions/services/content_aggregator_service.js
+?? functions/services/coverage_service.js
+?? functions/services/crucible_cycle_service.js
+?? functions/services/crucible_state_service.js
+?? functions/services/document_ai_service.js
+?? functions/services/graph_traversal_service.js
+?? functions/services/intervention_service.js
+?? functions/services/mastery_service.js
+?? functions/services/priority_queue_service.js
+?? functions/services/provider_adapter.js
+?? functions/services/provider_health_service.js
+?? functions/services/provider_quota_service.js
+?? functions/services/provider_rate_service.js
+?? functions/services/providers/
+?? functions/services/registry_service.js
+?? functions/services/risk_service.js
+?? functions/services/subscription_service.js
+?? functions/services/tactical_schedule_service.js
+?? functions/services/truth_service.js
+?? functions/test_token_auth.js
+?? functions/tools/
+?? functions/utils/seed_plans.js
+?? functions/utils/seeder.js
+?? functions/validate_crucible_testing_spine.js
+?? functions/validate_digibook_schedule_alignment.js
+?? functions/validate_live_digibook_assignment.js
+?? functions/workers/aggregator_worker.js
+?? functions/workers/graph_validator_worker.js
+?? functions/workers/mastery_decay_worker.js
+?? functions/workers/subscription_worker.js
+?? functions/workers/verification_worker.js
+?? lib/core/admin/admin_permission_resolver.dart
+?? lib/core/delivery/
+?? lib/core/knowledge/models/
+?? lib/database/local/battle_state_collection.dart
+?? lib/database/local/battle_state_collection.g.dart
+?? lib/database/local/isar_database.dart
+?? lib/database/local/topic_node_collection.dart
+?? lib/database/local/topic_node_collection.g.dart
+?? lib/features/admin/presentation/widgets/admin_task_card.dart
+?? lib/features/admin/presentation/widgets/mission_control/mission_detail_bottom_sheet.dart
+?? lib/features/admin/presentation/widgets/payments/
+?? lib/features/admin/presentation/widgets/review_queue/admin_tasks_list.dart
+?? lib/features/auth/presentation/screens/admin_invite_screen.dart
+?? lib/features/auth/presentation/screens/login_screen.dart
+?? lib/features/crucible/logic/
+?? lib/features/profile/presentation/screens/profile_setup_screen.dart
+?? lib/features/subscription/
+?? lib/main_web.dart
+?? lib/web/
+?? test/fdc_7s_trigger.dart
+?? test/student_delivery_contract_test.dart
+?? web/flutter_bootstrap.js
