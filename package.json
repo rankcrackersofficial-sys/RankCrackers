@@ -28,6 +28,7 @@
     "audit:pagewise:two-batch": "node functions/audit_pagewise_two_batch_continuity.js",
     "audit:pagewise:limit3": "node functions/audit_pagewise_limit3_apply_readiness.js",
     "audit:pagewise:limit3-result": "node functions/audit_pagewise_limit3_result_and_candidate_policy.js",
+    "audit:pagewise:second-hardened-limit3-result": "node functions/audit_pagewise_second_hardened_limit3_result.js",
     "audit:pagewise:hardened-limit3-result": "node functions/audit_pagewise_hardened_limit3_result.js",
     "audit:pagewise:candidate-selector": "node functions/audit_pagewise_candidate_selector_policy.js",
     "process:pagewise": "node functions/process_pagewise_extraction_batches.js --dry-run --limit 3 --prefer-native-digital",
