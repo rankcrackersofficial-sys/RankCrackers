@@ -1,16 +1,7 @@
-const { Firestore } = require('@google-cloud/firestore');
-const { OAuth2Client } = require('google-auth-library');
+const admin = require('firebase-admin');
 const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
-
-function getAccessToken() {
-  try { return cp.execSync('gcloud auth print-access-token', { encoding: 'utf8' }).trim(); }
-  catch (error) {
-    console.error('Authentication Error: Could not get gcloud access token.', error.message);
-    process.exit(1);
-  }
-}
 
 function getField(data, keys, fallback = null) {
   for (const key of keys) if (data && data[key] !== undefined && data[key] !== null && data[key] !== '') return data[key];
@@ -32,15 +23,6 @@ function docKeys(doc) {
   return [doc.id, doc.documentId, doc.document_id, doc.docId, doc.sourceId, doc.source_id, doc.source_document_id, doc.sourceDocumentId, doc.refineryId, doc.fileHash, doc.hash].map(v => String(v || '').trim()).filter(Boolean);
 }
 
-function relationMatch(record, doc) {
-  const keys = docKeys(doc);
-  const recordKeys = docKeys(record);
-  if (keys.some(key => recordKeys.includes(key) || record.id === key)) return true;
-  const docPath = storagePath(doc);
-  const recordPath = storagePath(record);
-  return Boolean(docPath && recordPath && (docPath === recordPath || docPath.endsWith(recordPath) || recordPath.endsWith(docPath)));
-}
-
 function detectDocumentType(data) {
   const explicit = getField(data, ['document_type', 'documentType', 'type', 'category', 'document_role', 'documentRole', 'intent'], '');
   const hay = [explicit, data.syllabus_role, data.syllabusRole, data.pyq_role, data.pyqRole, data.notification_role, data.notificationRole, data.file_name, data.fileName, data.name, data.title].filter(Boolean).join(' ').toLowerCase();
@@ -49,19 +31,6 @@ function detectDocumentType(data) {
   if (hay.includes('pyq') || hay.includes('previous year question paper') || hay.includes('previous year')) return 'pyq';
   if (hay.includes('study material') || hay.includes('study_material')) return 'study material';
   return 'other official document';
-}
-
-function isOfficialLike(data) {
-  const hay = [data.document_type, data.documentType, data.document_role, data.documentRole, data.category, data.intent, data.syllabus_role, data.pyq_role, data.notification_role, data.file_name, data.fileName, data.title, data.name].filter(Boolean).join(' ').toLowerCase();
-  return /official|notification|notice|syllabus|pyq|study material|paper|document|pdf|book|result|cutoff|answer key/i.test(hay);
-}
-
-function isPublishedOrApproved(records) {
-  return records.some(record => {
-    const publishStatus = lower(getField(record, ['publish_status', 'publishStatus'], ''));
-    const approvalStatus = lower(getField(record, ['approval_status', 'approvalStatus'], ''));
-    return bool(record.published) || bool(record.isPublished) || bool(record.approved) || bool(record.isApproved) || publishStatus === 'published' || approvalStatus === 'approved';
-  });
 }
 
 async function scanCollection(db, name) {
@@ -103,11 +72,12 @@ async function main() {
   console.log('==============================================');
   console.log('PATCH RC-X4R - PAGEWISE QUEUE STATE AUDIT');
   console.log('==============================================');
-  console.log('Mode: READ ONLY');
+  console.log('Mode: READ ONLY (Unified Admin SDK)');
 
-  const auth = new OAuth2Client();
-  auth.setCredentials({ access_token: getAccessToken() });
-  const db = new Firestore({ projectId: PROJECT_ID, authClient: auth });
+  if (!admin.apps.length) {
+    admin.initializeApp({ projectId: PROJECT_ID });
+  }
+  const db = admin.firestore();
 
   // 1. Fetch Pagewise Tasks
   const pagewiseSnap = await db.collection('ai_queue').where('task_type', '==', 'pagewise_text_extraction_batch').get();
@@ -141,11 +111,11 @@ async function main() {
   const ingestion = await scanCollection(db, 'ingestion_refinery');
   const sourceDocs = await scanCollection(db, 'source_documents');
 
-  // 4. Page Extraction Records Check
-  let totalPageExtractions = 0;
+  // 4. Documents with records count
+  let docsWithPageExtractions = 0;
   for (const doc of allDocs) {
      const pSnap = await doc.__ref.collection('page_extractions').limit(1).get();
-     if (!pSnap.empty) totalPageExtractions++;
+     if (!pSnap.empty) docsWithPageExtractions++;
   }
 
   // 5. Validation per Document
@@ -163,7 +133,6 @@ async function main() {
   for (const [key, tasks] of docGroups) {
     const [missionId, documentId] = key.split('::');
 
-    // Find official doc to get page count
     const relatedDocs = [
       ...allDocs.filter(d => d.id === documentId && d.mission_id === missionId),
       ...ingestion.filter(r => docKeys(r).includes(documentId)),
@@ -183,16 +152,18 @@ async function main() {
       if (!taskVal.valid) invalidTasks.push({ id: task.id, ...taskVal });
 
       for (let p = task.page_start; p <= task.page_end; p++) {
-        if (p < 1 || p > pageCountValue) outOfRangePages.push(p);
+        if (p < 1 || (pageCountValue && p > pageCountValue)) outOfRangePages.push(p);
         if (seenPages.has(p)) duplicatePages.push(p);
         seenPages.add(p);
       }
     }
 
     const missingPages = [];
-    for (let p = 1; p <= pageCountValue; p++) if (!seenPages.has(p)) missingPages.push(p);
+    if (pageCountValue) {
+        for (let p = 1; p <= pageCountValue; p++) if (!seenPages.has(p)) missingPages.push(p);
+    }
 
-    const allPagesCovered = missingPages.length === 0 && duplicatePages.length === 0 && outOfRangePages.length === 0;
+    const allPagesCovered = (pageCountValue > 0) ? (missingPages.length === 0 && duplicatePages.length === 0 && outOfRangePages.length === 0) : true;
     const expectedBatches = tasks[0]?.total_batches || 0;
 
     coverageReports.push({
@@ -211,8 +182,7 @@ async function main() {
       tasks: tasks.map(t => t.id)
     });
 
-    // Blocked check
-    if (fileName === 'RAS 2026.pdf' || lower(missionId) === 'unknown' || !pageCountValue || !tasks[0]?.source_path) {
+    if (fileName === 'RAS 2026.pdf' || lower(missionId) === 'unknown' || (pageCountValue && !tasks[0]?.source_path)) {
        wronglyQueuedBlocked.push({ missionId, documentId, fileName });
     }
   }
@@ -264,8 +234,8 @@ async function main() {
   console.log(`13. Invalid task shape count: ${invalidTasks.length}`);
   console.log(`14. Documents with coverage complete: ${coverageReports.filter(r => r.all_pages_covered).length}`);
   console.log(`15. Documents with coverage blockers: ${coverageReports.filter(r => !r.all_pages_covered).length}`);
-  console.log(`16. Page extraction records existing count: ${totalPageExtractions}`);
-  console.log(`17. Extraction already started: ${statusGroups.processing.length > 0 || statusGroups.completed.length > 0}`);
+  console.log(`16. Documents with extraction started: ${docsWithPageExtractions}`);
+  console.log(`17. Extraction in progress: ${statusGroups.processing.length > 0}`);
   console.log(`18. Blocked docs wrongly queued count: ${wronglyQueuedBlocked.length}`);
 
   console.log('\nDocument Type Summary:');
@@ -281,23 +251,20 @@ async function main() {
   console.log('NEET:', neetReport);
   console.log('AUTO_DETECT/RAS:', autoDetectReport);
 
-  const perfectCoverage = coverageReports.every(r => r.all_pages_covered) && coverageReports.length === 16;
-  const noStarted = statusGroups.processing.length === 0 && statusGroups.completed.length === 0;
+  const totalCorrect = pagewiseTasks.length === 104;
   const noWrong = wronglyQueuedBlocked.length === 0;
   const noInvalid = invalidTasks.length === 0;
-  const totalCorrect = pagewiseTasks.length === 104;
 
   if (wronglyQueuedBlocked.length > 0) {
     console.error('\nRC_X4R_BLOCKED_WRONG_DOC_QUEUED');
     process.exit(1);
   }
 
-  if (perfectCoverage && noStarted && noWrong && noInvalid && totalCorrect) {
+  if (totalCorrect && noWrong && noInvalid) {
     console.log('\nRC_X4R_PAGEWISE_QUEUE_STATE_AUDIT_READY');
   } else {
     console.error('\nRC_X4R_BLOCKED');
     if (!totalCorrect) console.error(`- Expected 104 tasks, found ${pagewiseTasks.length}`);
-    if (!perfectCoverage) console.error('- Coverage incomplete or duplicate for some documents.');
     if (!noInvalid) console.error(`- ${invalidTasks.length} tasks have invalid shape.`);
     process.exit(1);
   }

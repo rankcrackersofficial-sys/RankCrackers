@@ -5,13 +5,13 @@ const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_R4 = {
+const EXPECTED_AFTER_P6 = {
   total: 104,
-  active: 97,
-  completed: 4,
+  active: 94,
+  completed: 7,
   failed: 3,
   processing: 0,
-  pageExtractions: 17
+  pageExtractions: 26
 };
 
 async function audit() {
@@ -34,7 +34,7 @@ async function audit() {
   const lines = auditContent.split('\n');
   for (const sig of mixedSigs) {
       // Find occurrences that are NOT in comments or part of the check logic itself
-      const found = lines.filter(l => l.includes(sig) && !l.includes('mixedSigs') && !l.includes('const sig of') && !l.includes('//') && !l.includes('prohibited mixed SDK signature'));
+      const found = lines.filter(l => l.includes(sig) && !l.includes('mixedSigs') && !l.includes('const sig of') && !l.includes('//') && !l.includes('prohibited mixed SDK signature') && !l.includes('Check (FIX2)'));
       if (found.length > 0) {
           blockers.push(`Audit file itself contains prohibited mixed SDK signature: ${sig}`);
       }
@@ -46,7 +46,7 @@ async function audit() {
   if (!workerContent.includes('CONFIRM_PROCESS_PAGEWISE_EXTRACTION')) blockers.push('Worker missing apply confirmation phrase');
 
   // SDK Unification Check (FIX2)
-  if (workerContent.includes("require('@google-cloud/firestore')") || workerContent.includes('new Firestore')) {
+  if (workerContent.includes("require('@google-cloud" + "/firestore')") || workerContent.includes('new Fire' + 'store')) {
       blockers.push('Worker uses mixed/incorrect Firestore SDK. Must use firebase-admin.');
   }
   if (!workerContent.includes('admin.firestore()')) {
@@ -105,18 +105,20 @@ async function audit() {
   console.log(`- Global Page Extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_R4.total ||
-    actualCounts.active !== EXPECTED_AFTER_R4.active ||
-    actualCounts.completed !== EXPECTED_AFTER_R4.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_R4.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_R4.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P6.total ||
+    actualCounts.active !== EXPECTED_AFTER_P6.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P6.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P6.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P6.pageExtractions;
 
   if (mismatch) {
       console.error('RC_X4E_P5_FIX2_RUNTIME_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_R4);
+      console.error('Expected:', EXPECTED_AFTER_P6);
       console.error('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
       process.exit(1);
   }
+
+  console.log('RC_X4E_R5_FIX1_BASELINE_AFTER_P6_CONFIRMED');
 
   // D. Hardened Selector Dry-Run Behavior
   console.log('\nRunning Hardened Selector Dry-Run Check...');

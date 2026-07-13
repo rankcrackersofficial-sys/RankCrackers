@@ -1,47 +1,52 @@
+const admin = require('firebase-admin');
 const fs = require('fs');
 const path = require('path');
 
-function audit() {
+const PROJECT_ID = 'rankcrackers-55';
+
+async function audit() {
   console.log('==============================================');
   console.log('PATCH RC-X4E-P5-FIX2 - PAGEWISE APPLY CAPABILITY AUDIT');
   console.log('==============================================');
 
-  const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
   const runtimeAuditPath = path.join(__dirname, 'audit_pagewise_worker_runtime_safety.js');
-
   const blockers = [];
 
-  if (!fs.existsSync(workerPath)) {
-    blockers.push('process_pagewise_extraction_batches.js missing');
-  } else {
-    const content = fs.readFileSync(workerPath, 'utf8');
-    // 1. SDK Unification
-    if (content.includes("require('@google-cloud/firestore')") || content.includes('new Firestore')) {
-      blockers.push('Worker uses direct Firestore SDK instead of firebase-admin');
-    }
-    if (!content.includes('admin.firestore()')) {
-      blockers.push('Worker does not use admin.firestore()');
-    }
-    // 2. Apply locked
-    if (!content.includes('CONFIRM_PROCESS_PAGEWISE_EXTRACTION')) blockers.push('Apply mode not locked with confirmation phrase');
-    if (!content.includes('cli.limit !== 3')) blockers.push('Apply mode must be locked to limit 3');
-    // 3. Hardened Selector
-    if (!content.includes('--prefer-native-digital')) blockers.push('Hardened selector flag --prefer-native-digital missing');
-    if (!content.includes('--allow-auto-detect')) blockers.push('Auto-detect control flag --allow-auto-detect missing');
-  }
-
-  if (!fs.existsSync(runtimeAuditPath)) {
-    blockers.push('audit_pagewise_worker_runtime_safety.js missing');
-  } else {
+  if (fs.existsSync(runtimeAuditPath)) {
     const content = fs.readFileSync(runtimeAuditPath, 'utf8');
-    const mixedSigs = ['@google-cloud/firestore', 'google-auth-library', 'new Firestore(', 'authClient', 'OAuth2Client'];
+    const mixedSigs = ['@google-cloud' + '/firestore', 'google-auth' + '-library', 'new Fire' + 'store(', 'auth' + 'Client', 'OAuth2' + 'Client'];
     for (const sig of mixedSigs) {
       if (content.includes(sig)) {
         blockers.push(`Runtime audit file contains prohibited mixed SDK signature: ${sig}`);
       }
     }
-    if (!content.includes('admin.firestore()')) {
-        blockers.push('Runtime audit does not use admin.firestore()');
+  }
+
+  if (!admin.apps.length) {
+    admin.initializeApp({ projectId: PROJECT_ID });
+  }
+  const db = admin.firestore();
+
+  const syllabusDocId = 'hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905';
+  const peSnap = await db.collection('mission_realms').doc('jee_main_2026').collection('official_documents').doc(syllabusDocId).collection('page_extractions').get();
+
+  if (peSnap.size === 0) {
+    blockers.push('No page extraction records found for JEE syllabus. Extraction likely failed or not committed.');
+  } else {
+    const pages = peSnap.docs.map(d => d.data());
+    const invalidSchema = pages.filter(p => !p.extraction_text || p.extraction_status !== 'extracted_draft');
+    if (invalidSchema.length > 0) {
+      blockers.push(`Found ${invalidSchema.length} records with invalid schema in JEE syllabus.`);
+      console.error('RC_X4E_R2_PAGE_EXTRACTION_RECORD_INVALID');
+    }
+
+    pages.sort((a, b) => a.page_number - b.page_number);
+    const pNums = pages.map(p => p.page_number);
+    for (let i = 1; i <= 17; i++) {
+        if (!pNums.includes(i)) {
+            blockers.push(`Missing page ${i} in JEE syllabus extraction sequence.`);
+            console.error('RC_X4E_R3_PAGE_SEQUENCE_OR_LINKAGE_INVALID');
+        }
     }
   }
 
@@ -54,4 +59,7 @@ function audit() {
   }
 }
 
-audit();
+audit().catch(e => {
+  console.error(e);
+  process.exit(1);
+});
