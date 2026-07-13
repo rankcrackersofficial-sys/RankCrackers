@@ -224,6 +224,9 @@ function main() {
   if (!exists('functions/audit_pagewise_candidate_selector_policy.js')) {
     blockers.push('Missing audit_pagewise_candidate_selector_policy.js.');
   }
+  if (!exists('functions/audit_pagewise_hardened_limit3_result.js')) {
+    blockers.push('Missing audit_pagewise_hardened_limit3_result.js.');
+  }
 
   const filesToScan = [
     ...listFiles(path.join(ROOT, 'functions')),
