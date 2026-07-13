@@ -24,6 +24,7 @@
     "audit:pagewise:runtime": "node functions/audit_pagewise_worker_runtime_safety.js",
     "audit:pagewise:apply": "node functions/audit_pagewise_extraction_apply_capability.js",
     "audit:pagewise:first-result": "node functions/audit_first_pagewise_extraction_result.js",
+    "audit:pagewise:first-success": "node functions/audit_first_successful_pagewise_extraction.js",
     "process:pagewise": "node functions/process_pagewise_extraction_batches.js --dry-run --limit 3",
     "process:pagecount": "node functions/process_page_count_detection_tasks.js --dry-run --limit 5"
   },

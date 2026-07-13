@@ -209,6 +209,9 @@ function main() {
   if (!exists('functions/audit_first_pagewise_extraction_result.js')) {
     blockers.push('Missing audit_first_pagewise_extraction_result.js.');
   }
+  if (!exists('functions/audit_first_successful_pagewise_extraction.js')) {
+    blockers.push('Missing audit_first_successful_pagewise_extraction.js.');
+  }
 
   const filesToScan = [
     ...listFiles(path.join(ROOT, 'functions')),
