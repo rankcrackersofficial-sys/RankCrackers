@@ -31,7 +31,8 @@
     "audit:pagewise:hardened-limit3-result": "node functions/audit_pagewise_hardened_limit3_result.js",
     "audit:pagewise:candidate-selector": "node functions/audit_pagewise_candidate_selector_policy.js",
     "process:pagewise": "node functions/process_pagewise_extraction_batches.js --dry-run --limit 3 --prefer-native-digital",
-    "process:pagecount": "node functions/process_page_count_detection_tasks.js --dry-run --limit 5"
+    "process:pagecount": "node functions/process_page_count_detection_tasks.js --dry-run --limit 5",
+    "audit:fup2c:rx2-review-atoms": "node functions/audit_fup2c_rx2_review_atoms.js"
   },
   "dependencies": {
     "firebase-admin": "^12.7.0",

@@ -1,0 +1,15 @@
+FUP-2C-RX3 Founder/Admin Button Proof Notes
+
+Founder proof:
+- Founder browser screenshot supplied by Founder shows the temporary RX2 button visible in Syllabus Atom Verification.
+- Button label visible: Write 50 Review Atoms from Official Syllabus
+- Founder click completed successfully before RX3.
+
+Admin proof:
+- Browser proof pending.
+- Static UI condition hides the button unless roleMode == ConsoleRoleMode.founder and missionId == jee_main_2026.
+- Server-side callable action is in founderOnlyActions, so Admin/non-Founder is denied by backend guard.
+
+Final browser proof status:
+- Founder visible: YES
+- Admin hidden: PENDING browser proof
