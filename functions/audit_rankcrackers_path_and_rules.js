@@ -212,6 +212,9 @@ function main() {
   if (!exists('functions/audit_first_successful_pagewise_extraction.js')) {
     blockers.push('Missing audit_first_successful_pagewise_extraction.js.');
   }
+  if (!exists('functions/audit_pagewise_two_batch_continuity.js')) {
+    blockers.push('Missing audit_pagewise_two_batch_continuity.js.');
+  }
 
   const filesToScan = [
     ...listFiles(path.join(ROOT, 'functions')),
