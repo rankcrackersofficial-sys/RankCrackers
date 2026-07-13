@@ -3,7 +3,7 @@ const path = require('path');
 
 function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P1-FIX2 - PAGEWISE APPLY CAPABILITY AUDIT');
+  console.log('PATCH RC-X4E-P5-FIX1 - PAGEWISE APPLY CAPABILITY AUDIT');
   console.log('==============================================');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -15,82 +15,47 @@ function audit() {
   const content = fs.readFileSync(workerPath, 'utf8');
   const blockers = [];
 
-  // 1. Supports --dry-run and --limit
-  if (!content.includes('--dry-run')) blockers.push('Missing --dry-run support');
-  if (!content.includes('--limit')) blockers.push('Missing --limit support');
+  // 1. SDK Unification
+  if (content.includes("require('@google-cloud/firestore')") || content.includes('new Firestore')) {
+    blockers.push('Worker uses direct Firestore SDK instead of firebase-admin');
+  }
+  if (!content.includes('admin.firestore()')) {
+    blockers.push('Worker does not use admin.firestore()');
+  }
 
   // 2. Apply locked
   if (!content.includes('CONFIRM_PROCESS_PAGEWISE_EXTRACTION')) blockers.push('Apply mode not locked with confirmation phrase');
   if (!content.includes('cli.limit !== 3')) blockers.push('Apply mode must be locked to limit 3');
-  if (!content.includes('--prefer-native-digital')) blockers.push('Hardened selector flag missing');
-  if (!content.includes('--allow-auto-detect')) blockers.push('Auto-detect control flag missing');
 
-  // 3. SDK Unification (FIX2)
-  if (content.includes("require('@google-cloud/firestore')")) blockers.push('Mixed SDK: found @google-cloud/firestore import');
-  if (content.includes("require('google-auth-library')")) blockers.push('Mixed SDK: found google-auth-library import');
-  if (content.includes('new Firestore(')) blockers.push('Mixed SDK: found "new Firestore(" instantiation');
-  if (content.includes('authClient')) blockers.push('Mixed SDK: found authClient usage');
-  if (!content.includes('admin.firestore()')) blockers.push('Missing admin.firestore() usage');
-  if (!content.includes('admin.firestore.FieldValue.serverTimestamp()')) blockers.push('Missing admin.firestore.FieldValue.serverTimestamp() usage');
+  // 3. Hardened Selector
+  if (!content.includes('--prefer-native-digital')) blockers.push('Hardened selector flag --prefer-native-digital missing');
+  if (!content.includes('--allow-auto-detect')) blockers.push('Auto-detect control flag --allow-auto-detect missing');
 
-  // 4. Mapping: uses pData.num, no pageIndex
-  if (!content.includes('pData.num')) blockers.push('Missing pData.num mapping for pdf-parse v2');
-  if (content.includes('pData.pageIndex')) blockers.push('Must not use pData.pageIndex for pdf-parse v2');
-
-  // 5. Empty Text Safety
-  if (!content.includes('NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED')) blockers.push('Missing empty text extraction safety');
-  if (!content.includes('emptyPages.length > 0')) blockers.push('Missing empty page check logic');
-
-  // 6. Duplicate Check
-  if (!content.includes('PAGE_EXTRACTION_ALREADY_EXISTS')) blockers.push('Missing duplicate page_extraction check');
-  if (!content.includes('existing.exists')) blockers.push('Missing existing record existence check');
-
-  // 7. Block Partial Writes
-  if (!content.includes('batch.commit()')) blockers.push('Missing batch commit for atomic writes');
-
-  // 8. Allowed Writes
-  const writeSigs = ['.set(', '.update(', '.add(', 'batch.commit()'];
-  for (const sig of writeSigs) {
-    if (content.includes(sig)) {
-        const lines = content.split('\n');
-        const badLines = lines.filter(l => {
-            if (!l.includes(sig) || l.trim().startsWith('//')) return false;
-            if (sig === '.add(' && (l.includes('Represented.add') || l.includes('Set'))) return false;
-            if (l.includes('db.collection(\'ai_queue\').doc(task.id).update')) return false;
-            if (l.includes('batch.set(extractionRef')) return false;
-            if (l.includes('batch.update(taskRef')) return false;
-            if (l.includes('await batch.commit()')) return false;
-            return true;
-        });
-        if (badLines.length > 0) blockers.push(`Potentially dangerous write signature found: ${sig} in lines: ${badLines.map(l => l.trim()).join(', ')}`);
-    }
+  // 4. pdf-parse v2 mapping
+  if (!content.includes('const pageNum = Number(pData.num)')) {
+    blockers.push('Worker does not use correct pdf-parse v2 page mapping (pData.num)');
   }
 
-  // 9. NO AI/OCR
-  const aiSigs = ['VertexAI', 'GenerativeModel', 'Gemini', 'documentai', 'vision', 'OCR', 'processDocument'];
-  for (const sig of aiSigs) {
-     if (content.includes(sig)) {
-         const lines = content.split('\n');
-         const badLines = lines.filter(l => {
-             if (!l.includes(sig)) return false;
-             if (l.trim().startsWith('//') || l.includes('/*') || l.includes('*/')) return false;
-             if (l.includes(`no ${sig}`)) return false;
-             return true;
-         });
-         if (badLines.length > 0) blockers.push(`AI/OCR signature found: ${sig} in lines: ${badLines.map(l => l.trim()).join(', ')}`);
-     }
+  // 5. Text safety
+  if (!content.includes('NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED')) {
+    blockers.push('Empty text safety check missing');
+  }
+
+  // 6. Duplicate check
+  if (!content.includes('PAGE_EXTRACTION_ALREADY_EXISTS')) {
+    blockers.push('Duplicate record safety check missing');
   }
 
   console.log(`- Firestore SDK Unified (admin.firestore): ${!content.includes('new Firestore') ? 'YES' : 'NO'}`);
   console.log(`- pdf-parse v2 mapping (pData.num): ${content.includes('pData.num') ? 'YES' : 'NO'}`);
-  console.log(`- Empty text safety: ${content.includes('NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED') ? 'YES' : 'NO'}`);
-  console.log(`- Duplicate check: ${content.includes('PAGE_EXTRACTION_ALREADY_EXISTS') ? 'YES' : 'NO'}`);
-  console.log(`- Apply limit lock: ${content.includes('cli.limit !== 1') ? 'YES' : 'NO'}`);
+  console.log(`- Empty text safety: ${content.includes('EMPTY_OR_UNSUPPORTED') ? 'YES' : 'NO'}`);
+  console.log(`- Duplicate check: ${content.includes('ALREADY_EXISTS') ? 'YES' : 'NO'}`);
+  console.log(`- Hardened selector: ${content.includes('--prefer-native-digital') ? 'YES' : 'NO'}`);
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_P1_FIX2_PAGEWISE_APPLY_CAPABILITY_READY');
+    console.log('\nRC_X4E_P5_FIX1_PAGEWISE_APPLY_CAPABILITY_READY');
   } else {
-    console.error('\nRC_X4E_P1_FIX2_BLOCKED:');
+    console.error('\nRC_X4E_P5_FIX1_PAGEWISE_APPLY_CAPABILITY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }

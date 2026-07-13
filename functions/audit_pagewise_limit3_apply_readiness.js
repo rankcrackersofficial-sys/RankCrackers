@@ -4,9 +4,18 @@ const path = require('path');
 
 const PROJECT_ID = 'rankcrackers-55';
 
+const EXPECTED_AFTER_R4 = {
+  total: 104,
+  active: 97,
+  completed: 4,
+  failed: 3,
+  processing: 0,
+  pageExtractions: 17
+};
+
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P4-L3 - LIMIT 3 APPLY READINESS AUDIT');
+  console.log('PATCH RC-X4E-P5 - LIMIT 3 APPLY READINESS AUDIT');
   console.log('==============================================');
 
   if (!admin.apps.length) {
@@ -21,7 +30,8 @@ async function audit() {
       total: allTasks.length,
       active: allTasks.filter(t => ['queued', 'pending'].includes(t.status)).length,
       completed: allTasks.filter(t => t.status === 'completed').length,
-      failed: allTasks.filter(t => t.status === 'failed').length
+      failed: allTasks.filter(t => t.status === 'failed').length,
+      processing: allTasks.filter(t => ['processing', 'running'].includes(t.status)).length
   };
 
   console.log('Queue State:');
@@ -29,14 +39,26 @@ async function audit() {
   console.log(`- active: ${counts.active}`);
   console.log(`- completed: ${counts.completed}`);
   console.log(`- failed: ${counts.failed}`);
+  console.log(`- processing: ${counts.processing}`);
 
   const extractionsSnap = await db.collectionGroup('page_extractions').get();
   console.log(`- global page_extractions count: ${extractionsSnap.size}`);
 
-  if (counts.completed !== 2 || extractionsSnap.size !== 10) {
-      console.error('BLOCKER: Queue/Records mismatch expected baseline (C:2, PE:10)');
+  const mismatch =
+    counts.total !== EXPECTED_AFTER_R4.total ||
+    counts.active !== EXPECTED_AFTER_R4.active ||
+    counts.completed !== EXPECTED_AFTER_R4.completed ||
+    counts.failed !== EXPECTED_AFTER_R4.failed ||
+    extractionsSnap.size !== EXPECTED_AFTER_R4.pageExtractions;
+
+  if (mismatch) {
+      console.error('RC_X4E_P5_FIX1_BASELINE_MISMATCH');
+      console.error('Expected:', EXPECTED_AFTER_R4);
+      console.error('Actual:', { ...counts, pageExtractions: extractionsSnap.size });
       process.exit(1);
   }
+
+  console.log('RC_X4E_P5_BASELINE_AFTER_R4_CONFIRMED');
 
   console.log('\nWorker Safety Check:');
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -53,11 +75,11 @@ async function audit() {
   console.log(`- no AI/OCR imports: ${noAI}`);
 
   if (!hasConfirmation || !hasLimit3 || !noAI || !hasHarding) {
-      console.error('RC_X4E_P4_L3_BLOCKED_WORKER_UNSAFE');
+      console.error('RC_X4E_P5_BLOCKED_WORKER_UNSAFE');
       process.exit(1);
   }
 
-  console.log('\nRC_X4E_P4_L3_APPLY_READINESS_READY');
+  console.log('\nRC_X4E_P5_APPLY_READINESS_READY');
 }
 
 audit().catch(e => {
