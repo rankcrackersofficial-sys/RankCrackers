@@ -116,8 +116,8 @@ async function main() {
   console.log(`Mode: ${cli.isApplyMode ? 'APPLY' : 'DRY-RUN'}`);
   console.log(`Limit: ${cli.limit} tasks`);
 
-  if (cli.isApplyMode && cli.limit !== 1) {
-    console.error('RC_X4E_P1_BLOCKED_LIMIT_MUST_BE_1');
+  if (cli.isApplyMode && cli.limit !== 3) {
+    console.error('RC_X4E_P4_L3_BLOCKED_LIMIT_MUST_BE_3');
     process.exit(1);
   }
 

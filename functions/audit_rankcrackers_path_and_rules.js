@@ -215,6 +215,9 @@ function main() {
   if (!exists('functions/audit_pagewise_two_batch_continuity.js')) {
     blockers.push('Missing audit_pagewise_two_batch_continuity.js.');
   }
+  if (!exists('functions/audit_pagewise_limit3_apply_readiness.js')) {
+    blockers.push('Missing audit_pagewise_limit3_apply_readiness.js.');
+  }
 
   const filesToScan = [
     ...listFiles(path.join(ROOT, 'functions')),

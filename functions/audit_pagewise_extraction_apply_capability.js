@@ -21,7 +21,7 @@ function audit() {
 
   // 2. Apply locked
   if (!content.includes('CONFIRM_PROCESS_PAGEWISE_EXTRACTION')) blockers.push('Apply mode not locked with confirmation phrase');
-  if (!content.includes('cli.limit !== 1')) blockers.push('Apply mode must be locked to limit 1');
+  if (!content.includes('cli.limit !== 3')) blockers.push('Apply mode must be locked to limit 3 for RC-X4E-P4-L3');
 
   // 3. SDK Unification (FIX2)
   if (content.includes("require('@google-cloud/firestore')")) blockers.push('Mixed SDK: found @google-cloud/firestore import');
