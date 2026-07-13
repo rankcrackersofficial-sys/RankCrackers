@@ -37,9 +37,9 @@ function audit() {
       blockers.push('Main query should not have .limit() when counting total active tasks');
   }
   if (!content.includes('allActiveTasks.length')) blockers.push('Missing total active tasks count logic');
-  if (!content.includes('.slice(0, cli.limit)')) blockers.push('Missing in-memory selection by limit');
+  if (!content.includes('selectedTasks.length >= cli.limit')) blockers.push('Missing in-memory selection by limit');
   if (!content.includes('Total active pagewise tasks found')) blockers.push('Missing logging for total active tasks');
-  if (!content.includes('Tasks selected by limit')) blockers.push('Missing logging for selected tasks count');
+  if (!content.includes('Tasks selected by limit/selector')) blockers.push('Missing logging for selected tasks count');
   if (!content.includes('task limit is not page limit')) blockers.push('Missing task limit policy logging');
 
   // 5. WRITES in RC-X4E-P1 (Limited to ai_queue and page_extractions)

@@ -44,13 +44,15 @@ async function audit() {
 
   const hasConfirmation = content.includes('CONFIRM_PROCESS_PAGEWISE_EXTRACTION');
   const hasLimit3 = content.includes('cli.limit !== 3');
+  const hasHarding = content.includes('--prefer-native-digital') && content.includes('--allow-auto-detect');
   const noAI = !content.includes('VertexAI') && !content.includes('Gemini');
 
   console.log(`- confirmation required: ${hasConfirmation}`);
   console.log(`- limit 3 lock exists: ${hasLimit3}`);
+  console.log(`- selector hardening exists: ${hasHarding}`);
   console.log(`- no AI/OCR imports: ${noAI}`);
 
-  if (!hasConfirmation || !hasLimit3 || !noAI) {
+  if (!hasConfirmation || !hasLimit3 || !noAI || !hasHarding) {
       console.error('RC_X4E_P4_L3_BLOCKED_WORKER_UNSAFE');
       process.exit(1);
   }

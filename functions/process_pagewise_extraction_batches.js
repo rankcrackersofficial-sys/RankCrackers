@@ -23,10 +23,15 @@ function parseArgs(argv) {
   if (taskIdArg) taskId = taskIdArg.split('=')[1];
   else if (taskIdIdx >= 0) taskId = argv[taskIdIdx + 1];
 
+  const preferNativeDigital = argv.includes('--prefer-native-digital');
+  const allowAutoDetect = argv.includes('--allow-auto-detect');
+
   return {
     isDryRun, isApplyMode, confirmation, applyRequested: applyIndex >= 0,
     limit: isNaN(limit) ? 3 : limit,
-    taskId
+    taskId,
+    preferNativeDigital,
+    allowAutoDetect
   };
 }
 
@@ -115,6 +120,8 @@ async function main() {
   console.log('==============================================');
   console.log(`Mode: ${cli.isApplyMode ? 'APPLY' : 'DRY-RUN'}`);
   console.log(`Limit: ${cli.limit} tasks`);
+  console.log(`Prefer Native Digital: ${cli.preferNativeDigital ? 'YES' : 'NO'}`);
+  console.log(`Allow AUTO_DETECT: ${cli.allowAutoDetect ? 'YES' : 'NO'}`);
 
   if (cli.isApplyMode && cli.limit !== 3) {
     console.error('RC_X4E_P4_L3_BLOCKED_LIMIT_MUST_BE_3');
@@ -123,11 +130,18 @@ async function main() {
 
   const token = getAccessToken();
 
-  // Initialize firebase-admin consistently
   if (!admin.apps.length) {
     admin.initializeApp({ projectId: PROJECT_ID });
   }
   const db = admin.firestore();
+
+  // Find recent failures to avoid
+  const failedTasksSnap = await db.collection('ai_queue')
+    .where('task_type', '==', 'pagewise_text_extraction_batch')
+    .where('status', '==', 'failed')
+    .where('failure_reason', '==', 'NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED')
+    .get();
+  const recentFailuresDocIds = new Set(failedTasksSnap.docs.map(d => d.data().document_id));
 
   const queueSnap = await db.collection('ai_queue')
     .where('task_type', '==', 'pagewise_text_extraction_batch')
@@ -143,22 +157,68 @@ async function main() {
     return a.id.localeCompare(b.id);
   });
 
-  let selectedTasks = allActiveTasks;
-  if (cli.taskId) {
-    selectedTasks = allActiveTasks.filter(t => t.id === cli.taskId);
-    console.log(`\nFiltering by task-id: ${cli.taskId} (Found: ${selectedTasks.length})`);
-  } else {
-    selectedTasks = allActiveTasks.slice(0, cli.limit);
-  }
-
   console.log(`\n1. Total active pagewise tasks found: ${allActiveTasks.length}`);
+
+  let selectedTasks = [];
+  let skippedCount = 0;
+
+  if (cli.taskId) {
+    const task = allActiveTasks.find(t => t.id === cli.taskId);
+    if (task) {
+        if (task.mission_id === 'AUTO_DETECT' && !cli.allowAutoDetect) {
+            console.error('RC_X4E_P5_BLOCKED_AUTO_DETECT_REQUIRES_ALLOW_FLAG');
+            process.exit(1);
+        }
+        selectedTasks = [task];
+    }
+  } else {
+    for (const task of allActiveTasks) {
+      if (selectedTasks.length >= cli.limit) break;
+
+      // 1. AUTO_DETECT Check
+      if (task.mission_id === 'AUTO_DETECT' && !cli.allowAutoDetect) {
+          console.log(`   [SKIP] ${task.id}: SKIPPED_AUTO_DETECT_NOT_ALLOWED`);
+          skippedCount++;
+          continue;
+      }
+
+      // 2. Recent Failure Check
+      if (recentFailuresDocIds.has(task.document_id)) {
+          console.log(`   [SKIP] ${task.id}: SKIPPED_RECENT_EMPTY_NATIVE_TEXT_FAILURE_DOCUMENT`);
+          skippedCount++;
+          continue;
+      }
+
+      // 3. Prefer Native Digital Probe
+      if (cli.preferNativeDigital) {
+          try {
+              const bytes = await resolveSourceBytes(task.source_path, token);
+              const { result } = await extractPagesNatively(bytes, task.page_start, task.page_start);
+              const probeText = result[task.page_start] || '';
+              if (probeText.length <= 100) {
+                  console.log(`   [SKIP] ${task.id}: SKIPPED_NATIVE_TEXT_PROBE_EMPTY (len: ${probeText.length})`);
+                  skippedCount++;
+                  continue;
+              }
+          } catch (e) {
+              console.log(`   [SKIP] ${task.id}: SKIPPED_PROBE_FAILED (${e.message})`);
+              skippedCount++;
+              continue;
+          }
+      }
+
+      selectedTasks.push(task);
+    }
+  }
 
   if (selectedTasks.length === 0) {
     console.log('\nRC_X4W_PAGEWISE_WORKER_DRY_RUN_READY (No tasks to process)');
     return;
   }
 
-  console.log(`2. Tasks selected by limit/filter: ${selectedTasks.length}`);
+  console.log(`2. Tasks selected by limit/selector: ${selectedTasks.length}`);
+  console.log(`3. Skipped candidates count: ${skippedCount}`);
+  console.log(`Selected IDs: ${selectedTasks.map(t => t.id).join(', ')}`);
 
   for (const task of selectedTasks) {
     console.log(`\nProcessing task: ${task.id}`);
@@ -172,7 +232,7 @@ async function main() {
           failure_reason: 'INVALID_TASK_SHAPE',
           error_message: shape.reason,
           updated_at: admin.firestore.FieldValue.serverTimestamp(),
-          created_by_patch_failed: 'RC-X4E-P1-FIX2'
+          created_by_patch_failed: 'RC-X4E-P5-CANDIDATE-FIX'
         });
       }
       continue;
@@ -191,7 +251,7 @@ async function main() {
           failure_reason: 'SOURCE_ACCESS_FAILED',
           error_message: e.message,
           updated_at: admin.firestore.FieldValue.serverTimestamp(),
-          created_by_patch_failed: 'RC-X4E-P1-FIX2'
+          created_by_patch_failed: 'RC-X4E-P5-CANDIDATE-FIX'
         });
       }
       continue;
@@ -205,7 +265,7 @@ async function main() {
           status: 'failed',
           failure_reason: 'INVALID_PAGE_RANGE',
           updated_at: admin.firestore.FieldValue.serverTimestamp(),
-          created_by_patch_failed: 'RC-X4E-P1-FIX2'
+          created_by_patch_failed: 'RC-X4E-P5-CANDIDATE-FIX'
         });
       }
       continue;
@@ -232,7 +292,7 @@ async function main() {
             failure_reason: 'NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED',
             error_message: `Empty text on pages: ${emptyPages.join(', ')}`,
             updated_at: admin.firestore.FieldValue.serverTimestamp(),
-            created_by_patch_failed: 'RC-X4E-P1-FIX2'
+            created_by_patch_failed: 'RC-X4E-P5-CANDIDATE-FIX'
           });
           continue;
         }
@@ -254,7 +314,7 @@ async function main() {
             failure_reason: 'PAGE_EXTRACTION_ALREADY_EXISTS',
             error_message: `Duplicate page records: ${duplicatePages.join(', ')}`,
             updated_at: admin.firestore.FieldValue.serverTimestamp(),
-            created_by_patch_failed: 'RC-X4E-P1-FIX2'
+            created_by_patch_failed: 'RC-X4E-P5-CANDIDATE-FIX'
           });
           continue;
         }
@@ -293,7 +353,7 @@ async function main() {
             },
             created_at: admin.firestore.FieldValue.serverTimestamp(),
             updated_at: admin.firestore.FieldValue.serverTimestamp(),
-            created_by_patch: 'RC-X4E-P1-FIX2'
+            created_by_patch: 'RC-X4E-P5-CANDIDATE-FIX'
           };
 
           if (task.mission_id === 'AUTO_DETECT') {
@@ -317,7 +377,7 @@ async function main() {
             page_start: task.page_start,
             page_end: task.page_end
           },
-          created_by_patch_completed: 'RC-X4E-P1-FIX2'
+          created_by_patch_completed: 'RC-X4E-P5-CANDIDATE-FIX'
         });
 
         console.log(`   - Committing ${pagesInBatch} page extractions...`);
@@ -331,7 +391,7 @@ async function main() {
           failure_reason: 'NATIVE_TEXT_EXTRACTION_ERROR',
           error_message: e.message,
           updated_at: admin.firestore.FieldValue.serverTimestamp(),
-          created_by_patch_failed: 'RC-X4E-P1-FIX2'
+          created_by_patch_failed: 'RC-X4E-P5-CANDIDATE-FIX'
         });
       }
     } else {
@@ -348,7 +408,7 @@ async function main() {
   console.log('    - task limit is not page limit: YES');
 
   if (cli.isApplyMode) {
-    console.log('\nRC_X4E_P1_FIX2_APPLY_FINISHED');
+    console.log('\nRC_X4E_P5_CANDIDATE_FIX_APPLY_FINISHED');
   } else {
     console.log('\nRC_X4W_PAGEWISE_WORKER_DRY_RUN_READY');
   }
