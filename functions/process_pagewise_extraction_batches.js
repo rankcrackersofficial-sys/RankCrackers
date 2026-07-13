@@ -16,7 +16,18 @@ function parseArgs(argv) {
   let limit = 3;
   if (limitArg) limit = parseInt(limitArg.split('=')[1], 10);
   else if (limitIdx >= 0) limit = parseInt(argv[limitIdx + 1], 10);
-  return { isDryRun, isApplyMode, confirmation, applyRequested: applyIndex >= 0, limit: isNaN(limit) ? 3 : limit };
+
+  const taskIdArg = argv.find(a => a.startsWith('--task-id='));
+  const taskIdIdx = argv.indexOf('--task-id');
+  let taskId = '';
+  if (taskIdArg) taskId = taskIdArg.split('=')[1];
+  else if (taskIdIdx >= 0) taskId = argv[taskIdIdx + 1];
+
+  return {
+    isDryRun, isApplyMode, confirmation, applyRequested: applyIndex >= 0,
+    limit: isNaN(limit) ? 3 : limit,
+    taskId
+  };
 }
 
 const cli = parseArgs(process.argv.slice(2));
@@ -132,15 +143,22 @@ async function main() {
     return a.id.localeCompare(b.id);
   });
 
+  let selectedTasks = allActiveTasks;
+  if (cli.taskId) {
+    selectedTasks = allActiveTasks.filter(t => t.id === cli.taskId);
+    console.log(`\nFiltering by task-id: ${cli.taskId} (Found: ${selectedTasks.length})`);
+  } else {
+    selectedTasks = allActiveTasks.slice(0, cli.limit);
+  }
+
   console.log(`\n1. Total active pagewise tasks found: ${allActiveTasks.length}`);
 
-  if (allActiveTasks.length === 0) {
+  if (selectedTasks.length === 0) {
     console.log('\nRC_X4W_PAGEWISE_WORKER_DRY_RUN_READY (No tasks to process)');
     return;
   }
 
-  const selectedTasks = allActiveTasks.slice(0, cli.limit);
-  console.log(`2. Tasks selected by limit: ${selectedTasks.length}`);
+  console.log(`2. Tasks selected by limit/filter: ${selectedTasks.length}`);
 
   for (const task of selectedTasks) {
     console.log(`\nProcessing task: ${task.id}`);

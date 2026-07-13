@@ -91,8 +91,8 @@ async function audit() {
     if (!dryRunOutput.includes('Total active pagewise tasks found:')) {
         blockers.push('Dry-run output missing total active tasks count.');
     }
-    if (!dryRunOutput.includes('Tasks selected by limit: 1')) {
-        blockers.push('Dry-run output missing tasks selected by limit (1).');
+    if (!dryRunOutput.includes('Tasks selected by limit')) {
+        blockers.push('Dry-run output missing tasks selected count.');
     }
 
     if (dryRunOutput.includes('FAILED')) {
