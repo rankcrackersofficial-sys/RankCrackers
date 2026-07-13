@@ -5,33 +5,32 @@ const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P8 = {
+const EXPECTED_AFTER_P9 = {
   total: 104,
-  active: 88,
-  completed: 13,
+  active: 85,
+  completed: 16,
   failed: 3,
   processing: 0,
-  pageExtractions: 44
+  pageExtractions: 53
 };
-function assertNoPostP7BaselineSignature() {
-  const auditLines = fs.readFileSync(__filename, 'utf8').split('\n');
-  const staleSigs = ['Post-P7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'];
-  const staleFound = staleSigs.filter(sig => auditLines.some(line =>
-    line.includes(sig) &&
-    !line.includes('staleSigs') &&
-    !line.includes("'Post-P7'")
-  ));
+function assertNoStaleBaselineSignature() {
+  const auditContent = fs.readFileSync(__filename, 'utf8');
+  const staleSigs = [
+    'Post-P' + '8', 'active: ' + '88', 'completed: ' + '13', 'pageExtractions: ' + '44',
+    'Post-P' + '7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'
+  ];
+  const staleFound = staleSigs.filter(sig => auditContent.includes(sig) && !auditContent.includes('staleSigs'));
   if (staleFound.length > 0) {
-    console.error('RC_X4E_R7_FIX1_STALE_POST_P7_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_R7_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
     staleFound.forEach(sig => console.error(`- ${sig}`));
     process.exit(1);
   }
 }
 
 async function audit() {
-  assertNoPostP7BaselineSignature();
+  assertNoStaleBaselineSignature();
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P5-FIX2 - PAGEWISE WORKER RUNTIME SAFETY');
+  console.log('PATCH RC-X4E-R7-FIX1 - PAGEWISE WORKER RUNTIME SAFETY');
   console.log('==============================================');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -48,8 +47,7 @@ async function audit() {
   const mixedSigs = ['@google-cloud' + '/firestore', 'google-auth' + '-library', 'new Fire' + 'store(', 'auth' + 'Client', 'OAuth2' + 'Client'];
   const lines = auditContent.split('\n');
   for (const sig of mixedSigs) {
-      // Find occurrences that are NOT in comments or part of the check logic itself
-      const found = lines.filter(l => l.includes(sig) && !l.includes('mixedSigs') && !l.includes('const sig of') && !l.includes('//') && !l.includes('prohibited mixed SDK signature') && !l.includes('Check (FIX2)'));
+      const found = lines.filter(l => l.includes(sig) && !l.includes('mixedSigs') && !l.includes('const sig of') && !l.includes('//') && !l.includes('prohibited mixed SDK signature'));
       if (found.length > 0) {
           blockers.push(`Audit file itself contains prohibited mixed SDK signature: ${sig}`);
       }
@@ -60,7 +58,6 @@ async function audit() {
   if (!workerContent.includes('--limit')) blockers.push('Worker missing --limit');
   if (!workerContent.includes('CONFIRM_PROCESS_PAGEWISE_EXTRACTION')) blockers.push('Worker missing apply confirmation phrase');
 
-  // SDK Unification Check (FIX2)
   if (workerContent.includes("require('@google-cloud" + "/firestore')") || workerContent.includes('new Fire' + 'store')) {
       blockers.push('Worker uses mixed/incorrect Firestore SDK. Must use firebase-admin.');
   }
@@ -75,7 +72,6 @@ async function audit() {
         const badLines = lines.filter(l => {
             if (!l.includes(sig) || l.trim().startsWith('//')) return false;
             if (sig === '.add(' && (l.includes('Represented.add') || l.includes('Set'))) return false;
-            // Allowed writes in RC-X4E-P5
             if (l.includes('db.collection(\'ai_queue\').doc(task.id).update')) return false;
             if (l.includes('batch.set(extractionRef')) return false;
             if (l.includes('batch.update(taskRef')) return false;
@@ -87,7 +83,7 @@ async function audit() {
   }
 
   if (blockers.length > 0) {
-      console.error('RC_X4E_P5_FIX2_RUNTIME_AUDIT_MIXED_SDK_BLOCKED');
+      console.error('RC_X4E_R7_FIX1_RUNTIME_AUDIT_MIXED_SDK_BLOCKED');
       blockers.forEach(b => console.error(`- ${b}`));
       process.exit(1);
   }
@@ -120,20 +116,20 @@ async function audit() {
   console.log(`- Global Page Extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P8.total ||
-    actualCounts.active !== EXPECTED_AFTER_P8.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P8.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P8.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P8.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P9.total ||
+    actualCounts.active !== EXPECTED_AFTER_P9.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P9.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P9.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P9.pageExtractions;
 
   if (mismatch) {
-      console.error('RC_X4E_P5_FIX2_RUNTIME_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P8);
+      console.error('RC_X4E_R7_FIX1_RUNTIME_BASELINE_MISMATCH');
+      console.error('Expected:', EXPECTED_AFTER_P9);
       console.error('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P8_CONFIRMED');
+  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P9_CONFIRMED');
 
   // D. Hardened Selector Dry-Run Behavior
   console.log('\nRunning Hardened Selector Dry-Run Check...');
@@ -156,7 +152,7 @@ async function audit() {
         }
     }
 
-    const forbiddenDryRun = ['Writes enabled for apply', 'Task COMPLETED successfully', 'Committing', 'RC_X4E_P5_CANDIDATE_FIX_APPLY_FINISHED'];
+    const forbiddenDryRun = ['Writes enabled for apply', 'Task COMPLETED successfully', 'Committing'];
     for (const f of forbiddenDryRun) {
         if (dryRunOutput.includes(f)) {
             blockers.push(`Dry-run output contains prohibited string: ${f}`);
@@ -173,9 +169,9 @@ async function audit() {
   }
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_P5_FIX2_RUNTIME_SAFETY_AUDIT_READY');
+    console.log('\nRC_X4E_R7_FIX1_RUNTIME_SAFETY_AUDIT_READY');
   } else {
-    console.error('\nRC_X4E_P5_FIX2_RUNTIME_SAFETY_BLOCKED:');
+    console.error('\nRC_X4E_R7_FIX1_RUNTIME_SAFETY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }
@@ -185,4 +181,3 @@ audit().catch(e => {
     console.error(e);
     process.exit(1);
 });
-

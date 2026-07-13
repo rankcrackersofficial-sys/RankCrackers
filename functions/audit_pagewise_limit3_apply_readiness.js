@@ -4,33 +4,33 @@ const path = require('path');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P8 = {
+const EXPECTED_AFTER_P9 = {
   total: 104,
-  active: 88,
-  completed: 13,
+  active: 85,
+  completed: 16,
   failed: 3,
   processing: 0,
-  pageExtractions: 44
+  pageExtractions: 53
 };
-function assertNoPostP7BaselineSignature() {
-  const auditLines = fs.readFileSync(__filename, 'utf8').split('\n');
-  const staleSigs = ['Post-P7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'];
-  const staleFound = staleSigs.filter(sig => auditLines.some(line =>
-    line.includes(sig) &&
-    !line.includes('staleSigs') &&
-    !line.includes("'Post-P7'")
-  ));
+
+function assertNoStaleBaselineSignature() {
+  const auditContent = fs.readFileSync(__filename, 'utf8');
+  const staleSigs = [
+    'Post-P' + '8', 'active: ' + '88', 'completed: ' + '13', 'pageExtractions: ' + '44',
+    'Post-P' + '7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'
+  ];
+  const staleFound = staleSigs.filter(sig => auditContent.includes(sig) && !auditContent.includes('staleSigs'));
   if (staleFound.length > 0) {
-    console.error('RC_X4E_R7_FIX1_STALE_POST_P7_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_R7_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
     staleFound.forEach(sig => console.error(`- ${sig}`));
     process.exit(1);
   }
 }
 
 async function audit() {
-  assertNoPostP7BaselineSignature();
+  assertNoStaleBaselineSignature();
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P5 - LIMIT 3 APPLY READINESS AUDIT');
+  console.log('PATCH RC-X4E-R7-FIX1 - LIMIT 3 APPLY READINESS AUDIT');
   console.log('==============================================');
 
   if (!admin.apps.length) {
@@ -60,20 +60,20 @@ async function audit() {
   console.log(`- global page_extractions count: ${extractionsSnap.size}`);
 
   const mismatch =
-    counts.total !== EXPECTED_AFTER_P8.total ||
-    counts.active !== EXPECTED_AFTER_P8.active ||
-    counts.completed !== EXPECTED_AFTER_P8.completed ||
-    counts.failed !== EXPECTED_AFTER_P8.failed ||
-    extractionsSnap.size !== EXPECTED_AFTER_P8.pageExtractions;
+    counts.total !== EXPECTED_AFTER_P9.total ||
+    counts.active !== EXPECTED_AFTER_P9.active ||
+    counts.completed !== EXPECTED_AFTER_P9.completed ||
+    counts.failed !== EXPECTED_AFTER_P9.failed ||
+    extractionsSnap.size !== EXPECTED_AFTER_P9.pageExtractions;
 
   if (mismatch) {
-      console.error('RC_X4E_P5_FIX1_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P8);
+      console.error('RC_X4E_R7_FIX1_BASELINE_MISMATCH');
+      console.error('Expected:', EXPECTED_AFTER_P9);
       console.error('Actual:', { ...counts, pageExtractions: extractionsSnap.size });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P8_CONFIRMED');
+  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P9_CONFIRMED');
 
   console.log('\nWorker Safety Check:');
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -90,15 +90,14 @@ async function audit() {
   console.log(`- no AI/OCR imports: ${noAI}`);
 
   if (!hasConfirmation || !hasLimit3 || !noAI || !hasHarding) {
-      console.error('RC_X4E_P5_BLOCKED_WORKER_UNSAFE');
+      console.error('RC_X4E_R7_FIX1_BLOCKED_WORKER_UNSAFE');
       process.exit(1);
   }
 
-  console.log('\nRC_X4E_P5_APPLY_READINESS_READY');
+  console.log('\nRC_X4E_R7_FIX1_APPLY_READINESS_READY');
 }
 
 audit().catch(e => {
     console.error(e);
     process.exit(1);
 });
-

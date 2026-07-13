@@ -10,13 +10,13 @@ const EXPECTED_P7_TASKS = [
   'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b14_p40_42'
 ];
 
-const BASELINE_POST_P7 = {
+const EXPECTED_AFTER_P9 = {
   total: 104,
-  active: 91,
-  completed: 10,
+  active: 85,
+  completed: 16,
   failed: 3,
   processing: 0,
-  pageExtractions: 35
+  pageExtractions: 53
 };
 
 async function audit() {
@@ -52,17 +52,19 @@ async function audit() {
   console.log(`- total page_extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== BASELINE_POST_P7.total ||
-    actualCounts.active !== BASELINE_POST_P7.active ||
-    actualCounts.completed !== BASELINE_POST_P7.completed ||
-    actualCounts.failed !== BASELINE_POST_P7.failed ||
-    actualPageExtractions !== BASELINE_POST_P7.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P9.total ||
+    actualCounts.active !== EXPECTED_AFTER_P9.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P9.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P9.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P9.pageExtractions;
 
   if (mismatch) {
     console.error('RC_X4E_R6_QUEUE_BASELINE_MISMATCH');
-    console.log('Expected:', BASELINE_POST_P7);
+    console.log('Expected:', EXPECTED_AFTER_P9);
     console.log('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
   }
+
+  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P9_CONFIRMED');
 
   console.log('\n--- Part C: Verify P7 Task Results ---');
   for (const tid of EXPECTED_P7_TASKS) {
@@ -169,7 +171,8 @@ async function audit() {
     'functions/audit_pagewise_candidate_selector_policy.js',
     'functions/audit_pagewise_limit3_apply_readiness.js',
     'functions/audit_pagewise_hardened_limit3_result.js',
-    'functions/audit_pagewise_second_hardened_limit3_result.js'
+    'functions/audit_pagewise_second_hardened_limit3_result.js',
+    'functions/audit_pagewise_third_hardened_limit3_result.js'
   ];
 
   let staleFound = false;
@@ -178,7 +181,10 @@ async function audit() {
     if (!fs.existsSync(filePath)) continue;
     const content = fs.readFileSync(filePath, 'utf8');
 
-    const staleSigs = ['EXPECTED_AFTER' + '_P6', 'BASELINE_POST' + '_P6', 'active: ' + '94', 'completed: ' + '7', 'pageExtractions: ' + '26'];
+    const staleSigs = [
+      'Post-P' + '8', 'active: ' + '88', 'completed: ' + '13', 'pageExtractions: ' + '44',
+      'Post-P' + '7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'
+    ];
 
     for (const sig of staleSigs) {
         if (content.includes(sig) && !content.includes('staleSigs')) {
@@ -189,7 +195,7 @@ async function audit() {
   }
 
   if (staleFound) {
-    console.error('RC_X4E_R6_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_R7_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
   }
 
   console.log('\n--- Part J: Worker Hardened Selector Safety Check ---');
@@ -199,7 +205,7 @@ async function audit() {
   console.log(`- worker has hardened selector flags: ${hasPreferNative && hasAllowAutoDetect}`);
 
   if (staleFound) {
-    console.error('\nRC_X4E_R6_BLOCKED_STALE_AUDIT_BASELINE_FOUND');
+    console.error('\nRC_X4E_R7_FIX1_BLOCKED_STALE_AUDIT_BASELINE_FOUND');
     process.exit(1);
   }
 

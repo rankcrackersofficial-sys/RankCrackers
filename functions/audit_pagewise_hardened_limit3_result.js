@@ -10,18 +10,18 @@ const EXPECTED_P6_TASKS = [
   'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b11_p31_33'
 ];
 
-const EXPECTED_AFTER_P8 = {
+const EXPECTED_AFTER_P9 = {
   total: 104,
-  active: 88,
-  completed: 13,
+  active: 85,
+  completed: 16,
   failed: 3,
   processing: 0,
-  pageExtractions: 44
+  pageExtractions: 53
 };
 
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-R5 - HARDENED LIMIT-3 RESULT AUDIT');
+  console.log('PATCH RC-X4E-R7-FIX1 - HARDENED LIMIT-3 RESULT AUDIT');
   console.log('==============================================');
 
   if (!admin.apps.length) {
@@ -52,20 +52,19 @@ async function audit() {
   console.log(`- total page_extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P8.total ||
-    actualCounts.active !== EXPECTED_AFTER_P8.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P8.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P8.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P8.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P9.total ||
+    actualCounts.active !== EXPECTED_AFTER_P9.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P9.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P9.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P9.pageExtractions;
 
   if (mismatch) {
     console.error('RC_X4E_R7_QUEUE_BASELINE_MISMATCH');
-    console.log('Expected:', EXPECTED_AFTER_P8);
+    console.log('Expected:', EXPECTED_AFTER_P9);
     console.log('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
-    // This is a blocker if we want to proceed to another apply.
   }
 
-  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P8_CONFIRMED');
+  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P9_CONFIRMED');
 
   console.log('\n--- Part C: Verify P6 Task Results ---');
   for (const tid of EXPECTED_P6_TASKS) {
@@ -81,7 +80,7 @@ async function audit() {
     console.log(`  page_extractions_created: ${task.page_extractions_created}`);
 
     if (task.status !== 'completed' || task.mission_id === 'AUTO_DETECT' || task.page_extractions_created !== 3) {
-      console.error('RC_X4E_R5_P6_TASK_RESULT_INVALID');
+      console.error('RC_X4E_R7_P9_TASK_RESULT_INVALID');
       process.exit(1);
     }
   }
@@ -108,8 +107,6 @@ async function audit() {
     });
   }
 
-  const forbiddenFields = ['published', 'approved', 'verified', 'founder_approved', 'publish_status', 'atom_id', 'fact_id', 'question_id', 'crucible_item_id', 'digibook_unit_id', 'ai_generated', 'ocr_used'];
-
   let integrityValid = true;
   for (const docId in docMap) {
     const d = docMap[docId];
@@ -124,7 +121,7 @@ async function audit() {
     console.log(`  duplicate pages within doc: ${duplicates.length > 0 ? 'YES: ' + duplicates.join(',') : 'NO'}`);
 
     if (duplicates.length > 0) {
-      console.error('RC_X4E_R5_DUPLICATE_PAGE_RECORD_WITHIN_DOCUMENT');
+      console.error('RC_X4E_R7_DUPLICATE_PAGE_RECORD_WITHIN_DOCUMENT');
       integrityValid = false;
     }
 
@@ -140,7 +137,7 @@ async function audit() {
   }
 
   if (!integrityValid) {
-    console.error('RC_X4E_R5_INTEGRITY_CHECK_FAILED');
+    console.error('RC_X4E_R7_INTEGRITY_CHECK_FAILED');
     process.exit(1);
   }
 
@@ -162,7 +159,7 @@ async function audit() {
     const foundEffects = sideEffectFields.filter(f => parentDoc[f] !== undefined);
     console.log(`- doc: ${docId} | side effects: ${foundEffects.join(', ') || 'NONE'}`);
     if (foundEffects.length > 0) {
-      console.error('RC_X4E_R5_PARENT_SIDE_EFFECT_DETECTED');
+      console.error('RC_X4E_R7_PARENT_SIDE_EFFECT_DETECTED');
       process.exit(1);
     }
   }
@@ -170,11 +167,11 @@ async function audit() {
   console.log('\n--- Part I: Audit Baseline Staleness Check ---');
   const auditFiles = [
     'functions/audit_pagewise_worker_runtime_safety.js',
-    'functions/audit_pagewise_extraction_apply_capability.js',
     'functions/audit_pagewise_candidate_selector_policy.js',
     'functions/audit_pagewise_limit3_apply_readiness.js',
     'functions/audit_pagewise_hardened_limit3_result.js',
-    'functions/audit_pagewise_second_hardened_limit3_result.js'
+    'functions/audit_pagewise_second_hardened_limit3_result.js',
+    'functions/audit_pagewise_third_hardened_limit3_result.js'
   ];
 
   let staleFound = false;
@@ -183,10 +180,9 @@ async function audit() {
     if (!fs.existsSync(filePath)) continue;
     const content = fs.readFileSync(filePath, 'utf8');
 
-    // Detect stale Post-P6/Post-P7 baselines
     const staleSigs = [
-      'EXPECTED_AFTER' + '_P6', 'BASELINE_POST' + '_P6', 'active: ' + '94', 'completed: ' + '7', 'pageExtractions: ' + '26',
-      'Post-P7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'
+      'Post-P' + '8', 'active: ' + '88', 'completed: ' + '13', 'pageExtractions: ' + '44',
+      'Post-P' + '7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'
     ];
 
     for (const sig of staleSigs) {
@@ -214,11 +210,10 @@ async function audit() {
     process.exit(1);
   }
 
-  console.log('\nRC_X4E_R5_HARDENED_LIMIT3_RESULT_AUDIT_READY');
+  console.log('\nRC_X4E_R7_FIX1_HARDENED_LIMIT3_RESULT_AUDIT_READY');
 }
 
 audit().catch(e => {
   console.error(e);
   process.exit(1);
 });
-
