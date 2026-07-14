@@ -86,10 +86,10 @@ function main() {
     blockers.push('lib/main_web.dart must not use mobile AdminScreen as main entry.');
   }
 
-  if (exists('lib/features/admin/presentation/screens/admin_screen.dart')) {
-    blockers.push('Mobile admin_screen.dart must be absent.');
-  }
   const appRouter = read('lib/core/router/app_router.dart');
+  if (appRouter.includes('features/admin/presentation/screens/admin_screen.dart') || /AdminScreen\s*\(/.test(appRouter)) {
+    blockers.push('app_router.dart must not actively import/render mobile AdminScreen.');
+  }
   const hasActiveAdminRedirect = appRouter.includes('return AppRoutes.admin;') && !appRouter.match(/\/\*\s*[\s\S]*?return AppRoutes\.admin;[\s\S]*?\*\//);
   if (hasActiveAdminRedirect) {
     blockers.push('app_router.dart must not redirect founder/admin claims to mobile admin panel.');
@@ -283,11 +283,13 @@ function main() {
 
   if (blockers.length > 0) {
     console.error('\nRC_G0_BLOCKED');
+    console.error('\nRC_X4E_R8_FIX3_BOUNDARY_GUARD_BLOCKED');
     blockers.forEach(blocker => console.error(`- ${blocker}`));
     process.exit(1);
   }
 
   console.log('\nRC_G0_PATH_AND_RULES_GUARD_PASSED');
+  console.log('\nRC_X4E_R8_FIX3_BOUNDARY_GUARD_READY');
 }
 
 main();

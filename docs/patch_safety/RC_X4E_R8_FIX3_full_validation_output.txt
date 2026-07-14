@@ -1,0 +1,1209 @@
+﻿==========================================
+Command: npm run audit:rankcrackers:guard
+==========================================
+
+> audit:rankcrackers:guard
+> node functions/audit_rankcrackers_path_and_rules.js
+
+==============================================
+RANKCRACKERS PATH & FINAL RULES GUARD
+==============================================
+Current working path: C:\RankCrackers\RankCrackers-55
+Official working path: C:\RankCrackers\RankCrackers-55
+
+Guard results:
+- Official path locked: YES
+- Web build rule guarded: YES
+- Android Student/User-only guard checked: YES
+- M4/M6 catalog bridge guard checked: YES
+- Extraction policy documented: YES
+- Universal extraction audit exists: YES
+- Universal page completeness audit exists: YES
+- Atomic linkage integrity audit exists: YES
+- Universal page count queue apply script: PRESENT
+- Page count queue state audit exists: YES
+- Metadata repair planner exists: YES
+- Metadata repair apply script exists: YES
+- Repaired docs page count queue apply script: PRESENT
+- Page count detection worker exists: YES
+- Page count worker capability audit exists: YES
+- Final page count result audit exists: YES
+- Universal pagewise planner exists: YES
+- Universal pagewise apply exists: YES
+- Pagewise queue audit exists: YES
+- Pagewise worker exists: YES
+- Pagewise worker capability audit exists: YES
+- Pagewise worker runtime safety audit exists: YES
+- Pagewise extraction apply audit exists: YES
+- Notification dynamic schema system: PRESENT
+- Notification page count queue apply script: PRESENT
+
+RC_G0_PATH_AND_RULES_GUARD_PASSED
+
+RC_X4E_R8_FIX3_BOUNDARY_GUARD_READY
+
+==========================================
+Command: npm run audit:pagewise:queue
+==========================================
+
+> audit:pagewise:queue
+> node functions/audit_pagewise_queue_state.js
+
+==============================================
+PATCH RC-X4R - PAGEWISE QUEUE STATE AUDIT
+==============================================
+Mode: READ ONLY (Unified Admin SDK)
+
+Global Reconciliation:
+1. Total pagewise tasks found: 104
+2. Active pagewise tasks: 82
+3. Queued tasks: 82
+4. Processing/running tasks: 0
+5. Completed tasks: 19
+6. Failed tasks: 3
+7. Unexpected status tasks: 0
+8. Unique documents represented: 16
+9. Total planned pages from queue: 345
+10. Missing pages total: 0
+11. Duplicate pages total: 0
+12. Out-of-range pages total: 0
+13. Invalid task shape count: 0
+14. Documents with coverage complete: 16
+15. Documents with coverage blockers: 0
+16. Documents with extraction started: 2
+17. Extraction in progress: false
+18. Blocked docs wrongly queued count: 0
+
+Document Type Summary:
+Notification: { docs: 5, tasks: 77, pages: 230, blockers: 0 }
+Syllabus: { docs: 8, tasks: 14, pages: 56, blockers: 0 }
+PYQ: { docs: 2, tasks: 12, pages: 56, blockers: 0 }
+Study Material: { docs: 0, tasks: 0, pages: 0, blockers: 0 }
+Other Official: { docs: 1, tasks: 1, pages: 3, blockers: 0 }
+
+Mission Summary:
+RPSC: { docs: 8, tasks: 8, pages: 26, blockers: 0 }
+JEE: { docs: 3, tasks: 41, pages: 138, blockers: 0 }
+NEET: { docs: 3, tasks: 52, pages: 168, blockers: 0 }
+AUTO_DETECT/RAS: { docs: 2, tasks: 3, pages: 13, blockers: 0 }
+
+RC_X4R_PAGEWISE_QUEUE_STATE_AUDIT_READY
+
+==========================================
+Command: npm run audit:pagewise:worker
+==========================================
+
+> audit:pagewise:worker
+> node functions/audit_pagewise_worker_capability.js
+
+==============================================
+PATCH RC-X4E-P1 - PAGEWISE WORKER CAPABILITY AUDIT
+==============================================
+- Supports limit: YES
+- Apply mode enabled: YES
+- Firestore writes found: YES
+- AI/OCR calls found: YES
+
+RC_X4E_P1_PAGEWISE_WORKER_CAPABILITY_READY
+
+==========================================
+Command: npm run audit:pagewise:runtime
+==========================================
+
+> audit:pagewise:runtime
+> node functions/audit_pagewise_worker_runtime_safety.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - PAGEWISE WORKER RUNTIME SAFETY
+==============================================
+Runtime Queue State:
+- Total pagewise tasks: 104
+- Queued/Pending: 82
+- Processing/Running: 0
+- Completed: 19
+- Failed: 3
+- Global Page Extractions: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+Running Hardened Selector Dry-Run Check...
+--- Dry-Run Output Start ---
+==============================================
+PATCH RC-X4E-P1-FIX2 - PAGEWISE EXTRACTION WORKER
+==============================================
+Mode: DRY-RUN
+Limit: 3 tasks
+Prefer Native Digital: YES
+Allow AUTO_DETECT: NO
+
+1. Total active pagewise tasks found: 82
+2. Tasks selected by limit/selector: 3
+3. Skipped candidates count: 0
+Selected IDs: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (67-69)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (70-72)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (73-75)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Confirmation:
+    - no Firestore write: YES
+    - no queue status update: YES
+    - no AI extraction: YES
+    - no OCR: YES
+    - no text extraction: NO (Native extraction enabled in apply)
+    - task limit is not page limit: YES
+
+RC_X4W_PAGEWISE_WORKER_DRY_RUN_READY
+
+--- Dry-Run Output End ---
+Dry-run validation: PASSED
+
+RC_X4E_R8_FIX1_RUNTIME_SAFETY_AUDIT_READY
+
+==========================================
+Command: npm run audit:pagewise:apply
+==========================================
+
+> audit:pagewise:apply
+> node functions/audit_pagewise_extraction_apply_capability.js
+
+==============================================
+PATCH RC-X4E-P5-FIX2 - PAGEWISE APPLY CAPABILITY AUDIT
+==============================================
+
+RC_X4E_P5_FIX2_PAGEWISE_APPLY_CAPABILITY_READY
+
+==========================================
+Command: npm run audit:pagewise:first-result
+==========================================
+
+> audit:pagewise:first-result
+> node functions/audit_first_pagewise_extraction_result.js
+
+==============================================
+PATCH RC-X4E-R1 - FIRST PAGEWISE EXTRACTION AUDIT
+==============================================
+
+--- Part C: Verify Failed Task (rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b1_p1_5) ---
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b1_p1_5
+- status: failed
+- failure_reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED
+- error_message: Empty text on pages: 1, 2, 3, 5
+- mission_id: AUTO_DETECT
+- document_id: hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86
+- document_type: notification
+- source_path: ingestion_refinery/d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86.pdf
+- page_start: 1
+- page_end: 5
+- created_by_patch_failed: RC-X4E-P1-FIX2
+- updated_at exists: true
+- Verdict: Task state matches expectations.
+
+--- Part D: Verify No Page Extractions Created ---
+- extraction records count for target doc: 0
+- pages found: 
+- expected empty: true
+- Verdict: Correctly no extractions created.
+
+--- Part E: Verify Global Queue State ---
+- total pagewise tasks: 104
+- active queued/pending: 82
+- processing/running: 0
+- completed: 19
+- failed: 3
+- unexpected status: 0
+- documents with page_extractions count: 2
+
+--- Part F: Classify Failed Tasks ---
+
+- task_id: rc_x4a_pagewise_auto_detect_hash_c1d98fa33985314caf84ed9102fbfac92cdf7e7d1b2b27089500e97d56acbcdd_b1_p1_3
+  mission_id: AUTO_DETECT
+  document_id: hash_c1d98fa33985314caf84ed9102fbfac92cdf7e7d1b2b27089500e97d56acbcdd
+  page range: 1-3
+  failure_reason: NATIVE_TEXT_EXTRACTION_ERROR
+  error_message: pdfParse is not a function
+  created_by_patch_failed: RC-X4E-P1
+  Classification: OLD_RUNTIME_FAILURE
+
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b1_p1_5
+  mission_id: AUTO_DETECT
+  document_id: hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86
+  page range: 1-5
+  failure_reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED
+  error_message: Empty text on pages: 1, 2, 3, 5
+  created_by_patch_failed: RC-X4E-P1-FIX2
+  Classification: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b2_p6_10
+  mission_id: AUTO_DETECT
+  document_id: hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86
+  page range: 6-10
+  failure_reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED
+  error_message: Empty text on pages: 6, 7, 8
+  created_by_patch_failed: RC-X4E-P1-FIX2
+  Classification: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+
+--- Part G: Next Candidate Selection Preview ---
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69
+  mission_id: jee_main_2026
+  document_type: notification
+  pages: 67-69
+  source access: YES
+  source size: 6092568
+  native text layer: YES
+  likely_native_text_candidate: YES
+  reason: Digital PDF with native text layer found.
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72
+  mission_id: jee_main_2026
+  document_type: notification
+  pages: 70-72
+  source access: YES
+  source size: 6092568
+  native text layer: YES
+  likely_native_text_candidate: YES
+  reason: Digital PDF with native text layer found.
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75
+  mission_id: jee_main_2026
+  document_type: notification
+  pages: 73-75
+  source access: YES
+  source size: 6092568
+  native text layer: YES
+  likely_native_text_candidate: YES
+  reason: Digital PDF with native text layer found.
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b26_p76_78
+  mission_id: jee_main_2026
+  document_type: notification
+  pages: 76-78
+  source access: YES
+  source size: 6092568
+  native text layer: YES
+  likely_native_text_candidate: YES
+  reason: Digital PDF with native text layer found.
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b27_p79_81
+  mission_id: jee_main_2026
+  document_type: notification
+  pages: 79-81
+  source access: YES
+  source size: 6092568
+  native text layer: YES
+  likely_native_text_candidate: YES
+  reason: Digital PDF with native text layer found.
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b28_p82_84
+  mission_id: jee_main_2026
+  document_type: notification
+  pages: 82-84
+  source access: YES
+  source size: 6092568
+  native text layer: YES
+  likely_native_text_candidate: YES
+  reason: Digital PDF with native text layer found.
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b29_p85_87
+  mission_id: jee_main_2026
+  document_type: notification
+  pages: 85-87
+  source access: YES
+  source size: 6092568
+  native text layer: YES
+  likely_native_text_candidate: YES
+  reason: Digital PDF with native text layer found.
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b3_p7_9
+  mission_id: jee_main_2026
+  document_type: notification
+  pages: 7-9
+  source access: YES
+  source size: 6092568
+  native text layer: YES
+  likely_native_text_candidate: YES
+  reason: Digital PDF with native text layer found.
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b30_p88_90
+  mission_id: jee_main_2026
+  document_type: notification
+  pages: 88-90
+  source access: YES
+  source size: 6092568
+  native text layer: YES
+  likely_native_text_candidate: YES
+  reason: Digital PDF with native text layer found.
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b31_p91_91
+  mission_id: jee_main_2026
+  document_type: notification
+  pages: 91-91
+  source access: YES
+  source size: 6092568
+  native text layer: YES
+  likely_native_text_candidate: YES
+  reason: Digital PDF with native text layer found.
+
+--- Recommendation ---
+recommended_next_task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69
+recommended_next_page_range: 67-69
+recommendation_reason: Digital PDF with text layer confirmed by probe.
+
+RC_X4E_R1_FIRST_EXTRACTION_RESULT_AUDIT_READY
+
+==========================================
+Command: npm run audit:pagewise:first-success
+==========================================
+
+> audit:pagewise:first-success
+> node functions/audit_first_successful_pagewise_extraction.js
+
+==============================================
+PATCH RC-X4E-R2 - FIRST SUCCESSFUL EXTRACTION AUDIT
+==============================================
+
+--- Part C: Verify Completed Task (rc_x4a_pagewise_jee_main_2026_hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905_b1_p1_5) ---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905_b1_p1_5
+- status: completed
+- mission_id: jee_main_2026
+- document_id: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905
+- document_type: syllabus
+- source_document_id: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905
+- source_path: mission_realms/jee_main_2026/official_documents/hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905.pdf
+- page_start: 1
+- page_end: 5
+- page_extractions_created: 5
+- extraction_method: native_pdf_text
+- completed_at exists: true
+- updated_at exists: true
+- created_by_patch_completed: RC-X4E-P1-FIX2
+- Verdict: Task state matches expectations.
+
+--- Part D: Verify Page Extraction Records ---
+- extraction records count for target doc: 17
+
+- page_number: 1
+  text_length: 2969
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: true
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 2
+  text_length: 2637
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: true
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 3
+  text_length: 2744
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: true
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 4
+  text_length: 3342
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: true
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 5
+  text_length: 3366
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: true
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 6
+  text_length: 2800
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 7
+  text_length: 3989
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 8
+  text_length: 3859
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 9
+  text_length: 3067
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 10
+  text_length: 3048
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 11
+  text_length: 268
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 12
+  text_length: 3171
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 13
+  text_length: 2426
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 14
+  text_length: 1411
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 15
+  text_length: 3148
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 16
+  text_length: 3368
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+- page_number: 17
+  text_length: 1076
+  extraction_status: extracted_draft
+  review_status: pending_founder_verification
+  source_proof_valid: false
+  page_policy_valid: true
+  forbidden_fields_found: NONE
+
+==========================================
+Command: npm run audit:pagewise:two-batch
+==========================================
+
+> audit:pagewise:two-batch
+> node functions/audit_pagewise_two_batch_continuity.js
+
+==============================================
+PATCH RC-X4E-R3 - TWO-BATCH CONTINUITY AUDIT
+==============================================
+
+--- Part C: Verify Completed Tasks ---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905_b1_p1_5
+  status: completed
+  page_range: 1-5
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905_b2_p6_10
+  status: completed
+  page_range: 6-10
+
+--- Part D/E: Verify Page Sequence & Schema (1-10) ---
+- total records for doc: 17
+- pages found: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+- missing pages: NONE
+- duplicate pages: NONE
+
+==========================================
+Command: npm run audit:pagewise:limit3
+==========================================
+
+> audit:pagewise:limit3
+> node functions/audit_pagewise_limit3_apply_readiness.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - LIMIT 3 APPLY READINESS AUDIT
+==============================================
+Queue State:
+- total: 104
+- active: 82
+- completed: 19
+- failed: 3
+- processing: 0
+- global page_extractions count: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+Worker Safety Check:
+- confirmation required: true
+- limit 3 lock exists: true
+- selector hardening exists: true
+- no AI/OCR imports: true
+
+RC_X4E_R8_FIX1_APPLY_READINESS_READY
+
+==========================================
+Command: npm run audit:pagewise:limit3-result
+==========================================
+
+> audit:pagewise:limit3-result
+> node functions/audit_pagewise_limit3_result_and_candidate_policy.js
+
+==============================================
+PATCH RC-X4E-R4 - LIMIT-3 RESULT & POLICY AUDIT
+==============================================
+
+--- Part C: Verify P4-L3 Per-Task Results ---
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b2_p6_10
+  mission_id: AUTO_DETECT
+  document_id: hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86
+  document_type: notification
+  page_range: 6-10
+  status: failed
+  failure_reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED
+  created_by: RC-X4E-P1-FIX2
+  updated_at exists: true
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905_b3_p11_15
+  mission_id: jee_main_2026
+  document_id: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905
+  document_type: syllabus
+  page_range: 11-15
+  status: completed
+  page_extractions_created: 5
+  created_by: RC-X4E-P1-FIX2
+  updated_at exists: true
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905_b4_p16_17
+  mission_id: jee_main_2026
+  document_id: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905
+  document_type: syllabus
+  page_range: 16-17
+  status: completed
+  page_extractions_created: 2
+  created_by: RC-X4E-P1-FIX2
+  updated_at exists: true
+
+--- Part D: Verify JEE Pages 1-17 Continuity ---
+- pages found: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 (Total: 17)
+- Verdict: Segment 1-17 continuity and schema are valid.
+
+--- Part E: Verify Global Queue State ---
+- total: 104
+- active: 82
+- completed: 19
+- failed: 3
+- total global page_extractions records: 62
+  WARNING: Global counts differ from expectations (C:4, F:3, PE:17)
+
+--- Part F: Verify Failed Tasks Classification ---
+- task_id: rc_x4a_pagewise_auto_detect_hash_c1d98fa33985314caf84ed9102fbfac92cdf7e7d1b2b27089500e97d56acbcdd_b1_p1_3 | reason: NATIVE_TEXT_EXTRACTION_ERROR | class: OLD_RUNTIME_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b1_p1_5 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b2_p6_10 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+
+--- Part G: Parent Document Side-Effect Check ---
+- parent_doc_side_effect_fields_found: NONE
+
+--- Part H: Candidate Selection Policy Audit ---
+- selects first queued tasks by order: false
+- filters out AUTO_DETECT scanned candidates: false
+
+--- Part I: Candidate Hardening Plan ---
+RECOMMENDED NEXT PATCH: RC-X4E-P5-CANDIDATE-FIX
+Requirements:
+1. Add --prefer-native-digital selector mode to worker.
+2. Implement automatic native text probe for all 3 tasks in limit-3 readiness audit.
+3. Block AUTO_DETECT from selection unless --allow-auto-detect is passed.
+4. Ensure candidate selector skips documents with recent native-empty failures.
+
+RC_X4E_R4_LIMIT3_RESULT_AUDIT_READY_WITH_CANDIDATE_POLICY_WARNING
+
+==========================================
+Command: npm run audit:pagewise:candidate-selector
+==========================================
+
+> audit:pagewise:candidate-selector
+> node functions/audit_pagewise_candidate_selector_policy.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - CANDIDATE SELECTOR POLICY AUDIT
+==============================================
+Queue State Verification:
+- total: 104
+- active: 82
+- completed: 19
+- failed: 3
+- processing: 0
+- global page_extractions: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+Static Policy Check:
+- --prefer-native-digital: PRESENT
+- --allow-auto-detect: PRESENT
+- SKIPPED_AUTO_DETECT_NOT_ALLOWED: PRESENT
+- SKIPPED_NATIVE_TEXT_PROBE_EMPTY: PRESENT
+- SKIPPED_RECENT_EMPTY_NATIVE_TEXT_FAILURE_DOCUMENT: PRESENT
+- extractPagesNatively(bytes, task.page_start, task.page_start): PRESENT
+- recentFailuresDocIds.has(task.document_id): PRESENT
+
+Live Selector Simulation (Dry-Run):
+--- Simulation Output Start ---
+==============================================
+PATCH RC-X4E-P1-FIX2 - PAGEWISE EXTRACTION WORKER
+==============================================
+Mode: DRY-RUN
+Limit: 3 tasks
+Prefer Native Digital: YES
+Allow AUTO_DETECT: NO
+
+1. Total active pagewise tasks found: 82
+2. Tasks selected by limit/selector: 3
+3. Skipped candidates count: 0
+Selected IDs: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (67-69)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (70-72)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (73-75)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Confirmation:
+    - no Firestore write: YES
+    - no queue status update: YES
+    - no AI extraction: YES
+    - no OCR: YES
+    - no text extraction: NO (Native extraction enabled in apply)
+    - task limit is not page limit: YES
+
+RC_X4W_PAGEWISE_WORKER_DRY_RUN_READY
+
+--- Simulation Output End ---
+Parsed Selected IDs: [
+  'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69',
+  'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72',
+  'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75'
+]
+Selected candidates passed basic validation.
+
+RC_X4E_R8_FIX1_CANDIDATE_SELECTOR_POLICY_READY
+
+==========================================
+Command: npm run audit:pagewise:hardened-limit3-result
+==========================================
+
+> audit:pagewise:hardened-limit3-result
+> node functions/audit_pagewise_hardened_limit3_result.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - HARDENED LIMIT-3 RESULT AUDIT
+==============================================
+
+--- Part F: Global Queue Reconciliation ---
+- total: 104
+- active: 82
+- completed: 19
+- failed: 3
+- processing: 0
+- total page_extractions: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+--- Part C: Verify P6 Task Results ---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b1_p1_3
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 1-3
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b10_p28_30
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 28-30
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b11_p31_33
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 31-33
+  page_extractions_created: 3
+
+--- Part D/E: Multi-Document Integrity & New Records ---
+- document_id: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905
+  mission_id: jee_main_2026
+  count: 17
+  pages found: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+  duplicate pages within doc: NO
+- document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  mission_id: jee_main_2026
+  count: 45
+  pages found: 1, 2, 3, 4, 5, 6, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66
+  duplicate pages within doc: NO
+
+--- Part G: Failed Task Classification ---
+- task_id: rc_x4a_pagewise_auto_detect_hash_c1d98fa33985314caf84ed9102fbfac92cdf7e7d1b2b27089500e97d56acbcdd_b1_p1_3 | reason: NATIVE_TEXT_EXTRACTION_ERROR | class: OLD_RUNTIME_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b1_p1_5 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b2_p6_10 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+
+--- Part H: Parent Document Side-Effect Check ---
+- doc: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 | side effects: NONE
+- doc: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | side effects: NONE
+
+--- Part I: Audit Baseline Staleness Check ---
+
+--- Part J: Worker Hardened Selector Safety Check ---
+- worker has hardened selector flags: true
+- worker skips auto-detect by default: true
+
+RC_X4E_R8_FIX1_HARDENED_LIMIT3_RESULT_AUDIT_READY
+
+==========================================
+Command: npm run audit:pagewise:second-hardened-limit3-result
+==========================================
+
+> audit:pagewise:second-hardened-limit3-result
+> node functions/audit_pagewise_second_hardened_limit3_result.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - SECOND HARDENED LIMIT-3 RESULT AUDIT
+==============================================
+
+--- Part F: Global Queue Reconciliation ---
+- total: 104
+- active: 82
+- completed: 19
+- failed: 3
+- processing: 0
+- total page_extractions: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+--- Part C: Verify P7 Task Results ---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b12_p34_36
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 34-36
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b13_p37_39
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 37-39
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b14_p40_42
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 40-42
+  page_extractions_created: 3
+
+--- Part D/E: Multi-Document Integrity & New Records ---
+- document_id: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905
+  mission_id: jee_main_2026
+  count: 17
+  pages found: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+  duplicate pages within doc: NO
+- document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  mission_id: jee_main_2026
+  count: 45
+  pages found: 1, 2, 3, 4, 5, 6, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66
+  duplicate pages within doc: NO
+
+--- Part G: Failed Task Classification ---
+- task_id: rc_x4a_pagewise_auto_detect_hash_c1d98fa33985314caf84ed9102fbfac92cdf7e7d1b2b27089500e97d56acbcdd_b1_p1_3 | reason: NATIVE_TEXT_EXTRACTION_ERROR | class: OLD_RUNTIME_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b1_p1_5 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b2_p6_10 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+
+--- Part H: Parent Document Side-Effect Check ---
+- doc: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 | side effects: NONE
+- doc: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | side effects: NONE
+
+--- Part I: Audit Baseline Staleness Check ---
+
+--- Part J: Worker Hardened Selector Safety Check ---
+- worker has hardened selector flags: true
+
+RC_X4E_R8_FIX1_SECOND_HARDENED_LIMIT3_RESULT_AUDIT_READY
+
+==========================================
+Command: npm run audit:pagewise:third-hardened-limit3-result
+==========================================
+
+> audit:pagewise:third-hardened-limit3-result
+> node functions/audit_pagewise_third_hardened_limit3_result.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - THIRD HARDENED LIMIT-3 RESULT AUDIT
+==============================================
+
+--- Part F: Global Queue Reconciliation ---
+- total: 104
+- active: 82
+- completed: 19
+- failed: 3
+- processing: 0
+- total page_extractions: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+--- Part C: Verify P8 Task Results ---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b15_p43_45
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 43-45
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b16_p46_48
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 46-48
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b17_p49_51
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 49-51
+  page_extractions_created: 3
+
+--- Part D/E: Multi-Document Integrity & New Records ---
+- document_id: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905
+  mission_id: jee_main_2026
+  count: 17
+  pages found: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+  duplicate pages within doc: NO
+- document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  mission_id: jee_main_2026
+  count: 45
+  pages found: 1, 2, 3, 4, 5, 6, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66
+  duplicate pages within doc: NO
+
+--- Part G: Failed Task Classification ---
+- task_id: rc_x4a_pagewise_auto_detect_hash_c1d98fa33985314caf84ed9102fbfac92cdf7e7d1b2b27089500e97d56acbcdd_b1_p1_3 | reason: NATIVE_TEXT_EXTRACTION_ERROR | class: OLD_RUNTIME_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b1_p1_5 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b2_p6_10 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+
+--- Part H: Parent Document Side-Effect Check ---
+- doc: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 | side effects: NONE
+- doc: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | side effects: NONE
+
+--- Part I: Audit Baseline Staleness Check ---
+
+--- Part J: Worker Hardened Selector Safety Check ---
+- worker has hardened selector flags: true
+
+RC_X4E_R8_FIX1_THIRD_HARDENED_LIMIT3_RESULT_AUDIT_READY
+
+==========================================
+Command: npm run audit:pagewise:undocumented-apply-incident
+==========================================
+
+> audit:pagewise:undocumented-apply-incident
+> node functions/audit_pagewise_undocumented_apply_incident.js
+
+==============================================
+PATCH RC-X4E-IR1 - UNDOCUMENTED APPLY INCIDENT REVIEW
+==============================================
+
+--- Part C: Identifying Undocumented Completed Tasks ---
+Last 10 completed tasks:
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b22_p64_66
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 64-66 | PE created: 3
+  completed_at: 2026-07-14T07:04:07.315Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b21_p61_63
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 61-63 | PE created: 3
+  completed_at: 2026-07-14T07:04:00.893Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b20_p58_60
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 58-60 | PE created: 3
+  completed_at: 2026-07-14T07:03:54.064Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b2_p4_6
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 4-6 | PE created: 3
+  completed_at: 2026-07-13T14:41:34.589Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b19_p55_57
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 55-57 | PE created: 3
+  completed_at: 2026-07-13T14:41:28.172Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b18_p52_54
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 52-54 | PE created: 3
+  completed_at: 2026-07-13T14:41:21.773Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b17_p49_51
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 49-51 | PE created: 3
+  completed_at: 2026-07-13T13:59:14.485Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b16_p46_48
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 46-48 | PE created: 3
+  completed_at: 2026-07-13T13:59:08.087Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b15_p43_45
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 43-45 | PE created: 3
+  completed_at: 2026-07-13T13:59:01.729Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b14_p40_42
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 40-42 | PE created: 3
+  completed_at: 2026-07-13T13:28:33.679Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+
+--- Part D: Verifying Undocumented Tasks Safety ---
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b22_p64_66
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b21_p61_63
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b20_p58_60
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b2_p4_6
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b19_p55_57
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b18_p52_54
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+
+--- Part E: Verifying Undocumented Page Records ---
+Page 64 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=2403, proof=true, policy=true, forbidden=NONE
+Page 65 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1850, proof=true, policy=true, forbidden=NONE
+Page 66 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1766, proof=true, policy=true, forbidden=NONE
+Page 61 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=3153, proof=true, policy=true, forbidden=NONE
+Page 62 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1487, proof=true, policy=true, forbidden=NONE
+Page 63 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=2224, proof=true, policy=true, forbidden=NONE
+Page 58 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1227, proof=true, policy=true, forbidden=NONE
+Page 59 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1334, proof=true, policy=true, forbidden=NONE
+Page 60 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=816, proof=true, policy=true, forbidden=NONE
+Page 4 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1275, proof=true, policy=true, forbidden=NONE
+Page 5 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1382, proof=true, policy=true, forbidden=NONE
+Page 6 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=912, proof=true, policy=true, forbidden=NONE
+Page 55 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1221, proof=true, policy=true, forbidden=NONE
+Page 56 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1241, proof=true, policy=true, forbidden=NONE
+Page 57 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1159, proof=true, policy=true, forbidden=NONE
+Page 52 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1139, proof=true, policy=true, forbidden=NONE
+Page 53 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1449, proof=true, policy=true, forbidden=NONE
+Page 54 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1226, proof=true, policy=true, forbidden=NONE
+
+--- Part F: Queue Reconciliation ---
+Actual State: {
+  total: 104,
+  active: 82,
+  completed: 19,
+  failed: 3,
+  page_extractions: 62
+}
+
+--- Part G: Multi-Document Integrity ---
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 (Mission jee_main_2026): 17 pages, duplicates=NONE
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e (Mission jee_main_2026): 45 pages, duplicates=NONE
+
+--- Part H: Parent Document Side-Effect Check ---
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 side effects: NONE
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e side effects: NONE
+
+--- Part I: Audit Script Safety Check ---
+
+RC_X4E_IR1_UNDOCUMENTED_APPLY_SAFE_ROLL_FORWARD_READY
+
+==========================================
+Command: npm run audit:pagewise:baseline-exit-logic
+==========================================
+
+> audit:pagewise:baseline-exit-logic
+> node functions/audit_pagewise_baseline_exit_logic.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - BASELINE EXIT LOGIC AUDIT
+==============================================
+
+RC_X4E_R8_FIX1_BASELINE_EXIT_LOGIC_READY
+
+==========================================
+Command: node functions/audit_platform_boundary.js
+==========================================
+=========================================
+PLATFORM BOUNDARY REGRESSION AUDIT
+=========================================
+Ô£à Check 1: lib/main_web.dart exists.
+Ô£à Check 2: lib/main_web.dart imports/loads WebShell/UnifiedCommandConsole.
+Ô£à Check 3: lib/core/router/app_router.dart does not route Founder/Admin to mobile AdminScreen.
+Ô£à Check 5: AppRoutes.admin does not render AdminScreen (shows placeholder).
+Ô£à Check 4: legacy admin_screen.dart is not active in app_router.dart.
+Ô£à Check 6: student_mission_catalog query exists in firestore_service.dart.
+Ô£à Check 7: create_mission_dialog.dart still mirrors to student_mission_catalog.
+Ô£à Check 8: edit_mission_dialog.dart still mirrors to student_mission_catalog.
+-----------------------------------------
+­ƒÄë PATCH_W1B_BOUNDARY_AUDIT_PASSED
+
+==========================================
+Command: flutter test test/smoke_test.dart
+==========================================
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 61.0.0 (105.0.0 available)
+  _flutterfire_internals 1.3.59 (1.3.74 available)
+  analyzer 5.13.0 (14.1.0 available)
+  archive 3.6.1 (4.0.9 available)
+  build 2.4.1 (4.0.8 available)
+  build_config 1.1.2 (1.3.1 available)
+  build_daemon 4.1.1 (4.1.2 available)
+  build_resolvers 2.4.2 (3.0.4 available)
+  build_runner 2.4.13 (2.15.2 available)
+  build_runner_core 7.3.2 (9.3.2 available)
+  cli_util 0.4.2 (0.5.1 available)
+  cloud_firestore 5.6.12 (6.7.0 available)
+  cloud_firestore_platform_interface 6.6.12 (8.0.4 available)
+  cloud_firestore_web 4.4.12 (5.7.0 available)
+  cloud_functions 5.6.2 (6.3.4 available)
+  cloud_functions_platform_interface 5.8.2 (6.0.4 available)
+  cloud_functions_web 4.11.5 (5.1.10 available)
+  connectivity_plus 6.1.5 (7.2.0 available)
+  cross_file 0.3.5+2 (0.3.5+4 available)
+  dart_style 2.3.2 (3.1.12 available)
+  device_info_plus 11.5.0 (13.2.0 available)
+  device_info_plus_platform_interface 7.0.3 (8.1.0 available)
+  dio 5.9.2 (5.10.0 available)
+  dio_web_adapter 2.1.2 (2.2.0 available)
+  equatable 2.0.8 (2.1.0 available)
+  extension 0.6.0 (1.0.0 available)
+  file_picker 8.3.7 (11.0.2 available)
+  firebase_app_check 0.3.2+10 (0.4.5+1 available)
+  firebase_app_check_platform_interface 0.1.1+10 (0.4.1+1 available)
+  firebase_app_check_web 0.2.0+14 (0.2.5+1 available)
+  firebase_auth 5.7.0 (6.5.5 available)
+  firebase_auth_platform_interface 7.7.3 (9.0.4 available)
+  firebase_auth_web 5.15.3 (6.2.4 available)
+  firebase_core 3.15.2 (4.12.0 available)
+  firebase_core_platform_interface 6.0.3 (7.1.0 available)
+  firebase_core_web 2.24.1 (3.9.0 available)
+  firebase_crashlytics 4.3.10 (5.2.5 available)
+  firebase_crashlytics_platform_interface 3.8.10 (3.8.25 available)
+  firebase_performance 0.10.1+10 (0.11.4+4 available)
+  firebase_performance_platform_interface 0.1.5+10 (0.2.0+4 available)
+  firebase_performance_web 0.1.7+16 (0.1.8+10 available)
+  firebase_storage 12.4.10 (13.4.4 available)
+  firebase_storage_platform_interface 5.2.10 (6.0.4 available)
+  firebase_storage_web 3.10.17 (3.11.10 available)
+  flutter_native_splash 2.4.4 (2.4.8 available)
+  flutter_riverpod 2.6.1 (3.3.2 available)
+  flutter_secure_storage 9.2.4 (10.3.1 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.1 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.1 available)
+  flutter_secure_storage_windows 3.1.2 (4.2.2 available)
+  google_fonts 6.3.3 (8.1.0 available)
+  google_mlkit_commons 0.9.0 (0.12.0 available)
+  google_mlkit_text_recognition 0.14.0 (0.16.0 available)
+  google_sign_in 6.3.0 (7.2.0 available)
+  google_sign_in_android 6.2.1 (7.2.15 available)
+  google_sign_in_ios 5.9.0 (6.3.0 available)
+  google_sign_in_platform_interface 2.5.0 (3.1.0 available)
+  google_sign_in_web 0.12.4+4 (1.1.3 available)
+  hooks 2.0.2 (2.1.0 available)
+  image 4.3.0 (4.9.1 available)
+  image_picker 1.2.2 (1.2.3 available)
+  intl 0.19.0 (0.20.3 available)
+  js 0.6.7 (0.7.2 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 8.3.1 (10.2.0 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  path_provider_linux 2.2.1 (2.2.2 available)
+  record_use 0.6.0 (1.0.0 available)
+  riverpod 2.6.1 (3.3.2 available)
+  shared_preferences_android 2.4.26 (2.4.27 available)
+  shelf_web_socket 2.0.1 (3.0.0 available)
+  source_gen 1.5.0 (4.2.3 available)
+  syncfusion_flutter_core 28.2.12 (34.1.31 available)
+  syncfusion_flutter_pdf 28.2.12 (34.1.31 available)
+  test_api 0.7.11 (0.7.13 available)
+  vector_math 2.2.0 (2.4.0 available)
+  win32 5.15.0 (6.3.0 available)
+  win32_registry 2.1.0 (3.0.3 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+83 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading C:/RankCrackers/RankCrackers-55/test/smoke_test.dart
+00:00 +0: (setUpAll)
+RC_X4E_R8_FIX3_SMOKE_BASELINE_READY
+00:00 +0: RankCrackers system smoke tests KnowledgeEngine Initialization Smoke Test
+00:00 +1: RankCrackers system smoke tests Mission Realm widget construction Smoke Test
+00:00 +2: RankCrackers system smoke tests Dashboard widget construction Smoke Test
+00:00 +3: RankCrackers system smoke tests App Router - Mobile /admin route is blocked
+00:00 +4: (tearDownAll)
+00:00 +4: All tests passed!
+

@@ -18,7 +18,6 @@ import '../../features/syllabus/presentation/screens/syllabus_screen.dart';
 import '../../features/profile/presentation/screens/profile_screen.dart';
 import '../../features/home/presentation/screens/digi_book_screen.dart';
 import '../../features/assessment/presentation/screens/diagnostic_result_screen.dart';
-import '../../features/admin/presentation/screens/admin_screen.dart';
 import '../../features/deep_profile/screens/deep_profile_screen.dart';
 import '../../features/opportunities/screens/opportunities_screen.dart';
 import '../../features/opportunities/presentation/screens/sentinel_center_screen.dart';
@@ -143,7 +142,15 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
       path: AppRoutes.admin,
-      builder: (context, state) => const AdminScreen(),
+      builder: (context, state) => const Scaffold(
+        backgroundColor: AppColors.background,
+        body: Center(
+          child: Text(
+            'Access Denied: Mobile Admin Console is disabled.',
+            style: TextStyle(color: AppColors.textSecondary),
+          ),
+        ),
+      ),
     ),
     GoRoute(
       path: AppRoutes.deepProfile,

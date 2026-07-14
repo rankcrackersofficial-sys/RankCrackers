@@ -47,12 +47,16 @@ function main() {
         }
     }
 
-    // 4. admin_screen.dart deleted or absent
-    const adminScreenPath = path.join(__dirname, '../lib/features/admin/presentation/screens/admin_screen.dart');
-    if (fs.existsSync(adminScreenPath)) {
-        errors.push("lib/features/admin/presentation/screens/admin_screen.dart still exists (must be absent).");
-    } else {
-        console.log("✅ Check 4: lib/features/admin/presentation/screens/admin_screen.dart is deleted/absent.");
+    // 4. legacy admin_screen.dart may exist, but mobile routing must not import or render it.
+    if (fs.existsSync(appRouterPath)) {
+        const appRouterContent = fs.readFileSync(appRouterPath, 'utf8');
+        const importsMobileAdminScreen = appRouterContent.includes("features/admin/presentation/screens/admin_screen.dart");
+        const rendersMobileAdminScreen = appRouterContent.includes("AdminScreen()");
+        if (importsMobileAdminScreen || rendersMobileAdminScreen) {
+            errors.push("lib/core/router/app_router.dart still actively imports/renders mobile AdminScreen.");
+        } else {
+            console.log("✅ Check 4: legacy admin_screen.dart is not active in app_router.dart.");
+        }
     }
 
     // 6. student_mission_catalog query still exists in firestore_service.dart

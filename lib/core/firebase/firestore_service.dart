@@ -31,6 +31,7 @@ class FirestoreService {
   static const String sentinelDraftCollection = 'sentinel_drafts';
   static const String aiQueueCollection = 'ai_queue';
   static const String notificationCandidateCollection = 'notification_candidates';
+  static const String studentMissionCatalogCollection = 'student_mission_catalog';
 
   // 🔱 EXTRACTION REALM (Document 50J)
   static const String semanticUnitCollection = 'semantic_units';
@@ -89,6 +90,14 @@ class FirestoreService {
   static Stream<List<Map<String, dynamic>>> streamCollection(String collection) {
     return _firestore.collection(collection).snapshots().map((snap) =>
         snap.docs.map((doc) => doc.data()).toList());
+  }
+
+  static Stream<List<Map<String, dynamic>>> streamStudentMissionCatalog() {
+    return _firestore
+        .collection(studentMissionCatalogCollection)
+        .where('userPanelVisible', isEqualTo: true)
+        .snapshots()
+        .map((snap) => snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList());
   }
 
   // ===================================================
