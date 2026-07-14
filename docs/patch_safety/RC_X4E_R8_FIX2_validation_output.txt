@@ -1,0 +1,1260 @@
+﻿==========================================
+Command: npm run audit:rankcrackers:guard
+==========================================
+
+> audit:rankcrackers:guard
+> node functions/audit_rankcrackers_path_and_rules.js
+
+==============================================
+RANKCRACKERS PATH & FINAL RULES GUARD
+==============================================
+Current working path: C:\RankCrackers\RankCrackers-55
+Official working path: C:\RankCrackers\RankCrackers-55
+
+Guard results:
+- Official path locked: YES
+- Web build rule guarded: YES
+- Android Student/User-only guard checked: YES
+- M4/M6 catalog bridge guard checked: YES
+- Extraction policy documented: YES
+- Universal extraction audit exists: YES
+- Universal page completeness audit exists: YES
+- Atomic linkage integrity audit exists: YES
+- Universal page count queue apply script: PRESENT
+- Page count queue state audit exists: YES
+- Metadata repair planner exists: YES
+- Metadata repair apply script exists: YES
+- Repaired docs page count queue apply script: PRESENT
+- Page count detection worker exists: YES
+- Page count worker capability audit exists: YES
+- Final page count result audit exists: YES
+- Universal pagewise planner exists: YES
+- Universal pagewise apply exists: YES
+- Pagewise queue audit exists: YES
+- Pagewise worker exists: YES
+- Pagewise worker capability audit exists: YES
+- Pagewise worker runtime safety audit exists: YES
+- Pagewise extraction apply audit exists: YES
+- Notification dynamic schema system: PRESENT
+- Notification page count queue apply script: PRESENT
+
+==========================================
+Command: npm run audit:pagewise:queue
+==========================================
+
+> audit:pagewise:queue
+> node functions/audit_pagewise_queue_state.js
+
+==============================================
+PATCH RC-X4R - PAGEWISE QUEUE STATE AUDIT
+==============================================
+Mode: READ ONLY (Unified Admin SDK)
+
+Global Reconciliation:
+1. Total pagewise tasks found: 104
+2. Active pagewise tasks: 82
+3. Queued tasks: 82
+4. Processing/running tasks: 0
+5. Completed tasks: 19
+6. Failed tasks: 3
+7. Unexpected status tasks: 0
+8. Unique documents represented: 16
+9. Total planned pages from queue: 345
+10. Missing pages total: 0
+11. Duplicate pages total: 0
+12. Out-of-range pages total: 0
+13. Invalid task shape count: 0
+14. Documents with coverage complete: 16
+15. Documents with coverage blockers: 0
+16. Documents with extraction started: 2
+17. Extraction in progress: false
+18. Blocked docs wrongly queued count: 0
+
+Document Type Summary:
+Notification: { docs: 5, tasks: 77, pages: 230, blockers: 0 }
+Syllabus: { docs: 8, tasks: 14, pages: 56, blockers: 0 }
+PYQ: { docs: 2, tasks: 12, pages: 56, blockers: 0 }
+Study Material: { docs: 0, tasks: 0, pages: 0, blockers: 0 }
+Other Official: { docs: 1, tasks: 1, pages: 3, blockers: 0 }
+
+Mission Summary:
+RPSC: { docs: 8, tasks: 8, pages: 26, blockers: 0 }
+JEE: { docs: 3, tasks: 41, pages: 138, blockers: 0 }
+NEET: { docs: 3, tasks: 52, pages: 168, blockers: 0 }
+AUTO_DETECT/RAS: { docs: 2, tasks: 3, pages: 13, blockers: 0 }
+
+RC_X4R_PAGEWISE_QUEUE_STATE_AUDIT_READY
+
+==========================================
+Command: npm run audit:pagewise:runtime
+==========================================
+
+> audit:pagewise:runtime
+> node functions/audit_pagewise_worker_runtime_safety.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - PAGEWISE WORKER RUNTIME SAFETY
+==============================================
+Runtime Queue State:
+- Total pagewise tasks: 104
+- Queued/Pending: 82
+- Processing/Running: 0
+- Completed: 19
+- Failed: 3
+- Global Page Extractions: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+Running Hardened Selector Dry-Run Check...
+--- Dry-Run Output Start ---
+==============================================
+PATCH RC-X4E-P1-FIX2 - PAGEWISE EXTRACTION WORKER
+==============================================
+Mode: DRY-RUN
+Limit: 3 tasks
+Prefer Native Digital: YES
+Allow AUTO_DETECT: NO
+
+1. Total active pagewise tasks found: 82
+2. Tasks selected by limit/selector: 3
+3. Skipped candidates count: 0
+Selected IDs: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (67-69)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (70-72)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (73-75)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Confirmation:
+    - no Firestore write: YES
+    - no queue status update: YES
+    - no AI extraction: YES
+    - no OCR: YES
+    - no text extraction: NO (Native extraction enabled in apply)
+    - task limit is not page limit: YES
+
+RC_X4W_PAGEWISE_WORKER_DRY_RUN_READY
+
+--- Dry-Run Output End ---
+Dry-run validation: PASSED
+
+RC_X4E_R8_FIX1_RUNTIME_SAFETY_AUDIT_READY
+
+==========================================
+Command: npm run audit:pagewise:limit3
+==========================================
+
+> audit:pagewise:limit3
+> node functions/audit_pagewise_limit3_apply_readiness.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - LIMIT 3 APPLY READINESS AUDIT
+==============================================
+Queue State:
+- total: 104
+- active: 82
+- completed: 19
+- failed: 3
+- processing: 0
+- global page_extractions count: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+Worker Safety Check:
+- confirmation required: true
+- limit 3 lock exists: true
+- selector hardening exists: true
+- no AI/OCR imports: true
+
+RC_X4E_R8_FIX1_APPLY_READINESS_READY
+
+==========================================
+Command: npm run audit:pagewise:candidate-selector
+==========================================
+
+> audit:pagewise:candidate-selector
+> node functions/audit_pagewise_candidate_selector_policy.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - CANDIDATE SELECTOR POLICY AUDIT
+==============================================
+Queue State Verification:
+- total: 104
+- active: 82
+- completed: 19
+- failed: 3
+- processing: 0
+- global page_extractions: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+Static Policy Check:
+- --prefer-native-digital: PRESENT
+- --allow-auto-detect: PRESENT
+- SKIPPED_AUTO_DETECT_NOT_ALLOWED: PRESENT
+- SKIPPED_NATIVE_TEXT_PROBE_EMPTY: PRESENT
+- SKIPPED_RECENT_EMPTY_NATIVE_TEXT_FAILURE_DOCUMENT: PRESENT
+- extractPagesNatively(bytes, task.page_start, task.page_start): PRESENT
+- recentFailuresDocIds.has(task.document_id): PRESENT
+
+Live Selector Simulation (Dry-Run):
+--- Simulation Output Start ---
+==============================================
+PATCH RC-X4E-P1-FIX2 - PAGEWISE EXTRACTION WORKER
+==============================================
+Mode: DRY-RUN
+Limit: 3 tasks
+Prefer Native Digital: YES
+Allow AUTO_DETECT: NO
+
+1. Total active pagewise tasks found: 82
+2. Tasks selected by limit/selector: 3
+3. Skipped candidates count: 0
+Selected IDs: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (67-69)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (70-72)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (73-75)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Confirmation:
+    - no Firestore write: YES
+    - no queue status update: YES
+    - no AI extraction: YES
+    - no OCR: YES
+    - no text extraction: NO (Native extraction enabled in apply)
+    - task limit is not page limit: YES
+
+RC_X4W_PAGEWISE_WORKER_DRY_RUN_READY
+
+--- Simulation Output End ---
+Parsed Selected IDs: [
+  'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69',
+  'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72',
+  'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75'
+]
+Selected candidates passed basic validation.
+
+RC_X4E_R8_FIX1_CANDIDATE_SELECTOR_POLICY_READY
+
+==========================================
+Command: npm run audit:pagewise:hardened-limit3-result
+==========================================
+
+> audit:pagewise:hardened-limit3-result
+> node functions/audit_pagewise_hardened_limit3_result.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - HARDENED LIMIT-3 RESULT AUDIT
+==============================================
+
+--- Part F: Global Queue Reconciliation ---
+- total: 104
+- active: 82
+- completed: 19
+- failed: 3
+- processing: 0
+- total page_extractions: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+--- Part C: Verify P6 Task Results ---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b1_p1_3
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 1-3
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b10_p28_30
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 28-30
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b11_p31_33
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 31-33
+  page_extractions_created: 3
+
+--- Part D/E: Multi-Document Integrity & New Records ---
+- document_id: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905
+  mission_id: jee_main_2026
+  count: 17
+  pages found: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+  duplicate pages within doc: NO
+- document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  mission_id: jee_main_2026
+  count: 45
+  pages found: 1, 2, 3, 4, 5, 6, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66
+  duplicate pages within doc: NO
+
+--- Part G: Failed Task Classification ---
+- task_id: rc_x4a_pagewise_auto_detect_hash_c1d98fa33985314caf84ed9102fbfac92cdf7e7d1b2b27089500e97d56acbcdd_b1_p1_3 | reason: NATIVE_TEXT_EXTRACTION_ERROR | class: OLD_RUNTIME_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b1_p1_5 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b2_p6_10 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+
+--- Part H: Parent Document Side-Effect Check ---
+- doc: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 | side effects: NONE
+- doc: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | side effects: NONE
+
+--- Part I: Audit Baseline Staleness Check ---
+
+--- Part J: Worker Hardened Selector Safety Check ---
+- worker has hardened selector flags: true
+- worker skips auto-detect by default: true
+
+RC_X4E_R8_FIX1_HARDENED_LIMIT3_RESULT_AUDIT_READY
+
+==========================================
+Command: npm run audit:pagewise:second-hardened-limit3-result
+==========================================
+
+> audit:pagewise:second-hardened-limit3-result
+> node functions/audit_pagewise_second_hardened_limit3_result.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - SECOND HARDENED LIMIT-3 RESULT AUDIT
+==============================================
+
+--- Part F: Global Queue Reconciliation ---
+- total: 104
+- active: 82
+- completed: 19
+- failed: 3
+- processing: 0
+- total page_extractions: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+--- Part C: Verify P7 Task Results ---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b12_p34_36
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 34-36
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b13_p37_39
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 37-39
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b14_p40_42
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 40-42
+  page_extractions_created: 3
+
+--- Part D/E: Multi-Document Integrity & New Records ---
+- document_id: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905
+  mission_id: jee_main_2026
+  count: 17
+  pages found: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+  duplicate pages within doc: NO
+- document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  mission_id: jee_main_2026
+  count: 45
+  pages found: 1, 2, 3, 4, 5, 6, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66
+  duplicate pages within doc: NO
+
+--- Part G: Failed Task Classification ---
+- task_id: rc_x4a_pagewise_auto_detect_hash_c1d98fa33985314caf84ed9102fbfac92cdf7e7d1b2b27089500e97d56acbcdd_b1_p1_3 | reason: NATIVE_TEXT_EXTRACTION_ERROR | class: OLD_RUNTIME_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b1_p1_5 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b2_p6_10 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+
+--- Part H: Parent Document Side-Effect Check ---
+- doc: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 | side effects: NONE
+- doc: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | side effects: NONE
+
+--- Part I: Audit Baseline Staleness Check ---
+
+--- Part J: Worker Hardened Selector Safety Check ---
+- worker has hardened selector flags: true
+
+RC_X4E_R8_FIX1_SECOND_HARDENED_LIMIT3_RESULT_AUDIT_READY
+
+==========================================
+Command: npm run audit:pagewise:third-hardened-limit3-result
+==========================================
+
+> audit:pagewise:third-hardened-limit3-result
+> node functions/audit_pagewise_third_hardened_limit3_result.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - THIRD HARDENED LIMIT-3 RESULT AUDIT
+==============================================
+
+--- Part F: Global Queue Reconciliation ---
+- total: 104
+- active: 82
+- completed: 19
+- failed: 3
+- processing: 0
+- total page_extractions: 62
+RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED
+
+--- Part C: Verify P8 Task Results ---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b15_p43_45
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 43-45
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b16_p46_48
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 46-48
+  page_extractions_created: 3
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b17_p49_51
+  mission_id: jee_main_2026
+  status: completed
+  page_range: 49-51
+  page_extractions_created: 3
+
+--- Part D/E: Multi-Document Integrity & New Records ---
+- document_id: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905
+  mission_id: jee_main_2026
+  count: 17
+  pages found: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+  duplicate pages within doc: NO
+- document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  mission_id: jee_main_2026
+  count: 45
+  pages found: 1, 2, 3, 4, 5, 6, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66
+  duplicate pages within doc: NO
+
+--- Part G: Failed Task Classification ---
+- task_id: rc_x4a_pagewise_auto_detect_hash_c1d98fa33985314caf84ed9102fbfac92cdf7e7d1b2b27089500e97d56acbcdd_b1_p1_3 | reason: NATIVE_TEXT_EXTRACTION_ERROR | class: OLD_RUNTIME_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b1_p1_5 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+- task_id: rc_x4a_pagewise_auto_detect_hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86_b2_p6_10 | reason: NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED | class: EXPECTED_NATIVE_EMPTY_TEXT_FAILURE
+
+--- Part H: Parent Document Side-Effect Check ---
+- doc: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 | side effects: NONE
+- doc: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | side effects: NONE
+
+--- Part I: Audit Baseline Staleness Check ---
+
+--- Part J: Worker Hardened Selector Safety Check ---
+- worker has hardened selector flags: true
+
+RC_X4E_R8_FIX1_THIRD_HARDENED_LIMIT3_RESULT_AUDIT_READY
+
+==========================================
+Command: npm run audit:pagewise:undocumented-apply-incident
+==========================================
+
+> audit:pagewise:undocumented-apply-incident
+> node functions/audit_pagewise_undocumented_apply_incident.js
+
+==============================================
+PATCH RC-X4E-IR1 - UNDOCUMENTED APPLY INCIDENT REVIEW
+==============================================
+
+--- Part C: Identifying Undocumented Completed Tasks ---
+Last 10 completed tasks:
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b22_p64_66
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 64-66 | PE created: 3
+  completed_at: 2026-07-14T07:04:07.315Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b21_p61_63
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 61-63 | PE created: 3
+  completed_at: 2026-07-14T07:04:00.893Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b20_p58_60
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 58-60 | PE created: 3
+  completed_at: 2026-07-14T07:03:54.064Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b2_p4_6
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 4-6 | PE created: 3
+  completed_at: 2026-07-13T14:41:34.589Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b19_p55_57
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 55-57 | PE created: 3
+  completed_at: 2026-07-13T14:41:28.172Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b18_p52_54
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 52-54 | PE created: 3
+  completed_at: 2026-07-13T14:41:21.773Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b17_p49_51
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 49-51 | PE created: 3
+  completed_at: 2026-07-13T13:59:14.485Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b16_p46_48
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 46-48 | PE created: 3
+  completed_at: 2026-07-13T13:59:08.087Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b15_p43_45
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 43-45 | PE created: 3
+  completed_at: 2026-07-13T13:59:01.729Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b14_p40_42
+  mission_id: jee_main_2026 | document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  range: 40-42 | PE created: 3
+  completed_at: 2026-07-13T13:28:33.679Z
+  created_by_patch_completed: RC-X4E-P5-CANDIDATE-FIX
+---
+
+--- Part D: Verifying Undocumented Tasks Safety ---
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b22_p64_66
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b21_p61_63
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b20_p58_60
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b2_p4_6
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b19_p55_57
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b18_p52_54
+- Not AUTO_DETECT: true
+- PE created == 3: true
+- Method is native: true
+
+--- Part E: Verifying Undocumented Page Records ---
+Page 64 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=2403, proof=true, policy=true, forbidden=NONE
+Page 65 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1850, proof=true, policy=true, forbidden=NONE
+Page 66 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1766, proof=true, policy=true, forbidden=NONE
+Page 61 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=3153, proof=true, policy=true, forbidden=NONE
+Page 62 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1487, proof=true, policy=true, forbidden=NONE
+Page 63 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=2224, proof=true, policy=true, forbidden=NONE
+Page 58 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1227, proof=true, policy=true, forbidden=NONE
+Page 59 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1334, proof=true, policy=true, forbidden=NONE
+Page 60 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=816, proof=true, policy=true, forbidden=NONE
+Page 4 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1275, proof=true, policy=true, forbidden=NONE
+Page 5 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1382, proof=true, policy=true, forbidden=NONE
+Page 6 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=912, proof=true, policy=true, forbidden=NONE
+Page 55 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1221, proof=true, policy=true, forbidden=NONE
+Page 56 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1241, proof=true, policy=true, forbidden=NONE
+Page 57 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1159, proof=true, policy=true, forbidden=NONE
+Page 52 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1139, proof=true, policy=true, forbidden=NONE
+Page 53 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1449, proof=true, policy=true, forbidden=NONE
+Page 54 (Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e): len=1226, proof=true, policy=true, forbidden=NONE
+
+--- Part F: Queue Reconciliation ---
+Actual State: {
+  total: 104,
+  active: 82,
+  completed: 19,
+  failed: 3,
+  page_extractions: 62
+}
+
+--- Part G: Multi-Document Integrity ---
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 (Mission jee_main_2026): 17 pages, duplicates=NONE
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e (Mission jee_main_2026): 45 pages, duplicates=NONE
+
+--- Part H: Parent Document Side-Effect Check ---
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 side effects: NONE
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e side effects: NONE
+
+--- Part I: Audit Script Safety Check ---
+
+RC_X4E_IR1_UNDOCUMENTED_APPLY_SAFE_ROLL_FORWARD_READY
+
+==========================================
+Command: npm run audit:pagewise:baseline-exit-logic
+==========================================
+
+> audit:pagewise:baseline-exit-logic
+> node functions/audit_pagewise_baseline_exit_logic.js
+
+==============================================
+PATCH RC-X4E-R8-FIX1 - BASELINE EXIT LOGIC AUDIT
+==============================================
+
+RC_X4E_R8_FIX1_BASELINE_EXIT_LOGIC_READY
+
+==========================================
+Command: node functions/audit_platform_boundary.js
+==========================================
+=========================================
+PLATFORM BOUNDARY REGRESSION AUDIT
+=========================================
+Ô£à Check 1: lib/main_web.dart exists.
+Ô£à Check 2: lib/main_web.dart imports/loads WebShell/UnifiedCommandConsole.
+Ô£à Check 3: lib/core/router/app_router.dart does not route Founder/Admin to mobile AdminScreen.
+Ô£à Check 7: create_mission_dialog.dart still mirrors to student_mission_catalog.
+Ô£à Check 8: edit_mission_dialog.dart still mirrors to student_mission_catalog.
+-----------------------------------------
+
+==========================================
+Command: flutter test test/smoke_test.dart
+==========================================
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 61.0.0 (105.0.0 available)
+  _flutterfire_internals 1.3.59 (1.3.74 available)
+  analyzer 5.13.0 (14.1.0 available)
+  archive 3.6.1 (4.0.9 available)
+  build 2.4.1 (4.0.8 available)
+  build_config 1.1.2 (1.3.1 available)
+  build_daemon 4.1.1 (4.1.2 available)
+  build_resolvers 2.4.2 (3.0.4 available)
+  build_runner 2.4.13 (2.15.2 available)
+  build_runner_core 7.3.2 (9.3.2 available)
+  cli_util 0.4.2 (0.5.1 available)
+  cloud_firestore 5.6.12 (6.7.0 available)
+  cloud_firestore_platform_interface 6.6.12 (8.0.4 available)
+  cloud_firestore_web 4.4.12 (5.7.0 available)
+  cloud_functions 5.6.2 (6.3.4 available)
+  cloud_functions_platform_interface 5.8.2 (6.0.4 available)
+  cloud_functions_web 4.11.5 (5.1.10 available)
+  connectivity_plus 6.1.5 (7.2.0 available)
+  cross_file 0.3.5+2 (0.3.5+4 available)
+  dart_style 2.3.2 (3.1.12 available)
+  device_info_plus 11.5.0 (13.2.0 available)
+  device_info_plus_platform_interface 7.0.3 (8.1.0 available)
+  dio 5.9.2 (5.10.0 available)
+  dio_web_adapter 2.1.2 (2.2.0 available)
+  equatable 2.0.8 (2.1.0 available)
+  extension 0.6.0 (1.0.0 available)
+  file_picker 8.3.7 (11.0.2 available)
+  firebase_app_check 0.3.2+10 (0.4.5+1 available)
+  firebase_app_check_platform_interface 0.1.1+10 (0.4.1+1 available)
+  firebase_app_check_web 0.2.0+14 (0.2.5+1 available)
+  firebase_auth 5.7.0 (6.5.5 available)
+  firebase_auth_platform_interface 7.7.3 (9.0.4 available)
+  firebase_auth_web 5.15.3 (6.2.4 available)
+  firebase_core 3.15.2 (4.12.0 available)
+  firebase_core_platform_interface 6.0.3 (7.1.0 available)
+  firebase_core_web 2.24.1 (3.9.0 available)
+  firebase_crashlytics 4.3.10 (5.2.5 available)
+  firebase_crashlytics_platform_interface 3.8.10 (3.8.25 available)
+  firebase_performance 0.10.1+10 (0.11.4+4 available)
+  firebase_performance_platform_interface 0.1.5+10 (0.2.0+4 available)
+  firebase_performance_web 0.1.7+16 (0.1.8+10 available)
+  firebase_storage 12.4.10 (13.4.4 available)
+  firebase_storage_platform_interface 5.2.10 (6.0.4 available)
+  firebase_storage_web 3.10.17 (3.11.10 available)
+  flutter_native_splash 2.4.4 (2.4.8 available)
+  flutter_riverpod 2.6.1 (3.3.2 available)
+  flutter_secure_storage 9.2.4 (10.3.1 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.1 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.1 available)
+  flutter_secure_storage_windows 3.1.2 (4.2.2 available)
+  google_fonts 6.3.3 (8.1.0 available)
+  google_mlkit_commons 0.9.0 (0.12.0 available)
+  google_mlkit_text_recognition 0.14.0 (0.16.0 available)
+  google_sign_in 6.3.0 (7.2.0 available)
+  google_sign_in_android 6.2.1 (7.2.15 available)
+  google_sign_in_ios 5.9.0 (6.3.0 available)
+  google_sign_in_platform_interface 2.5.0 (3.1.0 available)
+  google_sign_in_web 0.12.4+4 (1.1.3 available)
+  hooks 2.0.2 (2.1.0 available)
+  image 4.3.0 (4.9.1 available)
+  image_picker 1.2.2 (1.2.3 available)
+  intl 0.19.0 (0.20.3 available)
+  js 0.6.7 (0.7.2 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 8.3.1 (10.2.0 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  path_provider_linux 2.2.1 (2.2.2 available)
+  record_use 0.6.0 (1.0.0 available)
+  riverpod 2.6.1 (3.3.2 available)
+  shared_preferences_android 2.4.26 (2.4.27 available)
+  shelf_web_socket 2.0.1 (3.0.0 available)
+  source_gen 1.5.0 (4.2.3 available)
+  syncfusion_flutter_core 28.2.12 (34.1.31 available)
+  syncfusion_flutter_pdf 28.2.12 (34.1.31 available)
+  test_api 0.7.11 (0.7.13 available)
+  vector_math 2.2.0 (2.4.0 available)
+  win32 5.15.0 (6.3.0 available)
+  win32_registry 2.1.0 (3.0.3 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+83 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading C:/RankCrackers/RankCrackers-55/test/smoke_test.dart
+00:00 +0: ­ƒö▒ RANKCRACKERS SYSTEM SMOKE TESTS KnowledgeEngine Initialization Smoke Test
+00:00 +1: ­ƒö▒ RANKCRACKERS SYSTEM SMOKE TESTS Mission Realm UI Smoke Test
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY WIDGETS LIBRARY Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following FirebaseException was thrown building MissionRealmScreen(dirty, dependencies:
+[UncontrolledProviderScope], state: _MissionRealmScreenState#9355c):
+[core/no-app] No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp()
+
+The relevant error-causing widget was:
+  MissionRealmScreen
+  MissionRealmScreen:file:///C:/RankCrackers/RankCrackers-55/test/smoke_test.dart:30:19
+
+When the exception was thrown, this was the stack:
+#1      _ProviderStateSubscription.read (package:riverpod/src/framework/provider_base.dart:181:28)
+#2      ConsumerStatefulElement.watch (package:flutter_riverpod/src/consumer.dart:568:8)
+#3      _MissionRealmScreenState.build (package:rank_crackers/features/auth/presentation/screens/mission_realm_screen.dart:137:29)
+#4      StatefulElement.build (package:flutter/src/widgets/framework.dart:5931:27)
+#5      ConsumerStatefulElement.build (package:flutter_riverpod/src/consumer.dart:539:20)
+#6      ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5817:15)
+#7      StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#8      Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#9      ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5799:5)
+#10     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5973:11)
+#11     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5793:5)
+...     Normal element mounting (260 frames)
+#271    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#272    MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7264:36)
+#273    MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7279:32)
+...     Normal element mounting (473 frames)
+#746    _UncontrolledProviderScopeElement.mount (package:flutter_riverpod/src/framework.dart:315:11)
+...     Normal element mounting (9 frames)
+#755    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#756    Element.updateChild (package:flutter/src/widgets/framework.dart:4053:20)
+#757    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#758    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#759    ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#760    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#761    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#762    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#763    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#764    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#765    StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#766    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#767    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#768    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#769    ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#770    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#771    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#772    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#773    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#774    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#775    StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#776    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#777    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#778    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#779    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#780    StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#781    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#782    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#783    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#784    ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#785    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#786    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#787    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#788    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#789    StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#790    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#791    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#792    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#793    ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#794    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#795    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#796    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#797    ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#798    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#799    _RawViewElement._updateChild (package:flutter/src/widgets/view.dart:481:16)
+#800    _RawViewElement.update (package:flutter/src/widgets/view.dart:568:5)
+#801    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#802    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#803    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#804    StatelessElement.update (package:flutter/src/widgets/framework.dart:5895:5)
+#805    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#806    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#807    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#808    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#809    StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#810    Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#811    RootElement._rebuild (package:flutter/src/widgets/binding.dart:2091:16)
+#812    RootElement.update (package:flutter/src/widgets/binding.dart:2069:5)
+#813    RootElement.performRebuild (package:flutter/src/widgets/binding.dart:2083:7)
+#814    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#815    BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2750:15)
+#816    BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2807:11)
+#817    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3111:18)
+#818    AutomatedTestWidgetsFlutterBinding.drawFrame (package:flutter_test/src/binding.dart:2431:19)
+#819    RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:509:5)
+#820    SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1430:15)
+#821    SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1345:9)
+#822    AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:2260:9)
+#825    TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#826    AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:2249:27)
+#827    WidgetTester.pumpWidget.<anonymous closure> (package:flutter_test/src/widget_tester.dart:598:22)
+#830    TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#831    WidgetTester.pumpWidget (package:flutter_test/src/widget_tester.dart:595:27)
+#832    main.<anonymous closure>.<anonymous closure> (file:///C:/RankCrackers/RankCrackers-55/test/smoke_test.dart:27:20)
+#833    testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:29)
+#834    TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+#836    AsyncError.value (package:riverpod/src/common.dart:495:7)
+#837    publishedRecruitmentsProvider.<anonymous closure> (package:rank_crackers/features/auth/presentation/providers/mission_realm_provider.dart:11:47)
+#838    ProviderContainer.listen (package:riverpod/src/framework/container.dart:280:21)
+#839    ConsumerStatefulElement.watch.<anonymous closure> (package:flutter_riverpod/src/consumer.dart:564:25)
+#840    _LinkedHashMapMixin.putIfAbsent (dart:_compact_hash:682:23)
+#841    ConsumerStatefulElement.watch (package:flutter_riverpod/src/consumer.dart:557:26)
+#842    _MissionRealmScreenState.build (package:rank_crackers/features/auth/presentation/screens/mission_realm_screen.dart:137:29)
+#843    StatefulElement.build (package:flutter/src/widgets/framework.dart:5931:27)
+#844    ConsumerStatefulElement.build (package:flutter_riverpod/src/consumer.dart:539:20)
+#845    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5817:15)
+#846    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#847    Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#848    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5799:5)
+#849    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5973:11)
+#850    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5793:5)
+...     Normal element mounting (260 frames)
+#1110   Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#1111   MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7264:36)
+#1112   MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7279:32)
+...     Normal element mounting (473 frames)
+#1585   _UncontrolledProviderScopeElement.mount (package:flutter_riverpod/src/framework.dart:315:11)
+...     Normal element mounting (9 frames)
+#1594   Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#1595   Element.updateChild (package:flutter/src/widgets/framework.dart:4053:20)
+#1596   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#1597   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1598   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#1599   _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#1600   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1601   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#1602   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#1603   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1604   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#1605   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1606   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#1607   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1608   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#1609   _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#1610   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1611   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#1612   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#1613   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1614   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#1615   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1616   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#1617   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#1618   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1619   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#1620   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1621   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#1622   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1623   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#1624   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1625   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#1626   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#1627   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1628   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#1629   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1630   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#1631   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1632   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#1633   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1634   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#1635   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1636   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#1637   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1638   _RawViewElement._updateChild (package:flutter/src/widgets/view.dart:481:16)
+#1639   _RawViewElement.update (package:flutter/src/widgets/view.dart:568:5)
+#1640   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1641   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#1642   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1643   StatelessElement.update (package:flutter/src/widgets/framework.dart:5895:5)
+#1644   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1645   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#1646   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#1647   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1648   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#1649   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#1650   RootElement._rebuild (package:flutter/src/widgets/binding.dart:2091:16)
+#1651   RootElement.update (package:flutter/src/widgets/binding.dart:2069:5)
+#1652   RootElement.performRebuild (package:flutter/src/widgets/binding.dart:2083:7)
+#1653   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1654   BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2750:15)
+#1655   BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2807:11)
+#1656   BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3111:18)
+#1657   AutomatedTestWidgetsFlutterBinding.drawFrame (package:flutter_test/src/binding.dart:2431:19)
+#1658   RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:509:5)
+#1659   SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1430:15)
+#1660   SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1345:9)
+#1661   AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:2260:9)
+#1664   TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#1665   AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:2249:27)
+#1666   WidgetTester.pumpWidget.<anonymous closure> (package:flutter_test/src/widget_tester.dart:598:22)
+#1669   TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#1670   WidgetTester.pumpWidget (package:flutter_test/src/widget_tester.dart:595:27)
+#1671   main.<anonymous closure>.<anonymous closure> (file:///C:/RankCrackers/RankCrackers-55/test/smoke_test.dart:27:20)
+#1672   testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:29)
+#1673   TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+#1675   MethodChannelFirebase.app (package:firebase_core_platform_interface/src/method_channel/method_channel_firebase.dart:190:5)
+#1676   Firebase.app (package:firebase_core/src/firebase.dart:79:41)
+#1677   FirebaseFirestore.instance (package:cloud_firestore/src/firestore.dart:33:21)
+#1678   FirestoreService._firestore (package:rank_crackers/core/firebase/firestore_service.dart:19:65)
+#1679   FirestoreService._firestore (package:rank_crackers/core/firebase/firestore_service.dart:0:0)
+#1680   FirestoreService.streamRecruitments (package:rank_crackers/core/firebase/firestore_service.dart:266:12)
+#1681   RecruitmentRepository.stream (package:rank_crackers/core/backend/recruitment_repository.dart:33:29)
+#1682   recruitmentsProvider.<anonymous closure> (package:rank_crackers/features/auth/presentation/providers/mission_realm_provider.dart:6:32)
+#1683   ProviderElementBase.watch (package:riverpod/src/framework/element.dart:714:12)
+#1684   publishedRecruitmentsProvider.<anonymous closure> (package:rank_crackers/features/auth/presentation/providers/mission_realm_provider.dart:11:19)
+#1685   ProviderContainer.listen (package:riverpod/src/framework/container.dart:280:21)
+#1686   ConsumerStatefulElement.watch.<anonymous closure> (package:flutter_riverpod/src/consumer.dart:564:25)
+#1687   _LinkedHashMapMixin.putIfAbsent (dart:_compact_hash:682:23)
+#1688   ConsumerStatefulElement.watch (package:flutter_riverpod/src/consumer.dart:557:26)
+#1689   _MissionRealmScreenState.build (package:rank_crackers/features/auth/presentation/screens/mission_realm_screen.dart:137:29)
+#1690   StatefulElement.build (package:flutter/src/widgets/framework.dart:5931:27)
+#1691   ConsumerStatefulElement.build (package:flutter_riverpod/src/consumer.dart:539:20)
+#1692   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5817:15)
+#1693   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#1694   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#1695   ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5799:5)
+#1696   StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5973:11)
+#1697   ComponentElement.mount (package:flutter/src/widgets/framework.dart:5793:5)
+...     Normal element mounting (260 frames)
+#1957   Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#1958   MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7264:36)
+#1959   MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7279:32)
+...     Normal element mounting (473 frames)
+#2432   _UncontrolledProviderScopeElement.mount (package:flutter_riverpod/src/framework.dart:315:11)
+...     Normal element mounting (9 frames)
+#2441   Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#2442   Element.updateChild (package:flutter/src/widgets/framework.dart:4053:20)
+#2443   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#2444   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2445   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#2446   _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#2447   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2448   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#2449   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#2450   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2451   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#2452   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2453   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#2454   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2455   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#2456   _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#2457   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2458   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#2459   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#2460   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2461   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#2462   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2463   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#2464   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#2465   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2466   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#2467   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2468   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#2469   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2470   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#2471   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2472   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#2473   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#2474   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2475   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#2476   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2477   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#2478   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2479   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#2480   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2481   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#2482   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2483   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#2484   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2485   _RawViewElement._updateChild (package:flutter/src/widgets/view.dart:481:16)
+#2486   _RawViewElement.update (package:flutter/src/widgets/view.dart:568:5)
+#2487   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2488   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#2489   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2490   StatelessElement.update (package:flutter/src/widgets/framework.dart:5895:5)
+#2491   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2492   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#2493   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#2494   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2495   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#2496   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#2497   RootElement._rebuild (package:flutter/src/widgets/binding.dart:2091:16)
+#2498   RootElement.update (package:flutter/src/widgets/binding.dart:2069:5)
+#2499   RootElement.performRebuild (package:flutter/src/widgets/binding.dart:2083:7)
+#2500   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2501   BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2750:15)
+#2502   BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2807:11)
+#2503   BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3111:18)
+#2504   AutomatedTestWidgetsFlutterBinding.drawFrame (package:flutter_test/src/binding.dart:2431:19)
+#2505   RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:509:5)
+#2506   SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1430:15)
+#2507   SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1345:9)
+#2508   AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:2260:9)
+#2511   TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#2512   AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:2249:27)
+#2513   WidgetTester.pumpWidget.<anonymous closure> (package:flutter_test/src/widget_tester.dart:598:22)
+#2516   TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#2517   WidgetTester.pumpWidget (package:flutter_test/src/widget_tester.dart:595:27)
+#2518   main.<anonymous closure>.<anonymous closure> (file:///C:/RankCrackers/RankCrackers-55/test/smoke_test.dart:27:20)
+#2519   testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:29)
+#2523   ProviderElementBase.watch (package:riverpod/src/framework/element.dart:714:12)
+#2524   publishedRecruitmentsProvider.<anonymous closure> (package:rank_crackers/features/auth/presentation/providers/mission_realm_provider.dart:11:19)
+#2525   ProviderContainer.listen (package:riverpod/src/framework/container.dart:280:21)
+#2526   ConsumerStatefulElement.watch.<anonymous closure> (package:flutter_riverpod/src/consumer.dart:564:25)
+#2527   _LinkedHashMapMixin.putIfAbsent (dart:_compact_hash:682:23)
+#2528   ConsumerStatefulElement.watch (package:flutter_riverpod/src/consumer.dart:557:26)
+#2529   _MissionRealmScreenState.build (package:rank_crackers/features/auth/presentation/screens/mission_realm_screen.dart:137:29)
+#2530   StatefulElement.build (package:flutter/src/widgets/framework.dart:5931:27)
+#2531   ConsumerStatefulElement.build (package:flutter_riverpod/src/consumer.dart:539:20)
+#2532   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5817:15)
+#2533   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#2534   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#2535   ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5799:5)
+#2536   StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5973:11)
+#2537   ComponentElement.mount (package:flutter/src/widgets/framework.dart:5793:5)
+...     Normal element mounting (260 frames)
+#2797   Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#2798   MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7264:36)
+#2799   MultiChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7279:32)
+...     Normal element mounting (473 frames)
+#3272   _UncontrolledProviderScopeElement.mount (package:flutter_riverpod/src/framework.dart:315:11)
+...     Normal element mounting (9 frames)
+#3281   Element.inflateWidget (package:flutter/src/widgets/framework.dart:4587:20)
+#3282   Element.updateChild (package:flutter/src/widgets/framework.dart:4053:20)
+#3283   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#3284   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3285   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#3286   _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#3287   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3288   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#3289   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#3290   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3291   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#3292   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3293   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#3294   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3295   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#3296   _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#3297   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3298   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#3299   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#3300   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3301   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#3302   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3303   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#3304   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#3305   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3306   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#3307   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3308   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#3309   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3310   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#3311   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3312   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#3313   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#3314   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3315   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#3316   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3317   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#3318   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3319   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#3320   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3321   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#3322   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3323   ProxyElement.update (package:flutter/src/widgets/framework.dart:6149:5)
+#3324   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3325   _RawViewElement._updateChild (package:flutter/src/widgets/view.dart:481:16)
+#3326   _RawViewElement.update (package:flutter/src/widgets/view.dart:568:5)
+#3327   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3328   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#3329   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3330   StatelessElement.update (package:flutter/src/widgets/framework.dart:5895:5)
+#3331   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3332   ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5841:16)
+#3333   StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5982:11)
+#3334   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3335   StatefulElement.update (package:flutter/src/widgets/framework.dart:6007:5)
+#3336   Element.updateChild (package:flutter/src/widgets/framework.dart:4037:15)
+#3337   RootElement._rebuild (package:flutter/src/widgets/binding.dart:2091:16)
+#3338   RootElement.update (package:flutter/src/widgets/binding.dart:2069:5)
+#3339   RootElement.performRebuild (package:flutter/src/widgets/binding.dart:2083:7)
+#3340   Element.rebuild (package:flutter/src/widgets/framework.dart:5529:7)
+#3341   BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2750:15)
+#3342   BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2807:11)
+#3343   BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3111:18)
+#3344   AutomatedTestWidgetsFlutterBinding.drawFrame (package:flutter_test/src/binding.dart:2431:19)
+#3345   RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:509:5)
+#3346   SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1430:15)
+#3347   SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1345:9)
+#3348   AutomatedTestWidgetsFlutterBinding.pump.<anonymous closure> (package:flutter_test/src/binding.dart:2260:9)
+#3351   TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#3352   AutomatedTestWidgetsFlutterBinding.pump (package:flutter_test/src/binding.dart:2249:27)
+#3353   WidgetTester.pumpWidget.<anonymous closure> (package:flutter_test/src/widget_tester.dart:598:22)
+#3356   TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)
+#3357   WidgetTester.pumpWidget (package:flutter_test/src/widget_tester.dart:595:27)
+#3358   main.<anonymous closure>.<anonymous closure> (file:///C:/RankCrackers/RankCrackers-55/test/smoke_test.dart:27:20)
+#3359   testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:29)
+#3361   testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:25)
+#3362   TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:19)
+#3364   TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1941:5)
+#3367   TestWidgetsFlutterBinding._runTest (package:flutter_test/src/binding.dart:1926:10)
+#3368   AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:2489:24)
+#3369   FakeAsync.run.<anonymous closure>.<anonymous closure> (package:fake_async/fake_async.dart:182:47)
+#3374   withClock (package:clock/src/default.dart:52:10)
+#3375   FakeAsync.run.<anonymous closure> (package:fake_async/fake_async.dart:182:15)
+#3380   FakeAsync.run (package:fake_async/fake_async.dart:181:52)
+#3381   AutomatedTestWidgetsFlutterBinding.runTest (package:flutter_test/src/binding.dart:2486:15)
+#3382   testWidgets.<anonymous closure> (package:flutter_test/src/widget_tester.dart:184:24)
+#3383   Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:253:25)
+#3385   Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:252:15)
+#3390   Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:250:17)
+#3391   Invoker._waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:318:17)
+#3396   Invoker._waitForOutstandingCallbacks (package:test_api/src/backend/invoker.dart:314:5)
+#3397   Invoker._onRun.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/invoker.dart:457:21)
+#3399   Invoker._onRun.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/invoker.dart:455:15)
+#3404   Invoker._onRun.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/invoker.dart:445:11)
+#3405   Invoker._guardIfGuarded (package:test_api/src/backend/invoker.dart:500:15)
+#3406   Invoker._onRun.<anonymous closure> (package:test_api/src/backend/invoker.dart:444:9)
+#3413   Invoker._onRun (package:test_api/src/backend/invoker.dart:442:11)
+#3414   LiveTestController.run (package:test_api/src/backend/live_test_controller.dart:161:11)
+#3415   RemoteListener._runLiveTest.<anonymous closure> (package:test_api/src/backend/remote_listener.dart:323:16)
+#3420   RemoteListener._runLiveTest (package:test_api/src/backend/remote_listener.dart:322:5)
+#3421   RemoteListener._serializeTest.<anonymous closure> (package:test_api/src/backend/remote_listener.dart:263:7)
+#3439   _GuaranteeSink.add (package:stream_channel/src/guarantee_channel.dart:125:12)
+#3440   new _MultiChannel.<anonymous closure> (package:stream_channel/src/multi_channel.dart:159:31)
+#3442   CastStreamSubscription._onData (dart:_internal/async_cast.dart:95:11)
+#3468   new _WebSocketImpl._fromSocket.<anonymous closure> (dart:_http/websocket_impl.dart:1252:27)
+#3474   _WebSocketProtocolTransformer._messageFrameEnd (dart:_http/websocket_impl.dart:348:23)
+#3475   _WebSocketProtocolTransformer.add (dart:_http/websocket_impl.dart:238:46)
+#3483   _Socket._onData (dart:io-patch/socket_patch.dart:2874:41)
+#3490   new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:2312:31)
+#3491   _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:1647:14)
+#3495   testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:189:25)
+#3496   TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:19)
+#3498   TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1941:5)
+#3501   TestWidgetsFlutterBinding._runTest (package:flutter_test/src/binding.dart:1926:10)
+#3502   AutomatedTestWidgetsFlutterBinding.runTest.<anonymous closure> (package:flutter_test/src/binding.dart:2489:24)
+#3503   FakeAsync.run.<anonymous closure>.<anonymous closure> (package:fake_async/fake_async.dart:182:47)
+#3508   withClock (package:clock/src/default.dart:52:10)
+#3509   FakeAsync.run.<anonymous closure> (package:fake_async/fake_async.dart:182:15)
+#3514   FakeAsync.run (package:fake_async/fake_async.dart:181:52)
+#3515   AutomatedTestWidgetsFlutterBinding.runTest (package:flutter_test/src/binding.dart:2486:15)
+#3516   testWidgets.<anonymous closure> (package:flutter_test/src/widget_tester.dart:184:24)
+#3517   Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:253:25)
+#3519   Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:252:15)
+#3524   Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:250:17)
+#3525   Invoker._waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:318:17)
+#3530   Invoker._waitForOutstandingCallbacks (package:test_api/src/backend/invoker.dart:314:5)
+#3531   Invoker._onRun.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/invoker.dart:457:21)
+#3533   Invoker._onRun.<anonymous closure>.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/invoker.dart:455:15)
+#3538   Invoker._onRun.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/invoker.dart:445:11)
+#3539   Invoker._guardIfGuarded (package:test_api/src/backend/invoker.dart:500:15)
+#3540   Invoker._onRun.<anonymous closure> (package:test_api/src/backend/invoker.dart:444:9)
+#3547   Invoker._onRun (package:test_api/src/backend/invoker.dart:442:11)
+#3548   LiveTestController.run (package:test_api/src/backend/live_test_controller.dart:161:11)
+#3549   RemoteListener._runLiveTest.<anonymous closure> (package:test_api/src/backend/remote_listener.dart:323:16)
+#3554   RemoteListener._runLiveTest (package:test_api/src/backend/remote_listener.dart:322:5)
+#3555   RemoteListener._serializeTest.<anonymous closure> (package:test_api/src/backend/remote_listener.dart:263:7)
+#3573   _GuaranteeSink.add (package:stream_channel/src/guarantee_channel.dart:125:12)
+#3574   new _MultiChannel.<anonymous closure> (package:stream_channel/src/multi_channel.dart:159:31)
+#3576   CastStreamSubscription._onData (dart:_internal/async_cast.dart:95:11)
+#3602   new _WebSocketImpl._fromSocket.<anonymous closure> (dart:_http/websocket_impl.dart:1252:27)
+#3608   _WebSocketProtocolTransformer._messageFrameEnd (dart:_http/websocket_impl.dart:348:23)
+#3609   _WebSocketProtocolTransformer.add (dart:_http/websocket_impl.dart:238:46)
+#3617   _Socket._onData (dart:io-patch/socket_patch.dart:2874:41)
+#3624   new _RawSocket.<anonymous closure> (dart:io-patch/socket_patch.dart:2312:31)
+#3625   _NativeSocket.issueReadEvent.issue (dart:io-patch/socket_patch.dart:1647:14)
+(elided 219 frames from dart:async and package:stack_trace)
+
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextWidgetFinder:<Found 0 widgets with text "Mission Realm": []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure> (file:///C:/RankCrackers/RankCrackers-55/test/smoke_test.dart:36:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/RankCrackers/RankCrackers-55/test/smoke_test.dart line 36
+The test description was:
+  Mission Realm UI Smoke Test
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following message was thrown:
+Multiple exceptions (2) were detected during the running of the current test, and at least one was
+unexpected.
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:03 +1 -1: ­ƒö▒ RANKCRACKERS SYSTEM SMOKE TESTS Mission Realm UI Smoke Test [E]
+  Test failed. See exception logs above.
+  The test description was: Mission Realm UI Smoke Test
+  
+00:03 +1 -1: ­ƒö▒ RANKCRACKERS SYSTEM SMOKE TESTS Dashboard UI Smoke Test
+­ƒö▒ KNOWLEDGE INIT START
+KnowledgeEngine: Initialization Error - [core/no-app] No Firebase App '[DEFAULT]' has been created - call Firebase.initializeApp()
+ÔòÉÔòÉÔòí EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK Ôò×ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextWidgetFinder:<Found 0 widgets with text "BATTLE TOOLS": []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure> (file:///C:/RankCrackers/RankCrackers-55/test/smoke_test.dart:50:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1952:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/RankCrackers/RankCrackers-55/test/smoke_test.dart line 50
+The test description was:
+  Dashboard UI Smoke Test
+ÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉÔòÉ
+00:05 +1 -2: ­ƒö▒ RANKCRACKERS SYSTEM SMOKE TESTS Dashboard UI Smoke Test [E]
+  Test failed. See exception logs above.
+  The test description was: Dashboard UI Smoke Test
+  
+00:05 +1 -2: Some tests failed.
+
+Failing tests:
+  C:/RankCrackers/RankCrackers-55/test/smoke_test.dart: ­ƒö▒ RANKCRACKERS SYSTEM SMOKE TESTS Dashboard UI Smoke Test
+  C:/RankCrackers/RankCrackers-55/test/smoke_test.dart: ­ƒö▒ RANKCRACKERS SYSTEM SMOKE TESTS Mission Realm UI Smoke Test
+
