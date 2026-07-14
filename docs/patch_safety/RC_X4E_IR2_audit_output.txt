@@ -1,0 +1,87 @@
+
+> audit:pagewise:pre-p11-undocumented-incident
+> node functions/audit_pagewise_pre_p11_undocumented_incident.js
+
+==============================================
+RC-X4E-IR2: FORENSIC INCIDENT AUDIT
+==============================================
+
+--- Part C: Verifying Authorized P11 Tasks ---
+- Task rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69: status=completed, PE_created=3, mission=jee_main_2026, method=native_pdf_text, range=67-69
+- Task rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72: status=completed, PE_created=3, mission=jee_main_2026, method=native_pdf_text, range=70-72
+- Task rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75: status=completed, PE_created=3, mission=jee_main_2026, method=native_pdf_text, range=73-75
+Ô£à Authorized P11 Tasks verified successfully.
+
+--- Part D: Sorting last 15 completed tasks ---
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b15_p43_45 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=43-45 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-13T13:59:01.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b16_p46_48 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=46-48 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-13T13:59:08.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b17_p49_51 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=49-51 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-13T13:59:14.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b18_p52_54 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=52-54 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-13T14:41:21.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b19_p55_57 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=55-57 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-13T14:41:28.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b2_p4_6 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=4-6 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-13T14:41:34.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b20_p58_60 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=58-60 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-14T07:03:54.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b21_p61_63 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=61-63 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-14T07:04:00.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b22_p64_66 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=64-66 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-14T07:04:07.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=67-69 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-14T11:55:26.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=70-72 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-14T11:55:33.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=73-75 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-14T11:55:40.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b26_p76_78 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=76-78 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-14T11:56:16.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b27_p79_81 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=79-81 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-14T11:56:23.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b28_p82_84 | mission=jee_main_2026 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | range=82-84 | status=completed | PE=3 | method=native_pdf_text | completed_at=2026-07-14T11:56:30.000Z | patch_completed=RC-X4E-P5-CANDIDATE-FIX
+
+--- Identified Undocumented Pre-P11 Tasks ---
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b20_p58_60 (Range: 58-60)
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b21_p61_63 (Range: 61-63)
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b22_p64_66 (Range: 64-66)
+
+--- Part E: Verifying Undocumented Tasks Safety ---
+Ô£à Undocumented tasks safety verified successfully.
+
+--- Part F: Verifying Undocumented Page Records Schema ---
+- Checking page records for task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b20_p58_60
+  Page 58 valid (text length = 1227)
+  Page 59 valid (text length = 1334)
+  Page 60 valid (text length = 816)
+- Checking page records for task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b21_p61_63
+  Page 61 valid (text length = 3153)
+  Page 62 valid (text length = 1487)
+  Page 63 valid (text length = 2224)
+- Checking page records for task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b22_p64_66
+  Page 64 valid (text length = 2403)
+  Page 65 valid (text length = 1850)
+  Page 66 valid (text length = 1766)
+Ô£à Undocumented page records verified successfully.
+
+--- Part G: Verifying Authorized P11 Page Records Schema ---
+- Checking page records for task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69
+  Page 67 valid (text length = 2059)
+  Page 68 valid (text length = 2619)
+  Page 69 valid (text length = 1265)
+- Checking page records for task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72
+  Page 70 valid (text length = 369)
+  Page 71 valid (text length = 211)
+  Page 72 valid (text length = 178)
+- Checking page records for task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75
+  Page 73 valid (text length = 106)
+  Page 74 valid (text length = 106)
+  Page 75 valid (text length = 127)
+Ô£à Authorized P11 page records verified successfully.
+
+--- Part H: Current Queue Reconciliation ---
+- Total tasks: 104
+- Active tasks: 76
+- Completed tasks: 25
+- Failed tasks: 3
+- Processing tasks: 0
+- Global page_extractions count: 80
+Ô£à Current queue baseline aligned perfectly (104 / 76 / 25 / 3 / 0 / 80).
+
+--- Part I: Multi-Document Integrity Check ---
+- Document: hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 | Mission: jee_main_2026 | Count: 17 | Pages: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17] | Duplicate: NO | Gaps (Info): []
+- Document: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | Mission: jee_main_2026 | Count: 63 | Pages: [1, 2, 3, 4, 5, 6, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84] | Duplicate: NO | Gaps (Info): [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+Ô£à Multi-document integrity check passed.
+
+--- Part J: Parent Document Side-Effect Check ---
+Ô£à Parent document side-effect check passed.
+
+RC_X4E_IR2_PRE_P11_UNDOCUMENTED_APPLY_SAFE_ROLL_FORWARD_READY
