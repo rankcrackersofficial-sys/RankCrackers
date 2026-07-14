@@ -1,0 +1,123 @@
+==========================================
+RC-X4E-P11-L3 PAGE EXTRACTION VERIFICATION
+==========================================
+
+Global page_extractions count: 80
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b23_p67_69
+  mission_id: jee_main_2026
+  document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  document_type: notification
+  page_start: 67
+  page_end: 69
+  task status after apply: completed
+  page_extractions_created: 3
+  failure_reason if any: NONE
+  page numbers found: [67, 68, 69]
+  - Page 67:
+    text length per page: 2059
+    extraction_status: extracted_draft
+    review_status: pending_founder_verification
+    extraction_method: native_pdf_text
+    source_proof valid: true
+    page_policy valid: true
+    empty extraction_text: false
+    forbidden publish/approval fields: false
+  - Page 68:
+    text length per page: 2619
+    extraction_status: extracted_draft
+    review_status: pending_founder_verification
+    extraction_method: native_pdf_text
+    source_proof valid: true
+    page_policy valid: true
+    empty extraction_text: false
+    forbidden publish/approval fields: false
+  - Page 69:
+    text length per page: 1265
+    extraction_status: extracted_draft
+    review_status: pending_founder_verification
+    extraction_method: native_pdf_text
+    source_proof valid: true
+    page_policy valid: true
+    empty extraction_text: false
+    forbidden publish/approval fields: false
+  parent document side effects: false
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b24_p70_72
+  mission_id: jee_main_2026
+  document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  document_type: notification
+  page_start: 70
+  page_end: 72
+  task status after apply: completed
+  page_extractions_created: 3
+  failure_reason if any: NONE
+  page numbers found: [70, 71, 72]
+  - Page 70:
+    text length per page: 369
+    extraction_status: extracted_draft
+    review_status: pending_founder_verification
+    extraction_method: native_pdf_text
+    source_proof valid: true
+    page_policy valid: true
+    empty extraction_text: false
+    forbidden publish/approval fields: false
+  - Page 71:
+    text length per page: 211
+    extraction_status: extracted_draft
+    review_status: pending_founder_verification
+    extraction_method: native_pdf_text
+    source_proof valid: true
+    page_policy valid: true
+    empty extraction_text: false
+    forbidden publish/approval fields: false
+  - Page 72:
+    text length per page: 178
+    extraction_status: extracted_draft
+    review_status: pending_founder_verification
+    extraction_method: native_pdf_text
+    source_proof valid: true
+    page_policy valid: true
+    empty extraction_text: false
+    forbidden publish/approval fields: false
+  parent document side effects: false
+
+- task_id: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b25_p73_75
+  mission_id: jee_main_2026
+  document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  document_type: notification
+  page_start: 73
+  page_end: 75
+  task status after apply: completed
+  page_extractions_created: 3
+  failure_reason if any: NONE
+  page numbers found: [73, 74, 75]
+  - Page 73:
+    text length per page: 106
+    extraction_status: extracted_draft
+    review_status: pending_founder_verification
+    extraction_method: native_pdf_text
+    source_proof valid: true
+    page_policy valid: true
+    empty extraction_text: false
+    forbidden publish/approval fields: false
+  - Page 74:
+    text length per page: 106
+    extraction_status: extracted_draft
+    review_status: pending_founder_verification
+    extraction_method: native_pdf_text
+    source_proof valid: true
+    page_policy valid: true
+    empty extraction_text: false
+    forbidden publish/approval fields: false
+  - Page 75:
+    text length per page: 127
+    extraction_status: extracted_draft
+    review_status: pending_founder_verification
+    extraction_method: native_pdf_text
+    source_proof valid: true
+    page_policy valid: true
+    empty extraction_text: false
+    forbidden publish/approval fields: false
+  parent document side effects: false
+
