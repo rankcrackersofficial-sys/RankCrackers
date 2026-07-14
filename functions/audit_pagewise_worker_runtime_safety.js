@@ -5,18 +5,19 @@ const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P10 = {
+const EXPECTED_AFTER_P11 = {
   total: 104,
-  active: 82,
-  completed: 19,
+  active: 76,
+  completed: 25,
   failed: 3,
   processing: 0,
-  pageExtractions: 62
+  pageExtractions: 80
 };
 
 function assertNoStaleBaselineSignature() {
   const auditContent = fs.readFileSync(__filename, 'utf8');
   const staleSigs = [
+    'Post-P' + '10', 'active: ' + '82', 'completed: ' + '19', 'pageExtractions: ' + '62',
     'Post-P' + '9', 'active: ' + '85', 'completed: ' + '16', 'pageExtractions: ' + '53',
     'Post-P' + '8', 'active: ' + '88', 'completed: ' + '13', 'pageExtractions: ' + '44',
     'Post-P' + '7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'
@@ -118,20 +119,20 @@ async function audit() {
   console.log(`- Global Page Extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P10.total ||
-    actualCounts.active !== EXPECTED_AFTER_P10.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P10.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P10.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P10.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P11.total ||
+    actualCounts.active !== EXPECTED_AFTER_P11.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P11.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P11.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P11.pageExtractions;
 
   if (mismatch) {
       console.error('RC_X4E_R8_FIX1_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P10);
+      console.error('Expected:', EXPECTED_AFTER_P11);
       console.error('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED');
+  console.log('RC_X4E_R8_FIX1_BASELINE_AFTER_P11_CONFIRMED');
 
   // D. Hardened Selector Dry-Run Behavior
   console.log('\nRunning Hardened Selector Dry-Run Check...');

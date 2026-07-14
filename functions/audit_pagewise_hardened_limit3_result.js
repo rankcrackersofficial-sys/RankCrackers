@@ -10,13 +10,13 @@ const EXPECTED_P6_TASKS = [
   'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b11_p31_33'
 ];
 
-const EXPECTED_AFTER_P10 = {
+const EXPECTED_AFTER_P11 = {
   total: 104,
-  active: 82,
-  completed: 19,
+  active: 76,
+  completed: 25,
   failed: 3,
   processing: 0,
-  pageExtractions: 62
+  pageExtractions: 80
 };
 
 async function audit() {
@@ -52,20 +52,20 @@ async function audit() {
   console.log(`- total page_extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P10.total ||
-    actualCounts.active !== EXPECTED_AFTER_P10.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P10.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P10.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P10.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P11.total ||
+    actualCounts.active !== EXPECTED_AFTER_P11.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P11.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P11.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P11.pageExtractions;
 
   if (mismatch) {
     console.error('RC_X4E_R8_FIX1_BASELINE_MISMATCH');
-    console.log('Expected:', EXPECTED_AFTER_P10);
+    console.log('Expected:', EXPECTED_AFTER_P11);
     console.log('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
     process.exit(1);
   }
 
-  console.log('RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED');
+  console.log('RC_X4E_R8_FIX1_BASELINE_AFTER_P11_CONFIRMED');
 
   console.log('\n--- Part C: Verify P6 Task Results ---');
   for (const tid of EXPECTED_P6_TASKS) {
@@ -182,6 +182,7 @@ async function audit() {
     const content = fs.readFileSync(filePath, 'utf8');
 
     const staleSigs = [
+    'Post-P' + '10', 'active: ' + '82', 'completed: ' + '19', 'pageExtractions: ' + '62',
       'Post-P' + '9', 'active: ' + '85', 'completed: ' + '16', 'pageExtractions: ' + '53',
       'Post-P' + '8', 'active: ' + '88', 'completed: ' + '13', 'pageExtractions: ' + '44',
       'Post-P' + '7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'
