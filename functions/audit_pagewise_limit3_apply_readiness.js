@@ -4,19 +4,20 @@ const path = require('path');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P12 = {
+const EXPECTED_AFTER_P13 = {
   total: 104,
-  active: 73,
-  completed: 28,
+  active: 70,
+  completed: 31,
   failed: 3,
   processing: 0,
-  pageExtractions: 89
+  pageExtractions: 96
 };
 
 function assertNoStaleBaselineSignature() {
   const auditContent = fs.readFileSync(__filename, 'utf8');
   const staleSigs = [
-    'Post-P' + '11', 'active: ' + '76', 'completed: ' + '25', 'pageExtractions: ' + '80',
+        'Post-P' + '12', 'active: ' + '73', 'completed: ' + '28', 'pageExtractions: ' + '89',
+'Post-P' + '11', 'active: ' + '76', 'completed: ' + '25', 'pageExtractions: ' + '80',
     'Post-P' + '10', 'active: ' + '82', 'completed: ' + '19', 'pageExtractions: ' + '62',
     'Post-P' + '9', 'active: ' + '85', 'completed: ' + '16', 'pageExtractions: ' + '53',
     'Post-P' + '8', 'active: ' + '88', 'completed: ' + '13', 'pageExtractions: ' + '44',
@@ -63,20 +64,20 @@ async function audit() {
   console.log(`- global page_extractions count: ${extractionsSnap.size}`);
 
   const mismatch =
-    counts.total !== EXPECTED_AFTER_P12.total ||
-    counts.active !== EXPECTED_AFTER_P12.active ||
-    counts.completed !== EXPECTED_AFTER_P12.completed ||
-    counts.failed !== EXPECTED_AFTER_P12.failed ||
-    extractionsSnap.size !== EXPECTED_AFTER_P12.pageExtractions;
+    counts.total !== EXPECTED_AFTER_P13.total ||
+    counts.active !== EXPECTED_AFTER_P13.active ||
+    counts.completed !== EXPECTED_AFTER_P13.completed ||
+    counts.failed !== EXPECTED_AFTER_P13.failed ||
+    extractionsSnap.size !== EXPECTED_AFTER_P13.pageExtractions;
 
   if (mismatch) {
       console.error('RC_X4E_R10_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P12);
+      console.error('Expected:', EXPECTED_AFTER_P13);
       console.error('Actual:', { ...counts, pageExtractions: extractionsSnap.size });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R10_BASELINE_AFTER_P12_CONFIRMED');
+  console.log('RC_X4E_R10_BASELINE_AFTER_P13_CONFIRMED');
 
   console.log('\nWorker Safety Check:');
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');

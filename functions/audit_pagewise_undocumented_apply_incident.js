@@ -4,20 +4,13 @@ const path = require('path');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const BASELINE_POST_P8 = {
+const BASELINE_POST_P13 = {
   total: 104,
-  active: 88,
-  completed: 13,
-  page_extractions: 44
-};
-
-const BASELINE_POST_P12 = {
-  total: 104,
-  active: 73,
-  completed: 28,
+  active: 70,
+  completed: 31,
   failed: 3,
   processing: 0,
-  page_extractions: 89
+  page_extractions: 96
 };
 
 async function audit() {
@@ -143,14 +136,14 @@ async function audit() {
   };
 
   console.log('Actual State:', actualCounts);
-  if (actualCounts.total !== BASELINE_POST_P12.total ||
-      actualCounts.active !== BASELINE_POST_P12.active ||
-      actualCounts.completed !== BASELINE_POST_P12.completed ||
-      actualCounts.page_extractions !== BASELINE_POST_P12.page_extractions) {
-    console.error('RC_X4E_R10_BASELINE_MISMATCH');
+  if (actualCounts.total !== BASELINE_POST_P13.total ||
+      actualCounts.active !== BASELINE_POST_P13.active ||
+      actualCounts.completed !== BASELINE_POST_P13.completed ||
+      actualCounts.page_extractions !== BASELINE_POST_P13.page_extractions) {
+    console.error('RC_X4E_P13_BASELINE_MISMATCH');
     process.exit(1);
   }
-  console.log('RC_X4E_R10_BASELINE_AFTER_P12_CONFIRMED');
+  console.log('RC_X4E_R10_BASELINE_AFTER_P13_CONFIRMED');
 
   // Part G: Multi-Document Integrity
   console.log('\n--- Part G: Multi-Document Integrity ---');
