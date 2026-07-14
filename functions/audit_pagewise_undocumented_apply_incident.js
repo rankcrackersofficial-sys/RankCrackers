@@ -11,11 +11,13 @@ const BASELINE_POST_P8 = {
   page_extractions: 44
 };
 
-const BASELINE_POST_UNDOCUMENTED = {
+const BASELINE_POST_P12 = {
   total: 104,
-  active: 82,
-  completed: 19,
-  page_extractions: 62
+  active: 73,
+  completed: 28,
+  failed: 3,
+  processing: 0,
+  page_extractions: 89
 };
 
 async function audit() {
@@ -55,8 +57,16 @@ async function audit() {
   });
 
   // The undocumented tasks are the ones since P8.
-  // P8 ended with completed 13. Current is 19. So 6 undocumented tasks.
-  const undocumentedTasks = completedTasks.slice(0, 6);
+  // P8 ended with completed 13. We target the specific 6 task IDs.
+  const targetIds = [
+    'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b10_p28_30',
+    'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b11_p31_33',
+    'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b12_p34_36',
+    'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b13_p37_39',
+    'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b14_p40_42',
+    'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b15_p43_45'
+  ];
+  const undocumentedTasks = completedTasks.filter(t => targetIds.includes(t.id));
   if (undocumentedTasks.length !== 6) {
     console.error('RC_X4E_IR1_BLOCKED_UNDOCUMENTED_TASKS_NOT_IDENTIFIED');
     process.exit(1);
@@ -133,13 +143,14 @@ async function audit() {
   };
 
   console.log('Actual State:', actualCounts);
-  if (actualCounts.total !== BASELINE_POST_UNDOCUMENTED.total ||
-      actualCounts.active !== BASELINE_POST_UNDOCUMENTED.active ||
-      actualCounts.completed !== BASELINE_POST_UNDOCUMENTED.completed ||
-      actualCounts.page_extractions !== BASELINE_POST_UNDOCUMENTED.page_extractions) {
-    console.error('RC_X4E_IR1_BLOCKED_CURRENT_STATE_MISMATCH');
+  if (actualCounts.total !== BASELINE_POST_P12.total ||
+      actualCounts.active !== BASELINE_POST_P12.active ||
+      actualCounts.completed !== BASELINE_POST_P12.completed ||
+      actualCounts.page_extractions !== BASELINE_POST_P12.page_extractions) {
+    console.error('RC_X4E_R10_BASELINE_MISMATCH');
     process.exit(1);
   }
+  console.log('RC_X4E_R10_BASELINE_AFTER_P12_CONFIRMED');
 
   // Part G: Multi-Document Integrity
   console.log('\n--- Part G: Multi-Document Integrity ---');

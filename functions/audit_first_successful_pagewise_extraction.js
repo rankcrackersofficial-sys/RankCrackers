@@ -61,7 +61,10 @@ async function audit() {
 
   const forbiddenFields = ['published', 'approved', 'verified', 'founder_approved', 'publish_status', 'atom_id', 'fact_id', 'question_id', 'crucible_item_id', 'digibook_unit_id', 'ai_generated', 'ocr_used'];
 
-  const records = extractionsSnap.docs.map(d => ({id: d.id, ...d.data()})).sort((a,b) => Number(a.id) - Number(b.id));
+  const records = extractionsSnap.docs
+    .map(d => ({id: d.id, ...d.data()}))
+    .filter(rec => rec.page_number >= 1 && rec.page_number <= 5)
+    .sort((a,b) => Number(a.id) - Number(b.id));
 
   let allRecordsValid = true;
   for (const rec of records) {

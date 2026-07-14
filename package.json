@@ -34,6 +34,7 @@
     "audit:pagewise:baseline-exit-logic": "node functions/audit_pagewise_baseline_exit_logic.js",
     "audit:pagewise:undocumented-apply-incident": "node functions/audit_pagewise_undocumented_apply_incident.js",
     "audit:pagewise:pre-p11-undocumented-incident": "node functions/audit_pagewise_pre_p11_undocumented_incident.js",
+    "audit:pagewise:post-p12-result": "node functions/audit_pagewise_post_p12_result.js",
     "audit:pagewise:candidate-selector": "node functions/audit_pagewise_candidate_selector_policy.js",
     "process:pagewise": "node functions/process_pagewise_extraction_batches.js --dry-run --limit 3 --prefer-native-digital",
     "process:pagecount": "node functions/process_page_count_detection_tasks.js --dry-run --limit 5",

@@ -46,7 +46,10 @@ async function audit() {
   const extractionsSnap = await db.collection(extractionPath).get();
 
   console.log(`- total records for doc: ${extractionsSnap.size}`);
-  const records = extractionsSnap.docs.map(d => ({id: d.id, ...d.data()})).sort((a,b) => Number(a.id) - Number(b.id));
+  const records = extractionsSnap.docs
+    .map(d => ({id: d.id, ...d.data()}))
+    .filter(rec => rec.page_number >= 1 && rec.page_number <= 10)
+    .sort((a,b) => Number(a.id) - Number(b.id));
 
   const expectedPages = [1,2,3,4,5,6,7,8,9,10];
   const foundPages = records.map(r => Number(r.id));
