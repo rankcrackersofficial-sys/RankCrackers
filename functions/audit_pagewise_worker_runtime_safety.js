@@ -5,23 +5,25 @@ const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P9 = {
+const EXPECTED_AFTER_P10 = {
   total: 104,
-  active: 85,
-  completed: 16,
+  active: 82,
+  completed: 19,
   failed: 3,
   processing: 0,
-  pageExtractions: 53
+  pageExtractions: 62
 };
+
 function assertNoStaleBaselineSignature() {
   const auditContent = fs.readFileSync(__filename, 'utf8');
   const staleSigs = [
+    'Post-P' + '9', 'active: ' + '85', 'completed: ' + '16', 'pageExtractions: ' + '53',
     'Post-P' + '8', 'active: ' + '88', 'completed: ' + '13', 'pageExtractions: ' + '44',
     'Post-P' + '7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'
   ];
   const staleFound = staleSigs.filter(sig => auditContent.includes(sig) && !auditContent.includes('staleSigs'));
   if (staleFound.length > 0) {
-    console.error('RC_X4E_P9_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_R8_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
     staleFound.forEach(sig => console.error(`- ${sig}`));
     process.exit(1);
   }
@@ -30,7 +32,7 @@ function assertNoStaleBaselineSignature() {
 async function audit() {
   assertNoStaleBaselineSignature();
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P9-FIX1 - PAGEWISE WORKER RUNTIME SAFETY');
+  console.log('PATCH RC-X4E-R8-FIX1 - PAGEWISE WORKER RUNTIME SAFETY');
   console.log('==============================================');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -83,7 +85,7 @@ async function audit() {
   }
 
   if (blockers.length > 0) {
-      console.error('RC_X4E_P9_FIX1_RUNTIME_AUDIT_MIXED_SDK_BLOCKED');
+      console.error('RC_X4E_R8_FIX1_RUNTIME_AUDIT_MIXED_SDK_BLOCKED');
       blockers.forEach(b => console.error(`- ${b}`));
       process.exit(1);
   }
@@ -116,20 +118,20 @@ async function audit() {
   console.log(`- Global Page Extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P9.total ||
-    actualCounts.active !== EXPECTED_AFTER_P9.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P9.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P9.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P9.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P10.total ||
+    actualCounts.active !== EXPECTED_AFTER_P10.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P10.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P10.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P10.pageExtractions;
 
   if (mismatch) {
-      console.error('RC_X4E_P9_FIX1_RUNTIME_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P9);
+      console.error('RC_X4E_R8_FIX1_BASELINE_MISMATCH');
+      console.error('Expected:', EXPECTED_AFTER_P10);
       console.error('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
       process.exit(1);
   }
 
-  console.log('RC_X4E_P9_FIX1_BASELINE_AFTER_P9_CONFIRMED');
+  console.log('RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED');
 
   // D. Hardened Selector Dry-Run Behavior
   console.log('\nRunning Hardened Selector Dry-Run Check...');
@@ -169,9 +171,9 @@ async function audit() {
   }
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_P9_FIX1_RUNTIME_SAFETY_AUDIT_READY');
+    console.log('\nRC_X4E_R8_FIX1_RUNTIME_SAFETY_AUDIT_READY');
   } else {
-    console.error('\nRC_X4E_P9_FIX1_RUNTIME_SAFETY_BLOCKED:');
+    console.error('\nRC_X4E_R8_FIX1_RUNTIME_SAFETY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }

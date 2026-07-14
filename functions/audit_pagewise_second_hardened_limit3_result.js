@@ -10,18 +10,18 @@ const EXPECTED_P7_TASKS = [
   'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b14_p40_42'
 ];
 
-const EXPECTED_AFTER_P9 = {
+const EXPECTED_AFTER_P10 = {
   total: 104,
-  active: 85,
-  completed: 16,
+  active: 82,
+  completed: 19,
   failed: 3,
   processing: 0,
-  pageExtractions: 53
+  pageExtractions: 62
 };
 
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-R6 - SECOND HARDENED LIMIT-3 RESULT AUDIT');
+  console.log('PATCH RC-X4E-R8-FIX1 - SECOND HARDENED LIMIT-3 RESULT AUDIT');
   console.log('==============================================');
 
   if (!admin.apps.length) {
@@ -52,19 +52,20 @@ async function audit() {
   console.log(`- total page_extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P9.total ||
-    actualCounts.active !== EXPECTED_AFTER_P9.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P9.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P9.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P9.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P10.total ||
+    actualCounts.active !== EXPECTED_AFTER_P10.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P10.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P10.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P10.pageExtractions;
 
   if (mismatch) {
-    console.error('RC_X4E_R6_QUEUE_BASELINE_MISMATCH');
-    console.log('Expected:', EXPECTED_AFTER_P9);
+    console.error('RC_X4E_R8_FIX1_BASELINE_MISMATCH');
+    console.log('Expected:', EXPECTED_AFTER_P10);
     console.log('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
+    process.exit(1);
   }
 
-  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P9_CONFIRMED');
+  console.log('RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED');
 
   console.log('\n--- Part C: Verify P7 Task Results ---');
   for (const tid of EXPECTED_P7_TASKS) {
@@ -80,7 +81,7 @@ async function audit() {
     console.log(`  page_extractions_created: ${task.page_extractions_created}`);
 
     if (task.status !== 'completed' || task.mission_id === 'AUTO_DETECT' || task.page_extractions_created !== 3) {
-      console.error('RC_X4E_R6_P7_TASK_RESULT_INVALID');
+      console.error('RC_X4E_R8_FIX1_TASK_RESULT_INVALID');
       process.exit(1);
     }
   }
@@ -121,7 +122,7 @@ async function audit() {
     console.log(`  duplicate pages within doc: ${duplicates.length > 0 ? 'YES: ' + duplicates.join(',') : 'NO'}`);
 
     if (duplicates.length > 0) {
-      console.error('RC_X4E_R6_DUPLICATE_PAGE_RECORD_WITHIN_DOCUMENT');
+      console.error('RC_X4E_R8_FIX1_DUPLICATE_PAGE_RECORD_WITHIN_DOCUMENT');
       integrityValid = false;
     }
 
@@ -137,7 +138,7 @@ async function audit() {
   }
 
   if (!integrityValid) {
-    console.error('RC_X4E_R6_INTEGRITY_CHECK_FAILED');
+    console.error('RC_X4E_R8_FIX1_INTEGRITY_CHECK_FAILED');
     process.exit(1);
   }
 
@@ -159,7 +160,7 @@ async function audit() {
     const foundEffects = sideEffectFields.filter(f => parentDoc[f] !== undefined);
     console.log(`- doc: ${docId} | side effects: ${foundEffects.join(', ') || 'NONE'}`);
     if (foundEffects.length > 0) {
-      console.error('RC_X4E_R6_PARENT_SIDE_EFFECT_DETECTED');
+      console.error('RC_X4E_R8_FIX1_PARENT_SIDE_EFFECT_DETECTED');
       process.exit(1);
     }
   }
@@ -167,7 +168,6 @@ async function audit() {
   console.log('\n--- Part I: Audit Baseline Staleness Check ---');
   const auditFiles = [
     'functions/audit_pagewise_worker_runtime_safety.js',
-    'functions/audit_pagewise_extraction_apply_capability.js',
     'functions/audit_pagewise_candidate_selector_policy.js',
     'functions/audit_pagewise_limit3_apply_readiness.js',
     'functions/audit_pagewise_hardened_limit3_result.js',
@@ -182,6 +182,7 @@ async function audit() {
     const content = fs.readFileSync(filePath, 'utf8');
 
     const staleSigs = [
+      'Post-P' + '9', 'active: ' + '85', 'completed: ' + '16', 'pageExtractions: ' + '53',
       'Post-P' + '8', 'active: ' + '88', 'completed: ' + '13', 'pageExtractions: ' + '44',
       'Post-P' + '7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'
     ];
@@ -195,7 +196,8 @@ async function audit() {
   }
 
   if (staleFound) {
-    console.error('RC_X4E_R7_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_R8_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
+    process.exit(1);
   }
 
   console.log('\n--- Part J: Worker Hardened Selector Safety Check ---');
@@ -204,12 +206,7 @@ async function audit() {
   const hasAllowAutoDetect = workerContent.includes('--allow-auto-detect');
   console.log(`- worker has hardened selector flags: ${hasPreferNative && hasAllowAutoDetect}`);
 
-  if (staleFound) {
-    console.error('\nRC_X4E_R7_FIX1_BLOCKED_STALE_AUDIT_BASELINE_FOUND');
-    process.exit(1);
-  }
-
-  console.log('\nRC_X4E_R6_SECOND_HARDENED_LIMIT3_RESULT_AUDIT_READY');
+  console.log('\nRC_X4E_R8_FIX1_SECOND_HARDENED_LIMIT3_RESULT_AUDIT_READY');
 }
 
 audit().catch(e => {

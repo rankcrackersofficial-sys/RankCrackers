@@ -5,24 +5,25 @@ const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P9 = {
+const EXPECTED_AFTER_P10 = {
   total: 104,
-  active: 85,
-  completed: 16,
+  active: 82,
+  completed: 19,
   failed: 3,
   processing: 0,
-  pageExtractions: 53
+  pageExtractions: 62
 };
 
 function assertNoStaleBaselineSignature() {
   const auditContent = fs.readFileSync(__filename, 'utf8');
   const staleSigs = [
+    'Post-P' + '9', 'active: ' + '85', 'completed: ' + '16', 'pageExtractions: ' + '53',
     'Post-P' + '8', 'active: ' + '88', 'completed: ' + '13', 'pageExtractions: ' + '44',
     'Post-P' + '7', 'active: ' + '91', 'completed: ' + '10', 'pageExtractions: ' + '35'
   ];
   const staleFound = staleSigs.filter(sig => auditContent.includes(sig) && !auditContent.includes('staleSigs'));
   if (staleFound.length > 0) {
-    console.error('RC_X4E_P9_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_R8_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
     staleFound.forEach(sig => console.error(`- ${sig}`));
     process.exit(1);
   }
@@ -31,7 +32,7 @@ function assertNoStaleBaselineSignature() {
 async function audit() {
   assertNoStaleBaselineSignature();
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P9-FIX1 - CANDIDATE SELECTOR POLICY AUDIT');
+  console.log('PATCH RC-X4E-R8-FIX1 - CANDIDATE SELECTOR POLICY AUDIT');
   console.log('==============================================');
 
   if (!admin.apps.length) {
@@ -62,20 +63,20 @@ async function audit() {
   console.log(`- global page_extractions: ${pageExtractionsCount}`);
 
   const mismatch =
-    counts.total !== EXPECTED_AFTER_P9.total ||
-    counts.active !== EXPECTED_AFTER_P9.active ||
-    counts.completed !== EXPECTED_AFTER_P9.completed ||
-    counts.failed !== EXPECTED_AFTER_P9.failed ||
-    pageExtractionsCount !== EXPECTED_AFTER_P9.pageExtractions;
+    counts.total !== EXPECTED_AFTER_P10.total ||
+    counts.active !== EXPECTED_AFTER_P10.active ||
+    counts.completed !== EXPECTED_AFTER_P10.completed ||
+    counts.failed !== EXPECTED_AFTER_P10.failed ||
+    pageExtractionsCount !== EXPECTED_AFTER_P10.pageExtractions;
 
   if (mismatch) {
-      console.error('RC_X4E_P9_FIX1_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P9);
+      console.error('RC_X4E_R8_FIX1_BASELINE_MISMATCH');
+      console.error('Expected:', EXPECTED_AFTER_P10);
       console.error('Actual:', { ...counts, pageExtractions: pageExtractionsCount });
       process.exit(1);
   }
 
-  console.log('RC_X4E_P9_FIX1_BASELINE_AFTER_P9_CONFIRMED');
+  console.log('RC_X4E_R8_FIX1_BASELINE_AFTER_P10_CONFIRMED');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
   const content = fs.readFileSync(workerPath, 'utf8');
@@ -104,7 +105,7 @@ async function audit() {
   }
 
   if (!staticValid) {
-    console.error('RC_X4E_P9_FIX1_STATIC_POLICY_INVALID');
+    console.error('RC_X4E_R8_FIX1_STATIC_POLICY_INVALID');
     process.exit(1);
   }
 
@@ -153,7 +154,7 @@ async function audit() {
     process.exit(1);
   }
 
-  console.log('\nRC_X4E_P9_FIX1_CANDIDATE_SELECTOR_POLICY_READY');
+  console.log('\nRC_X4E_R8_FIX1_CANDIDATE_SELECTOR_POLICY_READY');
 }
 
 audit().catch(e => {

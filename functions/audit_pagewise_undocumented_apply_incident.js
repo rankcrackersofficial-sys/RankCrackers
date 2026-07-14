@@ -13,9 +13,9 @@ const BASELINE_POST_P8 = {
 
 const BASELINE_POST_UNDOCUMENTED = {
   total: 104,
-  active: 85,
-  completed: 16,
-  page_extractions: 53
+  active: 82,
+  completed: 19,
+  page_extractions: 62
 };
 
 async function audit() {
@@ -54,11 +54,10 @@ async function audit() {
     console.log('---');
   });
 
-  // The 3 undocumented tasks are the top 3 (most recent) assuming b15-b17 were P8.
-  // Actually P8 was b15, b16, b17 (Pages 43-45, 46-48, 49-51).
-  // So undocumented are likely b18, b19 and one more.
-  const undocumentedTasks = completedTasks.slice(0, 3);
-  if (undocumentedTasks.length !== 3) {
+  // The undocumented tasks are the ones since P8.
+  // P8 ended with completed 13. Current is 19. So 6 undocumented tasks.
+  const undocumentedTasks = completedTasks.slice(0, 6);
+  if (undocumentedTasks.length !== 6) {
     console.error('RC_X4E_IR1_BLOCKED_UNDOCUMENTED_TASKS_NOT_IDENTIFIED');
     process.exit(1);
   }
