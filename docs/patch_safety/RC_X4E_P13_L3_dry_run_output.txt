@@ -1,0 +1,40 @@
+==============================================
+PATCH RC-X4E-P1-FIX2 - PAGEWISE EXTRACTION WORKER
+==============================================
+Mode: DRY-RUN
+Limit: 3 tasks
+Prefer Native Digital: YES
+Allow AUTO_DETECT: NO
+
+1. Total active pagewise tasks found: 73
+2. Tasks selected by limit/selector: 3
+3. Skipped candidates count: 0
+Selected IDs: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b31_p91_91, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b4_p10_12, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b5_p13_15
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b31_p91_91
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (91-91)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b4_p10_12
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (10-12)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b5_p13_15
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (13-15)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Confirmation:
+    - no Firestore write: YES
+    - no queue status update: YES
+    - no AI extraction: YES
+    - no OCR: YES
+    - no text extraction: NO (Native extraction enabled in apply)
+    - task limit is not page limit: YES
+
+RC_X4W_PAGEWISE_WORKER_DRY_RUN_READY

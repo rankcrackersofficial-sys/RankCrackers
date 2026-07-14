@@ -1,0 +1,64 @@
+==============================================
+RC-X4E-P13-L3: DEEP PAGE EXTRACTION VERIFICATION
+==============================================
+
+Task ID: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b31_p91_91
+- mission_id: jee_main_2026
+- document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+- document_type: notification
+- page_start: 91
+- page_end: 91
+- task status after apply: completed
+- page_extractions_created: 1
+- failure_reason: none
+- page numbers found: 91
+- text length per page: 91: 106 chars
+- extraction_status: 91: extracted_draft
+- review_status: 91: pending_founder_verification
+- extraction_method: 91: native_pdf_text
+- source_proof valid: true
+- page_policy valid: true
+- empty extraction_text: false
+- forbidden publish/approval fields: false
+- parent document side effects: false
+
+Task ID: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b4_p10_12
+- mission_id: jee_main_2026
+- document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+- document_type: notification
+- page_start: 10
+- page_end: 12
+- task status after apply: completed
+- page_extractions_created: 3
+- failure_reason: none
+- page numbers found: 10, 11, 12
+- text length per page: 10: 3555 chars, 11: 3170 chars, 12: 130 chars
+- extraction_status: 10: extracted_draft, 11: extracted_draft, 12: extracted_draft
+- review_status: 10: pending_founder_verification, 11: pending_founder_verification, 12: pending_founder_verification
+- extraction_method: 10: native_pdf_text, 11: native_pdf_text, 12: native_pdf_text
+- source_proof valid: true
+- page_policy valid: true
+- empty extraction_text: false
+- forbidden publish/approval fields: false
+- parent document side effects: false
+
+Task ID: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b5_p13_15
+- mission_id: jee_main_2026
+- document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+- document_type: notification
+- page_start: 13
+- page_end: 15
+- task status after apply: completed
+- page_extractions_created: 3
+- failure_reason: none
+- page numbers found: 13, 14, 15
+- text length per page: 13: 3308 chars, 14: 837 chars, 15: 136 chars
+- extraction_status: 13: extracted_draft, 14: extracted_draft, 15: extracted_draft
+- review_status: 13: pending_founder_verification, 14: pending_founder_verification, 15: pending_founder_verification
+- extraction_method: 13: native_pdf_text, 14: native_pdf_text, 15: native_pdf_text
+- source_proof valid: true
+- page_policy valid: true
+- empty extraction_text: false
+- forbidden publish/approval fields: false
+- parent document side effects: false
+
