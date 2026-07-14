@@ -1,0 +1,488 @@
+===== npm run audit:rankcrackers:guard =====
+
+> audit:rankcrackers:guard
+> node functions/audit_rankcrackers_path_and_rules.js
+
+==============================================
+RANKCRACKERS PATH & FINAL RULES GUARD
+==============================================
+Current working path: C:\RankCrackers\RankCrackers-55
+Official working path: C:\RankCrackers\RankCrackers-55
+
+Guard results:
+- Official path locked: YES
+- Web build rule guarded: YES
+- Android Student/User-only guard checked: YES
+- M4/M6 catalog bridge guard checked: YES
+- Extraction policy documented: YES
+- Universal extraction audit exists: YES
+- Universal page completeness audit exists: YES
+- Atomic linkage integrity audit exists: YES
+- Universal page count queue apply script: PRESENT
+- Page count queue state audit exists: YES
+- Metadata repair planner exists: YES
+- Metadata repair apply script exists: YES
+- Repaired docs page count queue apply script: PRESENT
+- Page count detection worker exists: YES
+- Page count worker capability audit exists: YES
+- Final page count result audit exists: YES
+- Universal pagewise planner exists: YES
+- Universal pagewise apply exists: YES
+- Pagewise queue audit exists: YES
+- Pagewise worker exists: YES
+- Pagewise worker capability audit exists: YES
+- Pagewise worker runtime safety audit exists: YES
+- Pagewise extraction apply audit exists: YES
+- Notification dynamic schema system: PRESENT
+- Notification page count queue apply script: PRESENT
+
+RC_G0_PATH_AND_RULES_GUARD_PASSED
+
+RC_X4E_R8_FIX3_BOUNDARY_GUARD_READY
+EXIT_CODE=0
+===== npm run audit:worker-training:policy =====
+
+> audit:worker-training:policy
+> node functions/audit_worker_training_policy.js
+
+Worker modes: SAFE_AUTO, MANUAL_DEBUG, RETRY_FAILED, PRO_VERIFY, DISABLED
+Default mode: MANUAL_DEBUG
+AUTO_DETECT default allowed: false
+Manual debug limit: 3
+SAFE_AUTO initial limit: 3
+Mandatory Pro verification categories: syllabus, PYQ, notification, answer_key, cutoff, result, exam_rules, low_confidence_output, weak_or_empty_text, duplicate_risk, random_sample_per_run
+RC_WORKER_TRAINING_1_POLICY_READY
+EXIT_CODE=0
+===== npm run audit:worker-training:autonomous-readiness =====
+
+> audit:worker-training:autonomous-readiness
+> node functions/audit_worker_training_autonomous_readiness.js
+
+==============================================
+RC-WORKER-TRAINING-2 AUTONOMOUS READINESS AUDIT
+==============================================
+
+Policy prerequisites: PASS
+- default mode: MANUAL_DEBUG
+- SAFE_AUTO enabled: NO
+- SAFE_AUTO initial limit: 3
+- AUTO_DETECT default allowed: false
+
+Current queue baseline: {
+  "total": 104,
+  "active": 70,
+  "completed": 31,
+  "failed": 3,
+  "processing": 0,
+  "pageExtractions": 96,
+  "autoDetectActive": 0,
+  "safelySelectableActive": 3
+}
+
+Document readiness summary:
+- hash_6808303b01a23893780f68a393885765142cdaaa0b81dd4ad81e26c73661103c | type=common_syllabus | mission=RPSC_FIRST_GRADE2026_2026_1782713222215 | tasks=1/0/1/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- hash_997b7f0303865e80462be73952a32bc86462c8e1ab719ab22593ddc429648843 | type=variable_syllabus | mission=RPSC_FIRST_GRADE2026_2026_1782713222215 | tasks=1/0/1/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- hash_c9f08340bbe29f9630dab701413168dbd7af43c47f8c2c01e404ace5df15ad83 | type=common_syllabus | mission=RPSC_FIRST_GRADE2026_2026_1782713222215 | tasks=1/0/1/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- hash_fad7a585eb5bc0983aa13348b8e6898122837c9480caf560aa4d216d5c29b8b3 | type=variable_syllabus | mission=RPSC_FIRST_GRADE2026_2026_1782713222215 | tasks=1/0/1/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 | type=common_syllabus | mission=jee_main_2026 | tasks=4/4/0/0/0 | PE=17 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | type=original_notification | mission=jee_main_2026 | tasks=31/27/4/0/0 | PE=79 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b | type=common_pyq | mission=jee_main_2026 | tasks=6/0/6/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925 | type=original_notification | mission=neet_(ug)-2027 | tasks=42/0/42/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- hash_8b16375b6143a29743d3392915bbed0f886d3764f2f2d17932faa0b852a3a089 | type=common_syllabus | mission=neet_(ug)-2027 | tasks=4/0/4/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- hash_bf5d40b6b9ec5b212a52a9a53036a0dce1503e37e02a90ffcc18771a029695ad | type=common_pyq | mission=neet_(ug)-2027 | tasks=6/0/6/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- hash_c1d98fa33985314caf84ed9102fbfac92cdf7e7d1b2b27089500e97d56acbcdd | type=other official document | mission=AUTO_DETECT | tasks=1/0/0/1/0 | PE=0 | status=BLOCKED_AUTO_DETECT_POLICY | blocker=AUTO_DETECT task present
+- hash_d99e44db716c44f7b210952651f5e9fea5918584cb7c49dc3c8d1d0a6a4f6f86 | type=notification | mission=AUTO_DETECT | tasks=2/0/0/2/0 | PE=0 | status=BLOCKED_AUTO_DETECT_POLICY | blocker=AUTO_DETECT task present
+- mission_RPSC_FIRST_GRADE2026_2026_1782713222215_notification_8682fce170b04597 | type=notification | mission=RPSC_FIRST_GRADE2026_2026_1782713222215 | tasks=1/0/1/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- mission_RPSC_FIRST_GRADE2026_2026_1782713222215_notification_a461e1f65845dd0a | type=notification | mission=RPSC_FIRST_GRADE2026_2026_1782713222215 | tasks=1/0/1/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- mission_RPSC_FIRST_GRADE2026_2026_1782713222215_syllabus_997b7f0303865e80 | type=syllabus | mission=RPSC_FIRST_GRADE2026_2026_1782713222215 | tasks=1/0/1/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+- mission_RPSC_FIRST_GRADE2026_2026_1782713222215_syllabus_c9f08340bbe29f96 | type=syllabus | mission=RPSC_FIRST_GRADE2026_2026_1782713222215 | tasks=1/0/1/0/0 | PE=0 | status=READY_FOR_SAFE_AUTO_DRY_RUN | blocker=none
+
+Candidate preview:
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | pages=16-18 | count=3 | type=notification | eligible=YES | reason=eligible for future SAFE_AUTO dry-run preview
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | pages=19-21 | count=3 | type=notification | eligible=YES | reason=eligible for future SAFE_AUTO dry-run preview
+- rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24 | doc=hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e | pages=22-24 | count=3 | type=notification | eligible=YES | reason=eligible for future SAFE_AUTO dry-run preview
+
+Pro verification readiness: {
+  "policyCategoriesAvailable": true,
+  "proVerificationQueueExists": false,
+  "verificationRunsExists": false,
+  "founderReviewQueueExists": false,
+  "currentOutputsNeedingProVerification": 5,
+  "missingSchemaPieces": [
+    "pro_verification_queue",
+    "verification_runs",
+    "founder_review_queue"
+  ]
+}
+
+Confirmations: no Firestore write, no extraction apply, no AI/OCR, no SAFE_AUTO enablement.
+RC_WORKER_TRAINING_2_AUTONOMOUS_READINESS_READY
+EXIT_CODE=0
+===== npm run audit:pagewise:post-p13-result =====
+
+> audit:pagewise:post-p13-result
+> node functions/audit_pagewise_post_p13_result.js
+
+==============================================
+RC-X4E-R11: POST-P13 RESULT AUDIT
+==============================================
+Global baseline: {
+  total: 104,
+  active: 70,
+  completed: 31,
+  failed: 3,
+  processing: 0,
+  pageExtractions: 96
+}
+P13, P12, and P11 page records verified.
+No duplicate page records in official document.
+Parent official document side-effect check passed.
+No stale active expected-baseline signatures detected.
+RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED
+RC_X4E_R11_POST_P13_RESULT_AUDIT_READY
+EXIT_CODE=0
+===== node functions/audit_pagewise_worker_runtime_safety.js =====
+==============================================
+PATCH RC-X4E-R8-FIX1 - PAGEWISE WORKER RUNTIME SAFETY
+==============================================
+Runtime Queue State:
+- Total pagewise tasks: 104
+- Queued/Pending: 70
+- Processing/Running: 0
+- Completed: 31
+- Failed: 3
+- Global Page Extractions: 96
+RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED
+
+Running Hardened Selector Dry-Run Check...
+--- Dry-Run Output Start ---
+==============================================
+PATCH RC-X4E-P1-FIX2 - PAGEWISE EXTRACTION WORKER
+==============================================
+Mode: DRY-RUN
+Limit: 3 tasks
+Prefer Native Digital: YES
+Allow AUTO_DETECT: NO
+
+1. Total active pagewise tasks found: 70
+2. Tasks selected by limit/selector: 3
+3. Skipped candidates count: 0
+Selected IDs: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (16-18)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (19-21)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (22-24)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Confirmation:
+    - no Firestore write: YES
+    - no queue status update: YES
+    - no AI extraction: YES
+    - no OCR: YES
+    - no text extraction: NO (Native extraction enabled in apply)
+    - task limit is not page limit: YES
+
+RC_X4W_PAGEWISE_WORKER_DRY_RUN_READY
+
+--- Dry-Run Output End ---
+Dry-run validation: PASSED
+
+RC_X4E_R11_RUNTIME_SAFETY_AUDIT_READY
+EXIT_CODE=0
+===== node functions/audit_pagewise_candidate_selector_policy.js =====
+==============================================
+PATCH RC-X4E-R8-FIX1 - CANDIDATE SELECTOR POLICY AUDIT
+==============================================
+Queue State Verification:
+- total: 104
+- active: 70
+- completed: 31
+- failed: 3
+- processing: 0
+- global page_extractions: 96
+RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED
+
+Static Policy Check:
+- --prefer-native-digital: PRESENT
+- --allow-auto-detect: PRESENT
+- SKIPPED_AUTO_DETECT_NOT_ALLOWED: PRESENT
+- SKIPPED_NATIVE_TEXT_PROBE_EMPTY: PRESENT
+- SKIPPED_RECENT_EMPTY_NATIVE_TEXT_FAILURE_DOCUMENT: PRESENT
+- extractPagesNatively(bytes, task.page_start, task.page_start): PRESENT
+- recentFailuresDocIds.has(task.document_id): PRESENT
+
+Live Selector Simulation (Dry-Run):
+--- Simulation Output Start ---
+==============================================
+PATCH RC-X4E-P1-FIX2 - PAGEWISE EXTRACTION WORKER
+==============================================
+Mode: DRY-RUN
+Limit: 3 tasks
+Prefer Native Digital: YES
+Allow AUTO_DETECT: NO
+
+1. Total active pagewise tasks found: 70
+2. Tasks selected by limit/selector: 3
+3. Skipped candidates count: 0
+Selected IDs: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21, rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (16-18)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (19-21)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (22-24)
+   - Mode: DRY-RUN (Skipping extraction and writes)
+
+Confirmation:
+    - no Firestore write: YES
+    - no queue status update: YES
+    - no AI extraction: YES
+    - no OCR: YES
+    - no text extraction: NO (Native extraction enabled in apply)
+    - task limit is not page limit: YES
+
+RC_X4W_PAGEWISE_WORKER_DRY_RUN_READY
+
+--- Simulation Output End ---
+Parsed Selected IDs: [
+  'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18',
+  'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21',
+  'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24'
+]
+Selected candidates passed basic validation.
+
+RC_X4E_R11_CANDIDATE_SELECTOR_POLICY_READY
+EXIT_CODE=0
+===== node functions/audit_platform_boundary.js =====
+=========================================
+PLATFORM BOUNDARY REGRESSION AUDIT
+=========================================
+✅ Check 1: lib/main_web.dart exists.
+✅ Check 2: lib/main_web.dart imports/loads WebShell/UnifiedCommandConsole.
+✅ Check 3: lib/core/router/app_router.dart does not route Founder/Admin to mobile AdminScreen.
+✅ Check 5: AppRoutes.admin does not render AdminScreen (shows placeholder).
+✅ Check 4: legacy admin_screen.dart is not active in app_router.dart.
+✅ Check 6: student_mission_catalog query exists in firestore_service.dart.
+✅ Check 7: create_mission_dialog.dart still mirrors to student_mission_catalog.
+✅ Check 8: edit_mission_dialog.dart still mirrors to student_mission_catalog.
+-----------------------------------------
+🎉 PATCH_W1B_BOUNDARY_AUDIT_PASSED
+EXIT_CODE=0
+===== flutter test test/smoke_test.dart =====
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 61.0.0 (105.0.0 available)
+  _flutterfire_internals 1.3.59 (1.3.74 available)
+  analyzer 5.13.0 (14.1.0 available)
+  archive 3.6.1 (4.0.9 available)
+  build 2.4.1 (4.0.8 available)
+  build_config 1.1.2 (1.3.1 available)
+  build_daemon 4.1.1 (4.1.2 available)
+  build_resolvers 2.4.2 (3.0.4 available)
+  build_runner 2.4.13 (2.15.2 available)
+  build_runner_core 7.3.2 (9.3.2 available)
+  cli_util 0.4.2 (0.5.1 available)
+  cloud_firestore 5.6.12 (6.7.0 available)
+  cloud_firestore_platform_interface 6.6.12 (8.0.4 available)
+  cloud_firestore_web 4.4.12 (5.7.0 available)
+  cloud_functions 5.6.2 (6.3.4 available)
+  cloud_functions_platform_interface 5.8.2 (6.0.4 available)
+  cloud_functions_web 4.11.5 (5.1.10 available)
+  connectivity_plus 6.1.5 (7.2.0 available)
+  cross_file 0.3.5+2 (0.3.5+4 available)
+  dart_style 2.3.2 (3.1.12 available)
+  device_info_plus 11.5.0 (13.2.0 available)
+  device_info_plus_platform_interface 7.0.3 (8.1.0 available)
+  dio 5.9.2 (5.10.0 available)
+  dio_web_adapter 2.1.2 (2.2.0 available)
+  equatable 2.0.8 (2.1.0 available)
+  extension 0.6.0 (1.0.0 available)
+  file_picker 8.3.7 (11.0.2 available)
+  firebase_app_check 0.3.2+10 (0.4.5+1 available)
+  firebase_app_check_platform_interface 0.1.1+10 (0.4.1+1 available)
+  firebase_app_check_web 0.2.0+14 (0.2.5+1 available)
+  firebase_auth 5.7.0 (6.5.5 available)
+  firebase_auth_platform_interface 7.7.3 (9.0.4 available)
+  firebase_auth_web 5.15.3 (6.2.4 available)
+  firebase_core 3.15.2 (4.12.0 available)
+  firebase_core_platform_interface 6.0.3 (7.1.0 available)
+  firebase_core_web 2.24.1 (3.9.0 available)
+  firebase_crashlytics 4.3.10 (5.2.5 available)
+  firebase_crashlytics_platform_interface 3.8.10 (3.8.25 available)
+  firebase_performance 0.10.1+10 (0.11.4+4 available)
+  firebase_performance_platform_interface 0.1.5+10 (0.2.0+4 available)
+  firebase_performance_web 0.1.7+16 (0.1.8+10 available)
+  firebase_storage 12.4.10 (13.4.4 available)
+  firebase_storage_platform_interface 5.2.10 (6.0.4 available)
+  firebase_storage_web 3.10.17 (3.11.10 available)
+  flutter_native_splash 2.4.4 (2.4.8 available)
+  flutter_riverpod 2.6.1 (3.3.2 available)
+  flutter_secure_storage 9.2.4 (10.3.1 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.1 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.1 available)
+  flutter_secure_storage_windows 3.1.2 (4.2.2 available)
+  google_fonts 6.3.3 (8.1.0 available)
+  google_mlkit_commons 0.9.0 (0.12.0 available)
+  google_mlkit_text_recognition 0.14.0 (0.16.0 available)
+  google_sign_in 6.3.0 (7.2.0 available)
+  google_sign_in_android 6.2.1 (7.2.15 available)
+  google_sign_in_ios 5.9.0 (6.3.0 available)
+  google_sign_in_platform_interface 2.5.0 (3.1.0 available)
+  google_sign_in_web 0.12.4+4 (1.1.3 available)
+  hooks 2.0.2 (2.1.0 available)
+  image 4.3.0 (4.9.1 available)
+  image_picker 1.2.2 (1.2.3 available)
+  intl 0.19.0 (0.20.3 available)
+  js 0.6.7 (0.7.2 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 8.3.1 (10.2.0 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  path_provider_linux 2.2.1 (2.2.2 available)
+  record_use 0.6.0 (1.0.0 available)
+  riverpod 2.6.1 (3.3.2 available)
+  shared_preferences_android 2.4.26 (2.4.27 available)
+  shelf_web_socket 2.0.1 (3.0.0 available)
+  source_gen 1.5.0 (4.2.3 available)
+  syncfusion_flutter_core 28.2.12 (34.1.31 available)
+  syncfusion_flutter_pdf 28.2.12 (34.1.31 available)
+  test_api 0.7.11 (0.7.13 available)
+  vector_math 2.2.0 (2.4.0 available)
+  win32 5.15.0 (6.3.0 available)
+  win32_registry 2.1.0 (3.0.3 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+83 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading C:/RankCrackers/RankCrackers-55/test/smoke_test.dart
+00:00 +0: (setUpAll)
+RC_X4E_R8_FIX3_SMOKE_BASELINE_READY
+00:00 +0: RankCrackers system smoke tests KnowledgeEngine Initialization Smoke Test
+00:00 +1: RankCrackers system smoke tests Mission Realm widget construction Smoke Test
+00:00 +2: RankCrackers system smoke tests Dashboard widget construction Smoke Test
+00:00 +3: RankCrackers system smoke tests App Router - Mobile /admin route is blocked
+00:00 +4: (tearDownAll)
+00:00 +4: All tests passed!
+EXIT_CODE=0
+===== flutter build web -t lib\main_web.dart --no-wasm-dry-run =====
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 61.0.0 (105.0.0 available)
+  _flutterfire_internals 1.3.59 (1.3.74 available)
+  analyzer 5.13.0 (14.1.0 available)
+  archive 3.6.1 (4.0.9 available)
+  build 2.4.1 (4.0.8 available)
+  build_config 1.1.2 (1.3.1 available)
+  build_daemon 4.1.1 (4.1.2 available)
+  build_resolvers 2.4.2 (3.0.4 available)
+  build_runner 2.4.13 (2.15.2 available)
+  build_runner_core 7.3.2 (9.3.2 available)
+  cli_util 0.4.2 (0.5.1 available)
+  cloud_firestore 5.6.12 (6.7.0 available)
+  cloud_firestore_platform_interface 6.6.12 (8.0.4 available)
+  cloud_firestore_web 4.4.12 (5.7.0 available)
+  cloud_functions 5.6.2 (6.3.4 available)
+  cloud_functions_platform_interface 5.8.2 (6.0.4 available)
+  cloud_functions_web 4.11.5 (5.1.10 available)
+  connectivity_plus 6.1.5 (7.2.0 available)
+  cross_file 0.3.5+2 (0.3.5+4 available)
+  dart_style 2.3.2 (3.1.12 available)
+  device_info_plus 11.5.0 (13.2.0 available)
+  device_info_plus_platform_interface 7.0.3 (8.1.0 available)
+  dio 5.9.2 (5.10.0 available)
+  dio_web_adapter 2.1.2 (2.2.0 available)
+  equatable 2.0.8 (2.1.0 available)
+  extension 0.6.0 (1.0.0 available)
+  file_picker 8.3.7 (11.0.2 available)
+  firebase_app_check 0.3.2+10 (0.4.5+1 available)
+  firebase_app_check_platform_interface 0.1.1+10 (0.4.1+1 available)
+  firebase_app_check_web 0.2.0+14 (0.2.5+1 available)
+  firebase_auth 5.7.0 (6.5.5 available)
+  firebase_auth_platform_interface 7.7.3 (9.0.4 available)
+  firebase_auth_web 5.15.3 (6.2.4 available)
+  firebase_core 3.15.2 (4.12.0 available)
+  firebase_core_platform_interface 6.0.3 (7.1.0 available)
+  firebase_core_web 2.24.1 (3.9.0 available)
+  firebase_crashlytics 4.3.10 (5.2.5 available)
+  firebase_crashlytics_platform_interface 3.8.10 (3.8.25 available)
+  firebase_performance 0.10.1+10 (0.11.4+4 available)
+  firebase_performance_platform_interface 0.1.5+10 (0.2.0+4 available)
+  firebase_performance_web 0.1.7+16 (0.1.8+10 available)
+  firebase_storage 12.4.10 (13.4.4 available)
+  firebase_storage_platform_interface 5.2.10 (6.0.4 available)
+  firebase_storage_web 3.10.17 (3.11.10 available)
+  flutter_native_splash 2.4.4 (2.4.8 available)
+  flutter_riverpod 2.6.1 (3.3.2 available)
+  flutter_secure_storage 9.2.4 (10.3.1 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.1 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.1 available)
+  flutter_secure_storage_windows 3.1.2 (4.2.2 available)
+  google_fonts 6.3.3 (8.1.0 available)
+  google_mlkit_commons 0.9.0 (0.12.0 available)
+  google_mlkit_text_recognition 0.14.0 (0.16.0 available)
+  google_sign_in 6.3.0 (7.2.0 available)
+  google_sign_in_android 6.2.1 (7.2.15 available)
+  google_sign_in_ios 5.9.0 (6.3.0 available)
+  google_sign_in_platform_interface 2.5.0 (3.1.0 available)
+  google_sign_in_web 0.12.4+4 (1.1.3 available)
+  hooks 2.0.2 (2.1.0 available)
+  image 4.3.0 (4.9.1 available)
+  image_picker 1.2.2 (1.2.3 available)
+  intl 0.19.0 (0.20.3 available)
+  js 0.6.7 (0.7.2 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 8.3.1 (10.2.0 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  path_provider_linux 2.2.1 (2.2.2 available)
+  record_use 0.6.0 (1.0.0 available)
+  riverpod 2.6.1 (3.3.2 available)
+  shared_preferences_android 2.4.26 (2.4.27 available)
+  shelf_web_socket 2.0.1 (3.0.0 available)
+  source_gen 1.5.0 (4.2.3 available)
+  syncfusion_flutter_core 28.2.12 (34.1.31 available)
+  syncfusion_flutter_pdf 28.2.12 (34.1.31 available)
+  test_api 0.7.11 (0.7.13 available)
+  vector_math 2.2.0 (2.4.0 available)
+  win32 5.15.0 (6.3.0 available)
+  win32_registry 2.1.0 (3.0.3 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+83 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Compiling lib\main_web.dart for the Web...                      
+Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 25772 bytes (98.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Compiling lib\main_web.dart for the Web...                          9.5s
+√ Built build\web
+EXIT_CODE=0
