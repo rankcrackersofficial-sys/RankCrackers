@@ -21,7 +21,7 @@ function assertNoStaleBaselineSignature() {
   ];
   const staleFound = staleSigs.filter(sig => auditContent.includes(sig) && !auditContent.includes('staleSigs'));
   if (staleFound.length > 0) {
-    console.error('RC_X4E_R7_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_P9_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
     staleFound.forEach(sig => console.error(`- ${sig}`));
     process.exit(1);
   }
@@ -30,7 +30,7 @@ function assertNoStaleBaselineSignature() {
 async function audit() {
   assertNoStaleBaselineSignature();
   console.log('==============================================');
-  console.log('PATCH RC-X4E-R7-FIX1 - PAGEWISE WORKER RUNTIME SAFETY');
+  console.log('PATCH RC-X4E-P9-FIX1 - PAGEWISE WORKER RUNTIME SAFETY');
   console.log('==============================================');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -83,7 +83,7 @@ async function audit() {
   }
 
   if (blockers.length > 0) {
-      console.error('RC_X4E_R7_FIX1_RUNTIME_AUDIT_MIXED_SDK_BLOCKED');
+      console.error('RC_X4E_P9_FIX1_RUNTIME_AUDIT_MIXED_SDK_BLOCKED');
       blockers.forEach(b => console.error(`- ${b}`));
       process.exit(1);
   }
@@ -123,13 +123,13 @@ async function audit() {
     actualPageExtractions !== EXPECTED_AFTER_P9.pageExtractions;
 
   if (mismatch) {
-      console.error('RC_X4E_R7_FIX1_RUNTIME_BASELINE_MISMATCH');
+      console.error('RC_X4E_P9_FIX1_RUNTIME_BASELINE_MISMATCH');
       console.error('Expected:', EXPECTED_AFTER_P9);
       console.error('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P9_CONFIRMED');
+  console.log('RC_X4E_P9_FIX1_BASELINE_AFTER_P9_CONFIRMED');
 
   // D. Hardened Selector Dry-Run Behavior
   console.log('\nRunning Hardened Selector Dry-Run Check...');
@@ -169,9 +169,9 @@ async function audit() {
   }
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_R7_FIX1_RUNTIME_SAFETY_AUDIT_READY');
+    console.log('\nRC_X4E_P9_FIX1_RUNTIME_SAFETY_AUDIT_READY');
   } else {
-    console.error('\nRC_X4E_R7_FIX1_RUNTIME_SAFETY_BLOCKED:');
+    console.error('\nRC_X4E_P9_FIX1_RUNTIME_SAFETY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }

@@ -21,7 +21,7 @@ const EXPECTED_AFTER_P9 = {
 
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-R7-FIX1 - HARDENED LIMIT-3 RESULT AUDIT');
+  console.log('PATCH RC-X4E-P9-FIX1 - HARDENED LIMIT-3 RESULT AUDIT');
   console.log('==============================================');
 
   if (!admin.apps.length) {
@@ -59,12 +59,12 @@ async function audit() {
     actualPageExtractions !== EXPECTED_AFTER_P9.pageExtractions;
 
   if (mismatch) {
-    console.error('RC_X4E_R7_QUEUE_BASELINE_MISMATCH');
+    console.error('RC_X4E_P9_QUEUE_BASELINE_MISMATCH');
     console.log('Expected:', EXPECTED_AFTER_P9);
     console.log('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
   }
 
-  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P9_CONFIRMED');
+  console.log('RC_X4E_P9_FIX1_BASELINE_AFTER_P9_CONFIRMED');
 
   console.log('\n--- Part C: Verify P6 Task Results ---');
   for (const tid of EXPECTED_P6_TASKS) {
@@ -194,7 +194,7 @@ async function audit() {
   }
 
   if (staleFound) {
-    console.error('RC_X4E_R7_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_P9_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
   }
 
   console.log('\n--- Part J: Worker Hardened Selector Safety Check ---');
@@ -206,11 +206,11 @@ async function audit() {
   console.log(`- worker skips auto-detect by default: ${hasSkipAutoDetect}`);
 
   if (staleFound) {
-    console.error('\nRC_X4E_R7_FIX1_BLOCKED_STALE_AUDIT_BASELINE_FOUND');
+    console.error('\nRC_X4E_P9_FIX1_BLOCKED_STALE_AUDIT_BASELINE_FOUND');
     process.exit(1);
   }
 
-  console.log('\nRC_X4E_R7_FIX1_HARDENED_LIMIT3_RESULT_AUDIT_READY');
+  console.log('\nRC_X4E_P9_FIX1_HARDENED_LIMIT3_RESULT_AUDIT_READY');
 }
 
 audit().catch(e => {

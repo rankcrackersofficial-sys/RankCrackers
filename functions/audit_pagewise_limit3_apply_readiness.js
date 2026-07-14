@@ -21,7 +21,7 @@ function assertNoStaleBaselineSignature() {
   ];
   const staleFound = staleSigs.filter(sig => auditContent.includes(sig) && !auditContent.includes('staleSigs'));
   if (staleFound.length > 0) {
-    console.error('RC_X4E_R7_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_P9_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
     staleFound.forEach(sig => console.error(`- ${sig}`));
     process.exit(1);
   }
@@ -30,7 +30,7 @@ function assertNoStaleBaselineSignature() {
 async function audit() {
   assertNoStaleBaselineSignature();
   console.log('==============================================');
-  console.log('PATCH RC-X4E-R7-FIX1 - LIMIT 3 APPLY READINESS AUDIT');
+  console.log('PATCH RC-X4E-P9-FIX1 - LIMIT 3 APPLY READINESS AUDIT');
   console.log('==============================================');
 
   if (!admin.apps.length) {
@@ -67,13 +67,13 @@ async function audit() {
     extractionsSnap.size !== EXPECTED_AFTER_P9.pageExtractions;
 
   if (mismatch) {
-      console.error('RC_X4E_R7_FIX1_BASELINE_MISMATCH');
+      console.error('RC_X4E_P9_FIX1_BASELINE_MISMATCH');
       console.error('Expected:', EXPECTED_AFTER_P9);
       console.error('Actual:', { ...counts, pageExtractions: extractionsSnap.size });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R7_FIX1_BASELINE_AFTER_P9_CONFIRMED');
+  console.log('RC_X4E_P9_FIX1_BASELINE_AFTER_P9_CONFIRMED');
 
   console.log('\nWorker Safety Check:');
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -90,11 +90,11 @@ async function audit() {
   console.log(`- no AI/OCR imports: ${noAI}`);
 
   if (!hasConfirmation || !hasLimit3 || !noAI || !hasHarding) {
-      console.error('RC_X4E_R7_FIX1_BLOCKED_WORKER_UNSAFE');
+      console.error('RC_X4E_P9_FIX1_BLOCKED_WORKER_UNSAFE');
       process.exit(1);
   }
 
-  console.log('\nRC_X4E_R7_FIX1_APPLY_READINESS_READY');
+  console.log('\nRC_X4E_P9_FIX1_APPLY_READINESS_READY');
 }
 
 audit().catch(e => {
