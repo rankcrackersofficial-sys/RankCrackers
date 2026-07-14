@@ -5,18 +5,20 @@ const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P11 = {
+const EXPECTED_AFTER_P12 = {
   total: 104,
-  active: 76,
-  completed: 25,
+  active: 73,
+  completed: 28,
   failed: 3,
   processing: 0,
-  pageExtractions: 80
+  pageExtractions: 89
 };
 
 function assertNoStaleBaselineSignature() {
   const auditContent = fs.readFileSync(__filename, 'utf8');
   const staleSigs = [
+    'Post-P' + '11', 'active: ' + '76', 'completed: ' + '25', 'pageExtractions: ' + '80',
+    'EXPECTED_AFTER_P' + '11', 'active: ' + '76', 'completed: ' + '25', 'pageExtractions: ' + '80',
     'Post-P' + '10', 'active: ' + '82', 'completed: ' + '19', 'pageExtractions: ' + '62',
     'Post-P' + '9', 'active: ' + '85', 'completed: ' + '16', 'pageExtractions: ' + '53',
     'Post-P' + '8', 'active: ' + '88', 'completed: ' + '13', 'pageExtractions: ' + '44',
@@ -24,7 +26,7 @@ function assertNoStaleBaselineSignature() {
   ];
   const staleFound = staleSigs.filter(sig => auditContent.includes(sig) && !auditContent.includes('staleSigs'));
   if (staleFound.length > 0) {
-    console.error('RC_X4E_R8_FIX1_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_R10_STALE_BASELINE_SIGNATURE_FOUND');
     staleFound.forEach(sig => console.error(`- ${sig}`));
     process.exit(1);
   }
@@ -119,20 +121,20 @@ async function audit() {
   console.log(`- Global Page Extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P11.total ||
-    actualCounts.active !== EXPECTED_AFTER_P11.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P11.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P11.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P11.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P12.total ||
+    actualCounts.active !== EXPECTED_AFTER_P12.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P12.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P12.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P12.pageExtractions;
 
   if (mismatch) {
-      console.error('RC_X4E_R8_FIX1_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P11);
+      console.error('RC_X4E_R10_BASELINE_MISMATCH');
+      console.error('Expected:', EXPECTED_AFTER_P12);
       console.error('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R8_FIX1_BASELINE_AFTER_P11_CONFIRMED');
+  console.log('RC_X4E_R10_BASELINE_AFTER_P12_CONFIRMED');
 
   // D. Hardened Selector Dry-Run Behavior
   console.log('\nRunning Hardened Selector Dry-Run Check...');
@@ -172,9 +174,9 @@ async function audit() {
   }
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_R8_FIX1_RUNTIME_SAFETY_AUDIT_READY');
+    console.log('\nRC_X4E_R10_RUNTIME_SAFETY_AUDIT_READY');
   } else {
-    console.error('\nRC_X4E_R8_FIX1_RUNTIME_SAFETY_BLOCKED:');
+    console.error('\nRC_X4E_R10_RUNTIME_SAFETY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }
