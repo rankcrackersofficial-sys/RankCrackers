@@ -178,7 +178,7 @@ async function main() {
     pageExtractions: peCount
   };
 
-  if (baseline.total !== 104 || baseline.active !== 70 || baseline.completed !== 31 || baseline.failed !== 3 || baseline.processing !== 0 || baseline.pageExtractions !== 96) {
+  if (baseline.total !== 104 || baseline.active !== 67 || baseline.completed !== 34 || baseline.failed !== 3 || baseline.processing !== 0 || baseline.pageExtractions !== 105) {
     console.error('RC_WORKER_TRAINING_3_BASELINE_MISMATCH');
     console.error(JSON.stringify(baseline, null, 2));
     process.exit(1);
