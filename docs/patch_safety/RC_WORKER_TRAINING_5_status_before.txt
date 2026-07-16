@@ -1,0 +1,8 @@
+Branch: safety/rc-g2-pre-notification-schema
+HEAD: 7a33e777c4ec7483912e1b44b1a7aaef6bb5cb17
+
+Git status --short:
+ M functions/audit_pagewise_second_hardened_limit3_result.js
+ M functions/audit_pagewise_worker_runtime_safety.js
+?? docs/patch_safety/RC_WORKER_TRAINING_4_apply_output.txt
+?? docs/patch_safety/RC_X4E_IR3_status_before.txt
