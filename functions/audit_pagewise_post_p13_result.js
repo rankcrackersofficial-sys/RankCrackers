@@ -14,11 +14,11 @@ const db = admin.firestore();
 
 const EXPECTED_AFTER_P13 = {
   total: 104,
-  active: 70,
-  completed: 31,
+  active: 67,
+  completed: 34,
   failed: 3,
   processing: 0,
-  pageExtractions: 96
+  pageExtractions: 105
 };
 
 const activeScripts = [
@@ -55,6 +55,9 @@ function range(start, end) {
 
 function pageTasks() {
   return [
+    { phase: 'R11_INCIDENT', id: 'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18', pages: range(16, 18) },
+    { phase: 'R11_INCIDENT', id: 'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21', pages: range(19, 21) },
+    { phase: 'R11_INCIDENT', id: 'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24', pages: range(22, 24) },
     { phase: 'P13', id: 'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b4_p10_12', pages: range(10, 12) },
     { phase: 'P13', id: 'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b5_p13_15', pages: range(13, 15) },
     { phase: 'P13', id: 'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b31_p91_91', pages: [91] },
@@ -87,7 +90,7 @@ async function verifyGlobalBaseline() {
   console.log('Global baseline:', actual);
   const mismatch = Object.keys(EXPECTED_AFTER_P13).filter(key => actual[key] !== EXPECTED_AFTER_P13[key]);
   if (mismatch.length > 0) {
-    console.error('RC_X4E_P13_POST_RESULT_BASELINE_MISMATCH');
+    console.error('RC_X4E_R11_BASELINE_MISMATCH');
     console.error('Expected:', EXPECTED_AFTER_P13);
     console.error('Actual:', actual);
     process.exit(1);
@@ -129,13 +132,13 @@ async function verifyPageGroups() {
   for (const task of pageTasks()) {
     for (const page of task.pages) {
       if (seen.has(page)) {
-        console.error('RC_X4E_P13_BLOCKED_DUPLICATE_EXPECTED_PAGE');
+        console.error('RC_X4E_R11_BLOCKED_DUPLICATE_EXPECTED_PAGE');
         process.exit(1);
       }
       seen.add(page);
       const result = await verifyPageRecord(task.id, page);
       if (!result.valid) {
-        console.error('RC_X4E_P13_BLOCKED_' + task.phase + '_PAGE_RECORD_INVALID');
+        console.error('RC_X4E_R11_BLOCKED_' + task.phase + '_PAGE_RECORD_INVALID');
         console.error(result.reason);
         process.exit(1);
       }
@@ -152,7 +155,7 @@ async function verifyNoDuplicatePageRecords() {
   const pages = snap.docs.map(doc => Number(doc.id || doc.data().page_number || doc.data().pageNumber));
   const duplicatePages = pages.filter((page, index) => pages.indexOf(page) !== index);
   if (duplicatePages.length > 0) {
-    console.error('RC_X4E_P13_BLOCKED_DUPLICATE_PAGE_RECORD');
+    console.error('RC_X4E_R11_BLOCKED_DUPLICATE_PAGE_RECORD');
     console.error([...new Set(duplicatePages)]);
     process.exit(1);
   }
@@ -174,7 +177,7 @@ async function verifyParentDocumentNoSideEffects() {
     if (value === true || lower(value) === 'published' || lower(value) === 'approved') sideEffects.push(field + '=' + value);
   }
   if (sideEffects.length > 0) {
-    console.error('RC_X4E_P13_BLOCKED_PARENT_SIDE_EFFECT_DETECTED');
+    console.error('RC_X4E_R11_BLOCKED_PARENT_SIDE_EFFECT_DETECTED');
     console.error(sideEffects.join('\n'));
     process.exit(1);
   }
@@ -187,6 +190,7 @@ function verifyNoActiveStaleBaselineSignatures() {
     'BASELINE_POST_P12', 'BASELINE_POST_P11', 'BASELINE_POST_P10', 'BASELINE_POST_P9', 'BASELINE_POST_P8', 'BASELINE_POST_P7'
   ];
   const staleExpectedBlocks = [
+    'active: 70', 'completed: 31', 'pageExtractions: 96',
     'active: 73', 'completed: 28', 'pageExtractions: 89',
     'active: 76', 'completed: 25', 'pageExtractions: 80',
     'active: 82', 'completed: 19', 'pageExtractions: 62',
@@ -214,7 +218,7 @@ function verifyNoActiveStaleBaselineSignatures() {
     }
   }
   if (blockers.length > 0) {
-    console.error('RC_X4E_P13_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_R11_STALE_BASELINE_SIGNATURE_FOUND');
     blockers.forEach(item => console.error('- ' + item));
     process.exit(1);
   }
@@ -223,18 +227,19 @@ function verifyNoActiveStaleBaselineSignatures() {
 
 async function main() {
   console.log('==============================================');
-  console.log('RC-X4E-P13-FIX1: POST-P13 RESULT AUDIT');
+  console.log('RC-X4E-R11: POST-P13 RESULT AUDIT');
   console.log('==============================================');
   await verifyGlobalBaseline();
   await verifyPageGroups();
   await verifyNoDuplicatePageRecords();
   await verifyParentDocumentNoSideEffects();
   verifyNoActiveStaleBaselineSignatures();
-  console.log('RC_X4E_P13_POST_RESULT_BASELINE_CONFIRMED');
-  console.log('RC_X4E_P13_POST_RESULT_AUDIT_READY');
+  console.log('RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
+  console.log('RC_X4E_R11_POST_P13_RESULT_AUDIT_READY');
 }
 
 main().catch(error => {
   console.error(error);
   process.exit(1);
 });
+

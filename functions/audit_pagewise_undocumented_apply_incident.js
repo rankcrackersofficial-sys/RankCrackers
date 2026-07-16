@@ -6,11 +6,11 @@ const PROJECT_ID = 'rankcrackers-55';
 
 const BASELINE_POST_P13 = {
   total: 104,
-  active: 70,
-  completed: 31,
+  active: 67,
+  completed: 34,
   failed: 3,
   processing: 0,
-  page_extractions: 96
+  page_extractions: 105
 };
 
 async function audit() {
@@ -140,10 +140,10 @@ async function audit() {
       actualCounts.active !== BASELINE_POST_P13.active ||
       actualCounts.completed !== BASELINE_POST_P13.completed ||
       actualCounts.page_extractions !== BASELINE_POST_P13.page_extractions) {
-    console.error('RC_X4E_P13_BASELINE_MISMATCH');
+    console.error('RC_X4E_R11_BASELINE_MISMATCH');
     process.exit(1);
   }
-  console.log('RC_X4E_R10_BASELINE_AFTER_P13_CONFIRMED');
+  console.log('RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
 
   // Part G: Multi-Document Integrity
   console.log('\n--- Part G: Multi-Document Integrity ---');
@@ -216,3 +216,4 @@ audit().catch(e => {
   console.error(e);
   process.exit(1);
 });
+

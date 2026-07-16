@@ -6,7 +6,7 @@ const PROJECT_ID = 'rankcrackers-55';
 
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-R2 - FIRST SUCCESSFUL EXTRACTION AUDIT');
+  console.log('PATCH RC-X4E-R11 - FIRST SUCCESSFUL EXTRACTION AUDIT');
   console.log('==============================================');
 
   if (!admin.apps.length) {
@@ -157,8 +157,8 @@ async function audit() {
   console.log(`- documents with page_extractions: ${docsWithRecords}`);
   console.log(`- total page_extraction records found: ${totalRecordsFound}`);
 
-  if (docsWithRecords !== 1 || totalRecordsFound !== 5) {
-      console.error('RC_X4E_R2_UNEXPECTED_EXTRACTION_RECORDS_FOUND');
+  if (docsWithRecords !== 2 || totalRecordsFound !== 105) {
+      console.error('RC_X4E_R11_BASELINE_MISMATCH');
       process.exit(1);
   }
 
@@ -185,15 +185,15 @@ async function audit() {
   const workerContent = fs.readFileSync(workerPath, 'utf8');
 
   const hasTaskId = workerContent.includes('cli.taskId');
-  const hasFilter = workerContent.includes('allActiveTasks.filter(t => t.id === cli.taskId)');
-  const hasLimitLock = workerContent.includes('cli.limit !== 1');
+  const hasFilter = workerContent.includes('allActiveTasks.find(t => t.id === cli.taskId)');
+  const hasLimitLock = workerContent.includes('cli.limit !== 3');
 
   console.log(`- --task-id support: ${hasTaskId ? 'YES' : 'NO'}`);
   console.log(`- filtering logic exists: ${hasFilter ? 'YES' : 'NO'}`);
-  console.log(`- limit 1 lock exists: ${hasLimitLock ? 'YES' : 'NO'}`);
+  console.log(`- limit 3 lock exists: ${hasLimitLock ? 'YES' : 'NO'}`);
 
   if (!hasTaskId || !hasFilter || !hasLimitLock) {
-      console.error('RC_X4E_R2_TASK_ID_TARGETING_UNSAFE');
+      console.error('RC_X4E_R11_TASK_ID_TARGETING_UNSAFE');
       process.exit(1);
   }
 

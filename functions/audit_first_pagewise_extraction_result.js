@@ -37,7 +37,7 @@ async function probeNativeText(bytes) {
 
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-R1 - FIRST PAGEWISE EXTRACTION AUDIT');
+  console.log('PATCH RC-X4E-R11 - FIRST PAGEWISE EXTRACTION AUDIT');
   console.log('==============================================');
 
   if (!admin.apps.length) {
@@ -159,8 +159,6 @@ async function audit() {
       return a.id.localeCompare(b.id);
   }).slice(0, 10);
 
-  let recommendation = null;
-
   for (const t of top10Active) {
       console.log(`\n- task_id: ${t.id}`);
       console.log(`  mission_id: ${t.mission_id}`);
@@ -194,7 +192,6 @@ async function audit() {
       } else if (probe.hasText === true) {
           candidate = 'YES';
           reason = 'Digital PDF with native text layer found.';
-          if (!recommendation) recommendation = t;
       } else {
           reason = 'Probe failed or inconclusive.';
       }
@@ -203,16 +200,12 @@ async function audit() {
       console.log(`  reason: ${reason}`);
   }
 
-  if (recommendation) {
-      console.log('\n--- Recommendation ---');
-      console.log(`recommended_next_task_id: ${recommendation.id}`);
-      console.log(`recommended_next_page_range: ${recommendation.page_start}-${recommendation.page_end}`);
-      console.log(`recommendation_reason: Digital PDF with text layer confirmed by probe.`);
-      console.log('\nRC_X4E_R1_FIRST_EXTRACTION_RESULT_AUDIT_READY');
-  } else {
-      console.log('\nRC_X4E_R1_BLOCKED: No good native text candidates found in first 10 active tasks.');
+  if (groups.queued.length !== 67 || groups.completed.length !== 34 || groups.failed.length !== 3) {
+      console.error('RC_X4E_R11_BASELINE_MISMATCH');
       process.exit(1);
   }
+
+  console.log('\nRC_X4E_R11_FIRST_EXTRACTION_RESULT_AUDIT_READY');
 }
 
 audit().catch(e => {

@@ -6,7 +6,7 @@ const PROJECT_ID = 'rankcrackers-55';
 
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P5-FIX2 - PAGEWISE APPLY CAPABILITY AUDIT');
+  console.log('PATCH RC-X4E-R11 - PAGEWISE APPLY CAPABILITY AUDIT');
   console.log('==============================================');
 
   const runtimeAuditPath = path.join(__dirname, 'audit_pagewise_worker_runtime_safety.js');
@@ -51,9 +51,9 @@ async function audit() {
   }
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_P5_FIX2_PAGEWISE_APPLY_CAPABILITY_READY');
+    console.log('\nRC_X4E_R11_PAGEWISE_APPLY_CAPABILITY_READY');
   } else {
-    console.error('\nRC_X4E_P5_FIX2_PAGEWISE_APPLY_CAPABILITY_BLOCKED:');
+    console.error('\nRC_X4E_R11_PAGEWISE_APPLY_CAPABILITY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }

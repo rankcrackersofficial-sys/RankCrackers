@@ -79,8 +79,8 @@ async function main() {
   console.log('RC-X4E-R10: POST-P12 RESULT AUDIT & STATIC GUARD');
   console.log('==============================================');
 
-  // 1. Verify Global Queue State = 104 / 73 / 28 / 3 / 0 / 89
-  console.log('\n--- Checking Global Queue Baseline (104 / 73 / 28 / 3 / 0 / 89) ---');
+  // 1. Verify Global Queue State = 104 / 67 / 34 / 3 / 0 / 105
+  console.log('\n--- Checking Global Queue Baseline (104 / 67 / 34 / 3 / 0 / 105) ---');
   const allTasksSnap = await db.collection('ai_queue').where('task_type', '==', 'pagewise_text_extraction_batch').get();
   const allTasks = allTasksSnap.docs.map(d => ({ id: d.id, ...d.data() }));
 
@@ -94,15 +94,15 @@ async function main() {
   const pageExtractionsCount = peGlobalSnap.size;
 
   console.log(`- Total tasks: ${total} (Expected: 104)`);
-  console.log(`- Active tasks: ${active} (Expected: 73)`);
-  console.log(`- Completed tasks: ${completed} (Expected: 28)`);
+  console.log(`- Active tasks: ${active} (Expected: 67)`);
+  console.log(`- Completed tasks: ${completed} (Expected: 34)`);
   console.log(`- Failed tasks: ${failed} (Expected: 3)`);
   console.log(`- Processing tasks: ${processing} (Expected: 0)`);
-  console.log(`- Global page_extractions count: ${pageExtractionsCount} (Expected: 89)`);
+  console.log(`- Global page_extractions count: ${pageExtractionsCount} (Expected: 105)`);
 
-  const match = total === 104 && active === 73 && completed === 28 && failed === 3 && processing === 0 && pageExtractionsCount === 89;
+  const match = total === 104 && active === 67 && completed === 34 && failed === 3 && processing === 0 && pageExtractionsCount === 105;
   if (!match) {
-    console.error('RC_X4E_R10_BASELINE_MISMATCH');
+    console.error('RC_X4E_R11_BASELINE_MISMATCH');
     process.exit(1);
   }
   console.log('✅ Global queue baseline matches expected counts.');
@@ -231,6 +231,9 @@ async function main() {
   // 7. Verify active audit scripts contain no stale baseline signatures
   console.log('\n--- Scanning Active Audit Scripts for Stale Baseline Signatures ---');
   const staleSigs = [
+    'active: 70',
+    'completed: 31',
+    'pageExtractions: 96',
     'EXPECTED_AFTER_P' + '11',
     'BASELINE_POST_P' + '11',
     'active: ' + '76',
@@ -263,12 +266,12 @@ async function main() {
   }
 
   if (staleFoundGlobal) {
-    console.error('\nRC_X4E_R10_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('\nRC_X4E_R11_STALE_BASELINE_SIGNATURE_FOUND');
     process.exit(1);
   }
   console.log('✅ No stale baseline signatures detected in active audit scripts.');
 
-  console.log('\nRC_X4E_R10_POST_P12_RESULT_AUDIT_READY');
+  console.log('\nRC_X4E_R11_POST_P12_RESULT_AUDIT_READY');
 }
 
 main().catch(err => {

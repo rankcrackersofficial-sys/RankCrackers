@@ -6,7 +6,7 @@ const PROJECT_ID = 'rankcrackers-55';
 
 async function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-R3 - TWO-BATCH CONTINUITY AUDIT');
+  console.log('PATCH RC-X4E-R11 - TWO-BATCH CONTINUITY AUDIT');
   console.log('==============================================');
 
   if (!admin.apps.length) {
@@ -119,25 +119,39 @@ async function audit() {
       completed: allTasks.filter(t => t.status === 'completed').length,
       failed: allTasks.filter(t => t.status === 'failed').length
   };
-  console.log(`- total: ${counts.total}`);
-  console.log(`- active: ${counts.active}`);
-  console.log(`- completed: ${counts.completed}`);
-  console.log(`- failed: ${counts.failed}`);
 
-  if (counts.completed !== 2 || counts.failed !== 2) {
-      console.log('  WARNING: Global counts differ from expected (C:2, F:2)');
+  const peGlobalSnap = await db.collectionGroup('page_extractions').get();
+  const pageExtractionsCount = peGlobalSnap.size;
+
+  console.log(`- total: ${counts.total} (Expected: 104)`);
+  console.log(`- active: ${counts.active} (Expected: 67)`);
+  console.log(`- completed: ${counts.completed} (Expected: 34)`);
+  console.log(`- failed: ${counts.failed} (Expected: 3)`);
+  console.log(`- page_extractions: ${pageExtractionsCount} (Expected: 105)`);
+
+  const matchTotal = counts.total === 104;
+  const matchActive = counts.active === 67;
+  const matchCompleted = counts.completed === 34;
+  const matchFailed = counts.failed === 3;
+  const matchPE = pageExtractionsCount === 105;
+
+  if (!matchTotal || !matchActive || !matchCompleted || !matchFailed || !matchPE) {
+      console.error('RC_X4E_R11_BASELINE_MISMATCH');
+      console.error('Matches:', { total: matchTotal, active: matchActive, completed: matchCompleted, failed: matchFailed, pe: matchPE });
+      process.exit(1);
   }
+  console.log('RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
 
   console.log('\n--- Part I: Scaling Readiness ---');
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
   const workerContent = fs.readFileSync(workerPath, 'utf8');
-  const hasLimit1 = workerContent.includes('cli.limit !== 1');
+  const hasLimit1 = workerContent.includes('cli.limit !== 3');
   const hasTaskId = workerContent.includes('cli.taskId');
-  console.log(`- worker has --limit 1 lock: ${hasLimit1}`);
+  console.log(`- worker has --limit 3 lock: ${hasLimit1}`);
   console.log(`- worker has --task-id support: ${hasTaskId}`);
 
-  console.log('\nscaling_recommendation: Option B (RC-X4E-P4-L3 - Controlled Limit 3)');
-  console.log('\nRC_X4E_R3_TWO_BATCH_CONTINUITY_AUDIT_READY');
+  console.log('\nscaling_recommendation: Option B (RC-X4E-P14-L3 - Controlled Limit 3 Native Apply)');
+  console.log('\nRC_X4E_R11_TWO_BATCH_CONTINUITY_AUDIT_READY');
 }
 
 audit().catch(e => {

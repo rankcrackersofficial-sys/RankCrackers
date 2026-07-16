@@ -7,16 +7,17 @@ const PROJECT_ID = 'rankcrackers-55';
 
 const EXPECTED_AFTER_P13 = {
   total: 104,
-  active: 70,
-  completed: 31,
+  active: 67,
+  completed: 34,
   failed: 3,
   processing: 0,
-  pageExtractions: 96
+  pageExtractions: 105
 };
 
 function assertNoStaleBaselineSignature() {
   const auditContent = fs.readFileSync(__filename, 'utf8');
   const staleSigs = [
+        'Post-P' + '13', 'active: ' + '70', 'completed: ' + '31', 'pageExtractions: ' + '96',
         'Post-P' + '12', 'active: ' + '73', 'completed: ' + '28', 'pageExtractions: ' + '89',
 'Post-P' + '11', 'active: ' + '76', 'completed: ' + '25', 'pageExtractions: ' + '80',
     'EXPECTED_AFTER_P' + '11', 'active: ' + '76', 'completed: ' + '25', 'pageExtractions: ' + '80',
@@ -27,7 +28,7 @@ function assertNoStaleBaselineSignature() {
   ];
   const staleFound = staleSigs.filter(sig => auditContent.includes(sig) && !auditContent.includes('staleSigs'));
   if (staleFound.length > 0) {
-    console.error('RC_X4E_R10_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_R11_STALE_BASELINE_SIGNATURE_FOUND');
     staleFound.forEach(sig => console.error(`- ${sig}`));
     process.exit(1);
   }
@@ -129,13 +130,13 @@ async function audit() {
     actualPageExtractions !== EXPECTED_AFTER_P13.pageExtractions;
 
   if (mismatch) {
-      console.error('RC_X4E_R10_BASELINE_MISMATCH');
+      console.error('RC_X4E_R11_BASELINE_MISMATCH');
       console.error('Expected:', EXPECTED_AFTER_P13);
       console.error('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R10_BASELINE_AFTER_P13_CONFIRMED');
+  console.log('RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
 
   // D. Hardened Selector Dry-Run Behavior
   console.log('\nRunning Hardened Selector Dry-Run Check...');
@@ -175,9 +176,9 @@ async function audit() {
   }
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_R10_RUNTIME_SAFETY_AUDIT_READY');
+    console.log('\nRC_X4E_R11_RUNTIME_SAFETY_AUDIT_READY');
   } else {
-    console.error('\nRC_X4E_R10_RUNTIME_SAFETY_BLOCKED:');
+    console.error('\nRC_X4E_R11_RUNTIME_SAFETY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }
@@ -187,3 +188,4 @@ audit().catch(e => {
     console.error(e);
     process.exit(1);
 });
+

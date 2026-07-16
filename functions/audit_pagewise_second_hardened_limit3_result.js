@@ -12,11 +12,11 @@ const EXPECTED_P7_TASKS = [
 
 const EXPECTED_AFTER_P13 = {
   total: 104,
-  active: 70,
-  completed: 31,
+  active: 67,
+  completed: 34,
   failed: 3,
   processing: 0,
-  pageExtractions: 96
+  pageExtractions: 105
 };
 
 async function audit() {
@@ -59,13 +59,13 @@ async function audit() {
     actualPageExtractions !== EXPECTED_AFTER_P13.pageExtractions;
 
   if (mismatch) {
-    console.error('RC_X4E_R10_BASELINE_MISMATCH');
+    console.error('RC_X4E_R11_BASELINE_MISMATCH');
     console.log('Expected:', EXPECTED_AFTER_P13);
     console.log('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
     process.exit(1);
   }
 
-  console.log('RC_X4E_R10_BASELINE_AFTER_P13_CONFIRMED');
+  console.log('RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
 
   console.log('\n--- Part C: Verify P7 Task Results ---');
   for (const tid of EXPECTED_P7_TASKS) {
@@ -182,6 +182,7 @@ async function audit() {
     const content = fs.readFileSync(filePath, 'utf8');
 
     const staleSigs = [
+          'Post-P' + '13', 'active: ' + '70', 'completed: ' + '31', 'pageExtractions: ' + '96',
           'Post-P' + '12', 'active: ' + '73', 'completed: ' + '28', 'pageExtractions: ' + '89',
 'EXPECTED_AFTER_P' + '11', 'active: ' + '76', 'completed: ' + '25', 'pageExtractions: ' + '80',
       'Post-P' + '10', 'active: ' + '82', 'completed: ' + '19', 'pageExtractions: ' + '62',
@@ -199,7 +200,7 @@ async function audit() {
   }
 
   if (staleFound) {
-    console.error('RC_X4E_R10_STALE_BASELINE_SIGNATURE_FOUND');
+    console.error('RC_X4E_R11_STALE_BASELINE_SIGNATURE_FOUND');
     process.exit(1);
   }
 
@@ -209,10 +210,11 @@ async function audit() {
   const hasAllowAutoDetect = workerContent.includes('--allow-auto-detect');
   console.log(`- worker has hardened selector flags: ${hasPreferNative && hasAllowAutoDetect}`);
 
-  console.log('\nRC_X4E_R10_SECOND_HARDENED_LIMIT3_RESULT_AUDIT_READY');
+  console.log('\nRC_X4E_R11_SECOND_HARDENED_LIMIT3_RESULT_AUDIT_READY');
 }
 
 audit().catch(e => {
   console.error(e);
   process.exit(1);
 });
+

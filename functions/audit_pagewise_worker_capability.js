@@ -3,7 +3,7 @@ const path = require('path');
 
 function audit() {
   console.log('==============================================');
-  console.log('PATCH RC-X4E-P1 - PAGEWISE WORKER CAPABILITY AUDIT');
+  console.log('PATCH RC-X4E-R11 - PAGEWISE WORKER CAPABILITY AUDIT');
   console.log('==============================================');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -83,9 +83,9 @@ function audit() {
   console.log(`- AI/OCR calls found: ${aiSigs.some(s => content.includes(s)) ? 'YES' : 'NO'}`);
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_P1_PAGEWISE_WORKER_CAPABILITY_READY');
+    console.log('\nRC_X4E_R11_PAGEWISE_WORKER_CAPABILITY_READY');
   } else {
-    console.error('\nRC_X4E_P1_BLOCKED:');
+    console.error('\nRC_X4E_R11_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));
     process.exit(1);
   }

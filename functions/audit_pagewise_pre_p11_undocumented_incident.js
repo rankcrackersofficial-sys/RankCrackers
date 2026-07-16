@@ -43,7 +43,7 @@ async function main() {
   });
 
   // ---------------------------------------------------------------------------
-  // Part C — Identify & Verify Authorized P11 Tasks
+  // Part C â€” Identify & Verify Authorized P11 Tasks
   // ---------------------------------------------------------------------------
   console.log('\n--- Part C: Verifying Authorized P11 Tasks ---');
   let p11TasksValid = true;
@@ -76,10 +76,10 @@ async function main() {
     console.error('\nRC_X4E_IR2_BLOCKED_AUTHORIZED_P11_TASK_INVALID');
     process.exit(1);
   }
-  console.log('✅ Authorized P11 Tasks verified successfully.');
+  console.log('âœ… Authorized P11 Tasks verified successfully.');
 
   // ---------------------------------------------------------------------------
-  // Part D — Identify Undocumented Pre-P11 Tasks
+  // Part D â€” Identify Undocumented Pre-P11 Tasks
   // ---------------------------------------------------------------------------
   console.log('\n--- Part D: Sorting last 15 completed tasks ---');
   const last15Completed = completedTasks.slice(-15);
@@ -115,7 +115,7 @@ async function main() {
   }
 
   // ---------------------------------------------------------------------------
-  // Part E — Verify Undocumented Task Safety
+  // Part E â€” Verify Undocumented Task Safety
   // ---------------------------------------------------------------------------
   console.log('\n--- Part E: Verifying Undocumented Tasks Safety ---');
   let undocumentedSafetyValid = true;
@@ -127,7 +127,7 @@ async function main() {
       process.exit(1);
     }
     
-    // Check overlap with pages 67–75
+    // Check overlap with pages 67â€“75
     const overlaps = (task.page_start >= 67 && task.page_start <= 75) || (task.page_end >= 67 && task.page_end <= 75);
     if (overlaps) {
       console.error(`- Blocked: Task ${task.id} overlaps with P11 pages 67-75.`);
@@ -152,7 +152,7 @@ async function main() {
     console.error('\nRC_X4E_IR2_BLOCKED_PRE_P11_UNDOCUMENTED_TASK_INVALID');
     process.exit(1);
   }
-  console.log('✅ Undocumented tasks safety verified successfully.');
+  console.log('âœ… Undocumented tasks safety verified successfully.');
 
   // Helper to verify page record schema
   const forbiddenFields = [
@@ -203,7 +203,7 @@ async function main() {
   }
 
   // ---------------------------------------------------------------------------
-  // Part F — Verify Undocumented Page Records
+  // Part F â€” Verify Undocumented Page Records
   // ---------------------------------------------------------------------------
   console.log('\n--- Part F: Verifying Undocumented Page Records Schema ---');
   let undocumentedPagesValid = true;
@@ -225,10 +225,10 @@ async function main() {
     console.error('\nRC_X4E_IR2_BLOCKED_PRE_P11_RECORD_SCHEMA_INVALID');
     process.exit(1);
   }
-  console.log('✅ Undocumented page records verified successfully.');
+  console.log('âœ… Undocumented page records verified successfully.');
 
   // ---------------------------------------------------------------------------
-  // Part G — Verify Authorized P11 Records Separately
+  // Part G â€” Verify Authorized P11 Records Separately
   // ---------------------------------------------------------------------------
   console.log('\n--- Part G: Verifying Authorized P11 Page Records Schema ---');
   let p11PagesValid = true;
@@ -250,10 +250,10 @@ async function main() {
     console.error('\nRC_X4E_IR2_BLOCKED_P11_RECORD_SCHEMA_INVALID');
     process.exit(1);
   }
-  console.log('✅ Authorized P11 page records verified successfully.');
+  console.log('âœ… Authorized P11 page records verified successfully.');
 
   // ---------------------------------------------------------------------------
-  // Part H — Current Queue Reconciliation
+  // Part H â€” Current Queue Reconciliation
   // ---------------------------------------------------------------------------
   console.log('\n--- Part H: Current Queue Reconciliation ---');
   
@@ -274,20 +274,20 @@ async function main() {
   console.log(`- Global page_extractions count: ${pageExtractionsCount}`);
 
   const matchTotal = total === 104;
-  const matchActive = active === 70;
-  const matchCompleted = completed === 31;
+  const matchActive = active === 67;
+  const matchCompleted = completed === 34;
   const matchFailed = failed === 3;
   const matchProcessing = processing === 0;
-  const matchPE = pageExtractionsCount === 96;
+  const matchPE = pageExtractionsCount === 105;
 
   if (!matchTotal || !matchActive || !matchCompleted || !matchFailed || !matchProcessing || !matchPE) {
-    console.error('RC_X4E_P13_BASELINE_MISMATCH');
+    console.error('RC_X4E_R11_BASELINE_MISMATCH');
     process.exit(1);
   }
-  console.log('RC_X4E_P13_BASELINE_AFTER_P13_CONFIRMED');
+  console.log('RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
 
   // ---------------------------------------------------------------------------
-  // Part I — Multi-Document Integrity
+  // Part I â€” Multi-Document Integrity
   // ---------------------------------------------------------------------------
   console.log('\n--- Part I: Multi-Document Integrity Check ---');
   
@@ -337,10 +337,10 @@ async function main() {
     console.error('\nRC_X4E_IR2_BLOCKED_DUPLICATE_PAGE_RECORD');
     process.exit(1);
   }
-  console.log('✅ Multi-document integrity check passed.');
+  console.log('âœ… Multi-document integrity check passed.');
 
   // ---------------------------------------------------------------------------
-  // Part J — Parent Side-Effect Check
+  // Part J â€” Parent Side-Effect Check
   // ---------------------------------------------------------------------------
   console.log('\n--- Part J: Parent Document Side-Effect Check ---');
   let sideEffectFound = false;
@@ -371,12 +371,13 @@ async function main() {
     console.error('\nRC_X4E_IR2_BLOCKED_PARENT_SIDE_EFFECT_DETECTED');
     process.exit(1);
   }
-  console.log('✅ Parent document side-effect check passed.');
+  console.log('âœ… Parent document side-effect check passed.');
 
-  console.log('\nRC_X4E_IR2_PRE_P11_UNDOCUMENTED_APPLY_SAFE_ROLL_FORWARD_READY');
+  console.log('\nRC_X4E_R11_PRE_P11_UNDOCUMENTED_APPLY_SAFE_ROLL_FORWARD_READY');
 }
 
 main().catch(err => {
   console.error(err);
   process.exit(1);
 });
+

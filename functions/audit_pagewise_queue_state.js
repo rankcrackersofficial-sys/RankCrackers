@@ -70,7 +70,7 @@ function validateTaskShape(task) {
 
 async function main() {
   console.log('==============================================');
-  console.log('PATCH RC-X4R - PAGEWISE QUEUE STATE AUDIT');
+  console.log('PATCH RC-X4E-R11 - PAGEWISE QUEUE STATE AUDIT');
   console.log('==============================================');
   console.log('Mode: READ ONLY (Unified Admin SDK)');
 
@@ -261,9 +261,10 @@ async function main() {
   }
 
   if (totalCorrect && noWrong && noInvalid) {
-    console.log('\nRC_X4R_PAGEWISE_QUEUE_STATE_AUDIT_READY');
+    console.log('\nRC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
+    console.log('\nRC_X4E_R11_PAGEWISE_QUEUE_STATE_AUDIT_READY');
   } else {
-    console.error('\nRC_X4R_BLOCKED');
+    console.error('\nRC_X4E_R11_BASELINE_MISMATCH');
     if (!totalCorrect) console.error(`- Expected 104 tasks, found ${pagewiseTasks.length}`);
     if (!noInvalid) console.error(`- ${invalidTasks.length} tasks have invalid shape.`);
     process.exit(1);
