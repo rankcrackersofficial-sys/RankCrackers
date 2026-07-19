@@ -1,0 +1,143 @@
+﻿================================================================
+PATCH RC-X4E-P14-L3 - DEEP VERIFICATION
+================================================================
+
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b9_p25_27
+- mission_id: jee_main_2026
+- document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+- page_range: 25-27
+- status after apply: completed
+- failure_reason: none
+  Page 25:
+    - text length: 3098
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+  Page 26:
+    - text length: 131
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+  Page 27:
+    - text length: 2866
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+- page_extractions_created: 3
+
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b1_p1_5
+- mission_id: jee_main_2026
+- document_id: hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b
+- page_range: 1-5
+- status after apply: completed
+- failure_reason: none
+  Page 1:
+    - text length: 1189
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+  Page 2:
+    - text length: 524
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+  Page 3:
+    - text length: 764
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+  Page 4:
+    - text length: 756
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+  Page 5:
+    - text length: 553
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+- page_extractions_created: 5
+
+Verifying Task: rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b2_p6_10
+- mission_id: jee_main_2026
+- document_id: hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b
+- page_range: 6-10
+- status after apply: completed
+- failure_reason: none
+  Page 6:
+    - text length: 760
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+  Page 7:
+    - text length: 770
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+  Page 8:
+    - text length: 645
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+  Page 9:
+    - text length: 1237
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+  Page 10:
+    - text length: 1117
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden fields found: false
+- page_extractions_created: 5
+
+--- PARENT DOCUMENT SIDE EFFECTS ---
+Parent side effects found: false
+
+--- DUPLICATE PAGE CHECKS ---
+Duplicate page records found: false
+
+Global page_extractions count: 118 (expected 118)
+
+================================================================
+VERIFICATION COMPLETE. STATUS: SUCCESS
+================================================================

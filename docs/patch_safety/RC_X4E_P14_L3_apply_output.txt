@@ -1,0 +1,46 @@
+﻿==============================================
+PATCH RC-X4E-P1-FIX2 - PAGEWISE EXTRACTION WORKER
+==============================================
+Mode: APPLY
+Limit: 3 tasks
+Prefer Native Digital: YES
+Allow AUTO_DETECT: NO
+
+1. Total active pagewise tasks found: 67
+2. Tasks selected by limit/selector: 3
+3. Skipped candidates count: 0
+Selected IDs: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b9_p25_27, rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b1_p1_5, rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b2_p6_10
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b9_p25_27
+   - Shape check: VALID
+   - Source access: SUCCESS (6092568 bytes)
+   - Page range check: VALID (25-27)
+   - Extracting text natively...
+   - Committing 3 page extractions...
+   - Task COMPLETED successfully.
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b1_p1_5
+   - Shape check: VALID
+   - Source access: SUCCESS (2463315 bytes)
+   - Page range check: VALID (1-5)
+   - Extracting text natively...
+   - Committing 5 page extractions...
+   - Task COMPLETED successfully.
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b2_p6_10
+   - Shape check: VALID
+   - Source access: SUCCESS (2463315 bytes)
+   - Page range check: VALID (6-10)
+   - Extracting text natively...
+   - Committing 5 page extractions...
+   - Task COMPLETED successfully.
+
+Confirmation:
+    - no Firestore write: NO (Writes enabled for apply)
+    - no queue status update: NO (Updated for apply)
+    - no AI extraction: YES
+    - no OCR: YES
+    - no text extraction: NO (Native extraction enabled in apply)
+    - task limit is not page limit: YES
+
+RC_X4E_P5_CANDIDATE_FIX_APPLY_FINISHED
