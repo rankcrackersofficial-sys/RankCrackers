@@ -52,7 +52,8 @@
                     "audit:syllabus:granularity-crucible-readiness":  "node functions/audit_syllabus_atom_granularity_crucible_readiness.js",
                     "audit:syllabus:atom-expansion-blueprint":  "node functions/audit_syllabus_atom_expansion_blueprint.js",
                     "audit:syllabus:atom-expansion-write-dry-run":  "node functions/audit_syllabus_atom_expansion_write_dry_run.js",
-                    "audit:syllabus:atom-expansion-rebalance-dry-run":  "node functions/audit_syllabus_atom_expansion_rebalance_dry_run.js"
+                    "audit:syllabus:atom-expansion-rebalance-dry-run":  "node functions/audit_syllabus_atom_expansion_rebalance_dry_run.js",
+                    "audit:syllabus:atom-expansion-prewrite-authorization":  "node functions/audit_syllabus_atom_expansion_prewrite_authorization.js"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",
