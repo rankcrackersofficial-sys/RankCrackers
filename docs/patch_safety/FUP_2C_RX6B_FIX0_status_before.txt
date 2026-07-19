@@ -1,0 +1,16 @@
+Branch: safety/rc-g2-pre-notification-schema
+HEAD: 6fbaba890fa427a43681f84a59a5c1ebac8fc207
+
+Git status --short:
+ M package.json
+?? docs/patch_safety/RC_X4E_R12_baseline_validation_output.txt
+?? docs/patch_safety/RC_X4E_R12_full_validation_output.txt
+?? docs/patch_safety/RC_X4E_R12_package_diff.txt
+?? docs/patch_safety/RC_X4E_R12_r11_incident_script_output.txt
+?? docs/patch_safety/RC_X4E_R12_rollforward_acceptance_output.txt
+?? docs/patch_safety/RC_X4E_R12_selector_dry_run_output.txt
+?? docs/patch_safety/RC_X4E_R12_status_before.txt
+?? docs/patch_safety/RC_X4E_R12_untracked_before.txt
+?? functions/audit_pagewise_post_ir3_rollforward_acceptance.js
+?? functions/audit_syllabus_atom_expansion_blueprint.js
+?? functions/audit_syllabus_atom_granularity_crucible_readiness.js

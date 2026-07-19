@@ -1,0 +1,16 @@
+# FUP-2C-RX6B-FIX0 Dirty File Classification
+
+| File | Classification | Action |
+| --- | --- | --- |
+| package.json | PACKAGE_SCRIPT_RELEVANT | allowed only if needed for FIX0 |
+| docs/patch_safety/RC_X4E_R12_baseline_validation_output.txt | UNRELATED_R12_IR3 | do not stage / leave untouched |
+| docs/patch_safety/RC_X4E_R12_full_validation_output.txt | UNRELATED_R12_IR3 | do not stage / leave untouched |
+| docs/patch_safety/RC_X4E_R12_package_diff.txt | UNRELATED_R12_IR3 | do not stage / leave untouched |
+| docs/patch_safety/RC_X4E_R12_r11_incident_script_output.txt | UNRELATED_R12_IR3 | do not stage / leave untouched |
+| docs/patch_safety/RC_X4E_R12_rollforward_acceptance_output.txt | UNRELATED_R12_IR3 | do not stage / leave untouched |
+| docs/patch_safety/RC_X4E_R12_selector_dry_run_output.txt | UNRELATED_R12_IR3 | do not stage / leave untouched |
+| docs/patch_safety/RC_X4E_R12_status_before.txt | UNRELATED_R12_IR3 | do not stage / leave untouched |
+| docs/patch_safety/RC_X4E_R12_untracked_before.txt | UNRELATED_R12_IR3 | do not stage / leave untouched |
+| functions/audit_pagewise_post_ir3_rollforward_acceptance.js | UNRELATED_R12_IR3 | do not stage / leave untouched |
+| functions/audit_syllabus_atom_expansion_blueprint.js | RX6B_RELEVANT | allowed only if needed for FIX0 |
+| functions/audit_syllabus_atom_granularity_crucible_readiness.js | RX6A_DEPENDENCY | allowed only if needed for FIX0 |

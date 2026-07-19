@@ -45,7 +45,9 @@
                     "process:pagecount":  "node functions/process_page_count_detection_tasks.js --dry-run --limit 5",
                     "audit:fup2c:rx2-review-atoms":  "node functions/audit_fup2c_rx2_review_atoms.js",
                     "audit:worker-training:post-wt4-result":  "node functions/audit_worker_training_post_wt4_result.js",
-                    "audit:worker-training:pro-verification-dry-run":  "node functions/audit_worker_training_pro_verification_dry_run.js"
+                    "audit:worker-training:pro-verification-dry-run":  "node functions/audit_worker_training_pro_verification_dry_run.js",
+                    "audit:syllabus:granularity-crucible-readiness":  "node functions/audit_syllabus_atom_granularity_crucible_readiness.js",
+                    "audit:syllabus:atom-expansion-blueprint":  "node functions/audit_syllabus_atom_expansion_blueprint.js"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",
