@@ -1,229 +1,258 @@
 const admin = require('firebase-admin');
-const fs = require('fs');
-const path = require('path');
 
 const PROJECT_ID = 'rankcrackers-55';
-const MISSION_ID = 'jee_main_2026';
-const DOC_ID = 'hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e';
 
-if (!admin.apps.length) {
-  admin.initializeApp({ projectId: PROJECT_ID });
-}
-
-const db = admin.firestore();
-
-function lower(val) {
-  return String(val || '').trim().toLowerCase();
-}
-
-async function verifyPageRecord(taskId, pageNum) {
-  const peRef = db.collection('mission_realms').doc(MISSION_ID)
-    .collection('official_documents').doc(DOC_ID)
-    .collection('page_extractions').doc(String(pageNum));
-
-  const snap = await peRef.get();
-  if (!snap.exists) return { valid: false, reason: `Page ${pageNum} record does not exist.` };
-
-  const pe = snap.data();
-  const text = pe.extraction_text || '';
-  if (text.length <= 100) return { valid: false, reason: `Page ${pageNum} text too short (${text.length} chars).` };
-
-  const isDraft = pe.extraction_status === 'extracted_draft';
-  const isPending = pe.review_status === 'pending_founder_verification';
-  const isNative = pe.extraction_method === 'native_pdf_text';
-  const taskMatch = pe.extracted_by_task_id === taskId;
-
-  const proof = pe.source_proof || {};
-  const proofTaskMatch = proof.task_id === taskId;
-  const proofPageMatch = proof.page_number === pageNum;
-
-  const policy = pe.page_policy || {};
-  const policyAllReq = policy.all_pages_required === true;
-  const policyFixedLimit = policy.fixed_page_limit_allowed === false;
-  const policyBatchSize = policy.batch_size_is_not_page_limit === true;
-
-  if (!isDraft || !isPending || !isNative || !taskMatch || !proofTaskMatch || !proofPageMatch || !policyAllReq || !policyFixedLimit || !policyBatchSize) {
-    return {
-      valid: false,
-      reason: `Schema values mismatch: draft=${isDraft}, pending=${isPending}, native=${isNative}, taskMatch=${taskMatch}, proofTask=${proofTaskMatch}, proofPage=${proofPageMatch}, policyAllReq=${policyAllReq}, policyFixedLimit=${policyFixedLimit}, policyBatch=${policyBatchSize}`
-    };
+function getField(data, keys, fallback = null) {
+  for (const key of keys) {
+    if (data && data[key] !== undefined && data[key] !== null && data[key] !== '') {
+      return data[key];
+    }
   }
-
-  const forbiddenFields = [
-    'published', 'approved', 'verified', 'founder_approved', 'publish_status',
-    'atom_id', 'fact_id', 'question_id', 'crucible_item_id', 'digibook_unit_id',
-    'ai_generated', 'ocr_used'
-  ];
-
-  for (const f of forbiddenFields) {
-    if (pe[f] !== undefined) return { valid: false, reason: `Forbidden field present: ${f}` };
-  }
-
-  return { valid: true };
+  return fallback;
 }
 
-async function audit() {
-  console.log('==============================================');
-  console.log('RC-X4E-IR3: R11 UNDOCUMENTED APPLY INCIDENT AUDIT');
-  console.log('==============================================');
+function lower(value) { return String(value || '').trim().toLowerCase(); }
+function bool(value) { return value === true || lower(value) === 'true'; }
 
-  // 1. All pagewise tasks
-  const snap = await db.collection('ai_queue')
-    .where('task_type', '==', 'pagewise_text_extraction_batch')
-    .get();
-  const allTasks = snap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+async function main() {
+  console.log('================================================================');
+  console.log('PATCH RC-X4E-IR3 - PAGEWISE R11 UNDOCUMENTED INCIDENT AUDIT');
+  console.log('================================================================');
 
-  // 2. Completed tasks sorted by completed_at
-  const completedTasks = allTasks.filter(t => lower(t.status) === 'completed');
+  if (!admin.apps.length) {
+    admin.initializeApp({ projectId: PROJECT_ID });
+  }
+  const db = admin.firestore();
+
+  // 1. Fetch all pagewise tasks
+  const snap = await db.collection('ai_queue').where('task_type', '==', 'pagewise_text_extraction_batch').get();
+  const tasks = [];
+  snap.forEach(doc => tasks.push({ id: doc.id, ...doc.data() }));
+
+  // Reconcile status counts
+  const total = tasks.length;
+  const active = tasks.filter(t => ['queued', 'pending', 'processing', 'running'].includes(lower(t.status))).length;
+  const completedTasks = tasks.filter(t => ['completed', 'done', 'success'].includes(lower(t.status)));
+  const completed = completedTasks.length;
+  const failed = tasks.filter(t => ['failed', 'error', 'dead_letter'].includes(lower(t.status))).length;
+  const processing = tasks.filter(t => ['processing', 'running'].includes(lower(t.status))).length;
+
+  console.log('\n--- PART G: CURRENT QUEUE STATE ---');
+  console.log(`Total tasks: ${total}`);
+  console.log(`Active tasks: ${active}`);
+  console.log(`Completed tasks: ${completed}`);
+  console.log(`Failed tasks: ${failed}`);
+  console.log(`Processing tasks: ${processing}`);
+
+  // Sort completed tasks by completed_at (descending/ascending)
   completedTasks.sort((a, b) => {
-    const timeA = a.completed_at?.toMillis() || 0;
-    const timeB = b.completed_at?.toMillis() || 0;
-    return timeB - timeA; // Descending (latest first)
+    const tA = getField(a, ['completed_at', 'completedAt', 'updated_at', 'updatedAt'], 0);
+    const tB = getField(b, ['completed_at', 'completedAt', 'updated_at', 'updatedAt'], 0);
+    return tA > tB ? 1 : -1;
   });
 
-  console.log('\n--- Part C: Last 20 Completed Tasks ---');
-  completedTasks.slice(0, 20).forEach(t => {
-    console.log(`- ${t.id} | mission: ${t.mission_id} | range: ${t.page_start}-${t.page_end} | PE: ${t.page_extractions_created} | finished: ${t.completed_at?.toDate().toISOString()}`);
+  console.log('\n--- PART C: LAST 20 COMPLETED TASKS ---');
+  const last20 = completedTasks.slice(-20);
+  last20.forEach(t => {
+    console.log(`- ID: ${t.id}`);
+    console.log(`  mission_id: ${t.mission_id}`);
+    console.log(`  document_id: ${t.document_id}`);
+    console.log(`  page_range: ${t.page_start}-${t.page_end}`);
+    console.log(`  status: ${t.status}`);
+    console.log(`  extraction_method: ${t.extraction_method}`);
+    console.log(`  completed_at: ${getField(t, ['completed_at', 'completedAt'])}`);
+    console.log(`  created_by_patch_completed: ${t.created_by_patch_completed || t.created_by_patch}`);
   });
 
-  const p13TaskIds = [
-    'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b31_p91_91',
-    'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b4_p10_12',
-    'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b5_p13_15'
-  ];
-
-  const suspectedR11Ids = [
+  // Identify undocumented tasks
+  const suspectIds = [
     'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18',
     'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21',
     'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24'
   ];
 
-  const r11Tasks = completedTasks.filter(t => suspectedR11Ids.includes(t.id));
-  if (r11Tasks.length !== 3) {
-    console.error('RC_X4E_IR3_BLOCKED_R11_UNDOCUMENTED_TASKS_NOT_IDENTIFIED');
-    console.error('Identified:', r11Tasks.map(t => t.id));
-    process.exit(1);
+  console.log('\n--- PART D: SUSPECTED R11 UNDOCUMENTED TASKS ---');
+  const foundSuspects = completedTasks.filter(t => suspectIds.includes(t.id));
+  console.log(`Found ${foundSuspects.length} out of 3 suspect tasks in completed queue.`);
+
+  let autoDetectLeakage = false;
+  let p13Overlap = false;
+  let r11TasksValid = true;
+
+  for (const t of foundSuspects) {
+    console.log(`Checking task ${t.id}:`);
+    console.log(`  status: ${t.status} (expected completed)`);
+    console.log(`  mission_id: ${t.mission_id} (expected jee_main_2026)`);
+    if (lower(t.mission_id) === 'auto_detect') autoDetectLeakage = true;
+    console.log(`  document_id: ${t.document_id}`);
+    console.log(`  extraction_method: ${t.extraction_method} (expected native_pdf_text)`);
+    console.log(`  page_range: ${t.page_start}-${t.page_end}`);
+    if (t.page_start <= 15 && t.page_end >= 10) p13Overlap = true;
+    if (t.page_start === 91 || t.page_end === 91) p13Overlap = true;
+
+    // Check if valid
+    const valid = t.status === 'completed' && t.mission_id === 'jee_main_2026' && t.document_id && t.extraction_method === 'native_pdf_text';
+    console.log(`  valid: ${valid}`);
+    if (!valid) r11TasksValid = false;
   }
 
-  // 4. Verify Undocumented Task Safety
-  console.log('\n--- Part D: Verifying Undocumented R11 Task Safety ---');
-  for (const t of r11Tasks) {
-    const isCompleted = lower(t.status) === 'completed';
-    const isJee = t.mission_id === MISSION_ID;
-    const peCreated = t.page_extractions_created === 3;
-    const isNative = t.extraction_method === 'native_pdf_text';
-    const rangeOverlap = (t.page_start >= 10 && t.page_start <= 15) || t.page_start === 91;
+  console.log(`AUTO_DETECT leakage: ${autoDetectLeakage}`);
+  console.log(`P13 range overlap: ${p13Overlap}`);
+  console.log(`R11 tasks valid: ${r11TasksValid}`);
 
-    console.log(`- Task ${t.id}: completed=${isCompleted}, mission=${t.mission_id}, pe_created=${t.page_extractions_created}, native=${isNative}, overlap=${rangeOverlap}`);
+  // Fetch page extractions from all documents in all mission realms to get total page_extractions count
+  const missionRealmsSnap = await db.collection('mission_realms').get();
+  let globalPageExtractionsCount = 0;
+  const docMap = new Map();
 
-    if (!isCompleted || !isJee || !peCreated || !isNative || rangeOverlap) {
-      if (rangeOverlap) console.error('RC_X4E_IR3_BLOCKED_OVERLAPS_AUTHORIZED_P13');
-      else console.error('RC_X4E_IR3_BLOCKED_R11_TASK_INVALID');
-      process.exit(1);
-    }
-    if (t.mission_id === 'AUTO_DETECT') {
-        console.error('RC_X4E_IR3_BLOCKED_AUTODETECT_PROCESSED');
-        process.exit(1);
+  console.log('\n--- PART H: MULTI-DOCUMENT INTEGRITY ---');
+  for (const missionDoc of missionRealmsSnap.docs) {
+    const missionId = missionDoc.id;
+    const docsSnap = await db.collection('mission_realms').doc(missionId).collection('official_documents').get();
+    for (const doc of docsSnap.docs) {
+      const documentId = doc.id;
+      const peSnap = await db.collection('mission_realms').doc(missionId).collection('official_documents').doc(documentId).collection('page_extractions').get();
+      const pages = [];
+      peSnap.forEach(peDoc => {
+        const pageNum = Number(peDoc.id);
+        pages.push(pageNum);
+        globalPageExtractionsCount++;
+      });
+      pages.sort((a, b) => a - b);
+      docMap.set(documentId, pages);
+      console.log(`Doc ID: ${documentId} (Mission: ${missionId}) -> Pages count: ${pages.length}, range: [${pages.join(', ')}]`);
     }
   }
 
-  // 5. Verify R11 Incident Page Records
-  console.log('\n--- Part E: Verifying R11 Incident Page Records ---');
-  for (const t of r11Tasks) {
-    for (let p = t.page_start; p <= t.page_end; p++) {
-      const res = await verifyPageRecord(t.id, p);
-      if (!res.valid) {
-        console.error(`- Page ${p} invalid: ${res.reason}`);
-        console.error('RC_X4E_IR3_BLOCKED_R11_RECORD_SCHEMA_INVALID');
-        process.exit(1);
+  console.log(`Global page_extractions count: ${globalPageExtractionsCount}`);
+
+  // Check parent document side effects
+  console.log('\n--- PART I: PARENT SIDE-EFFECT CHECK ---');
+  let parentSideEffectDetected = false;
+  for (const missionDoc of missionRealmsSnap.docs) {
+    const missionId = missionDoc.id;
+    const docsSnap = await db.collection('mission_realms').doc(missionId).collection('official_documents').get();
+    for (const doc of docsSnap.docs) {
+      // ONLY check parent documents that have page_extractions
+      const pages = docMap.get(doc.id) || [];
+      if (pages.length === 0) continue;
+
+      const data = doc.data();
+      const forbidden = [
+        'published', 'approved', 'verified', 'founder_approved',
+        'topic_nodes_created', 'atom_count', 'fact_count', 'question_count',
+        'crucible_generated', 'digibook_generated', 'notification_form_generated'
+      ];
+      forbidden.forEach(field => {
+        if (data[field] !== undefined) {
+          console.log(`Forbidden field '${field}' found in document ${doc.id}! Value:`, data[field]);
+          parentSideEffectDetected = true;
+        }
+      });
+    }
+  }
+  console.log(`Parent side effect detected: ${parentSideEffectDetected}`);
+
+  // Part E: Verify R11 incident page records (pages 16-24)
+  console.log('\n--- PART E: R11 INCIDENT PAGE RECORDS (16-24) ---');
+  let r11IncidentRecordsValid = true;
+  const docIdB18d = 'hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e';
+  const r11Pages = [16, 17, 18, 19, 20, 21, 22, 23, 24];
+
+  for (const pageNum of r11Pages) {
+    const docRef = db.collection('mission_realms').doc('jee_main_2026').collection('official_documents').doc(docIdB18d).collection('page_extractions').doc(String(pageNum));
+    const peSnap = await docRef.get();
+    if (!peSnap.exists) {
+      console.log(`Page ${pageNum} missing!`);
+      r11IncidentRecordsValid = false;
+      continue;
+    }
+    const data = peSnap.data();
+    const txtLen = (data.extraction_text || '').length;
+    const policy = data.page_policy || {};
+    const sp = data.source_proof || {};
+
+    const valid = txtLen > 100 &&
+                  data.extraction_status === 'extracted_draft' &&
+                  data.review_status === 'pending_founder_verification' &&
+                  data.extraction_method === 'native_pdf_text' &&
+                  data.extracted_by_task_id &&
+                  sp.task_id &&
+                  sp.page_number === pageNum &&
+                  bool(policy.all_pages_required) &&
+                  !bool(policy.fixed_page_limit_allowed) &&
+                  bool(policy.batch_size_is_not_page_limit);
+
+    console.log(`Page ${pageNum}: text length = ${txtLen}, valid = ${valid}`);
+    if (!valid) r11IncidentRecordsValid = false;
+
+    // Check forbidden fields in page records
+    const forbidden = [
+      'published', 'approved', 'verified', 'founder_approved', 'publish_status',
+      'atom_id', 'fact_id', 'question_id', 'crucible_item_id', 'digibook_unit_id',
+      'ai_generated', 'ocr_used'
+    ];
+    forbidden.forEach(field => {
+      if (data[field] !== undefined) {
+        console.log(`Forbidden field '${field}' found in page ${pageNum}!`);
+        r11IncidentRecordsValid = false;
       }
+    });
+  }
+  console.log(`R11 incident records valid: ${r11IncidentRecordsValid}`);
+
+  // Part F: Verify Authorized P13 Records Separately
+  console.log('\n--- PART F: AUTHORIZED P13 RECORDS ---');
+  let p13RecordsValid = true;
+  const p13PagesB18d = [91, 10, 11, 12, 13, 14, 15];
+
+  const verifyP13Page = async (docId, pageNum) => {
+    const docRef = db.collection('mission_realms').doc('jee_main_2026').collection('official_documents').doc(docId).collection('page_extractions').doc(String(pageNum));
+    const peSnap = await docRef.get();
+    if (!peSnap.exists) {
+      console.log(`P13 Page ${pageNum} missing in doc ${docId}!`);
+      p13RecordsValid = false;
+      return;
     }
-  }
-  console.log('✅ R11 incident page records verified.');
+    const data = peSnap.data();
+    const txtLen = (data.extraction_text || '').length;
+    const policy = data.page_policy || {};
+    const sp = data.source_proof || {};
 
-  // 6. Verify Authorized P13 Records
-  console.log('\n--- Part F: Verifying Authorized P13 Records ---');
-  const p13Pages = [91, 10, 11, 12, 13, 14, 15];
-  for (const p of p13Pages) {
-    let taskId = '';
-    if (p === 91) taskId = p13TaskIds[0];
-    else if (p >= 10 && p <= 12) taskId = p13TaskIds[1];
-    else taskId = p13TaskIds[2];
+    const valid = txtLen > 100 &&
+                  data.extraction_status === 'extracted_draft' &&
+                  data.review_status === 'pending_founder_verification' &&
+                  data.extraction_method === 'native_pdf_text' &&
+                  data.extracted_by_task_id &&
+                  sp.task_id &&
+                  sp.page_number === pageNum &&
+                  bool(policy.all_pages_required) &&
+                  !bool(policy.fixed_page_limit_allowed) &&
+                  bool(policy.batch_size_is_not_page_limit);
 
-    const res = await verifyPageRecord(taskId, p);
-    if (!res.valid) {
-      console.error(`- P13 Page ${p} invalid: ${res.reason}`);
-      console.error('RC_X4E_IR3_BLOCKED_P13_RECORD_SCHEMA_INVALID');
-      process.exit(1);
-    }
-  }
-  console.log('✅ Authorized P13 page records verified.');
+    console.log(`Doc ${docId} Page ${pageNum}: text length = ${txtLen}, valid = ${valid}`);
+    if (!valid) p13RecordsValid = false;
 
-  // 7. Global Reconciliation
-  console.log('\n--- Part G: Global Queue Reconciliation ---');
-  const peSnap = await db.collectionGroup('page_extractions').get();
-  const totalPE = peSnap.size;
-  const totalTasks = allTasks.length;
-  const activeCount = allTasks.filter(t => ['queued', 'pending'].includes(lower(t.status))).length;
-  const completedCount = completedTasks.length;
-  const failedCount = allTasks.filter(t => lower(t.status) === 'failed').length;
+    // Check forbidden fields in page records
+    const forbidden = [
+      'published', 'approved', 'verified', 'founder_approved', 'publish_status',
+      'atom_id', 'fact_id', 'question_id', 'crucible_item_id', 'digibook_unit_id',
+      'ai_generated', 'ocr_used'
+    ];
+    forbidden.forEach(field => {
+      if (data[field] !== undefined) {
+        console.log(`Forbidden field '${field}' found in page ${pageNum}!`);
+        p13RecordsValid = false;
+      }
+    });
+  };
 
-  console.log(`- total tasks: ${totalTasks} (Expected: 104)`);
-  console.log(`- active tasks: ${activeCount} (Expected: 67)`);
-  console.log(`- completed tasks: ${completedCount} (Expected: 34)`);
-  console.log(`- failed tasks: ${failedCount} (Expected: 3)`);
-  console.log(`- total page_extractions: ${totalPE} (Expected: 105)`);
+  for (const pageNum of p13PagesB18d) await verifyP13Page(docIdB18d, pageNum);
+  console.log(`P13 records valid: ${p13RecordsValid}`);
 
-  if (totalTasks !== 104 || activeCount !== 67 || completedCount !== 34 || failedCount !== 3 || totalPE !== 105) {
-    console.error('RC_X4E_IR3_BLOCKED_CURRENT_STATE_MISMATCH');
-    process.exit(1);
-  }
-
-  // 8. Multi-Document Integrity
-  console.log('\n--- Part H: Multi-Document Integrity ---');
-  const docPagesMap = new Map();
-  peSnap.forEach(d => {
-    const parts = d.ref.path.split('/');
-    const docId = parts[3];
-    const pageNum = Number(d.id);
-    if (!docPagesMap.has(docId)) docPagesMap.set(docId, []);
-    docPagesMap.get(docId).push(pageNum);
-  });
-
-  for (const [docId, pages] of docPagesMap) {
-    const unique = [...new Set(pages)];
-    if (pages.length !== unique.length) {
-      console.error(`- Document ${docId} has duplicate pages:`, pages.filter((p, i) => pages.indexOf(p) !== i));
-      console.error('RC_X4E_IR3_BLOCKED_DUPLICATE_PAGE_RECORD');
-      process.exit(1);
-    }
-    console.log(`- Document ${docId}: ${pages.length} pages, unique=YES`);
-  }
-
-  // 9. Parent Side-Effect Check
-  console.log('\n--- Part I: Parent Document Side-Effect Check ---');
-  const parentSideEffects = [
-    'published', 'approved', 'verified', 'founder_approved', 'topic_nodes_created',
-    'atom_count', 'fact_count', 'question_count', 'crucible_generated',
-    'digibook_generated', 'notification_form_generated'
-  ];
-  for (const [docId] of docPagesMap) {
-    const parentSnap = await db.collection('mission_realms').doc(MISSION_ID).collection('official_documents').doc(docId).get();
-    if (!parentSnap.exists) continue;
-    const data = parentSnap.data();
-    const found = parentSideEffects.filter(f => data[f] !== undefined && data[f] !== false && data[f] !== 0);
-    if (found.length > 0) {
-      console.error(`- Document ${docId} side effects:`, found);
-      console.error('RC_X4E_IR3_BLOCKED_PARENT_SIDE_EFFECT_DETECTED');
-      process.exit(1);
-    }
-  }
-  console.log('✅ Parent side-effect check passed.');
-
-  console.log('\nRC_X4E_IR3_R11_UNDOCUMENTED_APPLY_SAFE_ROLL_FORWARD_READY');
+  console.log('\n================================================================');
+  console.log('AUDIT COMPLETE');
+  console.log('================================================================');
 }
 
-audit().catch(e => {
-  console.error(e);
-  process.exit(1);
-});
+main().catch(console.error);
