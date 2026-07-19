@@ -1,0 +1,38 @@
+# RC-WORKER-TRAINING-6 Dirty File Classification
+
+| File | Classification | Action |
+| --- | --- | --- |
+| docs/patch_safety/RC_X4E_IR3_status_before.txt | R12_IR3_RELATED | do not stage |
+| functions/audit_first_pagewise_extraction_result.js | UNKNOWN_DO_NOT_STAGE | do not stage |
+| functions/audit_first_successful_pagewise_extraction.js | UNKNOWN_DO_NOT_STAGE | do not stage |
+| functions/audit_pagewise_baseline_exit_logic.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_candidate_selector_policy.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_extraction_apply_capability.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_hardened_limit3_result.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_limit3_apply_readiness.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_limit3_result_and_candidate_policy.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_post_ir3_rollforward_acceptance.js | R12_IR3_RELATED | do not stage |
+| functions/audit_pagewise_post_p12_result.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_post_p13_result.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_pre_p11_undocumented_incident.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_queue_state.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_second_hardened_limit3_result.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_third_hardened_limit3_result.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_two_batch_continuity.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_undocumented_apply_incident.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_worker_capability.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_pagewise_worker_runtime_safety.js | UNRELATED_PAGEWISE | do not stage |
+| functions/audit_worker_training_autonomous_readiness.js | WORKER_BASELINE_RELEVANT | stage in WT6 |
+| functions/audit_worker_training_safe_auto_dry_run.js | WORKER_BASELINE_RELEVANT | stage in WT6 |
+| package.json | WORKER_BASELINE_RELEVANT | stage in WT6 |
+| docs/patch_safety/RC_WORKER_TRAINING_6_dirty_file_classification.txt | WORKER_BASELINE_RELEVANT | stage in WT6 |
+| docs/patch_safety/RC_WORKER_TRAINING_6_status_before.txt | WORKER_BASELINE_RELEVANT | stage in WT6 |
+| docs/patch_safety/RC_WORKER_TRAINING_6_validation.txt | WORKER_BASELINE_RELEVANT | stage in WT6 |
+| docs/patch_safety/RC_X4E_R13_baseline_validation_output.txt | R13_RELATED | do not stage |
+| docs/patch_safety/RC_X4E_R13_queue_state_after.txt | R13_RELATED | do not stage |
+| docs/patch_safety/RC_X4E_R13_state_audit_output.txt | R13_RELATED | do not stage |
+| docs/patch_safety/RC_X4E_R13_status_before.txt | R13_RELATED | do not stage |
+| docs/patch_safety/RC_X4E_R13_untracked_before.txt | R13_RELATED | do not stage |
+| functions/audit_pagewise_post_p14_result.js | PAGEWISE_P14_RELEVANT | do not stage except package dependency |
+| functions/audit_worker_training_post_p14_result.js | WORKER_BASELINE_RELEVANT | stage in WT6 |
+| functions/run_all_baseline_audits.js | UNRELATED_PAGEWISE | do not stage |
