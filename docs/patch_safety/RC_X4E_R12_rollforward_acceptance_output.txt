@@ -1,0 +1,122 @@
+﻿
+> audit:pagewise:post-ir3-rollforward
+> node functions/audit_pagewise_post_ir3_rollforward_acceptance.js
+
+================================================================
+PATCH RC-X4E-R12 - PAGEWISE POST-IR3 ROLLFORWARD ACCEPTANCE
+================================================================
+
+--- 1. GLOBAL QUEUE STATE ---
+Total: 104 (expected 104)
+Active: 67 (expected 67)
+Completed: 34 (expected 34)
+Failed: 3 (expected 3)
+Processing: 0 (expected 0)
+Page Extractions: 105 (expected 105)
+
+--- 2. R11 INCIDENT TASKS ---
+Task rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18:
+  status: completed (expected completed)
+  mission_id: jee_main_2026
+  document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  extraction_method: native_pdf_text
+  completed_at: [object Object]
+Task rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21:
+  status: completed (expected completed)
+  mission_id: jee_main_2026
+  document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  extraction_method: native_pdf_text
+  completed_at: [object Object]
+Task rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24:
+  status: completed (expected completed)
+  mission_id: jee_main_2026
+  document_id: hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e
+  extraction_method: native_pdf_text
+  completed_at: [object Object]
+
+--- 3. R11 INCIDENT PAGE RECORDS (16-24) ---
+Page 16: text length = 2379, valid = true
+Page 17: text length = 2141, valid = true
+Page 18: text length = 2559, valid = true
+Page 19: text length = 2511, valid = true
+Page 20: text length = 1764, valid = true
+Page 21: text length = 2066, valid = true
+Page 22: text length = 994, valid = true
+Page 23: text length = 148, valid = true
+Page 24: text length = 2788, valid = true
+
+--- 4. PRIOR KEY PAGE RANGES VALIDATION ---
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 91: text length = 106, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 10: text length = 3555, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 11: text length = 3170, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 12: text length = 130, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 13: text length = 3308, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 14: text length = 837, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 15: text length = 136, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 7: text length = 1545, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 8: text length = 2059, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 9: text length = 3096, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 85: text length = 133, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 86: text length = 219, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 87: text length = 106, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 88: text length = 144, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 89: text length = 126, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 90: text length = 106, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 67: text length = 2059, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 68: text length = 2619, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 69: text length = 1265, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 70: text length = 369, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 71: text length = 211, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 72: text length = 178, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 73: text length = 106, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 74: text length = 106, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 75: text length = 127, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 76: text length = 147, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 77: text length = 106, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 78: text length = 144, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 79: text length = 143, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 80: text length = 205, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 81: text length = 216, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 82: text length = 156, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 83: text length = 161, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 84: text length = 168, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 58: text length = 1227, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 59: text length = 1334, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 60: text length = 816, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 61: text length = 3153, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 62: text length = 1487, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 63: text length = 2224, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 64: text length = 2403, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 65: text length = 1850, valid = true
+Doc hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e Page 66: text length = 1766, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 1: text length = 2969, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 2: text length = 2637, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 3: text length = 2744, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 4: text length = 3342, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 5: text length = 3366, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 6: text length = 2800, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 7: text length = 3989, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 8: text length = 3859, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 9: text length = 3067, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 10: text length = 3048, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 11: text length = 268, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 12: text length = 3171, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 13: text length = 2426, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 14: text length = 1411, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 15: text length = 3148, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 16: text length = 3368, valid = true
+Doc hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905 Page 17: text length = 1076, valid = true
+
+--- 6. PARENT DOCUMENT SIDE-EFFECT CHECK ---
+Parent document checks: ALL PASSED
+
+--- 7. MULTI-DOCUMENT INTEGRITY ---
+Document hash_7cad count: 17 (expected 17)
+Document hash_b18d count: 88 (expected 88)
+
+--- 8. ACTIVE AUDIT SCRIPT BASELINE CONSISTENCY ---
+Stale baseline checks: ALL CLEAN
+
+================================================================
+RC_X4E_R12_POST_IR3_ROLLFORWARD_ACCEPTANCE_READY
+================================================================
