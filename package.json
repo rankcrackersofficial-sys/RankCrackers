@@ -55,7 +55,9 @@
                     "audit:syllabus:atom-expansion-rebalance-dry-run":  "node functions/audit_syllabus_atom_expansion_rebalance_dry_run.js",
                     "audit:syllabus:atom-expansion-prewrite-authorization":  "node functions/audit_syllabus_atom_expansion_prewrite_authorization.js",
                     "audit:fup2c:verify5-second-gate-token": "node functions/audit_fup2c_verify5_second_gate_token_preflight.js",
-                    "audit:fup2c:verify5-live-auth-state": "node functions/audit_fup2c_verify5_live_authorization_state.js"
+                    "audit:fup2c:verify5-live-auth-state": "node functions/audit_fup2c_verify5_live_authorization_state.js",
+                    "audit:fup2c:verify5-founder-approval": "node functions/audit_fup2c_verify5_founder_approval_phrase.js",
+                    "generate:fup2c:verify5-second-gate-token": "node functions/generate_fup2c_verify5_second_gate_token.js"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",

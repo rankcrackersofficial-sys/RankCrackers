@@ -1,8 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
-const CEREMONY_PATH = path.join(__dirname, '..', 'docs', 'syllabus', 'FUP_2C_VERIFY5_LIVE_AUTHORIZATION_CEREMONY.md');
+const PHRASE_PATH = path.join(__dirname, '..', 'docs', 'patch_safety', 'FUP_2C_VERIFY5_FOUNDER_APPROVAL_PHRASE.txt');
 const TOKEN_PATH = path.join(__dirname, '..', 'docs', 'patch_safety', 'FUP_2C_VERIFY5_LIVE_AUTH_SECOND_GATE_TOKEN.json');
+
+const EXPECTED_PHRASE = "I, Founder of RankCrackers, authorize exactly one sandbox verification write to system_verification_sandbox/SANDBOX_TEST_DOC_001. I do not authorize syllabus_atoms writes. I do not authorize topic_nodes writes. I do not authorize student publish. I do not authorize Crucible or DigiBook generation. I do not authorize production academic mutation.";
 
 const EXPECTED_TOKEN_DATA = {
   patch: 'FUP-2C-VERIFY5-LIVE-WRITE-SANDBOX-1',
@@ -61,13 +64,16 @@ function main() {
   console.log('FUP-2C-VERIFY5 LIVE AUTHORIZATION STATE AUDIT');
   console.log('==============================================');
 
-  // 1. Check Founder Explicit Approval
+  // 1. Check Founder Explicit Approval Phrase
   let founder_explicit_approval = false;
-  if (fs.existsSync(CEREMONY_PATH)) {
-    const ceremonyText = fs.readFileSync(CEREMONY_PATH, 'utf8');
-    // Look for "Founder Explicit Live Approval: true"
-    if (/Founder Explicit Live Approval:\s*true/i.test(ceremonyText)) {
-      founder_explicit_approval = true;
+  if (fs.existsSync(PHRASE_PATH)) {
+    try {
+      const phraseText = fs.readFileSync(PHRASE_PATH, 'utf8').replace(/\r\n/g, '\n').trim();
+      if (phraseText === EXPECTED_PHRASE) {
+        founder_explicit_approval = true;
+      }
+    } catch (err) {
+      founder_explicit_approval = false;
     }
   }
 
@@ -82,7 +88,6 @@ function main() {
       const token = JSON.parse(raw);
       second_gate_token_valid = checkTokenValidity(token);
       if (second_gate_token_valid) {
-        // active token is true if valid and not expired
         active_live_token = true;
       }
     } catch (err) {
@@ -97,12 +102,8 @@ function main() {
   const deployed_rules_equivalence_known = false; // UNKNOWN
 
   // 4. Live execution allowed calculation
-  // All three authority gates MUST be true
-  const live_execution_allowed = (
-    founder_explicit_approval &&
-    second_gate_token_valid &&
-    active_live_token
-  );
+  // MUST remain false in this patch/script under all circumstances
+  const live_execution_allowed = false;
 
   // Print states
   console.log(`architecture_ready: ${architecture_ready}`);
@@ -116,30 +117,17 @@ function main() {
   console.log(`live_execution_allowed: ${live_execution_allowed}`);
 
   // 5. Escalation safety check
-  // If live_execution_allowed is true, but any required gate is false, that's an unauthorized escalation!
-  const actual_allowed_physically = (
-    founder_explicit_approval &&
-    second_gate_token_present &&
-    second_gate_token_valid &&
-    active_live_token
-  );
-
-  if (live_execution_allowed && !actual_allowed_physically) {
+  // If live_execution_allowed ever becomes true, block
+  if (live_execution_allowed) {
     console.error('\nERROR: Execution flag set but security gates failed!');
     console.log('FUP_2C_VERIFY5_BLOCKED_UNAUTHORIZED_LIVE_AUTH_ESCALATION');
     process.exit(1);
   }
 
-  // Double check: if any of the mandatory fields are true without explicit authority, raise error
-  if (!founder_explicit_approval && live_execution_allowed) {
-    console.error('\nERROR: Escalation check: founder_explicit_approval is false but live_execution_allowed is true.');
-    console.log('FUP_2C_VERIFY5_BLOCKED_UNAUTHORIZED_LIVE_AUTH_ESCALATION');
-    process.exit(1);
-  }
-
   console.log('\nVerdict:');
-  if (live_execution_allowed) {
-    console.log('FUP_2C_VERIFY5_LIVE_AUTH_STATE_APPROVED');
+  const token_ready = founder_explicit_approval && second_gate_token_valid && active_live_token;
+  if (token_ready) {
+    console.log('FUP_2C_VERIFY5_LIVE_AUTH_STATE_TOKEN_READY_EXECUTION_STILL_BLOCKED');
   } else {
     console.log('FUP_2C_VERIFY5_LIVE_AUTH_STATE_BLOCKED_PENDING_FOUNDER');
   }
