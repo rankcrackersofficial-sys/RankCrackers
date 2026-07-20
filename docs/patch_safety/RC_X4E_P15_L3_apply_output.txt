@@ -1,0 +1,46 @@
+==============================================
+PATCH RC-X4E-P1-FIX2 - PAGEWISE EXTRACTION WORKER
+==============================================
+Mode: APPLY
+Limit: 3 tasks
+Prefer Native Digital: YES
+Allow AUTO_DETECT: NO
+
+1. Total active pagewise tasks found: 64
+2. Tasks selected by limit/selector: 3
+3. Skipped candidates count: 0
+Selected IDs: rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b3_p11_15, rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b4_p16_20, rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b5_p21_25
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b3_p11_15
+   - Shape check: VALID
+   - Source access: SUCCESS (2463315 bytes)
+   - Page range check: VALID (11-15)
+   - Extracting text natively...
+   - Committing 5 page extractions...
+   - Task COMPLETED successfully.
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b4_p16_20
+   - Shape check: VALID
+   - Source access: SUCCESS (2463315 bytes)
+   - Page range check: VALID (16-20)
+   - Extracting text natively...
+   - Committing 5 page extractions...
+   - Task COMPLETED successfully.
+
+Processing task: rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b5_p21_25
+   - Shape check: VALID
+   - Source access: SUCCESS (2463315 bytes)
+   - Page range check: VALID (21-25)
+   - Extracting text natively...
+   - Committing 5 page extractions...
+   - Task COMPLETED successfully.
+
+Confirmation:
+    - no Firestore write: NO (Writes enabled for apply)
+    - no queue status update: NO (Updated for apply)
+    - no AI extraction: YES
+    - no OCR: YES
+    - no text extraction: NO (Native extraction enabled in apply)
+    - task limit is not page limit: YES
+
+RC_X4E_P5_CANDIDATE_FIX_APPLY_FINISHED

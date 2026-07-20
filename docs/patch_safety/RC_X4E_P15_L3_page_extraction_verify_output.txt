@@ -1,0 +1,174 @@
+=== P15 DEEP VERIFICATION ===
+
+Parent Document Side Effects: NO (Clean)
+
+Task ID: rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b3_p11_15
+- status: completed
+- mission_id: jee_main_2026
+- document_id: hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b
+- document_type: pyq
+- page_start: 11
+- page_end: 15
+- page_extractions_created: 5
+- failure_reason: none
+  * Page 11:
+    - text length: 513
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 12:
+    - text length: 780
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 13:
+    - text length: 542
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 14:
+    - text length: 543
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 15:
+    - text length: 532
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+- Pages Found: [11, 12, 13, 14, 15]
+
+Task ID: rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b4_p16_20
+- status: completed
+- mission_id: jee_main_2026
+- document_id: hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b
+- document_type: pyq
+- page_start: 16
+- page_end: 20
+- page_extractions_created: 5
+- failure_reason: none
+  * Page 16:
+    - text length: 728
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 17:
+    - text length: 542
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 18:
+    - text length: 872
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 19:
+    - text length: 1079
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 20:
+    - text length: 1081
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+- Pages Found: [16, 17, 18, 19, 20]
+
+Task ID: rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b5_p21_25
+- status: completed
+- mission_id: jee_main_2026
+- document_id: hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b
+- document_type: pyq
+- page_start: 21
+- page_end: 25
+- page_extractions_created: 5
+- failure_reason: none
+  * Page 21:
+    - text length: 542
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 22:
+    - text length: 761
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 23:
+    - text length: 553
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 24:
+    - text length: 750
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+  * Page 25:
+    - text length: 531
+    - empty extraction_text: false
+    - extraction_status: extracted_draft
+    - review_status: pending_founder_verification
+    - extraction_method: native_pdf_text
+    - source_proof valid: true
+    - page_policy valid: true
+    - forbidden publish/approval fields: false
+- Pages Found: [21, 22, 23, 24, 25]
+
+Global Pages for Doc hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+Duplicate Pages found: NO
