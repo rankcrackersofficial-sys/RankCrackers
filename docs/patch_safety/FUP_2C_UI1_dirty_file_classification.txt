@@ -1,0 +1,11 @@
+﻿lib/web/founder/mission_control/mission_documents_tab.dart | UPLOAD_CENTER_RELEVANT | STAGE_IF_SCOPED
+docs/patch_safety/FUP_2C_UI1_browser_verification.txt | UI1_RELEVANT | STAGE_IF_SCOPED
+docs/patch_safety/FUP_2C_UI1_validation.txt | UI1_RELEVANT | STAGE_IF_SCOPED
+docs/patch_safety/RC_X4E_P15_L3_apply_output.txt | UNRELATED | DO_NOT_STAGE
+docs/patch_safety/RC_X4E_P15_L3_dry_run_output.txt | UNRELATED | DO_NOT_STAGE
+docs/patch_safety/RC_X4E_P15_L3_post_queue_audit_output.txt | UNRELATED | DO_NOT_STAGE
+docs/patch_safety/RC_X4E_P15_L3_status_before.txt | UNRELATED | DO_NOT_STAGE
+docs/patch_safety/RC_X4E_P15_L3_untracked_before.txt | UNRELATED | DO_NOT_STAGE
+docs/syllabus/FUP_2C_RX6I_BLOCKED_AUTH_AND_KEY.md | RX6I_BLOCKER_EVIDENCE | STAGE_IF_SCOPED
+docs/syllabus/FUP_2C_UI1_PYQ_DIGIBOOK_PATTERN_LOCK.md | UI1_RELEVANT | STAGE_IF_SCOPED
+docs/syllabus/FUP_2C_UI1_PYQ_SAMPLE_ATOM_CELL_MAPPING_LOCK.md | UI1_RELEVANT | STAGE_IF_SCOPED

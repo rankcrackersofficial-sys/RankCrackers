@@ -1,0 +1,15 @@
+﻿Branch: safety/rc-g2-pre-notification-schema
+HEAD: c195e73ca3ddee91781f345c6218a77cbb008829
+
+Status before UI1 staging:
+ M lib/web/founder/mission_control/mission_documents_tab.dart
+?? docs/patch_safety/FUP_2C_UI1_browser_verification.txt
+?? docs/patch_safety/FUP_2C_UI1_validation.txt
+?? docs/patch_safety/RC_X4E_P15_L3_apply_output.txt
+?? docs/patch_safety/RC_X4E_P15_L3_dry_run_output.txt
+?? docs/patch_safety/RC_X4E_P15_L3_post_queue_audit_output.txt
+?? docs/patch_safety/RC_X4E_P15_L3_status_before.txt
+?? docs/patch_safety/RC_X4E_P15_L3_untracked_before.txt
+?? docs/syllabus/FUP_2C_RX6I_BLOCKED_AUTH_AND_KEY.md
+?? docs/syllabus/FUP_2C_UI1_PYQ_DIGIBOOK_PATTERN_LOCK.md
+?? docs/syllabus/FUP_2C_UI1_PYQ_SAMPLE_ATOM_CELL_MAPPING_LOCK.md

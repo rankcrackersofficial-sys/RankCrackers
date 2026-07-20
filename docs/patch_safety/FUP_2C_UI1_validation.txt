@@ -1,0 +1,949 @@
+﻿===== npm run audit:rankcrackers:guard =====
+
+> audit:rankcrackers:guard
+> node functions/audit_rankcrackers_path_and_rules.js
+
+==============================================
+RANKCRACKERS PATH & FINAL RULES GUARD
+==============================================
+Current working path: C:\RankCrackers\RankCrackers-55
+Official working path: C:\RankCrackers\RankCrackers-55
+
+Guard results:
+- Official path locked: YES
+- Web build rule guarded: YES
+- Android Student/User-only guard checked: YES
+- M4/M6 catalog bridge guard checked: YES
+- Extraction policy documented: YES
+- Universal extraction audit exists: YES
+- Universal page completeness audit exists: YES
+- Atomic linkage integrity audit exists: YES
+- Universal page count queue apply script: PRESENT
+- Page count queue state audit exists: YES
+- Metadata repair planner exists: YES
+- Metadata repair apply script exists: YES
+- Repaired docs page count queue apply script: PRESENT
+- Page count detection worker exists: YES
+- Page count worker capability audit exists: YES
+- Final page count result audit exists: YES
+- Universal pagewise planner exists: YES
+- Universal pagewise apply exists: YES
+- Pagewise queue audit exists: YES
+- Pagewise worker exists: YES
+- Pagewise worker capability audit exists: YES
+- Pagewise worker runtime safety audit exists: YES
+- Pagewise extraction apply audit exists: YES
+- Notification dynamic schema system: PRESENT
+- Notification page count queue apply script: PRESENT
+
+RC_G0_PATH_AND_RULES_GUARD_PASSED
+
+RC_X4E_R8_FIX3_BOUNDARY_GUARD_READY
+
+EXIT_CODE=0
+===== npm run audit:worker-training:policy =====
+
+> audit:worker-training:policy
+> node functions/audit_worker_training_policy.js
+
+Worker modes: SAFE_AUTO, MANUAL_DEBUG, RETRY_FAILED, PRO_VERIFY, DISABLED
+Default mode: MANUAL_DEBUG
+AUTO_DETECT default allowed: false
+Manual debug limit: 3
+SAFE_AUTO initial limit: 3
+Mandatory Pro verification categories: syllabus, PYQ, notification, answer_key, cutoff, result, exam_rules, low_confidence_output, weak_or_empty_text, duplicate_risk, random_sample_per_run
+RC_WORKER_TRAINING_1_POLICY_READY
+
+EXIT_CODE=0
+===== npm run audit:worker-training:post-p14-result =====
+
+> audit:worker-training:post-p14-result
+> node functions/audit_worker_training_post_p14_result.js
+
+==============================================
+RC-WORKER-TRAINING-6 POST-P14 BASELINE AUDIT
+==============================================
+Global baseline: {
+  total: 104,
+  active: 64,
+  completed: 37,
+  failed: 3,
+  processing: 0,
+  pageExtractions: 118
+}
+WT4 pages 16-24 still exist with source proof and review locks.
+Worker policy and Pro verification policy files are present.
+SAFE_AUTO default enablement: NO
+Live scheduler enablement: NO
+Student delivery side effects: NO
+Current accepted Post-P14 baseline: {
+  "total": 104,
+  "active": 64,
+  "completed": 37,
+  "failed": 3,
+  "processing": 0,
+  "pageExtractions": 118
+}
+RC_WORKER_TRAINING_6_POST_P14_BASELINE_CONFIRMED
+RC_WORKER_TRAINING_6_BASELINE_ALIGNED
+
+EXIT_CODE=0
+===== npm run audit:worker-training:pro-verification-dry-run =====
+
+> audit:worker-training:pro-verification-dry-run
+> node functions/audit_worker_training_pro_verification_dry_run.js
+
+==============================================
+RC-WORKER-TRAINING-5 PRO VERIFICATION DRY-RUN AUDIT
+==============================================
+Policy statuses: PENDING, PASSED, FAILED, NEEDS_HUMAN_REVIEW, BLOCKED_SOURCE_MISMATCH
+Policy decisions: PASS_TO_FOUNDER_REVIEW, SEND_BACK_TO_WORKER, BLOCK_PUBLICATION, REQUIRE_HUMAN_REVIEW
+Mandatory categories: syllabus, PYQ, notification, answer_key, cutoff, result, exam_rules, low_confidence_output, weak_or_empty_text, duplicate_risk, random_sample_per_run
+Permissions: {
+  "canBlock": true,
+  "canPublish": false,
+  "founderFinalApprovalRequired": true
+}
+Required output schema: verificationStatus, riskScore, issues, sampledPages, sourceAgreement, recommendation, verifiedAt, verifierModel, decision, founderReviewRequired
+Risk policy: {
+  "LOW": {
+    "min": 0,
+    "max": 20
+  },
+  "MEDIUM": {
+    "min": 21,
+    "max": 50
+  },
+  "HIGH": {
+    "min": 51,
+    "max": 80
+  },
+  "CRITICAL": {
+    "min": 81,
+    "max": 100
+  }
+}
+Current readiness: {
+  "pageExtractionsAvailable": true,
+  "wt4PagesSourceProof": true,
+  "wt4PagesReviewLock": true,
+  "proVerificationQueueExists": true,
+  "verificationRunsExists": false,
+  "founderReviewQueueExists": false,
+  "missingPieces": [
+    "verification_runs",
+    "founder_review_queue"
+  ]
+}
+WT4 records: [
+  {
+    "page": 16,
+    "taskId": "rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18",
+    "textLength": 2379,
+    "sourceProof": true,
+    "reviewLock": true
+  },
+  {
+    "page": 17,
+    "taskId": "rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18",
+    "textLength": 2141,
+    "sourceProof": true,
+    "reviewLock": true
+  },
+  {
+    "page": 18,
+    "taskId": "rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b6_p16_18",
+    "textLength": 2559,
+    "sourceProof": true,
+    "reviewLock": true
+  },
+  {
+    "page": 19,
+    "taskId": "rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21",
+    "textLength": 2511,
+    "sourceProof": true,
+    "reviewLock": true
+  },
+  {
+    "page": 20,
+    "taskId": "rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21",
+    "textLength": 1764,
+    "sourceProof": true,
+    "reviewLock": true
+  },
+  {
+    "page": 21,
+    "taskId": "rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b7_p19_21",
+    "textLength": 2066,
+    "sourceProof": true,
+    "reviewLock": true
+  },
+  {
+    "page": 22,
+    "taskId": "rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24",
+    "textLength": 994,
+    "sourceProof": true,
+    "reviewLock": true
+  },
+  {
+    "page": 23,
+    "taskId": "rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24",
+    "textLength": 148,
+    "sourceProof": true,
+    "reviewLock": true
+  },
+  {
+    "page": 24,
+    "taskId": "rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b8_p22_24",
+    "textLength": 2788,
+    "sourceProof": true,
+    "reviewLock": true
+  }
+]
+Dry-run simulated queue item: {
+  "dryRun": true,
+  "wouldCreateQueueItems": true,
+  "documentId": "hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e",
+  "sourceRun": "WT4",
+  "sampledPages": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "requiredCategory": "notification",
+  "reason": [
+    "official_document",
+    "random_sample_per_run",
+    "new_extraction_batch"
+  ],
+  "canPublish": false,
+  "founderReviewRequired": true,
+  "firestoreWrites": false
+}
+Confirmations: no Firestore write, no Pro AI call, no AI/OCR, no extraction apply.
+RC_WORKER_TRAINING_5_PRO_VERIFICATION_DRY_RUN_READY
+
+EXIT_CODE=0
+===== npm run audit:pagewise:post-p14-result =====
+
+> audit:pagewise:post-p14-result
+> node functions/audit_pagewise_post_p14_result.js
+
+
+--- 1. Global Baseline Verification ---
+Actual counts: {
+  total: 104,
+  active: 64,
+  completed: 37,
+  failed: 3,
+  processing: 0,
+  pageExtractions: 118
+}
+Expected counts: {
+  total: 104,
+  active: 64,
+  completed: 37,
+  failed: 3,
+  processing: 0,
+  pageExtractions: 118
+}
+RC_X4E_R13_BASELINE_AFTER_P14_CONFIRMED
+
+--- 2. P14 Tasks Verification ---
+Task rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b9_p25_27: status=completed, page_extractions_created=3
+Task rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b1_p1_5: status=completed, page_extractions_created=5
+Task rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b2_p6_10: status=completed, page_extractions_created=5
+
+--- 3. P14 Page Records Verification ---
+P14 page records verified successfully.
+
+--- 4. Prior Verified Ranges Verification ---
+Prior verified ranges are intact.
+
+--- 5. Parent Document Side-Effect Check ---
+Parent documents are clean of side effects.
+
+--- 6. Multi-Document Page Counts Integrity ---
+Document hash_7cad count: 17 (expected 17)
+Document hash_b18d count: 91 (expected 91)
+Document hash_ba8b count: 10 (expected 10)
+Multi-document page counts are correct.
+
+--- 7. Stale Baseline Signatures Scan ---
+Active scripts contain no stale baseline signatures.
+
+==============================================
+RC_X4E_R13_POST_P14_RESULT_AUDIT_READY
+==============================================
+
+EXIT_CODE=0
+===== npm run audit:syllabus:atom-expansion-live-result =====
+
+> audit:syllabus:atom-expansion-live-result
+> node functions/audit_syllabus_atom_pro_review_readiness.js
+
+{
+  "runId": "fup2c_rx6d_live_jee_main_2026_20260720060432",
+  "counts": {
+    "total": 206,
+    "Mathematics": 43,
+    "Physics": 66,
+    "Chemistry": 97
+  },
+  "readiness": {
+    "requiredFieldsComplete": 206,
+    "statusLockValid": 206,
+    "relationshipIntegrity": 206,
+    "sourceIntegrity": 206
+  },
+  "categories": {
+    "readyForProQueue": 206,
+    "readyForFounderAfterPro": 206,
+    "blockedMissingSource": 0,
+    "blockedMissingParent": 0,
+    "blockedStatusUnlocked": 0,
+    "blockedDuplicate": 0,
+    "blockedCrossSubject": 0,
+    "needsHumanReview": 0
+  },
+  "queueDryRun": {
+    "totalCandidates": 206,
+    "HIGH": 0,
+    "MEDIUM": 97,
+    "LOW": 109,
+    "blocked": 0,
+    "writeAllowedNow": false
+  },
+  "founderReview": {
+    "Mathematics": {
+      "total": 43,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 43,
+      "BLOCKED": 0,
+      "avgRisk": 15
+    },
+    "Physics": {
+      "total": 66,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 66,
+      "BLOCKED": 0,
+      "avgRisk": 25
+    },
+    "Chemistry": {
+      "total": 97,
+      "HIGH": 0,
+      "MEDIUM": 97,
+      "LOW": 0,
+      "BLOCKED": 0,
+      "avgRisk": 35
+    }
+  },
+  "risk": {
+    "averageRisk": 28,
+    "Math": 15,
+    "Physics": 25,
+    "Chemistry": 35,
+    "highRiskCount": 0,
+    "blockedCount": 0
+  },
+  "recommendation": "READY_FOR_PRO_VERIFICATION_QUEUE_DRY_RUN",
+  "confirmations": {
+    "noFirestoreWrite": true,
+    "noSyllabusAtomsWrite": true,
+    "noAtomApproval": true,
+    "noTopicNodesPublish": true,
+    "noStudentDeliveryChange": true,
+    "noAiOrOcr": true,
+    "noProAiCall": true,
+    "noExtractionApply": true,
+    "noDeploy": true,
+    "noCrucibleGeneration": true,
+    "noDigiBookGeneration": true,
+    "noVestaCityTouch": true
+  },
+  "verdict": "FUP_2C_RX6E_PRO_REVIEW_READINESS_READY"
+}
+FUP_2C_RX6E_PRO_REVIEW_READINESS_READY
+
+EXIT_CODE=0
+===== npm run audit:syllabus:atom-pro-review-readiness =====
+
+> audit:syllabus:atom-pro-review-readiness
+> node functions/audit_syllabus_atom_pro_review_readiness.js
+
+{
+  "runId": "fup2c_rx6d_live_jee_main_2026_20260720060432",
+  "counts": {
+    "total": 206,
+    "Mathematics": 43,
+    "Physics": 66,
+    "Chemistry": 97
+  },
+  "readiness": {
+    "requiredFieldsComplete": 206,
+    "statusLockValid": 206,
+    "relationshipIntegrity": 206,
+    "sourceIntegrity": 206
+  },
+  "categories": {
+    "readyForProQueue": 206,
+    "readyForFounderAfterPro": 206,
+    "blockedMissingSource": 0,
+    "blockedMissingParent": 0,
+    "blockedStatusUnlocked": 0,
+    "blockedDuplicate": 0,
+    "blockedCrossSubject": 0,
+    "needsHumanReview": 0
+  },
+  "queueDryRun": {
+    "totalCandidates": 206,
+    "HIGH": 0,
+    "MEDIUM": 97,
+    "LOW": 109,
+    "blocked": 0,
+    "writeAllowedNow": false
+  },
+  "founderReview": {
+    "Mathematics": {
+      "total": 43,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 43,
+      "BLOCKED": 0,
+      "avgRisk": 15
+    },
+    "Physics": {
+      "total": 66,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "LOW": 66,
+      "BLOCKED": 0,
+      "avgRisk": 25
+    },
+    "Chemistry": {
+      "total": 97,
+      "HIGH": 0,
+      "MEDIUM": 97,
+      "LOW": 0,
+      "BLOCKED": 0,
+      "avgRisk": 35
+    }
+  },
+  "risk": {
+    "averageRisk": 28,
+    "Math": 15,
+    "Physics": 25,
+    "Chemistry": 35,
+    "highRiskCount": 0,
+    "blockedCount": 0
+  },
+  "recommendation": "READY_FOR_PRO_VERIFICATION_QUEUE_DRY_RUN",
+  "confirmations": {
+    "noFirestoreWrite": true,
+    "noSyllabusAtomsWrite": true,
+    "noAtomApproval": true,
+    "noTopicNodesPublish": true,
+    "noStudentDeliveryChange": true,
+    "noAiOrOcr": true,
+    "noProAiCall": true,
+    "noExtractionApply": true,
+    "noDeploy": true,
+    "noCrucibleGeneration": true,
+    "noDigiBookGeneration": true,
+    "noVestaCityTouch": true
+  },
+  "verdict": "FUP_2C_RX6E_PRO_REVIEW_READINESS_READY"
+}
+FUP_2C_RX6E_PRO_REVIEW_READINESS_READY
+
+EXIT_CODE=0
+===== npm run audit:syllabus:atom-pro-queue-write-result =====
+
+> audit:syllabus:atom-pro-queue-write-result
+> node functions/audit_syllabus_atom_pro_queue_write_result.js
+
+{
+  "queueRunId": "fup2c_rx6g_pro_queue_jee_main_2026_20260720080015",
+  "queueDocs": 206,
+  "subjectCounts": {
+    "Mathematics": 43,
+    "Physics": 66,
+    "Chemistry": 97,
+    "Unknown": 0
+  },
+  "priorityCounts": {
+    "HIGH": 0,
+    "MEDIUM": 163,
+    "LOW": 43,
+    "blocked": 0
+  },
+  "defaults": {
+    "pending": 206,
+    "proPending": 206,
+    "founderRequired": 206,
+    "canPublishTrue": 0,
+    "writeAllowedNowTrue": 0,
+    "proAiCalledTrue": 0,
+    "atomMutationAllowedTrue": 0,
+    "studentPublishAllowedTrue": 0
+  },
+  "sourceAtomSafety": {
+    "sourceAtomIdExists": 206,
+    "sourceAtomsStillNeedsReview": 206,
+    "sourceAtomsFounderApprovedTrue": 0,
+    "sourceAtomsStudentTopicNodePublishedTrue": 0,
+    "sourceAtomsTopicNodePublishedTrue": 0,
+    "sourceAtomsModifiedByRX6G": false
+  },
+  "scopeSafety": {
+    "proVerificationQueueCreated": true,
+    "syllabusAtomsWrites": 0,
+    "verificationRunsWrites": 0,
+    "topicNodesWrites": 0,
+    "studentMissionCatalogWrites": 0,
+    "crucibleWrites": 0,
+    "digiBookWrites": 0,
+    "pyqDownloadsWrites": 0,
+    "pageExtractionsMutation": 0,
+    "officialDocumentsMutation": 0
+  },
+  "queueIdVerification": {
+    "duplicateQueueIds": 0,
+    "missingSourceAtomId": 0,
+    "duplicateSourceAtomIdInQueue": 0,
+    "unknownSubject": 0
+  },
+  "confirmations": {
+    "noProAiCall": true,
+    "noVerificationRunsWrite": true,
+    "noSyllabusAtomsMutation": true,
+    "noAtomApproval": true,
+    "noTopicNodesPublish": true,
+    "noStudentDeliveryChange": true,
+    "noAiOrOcr": true,
+    "noExtractionApply": true,
+    "noDeploy": true,
+    "noCrucibleGeneration": true,
+    "noDigiBookGeneration": true,
+    "noVestaCityTouch": true
+  },
+  "verdict": "FUP_2C_RX6G_QUEUE_WRITE_COMPLETE"
+}
+FUP_2C_RX6G_QUEUE_WRITE_COMPLETE
+
+EXIT_CODE=0
+===== npm run audit:syllabus:atom-pro-processor-contract-dry-run =====
+
+> audit:syllabus:atom-pro-processor-contract-dry-run
+> node functions/audit_syllabus_atom_pro_processor_contract_dry_run.js
+
+{
+  "queueRunId": "fup2c_rx6g_pro_queue_jee_main_2026_20260720080015",
+  "prerequisites": {
+    "queueDocs": 206,
+    "subjectCounts": {
+      "Mathematics": 43,
+      "Physics": 66,
+      "Chemistry": 97,
+      "Unknown": 0
+    },
+    "priorityCounts": {
+      "HIGH": 0,
+      "MEDIUM": 163,
+      "LOW": 43,
+      "blocked": 0
+    },
+    "queueDefaults": {
+      "pending": 206,
+      "proPending": 206,
+      "proAiCalledTrue": 0,
+      "canPublishTrue": 0,
+      "writeAllowedNowTrue": 0,
+      "studentPublishAllowedTrue": 0,
+      "atomStatusMutationAllowedTrue": 0
+    },
+    "source": {
+      "exists": 206,
+      "needsReview": 206,
+      "founderApprovedTrue": 0,
+      "studentTopicNodePublishedTrue": 0,
+      "topicNodePublishedTrue": 0,
+      "crucibleReadyTrue": 0,
+      "digibookReadyTrue": 0
+    },
+    "result": "PASS"
+  },
+  "processorSelection": {
+    "eligiblePendingQueueDocs": 206,
+    "rx6iPilotSelectableCount": 10,
+    "suggestedFirst10QueueItemIds": [
+      "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_01789b3f53",
+      "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_05f6787b6e",
+      "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_0a0d548f0b",
+      "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_0a1f621857",
+      "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_0da591a0e9",
+      "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_0e2ac78c6a",
+      "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_122636da23",
+      "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_155e53306f",
+      "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_15b5ebfafb",
+      "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_16b37814e7"
+    ],
+    "first10SubjectSplit": {
+      "Chemistry": 10
+    },
+    "first10PrioritySplit": {
+      "MEDIUM": 10
+    },
+    "selectionVerdict": "SELECTION_CONTRACT_PASS"
+  },
+  "futureProInputSchema": {
+    "schemaDefined": true,
+    "sourceExcerptsIncluded": true,
+    "credentialsIncluded": false,
+    "unrelatedProjectContextIncluded": false,
+    "schema": {
+      "taskType": "SYLLABUS_ATOM_PRO_VERIFICATION",
+      "missionId": "jee_main_2026",
+      "queueItemId": "",
+      "sourceAtomId": "",
+      "subject": "",
+      "title": "",
+      "displayTitle": "",
+      "parentAtomId": "",
+      "parentTitle": "",
+      "canonicalKey": "",
+      "granularity": "",
+      "hierarchyPath": "",
+      "sourceDocumentId": "",
+      "sourceTextExcerpt": "",
+      "sourceTraceQuality": "",
+      "expectedOutput": {
+        "academicCorrectness": "",
+        "granularityVerdict": "",
+        "sourceAlignment": "",
+        "parentChildValidity": "",
+        "duplicateRisk": "",
+        "studentClarity": "",
+        "cruciblePlanningSuitability": "",
+        "digibookSuitability": "",
+        "recommendation": ""
+      }
+    },
+    "verdict": "INPUT_SCHEMA_PASS"
+  },
+  "futureProResultSchema": {
+    "targetCollection": "pro_verification_results",
+    "schemaDefined": true,
+    "canAutoApprove": false,
+    "canPublish": false,
+    "founderFinalReviewMandatory": true,
+    "schema": {
+      "resultId": "",
+      "queueItemId": "",
+      "queueRunId": "fup2c_rx6g_pro_queue_jee_main_2026_20260720080015",
+      "sourceAtomId": "",
+      "missionId": "jee_main_2026",
+      "subject": "",
+      "proRunId": "",
+      "model": "",
+      "status": "PRO_VERIFIED | PRO_REJECTED | PRO_NEEDS_HUMAN_REVIEW | PRO_UNCERTAIN",
+      "academicCorrectness": "PASS | FAIL | UNCERTAIN",
+      "granularityVerdict": "GOOD | TOO_BROAD | TOO_FRAGMENTED | UNCERTAIN",
+      "sourceAlignment": "PASS | FAIL | WEAK | UNCERTAIN",
+      "parentChildValidity": "PASS | FAIL | UNCERTAIN",
+      "duplicateRisk": "LOW | MEDIUM | HIGH",
+      "studentClarity": "GOOD | NEEDS_EDIT | POOR",
+      "cruciblePlanningSuitability": "GOOD | NEEDS_REBALANCE | NOT_SUITABLE",
+      "digibookSuitability": "GOOD | NEEDS_REBALANCE | NOT_READY",
+      "confidence": 0,
+      "issues": [],
+      "recommendedFounderAction": "APPROVE | REJECT | SEND_BACK | REVIEW_REQUIRED",
+      "canAutoApprove": false,
+      "canPublish": false,
+      "createdAt": ""
+    },
+    "verdict": "RESULT_SCHEMA_PASS"
+  },
+  "futureMutationContract": {
+    "queueUpdatesAllowed": [
+      "proAiCalled",
+      "proVerificationStatus",
+      "status",
+      "proRunId",
+      "resultId",
+      "processedAt",
+      "processingError"
+    ],
+    "resultDocsAllowed": [
+      "create pro_verification_results/{resultId}"
+    ],
+    "sourceAtomAutoApprovalAllowed": false,
+    "sourceAtomPublishAllowed": false,
+    "topicNodesAllowed": false,
+    "studentDeliveryAllowed": false,
+    "verdict": "MUTATION_CONTRACT_PASS"
+  },
+  "publishLock": {
+    "topicNodesWriteAllowedByProcessor": false,
+    "studentMissionCatalogWriteAllowed": false,
+    "publishAllowed": false,
+    "canAutoApprove": false,
+    "founderFinalReviewMandatory": true,
+    "proVerifierCannotPublish": true,
+    "proVerifierCannotApprove": true,
+    "proVerifierCannotCreateCrucibleDigiBook": true,
+    "verdict": "PUBLISH_LOCK_PASS"
+  },
+  "rx6iPilotReadiness": {
+    "pilotSelectable": true,
+    "maxPilotSize": 10,
+    "suggestedSubject": "Chemistry",
+    "suggestedPriority": "MEDIUM",
+    "reason": "Chemistry has highest queue load and avg risk, first medium batch is subject-coherent.",
+    "risk": "MEDIUM",
+    "readinessVerdict": "READY_FOR_RX6I_TINY_PRO_PILOT"
+  },
+  "confirmations": {
+    "noFirestoreWrite": true,
+    "noQueueStatusUpdate": true,
+    "noVerificationRunsWrite": true,
+    "noProVerificationResultsWrite": true,
+    "noSyllabusAtomsWrite": true,
+    "noAtomApproval": true,
+    "noTopicNodesPublish": true,
+    "noStudentDeliveryChange": true,
+    "noAiOrOcr": true,
+    "noProAiCall": true,
+    "noExtractionApply": true,
+    "noDeploy": true,
+    "noCrucibleGeneration": true,
+    "noDigiBookGeneration": true,
+    "noVestaCityTouch": true
+  },
+  "finalVerdict": "FUP_2C_RX6H_PROCESSOR_CONTRACT_READY"
+}
+FUP_2C_RX6H_PROCESSOR_CONTRACT_READY
+
+EXIT_CODE=0
+===== node functions/audit_platform_boundary.js =====
+=========================================
+PLATFORM BOUNDARY REGRESSION AUDIT
+=========================================
+✅ Check 1: lib/main_web.dart exists.
+✅ Check 2: lib/main_web.dart imports/loads WebShell/UnifiedCommandConsole.
+✅ Check 3: lib/core/router/app_router.dart does not route Founder/Admin to mobile AdminScreen.
+✅ Check 5: AppRoutes.admin does not render AdminScreen (shows placeholder).
+✅ Check 4: legacy admin_screen.dart is not active in app_router.dart.
+✅ Check 6: student_mission_catalog query exists in firestore_service.dart.
+✅ Check 7: create_mission_dialog.dart still mirrors to student_mission_catalog.
+✅ Check 8: edit_mission_dialog.dart still mirrors to student_mission_catalog.
+-----------------------------------------
+🎉 PATCH_W1B_BOUNDARY_AUDIT_PASSED
+
+EXIT_CODE=0
+===== flutter test test/smoke_test.dart =====
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 61.0.0 (105.0.0 available)
+  _flutterfire_internals 1.3.59 (1.3.75 available)
+  analyzer 5.13.0 (14.1.0 available)
+  archive 3.6.1 (4.0.9 available)
+  build 2.4.1 (4.0.8 available)
+  build_config 1.1.2 (1.3.1 available)
+  build_daemon 4.1.1 (4.1.2 available)
+  build_resolvers 2.4.2 (3.0.4 available)
+  build_runner 2.4.13 (2.15.2 available)
+  build_runner_core 7.3.2 (9.3.2 available)
+  cli_util 0.4.2 (0.5.1 available)
+  cloud_firestore 5.6.12 (6.7.1 available)
+  cloud_firestore_platform_interface 6.6.12 (8.0.5 available)
+  cloud_firestore_web 4.4.12 (5.7.1 available)
+  cloud_functions 5.6.2 (6.3.5 available)
+  cloud_functions_platform_interface 5.8.2 (6.0.5 available)
+  cloud_functions_web 4.11.5 (5.1.11 available)
+  connectivity_plus 6.1.5 (7.3.0 available)
+  cross_file 0.3.5+2 (0.3.5+4 available)
+  dart_style 2.3.2 (3.1.12 available)
+  device_info_plus 11.5.0 (13.2.0 available)
+  device_info_plus_platform_interface 7.0.3 (8.1.0 available)
+  dio 5.9.2 (5.10.0 available)
+  dio_web_adapter 2.1.2 (2.2.0 available)
+  equatable 2.0.8 (2.1.0 available)
+  extension 0.6.0 (1.0.0 available)
+  file_picker 8.3.7 (11.0.2 available)
+  firebase_app_check 0.3.2+10 (0.4.5+2 available)
+  firebase_app_check_platform_interface 0.1.1+10 (0.4.1+2 available)
+  firebase_app_check_web 0.2.0+14 (0.2.5+2 available)
+  firebase_auth 5.7.0 (6.5.6 available)
+  firebase_auth_platform_interface 7.7.3 (9.0.5 available)
+  firebase_auth_web 5.15.3 (6.2.5 available)
+  firebase_core 3.15.2 (4.12.1 available)
+  firebase_core_platform_interface 6.0.3 (8.0.0 available)
+  firebase_core_web 2.24.1 (3.9.1 available)
+  firebase_crashlytics 4.3.10 (5.2.6 available)
+  firebase_crashlytics_platform_interface 3.8.10 (3.8.26 available)
+  firebase_performance 0.10.1+10 (0.11.4+5 available)
+  firebase_performance_platform_interface 0.1.5+10 (0.2.0+5 available)
+  firebase_performance_web 0.1.7+16 (0.1.8+11 available)
+  firebase_storage 12.4.10 (13.4.5 available)
+  firebase_storage_platform_interface 5.2.10 (6.0.5 available)
+  firebase_storage_web 3.10.17 (3.11.11 available)
+  flutter_native_splash 2.4.4 (2.4.8 available)
+  flutter_riverpod 2.6.1 (3.3.2 available)
+  flutter_secure_storage 9.2.4 (10.3.1 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.1 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.1 available)
+  flutter_secure_storage_windows 3.1.2 (4.2.2 available)
+  google_fonts 6.3.3 (8.2.0 available)
+  google_mlkit_commons 0.9.0 (0.12.0 available)
+  google_mlkit_text_recognition 0.14.0 (0.16.0 available)
+  google_sign_in 6.3.0 (7.2.0 available)
+  google_sign_in_android 6.2.1 (7.2.15 available)
+  google_sign_in_ios 5.9.0 (6.3.0 available)
+  google_sign_in_platform_interface 2.5.0 (3.1.0 available)
+  google_sign_in_web 0.12.4+4 (1.1.3 available)
+  hooks 2.0.2 (2.1.0 available)
+  image 4.3.0 (4.9.1 available)
+  image_picker 1.2.2 (1.2.3 available)
+  intl 0.19.0 (0.20.3 available)
+  js 0.6.7 (0.7.2 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 8.3.1 (10.2.1 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  path_provider_linux 2.2.1 (2.2.2 available)
+  record_use 0.6.0 (1.0.0 available)
+  riverpod 2.6.1 (3.3.2 available)
+  shared_preferences_android 2.4.26 (2.4.27 available)
+  shelf_web_socket 2.0.1 (3.0.0 available)
+  source_gen 1.5.0 (4.2.3 available)
+  syncfusion_flutter_core 28.2.12 (34.1.31 available)
+  syncfusion_flutter_pdf 28.2.12 (34.1.31 available)
+  test_api 0.7.11 (0.7.13 available)
+  uuid 4.5.3 (4.6.0 available)
+  vector_math 2.2.0 (2.4.0 available)
+  win32 5.15.0 (6.3.0 available)
+  win32_registry 2.1.0 (3.0.3 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+84 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading C:/RankCrackers/RankCrackers-55/test/smoke_test.dart
+00:00 +0: (setUpAll)
+RC_X4E_R8_FIX3_SMOKE_BASELINE_READY
+00:00 +0: RankCrackers system smoke tests KnowledgeEngine Initialization Smoke Test
+00:00 +1: RankCrackers system smoke tests Mission Realm widget construction Smoke Test
+00:00 +2: RankCrackers system smoke tests Dashboard widget construction Smoke Test
+00:00 +3: RankCrackers system smoke tests App Router - Mobile /admin route is blocked
+00:00 +4: (tearDownAll)
+00:00 +4: All tests passed!
+
+EXIT_CODE=0
+===== flutter build web -t lib\main_web.dart --no-wasm-dry-run =====
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 61.0.0 (105.0.0 available)
+  _flutterfire_internals 1.3.59 (1.3.75 available)
+  analyzer 5.13.0 (14.1.0 available)
+  archive 3.6.1 (4.0.9 available)
+  build 2.4.1 (4.0.8 available)
+  build_config 1.1.2 (1.3.1 available)
+  build_daemon 4.1.1 (4.1.2 available)
+  build_resolvers 2.4.2 (3.0.4 available)
+  build_runner 2.4.13 (2.15.2 available)
+  build_runner_core 7.3.2 (9.3.2 available)
+  cli_util 0.4.2 (0.5.1 available)
+  cloud_firestore 5.6.12 (6.7.1 available)
+  cloud_firestore_platform_interface 6.6.12 (8.0.5 available)
+  cloud_firestore_web 4.4.12 (5.7.1 available)
+  cloud_functions 5.6.2 (6.3.5 available)
+  cloud_functions_platform_interface 5.8.2 (6.0.5 available)
+  cloud_functions_web 4.11.5 (5.1.11 available)
+  connectivity_plus 6.1.5 (7.3.0 available)
+  cross_file 0.3.5+2 (0.3.5+4 available)
+  dart_style 2.3.2 (3.1.12 available)
+  device_info_plus 11.5.0 (13.2.0 available)
+  device_info_plus_platform_interface 7.0.3 (8.1.0 available)
+  dio 5.9.2 (5.10.0 available)
+  dio_web_adapter 2.1.2 (2.2.0 available)
+  equatable 2.0.8 (2.1.0 available)
+  extension 0.6.0 (1.0.0 available)
+  file_picker 8.3.7 (11.0.2 available)
+  firebase_app_check 0.3.2+10 (0.4.5+2 available)
+  firebase_app_check_platform_interface 0.1.1+10 (0.4.1+2 available)
+  firebase_app_check_web 0.2.0+14 (0.2.5+2 available)
+  firebase_auth 5.7.0 (6.5.6 available)
+  firebase_auth_platform_interface 7.7.3 (9.0.5 available)
+  firebase_auth_web 5.15.3 (6.2.5 available)
+  firebase_core 3.15.2 (4.12.1 available)
+  firebase_core_platform_interface 6.0.3 (8.0.0 available)
+  firebase_core_web 2.24.1 (3.9.1 available)
+  firebase_crashlytics 4.3.10 (5.2.6 available)
+  firebase_crashlytics_platform_interface 3.8.10 (3.8.26 available)
+  firebase_performance 0.10.1+10 (0.11.4+5 available)
+  firebase_performance_platform_interface 0.1.5+10 (0.2.0+5 available)
+  firebase_performance_web 0.1.7+16 (0.1.8+11 available)
+  firebase_storage 12.4.10 (13.4.5 available)
+  firebase_storage_platform_interface 5.2.10 (6.0.5 available)
+  firebase_storage_web 3.10.17 (3.11.11 available)
+  flutter_native_splash 2.4.4 (2.4.8 available)
+  flutter_riverpod 2.6.1 (3.3.2 available)
+  flutter_secure_storage 9.2.4 (10.3.1 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.1 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.1 available)
+  flutter_secure_storage_windows 3.1.2 (4.2.2 available)
+  google_fonts 6.3.3 (8.2.0 available)
+  google_mlkit_commons 0.9.0 (0.12.0 available)
+  google_mlkit_text_recognition 0.14.0 (0.16.0 available)
+  google_sign_in 6.3.0 (7.2.0 available)
+  google_sign_in_android 6.2.1 (7.2.15 available)
+  google_sign_in_ios 5.9.0 (6.3.0 available)
+  google_sign_in_platform_interface 2.5.0 (3.1.0 available)
+  google_sign_in_web 0.12.4+4 (1.1.3 available)
+  hooks 2.0.2 (2.1.0 available)
+  image 4.3.0 (4.9.1 available)
+  image_picker 1.2.2 (1.2.3 available)
+  intl 0.19.0 (0.20.3 available)
+  js 0.6.7 (0.7.2 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 8.3.1 (10.2.1 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  path_provider_linux 2.2.1 (2.2.2 available)
+  record_use 0.6.0 (1.0.0 available)
+  riverpod 2.6.1 (3.3.2 available)
+  shared_preferences_android 2.4.26 (2.4.27 available)
+  shelf_web_socket 2.0.1 (3.0.0 available)
+  source_gen 1.5.0 (4.2.3 available)
+  syncfusion_flutter_core 28.2.12 (34.1.31 available)
+  syncfusion_flutter_pdf 28.2.12 (34.1.31 available)
+  test_api 0.7.11 (0.7.13 available)
+  uuid 4.5.3 (4.6.0 available)
+  vector_math 2.2.0 (2.4.0 available)
+  win32 5.15.0 (6.3.0 available)
+  win32_registry 2.1.0 (3.0.3 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+84 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Compiling lib\main_web.dart for the Web...                      
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 25772 bytes (98.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1472 bytes (99.4% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Compiling lib\main_web.dart for the Web...                         65.3s
+√ Built build\web
+
+EXIT_CODE=0

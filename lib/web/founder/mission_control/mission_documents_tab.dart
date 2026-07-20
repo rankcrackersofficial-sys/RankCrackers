@@ -1,4 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+﻿import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:crypto/crypto.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -93,7 +93,17 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
       MapEntry('general_notice', 'General Notice / Instructions'),
       MapEntry('common_syllabus', 'Common Syllabus'),
       MapEntry('common_pyq', 'Common PYQ'),
-      MapEntry('exam_scheme', 'Exam Scheme / Common Instructions'),
+      MapEntry('common_instructions', 'Common Instructions'),
+      MapEntry('exam_scheme', 'Exam Scheme'),
+      MapEntry('sample_pyq', 'Sample PYQ'),
+      MapEntry('sample_question_paper', 'Sample Question Paper'),
+      MapEntry('topic_wise_sample_questions', 'Topic-wise Sample Questions'),
+      MapEntry('chapter_wise_sample_questions', 'Chapter-wise Sample Questions'),
+      MapEntry('study_material', 'Study Material'),
+      MapEntry('topic_wise_study_material', 'Topic-wise Study Material'),
+      MapEntry('chapter_wise_study_material', 'Chapter-wise Study Material'),
+      MapEntry('practice_set', 'Practice Set'),
+      MapEntry('model_paper', 'Model Paper'),
     ],
     'VARIABLE_SPECIFIC': [
       MapEntry('variable_syllabus', 'Variable Syllabus'),
@@ -102,6 +112,9 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
       MapEntry('variable_answer_key', 'Variable Answer Key'),
       MapEntry('variable_result', 'Variable Result'),
       MapEntry('variable_cutoff', 'Variable Cutoff'),
+      MapEntry('variable_study_material', 'Variable Study Material'),
+      MapEntry('variable_sample_questions', 'Variable Sample Questions'),
+      MapEntry('variable_practice_set', 'Variable Practice Set'),
     ],
     'PAPER_WISE': [
       MapEntry('paper_syllabus', 'Paper Syllabus'),
@@ -109,6 +122,9 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
       MapEntry('paper_instructions', 'Paper Instructions'),
       MapEntry('paper_answer_key', 'Paper Answer Key'),
       MapEntry('paper_result_cutoff', 'Paper Result / Cutoff'),
+      MapEntry('paper_sample_questions', 'Paper Sample Questions'),
+      MapEntry('paper_study_material', 'Paper Study Material'),
+      MapEntry('paper_model_paper', 'Paper Model Paper'),
     ],
   };
 
@@ -223,14 +239,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
   }
 
   Future<void> _uploadDocument() async {
-    final title = _titleCtrl.text.trim();
-    if (title.isEmpty) {
-      setState(() {
-        _error = 'Enter a document title before selecting file.';
-        _info = null;
-      });
-      return;
-    }
+    final manualTitle = _titleCtrl.text.trim();
     if (_scope != 'MISSION_COMMON' && _selectedVariableId == null) {
       setState(() {
         _error = 'Select a variable before uploading this document.';
@@ -250,20 +259,9 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     try {
       result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
-        allowedExtensions: [
-          'pdf',
-          'doc',
-          'docx',
-          'xlsx',
-          'json',
-          'csv',
-          'txt',
-          'png',
-          'jpg',
-          'jpeg',
-          'webp'
-        ],
+        allowedExtensions: ['pdf', 'doc', 'docx', 'xlsx', 'json', 'csv', 'txt', 'png', 'jpg', 'jpeg', 'webp'],
         withData: true,
+        allowMultiple: true,
       );
     } catch (e) {
       setState(() {
@@ -281,11 +279,11 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
       return;
     }
 
-    final file = result.files.single;
-    final bytes = file.bytes;
-    if (bytes == null) {
+    final files = result.files;
+    final unreadable = files.where((file) => file.bytes == null).map((file) => file.name).toList();
+    if (unreadable.isNotEmpty) {
       setState(() {
-        _error = 'Could not read selected file bytes.';
+        _error = 'Could not read selected file bytes: ${unreadable.join(', ')}';
         _info = null;
       });
       return;
@@ -294,168 +292,140 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     setState(() {
       _uploading = true;
       _error = null;
-      _info = 'Selected ${file.name}. Uploading official document...';
+      _info = files.length == 1
+          ? 'Selected ${files.first.name}. Uploading official document...'
+          : 'Selected ${files.length} files. Uploading documents one by one...';
     });
-    final hash = sha256.convert(bytes).toString();
-    final documentId = 'hash_$hash';
-    final ext = file.extension?.toLowerCase() ??
-        file.name.split('.').last.toLowerCase();
-    final storagePath =
-        'mission_realms/${widget.missionId}/official_documents/$documentId.$ext';
+
     final now = FieldValue.serverTimestamp();
     final variable = _selectedVariable;
-    final variableName = variable == null
-        ? null
-        : (variable['displayName'] ?? variable['name'] ?? _selectedVariableId)
-            .toString();
-    final subjectCode =
-        variable?['subjectCode']?.toString() ?? variable?['code']?.toString();
+    final variableName = variable == null ? null : (variable['displayName'] ?? variable['name'] ?? _selectedVariableId).toString();
+    final subjectCode = variable?['subjectCode']?.toString() ?? variable?['code']?.toString();
     final subjectHindiName = variable?['hindiName']?.toString();
     final paper = _scope == 'PAPER_WISE' ? _paperType : null;
+    var uploadedCount = 0;
+    final failedFiles = <String>[];
 
     try {
-      final ref = FirebaseStorage.instance.ref(storagePath);
-      await ref.putData(
-          bytes, SettableMetadata(contentType: mimeForExtension(ext)));
-      final downloadUrl = await ref.getDownloadURL();
+      for (final file in files) {
+        final bytes = file.bytes!;
+        final fallbackTitle = file.name.contains('.') ? file.name.substring(0, file.name.lastIndexOf('.')) : file.name;
+        final title = manualTitle.isNotEmpty ? manualTitle : fallbackTitle;
+        final titleSource = manualTitle.isNotEmpty ? 'MANUAL' : 'FILE_NAME_FALLBACK';
+        final hash = sha256.convert(bytes).toString();
+        final documentId = 'hash_$hash';
+        final ext = file.extension?.toLowerCase() ?? file.name.split('.').last.toLowerCase();
+        final storagePath = 'mission_realms/${widget.missionId}/official_documents/$documentId.$ext';
 
-      final docData = {
-        'id': documentId,
-        'docId': documentId,
-        'documentId': documentId,
-        'missionId': widget.missionId,
-        'missionName': widget.mission['name'] ?? widget.missionId,
-        'scope': _scope,
-        'documentLevelLabel': _levelLabels[_scope],
-        'documentType': _documentType,
-        'documentTypeLabel': _documentTypeLabel,
-        'title': title,
-        'fileName': file.name,
-        'storagePath': storagePath,
-        'storageRawPath': storagePath,
-        'downloadUrl': downloadUrl,
-        'variableId': _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
-        'variableName': _scope == 'MISSION_COMMON' ? null : variableName,
-        'subjectCode': _scope == 'MISSION_COMMON' ? null : subjectCode,
-        'subjectName': _scope == 'MISSION_COMMON' ? null : variableName,
-        'subjectHindiName':
-            _scope == 'MISSION_COMMON' ? null : subjectHindiName,
-        'paperType': paper,
-        'paperIndex': paper,
-        'status': 'RECEIVED',
-        'reviewStatus': 'PENDING',
-        'publishStatus': 'draft',
-        'aiQueueStatus': 'pending',
-        'uploadedAt': now,
-        'uploadedBy': FirebaseAuth.instance.currentUser?.uid,
-        'source': 'mission_documents_center',
-      };
+        try {
+          final ref = FirebaseStorage.instance.ref(storagePath);
+          await ref.putData(bytes, SettableMetadata(contentType: mimeForExtension(ext)));
+          final downloadUrl = await ref.getDownloadURL();
 
-      await FirebaseFirestore.instance
-          .collection('mission_realms')
-          .doc(widget.missionId)
-          .collection('official_documents')
-          .doc(documentId)
-          .set(docData, SetOptions(merge: true));
-
-      await FirebaseFirestore.instance
-          .collection('ingestion_refinery')
-          .doc(documentId)
-          .set({
-        ...docData,
-        'sourceId': documentId,
-        'fileType': ext,
-        'mimeType': mimeForExtension(ext),
-        'fileSize': bytes.length,
-        'fileHash': hash,
-        'assetType': 'official_document',
-        'status': 'uploaded',
-        'documentStatus': 'LIVE',
-        'sourceUrl': downloadUrl,
-        'createdAt': now,
-        'updatedAt': now,
-        'uploadedFrom': 'mission_documents_center',
-      }, SetOptions(merge: true));
-
-      try {
-        await FirebaseFirestore.instance
-            .collection('ai_queue')
-            .doc(documentId)
-            .set({
-          'type': 'pdfParse',
-          'provider': 'gemini',
-          'sourceType': 'MISSION_DOCUMENT',
-          'documentId': documentId,
-          'missionId': widget.missionId,
-          'scope': _scope,
-          'documentType': _documentType,
-          'variableId': _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
-          'subjectCode': _scope == 'MISSION_COMMON' ? null : subjectCode,
-          'paperType': paper,
-          'storagePath': storagePath,
-          'status': 'received',
-          'payload': {
+          final docData = {
             'id': documentId,
+            'docId': documentId,
             'documentId': documentId,
+            'missionId': widget.missionId,
+            'missionName': widget.mission['name'] ?? widget.missionId,
+            'scope': _scope,
+            'documentLevelLabel': _levelLabels[_scope],
+            'documentType': _documentType,
+            'documentTypeLabel': _documentTypeLabel,
+            'title': title,
+            'displayTitle': title,
+            'originalFileName': file.name,
+            'titleSource': titleSource,
             'fileName': file.name,
-            'filePath': downloadUrl,
             'storagePath': storagePath,
+            'storageRawPath': storagePath,
+            'downloadUrl': downloadUrl,
+            'variableId': _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
+            'variableName': _scope == 'MISSION_COMMON' ? null : variableName,
+            'subjectCode': _scope == 'MISSION_COMMON' ? null : subjectCode,
+            'subjectName': _scope == 'MISSION_COMMON' ? null : variableName,
+            'subjectHindiName': _scope == 'MISSION_COMMON' ? null : subjectHindiName,
+            'paperType': paper,
+            'paperIndex': paper,
+            'status': 'RECEIVED',
+            'reviewStatus': 'PENDING',
+            'publishStatus': 'draft',
+            'aiQueueStatus': 'pending',
+            'uploadedAt': now,
+            'uploadedBy': FirebaseAuth.instance.currentUser?.uid,
+            'source': 'mission_documents_center',
+          };
+
+          await FirebaseFirestore.instance.collection('mission_realms').doc(widget.missionId).collection('official_documents').doc(documentId).set(docData, SetOptions(merge: true));
+          await FirebaseFirestore.instance.collection('ingestion_refinery').doc(documentId).set({
+            ...docData,
+            'sourceId': documentId,
             'fileType': ext,
             'mimeType': mimeForExtension(ext),
-            'intent': _documentType,
+            'fileSize': bytes.length,
+            'fileHash': hash,
+            'assetType': 'official_document',
+            'status': 'uploaded',
+            'documentStatus': 'LIVE',
+            'sourceUrl': downloadUrl,
+            'createdAt': now,
+            'updatedAt': now,
+            'uploadedFrom': 'mission_documents_center',
+          }, SetOptions(merge: true));
+          await FirebaseFirestore.instance.collection('ai_queue').doc(documentId).set({
+            'type': 'pdfParse',
+            'provider': 'gemini',
             'sourceType': 'MISSION_DOCUMENT',
+            'documentId': documentId,
             'missionId': widget.missionId,
             'scope': _scope,
             'documentType': _documentType,
-            'variableId':
-                _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
+            'variableId': _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
             'subjectCode': _scope == 'MISSION_COMMON' ? null : subjectCode,
             'paperType': paper,
-            'mediumPolicy': widget.mission['mediumPolicy'] ?? 'ENGLISH_ONLY',
-          },
-          'manualTrigger': true,
-          'createdAt': now,
-          'triggeredFrom': 'mission_documents_center',
-        }, SetOptions(merge: true));
-        await FirebaseFirestore.instance
-            .collection('mission_realms')
-            .doc(widget.missionId)
-            .collection('official_documents')
-            .doc(documentId)
-            .set({'aiQueueStatus': 'received', 'aiQueueTaskId': documentId},
-                SetOptions(merge: true));
-      } catch (queueError) {
-        await FirebaseFirestore.instance
-            .collection('mission_realms')
-            .doc(widget.missionId)
-            .collection('official_documents')
-            .doc(documentId)
-            .set({
-          'aiQueueStatus': 'failed',
-          'aiQueueError': queueError.toString(),
-        }, SetOptions(merge: true));
-        rethrow;
+            'storagePath': storagePath,
+            'status': 'received',
+            'payload': {
+              'id': documentId,
+              'documentId': documentId,
+              'fileName': file.name,
+              'filePath': downloadUrl,
+              'storagePath': storagePath,
+              'fileType': ext,
+              'mimeType': mimeForExtension(ext),
+              'intent': _documentType,
+              'sourceType': 'MISSION_DOCUMENT',
+              'missionId': widget.missionId,
+              'scope': _scope,
+              'documentType': _documentType,
+              'variableId': _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
+              'subjectCode': _scope == 'MISSION_COMMON' ? null : subjectCode,
+              'paperType': paper,
+              'mediumPolicy': widget.mission['mediumPolicy'] ?? 'ENGLISH_ONLY',
+            },
+            'manualTrigger': true,
+            'createdAt': now,
+            'triggeredFrom': 'mission_documents_center',
+          }, SetOptions(merge: true));
+          await FirebaseFirestore.instance.collection('mission_realms').doc(widget.missionId).collection('official_documents').doc(documentId).set({'aiQueueStatus': 'received', 'aiQueueTaskId': documentId}, SetOptions(merge: true));
+          uploadedCount++;
+        } catch (fileError) {
+          failedFiles.add('${file.name}: $fileError');
+        }
       }
-
       setState(() {
-        _titleCtrl.clear();
-        _info = 'Uploaded to Storage, Ingestion, and AI Queue.';
-        _navigateToSubTab('Mission Document Directory');
+        if (failedFiles.isEmpty) _titleCtrl.clear();
+        _info = failedFiles.isEmpty
+            ? 'Uploaded $uploadedCount document${uploadedCount == 1 ? '' : 's'} to Storage, Ingestion, and AI Queue.'
+            : 'Uploaded $uploadedCount document${uploadedCount == 1 ? '' : 's'}. Failed: ${failedFiles.join('; ')}';
+        if (uploadedCount > 0) _navigateToSubTab('Mission Document Directory');
       });
     } catch (e) {
-      final message = e.toString();
-      if (message.contains('firebase_storage/unauthorized')) {
-        debugPrint('Storage upload blocked at: $storagePath\n$message');
-        setState(() => _error =
-            'Storage upload denied. Check Storage rules for mission official documents. Path: $storagePath');
-      } else {
-        setState(() => _error = 'Upload failed: $e');
-      }
+      setState(() => _error = 'Upload failed: $e');
     } finally {
       if (mounted) setState(() => _uploading = false);
     }
   }
-
   bool _matchesFilters(QueryDocumentSnapshot<Map<String, dynamic>> doc) {
     final data = doc.data();
     final q = _searchCtrl.text.trim().toLowerCase();
@@ -823,10 +793,10 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
               ),
             ],
             const SizedBox(height: 12),
-            RcField(controller: _titleCtrl, label: 'Document Title'),
+            RcField(controller: _titleCtrl, label: 'Document Title (Optional)'),
             const SizedBox(height: 6),
             const Text(
-              'Example: English Paper 2 Syllabus - RPSC 1st Grade 2026',
+              'Leave blank to use the file name now. AI title extraction can improve it later.',
               style: TextStyle(color: Colors.white38, fontSize: 11),
             ),
             if (_error != null) ...[
@@ -839,14 +809,14 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             ],
             const SizedBox(height: 18),
             const Text(
-              'Select PDF/DOC/DOCX file to attach to this mission document.',
+              'Select one or more files. Blank titles use each file name as the display title. Sample PYQ and sample questions can be uploaded as pattern references for future DigiBook planning.',
               style: TextStyle(color: Colors.white38, fontSize: 11),
             ),
             const SizedBox(height: 8),
             FilledButton.icon(
               onPressed: _uploading ? null : _uploadDocument,
               icon: const Icon(Icons.cloud_upload_rounded),
-              label: Text(_uploading ? 'Uploading...' : 'Select File & Upload'),
+              label: Text(_uploading ? 'Uploading...' : 'Select File(s) & Upload'),
             ),
           ],
         ),
@@ -1245,3 +1215,4 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     );
   }
 }
+
