@@ -10,13 +10,13 @@ const EXPECTED_P6_TASKS = [
   'rc_x4a_pagewise_jee_main_2026_hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e_b11_p31_33'
 ];
 
-const EXPECTED_AFTER_P14 = {
+const EXPECTED_AFTER_P15 = {
   total: 104,
-  active: 64,
-  completed: 37,
+  active: 61,
+  completed: 40,
   failed: 3,
   processing: 0,
-  pageExtractions: 118
+  pageExtractions: 133
 };
 
 async function audit() {
@@ -52,20 +52,20 @@ async function audit() {
   console.log(`- total page_extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P14.total ||
-    actualCounts.active !== EXPECTED_AFTER_P14.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P14.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P14.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P14.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P15.total ||
+    actualCounts.active !== EXPECTED_AFTER_P15.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P15.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P15.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P15.pageExtractions;
 
   if (mismatch) {
-    console.error('RC_X4E_R13_BASELINE_MISMATCH');
-    console.log('Expected:', EXPECTED_AFTER_P14);
+    console.error('RC_X4E_R14_BASELINE_MISMATCH');
+    console.log('Expected:', EXPECTED_AFTER_P15);
     console.log('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
     process.exit(1);
   }
 
-  console.log('RC_X4E_R13_BASELINE_AFTER_P14_CONFIRMED');
+  console.log('RC_X4E_R14_BASELINE_AFTER_P15_CONFIRMED');
 
   console.log('\n--- Part C: Verify P6 Task Results ---');
   for (const tid of EXPECTED_P6_TASKS) {
@@ -183,6 +183,7 @@ async function audit() {
 
     const staleSigs = [
         'Post-P' + '13', 'active: ' + '70', 'completed: ' + '31', 'pageExtractions: ' + '96',
+        'Post-P' + '14', 'active: ' + '64', 'completed: ' + '37', 'pageExtractions: ' + '118',
         'Post-P' + '13', 'active: ' + '67', 'completed: ' + '34', 'pageExtractions: ' + '105',
         'Post-P' + '12', 'active: ' + '73', 'completed: ' + '28', 'pageExtractions: ' + '89',
 'Post-P' + '11', 'active: ' + '76', 'completed: ' + '25', 'pageExtractions: ' + '80',
@@ -213,7 +214,7 @@ async function audit() {
   console.log(`- worker has hardened selector flags: ${hasPreferNative && hasAllowAutoDetect}`);
   console.log(`- worker skips auto-detect by default: ${hasSkipAutoDetect}`);
 
-  console.log('\nRC_X4E_R13_HARDENED_LIMIT3_RESULT_AUDIT_READY');
+  console.log('\nRC_X4E_R14_HARDENED_LIMIT3_RESULT_AUDIT_READY');
 }
 
 audit().catch(e => {

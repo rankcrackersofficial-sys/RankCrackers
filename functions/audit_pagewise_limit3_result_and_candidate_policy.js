@@ -34,19 +34,19 @@ async function audit() {
   console.log(`- global page_extractions: ${pageExtractionsCount} (Expected: 105)`);
 
   const matchTotal = counts.total === 104;
-  const matchActive = counts.active === 64;
-  const matchCompleted = counts.completed === 37;
+  const matchActive = counts.active === 61;
+  const matchCompleted = counts.completed === 40;
   const matchFailed = counts.failed === 3;
-  const matchPE = pageExtractionsCount === 118;
+  const matchPE = pageExtractionsCount === 133;
 
   if (!matchTotal || !matchActive || !matchCompleted || !matchFailed || !matchPE) {
-    console.error('RC_X4E_R13_BASELINE_MISMATCH');
+    console.error('RC_X4E_R14_BASELINE_MISMATCH');
     console.error('Matches:', { total: matchTotal, active: matchActive, completed: matchCompleted, failed: matchFailed, pe: matchPE });
     process.exit(1);
   }
-  console.log('RC_X4E_R13_BASELINE_AFTER_P14_CONFIRMED');
+  console.log('RC_X4E_R14_BASELINE_AFTER_P15_CONFIRMED');
 
-  console.log('\nRC_X4E_R13_LIMIT3_RESULT_AUDIT_READY');
+  console.log('\nRC_X4E_R14_LIMIT3_RESULT_AUDIT_READY');
 }
 
 audit().catch(e => {

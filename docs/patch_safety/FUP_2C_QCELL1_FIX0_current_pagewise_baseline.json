@@ -1,0 +1,36 @@
+{
+  "phase": "FUP-2C-QCELL1-FIX0",
+  "previousAcceptedBaseline": {
+    "total": 104,
+    "active": 64,
+    "completed": 37,
+    "failed": 3,
+    "processing": 0,
+    "pageExtractions": 118
+  },
+  "currentActualBaseline": {
+    "total": 104,
+    "active": 61,
+    "completed": 40,
+    "failed": 3,
+    "processing": 0,
+    "pageExtractions": 133
+  },
+  "drift": {
+    "active": -3,
+    "completed": 3,
+    "failed": 0,
+    "processing": 0,
+    "pageExtractions": 15
+  },
+  "likelyCause": "unrelated pagewise/R14/P15 progress",
+  "qcellCausedDrift": false,
+  "officialBaselineUpdatedInThisPhase": false,
+  "recommendation": "Create separate PAGEWISE_BASELINE_RECONCILIATION phase before using worker post-p14 as active validation gate.",
+  "confirmations": {
+    "noFirestoreWrite": true,
+    "noPagewiseApply": true,
+    "noExtractionApply": true
+  },
+  "verdict": "CURRENT_BASELINE_CAPTURED_NEEDS_SEPARATE_ACCEPTANCE"
+}

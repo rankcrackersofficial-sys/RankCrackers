@@ -1,0 +1,233 @@
+{
+  "phase": "FUP-2C-QCELL1-FIX0",
+  "missionId": "jee_main_2026",
+  "questionBankExists": true,
+  "inspectedCount": 22,
+  "fieldCounts": {
+    "atomId": 0,
+    "canonicalKey": 0,
+    "sourceDocumentId": 0,
+    "sourceQuestionId": 22,
+    "questionSourceKind": 0,
+    "mappingConfidence": 0
+  },
+  "migrationReadiness": {
+    "safeForAutoCellMigration": 0,
+    "requiringReview": 22,
+    "legacyUnmapped": 22
+  },
+  "sampleRecords": [
+    {
+      "docId": "JEE_2023_PHY_S2_Q011",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S1_Q042",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q011",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q015",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q021",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q031",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q032",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q034",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q035",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q036",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q051",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q052",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q054",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q055",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q056",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q057",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q071",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q072",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q074",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    },
+    {
+      "docId": "JEE_2024_PHY_S2_Q075",
+      "hasAtom": false,
+      "hasKey": false,
+      "hasSourceDoc": false,
+      "hasSourceQ": true,
+      "hasKind": false,
+      "hasConfidence": false,
+      "conceptualStatus": "LEGACY_UNMAPPED"
+    }
+  ],
+  "policy": [
+    "Existing question_bank records without atomId/canonicalKey/source proof must not be auto-migrated.",
+    "They are conceptually LEGACY_UNMAPPED in documentation only.",
+    "Future migration requires a separate read-only mapping dry-run.",
+    "No live migration in QCELL1-FIX0."
+  ],
+  "confirmations": {
+    "noFirestoreWrite": true,
+    "noQuestionBankMutation": true,
+    "noAtomicQuestionCellsWrite": true
+  },
+  "verdict": "QUESTION_BANK_LEGACY_RECONCILIATION_REQUIRED"
+}

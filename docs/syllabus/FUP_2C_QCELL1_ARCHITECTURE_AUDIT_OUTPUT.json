@@ -1,0 +1,34 @@
+{
+  "phase": "FUP-2C-QCELL1",
+  "missionId": "jee_main_2026",
+  "syllabusAtoms": 430,
+  "atomIdsPresent": 430,
+  "canonicalKeysPresent": 206,
+  "canonicalKeysMissing": 224,
+  "subjectCounts": {
+    "Physics": 177,
+    "Chemistry": 160,
+    "Mathematics": 93
+  },
+  "questionBank": {
+    "exists": true,
+    "inspected": 22,
+    "atomMappedRecords": 0
+  },
+  "officialDocuments": {
+    "total": 10,
+    "pyqOrQuestionSignals": 8
+  },
+  "targetArchitecture": {
+    "collection": "atomic_question_cells",
+    "sourceKinds": [
+      "PYQ",
+      "SAMPLE"
+    ],
+    "atomLinkRequired": true,
+    "founderReviewRequired": true,
+    "studentPublishAllowedNow": false
+  },
+  "dryRunVerdict": "NEEDS_SCHEMA_RECONCILIATION",
+  "finalVerdict": "FUP_2C_QCELL1_PARTIAL"
+}

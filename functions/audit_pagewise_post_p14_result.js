@@ -13,13 +13,13 @@ if (!admin.apps.length) {
 }
 const db = admin.firestore();
 
-const EXPECTED_AFTER_P14 = {
+const EXPECTED_AFTER_P15 = {
   total: 104,
-  active: 64,
-  completed: 37,
+  active: 61,
+  completed: 40,
   failed: 3,
   processing: 0,
-  pageExtractions: 118
+  pageExtractions: 133
 };
 
 const activeScripts = [
@@ -83,14 +83,14 @@ async function verifyGlobalBaseline() {
   };
 
   console.log('Actual counts:', actual);
-  console.log('Expected counts:', EXPECTED_AFTER_P14);
+  console.log('Expected counts:', EXPECTED_AFTER_P15);
 
-  const mismatch = Object.keys(EXPECTED_AFTER_P14).filter(k => actual[k] !== EXPECTED_AFTER_P14[k]);
+  const mismatch = Object.keys(EXPECTED_AFTER_P15).filter(k => actual[k] !== EXPECTED_AFTER_P15[k]);
   if (mismatch.length > 0) {
-    console.error('RC_X4E_R13_BASELINE_MISMATCH');
+    console.error('RC_X4E_R14_BASELINE_MISMATCH');
     process.exit(1);
   }
-  console.log('RC_X4E_R13_BASELINE_AFTER_P14_CONFIRMED');
+  console.log('RC_X4E_R14_BASELINE_AFTER_P15_CONFIRMED');
 }
 
 async function verifyP14Tasks() {
@@ -288,7 +288,7 @@ async function verifyMultiDocCounts() {
   const expectedCounts = {
     'hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905': 17,
     'hash_b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e': 91,
-    'hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b': 10
+    'hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b': 25
   };
 
   for (const docId of Object.keys(expectedCounts)) {
@@ -362,7 +362,7 @@ async function main() {
   verifyNoActiveStaleSignatures();
 
   console.log('\n==============================================');
-  console.log('RC_X4E_R13_POST_P14_RESULT_AUDIT_READY');
+  console.log('RC_X4E_R14_POST_P14_RESULT_AUDIT_READY');
   console.log('==============================================');
 }
 

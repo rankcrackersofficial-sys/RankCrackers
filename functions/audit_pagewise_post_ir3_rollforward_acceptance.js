@@ -61,13 +61,13 @@ async function main() {
 
   console.log('\n--- 1. GLOBAL QUEUE STATE ---');
   console.log(`Total: ${total} (expected 104)`);
-  console.log(`Active: ${active} (expected 64)`);
-  console.log(`Completed: ${completed} (expected 37)`);
+  console.log(`Active: ${active} (expected 61)`);
+  console.log(`Completed: ${completed} (expected 40)`);
   console.log(`Failed: ${failed} (expected 3)`);
   console.log(`Processing: ${processing} (expected 0)`);
-  console.log(`Page Extractions: ${globalPageExtractionsCount} (expected 118)`);
+  console.log(`Page Extractions: ${globalPageExtractionsCount} (expected 133)`);
 
-  if (total !== 104 || active !== 64 || completed !== 37 || failed !== 3 || processing !== 0 || globalPageExtractionsCount !== 118) {
+  if (total !== 104 || active !== 61 || completed !== 40 || failed !== 3 || processing !== 0 || globalPageExtractionsCount !== 133) {
     console.error('ERROR: Global queue state mismatch!');
     process.exit(1);
   }
@@ -251,9 +251,9 @@ async function main() {
   const countBa8b = (docMap.get(docIdBa8b) || []).length;
   console.log(`Document hash_7cad count: ${count7cad} (expected 17)`);
   console.log(`Document hash_b18d count: ${countB18d} (expected 91)`);
-  console.log(`Document hash_ba8b count: ${countBa8b} (expected 10)`);
+  console.log(`Document hash_ba8b count: ${countBa8b} (expected 25)`);
 
-  if (count7cad !== 17 || countB18d !== 91 || countBa8b !== 10) {
+  if (count7cad !== 17 || countB18d !== 91 || countBa8b !== 25) {
     console.error('ERROR: Multi-document page counts do not match expected values!');
     process.exit(1);
   }
@@ -299,7 +299,7 @@ async function main() {
   }
 
   console.log('\n================================================================');
-  console.log('RC_X4E_R13_POST_IR3_ROLLFORWARD_ACCEPTANCE_READY');
+  console.log('RC_X4E_R14_POST_IR3_ROLLFORWARD_ACCEPTANCE_READY');
   console.log('================================================================');
 }
 

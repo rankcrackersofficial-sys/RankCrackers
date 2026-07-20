@@ -1,0 +1,193 @@
+{
+  "phase": "FUP-2C-QCELL1-FIX0",
+  "missionId": "jee_main_2026",
+  "totalAtoms": 430,
+  "atomIdPresent": 430,
+  "canonicalKeyPresent": 206,
+  "canonicalKeyMissing": 224,
+  "subjectReadiness": {
+    "Physics": {
+      "total": 177,
+      "present": 66,
+      "missing": 111
+    },
+    "Chemistry": {
+      "total": 160,
+      "present": 97,
+      "missing": 63
+    },
+    "Mathematics": {
+      "total": 93,
+      "present": 43,
+      "missing": 50
+    }
+  },
+  "classification": {
+    "rx6dCreatedAtomsWithCanonicalKey": 206,
+    "preRx6dSourceBackedAtomsWithCanonicalKey": 0,
+    "legacyAtomsMissingCanonicalKey": 26,
+    "rejectedAtomsMissingCanonicalKey": 1,
+    "reviewHoldAtomsMissingCanonicalKey": 224,
+    "sourceReviewHoldAtomsMissingCanonicalKey": 197,
+    "duplicateRiskCandidateKeys": 0
+  },
+  "qcellReadiness": {
+    "cellsImmediatelySafeWithCanonicalKey": 206,
+    "cellsBlockedMissingCanonicalKey": 224,
+    "cellsBlockedRejected": 1,
+    "cellsBlockedSourceReview": 198
+  },
+  "missingCanonicalKeySample": [
+    {
+      "docId": "ATOM_JEE_U01_CH01_TOP05_001",
+      "atomId": "ATOM_JEE_U01_CH01_TOP05_001",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "ATOM_JEE_U01_CH01_TOP05_002",
+      "atomId": "ATOM_JEE_U01_CH01_TOP05_002",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "ATOM_JEE_U01_CH01_TOP06_001",
+      "atomId": "ATOM_JEE_U01_CH01_TOP06_001",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "ATOM_JEE_U01_CH01_TOP06_002",
+      "atomId": "ATOM_JEE_U01_CH01_TOP06_002",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "ATOM_JEE_U01_CH02_TOP01_001",
+      "atomId": "ATOM_JEE_U01_CH02_TOP01_001",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "ATOM_JEE_U01_CH02_TOP01_002",
+      "atomId": "ATOM_JEE_U01_CH02_TOP01_002",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+      "atomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH01_TOP05_002",
+      "atomId": "JEE_2026_PHY_U01_CH01_TOP05_002",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH01_TOP06_001",
+      "atomId": "JEE_2026_PHY_U01_CH01_TOP06_001",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH01_TOP06_002",
+      "atomId": "JEE_2026_PHY_U01_CH01_TOP06_002",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH02_TOP01_001",
+      "atomId": "JEE_2026_PHY_U01_CH02_TOP01_001",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH02_TOP01_002",
+      "atomId": "JEE_2026_PHY_U01_CH02_TOP01_002",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH03_TOP01_001",
+      "atomId": "JEE_2026_PHY_U01_CH03_TOP01_001",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH03_TOP01_002",
+      "atomId": "JEE_2026_PHY_U01_CH03_TOP01_002",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH03_TOP02_001",
+      "atomId": "JEE_2026_PHY_U01_CH03_TOP02_001",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH03_TOP02_002",
+      "atomId": "JEE_2026_PHY_U01_CH03_TOP02_002",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH04_TOP01_001",
+      "atomId": "JEE_2026_PHY_U01_CH04_TOP01_001",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH04_TOP01_002",
+      "atomId": "JEE_2026_PHY_U01_CH04_TOP01_002",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U01_CH04_TOP01_003",
+      "atomId": "JEE_2026_PHY_U01_CH04_TOP01_003",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    },
+    {
+      "docId": "JEE_2026_PHY_U02_CH01_TOP01_001",
+      "atomId": "JEE_2026_PHY_U02_CH01_TOP01_001",
+      "subject": "Physics",
+      "status": "VERIFIED",
+      "sourceProof": false
+    }
+  ],
+  "policy": [
+    "No canonicalKey writes in FIX0.",
+    "Missing canonicalKey atoms require a separate preflight/write authorization.",
+    "Rejected atoms remain excluded."
+  ],
+  "confirmations": {
+    "noFirestoreWrite": true,
+    "noSyllabusAtomMutation": true,
+    "noQuestionCellWrite": true
+  },
+  "verdict": "CANONICAL_KEY_RECONCILIATION_REQUIRED"
+}

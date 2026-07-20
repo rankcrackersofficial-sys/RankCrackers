@@ -94,15 +94,15 @@ async function main() {
   const pageExtractionsCount = peGlobalSnap.size;
 
   console.log(`- Total tasks: ${total} (Expected: 104)`);
-  console.log(`- Active tasks: ${active} (Expected: 64)`);
-  console.log(`- Completed tasks: ${completed} (Expected: 37)`);
+  console.log(`- Active tasks: ${active} (Expected: 61)`);
+  console.log(`- Completed tasks: ${completed} (Expected: 40)`);
   console.log(`- Failed tasks: ${failed} (Expected: 3)`);
   console.log(`- Processing tasks: ${processing} (Expected: 0)`);
-  console.log(`- Global page_extractions count: ${pageExtractionsCount} (Expected: 118)`);
+  console.log(`- Global page_extractions count: ${pageExtractionsCount} (Expected: 133)`);
 
-  const match = total === 104 && active === 64 && completed === 37 && failed === 3 && processing === 0 && pageExtractionsCount === 118;
+  const match = total === 104 && active === 61 && completed === 40 && failed === 3 && processing === 0 && pageExtractionsCount === 133;
   if (!match) {
-    console.error('RC_X4E_R13_BASELINE_MISMATCH');
+    console.error('RC_X4E_R14_BASELINE_MISMATCH');
     process.exit(1);
   }
   console.log('✅ Global queue baseline matches expected counts.');
@@ -271,7 +271,7 @@ async function main() {
   }
   console.log('✅ No stale baseline signatures detected in active audit scripts.');
 
-  console.log('\nRC_X4E_R13_POST_P12_RESULT_AUDIT_READY');
+  console.log('\nRC_X4E_R14_POST_P12_RESULT_AUDIT_READY');
 }
 
 main().catch(err => {

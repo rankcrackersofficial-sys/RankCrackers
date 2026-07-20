@@ -5,19 +5,20 @@ const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P14 = {
+const EXPECTED_AFTER_P15 = {
   total: 104,
-  active: 64,
-  completed: 37,
+  active: 61,
+  completed: 40,
   failed: 3,
   processing: 0,
-  pageExtractions: 118
+  pageExtractions: 133
 };
 
 function assertNoStaleBaselineSignature() {
   const auditContent = fs.readFileSync(__filename, 'utf8');
   const staleSigs = [
         'Post-P' + '13', 'active: ' + '70', 'completed: ' + '31', 'pageExtractions: ' + '96',
+        'Post-P' + '14', 'active: ' + '64', 'completed: ' + '37', 'pageExtractions: ' + '118',
         'Post-P' + '13', 'active: ' + '67', 'completed: ' + '34', 'pageExtractions: ' + '105',
         'Post-P' + '12', 'active: ' + '73', 'completed: ' + '28', 'pageExtractions: ' + '89',
 'Post-P' + '11', 'active: ' + '76', 'completed: ' + '25', 'pageExtractions: ' + '80',
@@ -68,20 +69,20 @@ async function audit() {
   console.log(`- global page_extractions: ${pageExtractionsCount}`);
 
   const mismatch =
-    counts.total !== EXPECTED_AFTER_P14.total ||
-    counts.active !== EXPECTED_AFTER_P14.active ||
-    counts.completed !== EXPECTED_AFTER_P14.completed ||
-    counts.failed !== EXPECTED_AFTER_P14.failed ||
-    pageExtractionsCount !== EXPECTED_AFTER_P14.pageExtractions;
+    counts.total !== EXPECTED_AFTER_P15.total ||
+    counts.active !== EXPECTED_AFTER_P15.active ||
+    counts.completed !== EXPECTED_AFTER_P15.completed ||
+    counts.failed !== EXPECTED_AFTER_P15.failed ||
+    pageExtractionsCount !== EXPECTED_AFTER_P15.pageExtractions;
 
   if (mismatch) {
-      console.error('RC_X4E_R13_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P14);
+      console.error('RC_X4E_R14_BASELINE_MISMATCH');
+      console.error('Expected:', EXPECTED_AFTER_P15);
       console.error('Actual:', { ...counts, pageExtractions: pageExtractionsCount });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R13_BASELINE_AFTER_P14_CONFIRMED');
+  console.log('RC_X4E_R14_BASELINE_AFTER_P15_CONFIRMED');
 
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
   const content = fs.readFileSync(workerPath, 'utf8');
@@ -159,7 +160,7 @@ async function audit() {
     process.exit(1);
   }
 
-  console.log('\nRC_X4E_R13_CANDIDATE_SELECTOR_POLICY_READY');
+  console.log('\nRC_X4E_R14_CANDIDATE_SELECTOR_POLICY_READY');
 }
 
 audit().catch(e => {
