@@ -67,7 +67,7 @@
     "audit:fup2c:verify5-sandbox-rollback-delete-result": "node functions/audit_fup2c_verify5_sandbox_rollback_delete_result.js",
     "apply:fup2c:verify5-sandbox-rollback-delete": "node functions/apply_fup2c_verify5_sandbox_rollback_delete.js",
     "audit:fup2c:verify5-final-closeout": "node functions/audit_fup2c_verify5_final_closeout.js",
-    "audit:syllabus:atom-expansion-live-result": "node functions/audit_syllabus_atom_expansion_live_write_result.js",
+    "audit:syllabus:atom-expansion-live-result": "node functions/audit_syllabus_atom_pro_review_readiness.js",
     "audit:syllabus:atom-pro-review-readiness": "node functions/audit_syllabus_atom_pro_review_readiness.js"
   },
   "dependencies": {
