@@ -1,0 +1,13 @@
+================================================================================
+FUP-2C-VERIFY5 SANDBOX ROLLBACK DELETE 1 - NO ACADEMIC DELETE PROOF
+================================================================================
+- sandbox deletes: 1
+- Firestore creates: 0
+- Firestore updates: 0
+- Firestore deletes outside sandbox: 0
+- syllabus_atoms writes/deletes: 0
+- topic_nodes writes/deletes: 0
+- page_extractions writes/deletes: 0
+- student publish changes: 0
+- deploys: 0
+- AI/OCR calls: 0

@@ -1,0 +1,16 @@
+================================================================================
+FUP-2C-VERIFY5 LIVE WRITE SANDBOX 1 - PRE-DELETE SNAPSHOT
+================================================================================
+Date: 2026-07-20
+
+- target exists: YES
+- target payload valid: YES
+- syllabus_atoms count: 430
+- topic_nodes count: 0
+- page_extractions count: 118
+- rollback token expiry: 2026-07-20T07:21:57.043Z
+- token expired: NO
+- current HEAD: 45c920ea346b21777c44dd711c64a707505b6ffe
+- branch: safety/rc-g2-pre-notification-schema
+- dirty count: 0
+- untracked count: 5
