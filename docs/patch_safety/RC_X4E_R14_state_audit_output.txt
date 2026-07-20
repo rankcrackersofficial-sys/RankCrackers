@@ -1,0 +1,45 @@
+
+> audit:pagewise:queue
+> node functions/audit_pagewise_queue_state.js
+
+==============================================
+PATCH RC-X4E-R11 - PAGEWISE QUEUE STATE AUDIT
+==============================================
+Mode: READ ONLY (Unified Admin SDK)
+
+Global Reconciliation:
+1. Total pagewise tasks found: 104
+2. Active pagewise tasks: 61
+3. Queued tasks: 61
+4. Processing/running tasks: 0
+5. Completed tasks: 40
+6. Failed tasks: 3
+7. Unexpected status tasks: 0
+8. Unique documents represented: 16
+9. Total planned pages from queue: 345
+10. Missing pages total: 0
+11. Duplicate pages total: 0
+12. Out-of-range pages total: 0
+13. Invalid task shape count: 0
+14. Documents with coverage complete: 16
+15. Documents with coverage blockers: 0
+16. Documents with extraction started: 3
+17. Extraction in progress: false
+18. Blocked docs wrongly queued count: 0
+
+Document Type Summary:
+Notification: { docs: 5, tasks: 77, pages: 230, blockers: 0 }
+Syllabus: { docs: 8, tasks: 14, pages: 56, blockers: 0 }
+PYQ: { docs: 2, tasks: 12, pages: 56, blockers: 0 }
+Study Material: { docs: 0, tasks: 0, pages: 0, blockers: 0 }
+Other Official: { docs: 1, tasks: 1, pages: 3, blockers: 0 }
+
+Mission Summary:
+RPSC: { docs: 8, tasks: 8, pages: 26, blockers: 0 }
+JEE: { docs: 3, tasks: 41, pages: 138, blockers: 0 }
+NEET: { docs: 3, tasks: 52, pages: 168, blockers: 0 }
+AUTO_DETECT/RAS: { docs: 2, tasks: 3, pages: 13, blockers: 0 }
+
+RC_X4E_R14_BASELINE_AFTER_P15_CONFIRMED
+
+RC_X4E_R14_PAGEWISE_QUEUE_STATE_AUDIT_READY
