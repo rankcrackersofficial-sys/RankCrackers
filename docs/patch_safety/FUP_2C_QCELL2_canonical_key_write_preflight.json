@@ -1,0 +1,383 @@
+{
+  "phase": "FUP-2C-QCELL2",
+  "missionId": "jee_main_2026",
+  "currentState": {
+    "totalAtoms": 430,
+    "atomIdPresent": 430,
+    "canonicalKeyPresent": 206,
+    "canonicalKeyMissing": 224,
+    "subjectTotals": {
+      "Physics": 177,
+      "Chemistry": 160,
+      "Mathematics": 93
+    },
+    "subjectMissingCanonicalKey": {
+      "Physics": 111,
+      "Chemistry": 63,
+      "Mathematics": 50
+    }
+  },
+  "existingCanonicalKeyIntegrity": {
+    "duplicateExistingCanonicalKeyCount": 0,
+    "emptyCanonicalKeyCount": 0,
+    "malformedCanonicalKeyCount": 0,
+    "crossSubjectDuplicateCanonicalKeyCount": 0,
+    "rejectedAtomsWithCanonicalKey": 0,
+    "studentPublishedAtomsMissingCanonicalKey": 0
+  },
+  "missingCanonicalKeyClassification": {
+    "SAFE_CANDIDATE": 1,
+    "HOLD_LEGACY_NO_SOURCE": 0,
+    "HOLD_REJECTED": 1,
+    "HOLD_DUPLICATE_RISK": 0,
+    "HOLD_MISSING_HIERARCHY": 0,
+    "HOLD_MISSING_TITLE": 26,
+    "HOLD_UNKNOWN_SUBJECT": 0,
+    "HOLD_SOURCE_REVIEW": 196
+  },
+  "holdSummary": {
+    "totalHolds": 223,
+    "holdBySubject": {
+      "Physics": {
+        "SAFE_CANDIDATE": 0,
+        "HOLD_LEGACY_NO_SOURCE": 0,
+        "HOLD_REJECTED": 0,
+        "HOLD_DUPLICATE_RISK": 0,
+        "HOLD_MISSING_HIERARCHY": 0,
+        "HOLD_MISSING_TITLE": 26,
+        "HOLD_UNKNOWN_SUBJECT": 0,
+        "HOLD_SOURCE_REVIEW": 85
+      },
+      "Chemistry": {
+        "SAFE_CANDIDATE": 0,
+        "HOLD_LEGACY_NO_SOURCE": 0,
+        "HOLD_REJECTED": 0,
+        "HOLD_DUPLICATE_RISK": 0,
+        "HOLD_MISSING_HIERARCHY": 0,
+        "HOLD_MISSING_TITLE": 0,
+        "HOLD_UNKNOWN_SUBJECT": 0,
+        "HOLD_SOURCE_REVIEW": 63
+      },
+      "Mathematics": {
+        "SAFE_CANDIDATE": 0,
+        "HOLD_LEGACY_NO_SOURCE": 0,
+        "HOLD_REJECTED": 1,
+        "HOLD_DUPLICATE_RISK": 0,
+        "HOLD_MISSING_HIERARCHY": 0,
+        "HOLD_MISSING_TITLE": 0,
+        "HOLD_UNKNOWN_SUBJECT": 0,
+        "HOLD_SOURCE_REVIEW": 48
+      }
+    },
+    "holdSamples": [
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP05_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 1 > Motion in 1D > Introduction"
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP05_002",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 1 > Motion in 2D > Projectiles"
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP06_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 1 > Laws of Motion > Inertia"
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP06_002",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 1 > Laws of Motion > Friction"
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH02_TOP01_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 2 > Chapter 2 > WPE > Work Done"
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH02_TOP01_002",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 2 > Chapter 2 > WPE > Conservation"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 1 > Motion in 1D > Introduction"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP05_002",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 1 > Motion in 2D > Projectiles"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP06_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 1 > Laws of Motion > Inertia"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP06_002",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 1 > Laws of Motion > Friction"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH02_TOP01_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 2 > Chapter 2 > WPE > Work Done"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH02_TOP01_002",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 2 > Chapter 2 > WPE > Conservation"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP01_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 3 > Laws of Motion > Second Law"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP01_002",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 3 > Laws of Motion > Third Law"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP02_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 3 > Circular Motion > Kinematics"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP02_002",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 3 > Circular Motion > Centripetal"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH04_TOP01_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 4 > Friction > Comparison"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH04_TOP01_002",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 4 > Friction > Angle"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH04_TOP01_003",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 1 > Chapter 4 > Friction > Checkpoint"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U02_CH01_TOP01_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 2 > Chapter 1 > Center of Mass > Introduction"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U02_CH01_TOP01_002",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 2 > Chapter 1 > Center of Mass > Two Particle"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U02_CH01_TOP01_003",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 2 > Chapter 1 > Center of Mass > Continuous"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U02_CH01_TOP02_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 2 > Chapter 1 > Linear Momentum > Conservation"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U02_CH01_TOP02_002",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 2 > Chapter 1 > Collisions > Impulse"
+      },
+      {
+        "atomId": "JEE_2026_PHY_U02_CH01_TOP03_001",
+        "subject": "Physics",
+        "classification": "HOLD_MISSING_TITLE",
+        "status": "VERIFIED",
+        "hasSource": false,
+        "title": "",
+        "hierarchy": "Unit 2 > Chapter 1 > Collisions > Types"
+      }
+    ]
+  },
+  "collisionGate": {
+    "proposedVsExistingCollisions": 0,
+    "proposedInternalCollisions": 12,
+    "duplicateTitleHierarchyCandidates": 12,
+    "subjectBoundaryMismatches": 0,
+    "safeCandidateExistingCollisions": 0,
+    "safeCandidateInternalCollisions": 0,
+    "atomIdMissing": 0,
+    "hierarchyTitleMissing": 26
+  },
+  "writeReadiness": {
+    "candidateCount": 224,
+    "safeWriteCandidateCount": 1,
+    "holdCount": 223,
+    "blockedCount": 223,
+    "rejectedExcludedCount": 1,
+    "legacyHoldCount": 0,
+    "sourceReviewHoldCount": 196
+  },
+  "proposedWriteManifest": {
+    "generated": true,
+    "futureTarget": "mission_realms/jee_main_2026/syllabus_atoms/{atomId}",
+    "futureOperation": "UPDATE_CANONICAL_KEY_ONLY",
+    "writeAllowedNow": false,
+    "proposedCanonicalKeyUpdates": 1,
+    "sample": [
+      {
+        "dryRun": true,
+        "operation": "UPDATE_CANONICAL_KEY_ONLY",
+        "missionId": "jee_main_2026",
+        "atomId": "JEE_MAIN_2026_P1_MATHEMATICS_U10_T003_003",
+        "targetPath": "mission_realms/jee_main_2026/syllabus_atoms/JEE_MAIN_2026_P1_MATHEMATICS_U10_T003_003",
+        "proposedCanonicalKey": "jee_main_2026|mathematics|paper_1_b_e_b_tech_mathematics_co_ordinate_geometry_circle_conic_sections_a_standard_form_of_equations_of_a_circle_the_general_form_of_the_equation_of_a_circle_its_radius_and_centre_equation_of_a_circle_when_the_endpoints_of_a_diameter_are_given_points_of_intersection_of_a_line_and_a_circle_with_the_centre_at_the_origin_and_sections_of_conics_equations_of_conic_sections_parabola_ellipse_and_hyperbola_in_standard_forms|circle_conic_sections_a_standard_form_of_equations_of_a_circle_the_general_form_of_the_equation_of_a_circle_its_radius_and_centre_equation_of_a_circle_when_the_endpoints_of_a_diameter_are_given_points_of_intersection_of_a_line_and_a_circle_with_the_centre_at_the_origin_and_sections_of_conics_equations_of_conic_sections_parabola_ellipse_and_hyperbola_in_standard_forms",
+        "currentCanonicalKey": null,
+        "subject": "Mathematics",
+        "title": "Circle, conic sections: A standard form of equations of a circle, the general form of the equation of a circle, its radius and centre, equation of a circle when the endpoints of a diameter are given, points of intersection of a line and a circle with the centre at the origin and sections of conics, equations of conic sections (parabola, ellipse and hyperbola) in standard forms",
+        "hierarchyPath": "Paper 1 (B.E./B.Tech.) > Mathematics > CO-ORDINATE GEOMETRY > Circle, conic sections: A standard form of equations of a circle, the general form of the equation of a circle, its radius and centre, equation of a circle when the endpoints of a diameter are given, points of intersection of a line and a circle with the centre at the origin and sections of conics, equations of conic sections (parabola, ellipse and hyperbola) in standard forms",
+        "classification": "SAFE_CANDIDATE",
+        "writeAllowedNow": false,
+        "studentPublishAllowed": false,
+        "atomApprovalAllowed": false,
+        "createdByPhase": "FUP_2C_QCELL2_PREFLIGHT_ONLY"
+      }
+    ],
+    "allowedFutureFields": [
+      "canonicalKey",
+      "canonicalKeyGeneratedByPhase",
+      "canonicalKeyGeneratedAt",
+      "canonicalKeySource",
+      "updatedAt"
+    ],
+    "forbiddenFutureFields": [
+      "verificationStatus",
+      "founderApproved",
+      "studentTopicNodePublished",
+      "topicNodePublished",
+      "crucibleReady",
+      "digibookReady",
+      "publishStatus",
+      "student delivery fields",
+      "source excerpt/content fields",
+      "title/hierarchy modification"
+    ]
+  },
+  "questionCellImpactProjection": {
+    "currentPossibleCells": 206,
+    "additionalCellsAfterSafeWrite": 1,
+    "totalPossibleAfterSafeWrite": 207,
+    "cellsStillBlocked": 223,
+    "pyqSampleMappingReadiness": "PARTIAL_SAFE_CANDIDATES_ONLY",
+    "digiBookPatternReadiness": "CAN_USE_CANONICALKEY_ATOMS_ONLY",
+    "cruciblePracticeReadiness": "CAN_USE_CANONICALKEY_ATOMS_ONLY"
+  },
+  "confirmations": {
+    "noFirestoreWrite": true,
+    "noCanonicalKeyWrite": true,
+    "noQuestionCellWrite": true,
+    "noQuestionMappingWrite": true,
+    "noQuestionBankMigration": true,
+    "noSyllabusAtomsMutation": true,
+    "noStudentDeliveryChange": true
+  },
+  "verdict": "CANONICAL_KEY_PREFLIGHT_READY_WITH_HOLDS"
+}

@@ -1,0 +1,593 @@
+{
+  "phase": "FUP-2C-QCELL2-HOLD1",
+  "missionId": "jee_main_2026",
+  "input": {
+    "totalAtoms": 430,
+    "canonicalKeyPresent": 206,
+    "canonicalKeyMissing": 224
+  },
+  "resolutionClassification": {
+    "RESOLVABLE_TITLE_FROM_DISPLAY_TITLE": 0,
+    "RESOLVABLE_TITLE_FROM_HIERARCHY": 14,
+    "RESOLVABLE_TITLE_FROM_TOPIC_PATH": 0,
+    "RESOLVABLE_SOURCE_REVIEW_GOOD": 1,
+    "RESOLVABLE_SOURCE_REVIEW_WEAK": 196,
+    "HOLD_REJECTED_EXCLUDE": 1,
+    "HOLD_DUPLICATE_TITLE_HIERARCHY": 12,
+    "HOLD_MISSING_ALL_TITLE_FIELDS": 0,
+    "HOLD_MISSING_SOURCE_PROOF": 0,
+    "HOLD_INTEGRITY_UNKNOWN": 0
+  },
+  "futureCanonicalWriteReadiness": {
+    "CANONICAL_WRITE_READY": 1,
+    "CANONICAL_WRITE_READY_NEEDS_FOUNDER_APPROVAL": 210,
+    "EXCLUDE_REJECTED": 1,
+    "REVIEW_REQUIRED_BEFORE_CANONICAL": 0,
+    "BLOCKED_MISSING_REQUIRED_FIELDS": 0,
+    "BLOCKED_DUPLICATE_DISAMBIGUATION": 12
+  },
+  "duplicateDisambiguation": {
+    "duplicateGroups": 6,
+    "groups": [
+      {
+        "candidateKey": "jee_main_2026|physics|unit_1_chapter_1_motion_in_1d_introduction|introduction",
+        "atomIds": [
+          "ATOM_JEE_U01_CH01_TOP05_001",
+          "JEE_2026_PHY_U01_CH01_TOP05_001"
+        ],
+        "count": 2,
+        "autoDisambiguatable": true,
+        "founderReviewRequired": true,
+        "policy": "ATOM_ID_DISAMBIGUATED fallback allowed only after Founder approval"
+      },
+      {
+        "candidateKey": "jee_main_2026|physics|unit_1_chapter_1_motion_in_2d_projectiles|projectiles",
+        "atomIds": [
+          "ATOM_JEE_U01_CH01_TOP05_002",
+          "JEE_2026_PHY_U01_CH01_TOP05_002"
+        ],
+        "count": 2,
+        "autoDisambiguatable": true,
+        "founderReviewRequired": true,
+        "policy": "ATOM_ID_DISAMBIGUATED fallback allowed only after Founder approval"
+      },
+      {
+        "candidateKey": "jee_main_2026|physics|unit_1_chapter_1_laws_of_motion_inertia|inertia",
+        "atomIds": [
+          "ATOM_JEE_U01_CH01_TOP06_001",
+          "JEE_2026_PHY_U01_CH01_TOP06_001"
+        ],
+        "count": 2,
+        "autoDisambiguatable": true,
+        "founderReviewRequired": true,
+        "policy": "ATOM_ID_DISAMBIGUATED fallback allowed only after Founder approval"
+      },
+      {
+        "candidateKey": "jee_main_2026|physics|unit_1_chapter_1_laws_of_motion_friction|friction",
+        "atomIds": [
+          "ATOM_JEE_U01_CH01_TOP06_002",
+          "JEE_2026_PHY_U01_CH01_TOP06_002"
+        ],
+        "count": 2,
+        "autoDisambiguatable": true,
+        "founderReviewRequired": true,
+        "policy": "ATOM_ID_DISAMBIGUATED fallback allowed only after Founder approval"
+      },
+      {
+        "candidateKey": "jee_main_2026|physics|unit_2_chapter_2_wpe_work_done|work_done",
+        "atomIds": [
+          "ATOM_JEE_U01_CH02_TOP01_001",
+          "JEE_2026_PHY_U01_CH02_TOP01_001"
+        ],
+        "count": 2,
+        "autoDisambiguatable": true,
+        "founderReviewRequired": true,
+        "policy": "ATOM_ID_DISAMBIGUATED fallback allowed only after Founder approval"
+      },
+      {
+        "candidateKey": "jee_main_2026|physics|unit_2_chapter_2_wpe_conservation|conservation",
+        "atomIds": [
+          "ATOM_JEE_U01_CH02_TOP01_002",
+          "JEE_2026_PHY_U01_CH02_TOP01_002"
+        ],
+        "count": 2,
+        "autoDisambiguatable": true,
+        "founderReviewRequired": true,
+        "policy": "ATOM_ID_DISAMBIGUATED fallback allowed only after Founder approval"
+      }
+    ],
+    "autoDisambiguatable": 6,
+    "founderReviewRequired": 6,
+    "atomIdFallbackProposed": true,
+    "randomSuffixUsed": false
+  },
+  "rejectedAtomPolicy": {
+    "rejectedAtomCount": 1,
+    "rejectedAtomIds": [
+      "JEE_MAIN_2026_P1_MATHEMATICS_U10_T002_002"
+    ],
+    "excludedFromQuestionCells": true,
+    "excludedFromDigiBook": true,
+    "excludedFromCrucible": true,
+    "futureRestorePath": "Founder must explicitly restore status in a separate review phase."
+  },
+  "questionCellEligibility": {
+    "CELL_READY_AFTER_CANONICAL_WRITE": 1,
+    "CELL_READY_CONCEPT_ONLY_AFTER_FOUNDER_APPROVAL": 210,
+    "CELL_REVIEW_REQUIRED": 0,
+    "CELL_BLOCKED_REJECTED": 1,
+    "CELL_BLOCKED_DUPLICATE": 12,
+    "CELL_BLOCKED_MISSING_TITLE": 0
+  },
+  "digiBookUsabilityProjection": {
+    "DIGIBOOK_PATTERN_READY": 1,
+    "DIGIBOOK_CONCEPT_ONLY_READY": 210,
+    "DIGIBOOK_NEEDS_SOURCE_REVIEW": 0,
+    "DIGIBOOK_BLOCKED_REJECTED": 1,
+    "DIGIBOOK_BLOCKED_MISSING_TITLE": 0,
+    "DIGIBOOK_BLOCKED_DUPLICATE": 12
+  },
+  "crucibleUsabilityProjection": {
+    "CRUCIBLE_PRACTICE_READY": 1,
+    "CRUCIBLE_CONCEPT_TASK_READY": 210,
+    "CRUCIBLE_NEEDS_REBALANCE": 0,
+    "CRUCIBLE_BLOCKED_REJECTED": 1,
+    "CRUCIBLE_BLOCKED_MISSING_TITLE": 0,
+    "CRUCIBLE_BLOCKED_DUPLICATE": 12
+  },
+  "futureWriteManifest": {
+    "generated": true,
+    "canonicalWriteReady": 1,
+    "founderApprovalNeeded": 210,
+    "duplicateDisambiguationNeeded": 12,
+    "titleRecoveryNeeded": 0,
+    "sourceReviewNeeded": 0,
+    "excludedRejected": 1,
+    "writeAllowedNow": false,
+    "samples": {
+      "canonicalWriteReady": [
+        {
+          "dryRun": true,
+          "atomId": "JEE_MAIN_2026_P1_MATHEMATICS_U10_T003_003",
+          "subject": "Mathematics",
+          "currentTitle": "Circle, conic sections: A standard form of equations of a circle, the general form of the equation of a circle, its radius and centre, equation of a circle when the endpoints of a diameter are given, points of intersection of a line and a circle with the centre at the origin and sections of conics, equations of conic sections (parabola, ellipse and hyperbola) in standard forms",
+          "derivedTitle": "Circle, conic sections: A standard form of equations of a circle, the general form of the equation of a circle, its radius and centre, equation of a circle when the endpoints of a diameter are given, points of intersection of a line and a circle with the centre at the origin and sections of conics, equations of conic sections (parabola, ellipse and hyperbola) in standard forms",
+          "titleSource": "TITLE",
+          "hierarchyPath": "Paper 1 (B.E./B.Tech.) > Mathematics > CO-ORDINATE GEOMETRY > Circle, conic sections: A standard form of equations of a circle, the general form of the equation of a circle, its radius and centre, equation of a circle when the endpoints of a diameter are given, points of intersection of a line and a circle with the centre at the origin and sections of conics, equations of conic sections (parabola, ellipse and hyperbola) in standard forms",
+          "proposedCanonicalKey": "jee_main_2026|mathematics|paper_1_b_e_b_tech_mathematics_co_ordinate_geometry_circle_conic_sections_a_standard_form_of_equations_of_a_circle_the_general_form_of_the_equation_of_a_circle_its_radius_and_centre_equation_of_a_circle_when_the_endpoints_of_a_diameter_are_given_points_of_intersection_of_a_line_and_a_circle_with_the_centre_at_the_origin_and_sections_of_conics_equations_of_conic_sections_parabola_ellipse_and_hyperbola_in_standard_forms|circle_conic_sections_a_standard_form_of_equations_of_a_circle_the_general_form_of_the_equation_of_a_circle_its_radius_and_centre_equation_of_a_circle_when_the_endpoints_of_a_diameter_are_given_points_of_intersection_of_a_line_and_a_circle_with_the_centre_at_the_origin_and_sections_of_conics_equations_of_conic_sections_parabola_ellipse_and_hyperbola_in_standard_forms",
+          "resolutionClass": "RESOLVABLE_SOURCE_REVIEW_GOOD",
+          "cellEligibility": "CELL_READY_AFTER_CANONICAL_WRITE",
+          "digiBookUsability": "DIGIBOOK_PATTERN_READY",
+          "crucibleUsability": "CRUCIBLE_PRACTICE_READY",
+          "requiresFounderDecision": false,
+          "writeAllowedNow": false,
+          "reason": [
+            "source proof and verified status present"
+          ]
+        }
+      ],
+      "founderApprovalNeeded": [
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U01_CH03_TOP01_001",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Second Law",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 3 > Laws of Motion > Second Law",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_3_laws_of_motion_second_law|second_law",
+          "resolutionClass": "RESOLVABLE_TITLE_FROM_HIERARCHY",
+          "cellEligibility": "CELL_READY_CONCEPT_ONLY_AFTER_FOUNDER_APPROVAL",
+          "digiBookUsability": "DIGIBOOK_CONCEPT_ONLY_READY",
+          "crucibleUsability": "CRUCIBLE_CONCEPT_TASK_READY",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "title derivable from hierarchyPath"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U01_CH03_TOP01_002",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Third Law",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 3 > Laws of Motion > Third Law",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_3_laws_of_motion_third_law|third_law",
+          "resolutionClass": "RESOLVABLE_TITLE_FROM_HIERARCHY",
+          "cellEligibility": "CELL_READY_CONCEPT_ONLY_AFTER_FOUNDER_APPROVAL",
+          "digiBookUsability": "DIGIBOOK_CONCEPT_ONLY_READY",
+          "crucibleUsability": "CRUCIBLE_CONCEPT_TASK_READY",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "title derivable from hierarchyPath"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U01_CH03_TOP02_001",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Kinematics",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 3 > Circular Motion > Kinematics",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_3_circular_motion_kinematics|kinematics",
+          "resolutionClass": "RESOLVABLE_TITLE_FROM_HIERARCHY",
+          "cellEligibility": "CELL_READY_CONCEPT_ONLY_AFTER_FOUNDER_APPROVAL",
+          "digiBookUsability": "DIGIBOOK_CONCEPT_ONLY_READY",
+          "crucibleUsability": "CRUCIBLE_CONCEPT_TASK_READY",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "title derivable from hierarchyPath"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U01_CH03_TOP02_002",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Centripetal",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 3 > Circular Motion > Centripetal",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_3_circular_motion_centripetal|centripetal",
+          "resolutionClass": "RESOLVABLE_TITLE_FROM_HIERARCHY",
+          "cellEligibility": "CELL_READY_CONCEPT_ONLY_AFTER_FOUNDER_APPROVAL",
+          "digiBookUsability": "DIGIBOOK_CONCEPT_ONLY_READY",
+          "crucibleUsability": "CRUCIBLE_CONCEPT_TASK_READY",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "title derivable from hierarchyPath"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U01_CH04_TOP01_001",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Comparison",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 4 > Friction > Comparison",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_4_friction_comparison|comparison",
+          "resolutionClass": "RESOLVABLE_TITLE_FROM_HIERARCHY",
+          "cellEligibility": "CELL_READY_CONCEPT_ONLY_AFTER_FOUNDER_APPROVAL",
+          "digiBookUsability": "DIGIBOOK_CONCEPT_ONLY_READY",
+          "crucibleUsability": "CRUCIBLE_CONCEPT_TASK_READY",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "title derivable from hierarchyPath"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U01_CH04_TOP01_002",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Angle",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 4 > Friction > Angle",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_4_friction_angle|angle",
+          "resolutionClass": "RESOLVABLE_TITLE_FROM_HIERARCHY",
+          "cellEligibility": "CELL_READY_CONCEPT_ONLY_AFTER_FOUNDER_APPROVAL",
+          "digiBookUsability": "DIGIBOOK_CONCEPT_ONLY_READY",
+          "crucibleUsability": "CRUCIBLE_CONCEPT_TASK_READY",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "title derivable from hierarchyPath"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U01_CH04_TOP01_003",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Checkpoint",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 4 > Friction > Checkpoint",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_4_friction_checkpoint|checkpoint",
+          "resolutionClass": "RESOLVABLE_TITLE_FROM_HIERARCHY",
+          "cellEligibility": "CELL_READY_CONCEPT_ONLY_AFTER_FOUNDER_APPROVAL",
+          "digiBookUsability": "DIGIBOOK_CONCEPT_ONLY_READY",
+          "crucibleUsability": "CRUCIBLE_CONCEPT_TASK_READY",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "title derivable from hierarchyPath"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U02_CH01_TOP01_001",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Introduction",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 2 > Chapter 1 > Center of Mass > Introduction",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_2_chapter_1_center_of_mass_introduction|introduction",
+          "resolutionClass": "RESOLVABLE_TITLE_FROM_HIERARCHY",
+          "cellEligibility": "CELL_READY_CONCEPT_ONLY_AFTER_FOUNDER_APPROVAL",
+          "digiBookUsability": "DIGIBOOK_CONCEPT_ONLY_READY",
+          "crucibleUsability": "CRUCIBLE_CONCEPT_TASK_READY",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "title derivable from hierarchyPath"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U02_CH01_TOP01_002",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Two Particle",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 2 > Chapter 1 > Center of Mass > Two Particle",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_2_chapter_1_center_of_mass_two_particle|two_particle",
+          "resolutionClass": "RESOLVABLE_TITLE_FROM_HIERARCHY",
+          "cellEligibility": "CELL_READY_CONCEPT_ONLY_AFTER_FOUNDER_APPROVAL",
+          "digiBookUsability": "DIGIBOOK_CONCEPT_ONLY_READY",
+          "crucibleUsability": "CRUCIBLE_CONCEPT_TASK_READY",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "title derivable from hierarchyPath"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U02_CH01_TOP01_003",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Continuous",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 2 > Chapter 1 > Center of Mass > Continuous",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_2_chapter_1_center_of_mass_continuous|continuous",
+          "resolutionClass": "RESOLVABLE_TITLE_FROM_HIERARCHY",
+          "cellEligibility": "CELL_READY_CONCEPT_ONLY_AFTER_FOUNDER_APPROVAL",
+          "digiBookUsability": "DIGIBOOK_CONCEPT_ONLY_READY",
+          "crucibleUsability": "CRUCIBLE_CONCEPT_TASK_READY",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "title derivable from hierarchyPath"
+          ]
+        }
+      ],
+      "duplicateDisambiguationNeeded": [
+        {
+          "dryRun": true,
+          "atomId": "ATOM_JEE_U01_CH01_TOP05_001",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Introduction",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 1 > Motion in 1D > Introduction",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_1_motion_in_1d_introduction|introduction|atom_jee_u01_ch01_top05_001",
+          "resolutionClass": "HOLD_DUPLICATE_TITLE_HIERARCHY",
+          "cellEligibility": "CELL_BLOCKED_DUPLICATE",
+          "digiBookUsability": "DIGIBOOK_BLOCKED_DUPLICATE",
+          "crucibleUsability": "CRUCIBLE_BLOCKED_DUPLICATE",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "duplicate title/hierarchy candidate"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "ATOM_JEE_U01_CH01_TOP05_002",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Projectiles",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 1 > Motion in 2D > Projectiles",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_1_motion_in_2d_projectiles|projectiles|atom_jee_u01_ch01_top05_002",
+          "resolutionClass": "HOLD_DUPLICATE_TITLE_HIERARCHY",
+          "cellEligibility": "CELL_BLOCKED_DUPLICATE",
+          "digiBookUsability": "DIGIBOOK_BLOCKED_DUPLICATE",
+          "crucibleUsability": "CRUCIBLE_BLOCKED_DUPLICATE",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "duplicate title/hierarchy candidate"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "ATOM_JEE_U01_CH01_TOP06_001",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Inertia",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 1 > Laws of Motion > Inertia",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_1_laws_of_motion_inertia|inertia|atom_jee_u01_ch01_top06_001",
+          "resolutionClass": "HOLD_DUPLICATE_TITLE_HIERARCHY",
+          "cellEligibility": "CELL_BLOCKED_DUPLICATE",
+          "digiBookUsability": "DIGIBOOK_BLOCKED_DUPLICATE",
+          "crucibleUsability": "CRUCIBLE_BLOCKED_DUPLICATE",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "duplicate title/hierarchy candidate"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "ATOM_JEE_U01_CH01_TOP06_002",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Friction",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 1 > Laws of Motion > Friction",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_1_laws_of_motion_friction|friction|atom_jee_u01_ch01_top06_002",
+          "resolutionClass": "HOLD_DUPLICATE_TITLE_HIERARCHY",
+          "cellEligibility": "CELL_BLOCKED_DUPLICATE",
+          "digiBookUsability": "DIGIBOOK_BLOCKED_DUPLICATE",
+          "crucibleUsability": "CRUCIBLE_BLOCKED_DUPLICATE",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "duplicate title/hierarchy candidate"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "ATOM_JEE_U01_CH02_TOP01_001",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Work Done",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 2 > Chapter 2 > WPE > Work Done",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_2_chapter_2_wpe_work_done|work_done|atom_jee_u01_ch02_top01_001",
+          "resolutionClass": "HOLD_DUPLICATE_TITLE_HIERARCHY",
+          "cellEligibility": "CELL_BLOCKED_DUPLICATE",
+          "digiBookUsability": "DIGIBOOK_BLOCKED_DUPLICATE",
+          "crucibleUsability": "CRUCIBLE_BLOCKED_DUPLICATE",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "duplicate title/hierarchy candidate"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "ATOM_JEE_U01_CH02_TOP01_002",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Conservation",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 2 > Chapter 2 > WPE > Conservation",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_2_chapter_2_wpe_conservation|conservation|atom_jee_u01_ch02_top01_002",
+          "resolutionClass": "HOLD_DUPLICATE_TITLE_HIERARCHY",
+          "cellEligibility": "CELL_BLOCKED_DUPLICATE",
+          "digiBookUsability": "DIGIBOOK_BLOCKED_DUPLICATE",
+          "crucibleUsability": "CRUCIBLE_BLOCKED_DUPLICATE",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "duplicate title/hierarchy candidate"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Introduction",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 1 > Motion in 1D > Introduction",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_1_motion_in_1d_introduction|introduction|jee_2026_phy_u01_ch01_top05_001",
+          "resolutionClass": "HOLD_DUPLICATE_TITLE_HIERARCHY",
+          "cellEligibility": "CELL_BLOCKED_DUPLICATE",
+          "digiBookUsability": "DIGIBOOK_BLOCKED_DUPLICATE",
+          "crucibleUsability": "CRUCIBLE_BLOCKED_DUPLICATE",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "duplicate title/hierarchy candidate"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U01_CH01_TOP05_002",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Projectiles",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 1 > Motion in 2D > Projectiles",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_1_motion_in_2d_projectiles|projectiles|jee_2026_phy_u01_ch01_top05_002",
+          "resolutionClass": "HOLD_DUPLICATE_TITLE_HIERARCHY",
+          "cellEligibility": "CELL_BLOCKED_DUPLICATE",
+          "digiBookUsability": "DIGIBOOK_BLOCKED_DUPLICATE",
+          "crucibleUsability": "CRUCIBLE_BLOCKED_DUPLICATE",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "duplicate title/hierarchy candidate"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U01_CH01_TOP06_001",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Inertia",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 1 > Laws of Motion > Inertia",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_1_laws_of_motion_inertia|inertia|jee_2026_phy_u01_ch01_top06_001",
+          "resolutionClass": "HOLD_DUPLICATE_TITLE_HIERARCHY",
+          "cellEligibility": "CELL_BLOCKED_DUPLICATE",
+          "digiBookUsability": "DIGIBOOK_BLOCKED_DUPLICATE",
+          "crucibleUsability": "CRUCIBLE_BLOCKED_DUPLICATE",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "duplicate title/hierarchy candidate"
+          ]
+        },
+        {
+          "dryRun": true,
+          "atomId": "JEE_2026_PHY_U01_CH01_TOP06_002",
+          "subject": "Physics",
+          "currentTitle": "",
+          "derivedTitle": "Friction",
+          "titleSource": "HIERARCHY_PATH",
+          "hierarchyPath": "Unit 1 > Chapter 1 > Laws of Motion > Friction",
+          "proposedCanonicalKey": "jee_main_2026|physics|unit_1_chapter_1_laws_of_motion_friction|friction|jee_2026_phy_u01_ch01_top06_002",
+          "resolutionClass": "HOLD_DUPLICATE_TITLE_HIERARCHY",
+          "cellEligibility": "CELL_BLOCKED_DUPLICATE",
+          "digiBookUsability": "DIGIBOOK_BLOCKED_DUPLICATE",
+          "crucibleUsability": "CRUCIBLE_BLOCKED_DUPLICATE",
+          "requiresFounderDecision": true,
+          "writeAllowedNow": false,
+          "reason": [
+            "duplicate title/hierarchy candidate"
+          ]
+        }
+      ],
+      "excludedRejected": [
+        {
+          "dryRun": true,
+          "atomId": "JEE_MAIN_2026_P1_MATHEMATICS_U10_T002_002",
+          "subject": "Mathematics",
+          "currentTitle": "Straight line: Various forms of equations of a line, intersection of lines, angles between two lines, conditions for concurrence of three lines, the distance of a point from a line, co-ordinate of the centroid, orthocentre and circumcentre of a triangle",
+          "derivedTitle": "Straight line: Various forms of equations of a line, intersection of lines, angles between two lines, conditions for concurrence of three lines, the distance of a point from a line, co-ordinate of the centroid, orthocentre and circumcentre of a triangle",
+          "titleSource": "TITLE",
+          "hierarchyPath": "Paper 1 (B.E./B.Tech.) > Mathematics > CO-ORDINATE GEOMETRY > Straight line: Various forms of equations of a line, intersection of lines, angles between two lines, conditions for concurrence of three lines, the distance of a point from a line, co-ordinate of the centroid, orthocentre and circumcentre of a triangle",
+          "proposedCanonicalKey": "jee_main_2026|mathematics|paper_1_b_e_b_tech_mathematics_co_ordinate_geometry_straight_line_various_forms_of_equations_of_a_line_intersection_of_lines_angles_between_two_lines_conditions_for_concurrence_of_three_lines_the_distance_of_a_point_from_a_line_co_ordinate_of_the_centroid_orthocentre_and_circumcentre_of_a_triangle|straight_line_various_forms_of_equations_of_a_line_intersection_of_lines_angles_between_two_lines_conditions_for_concurrence_of_three_lines_the_distance_of_a_point_from_a_line_co_ordinate_of_the_centroid_orthocentre_and_circumcentre_of_a_triangle",
+          "resolutionClass": "HOLD_REJECTED_EXCLUDE",
+          "cellEligibility": "CELL_BLOCKED_REJECTED",
+          "digiBookUsability": "DIGIBOOK_BLOCKED_REJECTED",
+          "crucibleUsability": "CRUCIBLE_BLOCKED_REJECTED",
+          "requiresFounderDecision": false,
+          "writeAllowedNow": false,
+          "reason": [
+            "rejected atom excluded"
+          ]
+        }
+      ]
+    }
+  },
+  "confirmations": {
+    "noFirestoreWrite": true,
+    "noCanonicalKeyWrite": true,
+    "noQuestionCellWrite": true,
+    "noQuestionMappingWrite": true,
+    "noQuestionBankMigration": true,
+    "noSyllabusAtomsMutation": true,
+    "noTopicNodesPublish": true,
+    "noStudentDeliveryChange": true,
+    "noAiOrOcr": true,
+    "noProAiCall": true,
+    "noExtractionApply": true,
+    "noDeploy": true,
+    "noCrucibleGeneration": true,
+    "noDigiBookGeneration": true
+  },
+  "verdict": "HOLD_RESOLUTION_READY_NEEDS_FOUNDER_DECISION"
+}
