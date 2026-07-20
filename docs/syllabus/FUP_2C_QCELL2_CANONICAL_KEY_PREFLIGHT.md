@@ -21,3 +21,8 @@ Safety: no Firestore write, no canonicalKey write, no question cell write, no ma
 ## HOLD1 Follow-up
 
 QCELL2 found only 1 immediately safe canonicalKey candidate and 223 held atoms. See `FUP_2C_QCELL2_HOLD1_CANONICAL_HOLD_RESOLUTION.md` for hold-resolution classification before any canonicalKey write is approved.
+
+## QCELL2-DECISION1 Cross-reference
+
+Founder decision locked: `APPROVE_210_CONCEPT_READY_CANONICAL_WRITE_AND_HOLD_12_DUPLICATES`. Future QCELL3 preflight count is 211 candidates: 210 concept-ready plus 1 direct safe candidate. 12 duplicate Physics atoms remain held and 1 rejected atom remains excluded. No write was authorized by DECISION1.
+

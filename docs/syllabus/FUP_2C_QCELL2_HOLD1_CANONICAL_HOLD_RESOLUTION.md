@@ -13,3 +13,8 @@ Question cells do not mean student publish. DigiBook and Crucible usage need lat
 Recommended next phase: FUP-2C-QCELL2-HOLD2 Founder Hold Decision / Policy Approval, then retry canonicalKey write preflight.
 
 Safety locks: no Firestore write, no canonicalKey write, no question cell write, no mapping write, no question_bank migration, no topic_nodes publish, no student delivery change, no AI/OCR/Pro AI, no DigiBook/Crucible generation, no deploy.
+
+## QCELL2-DECISION1 Cross-reference
+
+Founder decision locked: `APPROVE_210_CONCEPT_READY_CANONICAL_WRITE_AND_HOLD_12_DUPLICATES`. Future QCELL3 preflight count is 211 candidates: 210 concept-ready plus 1 direct safe candidate. 12 duplicate Physics atoms remain held and 1 rejected atom remains excluded. No write was authorized by DECISION1.
+

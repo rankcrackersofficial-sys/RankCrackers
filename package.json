@@ -81,7 +81,8 @@
                     "audit:pagewise:current-baseline-result":  "node functions/audit_pagewise_current_baseline_result.js",
                     "audit:worker-training:current-pagewise-baseline":  "node functions/audit_worker_training_current_pagewise_baseline.js",
                     "audit:syllabus:canonical-key-write-preflight":  "node functions/audit_syllabus_atom_canonical_key_write_preflight.js",
-                    "audit:syllabus:canonical-key-hold-resolution":  "node functions/audit_syllabus_atom_canonical_key_hold_resolution.js"
+                    "audit:syllabus:canonical-key-hold-resolution":  "node functions/audit_syllabus_atom_canonical_key_hold_resolution.js",
+                    "audit:qcell2:founder-hold-decision-policy":  "node functions/audit_qcell2_founder_hold_decision_policy.js"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",

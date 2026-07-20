@@ -20,3 +20,8 @@ Required before QCELL write:
 
 PYQ/Sample atomic cells must wait for canonicalKey hold resolution. HOLD1 confirms duplicate/title/source/rejected policies before any question-cell write or mapping write.
 
+
+## QCELL2-DECISION1 Cross-reference
+
+Founder decision locked: `APPROVE_210_CONCEPT_READY_CANONICAL_WRITE_AND_HOLD_12_DUPLICATES`. Future QCELL3 preflight count is 211 candidates: 210 concept-ready plus 1 direct safe candidate. 12 duplicate Physics atoms remain held and 1 rejected atom remains excluded. No write was authorized by DECISION1.
+
