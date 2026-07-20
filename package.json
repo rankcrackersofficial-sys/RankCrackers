@@ -79,7 +79,8 @@
                     "audit:question-bank:atomic-mapping-reconciliation":  "node functions/audit_question_bank_atomic_mapping_reconciliation.js",
                     "audit:pagewise:post-p15-result":  "node functions/audit_pagewise_post_p15_result.js",
                     "audit:pagewise:current-baseline-result":  "node functions/audit_pagewise_current_baseline_result.js",
-                    "audit:worker-training:current-pagewise-baseline":  "node functions/audit_worker_training_current_pagewise_baseline.js"
+                    "audit:worker-training:current-pagewise-baseline":  "node functions/audit_worker_training_current_pagewise_baseline.js",
+                    "audit:syllabus:canonical-key-write-preflight":  "node functions/audit_syllabus_atom_canonical_key_write_preflight.js"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",

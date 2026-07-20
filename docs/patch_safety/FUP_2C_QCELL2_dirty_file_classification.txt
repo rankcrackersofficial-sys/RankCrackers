@@ -1,0 +1,10 @@
+﻿File | Classification | Action
+--- | --- | ---
+docs/patch_safety/FUP_2C_QCELL2_status_before.txt | QCELL2_RELEVANT | stage in QCELL2
+docs/patch_safety/FUP_2C_QCELL2_dirty_file_classification.txt | QCELL2_RELEVANT | stage in QCELL2
+docs/patch_safety/FUP_2C_QCELL2_validation.txt | QCELL2_RELEVANT | stage in QCELL2
+docs/syllabus/FUP_2C_QCELL2_CANONICAL_KEY_PREFLIGHT.md | QCELL2_RELEVANT | stage in QCELL2
+functions/audit_syllabus_atom_canonical_key_write_preflight.js | QCELL2_RELEVANT | stage in QCELL2
+package.json | QCELL2_RELEVANT | stage in QCELL2
+docs/patch_safety/FUP_2C_QCELL2_canonical_key_write_preflight.json | QCELL2_RELEVANT | inspect only / do not stage per scoped list
+docs/patch_safety/RC_X4E_R14_* | R14_RELATED | do not stage / separate phase
