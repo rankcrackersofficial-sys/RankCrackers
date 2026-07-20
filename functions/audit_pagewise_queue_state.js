@@ -261,10 +261,10 @@ async function main() {
   }
 
   if (totalCorrect && noWrong && noInvalid) {
-    console.log('\nRC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
-    console.log('\nRC_X4E_R11_PAGEWISE_QUEUE_STATE_AUDIT_READY');
+    console.log('\nRC_X4E_R13_BASELINE_AFTER_P14_CONFIRMED');
+    console.log('\nRC_X4E_R13_PAGEWISE_QUEUE_STATE_AUDIT_READY');
   } else {
-    console.error('\nRC_X4E_R11_BASELINE_MISMATCH');
+    console.error('\nRC_X4E_R13_BASELINE_MISMATCH');
     if (!totalCorrect) console.error(`- Expected 104 tasks, found ${pagewiseTasks.length}`);
     if (!noInvalid) console.error(`- ${invalidTasks.length} tasks have invalid shape.`);
     process.exit(1);

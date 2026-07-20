@@ -200,12 +200,12 @@ async function audit() {
       console.log(`  reason: ${reason}`);
   }
 
-  if (groups.queued.length !== 67 || groups.completed.length !== 34 || groups.failed.length !== 3) {
-      console.error('RC_X4E_R11_BASELINE_MISMATCH');
+  if (groups.queued.length !== 64 || groups.completed.length !== 37 || groups.failed.length !== 3) {
+      console.error('RC_X4E_R13_BASELINE_MISMATCH');
       process.exit(1);
   }
 
-  console.log('\nRC_X4E_R11_FIRST_EXTRACTION_RESULT_AUDIT_READY');
+  console.log('\nRC_X4E_R13_FIRST_EXTRACTION_RESULT_AUDIT_READY');
 }
 
 audit().catch(e => {

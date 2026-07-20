@@ -1,0 +1,17 @@
+Bucket 1 — Allowed R13-FIX1 reports:
+- docs/patch_safety/RC_X4E_R13_FIX1_status_before.txt
+- docs/patch_safety/RC_X4E_R13_FIX1_untracked_before.txt
+- docs/patch_safety/RC_X4E_R13_FIX1_head_commit.txt
+- docs/patch_safety/RC_X4E_R13_FIX1_dirty_classification.txt
+
+Bucket 2 — RX6H / FUP production work:
+- functions/audit_ir4_detailed_timestamps.js (untracked)
+- functions/audit_ir4_task_metadata.js (untracked)
+- functions/test_ir4_replay_harness.js (untracked)
+- functions/get_raw_queue_statuses.js (staged, new file)
+
+Bucket 3 — RC-X4E R13 accidental leftovers:
+None
+
+Bucket 4 — unexpected:
+None
