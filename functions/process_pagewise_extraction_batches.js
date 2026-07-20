@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const admin = require('firebase-admin');
 const cp = require('child_process');
 const axios = require('axios');
@@ -129,6 +131,19 @@ async function main() {
   }
 
   const token = getAccessToken();
+
+  if (cli.isApplyMode) {
+    const authPath = path.join(__dirname, 'verification/write_authorization/verify5_p15_auth_candidate.json');
+    if (!fs.existsSync(authPath)) {
+      console.error('RC_X4E_P15_BLOCKED_MISSING_AUTHORIZATION_ARTIFACT');
+      process.exit(1);
+    }
+    const auth = JSON.parse(fs.readFileSync(authPath, 'utf8'));
+    if (!auth.P15ExplicitAuthorization || !auth.P15ExecutionAllowed) {
+       console.error('RC_X4E_P15_BLOCKED_AUTHORIZATION_INACTIVE');
+       process.exit(1);
+    }
+  }
 
   if (!admin.apps.length) {
     admin.initializeApp({ projectId: PROJECT_ID });
