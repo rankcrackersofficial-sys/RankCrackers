@@ -15,3 +15,8 @@ Required before QCELL write:
 - rejected atoms must stay excluded
 - old `question_bank` records without atom mapping/source proof must remain legacy/unmapped
 - PYQ/Sample extraction must attach `atomId`, `canonicalKey`, `questionSourceKind`, source document proof, and mapping confidence
+
+## QCELL2-HOLD1 Cross-Reference
+
+PYQ/Sample atomic cells must wait for canonicalKey hold resolution. HOLD1 confirms duplicate/title/source/rejected policies before any question-cell write or mapping write.
+

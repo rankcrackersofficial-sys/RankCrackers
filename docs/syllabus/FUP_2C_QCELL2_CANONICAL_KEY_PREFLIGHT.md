@@ -17,3 +17,7 @@ Hold policy: rejected atoms excluded; legacy/no-source atoms held; source-review
 Impact: question mapping must not use atoms without canonicalKey unless a separately approved stable key alternative exists.
 
 Safety: no Firestore write, no canonicalKey write, no question cell write, no mapping write, no question_bank migration, no topic_nodes publish, no student delivery change, no AI/OCR/Pro AI, no deploy.
+
+## HOLD1 Follow-up
+
+QCELL2 found only 1 immediately safe canonicalKey candidate and 223 held atoms. See `FUP_2C_QCELL2_HOLD1_CANONICAL_HOLD_RESOLUTION.md` for hold-resolution classification before any canonicalKey write is approved.
