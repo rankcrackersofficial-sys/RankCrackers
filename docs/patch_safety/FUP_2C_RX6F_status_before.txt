@@ -1,0 +1,38 @@
+Branch: safety/rc-g2-pre-notification-schema
+HEAD: e24ec7c339ba140d77f5e43dce14bdfb840dac64
+
+Recent log:
+e24ec7c3 chore: add expanded atom pro review readiness audit
+c6a380c3 chore: close out fup2c verify5 sandbox authorization cycle
+c889652f chore: execute fup2c verify5 sandbox rollback delete
+45c920ea chore: prepare fup2c verify5 sandbox rollback token
+d68c5bd5 chore: close out fup2c verify5 sandbox write evidence
+a808951e chore: execute fup2c verify5 authorized sandbox write
+67d52662 chore: record fup2c verify5 founder approval and token preflight
+b9b7ffa2 chore: clean tree after fup2c verify5 ceremony
+e2489e24 chore: prepare fup2c verify5 founder authorization ceremony
+2e04e192 chore: add syllabus expansion prewrite authorization audit
+3668f6b3 chore: add syllabus expansion rebalance dry run
+b3af4b36 chore: add syllabus expansion write dry run
+
+Status:
+ M functions/audit_first_successful_pagewise_extraction.js
+ M functions/audit_pagewise_baseline_exit_logic.js
+ M functions/audit_pagewise_candidate_selector_policy.js
+ M functions/audit_pagewise_hardened_limit3_result.js
+ M functions/audit_pagewise_limit3_apply_readiness.js
+ M functions/audit_pagewise_limit3_result_and_candidate_policy.js
+ M functions/audit_pagewise_post_ir3_rollforward_acceptance.js
+ M functions/audit_pagewise_post_p12_result.js
+ M functions/audit_pagewise_post_p13_result.js
+ M functions/audit_pagewise_pre_p11_undocumented_incident.js
+ M functions/audit_pagewise_second_hardened_limit3_result.js
+ M functions/audit_pagewise_third_hardened_limit3_result.js
+ M functions/audit_pagewise_two_batch_continuity.js
+ M functions/audit_pagewise_undocumented_apply_incident.js
+ M functions/audit_pagewise_worker_runtime_safety.js
+ M package.json
+?? docs/patch_safety/FUP_2C_RX6F_validation.txt
+?? docs/patch_safety/RC_X4E_R13_RESUME_baseline_alignment_output.txt
+?? docs/patch_safety/RC_X4E_R13_RESUME_state_audit_output.txt
+?? functions/audit_pagewise_post_p14_result.js
