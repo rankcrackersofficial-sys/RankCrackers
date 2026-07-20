@@ -1,0 +1,6 @@
+FUP-2C-RX6G pre-validation evidence
+Original full pre-write validation was executed before queue write and passed all requested gates.
+The original file was removed by workspace cleanup, so this file records the pre-write gate result from this RX6G run.
+Result: PASS
+Commands passed: guard, worker policy, worker post-p14, pro verification dry-run, pagewise post-p14, RX6D live result, RX6E readiness, RX6F manifest, platform boundary, smoke tests, web build.
+Firestore write happened only after this PASS.

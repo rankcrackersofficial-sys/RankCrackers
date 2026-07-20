@@ -1,0 +1,43 @@
+Branch: safety/rc-g2-pre-notification-schema
+HEAD: 244bc2f5a3a6160742f967540691ae73f2bd0e57
+
+Recent log:
+244bc2f5 chore: record post-r11 undocumented apply detailed provenance
+18d127cb chore: add syllabus pro verification queue manifest dry run
+e24ec7c3 chore: add expanded atom pro review readiness audit
+c6a380c3 chore: close out fup2c verify5 sandbox authorization cycle
+c889652f chore: execute fup2c verify5 sandbox rollback delete
+45c920ea chore: prepare fup2c verify5 sandbox rollback token
+d68c5bd5 chore: close out fup2c verify5 sandbox write evidence
+a808951e chore: execute fup2c verify5 authorized sandbox write
+67d52662 chore: record fup2c verify5 founder approval and token preflight
+b9b7ffa2 chore: clean tree after fup2c verify5 ceremony
+e2489e24 chore: prepare fup2c verify5 founder authorization ceremony
+2e04e192 chore: add syllabus expansion prewrite authorization audit
+
+Status:
+A  docs/patch_safety/FUP_2C_RX6G_post_write_audit.txt
+A  docs/patch_safety/FUP_2C_RX6G_write_result.txt
+AM functions/apply_syllabus_atom_pro_queue_write.js
+ M functions/audit_first_successful_pagewise_extraction.js
+ M functions/audit_pagewise_baseline_exit_logic.js
+ M functions/audit_pagewise_candidate_selector_policy.js
+ M functions/audit_pagewise_hardened_limit3_result.js
+ M functions/audit_pagewise_limit3_apply_readiness.js
+ M functions/audit_pagewise_limit3_result_and_candidate_policy.js
+ M functions/audit_pagewise_post_ir3_rollforward_acceptance.js
+ M functions/audit_pagewise_post_p12_result.js
+ M functions/audit_pagewise_post_p13_result.js
+ M functions/audit_pagewise_pre_p11_undocumented_incident.js
+ M functions/audit_pagewise_second_hardened_limit3_result.js
+ M functions/audit_pagewise_third_hardened_limit3_result.js
+ M functions/audit_pagewise_two_batch_continuity.js
+ M functions/audit_pagewise_undocumented_apply_incident.js
+ M functions/audit_pagewise_worker_runtime_safety.js
+AM functions/audit_syllabus_atom_pro_queue_write_result.js
+A  functions/rollback_syllabus_atom_pro_queue_rx6g.js
+M  package.json
+?? docs/patch_safety/FUP_2C_RX6G_validation.txt
+?? docs/patch_safety/RC_X4E_R13_RESUME_baseline_alignment_output.txt
+?? docs/syllabus/FUP_2C_RX6G_PRO_QUEUE_CONTROLLED_WRITE.md
+?? functions/audit_pagewise_post_p14_result.js

@@ -1,0 +1,27 @@
+| File | Classification | Action |
+| --- | --- | --- |
+| docs/patch_safety/FUP_2C_RX6G_post_write_audit.txt | RX6G_RELEVANT | stage in RX6G |
+| docs/patch_safety/FUP_2C_RX6G_write_result.txt | RX6G_RELEVANT | stage in RX6G |
+| functions/apply_syllabus_atom_pro_queue_write.js | RX6G_RELEVANT | stage in RX6G |
+| functions/audit_first_successful_pagewise_extraction.js | UNKNOWN_DO_NOT_STAGE | do not stage |
+| functions/audit_pagewise_baseline_exit_logic.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_candidate_selector_policy.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_hardened_limit3_result.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_limit3_apply_readiness.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_limit3_result_and_candidate_policy.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_post_ir3_rollforward_acceptance.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_post_p12_result.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_post_p13_result.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_pre_p11_undocumented_incident.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_second_hardened_limit3_result.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_third_hardened_limit3_result.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_two_batch_continuity.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_undocumented_apply_incident.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_pagewise_worker_runtime_safety.js | PAGEWISE_P14_RELATED | do not stage |
+| functions/audit_syllabus_atom_pro_queue_write_result.js | RX6G_RELEVANT | stage in RX6G |
+| functions/rollback_syllabus_atom_pro_queue_rx6g.js | RX6G_RELEVANT | stage in RX6G |
+| package.json | RX6G_RELEVANT | stage in RX6G |
+| docs/patch_safety/FUP_2C_RX6G_validation.txt | RX6G_RELEVANT | stage in RX6G |
+| docs/patch_safety/RC_X4E_R13_RESUME_baseline_alignment_output.txt | R13_RELATED | do not stage |
+| docs/syllabus/FUP_2C_RX6G_PRO_QUEUE_CONTROLLED_WRITE.md | RX6G_RELEVANT | stage in RX6G |
+| functions/audit_pagewise_post_p14_result.js | PAGEWISE_P14_RELATED | do not stage |

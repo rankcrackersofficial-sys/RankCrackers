@@ -1,0 +1,67 @@
+{
+  "queueRunId": "fup2c_rx6g_pro_queue_jee_main_2026_20260720080015",
+  "queueDocs": 206,
+  "subjectCounts": {
+    "Mathematics": 43,
+    "Physics": 66,
+    "Chemistry": 97,
+    "Unknown": 0
+  },
+  "priorityCounts": {
+    "HIGH": 0,
+    "MEDIUM": 163,
+    "LOW": 43,
+    "blocked": 0
+  },
+  "defaults": {
+    "pending": 206,
+    "proPending": 206,
+    "founderRequired": 206,
+    "canPublishTrue": 0,
+    "writeAllowedNowTrue": 0,
+    "proAiCalledTrue": 0,
+    "atomMutationAllowedTrue": 0,
+    "studentPublishAllowedTrue": 0
+  },
+  "sourceAtomSafety": {
+    "sourceAtomIdExists": 206,
+    "sourceAtomsStillNeedsReview": 206,
+    "sourceAtomsFounderApprovedTrue": 0,
+    "sourceAtomsStudentTopicNodePublishedTrue": 0,
+    "sourceAtomsTopicNodePublishedTrue": 0,
+    "sourceAtomsModifiedByRX6G": false
+  },
+  "scopeSafety": {
+    "proVerificationQueueCreated": true,
+    "syllabusAtomsWrites": 0,
+    "verificationRunsWrites": 0,
+    "topicNodesWrites": 0,
+    "studentMissionCatalogWrites": 0,
+    "crucibleWrites": 0,
+    "digiBookWrites": 0,
+    "pyqDownloadsWrites": 0,
+    "pageExtractionsMutation": 0,
+    "officialDocumentsMutation": 0
+  },
+  "queueIdVerification": {
+    "duplicateQueueIds": 0,
+    "missingSourceAtomId": 0,
+    "duplicateSourceAtomIdInQueue": 0,
+    "unknownSubject": 0
+  },
+  "confirmations": {
+    "noProAiCall": true,
+    "noVerificationRunsWrite": true,
+    "noSyllabusAtomsMutation": true,
+    "noAtomApproval": true,
+    "noTopicNodesPublish": true,
+    "noStudentDeliveryChange": true,
+    "noAiOrOcr": true,
+    "noExtractionApply": true,
+    "noDeploy": true,
+    "noCrucibleGeneration": true,
+    "noDigiBookGeneration": true,
+    "noVestaCityTouch": true
+  },
+  "verdict": "FUP_2C_RX6G_QUEUE_WRITE_COMPLETE"
+}

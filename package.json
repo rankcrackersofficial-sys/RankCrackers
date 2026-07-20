@@ -69,7 +69,10 @@
     "audit:fup2c:verify5-final-closeout": "node functions/audit_fup2c_verify5_final_closeout.js",
     "audit:syllabus:atom-expansion-live-result": "node functions/audit_syllabus_atom_pro_review_readiness.js",
     "audit:syllabus:atom-pro-review-readiness": "node functions/audit_syllabus_atom_pro_review_readiness.js",
-    "audit:syllabus:atom-pro-queue-manifest-dry-run": "node functions/audit_syllabus_atom_pro_queue_manifest_dry_run.js"
+    "audit:syllabus:atom-pro-queue-manifest-dry-run": "node functions/audit_syllabus_atom_pro_queue_manifest_dry_run.js",
+    "apply:syllabus:atom-pro-queue-write": "node functions/apply_syllabus_atom_pro_queue_write.js",
+    "audit:syllabus:atom-pro-queue-write-result": "node functions/audit_syllabus_atom_pro_queue_write_result.js",
+    "rollback:syllabus:atom-pro-queue-rx6g": "node functions/rollback_syllabus_atom_pro_queue_rx6g.js"
   },
   "dependencies": {
     "firebase-admin": "^12.7.0",

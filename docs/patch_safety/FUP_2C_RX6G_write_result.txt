@@ -1,0 +1,48 @@
+{
+  "queueRunId": "fup2c_rx6g_pro_queue_jee_main_2026_20260720080015",
+  "attemptedCreateCount": 206,
+  "successfulCreateCount": 206,
+  "skippedExistingCount": 0,
+  "failedCount": 0,
+  "first20QueueItemIds": [
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_365c8a9710",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_01789b3f53",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_c46adc14a8",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_19e3c8e473",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_c716376bdf",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_6313f59674",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_e06f58296b",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_6915fabf87",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_60b4e7283b",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_8ca2f9f92f",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_74a0861fbb",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_c7f772741b",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_382fe0a6ff",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_b97dd9ccb1",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_560aad64da",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_bde9fff504",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_5447d728d5",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_bf4dde4b07",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_6df867af93",
+    "pvq_jee_main_2026_rx6d_chem_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_973be0e0bb"
+  ],
+  "subjectCountsCreated": {
+    "Mathematics": 43,
+    "Physics": 66,
+    "Chemistry": 97,
+    "Unknown": 0
+  },
+  "priorityCountsCreated": {
+    "HIGH": 0,
+    "MEDIUM": 163,
+    "LOW": 43,
+    "blocked": 0
+  },
+  "targetCollection": "pro_verification_queue",
+  "noDisallowedTargetWrite": true,
+  "proAiCalled": false,
+  "createdByPhase": "FUP_2C_RX6G_QUEUE_WRITE",
+  "missionId": "jee_main_2026",
+  "expansionRunId": "fup2c_rx6d_live_jee_main_2026_20260720060432",
+  "verdict": "FUP_2C_RX6G_QUEUE_WRITE_COMPLETE"
+}
