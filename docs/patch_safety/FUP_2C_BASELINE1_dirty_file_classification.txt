@@ -1,0 +1,17 @@
+﻿File | Classification | Action
+--- | --- | ---
+docs/pagewise/FUP_2C_BASELINE1_CURRENT_PAGEWISE_BASELINE.md | PAGEWISE_BASELINE_RELEVANT | stage in BASELINE1
+docs/patch_safety/FUP_2C_BASELINE1_current_pagewise_result.json | BASELINE1_RELEVANT | stage in BASELINE1
+docs/patch_safety/FUP_2C_BASELINE1_dirty_file_classification.txt | BASELINE1_RELEVANT | stage in BASELINE1
+docs/patch_safety/FUP_2C_BASELINE1_status_before.txt | BASELINE1_RELEVANT | stage in BASELINE1
+docs/patch_safety/FUP_2C_BASELINE1_validation.txt | BASELINE1_RELEVANT | stage in BASELINE1
+docs/patch_safety/FUP_2C_BASELINE1_worker_current_baseline.json | BASELINE1_RELEVANT | stage in BASELINE1
+functions/audit_pagewise_current_baseline_result.js | PAGEWISE_BASELINE_RELEVANT | stage in BASELINE1
+functions/audit_worker_training_current_pagewise_baseline.js | PAGEWISE_BASELINE_RELEVANT | stage in BASELINE1
+package.json | BASELINE1_RELEVANT | stage in BASELINE1
+docs/patch_safety/FUP_2C_BASELINE1_repo_state.txt | BASELINE1_RELEVANT | inspect only / do not stage
+docs/patch_safety/RC_X4E_R14_baseline_alignment_output.txt | R14_RELATED | do not stage / separate phase
+docs/patch_safety/RC_X4E_R14_selector_dry_run_output.txt | R14_RELATED | do not stage / separate phase
+docs/patch_safety/RC_X4E_R14_full_validation_output.txt | R14_RELATED | do not stage / separate phase
+functions/audit_17_drift_files_detailed.js | IR4_RELATED | do not stage / separate phase
+functions/generate_ir4_baselines.js | IR4_RELATED | do not stage / separate phase

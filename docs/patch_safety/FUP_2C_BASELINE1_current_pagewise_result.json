@@ -1,0 +1,36 @@
+{
+  "phase": "FUP-2C-BASELINE1",
+  "missionId": "jee_main_2026",
+  "expected": {
+    "total": 104,
+    "active": 61,
+    "completed": 40,
+    "failed": 3,
+    "processing": 0,
+    "pageExtractions": 133
+  },
+  "actual": {
+    "total": 104,
+    "active": 61,
+    "completed": 40,
+    "failed": 3,
+    "processing": 0,
+    "pageExtractions": 133
+  },
+  "mismatches": [],
+  "evidence": {
+    "duplicatePageExtractionRecords": 0,
+    "missingSourceProofCount": 0,
+    "reviewLockCount": 133,
+    "parentPublishSideEffects": 0,
+    "studentDeliverySideEffects": 0
+  },
+  "confirmations": {
+    "noFirestoreWrite": true,
+    "noExtractionApply": true,
+    "noPageExtractionsWrite": true,
+    "noAiOrOcr": true,
+    "noStudentDeliveryChange": true
+  },
+  "verdict": "CURRENT_PAGEWISE_BASELINE_PASS"
+}
