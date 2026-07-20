@@ -1,0 +1,14 @@
+FUP-2C-QCELL3 CanonicalKey Controlled Write Preflight
+manifestGenerated: true
+futureTarget: mission_realms/jee_main_2026/syllabus_atoms/{atomId}
+futureOperation: UPDATE_CANONICAL_KEY_ONLY
+manifestCount: 211
+writeAllowedNow: false
+proposedVsExistingCollisions: 0
+proposedInternalCollisions: 0
+malformedProposedKeys: 0
+duplicateHeldAtomsIncluded: 0
+rejectedAtomsIncluded: 0
+fieldGate: FIELD_GATE_PASS
+recommendation: READY_FOR_QCELL4_CANONICAL_KEY_CONTROLLED_WRITE
+verdict: FUP_2C_QCELL3_CANONICAL_WRITE_PREFLIGHT_READY

@@ -25,3 +25,8 @@ Student publish lock: question cells and canonicalKey infrastructure must never 
 Recommended next phase: `READY_FOR_QCELL3_CANONICAL_WRITE_PREFLIGHT`.
 
 Exact Founder decision phrase: `APPROVE_210_CONCEPT_READY_CANONICAL_WRITE_AND_HOLD_12_DUPLICATES`.
+
+## QCELL3 Cross-reference
+
+QCELL3 built the read-only canonicalKey controlled write preflight. Future update manifest count: 211. Collision gate: pass. Field gate: pass. 12 duplicate Physics atoms remain held and 1 rejected atom remains excluded. No canonicalKey write was performed.
+

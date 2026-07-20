@@ -18,3 +18,8 @@ Safety locks: no Firestore write, no canonicalKey write, no question cell write,
 
 Founder decision locked: `APPROVE_210_CONCEPT_READY_CANONICAL_WRITE_AND_HOLD_12_DUPLICATES`. Future QCELL3 preflight count is 211 candidates: 210 concept-ready plus 1 direct safe candidate. 12 duplicate Physics atoms remain held and 1 rejected atom remains excluded. No write was authorized by DECISION1.
 
+
+## QCELL3 Cross-reference
+
+QCELL3 built the read-only canonicalKey controlled write preflight. Future update manifest count: 211. Collision gate: pass. Field gate: pass. 12 duplicate Physics atoms remain held and 1 rejected atom remains excluded. No canonicalKey write was performed.
+
