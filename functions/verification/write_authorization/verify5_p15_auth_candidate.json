@@ -1,0 +1,35 @@
+{
+  "authorizationId": "auth_p15_20260720_v4_final_neet",
+  "phase": "RC-X4E-P15-L3",
+  "repository": "C:\\RankCrackers\\RankCrackers-55",
+  "branch": "safety/rc-g2-pre-notification-schema",
+  "authorizedCodeCommit": "a71503b944ecde4f37468cf1740a0d24d206f103",
+  "projectId": "rankcrackers-55",
+  "missionId": "neet_(ug)-2027",
+  "documentId": "hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+  "taskIds": [
+    "rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b1_p1_3",
+    "rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b2_p4_6",
+    "rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b3_p7_9"
+  ],
+  "pageRanges": [
+    { "start": 1, "end": 3 },
+    { "start": 4, "end": 6 },
+    { "start": 7, "end": 9 }
+  ],
+  "baselineChecksums": {
+    "queue": "4123cea51b9df6a5acb2426038685e894e1f25f4c1daa653c9cc062e9690064e",
+    "page": "1926a7ba2ba94bcf53149ee0d2eaba0ca6910261202837bb9d7f91833a927ea5"
+  },
+  "dryRunChecksum": "39fcaac534ecb0724c551c3ffa3a2559b576f4929e01d66c7df2bb489eeb78a7",
+  "mutationBudget": {
+    "perTaskSuccess": 5,
+    "batchSuccess": 15,
+    "absoluteMaximum": 15
+  },
+  "expiresAt": "2026-07-21T12:00:00Z",
+  "oneTime": true,
+  "consumed": false,
+  "P15ExplicitAuthorization": false,
+  "P15ExecutionAllowed": false
+}
