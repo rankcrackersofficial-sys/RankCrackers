@@ -57,7 +57,9 @@
                     "audit:fup2c:verify5-second-gate-token": "node functions/audit_fup2c_verify5_second_gate_token_preflight.js",
                     "audit:fup2c:verify5-live-auth-state": "node functions/audit_fup2c_verify5_live_authorization_state.js",
                     "audit:fup2c:verify5-founder-approval": "node functions/audit_fup2c_verify5_founder_approval_phrase.js",
-                    "generate:fup2c:verify5-second-gate-token": "node functions/generate_fup2c_verify5_second_gate_token.js"
+                    "generate:fup2c:verify5-second-gate-token": "node functions/generate_fup2c_verify5_second_gate_token.js",
+                    "audit:fup2c:verify5-live-sandbox-write-result": "node functions/audit_fup2c_verify5_live_sandbox_write_result.js",
+                    "apply:fup2c:verify5-live-sandbox-write": "node functions/apply_fup2c_verify5_live_sandbox_write.js"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",
