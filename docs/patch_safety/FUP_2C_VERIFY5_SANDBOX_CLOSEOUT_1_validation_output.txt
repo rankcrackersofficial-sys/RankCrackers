@@ -1,0 +1,198 @@
+
+> audit:rankcrackers:guard
+> node functions/audit_rankcrackers_path_and_rules.js
+
+==============================================
+RANKCRACKERS PATH & FINAL RULES GUARD
+==============================================
+Current working path: C:\RankCrackers\RankCrackers-55
+Official working path: C:\RankCrackers\RankCrackers-55
+
+Guard results:
+- Official path locked: YES
+- Web build rule guarded: YES
+- Android Student/User-only guard checked: YES
+- M4/M6 catalog bridge guard checked: YES
+- Extraction policy documented: YES
+- Universal extraction audit exists: YES
+- Universal page completeness audit exists: YES
+- Atomic linkage integrity audit exists: YES
+- Universal page count queue apply script: PRESENT
+- Page count queue state audit exists: YES
+- Metadata repair planner exists: YES
+- Metadata repair apply script exists: YES
+- Repaired docs page count queue apply script: PRESENT
+- Page count detection worker exists: YES
+- Page count worker capability audit exists: YES
+- Final page count result audit exists: YES
+- Universal pagewise planner exists: YES
+- Universal pagewise apply exists: YES
+- Pagewise queue audit exists: YES
+- Pagewise worker exists: YES
+- Pagewise worker capability audit exists: YES
+- Pagewise worker runtime safety audit exists: YES
+- Pagewise extraction apply audit exists: YES
+- Notification dynamic schema system: PRESENT
+- Notification page count queue apply script: PRESENT
+
+RC_G0_PATH_AND_RULES_GUARD_PASSED
+
+RC_X4E_R8_FIX3_BOUNDARY_GUARD_READY
+
+> audit:fup2c:verify5-founder-approval
+> node functions/audit_fup2c_verify5_founder_approval_phrase.js
+
+FUP_2C_VERIFY5_FOUNDER_APPROVAL_PHRASE_VALID
+founder_approval_phrase_hash: 0c63d04b9d603c5f43e9c95e8ccccc2d4964b033d37fc392bf9271c8d25d3b79
+
+> audit:fup2c:verify5-second-gate-token
+> node functions/audit_fup2c_verify5_second_gate_token_preflight.js
+
+FUP_2C_VERIFY5_SECOND_GATE_TOKEN_PREFLIGHT_READY
+
+> audit:fup2c:verify5-live-auth-state
+> node functions/audit_fup2c_verify5_live_authorization_state.js
+
+==============================================
+FUP-2C-VERIFY5 LIVE AUTHORIZATION STATE AUDIT
+==============================================
+architecture_ready: true
+checksum_reconciled: true
+founder_explicit_approval: true
+second_gate_token_present: true
+second_gate_token_valid: true
+active_live_token: true
+live_target_existence_known: false
+deployed_rules_equivalence_known: false
+live_execution_allowed: false
+
+Verdict:
+FUP_2C_VERIFY5_LIVE_AUTH_STATE_TOKEN_READY_EXECUTION_STILL_BLOCKED
+
+> audit:fup2c:verify5-live-sandbox-write-result
+> node functions/audit_fup2c_verify5_live_sandbox_write_result.js
+
+=== FUP-2C-VERIFY5 LIVE SANDBOX WRITE RESULT AUDIT ===
+Verified global page_extractions count: 118
+FUP_2C_VERIFY5_LIVE_SANDBOX_WRITE_RESULT_READY
+
+> audit:fup2c:verify5-sandbox-closeout
+> node functions/audit_fup2c_verify5_sandbox_closeout.js
+
+=== FUP-2C-VERIFY5 SANDBOX CLOSEOUT AUDIT ===
+Syllabus atoms count: 430 (STABLE)
+Topic nodes count: 0 (STABLE)
+Page extractions count: 118 (STABLE)
+Production student publish: BLOCKED
+FUP_2C_VERIFY5_SANDBOX_CLOSEOUT_READY
+=========================================
+PLATFORM BOUNDARY REGRESSION AUDIT
+=========================================
+??? Check 1: lib/main_web.dart exists.
+??? Check 2: lib/main_web.dart imports/loads WebShell/UnifiedCommandConsole.
+??? Check 3: lib/core/router/app_router.dart does not route Founder/Admin to mobile AdminScreen.
+??? Check 5: AppRoutes.admin does not render AdminScreen (shows placeholder).
+??? Check 4: legacy admin_screen.dart is not active in app_router.dart.
+??? Check 6: student_mission_catalog query exists in firestore_service.dart.
+??? Check 7: create_mission_dialog.dart still mirrors to student_mission_catalog.
+??? Check 8: edit_mission_dialog.dart still mirrors to student_mission_catalog.
+-----------------------------------------
+???? PATCH_W1B_BOUNDARY_AUDIT_PASSED
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 61.0.0 (105.0.0 available)
+  _flutterfire_internals 1.3.59 (1.3.75 available)
+  analyzer 5.13.0 (14.1.0 available)
+  archive 3.6.1 (4.0.9 available)
+  build 2.4.1 (4.0.8 available)
+  build_config 1.1.2 (1.3.1 available)
+  build_daemon 4.1.1 (4.1.2 available)
+  build_resolvers 2.4.2 (3.0.4 available)
+  build_runner 2.4.13 (2.15.2 available)
+  build_runner_core 7.3.2 (9.3.2 available)
+  cli_util 0.4.2 (0.5.1 available)
+  cloud_firestore 5.6.12 (6.7.1 available)
+  cloud_firestore_platform_interface 6.6.12 (8.0.5 available)
+  cloud_firestore_web 4.4.12 (5.7.1 available)
+  cloud_functions 5.6.2 (6.3.5 available)
+  cloud_functions_platform_interface 5.8.2 (6.0.5 available)
+  cloud_functions_web 4.11.5 (5.1.11 available)
+  connectivity_plus 6.1.5 (7.3.0 available)
+  cross_file 0.3.5+2 (0.3.5+4 available)
+  dart_style 2.3.2 (3.1.12 available)
+  device_info_plus 11.5.0 (13.2.0 available)
+  device_info_plus_platform_interface 7.0.3 (8.1.0 available)
+  dio 5.9.2 (5.10.0 available)
+  dio_web_adapter 2.1.2 (2.2.0 available)
+  equatable 2.0.8 (2.1.0 available)
+  extension 0.6.0 (1.0.0 available)
+  file_picker 8.3.7 (11.0.2 available)
+  firebase_app_check 0.3.2+10 (0.4.5+2 available)
+  firebase_app_check_platform_interface 0.1.1+10 (0.4.1+2 available)
+  firebase_app_check_web 0.2.0+14 (0.2.5+2 available)
+  firebase_auth 5.7.0 (6.5.6 available)
+  firebase_auth_platform_interface 7.7.3 (9.0.5 available)
+  firebase_auth_web 5.15.3 (6.2.5 available)
+  firebase_core 3.15.2 (4.12.1 available)
+  firebase_core_platform_interface 6.0.3 (8.0.0 available)
+  firebase_core_web 2.24.1 (3.9.1 available)
+  firebase_crashlytics 4.3.10 (5.2.6 available)
+  firebase_crashlytics_platform_interface 3.8.10 (3.8.26 available)
+  firebase_performance 0.10.1+10 (0.11.4+5 available)
+  firebase_performance_platform_interface 0.1.5+10 (0.2.0+5 available)
+  firebase_performance_web 0.1.7+16 (0.1.8+11 available)
+  firebase_storage 12.4.10 (13.4.5 available)
+  firebase_storage_platform_interface 5.2.10 (6.0.5 available)
+  firebase_storage_web 3.10.17 (3.11.11 available)
+  flutter_native_splash 2.4.4 (2.4.8 available)
+  flutter_riverpod 2.6.1 (3.3.2 available)
+  flutter_secure_storage 9.2.4 (10.3.1 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.1 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.1 available)
+  flutter_secure_storage_web 1.2.1 (2.1.1 available)
+  flutter_secure_storage_windows 3.1.2 (4.2.2 available)
+  google_fonts 6.3.3 (8.2.0 available)
+  google_mlkit_commons 0.9.0 (0.12.0 available)
+  google_mlkit_text_recognition 0.14.0 (0.16.0 available)
+  google_sign_in 6.3.0 (7.2.0 available)
+  google_sign_in_android 6.2.1 (7.2.15 available)
+  google_sign_in_ios 5.9.0 (6.3.0 available)
+  google_sign_in_platform_interface 2.5.0 (3.1.0 available)
+  google_sign_in_web 0.12.4+4 (1.1.3 available)
+  hooks 2.0.2 (2.1.0 available)
+  image 4.3.0 (4.9.1 available)
+  image_picker 1.2.2 (1.2.3 available)
+  intl 0.19.0 (0.20.3 available)
+  js 0.6.7 (0.7.2 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 8.3.1 (10.2.1 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  path_provider_linux 2.2.1 (2.2.2 available)
+  record_use 0.6.0 (1.0.0 available)
+  riverpod 2.6.1 (3.3.2 available)
+  shared_preferences_android 2.4.26 (2.4.27 available)
+  shelf_web_socket 2.0.1 (3.0.0 available)
+  source_gen 1.5.0 (4.2.3 available)
+  syncfusion_flutter_core 28.2.12 (34.1.31 available)
+  syncfusion_flutter_pdf 28.2.12 (34.1.31 available)
+  test_api 0.7.11 (0.7.13 available)
+  uuid 4.5.3 (4.6.0 available)
+  vector_math 2.2.0 (2.4.0 available)
+  win32 5.15.0 (6.3.0 available)
+  win32_registry 2.1.0 (3.0.3 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+84 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading C:/RankCrackers/RankCrackers-55/test/smoke_test.dart
+00:00 +0: (setUpAll)
+RC_X4E_R8_FIX3_SMOKE_BASELINE_READY
+00:00 +0: RankCrackers system smoke tests KnowledgeEngine Initialization Smoke Test
+00:00 +1: RankCrackers system smoke tests Mission Realm widget construction Smoke Test
+00:00 +2: RankCrackers system smoke tests Dashboard widget construction Smoke Test
+00:00 +3: RankCrackers system smoke tests App Router - Mobile /admin route is blocked
+00:00 +4: (tearDownAll)
+00:00 +4: All tests passed!
