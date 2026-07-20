@@ -60,7 +60,10 @@
                     "generate:fup2c:verify5-second-gate-token": "node functions/generate_fup2c_verify5_second_gate_token.js",
                     "audit:fup2c:verify5-live-sandbox-write-result": "node functions/audit_fup2c_verify5_live_sandbox_write_result.js",
                     "apply:fup2c:verify5-live-sandbox-write": "node functions/apply_fup2c_verify5_live_sandbox_write.js",
-                    "audit:fup2c:verify5-sandbox-closeout": "node functions/audit_fup2c_verify5_sandbox_closeout.js"
+                    "audit:fup2c:verify5-sandbox-closeout": "node functions/audit_fup2c_verify5_sandbox_closeout.js",
+                    "audit:fup2c:verify5-sandbox-rollback-approval": "node functions/audit_fup2c_verify5_sandbox_rollback_approval_phrase.js",
+                    "generate:fup2c:verify5-sandbox-rollback-token": "node functions/generate_fup2c_verify5_sandbox_rollback_token.js",
+                    "audit:fup2c:verify5-sandbox-rollback-token": "node functions/audit_fup2c_verify5_sandbox_rollback_token.js"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",
