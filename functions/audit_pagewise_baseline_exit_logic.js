@@ -59,11 +59,11 @@ function audit() {
   });
 
   if (!allSafe) {
-    console.error('\nRC_X4E_R11_NON_FATAL_BASELINE_MISMATCH_FOUND');
+    console.error('\nRC_X4E_R13_NON_FATAL_BASELINE_MISMATCH_FOUND');
     process.exit(1);
   }
 
-  console.log('\nRC_X4E_R11_BASELINE_EXIT_LOGIC_READY');
+  console.log('\nRC_X4E_R13_BASELINE_EXIT_LOGIC_READY');
 }
 
 audit();

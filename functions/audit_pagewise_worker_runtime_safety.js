@@ -5,19 +5,20 @@ const cp = require('child_process');
 
 const PROJECT_ID = 'rankcrackers-55';
 
-const EXPECTED_AFTER_P13 = {
+const EXPECTED_AFTER_P14 = {
   total: 104,
-  active: 67,
-  completed: 34,
+  active: 64,
+  completed: 37,
   failed: 3,
   processing: 0,
-  pageExtractions: 105
+  pageExtractions: 118
 };
 
 function assertNoStaleBaselineSignature() {
   const auditContent = fs.readFileSync(__filename, 'utf8');
   const staleSigs = [
         'Post-P' + '13', 'active: ' + '70', 'completed: ' + '31', 'pageExtractions: ' + '96',
+        'Post-P' + '13', 'active: ' + '67', 'completed: ' + '34', 'pageExtractions: ' + '105',
         'Post-P' + '12', 'active: ' + '73', 'completed: ' + '28', 'pageExtractions: ' + '89',
 'Post-P' + '11', 'active: ' + '76', 'completed: ' + '25', 'pageExtractions: ' + '80',
     'EXPECTED_AFTER_P' + '11', 'active: ' + '76', 'completed: ' + '25', 'pageExtractions: ' + '80',
@@ -123,20 +124,20 @@ async function audit() {
   console.log(`- Global Page Extractions: ${actualPageExtractions}`);
 
   const mismatch =
-    actualCounts.total !== EXPECTED_AFTER_P13.total ||
-    actualCounts.active !== EXPECTED_AFTER_P13.active ||
-    actualCounts.completed !== EXPECTED_AFTER_P13.completed ||
-    actualCounts.failed !== EXPECTED_AFTER_P13.failed ||
-    actualPageExtractions !== EXPECTED_AFTER_P13.pageExtractions;
+    actualCounts.total !== EXPECTED_AFTER_P14.total ||
+    actualCounts.active !== EXPECTED_AFTER_P14.active ||
+    actualCounts.completed !== EXPECTED_AFTER_P14.completed ||
+    actualCounts.failed !== EXPECTED_AFTER_P14.failed ||
+    actualPageExtractions !== EXPECTED_AFTER_P14.pageExtractions;
 
   if (mismatch) {
-      console.error('RC_X4E_R11_BASELINE_MISMATCH');
-      console.error('Expected:', EXPECTED_AFTER_P13);
+      console.error('RC_X4E_R13_BASELINE_MISMATCH');
+      console.error('Expected:', EXPECTED_AFTER_P14);
       console.error('Actual:', { ...actualCounts, pageExtractions: actualPageExtractions });
       process.exit(1);
   }
 
-  console.log('RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
+  console.log('RC_X4E_R13_BASELINE_AFTER_P14_CONFIRMED');
 
   // D. Hardened Selector Dry-Run Behavior
   console.log('\nRunning Hardened Selector Dry-Run Check...');
@@ -176,7 +177,7 @@ async function audit() {
   }
 
   if (blockers.length === 0) {
-    console.log('\nRC_X4E_R11_RUNTIME_SAFETY_AUDIT_READY');
+    console.log('\nRC_X4E_R13_RUNTIME_SAFETY_AUDIT_READY');
   } else {
     console.error('\nRC_X4E_R11_RUNTIME_SAFETY_BLOCKED:');
     blockers.forEach(b => console.error(`- ${b}`));

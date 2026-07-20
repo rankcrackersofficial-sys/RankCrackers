@@ -130,17 +130,17 @@ async function audit() {
   console.log(`- page_extractions: ${pageExtractionsCount} (Expected: 105)`);
 
   const matchTotal = counts.total === 104;
-  const matchActive = counts.active === 67;
-  const matchCompleted = counts.completed === 34;
+  const matchActive = counts.active === 64;
+  const matchCompleted = counts.completed === 37;
   const matchFailed = counts.failed === 3;
-  const matchPE = pageExtractionsCount === 105;
+  const matchPE = pageExtractionsCount === 118;
 
   if (!matchTotal || !matchActive || !matchCompleted || !matchFailed || !matchPE) {
-      console.error('RC_X4E_R11_BASELINE_MISMATCH');
+      console.error('RC_X4E_R13_BASELINE_MISMATCH');
       console.error('Matches:', { total: matchTotal, active: matchActive, completed: matchCompleted, failed: matchFailed, pe: matchPE });
       process.exit(1);
   }
-  console.log('RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
+  console.log('RC_X4E_R13_BASELINE_AFTER_P14_CONFIRMED');
 
   console.log('\n--- Part I: Scaling Readiness ---');
   const workerPath = path.join(__dirname, 'process_pagewise_extraction_batches.js');
@@ -150,8 +150,8 @@ async function audit() {
   console.log(`- worker has --limit 3 lock: ${hasLimit1}`);
   console.log(`- worker has --task-id support: ${hasTaskId}`);
 
-  console.log('\nscaling_recommendation: Option B (RC-X4E-P14-L3 - Controlled Limit 3 Native Apply)');
-  console.log('\nRC_X4E_R11_TWO_BATCH_CONTINUITY_AUDIT_READY');
+  console.log('\nscaling_recommendation: Option B (RC-X4E-P15-L3 - Controlled Limit 3 Native Apply)');
+  console.log('\nRC_X4E_R13_TWO_BATCH_CONTINUITY_AUDIT_READY');
 }
 
 audit().catch(e => {

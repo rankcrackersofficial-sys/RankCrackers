@@ -157,8 +157,8 @@ async function audit() {
   console.log(`- documents with page_extractions: ${docsWithRecords}`);
   console.log(`- total page_extraction records found: ${totalRecordsFound}`);
 
-  if (docsWithRecords !== 2 || totalRecordsFound !== 105) {
-      console.error('RC_X4E_R11_BASELINE_MISMATCH');
+  if (docsWithRecords !== 3 || totalRecordsFound !== 118) {
+      console.error('RC_X4E_R13_BASELINE_MISMATCH');
       process.exit(1);
   }
 
@@ -197,7 +197,7 @@ async function audit() {
       process.exit(1);
   }
 
-  console.log('\nRC_X4E_R2_FIRST_SUCCESSFUL_EXTRACTION_AUDIT_READY');
+  console.log('\nRC_X4E_R13_FIRST_SUCCESSFUL_EXTRACTION_AUDIT_READY');
 }
 
 audit().catch(e => {

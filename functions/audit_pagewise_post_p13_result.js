@@ -12,13 +12,13 @@ if (!admin.apps.length) {
 
 const db = admin.firestore();
 
-const EXPECTED_AFTER_P13 = {
+const EXPECTED_AFTER_P14 = {
   total: 104,
-  active: 67,
-  completed: 34,
+  active: 64,
+  completed: 37,
   failed: 3,
   processing: 0,
-  pageExtractions: 105
+  pageExtractions: 118
 };
 
 const activeScripts = [
@@ -88,10 +88,10 @@ async function verifyGlobalBaseline() {
   };
 
   console.log('Global baseline:', actual);
-  const mismatch = Object.keys(EXPECTED_AFTER_P13).filter(key => actual[key] !== EXPECTED_AFTER_P13[key]);
+  const mismatch = Object.keys(EXPECTED_AFTER_P14).filter(key => actual[key] !== EXPECTED_AFTER_P14[key]);
   if (mismatch.length > 0) {
-    console.error('RC_X4E_R11_BASELINE_MISMATCH');
-    console.error('Expected:', EXPECTED_AFTER_P13);
+    console.error('RC_X4E_R13_BASELINE_MISMATCH');
+    console.error('Expected:', EXPECTED_AFTER_P14);
     console.error('Actual:', actual);
     process.exit(1);
   }
@@ -234,7 +234,7 @@ async function main() {
   await verifyNoDuplicatePageRecords();
   await verifyParentDocumentNoSideEffects();
   verifyNoActiveStaleBaselineSignatures();
-  console.log('RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
+  console.log('RC_X4E_R13_BASELINE_AFTER_P14_CONFIRMED');
   console.log('RC_X4E_R11_POST_P13_RESULT_AUDIT_READY');
 }
 

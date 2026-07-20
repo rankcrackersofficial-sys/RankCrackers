@@ -274,17 +274,17 @@ async function main() {
   console.log(`- Global page_extractions count: ${pageExtractionsCount}`);
 
   const matchTotal = total === 104;
-  const matchActive = active === 67;
-  const matchCompleted = completed === 34;
+  const matchActive = active === 64;
+  const matchCompleted = completed === 37;
   const matchFailed = failed === 3;
   const matchProcessing = processing === 0;
-  const matchPE = pageExtractionsCount === 105;
+  const matchPE = pageExtractionsCount === 118;
 
   if (!matchTotal || !matchActive || !matchCompleted || !matchFailed || !matchProcessing || !matchPE) {
-    console.error('RC_X4E_R11_BASELINE_MISMATCH');
+    console.error('RC_X4E_R13_BASELINE_MISMATCH');
     process.exit(1);
   }
-  console.log('RC_X4E_R11_BASELINE_AFTER_P13_CONFIRMED');
+  console.log('RC_X4E_R13_BASELINE_AFTER_P14_CONFIRMED');
 
   // ---------------------------------------------------------------------------
   // Part I â€” Multi-Document Integrity
