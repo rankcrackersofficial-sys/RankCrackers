@@ -83,7 +83,12 @@
                     "audit:syllabus:canonical-key-write-preflight":  "node functions/audit_syllabus_atom_canonical_key_write_preflight.js",
                     "audit:syllabus:canonical-key-hold-resolution":  "node functions/audit_syllabus_atom_canonical_key_hold_resolution.js",
                     "audit:qcell2:founder-hold-decision-policy":  "node functions/audit_qcell2_founder_hold_decision_policy.js",
-                    "audit:qcell3:canonical-key-controlled-write-preflight":  "node functions/audit_qcell3_canonical_key_controlled_write_preflight.js"
+                    "audit:qcell3:canonical-key-controlled-write-preflight":  "node functions/audit_qcell3_canonical_key_controlled_write_preflight.js",
+                    "audit:rcx4e:ir4-refine8":  "node functions/audit_rc_x4e_ir4_refine8_acceptance.js",
+                    "audit:rcx4e:p15-founder-approval":  "node functions/audit_rc_x4e_p15_founder_approval_phrase.js",
+                    "generate:rcx4e:p15-second-gate-token":  "node functions/generate_rc_x4e_p15_second_gate_token.js",
+                    "audit:rcx4e:p15-second-gate-token":  "node functions/audit_rc_x4e_p15_second_gate_token.js",
+                    "audit:rcx4e:p15-auth-state":  "node functions/audit_rc_x4e_p15_authorization_state.js"
                 },
     "dependencies":  {
                          "firebase-admin":  "^12.7.0",
