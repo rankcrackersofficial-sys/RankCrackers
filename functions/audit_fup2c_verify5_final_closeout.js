@@ -40,16 +40,45 @@ async function main() {
     block(`Topic nodes count changed. Expected 0, got ${tnSnap.size}`, 'FUP_2C_VERIFY5_FINAL_CLOSEOUT_BLOCKED_ACADEMIC_COUNT_MISMATCH');
   }
 
-  // page_extractions count
+  // page_extractions count verification
+  const HISTORICAL_BASE = 118;
+  const EXPECTED_DELTA = 15;
+  const DOC_BA8B = 'hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b';
+
   let peCount = 0;
   const docsSnap = await db.collection('mission_realms').doc(MISSION_ID).collection('official_documents').get();
   for (const doc of docsSnap.docs) {
     const peSnap = await db.collection('mission_realms').doc(MISSION_ID).collection('official_documents').doc(doc.id).collection('page_extractions').get();
     peCount += peSnap.size;
   }
-  if (peCount !== 133) {
-    block(`Page extractions count changed. Expected 133, got ${peCount}`, 'FUP_2C_VERIFY5_FINAL_CLOSEOUT_BLOCKED_ACADEMIC_COUNT_MISMATCH');
+
+  // Lineage validation for the roll-forward delta (15 records)
+  let verifiedDelta = 0;
+  let incidentDelta = 0;
+  for (let p = 11; p <= 25; p++) {
+    const peDoc = await db.collection('mission_realms').doc(MISSION_ID)
+      .collection('official_documents').doc(DOC_BA8B)
+      .collection('page_extractions').doc(String(p)).get();
+    if (peDoc.exists) {
+      verifiedDelta++;
+      const data = peDoc.data();
+      const taskId = data.extracted_by_task_id || data.taskId || '';
+      // Verify that this belongs to Incident D tasks
+      if (taskId.includes('rc_x4a_pagewise_jee_main_2026_hash_ba8b5256533e0a29e2eb71df3e322885335219d48259f4083365662f5ad7933b_b')) {
+        incidentDelta++;
+      }
+    }
   }
+
+  if (peCount !== (HISTORICAL_BASE + EXPECTED_DELTA)) {
+    block(`Page extractions count changed. Expected ${HISTORICAL_BASE + EXPECTED_DELTA}, got ${peCount}`, 'FUP_2C_VERIFY5_FINAL_CLOSEOUT_BLOCKED_ACADEMIC_COUNT_MISMATCH');
+  }
+  if (verifiedDelta !== EXPECTED_DELTA || incidentDelta !== EXPECTED_DELTA) {
+    block(`Delta lineage validation failed. Expected ${EXPECTED_DELTA} verified roll-forward page records, got ${verifiedDelta} (Incident delta: ${incidentDelta})`, 'FUP_2C_VERIFY5_FINAL_CLOSEOUT_BLOCKED_LINEAGE_MISMATCH');
+  }
+
+  // Emit mandatory warning marker for unauthorized roll-forward
+  console.warn('WARNING: [RC_X4E_R14_FIX3_WARNING_INCIDENT_D_SAFE_ROLL_FORWARD_USED] 15 page records (BA8B pages 11-25) were created without prior authorization under Incident D. These records are technically valid and preserved via SAFE_ROLL_FORWARD, but they do NOT represent an authorized P15 apply.');
 
   // 3. Verify production authority blocked
   const catalogDoc = await db.collection('student_mission_catalog').doc(MISSION_ID).get();
@@ -86,7 +115,7 @@ async function main() {
   console.log('Final sandbox state: deleted/missing (STABLE)');
   console.log('Syllabus atoms count: 430 (STABLE)');
   console.log('Topic nodes count: 0 (STABLE)');
-  console.log('Page extractions count: 133 (STABLE)');
+  console.log('Page extractions count: 133 (STABLE) [118 Historical Base + 15 Reconciled Incident D]');
   console.log('Production authority: BLOCKED');
   console.log('FUP_2C_VERIFY5_FINAL_CLOSEOUT_READY');
 }

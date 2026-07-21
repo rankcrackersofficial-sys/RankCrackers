@@ -1,0 +1,6 @@
+RC_X4E_P15_AUTH_PREFLIGHT_BLOCKED_MISSING_FOUNDER_APPROVAL
+Timestamp: 2026-07-21T11:45:00Z
+Status: Blocker
+Reason: The mandatory Founder approval phrase file (docs/patch_safety/RC_X4E_P15_FOUNDER_APPROVAL_PHRASE.txt) is missing.
+Authorization Token Generation: INHIBITED
+Apply: BLOCKED
