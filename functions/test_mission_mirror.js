@@ -90,9 +90,23 @@ class MockDocumentReference {
       doc: (subId) => new MockDocumentReference(`${this.path}/${name}`, subId),
       where: () => ({
         get: async () => {
-          // Return an empty list/snapshot for subcollections during tests
+          // Return eligible student doc to trigger certificates logic
           return {
-            forEach: () => {}
+            forEach: (cb) => {
+              cb({
+                id: 'student_123',
+                ref: new MockDocumentReference('mission_realms/jee_main_2026/participants', 'student_123'),
+                data: () => ({
+                  attempts: {
+                    FINAL_RESULT: {
+                      status: 'CERTIFICATE_ELIGIBLE',
+                      examName: 'JEE Main',
+                      verifiedScore: 99.5
+                    }
+                  }
+                })
+              });
+            }
           };
         }
       })
@@ -107,8 +121,22 @@ const mockDb = {
     };
   },
   batch: () => ({
-    set: () => {},
-    update: () => {},
+    set: (ref, data) => {
+      if (ref.parentPath === 'certificates' && mockDatabaseState.simulateCertificateBatchFailure) {
+        throw new Error('BATCH_CERTIFICATE_WRITE_FAILED');
+      }
+      const colState = mockDatabaseState[ref.parentPath] || {};
+      colState[ref.id] = data;
+    },
+    update: (ref, data) => {
+      if (ref.parentPath === 'mission_realms' && mockDatabaseState.simulateAnalyticsBatchFailure) {
+        throw new Error('BATCH_ANALYTICS_WRITE_FAILED');
+      }
+      const colState = mockDatabaseState[ref.parentPath] || {};
+      if (colState[ref.id]) {
+        colState[ref.id] = { ...colState[ref.id], ...data };
+      }
+    },
     commit: async () => {}
   }),
   runTransaction: async (callback) => {
@@ -167,16 +195,20 @@ require.cache[require.resolve('firebase-functions')] = {
   exports: mockFunctions
 };
 
-// Require implementation (will load raw handleSentinelAction function!)
+// Require implementation
 const { 
   handleSentinelAction,
   buildStudentMissionCatalogShell, 
-  mirrorMissionShellToStudentCatalog,
-  resolveCanonicalMissionId
+  mirrorMissionShellToStudentCatalog
 } = require('./callable/handle_sentinel_action');
 
+const {
+  resolveCanonicalMissionId,
+  validateOrResolveId
+} = require('./canonical_mission_registry');
+
 console.log("================================================");
-console.log("RUNNING HARDENED INTEGRATION TESTS (21 CASES)");
+console.log("RUNNING HARDENED INTEGRATION TESTS (29 CASES)");
 console.log("================================================");
 
 let testsCount = 0;
@@ -192,6 +224,8 @@ function resetMockDb() {
   mockDatabaseState.student_mission_catalog = {};
   mockDatabaseState.sentinel_drafts = {};
   mockDatabaseState.certificates = {};
+  mockDatabaseState.simulateCertificateBatchFailure = false;
+  mockDatabaseState.simulateAnalyticsBatchFailure = false;
 }
 
 async function runSuite() {
@@ -650,6 +684,151 @@ async function runSuite() {
     }
 
     mockDb.runTransaction = originalRunTransaction;
+  });
+
+  // 22. Existing non-pilot mission with legacy ID preserved
+  await testCase("Existing non-pilot mission with legacy ID preserved", async () => {
+    resetMockDb();
+    const legacyId = 'rec_rpsc_exam_2026_1';
+    mockDatabaseState.recruitments[legacyId] = {
+      id: legacyId,
+      title: 'RPSC Secondary Exam',
+      org: 'RPSC',
+      year: 2026,
+      nature: 'STAGED'
+    };
+
+    const data = {
+      action: 'manifest_realm',
+      recruitmentId: legacyId
+    };
+
+    await handleSentinelAction(data, founderContext);
+
+    const shell = mockDatabaseState.student_mission_catalog[legacyId];
+    assert.ok(shell);
+    assert.strictEqual(shell.id, legacyId);
+  });
+
+  // 23. Same display fields producing a new slug
+  await testCase("Same display fields producing a new slug", async () => {
+    resetMockDb();
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {
+        examName: 'CSE',
+        organization: 'UPSC',
+        year: 2028,
+        nature: 'ACTIVE'
+      }
+    };
+
+    await handleSentinelAction(data, founderContext);
+
+    const expectedId = 'rec_upsc_cse_2028';
+    const shell = mockDatabaseState.student_mission_catalog[expectedId];
+    assert.ok(shell);
+    assert.strictEqual(shell.id, expectedId);
+  });
+
+  // 24. Lifecycle action without canonical ID fails closed
+  await testCase("Lifecycle action without canonical ID fails closed", async () => {
+    resetMockDb();
+    const data = {
+      action: 'launch_realm',
+      recruitmentId: ''
+    };
+
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, founderContext);
+    }, /CANONICAL_ID_REQUIRED/);
+  });
+
+  // 25. Invalid canonical ID format fails closed
+  await testCase("Invalid canonical ID format fails closed", async () => {
+    resetMockDb();
+    const data = {
+      action: 'launch_realm',
+      recruitmentId: 'jee_main_2026; DROP TABLE student_mission_catalog;'
+    };
+
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, founderContext);
+    }, /INVALID_CANONICAL_ID/);
+  });
+
+  // 26. Alias resolving to existing document
+  await testCase("Alias resolving to existing document", async () => {
+    const resolved = resolveCanonicalMissionId('NEET (UG) 2027', 'NTA', 2027);
+    assert.strictEqual(resolved, 'neet_(ug)-2027');
+  });
+
+  // 27. Declare-result post-transaction certificate failure behavior
+  await testCase("Declare-result post-transaction certificate failure behavior", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ACTIVE' };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE', userPanelVisible: true };
+    mockDatabaseState.simulateCertificateBatchFailure = true;
+
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON' }
+    };
+
+    // Transaction should commit core mirror states, but fail-safes are logged
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, founderContext);
+    }, /BATCH_CERTIFICATE_WRITE_FAILED/);
+  });
+
+  // 28. Declare-result post-transaction analytics failure behavior
+  await testCase("Declare-result post-transaction analytics failure behavior", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ACTIVE' };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE', userPanelVisible: true };
+    mockDatabaseState.simulateAnalyticsBatchFailure = true;
+
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON' }
+    };
+
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, founderContext);
+    }, /BATCH_ANALYTICS_WRITE_FAILED/);
+  });
+
+  // 29. Backfill contract semantic equality fixtures check
+  await testCase("Backfill contract semantic equality fixtures check", async () => {
+    const realmData = {
+      exam_name: 'JEE Main',
+      organization: 'NTA',
+      exam_year: 2027,
+      priority: 5,
+      createdAt: 'ORIGINAL_TIME'
+    };
+    const recData = {
+      title: 'JEE Main',
+      org: 'NTA',
+      year: 2027
+    };
+
+    const shell = buildStudentMissionCatalogShell('jee_main_2026', realmData, recData, 'launch_realm');
+
+    assert.strictEqual(shell.id, 'jee_main_2026');
+    assert.strictEqual(shell.mission_id, 'jee_main_2026');
+    assert.strictEqual(shell.name, 'JEE Main');
+    assert.strictEqual(shell.title, 'JEE Main');
+    assert.strictEqual(shell.boardId, 'NTA');
+    assert.strictEqual(shell.organizationCode, 'NTA');
+    assert.strictEqual(shell.year, 2027);
+    assert.strictEqual(shell.target_year, 2027);
+    assert.strictEqual(shell.priority, 5);
+    assert.strictEqual(shell.sortOrder, 5);
   });
 
   console.log("------------------------------------------------");

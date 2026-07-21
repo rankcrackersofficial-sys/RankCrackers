@@ -3,6 +3,7 @@ const admin = require("firebase-admin");
 const crypto = require("crypto");
 const { logFounderActivity } = require("../services/audit_service");
 const { getLifecycleBlueprint } = require("../helpers/blueprints");
+const { validateOrResolveId } = require("../canonical_mission_registry");
 
 /**
  * SENTINEL ACTION CENTER (Hardened v5.5 - Full Command Connectivity)
@@ -217,7 +218,10 @@ exports.handleSentinelAction = functions
     let graduationNeeded = null;
 
     const result = await db.runTransaction(async (transaction) => {
-      const recruitmentId = reqRecruitmentId || null;
+      let recruitmentId = reqRecruitmentId || null;
+      if (action !== 'launch_exam_mission') {
+        recruitmentId = validateOrResolveId(action, payload, recruitmentId);
+      }
       const realmRef = recruitmentId ? db.collection('mission_realms').doc(recruitmentId) : null;
       const recRef = recruitmentId ? db.collection('recruitments').doc(recruitmentId) : null;
 
@@ -227,8 +231,8 @@ exports.handleSentinelAction = functions
         const catCode = (examCategory || 'default').toLowerCase();
         const targetYear = year || 2026;
 
-        // Resolve canonical mission ID to preserve pilot compatibility (e.g. JEE Main 2027 -> jee_main_2026)
-        const realmId = resolveCanonicalMissionId(examName, organization, targetYear, cycle);
+        // Resolve canonical mission ID from shared registry
+        const realmId = validateOrResolveId(action, payload);
 
         // 1. READ catalog snapshot first (before any sets)
         const catalogRef = db.collection('student_mission_catalog').doc(realmId);
@@ -606,36 +610,6 @@ async function mirrorMissionShellToStudentCatalog(transaction, db, realmId, real
   return payload;
 }
 
-/**
- * Resolves display/launch parameters to the canonical backend mission ID.
- */
-function resolveCanonicalMissionId(examName, organization, year, cycle = '') {
-  const normName = String(examName || '').trim().toLowerCase();
-  const targetYear = parseInt(year || 2026, 10);
-
-  // JEE Main Pilot mapping
-  if (normName.includes('jee main') && (targetYear === 2026 || targetYear === 2027)) {
-    return 'jee_main_2026';
-  }
-  
-  // NEET Pilot mapping
-  if (normName.includes('neet') && targetYear === 2027) {
-    return 'neet_(ug)-2027';
-  }
-
-  // RPSC 1st Grade Pilot mapping
-  if (normName.includes('rpsc first grade') || normName.includes('rpsc 1st grade')) {
-    return 'RPSC_FIRST_GRADE2026_2026_1782713222215';
-  }
-
-  // Fallback to standard slugified format
-  const orgCode = String(organization || 'central').toLowerCase().replace(/\s/g, '_');
-  const examCode = normName.replace(/\s/g, '_');
-  const suffix = cycle ? `_${cycle}` : '';
-  return `rec_${orgCode}_${examCode}_${targetYear}${suffix}`.replace(/_+/g, '_').replace(/_$/, '');
-}
-
 // Export helpers for testing
 exports.buildStudentMissionCatalogShell = buildStudentMissionCatalogShell;
 exports.mirrorMissionShellToStudentCatalog = mirrorMissionShellToStudentCatalog;
-exports.resolveCanonicalMissionId = resolveCanonicalMissionId;
