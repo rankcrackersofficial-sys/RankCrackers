@@ -1,0 +1,14 @@
+﻿--- RC-X4E-P15 Authorization State Audit ---
+incident_closed: true
+direct_apply_fail_closed: true
+founder_approval_present: true
+second_gate_token_present: true
+active_token: false
+candidate_tasks_queued: true
+candidate_pages_existing_zero: true
+auto_detect_blocked: true
+expected_page_extractions: 9
+mutation_budget_max: 15
+execution_allowed_now: false
+
+RC_X4E_P15_AUTH_PREFLIGHT_STATE_READY_EXECUTION_BLOCKED
