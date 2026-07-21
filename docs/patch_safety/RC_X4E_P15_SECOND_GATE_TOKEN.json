@@ -1,0 +1,54 @@
+{
+  "patch": "RC-X4E-P15-AUTHORIZED-APPLY-1",
+  "authorization_id": "auth_p15_20260720_v5_final_neet",
+  "project_id": "rankcrackers-55",
+  "branch": "safety/rc-g2-pre-notification-schema",
+  "code_commit": "f82d4269e7fdafa7c80e148730056b4d91c5678b",
+  "authorization_commit": "d64a675b04a2cd650b4786a2a58877368d4e71a0",
+  "mission_id": "neet_(ug)-2027",
+  "document_id": "hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+  "tasks": [
+    "rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b1_p1_3",
+    "rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b2_p4_6",
+    "rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b3_p7_9"
+  ],
+  "page_ranges": [
+    {
+      "start": 1,
+      "end": 3
+    },
+    {
+      "start": 4,
+      "end": 6
+    },
+    {
+      "start": 7,
+      "end": 9
+    }
+  ],
+  "expected_page_extractions": 9,
+  "mutation_budget": {
+    "max_total_writes": 15,
+    "max_tasks": 3,
+    "max_page_creates": 9,
+    "queue_task_updates_allowed": true,
+    "retry_allowed": false,
+    "replacement_task_allowed": false
+  },
+  "constraints": {
+    "prefer_native_digital": true,
+    "allow_auto_detect": false,
+    "ai_ocr_allowed": false,
+    "syllabus_atoms_allowed": false,
+    "topic_nodes_allowed": false,
+    "student_publish_allowed": false,
+    "deploy_allowed": false
+  },
+  "expires_at": "2026-07-21T11:11:57.236Z",
+  "one_time_use": true,
+  "founder_approval_phrase_hash": "038c3860b07b41227bba65a45e43f1648e8fdbe6900356a60b8d023fbd790e00",
+  "queue_digest": "6586a746c2f6486207e297f121294982a7e693df9d0d8ca73183ad2baf19fa17",
+  "page_digest": "1926a7ba2ba94bcf53149ee0d2eaba0ca6910261202837bb9d7f91833a927ea5",
+  "dry_run_digest": "39fcaac534ecb0724c551c3ffa3a2559b576f4929e01d66c7df2bb489eeb78a7",
+  "bundle_sha256": "14cde3ced3377428ed30d6da59df785ebe565448cfcdc1ca0729e2f5a98a769a"
+}
