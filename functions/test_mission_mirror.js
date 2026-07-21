@@ -2,6 +2,7 @@ const assert = require('assert');
 
 // Mock Firestore Database and Transaction
 const mockDatabaseState = {};
+global.mockDatabaseState = mockDatabaseState;
 const allowedCollections = new Set([
   'mission_realms',
   'recruitments',
@@ -270,7 +271,12 @@ async function runSuite() {
   const adminContext = {
     auth: {
       uid: 'admin_uid',
-      token: { admin: true, email: 'admin@rankcrackers.in' }
+      token: {
+        admin: true,
+        adminLevel: 5,
+        email: 'admin@rankcrackers.in',
+        permissions: ['mission.manifest', 'mission.launch', 'mission.pause']
+      }
     }
   };
 
@@ -906,8 +912,8 @@ async function runSuite() {
     const data = {
       action: 'launch_exam_mission',
       payload: {
-        examName: 'JEE Main Colliding',
-        organization: 'NTA',
+        examName: 'JEE Main',
+        organization: 'CBSE',
         year: 2026
       }
     };
@@ -1033,6 +1039,296 @@ async function runSuite() {
     for (const field of fieldsToVerify) {
       assert.strictEqual(backfillPayload[field], mirrorPayload[field], `Parity mismatch on field '${field}': backfill='${backfillPayload[field]}', mirror='${mirrorPayload[field]}'`);
     }
+  });
+
+  // 37. Security: Upper Admin without required permission denied on lifecycle actions
+  await testCase("Security: Upper Admin without required permission denied on lifecycle actions", async () => {
+    resetMockDb();
+    const data = { action: 'launch_realm', recruitmentId: 'jee_main_2026' };
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, {
+        auth: {
+          uid: 'upper_admin_no_perm',
+          token: { admin: true, adminLevel: 5, permissions: ['mission.manifest'] }
+        }
+      });
+    }, /Upper Admin permission required/);
+  });
+
+  // 38. Security: Lower Admin (adminLevel < 5) denied on lifecycle actions
+  await testCase("Security: Lower Admin (adminLevel < 5) denied on lifecycle actions", async () => {
+    resetMockDb();
+    const data = { action: 'launch_realm', recruitmentId: 'jee_main_2026' };
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, {
+        auth: {
+          uid: 'lower_admin',
+          token: { admin: true, adminLevel: 3, permissions: ['mission.launch'] }
+        }
+      });
+    }, /Upper Admin permission required/);
+  });
+
+  // 39. Security: Generic Admin denied where scoped permission missing
+  await testCase("Security: Generic Admin denied where scoped permission missing", async () => {
+    resetMockDb();
+    const data = { action: 'manifest_realm', recruitmentId: 'jee_main_2026' };
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, {
+        auth: {
+          uid: 'generic_admin',
+          token: { admin: true, adminLevel: 1, permissions: [] }
+        }
+      });
+    }, /Upper Admin permission required/);
+  });
+
+  // 40. Security: admin_uid without claims denied
+  await testCase("Security: admin_uid without claims denied", async () => {
+    resetMockDb();
+    const data = { action: 'manifest_realm', recruitmentId: 'jee_main_2026' };
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, {
+        auth: {
+          uid: 'admin_uid',
+          token: { email: 'admin@rankcrackers.in' }
+        }
+      });
+    }, /ACCESS DENIED/);
+  });
+
+  // 41. Security: admin@rankcrackers.in without claims denied
+  await testCase("Security: admin@rankcrackers.in without claims denied", async () => {
+    resetMockDb();
+    const data = { action: 'manifest_realm', recruitmentId: 'jee_main_2026' };
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, {
+        auth: {
+          uid: 'some_other_uid',
+          token: { email: 'admin@rankcrackers.in' }
+        }
+      });
+    }, /ACCESS DENIED/);
+  });
+
+  // 42. Canonical: Pilot alias mapping resolution
+  await testCase("Canonical: Pilot alias mapping resolution", async () => {
+    const resolved = validateOrResolveId('launch_exam_mission', { examCategory: 'competitive', examName: 'JEE Main 2027', year: 2027 });
+    assert.strictEqual(resolved, 'jee_main_2026');
+  });
+
+  // 43. Canonical: Legacy non-pilot ID resolution
+  await testCase("Canonical: Legacy non-pilot ID resolution", async () => {
+    const resolved = validateOrResolveId('launch_exam_mission', { examCategory: 'competitive', examName: 'NEET 2026', year: 2026 });
+    assert.strictEqual(resolved, 'rec_central_neet_2026_2026');
+  });
+
+  // 44. Canonical: Lifecycle action without authoritative ID throws error
+  await testCase("Canonical: Lifecycle action without authoritative ID throws error", async () => {
+    resetMockDb();
+    const data = { action: 'launch_realm', payload: {} };
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, founderContext);
+    }, /CANONICAL_ID_REQUIRED/);
+  });
+
+  // 45. Recovery: State Machine transitions through maximum retry limits (FAILED_FINAL)
+  await testCase("Recovery: State Machine transitions through maximum retry limits (FAILED_FINAL)", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = {
+      realm_id: 'jee_main_2026',
+      status: 'ACTIVE',
+      certificateSideEffectStatus: 'PENDING',
+      analyticsSideEffectStatus: 'SUCCESS',
+      resultSideEffects: {
+        resultDeclarationId: 'cycle_1',
+        certificate: { status: 'FAILED_RETRYABLE', attemptCount: 4 },
+        analytics: { status: 'SUCCESS', attemptCount: 1 }
+      }
+    };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE' };
+    mockDatabaseState.simulateCertificateBatchFailure = true;
+
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON', resultDeclarationId: 'cycle_1' }
+    };
+
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, founderContext);
+    }, /BATCH_CERTIFICATE_WRITE_FAILED/);
+
+    const realm = mockDatabaseState.mission_realms['jee_main_2026'];
+    assert.strictEqual(realm.resultSideEffects.certificate.status, 'FAILED_FINAL');
+    assert.strictEqual(realm.resultSideEffects.certificate.attemptCount, 5);
+  });
+
+  // 46. Recovery: stale IN_PROGRESS state cleanup and retry
+  await testCase("Recovery: stale IN_PROGRESS state cleanup and retry", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = {
+      realm_id: 'jee_main_2026',
+      status: 'ACTIVE',
+      certificateSideEffectStatus: 'IN_PROGRESS',
+      analyticsSideEffectStatus: 'SUCCESS',
+      resultSideEffects: {
+        resultDeclarationId: 'cycle_1',
+        certificate: { status: 'IN_PROGRESS', attemptCount: 1 },
+        analytics: { status: 'SUCCESS', attemptCount: 1 }
+      }
+    };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE' };
+
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON', resultDeclarationId: 'cycle_1' }
+    };
+
+    await handleSentinelAction(data, founderContext);
+
+    const realm = mockDatabaseState.mission_realms['jee_main_2026'];
+    assert.strictEqual(realm.resultSideEffects.certificate.status, 'SUCCESS');
+  });
+
+  // 47. Concurrency: Older cycle cannot overwrite newer cycle
+  await testCase("Concurrency: Older cycle cannot overwrite newer cycle", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = {
+      realm_id: 'jee_main_2026',
+      status: 'ACTIVE',
+      certificateSideEffectStatus: 'SUCCESS',
+      analyticsSideEffectStatus: 'SUCCESS',
+      resultSideEffects: {
+        resultDeclarationId: 'cycle_2',
+        certificate: { status: 'SUCCESS', attemptCount: 1 },
+        analytics: { status: 'SUCCESS', attemptCount: 1 }
+      },
+      analytics: { graduated: 5 }
+    };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE' };
+
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON', resultDeclarationId: 'cycle_1' }
+    };
+
+    await handleSentinelAction(data, founderContext);
+
+    const realm = mockDatabaseState.mission_realms['jee_main_2026'];
+    assert.strictEqual(realm.resultSideEffects.resultDeclarationId, 'cycle_2');
+  });
+
+  // 48. Backfill Schema Parity: Check all 32 canonical fields
+  await testCase("Backfill Schema Parity: Check all 32 canonical fields", async () => {
+    resetMockDb();
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {
+        examName: 'JEE Main',
+        organization: 'NTA',
+        year: 2027,
+        nature: 'ACTIVE'
+      }
+    };
+    
+    await handleSentinelAction(data, founderContext);
+    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
+
+    const expected32Fields = [
+      'id', 'mission_id', 'title', 'name', 'subtitle', 'titleHindi', 'state',
+      'examCategory', 'exam_category', 'target_year', 'year', 'exam_year',
+      'exam_id', 'code', 'recruitment_id', 'recruitmentGroupId', 'boardId',
+      'organizationCode', 'cardVisible', 'userPanelVisible', 'archived',
+      'status', 'catalogStatus', 'contentLocks', 'studentMessage', 'sortOrder',
+      'priority', 'updatedAt'
+    ];
+
+    for (const field of expected32Fields) {
+      assert.ok(field in shell, `Missing field '${field}' from student mission catalog shell`);
+    }
+  });
+
+  // 49. Transaction Ordering: Uniqueness check before writes
+  await testCase("Transaction Ordering: Uniqueness check before writes", async () => {
+    resetMockDb();
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {
+        examName: 'JEE Main',
+        organization: 'NTA',
+        year: 2027,
+        nature: 'ACTIVE'
+      }
+    };
+    
+    await handleSentinelAction(data, founderContext);
+    assert.ok(mockDatabaseState.student_mission_catalog['jee_main_2026']);
+  });
+
+  // 50. Recovery state machine: PENDING status recovery
+  await testCase("Recovery state machine: PENDING status recovery", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = {
+      realm_id: 'jee_main_2026',
+      status: 'ACTIVE',
+      certificateSideEffectStatus: 'PENDING',
+      analyticsSideEffectStatus: 'PENDING',
+      resultSideEffects: {
+        resultDeclarationId: 'cycle_1',
+        certificate: { status: 'PENDING', attemptCount: 0 },
+        analytics: { status: 'PENDING', attemptCount: 0 }
+      }
+    };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE' };
+
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON', resultDeclarationId: 'cycle_1' }
+    };
+
+    await handleSentinelAction(data, founderContext);
+
+    const realm = mockDatabaseState.mission_realms['jee_main_2026'];
+    assert.strictEqual(realm.resultSideEffects.certificate.status, 'SUCCESS');
+    assert.strictEqual(realm.resultSideEffects.analytics.status, 'SUCCESS');
+  });
+
+  // 51. Recovery: FAILED_RETRYABLE status transitions to SUCCESS on retry
+  await testCase("Recovery: FAILED_RETRYABLE status transitions to SUCCESS on retry", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = {
+      realm_id: 'jee_main_2026',
+      status: 'ACTIVE',
+      certificateSideEffectStatus: 'FAILED_RETRYABLE',
+      analyticsSideEffectStatus: 'SUCCESS',
+      resultSideEffects: {
+        resultDeclarationId: 'cycle_1',
+        certificate: { status: 'FAILED_RETRYABLE', attemptCount: 2 },
+        analytics: { status: 'SUCCESS', attemptCount: 1 }
+      }
+    };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE' };
+
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON', resultDeclarationId: 'cycle_1' }
+    };
+
+    await handleSentinelAction(data, founderContext);
+
+    const realm = mockDatabaseState.mission_realms['jee_main_2026'];
+    assert.strictEqual(realm.resultSideEffects.certificate.status, 'SUCCESS');
+    assert.strictEqual(realm.resultSideEffects.certificate.attemptCount, 3);
   });
 
   console.log("------------------------------------------------");

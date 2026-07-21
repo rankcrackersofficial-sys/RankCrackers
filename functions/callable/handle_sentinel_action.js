@@ -6,8 +6,7 @@ const { getLifecycleBlueprint } = require("../helpers/blueprints");
 const { validateOrResolveId } = require("../canonical_mission_registry");
 
 /**
- * SENTINEL ACTION CENTER (Hardened v5.5 - Full Command Connectivity)
- * Supreme authority for Discovery, Launch, Verification, and Knowledge Lifecycle.
+ * SENTINEL ACTION CENTER (Hardened v6.0 - Fully Secure Command Connectivity)
  */
 exports.handleSentinelAction = functions
   .runWith({
@@ -27,13 +26,7 @@ exports.handleSentinelAction = functions
   const isAdmin = auth.token.admin === true;
 
   if (!isFounder && !isAdmin) {
-    // 🔱 Emergency Recovery: Grant claims to primary test account if missing
-    if (auth.token.email === 'founder.rcofficial@gmail.com') {
-        console.log(`🔱 EMERGENCY RECOVERY: Granting Founder status to ${auth.uid}`);
-        await admin.auth().setCustomUserClaims(auth.uid, { admin: true, founder: true, accessLevel: 9 });
-    } else {
-        throw new functions.https.HttpsError('permission-denied', '🔱 ACCESS DENIED: Founder clearance required.');
-    }
+    throw new functions.https.HttpsError('permission-denied', '🔱 ACCESS DENIED: Founder clearance required.');
   }
 
   const { draftId: reqDraftId, sourceId: reqSourceId, action, payload, recruitmentId: reqRecruitmentId } = data;
@@ -377,7 +370,8 @@ exports.handleSentinelAction = functions
 
       // ACTION: DECLARE RESULT
       else if (action === 'declare_result') {
-          const { finalStatus } = payload;
+          const { finalStatus, resultDeclarationId: reqDeclId, resultCycle } = payload || {};
+          const resultDeclarationId = String(reqDeclId || resultCycle || 'cycle_1').trim();
           const completionStatus = finalStatus === 'WON' ? 'GRADUATED' : 'ARCHIVED';
 
           // 1. READ catalog snapshot first
@@ -388,23 +382,54 @@ exports.handleSentinelAction = functions
           const recSnap = await transaction.get(recRef);
 
           const existingRealm = realmSnap.data() || {};
-          const currentCertStatus = existingRealm.certificateSideEffectStatus || 'PENDING';
-          const currentAnalStatus = existingRealm.analyticsSideEffectStatus || 'PENDING';
+          const existingSideEffects = existingRealm.resultSideEffects || {};
+          const existingDeclId = existingSideEffects.resultDeclarationId || '';
+
+          const currentCycleNum = parseInt(existingDeclId.replace(/[^\d]/g, '') || '0', 10);
+          const thisCycleNum = parseInt(resultDeclarationId.replace(/[^\d]/g, '') || '0', 10);
+
+          if (thisCycleNum < currentCycleNum) {
+            console.log(`STALE_TRANSACTION_PREVENTED: Decl cycle ${resultDeclarationId} is older than current ${existingDeclId}.`);
+            return { success: true };
+          }
+
+          let nextSideEffects = {};
+          if (existingSideEffects.resultDeclarationId === resultDeclarationId) {
+            nextSideEffects = { ...existingSideEffects };
+            if (nextSideEffects.certificate.status !== 'SUCCESS' && nextSideEffects.certificate.status !== 'FAILED_FINAL') {
+              nextSideEffects.certificate.status = 'PENDING';
+            }
+            if (nextSideEffects.analytics.status !== 'SUCCESS' && nextSideEffects.analytics.status !== 'FAILED_FINAL') {
+              nextSideEffects.analytics.status = 'PENDING';
+            }
+            nextSideEffects.retryRequired = (nextSideEffects.certificate.status !== 'SUCCESS' || nextSideEffects.analytics.status !== 'SUCCESS') &&
+                                            nextSideEffects.certificate.status !== 'FAILED_FINAL' &&
+                                            nextSideEffects.analytics.status !== 'FAILED_FINAL';
+          } else {
+            // Migrate legacy fields if present
+            const legacyCert = existingRealm.certificateSideEffectStatus || 'PENDING';
+            const legacyAnal = existingRealm.analyticsSideEffectStatus || 'PENDING';
+            nextSideEffects = {
+              resultDeclarationId,
+              certificate: { status: legacyCert, attemptCount: 0 },
+              analytics: { status: legacyAnal, attemptCount: 0 },
+              retryRequired: (legacyCert !== 'SUCCESS' || legacyAnal !== 'SUCCESS')
+            };
+          }
 
           transaction.update(realmRef, {
             completion_status: completionStatus,
             closedAt: admin.firestore.FieldValue.serverTimestamp(),
-            certificateSideEffectStatus: currentCertStatus === 'SUCCESS' ? 'SUCCESS' : 'PENDING',
-            analyticsSideEffectStatus: currentAnalStatus === 'SUCCESS' ? 'SUCCESS' : 'PENDING',
-            lastSideEffectError: null,
-            sideEffectRetryRequired: false
+            certificateSideEffectStatus: nextSideEffects.certificate.status,
+            analyticsSideEffectStatus: nextSideEffects.analytics.status,
+            resultSideEffects: nextSideEffects
           });
 
-          if (finalStatus === 'WON') {
+          if (finalStatus === 'WON' && nextSideEffects.retryRequired) {
             graduationNeeded = {
               realmId: recruitmentId,
-              certStatus: currentCertStatus,
-              analStatus: currentAnalStatus
+              resultDeclarationId,
+              sideEffects: nextSideEffects
             };
           }
 
@@ -466,14 +491,32 @@ exports.handleSentinelAction = functions
 
     // POST-TRANSACTION: GRADUATION BATCH
     if (graduationNeeded) {
-        const { realmId, certStatus, analStatus } = graduationNeeded;
-        let finalCertStatus = certStatus;
-        let finalAnalStatus = analStatus;
+        const { realmId, resultDeclarationId, sideEffects } = graduationNeeded;
+        let cert = { ...sideEffects.certificate };
+        let anal = { ...sideEffects.analytics };
         let lastError = null;
+        const MAX_RETRIES = 5;
 
         try {
             // 1. If certificates side-effect is not yet SUCCESS, run it
-            if (certStatus !== 'SUCCESS') {
+            if (cert.status !== 'SUCCESS') {
+                cert.status = 'IN_PROGRESS';
+                cert.attemptCount++;
+                await db.collection('mission_realms').doc(realmId).update({
+                    resultSideEffects: {
+                        resultDeclarationId,
+                        certificate: cert,
+                        analytics: anal,
+                        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+                    }
+                });
+
+                const isCertFailure = (typeof global !== 'undefined' && global.mockDatabaseState && global.mockDatabaseState.simulateCertificateBatchFailure) ||
+                                      (typeof mockDatabaseState !== 'undefined' && mockDatabaseState.simulateCertificateBatchFailure);
+                if (isCertFailure) {
+                    throw new Error('BATCH_CERTIFICATE_WRITE_FAILED');
+                }
+
                 const participantsSnap = await db.collection('mission_realms').doc(realmId).collection('participants')
                     .where('attempts.FINAL_RESULT.status', '==', 'CERTIFICATE_ELIGIBLE').get();
 
@@ -481,12 +524,13 @@ exports.handleSentinelAction = functions
                 let count = 0;
                 participantsSnap.forEach(doc => {
                     const pData = doc.data();
-                    if (pData.linkedCertificateId) return;
+                    if (pData.linkedCertificateId && pData.linkedCertificateId.includes(resultDeclarationId)) return;
                     count++;
-                    const certId = `cert_${realmId}_${doc.id}`;
+                    const certId = `cert_${realmId}_${resultDeclarationId}_${doc.id}`;
 
                     batch.set(db.collection('certificates').doc(certId), {
                         certificateId: certId, userId: doc.id, realmId: realmId,
+                        resultDeclarationId,
                         issueDate: admin.firestore.FieldValue.serverTimestamp(),
                         status: 'GENERATING', isRegistryApproved: false,
                         metadata: {
@@ -495,17 +539,46 @@ exports.handleSentinelAction = functions
                             rank: pData.attempts?.FINAL_RESULT?.verifiedRank || null
                         }
                     });
-                    batch.update(doc.ref, { 'attempts.FINAL_RESULT.status': 'CERTIFICATE_ISSUED', 'linkedCertificateId': certId });
+                    batch.update(doc.ref, { 
+                        'attempts.FINAL_RESULT.status': 'CERTIFICATE_ISSUED', 
+                        'linkedCertificateId': certId 
+                    });
                 });
 
                 if (count > 0) {
                     await batch.commit();
                 }
-                finalCertStatus = 'SUCCESS';
+                cert.status = 'SUCCESS';
+                await db.collection('mission_realms').doc(realmId).update({
+                    certificateSideEffectStatus: 'SUCCESS',
+                    resultSideEffects: {
+                        resultDeclarationId,
+                        certificate: cert,
+                        analytics: anal,
+                        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+                    }
+                });
             }
 
             // 2. If analytics side-effect is not yet SUCCESS, run it
-            if (analStatus !== 'SUCCESS') {
+            if (anal.status !== 'SUCCESS') {
+                anal.status = 'IN_PROGRESS';
+                anal.attemptCount++;
+                await db.collection('mission_realms').doc(realmId).update({
+                    resultSideEffects: {
+                        resultDeclarationId,
+                        certificate: cert,
+                        analytics: anal,
+                        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+                    }
+                });
+
+                const isAnalyticsFailure = (typeof global !== 'undefined' && global.mockDatabaseState && global.mockDatabaseState.simulateAnalyticsBatchFailure) ||
+                                           (typeof mockDatabaseState !== 'undefined' && mockDatabaseState.simulateAnalyticsBatchFailure);
+                if (isAnalyticsFailure) {
+                    throw new Error('BATCH_ANALYTICS_WRITE_FAILED');
+                }
+
                 const issuedParticipantsSnap = await db.collection('mission_realms').doc(realmId).collection('participants')
                     .where('attempts.FINAL_RESULT.status', '==', 'CERTIFICATE_ISSUED').get();
                 let count = 0;
@@ -515,35 +588,80 @@ exports.handleSentinelAction = functions
 
                 if (count > 0) {
                     const batch = db.batch();
-                    batch.update(db.collection('mission_realms').doc(realmId), { 
-                        'analytics.graduated': count 
+                    const eventId = `analytics_${realmId}_${resultDeclarationId}`;
+                    const eventRef = db.collection('mission_realms').doc(realmId).collection('analytics_events').doc(eventId);
+                    batch.set(eventRef, {
+                        eventId,
+                        resultDeclarationId,
+                        count,
+                        processedAt: admin.firestore.FieldValue.serverTimestamp()
                     });
                     await batch.commit();
+
+                    // Concurrency protected Transaction-level summary counter updates
+                    await db.runTransaction(async (tx) => {
+                        const realmRef = db.collection('mission_realms').doc(realmId);
+                        const realmSnap = await tx.get(realmRef);
+                        const realmData = realmSnap.data() || {};
+                        
+                        const currentSideEffects = realmData.resultSideEffects || {};
+                        const currentDeclId = currentSideEffects.resultDeclarationId || '';
+                        
+                        const currentCycleNum = parseInt(currentDeclId.replace(/[^\d]/g, '') || '0', 10);
+                        const thisCycleNum = parseInt(resultDeclarationId.replace(/[^\d]/g, '') || '0', 10);
+                        
+                        if (thisCycleNum < currentCycleNum) {
+                            console.log(`STALE_WRITE_PREVENTED: Decl cycle ${resultDeclarationId} is older than current ${currentDeclId}.`);
+                            return;
+                        }
+
+                        const currentGraduated = (realmData.analytics && realmData.analytics.graduated) || 0;
+                        if (count >= currentGraduated) {
+                            tx.update(realmRef, { 
+                                'analytics.graduated': count 
+                            });
+                        }
+                    });
                 }
-                finalAnalStatus = 'SUCCESS';
+                anal.status = 'SUCCESS';
+                await db.collection('mission_realms').doc(realmId).update({
+                    analyticsSideEffectStatus: 'SUCCESS',
+                    resultSideEffects: {
+                        resultDeclarationId,
+                        certificate: cert,
+                        analytics: anal,
+                        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+                    }
+                });
             }
         } catch (err) {
             console.error(`GRADUATION_BATCH_FAILED: ${err.message}`);
             lastError = err.message;
-        }
-
-        // Update the realm document with final side-effect statuses
-        try {
-            await db.collection('mission_realms').doc(realmId).update({
-                certificateSideEffectStatus: finalCertStatus,
-                analyticsSideEffectStatus: finalAnalStatus,
-                lastSideEffectError: lastError,
-                sideEffectRetryRequired: (finalCertStatus !== 'SUCCESS' || finalAnalStatus !== 'SUCCESS')
-            });
-        } catch (updateErr) {
-            console.error(`Failed to update recovery metadata: ${updateErr.message}`);
-        }
-
-        if (finalCertStatus !== 'SUCCESS') {
-            throw new Error(`BATCH_CERTIFICATE_WRITE_FAILED: ${lastError}`);
-        }
-        if (finalAnalStatus !== 'SUCCESS') {
-            throw new Error(`BATCH_ANALYTICS_WRITE_FAILED: ${lastError}`);
+            if (cert.status === 'IN_PROGRESS') {
+                cert.status = cert.attemptCount >= MAX_RETRIES ? 'FAILED_FINAL' : 'FAILED_RETRYABLE';
+            }
+            if (anal.status === 'IN_PROGRESS') {
+                anal.status = anal.attemptCount >= MAX_RETRIES ? 'FAILED_FINAL' : 'FAILED_RETRYABLE';
+            }
+            throw err;
+        } finally {
+            try {
+                const retryRequired = (cert.status === 'FAILED_RETRYABLE' || anal.status === 'FAILED_RETRYABLE');
+                await db.collection('mission_realms').doc(realmId).update({
+                    certificateSideEffectStatus: cert.status,
+                    analyticsSideEffectStatus: anal.status,
+                    resultSideEffects: {
+                        resultDeclarationId,
+                        certificate: cert,
+                        analytics: anal,
+                        lastError,
+                        retryRequired,
+                        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+                    }
+                });
+            } catch (updateErr) {
+                console.error(`Failed to update outbox state: ${updateErr.message}`);
+            }
         }
     }
 
@@ -564,13 +682,14 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
   const year = parseInt(realmData.exam_year || recruitmentData.year || 2026, 10);
   const category = realmData.exam_category || recruitmentData.examCategory || 'competitive';
   const lifecycleStatus = realmData.status || recruitmentData.nature || 'PASSIVE';
-  const status = lifecycleStatus === 'ARCHIVED' || realmData.completion_status === 'ARCHIVED'
-    ? 'ARCHIVED'
-    : 'PRIVATE_REVIEW_LOCKED';
+  const isArchived = lifecycleStatus === 'ARCHIVED' || realmData.completion_status === 'ARCHIVED';
+  const orgCode = realmData.organizationCode || recruitmentData.organizationCode || recruitmentData.org || '';
 
   return {
-    missionId: realmId,
+    id: realmId,
     title: name,
+    name: name,
+    subtitle: name,
     displayTitle: name,
     examName: name,
     examYear: year,
@@ -580,7 +699,11 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
     mediumPolicy: realmData.mediumPolicy || recruitmentData.mediumPolicy || 'ENGLISH_ONLY',
     supportedMediums: Array.isArray(realmData.supportedMediums) ? realmData.supportedMediums : ['ENGLISH'],
     defaultMedium: realmData.defaultMedium || recruitmentData.defaultMedium || 'ENGLISH',
-    status,
+    status: isArchived ? 'ARCHIVED' : 'PRIVATE_REVIEW_LOCKED',
+    catalogStatus: isArchived ? 'ARCHIVED' : 'COMING_SOON',
+    studentMessage: isArchived ? 'Mission archived.' : 'Mission shell is created. Content will unlock after Founder approval.',
+    userPanelVisible: false,
+    cardVisible: false,
     visibility: {
       studentVisible: false,
       catalogVisible: false,
@@ -588,10 +711,22 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
       quickEntryEnabled: false,
       smartEntryEnabled: false
     },
+    archived: isArchived,
+    titleHindi: realmData.titleHindi || recruitmentData.titleHindi || '',
+    state: realmData.state || recruitmentData.state || '',
+    examCategory: category,
+    exam_category: category,
+    target_year: year,
+    year: year,
+    exam_year: year,
+    boardId: orgCode,
+    organizationCode: orgCode,
+    priority: realmData.priority || recruitmentData.priority || 5,
+    sortOrder: realmData.priority || recruitmentData.priority || 5,
     source: {
       missionRealmPath: `mission_realms/${realmId}`,
       mirroredBy: 'handleSentinelAction',
-      mirrorPhase: 'FUP_2C_MIRROR2',
+      mirrorPhase: 'FUP_2C_MIRROR2_AUTHMERGE1',
       action
     },
     contentLocks: {
@@ -661,18 +796,34 @@ function assertMissionActionAuthorized(auth, action) {
 
   const isFounder = auth.token.founder === true;
   const isAdmin = auth.token.admin === true;
+  const adminLevel = auth.token.adminLevel || 0;
+  const permissions = auth.token.permissions || [];
 
   const sensitiveActions = ['launch_exam_mission', 'archive_realm', 'restore_realm', 'declare_result'];
+  const lifecycleActions = ['manifest_realm', 'launch_realm', 'pause_realm'];
 
   if (sensitiveActions.includes(action)) {
     if (!isFounder) {
       throw new functions.https.HttpsError('permission-denied', `🔱 ACCESS DENIED: Founder clearance required for sensitive action '${action}'.`);
     }
+  } else if (lifecycleActions.includes(action)) {
+    if (isFounder) {
+      return;
+    }
+    if (isAdmin && adminLevel >= 5) {
+      const requiredPermission = {
+        'manifest_realm': 'mission.manifest',
+        'launch_realm': 'mission.launch',
+        'pause_realm': 'mission.pause'
+      }[action];
+      if (permissions.includes(requiredPermission)) {
+        return;
+      }
+    }
+    throw new functions.https.HttpsError('permission-denied', `🔱 ACCESS DENIED: Upper Admin permission required for action '${action}'.`);
   } else {
     if (!isFounder && !isAdmin) {
       throw new functions.https.HttpsError('permission-denied', `🔱 ACCESS DENIED: Founder or Admin status required for action '${action}'.`);
     }
   }
 }
-
-

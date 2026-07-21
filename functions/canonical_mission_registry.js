@@ -20,10 +20,10 @@ function resolveCanonicalMissionId(examName, organization, year, cycle = '') {
   const normName = String(examName || '').trim().toLowerCase();
   const targetYear = parseInt(year || 2026, 10);
 
-  // 1. Check pilot aliases
+  // 1. Check pilot aliases with exact matching to prevent partial matches
   for (const [canonicalId, aliases] of Object.entries(PILOT_ALIASES)) {
     for (const alias of aliases) {
-      if (normName.includes(alias)) {
+      if (normName === alias) {
         return canonicalId;
       }
     }

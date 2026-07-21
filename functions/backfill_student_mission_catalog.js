@@ -37,60 +37,6 @@ async function main() {
         }
 
         const data = docSnap.data();
-        
-        // Fetch variables subcollection
-        const varsSnap = await docRef.collection('variables').get();
-        const variables = [];
-        varsSnap.forEach(d => {
-            const v = d.data();
-            if (v.status !== 'archived') {
-                variables.push({
-                    id: d.id,
-                    name: v.displayName || v.name || '',
-                    code: v.subjectCode || v.code || '',
-                    status: v.status || 'active',
-                    paperType: v.paperType || 'Paper 2'
-                });
-            }
-        });
-
-        // 1. Notification document link check
-        const offDocsSnap = await docRef.collection('official_documents').get();
-        let offDocs = [];
-        offDocsSnap.forEach(d => offDocs.push({ id: d.id, ...d.data() }));
-
-        let hasNotificationDoc = false;
-        for (const doc of offDocs) {
-            const role = (doc.document_role || doc.documentRole || '').toLowerCase();
-            const type = (doc.document_type || doc.documentType || '').toLowerCase();
-            const category = (doc.category || '').toLowerCase();
-            const name = (doc.file_name || doc.fileName || '').toLowerCase();
-
-            if (role === 'notification' || type === 'notification' || category === 'notification' || name.includes('notification')) {
-                hasNotificationDoc = true;
-                break;
-            }
-        }
-
-        let externalNotificationDoc = null;
-        if (!hasNotificationDoc) {
-            const registryColls = ['ingestion_refinery', 'source_documents'];
-            for (const collName of registryColls) {
-                try {
-                    const snap = await db.collection(collName).get();
-                    snap.forEach(d => {
-                        const data = d.data();
-                        const missionLink = data.mission_id || data.missionId || '';
-                        const docRole = data.document_role || data.documentRole || '';
-                        if (missionLink === id && (docRole === 'notification' || d.id.includes('notification'))) {
-                            externalNotificationDoc = { id: d.id, ...data };
-                        }
-                    });
-                } catch (_) {}
-                if (externalNotificationDoc) break;
-            }
-        }
-
         const notificationExists = hasNotificationDoc || !!externalNotificationDoc;
 
         // 2. Crucible Days count with filters
@@ -185,7 +131,7 @@ async function main() {
             }
         }
 
-        const catalogPayload = buildCatalogPayload(id, data, variables, readiness, catalogStatus, studentMessage, now);
+        const catalogPayload = buildCatalogPayload(id, data, now);
 
         if (dryRun) {
             console.log(`[DRY RUN] Would write student_mission_catalog/${id}:`);
@@ -199,14 +145,18 @@ async function main() {
     console.log("Backfill operation complete.");
 }
 
-function buildCatalogPayload(id, data, variables, readiness, catalogStatus, studentMessage, now) {
+function buildCatalogPayload(id, data, now) {
     const title = data.name || data.title || '';
     const year = data.year || data.exam_year || 2026;
     const category = data.examCategory || data.exam_category || 'competitive';
-    const status = catalogStatus === 'ARCHIVED' ? 'ARCHIVED' : 'PRIVATE_REVIEW_LOCKED';
+    const isArchived = data.status === 'ARCHIVED' || data.completion_status === 'ARCHIVED';
+    const orgCode = data.org || data.organizationCode || '';
+
     return {
-        missionId: id,
+        id: id,
         title: title,
+        name: title,
+        subtitle: title,
         displayTitle: title,
         examName: title,
         examYear: year,
@@ -216,7 +166,11 @@ function buildCatalogPayload(id, data, variables, readiness, catalogStatus, stud
         mediumPolicy: data.mediumPolicy || 'ENGLISH_ONLY',
         supportedMediums: Array.isArray(data.supportedMediums) ? data.supportedMediums : ['ENGLISH'],
         defaultMedium: data.defaultMedium || 'ENGLISH',
-        status: status,
+        status: isArchived ? 'ARCHIVED' : 'PRIVATE_REVIEW_LOCKED',
+        catalogStatus: isArchived ? 'ARCHIVED' : 'COMING_SOON',
+        studentMessage: isArchived ? 'Mission archived.' : 'Mission shell is created. Content will unlock after Founder approval.',
+        userPanelVisible: false,
+        cardVisible: false,
         visibility: {
             studentVisible: false,
             catalogVisible: false,
@@ -224,10 +178,22 @@ function buildCatalogPayload(id, data, variables, readiness, catalogStatus, stud
             quickEntryEnabled: false,
             smartEntryEnabled: false
         },
+        archived: isArchived,
+        titleHindi: data.titleHindi || '',
+        state: data.state || '',
+        examCategory: category,
+        exam_category: category,
+        target_year: year,
+        year: year,
+        exam_year: year,
+        boardId: orgCode,
+        organizationCode: orgCode,
+        priority: data.priority || 5,
+        sortOrder: data.priority || 5,
         source: {
             missionRealmPath: `mission_realms/${id}`,
             mirroredBy: 'backfill_student_mission_catalog',
-            mirrorPhase: 'FUP_2C_MIRROR2',
+            mirrorPhase: 'FUP_2C_MIRROR2_AUTHMERGE1',
             backfillMode: true
         },
         contentLocks: {

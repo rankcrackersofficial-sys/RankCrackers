@@ -165,6 +165,17 @@ function main() {
     if (content.includes('PILOT_ALIASES') && !content.includes('require(') && !content.includes('validateOrResolveId')) {
       blockers.push('handle_sentinel_action.js must not define its own local PILOT_ALIASES table.');
     }
+
+    // 🔱 Hardcoded Identity Search Guard: Fail if production contains test/emergency whitelisted identities
+    const forbiddenBypasses = ['admin_uid', 'admin@rankcrackers.in', 'founder.rcofficial@gmail.com'];
+    let foundBypassCount = 0;
+    for (const bypass of forbiddenBypasses) {
+      if (content.includes(bypass)) {
+        blockers.push(`handle_sentinel_action.js contains hardcoded production bypass/test identity: ${bypass}`);
+        foundBypassCount++;
+      }
+    }
+    console.log(`\nHARDCODED_AUTHORITY_IDENTITY_COUNT = ${foundBypassCount}`);
   }
 
   const backfillPath = 'functions/backfill_student_mission_catalog.js';
