@@ -135,8 +135,16 @@ function main() {
     if (!content.includes('mirrorMissionShellToStudentCatalog')) {
       blockers.push('handle_sentinel_action.js missing mirrorMissionShellToStudentCatalog helper.');
     }
-    if (content.includes('topic_nodes') || content.includes('atomic_question_cells')) {
-      blockers.push('Mission shell mirror must not write topic_nodes or atomic_question_cells.');
+    
+    // Check behavioral invocation invariants
+    if (!content.includes('await mirrorMissionShellToStudentCatalog(transaction,')) {
+      blockers.push('handle_sentinel_action.js must invoke mirror helper with transaction.');
+    }
+    if (!content.includes("db.collection('student_mission_catalog')")) {
+      blockers.push('handle_sentinel_action.js must target student_mission_catalog collection.');
+    }
+    if (!content.includes('Identity mismatch detected for immutable fields')) {
+      blockers.push('handle_sentinel_action.js must validate existing record identity mismatch.');
     }
     
     // Check that required lifecycle actions call the mirror helper
@@ -144,6 +152,18 @@ function main() {
     if (matches < 5) {
       blockers.push(`handle_sentinel_action.js calls mirror helper ${matches} times, expected at least 5 times.`);
     }
+
+    if (content.includes('topic_nodes') || content.includes('atomic_question_cells')) {
+      blockers.push('Mission shell mirror must not write topic_nodes or atomic_question_cells.');
+    }
+  }
+
+  // Verify direct UI writes are completely absent
+  if (exists(createUiPath) && read(createUiPath).includes('student_mission_catalog')) {
+    blockers.push('mission_creation_center.dart contains direct student_mission_catalog reference.');
+  }
+  if (exists(editUiPath) && read(editUiPath).includes('student_mission_catalog')) {
+    blockers.push('mission_control_center.dart contains direct student_mission_catalog reference.');
   }
 
   if (!exists('docs/RANKCRACKERS_FINAL_OPERATION_RULES.md')) {

@@ -232,6 +232,10 @@ exports.handleSentinelAction = functions
         // 🔱 Hardened Realm ID: rec_org_exam_year_cycle (RC-15 Fix)
         const realmId = `rec_${orgCode}_${examCode}_${targetYear}_${cycle || ''}`.replace(/_+/g, '_').replace(/_$/, '');
 
+        // 1. READ catalog snapshot first (before any sets)
+        const catalogRef = db.collection('student_mission_catalog').doc(realmId);
+        const catalogSnap = await transaction.get(catalogRef);
+
         const now = admin.firestore.FieldValue.serverTimestamp();
         const realmData = {
           realm_id: realmId, exam_name: examName, exam_category: catCode, organization, exam_year: targetYear,
@@ -264,8 +268,8 @@ exports.handleSentinelAction = functions
         };
         transaction.set(db.collection('recruitments').doc(realmId), recruitmentData, { merge: true });
 
-        // Mirror to student catalog
-        mirrorMissionShellToStudentCatalog(transaction, db, realmId, { ...realmData, ...recruitmentData }, { status: realmData.status || 'DRAFT', isCreate: true, allowVisibility: false });
+        // Mirror to student catalog using the pre-read snapshot
+        await mirrorMissionShellToStudentCatalog(transaction, db, realmId, realmData, recruitmentData, action, catalogSnap);
 
         blueprintToInject = getLifecycleBlueprint(catCode);
         createdRealmId = realmId;
@@ -274,6 +278,11 @@ exports.handleSentinelAction = functions
       // 🔱 ACTION: MANIFEST REALM (Candidate -> Staged)
       else if (action === 'manifest_realm') {
         if (!recruitmentId) throw new Error('RECRUITMENT_ID_REQUIRED');
+
+        // 1. READ catalog snapshot first
+        const catalogRef = db.collection('student_mission_catalog').doc(recruitmentId);
+        const catalogSnap = await transaction.get(catalogRef);
+
         const recSnap = await transaction.get(recRef);
         if (!recSnap.exists) throw new Error('CANDIDATE_NOT_FOUND');
         const recData = recSnap.data();
@@ -308,12 +317,19 @@ exports.handleSentinelAction = functions
         }
 
         // Mirror to student catalog
-        mirrorMissionShellToStudentCatalog(transaction, db, recruitmentId, { ...recData, ...realmData }, { status: realmData.status || 'STAGED', isCreate: true, allowVisibility: false });
+        await mirrorMissionShellToStudentCatalog(transaction, db, recruitmentId, realmData, recData, action, catalogSnap);
       }
 
       // ACTION: MANAGE REALM LIFECYCLE (Hardened RC-14 Sync)
       else if (['launch_realm', 'pause_realm', 'archive_realm', 'restore_realm'].includes(action)) {
           if (!realmRef || !recRef) throw new Error('REALM_ID_REQUIRED');
+
+          // 1. READ catalog snapshot first
+          const catalogRef = db.collection('student_mission_catalog').doc(recruitmentId);
+          const catalogSnap = await transaction.get(catalogRef);
+
+          const realmSnap = await transaction.get(realmRef);
+          const recSnap = await transaction.get(recRef);
 
           const statusMap = {
             'launch_realm': { realm: 'ACTIVE', rec: 'published' },
@@ -334,34 +350,36 @@ exports.handleSentinelAction = functions
             updatedAt: admin.firestore.FieldValue.serverTimestamp()
           });
 
-          // Fetch fresh snapshots to build the mirror shell payload
-          const realmSnap = await transaction.get(realmRef);
-          const recSnap = await transaction.get(recRef);
           const realmData = { ...realmSnap.data(), status: target.realm };
           const recruitmentData = { ...recSnap.data(), status: target.rec };
 
           // Mirror to student catalog
-          mirrorMissionShellToStudentCatalog(transaction, db, recruitmentId, { ...recruitmentData, ...realmData }, { status: realmData.status || 'DRAFT', allowVisibility: false });
+          await mirrorMissionShellToStudentCatalog(transaction, db, recruitmentId, realmData, recruitmentData, action, catalogSnap);
       }
 
       // ACTION: DECLARE RESULT
       else if (action === 'declare_result') {
           const { finalStatus } = payload;
           const completionStatus = finalStatus === 'WON' ? 'GRADUATED' : 'ARCHIVED';
+
+          // 1. READ catalog snapshot first
+          const catalogRef = db.collection('student_mission_catalog').doc(recruitmentId);
+          const catalogSnap = await transaction.get(catalogRef);
+
+          const realmSnap = await transaction.get(realmRef);
+          const recSnap = await transaction.get(recRef);
+
           transaction.update(realmRef, {
             completion_status: completionStatus,
             closedAt: admin.firestore.FieldValue.serverTimestamp()
           });
           if (finalStatus === 'WON') graduationNeeded = recruitmentId;
 
-          // Fetch fresh snapshots to build the mirror shell payload
-          const realmSnap = await transaction.get(realmRef);
-          const recSnap = await transaction.get(recRef);
           const realmData = { ...realmSnap.data(), completion_status: completionStatus };
           const recruitmentData = recSnap.data() || {};
 
           // Mirror to student catalog
-          mirrorMissionShellToStudentCatalog(transaction, db, recruitmentId, { ...recruitmentData, ...realmData }, { status: realmData.status || 'DRAFT', allowVisibility: false });
+          await mirrorMissionShellToStudentCatalog(transaction, db, recruitmentId, realmData, recruitmentData, action, catalogSnap);
       }
 
       // ACTION: DELETE (Hardened Cleanup with Physical Storage Purge)
@@ -453,69 +471,143 @@ exports.handleSentinelAction = functions
 });
 
 /**
- * Pure safe-shell builder for student_mission_catalog mirror metadata.
- * This does not include academic content or private Founder workbench data.
+ * Deterministic builder for student mission catalog document payload.
  */
-function buildStudentMissionCatalogShell(missionId, missionData = {}, options = {}) {
-  if (!missionId) throw new Error('MISSION_ID_REQUIRED_FOR_STUDENT_CATALOG_MIRROR');
-  const title = String(
-    missionData.title ||
-    missionData.displayTitle ||
-    missionData.recruitment_name ||
-    missionData.exam_name ||
-    missionData.examName ||
-    missionId
-  ).trim();
-  const supportedMediums = Array.isArray(missionData.supportedMediums) && missionData.supportedMediums.length
-    ? missionData.supportedMediums.map((item) => String(item).trim().toUpperCase()).filter(Boolean)
-    : ['ENGLISH'];
-  const allowVisibility = options.allowVisibility === true;
-  const shell = {
-    missionId,
-    title,
-    displayTitle: String(missionData.displayTitle || missionData.displayName || title).trim(),
-    examName: String(missionData.examName || missionData.exam_name || title).trim(),
-    examYear: missionData.examYear || missionData.exam_year || missionData.year || null,
-    missionType: String(missionData.missionType || missionData.exam_category || missionData.examCategory || '').trim(),
-    missionStructureType: String(missionData.missionStructureType || missionData.structure || 'SHELL_ONLY').trim(),
-    examScope: String(missionData.examScope || missionData.scope || '').trim(),
-    mediumPolicy: String(missionData.mediumPolicy || 'ENGLISH_ONLY').trim(),
-    supportedMediums,
-    defaultMedium: String(missionData.defaultMedium || supportedMediums[0] || 'ENGLISH').trim(),
-    status: String(options.status || missionData.status || 'DRAFT').trim().toUpperCase(),
-    visibility: {
-      studentVisible: allowVisibility && missionData.studentVisible === true,
-      catalogVisible: allowVisibility && missionData.catalogVisible === true,
-      quickEntryEnabled: allowVisibility && missionData.quickEntryEnabled === true,
-      smartEntryEnabled: allowVisibility && missionData.smartEntryEnabled === true
-    },
-    source: {
-      missionRealmPath: 'mission_realms/' + missionId,
-      mirroredBy: 'handleSentinelAction',
-      mirrorPhase: 'FUP_2C_MIRROR1_RETRY'
-    },
-    contentLocks: {
-      syllabusPublished: false,
-      topicNodesPublished: false,
-      digibookPublished: false,
-      cruciblePublished: false,
-      pyqPublished: false,
-      questionCellsPublished: false
-    },
-    updatedAt: admin.firestore.FieldValue.serverTimestamp()
+function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentData = {}, action = '') {
+  if (!realmId) throw new Error('CANONICAL_ID_REQUIRED');
+
+  // Authoritative identity resolution
+  const name = realmData.exam_name || realmData.recruitment_name || recruitmentData.title || '';
+  const org = realmData.organization || recruitmentData.org || 'RPSC';
+  const year = parseInt(realmData.exam_year || recruitmentData.year || 2026, 10);
+  const category = realmData.exam_category || recruitmentData.examCategory || 'competitive';
+
+  // Determine visibility states based on status/nature mapping
+  const lifecycleStatus = realmData.status || recruitmentData.nature || 'PASSIVE';
+  
+  let catalogStatus = 'COMING_SOON';
+  let userPanelVisible = false;
+  let cardVisible = true;
+  let archived = false;
+  let studentMessage = 'Mission is being prepared. Content will unlock soon.';
+
+  if (lifecycleStatus === 'ACTIVE') {
+    catalogStatus = 'LIVE';
+    userPanelVisible = true;
+    studentMessage = 'Mission is live and fully accessible!';
+  } else if (lifecycleStatus === 'ARCHIVED') {
+    catalogStatus = 'ARCHIVED';
+    userPanelVisible = false;
+    cardVisible = false;
+    archived = true;
+    studentMessage = 'This mission has been archived.';
+  } else if (lifecycleStatus === 'STAGED' || lifecycleStatus === 'PASSIVE') {
+    catalogStatus = 'COMING_SOON';
+    userPanelVisible = false;
+    studentMessage = 'Mission is being prepared. Content will unlock soon.';
+  }
+
+  // Declare Result handling mapping explicitly
+  if (realmData.completion_status === 'GRADUATED') {
+    catalogStatus = 'LIVE';
+    userPanelVisible = true;
+    cardVisible = true;
+    archived = false;
+    studentMessage = 'Mission completed successfully. Material remains available.';
+  } else if (realmData.completion_status === 'ARCHIVED') {
+    catalogStatus = 'ARCHIVED';
+    userPanelVisible = false;
+    cardVisible = false;
+    archived = true;
+    studentMessage = 'This mission has been archived.';
+  }
+
+  const defaultReadiness = {
+    notification: (realmData.notification_ids && realmData.notification_ids.length > 0) ? 'uploaded' : 'not_ready',
+    syllabus: 'not_ready',
+    crucible: 'not_ready',
+    digibook: 'not_ready',
+    tests: 'not_ready'
   };
-  if (options.isCreate === true) shell.createdAt = admin.firestore.FieldValue.serverTimestamp();
-  return shell;
+
+  const payload = {
+    mission_id: realmId,
+    id: realmId,
+    title: name,
+    name: name,
+    subtitle: recruitmentData.titleHindi || '',
+    titleHindi: recruitmentData.titleHindi || '',
+    state: realmData.state || recruitmentData.state || 'Rajasthan',
+    examCategory: category,
+    exam_category: category,
+    target_year: year,
+    year: year,
+    exam_year: year,
+    exam_id: recruitmentData.code || realmId,
+    code: recruitmentData.code || realmId,
+    recruitment_id: realmId,
+    recruitmentGroupId: realmId,
+    boardId: org,
+    organizationCode: org,
+    cardVisible: cardVisible,
+    userPanelVisible: userPanelVisible,
+    archived: archived,
+    status: catalogStatus,
+    catalogStatus: catalogStatus,
+    contentReadiness: defaultReadiness,
+    studentMessage: studentMessage,
+    sortOrder: recruitmentData.priority || realmData.priority || 0,
+    priority: recruitmentData.priority || realmData.priority || 0,
+    variables: recruitmentData.variables || [],
+    updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    updated_at: admin.firestore.FieldValue.serverTimestamp()
+  };
+
+  return payload;
 }
 
 /**
- * Transactional safe-shell mirror. Validation must not execute this against production Firestore.
+ * Transactional helper to mirror mission shell to student_mission_catalog.
  */
-function mirrorMissionShellToStudentCatalog(transaction, db, missionId, missionData = {}, options = {}) {
-  const shell = buildStudentMissionCatalogShell(missionId, missionData, options);
-  transaction.set(db.collection('student_mission_catalog').doc(missionId), shell, { merge: true });
-  return shell;
+async function mirrorMissionShellToStudentCatalog(transaction, db, realmId, realmData = {}, recruitmentData = {}, action = '', preReadCatalogSnap = null) {
+  if (!realmId) throw new Error('CANONICAL_ID_REQUIRED');
+  
+  const catalogRef = db.collection('student_mission_catalog').doc(realmId);
+  const catalogSnap = preReadCatalogSnap || await transaction.get(catalogRef);
+  
+  if (catalogSnap.exists) {
+    const existing = catalogSnap.data() || {};
+    
+    // Check that immutable identity fields match
+    const checks = {
+      id: existing.id || existing.mission_id || realmId,
+      mission_id: existing.mission_id || existing.id || realmId,
+      recruitment_id: existing.recruitment_id || existing.recruitmentGroupId || realmId,
+      recruitmentGroupId: existing.recruitmentGroupId || existing.recruitment_id || realmId
+    };
+
+    if (checks.id !== realmId || 
+        checks.mission_id !== realmId || 
+        checks.recruitment_id !== realmId || 
+        checks.recruitmentGroupId !== realmId) {
+      throw new Error('FAILED_PRECONDITION: Identity mismatch detected for immutable fields.');
+    }
+  }
+
+  const payload = buildStudentMissionCatalogShell(realmId, realmData, recruitmentData, action);
+  
+  if (!catalogSnap.exists) {
+    // Initial creation: inject creation timestamps
+    payload.createdAt = admin.firestore.FieldValue.serverTimestamp();
+    payload.created_at = admin.firestore.FieldValue.serverTimestamp();
+    transaction.set(catalogRef, payload);
+  } else {
+    // Update existing: preserve immutable creation fields by omitting them
+    transaction.set(catalogRef, payload, { merge: true });
+  }
+  return payload;
 }
 
+// Export helpers for testing
 exports.buildStudentMissionCatalogShell = buildStudentMissionCatalogShell;
 exports.mirrorMissionShellToStudentCatalog = mirrorMissionShellToStudentCatalog;
