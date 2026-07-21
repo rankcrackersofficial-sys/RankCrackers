@@ -9,7 +9,8 @@
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
     "audit:qcell5:empty-atomic-question-cells-preflight": "node audit_qcell5_empty_atomic_question_cells_preflight.js",
-    "audit:qcell5:fix2-missing-canonicalkey-classifier": "node audit_qcell5_fix2_missing_canonicalkey_classifier.js"
+    "audit:qcell5:fix2-missing-canonicalkey-classifier": "node audit_qcell5_fix2_missing_canonicalkey_classifier.js",
+    "audit:qcell5:fix3-legacy-duplicate-pair-evidence": "node audit_qcell5_fix3_legacy_duplicate_pair_evidence.js"
   },
   "engines": {
     "node": "22"
