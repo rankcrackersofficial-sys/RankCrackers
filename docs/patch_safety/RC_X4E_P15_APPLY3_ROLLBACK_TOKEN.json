@@ -1,0 +1,46 @@
+{
+    "patch": "RC-X4E-P15-APPLY3-ROLLBACK-EXECUTE-1",
+    "rollback_id": "rollback_p15_apply3_simulated_text_20260721_v1",
+    "project_id": "rankcrackers-55",
+    "branch": "safety/rc-g2-pre-notification-schema",
+    "ceremony_commit": "7b109afaa3005f467e08e3399ee4594975e95c60",
+    "ir1_commit": "16e3439b5f8ff4096f7c4fc93d0ccf096403465d",
+    "affected_apply_commit": "46a38d347d94b6d5c37fb51fb847bf6e8b02f516",
+    "mission_id": "neet_(ug)-2027",
+    "document_id": "hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+    "page_deletes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ],
+    "task_resets": [
+        "rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b1_p1_3",
+        "rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b2_p4_6",
+        "rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b3_p7_9"
+    ],
+    "mutation_budget": {
+        "max_page_deletes": 9,
+        "max_task_updates": 3,
+        "max_total_writes_deletes": 12
+    },
+    "constraints": {
+        "no_other_page_deletes": true,
+        "no_other_queue_updates": true,
+        "no_parent_document_updates": true,
+        "no_syllabus_atoms": true,
+        "no_topic_nodes": true,
+        "no_student_publish": true,
+        "no_deploy": true,
+        "no_ai_ocr": true
+    },
+    "expires_at": "2026-07-21T15:25:26.931Z",
+    "one_time_use": true,
+    "rollback_approval_phrase_hash": "78ab93aea6850f8b34ff8380057a53593ffe994f87057b190195afe253c14228",
+    "bundle_sha256": "b7167664dfaf9eb64ed3fa7cc0d88af12957a161e00bc7cca79cd33717d285c2"
+}
