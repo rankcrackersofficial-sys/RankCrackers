@@ -4,7 +4,7 @@ const admin = require('firebase-admin');
 const cp = require('child_process');
 const PROJECT_ID = 'rankcrackers-55';
 const TOKEN_PATH = path.join(__dirname, '../docs/patch_safety/RC_X4E_P15_SECOND_GATE_TOKEN.json');
-const EXPECTED_HEAD = '0e8b94ffd99b69f4f548466f9643e2e608f82be4';
+const EXPECTED_HEAD = 'd66bc1dd097a690836e6cc31dc4f43b0a8af8c48';
 async function main() {
     console.log('--- RC-X4E-P15 AUTHORIZED APPLY ---');
     const currentHead = cp.execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim();
