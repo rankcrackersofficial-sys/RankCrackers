@@ -72,29 +72,29 @@ function main() {
         }
     }
 
-    // 7. create_mission_dialog.dart still mirrors to student_mission_catalog
-    const createDialogPath = path.join(__dirname, '../lib/web/founder/mission_control/create_mission_dialog.dart');
-    if (!fs.existsSync(createDialogPath)) {
-        errors.push("lib/web/founder/mission_control/create_mission_dialog.dart does not exist.");
+    // 7. mission_creation_center.dart calls handleSentinelAction for launch
+    const createUiPath = path.join(__dirname, '../lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart');
+    if (!fs.existsSync(createUiPath)) {
+        errors.push("lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart does not exist.");
     } else {
-        const createContent = fs.readFileSync(createDialogPath, 'utf8');
-        if (!createContent.includes("student_mission_catalog")) {
-            errors.push("lib/web/founder/mission_control/create_mission_dialog.dart does not mirror to student_mission_catalog.");
+        const createContent = fs.readFileSync(createUiPath, 'utf8');
+        if (!createContent.includes("launch_exam_mission") || !createContent.includes("handleSentinelAction")) {
+            errors.push("lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart does not call handleSentinelAction.");
         } else {
-            console.log("✅ Check 7: create_mission_dialog.dart still mirrors to student_mission_catalog.");
+            console.log("✅ Check 7: mission_creation_center.dart invokes launch_exam_mission via handleSentinelAction.");
         }
     }
 
-    // 8. edit_mission_dialog.dart still mirrors to student_mission_catalog
-    const editDialogPath = path.join(__dirname, '../lib/web/founder/mission_control/edit_mission_dialog.dart');
-    if (!fs.existsSync(editDialogPath)) {
-        errors.push("lib/web/founder/mission_control/edit_mission_dialog.dart does not exist.");
+    // 8. handle_sentinel_action.js implements deterministic builder and transactional catalog mirror
+    const handleSentinelPath = path.join(__dirname, 'callable/handle_sentinel_action.js');
+    if (!fs.existsSync(handleSentinelPath)) {
+        errors.push("functions/callable/handle_sentinel_action.js does not exist.");
     } else {
-        const editContent = fs.readFileSync(editDialogPath, 'utf8');
-        if (!editContent.includes("student_mission_catalog")) {
-            errors.push("lib/web/founder/mission_control/edit_mission_dialog.dart does not mirror to student_mission_catalog.");
+        const content = fs.readFileSync(handleSentinelPath, 'utf8');
+        if (!content.includes("buildStudentMissionCatalogShell") || !content.includes("mirrorMissionShellToStudentCatalog")) {
+            errors.push("handle_sentinel_action.js is missing mirror helpers.");
         } else {
-            console.log("✅ Check 8: edit_mission_dialog.dart still mirrors to student_mission_catalog.");
+            console.log("✅ Check 8: handle_sentinel_action.js implements buildStudentMissionCatalogShell & mirrorMissionShellToStudentCatalog.");
         }
     }
 

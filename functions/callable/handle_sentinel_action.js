@@ -233,7 +233,7 @@ exports.handleSentinelAction = functions
         const realmId = `rec_${orgCode}_${examCode}_${targetYear}_${cycle || ''}`.replace(/_+/g, '_').replace(/_$/, '');
 
         const now = admin.firestore.FieldValue.serverTimestamp();
-        transaction.set(db.collection('mission_realms').doc(realmId), {
+        const realmData = {
           realm_id: realmId, exam_name: examName, exam_category: catCode, organization, exam_year: targetYear,
           status: nature || 'PASSIVE',
           notification_ids: notificationId ? [notificationId] : [],
@@ -243,14 +243,15 @@ exports.handleSentinelAction = functions
           created_at: now,
           updated_at: now,
           created_by: auth.uid
-        }, { merge: true });
+        };
+        transaction.set(db.collection('mission_realms').doc(realmId), realmData, { merge: true });
 
         // Link Discovery Drafts to Realm
         if (notificationId) transaction.update(db.collection('sentinel_drafts').doc(notificationId), { linkedRealmId: realmId });
         if (syllabusId) transaction.update(db.collection('sentinel_drafts').doc(syllabusId), { linkedRealmId: realmId });
 
         // 🔱 Forensic Fix: Recruitment Manifestation (RC-07)
-        transaction.set(db.collection('recruitments').doc(realmId), {
+        const recruitmentData = {
           id: realmId,
           title: examName,
           org: organization,
@@ -260,7 +261,11 @@ exports.handleSentinelAction = functions
           nature: nature || 'PASSIVE',
           createdAt: now,
           version: '1.0.0'
-        }, { merge: true });
+        };
+        transaction.set(db.collection('recruitments').doc(realmId), recruitmentData, { merge: true });
+
+        // Mirror to student catalog
+        mirrorMissionShellToStudentCatalog(transaction, db, realmId, { ...realmData, ...recruitmentData }, { status: realmData.status || 'DRAFT', isCreate: true, allowVisibility: false });
 
         blueprintToInject = getLifecycleBlueprint(catCode);
         createdRealmId = realmId;
@@ -273,14 +278,15 @@ exports.handleSentinelAction = functions
         if (!recSnap.exists) throw new Error('CANDIDATE_NOT_FOUND');
         const recData = recSnap.data();
 
-        transaction.set(realmRef, {
+        const realmData = {
           realm_id: recruitmentId,
           recruitment_name: recData.title,
           organization: recData.org,
           exam_year: recData.year,
           status: 'STAGED',
           manifestedAt: admin.firestore.FieldValue.serverTimestamp()
-        }, { merge: true });
+        };
+        transaction.set(realmRef, realmData, { merge: true });
 
         transaction.update(recRef, { status: 'MANIFESTED' });
 
@@ -300,6 +306,9 @@ exports.handleSentinelAction = functions
                 });
             }
         }
+
+        // Mirror to student catalog
+        mirrorMissionShellToStudentCatalog(transaction, db, recruitmentId, { ...recData, ...realmData }, { status: realmData.status || 'STAGED', isCreate: true, allowVisibility: false });
       }
 
       // ACTION: MANAGE REALM LIFECYCLE (Hardened RC-14 Sync)
@@ -324,16 +333,35 @@ exports.handleSentinelAction = functions
             status: target.rec,
             updatedAt: admin.firestore.FieldValue.serverTimestamp()
           });
+
+          // Fetch fresh snapshots to build the mirror shell payload
+          const realmSnap = await transaction.get(realmRef);
+          const recSnap = await transaction.get(recRef);
+          const realmData = { ...realmSnap.data(), status: target.realm };
+          const recruitmentData = { ...recSnap.data(), status: target.rec };
+
+          // Mirror to student catalog
+          mirrorMissionShellToStudentCatalog(transaction, db, recruitmentId, { ...recruitmentData, ...realmData }, { status: realmData.status || 'DRAFT', allowVisibility: false });
       }
 
       // ACTION: DECLARE RESULT
       else if (action === 'declare_result') {
           const { finalStatus } = payload;
+          const completionStatus = finalStatus === 'WON' ? 'GRADUATED' : 'ARCHIVED';
           transaction.update(realmRef, {
-            completion_status: finalStatus === 'WON' ? 'GRADUATED' : 'ARCHIVED',
+            completion_status: completionStatus,
             closedAt: admin.firestore.FieldValue.serverTimestamp()
           });
           if (finalStatus === 'WON') graduationNeeded = recruitmentId;
+
+          // Fetch fresh snapshots to build the mirror shell payload
+          const realmSnap = await transaction.get(realmRef);
+          const recSnap = await transaction.get(recRef);
+          const realmData = { ...realmSnap.data(), completion_status: completionStatus };
+          const recruitmentData = recSnap.data() || {};
+
+          // Mirror to student catalog
+          mirrorMissionShellToStudentCatalog(transaction, db, recruitmentId, { ...recruitmentData, ...realmData }, { status: realmData.status || 'DRAFT', allowVisibility: false });
       }
 
       // ACTION: DELETE (Hardened Cleanup with Physical Storage Purge)
@@ -423,3 +451,71 @@ exports.handleSentinelAction = functions
     throw new functions.https.HttpsError('internal', error.message);
   }
 });
+
+/**
+ * Pure safe-shell builder for student_mission_catalog mirror metadata.
+ * This does not include academic content or private Founder workbench data.
+ */
+function buildStudentMissionCatalogShell(missionId, missionData = {}, options = {}) {
+  if (!missionId) throw new Error('MISSION_ID_REQUIRED_FOR_STUDENT_CATALOG_MIRROR');
+  const title = String(
+    missionData.title ||
+    missionData.displayTitle ||
+    missionData.recruitment_name ||
+    missionData.exam_name ||
+    missionData.examName ||
+    missionId
+  ).trim();
+  const supportedMediums = Array.isArray(missionData.supportedMediums) && missionData.supportedMediums.length
+    ? missionData.supportedMediums.map((item) => String(item).trim().toUpperCase()).filter(Boolean)
+    : ['ENGLISH'];
+  const allowVisibility = options.allowVisibility === true;
+  const shell = {
+    missionId,
+    title,
+    displayTitle: String(missionData.displayTitle || missionData.displayName || title).trim(),
+    examName: String(missionData.examName || missionData.exam_name || title).trim(),
+    examYear: missionData.examYear || missionData.exam_year || missionData.year || null,
+    missionType: String(missionData.missionType || missionData.exam_category || missionData.examCategory || '').trim(),
+    missionStructureType: String(missionData.missionStructureType || missionData.structure || 'SHELL_ONLY').trim(),
+    examScope: String(missionData.examScope || missionData.scope || '').trim(),
+    mediumPolicy: String(missionData.mediumPolicy || 'ENGLISH_ONLY').trim(),
+    supportedMediums,
+    defaultMedium: String(missionData.defaultMedium || supportedMediums[0] || 'ENGLISH').trim(),
+    status: String(options.status || missionData.status || 'DRAFT').trim().toUpperCase(),
+    visibility: {
+      studentVisible: allowVisibility && missionData.studentVisible === true,
+      catalogVisible: allowVisibility && missionData.catalogVisible === true,
+      quickEntryEnabled: allowVisibility && missionData.quickEntryEnabled === true,
+      smartEntryEnabled: allowVisibility && missionData.smartEntryEnabled === true
+    },
+    source: {
+      missionRealmPath: 'mission_realms/' + missionId,
+      mirroredBy: 'handleSentinelAction',
+      mirrorPhase: 'FUP_2C_MIRROR1_RETRY'
+    },
+    contentLocks: {
+      syllabusPublished: false,
+      topicNodesPublished: false,
+      digibookPublished: false,
+      cruciblePublished: false,
+      pyqPublished: false,
+      questionCellsPublished: false
+    },
+    updatedAt: admin.firestore.FieldValue.serverTimestamp()
+  };
+  if (options.isCreate === true) shell.createdAt = admin.firestore.FieldValue.serverTimestamp();
+  return shell;
+}
+
+/**
+ * Transactional safe-shell mirror. Validation must not execute this against production Firestore.
+ */
+function mirrorMissionShellToStudentCatalog(transaction, db, missionId, missionData = {}, options = {}) {
+  const shell = buildStudentMissionCatalogShell(missionId, missionData, options);
+  transaction.set(db.collection('student_mission_catalog').doc(missionId), shell, { merge: true });
+  return shell;
+}
+
+exports.buildStudentMissionCatalogShell = buildStudentMissionCatalogShell;
+exports.mirrorMissionShellToStudentCatalog = mirrorMissionShellToStudentCatalog;

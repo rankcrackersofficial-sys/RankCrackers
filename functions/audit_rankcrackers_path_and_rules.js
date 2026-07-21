@@ -102,13 +102,48 @@ function main() {
   if (!firestoreService.includes('student_mission_catalog')) {
     blockers.push('student_mission_catalog query missing from firestore_service.dart.');
   }
-  const createMissionDialog = read('lib/web/founder/mission_control/create_mission_dialog.dart');
-  if (!createMissionDialog.includes('student_mission_catalog')) {
-    blockers.push('create_mission_dialog.dart must mirror to student_mission_catalog.');
+  // Verify current UI paths exist and call backend authority
+  const createUiPath = 'lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart';
+  const editUiPath = 'lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart';
+  if (!exists(createUiPath)) {
+    blockers.push('mission_creation_center.dart does not exist.');
+  } else {
+    const content = read(createUiPath);
+    if (!content.includes('launch_exam_mission') || !content.includes('handleSentinelAction')) {
+      blockers.push('mission_creation_center.dart does not trigger launch_exam_mission callable.');
+    }
   }
-  const editMissionDialog = read('lib/web/founder/mission_control/edit_mission_dialog.dart');
-  if (!editMissionDialog.includes('student_mission_catalog')) {
-    blockers.push('edit_mission_dialog.dart must mirror to student_mission_catalog.');
+
+  if (!exists(editUiPath)) {
+    blockers.push('mission_control_center.dart does not exist.');
+  } else {
+    const content = read(editUiPath);
+    if (!content.includes('handleSentinelAction')) {
+      blockers.push('mission_control_center.dart does not call handleSentinelAction callable.');
+    }
+  }
+
+  // Verify backend contains mirror helper and calls it transactionally
+  const handleSentinelPath = 'functions/callable/handle_sentinel_action.js';
+  if (!exists(handleSentinelPath)) {
+    blockers.push('handle_sentinel_action.js does not exist.');
+  } else {
+    const content = read(handleSentinelPath);
+    if (!content.includes('buildStudentMissionCatalogShell')) {
+      blockers.push('handle_sentinel_action.js missing buildStudentMissionCatalogShell builder.');
+    }
+    if (!content.includes('mirrorMissionShellToStudentCatalog')) {
+      blockers.push('handle_sentinel_action.js missing mirrorMissionShellToStudentCatalog helper.');
+    }
+    if (content.includes('topic_nodes') || content.includes('atomic_question_cells')) {
+      blockers.push('Mission shell mirror must not write topic_nodes or atomic_question_cells.');
+    }
+    
+    // Check that required lifecycle actions call the mirror helper
+    const matches = (content.match(/mirrorMissionShellToStudentCatalog/g) || []).length;
+    if (matches < 5) {
+      blockers.push(`handle_sentinel_action.js calls mirror helper ${matches} times, expected at least 5 times.`);
+    }
   }
 
   if (!exists('docs/RANKCRACKERS_FINAL_OPERATION_RULES.md')) {
