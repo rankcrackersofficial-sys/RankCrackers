@@ -85,6 +85,23 @@ class MockDocumentReference {
     this.id = id;
     this.path = `${parentPath}/${id}`;
   }
+  update(data) {
+    const colState = mockDatabaseState[this.parentPath] || {};
+    if (!colState[this.id]) {
+      throw new Error(`DOCUMENT_NOT_FOUND: Cannot update non-existing document '${this.id}'`);
+    }
+    colState[this.id] = { ...colState[this.id], ...data };
+    return Promise.resolve();
+  }
+  set(data, options = {}) {
+    const colState = mockDatabaseState[this.parentPath] || {};
+    if (options.merge && colState[this.id]) {
+      colState[this.id] = { ...colState[this.id], ...data };
+    } else {
+      colState[this.id] = data;
+    }
+    return Promise.resolve();
+  }
   collection(name) {
     return {
       doc: (subId) => new MockDocumentReference(`${this.path}/${name}`, subId),
@@ -195,7 +212,6 @@ require.cache[require.resolve('firebase-functions')] = {
   exports: mockFunctions
 };
 
-// Require implementation
 const { 
   handleSentinelAction,
   buildStudentMissionCatalogShell, 
@@ -206,6 +222,8 @@ const {
   resolveCanonicalMissionId,
   validateOrResolveId
 } = require('./canonical_mission_registry');
+
+const { buildCatalogPayload } = require('./backfill_student_mission_catalog');
 
 console.log("================================================");
 console.log("RUNNING HARDENED INTEGRATION TESTS (29 CASES)");
@@ -284,8 +302,8 @@ async function runSuite() {
     assert.strictEqual(shell.userPanelVisible, true);
   });
 
-  // 2. Admin launch behavior follows permission policy (allow launch)
-  await testCase("Admin launch behavior follows permission policy (allow launch)", async () => {
+  // 2. Admin launch behavior follows permission policy (allow launch -> now blocked by governance lock)
+  await testCase("Admin launch behavior follows permission policy (allow launch -> now blocked by governance lock)", async () => {
     resetMockDb();
     const data = {
       action: 'launch_exam_mission',
@@ -297,11 +315,9 @@ async function runSuite() {
       }
     };
     
-    await handleSentinelAction(data, adminContext);
-    
-    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
-    assert.ok(shell);
-    assert.strictEqual(shell.status, 'LIVE');
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, adminContext);
+    }, /ACCESS DENIED/);
   });
 
   // 3. Unauthorized caller rejected
@@ -829,6 +845,194 @@ async function runSuite() {
     assert.strictEqual(shell.target_year, 2027);
     assert.strictEqual(shell.priority, 5);
     assert.strictEqual(shell.sortOrder, 5);
+  });
+
+  // 30. Permission matrix - Founder allowed on sensitive archive_realm
+  await testCase("Permission matrix - Founder allowed on sensitive archive_realm", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ACTIVE' };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', status: 'LIVE' };
+
+    const data = {
+      action: 'archive_realm',
+      recruitmentId: 'jee_main_2026'
+    };
+
+    await handleSentinelAction(data, founderContext);
+    assert.strictEqual(mockDatabaseState.mission_realms['jee_main_2026'].status, 'ARCHIVED');
+  });
+
+  // 31. Permission matrix - Admin rejected on sensitive archive_realm
+  await testCase("Permission matrix - Admin rejected on sensitive archive_realm", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ACTIVE' };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+
+    const data = {
+      action: 'archive_realm',
+      recruitmentId: 'jee_main_2026'
+    };
+
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, adminContext);
+    }, /ACCESS DENIED/);
+  });
+
+  // 32. Permission matrix - Admin allowed on staged/lifecycle manifest_realm
+  await testCase("Permission matrix - Admin allowed on staged/lifecycle manifest_realm", async () => {
+    resetMockDb();
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published', title: 'JEE Main', org: 'NTA', year: 2026 };
+
+    const data = {
+      action: 'manifest_realm',
+      recruitmentId: 'jee_main_2026'
+    };
+
+    await handleSentinelAction(data, adminContext);
+    assert.strictEqual(mockDatabaseState.mission_realms['jee_main_2026'].status, 'STAGED');
+  });
+
+  // 33. Concurrent creation race protection (precondition check/collision prevention)
+  await testCase("Concurrent creation race protection", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = {
+      realm_id: 'jee_main_2026',
+      exam_name: 'JEE Main Original',
+      organization: 'NTA',
+      exam_year: 2026
+    };
+
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {
+        examName: 'JEE Main Colliding',
+        organization: 'NTA',
+        year: 2026
+      }
+    };
+
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, founderContext);
+    }, /Identity mismatch detected for existing mission ID/);
+  });
+
+  // 34. Option B Side-effect recovery - Partial failure and retry reconciliation
+  await testCase("Option B Side-effect recovery - Partial failure and retry reconciliation", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = { 
+      realm_id: 'jee_main_2026', 
+      status: 'ACTIVE',
+      certificateSideEffectStatus: 'SUCCESS',
+      analyticsSideEffectStatus: 'PENDING'
+    };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE' };
+
+    // Seed 1 participant who got certificate issued previously
+    const participantRef = mockDb.collection('mission_realms').doc('jee_main_2026').collection('participants').doc('student_123');
+    mockDatabaseState['mission_realms/jee_main_2026/participants'] = {
+      'student_123': {
+        attempts: {
+          FINAL_RESULT: { status: 'CERTIFICATE_ISSUED', examName: 'JEE Main', verifiedScore: 99.5 }
+        },
+        linkedCertificateId: 'cert_jee_main_2026_student_123'
+      }
+    };
+
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON' }
+    };
+
+    await handleSentinelAction(data, founderContext);
+
+    // Analytics should now be SUCCESS and graduates count should be set to 1
+    const realm = mockDatabaseState.mission_realms['jee_main_2026'];
+    assert.strictEqual(realm.certificateSideEffectStatus, 'SUCCESS');
+    assert.strictEqual(realm.analyticsSideEffectStatus, 'SUCCESS');
+    assert.strictEqual(realm['analytics.graduated'], 1);
+  });
+
+  // 35. Option B Side-effect recovery - Repeated declare_result is idempotent
+  await testCase("Option B Side-effect recovery - Repeated declare_result is idempotent", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = { 
+      realm_id: 'jee_main_2026', 
+      status: 'ACTIVE',
+      certificateSideEffectStatus: 'SUCCESS',
+      analyticsSideEffectStatus: 'SUCCESS',
+      'analytics.graduated': 1
+    };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE' };
+
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON' }
+    };
+
+    // Override batch to verify no operations are called
+    const originalBatch = mockDb.batch;
+    let batchCalled = false;
+    mockDb.batch = () => {
+      batchCalled = true;
+      return originalBatch();
+    };
+
+    await handleSentinelAction(data, founderContext);
+
+    assert.strictEqual(batchCalled, false);
+    mockDb.batch = originalBatch;
+  });
+
+  // 36. Backfill builder semantic parity check
+  await testCase("Backfill builder semantic parity check", async () => {
+    const realmData = {
+      exam_name: 'JEE Main 2026',
+      titleHindi: 'JEE Main Hindi',
+      state: 'Rajasthan',
+      exam_category: 'competitive',
+      exam_year: 2026,
+      code: 'jee_main_2026',
+      organization: 'NTA',
+      organizationCode: 'NTA',
+      status: 'ACTIVE',
+      priority: 3,
+      createdAt: 'MOCK_TIME'
+    };
+
+    const recData = {
+      title: 'JEE Main 2026',
+      titleHindi: 'JEE Main Hindi',
+      state: 'Rajasthan',
+      examCategory: 'competitive',
+      year: 2026,
+      code: 'jee_main_2026',
+      org: 'NTA',
+      organizationCode: 'NTA',
+      nature: 'ACTIVE',
+      priority: 3,
+      createdAt: 'MOCK_TIME'
+    };
+
+    const variables = [{ id: 'var_1', name: 'Var 1' }];
+    const readiness = { crucible: 'ready' };
+    const catalogStatus = 'LIVE';
+    const studentMessage = 'Success';
+    const now = 'CURRENT_TIME';
+
+    const backfillPayload = buildCatalogPayload('jee_main_2026', recData, variables, readiness, catalogStatus, studentMessage, now);
+    const mirrorPayload = buildStudentMissionCatalogShell('jee_main_2026', realmData, recData, 'launch_realm');
+
+    // Compare field-by-field semantic equality
+    const fieldsToVerify = ['id', 'mission_id', 'title', 'name', 'subtitle', 'titleHindi', 'state', 'examCategory', 'exam_category', 'target_year', 'year', 'exam_year', 'exam_id', 'code', 'recruitment_id', 'recruitmentGroupId', 'boardId', 'organizationCode', 'cardVisible', 'userPanelVisible', 'priority', 'sortOrder'];
+
+    for (const field of fieldsToVerify) {
+      assert.strictEqual(backfillPayload[field], mirrorPayload[field], `Parity mismatch on field '${field}': backfill='${backfillPayload[field]}', mirror='${mirrorPayload[field]}'`);
+    }
   });
 
   console.log("------------------------------------------------");

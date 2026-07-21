@@ -1,6 +1,7 @@
 const { Firestore } = require('@google-cloud/firestore');
 const { OAuth2Client } = require('google-auth-library');
 const cp = require('child_process');
+const { KNOWN_PILOT_IDS } = require('./canonical_mission_registry');
 
 async function main() {
     console.log("RUNNING STUDENT MISSION CATALOG BACKFILL SCRIPT (PATCH M5A)");
@@ -23,11 +24,7 @@ async function main() {
         authClient: auth
     });
 
-    const missionIds = [
-        'jee_main_2026',
-        'neet_(ug)-2027',
-        'RPSC_FIRST_GRADE2026_2026_1782713222215'
-    ];
+    const missionIds = Array.from(KNOWN_PILOT_IDS);
 
     const now = new Date().toISOString();
 
@@ -188,39 +185,7 @@ async function main() {
             }
         }
 
-        const catalogPayload = {
-            mission_id: id,
-            id: id,
-            title: data.name || data.title || '',
-            name: data.name || data.title || '',
-            subtitle: data.titleHindi || '',
-            titleHindi: data.titleHindi || '',
-            state: data.state || 'Rajasthan',
-            examCategory: data.examCategory || data.exam_category || 'competitive',
-            exam_category: data.examCategory || data.exam_category || 'competitive',
-            target_year: data.year || data.exam_year || 2026,
-            year: data.year || data.exam_year || 2026,
-            exam_year: data.year || data.exam_year || 2026,
-            exam_id: data.code || id,
-            code: data.code || id,
-            recruitment_id: id,
-            recruitmentGroupId: id,
-            boardId: data.organizationCode || 'RPSC',
-            organizationCode: data.organizationCode || 'RPSC',
-            cardVisible: true,
-            userPanelVisible: true,
-            status: catalogStatus, // for compatibility
-            catalogStatus: catalogStatus,
-            contentReadiness: readiness,
-            studentMessage: studentMessage,
-            sortOrder: data.priority || 0,
-            priority: data.priority || 0,
-            variables: variables,
-            created_at: data.createdAt || data.created_at || now,
-            createdAt: data.createdAt || data.created_at || now,
-            updated_at: now,
-            updatedAt: now
-        };
+        const catalogPayload = buildCatalogPayload(id, data, variables, readiness, catalogStatus, studentMessage, now);
 
         if (dryRun) {
             console.log(`[DRY RUN] Would write student_mission_catalog/${id}:`);
@@ -234,4 +199,46 @@ async function main() {
     console.log("Backfill operation complete.");
 }
 
-main().catch(console.error);
+function buildCatalogPayload(id, data, variables, readiness, catalogStatus, studentMessage, now) {
+    return {
+        mission_id: id,
+        id: id,
+        title: data.name || data.title || '',
+        name: data.name || data.title || '',
+        subtitle: data.titleHindi || '',
+        titleHindi: data.titleHindi || '',
+        state: data.state || 'Rajasthan',
+        examCategory: data.examCategory || data.exam_category || 'competitive',
+        exam_category: data.examCategory || data.exam_category || 'competitive',
+        target_year: data.year || data.exam_year || 2026,
+        year: data.year || data.exam_year || 2026,
+        exam_year: data.year || data.exam_year || 2026,
+        exam_id: data.code || id,
+        code: data.code || id,
+        recruitment_id: id,
+        recruitmentGroupId: id,
+        boardId: data.organizationCode || 'RPSC',
+        organizationCode: data.organizationCode || 'RPSC',
+        cardVisible: true,
+        userPanelVisible: true,
+        status: catalogStatus, // for compatibility
+        catalogStatus: catalogStatus,
+        contentReadiness: readiness,
+        studentMessage: studentMessage,
+        sortOrder: data.priority || 0,
+        priority: data.priority || 0,
+        variables: variables,
+        created_at: data.createdAt || data.created_at || now,
+        createdAt: data.createdAt || data.created_at || now,
+        updated_at: now,
+        updatedAt: now
+    };
+}
+
+module.exports = {
+    buildCatalogPayload
+};
+
+if (require.main === module) {
+    main().catch(console.error);
+}

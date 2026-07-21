@@ -39,6 +39,8 @@ exports.handleSentinelAction = functions
   const { draftId: reqDraftId, sourceId: reqSourceId, action, payload, recruitmentId: reqRecruitmentId } = data;
   const db = admin.firestore();
 
+  assertMissionActionAuthorized(auth, action);
+
   try {
     console.log(`SENTINEL_ACTION: ${action} triggered by ${auth.uid} (${auth.token.email})`);
 
@@ -234,6 +236,20 @@ exports.handleSentinelAction = functions
         // Resolve canonical mission ID from shared registry
         const realmId = validateOrResolveId(action, payload);
 
+        // Transactional lookup for existing records to enforce uniqueness & identity verification
+        const existingRealmRef = db.collection('mission_realms').doc(realmId);
+        const existingRealmSnap = await transaction.get(existingRealmRef);
+        if (existingRealmSnap.exists) {
+          const existingData = existingRealmSnap.data() || {};
+          const matchName = String(existingData.exam_name || '').trim().toLowerCase() === String(examName || '').trim().toLowerCase();
+          const matchOrg = String(existingData.organization || '').trim().toLowerCase() === String(organization || '').trim().toLowerCase();
+          const matchYear = parseInt(existingData.exam_year || 0, 10) === parseInt(targetYear, 10);
+          
+          if (!matchName || !matchOrg || !matchYear) {
+            throw new Error(`FAILED_PRECONDITION: Identity mismatch detected for existing mission ID '${realmId}'.`);
+          }
+        }
+
         // 1. READ catalog snapshot first (before any sets)
         const catalogRef = db.collection('student_mission_catalog').doc(realmId);
         const catalogSnap = await transaction.get(catalogRef);
@@ -371,11 +387,26 @@ exports.handleSentinelAction = functions
           const realmSnap = await transaction.get(realmRef);
           const recSnap = await transaction.get(recRef);
 
+          const existingRealm = realmSnap.data() || {};
+          const currentCertStatus = existingRealm.certificateSideEffectStatus || 'PENDING';
+          const currentAnalStatus = existingRealm.analyticsSideEffectStatus || 'PENDING';
+
           transaction.update(realmRef, {
             completion_status: completionStatus,
-            closedAt: admin.firestore.FieldValue.serverTimestamp()
+            closedAt: admin.firestore.FieldValue.serverTimestamp(),
+            certificateSideEffectStatus: currentCertStatus === 'SUCCESS' ? 'SUCCESS' : 'PENDING',
+            analyticsSideEffectStatus: currentAnalStatus === 'SUCCESS' ? 'SUCCESS' : 'PENDING',
+            lastSideEffectError: null,
+            sideEffectRetryRequired: false
           });
-          if (finalStatus === 'WON') graduationNeeded = recruitmentId;
+
+          if (finalStatus === 'WON') {
+            graduationNeeded = {
+              realmId: recruitmentId,
+              certStatus: currentCertStatus,
+              analStatus: currentAnalStatus
+            };
+          }
 
           const realmData = { ...realmSnap.data(), completion_status: completionStatus };
           const recruitmentData = recSnap.data() || {};
@@ -435,33 +466,84 @@ exports.handleSentinelAction = functions
 
     // POST-TRANSACTION: GRADUATION BATCH
     if (graduationNeeded) {
-        const participantsSnap = await db.collection('mission_realms').doc(graduationNeeded).collection('participants')
-            .where('attempts.FINAL_RESULT.status', '==', 'CERTIFICATE_ELIGIBLE').get();
+        const { realmId, certStatus, analStatus } = graduationNeeded;
+        let finalCertStatus = certStatus;
+        let finalAnalStatus = analStatus;
+        let lastError = null;
 
-        const batch = db.batch();
-        let count = 0;
-        participantsSnap.forEach(doc => {
-            const pData = doc.data();
-            if (pData.linkedCertificateId) return;
-            count++;
-            const certId = `cert_${graduationNeeded}_${doc.id}`;
-            const vHash = crypto.createHash('sha256').update(`${doc.id}_${graduationNeeded}_rankcrackers`).digest('hex');
+        try {
+            // 1. If certificates side-effect is not yet SUCCESS, run it
+            if (certStatus !== 'SUCCESS') {
+                const participantsSnap = await db.collection('mission_realms').doc(realmId).collection('participants')
+                    .where('attempts.FINAL_RESULT.status', '==', 'CERTIFICATE_ELIGIBLE').get();
 
-            batch.set(db.collection('certificates').doc(certId), {
-                certificateId: certId, userId: doc.id, realmId: graduationNeeded,
-                issueDate: admin.firestore.FieldValue.serverTimestamp(),
-                status: 'GENERATING', isRegistryApproved: false,
-                metadata: {
-                    examName: pData.attempts?.FINAL_RESULT?.examName || 'Mission Victory',
-                    score: pData.attempts?.FINAL_RESULT?.verifiedScore || 0,
-                    rank: pData.attempts?.FINAL_RESULT?.verifiedRank || null
+                const batch = db.batch();
+                let count = 0;
+                participantsSnap.forEach(doc => {
+                    const pData = doc.data();
+                    if (pData.linkedCertificateId) return;
+                    count++;
+                    const certId = `cert_${realmId}_${doc.id}`;
+
+                    batch.set(db.collection('certificates').doc(certId), {
+                        certificateId: certId, userId: doc.id, realmId: realmId,
+                        issueDate: admin.firestore.FieldValue.serverTimestamp(),
+                        status: 'GENERATING', isRegistryApproved: false,
+                        metadata: {
+                            examName: pData.attempts?.FINAL_RESULT?.examName || 'Mission Victory',
+                            score: pData.attempts?.FINAL_RESULT?.verifiedScore || 0,
+                            rank: pData.attempts?.FINAL_RESULT?.verifiedRank || null
+                        }
+                    });
+                    batch.update(doc.ref, { 'attempts.FINAL_RESULT.status': 'CERTIFICATE_ISSUED', 'linkedCertificateId': certId });
+                });
+
+                if (count > 0) {
+                    await batch.commit();
                 }
+                finalCertStatus = 'SUCCESS';
+            }
+
+            // 2. If analytics side-effect is not yet SUCCESS, run it
+            if (analStatus !== 'SUCCESS') {
+                const issuedParticipantsSnap = await db.collection('mission_realms').doc(realmId).collection('participants')
+                    .where('attempts.FINAL_RESULT.status', '==', 'CERTIFICATE_ISSUED').get();
+                let count = 0;
+                issuedParticipantsSnap.forEach(() => {
+                    count++;
+                });
+
+                if (count > 0) {
+                    const batch = db.batch();
+                    batch.update(db.collection('mission_realms').doc(realmId), { 
+                        'analytics.graduated': count 
+                    });
+                    await batch.commit();
+                }
+                finalAnalStatus = 'SUCCESS';
+            }
+        } catch (err) {
+            console.error(`GRADUATION_BATCH_FAILED: ${err.message}`);
+            lastError = err.message;
+        }
+
+        // Update the realm document with final side-effect statuses
+        try {
+            await db.collection('mission_realms').doc(realmId).update({
+                certificateSideEffectStatus: finalCertStatus,
+                analyticsSideEffectStatus: finalAnalStatus,
+                lastSideEffectError: lastError,
+                sideEffectRetryRequired: (finalCertStatus !== 'SUCCESS' || finalAnalStatus !== 'SUCCESS')
             });
-            batch.update(doc.ref, { 'attempts.FINAL_RESULT.status': 'CERTIFICATE_ISSUED', 'linkedCertificateId': certId });
-        });
-        if (count > 0) {
-            batch.update(db.collection('mission_realms').doc(graduationNeeded), { 'analytics.graduated': admin.firestore.FieldValue.increment(count) });
-            await batch.commit();
+        } catch (updateErr) {
+            console.error(`Failed to update recovery metadata: ${updateErr.message}`);
+        }
+
+        if (finalCertStatus !== 'SUCCESS') {
+            throw new Error(`BATCH_CERTIFICATE_WRITE_FAILED: ${lastError}`);
+        }
+        if (finalAnalStatus !== 'SUCCESS') {
+            throw new Error(`BATCH_ANALYTICS_WRITE_FAILED: ${lastError}`);
         }
     }
 
@@ -613,3 +695,29 @@ async function mirrorMissionShellToStudentCatalog(transaction, db, realmId, real
 // Export helpers for testing
 exports.buildStudentMissionCatalogShell = buildStudentMissionCatalogShell;
 exports.mirrorMissionShellToStudentCatalog = mirrorMissionShellToStudentCatalog;
+
+/**
+ * Asserts whether the authenticated context is authorized to perform the action.
+ * strictly implements the Founder-only governance lock for sensitive/irreversible actions.
+ */
+function assertMissionActionAuthorized(auth, action) {
+  if (!auth) {
+    throw new functions.https.HttpsError('unauthenticated', '🔱 COMMAND DENIED: Authentication required.');
+  }
+
+  const isFounder = auth.token.founder === true;
+  const isAdmin = auth.token.admin === true;
+
+  const sensitiveActions = ['launch_exam_mission', 'archive_realm', 'restore_realm', 'declare_result'];
+
+  if (sensitiveActions.includes(action)) {
+    if (!isFounder) {
+      throw new functions.https.HttpsError('permission-denied', `🔱 ACCESS DENIED: Founder clearance required for sensitive action '${action}'.`);
+    }
+  } else {
+    if (!isFounder && !isAdmin) {
+      throw new functions.https.HttpsError('permission-denied', `🔱 ACCESS DENIED: Founder or Admin status required for action '${action}'.`);
+    }
+  }
+}
+

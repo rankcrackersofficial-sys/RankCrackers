@@ -156,6 +156,31 @@ function main() {
     if (content.includes('topic_nodes') || content.includes('atomic_question_cells')) {
       blockers.push('Mission shell mirror must not write topic_nodes or atomic_question_cells.');
     }
+
+    // 🔱 Guard Enforcements: Shared Canonical Registry
+    if (!content.includes('canonical_mission_registry')) {
+      blockers.push('handle_sentinel_action.js must import canonical_mission_registry module.');
+    }
+    // Prevent redefining aliases locally
+    if (content.includes('PILOT_ALIASES') && !content.includes('require(') && !content.includes('validateOrResolveId')) {
+      blockers.push('handle_sentinel_action.js must not define its own local PILOT_ALIASES table.');
+    }
+  }
+
+  const backfillPath = 'functions/backfill_student_mission_catalog.js';
+  if (!exists(backfillPath)) {
+    blockers.push('backfill_student_mission_catalog.js does not exist.');
+  } else {
+    const content = read(backfillPath);
+    if (!content.includes('canonical_mission_registry')) {
+      blockers.push('backfill_student_mission_catalog.js must import canonical_mission_registry module.');
+    }
+    if (content.includes('PILOT_ALIASES') && !content.includes('require(')) {
+      blockers.push('backfill_student_mission_catalog.js must not define its own local PILOT_ALIASES table.');
+    }
+    if (content.match(/missionIds\s*=\s*\[/)) {
+      blockers.push('backfill_student_mission_catalog.js must not define local hardcoded mission IDs list.');
+    }
   }
 
   // Verify direct UI writes are completely absent
