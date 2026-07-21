@@ -1,0 +1,572 @@
+--- staged-state guard ---
+
+> audit:repo:staged-state-guard
+> node functions/audit_repo_staged_state_guard.js
+
+{
+  "stagedFiles": [
+    "docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md",
+    "docs/patch_safety/FUP_2C_MIRROR2_status_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md",
+    "docs/patch_safety/FUP_2C_MIRROR2_validation.txt",
+    "docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md",
+    "functions/audit_mission_catalog_shell_contract.js",
+    "functions/audit_mission_mirror_current_flow.js",
+    "functions/audit_repo_staged_state_guard.js",
+    "functions/backfill_student_mission_catalog.js",
+    "functions/callable/handle_sentinel_action.js"
+  ],
+  "allowedStagedFiles": [
+    "docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md",
+    "docs/patch_safety/FUP_2C_MIRROR2_status_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md",
+    "docs/patch_safety/FUP_2C_MIRROR2_validation.txt",
+    "docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md",
+    "functions/audit_mission_catalog_shell_contract.js",
+    "functions/audit_mission_mirror_current_flow.js",
+    "functions/audit_repo_staged_state_guard.js",
+    "functions/backfill_student_mission_catalog.js",
+    "functions/callable/handle_sentinel_action.js"
+  ],
+  "blockedStagedFiles": [],
+  "unscopedStagedFiles": [],
+  "packageJsonConflict": false,
+  "verdict": "REPO_STAGED_STATE_PASS"
+}
+REPO_STAGED_STATE_PASS
+HEAD=9e910b7159811d3cb0fc15e6f42d9ed4734898c4
+STATUS:
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+A  docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+A  docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+A  docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+AM functions/audit_mission_catalog_shell_contract.js
+A  functions/audit_mission_mirror_current_flow.js
+MM functions/audit_repo_staged_state_guard.js
+M  functions/backfill_student_mission_catalog.js
+M  functions/callable/handle_sentinel_action.js
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_current_mirror_audit.md
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_validation.txt
+STAGED:
+docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+functions/audit_mission_catalog_shell_contract.js
+functions/audit_mission_mirror_current_flow.js
+functions/audit_repo_staged_state_guard.js
+functions/backfill_student_mission_catalog.js
+functions/callable/handle_sentinel_action.js
+--- head-freeze before ---
+
+> audit:repo:head-freeze-guard
+> node functions/audit_repo_head_freeze_guard.js 9e910b7159811d3cb0fc15e6f42d9ed4734898c4
+
+{
+  "expectedHead": "9e910b7159811d3cb0fc15e6f42d9ed4734898c4",
+  "currentHead": "9e910b7159811d3cb0fc15e6f42d9ed4734898c4",
+  "branch": "safety/rc-g2-pre-notification-schema",
+  "headStable": true,
+  "stagedFiles": [
+    "docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md",
+    "docs/patch_safety/FUP_2C_MIRROR2_status_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md",
+    "docs/patch_safety/FUP_2C_MIRROR2_validation.txt",
+    "docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md",
+    "functions/audit_mission_catalog_shell_contract.js",
+    "functions/audit_mission_mirror_current_flow.js",
+    "functions/audit_repo_staged_state_guard.js",
+    "functions/backfill_student_mission_catalog.js",
+    "functions/callable/handle_sentinel_action.js"
+  ],
+  "blockedStagedFiles": [],
+  "freezeMarker": true,
+  "verdict": "REPO_HEAD_FREEZE_PASS"
+}
+REPO_HEAD_FREEZE_PASS
+HEAD=9e910b7159811d3cb0fc15e6f42d9ed4734898c4
+STATUS:
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+A  docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+A  docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+A  docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+AM functions/audit_mission_catalog_shell_contract.js
+A  functions/audit_mission_mirror_current_flow.js
+MM functions/audit_repo_staged_state_guard.js
+M  functions/backfill_student_mission_catalog.js
+M  functions/callable/handle_sentinel_action.js
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_current_mirror_audit.md
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_validation.txt
+STAGED:
+docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+functions/audit_mission_catalog_shell_contract.js
+functions/audit_mission_mirror_current_flow.js
+functions/audit_repo_staged_state_guard.js
+functions/backfill_student_mission_catalog.js
+functions/callable/handle_sentinel_action.js
+--- shell contract ---
+
+> audit:mission:catalog-shell-contract
+> node functions/audit_mission_catalog_shell_contract.js
+
+{
+  "checks": [
+    {
+      "name": "backend builder exists",
+      "pass": true,
+      "detail": "functions/callable/handle_sentinel_action.js"
+    },
+    {
+      "name": "backfill builder exists",
+      "pass": true,
+      "detail": "functions/backfill_student_mission_catalog.js"
+    },
+    {
+      "name": "writer exists",
+      "pass": true,
+      "detail": "mirrorMissionShellToStudentCatalog"
+    },
+    {
+      "name": "student catalog target exists",
+      "pass": true,
+      "detail": "student_mission_catalog"
+    },
+    {
+      "name": "backend has visibility object",
+      "pass": true,
+      "detail": "visibility defaults false"
+    },
+    {
+      "name": "backend has contentLocks false",
+      "pass": true,
+      "detail": "contentLocks defaults false"
+    },
+    {
+      "name": "backend does not set live",
+      "pass": true,
+      "detail": "backend builder must not set LIVE"
+    },
+    {
+      "name": "backend does not expose user visible true",
+      "pass": true,
+      "detail": "no userPanelVisible true"
+    },
+    {
+      "name": "backend no contentReadiness",
+      "pass": true,
+      "detail": "no contentReadiness field"
+    },
+    {
+      "name": "backend no variables",
+      "pass": true,
+      "detail": "no variables field"
+    },
+    {
+      "name": "backend no legacy id fields",
+      "pass": true,
+      "detail": "allowed shell fields only"
+    },
+    {
+      "name": "backfill has visibility object",
+      "pass": true,
+      "detail": "backfill visibility defaults false"
+    },
+    {
+      "name": "backfill has contentLocks false",
+      "pass": true,
+      "detail": "backfill contentLocks defaults false"
+    },
+    {
+      "name": "backfill no user visible true",
+      "pass": true,
+      "detail": "backfill no userPanelVisible true"
+    },
+    {
+      "name": "backfill no contentReadiness",
+      "pass": true,
+      "detail": "backfill no contentReadiness field"
+    },
+    {
+      "name": "backfill no variables",
+      "pass": true,
+      "detail": "backfill no variables field"
+    },
+    {
+      "name": "no forbidden collection writes",
+      "pass": true,
+      "detail": "no academic collection writes in shell builders"
+    }
+  ],
+  "failed": [],
+  "verdict": "MISSION_CATALOG_SHELL_CONTRACT_PASS",
+  "noWriteProof": true
+}
+MISSION_CATALOG_SHELL_CONTRACT_PASS
+HEAD=9e910b7159811d3cb0fc15e6f42d9ed4734898c4
+STATUS:
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+A  docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+A  docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+A  docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+AM functions/audit_mission_catalog_shell_contract.js
+A  functions/audit_mission_mirror_current_flow.js
+MM functions/audit_repo_staged_state_guard.js
+M  functions/backfill_student_mission_catalog.js
+M  functions/callable/handle_sentinel_action.js
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_current_mirror_audit.md
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_validation.txt
+STAGED:
+docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+functions/audit_mission_catalog_shell_contract.js
+functions/audit_mission_mirror_current_flow.js
+functions/audit_repo_staged_state_guard.js
+functions/backfill_student_mission_catalog.js
+functions/callable/handle_sentinel_action.js
+--- mission mirror flow ---
+
+> audit:mission:mirror-current-flow
+> node functions/audit_mission_mirror_current_flow.js
+
+{
+  "paths": {
+    "oldCreate": "lib/web/founder/mission_control/create_mission_dialog.dart",
+    "oldEdit": "lib/web/founder/mission_control/edit_mission_dialog.dart",
+    "currentCreate": "lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart",
+    "currentEdit": "lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart",
+    "backend": "functions/callable/handle_sentinel_action.js"
+  },
+  "checks": [
+    {
+      "name": "old create path stale/missing",
+      "pass": true,
+      "detail": "lib/web/founder/mission_control/create_mission_dialog.dart"
+    },
+    {
+      "name": "old edit path stale/missing",
+      "pass": true,
+      "detail": "lib/web/founder/mission_control/edit_mission_dialog.dart"
+    },
+    {
+      "name": "current create path exists",
+      "pass": true,
+      "detail": "lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart"
+    },
+    {
+      "name": "current edit path exists",
+      "pass": true,
+      "detail": "lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart"
+    },
+    {
+      "name": "backend action path exists",
+      "pass": true,
+      "detail": "functions/callable/handle_sentinel_action.js"
+    },
+    {
+      "name": "builder exists",
+      "pass": true,
+      "detail": "builder marker"
+    },
+    {
+      "name": "writer exists",
+      "pass": true,
+      "detail": "writer marker"
+    },
+    {
+      "name": "launch mirror call exists",
+      "pass": true,
+      "detail": "launch action mirror"
+    },
+    {
+      "name": "manifest mirror call exists",
+      "pass": true,
+      "detail": "manifest action mirror"
+    },
+    {
+      "name": "lifecycle mirror call exists",
+      "pass": true,
+      "detail": "lifecycle mirror"
+    },
+    {
+      "name": "declare result mirror call exists",
+      "pass": true,
+      "detail": "declare result mirror"
+    },
+    {
+      "name": "visibility safe",
+      "pass": true,
+      "detail": "false visibility defaults"
+    },
+    {
+      "name": "content locks safe",
+      "pass": true,
+      "detail": "false contentLocks"
+    },
+    {
+      "name": "no broad content readiness mirror",
+      "pass": true,
+      "detail": "no contentReadiness in shell"
+    },
+    {
+      "name": "no variable mirror",
+      "pass": true,
+      "detail": "no variables in shell"
+    },
+    {
+      "name": "no auto-live in builder",
+      "pass": true,
+      "detail": "no auto live/user visible"
+    }
+  ],
+  "failed": [],
+  "verdict": "MISSION_MIRROR_PROOF_PASS_SERVICE_LEVEL",
+  "noWriteProof": true
+}
+MISSION_MIRROR_PROOF_PASS_SERVICE_LEVEL
+HEAD=9e910b7159811d3cb0fc15e6f42d9ed4734898c4
+STATUS:
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+A  docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+A  docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+A  docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+AM functions/audit_mission_catalog_shell_contract.js
+A  functions/audit_mission_mirror_current_flow.js
+MM functions/audit_repo_staged_state_guard.js
+M  functions/backfill_student_mission_catalog.js
+M  functions/callable/handle_sentinel_action.js
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_current_mirror_audit.md
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_validation.txt
+STAGED:
+docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+functions/audit_mission_catalog_shell_contract.js
+functions/audit_mission_mirror_current_flow.js
+functions/audit_repo_staged_state_guard.js
+functions/backfill_student_mission_catalog.js
+functions/callable/handle_sentinel_action.js
+--- rankcrackers guard ---
+
+> audit:rankcrackers:guard
+> node functions/audit_rankcrackers_path_and_rules.js
+
+==============================================
+RANKCRACKERS PATH & FINAL RULES GUARD
+==============================================
+Current working path: C:\RankCrackers\RankCrackers-55
+Official working path: C:\RankCrackers\RankCrackers-55
+
+Guard results:
+- Official path locked: YES
+- Web build rule guarded: YES
+- Android Student/User-only guard checked: YES
+- M4/M6 catalog bridge guard checked: YES
+- Extraction policy documented: YES
+- Universal extraction audit exists: YES
+- Universal page completeness audit exists: YES
+- Atomic linkage integrity audit exists: YES
+- Universal page count queue apply script: PRESENT
+- Page count queue state audit exists: YES
+- Metadata repair planner exists: YES
+- Metadata repair apply script exists: YES
+- Repaired docs page count queue apply script: PRESENT
+- Page count detection worker exists: YES
+- Page count worker capability audit exists: YES
+- Final page count result audit exists: YES
+- Universal pagewise planner exists: YES
+- Universal pagewise apply exists: YES
+- Pagewise queue audit exists: YES
+- Pagewise worker exists: YES
+- Pagewise worker capability audit exists: YES
+- Pagewise worker runtime safety audit exists: YES
+- Pagewise extraction apply audit exists: YES
+- Notification dynamic schema system: PRESENT
+- Notification page count queue apply script: PRESENT
+
+RC_G0_PATH_AND_RULES_GUARD_PASSED
+
+RC_X4E_R8_FIX3_BOUNDARY_GUARD_READY
+HEAD=9e910b7159811d3cb0fc15e6f42d9ed4734898c4
+STATUS:
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+A  docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+A  docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+A  docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+AM functions/audit_mission_catalog_shell_contract.js
+A  functions/audit_mission_mirror_current_flow.js
+MM functions/audit_repo_staged_state_guard.js
+M  functions/backfill_student_mission_catalog.js
+M  functions/callable/handle_sentinel_action.js
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_current_mirror_audit.md
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_validation.txt
+STAGED:
+docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+functions/audit_mission_catalog_shell_contract.js
+functions/audit_mission_mirror_current_flow.js
+functions/audit_repo_staged_state_guard.js
+functions/backfill_student_mission_catalog.js
+functions/callable/handle_sentinel_action.js
+--- platform boundary ---
+=========================================
+PLATFORM BOUNDARY REGRESSION AUDIT
+=========================================
+? Check 1: lib/main_web.dart exists.
+? Check 2: lib/main_web.dart imports/loads WebShell/UnifiedCommandConsole.
+? Check 3: lib/core/router/app_router.dart does not route Founder/Admin to mobile AdminScreen.
+? Check 5: AppRoutes.admin does not render AdminScreen (shows placeholder).
+? Check 4: legacy admin_screen.dart is not active in app_router.dart.
+? Check 6: student_mission_catalog query exists in firestore_service.dart.
+? Check 7: mission_creation_center.dart invokes launch_exam_mission via handleSentinelAction.
+? Check 8: handle_sentinel_action.js implements buildStudentMissionCatalogShell & mirrorMissionShellToStudentCatalog.
+-----------------------------------------
+?? PATCH_W1B_BOUNDARY_AUDIT_PASSED
+HEAD=9e910b7159811d3cb0fc15e6f42d9ed4734898c4
+STATUS:
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+A  docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+A  docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+A  docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+AM functions/audit_mission_catalog_shell_contract.js
+A  functions/audit_mission_mirror_current_flow.js
+MM functions/audit_repo_staged_state_guard.js
+M  functions/backfill_student_mission_catalog.js
+M  functions/callable/handle_sentinel_action.js
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_current_mirror_audit.md
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_validation.txt
+STAGED:
+docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+functions/audit_mission_catalog_shell_contract.js
+functions/audit_mission_mirror_current_flow.js
+functions/audit_repo_staged_state_guard.js
+functions/backfill_student_mission_catalog.js
+functions/callable/handle_sentinel_action.js
+--- head-freeze after ---
+
+> audit:repo:head-freeze-guard
+> node functions/audit_repo_head_freeze_guard.js 9e910b7159811d3cb0fc15e6f42d9ed4734898c4
+
+{
+  "expectedHead": "9e910b7159811d3cb0fc15e6f42d9ed4734898c4",
+  "currentHead": "9e910b7159811d3cb0fc15e6f42d9ed4734898c4",
+  "branch": "safety/rc-g2-pre-notification-schema",
+  "headStable": true,
+  "stagedFiles": [
+    "docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md",
+    "docs/patch_safety/FUP_2C_MIRROR2_status_before.txt",
+    "docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md",
+    "docs/patch_safety/FUP_2C_MIRROR2_validation.txt",
+    "docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md",
+    "functions/audit_mission_catalog_shell_contract.js",
+    "functions/audit_mission_mirror_current_flow.js",
+    "functions/audit_repo_staged_state_guard.js",
+    "functions/backfill_student_mission_catalog.js",
+    "functions/callable/handle_sentinel_action.js"
+  ],
+  "blockedStagedFiles": [],
+  "freezeMarker": true,
+  "verdict": "REPO_HEAD_FREEZE_PASS"
+}
+REPO_HEAD_FREEZE_PASS
+HEAD=9e910b7159811d3cb0fc15e6f42d9ed4734898c4
+STATUS:
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+A  docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+A  docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+A  docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+A  docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+AM functions/audit_mission_catalog_shell_contract.js
+A  functions/audit_mission_mirror_current_flow.js
+MM functions/audit_repo_staged_state_guard.js
+M  functions/backfill_student_mission_catalog.js
+M  functions/callable/handle_sentinel_action.js
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_current_mirror_audit.md
+?? docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_validation.txt
+STAGED:
+docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_dirty_file_classification.txt
+docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_safe_shell_contract.md
+docs/patch_safety/FUP_2C_MIRROR2_status_before.txt
+docs/patch_safety/FUP_2C_MIRROR2_unsafe_mirror_source_audit.md
+docs/patch_safety/FUP_2C_MIRROR2_validation.txt
+docs/syllabus/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX.md
+functions/audit_mission_catalog_shell_contract.js
+functions/audit_mission_mirror_current_flow.js
+functions/audit_repo_staged_state_guard.js
+functions/backfill_student_mission_catalog.js
+functions/callable/handle_sentinel_action.js

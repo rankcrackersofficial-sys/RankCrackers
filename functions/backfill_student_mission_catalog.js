@@ -200,41 +200,48 @@ async function main() {
 }
 
 function buildCatalogPayload(id, data, variables, readiness, catalogStatus, studentMessage, now) {
+    const title = data.name || data.title || '';
+    const year = data.year || data.exam_year || 2026;
+    const category = data.examCategory || data.exam_category || 'competitive';
+    const status = catalogStatus === 'ARCHIVED' ? 'ARCHIVED' : 'PRIVATE_REVIEW_LOCKED';
     return {
-        mission_id: id,
-        id: id,
-        title: data.name || data.title || '',
-        name: data.name || data.title || '',
-        subtitle: data.titleHindi || '',
-        titleHindi: data.titleHindi || '',
-        state: data.state || 'Rajasthan',
-        examCategory: data.examCategory || data.exam_category || 'competitive',
-        exam_category: data.examCategory || data.exam_category || 'competitive',
-        target_year: data.year || data.exam_year || 2026,
-        year: data.year || data.exam_year || 2026,
-        exam_year: data.year || data.exam_year || 2026,
-        exam_id: data.code || id,
-        code: data.code || id,
-        recruitment_id: id,
-        recruitmentGroupId: id,
-        boardId: data.organizationCode || 'RPSC',
-        organizationCode: data.organizationCode || 'RPSC',
-        cardVisible: true,
-        userPanelVisible: true,
-        status: catalogStatus, // for compatibility
-        catalogStatus: catalogStatus,
-        contentReadiness: readiness,
-        studentMessage: studentMessage,
-        sortOrder: data.priority || 0,
-        priority: data.priority || 0,
-        variables: variables,
-        created_at: data.createdAt || data.created_at || now,
+        missionId: id,
+        title: title,
+        displayTitle: title,
+        examName: title,
+        examYear: year,
+        missionType: category,
+        missionStructureType: data.missionStructureType || 'SINGLE_TRACK',
+        examScope: data.examScope || 'PRIVATE_REVIEW',
+        mediumPolicy: data.mediumPolicy || 'ENGLISH_ONLY',
+        supportedMediums: Array.isArray(data.supportedMediums) ? data.supportedMediums : ['ENGLISH'],
+        defaultMedium: data.defaultMedium || 'ENGLISH',
+        status: status,
+        visibility: {
+            studentVisible: false,
+            catalogVisible: false,
+            userPanelVisible: false,
+            quickEntryEnabled: false,
+            smartEntryEnabled: false
+        },
+        source: {
+            missionRealmPath: `mission_realms/${id}`,
+            mirroredBy: 'backfill_student_mission_catalog',
+            mirrorPhase: 'FUP_2C_MIRROR2',
+            backfillMode: true
+        },
+        contentLocks: {
+            syllabusPublished: false,
+            topicNodesPublished: false,
+            digibookPublished: false,
+            cruciblePublished: false,
+            pyqPublished: false,
+            questionCellsPublished: false
+        },
         createdAt: data.createdAt || data.created_at || now,
-        updated_at: now,
         updatedAt: now
     };
 }
-
 module.exports = {
     buildCatalogPayload
 };
@@ -242,3 +249,4 @@ module.exports = {
 if (require.main === module) {
     main().catch(console.error);
 }
+

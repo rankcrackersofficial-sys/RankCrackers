@@ -560,96 +560,51 @@ exports.handleSentinelAction = functions
 function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentData = {}, action = '') {
   if (!realmId) throw new Error('CANONICAL_ID_REQUIRED');
 
-  // Authoritative identity resolution
   const name = realmData.exam_name || realmData.recruitment_name || recruitmentData.title || '';
-  const org = realmData.organization || recruitmentData.org || 'RPSC';
   const year = parseInt(realmData.exam_year || recruitmentData.year || 2026, 10);
   const category = realmData.exam_category || recruitmentData.examCategory || 'competitive';
-
-  // Determine visibility states based on status/nature mapping
   const lifecycleStatus = realmData.status || recruitmentData.nature || 'PASSIVE';
-  
-  let catalogStatus = 'COMING_SOON';
-  let userPanelVisible = false;
-  let cardVisible = true;
-  let archived = false;
-  let studentMessage = 'Mission is being prepared. Content will unlock soon.';
+  const status = lifecycleStatus === 'ARCHIVED' || realmData.completion_status === 'ARCHIVED'
+    ? 'ARCHIVED'
+    : 'PRIVATE_REVIEW_LOCKED';
 
-  if (lifecycleStatus === 'ACTIVE') {
-    catalogStatus = 'LIVE';
-    userPanelVisible = true;
-    studentMessage = 'Mission is live and fully accessible!';
-  } else if (lifecycleStatus === 'ARCHIVED') {
-    catalogStatus = 'ARCHIVED';
-    userPanelVisible = false;
-    cardVisible = false;
-    archived = true;
-    studentMessage = 'This mission has been archived.';
-  } else if (lifecycleStatus === 'STAGED' || lifecycleStatus === 'PASSIVE') {
-    catalogStatus = 'COMING_SOON';
-    userPanelVisible = false;
-    studentMessage = 'Mission is being prepared. Content will unlock soon.';
-  }
-
-  // Declare Result handling mapping explicitly
-  if (realmData.completion_status === 'GRADUATED') {
-    catalogStatus = 'LIVE';
-    userPanelVisible = true;
-    cardVisible = true;
-    archived = false;
-    studentMessage = 'Mission completed successfully. Material remains available.';
-  } else if (realmData.completion_status === 'ARCHIVED') {
-    catalogStatus = 'ARCHIVED';
-    userPanelVisible = false;
-    cardVisible = false;
-    archived = true;
-    studentMessage = 'This mission has been archived.';
-  }
-
-  const defaultReadiness = {
-    notification: (realmData.notification_ids && realmData.notification_ids.length > 0) ? 'uploaded' : 'not_ready',
-    syllabus: 'not_ready',
-    crucible: 'not_ready',
-    digibook: 'not_ready',
-    tests: 'not_ready'
-  };
-
-  const payload = {
-    mission_id: realmId,
-    id: realmId,
+  return {
+    missionId: realmId,
     title: name,
-    name: name,
-    subtitle: recruitmentData.titleHindi || '',
-    titleHindi: recruitmentData.titleHindi || '',
-    state: realmData.state || recruitmentData.state || 'Rajasthan',
-    examCategory: category,
-    exam_category: category,
-    target_year: year,
-    year: year,
-    exam_year: year,
-    exam_id: recruitmentData.code || realmId,
-    code: recruitmentData.code || realmId,
-    recruitment_id: realmId,
-    recruitmentGroupId: realmId,
-    boardId: org,
-    organizationCode: org,
-    cardVisible: cardVisible,
-    userPanelVisible: userPanelVisible,
-    archived: archived,
-    status: catalogStatus,
-    catalogStatus: catalogStatus,
-    contentReadiness: defaultReadiness,
-    studentMessage: studentMessage,
-    sortOrder: recruitmentData.priority || realmData.priority || 0,
-    priority: recruitmentData.priority || realmData.priority || 0,
-    variables: recruitmentData.variables || [],
-    updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-    updated_at: admin.firestore.FieldValue.serverTimestamp()
+    displayTitle: name,
+    examName: name,
+    examYear: year,
+    missionType: category,
+    missionStructureType: realmData.missionStructureType || recruitmentData.missionStructureType || 'SINGLE_TRACK',
+    examScope: realmData.examScope || recruitmentData.examScope || 'PRIVATE_REVIEW',
+    mediumPolicy: realmData.mediumPolicy || recruitmentData.mediumPolicy || 'ENGLISH_ONLY',
+    supportedMediums: Array.isArray(realmData.supportedMediums) ? realmData.supportedMediums : ['ENGLISH'],
+    defaultMedium: realmData.defaultMedium || recruitmentData.defaultMedium || 'ENGLISH',
+    status,
+    visibility: {
+      studentVisible: false,
+      catalogVisible: false,
+      userPanelVisible: false,
+      quickEntryEnabled: false,
+      smartEntryEnabled: false
+    },
+    source: {
+      missionRealmPath: `mission_realms/${realmId}`,
+      mirroredBy: 'handleSentinelAction',
+      mirrorPhase: 'FUP_2C_MIRROR2',
+      action
+    },
+    contentLocks: {
+      syllabusPublished: false,
+      topicNodesPublished: false,
+      digibookPublished: false,
+      cruciblePublished: false,
+      pyqPublished: false,
+      questionCellsPublished: false
+    },
+    updatedAt: admin.firestore.FieldValue.serverTimestamp()
   };
-
-  return payload;
 }
-
 /**
  * Transactional helper to mirror mission shell to student_mission_catalog.
  */
@@ -683,7 +638,6 @@ async function mirrorMissionShellToStudentCatalog(transaction, db, realmId, real
   if (!catalogSnap.exists) {
     // Initial creation: inject creation timestamps
     payload.createdAt = admin.firestore.FieldValue.serverTimestamp();
-    payload.created_at = admin.firestore.FieldValue.serverTimestamp();
     transaction.set(catalogRef, payload);
   } else {
     // Update existing: preserve immutable creation fields by omitting them
@@ -720,4 +674,5 @@ function assertMissionActionAuthorized(auth, action) {
     }
   }
 }
+
 

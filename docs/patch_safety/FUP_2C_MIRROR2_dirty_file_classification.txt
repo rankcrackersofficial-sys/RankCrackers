@@ -1,0 +1,11 @@
+| File | Classification | Staged? | Action |
+|---|---|---|---|
+| functions/backfill_student_mission_catalog.js | BACKFILL_SCRIPT_RELEVANT | NO | stage in MIRROR2 because aligned safe shell |
+| functions/callable/handle_sentinel_action.js | BACKEND_MIRROR_FIX_RELEVANT | NO | stage in MIRROR2 |
+| docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_current_mirror_audit.md | MIRROR_AUDIT_EVIDENCE | NO | stage only if scoped evidence is needed |
+| docs/patch_safety/FUP_2C_MIRROR1_ACCEPTANCE1_RETRY_validation.txt | MIRROR_AUDIT_EVIDENCE | NO | stage only if scoped evidence is needed |
+| docs/patch_safety/FUP_2C_MIRROR2_dirty_before.txt | MIRROR2_RELEVANT | NO | stage in MIRROR2 |
+| docs/patch_safety/FUP_2C_MIRROR2_existing_mirror_diff_before.txt | MIRROR2_RELEVANT | NO | stage in MIRROR2 |
+| docs/patch_safety/FUP_2C_MIRROR2_status_before.txt | MIRROR2_RELEVANT | NO | stage in MIRROR2 |
+| functions/audit_mission_catalog_shell_contract.js | MIRROR2_RELEVANT | NO | stage in MIRROR2 |
+| functions/audit_mission_mirror_current_flow.js | MIRROR2_RELEVANT | NO | stage in MIRROR2 |

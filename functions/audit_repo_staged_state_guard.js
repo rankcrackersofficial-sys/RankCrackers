@@ -14,10 +14,16 @@ const blockedPatterns = [
 const allowedPatterns = [
   /^functions\/audit_repo_staged_state_guard\.js$/,
   /^functions\/audit_repo_head_freeze_guard\.js$/,
+  /^functions\/audit_mission_catalog_shell_contract\.js$/,
+  /^functions\/audit_mission_mirror_current_flow\.js$/,
+  /^functions\/callable\/handle_sentinel_action\.js$/,
+  /^functions\/backfill_student_mission_catalog\.js$/,
   /^docs\/patch_safety\/FUP_2C_REPOGUARD4_/,
   /^docs\/patch_safety\/FUP_2C_REPOLOCK3_/,
+  /^docs\/patch_safety\/FUP_2C_MIRROR2_/,
   /^docs\/syllabus\/FUP_2C_REPOGUARD4_HEAD_FREEZE_AND_AUTONOMOUS_NEUTRALIZATION\.md$/,
   /^docs\/syllabus\/FUP_2C_REPOLOCK3_ACCEPTED_GUARD_RESTORE\.md$/,
+  /^docs\/syllabus\/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX\.md$/,
   /^package\.json$/
 ];
 
