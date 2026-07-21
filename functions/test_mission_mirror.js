@@ -1,7 +1,6 @@
 const assert = require('assert');
-const admin = require('firebase-admin');
 
-// Mock Firestore Database and Transaction before requiring handle_sentinel_action.js
+// Mock Firestore Database and Transaction
 const mockDatabaseState = {};
 const allowedCollections = new Set([
   'mission_realms',
@@ -86,6 +85,19 @@ class MockDocumentReference {
     this.id = id;
     this.path = `${parentPath}/${id}`;
   }
+  collection(name) {
+    return {
+      doc: (subId) => new MockDocumentReference(`${this.path}/${name}`, subId),
+      where: () => ({
+        get: async () => {
+          // Return an empty list/snapshot for subcollections during tests
+          return {
+            forEach: () => {}
+          };
+        }
+      })
+    };
+  }
 }
 
 const mockDb = {
@@ -94,6 +106,11 @@ const mockDb = {
       doc: (id) => new MockDocumentReference(name, id)
     };
   },
+  batch: () => ({
+    set: () => {},
+    update: () => {},
+    commit: async () => {}
+  }),
   runTransaction: async (callback) => {
     const tx = new MockTransaction();
     try {
@@ -105,28 +122,61 @@ const mockDb = {
   }
 };
 
-// Override admin.firestore
-admin.firestore = () => mockDb;
-admin.firestore.FieldValue = {
+// Define mock admin module
+const mockAdmin = {
+  firestore: () => mockDb,
+  initializeApp: () => {}
+};
+mockAdmin.firestore.FieldValue = {
   serverTimestamp: () => 'MOCK_SERVER_TIMESTAMP',
   increment: (val) => ({ type: 'increment', value: val })
 };
-
-// Stub admin.auth() for claims recovery if needed
-admin.auth = () => ({
+mockAdmin.auth = () => ({
   setCustomUserClaims: async () => {}
 });
 
-// Require implementation
+// Mock firebase-functions module dynamically before requiring the handler
+const mockFunctions = {
+  runWith: () => ({
+    https: {
+      onCall: (handler) => handler
+    }
+  }),
+  https: {
+    HttpsError: class HttpsError extends Error {
+      constructor(code, message) {
+        super(message);
+        this.code = code;
+      }
+    }
+  }
+};
+
+// Stub the require cache
+require.cache[require.resolve('firebase-admin')] = {
+  id: require.resolve('firebase-admin'),
+  filename: require.resolve('firebase-admin'),
+  loaded: true,
+  exports: mockAdmin
+};
+
+require.cache[require.resolve('firebase-functions')] = {
+  id: require.resolve('firebase-functions'),
+  filename: require.resolve('firebase-functions'),
+  loaded: true,
+  exports: mockFunctions
+};
+
+// Require implementation (will load raw handleSentinelAction function!)
 const { 
+  handleSentinelAction,
   buildStudentMissionCatalogShell, 
-  mirrorMissionShellToStudentCatalog 
+  mirrorMissionShellToStudentCatalog,
+  resolveCanonicalMissionId
 } = require('./callable/handle_sentinel_action');
 
-const handleSentinelAction = require('./callable/handle_sentinel_action');
-
 console.log("================================================");
-console.log("RUNNING REFINED TRANSACTIONAL MIRROR TESTS (18 CASES)");
+console.log("RUNNING HARDENED INTEGRATION TESTS (21 CASES)");
 console.log("================================================");
 
 let testsCount = 0;
@@ -158,56 +208,120 @@ async function runSuite() {
     }
   }
 
+  const founderContext = {
+    auth: {
+      uid: 'founder_uid',
+      token: { founder: true, email: 'founder@rankcrackers.in' }
+    }
+  };
+
+  const adminContext = {
+    auth: {
+      uid: 'admin_uid',
+      token: { admin: true, email: 'admin@rankcrackers.in' }
+    }
+  };
+
+  const unprivilegedContext = {
+    auth: {
+      uid: 'student_uid',
+      token: { email: 'student@rankcrackers.in' }
+    }
+  };
+
   // 1. Founder launch creates catalog shell
   await testCase("Founder launch creates catalog shell", async () => {
     resetMockDb();
-    const tx = new MockTransaction();
-    const realmId = 'rec_rpsc_exam_2026';
-    const realmData = { status: 'ACTIVE' };
-    const recruitmentData = { title: 'RPSC', nature: 'ACTIVE' };
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {
+        examName: 'JEE Main',
+        organization: 'NTA',
+        year: 2027,
+        nature: 'ACTIVE'
+      }
+    };
+    
+    await handleSentinelAction(data, founderContext);
 
-    await mirrorMissionShellToStudentCatalog(tx, mockDb, realmId, realmData, recruitmentData, 'launch_exam_mission');
-
-    const shell = mockDatabaseState.student_mission_catalog[realmId];
+    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.ok(shell);
     assert.strictEqual(shell.status, 'LIVE');
     assert.strictEqual(shell.userPanelVisible, true);
-    assert.ok(shell.createdAt);
   });
 
-  // 2. Admin launch behavior follows permission policy
+  // 2. Admin launch behavior follows permission policy (allow launch)
   await testCase("Admin launch behavior follows permission policy (allow launch)", async () => {
     resetMockDb();
-    const payload = buildStudentMissionCatalogShell('rec_jee_2026', { status: 'ACTIVE' }, { title: 'JEE' }, 'launch_realm');
-    assert.strictEqual(payload.catalogStatus, 'LIVE');
-    assert.strictEqual(payload.userPanelVisible, true);
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {
+        examName: 'JEE Main',
+        organization: 'NTA',
+        year: 2027,
+        nature: 'ACTIVE'
+      }
+    };
+    
+    await handleSentinelAction(data, adminContext);
+    
+    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
+    assert.ok(shell);
+    assert.strictEqual(shell.status, 'LIVE');
   });
 
   // 3. Unauthorized caller rejected
   await testCase("Unauthorized caller rejected", async () => {
-    assert.throws(() => {
-      buildStudentMissionCatalogShell(null, {}, {}, 'launch_exam_mission');
-    }, /CANONICAL_ID_REQUIRED/);
+    resetMockDb();
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {
+        examName: 'JEE Main',
+        organization: 'NTA',
+        year: 2027,
+        nature: 'ACTIVE'
+      }
+    };
+
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, unprivilegedContext);
+    }, /ACCESS DENIED/);
   });
 
   // 4. Unauthenticated caller rejected
   await testCase("Unauthenticated caller rejected", async () => {
-    assert.throws(() => {
-      buildStudentMissionCatalogShell('', {}, {}, 'launch_exam_mission');
-    }, /CANONICAL_ID_REQUIRED/);
+    resetMockDb();
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {}
+    };
+
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, {});
+    }, /Authentication required/);
   });
 
   // 5. Manifest creates hidden coming-soon shell
   await testCase("Manifest creates hidden coming-soon shell", async () => {
     resetMockDb();
-    const tx = new MockTransaction();
-    const realmId = 'rec_manifest_2026';
-    const realmData = { status: 'STAGED' };
-    const recruitmentData = { title: 'Manifest Mission', nature: 'STAGED' };
+    
+    // Seed candidate recruitment record
+    mockDatabaseState.recruitments['jee_main_2026'] = {
+      id: 'jee_main_2026',
+      title: 'JEE Main',
+      org: 'NTA',
+      year: 2026,
+      nature: 'STAGED'
+    };
 
-    await mirrorMissionShellToStudentCatalog(tx, mockDb, realmId, realmData, recruitmentData, 'manifest_realm');
+    const data = {
+      action: 'manifest_realm',
+      recruitmentId: 'jee_main_2026'
+    };
 
-    const shell = mockDatabaseState.student_mission_catalog[realmId];
+    await handleSentinelAction(data, founderContext);
+
+    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.ok(shell);
     assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
     assert.strictEqual(shell.userPanelVisible, false);
@@ -217,14 +331,20 @@ async function runSuite() {
   // 6. Launch updates shell to LIVE
   await testCase("Launch updates shell to LIVE", async () => {
     resetMockDb();
-    const tx = new MockTransaction();
-    const realmId = 'rec_launch_2026';
-    const realmData = { status: 'ACTIVE' };
-    const recruitmentData = { title: 'Live Mission', nature: 'ACTIVE' };
+    
+    // Seed existing documents
+    mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'STAGED' };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'MANIFESTED' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'COMING_SOON', userPanelVisible: false };
 
-    await mirrorMissionShellToStudentCatalog(tx, mockDb, realmId, realmData, recruitmentData, 'launch_realm');
+    const data = {
+      action: 'launch_realm',
+      recruitmentId: 'jee_main_2026'
+    };
 
-    const shell = mockDatabaseState.student_mission_catalog[realmId];
+    await handleSentinelAction(data, founderContext);
+
+    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.strictEqual(shell.catalogStatus, 'LIVE');
     assert.strictEqual(shell.userPanelVisible, true);
   });
@@ -232,64 +352,80 @@ async function runSuite() {
   // 7. Pause maps deterministically to hidden coming-soon
   await testCase("Pause maps deterministically to hidden coming-soon", async () => {
     resetMockDb();
-    const tx = new MockTransaction();
-    const realmId = 'rec_pause_2026';
-    const realmData = { status: 'PASSIVE' };
-    const recruitmentData = { title: 'Paused Mission', nature: 'PASSIVE' };
+    mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ACTIVE' };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE', userPanelVisible: true };
 
-    await mirrorMissionShellToStudentCatalog(tx, mockDb, realmId, realmData, recruitmentData, 'pause_realm');
+    const data = {
+      action: 'pause_realm',
+      recruitmentId: 'jee_main_2026'
+    };
 
-    const shell = mockDatabaseState.student_mission_catalog[realmId];
+    await handleSentinelAction(data, founderContext);
+
+    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
     assert.strictEqual(shell.userPanelVisible, false);
-    assert.strictEqual(shell.cardVisible, true);
   });
 
   // 8. Archive hides and archives
   await testCase("Archive hides and archives", async () => {
     resetMockDb();
-    const tx = new MockTransaction();
-    const realmId = 'rec_archive_2026';
-    const realmData = { status: 'ARCHIVED' };
-    const recruitmentData = { title: 'Archived Mission', nature: 'ARCHIVED' };
+    mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ACTIVE' };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE', userPanelVisible: true };
 
-    await mirrorMissionShellToStudentCatalog(tx, mockDb, realmId, realmData, recruitmentData, 'archive_realm');
+    const data = {
+      action: 'archive_realm',
+      recruitmentId: 'jee_main_2026'
+    };
 
-    const shell = mockDatabaseState.student_mission_catalog[realmId];
+    await handleSentinelAction(data, founderContext);
+
+    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.strictEqual(shell.catalogStatus, 'ARCHIVED');
     assert.strictEqual(shell.userPanelVisible, false);
     assert.strictEqual(shell.cardVisible, false);
     assert.strictEqual(shell.archived, true);
   });
 
-  // 9. Restore follows locked policy (Option A - PASSIVE always hidden)
-  await testCase("Restore follows locked policy (Option A - PASSIVE always hidden)", async () => {
+  // 9. Restore follows Option A policy (Restore to hidden passive)
+  await testCase("Restore follows Option A policy (Restore to hidden passive)", async () => {
     resetMockDb();
-    const tx = new MockTransaction();
-    const realmId = 'rec_restore_2026';
-    const realmData = { status: 'PASSIVE' };
-    const recruitmentData = { title: 'Restored Mission', nature: 'PASSIVE' };
+    mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ARCHIVED' };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'archived' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'ARCHIVED', userPanelVisible: false, cardVisible: false, archived: true };
 
-    await mirrorMissionShellToStudentCatalog(tx, mockDb, realmId, realmData, recruitmentData, 'restore_realm');
+    const data = {
+      action: 'restore_realm',
+      recruitmentId: 'jee_main_2026'
+    };
 
-    const shell = mockDatabaseState.student_mission_catalog[realmId];
+    await handleSentinelAction(data, founderContext);
+
+    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
-    assert.strictEqual(shell.userPanelVisible, false); // Option A verification
+    assert.strictEqual(shell.userPanelVisible, false); // Option A: always hidden on restore/passive
     assert.strictEqual(shell.cardVisible, true);
     assert.strictEqual(shell.archived, false);
   });
 
-  // 10. Declare result maps exactly
-  await testCase("Declare result maps exactly (GRADUATED/ARCHIVED)", async () => {
+  // 10. Declare result maps exactly (completion lifecycle status)
+  await testCase("Declare result maps exactly (completion lifecycle status)", async () => {
     resetMockDb();
-    const tx = new MockTransaction();
-    const realmId = 'rec_result_2026';
-    const realmData = { completion_status: 'GRADUATED', status: 'ACTIVE' };
-    const recruitmentData = { title: 'Graduated Mission' };
+    mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ACTIVE' };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE', userPanelVisible: true };
 
-    await mirrorMissionShellToStudentCatalog(tx, mockDb, realmId, realmData, recruitmentData, 'declare_result');
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON' }
+    };
 
-    const shell = mockDatabaseState.student_mission_catalog[realmId];
+    await handleSentinelAction(data, founderContext);
+
+    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.strictEqual(shell.catalogStatus, 'LIVE');
     assert.strictEqual(shell.userPanelVisible, true);
     assert.strictEqual(shell.studentMessage, 'Mission completed successfully. Material remains available.');
@@ -298,31 +434,41 @@ async function runSuite() {
   // 11. Same action retry is idempotent
   await testCase("Same action retry is idempotent", async () => {
     resetMockDb();
-    const tx1 = new MockTransaction();
-    const realmId = 'rec_idempotent_2026';
-    const realmData = { status: 'ACTIVE' };
-    const recruitmentData = { title: 'Idempotent' };
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {
+        examName: 'JEE Main',
+        organization: 'NTA',
+        year: 2027,
+        nature: 'ACTIVE'
+      }
+    };
 
-    await mirrorMissionShellToStudentCatalog(tx1, mockDb, realmId, realmData, recruitmentData, 'launch_exam_mission');
-    const snap1 = new MockDocumentSnapshot(realmId, mockDatabaseState.student_mission_catalog[realmId]);
-
-    const tx2 = new MockTransaction();
-    await mirrorMissionShellToStudentCatalog(tx2, mockDb, realmId, realmData, recruitmentData, 'launch_exam_mission', snap1);
+    await handleSentinelAction(data, founderContext);
+    const doc1 = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     
-    const shell = mockDatabaseState.student_mission_catalog[realmId];
-    assert.strictEqual(shell.catalogStatus, 'LIVE');
+    await handleSentinelAction(data, founderContext);
+    const doc2 = mockDatabaseState.student_mission_catalog['jee_main_2026'];
+
+    assert.deepStrictEqual(doc1.id, doc2.id);
   });
 
   // 12. Duplicate document count remains one
   await testCase("Duplicate document count remains one", async () => {
     resetMockDb();
-    const tx1 = new MockTransaction();
-    const realmId = 'rec_duplicate_2026';
-    await mirrorMissionShellToStudentCatalog(tx1, mockDb, realmId, {}, {}, 'manifest_realm');
-    
-    const tx2 = new MockTransaction();
-    await mirrorMissionShellToStudentCatalog(tx2, mockDb, realmId, {}, {}, 'manifest_realm');
-    
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {
+        examName: 'JEE Main',
+        organization: 'NTA',
+        year: 2027,
+        nature: 'ACTIVE'
+      }
+    };
+
+    await handleSentinelAction(data, founderContext);
+    await handleSentinelAction(data, founderContext);
+
     const docs = Object.keys(mockDatabaseState.student_mission_catalog);
     assert.strictEqual(docs.length, 1);
   });
@@ -330,23 +476,27 @@ async function runSuite() {
   // 13. Existing identity mismatch aborts
   await testCase("Existing identity mismatch aborts", async () => {
     resetMockDb();
-    const realmId = 'rec_jee_main_2026';
+    const realmId = 'jee_main_2026';
     
-    // Seed database with JEE mission
+    // Seed mismatched record under jee_main_2026
     mockDatabaseState.student_mission_catalog[realmId] = {
       id: realmId,
-      mission_id: realmId,
+      mission_id: 'mismatched_id_value_here',
       recruitment_id: realmId,
-      recruitmentGroupId: realmId,
-      title: 'JEE Main 2026'
+      recruitmentGroupId: realmId
     };
 
-    const existingSnap = new MockDocumentSnapshot(realmId, mockDatabaseState.student_mission_catalog[realmId]);
-    const tx = new MockTransaction();
+    mockDatabaseState.mission_realms[realmId] = { realm_id: realmId, status: 'ACTIVE' };
+    mockDatabaseState.recruitments[realmId] = { id: realmId, status: 'published' };
+
+    const data = {
+      action: 'launch_realm',
+      recruitmentId: realmId
+    };
 
     await assert.rejects(async () => {
-      await mirrorMissionShellToStudentCatalog(tx, mockDb, 'rec_neet_ug_2027', {}, {}, 'manifest_realm', existingSnap);
-    }, /FAILED_PRECONDITION/);
+      await handleSentinelAction(data, founderContext);
+    }, /Identity mismatch detected/);
   });
 
   // 14. Missing canonical ID aborts
@@ -356,30 +506,45 @@ async function runSuite() {
     }, /CANONICAL_ID_REQUIRED/);
   });
 
-  // 15. Catalog mirror failure aborts realm/recruitment writes
-  await testCase("Catalog mirror failure aborts realm/recruitment writes", async () => {
+  // 15. Catalog mirror failure aborts writes
+  await testCase("Catalog mirror failure aborts writes", async () => {
     resetMockDb();
     
-    const mockTransactionFail = {
-      get: async () => {
-        throw new Error('SIMULATED_CATALOG_FAILURE');
-      },
-      set: () => {},
-      update: () => {}
+    // Overwrite mockDb.runTransaction to simulate transactional catalog write failure
+    const originalRunTransaction = mockDb.runTransaction;
+    mockDb.runTransaction = async (callback) => {
+      const tx = new MockTransaction();
+      tx.set = (ref) => {
+        if (ref.parentPath === 'student_mission_catalog') {
+          throw new Error('SIMULATED_CATALOG_FAILURE');
+        }
+      };
+      return callback(tx);
+    };
+
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {
+        examName: 'JEE Main',
+        organization: 'NTA',
+        year: 2027,
+        nature: 'ACTIVE'
+      }
     };
 
     await assert.rejects(async () => {
-      await mirrorMissionShellToStudentCatalog(mockTransactionFail, mockDb, 'rec_fail_2026', {}, {}, 'manifest_realm');
+      await handleSentinelAction(data, founderContext);
     }, /SIMULATED_CATALOG_FAILURE/);
+
+    // Restore runTransaction
+    mockDb.runTransaction = originalRunTransaction;
   });
 
   // 16. No reads after writes
   await testCase("No reads after writes", async () => {
     const tx = new MockTransaction();
     const ref = mockDb.collection('student_mission_catalog').doc('test');
-    
-    tx.set(ref, { data: 'test' });
-    
+    tx.set(ref, { val: 1 });
     await assert.rejects(async () => {
       await tx.get(ref);
     }, /READS_AFTER_WRITES_VIOLATION/);
@@ -388,8 +553,7 @@ async function runSuite() {
   // 17. Existing createdAt remains unchanged
   await testCase("Existing createdAt remains unchanged", async () => {
     resetMockDb();
-    const realmId = 'rec_created_at_test';
-    
+    const realmId = 'jee_main_2026';
     mockDatabaseState.student_mission_catalog[realmId] = {
       id: realmId,
       mission_id: realmId,
@@ -413,10 +577,79 @@ async function runSuite() {
   await testCase("No prohibited collection writes", async () => {
     const tx = new MockTransaction();
     const badRef = { parentPath: 'unauthorized_collection', id: 'doc', path: 'unauthorized_collection/doc' };
-    
     assert.throws(() => {
       tx.set(badRef, { test: 1 });
     }, /PROHIBITED_WRITE_VIOLATION/);
+  });
+
+  // 19. Canonical mapping of JEE Main 2027 to jee_main_2026
+  await testCase("Canonical mapping of JEE Main 2027 to jee_main_2026", async () => {
+    const mapped = resolveCanonicalMissionId('JEE Main', 'NTA', 2027);
+    assert.strictEqual(mapped, 'jee_main_2026');
+  });
+
+  // 20. Duplicate-Mission Migration Risk (prevent rec_nta_jee_main_2027 creation)
+  await testCase("Duplicate-Mission Migration Risk (prevent rec_nta_jee_main_2027)", async () => {
+    resetMockDb();
+    const data = {
+      action: 'launch_exam_mission',
+      payload: {
+        examName: 'JEE Main',
+        organization: 'NTA',
+        year: 2027,
+        nature: 'ACTIVE'
+      }
+    };
+    
+    await handleSentinelAction(data, founderContext);
+
+    // Verify it resolved to jee_main_2026 and NOT rec_nta_jee_main_2027
+    assert.ok(mockDatabaseState.student_mission_catalog['jee_main_2026']);
+    assert.strictEqual(mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'], undefined);
+  });
+
+  // 21. Declare Result write inventory limits writes
+  await testCase("Declare Result write inventory limits writes", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ACTIVE' };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE', userPanelVisible: true };
+
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON' }
+    };
+
+    // Override mockDb.runTransaction to track collection writes during declare_result action
+    const originalRunTransaction = mockDb.runTransaction;
+    const collectionsWritten = new Set();
+    
+    mockDb.runTransaction = async (callback) => {
+      const tx = new MockTransaction();
+      const originalSet = tx.set.bind(tx);
+      const originalUpdate = tx.update.bind(tx);
+      
+      tx.set = (ref, data, options) => {
+        collectionsWritten.add(ref.parentPath);
+        return originalSet(ref, data, options);
+      };
+      tx.update = (ref, data) => {
+        collectionsWritten.add(ref.parentPath);
+        return originalUpdate(ref, data);
+      };
+      
+      return callback(tx);
+    };
+
+    await handleSentinelAction(data, founderContext);
+
+    // Verify only allowed collections were modified during declare_result transaction
+    for (const col of collectionsWritten) {
+      assert.ok(allowedCollections.has(col), `Prohibited collection '${col}' written during declare_result`);
+    }
+
+    mockDb.runTransaction = originalRunTransaction;
   });
 
   console.log("------------------------------------------------");

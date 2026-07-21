@@ -225,12 +225,10 @@ exports.handleSentinelAction = functions
       if (action === 'launch_exam_mission') {
         const { notificationId, syllabusId, examName, organization, year, examCategory, cycle, nature } = payload;
         const catCode = (examCategory || 'default').toLowerCase();
-        const orgCode = (organization || 'central').toLowerCase().replace(/\s/g, '_');
-        const examCode = (examName || 'exam').toLowerCase().replace(/\s/g, '_');
         const targetYear = year || 2026;
 
-        // 🔱 Hardened Realm ID: rec_org_exam_year_cycle (RC-15 Fix)
-        const realmId = `rec_${orgCode}_${examCode}_${targetYear}_${cycle || ''}`.replace(/_+/g, '_').replace(/_$/, '');
+        // Resolve canonical mission ID to preserve pilot compatibility (e.g. JEE Main 2027 -> jee_main_2026)
+        const realmId = resolveCanonicalMissionId(examName, organization, targetYear, cycle);
 
         // 1. READ catalog snapshot first (before any sets)
         const catalogRef = db.collection('student_mission_catalog').doc(realmId);
@@ -608,6 +606,36 @@ async function mirrorMissionShellToStudentCatalog(transaction, db, realmId, real
   return payload;
 }
 
+/**
+ * Resolves display/launch parameters to the canonical backend mission ID.
+ */
+function resolveCanonicalMissionId(examName, organization, year, cycle = '') {
+  const normName = String(examName || '').trim().toLowerCase();
+  const targetYear = parseInt(year || 2026, 10);
+
+  // JEE Main Pilot mapping
+  if (normName.includes('jee main') && (targetYear === 2026 || targetYear === 2027)) {
+    return 'jee_main_2026';
+  }
+  
+  // NEET Pilot mapping
+  if (normName.includes('neet') && targetYear === 2027) {
+    return 'neet_(ug)-2027';
+  }
+
+  // RPSC 1st Grade Pilot mapping
+  if (normName.includes('rpsc first grade') || normName.includes('rpsc 1st grade')) {
+    return 'RPSC_FIRST_GRADE2026_2026_1782713222215';
+  }
+
+  // Fallback to standard slugified format
+  const orgCode = String(organization || 'central').toLowerCase().replace(/\s/g, '_');
+  const examCode = normName.replace(/\s/g, '_');
+  const suffix = cycle ? `_${cycle}` : '';
+  return `rec_${orgCode}_${examCode}_${targetYear}${suffix}`.replace(/_+/g, '_').replace(/_$/, '');
+}
+
 // Export helpers for testing
 exports.buildStudentMissionCatalogShell = buildStudentMissionCatalogShell;
 exports.mirrorMissionShellToStudentCatalog = mirrorMissionShellToStudentCatalog;
+exports.resolveCanonicalMissionId = resolveCanonicalMissionId;
