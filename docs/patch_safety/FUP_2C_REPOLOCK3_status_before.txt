@@ -1,0 +1,30 @@
+--- BRANCH ---
+safety/rc-g2-pre-notification-schema
+--- HEAD ---
+46a38d347d94b6d5c37fb51fb847bf6e8b02f516
+--- STATUS ---
+ M functions/backfill_student_mission_catalog.js
+--- STAGED ---
+--- DIFF NAME ONLY ---
+functions/backfill_student_mission_catalog.js
+--- LOG ---
+46a38d34 chore: include authorized p15 apply and audit scripts
+99a9142c chore: record token3 p15 authorized pagewise apply
+6892873c fix: lock mission identity and result consistency contracts
+d66bc1dd fix: preserve canonical mission ids in catalog mirror
+f0b17f55 fix: lock mission catalog mirror lifecycle and transaction invariants
+214267ad chore: add missing no-write proof for Token-3
+5f5a3fb1 chore: refresh rc x4e p15 second gate token third attempt
+bdc3a7b8 feat: enforce transactional student mission catalog mirror
+3120f983 chore: verify clean blocked p15 authorized apply state
+43b871e7 chore: record blocked fresh-token p15 authorized apply
+0e8b94ff chore: refresh rc x4e p15 second gate token
+02d4e80a chore: document repo guard blocker and staged state
+10cecf60 chore: disable background autocommit config and register rc x4e r14 fix6 governance marker
+e023bdee chore: disable autonomous commits and lock p15 ceremony inactive
+7228f521 chore: record missing rc x4e p15 founder authorization
+2e210aed chore: restore incident-d lineage in r14 compatibility audit
+19253051 chore: record missing rc x4e p15 founder authorization
+d64a675b chore: bind inactive neet p15 authorization candidate
+f82d4269 chore: finalize rc-x4e incident-d evidence and p15 baseline
+081f5111 chore: add canonical key controlled write preflight

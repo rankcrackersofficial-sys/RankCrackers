@@ -86,6 +86,7 @@
                     "audit:qcell3:canonical-key-controlled-write-preflight":  "node functions/audit_qcell3_canonical_key_controlled_write_preflight.js",
                     "generate:rcx4e:p15-second-gate-token":  "echo disabled",
                     "audit:repo:staged-state-guard":  "node functions/audit_repo_staged_state_guard.js",
+                    "audit:repo:head-freeze-guard":  "node functions/audit_repo_head_freeze_guard.js",
                     "audit:repo:head-persistence-guard":  "echo disabled",
                     "audit:rcx4e:ir4-refine8":  "node functions/audit_rc_x4e_ir4_refine8_acceptance.js",
                     "audit:rcx4e:p15-founder-approval":  "node functions/audit_rc_x4e_p15_founder_approval_phrase.js",
@@ -101,4 +102,5 @@
                          "firebase-functions":  "^4.9.0"
                      }
 }
+
 
