@@ -7,7 +7,8 @@
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "logs": "firebase functions:log",
+    "audit:qcell5:empty-atomic-question-cells-preflight": "node audit_qcell5_empty_atomic_question_cells_preflight.js"
   },
   "engines": {
     "node": "22"
