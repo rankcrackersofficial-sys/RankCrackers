@@ -1,0 +1,66 @@
+HEAD_BEFORE=10cecf602c32efe715a5900991812635c6b523fb
+### direct guard
+==============================================
+RANKCRACKERS PATH & FINAL RULES GUARD
+==============================================
+Current working path: C:\RankCrackers\RankCrackers-55
+Official working path: C:\RankCrackers\RankCrackers-55
+
+Guard results:
+- Official path locked: YES
+- Web build rule guarded: YES
+- Android Student/User-only guard checked: YES
+- M4/M6 catalog bridge guard checked: YES
+- Extraction policy documented: YES
+- Universal extraction audit exists: YES
+- Universal page completeness audit exists: YES
+- Atomic linkage integrity audit exists: YES
+- Universal page count queue apply script: PRESENT
+- Page count queue state audit exists: YES
+- Metadata repair planner exists: YES
+- Metadata repair apply script exists: YES
+- Repaired docs page count queue apply script: PRESENT
+- Page count detection worker exists: YES
+- Page count worker capability audit exists: YES
+- Final page count result audit exists: YES
+- Universal pagewise planner exists: YES
+- Universal pagewise apply exists: YES
+- Pagewise queue audit exists: YES
+- Pagewise worker exists: YES
+- Pagewise worker capability audit exists: YES
+- Pagewise worker runtime safety audit exists: YES
+- Pagewise extraction apply audit exists: YES
+- Notification dynamic schema system: PRESENT
+- Notification page count queue apply script: PRESENT
+node : 
+At line:82 char:1
++ node functions\audit_rankcrackers_path_and_rules.js *> tmp_guard_fix0 ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+RC_G0_BLOCKED
+
+RC_X4E_R8_FIX3_BOUNDARY_GUARD_BLOCKED
+- create_mission_dialog.dart must mirror to student_mission_catalog.
+- edit_mission_dialog.dart must mirror to student_mission_catalog.
+### guard_exit=1
+### head_after_guard=10cecf602c32efe715a5900991812635c6b523fb
+REPO_HEAD_GUARD_SCRIPT_NOT_PERSISTED_YET
+### final_head=10cecf602c32efe715a5900991812635c6b523fb
+### final_status
+?? docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_dirty_file_classification.txt
+?? docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_guard_failure_analysis.md
+?? docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_mission_mirror_readonly_audit.md
+?? docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_staged_cleanup.txt
+?? docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_validation.txt
+GUARD_EXIT=1
+HEAD_AFTER_RECHECK=10cecf602c32efe715a5900991812635c6b523fb
+?? docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_dirty_file_classification.txt
+?? docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_guard_failure_analysis.md
+?? docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_guard_failure_output.txt
+?? docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_mission_mirror_readonly_audit.md
+?? docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_staged_cleanup.txt
+?? docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_validation.txt
+?? docs/syllabus/FUP_2C_REPOGUARD1_FIX0_GUARD_FAILURE_AND_STAGED_STATE.md
+?? functions/audit_rc_x4e_p15_token2_candidate_eligibility.js

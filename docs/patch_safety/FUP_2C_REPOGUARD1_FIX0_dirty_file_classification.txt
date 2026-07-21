@@ -1,0 +1,10 @@
+File | Classification | Staged? | Action
+--- | --- | ---
+package.json | PACKAGE_SCRIPT_RELEVANT | NO | do not stage; pre-existing disabled script changes need separate cleanup
+functions/audit_repo_head_persistence_guard.js | REPOGUARD1_DEPENDENCY | NO | do not stage in FIX0
+RC_X4E_P15_* files | P15_CEREMONY_RELEVANT | NO | do not stage; separate P15 phase
+docs/patch_safety/FUP_2C_REPOGUARD1_FIX0_* | REPOGUARD1_FIX0_RELEVANT | NO | stage in FIX0
+lib/web/founder/mission_control/create_mission_dialog.dart | UI_GUARD_RELEVANT | NO | file missing; read-only evidence
+lib/web/founder/mission_control/edit_mission_dialog.dart | UI_GUARD_RELEVANT | NO | file missing; read-only evidence
+functions/audit_rankcrackers_path_and_rules.js | VALIDATION_SCRIPT_RELEVANT | NO | inspect only
+functions/audit_platform_boundary.js | VALIDATION_SCRIPT_RELEVANT | NO | inspect only
