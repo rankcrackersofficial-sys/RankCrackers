@@ -32,5 +32,12 @@
     "noAiOrOcr": true,
     "noStudentDeliveryChange": true
   },
-  "verdict": "CURRENT_PAGEWISE_BASELINE_PASS"
+  "verdict": "CURRENT_PAGEWISE_BASELINE_PASS",
+  "historicalReference": 118,
+  "currentOperationalCount": 133,
+  "delta": 15,
+  "deltaAuthorization": "UNAUTHORIZED_INCIDENT_D",
+  "deltaIntegrity": "PASS",
+  "safeRollForwardAccepted": true,
+  "productionAuthority": false
 }

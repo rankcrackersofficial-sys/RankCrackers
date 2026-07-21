@@ -44,5 +44,12 @@
   "extractionApplyInThisPhase": false,
   "firestoreWritesInThisPhase": false,
   "recommendation": "Use audit:pagewise:current-baseline-result and audit:worker-training:current-pagewise-baseline for QCELL2 and later validation gates.",
-  "verdict": "WORKER_CURRENT_BASELINE_PASS"
+  "verdict": "WORKER_CURRENT_BASELINE_PASS",
+  "historicalReference": 118,
+  "currentOperationalCount": 133,
+  "delta": 15,
+  "deltaAuthorization": "UNAUTHORIZED_INCIDENT_D",
+  "deltaIntegrity": "PASS",
+  "safeRollForwardAccepted": true,
+  "productionAuthority": false
 }
