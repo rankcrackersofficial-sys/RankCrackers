@@ -1,0 +1,27 @@
+RC-X4E-P15-AUTH-APPLY-2-FIX1 Dirty/Untracked Classification
+Timestamp: 2026-07-21T18:35:00Z
+
+Bucket 1 — Allowed FIX1 reports:
+- docs/patch_safety/RC_X4E_P15_AUTH_APPLY_2_FIX1_status_before.txt | PRESERVED
+- docs/patch_safety/RC_X4E_P15_AUTH_APPLY_2_FIX1_untracked_before.txt | PRESERVED
+- docs/patch_safety/RC_X4E_P15_AUTH_APPLY_2_FIX1_dirty_classification.txt | PRESERVED
+- docs/patch_safety/RC_X4E_P15_AUTH_APPLY_2_FIX1_block_evidence_audit.txt | PRESERVED
+- docs/patch_safety/RC_X4E_P15_AUTH_APPLY_2_FIX1_no_write_recheck.txt | PRESERVED
+- docs/patch_safety/RC_X4E_P15_AUTH_APPLY_2_FIX1_validation_output.txt | PRESERVED
+
+Bucket 2 — leftover audit scripts:
+- functions/audit_mission_catalog_shell_contract.js | DELETED (git clean)
+- functions/audit_mission_mirror_current_flow.js | DELETED (git clean)
+
+Bucket 3 — temporary write/test files:
+- docs/patch_safety/FUP_2C_REPOGUARD2_log_before.txt | DELETED (git clean)
+- docs/patch_safety/FUP_2C_REPOGUARD2_reflog_before.txt | DELETED (git clean)
+- docs/patch_safety/FUP_2C_REPOGUARD2_staged_before.txt | DELETED (git clean)
+- docs/patch_safety/FUP_2C_REPOGUARD2_staged_stat_before.txt | DELETED (git clean)
+- docs/patch_safety/FUP_2C_REPOGUARD2_status_before.txt | DELETED (git clean)
+
+Bucket 4 — unexpected:
+- None.
+
+Quarantine path:
+Not used (deleted via git clean -fd).

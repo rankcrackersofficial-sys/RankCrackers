@@ -1,0 +1,21 @@
+RC-X4E-P15-AUTH-APPLY-2-FIX1 Block Evidence Audit
+Timestamp: 2026-07-21T18:40:00Z
+
+Verifying blocked apply from commit 43b871e78f0a0a1afb88f8b49b49986c48dac150:
+
+1. Commit: 43b871e78f0a0a1afb88f8b49b49986c48dac150
+2. Apply result marker: RC_X4E_P15_AUTHORIZED_APPLY_BLOCKED_TOKEN_EXPIRED
+3. Token expiry: 2026-07-21T11:11:57.236Z
+4. Actual execution time: ~2026-07-21T11:13:00Z
+5. Writes:
+   - task updates: 0
+   - page_extractions created: 0
+   - total writes: 0
+6. Candidate pages:
+   - pages 1–9 existing count: 0
+7. Confirmation correction:
+   - exactly 3 token tasks intended: YES
+   - exactly 3 token tasks processed: NO
+   - reason: token expired before write
+
+Result: RC_X4E_P15_AUTH_APPLY_2_FIX1_BLOCK_EVIDENCE_CONFIRMED
