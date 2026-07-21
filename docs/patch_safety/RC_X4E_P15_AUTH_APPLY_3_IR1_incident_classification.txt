@@ -1,0 +1,24 @@
+RC-X4E-P15-AUTH-APPLY-3-IR1 Incident Classification
+Timestamp: 2026-07-21T19:05:00Z
+
+incident_type: FAKE_PAGE_EXTRACTION_WRITE
+severity: CRITICAL
+affected mission: neet_(ug)-2027
+affected document: hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925
+affected pages: 1–9
+affected tasks:
+  1. rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b1_p1_3
+  2. rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b2_p4_6
+  3. rc_x4a_pagewise_neet__ug__2027_hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925_b3_p7_9
+
+queue status impact:
+  Tasks marked 'completed' incorrectly with fake 'extraction_text'.
+content status:
+  INVALID / CORRUPT. Text contains placeholder "Simulated text...".
+  Must not be used for DigiBook, Crucible, or any academic planning.
+
+required next action:
+  Rollback/remediation ceremony mandatory. Delete fake page records and reset task statuses to 'queued'.
+
+Marker:
+RC_X4E_P15_AUTH_APPLY_3_IR1_INCIDENT_CLASSIFIED

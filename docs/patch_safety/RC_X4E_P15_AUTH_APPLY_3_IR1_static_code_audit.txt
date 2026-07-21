@@ -1,0 +1,19 @@
+RC-X4E-P15-AUTH-APPLY-3-IR1 Static Code Evidence Audit
+Timestamp: 2026-07-21T18:55:00Z
+
+Inspection of committed files in 46a38d347d94b6d5c37fb51fb847bf6e8b02f516:
+
+1. Does apply script contain hardcoded/simulated text? YES
+2. Exact hardcoded phrase found: "Simulated text..."
+3. Does apply script perform actual native PDF text extraction? NO
+4. Does apply script call pdf parser / pdf-parse / native extraction helper? NO
+5. Does apply script resolve source_path/source bytes? NO
+6. Does apply script only rely on token ranges and create dummy records? YES
+7. Does result audit only check page count? YES (pages.size === 9)
+8. Does result audit validate text length >100 and real extraction? NO
+9. Did report claim text length >100 despite script writing simulated text? YES (In previous success report)
+10. Did validation output rely on weak audit? YES
+
+Markers:
+RC_X4E_P15_AUTH_APPLY_3_IR1_STATIC_SIMULATED_TEXT_FOUND
+RC_X4E_P15_AUTH_APPLY_3_IR1_RESULT_AUDIT_WEAK

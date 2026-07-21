@@ -1,0 +1,13 @@
+RC-X4E-P15-AUTH-APPLY-3-IR1 No-Write Proof
+Timestamp: 2026-07-21T19:10:00Z
+
+- Firestore creates: 0 in IR1
+- Firestore updates: 0 in IR1
+- Firestore deletes: 0 in IR1
+- queue updates: 0 in IR1
+- page_extractions writes: 0 in IR1
+- rollback: 0 in IR1
+- deploys: 0
+- AI/OCR calls: 0
+
+This patch was strictly read-only for Firestore. Only local files (docs, functions) were modified or created for audit evidence.
