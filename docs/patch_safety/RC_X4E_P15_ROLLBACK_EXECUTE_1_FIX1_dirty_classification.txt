@@ -1,0 +1,42 @@
+RC-X4E-P15-ROLLBACK-EXECUTE-1-FIX1 Dirty/Untracked Classification
+Timestamp: 2026-07-24T12:05:00Z
+
+Bucket 1 — Allowed FIX1 reports:
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_1_FIX1_status_before.txt
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_1_FIX1_untracked_before.txt
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_1_FIX1_dirty_classification.txt
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_1_FIX1_block_evidence_audit.txt
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_1_FIX1_no_write_recheck.txt
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_1_FIX1_validation_output.txt
+
+Bucket 2 — Unrelated FUP artifacts (18 previously reported):
+Classification of files previously seen as untracked:
+1. docs/patch_safety/FUP_2C_MIRROR2_RECOVER1_backfill_diff_before.txt -> Resolved (now tracked or removed)
+2. docs/patch_safety/FUP_2C_MIRROR2_RECOVER1_canonical_registry_diff_before.txt -> Resolved
+3. docs/patch_safety/FUP_2C_MIRROR2_RECOVER1_handle_sentinel_action_diff_before.txt -> Resolved
+4. docs/patch_safety/FUP_2C_MIRROR2_RECOVER1_test_mission_mirror_diff_before.txt -> Resolved
+5. docs/patch_safety/FUP_2C_REFINE6_AUDIT1_audit_rankcrackers_path_and_rules_diff.txt -> Resolved
+6. docs/patch_safety/FUP_2C_REFINE6_AUDIT1_backfill_student_mission_catalog_diff.txt -> Resolved
+7. docs/patch_safety/FUP_2C_REFINE6_AUDIT1_handle_sentinel_action_diff.txt -> Resolved
+8. docs/patch_safety/FUP_2C_REFINE6_AUDIT1_index_legacy_diff.txt -> Resolved
+9. docs/patch_safety/FUP_2C_REFINE6_AUDIT1_sovereign_logic_diff.txt -> Resolved
+10. docs/patch_safety/FUP_2C_REFINE6_AUDIT1_test_mission_mirror_diff.txt -> Resolved
+11. docs/patch_safety/FUP_2C_REFINE6_DIRTY_index_legacy_diff.txt -> Resolved
+12. docs/patch_safety/FUP_2C_REFINE6_DIRTY_sovereign_logic_diff.txt -> Resolved
+13. docs/patch_safety/FUP_2C_REPOGUARD1_FIX2_REFINE6_AUTH_IDENTITY_BYPASS_AUDIT.md -> Resolved
+14. docs/patch_safety/FUP_2C_REPOGUARD1_FIX2_REFINE6_BACKFILL_SCHEMA_CONTRACT.md -> Resolved
+15. docs/patch_safety/FUP_2C_REPOGUARD1_FIX2_REFINE6_NO_WRITE_PROOF.txt -> Resolved
+16. docs/patch_safety/FUP_2C_REPOGUARD1_FIX2_REFINE6_RESULT_RECOVERY_CONTRACT.md -> Resolved
+17. docs/patch_safety/FUP_2C_REPOGUARD1_FIX2_REFINE6_WRITE_LEDGER.md -> Resolved
+18. docs/governance/ -> Resolved
+
+Status: All 18 previously reported untracked files are no longer in the untracked list (git ls-files --others --exclude-standard returns empty except for FIX1 reports).
+
+Bucket 3 — temporary/test files:
+- test.txt (committed in 0108eef4)
+
+Bucket 4 — unexpected:
+- None.
+
+Action: No manual cleanup required for the 18 files as they are no longer untracked. Only FIX1 reports are present.
+Verification: git status --short shows only FIX1 reports as untracked.

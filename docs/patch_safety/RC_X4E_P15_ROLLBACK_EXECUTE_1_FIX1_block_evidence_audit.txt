@@ -1,0 +1,32 @@
+RC-X4E-P15-ROLLBACK-EXECUTE-1-FIX1 Block Evidence Audit
+Timestamp: 2026-07-24T12:06:00Z
+
+1. Blocked rollback commit:
+   0108eef4b9c20fbea1c5831db302e6b89a3187c1 (Branch safety/rc-g2-pre-notification-schema)
+
+2. Blocker marker:
+   RC_X4E_P15_APPLY3_ROLLBACK_BLOCKED_TOKEN_INVALID_OR_EXPIRED
+
+3. Token expiry:
+   2026-07-21T15:25:26.931Z
+
+4. Execution time:
+   2026-07-24T06:05:10Z
+
+5. Rollback did not execute:
+   - page_extractions deleted: 0
+   - queue tasks reset: 0
+   - total writes/deletes: 0
+   (Evidence: RC_X4E_P15_APPLY3_ROLLBACK_EXECUTE_1_execution_output.txt confirms validation failure: future_expires_at)
+
+6. Corrupt state remains:
+   - pages 1–9 still exist: YES
+   - pages simulated: YES
+   - tasks completed: YES
+   (Confirmed by audit_rc_x4e_p15_apply3_rollback_readiness.js output in preflight)
+
+7. Required next action:
+   - Obtain new rollback token with future expiry.
+   - Re-run rollback execution.
+
+RC_X4E_P15_ROLLBACK_EXECUTE_1_FIX1_BLOCK_EVIDENCE_CONFIRMED
