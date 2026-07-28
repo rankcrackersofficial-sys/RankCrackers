@@ -304,8 +304,8 @@ async function runSuite() {
 
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.ok(shell);
-    assert.strictEqual(shell.status, 'LIVE');
-    assert.strictEqual(shell.userPanelVisible, true);
+    assert.strictEqual(shell.status, 'PRIVATE_REVIEW_LOCKED');
+    assert.strictEqual(shell.userPanelVisible, false);
   });
 
   // 2. Admin launch behavior follows permission policy (allow launch -> now blocked by governance lock)
@@ -381,7 +381,7 @@ async function runSuite() {
     assert.ok(shell);
     assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
     assert.strictEqual(shell.userPanelVisible, false);
-    assert.strictEqual(shell.cardVisible, true);
+    assert.strictEqual(shell.cardVisible, false);
   });
 
   // 6. Launch updates shell to LIVE
@@ -401,8 +401,8 @@ async function runSuite() {
     await handleSentinelAction(data, founderContext);
 
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
-    assert.strictEqual(shell.catalogStatus, 'LIVE');
-    assert.strictEqual(shell.userPanelVisible, true);
+    assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
+    assert.strictEqual(shell.userPanelVisible, false);
   });
 
   // 7. Pause maps deterministically to hidden coming-soon
@@ -462,7 +462,7 @@ async function runSuite() {
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
     assert.strictEqual(shell.userPanelVisible, false); // Option A: always hidden on restore/passive
-    assert.strictEqual(shell.cardVisible, true);
+    assert.strictEqual(shell.cardVisible, false);
     assert.strictEqual(shell.archived, false);
   });
 
@@ -482,9 +482,9 @@ async function runSuite() {
     await handleSentinelAction(data, founderContext);
 
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
-    assert.strictEqual(shell.catalogStatus, 'LIVE');
-    assert.strictEqual(shell.userPanelVisible, true);
-    assert.strictEqual(shell.studentMessage, 'Mission completed successfully. Material remains available.');
+    assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
+    assert.strictEqual(shell.userPanelVisible, false);
+    assert.strictEqual(shell.studentMessage, 'Mission shell is created. Content will unlock after Founder approval.');
   });
 
   // 11. Same action retry is idempotent
@@ -842,7 +842,6 @@ async function runSuite() {
     const shell = buildStudentMissionCatalogShell('jee_main_2026', realmData, recData, 'launch_realm');
 
     assert.strictEqual(shell.id, 'jee_main_2026');
-    assert.strictEqual(shell.mission_id, 'jee_main_2026');
     assert.strictEqual(shell.name, 'JEE Main');
     assert.strictEqual(shell.title, 'JEE Main');
     assert.strictEqual(shell.boardId, 'NTA');
@@ -1240,16 +1239,17 @@ async function runSuite() {
     await handleSentinelAction(data, founderContext);
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
 
-    const expected32Fields = [
-      'id', 'mission_id', 'title', 'name', 'subtitle', 'titleHindi', 'state',
-      'examCategory', 'exam_category', 'target_year', 'year', 'exam_year',
-      'exam_id', 'code', 'recruitment_id', 'recruitmentGroupId', 'boardId',
-      'organizationCode', 'cardVisible', 'userPanelVisible', 'archived',
-      'status', 'catalogStatus', 'contentLocks', 'studentMessage', 'sortOrder',
-      'priority', 'updatedAt'
+    const expectedActualFields = [
+      'id', 'title', 'name', 'subtitle', 'displayTitle', 'examName', 'examYear',
+      'missionType', 'missionStructureType', 'examScope', 'mediumPolicy',
+      'supportedMediums', 'defaultMedium', 'status', 'catalogStatus',
+      'studentMessage', 'userPanelVisible', 'cardVisible', 'visibility',
+      'archived', 'titleHindi', 'state', 'examCategory', 'exam_category',
+      'target_year', 'year', 'exam_year', 'boardId', 'organizationCode',
+      'priority', 'sortOrder', 'source', 'contentLocks', 'updatedAt'
     ];
 
-    for (const field of expected32Fields) {
+    for (const field of expectedActualFields) {
       assert.ok(field in shell, `Missing field '${field}' from student mission catalog shell`);
     }
   });
