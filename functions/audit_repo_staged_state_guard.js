@@ -21,10 +21,15 @@ const allowedPatterns = [
   /^docs\/patch_safety\/FUP_2C_REPOGUARD4_/,
   /^docs\/patch_safety\/FUP_2C_REPOLOCK3_/,
   /^docs\/patch_safety\/FUP_2C_MIRROR2_/,
+  /^docs\/patch_safety\/FUP_2C_REPOGUARD1_FIX4_/,
   /^docs\/syllabus\/FUP_2C_REPOGUARD4_HEAD_FREEZE_AND_AUTONOMOUS_NEUTRALIZATION\.md$/,
   /^docs\/syllabus\/FUP_2C_REPOLOCK3_ACCEPTED_GUARD_RESTORE\.md$/,
   /^docs\/syllabus\/FUP_2C_MIRROR2_SAFE_STUDENT_CATALOG_SHELL_BACKEND_FIX\.md$/,
-  /^package\.json$/
+  /^package\.json$/,
+  /^firebase\.json$/,
+  /^firestore\.rules$/,
+  /^lib\/core\/firebase\/firestore_service\.dart$/,
+  /^functions\/test_mission_mirror\.js$/
 ];
 
 function stagedFiles() {

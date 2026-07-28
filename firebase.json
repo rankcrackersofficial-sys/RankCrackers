@@ -8,7 +8,14 @@
         ".git",
         "firebase-debug.log",
         "firebase-debug.*.log",
-        "*.local"
+        "*.local",
+        "test_mission_mirror.js",
+        "tmp_qcell6_gate1_live_write_readiness.js",
+        "tmp_qcell6_live_failure_diag1.js",
+        "audit_rankcrackers_path_and_rules.js",
+        "audit_platform_boundary.js",
+        "audit_repo_head_freeze_guard.js",
+        "audit_repo_staged_state_guard.js"
       ],
       "predeploy": [
         "npm --prefix \"functions\" run build"
@@ -35,5 +42,20 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "emulators": {
+    "auth": {
+      "port": 9099,
+      "host": "127.0.0.1"
+    },
+    "firestore": {
+      "port": 8080,
+      "host": "127.0.0.1"
+    },
+    "ui": {
+      "enabled": true,
+      "port": 4000,
+      "host": "127.0.0.1"
+    }
   }
 }

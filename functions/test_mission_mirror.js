@@ -1331,6 +1331,35 @@ async function runSuite() {
     assert.strictEqual(realm.resultSideEffects.certificate.attemptCount, 3);
   });
 
+  // 52. Concurrency lease: Active lease blocks concurrent invocation
+  await testCase("Concurrency lease: Active lease blocks concurrent invocation", async () => {
+    resetMockDb();
+    mockDatabaseState.mission_realms['jee_main_2026'] = {
+      realm_id: 'jee_main_2026',
+      status: 'ACTIVE',
+      certificateSideEffectStatus: 'IN_PROGRESS',
+      analyticsSideEffectStatus: 'SUCCESS',
+      resultSideEffects: {
+        resultDeclarationId: 'cycle_1',
+        certificate: { status: 'IN_PROGRESS', attemptCount: 1 },
+        analytics: { status: 'SUCCESS', attemptCount: 1 },
+        updatedAt: new Date().toISOString()
+      }
+    };
+    mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE' };
+
+    const data = {
+      action: 'declare_result',
+      recruitmentId: 'jee_main_2026',
+      payload: { finalStatus: 'WON', resultDeclarationId: 'cycle_1' }
+    };
+
+    await assert.rejects(async () => {
+      await handleSentinelAction(data, founderContext);
+    }, /CONCURRENT_EXECUTION_BLOCKED/);
+  });
+
   console.log("------------------------------------------------");
   console.log(`TEST RUN COMPLETE: Passed ${passedCount} / ${testsCount} tests.`);
   console.log("------------------------------------------------");

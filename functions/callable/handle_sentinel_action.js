@@ -396,6 +396,28 @@ exports.handleSentinelAction = functions
           let nextSideEffects = {};
           if (existingSideEffects.resultDeclarationId === resultDeclarationId) {
             nextSideEffects = { ...existingSideEffects };
+            const isCertInProgress = nextSideEffects.certificate && nextSideEffects.certificate.status === 'IN_PROGRESS';
+            const isAnalInProgress = nextSideEffects.analytics && nextSideEffects.analytics.status === 'IN_PROGRESS';
+            
+            if (isCertInProgress || isAnalInProgress) {
+              let lastUpdatedMs = 0;
+              if (existingSideEffects.updatedAt) {
+                if (typeof existingSideEffects.updatedAt.toDate === 'function') {
+                  lastUpdatedMs = existingSideEffects.updatedAt.toDate().getTime();
+                } else if (existingSideEffects.updatedAt instanceof Date) {
+                  lastUpdatedMs = existingSideEffects.updatedAt.getTime();
+                } else if (typeof existingSideEffects.updatedAt === 'number') {
+                  lastUpdatedMs = existingSideEffects.updatedAt;
+                } else if (typeof existingSideEffects.updatedAt === 'string') {
+                  lastUpdatedMs = new Date(existingSideEffects.updatedAt).getTime();
+                }
+              }
+              const LEASE_TIMEOUT_MS = 300000; // 5 minutes
+              if (Date.now() - lastUpdatedMs < LEASE_TIMEOUT_MS) {
+                throw new Error('CONCURRENT_EXECUTION_BLOCKED');
+              }
+            }
+
             if (nextSideEffects.certificate.status !== 'SUCCESS' && nextSideEffects.certificate.status !== 'FAILED_FINAL') {
               nextSideEffects.certificate.status = 'PENDING';
             }

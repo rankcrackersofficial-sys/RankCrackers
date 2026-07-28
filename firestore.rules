@@ -45,6 +45,16 @@ service cloud.firestore {
       allow write: if isFounder();
     }
 
+    match /student_mission_catalog/{missionId} {
+      allow read: if isFounder() || (
+        request.auth != null &&
+        resource.data.cardVisible == true &&
+        resource.data.userPanelVisible == true &&
+        resource.data.archived == false
+      );
+      allow write: if false; // Writes only via Cloud Functions (Admin SDK)
+    }
+
     match /mission_realms/{realmId} {
       allow read: if isFounder();
       allow write: if isFounder();

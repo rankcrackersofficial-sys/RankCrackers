@@ -95,7 +95,9 @@ class FirestoreService {
   static Stream<List<Map<String, dynamic>>> streamStudentMissionCatalog() {
     return _firestore
         .collection(studentMissionCatalogCollection)
+        .where('cardVisible', isEqualTo: true)
         .where('userPanelVisible', isEqualTo: true)
+        .where('archived', isEqualTo: false)
         .snapshots()
         .map((snap) => snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList());
   }
