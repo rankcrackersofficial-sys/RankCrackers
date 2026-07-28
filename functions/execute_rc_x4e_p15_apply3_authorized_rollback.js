@@ -18,7 +18,7 @@ async function main() {
     }
 
     const head = execSync('git rev-parse HEAD').toString().trim();
-    const expectedHead = '450de3c711d375b1881059d9e75ed54095cd654d';
+    const expectedHead = 'f8fd1dfc235bfe162a78883ef04f96201384d2e7';
     if (head !== expectedHead) {
         console.error(`RC_X4E_P15_APPLY3_ROLLBACK_BLOCKED_HEAD_MISMATCH: ${head}`);
         process.exit(1);
@@ -107,7 +107,7 @@ async function main() {
             status: 'queued',
             page_extractions_created: 0,
             rollback_marker: 'RC_X4E_P15_APPLY3_SIMULATED_TEXT_ROLLBACK',
-            rollback_source: 'RC-X4E-P15-APPLY3-ROLLBACK-EXECUTE-2',
+            rollback_source: 'RC-X4E-P15-APPLY3-ROLLBACK-EXECUTE-3',
             updated_at: admin.firestore.FieldValue.serverTimestamp(),
             completed_at: admin.firestore.FieldValue.delete()
         });
