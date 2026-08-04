@@ -1,0 +1,24 @@
+RC-X4E-P15-ROLLBACK-EXECUTE-3-FIX1 Dirty/Untracked Classification
+Timestamp: 2026-07-28T05:45:00Z
+
+Bucket 1 — Allowed FIX1 reports:
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_3_FIX1_status_before.txt (Untracked)
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_3_FIX1_untracked_before.txt (Untracked)
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_3_FIX1_head_lineage_audit.txt (Staged)
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_3_FIX1_dirty_classification.txt
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_3_FIX1_block_evidence_recheck.txt
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_3_FIX1_no_write_recheck.txt
+- docs/patch_safety/RC_X4E_P15_ROLLBACK_EXECUTE_3_FIX1_validation_output.txt
+
+Bucket 2 — leftover Execute-3 reports:
+- None. (Removed by git clean -fd in Part A).
+
+Bucket 3 — rollback execute/audit scripts:
+- functions/execute_rc_x4e_p15_apply3_authorized_rollback.js (Preserved in history)
+- functions/audit_rc_x4e_p15_apply3_rollback_result.js (Preserved in history)
+
+Bucket 4 — unexpected files:
+- 40+ Mechanics/Audit/Scratch files found in working tree (Bucket 4).
+- Action: Deleted by git clean -fd. (Reason: Outside rollback scope).
+
+Verification: Tree is now clean except for allowed FIX1 reports.

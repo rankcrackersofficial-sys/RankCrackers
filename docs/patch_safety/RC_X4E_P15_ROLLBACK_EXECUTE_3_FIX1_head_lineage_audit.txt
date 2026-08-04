@@ -1,0 +1,16 @@
+RC-X4E-P15-ROLLBACK-EXECUTE-3-FIX1 Head Lineage Audit
+Timestamp: 2026-07-28T05:40:00Z
+
+1. Actual HEAD: 4f3ab70504a4b594831decf14f04fce120d666f0
+2. Lineage Review:
+   - f8fd1dfc (Token-3): NOT an ancestor of HEAD. (Divergent from 3b5dd69a).
+   - 4f3ab705 (Execute-3 Block): IS the current HEAD.
+   - 3b5dd69a (Parent): IS an ancestor of HEAD.
+3. Analysis:
+   - Rollback Execute-3 (4f3a) was incorrectly committed on top of 3b5dd69a instead of the authorized Token-3 commit (f8fd1dfc).
+   - This caused the 'HEAD_MISMATCH' blocker in the executor.
+   - Additionally, the working tree during EXECUTE-3 was dirty/staged.
+4. Working Tree Status:
+   - Working tree clean: YES (after FIX1 Part A reset/clean).
+
+RC_X4E_P15_ROLLBACK_EXECUTE_3_FIX1_HEAD_LINEAGE_REVIEWED
