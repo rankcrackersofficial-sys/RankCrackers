@@ -336,6 +336,19 @@ Imagine you are sitting in a moving train. To your friend sitting next to you, y
 
 ---
 
+### K. Founder Internal Acceptance
+
+The Mechanics Foundations DigiBook internal draft passed formal Pro Academic Review and was accepted by the Founder for continued internal RankCrackers development on 2026-08-04.
+
+This internal acceptance does not authorize:
+- student publication
+- production or Firestore materialization
+- question-pack attachment
+- Crucible generation
+- deployment
+
+---
+
 ### Glossary (शब्दकोश)
 - **Frame of Reference**: निर्देश तंत्र (Nirdesh Tantra)
 - **Displacement**: विस्थापन (Visthapan)

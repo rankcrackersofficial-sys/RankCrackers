@@ -1,0 +1,82 @@
+{
+  "phase": "VS1C_R2_RECOVERY",
+  "recordedOnActiveLineAt": "2026-08-05T11:30:09+05:30",
+  "activeBaselineHead": "a32d1f91d155ba5e424525c99ec744706e9a35fd",
+  "divergentCommitRejection": "9805c2d15dbd7ebd1ebfb4c78d9549c70849381d",
+  "divergentCommitRejectionNote": "9805c2d15dbd7ebd1ebfb4c78d9549c70849381d WAS NOT MERGED, CHERRY-PICKED OR USED AS A FILE SOURCE.",
+  "acceptedSourceCommit": "6379096da2222e4ca77d0e2b03f41dfd2d9bafd1",
+  "phaseARecoveryCommit": "24e3b924ebcde7cf532d6f6813935c4b9e90a392",
+  "restoredBlobs": {
+    "digibookMd": "0e4cb59aed5ddf0b682cb98b034fcfd2d9bafd1",
+    "digibookJson": "082d8f8013f5bae054775241aebbb3ec15def4bc",
+    "fix3EvidenceJson": "c5a3a79b9992b2517113fafb4aeae3c78582c152",
+    "fix3EvidenceMd": "70067c2bcfcb17866ce405f9f37e900cc8397c2e"
+  },
+  "founderDecision": "ACCEPT_INTERNAL_DIGIBOOK_DRAFT",
+  "governanceMetadata": {
+    "decisionRecord": {
+      "decisionType": "FOUNDER_INTERNAL_DRAFT_DECISION",
+      "decision": "ACCEPT_INTERNAL_DIGIBOOK_DRAFT",
+      "decisionStatus": "ACCEPTED",
+      "acceptedArtifactCommit": "6379096da2222e4ca77d0e2b03f41dfd2d9bafd1",
+      "proReviewVerdict": "VS1C_R1_PRO_REVIEW_PASSED_READY_FOR_FOUNDER_DECISION",
+      "scope": "INTERNAL_DIGIBOOK_DRAFT_ONLY",
+      "studentPublicationAuthorized": false,
+      "firestoreMaterializationAuthorized": false,
+      "questionPackAttachmentAuthorized": false,
+      "crucibleGenerationAuthorized": false,
+      "acceptedByRole": "FOUNDER",
+      "acceptedAt": "2026-08-04T20:31:01+05:30"
+    },
+    "reviewStatus": {
+      "sourceReview": "PASSED",
+      "proAcademicReview": "PASSED",
+      "founderInternalDecision": "ACCEPTED",
+      "studentReadiness": "NOT_READY"
+    }
+  },
+  "zeroAcademicDiffProof": {
+    "canonicalMarkdownBeforeSectionKHash": "c55f8436221fb0a015aefbe170f641f36a87040755071703aad5364fd52bffdb",
+    "canonicalMarkdownAfterSectionKRemovedHash": "c55f8436221fb0a015aefbe170f641f36a87040755071703aad5364fd52bffdb",
+    "canonicalAcademicJsonHashBefore": "62ffa05d95ff26f92007a996e46c7b9e64a952bc2809d4c5394e6a23810f71c8",
+    "canonicalAcademicJsonHashAfter": "62ffa05d95ff26f92007a996e46c7b9e64a952bc2809d4c5394e6a23810f71c8",
+    "zeroFormulaChange": true,
+    "zeroMisconceptionChange": true,
+    "zeroExampleChange": true,
+    "zeroSelfCheckChange": true,
+    "zeroSourceLineageChange": true,
+    "zeroRubricChange": true,
+    "zeroSafetyFlagChange": true
+  },
+  "contentPreservation": {
+    "atoms": 2,
+    "sourceRecords": 2,
+    "examples": 7,
+    "selfChecks": 10,
+    "formulas": 7,
+    "misconceptions": 8,
+    "rubrics": 15
+  },
+  "safetyLocks": {
+    "studentReadiness": "NOT_READY",
+    "studentPublishReady": false,
+    "questionPackAttached": false,
+    "crucibleReady": false,
+    "firestoreMaterializationAuthorized": false,
+    "studentPublicationAuthorized": false,
+    "questionPackAttachmentAuthorized": false,
+    "crucibleGenerationAuthorized": false
+  },
+  "persistenceCheck": {
+    "noFirestoreWrite": true,
+    "noEmulatorExecution": true,
+    "noDeployment": true
+  },
+  "exactCommittedFiles": [
+    "docs/digibook/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_V1.md",
+    "docs/digibook/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_V1.json",
+    "docs/patch_safety/RANKCRACKERS_VS1C_R2_ACTIVE_LINE_founder_acceptance_closeout_20260805113009.json",
+    "docs/patch_safety/RANKCRACKERS_VS1C_R2_ACTIVE_LINE_founder_acceptance_closeout_20260805113009.md"
+  ],
+  "verdict": "RANKCRACKERS_VS1C_ACTIVE_LINE_RECOVERY_AND_FOUNDER_GOVERNANCE_ACCEPTED"
+}

@@ -455,6 +455,28 @@
     "markdownJsonConsistency": { "status": "PASS", "evidence": "Synced registers and IDs.", "reviewNote": "Verified.", "blocking": true },
     "safetyMetadata": { "status": "PASS", "evidence": "Pending flags.", "reviewNote": "All false.", "blocking": true }
   },
+  "governanceDecision": {
+    "decisionType": "FOUNDER_INTERNAL_DRAFT_DECISION",
+    "decision": "ACCEPT_INTERNAL_DIGIBOOK_DRAFT",
+    "decisionStatus": "ACCEPTED",
+    "acceptedArtifactCommit": "6379096da2222e4ca77d0e2b03f41dfd2d9bafd1",
+    "activeLineRecoveryCommit": "24e3b924ebcde7cf532d6f6813935c4b9e90a392",
+    "proReviewVerdict": "VS1C_R1_PRO_REVIEW_PASSED_READY_FOR_FOUNDER_DECISION",
+    "scope": "INTERNAL_DIGIBOOK_DRAFT_ONLY",
+    "studentPublicationAuthorized": false,
+    "firestoreMaterializationAuthorized": false,
+    "questionPackAttachmentAuthorized": false,
+    "crucibleGenerationAuthorized": false,
+    "acceptedAt": "2026-08-04T20:31:01+05:30",
+    "recordedOnActiveLineAt": "2026-08-05T11:30:09+05:30",
+    "acceptedByRole": "FOUNDER"
+  },
+  "reviewStatus": {
+    "sourceReview": "PASSED",
+    "proAcademicReview": "PASSED",
+    "founderInternalDecision": "ACCEPTED",
+    "studentReadiness": "NOT_READY"
+  },
   "studentReadiness": "NOT_READY",
   "safetyFlags": {
     "studentPublishReady": false,
