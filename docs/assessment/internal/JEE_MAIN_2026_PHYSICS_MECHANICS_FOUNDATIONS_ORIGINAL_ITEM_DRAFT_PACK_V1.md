@@ -319,13 +319,13 @@
 - **Critical Gate IDs**: `constant-acceleration condition`
 - **Expected Reasoning Outline**: 
   - Acceleration is the rate of change of velocity. Even when velocity is zero momentarily at the peak, it is changing from upward to downward, so acceleration is non-zero.
-  - The standard kinematic equations require that the acceleration is constant in both magnitude and direction during the entire motion.
-- **Provisional Key Candidate**: Acceleration is non-zero because the velocity is changing. Kinematic equations require constant acceleration.
-- **Acceptable Response Evidence**: Explanation must state that acceleration is non-zero (or equal to freefall acceleration) and that equations apply only if acceleration is constant in magnitude and direction.
+  - The standard kinematic equations require that the acceleration remains constant throughout the interval.
+- **Provisional Key Candidate**: Standard kinematic equations apply when acceleration remains constant throughout the interval. The constant acceleration may be zero or non-zero.
+- **Acceptable Response Evidence**: Explanation must state that standard kinematic equations apply when acceleration remains constant, which can be zero or non-zero.
 - **Partial Credit Anchors**: `NOT_APPLICABLE`
-- **Critical Errors**: Asserting that acceleration must be zero because velocity is zero.
-- **Non-Critical Errors**: Wording ambiguity about the direction of acceleration.
-- **Common Failure Signals**: Claiming acceleration is zero at the top because the ball is not moving.
+- **Critical Errors**: Believing that standard kinematic equations require acceleration to be strictly non-zero.
+- **Non-Critical Errors**: Wording details.
+- **Common Failure Signals**: Claiming constant acceleration equations cannot be used if acceleration is zero.
 - **Review Requirements**: Standard internal peer review.
 - **Source Type**: `ORIGINAL_AUTHORED_ASSESSMENT`
 - **PYQ Claim**: `false`
@@ -402,27 +402,25 @@
 - **Difficulty Band**: `HARD`
 - **Point Value**: 2
 - **Estimated Response Time (Seconds)**: 180
-- **Stem**: Two spheres, Sphere 1 of mass $1\text{ kg}$ and Sphere 2 of mass $5\text{ kg}$, are dropped from rest from the top of a tower. Both spheres experience the exact same constant downward acceleration of $10\text{ m/s}^2$ throughout their fall. Calculate the distance in meters traveled by Sphere 2 during the first $3.0\text{ s}$ of its fall. Enter the numeric value only, rounded to one decimal place. (Note: The motion is strictly one-dimensional, where downward is defined as positive.)
+- **Stem**: Two automated carts have masses of $1\text{ kg}$ and $5\text{ kg}$. Each cart starts from rest on a straight guideway and is programmed to move with the same constant acceleration of $2.0\text{ m/s}^2$. Calculate the displacement of the $5\text{ kg}$ cart during the first $3.0\text{ s}$. Enter the numeric value in metres, rounded to one decimal place. Take the direction of motion as positive.
 - **Options**: `NOT_APPLICABLE`
-- **Response Constraints**: Numeric value only, rounded to one decimal place. Do not include units.
-- **Given Data**: Mass of Sphere 1 $= 1\text{ kg}$, Mass of Sphere 2 $= 5\text{ kg}$, Initial speed $u = 0$, constant acceleration $a = 10\text{ m/s}^2$, time $t = 3.0\text{ s}$.
+- **Response Constraints**: Numeric value only, rounded to one decimal place. Do not include units in your answer box.
+- **Given Data**: Mass of Cart 1 $= 1\text{ kg}$, Mass of Cart 2 $= 5\text{ kg}$, Initial speed $u = 0$, constant acceleration $a = 2.0\text{ m/s}^2$, time $t = 3.0\text{ s}$.
 - **Required Representation**: numerical values and units
 - **Diagram Specification**: `NOT_APPLICABLE`
-- **Sign Convention**: Downward is positive.
-- **Units Requirement**: Output in meters.
-- **Misconception Targets**: `MIS_07` (Heavier objects always fall faster).
+- **Sign Convention**: Direction of motion is positive.
+- **Units Requirement**: Output in metres.
+- **Misconception Targets**: None (Note: Local design target is the insertion of extraneous mass data into kinematic equations).
 - **Critical Gate IDs**: None
 - **Expected Reasoning Outline**: 
-  - The equation for displacement is $s = ut + \frac{1}{2}at^2$.
-  - Substituting $u = 0$, $a = 10\text{ m/s}^2$, and $t = 3.0\text{ s}$:
-  - $s = 0 + \frac{1}{2} \times 10 \times (3.0)^2 = 5 \times 9 = 45.0\text{ m}$.
-  - Mass does not appear in kinematic equations, so Sphere 2's mass of $5\text{ kg}$ does not change its acceleration or distance traveled.
-- **Provisional Key Candidate**: 45.0
-- **Acceptable Response Evidence**: Exact string match: "45.0" or "45".
+  - Use $s = ut + \frac{1}{2}at^2$ with $u = 0$, $a = 2.0\text{ m/s}^2$ and $t = 3.0\text{ s}$.
+  - The mass of $5\text{ kg}$ is extraneous and is not required for the prescribed kinematic calculation.
+- **Provisional Key Candidate**: 9.0
+- **Acceptable Response Evidence**: Exact string match: "9.0" or "9".
 - **Partial Credit Anchors**: 1 point awarded if the calculation is setup correctly but contains a basic math arithmetic error.
-- **Critical Errors**: Multiplying or dividing the kinematic result by mass (e.g. scaling by 5 to get 225), which demonstrates the heavier-object misconception.
+- **Critical Errors**: Attempting to insert mass into the kinematic equations.
 - **Non-Critical Errors**: Rounding or formatting error.
-- **Common Failure Signals**: Entering 225.0 due to multiplying displacement by mass.
+- **Common Failure Signals**: Entering 45.0 due to multiplying displacement by mass.
 - **Review Requirements**: Standard internal peer review.
 - **Source Type**: `ORIGINAL_AUTHORED_ASSESSMENT`
 - **PYQ Claim**: `false`
@@ -547,15 +545,15 @@
 - **Misconception Targets**: `MIS_05` (A moving object requires continuous force), `MIS_06` (Inertia is a force).
 - **Critical Gate IDs**: `zero net force under Newton's First Law`, `inertia is not a force`
 - **Expected Reasoning Outline**: 
-  - Phase 1: Velocity is constant, so acceleration is zero. By Newton's First Law, the net horizontal force is exactly zero. No horizontal force is required to sustain this motion.
-  - Phase 2: Velocity is decreasing linearly, indicating a constant negative acceleration. Therefore, a non-zero, constant net horizontal force must act in the direction opposite to motion.
-  - Inertia is the hovercraft's resistance (due to its $100\text{ kg}$ mass) to this change in motion, causing it to glide forward during the deceleration phase rather than stopping instantaneously.
-- **Provisional Key Candidate**: Phase 1 has zero net force due to constant velocity (First Law). Phase 2 has a non-zero opposing net force causing deceleration. Inertia of the $100\text{ kg}$ mass resists this change.
-- **Acceptable Response Evidence**: Must explicitly state that net force in Phase 1 is zero, Phase 2 net force is non-zero (opposing), and describe inertia as resistance to acceleration rather than a force.
-- **Partial Credit Anchors**: 1 point awarded if forces are correctly mapped but inertia is incorrectly described.
-- **Critical Errors**: Recommending a forward net force for Phase 1 or labeling inertia as an active force vector.
+  - Phase 1: Velocity is constant, so acceleration is zero. By Newton's First Law, the net external force is exactly zero. No net external force is required to sustain this motion.
+  - Phase 2: Velocity is decreasing linearly, indicating a constant negative acceleration. Therefore, a non-zero, constant net external force must act in the direction opposite to motion.
+  - Inertia is the hovercraft's resistance (due to its $100\text{ kg}$ mass) to this change in motion, causing it to glide forward during the deceleration phase rather than stopping instantaneously; it is not an additional force.
+- **Provisional Key Candidate**: Phase 1: The net external force is zero. Phase 2: The net external force is non-zero and directed opposite to the motion. Inertia is a property of the object; it is not an additional force.
+- **Acceptable Response Evidence**: Must explicitly state that the net external force in Phase 1 is zero, and in Phase 2 it is non-zero and opposing the motion. Inertia must be described as a property, not a force.
+- **Partial Credit Anchors**: 1 point awarded if net external forces are correctly mapped but inertia is incorrectly described.
+- **Critical Errors**: Recommending a forward net external force for Phase 1, labeling inertia as an active force vector, or claiming inertia is an opposing force.
 - **Non-Critical Errors**: Wording details.
-- **Common Failure Signals**: Stating a forward force is needed in Phase 1 to maintain the speed of $+4\text{ m/s}$.
+- **Common Failure Signals**: Stating a forward net external force is needed in Phase 1 to maintain the speed of $+4\text{ m/s}$.
 - **Review Requirements**: Standard internal peer review.
 - **Source Type**: `ORIGINAL_AUTHORED_ASSESSMENT`
 - **PYQ Claim**: `false`
@@ -577,10 +575,10 @@
 | **academic accuracy** | SELF_CHECKED | Physically correct calculations & coordinate axis. | Validated. | `true` |
 | **stem clarity** | SELF_CHECKED | Stems contain explicit coordinate definitions. | Explicit. | `true` |
 | **option quality** | SELF_CHECKED | Plausible distractors mapping to misconceptions. | Validated. | `true` |
-| **numerical correctness** | SELF_CHECKED | Accurate kinematic values (27 m, 1.4 m/s, 45.0 m). | Verified. | `true` |
+| **numerical correctness** | SELF_CHECKED | Accurate kinematic values (27 m, 1.4 m/s, 9.0 m). | Verified. | `true` |
 | **graph correctness** | SELF_CHECKED | Slopes and areas match geometric formulas. | Verified. | `true` |
 | **sign and unit correctness** | SELF_CHECKED | Sign conventions and output units are explicit. | Confirmed. | `true` |
-| **misconception targeting** | SELF_CHECKED | 8/8 misconceptions targeted directly. | Validated. | `true` |
+| **misconception targeting** | SELF_CHECKED | 7 in-scope misconceptions targeted, 1 deferred. | Validated. | `true` |
 | **cognitive-level fidelity** | SELF_CHECKED | Items demand Recall, Understanding, App, and Analysis. | Verified. | `true` |
 | **point fidelity** | SELF_CHECKED | Total points sum to 16. Slots match values. | Verified. | `true` |
 | **critical-gate fidelity** | SELF_CHECKED | Critical items marked with criticalGateId. | Locked. | `true` |

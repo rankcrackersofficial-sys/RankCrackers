@@ -1,0 +1,50 @@
+{
+  "phase": "VS1E-A-FIX1",
+  "timestamp": "2026-08-05T12:29:43+05:30",
+  "baselineHead": "d80cd6718d2c9086bbb9e66de263b40b6a81a6be",
+  "verifications": {
+    "itemCount": 12,
+    "pointTotal": 16,
+    "cognitiveDistribution": {
+      "RECALL": 2,
+      "UNDERSTANDING": 4,
+      "APPLICATION": 4,
+      "ANALYSIS": 2
+    },
+    "misconceptions": {
+      "assessableInScopeCount": 7,
+      "deferredCount": 1,
+      "deferredReason": "MIS_07 deferred to GRAVITATION_OR_FREE_FALL_AUTHORIZED_UNIT"
+    },
+    "mf_asi_07_correction": {
+      "itemId": "MF_ASI_07",
+      "status": "PASS",
+      "provisionalKey": "Standard kinematic equations apply when acceleration remains constant throughout the interval. The constant acceleration may be zero or non-zero."
+    },
+    "mf_asi_09_correction": {
+      "itemId": "MF_ASI_09",
+      "status": "PASS",
+      "calculation": "s = ut + 0.5 * a * t^2 = 0 + 0.5 * 2.0 * 3.0^2 = 9.0 m. Mass is extraneous.",
+      "keyCandidate": "9.0",
+      "context": "SAFE_PRESCRIBED_ONE_DIMENSIONAL_UAM"
+    },
+    "mf_asi_12_correction": {
+      "itemId": "MF_ASI_12",
+      "status": "PASS",
+      "netForceWording": "Phase 1: net external force is zero. Phase 2: net external force is non-zero and directed opposite to motion. Inertia is a property, not a force."
+    }
+  },
+  "safetyLocks": {
+    "studentPublishReady": false,
+    "assessmentPackReviewed": false,
+    "answerReviewStatus": "PENDING",
+    "solutionReviewStatus": "PENDING",
+    "founderApprovalStatus": "PENDING",
+    "proReviewStatus": "PENDING",
+    "studentReadiness": "NOT_READY",
+    "questionPackAttached": false,
+    "crucibleReady": false,
+    "firestoreMaterializationAuthorized": false
+  },
+  "verdict": "RANKCRACKERS_VS1E_A_FIX1_MECHANICS_FOUNDATIONS_ITEM_KEY_CORRECTION_COMPLETE"
+}
