@@ -158,8 +158,8 @@ No active test papers, question cards, or student-facing quizzes are compiled in
 - **Acceptable Evidence**: Distinguishes high-position/low-speed states from low-position/high-speed states on the graph.
 - **Insufficient Evidence**: Treating the vertical position coordinate as velocity.
 - **Common Failure Signals**: Reading the y-axis value as speed.
-- **Scoring Approach**: PARTIAL_CREDIT
-- **Mastery Signal**: Accurately computes slope at multiple intervals and identifies motion state.
+- **Scoring Approach**: BINARY
+- **Mastery Signal**: Selects the complete correct option showing both: A velocity = 5 m/s and B velocity = 0 m/s.
 - **Review Requirements**: Standard internal review.
 - **Safety Flags**: `studentPublishReady = false`
 
@@ -389,7 +389,7 @@ The blueprint outlines the points allocation across the slots. The provisional p
 | `AS_02` | BINARY | 1 | `false` | Conflating displacement with distance. | N/A | Formative computation. |
 | `AS_03` | BINARY | 1 | `false` | Directly averaging the segment velocities. | N/A | Exit rate calculations. |
 | `AS_04` | BINARY | 1 | `false` | Conflating negative sign with speed reduction. | N/A | Diagnostic sign classification. |
-| `AS_05` | PARTIAL_CREDIT | 2 | `true` | Reading vertical height as speed. | Math calculation slip in slope. | Formative slope analysis. |
+| `AS_05` | BINARY | 2 | `false` | Reading vertical height as speed. | N/A | Formative slope analysis. |
 | `AS_06` | PARTIAL_CREDIT | 2 | `true` | Summing absolute areas for displacement. | Arithmetic slip in geometric area. | Exit slope/area calculation. |
 | `AS_07` | BINARY | 1 | `false` | Stating acceleration is zero at the instant when velocity is momentarily zero. | N/A | Diagnostic concept justification. |
 | `AS_08` | BINARY | 1 | `false` | Choosing variable acceleration equations. | N/A | Formative equation match. |

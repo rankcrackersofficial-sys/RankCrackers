@@ -1,0 +1,18 @@
+{
+  "patchId": "VS1D-FIX3",
+  "timestamp": "2026-08-05T17:49:34+05:30",
+  "baselineHead": "02dd701926619e5c42f311006ab1fb0883b4b427",
+  "corrections": [
+    {
+      "slotId": "AS_05",
+      "change": "PARTIAL_CREDIT to BINARY scoring",
+      "reason": "Single-choice response surface does not allow independent sub-score observation"
+    }
+  ],
+  "verification": {
+    "totalPoints": 16,
+    "as05Points": 2,
+    "partialCreditAllowed": false
+  },
+  "status": "RC_X4E_VS1D_FIX3_BLUEPRINT_SCORING_FEASIBILITY_COMPLETE"
+}

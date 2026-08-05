@@ -170,12 +170,12 @@
       "acceptableEvidence": "Distinguishes high-position/low-speed states from low-position/high-speed states on the graph.",
       "insufficientEvidence": "Treating the vertical position coordinate as velocity.",
       "commonFailureSignals": "Reading the y-axis value as speed.",
-      "scoringApproach": "PARTIAL_CREDIT",
+      "scoringApproach": "BINARY",
       "maxPoints": 2,
-      "partialCreditAllowed": true,
+      "partialCreditAllowed": false,
       "criticalError": "Reading vertical height as speed.",
-      "noncriticalError": "Math calculation slip in slope.",
-      "masterySignal": "Accurately computes slope at multiple intervals and identifies motion state.",
+      "noncriticalError": "N/A",
+      "masterySignal": "Selects the complete correct option showing both: A velocity = 5 m/s and B velocity = 0 m/s.",
       "reviewRequirements": "Standard internal review",
       "safetyFlags": {
         "studentPublishReady": false
