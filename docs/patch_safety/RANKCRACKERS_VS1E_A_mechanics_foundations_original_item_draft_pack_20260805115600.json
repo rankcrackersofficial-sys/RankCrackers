@@ -1,0 +1,117 @@
+{
+  "phase": "VS1E-A",
+  "timestamp": "2026-08-05T11:56:00+05:30",
+  "baselineHead": "bf45e90c1011edd397dcc725abcac57ad00a50e3",
+  "inputArtifacts": {
+    "digibookMd": "e92811446a6b8c86bcb992dd0988dca23270b849",
+    "digibookJson": "6978ce20a09a2b40f31e4705920eab03639a4d50",
+    "blueprintMd": "53b4216527ddc248ac109c5c66efdf889f6b0266",
+    "blueprintJson": "abb022b7b5950350142d59bd1ce808aba608ebc2"
+  },
+  "packVerification": {
+    "assessmentPackId": "jee_main_2026_physics_mechanics_foundations_original_item_draft_pack_v1",
+    "totalItems": 12,
+    "slotToItemMatrix": {
+      "AS_01": "MF_ASI_01",
+      "AS_02": "MF_ASI_02",
+      "AS_03": "MF_ASI_03",
+      "AS_04": "MF_ASI_04",
+      "AS_05": "MF_ASI_05",
+      "AS_06": "MF_ASI_06",
+      "AS_07": "MF_ASI_07",
+      "AS_08": "MF_ASI_08",
+      "AS_09": "MF_ASI_09",
+      "AS_10": "MF_ASI_10",
+      "AS_11": "MF_ASI_11",
+      "AS_12": "MF_ASI_12"
+    },
+    "pointsVerification": {
+      "itemPoints": [1, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 2],
+      "totalPoints": 16,
+      "status": "PASS"
+    },
+    "cognitiveDistribution": {
+      "RECALL": 2,
+      "UNDERSTANDING": 4,
+      "APPLICATION": 4,
+      "ANALYSIS": 2
+    },
+    "atomCoverage": {
+      "JEE_2026_PHY_U01_CH01_TOP05_001": 10,
+      "JEE_2026_PHY_U01_CH01_TOP06_001": 3,
+      "note": "MF_ASI_12 references both atoms."
+    },
+    "misconceptionCoverage": {
+      "MIS_01": "MF_ASI_02",
+      "MIS_02": "MF_ASI_03",
+      "MIS_03": "MF_ASI_04",
+      "MIS_04": "MF_ASI_07",
+      "MIS_05": "MF_ASI_10, MF_ASI_12",
+      "MIS_06": "MF_ASI_11, MF_ASI_12",
+      "MIS_07": "MF_ASI_09",
+      "MIS_08": "MF_ASI_05"
+    },
+    "criticalGateCoverage": {
+      "distance versus displacement": "MF_ASI_02",
+      "speed versus velocity": "MF_ASI_03",
+      "x-t graph slope": "MF_ASI_05",
+      "signed v-t graph area": "MF_ASI_06",
+      "constant-acceleration condition": "MF_ASI_07, MF_ASI_08",
+      "zero net force under Newton's First Law": "MF_ASI_10, MF_ASI_12",
+      "inertia is not a force": "MF_ASI_11, MF_ASI_12"
+    }
+  },
+  "originalityDeclarations": {
+    "sourceType": "ORIGINAL_AUTHORED_ASSESSMENT",
+    "pyqClaim": false,
+    "officialAnswerKey": false,
+    "questionMapIdPresent": false
+  },
+  "pointerAndPyqScan": {
+    "status": "PASS",
+    "scannedProhibited": ["pyq_", "slice_question_pointers", "questionMapId", "question_review_queue", "officialAnswerKey = true"],
+    "verdict": "ZERO_POINTER_CONSUMPTION"
+  },
+  "scopeScan": {
+    "status": "PASS",
+    "exclusionsChecked": [
+      "Newton's Second Law calculations",
+      "Newton's Third Law",
+      "friction calculations",
+      "projectile motion",
+      "circular motion",
+      "work-energy theorem",
+      "centre of mass",
+      "rotation",
+      "gravitation",
+      "oscillation",
+      "elasticity",
+      "fluids",
+      "measurement instruments"
+    ],
+    "verdict": "ZERO_OUT_OF_SCOPE_ITEM_CONTENT"
+  },
+  "provisionalKeyBoundary": {
+    "officialAnswerKey": false,
+    "answerReviewStatus": "PENDING",
+    "solutionReviewStatus": "PENDING"
+  },
+  "safetyFlags": {
+    "studentPublishReady": false,
+    "assessmentPackReviewed": false,
+    "answerReviewStatus": "PENDING",
+    "solutionReviewStatus": "PENDING",
+    "founderApprovalStatus": "PENDING",
+    "proReviewStatus": "PENDING",
+    "studentReadiness": "NOT_READY",
+    "questionPackAttached": false,
+    "crucibleReady": false,
+    "firestoreMaterializationAuthorized": false
+  },
+  "noPersistenceProof": {
+    "firestoreWrites": 0,
+    "emulatorExecutions": 0,
+    "deploymentOperations": 0
+  },
+  "verdict": "RANKCRACKERS_VS1E_A_MECHANICS_FOUNDATIONS_ORIGINAL_ITEM_DRAFT_PACK_READY_FOR_REVIEW"
+}
