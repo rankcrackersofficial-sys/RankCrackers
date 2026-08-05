@@ -307,25 +307,25 @@
 - **Difficulty Band**: `EASY`
 - **Point Value**: 1
 - **Estimated Response Time (Seconds)**: 90
-- **Stem**: A ball is thrown straight upward into the air. At the highest point of its flight, the ball is momentarily at rest. Explain whether the ball's acceleration at this highest point is zero or non-zero, and state the condition under which the standard kinematic equations (constant-acceleration equations) can be used to describe this motion.
+- **Stem**: A motorized cart moves along a straight line. At $t = 0$ it has velocity $-2.0\text{ m/s}$ and from that instant onward it has a constant acceleration of $+1.0\text{ m/s}^2$. At $t = 2.0\text{ s}$ its velocity is momentarily zero. Is the cart’s acceleration zero at that instant? Also state the condition under which the standard constant-acceleration equations may be used.
 - **Options**: `NOT_APPLICABLE`
 - **Response Constraints**: Provide a short paragraph answer (maximum 3 sentences).
-- **Given Data**: $v = 0$ at highest point.
+- **Given Data**: $v = -2.0\text{ m/s}$ at $t=0$, $a = +1.0\text{ m/s}^2$, $v = 0$ at $t = 2.0\text{ s}$.
 - **Required Representation**: verbal description
 - **Diagram Specification**: `NOT_APPLICABLE`
-- **Sign Convention**: Upward direction is positive.
-- **Units Requirement**: Conceptual check; no units required.
+- **Sign Convention**: Right is positive.
+- **Units Requirement**: Conceptual check; units as given.
 - **Misconception Targets**: `MIS_04` (Zero velocity means zero acceleration).
 - **Critical Gate IDs**: `constant-acceleration condition`
 - **Expected Reasoning Outline**: 
-  - Acceleration is the rate of change of velocity. Even when velocity is zero momentarily at the peak, it is changing from upward to downward, so acceleration is non-zero.
-  - The standard kinematic equations require that the acceleration remains constant throughout the interval.
-- **Provisional Key Candidate**: Standard kinematic equations apply when acceleration remains constant throughout the interval. The constant acceleration may be zero or non-zero.
-- **Acceptable Response Evidence**: Explanation must state that standard kinematic equations apply when acceleration remains constant, which can be zero or non-zero.
+  - Acceleration is explicitly prescribed as constant ($+1.0\text{ m/s}^2$). Even when velocity is zero momentarily, the acceleration remains $+1.0\text{ m/s}^2$.
+  - The standard constant-acceleration equations require that acceleration remains constant throughout the interval. This constant acceleration may be zero or non-zero.
+- **Provisional Key Candidate**: No. Its acceleration remains $+1.0\text{ m/s}^2$ even when its velocity is momentarily zero. The standard kinematic equations may be used when acceleration remains constant throughout the interval. That constant acceleration may be zero or non-zero.
+- **Acceptable Response Evidence**: Must state that acceleration is not zero and that constant-acceleration equations apply when acceleration is constant (regardless of whether it is zero or non-zero).
 - **Partial Credit Anchors**: `NOT_APPLICABLE`
-- **Critical Errors**: Believing that standard kinematic equations require acceleration to be strictly non-zero.
+- **Critical Errors**: Believing that zero velocity implies zero acceleration or that kinematic equations require non-zero acceleration.
 - **Non-Critical Errors**: Wording details.
-- **Common Failure Signals**: Claiming constant acceleration equations cannot be used if acceleration is zero.
+- **Common Failure Signals**: Claiming acceleration is zero because the cart has stopped momentarily.
 - **Review Requirements**: Standard internal peer review.
 - **Source Type**: `ORIGINAL_AUTHORED_ASSESSMENT`
 - **PYQ Claim**: `false`
@@ -534,26 +534,26 @@
 - **Difficulty Band**: `HARD`
 - **Point Value**: 2
 - **Estimated Response Time (Seconds)**: 300
-- **Stem**: A hovercraft of mass $m = 100\text{ kg}$ moves along a straight line on a frictionless track. Its velocity-time ($v-t$) graph consists of two phases: Phase 1 (from $t = 0$ to $5\text{ s}$): a horizontal flat line at $v = +4\text{ m/s}$. Phase 2 (from $t = 5\text{ s}$ to $10\text{ s}$): a straight line with a constant slope, decreasing from $+4\text{ m/s}$ to $0\text{ m/s}$. Analyze the net horizontal force acting on the hovercraft during Phase 1 and Phase 2. Connect your reasoning to Newton's First Law and explain the role of inertia. (Do not perform calculations using Newton's Second Law.)
+- **Stem**: A hovercraft moves along a straight frictionless guideway. Its velocity-time ($v-t$) graph consists of two phases: Phase 1 (from $t = 0$ to $5\text{ s}$): a horizontal flat line at $v = +4\text{ m/s}$. Phase 2 (from $t = 5\text{ s}$ to $10\text{ s}$): a straight line with a constant slope, decreasing from $+4\text{ m/s}$ to $0\text{ m/s}$. For each phase, state whether the net external force is zero or non-zero. Explain your answer using Newton’s First Law and explain what inertia means in this situation. Do not determine the direction or magnitude of the force.
 - **Options**: `NOT_APPLICABLE`
 - **Response Constraints**: Limit response to 150 words.
-- **Given Data**: Hovercraft mass $= 100\text{ kg}$, frictionless track. Phase 1 velocity $= +4\text{ m/s}$ (constant). Phase 2 velocity decreases from $+4$ to $0\text{ m/s}$ linearly.
+- **Given Data**: Frictionless track. Phase 1 velocity $= +4\text{ m/s}$ (constant). Phase 2 velocity decreases from $+4$ to $0\text{ m/s}$ linearly.
 - **Required Representation**: qualitative force diagram reasoning, velocity-time graph
-- **Diagram Specification**: A sketch of the $v-t$ graph and two qualitative force-arrow diagrams (one for Phase 1 showing balanced arrows, one for Phase 2 showing a backward net force).
+- **Diagram Specification**: A sketch of the $v-t$ graph and two qualitative force-arrow diagrams (one for Phase 1 showing balanced arrows, one for Phase 2 showing unbalanced arrows without prescribed direction).
 - **Sign Convention**: Positive $x$-direction is the direction of initial velocity.
 - **Units Requirement**: Force conceptually evaluated.
 - **Misconception Targets**: `MIS_05` (A moving object requires continuous force), `MIS_06` (Inertia is a force).
 - **Critical Gate IDs**: `zero net force under Newton's First Law`, `inertia is not a force`
 - **Expected Reasoning Outline**: 
   - Phase 1: Velocity is constant, so acceleration is zero. By Newton's First Law, the net external force is exactly zero. No net external force is required to sustain this motion.
-  - Phase 2: Velocity is decreasing linearly, indicating a constant negative acceleration. Therefore, a non-zero, constant net external force must act in the direction opposite to motion.
-  - Inertia is the hovercraft's resistance (due to its $100\text{ kg}$ mass) to this change in motion, causing it to glide forward during the deceleration phase rather than stopping instantaneously; it is not an additional force.
-- **Provisional Key Candidate**: Phase 1: The net external force is zero. Phase 2: The net external force is non-zero and directed opposite to the motion. Inertia is a property of the object; it is not an additional force.
-- **Acceptable Response Evidence**: Must explicitly state that the net external force in Phase 1 is zero, and in Phase 2 it is non-zero and opposing the motion. Inertia must be described as a property, not a force.
+  - Phase 2: Velocity is changing, indicating a non-zero net external force.
+  - Inertia is an inherent property describing resistance to a change in velocity. It neither causes motion nor acts as an additional force.
+- **Provisional Key Candidate**: Phase 1: The net external force is zero because the velocity is constant. Phase 2: The net external force is non-zero because the velocity is changing. Inertia is a property of the hovercraft describing resistance to a change in velocity. It is not a force and does not itself cause motion.
+- **Acceptable Response Evidence**: Must explicitly state that the net external force in Phase 1 is zero, and in Phase 2 it is non-zero. Inertia must be described as a property, not a force.
 - **Partial Credit Anchors**: 1 point awarded if net external forces are correctly mapped but inertia is incorrectly described.
-- **Critical Errors**: Recommending a forward net external force for Phase 1, labeling inertia as an active force vector, or claiming inertia is an opposing force.
+- **Critical Errors**: Recommending a forward net external force for Phase 1, labeling inertia as an active force vector, or claiming inertia is an opposing force, or inferring force direction.
 - **Non-Critical Errors**: Wording details.
-- **Common Failure Signals**: Stating a forward net external force is needed in Phase 1 to maintain the speed of $+4\text{ m/s}$.
+- **Common Failure Signals**: Stating a forward net external force is needed in Phase 1 to maintain the speed.
 - **Review Requirements**: Standard internal peer review.
 - **Source Type**: `ORIGINAL_AUTHORED_ASSESSMENT`
 - **PYQ Claim**: `false`

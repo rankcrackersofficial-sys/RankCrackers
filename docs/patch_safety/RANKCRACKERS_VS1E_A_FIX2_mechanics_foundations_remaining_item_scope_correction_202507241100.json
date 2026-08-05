@@ -1,0 +1,30 @@
+{
+  "patchId": "VS1E-A-FIX2",
+  "timestamp": "2025-07-24T11:00:00Z",
+  "assessmentPackId": "jee_main_2026_physics_mechanics_foundations_original_item_draft_pack_v1",
+  "itemCorrections": [
+    {
+      "itemId": "MF_ASI_07",
+      "change": "Replaced vertical throw with motorized cart scenario",
+      "rationale": "Remove gravitation scope leakage"
+    },
+    {
+      "itemId": "MF_ASI_12",
+      "change": "Removed force direction and inertia causal language",
+      "rationale": "Restrict to NLM 1 authorized scope"
+    }
+  ],
+  "verification": {
+    "itemCount": 12,
+    "pointTotal": 16,
+    "cognitiveDistribution": {
+      "RECALL": 2,
+      "UNDERSTANDING": 4,
+      "APPLICATION": 4,
+      "ANALYSIS": 2
+    },
+    "markdownJsonConsistency": true,
+    "staleClaimMatches": 0
+  },
+  "status": "RC_X4E_VS1E_A_FIX2_ITEM_CORRECTION_COMPLETE"
+}
