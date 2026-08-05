@@ -1,0 +1,35 @@
+{
+  "patchId": "VS1E-A-FIX2A",
+  "timestamp": "2026-08-05T14:30:00Z",
+  "baselineHead": "7afca4d79fa9af0d56707248780e013b4990cd57",
+  "corrections": {
+    "evidenceIntegrity": {
+      "deletedFiles": [
+        "RANKCRACKERS_VS1E_A_FIX2_mechanics_foundations_remaining_item_scope_correction_202507241100.md",
+        "RANKCRACKERS_VS1E_A_FIX2_mechanics_foundations_remaining_item_scope_correction_202507241100.json"
+      ]
+    },
+    "mf_asi_09": {
+      "oldObjective": "Execute a multi-step calculation using UAM equations and perform a dimensional/sanity check.",
+      "newObjective": "Execute a one-dimensional constant-acceleration calculation, identify irrelevant data, and report the result with correct units and rounding.",
+      "syncStatus": "PASS"
+    },
+    "mf_asi_12": {
+      "oldDiagramSpec": "A sketch of the v-t graph and two qualitative force-arrow diagrams (one for Phase 1 showing balanced arrows, one for Phase 2 showing unbalanced arrows without prescribed direction).",
+      "newDiagramSpec": "A v-t graph showing the two motion phases. Accompany it with non-directional state labels: Phase 1 — NET EXTERNAL FORCE = ZERO, Phase 2 — NET EXTERNAL FORCE = NON-ZERO. No force-direction arrows are drawn or inferred.",
+      "syncStatus": "PASS"
+    }
+  },
+  "verification": {
+    "itemCount": 12,
+    "pointTotal": 16,
+    "cognitiveDistribution": {
+      "RECALL": 2,
+      "UNDERSTANDING": 4,
+      "APPLICATION": 4,
+      "ANALYSIS": 2
+    },
+    "markdownJsonEquality": true
+  },
+  "verdict": "RANKCRACKERS_VS1E_A_FIX2A_ITEM_PACK_ARTIFACT_INTEGRITY_COMPLETE"
+}
