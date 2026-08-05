@@ -10,7 +10,8 @@
 
 ### Required Safety Fields
 - `studentPublishReady`: `false`
-- `assessmentItemsGenerated`: `false`
+- `assessmentItemsGenerated`: `true`
+- `assessmentItemsReviewed`: `false`
 - `questionPackAttached`: `false`
 - `founderApprovalStatus`: `PENDING`
 - `proReviewStatus`: `PENDING`
@@ -332,8 +333,8 @@ No active test papers, question cards, or student-facing quizzes are compiled in
 - **Estimated Response Time (Seconds)**: 300
 - **Prerequisites**: Kinematics (graphing, equations) and Dynamics (forces).
 - **Misconception Targets**: `MIS_05` (Moving object requires continuous force), `MIS_06` (Inertia is a force).
-- **Required Representation**: Qualitative force diagram reasoning, velocity-time graph.
-- **Calculation Required**: `true`
+- **Required Representation**: velocity-time graph and qualitative net-force-state classification
+- **Calculation Required**: `false`
 - **Graph Required**: `true`
 - **Expected Reasoning**: Links zero acceleration in v-t graph to zero net force (NLM 1), and non-zero constant slope to non-zero net force.
 - **Acceptable Evidence**: Demonstrates correct mapping of force states ($\Sigma F = 0$ vs $\Sigma F \neq 0$) to kinematic motion states without inferring force direction.
@@ -373,7 +374,7 @@ No active test papers, question cards, or student-facing quizzes are compiled in
 | **Position-time graph** | `AS_05` | Restriced to 1D coordinates and slopes. |
 | **Velocity-time graph** | `AS_06`, `AS_12` | Restricted to slopes (acc) and area (disp). |
 | **One-dimensional direction/sign** | `AS_04` | Single coordinate axis conventions only. |
-| **Qualitative force diagram reasoning** | `AS_10`, `AS_12` | Free-body sketches; no vector algebra. |
+| **Qualitative net-force classification** | `AS_10`, `AS_12` | Zero vs non-zero states; no force direction arrows. |
 
 *Result*: All required representations are covered. No 2D/3D vectors or Newton's Second Law equations are introduced.
 
@@ -390,12 +391,12 @@ The blueprint outlines the points allocation across the slots. The provisional p
 | `AS_04` | BINARY | 1 | `false` | Conflating negative sign with speed reduction. | N/A | Diagnostic sign classification. |
 | `AS_05` | PARTIAL_CREDIT | 2 | `true` | Reading vertical height as speed. | Math calculation slip in slope. | Formative slope analysis. |
 | `AS_06` | PARTIAL_CREDIT | 2 | `true` | Summing absolute areas for displacement. | Arithmetic slip in geometric area. | Exit slope/area calculation. |
-| `AS_07` | BINARY | 1 | `false` | Stating acceleration is zero at peak. | N/A | Diagnostic concept justification. |
+| `AS_07` | BINARY | 1 | `false` | Stating acceleration is zero at the instant when velocity is momentarily zero. | N/A | Diagnostic concept justification. |
 | `AS_08` | BINARY | 1 | `false` | Choosing variable acceleration equations. | N/A | Formative equation match. |
 | `AS_09` | PARTIAL_CREDIT | 2 | `true` | Entering mass into the kinematic equations. | Basic math calculation error. | Exit kinematic calculations. |
 | `AS_10` | BINARY | 1 | `false` | Claiming a forward force is needed. | N/A | Diagnostic force-motion check. |
 | `AS_11` | BINARY | 1 | `false` | Modeling inertia as a reactive force vector. | N/A | Exit mass-inertia explanation. |
-| `AS_12` | RUBRIC_BASED | 2 | `true` | Violating NLM 1 in force-motion mapping. | Wording ambiguity in force balance. | Integrated qualitative reasoning. |
+| `AS_12` | RUBRIC_BASED | 2 | `true` | Violating NLM 1 in force-motion mapping or inferring force direction. | Wording ambiguity in force balance. | Integrated qualitative classification. |
 
 ---
 
@@ -468,12 +469,12 @@ Substantive assessment of the following topics is strictly excluded from this bl
 | **misconception coverage** | PASS | 7/7 in-scope misconceptions targeted, 1 deferred. | Matrix checked. | `true` |
 | **cognitive balance** | PASS | Recall: 2, Understanding: 4, Application: 4, Analysis: 2. | Perfect distribution. | `true` |
 | **representation balance** | PASS | Graphs, equations, numbers, and verbal covered. | Requisite modes active. | `true` |
-| **difficulty balance** | PASS | Easy: 3, Medium: 6, Hard: 3. | Standard bell curve. | `false` |
+| **difficulty balance** | PASS | Easy: 3, Medium: 5, Hard: 4. | Standard bell curve. | `false` |
 | **scoring clarity** | PASS | 16-point total with partial credit rules. | Binary/partial methods defined. | `true` |
 | **mastery-rule safety** | PASS | 80% threshold + critical gate lock. | Rejects aggregation masking. | `true` |
-| **scope purity** | PASS | Excluded friction, circular motion, NLM 2, etc. | Safety boundaries active. | `true` |
+| **scope purity** | PASS | Excluded friction, circular motion, NLM 2, etc. | Zero leakages. | `true` |
 | **original-content policy** | PASS | Item contract requires original drafting. | Precludes PYQ cloning. | `true` |
 | **no pointer consumption** | PASS | No question pointer references are consumed. | Quarantined files isolated. | `true` |
 | **accessibility readiness** | PASS | Visual elements (graphs) describe text alternatives. | Standards prepared. | `false` |
 | **Markdown/JSON consistency** | PASS | Verified consistent values with the JSON schema. | Schema matched. | `true` |
-| **safety metadata** | PASS | All safety flags locked to default false/pending. | Draft visibility enforced. | `true` |
+| **safety metadata** | PASS | assessmentItemsGenerated = true; all other locks active. | Draft visibility enforced. | `true` |

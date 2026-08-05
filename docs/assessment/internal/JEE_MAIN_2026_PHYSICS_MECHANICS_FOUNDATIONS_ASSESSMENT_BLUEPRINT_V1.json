@@ -7,7 +7,8 @@
   "planningNode": "mech_foundations",
   "safetyFlags": {
     "studentPublishReady": false,
-    "assessmentItemsGenerated": false,
+    "assessmentItemsGenerated": true,
+    "assessmentItemsReviewed": false,
     "questionPackAttached": false,
     "founderApprovalStatus": "PENDING",
     "proReviewStatus": "PENDING",
@@ -236,7 +237,7 @@
       "scoringApproach": "BINARY",
       "maxPoints": 1,
       "partialCreditAllowed": false,
-      "criticalError": "Stating acceleration is zero at peak.",
+      "criticalError": "Stating acceleration is zero at the instant when velocity is momentarily zero.",
       "noncriticalError": "N/A",
       "masterySignal": "Provides correct conceptual description of prescribed momentarily zero velocity state.",
       "reviewRequirements": "Standard internal review",
@@ -386,8 +387,8 @@
       "estimatedResponseTimeSeconds": 300,
       "prerequisites": "Kinematics and Dynamics",
       "misconceptionTargets": ["MIS_05", "MIS_06"],
-      "requiredRepresentation": "qualitative force diagram reasoning, velocity-time graph",
-      "calculationRequired": true,
+      "requiredRepresentation": "velocity-time graph and qualitative net-force-state classification",
+      "calculationRequired": false,
       "graphRequired": true,
       "expectedReasoning": "Links zero acceleration in v-t graph to zero net force, and non-zero constant slope to non-zero net force.",
       "acceptableEvidence": "Demonstrates correct mapping of force states to kinematic motion states without inferring force direction.",
@@ -462,8 +463,8 @@
     "learningObjectiveCoverage": { "status": "PASS", "evidence": "Syllabus motion, graphs, NLM 1, and inertia mapped.", "reviewNote": "No leakages", "blocking": true },
     "misconceptionCoverage": { "status": "PASS", "evidence": "7/7 in-scope misconceptions targeted, 1 deferred.", "reviewNote": "Matrix validated", "blocking": true },
     "cognitiveBalance": { "status": "PASS", "evidence": "Recall: 2, Understanding: 4, Application: 4, Analysis: 2.", "reviewNote": "Balanced", "blocking": true },
-    "representationBalance": { "status": "PASS", "evidence": "Verbals, formulas, graphs, signs and qualitative diagrams mapped.", "reviewNote": "Matches requirements", "blocking": true },
-    "difficultyBalance": { "status": "PASS", "evidence": "Easy: 3, Medium: 6, Hard: 3.", "reviewNote": "Normal distribution", "blocking": false },
+    "representationBalance": { "status": "PASS", "evidence": "Verbals, formulas, graphs, signs and qualitative classifications mapped.", "reviewNote": "Matches requirements", "blocking": true },
+    "difficultyBalance": { "status": "PASS", "evidence": "Easy: 3, Medium: 5, Hard: 4.", "reviewNote": "Updated actual distribution", "blocking": false },
     "scoringClarity": { "status": "PASS", "evidence": "16-point total with partial credit rules.", "reviewNote": "Clearly defined", "blocking": true },
     "masteryRuleSafety": { "status": "PASS", "evidence": "80% threshold + critical gate lock.", "reviewNote": "Aggregations checked", "blocking": true },
     "scopePurity": { "status": "PASS", "evidence": "No NLM 2, Third Law, projectile, friction, etc.", "reviewNote": "Zero leakages", "blocking": true },
@@ -471,6 +472,6 @@
     "noPointerConsumption": { "status": "PASS", "evidence": "No question pointer references from prior V1B are consumed.", "reviewNote": "Verified", "blocking": true },
     "accessibilityReadiness": { "status": "PASS", "evidence": "Item contract requires text equivalents for visual elements.", "reviewNote": "Ready", "blocking": false },
     "MarkdownJsonConsistency": { "status": "PASS", "evidence": "MD and JSON slot values align 100%.", "reviewNote": "Consistent", "blocking": true },
-    "safetyMetadata": { "status": "PASS", "evidence": "All safety flags locked to false/pending.", "reviewNote": "Confirmed", "blocking": true }
+    "safetyMetadata": { "status": "PASS", "evidence": "assessmentItemsGenerated = true; all other locks active.", "reviewNote": "Confirmed", "blocking": true }
   }
 }
