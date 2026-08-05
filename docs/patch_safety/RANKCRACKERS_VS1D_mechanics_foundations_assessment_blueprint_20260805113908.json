@@ -1,0 +1,101 @@
+{
+  "phase": "VS1D",
+  "timestamp": "2026-08-05T11:39:08+05:30",
+  "baselineHead": "e0994f1cecb32acd52c694590522e9ade818d42b",
+  "inputArtifacts": {
+    "digibookMd": "e92811446a6b8c86bcb992dd0988dca23270b849",
+    "digibookJson": "6978ce20a09a2b40f31e4705920eab03639a4d50",
+    "fix3EvidenceJson": "c5a3a79b9992b2517113fafb4aeae3c78582c152",
+    "activeLineR2EvidenceJson": "a3575e98d9c1fd8bd2b0a2cb0bd6fca7683ef684"
+  },
+  "blueprintVerification": {
+    "blueprintId": "jee_main_2026_physics_mechanics_foundations_assessment_blueprint_v1",
+    "totalSlots": 12,
+    "scoringPointsTotal": 16,
+    "cognitiveDistribution": {
+      "RECALL": 2,
+      "UNDERSTANDING": 4,
+      "APPLICATION": 4,
+      "ANALYSIS": 2
+    },
+    "atomTraceability": {
+      "totalSlotsTraced": 12,
+      "TOP05_001_slots": 10,
+      "TOP06_001_slots": 3,
+      "unmappedSlots": 0,
+      "note": "Slot AS_12 traces to both atoms."
+    },
+    "misconceptionCoverage": {
+      "totalMisconceptionsCovered": 8,
+      "matrix": {
+        "MIS_01": "AS_02",
+        "MIS_02": "AS_03",
+        "MIS_03": "AS_04",
+        "MIS_04": "AS_07",
+        "MIS_05": "AS_10, AS_12",
+        "MIS_06": "AS_11, AS_12",
+        "MIS_07": "AS_09",
+        "MIS_08": "AS_05"
+      }
+    },
+    "representationDistribution": {
+      "verbalDescription": 3,
+      "symbolicFormula": 1,
+      "numericalValuesAndUnits": 3,
+      "positionTimeGraph": 1,
+      "velocityTimeGraph": 2,
+      "oneDimensionalDirectionSign": 1,
+      "qualitativeForceDiagramReasoning": 2
+    }
+  },
+  "masteryInterpretation": {
+    "minScoreForMastery": 13,
+    "criticalMisconceptionsAllowed": 0,
+    "safetyPreservation": "Provisional masteries do not constitute student-readiness or publish decisions."
+  },
+  "scopeExclusionScan": {
+    "status": "PASS",
+    "exclusionsChecked": [
+      "Newton's Second Law calculations",
+      "Newton's Third Law",
+      "friction calculations",
+      "projectile motion",
+      "circular motion",
+      "work-energy theorem",
+      "centre of mass",
+      "rotation",
+      "gravitation",
+      "oscillation",
+      "elasticity",
+      "fluids",
+      "measurement instruments"
+    ],
+    "verdict": "ZERO_OUT_OF_SCOPE_ASSESSMENT_DESIGN"
+  },
+  "pointerAndPyqScan": {
+    "status": "PASS",
+    "prohibitedTermsScanned": [
+      "pyq_",
+      "slice_question_pointers",
+      "questionMapId",
+      "question_review_queue",
+      "officialAnswerKey = true"
+    ],
+    "verdict": "ZERO_POINTER_CONSUMPTION"
+  },
+  "safetyLocks": {
+    "studentPublishReady": false,
+    "assessmentItemsGenerated": false,
+    "questionPackAttached": false,
+    "founderApprovalStatus": "PENDING",
+    "proReviewStatus": "PENDING",
+    "studentReadiness": "NOT_READY",
+    "firestoreMaterializationAuthorized": false
+  },
+  "noPersistenceProof": {
+    "firestoreWrites": 0,
+    "emulatorExecutions": 0,
+    "deploymentOperations": 0
+  },
+  "verdict": "RANKCRACKERS_VS1D_MECHANICS_FOUNDATIONS_INTERNAL_ASSESSMENT_BLUEPRINT_READY_FOR_REVIEW"
+}
