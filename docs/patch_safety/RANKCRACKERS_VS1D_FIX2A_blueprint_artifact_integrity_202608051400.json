@@ -1,0 +1,34 @@
+{
+  "patchId": "VS1D-FIX2A",
+  "timestamp": "2026-08-05T14:00:00Z",
+  "baselineHead": "7afca4d79fa9af0d56707248780e013b4990cd57",
+  "corrections": {
+    "evidenceIntegrity": {
+      "deletedFiles": [
+        "RANKCRACKERS_VS1D_FIX2_mechanics_foundations_remaining_scope_correction_202507241030.md",
+        "RANKCRACKERS_VS1D_FIX2_mechanics_foundations_remaining_scope_correction_202507241030.json"
+      ],
+      "reason": "Invalid backdated timestamps and RC_X4E token contamination"
+    },
+    "as07": {
+      "staleWordingRemoved": "at peak",
+      "updatedWording": "at the instant when velocity is momentarily zero"
+    },
+    "metadata": {
+      "assessmentItemsGenerated": true,
+      "assessmentItemsReviewed": false
+    },
+    "difficulty": {
+      "easy": 3,
+      "medium": 5,
+      "hard": 4,
+      "validation": "Matches actual 12 slot distribution"
+    },
+    "as12": {
+      "calculationRequired": false,
+      "representation": "velocity-time graph and qualitative net-force-state classification",
+      "prohibited": "directional force diagrams/arrows"
+    }
+  },
+  "verdict": "RANKCRACKERS_VS1D_FIX2A_BLUEPRINT_ARTIFACT_INTEGRITY_COMPLETE"
+}
