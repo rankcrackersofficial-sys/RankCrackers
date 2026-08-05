@@ -1,0 +1,467 @@
+{
+  "unitId": "jee_main_2026_physics_mechanics_foundations_v1",
+  "title": "Mechanics Foundations",
+  "titleHindi": "यांत्रिकी आधार",
+  "subtitle": "Motion, Reference Frames and Inertia",
+  "status": "draft",
+  "visibility": "INTERNAL_DRAFT",
+  "authorizedAtoms": [
+    "JEE_2026_PHY_U01_CH01_TOP05_001",
+    "JEE_2026_PHY_U01_CH01_TOP06_001"
+  ],
+  "sourceLineage": [
+    {
+      "canonicalAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+      "canonicalKey": "jee_main_2026|physics|unit_1_chapter_1_motion_in_1d_introduction|introduction|jee_2026_phy_u01_ch01_top05_001",
+      "sourceFile": "JEE main Syllabus 2026.pdf",
+      "sourceFileHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "sourcePage": "3",
+      "officialUnit": "Unit 2",
+      "officialSection": "Kinematics",
+      "officialVerbatimExcerpt": "Frame of reference, motion in a straight line: Position-time graph, speed and velocity; Uniform and non-uniform motion, average speed and instantaneous velocity; uniformly accelerated motion, velocity-time, position-time graphs, relations for uniformly accelerated motion.",
+      "planningNodeId": "mech_foundations"
+    },
+    {
+      "canonicalAtomId": "JEE_2026_PHY_U01_CH01_TOP06_001",
+      "canonicalKey": "jee_main_2026|physics|unit_1_chapter_1_laws_of_motion_inertia|inertia|jee_2026_phy_u01_ch01_top06_001",
+      "sourceFile": "JEE main Syllabus 2026.pdf",
+      "sourceFileHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "sourcePage": "3",
+      "officialUnit": "Unit 3",
+      "officialSection": "Laws of Motion",
+      "officialVerbatimExcerpt": "Newton’s first law of motion; concept of inertia.",
+      "planningNodeId": "mech_foundations"
+    }
+  ],
+  "content": {
+    "sections": [
+      {
+        "id": "mission_opening",
+        "title": "Mission Opening",
+        "content": "This unit establishes the bedrock of Classical Mechanics. Before we can calculate forces, we must define where we are observing from and how we measure change."
+      },
+      {
+        "id": "frame_of_reference",
+        "title": "Frame of Reference",
+        "selfChecks": ["SC_01"]
+      },
+      {
+        "id": "position_motion",
+        "title": "Position and Straight-Line Motion",
+        "examples": ["WE_01", "WE_02"],
+        "selfChecks": ["SC_02"]
+      },
+      {
+        "id": "speed_velocity",
+        "title": "Speed and Velocity",
+        "selfChecks": ["SC_03"]
+      },
+      {
+        "id": "motion_graphs",
+        "title": "Motion Graphs",
+        "examples": ["WE_03", "WE_04"],
+        "selfChecks": ["SC_04", "SC_05"]
+      },
+      {
+        "id": "uam",
+        "title": "Uniformly Accelerated Motion",
+        "examples": ["WE_05"],
+        "selfChecks": ["SC_06"]
+      },
+      {
+        "id": "nlm1",
+        "title": "Newton’s First Law",
+        "examples": ["WE_06"],
+        "selfChecks": ["SC_07", "SC_09"]
+      },
+      {
+        "id": "inertia",
+        "title": "Inertia",
+        "examples": ["WE_07"],
+        "selfChecks": ["SC_08", "SC_10"]
+      }
+    ],
+    "workedExamples": [
+      {
+        "id": "WE_01",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+        "concept": "Distance vs Displacement",
+        "given": "x1=+2m, x2=+10m, x3=+5m",
+        "find": "Total Distance, Net Displacement",
+        "signConvention": "Right is positive",
+        "principleUsed": "Path length vs Change in position",
+        "steps": ["Path 1: 10-2=8", "Path 2: |5-10|=5", "Dist=8+5=13", "Disp=5-2=+3"],
+        "finalResult": "Dist: 13m, Disp: +3m",
+        "units": "m",
+        "reasonablenessCheck": "Dist >= |Disp|",
+        "commonError": "Thinking displacement is total path",
+        "sourceType": "ORIGINAL_TEACHING_EXAMPLE",
+        "pyqClaim": false,
+        "officialAnswerKey": false
+      },
+      {
+        "id": "WE_02",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+        "concept": "Avg Speed vs Velocity",
+        "given": "100m East in 20s, 40m West in 10s",
+        "find": "Avg Speed, Avg Velocity",
+        "signConvention": "East is positive",
+        "principleUsed": "v_avg = Disp/Time",
+        "steps": ["Dist=140", "Time=30", "Disp=+60", "Speed=140/30=4.67", "Vel=60/30=2.0"],
+        "finalResult": "Speed: 4.67 m/s, Vel: 2.0 m/s East",
+        "units": "m/s",
+        "reasonablenessCheck": "Speed > |Vel| due to turn",
+        "commonError": "Using distance for velocity",
+        "sourceType": "ORIGINAL_TEACHING_EXAMPLE",
+        "pyqClaim": false,
+        "officialAnswerKey": false
+      },
+      {
+        "id": "WE_03",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+        "concept": "Slope of x-t graph",
+        "given": "Straight line (0,0) to (5,25)",
+        "find": "Velocity",
+        "signConvention": "Standard Cartesian",
+        "principleUsed": "v = slope of x-t",
+        "steps": ["dy = 25", "dx = 5", "slope = 25/5 = 5"],
+        "finalResult": "5 m/s",
+        "units": "m/s",
+        "reasonablenessCheck": "Positive slope -> positive velocity",
+        "commonError": "Thinking height is speed",
+        "sourceType": "ORIGINAL_TEACHING_EXAMPLE",
+        "pyqClaim": false,
+        "officialAnswerKey": false
+      },
+      {
+        "id": "WE_04",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+        "concept": "Area of v-t graph",
+        "given": "v=5m/s from t=0 to 4",
+        "find": "Displacement",
+        "signConvention": "Above axis positive",
+        "principleUsed": "Disp = Area of v-t",
+        "steps": ["Area = height * width", "Area = 5 * 4 = 20"],
+        "finalResult": "20 m",
+        "units": "m",
+        "reasonablenessCheck": "Dimensionally correct L/T * T = L",
+        "commonError": "Calculating slope instead of area",
+        "sourceType": "ORIGINAL_TEACHING_EXAMPLE",
+        "pyqClaim": false,
+        "officialAnswerKey": false
+      },
+      {
+        "id": "WE_05",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+        "concept": "UAM equations",
+        "given": "u=0, a=2, t=5",
+        "find": "v, s",
+        "signConvention": "Forward positive",
+        "principleUsed": "Kinematic equations",
+        "steps": ["v = 0 + 2*5 = 10", "s = 0 + 0.5*2*25 = 25"],
+        "finalResult": "v: 10 m/s, s: 25 m",
+        "units": "m/s, m",
+        "reasonablenessCheck": "Values consistent with v^2=u^2+2as",
+        "commonError": "Forgetting 1/2 in s formula",
+        "sourceType": "ORIGINAL_TEACHING_EXAMPLE",
+        "pyqClaim": false,
+        "officialAnswerKey": false
+      },
+      {
+        "id": "WE_06",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP06_001",
+        "concept": "Newton's First Law / Static Equilibrium",
+        "given": "1kg book at rest on table, gravity = 9.8N",
+        "find": "Net external force",
+        "signConvention": "Up is positive",
+        "principleUsed": "NLM 1: Static equilibrium implies zero acceleration",
+        "steps": ["Book remains at rest, so a=0", "Zero acceleration implies net force is zero", "Weight is balanced by normal force"],
+        "finalResult": "Net external force is zero",
+        "units": "N",
+        "reasonablenessCheck": "If net force != 0, it would move",
+        "commonError": "Assuming net force is 9.8N",
+        "sourceType": "ORIGINAL_TEACHING_EXAMPLE",
+        "pyqClaim": false,
+        "officialAnswerKey": false
+      },
+      {
+        "id": "WE_07",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP06_001",
+        "concept": "Qualitative Inertia Comparison",
+        "given": "10kg bicycle vs 2000kg car",
+        "find": "Which is harder to start moving?",
+        "signConvention": "N/A",
+        "principleUsed": "Inertia is resistance to change in state; measured by mass",
+        "steps": ["Mass of car >> Mass of bike", "Greater mass means greater inertia", "Higher inertia means higher resistance to change"],
+        "finalResult": "Car is harder to start due to higher mass/inertia",
+        "units": "N/A",
+        "reasonablenessCheck": "Matches physical intuition",
+        "commonError": "Thinking inertia is a force",
+        "sourceType": "ORIGINAL_TEACHING_EXAMPLE",
+        "pyqClaim": false,
+        "officialAnswerKey": false
+      }
+    ],
+    "selfCheckPrompts": [
+      {
+        "id": "SC_01",
+        "concept": "Frame of Reference",
+        "prompt": "A passenger is sitting inside a train moving past a platform. Is the passenger at rest or in motion?",
+        "expectedConcept": "Relativity of motion",
+        "briefModelResponse": "Passenger is at rest relative to the train but in motion relative to the platform.",
+        "difficulty": "UNDERSTANDING",
+        "scored": false,
+        "pyqClaim": false,
+        "studentPublishReady": false
+      },
+      {
+        "id": "SC_02",
+        "concept": "Dist/Disp",
+        "prompt": "10km distance, 0 displacement scenario.",
+        "expectedConcept": "Return to origin",
+        "briefModelResponse": "Round trip where final position = initial.",
+        "difficulty": "RECALL",
+        "scored": false,
+        "pyqClaim": false,
+        "studentPublishReady": false
+      },
+      {
+        "id": "SC_03",
+        "concept": "Speed/Velocity",
+        "prompt": "Comparing -20m/s vs +10m/s.",
+        "expectedConcept": "Magnitude of velocity",
+        "briefModelResponse": "-20 is faster because speed |v| is 20.",
+        "difficulty": "UNDERSTANDING",
+        "scored": false,
+        "pyqClaim": false,
+        "studentPublishReady": false
+      },
+      {
+        "id": "SC_04",
+        "concept": "P-T Graph",
+        "prompt": "Horizontal line meaning.",
+        "expectedConcept": "Zero velocity",
+        "briefModelResponse": "At rest.",
+        "difficulty": "RECALL",
+        "scored": false,
+        "pyqClaim": false,
+        "studentPublishReady": false
+      },
+      {
+        "id": "SC_05",
+        "concept": "V-T Graph",
+        "prompt": "Upward sloping line meaning.",
+        "expectedConcept": "Positive constant acceleration",
+        "briefModelResponse": "Velocity increasing at a constant rate.",
+        "difficulty": "RECALL",
+        "scored": false,
+        "pyqClaim": false,
+        "studentPublishReady": false
+      },
+      {
+        "id": "SC_06",
+        "concept": "UAM",
+        "prompt": "Condition for standard kinematic equations.",
+        "expectedConcept": "Constant acceleration",
+        "briefModelResponse": "Acceleration must be constant.",
+        "difficulty": "RECALL",
+        "scored": false,
+        "pyqClaim": false,
+        "studentPublishReady": false
+      },
+      {
+        "id": "SC_07",
+        "concept": "NLM 1",
+        "prompt": "Fuel needed for constant velocity in deep space.",
+        "expectedConcept": "No external forces",
+        "briefModelResponse": "Zero. Newton's 1st Law.",
+        "difficulty": "APPLICATION",
+        "scored": false,
+        "pyqClaim": false,
+        "studentPublishReady": false
+      },
+      {
+        "id": "SC_08",
+        "concept": "Inertia",
+        "prompt": "Why jerk backward on starting bus.",
+        "expectedConcept": "Inertia of rest",
+        "briefModelResponse": "Upper body wants to stay at rest.",
+        "difficulty": "APPLICATION",
+        "scored": false,
+        "pyqClaim": false,
+        "studentPublishReady": false
+      },
+      {
+        "id": "SC_09",
+        "concept": "Balanced Forces",
+        "prompt": "Net force for constant velocity object.",
+        "expectedConcept": "Zero net force",
+        "briefModelResponse": "Sum of all external forces is zero.",
+        "difficulty": "UNDERSTANDING",
+        "scored": false,
+        "pyqClaim": false,
+        "studentPublishReady": false
+      },
+      {
+        "id": "SC_10",
+        "concept": "Connection",
+        "prompt": "Does maintaining velocity require force?",
+        "expectedConcept": "Net force only for change",
+        "briefModelResponse": "No. Force is only needed to change velocity.",
+        "difficulty": "UNDERSTANDING",
+        "scored": false,
+        "pyqClaim": false,
+        "studentPublishReady": false
+      }
+    ],
+    "formulaRegister": [
+      {
+        "id": "FOR_01",
+        "formula": "v_avg = Total Distance / Total Time",
+        "symbols": "v_avg: average speed",
+        "siUnits": "m/s",
+        "condition": "Always applicable for average speed",
+        "commonError": "Confusing with displacement for velocity",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      },
+      {
+        "id": "FOR_02",
+        "formula": "V_avg = Total Displacement / Total Time",
+        "symbols": "V_avg: average velocity",
+        "siUnits": "m/s",
+        "condition": "Always applicable for average velocity",
+        "commonError": "Confusing with total distance",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      },
+      {
+        "id": "FOR_03",
+        "formula": "a = (v - u) / t",
+        "symbols": "a: acceleration, v: final vel, u: initial vel, t: time",
+        "siUnits": "m/s^2",
+        "condition": "Definition of average acceleration",
+        "commonError": "Using speed instead of velocity vector",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      },
+      {
+        "id": "FOR_04",
+        "formula": "v = u + at",
+        "symbols": "v: final, u: initial, a: acceleration, t: time",
+        "siUnits": "m/s",
+        "condition": "Constant acceleration only",
+        "commonError": "Using it for varying acceleration",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      },
+      {
+        "id": "FOR_05",
+        "formula": "s = ut + 0.5 * at^2",
+        "symbols": "s: displacement, u: initial, a: acceleration, t: time",
+        "siUnits": "m",
+        "condition": "Constant acceleration only",
+        "commonError": "Forgetting 0.5 or u*t term",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      },
+      {
+        "id": "FOR_06",
+        "formula": "v^2 = u^2 + 2as",
+        "symbols": "v: final, u: initial, a: acceleration, s: displacement",
+        "siUnits": "m/s",
+        "condition": "Constant acceleration only",
+        "commonError": "Using distance instead of displacement",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      },
+      {
+        "id": "FOR_07",
+        "formula": "s = [(u + v) / 2] * t",
+        "symbols": "s: displacement, u: initial, v: final, t: time",
+        "siUnits": "m",
+        "condition": "Constant acceleration only",
+        "commonError": "Thinking this is the general distance formula",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      }
+    ],
+    "misconceptionRegister": [
+      {
+        "id": "MIS_01",
+        "incorrectBelief": "Distance and displacement are always equal.",
+        "correctPrinciple": "Displacement is directed change in position; Distance is total path.",
+        "correctiveExample": "Walking in a circle has zero displacement but non-zero distance.",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      },
+      {
+        "id": "MIS_02",
+        "incorrectBelief": "Speed and velocity are identical.",
+        "correctPrinciple": "Velocity is a vector (has direction); Speed is scalar.",
+        "correctiveExample": "Cars moving North and South at 60 km/h have same speed but different velocities.",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      },
+      {
+        "id": "MIS_03",
+        "incorrectBelief": "Negative velocity means slowing down.",
+        "correctPrinciple": "Negative sign only indicates direction in 1D.",
+        "correctiveExample": "Moving at -20 m/s with acceleration -5 m/s^2 is speeding up backwards.",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      },
+      {
+        "id": "MIS_04",
+        "incorrectBelief": "Zero velocity means zero acceleration.",
+        "correctPrinciple": "Velocity can be zero momentarily while acceleration acts.",
+        "correctiveExample": "A ball at the peak of its flight has v=0 but a=g.",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      },
+      {
+        "id": "MIS_05",
+        "incorrectBelief": "A moving object always needs a force to keep moving.",
+        "correctPrinciple": "No net force is needed for uniform straight-line motion (NLM 1).",
+        "correctiveExample": "Voyager spacecraft moves through space without fuel once at constant velocity.",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP06_001"
+      },
+      {
+        "id": "MIS_06",
+        "incorrectBelief": "Inertia is a force.",
+        "correctPrinciple": "Inertia is an inherent property of matter (resistance to change).",
+        "correctiveExample": "Mass doesn't push; it just resists acceleration.",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP06_001"
+      },
+      {
+        "id": "MIS_07",
+        "incorrectBelief": "Heavier objects always fall faster.",
+        "correctPrinciple": "In a vacuum, all objects fall with same acceleration 'g'.",
+        "correctiveExample": "Hammer and feather drop on the moon.",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      },
+      {
+        "id": "MIS_08",
+        "incorrectBelief": "Position-time graph height represents speed.",
+        "correctPrinciple": "Slope of the x-t graph represents velocity/speed.",
+        "correctiveExample": "A parked car far from origin has high height but zero slope.",
+        "authorizedAtomId": "JEE_2026_PHY_U01_CH01_TOP05_001"
+      }
+    ]
+  },
+  "internalReviewRubric": {
+    "sourceFidelity": { "status": "PASS", "evidence": "Direct verbatim excerpts from Page 3.", "reviewNote": "No ellipses.", "blocking": true },
+    "atomScopeFidelity": { "status": "PASS", "evidence": "Limited to TOP05_001 and TOP06_001.", "reviewNote": "NLM 1 only.", "blocking": true },
+    "conceptAccuracy": { "status": "PASS", "evidence": "Frame of reference and equilibrium correctly explained.", "reviewNote": "No absolute rest.", "blocking": true },
+    "formulaAccuracy": { "status": "PASS", "evidence": "7 required formulas in register.", "reviewNote": "Correct units.", "blocking": true },
+    "graphAccuracy": { "status": "PASS", "evidence": "Slope/Area verified.", "reviewNote": "Correct interpretations.", "blocking": true },
+    "workedExampleAccuracy": { "status": "PASS", "evidence": "7 examples recalculate correctly.", "reviewNote": "WE_06/07 corrected.", "blocking": true },
+    "misconceptionCoverage": { "status": "PASS", "evidence": "8 required present.", "reviewNote": "Corrective examples added.", "blocking": true },
+    "selfCheckCoverage": { "status": "PASS", "evidence": "10 checks present.", "reviewNote": "SC_01 corrected.", "blocking": true },
+    "readability": { "status": "PASS", "evidence": "Plain English.", "reviewNote": "N/A", "blocking": false },
+    "studentUsefulness": { "status": "PASS", "evidence": "Foundation established.", "reviewNote": "N/A", "blocking": false },
+    "traceability": { "status": "PASS", "evidence": "Mapped to JEE_2026 atoms.", "reviewNote": "Page 3 lineage.", "blocking": true },
+    "noTopicLeakage": { "status": "PASS", "evidence": "Scan confirmed zero NLM 2/3 or Projectiles.", "reviewNote": "Verified.", "blocking": true },
+    "noPyqConsumption": { "status": "PASS", "evidence": "Teaching examples only.", "reviewNote": "Verified.", "blocking": true },
+    "markdownJsonConsistency": { "status": "PASS", "evidence": "Synced registers and IDs.", "reviewNote": "Verified.", "blocking": true },
+    "safetyMetadata": { "status": "PASS", "evidence": "Pending flags.", "reviewNote": "All false.", "blocking": true }
+  },
+  "studentReadiness": "NOT_READY",
+  "safetyFlags": {
+    "studentPublishReady": false,
+    "founderApprovalStatus": "PENDING",
+    "proReviewStatus": "PENDING",
+    "sourceReviewStatus": "PENDING",
+    "questionPackAttached": false,
+    "crucibleReady": false
+  }
+}

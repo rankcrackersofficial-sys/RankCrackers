@@ -1,0 +1,40 @@
+{
+  "phase": "VS1C_FIX3",
+  "timestamp": "2026-08-04T19:52:22+05:30",
+  "baselineCommit": "fe55f1d6f15d1aa23edd25e89fc6202678a0a5c6",
+  "sourceLineage": {
+    "status": "VERIFIED_WITH_PAGE_NUMBERS",
+    "records": [
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+        "officialUnit": "Unit 2",
+        "officialPage": "3",
+        "verbatimExcerpt": "Frame of reference, motion in a straight line: Position-time graph, speed and velocity; Uniform and non-uniform motion, average speed and instantaneous velocity; uniformly accelerated motion, velocity-time, position-time graphs, relations for uniformly accelerated motion."
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP06_001",
+        "officialUnit": "Unit 3",
+        "officialPage": "3",
+        "verbatimExcerpt": "Newton’s first law of motion; concept of inertia."
+      }
+    ]
+  },
+  "artifactSynchronization": {
+    "formulaRegister": "7/7 records added with full metadata (id, symbols, siUnits, condition, commonError).",
+    "misconceptionRegister": "8/8 records added with full metadata (incorrectBelief, correctPrinciple, correctiveExample).",
+    "sc01Correction": "Projectile-motion leakage removed; replaced with train-platform relative motion case.",
+    "consistency": "Markdown and JSON verified identical for formulas, misconceptions, and SC_01."
+  },
+  "contentLeakageScan": {
+    "NewtonSecondLaw": "NONE",
+    "ProjectileMotion": "NONE (SC_01 corrected)",
+    "WorkEnergy": "NONE",
+    "Friction": "NONE"
+  },
+  "reviewRubric": {
+    "overall": "PASS",
+    "completeness": "ALL_REQUIRED_STRUCTURED_REGISTERS_PRESENT",
+    "studentReadiness": "NOT_READY"
+  },
+  "verdict": "RANKCRACKERS_VS1C_FIX3_MECHANICS_FOUNDATIONS_ARTIFACT_CONTRACT_ACCEPTED_READY_FOR_PRO_REVIEW"
+}
