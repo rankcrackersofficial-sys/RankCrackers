@@ -1,0 +1,23 @@
+{
+  "patchId": "VS1E-R2-FIX1",
+  "timestamp": "2026-08-05T17:56:36+05:30",
+  "baselineHead": "89410c6d362c345223527138981d6952cb7b7bf0",
+  "corrections": [
+    {
+      "recordId": "MF_ASR_05",
+      "change": "PARTIAL_CREDIT to BINARY scoring",
+      "reason": "Single-choice response format feasibility"
+    },
+    {
+      "recordId": "MF_ASR_09",
+      "change": "Numeric-only normalization",
+      "reason": "Align with stem response constraint (No Units)"
+    }
+  ],
+  "verification": {
+    "pointTotal": 16,
+    "mfAsr05Binary": true,
+    "mfAsr09Variants": ["9", "9.0"]
+  },
+  "status": "RANKCRACKERS_VS1E_R2_FIX1_NORMALIZATION_AND_SCORING_COMPLETE"
+}

@@ -113,9 +113,9 @@
   - For Object A: Line from (0,0) to (2,10). Slope = 10 / 2 = 5 m/s.
   - For Object B: Horizontal line at x=20. Slope = 0 m/s.
   - Distinction: High height on the graph indicates a far position, not a high speed.
-- **Scoring Approach**: PARTIAL_CREDIT (Total 2 pts)
-  - 1 pt: Correct velocity of A.
-  - 1 pt: Correct velocity of B and rejection of height misconception.
+- **Scoring Approach**: BINARY (2 pts / 0 pt)
+- **Scoring Feasibility**: The item records one selected option only. Independent one-point component scores cannot be inferred from that response.
+- **Operational Scoring**: 2 points — Option A selected. 0 points — Any other option selected.
 - **Critical Errors**: Treating graph height as speed.
 - **Critical Gate**: `slope of x-t graph`
 
@@ -185,6 +185,8 @@
 - **Independently Derived Answer**: **9.0**
 - **Provisional Key Candidate**: 9.0
 - **Normalized Accepted Response**: `9.0`
+- **Accepted Response Variants**: `["9", "9.0"]`
+- **Normalization Rule**: Unit-bearing strings (e.g., "9.0 m") are academically equivalent but rejected by the configured answer-box constraint because the item requires numeric-only input.
 - **Answer Derivation**: 
   - Use s = ut + 0.5at² for the 5 kg cart.
   - u = 0, a = 2.0, t = 3.0. 
