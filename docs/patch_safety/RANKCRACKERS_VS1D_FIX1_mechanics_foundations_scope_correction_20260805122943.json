@@ -1,0 +1,43 @@
+{
+  "phase": "VS1D-FIX1",
+  "timestamp": "2026-08-05T12:29:43+05:30",
+  "baselineHead": "bf45e90c1011edd397dcc725abcac57ad00a50e3",
+  "verifications": {
+    "slotCount": 12,
+    "pointTotal": 16,
+    "cognitiveDistribution": {
+      "RECALL": 2,
+      "UNDERSTANDING": 4,
+      "APPLICATION": 4,
+      "ANALYSIS": 2
+    },
+    "deferredMisconception": {
+      "misconceptionId": "MIS_07",
+      "currentSliceAssessable": false,
+      "deferredReason": "Requires free-fall/gravitation context beyond the two authorized atoms.",
+      "futureAssessmentDependency": "GRAVITATION_OR_FREE_FALL_AUTHORIZED_UNIT",
+      "studentAssessmentItemGenerated": false
+    },
+    "misconceptionCoverage": {
+      "assessableInScopeCount": 7,
+      "deferredCount": 1,
+      "verdict": "7_OF_7_IN_SCOPE_MISCONCEPTIONS_ASSESSABLE"
+    },
+    "as09ScopeCorrection": {
+      "slotId": "AS_09",
+      "points": 2,
+      "cognitiveLevel": "APPLICATION",
+      "scopePurity": "Removed vertical drop, spheres, towers, falling, free fall, gravity, and g. Purely prescribed abstract UAM carts on a straight guideway designed."
+    }
+  },
+  "safetyLocks": {
+    "studentPublishReady": false,
+    "assessmentItemsGenerated": false,
+    "questionPackAttached": false,
+    "founderApprovalStatus": "PENDING",
+    "proReviewStatus": "PENDING",
+    "studentReadiness": "NOT_READY",
+    "firestoreMaterializationAuthorized": false
+  },
+  "verdict": "RANKCRACKERS_VS1D_FIX1_MECHANICS_FOUNDATIONS_SCOPE_CORRECTION_COMPLETE"
+}

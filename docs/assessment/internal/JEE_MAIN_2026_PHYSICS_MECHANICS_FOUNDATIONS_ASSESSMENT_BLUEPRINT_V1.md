@@ -245,24 +245,24 @@ No active test papers, question cards, or student-facing quizzes are compiled in
 - **Authorized Atom ID**: `JEE_2026_PHY_U01_CH01_TOP05_001`
 - **Planning Node ID**: `mech_foundations`
 - **Concept ID**: `CON_09`
-- **Learning Objective**: Execute a multi-step calculation using UAM equations and perform a dimensional/sanity check.
+- **Learning Objective**: Execute a one-dimensional constant-acceleration calculation, identify irrelevant data, and report the result with correct units and rounding.
 - **Assessment Purpose**: Exit (verifies quantitative execution).
 - **Evidence Type**: EXIT
-- **Cognitive Level**: APPLICATION
-- **Recommended Item Format**: NUMERIC_RESPONSE
-- **Difficulty Band**: HARD
+- **Cognitive Level**: `APPLICATION`
+- **Recommended Item Format**: `NUMERIC_RESPONSE`
+- **Difficulty Band**: `HARD`
 - **Estimated Response Time (Seconds)**: 180
 - **Prerequisites**: Algebraic substitution, basic arithmetic.
-- **Misconception Targets**: `MIS_07` (Heavier objects always fall faster).
+- **Misconception Targets**: None (Note: Local design target is the insertion of extraneous mass data into kinematic equations).
 - **Required Representation**: Numerical values and units.
 - **Calculation Required**: `true`
 - **Graph Required**: `false`
-- **Expected Reasoning**: Calculates displacement and final velocity for freefall, verifying that mass does not enter kinematic relations.
-- **Acceptable Evidence**: Correct numerical substitution, units ($m$, $m/s$), and explanation of mass-independence.
-- **Insufficient Evidence**: Mass-dependent calculations or arithmetic errors.
-- **Common Failure Signals**: Attempting to include mass in the kinematic formulas.
-- **Scoring Approach**: PARTIAL_CREDIT
-- **Mastery Signal**: Correct numerical output, correct units, and correct mass-independence reasoning.
+- **Expected Reasoning**: Calculates displacement under constant acceleration on a straight guideway, identifying mass as irrelevant/extraneous data.
+- **Acceptable Evidence**: Correct numerical substitution, correct units, and correct identification of mass as extraneous data.
+- **Insufficient Evidence**: Attempting to insert mass into the kinematic equations or arithmetic errors.
+- **Common Failure Signals**: Inserting mass into UAM formulas.
+- **Scoring Approach**: `PARTIAL_CREDIT`
+- **Mastery Signal**: Correct numerical output, correct units, and correct reasoning identifying mass as extraneous.
 - **Review Requirements**: Standard internal review.
 - **Safety Flags**: `studentPublishReady = false`
 
@@ -356,10 +356,10 @@ No active test papers, question cards, or student-facing quizzes are compiled in
 | **Zero velocity means zero acceleration** | `AS_07` | Moment of reversal (peak vertical flight) shows $v=0, a \neq 0$. |
 | **A moving object requires continuous force** | `AS_10` | Spacecraft scenario verifies $\Sigma F = 0$ for uniform straight-line motion. |
 | **Inertia is a force** | `AS_11` | Mass-inertia comparison clarifies inertia as a property, not a force. |
-| **Heavier objects always fall faster** | `AS_09` | UAM gravity calculation shows mass-independence. |
+| **Heavier objects always fall faster** | `DEFERRED_CROSS_UNIT` | Requires free-fall/gravitation context beyond the two authorized atoms. |
 | **Position-time graph height represents speed** | `AS_05` | Separates high-height coordinate from low-slope velocity. |
 
-*Result*: `8_OF_8_MISCONCEPTIONS_ASSESSABLE`
+*Result*: `7_OF_7_IN_SCOPE_MISCONCEPTIONS_ASSESSABLE`, `1_CROSS_UNIT_MISCONCEPTION_DEFERRED`
 
 ---
 
@@ -465,7 +465,7 @@ Substantive assessment of the following topics is strictly excluded from this bl
 | **source traceability** | PASS | Restored artifacts from `6379096` utilized. | Exact matches verified. | `true` |
 | **atom coverage** | PASS | 12/12 slots mapped to `TOP05_001`/`TOP06_001`. | Traceability confirmed. | `true` |
 | **learning-objective coverage** | PASS | Formulated for motion, graphs, NLM 1, and inertia. | Matches unit syllabus. | `true` |
-| **misconception coverage** | PASS | 8/8 misconceptions targeted. | Matrix checked. | `true` |
+| **misconception coverage** | PASS | 7/7 in-scope misconceptions targeted, 1 deferred. | Matrix checked. | `true` |
 | **cognitive balance** | PASS | Recall: 2, Understanding: 4, Application: 4, Analysis: 2. | Perfect distribution. | `true` |
 | **representation balance** | PASS | Graphs, equations, numbers, and verbal covered. | Requisite modes active. | `true` |
 | **difficulty balance** | PASS | Easy: 3, Medium: 6, Hard: 3. | Standard bell curve. | `false` |
