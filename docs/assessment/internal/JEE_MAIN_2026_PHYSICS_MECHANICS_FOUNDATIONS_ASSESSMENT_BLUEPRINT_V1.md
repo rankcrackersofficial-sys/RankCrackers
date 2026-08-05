@@ -205,12 +205,12 @@ No active test papers, question cards, or student-facing quizzes are compiled in
 - **Required Representation**: Verbal description.
 - **Calculation Required**: `false`
 - **Graph Required**: `false`
-- **Expected Reasoning**: Explains that acceleration is the rate of change of velocity; velocity can pass through zero when changing direction (like a ball at peak height).
+- **Expected Reasoning**: Explains that acceleration is the rate of change of velocity; velocity can pass through zero when changing direction (like a prescribed motorized cart scenario).
 - **Acceptable Evidence**: Demonstrates that $v=0$ doesn't require $a=0$ if velocity is changing.
 - **Insufficient Evidence**: Arguing that because velocity is zero, there is no change in motion.
 - **Common Failure Signals**: Equating instantaneous velocity value to rate of change.
 - **Scoring Approach**: BINARY
-- **Mastery Signal**: Provides correct conceptual description of peak vertical flight state.
+- **Mastery Signal**: Provides correct conceptual description of prescribed momentarily zero velocity state.
 - **Review Requirements**: Standard internal review.
 - **Safety Flags**: `studentPublishReady = false`
 
@@ -335,9 +335,9 @@ No active test papers, question cards, or student-facing quizzes are compiled in
 - **Required Representation**: Qualitative force diagram reasoning, velocity-time graph.
 - **Calculation Required**: `true`
 - **Graph Required**: `true`
-- **Expected Reasoning**: Links zero acceleration in v-t graph to zero net force (NLM 1), and non-zero constant slope to constant net force.
-- **Acceptable Evidence**: Demonstrates correct mapping of force states ($\Sigma F = 0$ vs $\Sigma F \neq 0$) to kinematic motion states.
-- **Insufficient Evidence**: Assuming force is proportional to velocity at all points.
+- **Expected Reasoning**: Links zero acceleration in v-t graph to zero net force (NLM 1), and non-zero constant slope to non-zero net force.
+- **Acceptable Evidence**: Demonstrates correct mapping of force states ($\Sigma F = 0$ vs $\Sigma F \neq 0$) to kinematic motion states without inferring force direction.
+- **Insufficient Evidence**: Assuming force is proportional to velocity at all points or inferring force direction.
 - **Common Failure Signals**: Recommending force during uniform motion segment.
 - **Scoring Approach**: RUBRIC_BASED
 - **Mastery Signal**: Provides clear, logical reasoning linking graph properties to force states.
@@ -353,7 +353,7 @@ No active test papers, question cards, or student-facing quizzes are compiled in
 | **Distance and displacement are always equal** | `AS_02` | Turn-back path calculation distinguishes distance from displacement. |
 | **Speed and velocity are identical** | `AS_03` | Reversal of motion highlights difference in velocity vector vs speed. |
 | **Negative velocity means slowing down** | `AS_04` | Explains negative sign as direction vector rather than speed value. |
-| **Zero velocity means zero acceleration** | `AS_07` | Moment of reversal (peak vertical flight) shows $v=0, a \neq 0$. |
+| **Zero velocity means zero acceleration** | `AS_07` | Prescribed momentarily zero velocity scenario shows $v=0, a \neq 0$. |
 | **A moving object requires continuous force** | `AS_10` | Spacecraft scenario verifies $\Sigma F = 0$ for uniform straight-line motion. |
 | **Inertia is a force** | `AS_11` | Mass-inertia comparison clarifies inertia as a property, not a force. |
 | **Heavier objects always fall faster** | `DEFERRED_CROSS_UNIT` | Requires free-fall/gravitation context beyond the two authorized atoms. |

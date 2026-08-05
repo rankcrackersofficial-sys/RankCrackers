@@ -1,0 +1,32 @@
+{
+  "patchId": "VS1D-FIX2",
+  "timestamp": "2025-07-24T10:30:00Z",
+  "blueprintId": "jee_main_2026_physics_mechanics_foundations_assessment_blueprint_v1",
+  "corrections": [
+    {
+      "slotId": "AS_07",
+      "removed": "peak vertical flight / ball throw context",
+      "added": "prescribed motorized cart scenario",
+      "rationale": "Remove implicit gravitation dependency"
+    },
+    {
+      "slotId": "AS_12",
+      "removed": "qualitative NLM 2 direction inference",
+      "added": "strict NLM 1 non-zero force mapping",
+      "rationale": "Maintain authorized atom scope purity"
+    }
+  ],
+  "verification": {
+    "slotCount": 12,
+    "pointTotal": 16,
+    "cognitiveDistribution": {
+      "RECALL": 2,
+      "UNDERSTANDING": 4,
+      "APPLICATION": 4,
+      "ANALYSIS": 2
+    },
+    "misconceptionCoverage": "7_OF_7_IN_SCOPE",
+    "markdownJsonSync": true
+  },
+  "status": "RC_X4E_VS1D_FIX2_BLUEPRINT_CORRECTION_COMPLETE"
+}
