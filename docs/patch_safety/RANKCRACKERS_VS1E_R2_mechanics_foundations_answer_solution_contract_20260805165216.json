@@ -1,0 +1,44 @@
+{
+  "patchId": "VS1E-R2",
+  "recordType": "ANSWER_AND_SOLUTION_AUTHORING_EVIDENCE",
+  "timestamp": "2026-08-05T16:52:16+05:30",
+  "baselineHead": "44225b7110fdb3fa274a2f7c430280a2c2afe8d0",
+  "inputHashes": {
+    "blueprintMd": "64bdee5934f51838fbdafd6be183e57f9a83b144",
+    "blueprintJson": "46ce45d86fe0fe91dfecae3322289849353ad9c8",
+    "itemPackMd": "8a13f6f84d4dfb89bf447a131ed2b3be97ad496b",
+    "itemPackJson": "6c0061df795e6e698722a6848e2bb979a95f3767"
+  },
+  "answerRecords": [
+    "MF_ASR_01", "MF_ASR_02", "MF_ASR_03", "MF_ASR_04",
+    "MF_ASR_05", "MF_ASR_06", "MF_ASR_07", "MF_ASR_08",
+    "MF_ASR_09", "MF_ASR_10", "MF_ASR_11", "MF_ASR_12"
+  ],
+  "verification": {
+    "recordCount": 12,
+    "pointTotal": 16,
+    "independentlyDerivedAnswersMatch": true,
+    "normalizationRulesDefined": true,
+    "distractorAuditComplete": true,
+    "scopeSafetyCheck": "PASSED",
+    "gravityExclusionCheck": "PASSED",
+    "nlm2DirectionExclusionCheck": "PASSED"
+  },
+  "criticalGateMatrix": [
+    { "gateId": "distance versus displacement", "itemId": "MF_ASI_02" },
+    { "gateId": "speed versus velocity", "itemId": "MF_ASI_03" },
+    { "gateId": "slope of x-t graph", "itemId": "MF_ASI_05" },
+    { "gateId": "signed area under v-t graph", "itemId": "MF_ASI_06" },
+    { "gateId": "constant-acceleration condition", "itemId": "MF_ASI_07" },
+    { "gateId": "zero net force under Newton's First Law", "itemId": "MF_ASI_10" },
+    { "gateId": "inertia is not a force", "itemId": "MF_ASI_11" }
+  ],
+  "safetyFlags": {
+    "officialAnswerKey": false,
+    "answerReviewStatus": "PENDING_INDEPENDENT_REVIEW",
+    "solutionReviewStatus": "PENDING_INDEPENDENT_REVIEW",
+    "studentPublishReady": false,
+    "studentReadiness": "NOT_READY"
+  },
+  "verdict": "RANKCRACKERS_VS1E_R2_MECHANICS_FOUNDATIONS_INTERNAL_ANSWER_SOLUTION_CONTRACT_READY_FOR_REVIEW"
+}
