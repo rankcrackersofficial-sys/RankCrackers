@@ -396,7 +396,7 @@
 - **Secondary Authorized Atom IDs**: `NOT_APPLICABLE`
 - **Planning Node ID**: `mech_foundations`
 - **Concept ID**: `CON_09`
-- **Learning Objective**: Execute a multi-step calculation using UAM equations and perform a dimensional/sanity check.
+- **Learning Objective**: Execute a one-dimensional constant-acceleration calculation, identify irrelevant data, and report the result with correct units and rounding.
 - **Item Format**: `NUMERIC_RESPONSE`
 - **Cognitive Level**: `APPLICATION`
 - **Difficulty Band**: `HARD`
@@ -538,8 +538,8 @@
 - **Options**: `NOT_APPLICABLE`
 - **Response Constraints**: Limit response to 150 words.
 - **Given Data**: Frictionless track. Phase 1 velocity $= +4\text{ m/s}$ (constant). Phase 2 velocity decreases from $+4$ to $0\text{ m/s}$ linearly.
-- **Required Representation**: qualitative force diagram reasoning, velocity-time graph
-- **Diagram Specification**: A sketch of the $v-t$ graph and two qualitative force-arrow diagrams (one for Phase 1 showing balanced arrows, one for Phase 2 showing unbalanced arrows without prescribed direction).
+- **Required Representation**: qualitative net-force classification, velocity-time graph
+- **Diagram Specification**: A v-t graph showing the two motion phases. Accompany it with non-directional state labels: Phase 1 — NET EXTERNAL FORCE = ZERO, Phase 2 — NET EXTERNAL FORCE = NON-ZERO. No force-direction arrows are drawn or inferred.
 - **Sign Convention**: Positive $x$-direction is the direction of initial velocity.
 - **Units Requirement**: Force conceptually evaluated.
 - **Misconception Targets**: `MIS_05` (A moving object requires continuous force), `MIS_06` (Inertia is a force).
