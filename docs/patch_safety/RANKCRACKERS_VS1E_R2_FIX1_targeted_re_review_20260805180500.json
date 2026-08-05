@@ -1,0 +1,199 @@
+{
+  "phase": "RANKCRACKERS_VS1E_R2_FIX1_TARGETED_RE_REVIEW",
+  "verdict": "RANKCRACKERS_VS1E_R2_FIX1_TARGETED_RE_REVIEW_PASS_READY_FOR_INDEPENDENT_REVIEW",
+  "authoritativeHeadBeforeReview": "cb7980cfdb620dfa53a89e6199d26eb19c1d65d5",
+  "linkedCommits": {
+    "blueprintCorrectionVS1DFIX3": "a88d03f56ec7d860d6424ec0bdb1273aa394642b",
+    "itemPackCorrectionVS1EAFIX3": "89410c6d362c345223527138981d6952cb7b7bf0",
+    "contractCorrectionVS1ER2FIX1": "cb7980cfdb620dfa53a89e6199d26eb19c1d65d5"
+  },
+  "filesAudited": [
+    "docs/assessment/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_ASSESSMENT_BLUEPRINT_V1.json",
+    "docs/assessment/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_ORIGINAL_ITEM_DRAFT_PACK_V1.json",
+    "docs/assessment/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_ANSWER_SOLUTION_CONTRACT_V1.json"
+  ],
+  "targetedChecks": {
+    "as05BinaryScoring": true,
+    "mfAsi09NumericOnlyNormalization": true,
+    "slotItemAnswerCrossAlignment": true,
+    "studentSafetyLocksPreserved": true,
+    "independentReviewPendingPreserved": true,
+    "notReadyPreserved": true
+  },
+  "as05Correction": {
+    "blueprint": {
+      "scoringApproach": "BINARY",
+      "maxPoints": 2,
+      "partialCreditAllowed": false
+    },
+    "itemPack": {
+      "itemId": "MF_ASI_05",
+      "pointValue": 2,
+      "responseConstraints": "Select exactly one option.",
+      "partialCreditAnchors": "NOT_APPLICABLE",
+      "provisionalKeyCandidate": "A"
+    },
+    "contract": {
+      "answerRecordId": "MF_ASR_05",
+      "pointValue": 2,
+      "partialCreditRubric": "NOT_APPLICABLE",
+      "operationalScoring": "2 points — Option A selected; 0 points — Any other option selected.",
+      "acceptedResponseVariants": [
+        "A"
+      ]
+    }
+  },
+  "mfAsi09Correction": {
+    "itemPack": {
+      "responseConstraints": "Numeric value only, rounded to one decimal place. Do not include units in your answer box.",
+      "provisionalKeyCandidate": "9.0"
+    },
+    "contract": {
+      "normalizedAcceptedResponse": "9.0",
+      "acceptedResponseVariants": [
+        "9",
+        "9.0"
+      ],
+      "unitBearingAccepted": false
+    }
+  },
+  "counts": {
+    "blueprintSlots": 12,
+    "itemPackItems": 12,
+    "answerContractRecords": 12,
+    "crossMapRows": 12,
+    "failures": 0,
+    "warnings": 0
+  },
+  "crossMap": [
+    {
+      "slotId": "AS_01",
+      "itemId": "MF_ASI_01",
+      "answerRecordId": "MF_ASR_01",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    },
+    {
+      "slotId": "AS_02",
+      "itemId": "MF_ASI_02",
+      "answerRecordId": "MF_ASR_02",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    },
+    {
+      "slotId": "AS_03",
+      "itemId": "MF_ASI_03",
+      "answerRecordId": "MF_ASR_03",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    },
+    {
+      "slotId": "AS_04",
+      "itemId": "MF_ASI_04",
+      "answerRecordId": "MF_ASR_04",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    },
+    {
+      "slotId": "AS_05",
+      "itemId": "MF_ASI_05",
+      "answerRecordId": "MF_ASR_05",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    },
+    {
+      "slotId": "AS_06",
+      "itemId": "MF_ASI_06",
+      "answerRecordId": "MF_ASR_06",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    },
+    {
+      "slotId": "AS_07",
+      "itemId": "MF_ASI_07",
+      "answerRecordId": "MF_ASR_07",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    },
+    {
+      "slotId": "AS_08",
+      "itemId": "MF_ASI_08",
+      "answerRecordId": "MF_ASR_08",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    },
+    {
+      "slotId": "AS_09",
+      "itemId": "MF_ASI_09",
+      "answerRecordId": "MF_ASR_09",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    },
+    {
+      "slotId": "AS_10",
+      "itemId": "MF_ASI_10",
+      "answerRecordId": "MF_ASR_10",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    },
+    {
+      "slotId": "AS_11",
+      "itemId": "MF_ASI_11",
+      "answerRecordId": "MF_ASR_11",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    },
+    {
+      "slotId": "AS_12",
+      "itemId": "MF_ASI_12",
+      "answerRecordId": "MF_ASR_12",
+      "atomAligned": true,
+      "pointAligned": true,
+      "keyAligned": true,
+      "studentLocked": true
+    }
+  ],
+  "failures": [],
+  "warnings": [],
+  "safetyLocks": {
+    "studentPublishReady": false,
+    "officialAnswerKey": false,
+    "firestoreMaterializationAuthorized": false,
+    "studentReadiness": "NOT_READY",
+    "answerReviewStatus": "PENDING_INDEPENDENT_REVIEW",
+    "solutionReviewStatus": "PENDING_INDEPENDENT_REVIEW",
+    "founderApprovalStatus": "PENDING",
+    "proReviewStatus": "PENDING"
+  },
+  "notDone": [
+    "NO_STUDENT_PUBLISH",
+    "NO_FIRESTORE_MATERIALIZATION",
+    "NO_QUESTION_PACK_ATTACHMENT",
+    "NO_CRUCIBLE_READY_FLAG",
+    "NO_FOUNDER_APPROVAL",
+    "NO_PRO_REVIEW_APPROVAL"
+  ],
+  "nextRecommendedPhase": "RANKCRACKERS_VS1E_R3_INDEPENDENT_ANSWER_SOLUTION_REVIEW_PRECHECK"
+}
