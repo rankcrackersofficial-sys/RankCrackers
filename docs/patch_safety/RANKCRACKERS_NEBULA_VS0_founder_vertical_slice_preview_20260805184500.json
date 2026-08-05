@@ -1,0 +1,246 @@
+{
+    "phase":  "RANKCRACKERS_NEBULA_VS0",
+    "verdict":  "RANKCRACKERS_NEBULA_JEE_MAIN_2027_FOUNDER_VERTICAL_SLICE_PREVIEW_CODE_AND_DATA_PASS_BROWSER_PROOF_PENDING",
+    "missionId":  "jee_main_2026",
+    "displayMission":  "JEE Main 2027",
+    "previewOnly":  true,
+    "firestoreReadOnlyInventory":  true,
+    "firestoreWrite":  false,
+    "deploy":  false,
+    "inventory":  {
+                      "totalAtoms":  430,
+                      "previewEligibleAtoms":  417,
+                      "heldExcludedAtoms":  13,
+                      "subjectCounts":  {
+                                            "Chemistry":  160,
+                                            "Mathematics":  92,
+                                            "Physics":  165
+                                        },
+                      "unitCount":  91,
+                      "chapterCount":  129,
+                      "topicCount":  366
+                  },
+    "heldDiagnostics":  {
+                            "count":  13,
+                            "byReason":  {
+                                             "HELD_MISSING_CANONICAL_KEY":  12,
+                                             "REJECTED":  1
+                                         },
+                            "sample":  [
+                                           {
+                                               "atomId":  "ATOM_JEE_U01_CH01_TOP05_001",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 1",
+                                               "chapter":  "Chapter 1",
+                                               "topic":  "Motion In 1D",
+                                               "atomicTopicLabel":  "Kinematics Intro",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "ATOM_JEE_U01_CH01_TOP05_002",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 1",
+                                               "chapter":  "Chapter 1",
+                                               "topic":  "Motion In 2D",
+                                               "atomicTopicLabel":  "Projectile Motion",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "ATOM_JEE_U01_CH01_TOP06_001",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 1",
+                                               "chapter":  "Chapter 1",
+                                               "topic":  "Laws Of Motion",
+                                               "atomicTopicLabel":  "Newton\u0027s First Law",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "ATOM_JEE_U01_CH01_TOP06_002",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 1",
+                                               "chapter":  "Chapter 1",
+                                               "topic":  "Laws Of Motion",
+                                               "atomicTopicLabel":  "Friction Intro",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "ATOM_JEE_U01_CH02_TOP01_001",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 2",
+                                               "chapter":  "Chapter 2",
+                                               "topic":  "WPE",
+                                               "atomicTopicLabel":  "Work Power Energy",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "ATOM_JEE_U01_CH02_TOP01_002",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 2",
+                                               "chapter":  "Chapter 2",
+                                               "topic":  "WPE",
+                                               "atomicTopicLabel":  "Conservation Of Energy",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "JEE_2026_PHY_U01_CH01_TOP05_001",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 1",
+                                               "chapter":  "Chapter 1",
+                                               "topic":  "Motion In 1D",
+                                               "atomicTopicLabel":  "Kinematics Intro",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "JEE_2026_PHY_U01_CH01_TOP05_002",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 1",
+                                               "chapter":  "Chapter 1",
+                                               "topic":  "Motion In 2D",
+                                               "atomicTopicLabel":  "Projectile Motion",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "JEE_2026_PHY_U01_CH01_TOP06_001",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 1",
+                                               "chapter":  "Chapter 1",
+                                               "topic":  "Laws Of Motion",
+                                               "atomicTopicLabel":  "Newton\u0027s First Law",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "JEE_2026_PHY_U01_CH01_TOP06_002",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 1",
+                                               "chapter":  "Chapter 1",
+                                               "topic":  "Laws Of Motion",
+                                               "atomicTopicLabel":  "Friction Intro",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "JEE_2026_PHY_U01_CH02_TOP01_001",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 2",
+                                               "chapter":  "Chapter 2",
+                                               "topic":  "WPE",
+                                               "atomicTopicLabel":  "Work Power Energy",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "JEE_2026_PHY_U01_CH02_TOP01_002",
+                                               "classification":  "HELD_MISSING_CANONICAL_KEY",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Physics",
+                                               "unit":  "Unit 2",
+                                               "chapter":  "Chapter 2",
+                                               "topic":  "WPE",
+                                               "atomicTopicLabel":  "Conservation Of Energy",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+                                               "previewOnly":  true
+                                           },
+                                           {
+                                               "atomId":  "JEE_MAIN_2026_P1_MATHEMATICS_U10_T002_002",
+                                               "classification":  "REJECTED",
+                                               "canonicalKeyPresent":  false,
+                                               "subject":  "Mathematics",
+                                               "unit":  "CO-ORDINATE GEOMETRY",
+                                               "chapter":  "General Chapter",
+                                               "topic":  "Straight Line: Various Forms Of Equations Of A Line, Intersection Of Lines, Angles Between Two Lines, Conditions For Concurrence Of Three Lines, The Distance Of A Point From A Line, Co-ordinate Of The Centroid, Orthocentre And Circumcentre Of A Triangle",
+                                               "atomicTopicLabel":  "Straight Line: Various Forms Of Equations Of A Line, Intersection Of Lines, Angles Between Two Lines, Conditions For Concurrence Of Three Lines, The Distance Of A Point From A Line, Co-ordinate Of The Centroid, Orthocentre And Circumcentre Of A Triangle",
+                                               "sourceTraceStatus":  "SOURCE_TRACE_PRESENT",
+                                               "previewOnly":  true
+                                           }
+                                       ]
+                        },
+    "crucibleIntegrity":  {
+                              "previewEligibleAtoms":  417,
+                              "allocatedPrimaryAtoms":  417,
+                              "uniqueAllocatedAtoms":  417,
+                              "duplicateAllocationCount":  0,
+                              "missingAllocationCount":  0,
+                              "missingAllocation":  [
+
+                                                    ]
+                          },
+    "crucibleShape":  {
+                          "cycleDays":  100,
+                          "phases":  7,
+                          "schedules":  42,
+                          "rebuildWindows":  7,
+                          "macroTests":  7,
+                          "majorTests":  1
+                      },
+    "digibookDemo":  {
+                         "units":  1,
+                         "title":  "Mechanics Foundations",
+                         "sections":  8,
+                         "formulas":  7,
+                         "misconceptions":  8,
+                         "workedExamples":  7,
+                         "selfChecks":  10
+                     },
+    "assessmentPreview":  {
+                              "items":  12,
+                              "totalPoints":  16,
+                              "state":  "INTERNAL_ASSESSMENT_PREVIEW",
+                              "answerReviewStatus":  "PENDING_INDEPENDENT_REVIEW",
+                              "studentPublishReady":  false
+                          },
+    "route":  "/nebula-founder-preview",
+    "tests":  [
+                  "flutter test test\\nebula_vs0_preview_bundle_test.dart = PASS",
+                  "flutter analyze preview route/files = PASS"
+              ],
+    "browserScreenshots":  "PENDING_NEXT_GATE",
+    "safety":  [
+                   "NO_PRODUCTION_DEPLOY",
+                   "NO_FIRESTORE_PRODUCTION_WRITE",
+                   "NO_RULES_DEPLOY",
+                   "NO_CALLABLE_DEPLOY",
+                   "NO_STUDENT_PUBLICATION",
+                   "NO_LIVE_CRUCIBLE_ACTIVATION",
+                   "NO_MASTERY_WRITE",
+                   "NO_COVERAGE_WRITE",
+                   "NO_STREAK_WRITE",
+                   "NO_QUESTION_PACK_ATTACHMENT",
+                   "NO_FAKE_TEST_DATA",
+                   "NO_FAKE_DIGIBOOK_CONTENT",
+                   "NO_SYLLABUS_ATOM_MUTATION",
+                   "NO_CANONICAL_KEY_MUTATION",
+                   "NO_TOPIC_NODE_PRODUCTION_PUBLISH"
+               ],
+    "nextRecommendedPhase":  "NEBULA_VS0_BROWSER_VISUAL_VALIDATION_ANDROID_VIEWPORT"
+}

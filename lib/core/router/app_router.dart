@@ -22,17 +22,23 @@ import '../../features/deep_profile/screens/deep_profile_screen.dart';
 import '../../features/opportunities/screens/opportunities_screen.dart';
 import '../../features/opportunities/presentation/screens/sentinel_center_screen.dart';
 import '../../features/opportunities/presentation/screens/notification_center_screen.dart';
+import '../../features/preview/presentation/screens/nebula_founder_preview_screen.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../shared/session/session_manager.dart';
 import '../constants/founder_identity.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
-final GlobalKey<NavigatorState> _shellNavigatorDashboardKey = GlobalKey<NavigatorState>(debugLabel: 'dashboard');
-final GlobalKey<NavigatorState> _shellNavigatorSyllabusKey = GlobalKey<NavigatorState>(debugLabel: 'syllabus');
-final GlobalKey<NavigatorState> _shellNavigatorDigiBookKey = GlobalKey<NavigatorState>(debugLabel: 'digibook');
-final GlobalKey<NavigatorState> _shellNavigatorCrucibleKey = GlobalKey<NavigatorState>(debugLabel: 'crucible');
-final GlobalKey<NavigatorState> _shellNavigatorOpportunitiesKey = GlobalKey<NavigatorState>(debugLabel: 'opportunities');
+final GlobalKey<NavigatorState> _shellNavigatorDashboardKey =
+    GlobalKey<NavigatorState>(debugLabel: 'dashboard');
+final GlobalKey<NavigatorState> _shellNavigatorSyllabusKey =
+    GlobalKey<NavigatorState>(debugLabel: 'syllabus');
+final GlobalKey<NavigatorState> _shellNavigatorDigiBookKey =
+    GlobalKey<NavigatorState>(debugLabel: 'digibook');
+final GlobalKey<NavigatorState> _shellNavigatorCrucibleKey =
+    GlobalKey<NavigatorState>(debugLabel: 'crucible');
+final GlobalKey<NavigatorState> _shellNavigatorOpportunitiesKey =
+    GlobalKey<NavigatorState>(debugLabel: 'opportunities');
 
 final GoRouter appRouter = GoRouter(
   navigatorKey: _rootNavigatorKey,
@@ -40,7 +46,7 @@ final GoRouter appRouter = GoRouter(
   redirect: (context, state) {
     final user = FirebaseAuth.instance.currentUser;
     final matchedLocation = state.matchedLocation;
-    
+
     debugPrint("🔱 ROUTER REDIRECT: $matchedLocation");
 
     // 🔱 Level-12.7 & 12.9 Protection: Never redirect from Splash internally.
@@ -48,8 +54,8 @@ final GoRouter appRouter = GoRouter(
       return null;
     }
 
-    final bool onLoginFlow = matchedLocation == AppRoutes.login || 
-                             matchedLocation == AppRoutes.profileSetup;
+    final bool onLoginFlow = matchedLocation == AppRoutes.login ||
+        matchedLocation == AppRoutes.profileSetup;
 
     // 🔱 Authority 1: Auth Gate
     if (user == null) {
@@ -59,10 +65,11 @@ final GoRouter appRouter = GoRouter(
 
     // 🔱 Authority 2: Privilege Gate (Bypass Onboarding for Founders/Admins)
     bool isPrivileged = FounderIdentity.isFounderUser(user);
-    
+
     if (isPrivileged && onLoginFlow) {
-      debugPrint("🔱 ROUTER: Privileged User on Login flow, bypassing to Dashboard");
-      return AppRoutes.dashboard; 
+      debugPrint(
+          "🔱 ROUTER: Privileged User on Login flow, bypassing to Dashboard");
+      return AppRoutes.dashboard;
     }
 
     // 🔱 Authority 3: Profile Gate (Must complete setup)
@@ -70,7 +77,9 @@ final GoRouter appRouter = GoRouter(
     final profileDone = SessionManager.profileCompletedSync();
     if (!profileDone && !isPrivileged) {
       debugPrint("🔱 ROUTER: Profile incomplete, routing to Identity");
-      return (matchedLocation == AppRoutes.profileSetup) ? null : AppRoutes.profileSetup;
+      return (matchedLocation == AppRoutes.profileSetup)
+          ? null
+          : AppRoutes.profileSetup;
     }
 
     // 🔱 Authority 4: Mission Gate (Must select mission)
@@ -78,7 +87,9 @@ final GoRouter appRouter = GoRouter(
     if (selectedExam == null && !isPrivileged) {
       debugPrint("🔱 ROUTER: Mission missing, routing to Realm");
       if (matchedLocation == AppRoutes.profileSetup) return null;
-      return (matchedLocation == AppRoutes.missionRealm) ? null : AppRoutes.missionRealm;
+      return (matchedLocation == AppRoutes.missionRealm)
+          ? null
+          : AppRoutes.missionRealm;
     }
 
     // 🔱 Authority 5: Authenticated users should not be on Login screens
@@ -141,6 +152,21 @@ final GoRouter appRouter = GoRouter(
       },
     ),
     GoRoute(
+      path: AppRoutes.nebulaFounderPreview,
+      builder: (context, state) =>
+          FounderIdentity.isFounderUser(FirebaseAuth.instance.currentUser)
+              ? const NebulaFounderPreviewScreen()
+              : const Scaffold(
+                  backgroundColor: AppColors.background,
+                  body: Center(
+                    child: Text(
+                      'Founder preview access denied.',
+                      style: TextStyle(color: AppColors.textSecondary),
+                    ),
+                  ),
+                ),
+    ),
+    GoRoute(
       path: AppRoutes.admin,
       builder: (context, state) => const Scaffold(
         backgroundColor: AppColors.background,
@@ -168,7 +194,7 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.profile,
       builder: (context, state) => const ProfileScreen(),
     ),
-    
+
     // 🔱 Stateful Shell for Root Bottom Navigation
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
@@ -202,8 +228,9 @@ final GoRouter appRouter = GoRouter(
             GoRoute(
               path: AppRoutes.digibook,
               builder: (context, state) {
-                final MicroTopicNode? extraNode = state.extra as MicroTopicNode?;
-                
+                final MicroTopicNode? extraNode =
+                    state.extra as MicroTopicNode?;
+
                 // If node passed via extra, use it immediately 🔱
                 if (extraNode != null) {
                   return DigiBookScreen(node: extraNode);
@@ -236,7 +263,8 @@ final GoRouter appRouter = GoRouter(
                               ElevatedButton(
                                 onPressed: () {
                                   if (!KnowledgeEngine.instance.isHydrating) {
-                                    KnowledgeEngine.instance.initialize(force: true);
+                                    KnowledgeEngine.instance
+                                        .initialize(force: true);
                                   }
                                 },
                                 child: const Text("RETRY SYNC"),

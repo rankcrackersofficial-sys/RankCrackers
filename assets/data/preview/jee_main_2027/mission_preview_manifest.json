@@ -1,0 +1,227 @@
+{
+  "previewOnly": true,
+  "studentPublishReady": false,
+  "productionMaterializationAuthorized": false,
+  "progressPersistenceEnabled": false,
+  "runId": "nebula_vs0_founder_preview_20260805183000",
+  "missionId": "jee_main_2026",
+  "displayMission": "JEE Main 2027",
+  "title": "Mission NEBULA - JEE Main 2027 Founder Student-End Preview",
+  "banner": "INTERNAL FOUNDER PREVIEW",
+  "copy": {
+    "headline": "JEE Main 2027 - Internal Preview",
+    "syllabus": "The verified syllabus structure is available.",
+    "crucible": "The Crucible structure is being generated from syllabus topics.",
+    "digibook": "Pilot DigiBook content is available for Mechanics Foundations.",
+    "assessment": "Assessments and tests remain under internal academic review."
+  },
+  "files": {
+    "syllabusPreviewTree": "assets/data/preview/jee_main_2027/syllabus_preview_tree.json",
+    "cruciblePreviewPlan": "assets/data/preview/jee_main_2027/crucible_preview_plan.json",
+    "digibookPreviewCatalog": "assets/data/preview/jee_main_2027/digibook_preview_catalog.json",
+    "assessmentPreviewManifest": "assets/data/preview/jee_main_2027/assessment_preview_manifest.json"
+  },
+  "inventory": {
+    "totalAtoms": 430,
+    "previewEligibleAtoms": 417,
+    "heldExcludedAtoms": 13,
+    "subjectCounts": {
+      "Chemistry": 160,
+      "Mathematics": 92,
+      "Physics": 165
+    },
+    "unitCount": 91,
+    "chapterCount": 129,
+    "topicCount": 366
+  },
+  "crucibleIntegrity": {
+    "previewEligibleAtoms": 417,
+    "allocatedPrimaryAtoms": 417,
+    "uniqueAllocatedAtoms": 417,
+    "duplicateAllocationCount": 0,
+    "missingAllocationCount": 0,
+    "missingAllocation": []
+  },
+  "safety": {
+    "noProductionDeploy": true,
+    "noFirestoreProductionWrite": true,
+    "noRulesDeploy": true,
+    "noCallableDeploy": true,
+    "noStudentPublication": true,
+    "noLiveCrucibleActivation": true,
+    "noMasteryWrite": true,
+    "noCoverageWrite": true,
+    "noStreakWrite": true,
+    "noQuestionPackAttachment": true,
+    "noFakeTestData": true,
+    "noFakeDigiBookContent": true,
+    "noSyllabusAtomMutation": true,
+    "noCanonicalKeyMutation": true,
+    "noTopicNodeProductionPublish": true
+  },
+  "heldDiagnostics": {
+    "count": 13,
+    "byReason": {
+      "HELD_MISSING_CANONICAL_KEY": 12,
+      "REJECTED": 1
+    },
+    "sample": [
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP05_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Motion In 1D",
+        "atomicTopicLabel": "Kinematics Intro",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP05_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Motion In 2D",
+        "atomicTopicLabel": "Projectile Motion",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP06_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Laws Of Motion",
+        "atomicTopicLabel": "Newton's First Law",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP06_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Laws Of Motion",
+        "atomicTopicLabel": "Friction Intro",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH02_TOP01_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 2",
+        "chapter": "Chapter 2",
+        "topic": "WPE",
+        "atomicTopicLabel": "Work Power Energy",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH02_TOP01_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 2",
+        "chapter": "Chapter 2",
+        "topic": "WPE",
+        "atomicTopicLabel": "Conservation Of Energy",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Motion In 1D",
+        "atomicTopicLabel": "Kinematics Intro",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP05_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Motion In 2D",
+        "atomicTopicLabel": "Projectile Motion",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP06_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Laws Of Motion",
+        "atomicTopicLabel": "Newton's First Law",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP06_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Laws Of Motion",
+        "atomicTopicLabel": "Friction Intro",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH02_TOP01_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 2",
+        "chapter": "Chapter 2",
+        "topic": "WPE",
+        "atomicTopicLabel": "Work Power Energy",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH02_TOP01_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 2",
+        "chapter": "Chapter 2",
+        "topic": "WPE",
+        "atomicTopicLabel": "Conservation Of Energy",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_MAIN_2026_P1_MATHEMATICS_U10_T002_002",
+        "classification": "REJECTED",
+        "canonicalKeyPresent": false,
+        "subject": "Mathematics",
+        "unit": "CO-ORDINATE GEOMETRY",
+        "chapter": "General Chapter",
+        "topic": "Straight Line: Various Forms Of Equations Of A Line, Intersection Of Lines, Angles Between Two Lines, Conditions For Concurrence Of Three Lines, The Distance Of A Point From A Line, Co-ordinate Of The Centroid, Orthocentre And Circumcentre Of A Triangle",
+        "atomicTopicLabel": "Straight Line: Various Forms Of Equations Of A Line, Intersection Of Lines, Angles Between Two Lines, Conditions For Concurrence Of Three Lines, The Distance Of A Point From A Line, Co-ordinate Of The Centroid, Orthocentre And Circumcentre Of A Triangle",
+        "sourceTraceStatus": "SOURCE_TRACE_PRESENT",
+        "previewOnly": true
+      }
+    ]
+  }
+}

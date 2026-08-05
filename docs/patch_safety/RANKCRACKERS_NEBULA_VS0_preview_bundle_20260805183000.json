@@ -1,0 +1,272 @@
+{
+  "phase": "RANKCRACKERS_NEBULA_VS0_PHASE_A_B_C_D_PREVIEW_BUNDLE",
+  "verdict": "NEBULA_VS0_PREVIEW_BUNDLE_GENERATED_READY_FOR_UI_BINDING",
+  "runId": "nebula_vs0_founder_preview_20260805183000",
+  "missionId": "jee_main_2026",
+  "displayMission": "JEE Main 2027",
+  "firestoreReadOnly": true,
+  "firestoreWrite": false,
+  "atomMutation": false,
+  "topicNodePublish": false,
+  "studentPublish": false,
+  "deploy": false,
+  "inventory": {
+    "totalAtoms": 430,
+    "previewEligibleAtoms": 417,
+    "heldExcludedAtoms": 13,
+    "subjectCounts": {
+      "Chemistry": 160,
+      "Mathematics": 92,
+      "Physics": 165
+    },
+    "unitCount": 91,
+    "chapterCount": 129,
+    "topicCount": 366
+  },
+  "heldDiagnostics": {
+    "count": 13,
+    "byReason": {
+      "HELD_MISSING_CANONICAL_KEY": 12,
+      "REJECTED": 1
+    },
+    "sample": [
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP05_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Motion In 1D",
+        "atomicTopicLabel": "Kinematics Intro",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP05_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Motion In 2D",
+        "atomicTopicLabel": "Projectile Motion",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP06_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Laws Of Motion",
+        "atomicTopicLabel": "Newton's First Law",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH01_TOP06_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Laws Of Motion",
+        "atomicTopicLabel": "Friction Intro",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH02_TOP01_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 2",
+        "chapter": "Chapter 2",
+        "topic": "WPE",
+        "atomicTopicLabel": "Work Power Energy",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "ATOM_JEE_U01_CH02_TOP01_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 2",
+        "chapter": "Chapter 2",
+        "topic": "WPE",
+        "atomicTopicLabel": "Conservation Of Energy",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP05_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Motion In 1D",
+        "atomicTopicLabel": "Kinematics Intro",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP05_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Motion In 2D",
+        "atomicTopicLabel": "Projectile Motion",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP06_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Laws Of Motion",
+        "atomicTopicLabel": "Newton's First Law",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH01_TOP06_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 1",
+        "chapter": "Chapter 1",
+        "topic": "Laws Of Motion",
+        "atomicTopicLabel": "Friction Intro",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH02_TOP01_001",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 2",
+        "chapter": "Chapter 2",
+        "topic": "WPE",
+        "atomicTopicLabel": "Work Power Energy",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_2026_PHY_U01_CH02_TOP01_002",
+        "classification": "HELD_MISSING_CANONICAL_KEY",
+        "canonicalKeyPresent": false,
+        "subject": "Physics",
+        "unit": "Unit 2",
+        "chapter": "Chapter 2",
+        "topic": "WPE",
+        "atomicTopicLabel": "Conservation Of Energy",
+        "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE",
+        "previewOnly": true
+      },
+      {
+        "atomId": "JEE_MAIN_2026_P1_MATHEMATICS_U10_T002_002",
+        "classification": "REJECTED",
+        "canonicalKeyPresent": false,
+        "subject": "Mathematics",
+        "unit": "CO-ORDINATE GEOMETRY",
+        "chapter": "General Chapter",
+        "topic": "Straight Line: Various Forms Of Equations Of A Line, Intersection Of Lines, Angles Between Two Lines, Conditions For Concurrence Of Three Lines, The Distance Of A Point From A Line, Co-ordinate Of The Centroid, Orthocentre And Circumcentre Of A Triangle",
+        "atomicTopicLabel": "Straight Line: Various Forms Of Equations Of A Line, Intersection Of Lines, Angles Between Two Lines, Conditions For Concurrence Of Three Lines, The Distance Of A Point From A Line, Co-ordinate Of The Centroid, Orthocentre And Circumcentre Of A Triangle",
+        "sourceTraceStatus": "SOURCE_TRACE_PRESENT",
+        "previewOnly": true
+      }
+    ]
+  },
+  "crucibleIntegrity": {
+    "previewEligibleAtoms": 417,
+    "allocatedPrimaryAtoms": 417,
+    "uniqueAllocatedAtoms": 417,
+    "duplicateAllocationCount": 0,
+    "missingAllocationCount": 0,
+    "missingAllocation": []
+  },
+  "digibookDemo": {
+    "units": 1,
+    "firstUnit": "Mechanics Foundations",
+    "authorizedAtoms": 2,
+    "sections": 8,
+    "formulas": 7,
+    "misconceptions": 8,
+    "workedExamples": 7,
+    "selfChecks": 10
+  },
+  "assessmentPreview": {
+    "assessmentId": "jee_main_2026_physics_mechanics_foundations_original_item_draft_pack_v1",
+    "title": "Mechanics Foundations — Original Internal Assessment Draft Pack",
+    "subject": "Physics",
+    "unit": "Mechanics Foundations",
+    "itemCount": 12,
+    "totalPoints": 16,
+    "state": "INTERNAL_ASSESSMENT_PREVIEW",
+    "answerContractStatus": "DRAFT_FOR_INDEPENDENT_REVIEW",
+    "answerReviewStatus": "PENDING_INDEPENDENT_REVIEW",
+    "solutionReviewStatus": "PENDING_INDEPENDENT_REVIEW",
+    "resultsSaved": false,
+    "masteryUpdated": false,
+    "officialAnswerKey": false,
+    "studentPublishReady": false,
+    "sampleItems": [
+      {
+        "itemId": "MF_ASI_01",
+        "format": "SINGLE_SELECT",
+        "stem": "A train is moving along a straight horizontal track at a constant speed of $20\\text{ m/s}$. A passenger sitting inside the train carriage places a book on their tray table. Which of the following statements correctly describes the state of motion of the book?",
+        "pointValue": 1,
+        "studentPublishReady": false
+      },
+      {
+        "itemId": "MF_ASI_02",
+        "format": "SINGLE_SELECT",
+        "stem": "An object starts at position $x = +5\\text{ m}$ on a one-dimensional coordinate axis. It moves along the axis to $x = +15\\text{ m}$, turns back, and moves to $x = -2\\text{ m}$. What are the total distance traveled and the net displacement of the object during this motion?",
+        "pointValue": 1,
+        "studentPublishReady": false
+      },
+      {
+        "itemId": "MF_ASI_03",
+        "format": "NUMERIC_RESPONSE",
+        "stem": "A runner moves along a straight $x$-axis in the positive direction from $x = 0$ to $x = +100\\text{ m}$ in $40\\text{ s}$, then turns around and runs in the negative direction from $x = +100\\text{ m}$ to $x = +70\\text{ m}$ in $10\\text{ s}$. Calculate the magnitude of the runner's average velocity and the runner's average speed over the entire $50\\text{ s}$ interval, in $\\text{m/s}$. Enter the magnitude of average velocity first, followed by average speed, separated by a comma (e.g., 2.3, 3.4).",
+        "pointValue": 1,
+        "studentPublishReady": false
+      }
+    ]
+  },
+  "generatedFiles": [
+    "assets/data/preview/jee_main_2027/syllabus_preview_tree.json",
+    "assets/data/preview/jee_main_2027/crucible_preview_plan.json",
+    "assets/data/preview/jee_main_2027/digibook_preview_catalog.json",
+    "assets/data/preview/jee_main_2027/assessment_preview_manifest.json",
+    "assets/data/preview/jee_main_2027/mission_preview_manifest.json"
+  ],
+  "safety": {
+    "noProductionDeploy": true,
+    "noFirestoreProductionWrite": true,
+    "noRulesDeploy": true,
+    "noCallableDeploy": true,
+    "noStudentPublication": true,
+    "noLiveCrucibleActivation": true,
+    "noMasteryWrite": true,
+    "noCoverageWrite": true,
+    "noStreakWrite": true,
+    "noQuestionPackAttachment": true,
+    "noFakeTestData": true,
+    "noFakeDigiBookContent": true,
+    "noSyllabusAtomMutation": true,
+    "noCanonicalKeyMutation": true,
+    "noTopicNodeProductionPublish": true
+  }
+}

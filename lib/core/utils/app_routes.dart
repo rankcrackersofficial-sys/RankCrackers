@@ -13,7 +13,7 @@ class AppRoutes {
   static const String profile = '/profile';
   static const String digibook = '/digibook';
   static const String digiBook = '/digibook'; // Alias for compatibility
-  
+
   // Battle Tools Routes
   static const String pyqVault = '/pyq-vault';
   static const String progressTracker = '/progress-tracker';
@@ -24,4 +24,5 @@ class AppRoutes {
   static const String sentinelCenter = '/sentinel-center';
   static const String notificationCenter = '/notification-center';
   static const String admin = '/admin';
+  static const String nebulaFounderPreview = '/nebula-founder-preview';
 }
