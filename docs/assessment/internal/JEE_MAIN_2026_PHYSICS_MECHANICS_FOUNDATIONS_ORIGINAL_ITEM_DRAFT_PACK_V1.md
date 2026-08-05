@@ -235,7 +235,8 @@
   - Note: Target B has a higher vertical position ($20\text{ m}$) but its speed is zero.
 - **Provisional Key Candidate**: A
 - **Acceptable Response Evidence**: Selection of option A.
-- **Partial Credit Anchors**: 1 point awarded if the student correctly calculates slope of A but misinterprets B.
+- **Partial Credit Anchors**: `NOT_APPLICABLE`
+- **Operational scoring**: Option A selected = 2 points. Any other option = 0 points.
 - **Critical Errors**: Treating y-axis height as speed (selecting options with B velocity $= 20\text{ m/s}$).
 - **Non-Critical Errors**: Numerical calculation slip.
 - **Common Failure Signals**: Selecting B because B's line is "higher" on the graph.

@@ -1,0 +1,18 @@
+{
+  "patchId": "VS1E-A-FIX3",
+  "timestamp": "2026-08-05T17:51:49+05:30",
+  "baselineHead": "a88d03f56ec7d860d6424ec0bdb1273aa394642b",
+  "corrections": [
+    {
+      "itemId": "MF_ASI_05",
+      "change": "Set partialCreditAnchors to NOT_APPLICABLE",
+      "reason": "Single-choice response constraint makes independent sub-component scoring unobservable"
+    }
+  ],
+  "verification": {
+    "pointTotal": 16,
+    "itemCount": 12,
+    "binaryScoringApplied": true
+  },
+  "status": "RC_X4E_VS1E_A_FIX3_ITEM_SCORING_CONTRACT_COMPLETE"
+}
