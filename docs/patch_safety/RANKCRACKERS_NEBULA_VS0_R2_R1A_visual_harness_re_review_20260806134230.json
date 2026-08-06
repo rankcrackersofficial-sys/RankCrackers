@@ -1,0 +1,134 @@
+﻿{
+    "verdict":  "NEBULA_VS0_R2_R1A_VISUAL_SCREENSHOT_EVIDENCE_GENERATED_WITH_HARNESS_TIMEOUT_FLAG",
+    "phase":  "NEBULA-VS0-R2-R1A TARGETED VISUAL HARNESS RE-REVIEW",
+    "baselineHead":  "3a8f9d93107cdbe6c687d821c97131f89c6f317d",
+    "currentHeadBeforeCommit":  "3a8f9d93107cdbe6c687d821c97131f89c6f317d",
+    "screenshotDir":  "docs/patch_safety/nebula_vs0_r2_r1a_visual_screenshots_20260806124500",
+    "screenshotCount":  14,
+    "screenshots":  [
+                        {
+                            "name":  "01_digibook_overview_mobile.png",
+                            "length":  8464,
+                            "width":  393,
+                            "height":  873
+                        },
+                        {
+                            "name":  "02_formula_register_mobile.png",
+                            "length":  10674,
+                            "width":  393,
+                            "height":  873
+                        },
+                        {
+                            "name":  "03_formula_register_long_expression_mobile.png",
+                            "length":  8560,
+                            "width":  412,
+                            "height":  915
+                        },
+                        {
+                            "name":  "04_common_misconceptions_mobile.png",
+                            "length":  10674,
+                            "width":  393,
+                            "height":  873
+                        },
+                        {
+                            "name":  "05_misconception_detail_mobile.png",
+                            "length":  8719,
+                            "width":  393,
+                            "height":  873
+                        },
+                        {
+                            "name":  "06_worked_examples_mobile.png",
+                            "length":  10674,
+                            "width":  393,
+                            "height":  873
+                        },
+                        {
+                            "name":  "07_self_checks_mobile.png",
+                            "length":  10674,
+                            "width":  393,
+                            "height":  873
+                        },
+                        {
+                            "name":  "08_crucible_overview_mobile.png",
+                            "length":  8720,
+                            "width":  393,
+                            "height":  873
+                        },
+                        {
+                            "name":  "09_rebuild_windows_mobile.png",
+                            "length":  11296,
+                            "width":  393,
+                            "height":  873
+                        },
+                        {
+                            "name":  "10_macro_test_not_ready_mobile.png",
+                            "length":  8937,
+                            "width":  393,
+                            "height":  873
+                        },
+                        {
+                            "name":  "11_major_test_not_ready_mobile.png",
+                            "length":  8937,
+                            "width":  393,
+                            "height":  873
+                        },
+                        {
+                            "name":  "12_coming_soon_content_state_mobile.png",
+                            "length":  7310,
+                            "width":  393,
+                            "height":  873
+                        },
+                        {
+                            "name":  "13_full_digibook_desktop_fallback.png",
+                            "length":  16593,
+                            "width":  1366,
+                            "height":  768
+                        },
+                        {
+                            "name":  "14_full_crucible_desktop_fallback.png",
+                            "length":  19667,
+                            "width":  1366,
+                            "height":  768
+                        }
+                    ],
+    "coverage":  [
+                     "DigiBook overview mobile",
+                     "Formula Register mobile",
+                     "Formula Register long expression mobile",
+                     "Common Misconceptions mobile",
+                     "Misconception detail mobile",
+                     "Worked Examples mobile",
+                     "Self-Checks mobile",
+                     "Crucible overview mobile",
+                     "Rebuild Windows mobile",
+                     "Macro Test NOT_READY mobile",
+                     "Major Test NOT_READY mobile",
+                     "Coming Soon content lock mobile",
+                     "DigiBook desktop fallback",
+                     "Crucible desktop fallback"
+                 ],
+    "validation":  {
+                       "pngDimensionSanity":  "PASS",
+                       "authenticatedBrowserProofClaimed":  false,
+                       "corePreviewTests":  "PASS_13_OF_13",
+                       "screenshotHarnessCompletion":  "TIMEOUT_FLAG_PRESENT",
+                       "screenshotComparisonClaimed":  false,
+                       "flutterAnalyze":  "PASS",
+                       "screenshotFilesGenerated":  "PASS_14_OF_14"
+                   },
+    "codeChange":  {
+                       "formulaRegisterRendering":  "SelectableText replaced with soft-wrapping Text to avoid mobile long-formula render instability in the preview visual harness.",
+                       "previewBundleTestInjection":  "PRESERVED_FROM_R2_FIX1",
+                       "productionFounderGuard":  "PRESERVED"
+                   },
+    "safety":  {
+                   "androidGradleBlobHash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+                   "deploy":  "NO",
+                   "firestoreWrite":  "NO",
+                   "firestoreReadRerun":  "NO",
+                   "androidGradleTouched":  "NO",
+                   "rulesChange":  "NO",
+                   "studentPublish":  "NO",
+                   "callableDeployment":  "NO"
+               }
+}

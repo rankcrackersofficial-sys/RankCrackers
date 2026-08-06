@@ -569,8 +569,9 @@ class _NebulaFounderPreviewScreenState
                 _badge('INTERNAL PILOT CONTENT'),
               ]),
           const SizedBox(height: 8),
-          SelectableText(
+          Text(
             formula['formula']?.toString() ?? '',
+            softWrap: true,
             style: const TextStyle(
               color: AppColors.gold,
               fontWeight: FontWeight.w900,
