@@ -10,21 +10,31 @@ import 'package:rank_crackers/core/theme/app_theme.dart';
 import 'package:rank_crackers/features/preview/presentation/screens/nebula_founder_preview_screen.dart';
 
 const _goldenDir =
-    '../../docs/patch_safety/nebula_vs1_fix1_golden_screenshots_20260806150500';
+    '../../docs/patch_safety/nebula_vs1_fix2_real_text_screenshots_20260806190000';
 
-Future<void> loadGoogleFontFamiliesForTest() async {
-  final fontFile = File(
-      'E:/Programs/Flutter/flutter/bin/cache/artifacts/material_fonts/roboto-regular.ttf');
-  final bytes = await fontFile.readAsBytes();
+Future<void> loadRealApplicationFontFamiliesForTest() async {
+  GoogleFonts.config.allowRuntimeFetching = false;
+  final materialFontDir = Directory(
+    'E:/Programs/Flutter/flutter/bin/cache/artifacts/material_fonts',
+  );
+
+  Future<ByteData> fontBytes(String name) async {
+    final bytes = await File('${materialFontDir.path}/$name').readAsBytes();
+    return ByteData.view(bytes.buffer);
+  }
+
   Future<void> loadFamily(String family) async {
     final loader = FontLoader(family)
-      ..addFont(Future<ByteData>.value(ByteData.view(bytes.buffer)));
+      ..addFont(fontBytes('roboto-regular.ttf'))
+      ..addFont(fontBytes('roboto-medium.ttf'))
+      ..addFont(fontBytes('roboto-bold.ttf'));
     await loader.load();
   }
 
-  await loadFamily('Sora');
   await loadFamily('Inter');
+  await loadFamily('Sora');
   await loadFamily('Noto Sans');
+  await loadFamily('Roboto');
 }
 
 Map<String, dynamic> _loadPreviewJson(String name) {
@@ -41,17 +51,22 @@ Map<String, dynamic> _loadPreviewBundle() => {
       'assessment': _loadPreviewJson('assessment_preview_manifest.json'),
     };
 
+ThemeData _testTheme() => AppTheme.darkTheme;
+
 Future<void> _pumpPreview(WidgetTester tester, Size size, int tabIndex) async {
   tester.view.physicalSize = size;
   tester.view.devicePixelRatio = 1;
   await tester.pumpWidget(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: AppTheme.darkTheme,
-      home: NebulaFounderPreviewScreen(
-        previewBundleForTest:
-            Future<Map<String, dynamic>>.value(_loadPreviewBundle()),
-        initialTabIndexForTest: tabIndex,
+      theme: _testTheme(),
+      home: DefaultTextStyle.merge(
+        style: const TextStyle(fontFamily: 'Inter'),
+        child: NebulaFounderPreviewScreen(
+          previewBundleForTest:
+              Future<Map<String, dynamic>>.value(_loadPreviewBundle()),
+          initialTabIndexForTest: tabIndex,
+        ),
       ),
     ),
   );
@@ -62,28 +77,132 @@ Future<void> _pumpPreview(WidgetTester tester, Size size, int tabIndex) async {
   }
 }
 
-Future<void> _scrollToText(WidgetTester tester, String text) async {
-  final target = find.text(text);
-  for (var i = 0; i < 64 && target.evaluate().isEmpty; i++) {
-    await tester.drag(
-      find.byType(Scrollable).first,
-      const Offset(0, -300),
-      warnIfMissed: false,
-    );
-    await tester.pump(const Duration(milliseconds: 70));
-  }
-  expect(target, findsWidgets, reason: '$text must render before screenshot.');
+Finder _exactText(String text) => find.text(text, skipOffstage: false);
+
+Future<void> _scrollToExactText(WidgetTester tester, String text) async {
+  await _scrollToFinder(tester, _exactText(text), text);
 }
 
-Widget _accessDeniedState() => const Scaffold(
+Future<void> _scrollToContainingText(WidgetTester tester, String text) async {
+  await _scrollToFinder(
+      tester, find.textContaining(text, skipOffstage: false), text);
+}
+
+Future<void> _scrollToFinder(
+  WidgetTester tester,
+  Finder finder,
+  String description,
+) async {
+  for (var i = 0; i < 80 && finder.evaluate().isEmpty; i++) {
+    await tester.drag(
+      find.byType(Scrollable).first,
+      const Offset(0, -320),
+      warnIfMissed: false,
+    );
+    await tester.pump(const Duration(milliseconds: 80));
+  }
+  expect(finder, findsWidgets,
+      reason: '$description must render before screenshot.');
+  await tester.ensureVisible(finder.first);
+  await tester.pump(const Duration(milliseconds: 160));
+}
+
+Future<void> _selectSubject(WidgetTester tester, String subject) async {
+  final chip = find.widgetWithText(ChoiceChip, subject);
+  expect(chip, findsOneWidget,
+      reason: '$subject subject chip must be visible.');
+  await tester.tap(chip);
+  await tester.pump(const Duration(milliseconds: 250));
+}
+
+Widget _accessDeniedState() => Scaffold(
       backgroundColor: AppColors.background,
-      body: Center(
-        child: Text(
-          'Founder preview access denied.',
-          style: TextStyle(color: AppColors.textSecondary),
+      body: SafeArea(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.lock_outline, color: AppColors.gold, size: 42),
+                const SizedBox(height: 16),
+                Text(
+                  'Access Denied',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontFamily: 'Inter',
+                    color: AppColors.primaryText,
+                    fontSize: 22,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                const Text(
+                  'Founder preview access denied.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: 'Inter',
+                    color: AppColors.secondaryText,
+                    height: 1.4,
+                  ),
+                ),
+                const SizedBox(height: 14),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                  decoration: BoxDecoration(
+                    color: AppColors.gold.withValues(alpha: 0.10),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                        color: AppColors.gold.withValues(alpha: 0.28)),
+                  ),
+                  child: const Text(
+                    'Return to safe area',
+                    style: TextStyle(
+                      fontFamily: 'Inter',
+                      color: AppColors.primaryText,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
+
+Future<void> _applyCaseState(
+  WidgetTester tester,
+  _ScreenshotCase screenshotCase,
+) async {
+  if (screenshotCase.subject != null) {
+    await _selectSubject(tester, screenshotCase.subject!);
+  }
+  if (screenshotCase.scrollExactText != null) {
+    await _scrollToExactText(tester, screenshotCase.scrollExactText!);
+  }
+  if (screenshotCase.scrollContainingText != null) {
+    await _scrollToContainingText(tester, screenshotCase.scrollContainingText!);
+  }
+  if (screenshotCase.tapExactText != null) {
+    final tapTarget = _exactText(screenshotCase.tapExactText!);
+    await _scrollToFinder(tester, tapTarget, screenshotCase.tapExactText!);
+    await tester.tap(tapTarget.first);
+    await tester.pump(const Duration(milliseconds: 250));
+  }
+}
+
+Future<void> _assertMarkers(_ScreenshotCase screenshotCase) async {
+  for (final marker in screenshotCase.exactMarkers) {
+    expect(_exactText(marker), findsWidgets,
+        reason: '${screenshotCase.fileName} marker missing: $marker');
+  }
+  for (final marker in screenshotCase.containingMarkers) {
+    expect(find.textContaining(marker, skipOffstage: false), findsWidgets,
+        reason: '${screenshotCase.fileName} marker missing: $marker');
+  }
+}
 
 Future<void> _capturePreviewGolden(
   WidgetTester tester,
@@ -95,17 +214,20 @@ Future<void> _capturePreviewGolden(
     await tester.pumpWidget(
       MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: AppTheme.darkTheme,
-        home: _accessDeniedState(),
+        theme: _testTheme(),
+        home: DefaultTextStyle.merge(
+          style: const TextStyle(fontFamily: 'Inter'),
+          child: _accessDeniedState(),
+        ),
       ),
     );
-    await tester.pump(const Duration(milliseconds: 300));
+    await tester.pump(const Duration(milliseconds: 400));
   } else {
     await _pumpPreview(tester, screenshotCase.size, screenshotCase.tabIndex);
-    if (screenshotCase.scrollTarget != null) {
-      await _scrollToText(tester, screenshotCase.scrollTarget!);
-    }
+    await _applyCaseState(tester, screenshotCase);
   }
+
+  await _assertMarkers(screenshotCase);
 
   await expectLater(
     find.byType(MaterialApp),
@@ -116,10 +238,7 @@ Future<void> _capturePreviewGolden(
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  setUpAll(() async {
-    GoogleFonts.config.allowRuntimeFetching = false;
-    await loadGoogleFontFamiliesForTest();
-  });
+  setUpAll(loadRealApplicationFontFamiliesForTest);
 
   tearDown(() {
     final binding = TestWidgetsFlutterBinding.instance;
@@ -128,67 +247,213 @@ void main() {
   });
 
   final cases = <_ScreenshotCase>[
-    _ScreenshotCase('01_mission_landing_mobile.png', const Size(393, 873), 0),
     _ScreenshotCase(
-        '02_physics_syllabus_mobile.png', const Size(393, 873), 1, 'Physics'),
-    _ScreenshotCase('03_chemistry_syllabus_mobile.png', const Size(393, 873), 1,
-        'Chemistry'),
-    _ScreenshotCase('04_mathematics_syllabus_mobile.png', const Size(393, 873),
-        1, 'Mathematics'),
-    _ScreenshotCase('05_atomic_topic_detail_mobile.png', const Size(393, 873),
-        1, 'Founder diagnostics - hidden from student tree'),
-    _ScreenshotCase('06_crucible_overview_mobile.png', const Size(393, 873), 2),
-    _ScreenshotCase('07_phase_detail_mobile.png', const Size(393, 873), 2,
-        'Foundation Ignition'),
-    _ScreenshotCase('08_schedule_detail_mobile.png', const Size(393, 873), 2,
-        'Schedule 1 - Days 1-2'),
-    _ScreenshotCase('09_rebuild_windows_mobile.png', const Size(393, 873), 2,
-        'Rebuild Windows'),
-    _ScreenshotCase('10_macro_test_not_ready_mobile.png', const Size(393, 873),
-        2, 'Macro Test - macro_test_1'),
-    _ScreenshotCase('11_major_test_not_ready_mobile.png', const Size(393, 873),
-        2, 'Major Test - major_test_final'),
-    _ScreenshotCase('12_digibook_overview_mobile.png', const Size(393, 873), 3),
-    _ScreenshotCase('13_concept_reader_mobile.png', const Size(393, 873), 3,
-        'Concept reader'),
-    _ScreenshotCase('14_formula_register_mobile.png', const Size(393, 873), 3,
-        'Formula Register'),
-    _ScreenshotCase('15_common_misconceptions_mobile.png', const Size(393, 873),
-        3, 'Common Misconceptions'),
-    _ScreenshotCase('16_worked_example_mobile.png', const Size(393, 873), 3,
-        'Worked Examples'),
+      '01_mission_landing_mobile.png',
+      const Size(393, 873),
+      0,
+      exactMarkers: ['JEE Main 2027', 'Explore Syllabus'],
+    ),
     _ScreenshotCase(
-        '17_self_check_mobile.png', const Size(393, 873), 3, 'Self-Checks'),
-    _ScreenshotCase('18_assessment_preview_mobile.png', const Size(393, 873), 4,
-        'INTERNAL ASSESSMENT PREVIEW'),
+      '02_physics_syllabus_mobile.png',
+      const Size(393, 873),
+      1,
+      subject: 'Physics',
+      scrollExactText: 'Physics (165)',
+      exactMarkers: ['Physics (165)'],
+    ),
     _ScreenshotCase(
-        '19_coming_soon_content_mobile.png',
-        const Size(393, 873),
-        3,
-        'DigiBook is generated only from reviewed/accepted atomic teaching content. Empty fake reader pages are blocked.'),
+      '03_chemistry_syllabus_mobile.png',
+      const Size(393, 873),
+      1,
+      subject: 'Chemistry',
+      scrollExactText: 'Chemistry (160)',
+      exactMarkers: ['Chemistry (160)'],
+    ),
     _ScreenshotCase(
-        '20_access_denied_state.png', const Size(393, 873), 0, null, true),
-    _ScreenshotCase('21_fallback_360_mission.png', const Size(360, 800), 0),
-    _ScreenshotCase('22_fallback_412_formula.png', const Size(412, 915), 3,
-        'Formula Register'),
-    _ScreenshotCase('23_fallback_1366_crucible.png', const Size(1366, 768), 2,
-        'Rebuild Windows'),
+      '04_mathematics_syllabus_mobile.png',
+      const Size(393, 873),
+      1,
+      subject: 'Mathematics',
+      scrollExactText: 'Mathematics (92)',
+      exactMarkers: ['Mathematics (92)'],
+    ),
+    _ScreenshotCase(
+      '05_atomic_topic_detail_mobile.png',
+      const Size(393, 873),
+      1,
+      scrollExactText: 'Founder diagnostics - hidden from student tree',
+      exactMarkers: ['Founder diagnostics - hidden from student tree'],
+      containingMarkers: ['Held/excluded atoms'],
+    ),
+    _ScreenshotCase(
+      '06_crucible_overview_mobile.png',
+      const Size(393, 873),
+      2,
+      exactMarkers: ['7-phase structure'],
+      containingMarkers: ['100 days'],
+    ),
+    _ScreenshotCase(
+      '07_phase_detail_mobile.png',
+      const Size(393, 873),
+      2,
+      scrollExactText: 'Final Consolidation',
+      exactMarkers: ['Final Consolidation'],
+    ),
+    _ScreenshotCase(
+      '08_schedule_detail_mobile.png',
+      const Size(393, 873),
+      2,
+      scrollExactText: 'Schedule 1 - Days 1-2',
+      exactMarkers: ['Schedule 1 - Days 1-2'],
+      containingMarkers: ['Subject mix'],
+    ),
+    _ScreenshotCase(
+      '09_rebuild_windows_mobile.png',
+      const Size(393, 873),
+      2,
+      scrollExactText: 'Rebuild Window 7',
+      exactMarkers: ['Rebuild Window 7'],
+      containingMarkers: ['revision, recovery and gap correction'],
+    ),
+    _ScreenshotCase(
+      '10_macro_test_not_ready_mobile.png',
+      const Size(393, 873),
+      2,
+      scrollExactText: 'Macro Test - macro_test_1',
+      exactMarkers: ['Macro Test - macro_test_1'],
+      containingMarkers: ['reviewed question pools'],
+    ),
+    _ScreenshotCase(
+      '11_major_test_not_ready_mobile.png',
+      const Size(393, 873),
+      2,
+      scrollExactText: 'Major Test - major_test_final',
+      exactMarkers: ['Major Test - major_test_final'],
+      containingMarkers: ['full mission'],
+    ),
+    _ScreenshotCase(
+      '12_digibook_overview_mobile.png',
+      const Size(393, 873),
+      3,
+      exactMarkers: ['Mechanics Foundations', 'Formula Register'],
+    ),
+    _ScreenshotCase(
+      '13_concept_reader_mobile.png',
+      const Size(393, 873),
+      3,
+      scrollContainingText:
+          'This unit establishes the bedrock of Classical Mechanics.',
+      exactMarkers: ['Concept reader'],
+      containingMarkers: ['Classical Mechanics'],
+    ),
+    _ScreenshotCase(
+      '14_formula_register_mobile.png',
+      const Size(393, 873),
+      3,
+      scrollExactText: 'Symbols',
+      exactMarkers: ['Formula Register', 'Symbols'],
+      containingMarkers: ['v_avg = Total Distance / Total Time'],
+    ),
+    _ScreenshotCase(
+      '15_common_misconceptions_mobile.png',
+      const Size(393, 873),
+      3,
+      scrollExactText: 'Misconception',
+      exactMarkers: ['Common Misconceptions', 'Misconception'],
+      containingMarkers: ['Correct understanding'],
+    ),
+    _ScreenshotCase(
+      '16_worked_example_mobile.png',
+      const Size(393, 873),
+      3,
+      scrollExactText: 'Distance vs Displacement',
+      tapExactText: 'Distance vs Displacement',
+      exactMarkers: ['Worked Examples', 'Given'],
+      containingMarkers: ['Principle'],
+    ),
+    _ScreenshotCase(
+      '17_self_check_mobile.png',
+      const Size(393, 873),
+      3,
+      scrollContainingText: 'Model idea:',
+      exactMarkers: ['Self-Checks'],
+      containingMarkers: ['Model idea:'],
+    ),
+    _ScreenshotCase(
+      '18_assessment_preview_mobile.png',
+      const Size(393, 873),
+      4,
+      exactMarkers: ['INTERNAL ASSESSMENT PREVIEW'],
+      containingMarkers: ['No production attempt'],
+    ),
+    _ScreenshotCase(
+      '19_coming_soon_content_mobile.png',
+      const Size(393, 873),
+      3,
+      scrollContainingText:
+          'DigiBook is generated only from reviewed/accepted atomic teaching content.',
+      containingMarkers: ['Empty fake reader pages are blocked'],
+    ),
+    _ScreenshotCase(
+      '20_access_denied_state.png',
+      const Size(393, 873),
+      0,
+      accessDenied: true,
+      exactMarkers: ['Access Denied', 'Return to safe area'],
+    ),
+    _ScreenshotCase(
+      '21_fallback_360_mission.png',
+      const Size(360, 800),
+      0,
+      exactMarkers: ['JEE Main 2027', 'Explore Syllabus'],
+    ),
+    _ScreenshotCase(
+      '22_fallback_412_formula.png',
+      const Size(412, 915),
+      3,
+      scrollExactText: 'Symbols',
+      exactMarkers: ['Formula Register', 'Symbols'],
+      containingMarkers: ['a = (v - u) / t'],
+    ),
+    _ScreenshotCase(
+      '23_fallback_1366_crucible.png',
+      const Size(1366, 768),
+      2,
+      scrollExactText: 'Rebuild Window 7',
+      exactMarkers: ['Rebuild Window 7'],
+      containingMarkers: ['revision, recovery and gap correction'],
+    ),
   ];
 
   for (final screenshotCase in cases) {
-    testWidgets('VS1 Golden ${screenshotCase.fileName}', (tester) async {
+    testWidgets('VS1 FIX2 Golden ${screenshotCase.fileName}', (tester) async {
       await _capturePreviewGolden(tester, screenshotCase);
     });
   }
 }
 
 class _ScreenshotCase {
-  const _ScreenshotCase(this.fileName, this.size, this.tabIndex,
-      [this.scrollTarget, this.accessDenied = false]);
+  const _ScreenshotCase(
+    this.fileName,
+    this.size,
+    this.tabIndex, {
+    this.subject,
+    this.scrollExactText,
+    this.scrollContainingText,
+    this.tapExactText,
+    this.exactMarkers = const [],
+    this.containingMarkers = const [],
+    this.accessDenied = false,
+  });
 
   final String fileName;
   final Size size;
   final int tabIndex;
-  final String? scrollTarget;
+  final String? subject;
+  final String? scrollExactText;
+  final String? scrollContainingText;
+  final String? tapExactText;
+  final List<String> exactMarkers;
+  final List<String> containingMarkers;
   final bool accessDenied;
 }
