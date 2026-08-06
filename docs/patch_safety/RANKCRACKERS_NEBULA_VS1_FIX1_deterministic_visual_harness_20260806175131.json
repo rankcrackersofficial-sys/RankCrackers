@@ -1,0 +1,275 @@
+﻿{
+    "phase":  "NEBULA_VS1_FIX1",
+    "verdict":  "NEBULA_VS1_FIX1_DETERMINISTIC_VISUAL_HARNESS_PASSED",
+    "generatedAt":  "2026-08-06T17:53:20.1017805+05:30",
+    "officialRepoPath":  "C:\\RankCrackers\\RankCrackers-55",
+    "baselineHead":  "15c59735d893c7173f803fe9416aa757b8576a3f",
+    "currentBranch":  "safety/rc-g2-pre-notification-schema",
+    "matrixPath":  "docs\\patch_safety\\nebula_vs1_fix1_visual_runner_20260806150500\\matrix.json",
+    "goldenDir":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500",
+    "visualMatrix":  {
+                         "total":  23,
+                         "pass":  23,
+                         "fail":  0,
+                         "requiredTotal":  20,
+                         "requiredPass":  20,
+                         "requiredFail":  0,
+                         "fallbackTotal":  3,
+                         "fallbackPass":  3
+                     },
+    "rootCause":  "Manual RenderRepaintBoundary.toImage PNG writer path caused runner lifecycle timeout. Flutter native matchesGoldenFile --update-goldens route exits cleanly and now provides deterministic independent-process screenshot proofs.",
+    "harnessScope":  "Harness-only repair. Product UI, preview JSON data, auth logic, Firestore, student delivery, and deploy were not changed.",
+    "authGuardProof":  {
+                           "sourceBackedGuardTest":  "test/nebula_vs0/nebula_vs0_preview_ui_completeness_test.dart",
+                           "assertions":  "FounderIdentity.isFounderUser, FirebaseAuth currentUser route guard, denied text, no localStorage/queryParameters bypass.",
+                           "accessDeniedVisual":  "20_access_denied_state.png mirrors current router denied state; production guard source test remains authoritative."
+                       },
+    "validation":  {
+                       "flutterAnalyzeGoldenTest":  "PASS",
+                       "nebulaBundleAndUiCompletenessTests":  "PASS 15/15",
+                       "productPreviewUiDiff":  "EMPTY",
+                       "previewDataDiff":  "EMPTY",
+                       "gradleHash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+                       "knownUnrelatedDirtyFile":  "android/app/build.gradle.kts"
+                   },
+    "safety":  {
+                   "firestoreWrite":  "NO",
+                   "deploy":  "NO",
+                   "studentPublish":  "NO",
+                   "productionDataMutation":  "NO",
+                   "productUiMutation":  "NO",
+                   "gradleMutation":  "NO"
+               },
+    "screens":  [
+                    {
+                        "screen":  "01_mission_landing_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\01_mission_landing_mobile.png",
+                        "pngBytes":  7753,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "02_physics_syllabus_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\02_physics_syllabus_mobile.png",
+                        "pngBytes":  9938,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "03_chemistry_syllabus_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\03_chemistry_syllabus_mobile.png",
+                        "pngBytes":  9938,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "04_mathematics_syllabus_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\04_mathematics_syllabus_mobile.png",
+                        "pngBytes":  9938,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "05_atomic_topic_detail_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\05_atomic_topic_detail_mobile.png",
+                        "pngBytes":  8571,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "06_crucible_overview_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\06_crucible_overview_mobile.png",
+                        "pngBytes":  9698,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "07_phase_detail_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\07_phase_detail_mobile.png",
+                        "pngBytes":  9698,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "08_schedule_detail_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\08_schedule_detail_mobile.png",
+                        "pngBytes":  9593,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "09_rebuild_windows_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\09_rebuild_windows_mobile.png",
+                        "pngBytes":  12217,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "10_macro_test_not_ready_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\10_macro_test_not_ready_mobile.png",
+                        "pngBytes":  8417,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "11_major_test_not_ready_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\11_major_test_not_ready_mobile.png",
+                        "pngBytes":  8417,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "12_digibook_overview_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\12_digibook_overview_mobile.png",
+                        "pngBytes":  8451,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "13_concept_reader_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\13_concept_reader_mobile.png",
+                        "pngBytes":  11157,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "14_formula_register_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\14_formula_register_mobile.png",
+                        "pngBytes":  10804,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "15_common_misconceptions_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\15_common_misconceptions_mobile.png",
+                        "pngBytes":  10804,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "16_worked_example_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\16_worked_example_mobile.png",
+                        "pngBytes":  10804,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "17_self_check_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\17_self_check_mobile.png",
+                        "pngBytes":  10804,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "18_assessment_preview_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\18_assessment_preview_mobile.png",
+                        "pngBytes":  8605,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "19_coming_soon_content_mobile.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\19_coming_soon_content_mobile.png",
+                        "pngBytes":  7124,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "20_access_denied_state.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\20_access_denied_state.png",
+                        "pngBytes":  3200,
+                        "width":  393,
+                        "height":  873,
+                        "expectedWidth":  393,
+                        "expectedHeight":  873,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "21_fallback_360_mission.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\21_fallback_360_mission.png",
+                        "pngBytes":  6483,
+                        "width":  360,
+                        "height":  800,
+                        "expectedWidth":  360,
+                        "expectedHeight":  800,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "22_fallback_412_formula.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\22_fallback_412_formula.png",
+                        "pngBytes":  11992,
+                        "width":  412,
+                        "height":  915,
+                        "expectedWidth":  412,
+                        "expectedHeight":  915,
+                        "result":  "PASS"
+                    },
+                    {
+                        "screen":  "23_fallback_1366_crucible.png",
+                        "pngPath":  "docs\\patch_safety\\nebula_vs1_fix1_golden_screenshots_20260806150500\\23_fallback_1366_crucible.png",
+                        "pngBytes":  20026,
+                        "width":  1366,
+                        "height":  768,
+                        "expectedWidth":  1366,
+                        "expectedHeight":  768,
+                        "result":  "PASS"
+                    }
+                ]
+}
