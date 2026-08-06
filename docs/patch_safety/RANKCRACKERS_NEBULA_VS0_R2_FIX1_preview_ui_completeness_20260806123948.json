@@ -1,0 +1,45 @@
+﻿{
+    "verdict":  "NEBULA_VS0_R2_FIX1_PREVIEW_UI_COMPLETENESS_REPAIR_PASSED",
+    "generatedAtLocal":  "2026-08-06T12:39:49+05:30",
+    "branch":  "safety/rc-g2-pre-notification-schema",
+    "baselineHead":  "bc772128debd9c71c1ae841afe07e0a15b0f5d53",
+    "expectedBaselineHead":  "bc772128debd9c71c1ae841afe07e0a15b0f5d53",
+    "gradleHashBeforeAfter":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+    "gradleHashExpected":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+    "formulaRegisterCount":  7,
+    "misconceptionRegisterCount":  8,
+    "workedExamplesCount":  7,
+    "selfChecksCount":  10,
+    "rebuildWindowCount":  7,
+    "macroTestCount":  7,
+    "majorTestCount":  1,
+    "macroMajorStatus":  "NOT_READY / REVIEWED_QUESTION_POOL_NOT_AVAILABLE visual cards added",
+    "navigationStatus":  "DigiBook section navigator includes Overview, Concepts, Formula Register, Common Misconceptions, Worked Examples, Self-Checks, Assessment Preview",
+    "viewportsTested":  [
+                            "360x800",
+                            "393x873",
+                            "412x915",
+                            "1366x768"
+                        ],
+    "flutterAnalyze":  "PASS: targeted flutter analyze",
+    "flutterTests":  "PASS: bundle + UI completeness tests, 13/13",
+    "authGuardProof":  "Static guard test verifies FounderIdentity.isFounderUser, FirebaseAuth.instance.currentUser, founder access denied copy, founder email, and absence of harness/localStorage/queryParameters bypass markers.",
+    "screenshotStatus":  "No screenshot comparison claimed in FIX1. Targeted screenshot/browser re-review remains next gate NEBULA-VS0-R2-R1A.",
+    "safety":  {
+                   "noDeploy":  true,
+                   "noFirestoreWrite":  true,
+                   "noRulesDeploy":  true,
+                   "noCallableDeploy":  true,
+                   "noStudentPublication":  true,
+                   "noPreviewDataFabrication":  true,
+                   "noSyllabusAtomMutation":  true,
+                   "noCrucibleAllocationMutation":  true,
+                   "androidGradleTouched":  false
+               },
+    "modifiedFiles":  [
+                          "lib/features/preview/presentation/screens/nebula_founder_preview_screen.dart",
+                          "test/nebula_vs0/nebula_vs0_preview_ui_completeness_test.dart",
+                          "docs/patch_safety/RANKCRACKERS_NEBULA_VS0_R2_FIX1_preview_ui_completeness_20260806123948.json",
+                          "docs/patch_safety/RANKCRACKERS_NEBULA_VS0_R2_FIX1_preview_ui_completeness_20260806123948.md"
+                      ]
+}
