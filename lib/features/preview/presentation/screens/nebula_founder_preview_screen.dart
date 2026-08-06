@@ -87,13 +87,25 @@ class _NebulaFounderPreviewScreenState
               _digibook(data['digibook'] as Map<String, dynamic>),
               _assessment(data['assessment'] as Map<String, dynamic>),
             ];
+            const tabTitles = [
+              'Mission Overview',
+              'Syllabus',
+              'Crucible',
+              'DigiBook',
+              'Assessment',
+            ];
             if (widget.previewBundleForTest != null) {
               final index =
                   widget.initialTabIndexForTest.clamp(0, pages.length - 1);
               return Column(
                 children: [
-                  _header(data['manifest'] as Map<String, dynamic>),
-                  Expanded(child: pages[index]),
+                  index == 0
+                      ? _header(data['manifest'] as Map<String, dynamic>)
+                      : _compactHeader(
+                          data['manifest'] as Map<String, dynamic>,
+                          tabTitles[index],
+                        ),
+                  Expanded(child: _responsivePreviewBody(pages[index])),
                 ],
               );
             }
@@ -113,7 +125,11 @@ class _NebulaFounderPreviewScreenState
                     ],
                   ),
                   Expanded(
-                    child: TabBarView(children: pages),
+                    child: TabBarView(
+                      children: [
+                        for (final page in pages) _responsivePreviewBody(page),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -123,6 +139,57 @@ class _NebulaFounderPreviewScreenState
       ),
     );
   }
+
+  Widget _compactHeader(Map<String, dynamic> manifest, String sectionTitle) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
+      decoration: const BoxDecoration(
+        color: AppColors.surface,
+        border: Border(bottom: BorderSide(color: AppColors.borderSoft)),
+      ),
+      child: Row(children: [
+        const Icon(Icons.arrow_back_rounded, size: 18, color: Colors.white70),
+        const SizedBox(width: 8),
+        Expanded(
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(
+              manifest['displayMission']?.toString() ?? 'JEE Main 2027',
+              style: const TextStyle(
+                color: Colors.white70,
+                fontSize: 12,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            const SizedBox(height: 2),
+            Text(
+              sectionTitle,
+              style: const TextStyle(
+                color: AppColors.primaryText,
+                fontSize: 18,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+          ]),
+        ),
+        _badge('Founder Preview'),
+      ]),
+    );
+  }
+
+  Widget _responsivePreviewBody(Widget child) => LayoutBuilder(
+        builder: (context, constraints) {
+          if (constraints.maxWidth < 900) return child;
+          return Align(
+            alignment: Alignment.topCenter,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 1040),
+              child: child,
+            ),
+          );
+        },
+      );
 
   Widget _header(Map<String, dynamic> manifest) {
     final copy = Map<String, dynamic>.from(manifest['copy'] as Map? ?? {});
@@ -231,8 +298,6 @@ class _NebulaFounderPreviewScreenState
     final visible = subjects
         .where((s) => _subject == 'ALL' || s['name'] == _subject)
         .toList();
-    final held =
-        Map<String, dynamic>.from(manifest['heldDiagnostics'] as Map? ?? {});
     return ListView(
         padding: const EdgeInsets.fromLTRB(16, 16, 16, 96),
         children: [
@@ -263,18 +328,11 @@ class _NebulaFounderPreviewScreenState
                       onSelected: (_) => setState(() => _subject = s)))
                   .toList()),
           const SizedBox(height: 12),
+          if (visible.isNotEmpty)
+            _atomicTopicDetailCard(Map<String, dynamic>.from(visible.first)),
+          const SizedBox(height: 12),
           for (final subject in visible)
             _subjectTile(Map<String, dynamic>.from(subject)),
-          _card(Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text('Founder diagnostics - hidden from student tree',
-                style: _labelStyle),
-            const SizedBox(height: 8),
-            Text('Held/excluded atoms: ${held['count'] ?? 0}'),
-            Text('Reasons: ${held['byReason'] ?? {}}'),
-            const SizedBox(height: 6),
-            const Text(
-                'These records are hidden from the normal student syllabus tree.'),
-          ])),
         ]);
   }
 
@@ -332,7 +390,7 @@ class _NebulaFounderPreviewScreenState
               dense: true,
               title:
                   Text(raw['atomicTopicLabel']?.toString() ?? 'Atomic Topic'),
-              subtitle: Text(raw['atomId']?.toString() ?? ''),
+              subtitle: Text(_atomLearningPromise(raw)),
               trailing: Wrap(spacing: 6, children: [
                 _badge(raw['digibookReadiness']?.toString() ?? 'IN_PROGRESS'),
                 _badge(raw['assessmentReadiness']?.toString() ?? 'NOT_STARTED')
@@ -358,13 +416,31 @@ class _NebulaFounderPreviewScreenState
               'All preview-eligible atoms are allocated exactly once. Tests remain structural slots until reviewed question pools exist.'),
           const SizedBox(height: 12),
           _metrics([
-            ['Cycle', '${plan['cycleDays']} days'],
-            ['Phases', plan['phaseCount']],
-            ['Schedules', plan['scheduleCount']],
-            ['Duplicate allocation', allocation['duplicateAllocationCount']],
+            ['100-Day Plan', '${plan['cycleDays']} days'],
+            ['Learning phases', plan['phaseCount']],
+            ['Focused schedules', plan['scheduleCount']],
+            [
+              'Allocation check',
+              allocation['duplicateAllocationCount'] == 0 ? 'clean' : 'review'
+            ],
           ]),
+          const SizedBox(height: 12),
+          _card(Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Text('How the Crucible works',
+                    style: TextStyle(
+                        color: AppColors.gold, fontWeight: FontWeight.w900)),
+                SizedBox(height: 8),
+                Text(
+                    'Learning Schedule: a focused group of topics for a few days.'),
+                Text('Rebuild Window: revision and recovery time.'),
+                Text(
+                    'Macro Test: a phase-level test after review is complete.'),
+                Text('Major Test: a full-cycle test after approval.'),
+              ])),
           const SizedBox(height: 14),
-          Text('7-phase structure', style: _labelStyle),
+          Text('7 Learning Phases', style: _labelStyle),
           const SizedBox(height: 8),
           for (final raw in phases) _phaseCard(Map<String, dynamic>.from(raw)),
           const SizedBox(height: 14),
@@ -383,7 +459,7 @@ class _NebulaFounderPreviewScreenState
         Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(children: [
             Expanded(child: Text('Rebuild Windows', style: _labelStyle)),
-            _badge('${windows.length} STRUCTURE PREVIEW'),
+            _badge('${windows.length} revision windows'),
           ]),
           const SizedBox(height: 8),
           const Text(
@@ -408,14 +484,15 @@ class _NebulaFounderPreviewScreenState
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(children: [
-            Expanded(child: Text('Rebuild Window $number', style: _labelStyle)),
+            Expanded(
+                child: Text('Revision Window $number', style: _labelStyle)),
             _statusBadge(window['status']?.toString() ?? 'STRUCTURE_PREVIEW'),
           ]),
           const SizedBox(height: 6),
-          Text(
-              'Phase association: ${window['phaseId'] ?? 'STRUCTURE PREVIEW'}'),
+          Text('Linked phase: ${_phaseLabel(window['phaseId']?.toString())}'),
           const Text('Purpose: revision, recovery and gap correction'),
-          const Text('Learner mastery calculation: not active in this preview'),
+          const Text(
+              'Student status: preview only; progress is not active yet'),
         ]),
       );
 
@@ -446,28 +523,46 @@ class _NebulaFounderPreviewScreenState
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(children: [
             Expanded(
-                child: Text(
-                    '$label - ${slot['macroTestId'] ?? slot['majorTestId'] ?? 'slot'}',
-                    style: _labelStyle)),
+                child:
+                    Text(_studentTestTitle(label, slot), style: _labelStyle)),
             _statusBadge(slot['status']?.toString() ?? 'NOT_READY'),
           ]),
           const SizedBox(height: 6),
-          Text('Phase: ${slot['phaseId'] ?? 'full mission'}'),
-          Text(
-              'Reason: ${slot['reason'] ?? 'REVIEWED_QUESTION_POOL_NOT_AVAILABLE'}'),
+          Text('Coverage: ${_phaseLabel(slot['phaseId']?.toString())}'),
+          Text(_studentReadinessReason(slot['reason']?.toString())),
         ]),
       );
   Widget _phaseCard(Map<String, dynamic> phase) {
-    return _card(Row(children: [
-      CircleAvatar(child: Text('${phase['phaseNumber']}')),
-      const SizedBox(width: 12),
-      Expanded(
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Text(phase['title']?.toString() ?? 'Phase', style: _labelStyle),
-        Text(
-            '${phase['atomCount']} atoms | ${phase['estimatedCoverage']}% coverage'),
-      ])),
+    final number = phase['phaseNumber']?.toString() ?? '-';
+    final title = phase['title']?.toString() ?? 'Learning Phase';
+    return _card(
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        CircleAvatar(child: Text(number)),
+        const SizedBox(width: 12),
+        Expanded(
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text('Phase $number - $title', style: _labelStyle),
+          const SizedBox(height: 4),
+          Text(
+              '${phase['atomCount']} focused topics | ${phase['estimatedCoverage']}% mission coverage'),
+        ])),
+      ]),
+      const SizedBox(height: 10),
+      const Text('Phase Detail',
+          style: TextStyle(color: Colors.white54, fontSize: 12)),
+      const SizedBox(height: 4),
+      const Text(
+        'Purpose: build the learning base, keep the schedule understandable, and prepare for reviewed practice without pretending tests are live.',
+        style: TextStyle(color: Colors.white70, height: 1.35),
+      ),
+      const SizedBox(height: 8),
+      Wrap(spacing: 8, runSpacing: 8, children: [
+        _badge('DigiBook summary visible'),
+        _badge('Assessment under review'),
+        _badge('Schedule list available'),
+      ]),
     ]));
   }
 
@@ -480,18 +575,18 @@ class _NebulaFounderPreviewScreenState
             child: Text(
                 'Schedule ${schedule['scheduleNumber']} - Days ${schedule['dayRange']}',
                 style: _labelStyle)),
-        _badge(schedule['scheduleReadiness']?.toString() ??
+        _statusBadge(schedule['scheduleReadiness']?.toString() ??
             'INTERNAL_REVIEW_REQUIRED'),
       ]),
       const SizedBox(height: 8),
-      Text('Phase: ${schedule['phaseId']}'),
+      Text('Phase: ${_phaseLabel(schedule['phaseId']?.toString())}'),
       Text(
-          'Syllabus atoms allocated: ${(schedule['assignedAtomIds'] as List? ?? []).length}'),
-      Text('Subject mix: ${schedule['subjectMix'] ?? {}}'),
+          'What to learn: ${(schedule['assignedAtomIds'] as List? ?? []).length} focused topics'),
+      Text('Topic mix: ${_studentSubjectMix(schedule['subjectMix'])}'),
       Text(
-          'DigiBook available: ${schedule['digibookAvailableCount']} | In progress: ${schedule['digibookMissingCount']}'),
+          'DigiBook: ${schedule['digibookAvailableCount']} ready, ${schedule['digibookMissingCount']} being prepared'),
       Text(
-          'Question pool ready: ${schedule['questionPoolReadyCount']} | Micro test: ${schedule['microTestStatus']}'),
+          'Test status: ${_studentStatus(schedule['microTestStatus']?.toString() ?? 'NOT_READY')}'),
       if (pilots.isNotEmpty) ...[
         const SizedBox(height: 8),
         _badge('MECHANICS FOUNDATIONS DIGIBOOK DEMO'),
@@ -555,22 +650,8 @@ class _NebulaFounderPreviewScreenState
           ])),
           _formulaRegisterSection(formulas),
           _misconceptionSection(misconceptions),
-          _card(Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text('Worked Examples', style: _labelStyle),
-            const SizedBox(height: 8),
-            for (final raw in examples)
-              ExpansionTile(
-                tilePadding: EdgeInsets.zero,
-                title: Text(raw['concept']?.toString() ?? 'Example'),
-                subtitle: Text(raw['finalResult']?.toString() ?? ''),
-                children: [
-                  _kv('Given', raw['given']),
-                  _kv('Find', raw['find']),
-                  _kv('Principle', raw['principleUsed']),
-                  _kv('Common error', raw['commonError']),
-                ],
-              ),
-          ])),
+          if (examples.isNotEmpty)
+            _workedExampleDetail(Map<String, dynamic>.from(examples.first)),
           _card(Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text('Self-Checks', style: _labelStyle),
             const SizedBox(height: 8),
@@ -590,9 +671,67 @@ class _NebulaFounderPreviewScreenState
             const Text(
                 'Preview only - results will not be saved. Full assessment remains under internal academic review.'),
           ])),
-          _card(Text(missing['reason']?.toString() ?? 'Content in progress')),
+          _comingSoonState(missing),
         ]);
   }
+
+  Widget _workedExampleDetail(Map<String, dynamic> raw) {
+    final steps =
+        (raw['steps'] as List? ?? []).map((e) => e.toString()).toList();
+    return _card(
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text('Worked Example', style: _labelStyle),
+      const SizedBox(height: 8),
+      Text(raw['concept']?.toString() ?? 'Example',
+          style: const TextStyle(
+              color: AppColors.primaryText,
+              fontSize: 18,
+              fontWeight: FontWeight.w900)),
+      const SizedBox(height: 10),
+      _detailLine('Problem', raw['find']),
+      _detailLine('Given', raw['given']),
+      _detailLine('Method', raw['principleUsed']),
+      if (steps.isNotEmpty) ...[
+        const SizedBox(height: 10),
+        const Text('Solution',
+            style: TextStyle(color: Colors.white54, fontSize: 12)),
+        const SizedBox(height: 4),
+        for (var i = 0; i < steps.length; i++)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 4),
+            child: Text('Step ${i + 1}: ${steps[i]}'),
+          ),
+      ],
+      _detailLine('Final Result', raw['finalResult']),
+      _detailLine('Concept Takeaway', raw['reasonablenessCheck']),
+      _detailLine('Common error to avoid', raw['commonError']),
+    ]));
+  }
+
+  Widget _comingSoonState(Map<String, dynamic> missing) => _card(
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Row(children: [
+            const Icon(Icons.hourglass_empty_rounded, color: AppColors.gold),
+            const SizedBox(width: 8),
+            Expanded(child: Text('Content Being Prepared', style: _labelStyle)),
+          ]),
+          const SizedBox(height: 10),
+          const Text(
+            'This syllabus topic is verified, but its DigiBook lesson is still under academic preparation.',
+            style: TextStyle(color: Colors.white70, height: 1.35),
+          ),
+          const SizedBox(height: 10),
+          Text(missing['reason']?.toString() ??
+              'Empty fake reader pages are blocked until reviewed teaching content exists.'),
+          const SizedBox(height: 12),
+          Wrap(spacing: 8, runSpacing: 8, children: [
+            _actionChip(Icons.account_tree_outlined, 'Return to Syllabus'),
+            _actionChip(Icons.timeline_outlined, 'View Crucible Schedule'),
+            _actionChip(
+                Icons.menu_book_outlined, 'Open Available Pilot DigiBook'),
+          ]),
+        ]),
+      );
 
   Widget _sectionNavigator(List<String> labels) => _card(
         Wrap(
@@ -719,7 +858,10 @@ class _NebulaFounderPreviewScreenState
           _metrics([
             ['Questions', assessment['itemCount']],
             ['Points', assessment['totalPoints']],
-            ['Answer review', assessment['answerReviewStatus']],
+            [
+              'Answer review',
+              _studentReviewStatus(assessment['answerReviewStatus']?.toString())
+            ],
             [
               'Student ready',
               assessment['studentPublishReady'] == true ? 'YES' : 'NO'
@@ -735,7 +877,7 @@ class _NebulaFounderPreviewScreenState
                 contentPadding: EdgeInsets.zero,
                 leading: const Icon(Icons.assignment_outlined,
                     color: AppColors.gold),
-                title: Text('${raw['itemId']} - ${raw['format']}'),
+                title: Text(_assessmentItemTitle(raw)),
                 subtitle: Text(raw['stem']?.toString() ?? '',
                     maxLines: 5, overflow: TextOverflow.ellipsis),
               ),
@@ -798,6 +940,124 @@ class _NebulaFounderPreviewScreenState
         ]),
       );
 
+  Widget _atomicTopicDetailCard(Map<String, dynamic> subject) {
+    final units = (subject['children'] as List? ?? []).cast<Map>();
+    if (units.isEmpty) return const SizedBox.shrink();
+    final unit = Map<String, dynamic>.from(units.first);
+    final chapters = (unit['children'] as List? ?? []).cast<Map>();
+    if (chapters.isEmpty) return const SizedBox.shrink();
+    final chapter = Map<String, dynamic>.from(chapters.first);
+    final topics = (chapter['children'] as List? ?? []).cast<Map>();
+    if (topics.isEmpty) return const SizedBox.shrink();
+    final topic = Map<String, dynamic>.from(topics.first);
+    final atoms = (topic['atoms'] as List? ?? []).cast<Map>();
+    if (atoms.isEmpty) return const SizedBox.shrink();
+    final atom = Map<String, dynamic>.from(atoms.first);
+    return _card(
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      Text('Atomic Topic Detail', style: _labelStyle),
+      const SizedBox(height: 8),
+      _hierarchyLine('Subject', subject['name']),
+      _hierarchyLine('Unit', unit['name']),
+      _hierarchyLine('Chapter', chapter['name']),
+      _hierarchyLine('Topic', topic['name']),
+      const Divider(height: 18),
+      Text(atom['atomicTopicLabel']?.toString() ?? 'Atomic Topic',
+          style: const TextStyle(
+              color: AppColors.primaryText,
+              fontSize: 18,
+              fontWeight: FontWeight.w900)),
+      const SizedBox(height: 6),
+      Text(_atomLearningPromise(atom),
+          style: const TextStyle(color: Colors.white70, height: 1.35)),
+      const SizedBox(height: 10),
+      Wrap(spacing: 8, runSpacing: 8, children: [
+        _badge(_studentStatus(
+            atom['digibookReadiness']?.toString() ?? 'IN_PROGRESS')),
+        _badge(_studentStatus(
+            atom['assessmentReadiness']?.toString() ?? 'NOT_STARTED')),
+      ]),
+    ]));
+  }
+
+  Widget _hierarchyLine(String label, Object? value) => Padding(
+        padding: const EdgeInsets.only(bottom: 5),
+        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          SizedBox(
+            width: 72,
+            child: Text(label,
+                style: const TextStyle(color: Colors.white54, fontSize: 12)),
+          ),
+          Expanded(
+            child: Text(value?.toString() ?? '-',
+                style: const TextStyle(fontWeight: FontWeight.w700)),
+          ),
+        ]),
+      );
+
+  String _atomLearningPromise(Map raw) {
+    final label = raw['atomicTopicLabel']?.toString().trim();
+    if (label == null || label.isEmpty) {
+      return 'This atomic topic is linked to the syllabus tree and will open its DigiBook, practice and review material when ready.';
+    }
+    return 'Learn $label through the syllabus tree, then connect it to DigiBook reading, Crucible practice and reviewed questions.';
+  }
+
+  String _phaseLabel(String? raw) {
+    if (raw == null || raw.trim().isEmpty) return 'Full mission';
+    final match = RegExp(r'phase_(\d+)').firstMatch(raw);
+    if (match != null) return 'Phase ${match.group(1)}';
+    return _studentStatus(raw);
+  }
+
+  String _studentSubjectMix(Object? value) {
+    if (value is Map) {
+      return value.entries
+          .map((entry) => '${entry.key}: ${entry.value} topics')
+          .join(', ');
+    }
+    final text = value?.toString().trim() ?? '';
+    if (text.isEmpty || text == '{}') return 'balanced mission mix';
+    return text;
+  }
+
+  String _studentReadinessReason(String? raw) {
+    switch (raw) {
+      case 'REVIEWED_QUESTION_POOL_NOT_AVAILABLE':
+      case 'REVIEWED_FULL_MISSION_QUESTION_POOL_NOT_AVAILABLE':
+        return 'Test questions are under academic review.';
+      case null:
+      case '':
+        return 'Academic review is pending.';
+      default:
+        return _studentStatus(raw);
+    }
+  }
+
+  String _studentTestTitle(String label, Map<String, dynamic> slot) {
+    if (label == 'Major Test') return 'Major Test - Full Mission Review';
+    final phase = _phaseLabel(slot['phaseId']?.toString());
+    return '$label - $phase Review';
+  }
+
+  String _studentReviewStatus(String? raw) {
+    switch (raw) {
+      case 'PENDING_INDEPENDENT_REVIEW':
+        return 'Under academic review';
+      case 'APPROVED':
+        return 'Approved';
+      default:
+        return _studentStatus(raw ?? 'UNDER_REVIEW');
+    }
+  }
+
+  String _assessmentItemTitle(Map raw) {
+    final format = raw['format']?.toString() == 'SINGLE_SELECT'
+        ? 'Single-choice question'
+        : _studentStatus(raw['format']?.toString() ?? 'Question');
+    return format;
+  }
+
   String _studentStatus(String raw) {
     switch (raw) {
       case 'AVAILABLE_FOR_FOUNDER_PREVIEW':
@@ -806,21 +1066,24 @@ class _NebulaFounderPreviewScreenState
         return 'DigiBook Available';
       case 'INTERNAL_REVIEW_REQUIRED':
       case 'UNDER_REVIEW':
-        return 'Assessment Under Review';
+      case 'PENDING_INDEPENDENT_REVIEW':
+        return 'Under Academic Review';
       case 'QUESTION_POOL_BLOCKED':
       case 'REVIEWED_QUESTION_POOL_NOT_AVAILABLE':
       case 'REVIEWED_FULL_MISSION_QUESTION_POOL_NOT_AVAILABLE':
-        return 'Test questions are still under academic review';
+        return 'Test Questions Under Review';
       case 'STRUCTURAL_SLOT_ONLY':
       case 'STRUCTURE_PREVIEW':
         return 'Structure Preview';
       case 'NOT_READY':
-        return 'Not Ready';
+        return 'Not Available Yet';
       case 'NOT_STARTED':
         return 'Not Started';
       case 'IN_PROGRESS':
       case 'CONTENT_IN_PROGRESS':
         return 'Content Being Prepared';
+      case 'CONTENT_PARTIAL':
+        return 'Content Partly Available';
       default:
         return raw.replaceAll('_', ' ').toLowerCase().split(' ').map((part) {
           if (part.isEmpty) return part;
@@ -919,17 +1182,6 @@ class _NebulaFounderPreviewScreenState
       ]),
     );
   }
-
-  Widget _kv(String label, Object? value) => Padding(
-        padding: const EdgeInsets.only(bottom: 8),
-        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          SizedBox(
-              width: 88,
-              child:
-                  Text(label, style: const TextStyle(color: Colors.white54))),
-          Expanded(child: Text(value?.toString() ?? '')),
-        ]),
-      );
 
   Widget _error(String error) => Center(
         child: Padding(

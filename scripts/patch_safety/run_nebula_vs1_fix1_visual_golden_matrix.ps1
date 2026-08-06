@@ -1,8 +1,8 @@
-﻿$ErrorActionPreference = "Continue"
+$ErrorActionPreference = "Continue"
 
 $testFile = "test\nebula_vs0\nebula_vs1_golden_visual_proof_test.dart"
-$goldenDir = "docs\patch_safety\nebula_vs1_fix2_real_text_screenshots_20260806190000"
-$outDir = "docs\patch_safety\nebula_vs1_fix2_visual_runner_20260806190000"
+$goldenDir = "docs\patch_safety\nebula_vs1_fix3_premium_student_screenshots_20260806193000"
+$outDir = "docs\patch_safety\nebula_vs1_fix3_visual_runner_20260806193000"
 New-Item -ItemType Directory -Force -Path $outDir | Out-Null
 New-Item -ItemType Directory -Force -Path $goldenDir | Out-Null
 
@@ -11,13 +11,13 @@ $screens = @(
   @{ name = "02_physics_syllabus_mobile.png"; width = 393; height = 873; marker = "Physics (165)" },
   @{ name = "03_chemistry_syllabus_mobile.png"; width = 393; height = 873; marker = "Chemistry (160)" },
   @{ name = "04_mathematics_syllabus_mobile.png"; width = 393; height = 873; marker = "Mathematics (92)" },
-  @{ name = "05_atomic_topic_detail_mobile.png"; width = 393; height = 873; marker = "Founder diagnostics - hidden from student tree" },
+  @{ name = "05_atomic_topic_detail_mobile.png"; width = 393; height = 873; marker = "Atomic Topic Detail" },
   @{ name = "06_crucible_overview_mobile.png"; width = 393; height = 873; marker = "7-phase structure" },
-  @{ name = "07_phase_detail_mobile.png"; width = 393; height = 873; marker = "Final Consolidation" },
+  @{ name = "07_phase_detail_mobile.png"; width = 393; height = 873; marker = "Phase 1 - Foundation Ignition" },
   @{ name = "08_schedule_detail_mobile.png"; width = 393; height = 873; marker = "Schedule 1 - Days 1-2" },
-  @{ name = "09_rebuild_windows_mobile.png"; width = 393; height = 873; marker = "Rebuild Window 7" },
-  @{ name = "10_macro_test_not_ready_mobile.png"; width = 393; height = 873; marker = "Macro Test - macro_test_1" },
-  @{ name = "11_major_test_not_ready_mobile.png"; width = 393; height = 873; marker = "Major Test - major_test_final" },
+  @{ name = "09_rebuild_windows_mobile.png"; width = 393; height = 873; marker = "Revision Window 7" },
+  @{ name = "10_macro_test_not_ready_mobile.png"; width = 393; height = 873; marker = "Macro Test - Phase 1 Review" },
+  @{ name = "11_major_test_not_ready_mobile.png"; width = 393; height = 873; marker = "Major Test - Full Mission Review" },
   @{ name = "12_digibook_overview_mobile.png"; width = 393; height = 873; marker = "Mechanics Foundations" },
   @{ name = "13_concept_reader_mobile.png"; width = 393; height = 873; marker = "Classical Mechanics" },
   @{ name = "14_formula_register_mobile.png"; width = 393; height = 873; marker = "Formula Register" },
@@ -29,13 +29,13 @@ $screens = @(
   @{ name = "20_access_denied_state.png"; width = 393; height = 873; marker = "Access Denied" },
   @{ name = "21_fallback_360_mission.png"; width = 360; height = 800; marker = "JEE Main 2027" },
   @{ name = "22_fallback_412_formula.png"; width = 412; height = 915; marker = "Formula Register" },
-  @{ name = "23_fallback_1366_crucible.png"; width = 1366; height = 768; marker = "Rebuild Window 7" }
+  @{ name = "23_fallback_1366_crucible.png"; width = 1366; height = 768; marker = "Revision Window 7" }
 )
 
 Add-Type -AssemblyName System.Drawing
 $results = @()
 foreach ($screen in $screens) {
-  $testName = "VS1 FIX2 Golden $($screen.name)"
+  $testName = "VS1 FIX3 Golden $($screen.name)"
   $pngPath = Join-Path $goldenDir $screen.name
   $logPath = Join-Path $outDir "$($screen.name).log.txt"
   $start = Get-Date

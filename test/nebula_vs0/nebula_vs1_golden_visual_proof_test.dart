@@ -10,7 +10,7 @@ import 'package:rank_crackers/core/theme/app_theme.dart';
 import 'package:rank_crackers/features/preview/presentation/screens/nebula_founder_preview_screen.dart';
 
 const _goldenDir =
-    '../../docs/patch_safety/nebula_vs1_fix2_real_text_screenshots_20260806190000';
+    '../../docs/patch_safety/nebula_vs1_fix3_premium_student_screenshots_20260806193000';
 
 Future<void> loadRealApplicationFontFamiliesForTest() async {
   GoogleFonts.config.allowRuntimeFetching = false;
@@ -185,12 +185,6 @@ Future<void> _applyCaseState(
   if (screenshotCase.scrollContainingText != null) {
     await _scrollToContainingText(tester, screenshotCase.scrollContainingText!);
   }
-  if (screenshotCase.tapExactText != null) {
-    final tapTarget = _exactText(screenshotCase.tapExactText!);
-    await _scrollToFinder(tester, tapTarget, screenshotCase.tapExactText!);
-    await tester.tap(tapTarget.first);
-    await tester.pump(const Duration(milliseconds: 250));
-  }
 }
 
 Future<void> _assertMarkers(_ScreenshotCase screenshotCase) async {
@@ -281,23 +275,23 @@ void main() {
       '05_atomic_topic_detail_mobile.png',
       const Size(393, 873),
       1,
-      scrollExactText: 'Founder diagnostics - hidden from student tree',
-      exactMarkers: ['Founder diagnostics - hidden from student tree'],
-      containingMarkers: ['Held/excluded atoms'],
+      scrollExactText: 'Atomic Topic Detail',
+      exactMarkers: ['Atomic Topic Detail'],
+      containingMarkers: ['Subject', 'Unit', 'Chapter', 'Topic'],
     ),
     _ScreenshotCase(
       '06_crucible_overview_mobile.png',
       const Size(393, 873),
       2,
-      exactMarkers: ['7-phase structure'],
+      exactMarkers: ['7 Learning Phases'],
       containingMarkers: ['100 days'],
     ),
     _ScreenshotCase(
       '07_phase_detail_mobile.png',
       const Size(393, 873),
       2,
-      scrollExactText: 'Final Consolidation',
-      exactMarkers: ['Final Consolidation'],
+      scrollExactText: 'Phase 1 - Foundation Ignition',
+      exactMarkers: ['Phase Detail', 'Phase 1 - Foundation Ignition'],
     ),
     _ScreenshotCase(
       '08_schedule_detail_mobile.png',
@@ -305,31 +299,31 @@ void main() {
       2,
       scrollExactText: 'Schedule 1 - Days 1-2',
       exactMarkers: ['Schedule 1 - Days 1-2'],
-      containingMarkers: ['Subject mix'],
+      containingMarkers: ['What to learn', 'Topic mix'],
     ),
     _ScreenshotCase(
       '09_rebuild_windows_mobile.png',
       const Size(393, 873),
       2,
-      scrollExactText: 'Rebuild Window 7',
-      exactMarkers: ['Rebuild Window 7'],
+      scrollExactText: 'Revision Window 7',
+      exactMarkers: ['Revision Window 7'],
       containingMarkers: ['revision, recovery and gap correction'],
     ),
     _ScreenshotCase(
       '10_macro_test_not_ready_mobile.png',
       const Size(393, 873),
       2,
-      scrollExactText: 'Macro Test - macro_test_1',
-      exactMarkers: ['Macro Test - macro_test_1'],
+      scrollExactText: 'Macro Test - Phase 1 Review',
+      exactMarkers: ['Macro Test - Phase 1 Review'],
       containingMarkers: ['reviewed question pools'],
     ),
     _ScreenshotCase(
       '11_major_test_not_ready_mobile.png',
       const Size(393, 873),
       2,
-      scrollExactText: 'Major Test - major_test_final',
-      exactMarkers: ['Major Test - major_test_final'],
-      containingMarkers: ['full mission'],
+      scrollExactText: 'Major Test - Full Mission Review',
+      exactMarkers: ['Major Test - Full Mission Review'],
+      containingMarkers: ['Full mission'],
     ),
     _ScreenshotCase(
       '12_digibook_overview_mobile.png',
@@ -367,9 +361,8 @@ void main() {
       const Size(393, 873),
       3,
       scrollExactText: 'Distance vs Displacement',
-      tapExactText: 'Distance vs Displacement',
-      exactMarkers: ['Worked Examples', 'Given'],
-      containingMarkers: ['Principle'],
+      exactMarkers: ['Worked Example', 'Given', 'Final Result'],
+      containingMarkers: ['Method', 'Solution'],
     ),
     _ScreenshotCase(
       '17_self_check_mobile.png',
@@ -390,9 +383,12 @@ void main() {
       '19_coming_soon_content_mobile.png',
       const Size(393, 873),
       3,
-      scrollContainingText:
-          'DigiBook is generated only from reviewed/accepted atomic teaching content.',
-      containingMarkers: ['Empty fake reader pages are blocked'],
+      scrollExactText: 'Content Being Prepared',
+      exactMarkers: ['Content Being Prepared'],
+      containingMarkers: [
+        'Return to Syllabus',
+        'Open Available Pilot DigiBook'
+      ],
     ),
     _ScreenshotCase(
       '20_access_denied_state.png',
@@ -419,14 +415,14 @@ void main() {
       '23_fallback_1366_crucible.png',
       const Size(1366, 768),
       2,
-      scrollExactText: 'Rebuild Window 7',
-      exactMarkers: ['Rebuild Window 7'],
+      scrollExactText: 'Revision Window 7',
+      exactMarkers: ['Revision Window 7'],
       containingMarkers: ['revision, recovery and gap correction'],
     ),
   ];
 
   for (final screenshotCase in cases) {
-    testWidgets('VS1 FIX2 Golden ${screenshotCase.fileName}', (tester) async {
+    testWidgets('VS1 FIX3 Golden ${screenshotCase.fileName}', (tester) async {
       await _capturePreviewGolden(tester, screenshotCase);
     });
   }
@@ -440,7 +436,6 @@ class _ScreenshotCase {
     this.subject,
     this.scrollExactText,
     this.scrollContainingText,
-    this.tapExactText,
     this.exactMarkers = const [],
     this.containingMarkers = const [],
     this.accessDenied = false,
@@ -452,7 +447,6 @@ class _ScreenshotCase {
   final String? subject;
   final String? scrollExactText;
   final String? scrollContainingText;
-  final String? tapExactText;
   final List<String> exactMarkers;
   final List<String> containingMarkers;
   final bool accessDenied;

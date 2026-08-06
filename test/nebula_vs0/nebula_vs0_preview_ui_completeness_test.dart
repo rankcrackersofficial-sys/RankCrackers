@@ -163,15 +163,15 @@ void main() {
       (tester) async {
     await pumpPreview(tester, size: const Size(393, 873), initialTabIndex: 2);
 
-    expect(find.text('7-phase structure'), findsWidgets);
+    await expectVisibleAfterScroll(tester, 'How the Crucible works');
+    await expectVisibleAfterScroll(tester, '7 Learning Phases');
     await expectVisibleAfterScroll(tester, 'Rebuild Windows');
-    await expectVisibleAfterScroll(tester, 'Rebuild Window 1');
-    await expectVisibleAfterScroll(tester, 'Structure Preview');
+    await expectVisibleAfterScroll(tester, 'Revision Window 1');
     await expectVisibleAfterScroll(tester, 'Macro and Major Test Readiness');
-    await expectVisibleAfterScroll(tester, 'Macro Test - macro_test_1');
-    await expectVisibleAfterScroll(tester, 'Major Test - major_test_final');
+    await expectVisibleAfterScroll(tester, 'Macro Test - Phase 1 Review');
+    await expectVisibleAfterScroll(tester, 'Major Test - Full Mission Review');
     await expectVisibleAfterScroll(
-        tester, 'Reason: REVIEWED_QUESTION_POOL_NOT_AVAILABLE');
+        tester, 'Test questions are under academic review.');
     expectNoFlutterException(tester);
   });
 
@@ -203,6 +203,9 @@ void main() {
     await expectVisibleAfterScroll(tester,
         'No production attempt. No marks persistence. No official answer-key claim.');
     expect(find.textContaining('studentPublishReady = true'), findsNothing);
+    expect(find.textContaining('PENDING_INDEPENDENT_REVIEW'), findsNothing);
+    expect(find.textContaining('SINGLE_SELECT'), findsNothing);
+    expect(find.textContaining('MF_ASI_01'), findsNothing);
     expectNoFlutterException(tester);
   });
   for (final size in <Size>[
