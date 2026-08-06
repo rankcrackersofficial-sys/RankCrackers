@@ -1,0 +1,48 @@
+﻿{
+    "verdict":  "NEBULA_VS1_BLOCKED_BY_MULTIPLE_UI_DEFECTS",
+    "phase":  "NEBULA-VS1 PREMIUM STUDENT PROTOTYPE POLISH",
+    "startingHead":  "60692800acba9ad06753080f1df4452425841d89",
+    "currentHeadBeforeCommit":  "60692800acba9ad06753080f1df4452425841d89",
+    "implementationStatus":  "CODE_AND_CORE_TESTS_PASS",
+    "screenshotStatus":  "PARTIAL_1_OF_20_BLOCKED_BY_HARNESS_LIFECYCLE",
+    "screenshotDir":  "docs/patch_safety/nebula_vs1_premium_student_prototype_screenshots_20260806140500",
+    "screenshots":  {
+                        "name":  "01_mission_landing_mobile.png",
+                        "length":  7753
+                    },
+    "productPolish":  {
+                          "syllabusStudentLabels":  "ADDED",
+                          "missionFirstNavigation":  "ADDED",
+                          "missionLanding":  "ADDED",
+                          "crucibleStudentReadinessCopy":  "ADDED",
+                          "assessmentPreviewSafetyCopy":  "PRESERVED",
+                          "digibookReaderStructure":  "PRESERVED_AND_POLISHED",
+                          "mobileOverflowActionChips":  "FIXED"
+                      },
+    "validation":  {
+                       "previewBundleAndUiTests":  "PASS_15_OF_15",
+                       "authenticatedBrowserProofClaimed":  false,
+                       "targetedAnalyze":  "PASS",
+                       "harnessTimeoutStatus":  "RUNNER_TIMEOUT_AFTER_OUTPUT_OPEN_TECHNICAL_FLAG",
+                       "goldenComparisonClaimed":  false,
+                       "screenshotHarness":  "BLOCKED_AFTER_FIRST_OUTPUT"
+                   },
+    "safety":  {
+                   "syllabusDataMutation":  "NO",
+                   "coverageWrite":  "NO",
+                   "androidGradleBlobHash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+                   "masteryWrite":  "NO",
+                   "deploy":  "NO",
+                   "crucibleAllocationMutation":  "NO",
+                   "firestoreWrite":  "NO",
+                   "callableDeploy":  "NO",
+                   "androidGradleTouched":  "NO",
+                   "streakWrite":  "NO",
+                   "founderGuardWeakened":  "NO",
+                   "rulesDeploy":  "NO",
+                   "normalStudentPublication":  "NO",
+                   "questionPackAttachment":  "NO",
+                   "progressWrite":  "NO"
+               },
+    "nextRecommendation":  "NEBULA_VS1_FIX1_SCREENSHOT_HARNESS_LIFECYCLE_REPAIR_OR_MANUAL_BROWSER_PREVIEW_PROOF before declaring full VS1 pass."
+}

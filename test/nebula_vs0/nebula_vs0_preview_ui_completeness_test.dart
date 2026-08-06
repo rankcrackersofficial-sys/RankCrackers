@@ -146,7 +146,7 @@ void main() {
 
   testWidgets('R2-FIX1 DigiBook renders formula and misconception sections',
       (tester) async {
-    await pumpPreview(tester, size: const Size(393, 873), initialTabIndex: 2);
+    await pumpPreview(tester, size: const Size(393, 873), initialTabIndex: 3);
 
     expect(find.text('Mechanics Foundations'), findsOneWidget);
     await expectVisibleAfterScroll(tester, 'Formula Register');
@@ -161,12 +161,12 @@ void main() {
 
   testWidgets('R2-FIX1 Crucible renders rebuild windows and test readiness',
       (tester) async {
-    await pumpPreview(tester, size: const Size(393, 873), initialTabIndex: 1);
+    await pumpPreview(tester, size: const Size(393, 873), initialTabIndex: 2);
 
     expect(find.text('7-phase structure'), findsWidgets);
     await expectVisibleAfterScroll(tester, 'Rebuild Windows');
     await expectVisibleAfterScroll(tester, 'Rebuild Window 1');
-    await expectVisibleAfterScroll(tester, 'STRUCTURAL_SLOT_ONLY');
+    await expectVisibleAfterScroll(tester, 'Structure Preview');
     await expectVisibleAfterScroll(tester, 'Macro and Major Test Readiness');
     await expectVisibleAfterScroll(tester, 'Macro Test - macro_test_1');
     await expectVisibleAfterScroll(tester, 'Major Test - major_test_final');
@@ -175,6 +175,36 @@ void main() {
     expectNoFlutterException(tester);
   });
 
+  testWidgets('VS1 mission landing is premium, truthful and preview-only',
+      (tester) async {
+    await pumpPreview(tester, size: const Size(393, 873));
+
+    expect(find.text('JEE Main 2027'), findsWidgets);
+    expect(find.text('INTERNAL FOUNDER PREVIEW'), findsWidgets);
+    expect(find.text('Explore Syllabus'), findsOneWidget);
+    expect(find.text('View Crucible Plan'), findsOneWidget);
+    expect(find.text('Open Pilot DigiBook'), findsOneWidget);
+    await expectVisibleAfterScroll(tester, 'Syllabus Verified');
+    await expectVisibleAfterScroll(tester, 'Structure Preview');
+    await expectVisibleAfterScroll(tester, 'DigiBook Available');
+    await expectVisibleAfterScroll(tester, 'Assessment Under Review');
+    expect(find.text('Reviewed tests'), findsOneWidget);
+    expect(find.text('In progress'), findsOneWidget);
+    expect(find.textContaining('No score'), findsWidgets);
+    expectNoFlutterException(tester);
+  });
+
+  testWidgets('VS1 assessment preview blocks production attempt language',
+      (tester) async {
+    await pumpPreview(tester, size: const Size(393, 873), initialTabIndex: 4);
+
+    expect(find.text('INTERNAL ASSESSMENT PREVIEW'), findsWidgets);
+    expect(find.textContaining('Results will not be saved'), findsWidgets);
+    await expectVisibleAfterScroll(tester,
+        'No production attempt. No marks persistence. No official answer-key claim.');
+    expect(find.textContaining('studentPublishReady = true'), findsNothing);
+    expectNoFlutterException(tester);
+  });
   for (final size in <Size>[
     const Size(360, 800),
     const Size(393, 873),
@@ -185,13 +215,13 @@ void main() {
         'R2-FIX1 preview renders key tabs at ${size.width}x${size.height}',
         (tester) async {
       await pumpPreview(tester, size: size);
-      expect(find.text('JEE Main 2027 - Internal Preview'), findsOneWidget);
-      await pumpPreview(tester, size: size, initialTabIndex: 1);
-      await expectVisibleAfterScroll(tester, 'Rebuild Windows');
+      expect(find.text('JEE Main 2027'), findsWidgets);
       await pumpPreview(tester, size: size, initialTabIndex: 2);
+      await expectVisibleAfterScroll(tester, 'Rebuild Windows');
+      await pumpPreview(tester, size: size, initialTabIndex: 3);
       await expectVisibleAfterScroll(tester, 'Formula Register');
       await expectVisibleAfterScroll(tester, 'Common Misconceptions');
-      await pumpPreview(tester, size: size, initialTabIndex: 3);
+      await pumpPreview(tester, size: size, initialTabIndex: 4);
       await expectVisibleAfterScroll(tester, 'INTERNAL ASSESSMENT PREVIEW');
       expectNoFlutterException(tester);
     });

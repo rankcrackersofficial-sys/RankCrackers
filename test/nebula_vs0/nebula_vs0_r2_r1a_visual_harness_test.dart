@@ -11,7 +11,7 @@ import 'package:rank_crackers/core/theme/app_theme.dart';
 import 'package:rank_crackers/features/preview/presentation/screens/nebula_founder_preview_screen.dart';
 
 const _screenshotDir =
-    'docs/patch_safety/nebula_vs0_r2_r1a_visual_screenshots_20260806124500';
+    'docs/patch_safety/nebula_vs1_premium_student_prototype_screenshots_20260806140500';
 
 Future<void> loadGoogleFontFamiliesForTest() async {
   final fontFile = File(
@@ -60,7 +60,7 @@ Future<void> _pumpPreview(
         theme: AppTheme.darkTheme,
         home: NebulaFounderPreviewScreen(
           key: ValueKey<String>(
-              'r1a-$initialTabIndex-${size.width}x${size.height}'),
+              'vs1-$initialTabIndex-${size.width}x${size.height}'),
           previewBundleForTest:
               Future<Map<String, dynamic>>.value(_loadPreviewBundle()),
           initialTabIndexForTest: initialTabIndex,
@@ -81,7 +81,7 @@ Future<void> _pumpPreview(
 
 Future<void> _scrollToText(WidgetTester tester, String text) async {
   final target = find.text(text);
-  for (var i = 0; i < 55 && target.evaluate().isEmpty; i++) {
+  for (var i = 0; i < 60 && target.evaluate().isEmpty; i++) {
     await tester.drag(
       find.byType(Scrollable).first,
       const Offset(0, -320),
@@ -139,40 +139,48 @@ void main() {
   });
 
   final cases = <_ScreenshotCase>[
-    _ScreenshotCase('01_digibook_overview_mobile.png', const Size(393, 873), 2),
-    _ScreenshotCase('02_formula_register_mobile.png', const Size(393, 873), 2,
-        'Formula Register'),
-    _ScreenshotCase('03_formula_register_long_expression_mobile.png',
-        const Size(412, 915), 2, 'v_avg = Total Distance / Total Time'),
-    _ScreenshotCase('04_common_misconceptions_mobile.png', const Size(393, 873),
-        2, 'Common Misconceptions'),
-    _ScreenshotCase('05_misconception_detail_mobile.png', const Size(393, 873),
-        2, 'Correct understanding'),
-    _ScreenshotCase('06_worked_examples_mobile.png', const Size(393, 873), 2,
-        'Worked Examples'),
+    _ScreenshotCase('01_mission_landing_mobile.png', const Size(393, 873), 0),
     _ScreenshotCase(
-        '07_self_checks_mobile.png', const Size(393, 873), 2, 'Self-Checks'),
-    _ScreenshotCase('08_crucible_overview_mobile.png', const Size(393, 873), 1),
-    _ScreenshotCase('09_rebuild_windows_mobile.png', const Size(393, 873), 1,
+        '02_physics_syllabus_mobile.png', const Size(393, 873), 1, 'Physics'),
+    _ScreenshotCase('03_chemistry_syllabus_mobile.png', const Size(393, 873), 1,
+        'Chemistry'),
+    _ScreenshotCase('04_mathematics_syllabus_mobile.png', const Size(393, 873),
+        1, 'Mathematics'),
+    _ScreenshotCase('05_atomic_topic_detail_mobile.png', const Size(393, 873),
+        1, 'Founder diagnostics - hidden from student tree'),
+    _ScreenshotCase('06_crucible_overview_mobile.png', const Size(393, 873), 2),
+    _ScreenshotCase('07_phase_detail_mobile.png', const Size(393, 873), 2,
+        'Foundation Ignition'),
+    _ScreenshotCase(
+        '08_schedule_detail_mobile.png', const Size(393, 873), 2, 'Schedule 1'),
+    _ScreenshotCase('09_rebuild_windows_mobile.png', const Size(393, 873), 2,
         'Rebuild Windows'),
     _ScreenshotCase('10_macro_test_not_ready_mobile.png', const Size(393, 873),
-        1, 'Macro Test - macro_test_1'),
+        2, 'Macro Test - macro_test_1'),
     _ScreenshotCase('11_major_test_not_ready_mobile.png', const Size(393, 873),
-        1, 'Major Test - major_test_final'),
+        2, 'Major Test - major_test_final'),
+    _ScreenshotCase('12_digibook_overview_mobile.png', const Size(393, 873), 3),
+    _ScreenshotCase('13_concept_reader_mobile.png', const Size(393, 873), 3,
+        'Concept reader'),
+    _ScreenshotCase('14_formula_register_mobile.png', const Size(393, 873), 3,
+        'Formula Register'),
+    _ScreenshotCase('15_common_misconceptions_mobile.png', const Size(393, 873),
+        3, 'Common Misconceptions'),
+    _ScreenshotCase('16_worked_example_mobile.png', const Size(393, 873), 3,
+        'Worked Examples'),
     _ScreenshotCase(
-      '12_coming_soon_content_state_mobile.png',
-      const Size(393, 873),
-      2,
-      'DigiBook is generated only from reviewed/accepted atomic teaching content. Empty fake reader pages are blocked.',
-    ),
-    _ScreenshotCase('13_full_digibook_desktop_fallback.png',
-        const Size(1366, 768), 2, 'Formula Register'),
-    _ScreenshotCase('14_full_crucible_desktop_fallback.png',
-        const Size(1366, 768), 1, 'Rebuild Windows'),
+        '17_self_check_mobile.png', const Size(393, 873), 3, 'Self-Checks'),
+    _ScreenshotCase('18_assessment_preview_mobile.png', const Size(393, 873), 4,
+        'INTERNAL ASSESSMENT PREVIEW'),
+    _ScreenshotCase('19_coming_soon_content_mobile.png', const Size(393, 873),
+        3, 'Content in progress'),
+    _ScreenshotCase('20_desktop_crucible_fallback.png', const Size(1366, 768),
+        2, 'Rebuild Windows'),
   ];
 
-  for (final screenshotCase in cases) {
-    testWidgets('R2-R1A captures ${screenshotCase.fileName}', (tester) async {
+  testWidgets('VS1 captures full premium student prototype screenshot set',
+      (tester) async {
+    for (final screenshotCase in cases) {
       await _captureState(
         tester,
         fileName: screenshotCase.fileName,
@@ -182,8 +190,8 @@ void main() {
       );
       expect(File('$_screenshotDir/${screenshotCase.fileName}').existsSync(),
           isTrue);
-    });
-  }
+    }
+  });
 }
 
 class _ScreenshotCase {
