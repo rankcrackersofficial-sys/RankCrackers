@@ -224,6 +224,17 @@ void main() {
     expect(find.textContaining('Chapter hierarchy pending verification'),
         findsWidgets);
 
+    final mathChip = find.widgetWithText(ChoiceChip, 'Mathematics');
+    expect(mathChip, findsOneWidget);
+    await tester.tap(mathChip);
+    await tester.pump(const Duration(milliseconds: 250));
+    expect(find.text('B.Tech.)'), findsNothing);
+    expect(find.textContaining('Paper 1 B E B Tech'), findsNothing);
+    expect(find.textContaining('Unit hierarchy pending verification'),
+        findsWidgets);
+    expect(find.textContaining('Chapter hierarchy pending verification'),
+        findsWidgets);
+
     await pumpPreview(
       tester,
       size: const Size(393, 873),

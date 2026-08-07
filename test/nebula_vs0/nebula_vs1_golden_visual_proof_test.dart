@@ -10,7 +10,7 @@ import 'package:rank_crackers/core/theme/app_theme.dart';
 import 'package:rank_crackers/features/preview/presentation/screens/nebula_founder_preview_screen.dart';
 
 const _goldenDir =
-    '../../docs/patch_safety/nebula_vs1_fix4_truthful_hierarchy_screenshots_20260807093000';
+    '../../docs/patch_safety/nebula_vs1_fix5_hierarchy_integrity_screenshots_20260807170000';
 
 Future<void> loadRealApplicationFontFamiliesForTest() async {
   GoogleFonts.config.allowRuntimeFetching = false;
@@ -442,7 +442,7 @@ void main() {
   ];
 
   for (final screenshotCase in cases) {
-    testWidgets('VS1 FIX4 Golden ${screenshotCase.fileName}', (tester) async {
+    testWidgets('VS1 FIX5 Golden ${screenshotCase.fileName}', (tester) async {
       await _capturePreviewGolden(tester, screenshotCase);
     });
   }

@@ -1,0 +1,296 @@
+{
+  "verdict": "NEBULA_VS1_FIX5_SYLLABUS_HIERARCHY_INTEGRITY_REPAIR_PASSED",
+  "startingHead": "2e864d835c9745b7988312faa7dd42c902ad3ecf",
+  "branch": "safety/rc-g2-pre-notification-schema",
+  "totalPreviewEligibleAtomsAudited": 417,
+  "sourceHierarchySuspiciousAtoms": 293,
+  "sourceSuspiciousBySubject": {
+    "Chemistry": 122,
+    "Mathematics": 92,
+    "Physics": 79
+  },
+  "sourceSuspiciousLevelCounts": {
+    "unit": 243,
+    "chapter": 255
+  },
+  "studentFacingSuspiciousDisplayCount": 0,
+  "studentFacingPolicy": "Show source-backed Unit/Chapter only when not generic, malformed, course-fragment, or over-specific; otherwise show hierarchy pending verification.",
+  "canonicalDataMutation": false,
+  "assetDiff": "",
+  "visualMatrix": {
+    "total": 23,
+    "pass": 23,
+    "fail": 0,
+    "unexpectedDuplicateHashGroups": 0,
+    "goldenDir": "docs\\patch_safety\\nebula_vs1_fix5_hierarchy_integrity_screenshots_20260807170000"
+  },
+  "sampleSuspiciousRepairs": [
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Actinoids - Electronic Configuration And Oxidation States.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U11_T_0DB42BEA_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Alcohols: Identification Of Primary, Secondary And Tertiary Alcohols, Mechanism Of Dehydration.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_C9AC8CA6_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Aldehyde And Ketones: Nature Of Carbonyl Group, Nucleophilic Addition To >C=O Group, Relative Reactivities Of Aldehydes And Ketones, Important Reactions Such As - Nucleophilic Addition Reactions (addition Of HCN, NH3 And Its Derivatives), Grignard Reagent, Oxidation, Reduction (Wolf Kishner And Clemmensen), The Acidity Of 𝐀 -hydrogen. Aldol Condensation, Cannizzaro Reaction, Haloform Reaction, Chemical Tests To Distinguish Between Aldehydes And Ketones.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_1206BA8A_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Aldehyde And Ketones: Nature Of Carbonyl Group, Nucleophilic Addition To >C=O Group, Relative Reactivities Of Aldehydes And Ketones, Important Reactions Such As - Nucleophilic Addition Reactions (addition Of HCN, NH3 And Its Derivatives), Grignard Reagent, Oxidation, Reduction (Wolf Kishner And Clemmensen), The Acidity Of 𝐀 -hydrogen. Aldol Condensation, Cannizzaro Reaction, Haloform Reaction, Chemical Tests To Distinguish Between Aldehydes And Ketones.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_1206BA8A_CH002",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Alkanes - Conformations: Sawhorse And Newman Projections (of Ethane), Mechanism Of Halogenation Of Alkanes.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_BCA9920C_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Alkenes - Geometrical Isomerism, Mechanism Of Electrophilic Addition, Addition Of Hydrogen, Halogens, Water, Hydrogen Halides (Markownikoffs And Peroxide Effect), Ozonolysis And Polymerization.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_B270826F_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Alkenes - Geometrical Isomerism, Mechanism Of Electrophilic Addition, Addition Of Hydrogen, Halogens, Water, Hydrogen Halides (Markownikoffs And Peroxide Effect), Ozonolysis And Polymerization.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_B270826F_CH002",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Alkynes - Acidic Character, Addition Of Hydrogen, Halogens, Water And Hydrogen Halides, Polymerization.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_D8B93C4B_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Amines: Nomenclature, Classification, Structure, Basic Character And Identification Of Primary, Secondary And Tertiary Amines And Their Basic Character.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U18_T_19C1F7E4_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Amines: Nomenclature, Classification, Structure, Basic Character And Identification Of Primary, Secondary And Tertiary Amines And Their Basic Character.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U18_T_19C1F7E4_CH002",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Aromatic Hydrocarbons - Nomenclature, Benzene - Structure And Aromaticity, Mechanism Of Electrophilic Substitution, Halogenation, Nitration.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_97ACB2E0_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Calculations Of Empirical Formulae And Molecular Formulae, Numerical Problems In Organic Quantitative Analysis,",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U13_T_0B6FC591_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "CARBOHYDRATES – Classification, Aldoses And Ketoses, Monosaccharides (glucose And Fructose) And Constituent Monosaccharides Of Oligosaccharides (sucrose, Lactose And Maltose).",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_69EF29B0_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "CARBOHYDRATES – Classification, Aldoses And Ketoses, Monosaccharides (glucose And Fructose) And Constituent Monosaccharides Of Oligosaccharides (sucrose, Lactose And Maltose).",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_69EF29B0_CH002",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Carboxylic Acids: Acidic Strength And Factors Affecting It.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_3944DA40_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Chemical Principles Involved In The Following Experiments: 1. Enthalpy Of Solution Of CuSO4 2. Enthalpy Of Neutralization Of Strong Acid And Strong Base. 3. Preparation Of Lyophilic And Lyophobic Sols. 4. Kinetic Study Of The Reaction Of Iodide Ions With Hydrogen Peroxide At Room Temperature.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_FE6942BA_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Chemical Principles Involved In The Following Experiments: 1. Enthalpy Of Solution Of CuSO4 2. Enthalpy Of Neutralization Of Strong Acid And Strong Base. 3. Preparation Of Lyophilic And Lyophobic Sols. 4. Kinetic Study Of The Reaction Of Iodide Ions With Hydrogen Peroxide At Room Temperature.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_FE6942BA_CH002",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Chemical Principles Involved In The Qualitative Salt Analysis: Cations – Pb2+, Cu2+, Al3+, Fe3+, Zn2+, Ni2+, Ca2+, Ba2+, Mg2+, NH4+ Anions- CO32−, S2-, SO42−, NO3-, NO2-, Cl-, Br-, I- ( Insoluble Salts Excluded).",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_7CAF568B_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Chemical Principles Involved In The Qualitative Salt Analysis: Cations – Pb2+, Cu2+, Al3+, Fe3+, Zn2+, Ni2+, Ca2+, Ba2+, Mg2+, NH4+ Anions- CO32−, S2-, SO42−, NO3-, NO2-, Cl-, Br-, I- ( Insoluble Salts Excluded).",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_7CAF568B_CH002",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    },
+    {
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "displayUnit": "Unit hierarchy pending verification",
+      "displayChapter": "Chapter hierarchy pending verification",
+      "topic": "Classification, Isomerism, IUPAC Nomenclature, General Methods Of Preparation, Properties And Reactions.",
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_671F479D_CH001",
+      "reasons": [
+        "unit",
+        "chapter"
+      ]
+    }
+  ],
+  "safety": [
+    "NO_FIRESTORE_WRITE",
+    "NO_DEPLOY",
+    "NO_STUDENT_PUBLISH",
+    "NO_CANONICAL_SYLLABUS_DATA_MUTATION",
+    "NO_CRUCIBLE_ALLOCATION_MUTATION"
+  ]
+}

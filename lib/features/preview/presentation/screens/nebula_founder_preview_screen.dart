@@ -1186,13 +1186,28 @@ class _NebulaFounderPreviewScreenState
     return labels;
   }
 
-  bool _isUnverifiedHierarchyLabel(Object? raw) {
-    final text = raw?.toString().trim().toLowerCase() ?? '';
-    return text.isEmpty || text == 'general unit' || text == 'general chapter';
+  bool _isUnverifiedHierarchyLabel(Object? raw, String level) {
+    final label = raw?.toString().trim() ?? '';
+    final text = label.toLowerCase();
+    final words =
+        label.split(RegExp(r'\s+')).where((part) => part.isNotEmpty).length;
+    final hasCourseFragment = RegExp(
+      r'(^|\b)(b\.?\s*tech|b\s*e\s*b\s*tech|paper\s*1|course|shift|exam)(\b|$)',
+      caseSensitive: false,
+    ).hasMatch(label);
+    final malformed = label.endsWith(')') || label.endsWith('.)');
+    final tooSpecificForLevel =
+        (level == 'Unit' && words > 6) || (level == 'Chapter' && words > 9);
+    return text.isEmpty ||
+        text == 'general unit' ||
+        text == 'general chapter' ||
+        hasCourseFragment ||
+        malformed ||
+        tooSpecificForLevel;
   }
 
   String _hierarchyDisplay(Object? raw, String level) {
-    if (_isUnverifiedHierarchyLabel(raw)) {
+    if (_isUnverifiedHierarchyLabel(raw, level)) {
       return '$level hierarchy pending verification';
     }
     return raw.toString();
