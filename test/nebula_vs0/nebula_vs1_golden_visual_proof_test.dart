@@ -10,7 +10,7 @@ import 'package:rank_crackers/core/theme/app_theme.dart';
 import 'package:rank_crackers/features/preview/presentation/screens/nebula_founder_preview_screen.dart';
 
 const _goldenDir =
-    '../../docs/patch_safety/nebula_vs1_fix3_premium_student_screenshots_20260806193000';
+    '../../docs/patch_safety/nebula_vs1_fix4_truthful_hierarchy_screenshots_20260807093000';
 
 Future<void> loadRealApplicationFontFamiliesForTest() async {
   GoogleFonts.config.allowRuntimeFetching = false;
@@ -53,7 +53,12 @@ Map<String, dynamic> _loadPreviewBundle() => {
 
 ThemeData _testTheme() => AppTheme.darkTheme;
 
-Future<void> _pumpPreview(WidgetTester tester, Size size, int tabIndex) async {
+Future<void> _pumpPreview(
+  WidgetTester tester,
+  Size size,
+  int tabIndex, {
+  String? viewMode,
+}) async {
   tester.view.physicalSize = size;
   tester.view.devicePixelRatio = 1;
   await tester.pumpWidget(
@@ -66,6 +71,7 @@ Future<void> _pumpPreview(WidgetTester tester, Size size, int tabIndex) async {
           previewBundleForTest:
               Future<Map<String, dynamic>>.value(_loadPreviewBundle()),
           initialTabIndexForTest: tabIndex,
+          initialViewModeForTest: viewMode,
         ),
       ),
     ),
@@ -217,7 +223,12 @@ Future<void> _capturePreviewGolden(
     );
     await tester.pump(const Duration(milliseconds: 400));
   } else {
-    await _pumpPreview(tester, screenshotCase.size, screenshotCase.tabIndex);
+    await _pumpPreview(
+      tester,
+      screenshotCase.size,
+      screenshotCase.tabIndex,
+      viewMode: screenshotCase.viewMode,
+    );
     await _applyCaseState(tester, screenshotCase);
   }
 
@@ -277,7 +288,12 @@ void main() {
       1,
       scrollExactText: 'Atomic Topic Detail',
       exactMarkers: ['Atomic Topic Detail'],
-      containingMarkers: ['Subject', 'Unit', 'Chapter', 'Topic'],
+      containingMarkers: [
+        'Subject',
+        'Unit hierarchy pending verification',
+        'Chapter hierarchy pending verification',
+        'Topic'
+      ],
     ),
     _ScreenshotCase(
       '06_crucible_overview_mobile.png',
@@ -290,16 +306,20 @@ void main() {
       '07_phase_detail_mobile.png',
       const Size(393, 873),
       2,
-      scrollExactText: 'Phase 1 - Foundation Ignition',
+      viewMode: 'phaseDetail',
       exactMarkers: ['Phase Detail', 'Phase 1 - Foundation Ignition'],
+      containingMarkers: ['Schedules', 'DigiBook ready'],
     ),
     _ScreenshotCase(
       '08_schedule_detail_mobile.png',
       const Size(393, 873),
       2,
-      scrollExactText: 'Schedule 1 - Days 1-2',
-      exactMarkers: ['Schedule 1 - Days 1-2'],
-      containingMarkers: ['What to learn', 'Topic mix'],
+      viewMode: 'scheduleDetail',
+      exactMarkers: ['Schedule Detail', 'Schedule 1 - Days 1-2'],
+      containingMarkers: [
+        'What to learn: 10 focused topics',
+        'DigiBook: 2 ready, 8 being prepared'
+      ],
     ),
     _ScreenshotCase(
       '09_rebuild_windows_mobile.png',
@@ -368,9 +388,9 @@ void main() {
       '17_self_check_mobile.png',
       const Size(393, 873),
       3,
-      scrollContainingText: 'Model idea:',
+      scrollContainingText: 'Reveal explanation',
       exactMarkers: ['Self-Checks'],
-      containingMarkers: ['Model idea:'],
+      containingMarkers: ['Reveal explanation', 'answer is hidden'],
     ),
     _ScreenshotCase(
       '18_assessment_preview_mobile.png',
@@ -383,7 +403,7 @@ void main() {
       '19_coming_soon_content_mobile.png',
       const Size(393, 873),
       3,
-      scrollExactText: 'Content Being Prepared',
+      viewMode: 'comingSoon',
       exactMarkers: ['Content Being Prepared'],
       containingMarkers: [
         'Return to Syllabus',
@@ -422,7 +442,7 @@ void main() {
   ];
 
   for (final screenshotCase in cases) {
-    testWidgets('VS1 FIX3 Golden ${screenshotCase.fileName}', (tester) async {
+    testWidgets('VS1 FIX4 Golden ${screenshotCase.fileName}', (tester) async {
       await _capturePreviewGolden(tester, screenshotCase);
     });
   }
@@ -439,6 +459,7 @@ class _ScreenshotCase {
     this.exactMarkers = const [],
     this.containingMarkers = const [],
     this.accessDenied = false,
+    this.viewMode,
   });
 
   final String fileName;
@@ -450,4 +471,5 @@ class _ScreenshotCase {
   final List<String> exactMarkers;
   final List<String> containingMarkers;
   final bool accessDenied;
+  final String? viewMode;
 }

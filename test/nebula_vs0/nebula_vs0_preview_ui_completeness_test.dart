@@ -39,6 +39,7 @@ Future<void> pumpPreview(
   WidgetTester tester, {
   Size size = const Size(393, 873),
   int initialTabIndex = 0,
+  String? initialViewMode,
 }) async {
   await tester.pumpWidget(const SizedBox.shrink());
   await tester.pump();
@@ -57,6 +58,7 @@ Future<void> pumpPreview(
         previewBundleForTest:
             Future<Map<String, dynamic>>.value(loadPreviewBundle()),
         initialTabIndexForTest: initialTabIndex,
+        initialViewModeForTest: initialViewMode,
       ),
     ),
   );
@@ -150,11 +152,12 @@ void main() {
 
     expect(find.text('Mechanics Foundations'), findsOneWidget);
     await expectVisibleAfterScroll(tester, 'Formula Register');
-    await expectVisibleAfterScroll(tester, 'FOR_01');
+    expect(find.text('FOR_01'), findsNothing);
     await expectVisibleAfterScroll(
         tester, 'v_avg = Total Distance / Total Time');
     await expectVisibleAfterScroll(tester, 'Common Misconceptions');
     await expectVisibleAfterScroll(tester, 'INCORRECT BELIEF');
+    expect(find.text('MIS_02'), findsNothing);
     await expectVisibleAfterScroll(tester, 'Correct understanding');
     expectNoFlutterException(tester);
   });
@@ -206,8 +209,55 @@ void main() {
     expect(find.textContaining('PENDING_INDEPENDENT_REVIEW'), findsNothing);
     expect(find.textContaining('SINGLE_SELECT'), findsNothing);
     expect(find.textContaining('MF_ASI_01'), findsNothing);
+    expect(find.textContaining(r'$20\text'), findsNothing);
     expectNoFlutterException(tester);
   });
+
+  testWidgets('VS1-FIX4 truthful hierarchy and schedule detail states',
+      (tester) async {
+    await pumpPreview(tester, size: const Size(393, 873), initialTabIndex: 1);
+    await expectVisibleAfterScroll(tester, 'Atomic Topic Detail');
+    expect(find.text('General Unit'), findsNothing);
+    expect(find.text('General Chapter'), findsNothing);
+    expect(find.textContaining('Unit hierarchy pending verification'),
+        findsWidgets);
+    expect(find.textContaining('Chapter hierarchy pending verification'),
+        findsWidgets);
+
+    await pumpPreview(
+      tester,
+      size: const Size(393, 873),
+      initialTabIndex: 2,
+      initialViewMode: 'scheduleDetail',
+    );
+    expect(find.text('Schedule Detail'), findsWidgets);
+    expect(
+        find.textContaining('What to learn: 10 focused topics'), findsWidgets);
+    expect(find.textContaining('DigiBook: 2 ready, 8 being prepared'),
+        findsWidgets);
+    expectNoFlutterException(tester);
+  });
+
+  testWidgets('VS1-FIX4 learning interactions hide answers and internal ids',
+      (tester) async {
+    await pumpPreview(tester, size: const Size(393, 873), initialTabIndex: 3);
+    await expectVisibleAfterScroll(tester, 'Reveal explanation (preview)');
+    expect(find.textContaining('Model idea:'), findsNothing);
+    expect(find.textContaining('JEE_2026_'), findsNothing);
+    expect(find.textContaining('authorizedAtomId'), findsNothing);
+
+    await pumpPreview(
+      tester,
+      size: const Size(393, 873),
+      initialTabIndex: 3,
+      initialViewMode: 'comingSoon',
+    );
+    expect(find.text('Content Being Prepared'), findsWidgets);
+    expect(find.text('Self-Checks'), findsNothing);
+    expect(find.text('Assessment Preview'), findsNothing);
+    expectNoFlutterException(tester);
+  });
+
   for (final size in <Size>[
     const Size(360, 800),
     const Size(393, 873),

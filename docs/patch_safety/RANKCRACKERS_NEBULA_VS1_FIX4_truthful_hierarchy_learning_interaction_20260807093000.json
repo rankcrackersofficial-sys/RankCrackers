@@ -1,0 +1,31 @@
+{
+  "verdict": "NEBULA_VS1_FIX4_TRUTHFUL_HIERARCHY_LEARNING_INTERACTION_REPAIR_COMPLETED_WITH_VISUAL_PROOF_PENDING_MANUAL_PIXEL_ACCEPTANCE",
+  "startingHead": "fdb86c42c5e3c171e0415bae04746eec00397a8c",
+  "branch": "safety/rc-g2-pre-notification-schema",
+  "matrix": {
+    "total": 23,
+    "pass": 23,
+    "fail": 0,
+    "unexpectedDuplicateHashGroups": 0,
+    "goldenDir": "docs\\patch_safety\\nebula_vs1_fix4_truthful_hierarchy_screenshots_20260807093000"
+  },
+  "repairs": [
+    "Student-facing fake General Unit / General Chapter labels suppressed into hierarchy pending verification state.",
+    "Crucible schedule DigiBook readiness display now derives available + preparing = allocated.",
+    "Dedicated selected Phase Detail preview state added.",
+    "Dedicated selected Schedule Detail preview state added with allocated topic labels where source-backed labels are available.",
+    "Assessment stems pass through safe plain-text math cleanup; raw TeX dollar/text fragments blocked from preview tests.",
+    "Formula and misconception student surfaces hide internal IDs and atom IDs.",
+    "Self-check answers are hidden behind Reveal explanation preview state.",
+    "Concept reader now shows selected concept content plus learning links instead of only a topic index.",
+    "Coming Soon can render as a standalone unavailable-content state."
+  ],
+  "safety": {
+    "canonicalSyllabusDataMutated": false,
+    "crucibleAllocationMutated": false,
+    "studentPublish": false,
+    "deploy": false,
+    "firestoreWrite": false,
+    "knownUnrelatedDirtyFilePreserved": "android/app/build.gradle.kts"
+  }
+}

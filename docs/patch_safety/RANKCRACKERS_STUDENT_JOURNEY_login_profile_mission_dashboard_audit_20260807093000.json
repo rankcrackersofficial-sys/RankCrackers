@@ -1,0 +1,24 @@
+{
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_LOGIN_PROFILE_MISSION_DASHBOARD_AUDIT_COMPLETED_REPAIR_PHASE_REQUIRED",
+  "scope": [
+    "Login/Auth",
+    "Profile creation",
+    "Mission Realm",
+    "Dashboard"
+  ],
+  "smokeTest": "PASS: test/smoke_test.dart",
+  "analyzeFindings": [
+    "Dashboard/profile journey analyze has pre-existing warnings, mostly unused imports/fields and one async context lint.",
+    "MissionRealmScreen has SingleChildScrollView + minHeight Column + Spacer plus conditional NeverScrollableScrollPhysics; this is a real overflow/red-screen risk on small devices or empty/short mission lists.",
+    "UnifiedIdentityScreen is the current login/profile setup route for both /login and /profileSetup.",
+    "lib/features/profile/presentation/screens/exam_goal_selection_screen.dart is currently empty.",
+    "DeepProfileScreen plus tile widgets and SacredProfileCitadel exist as older/premium profile experience candidates; they should be reviewed before changing current profile creation UX."
+  ],
+  "recommendedNextPhase": "RANKCRACKERS_STUDENT_JOURNEY_FIX1_LOGIN_PROFILE_MISSION_DASHBOARD_OVERFLOW_AND_PROFILE_RESTORE_AUDIT",
+  "mustNotChange": [
+    "Do not remove existing UI options.",
+    "Do not simplify profile creation by deleting Founder/user choices.",
+    "Do not deploy.",
+    "Do not write Firestore."
+  ]
+}
