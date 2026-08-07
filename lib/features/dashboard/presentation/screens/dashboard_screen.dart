@@ -20,19 +20,17 @@ import '../../../../core/models/readiness_state.dart';
 import '../../../../core/models/momentum_state.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import '../providers/dashboard_provider.dart';
-import '../providers/dashboard_scroll_provider.dart';
 import '../widgets/battle_tools/battle_tools_grid.dart';
 import '../widgets/archive/archive_preview_card.dart';
 import '../widgets/notifications/latest_updates_card.dart';
-import '../../../../shared/widgets/tactical_button.dart';
 import '../../../../shared/widgets/command_header.dart';
-import '../../../opportunities/providers/opportunity_stats_provider.dart';
-import '../../../opportunities/providers/opportunity_match_provider.dart';
-import '../../../deep_profile/providers/warrior_profile_provider.dart';
 import '../../../opportunities/presentation/widgets/sentinel_intelligence_card.dart';
 
 class DashboardScreen extends ConsumerStatefulWidget {
-  const DashboardScreen({super.key});
+  const DashboardScreen(
+      {super.key, this.disableKnowledgeEngineInitForTest = false});
+
+  final bool disableKnowledgeEngineInitForTest;
 
   @override
   ConsumerState<DashboardScreen> createState() => _DashboardScreenState();
@@ -40,25 +38,23 @@ class DashboardScreen extends ConsumerStatefulWidget {
 
 class _DashboardScreenState extends ConsumerState<DashboardScreen> {
   String userName = 'Warrior';
-  String examName = 'UNSPECIFIED MISSION'; 
+  String examName = 'UNSPECIFIED MISSION';
   String? userPhoto;
 
   final ScrollController _scrollController = ScrollController();
-  
-  final GlobalKey _crucibleKey = GlobalKey();
-  final GlobalKey _digibookKey = GlobalKey();
-  final GlobalKey _syllabusKey = GlobalKey();
-  final GlobalKey _opportunitiesKey = GlobalKey();
 
   @override
   void initState() {
     super.initState();
     _loadData();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (!KnowledgeEngine.instance.isInitialized && !KnowledgeEngine.instance.isLoading) {
-        KnowledgeEngine.instance.initialize();
-      }
-    });
+    if (!widget.disableKnowledgeEngineInitForTest) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!KnowledgeEngine.instance.isInitialized &&
+            !KnowledgeEngine.instance.isLoading) {
+          KnowledgeEngine.instance.initialize();
+        }
+      });
+    }
   }
 
   @override
@@ -88,7 +84,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     final readiness = ref.watch(missionReadinessProvider);
     final sessionUser = ref.watch(sessionUserProvider).valueOrNull;
     final nodes = ref.watch(allNodesProvider);
-    
+
     final priorityNode = BattleEngine.getPriorityNode(
       nodes,
       knowledge.nodeStates,
@@ -116,50 +112,82 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
 
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: ResponsiveHelper.wp(context, 0.05)),
-                  child: _buildPreparationStatusSection(coverage, risk, readiness, momentum, nodes, knowledge),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: ResponsiveHelper.wp(context, 0.05)),
+                  child: _buildPreparationStatusSection(
+                      coverage, risk, readiness, momentum, nodes, knowledge),
                 ),
               ),
 
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 12, ResponsiveHelper.wp(context, 0.05), 0),
+                  padding: EdgeInsets.fromLTRB(
+                      ResponsiveHelper.wp(context, 0.05),
+                      12,
+                      ResponsiveHelper.wp(context, 0.05),
+                      0),
                   child: _buildTodayFocusSection(priorityNode, knowledge),
                 ),
               ),
-              
+
               // 🔱 FOLD 2: Core Pillars
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), ResponsiveHelper.sectionSpacing(context), ResponsiveHelper.wp(context, 0.05), 8),
-                  child: Text('MISSION HUB', style: AppTypography.label.copyWith(fontSize: 8, letterSpacing: 1.2, color: Colors.white12)),
+                  padding: EdgeInsets.fromLTRB(
+                      ResponsiveHelper.wp(context, 0.05),
+                      ResponsiveHelper.sectionSpacing(context),
+                      ResponsiveHelper.wp(context, 0.05),
+                      8),
+                  child: Text('MISSION HUB',
+                      style: AppTypography.label.copyWith(
+                          fontSize: 8,
+                          letterSpacing: 1.2,
+                          color: Colors.white12)),
                 ),
               ),
 
               SliverPadding(
-                padding: EdgeInsets.symmetric(horizontal: ResponsiveHelper.wp(context, 0.05)),
+                padding: EdgeInsets.symmetric(
+                    horizontal: ResponsiveHelper.wp(context, 0.05)),
                 sliver: SliverGrid.count(
                   crossAxisCount: 2,
                   crossAxisSpacing: 10,
                   mainAxisSpacing: 10,
                   childAspectRatio: 2.2,
                   children: [
-                    _compactPillarCard(Icons.local_fire_department, 'PRACTICE', () => context.go(AppRoutes.crucible), color: Colors.orangeAccent),
-                    _compactPillarCard(Icons.menu_book_rounded, 'DIGIBOOK', () => context.go(AppRoutes.digibook, extra: priorityNode), color: Colors.blueAccent),
-                    _compactPillarCard(Icons.account_tree_rounded, 'SYLLABUS', () => context.go(AppRoutes.syllabus), color: Colors.purpleAccent),
-                    _compactPillarCard(Icons.rocket_launch_rounded, 'JOBS', () => context.go(AppRoutes.recruitment), color: AppColors.gold),
+                    _compactPillarCard(Icons.local_fire_department, 'PRACTICE',
+                        () => context.go(AppRoutes.crucible),
+                        color: Colors.orangeAccent),
+                    _compactPillarCard(
+                        Icons.menu_book_rounded,
+                        'DIGIBOOK',
+                        () =>
+                            context.go(AppRoutes.digibook, extra: priorityNode),
+                        color: Colors.blueAccent),
+                    _compactPillarCard(Icons.account_tree_rounded, 'SYLLABUS',
+                        () => context.go(AppRoutes.syllabus),
+                        color: Colors.purpleAccent),
+                    _compactPillarCard(Icons.rocket_launch_rounded, 'JOBS',
+                        () => context.go(AppRoutes.recruitment),
+                        color: AppColors.gold),
                   ],
                 ),
               ),
 
               // 🔱 FOLD 3: Battle Tools
               SliverPadding(
-                padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), ResponsiveHelper.sectionSpacing(context), ResponsiveHelper.wp(context, 0.05), 0),
+                padding: EdgeInsets.fromLTRB(
+                    ResponsiveHelper.wp(context, 0.05),
+                    ResponsiveHelper.sectionSpacing(context),
+                    ResponsiveHelper.wp(context, 0.05),
+                    0),
                 sliver: SliverToBoxAdapter(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("BATTLE TOOLS", style: AppTypography.label.copyWith(fontSize: 8, color: Colors.white12)),
+                      Text("BATTLE TOOLS",
+                          style: AppTypography.label
+                              .copyWith(fontSize: 8, color: Colors.white12)),
                       const SizedBox(height: 12),
                       const BattleToolsGrid(),
                     ],
@@ -170,17 +198,26 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
               // 🔱 FOLD 4: Intelligence & Feed
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), ResponsiveHelper.sectionSpacing(context), ResponsiveHelper.wp(context, 0.05), 0),
+                  padding: EdgeInsets.fromLTRB(
+                      ResponsiveHelper.wp(context, 0.05),
+                      ResponsiveHelper.sectionSpacing(context),
+                      ResponsiveHelper.wp(context, 0.05),
+                      0),
                   child: const SentinelIntelligenceCard(),
                 ),
               ),
 
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 12, ResponsiveHelper.wp(context, 0.05), 0),
+                  padding: EdgeInsets.fromLTRB(
+                      ResponsiveHelper.wp(context, 0.05),
+                      12,
+                      ResponsiveHelper.wp(context, 0.05),
+                      0),
                   child: Consumer(
                     builder: (context, ref, child) {
-                      final notificationsAsync = ref.watch(notificationListProvider);
+                      final notificationsAsync =
+                          ref.watch(notificationListProvider);
                       return notificationsAsync.maybeWhen(
                         data: (list) {
                           if (list.isEmpty) return const SizedBox.shrink();
@@ -200,7 +237,11 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
 
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 12, ResponsiveHelper.wp(context, 0.05), 0),
+                  padding: EdgeInsets.fromLTRB(
+                      ResponsiveHelper.wp(context, 0.05),
+                      12,
+                      ResponsiveHelper.wp(context, 0.05),
+                      0),
                   child: const ArchivePreviewCard(),
                 ),
               ),
@@ -213,7 +254,8 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     );
   }
 
-  Widget _compactPillarCard(IconData icon, String label, VoidCallback onTap, {required Color color}) {
+  Widget _compactPillarCard(IconData icon, String label, VoidCallback onTap,
+      {required Color color}) {
     return GestureDetector(
       onTap: onTap,
       child: DarkCard(
@@ -223,21 +265,29 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
           children: [
             Icon(icon, color: color.withValues(alpha: 0.6), size: 18),
             const SizedBox(height: 2),
-            Text(label, style: AppTypography.label.copyWith(fontSize: 7, fontWeight: FontWeight.bold, color: Colors.white70)),
+            Text(label,
+                style: AppTypography.label.copyWith(
+                    fontSize: 7,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white70)),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildTodayFocusSection(MicroTopicNode? priorityNode, KnowledgeEngine knowledge) {
-    final state = priorityNode != null ? knowledge.getState(priorityNode.id) : null;
+  Widget _buildTodayFocusSection(
+      MicroTopicNode? priorityNode, KnowledgeEngine knowledge) {
+    final state =
+        priorityNode != null ? knowledge.getState(priorityNode.id) : null;
     final masteryValue = state?.mastery ?? 0.0;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("TODAY'S PRIORITY", style: AppTypography.label.copyWith(fontSize: 8, color: Colors.white12)),
+        Text("TODAY'S PRIORITY",
+            style: AppTypography.label
+                .copyWith(fontSize: 8, color: Colors.white12)),
         const SizedBox(height: 8),
         DarkCard(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -247,12 +297,16 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(priorityNode?.title ?? 'No Active Weakness', style: AppTypography.cardTitle.copyWith(fontSize: 13)),
-                    Text('Target: ${(masteryValue * 100).toInt()}% Mastery', style: AppTypography.body.copyWith(fontSize: 9, color: Colors.white24)),
+                    Text(priorityNode?.title ?? 'No Active Weakness',
+                        style: AppTypography.cardTitle.copyWith(fontSize: 13)),
+                    Text('Target: ${(masteryValue * 100).toInt()}% Mastery',
+                        style: AppTypography.body
+                            .copyWith(fontSize: 9, color: Colors.white24)),
                   ],
                 ),
               ),
-              const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white10, size: 12),
+              const Icon(Icons.arrow_forward_ios_rounded,
+                  color: Colors.white10, size: 12),
             ],
           ),
         ),
@@ -260,21 +314,39 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     );
   }
 
-  Widget _buildPreparationStatusSection(CoverageState? coverage, RiskState? risk, ReadinessState? readiness, MomentumState? momentum, List<MicroTopicNode> nodes, KnowledgeEngine knowledge) {
+  Widget _buildPreparationStatusSection(
+      CoverageState? coverage,
+      RiskState? risk,
+      ReadinessState? readiness,
+      MomentumState? momentum,
+      List<MicroTopicNode> nodes,
+      KnowledgeEngine knowledge) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("MISSION STATUS", style: AppTypography.label.copyWith(fontSize: 8, color: Colors.white12)),
+        Text("MISSION STATUS",
+            style: AppTypography.label
+                .copyWith(fontSize: 8, color: Colors.white12)),
         const SizedBox(height: 8),
         DarkCard(
           padding: const EdgeInsets.all(12),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _statusItem("READINESS", "${(readiness?.score ?? 0).toInt()}%", AppColors.gold),
-              _statusItem("COVERAGE", "${((coverage?.coveragePercent ?? 0) * 100).toInt()}%", Colors.blueAccent),
-              _statusItem("STREAK", "${momentum?.studyStreakDays ?? 0}d", Colors.orangeAccent),
-              _statusItem("RISK", risk?.highRisk == true ? "HIGH" : "LOW", risk?.highRisk == true ? Colors.redAccent : Colors.greenAccent),
+              _statusItem("READINESS", "${(readiness?.score ?? 0).toInt()}%",
+                  AppColors.gold),
+              _statusItem(
+                  "COVERAGE",
+                  "${((coverage?.coveragePercent ?? 0) * 100).toInt()}%",
+                  Colors.blueAccent),
+              _statusItem("STREAK", "${momentum?.studyStreakDays ?? 0}d",
+                  Colors.orangeAccent),
+              _statusItem(
+                  "RISK",
+                  risk?.highRisk == true ? "HIGH" : "LOW",
+                  risk?.highRisk == true
+                      ? Colors.redAccent
+                      : Colors.greenAccent),
             ],
           ),
         ),
@@ -285,8 +357,11 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
   Widget _statusItem(String label, String value, Color color) {
     return Column(
       children: [
-        Text(value, style: AppTypography.hero.copyWith(fontSize: 16, color: color)),
-        Text(label, style: AppTypography.label.copyWith(fontSize: 6, color: Colors.white10)),
+        Text(value,
+            style: AppTypography.hero.copyWith(fontSize: 16, color: color)),
+        Text(label,
+            style: AppTypography.label
+                .copyWith(fontSize: 6, color: Colors.white10)),
       ],
     );
   }

@@ -1,0 +1,37 @@
+﻿{
+    "verdict":  "RANKCRACKERS_STUDENT_JOURNEY_FIX2_VISUAL_DEVICE_QA_PASS_WITH_HARNESS_FLAGS",
+    "branch":  "safety/rc-g2-pre-notification-schema",
+    "baselineHead":  "8d1608e5a0436ad8cb9872165dcda1f5e9f6421d",
+    "knownUnrelatedDirtyFile":  "android/app/build.gradle.kts",
+    "knownUnrelatedDirtyFileHash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+    "screenshotDirectory":  "docs/patch_safety/student_journey_fix2_visual_device_qa_screenshots_20260807190000",
+    "pngScreenshots":  16,
+    "jsonRecords":  16,
+    "pixelAudit":  "docs/patch_safety/RANKCRACKERS_STUDENT_JOURNEY_FIX2_pixel_audit_20260807194800.json",
+    "pixelAuditSummary":  {
+                              "redScreenRisk":  0,
+                              "overflowStripeRisk":  0,
+                              "blankScreenshotRisk":  0,
+                              "dimensionsValid":  16
+                          },
+    "productRepair":  {
+                          "loginGoogleButtonOverflowFixed":  true,
+                          "profileRewrite":  false,
+                          "uiOptionRemoval":  false,
+                          "productionAuthWeakening":  false
+                      },
+    "harnessFlags":  [
+                         "flutter_test_runner_pending_async_or_timer_after_evidence_write"
+                     ],
+    "safety":  {
+                   "firestoreWrite":  false,
+                   "reviewQueueMutation":  false,
+                   "questionImport":  false,
+                   "atomicCellMutation":  false,
+                   "studentDelivery":  false,
+                   "deploy":  false,
+                   "gradleTouched":  false
+               },
+    "recommendedNextStep":  "RANKCRACKERS_STUDENT_JOURNEY_FIX3_PROFILE_PREMIUM_RESTORE_AND_HARNESS_TIMER_CLOSURE",
+    "targetedAnalyze":  "PASS_NO_ISSUES_FOUND"
+}

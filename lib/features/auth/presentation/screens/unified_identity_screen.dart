@@ -20,15 +20,23 @@ import '../providers/auth_provider.dart';
 import '../providers/mission_realm_provider.dart';
 
 class UnifiedIdentityScreen extends ConsumerStatefulWidget {
-  const UnifiedIdentityScreen({super.key});
+  const UnifiedIdentityScreen(
+      {super.key,
+      this.forceProfileSetupForTest = false,
+      this.disableFirebaseAuthLookupForTest = false,
+      this.disableAnimationsForTest = false});
+
+  final bool forceProfileSetupForTest;
+  final bool disableFirebaseAuthLookupForTest;
+  final bool disableAnimationsForTest;
 
   @override
-  ConsumerState<UnifiedIdentityScreen> createState() => _UnifiedIdentityScreenState();
+  ConsumerState<UnifiedIdentityScreen> createState() =>
+      _UnifiedIdentityScreenState();
 }
 
 class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     with SingleTickerProviderStateMixin {
-  
   // 🔱 Controllers
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -60,15 +68,22 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 3),
-    )..repeat(reverse: true);
+    );
+    if (widget.disableAnimationsForTest) {
+      _animationController.value = 0.5;
+    } else {
+      _animationController.repeat(reverse: true);
+    }
 
     glowAnimation = Tween<double>(begin: 0.06, end: 0.14).animate(
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
 
-    final user = FirebaseAuth.instance.currentUser;
-    if (user != null) {
-      nameController.text = user.displayName ?? '';
+    if (!widget.disableFirebaseAuthLookupForTest) {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        nameController.text = user.displayName ?? '';
+      }
     }
   }
 
@@ -93,7 +108,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     final email = emailController.text.trim();
     final password = passwordController.text.trim();
 
-    if (email.isEmpty || !RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(email)) {
+    if (email.isEmpty ||
+        !RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(email)) {
       _showSnackBar("Please enter a valid email address");
       return;
     }
@@ -121,7 +137,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   }
 
   Future<void> _continueWithGoogle() async {
-    final success = await ref.read(authNotifierProvider.notifier).signInWithGoogle();
+    final success =
+        await ref.read(authNotifierProvider.notifier).signInWithGoogle();
     if (success && mounted) {
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
@@ -137,11 +154,13 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
 
   Future<void> _forgotPassword() async {
     final email = emailController.text.trim();
-    if (email.isEmpty || !RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(email)) {
+    if (email.isEmpty ||
+        !RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(email)) {
       _showSnackBar("Please enter your email to reset password");
       return;
     }
-    final success = await ref.read(authNotifierProvider.notifier).forgotPassword(email);
+    final success =
+        await ref.read(authNotifierProvider.notifier).forgotPassword(email);
     if (success) _showSnackBar("Password reset link sent to your email.");
   }
 
@@ -177,10 +196,12 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
 
       // 🔱 STEP 1: Save Local Truth Immediately (Non-blocking)
       await SessionManager.completeLogin(); // 🔱 Ensure login state is marked
-      await SessionManager.completeProfile(studentName: name, studentCity: city);
-      await SessionManager.saveFirebaseIdentity(uid: user.uid, email: user.email ?? '');
+      await SessionManager.completeProfile(
+          studentName: name, studentCity: city);
+      await SessionManager.saveFirebaseIdentity(
+          uid: user.uid, email: user.email ?? '');
       await SessionManager.saveStudentMobile(mobile);
-      
+
       await SessionManager.saveMissionIdentity(
         examId: selectedMission!.examId,
         examName: selectedMission!.title,
@@ -194,28 +215,25 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
 
       // 🔱 STEP 2: Execute Instant Navigation after brief buffer for disk flush
       await Future.delayed(const Duration(milliseconds: 500));
-      
+
       if (!mounted) return;
       debugPrint("🔱 GOING TO DASHBOARD");
       context.go(AppRoutes.dashboard);
 
       // 🔱 STEP 3: Background Operations (Sovereign Threading)
       // These run after navigation starts and don't block the user.
-      unawaited(FirestoreService.saveUserProfile(
-        uid: user.uid, 
-        profileData: {
-          'name': name,
-          'city': city,
-          'state': stateStr,
-          'mobile': mobile,
-          'onboardingCompleted': true,
-          'selectedExam': selectedMission!.examId,
-          'selectedExamName': selectedMission!.title,
-          'updatedAt': FieldValue.serverTimestamp(),
-          'email': user.email,
-          'photoUrl': user.photoURL,
-        }
-      ).then((_) => debugPrint("🔱 CLOUD SYNC COMPLETE")));
+      unawaited(FirestoreService.saveUserProfile(uid: user.uid, profileData: {
+        'name': name,
+        'city': city,
+        'state': stateStr,
+        'mobile': mobile,
+        'onboardingCompleted': true,
+        'selectedExam': selectedMission!.examId,
+        'selectedExamName': selectedMission!.title,
+        'updatedAt': FieldValue.serverTimestamp(),
+        'email': user.email,
+        'photoUrl': user.photoURL,
+      }).then((_) => debugPrint("🔱 CLOUD SYNC COMPLETE")));
 
       // 🔱 LEVEL-12.4
       // Disable hydration temporarily
@@ -224,7 +242,6 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           .timeout(const Duration(seconds: 10))
           .then((_) => debugPrint("🔱 ENGINE HYDRATION TRIGGERED")));
       */
-
     } catch (e) {
       _showSnackBar("Identity Save Error: $e");
     } finally {
@@ -242,7 +259,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       context: context,
       backgroundColor: royalBlack,
       isScrollControlled: true,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (context) {
         List<String> filteredItems = items;
         return StatefulBuilder(
@@ -252,7 +270,9 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
               child: Column(
                 children: [
-                  Text(title, style: AppTypography.cardTitle.copyWith(color: goldAccent)),
+                  Text(title,
+                      style:
+                          AppTypography.cardTitle.copyWith(color: goldAccent)),
                   const SizedBox(height: 16),
                   TextField(
                     autofocus: true,
@@ -263,11 +283,16 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                       prefixIcon: const Icon(Icons.search, color: goldAccent),
                       filled: true,
                       fillColor: Colors.white10,
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none),
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: BorderSide.none),
                     ),
                     onChanged: (val) {
                       setModalState(() {
-                        filteredItems = items.where((i) => i.toLowerCase().contains(val.toLowerCase())).toList();
+                        filteredItems = items
+                            .where((i) =>
+                                i.toLowerCase().contains(val.toLowerCase()))
+                            .toList();
                       });
                     },
                   ),
@@ -277,7 +302,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                       itemCount: filteredItems.length,
                       itemBuilder: (context, index) {
                         return ListTile(
-                          title: Text(filteredItems[index], style: const TextStyle(color: Colors.white70)),
+                          title: Text(filteredItems[index],
+                              style: const TextStyle(color: Colors.white70)),
                           onTap: () {
                             onSelected(filteredItems[index]);
                             Navigator.pop(context);
@@ -297,7 +323,10 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
 
   void _showSnackBar(String message) {
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(backgroundColor: const Color(0xFF111625), content: Text(message, style: GoogleFonts.poppins(color: Colors.white))),
+      SnackBar(
+          backgroundColor: const Color(0xFF111625),
+          content:
+              Text(message, style: GoogleFonts.poppins(color: Colors.white))),
     );
   }
 
@@ -305,6 +334,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   Widget build(BuildContext context) {
     final authState = ref.watch(authNotifierProvider);
     final user = authState.user;
+    final showProfileSetup = widget.forceProfileSetupForTest || user != null;
     final allMissions = ref.watch(publishedRecruitmentsProvider);
 
     return Scaffold(
@@ -325,12 +355,10 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                     SizedBox(height: ResponsiveHelper.compactGap(context)),
                     _buildHeader(),
                     SizedBox(height: ResponsiveHelper.sectionSpacing(context)),
-
-                    if (user == null)
+                    if (!showProfileSetup)
                       _buildLoginSection(authState.isLoading)
                     else
                       _buildIdentityForm(allMissions),
-
                     SizedBox(height: ResponsiveHelper.sectionSpacing(context)),
                     _buildFooter(),
                   ],
@@ -339,7 +367,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                 if (ResponsiveHelper.isCompact(context)) {
                   return SingleChildScrollView(
                     physics: const BouncingScrollPhysics(),
-                    padding: EdgeInsets.symmetric(horizontal: ResponsiveHelper.wp(context, 0.07)),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: ResponsiveHelper.wp(context, 0.07)),
                     child: Center(
                       child: ConstrainedBox(
                         constraints: const BoxConstraints(maxWidth: 500),
@@ -353,7 +382,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                   child: ConstrainedBox(
                     constraints: const BoxConstraints(maxWidth: 500),
                     child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: ResponsiveHelper.wp(context, 0.07)),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: ResponsiveHelper.wp(context, 0.07)),
                       child: content,
                     ),
                   ),
@@ -380,7 +410,10 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
             height: screenWidth * 0.8,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              gradient: RadialGradient(colors: [goldAccent.withValues(alpha: glowAnimation.value), Colors.transparent]),
+              gradient: RadialGradient(colors: [
+                goldAccent.withValues(alpha: glowAnimation.value),
+                Colors.transparent
+              ]),
             ),
           );
         },
@@ -423,24 +456,36 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   Widget _buildLoginSection(bool isLoading) {
     return Column(
       children: [
-        _miniField(emailController, "Email Address", Icons.email_outlined, keyboard: TextInputType.emailAddress),
+        _miniField(emailController, "Email Address", Icons.email_outlined,
+            keyboard: TextInputType.emailAddress),
         const SizedBox(height: 12),
-        _miniField(passwordController, "Password", Icons.lock_outline_rounded, obscure: true),
+        _miniField(passwordController, "Password", Icons.lock_outline_rounded,
+            obscure: true),
         Align(
           alignment: Alignment.centerRight,
           child: TextButton(
             onPressed: _forgotPassword,
-            style: TextButton.styleFrom(padding: EdgeInsets.zero, minimumSize: const Size(50, 30)),
-            child: Text("Forgot Password?", style: GoogleFonts.poppins(color: goldAccent.withValues(alpha: 0.8), fontSize: 11)),
+            style: TextButton.styleFrom(
+                padding: EdgeInsets.zero, minimumSize: const Size(50, 30)),
+            child: Text("Forgot Password?",
+                style: GoogleFonts.poppins(
+                    color: goldAccent.withValues(alpha: 0.8), fontSize: 11)),
           ),
         ),
         const SizedBox(height: 12),
-        PremiumButton(text: "LOGIN / CONTINUE", onTap: _onEmailLogin, isLoading: isLoading),
+        PremiumButton(
+            text: "LOGIN / CONTINUE",
+            onTap: _onEmailLogin,
+            isLoading: isLoading),
         const SizedBox(height: 20),
         Row(
           children: [
             const Expanded(child: Divider(color: Colors.white10)),
-            Padding(padding: const EdgeInsets.symmetric(horizontal: 12), child: Text("OR", style: AppTypography.label.copyWith(fontSize: 8, color: Colors.white24))),
+            Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                child: Text("OR",
+                    style: AppTypography.label
+                        .copyWith(fontSize: 8, color: Colors.white24))),
             const Expanded(child: Divider(color: Colors.white10)),
           ],
         ),
@@ -460,8 +505,16 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset("assets/images/google.png", width: 20),
-                const SizedBox(width: 14),
-                Text("Continue with Google", style: GoogleFonts.poppins(fontWeight: FontWeight.w600, color: Colors.white)),
+                const SizedBox(width: 12),
+                Flexible(
+                  child: Text(
+                    "Continue with Google",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w600, color: Colors.white),
+                  ),
+                ),
               ],
             ),
           ),
@@ -474,13 +527,18 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     return Column(
       children: [
         _miniField(
-          nameController, 
-          "Full Name", 
+          nameController,
+          "Full Name",
           Icons.person_outline_rounded,
           capitalization: TextCapitalization.words,
           onChanged: (value) {
             if (value.isNotEmpty) {
-              final formatted = value.split(' ').map((e) => e.isEmpty ? '' : '${e[0].toUpperCase()}${e.substring(1).toLowerCase()}').join(' ');
+              final formatted = value
+                  .split(' ')
+                  .map((e) => e.isEmpty
+                      ? ''
+                      : '${e[0].toUpperCase()}${e.substring(1).toLowerCase()}')
+                  .join(' ');
               if (formatted != value) {
                 nameController.value = TextEditingValue(
                   text: formatted,
@@ -491,7 +549,9 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           },
         ),
         const SizedBox(height: 12),
-        _miniField(mobileController, "Mobile Number", Icons.phone_android_rounded, keyboard: TextInputType.phone),
+        _miniField(
+            mobileController, "Mobile Number", Icons.phone_android_rounded,
+            keyboard: TextInputType.phone),
         const SizedBox(height: 12),
         _miniSelector(
           title: "STATE / UT",
@@ -519,7 +579,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
             _showSearchSheet(
               title: "Select District",
               items: IndiaDistricts.districts[stateController.text] ?? [],
-              onSelected: (val) => setState(() => districtController.text = val),
+              onSelected: (val) =>
+                  setState(() => districtController.text = val),
             );
           },
         ),
@@ -541,7 +602,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         ),
         const SizedBox(height: 24),
         PremiumButton(
-          text: "ESTABLISH IDENTITY", 
+          text: "ESTABLISH IDENTITY",
           onTap: _establishIdentity,
           isLoading: _isSaving,
         ),
@@ -562,8 +623,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   }
 
   Widget _miniField(
-    TextEditingController controller, 
-    String hint, 
+    TextEditingController controller,
+    String hint,
     IconData icon, {
     TextInputType keyboard = TextInputType.text,
     bool obscure = false,
@@ -587,7 +648,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         decoration: InputDecoration(
           hintText: hint,
           hintStyle: const TextStyle(color: Colors.white10, fontSize: 13),
-          prefixIcon: Icon(icon, color: goldAccent.withValues(alpha: 0.5), size: 18),
+          prefixIcon:
+              Icon(icon, color: goldAccent.withValues(alpha: 0.5), size: 18),
           contentPadding: const EdgeInsets.symmetric(horizontal: 16),
           border: InputBorder.none,
         ),
@@ -608,24 +670,29 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         height: ResponsiveHelper.fieldHeight(context),
         padding: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
-          color: enabled ? AppColors.surface : AppColors.surface.withValues(alpha: 0.5),
+          color: enabled
+              ? AppColors.surface
+              : AppColors.surface.withValues(alpha: 0.5),
           borderRadius: BorderRadius.circular(12),
           border: Border.all(color: AppColors.borderSoft),
         ),
         child: Row(
           children: [
-            Icon(Icons.location_on_outlined, color: goldAccent.withValues(alpha: 0.5), size: 18),
+            Icon(Icons.location_on_outlined,
+                color: goldAccent.withValues(alpha: 0.5), size: 18),
             const SizedBox(width: 12),
             Expanded(
               child: Text(
                 controller.text.isEmpty ? hint : controller.text,
                 style: TextStyle(
-                  color: controller.text.isEmpty ? Colors.white10 : Colors.white70,
+                  color:
+                      controller.text.isEmpty ? Colors.white10 : Colors.white70,
                   fontSize: 13,
                 ),
               ),
             ),
-            const Icon(Icons.keyboard_arrow_down_rounded, color: Colors.white10, size: 18),
+            const Icon(Icons.keyboard_arrow_down_rounded,
+                color: Colors.white10, size: 18),
           ],
         ),
       ),
