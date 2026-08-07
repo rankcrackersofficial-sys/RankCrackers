@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:rank_crackers/core/knowledge/knowledge_engine.dart';
 import 'package:rank_crackers/features/auth/presentation/providers/mission_realm_provider.dart';
@@ -6,7 +7,6 @@ import 'package:rank_crackers/features/dashboard/presentation/screens/dashboard_
 import 'package:rank_crackers/core/router/app_router.dart';
 import 'package:rank_crackers/core/utils/app_routes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'helpers/firebase_test_setup.dart';
@@ -37,6 +37,14 @@ void main() {
       expect(publishedStatesProvider, isNotNull);
     });
 
+    test('Mission Realm compact layout keeps scrolling available', () {
+      final source = File(
+              'lib/features/auth/presentation/screens/mission_realm_screen.dart')
+          .readAsStringSync();
+      expect(source, contains('physics: const BouncingScrollPhysics()'));
+      expect(source, isNot(contains('NeverScrollableScrollPhysics')));
+      expect(source, isNot(contains('const Spacer()')));
+    });
     test('Dashboard widget construction Smoke Test', () {
       expect(const DashboardScreen(), isA<DashboardScreen>());
     });
@@ -44,12 +52,13 @@ void main() {
     test('App Router - Mobile /admin route is blocked', () {
       final router = appRouter;
       expect(router.configuration.routes, isNotEmpty);
-      
+
       // Find /admin route
-      final adminRoute = router.configuration.routes
-          .firstWhere((route) => route is GoRoute && route.path == AppRoutes.admin) as GoRoute;
+      final adminRoute = router.configuration.routes.firstWhere(
+              (route) => route is GoRoute && route.path == AppRoutes.admin)
+          as GoRoute;
       expect(adminRoute, isNotNull);
-      
+
       // Verify that builder exists and is a function
       expect(adminRoute.builder, isNotNull);
     });

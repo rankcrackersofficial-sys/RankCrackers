@@ -30,7 +30,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
 
   final TextEditingController stateController = TextEditingController();
   final TextEditingController examSearchController = TextEditingController();
-  
+
   List<String> filteredStates = [];
   List<Recruitment> searchResults = [];
 
@@ -65,9 +65,9 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
       recruitmentId: recruitment.id,
       examBlueprintId: recruitment.examBlueprintId,
       variantId: recruitment.variantCode,
-      variantName: recruitment.variantCode, 
+      variantName: recruitment.variantCode,
     );
-    
+
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('user_state', selectedState);
     await prefs.setString('user_exam_category', recruitment.examCategory);
@@ -93,8 +93,8 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     final q = query.toLowerCase();
     setState(() {
       searchResults = allMissions.where((r) {
-        return r.title.toLowerCase().contains(q) || 
-               r.state.toLowerCase().contains(q);
+        return r.title.toLowerCase().contains(q) ||
+            r.state.toLowerCase().contains(q);
       }).toList();
     });
   }
@@ -105,11 +105,13 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
 
     try {
       await _saveMissionSelection(recruitment);
-      
-      await KnowledgeEngine.instance.initialize(recruitment: recruitment, force: true)
+
+      await KnowledgeEngine.instance
+          .initialize(recruitment: recruitment, force: true)
           .timeout(const Duration(seconds: 5), onTimeout: () {
-            debugPrint("🔱 MISSION START: Engine hydration slow. Moving to dashboard anyway.");
-          });
+        debugPrint(
+            "🔱 MISSION START: Engine hydration slow. Moving to dashboard anyway.");
+      });
 
       if (!mounted) return;
       if (isSmart) {
@@ -136,10 +138,11 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   Widget build(BuildContext context) {
     final allMissions = ref.watch(publishedRecruitmentsProvider);
     final publishedStates = ref.watch(publishedStatesProvider);
-    
+
     final missions = allMissions.where((r) {
-      final isStateMatch = r.state.toLowerCase() == selectedState.toLowerCase() || 
-                           r.state.toLowerCase() == 'central';
+      final isStateMatch =
+          r.state.toLowerCase() == selectedState.toLowerCase() ||
+              r.state.toLowerCase() == 'central';
       final isCategoryMatch = r.examCategory == selectedCategory;
       return isStateMatch && isCategoryMatch;
     }).toList();
@@ -152,9 +155,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
           child: LayoutBuilder(
             builder: (context, constraints) {
               return SingleChildScrollView(
-                physics: (missions.length > 3 || isChangingState) 
-                    ? const BouncingScrollPhysics() 
-                    : const NeverScrollableScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 padding: EdgeInsets.symmetric(
                   horizontal: ResponsiveHelper.wp(context, 0.06),
                   vertical: ResponsiveHelper.hp(context, 0.02),
@@ -165,62 +166,72 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                       minHeight: constraints.maxHeight,
                       maxWidth: ResponsiveHelper.isTablet(context) ? 600 : 500,
                     ),
-                    child: Column( // 🔱 Removed IntrinsicHeight
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          _buildHeader(),
-                          SizedBox(height: ResponsiveHelper.compactGap(context)),
-                          
-                          if (isChangingState) ...[
-                            _buildStateSearchSection(publishedStates),
-                            const SizedBox(height: 16),
-                          ],
-    
-                          _buildCategorySelector(),
-                          SizedBox(height: ResponsiveHelper.sectionSpacing(context)),
-    
-                          SmartSearchField(
-                            title: 'SEARCH MISSION',
-                            hint: 'Type Exam Name',
-                            controller: examSearchController,
-                            suggestions: searchResults.map((e) => e.title).toList(),
-                            onChanged: (q) => _searchMissions(q, allMissions),
-                            onSelected: (title) {
-                              final recruitment = allMissions.firstWhere((r) => r.title == title);
-                              setState(() {
-                                selectedRecruitmentId = recruitment.id;
-                                selectedCategory = recruitment.examCategory;
-                                examSearchController.text = title;
-                                searchResults = [];
-                              });
-                            },
-                          ),
-    
-                          SizedBox(height: ResponsiveHelper.compactGap(context)),
-    
-                          if (missions.isNotEmpty) ...[
-                            Text(
-                              selectedCategory == 'competitive' ? '🛡 COMPETITIVE MISSIONS' : '🎓 QUALIFYING MISSIONS',
-                              style: AppTypography.label.copyWith(fontSize: 8, color: AppColors.gold, letterSpacing: 1.5),
-                            ),
-                            const SizedBox(height: 12),
-                            // 🔱 Performance Fix: Using a constrained list inside the Column
-                            ...missions.take(10).map((r) => _buildMissionCard(r)),
-                            if (missions.length > 10)
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8),
-                                child: Center(child: Text("+ ${missions.length - 10} more missions available", style: AppTypography.label.copyWith(fontSize: 6, color: Colors.white10))),
-                              ),
-                          ] else
-                            _buildEmptyState(),
-                          
-                          const Spacer(),
-                          if (_isLoading)
-                            const Center(child: Padding(
-                              padding: EdgeInsets.only(bottom: 20),
-                              child: CircularProgressIndicator(color: AppColors.gold),
-                            )),
+                      children: [
+                        _buildHeader(),
+                        SizedBox(height: ResponsiveHelper.compactGap(context)),
+                        if (isChangingState) ...[
+                          _buildStateSearchSection(publishedStates),
+                          const SizedBox(height: 16),
                         ],
+                        _buildCategorySelector(),
+                        SizedBox(
+                            height: ResponsiveHelper.sectionSpacing(context)),
+                        SmartSearchField(
+                          title: 'SEARCH MISSION',
+                          hint: 'Type Exam Name',
+                          controller: examSearchController,
+                          suggestions:
+                              searchResults.map((e) => e.title).toList(),
+                          onChanged: (q) => _searchMissions(q, allMissions),
+                          onSelected: (title) {
+                            final recruitment =
+                                allMissions.firstWhere((r) => r.title == title);
+                            setState(() {
+                              selectedRecruitmentId = recruitment.id;
+                              selectedCategory = recruitment.examCategory;
+                              examSearchController.text = title;
+                              searchResults = [];
+                            });
+                          },
+                        ),
+                        SizedBox(height: ResponsiveHelper.compactGap(context)),
+                        if (missions.isNotEmpty) ...[
+                          Text(
+                            selectedCategory == 'competitive'
+                                ? '🛡 COMPETITIVE MISSIONS'
+                                : '🎓 QUALIFYING MISSIONS',
+                            style: AppTypography.label.copyWith(
+                                fontSize: 8,
+                                color: AppColors.gold,
+                                letterSpacing: 1.5),
+                          ),
+                          const SizedBox(height: 12),
+                          // 🔱 Performance Fix: Using a constrained list inside the Column
+                          ...missions.take(10).map((r) => _buildMissionCard(r)),
+                          if (missions.length > 10)
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8),
+                              child: Center(
+                                  child: Text(
+                                      "+ ${missions.length - 10} more missions available",
+                                      style: AppTypography.label.copyWith(
+                                          fontSize: 6, color: Colors.white10))),
+                            ),
+                        ] else
+                          _buildEmptyState(),
+                        SizedBox(
+                            height: ResponsiveHelper.sectionSpacing(context)),
+                        if (_isLoading)
+                          const Center(
+                              child: Padding(
+                            padding: EdgeInsets.only(bottom: 20),
+                            child: CircularProgressIndicator(
+                                color: AppColors.gold),
+                          )),
+                      ],
                     ),
                   ),
                 ),
@@ -238,16 +249,27 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
       children: [
         Expanded(
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Mission Realm', style: AppTypography.hero.copyWith(fontSize: ResponsiveHelper.sp(context, 20))),
-              Text('Select the mission you are preparing to dominate.', style: AppTypography.body.copyWith(color: Colors.white30, fontSize: ResponsiveHelper.sp(context, 12))),
+              Text('Mission Realm',
+                  style: AppTypography.hero
+                      .copyWith(fontSize: ResponsiveHelper.sp(context, 20))),
+              Text('Select the mission you are preparing to dominate.',
+                  style: AppTypography.body.copyWith(
+                      color: Colors.white30,
+                      fontSize: ResponsiveHelper.sp(context, 12))),
             ],
           ),
         ),
         IconButton(
           onPressed: () => setState(() => isChangingState = !isChangingState),
-          icon: Icon(isChangingState ? Icons.close_rounded : Icons.edit_location_alt_rounded, color: AppColors.gold, size: 20),
+          icon: Icon(
+              isChangingState
+                  ? Icons.close_rounded
+                  : Icons.edit_location_alt_rounded,
+              color: AppColors.gold,
+              size: 20),
         ),
       ],
     );
@@ -310,7 +332,8 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
         title: 'NEW STATE COMMAND',
         hint: 'Search State',
         controller: stateController,
-        suggestions: filteredStates.where((s) => publishedStates.contains(s)).toList(),
+        suggestions:
+            filteredStates.where((s) => publishedStates.contains(s)).toList(),
         onChanged: _searchStates,
         onSelected: (state) async {
           setState(() {
@@ -341,10 +364,21 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
       child: Column(
         children: [
           ListTile(
-            onTap: () => setState(() => selectedRecruitmentId = isExpanded ? null : recruitment.id),
-            title: Text(recruitment.title, style: AppTypography.cardTitle.copyWith(fontSize: 13, color: isExpanded ? AppColors.gold : Colors.white70)),
-            subtitle: Text("${recruitment.state} • ${recruitment.year}", style: AppTypography.body.copyWith(fontSize: 9, color: Colors.white24)),
-            trailing: Icon(isExpanded ? Icons.keyboard_arrow_up_rounded : Icons.keyboard_arrow_down_rounded, color: Colors.white10, size: 16),
+            onTap: () => setState(() =>
+                selectedRecruitmentId = isExpanded ? null : recruitment.id),
+            title: Text(recruitment.title,
+                style: AppTypography.cardTitle.copyWith(
+                    fontSize: 13,
+                    color: isExpanded ? AppColors.gold : Colors.white70)),
+            subtitle: Text("${recruitment.state} • ${recruitment.year}",
+                style: AppTypography.body
+                    .copyWith(fontSize: 9, color: Colors.white24)),
+            trailing: Icon(
+                isExpanded
+                    ? Icons.keyboard_arrow_up_rounded
+                    : Icons.keyboard_arrow_down_rounded,
+                color: Colors.white10,
+                size: 16),
           ),
           if (isExpanded)
             Padding(
@@ -356,8 +390,14 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                       height: 38,
                       child: ElevatedButton(
                         onPressed: () => _startMission(recruitment, true),
-                        style: ElevatedButton.styleFrom(backgroundColor: AppColors.gold, foregroundColor: Colors.black, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
-                        child: const Text('SMART START', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold)),
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.gold,
+                            foregroundColor: Colors.black,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8))),
+                        child: const Text('SMART START',
+                            style: TextStyle(
+                                fontSize: 10, fontWeight: FontWeight.bold)),
                       ),
                     ),
                   ),
@@ -367,8 +407,13 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                       height: 38,
                       child: OutlinedButton(
                         onPressed: () => _startMission(recruitment, false),
-                        style: OutlinedButton.styleFrom(side: const BorderSide(color: AppColors.borderSoft), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8))),
-                        child: Text('QUICK START', style: AppTypography.label.copyWith(fontSize: 8, color: Colors.white60)),
+                        style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: AppColors.borderSoft),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8))),
+                        child: Text('QUICK START',
+                            style: AppTypography.label
+                                .copyWith(fontSize: 8, color: Colors.white60)),
                       ),
                     ),
                   ),
@@ -383,7 +428,10 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   Widget _buildEmptyState() {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 40),
-      child: Center(child: Text('No $selectedCategory missions for $selectedState.', style: AppTypography.body.copyWith(color: Colors.white10, fontSize: 13))),
+      child: Center(
+          child: Text('No $selectedCategory missions for $selectedState.',
+              style: AppTypography.body
+                  .copyWith(color: Colors.white10, fontSize: 13))),
     );
   }
 }

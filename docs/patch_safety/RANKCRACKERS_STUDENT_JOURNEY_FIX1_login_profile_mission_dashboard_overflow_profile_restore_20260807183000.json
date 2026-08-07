@@ -1,0 +1,47 @@
+{
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX1_MISSION_REALM_OVERFLOW_REPAIR_AND_PROFILE_RESTORE_AUDIT_PASS",
+  "officialRepo": "C:\\RankCrackers\\RankCrackers-55",
+  "branch": "safety/rc-g2-pre-notification-schema",
+  "startHead": "78acb29f72794fa6c2c6501d45205075637cdf51",
+  "unrelatedDirtyFilePreserved": "android/app/build.gradle.kts",
+  "unrelatedDirtyFileHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "scope": {
+    "missionRealmOverflowRepair": true,
+    "profileSourceComparisonAudit": true,
+    "dashboardSourceAudit": true,
+    "profileRewrite": false,
+    "uiOptionRemoval": false
+  },
+  "missionRealmRepair": {
+    "alwaysScrollable": true,
+    "removedNeverScrollableRisk": true,
+    "removedBottomSpacerRisk": true,
+    "preservedSmartStart": true,
+    "preservedQuickStart": true,
+    "preservedMissionOptions": true
+  },
+  "profileSources": {
+    "loginRoute": "UnifiedIdentityScreen",
+    "profileSetupRoute": "UnifiedIdentityScreen",
+    "deepProfileRoute": "DeepProfileScreen",
+    "premiumProfileCandidate": "SacredProfileCitadel",
+    "emptyGoalSelectionScreenLength": 0,
+    "decision": "DO_NOT_REWRITE_PROFILE_FROM_SCRATCH"
+  },
+  "validation": {
+    "dartFormat": "PASS",
+    "targetedAnalyze": "PASS",
+    "missionRealmCompactGuardTest": "PASS",
+    "diffCheck": "PASS",
+    "fullSmokeSuite": "NOT_CLAIMED_INITIAL_TIMEOUT"
+  },
+  "safety": {
+    "firestoreWrite": false,
+    "reviewQueueMutation": false,
+    "questionImport": false,
+    "atomicCellMutation": false,
+    "studentDelivery": false,
+    "deploy": false
+  },
+  "nextRecommendedPhase": "RANKCRACKERS_STUDENT_JOURNEY_FIX2_VISUAL_DEVICE_QA"
+}
