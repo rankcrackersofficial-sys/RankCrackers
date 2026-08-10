@@ -1,0 +1,31 @@
+{
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R3_BLOCKED_BY_NO_ANDROID_EMULATOR_TARGET",
+  "requiredBaseline": "151260168e4cca3ce17526b2b40d9cb218529ef8",
+  "currentHead": "151260168e4cca3ce17526b2b40d9cb218529ef8",
+  "gradleHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "requiredGradleHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "deviceFindings": {
+    "flutterDevices": ["Chrome", "Edge"],
+    "androidDeviceAvailable": false,
+    "flutterEmulatorsAvailable": false,
+    "adbAvailableInPath": false,
+    "firebaseCliVersion": "15.22.3"
+  },
+  "validationAttempted": {
+    "actualProfileSetupUi": false,
+    "emulatorUserCreation": false,
+    "profileWrite": false,
+    "readBack": false,
+    "successSealCapture": false
+  },
+  "safety": {
+    "productionWriteAttempted": false,
+    "firestoreWrite": false,
+    "authWrite": false,
+    "rulesChange": false,
+    "configSwap": false,
+    "deploy": false,
+    "studentDelivery": false
+  },
+  "requiredNextEnvironmentStep": "Make Android emulator/device available to Flutter with verified emulator host route, then rerun R3."
+}
