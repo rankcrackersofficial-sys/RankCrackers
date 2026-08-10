@@ -1,0 +1,139 @@
+{
+  "gate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4D_R1_FLUTTER_TOOLCHAIN_STABILIZATION_AND_FRESH_SAMSUNG_INSTALL_PROOF",
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4D_R1_BLOCKED_BY_GOOGLE_AUTH_ENVIRONMENT",
+  "baselineHead": "eff5dd5629675e5526efc4141239b14d4e214665",
+  "device": {
+    "model": "Samsung SM-S911B",
+    "serial": "RZCW12FBFXZ"
+  },
+  "toolchain": {
+    "flutter": "3.44.2 stable / Dart 3.12.2",
+    "vmCrashReproduced": "NO",
+    "controlledVerboseBuildExitCode": 0,
+    "debugBuildPassConsecutive": 2,
+    "freshApkInstall": "PASS"
+  },
+  "apk": {
+    "path": "build/app/outputs/flutter-apk/app-debug.apk",
+    "sizeBytes": 230087435,
+    "package": "com.rankcrackers.app",
+    "versionName": "1.0.0",
+    "versionCode": 1
+  },
+  "firebaseSafety": {
+    "authEmulatorPort9099": "LISTENING",
+    "firestoreEmulatorPort8080": "LISTENING",
+    "adbReverse": [
+      "tcp:9099 tcp:9099",
+      "tcp:8080 tcp:8080"
+    ],
+    "builtWithDartDefines": [
+      "RC_USE_FIREBASE_EMULATOR=true",
+      "RC_FIREBASE_EMULATOR_HOST=127.0.0.1"
+    ],
+    "explicitRuntimeDiagnosticFoundInLogcat": "NO",
+    "productionFirestoreWrite": "NO",
+    "productionDeploy": "NO"
+  },
+  "loginVisual": {
+    "freshSamsungInstall": "PASS",
+    "rankCrackersForeground": "PASS",
+    "emailPasswordControlsPresent": "PASS",
+    "showPasswordPresent": "PASS",
+    "loginFieldsHeavyShadedBoxes": "NO_BY_VALID_PNG_PIXEL_SAMPLING",
+    "pixelSampling": "valid_png_pixel_sampling.txt",
+    "validScreenshots": [
+      "01_login_initial_samsung_valid.png",
+      "02_email_focus_samsung_valid.png",
+      "03_password_focus_samsung_valid.png",
+      "05_google_loading_samsung_valid.png",
+      "07_google_final_state_samsung_valid.png"
+    ]
+  },
+  "googleAuth": {
+    "googleLoadingState": "PASS_OPENING_GOOGLE_VISIBLE",
+    "spinnerStuck": "NO",
+    "buttonReenabledAfterFailure": "PASS",
+    "rawErrorVisibleInCapturedUi": "NO",
+    "failureStage": "FIREBASE_AUTH_CREDENTIAL/firebase-credential-timeout",
+    "accountChooserProof": "NOT_PROVEN_IN_THIS_RUN",
+    "profileTransition": "NOT_REACHED_DUE_TO_GOOGLE_AUTH_ENVIRONMENT_BLOCK"
+  },
+  "worktree": {
+    "knownUnrelatedDirty": "android/app/build.gradle.kts",
+    "gradleHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+    "productCodeChangedInR1": "NO"
+  },
+  "safety": [
+    "NO_PRODUCTION_READ",
+    "NO_PRODUCTION_WRITE",
+    "NO_RULES_CHANGE",
+    "NO_FIREBASE_CONFIG_SWAP",
+    "NO_DEPLOY",
+    "NO_STUDENT_PUBLISH",
+    "NO_LOGIN_REDESIGN",
+    "NO_PROFILE_REWRITE",
+    "NO_UI_OPTION_REMOVAL",
+    "NO_GRADLE_SOURCE_EDIT"
+  ],
+  "evidenceFiles": {
+    "01_login_initial_samsung.xml": 6927,
+    "01_login_initial_samsung_valid.png": 456227,
+    "02_email_focus_samsung_valid.png": 483121,
+    "03_password_focus_samsung_valid.png": 525103,
+    "05_google_loading_samsung.xml": 6902,
+    "05_google_loading_samsung_valid.png": 466614,
+    "06_google_account_flow_samsung.xml": 6925,
+    "07_google_final_state_samsung.xml": 6925,
+    "07_google_final_state_samsung_valid.png": 521103,
+    "07d_relaunched_login_after_google_samsung.xml": 6903,
+    "adb_full_path.txt": 896,
+    "adb_get_state.txt": 18,
+    "adb_install.txt": 78,
+    "adb_launch.txt": 456,
+    "adb_relaunch_after_google.txt": 456,
+    "adb_relaunch_for_valid_png.txt": 456,
+    "adb_reverse_list.txt": 110,
+    "build_reproduce_exit_code.txt": 13,
+    "build_reproduce_verbose.log": 1659246,
+    "dart_version.txt": 170,
+    "deterministic_build_01.log": 11448,
+    "deterministic_build_01_apk.txt": 338,
+    "deterministic_build_01_exit_code.txt": 13,
+    "deterministic_build_02.log": 11448,
+    "deterministic_build_02_apk.txt": 338,
+    "deterministic_build_02_exit_code.txt": 13,
+    "disk_space.txt": 1950,
+    "env_backend_paths.txt": 740,
+    "evidence_file_inventory.txt": 3308,
+    "final_git_diff_name_status.txt": 66,
+    "final_git_status_short.txt": 248,
+    "final_gradle_hash.txt": 86,
+    "firebase_emulator_ports.txt": 0,
+    "firebase_emulator_ports_after_wait.txt": 318,
+    "firebase_emulator_ports_after_wait2.txt": 326,
+    "firebase_emulators_r1.err.log": 0,
+    "firebase_emulators_r1.out.log": 2560,
+    "flutter_devices.txt": 1228,
+    "flutter_doctor_v.txt": 3858,
+    "flutter_version.txt": 618,
+    "foreground_after_launch.txt": 368,
+    "google_final_foreground.txt": 368,
+    "google_tap_logcat.txt": 707948,
+    "google_tap_valid_png_logcat.txt": 442296,
+    "google_timeout_error_logcat.txt": 588864,
+    "java_version.txt": 1076,
+    "launch_logcat.txt": 344540,
+    "memory.txt": 272,
+    "package_identity.txt": 490,
+    "relaunch_after_google_foreground.txt": 368,
+    "targeted_analyze_after_install.txt": 8918,
+    "targeted_analyze_after_install_exit_code.txt": 13,
+    "valid_png_pixel_sampling.txt": 846,
+    "where_adb.txt": 796,
+    "where_dart.txt": 162,
+    "where_flutter.txt": 174,
+    "where_java.txt": 78
+  },
+  "recommendedNextStep": "R4D-R2_GOOGLE_FIREBASE_EMULATOR_CREDENTIAL_TIMEOUT_ROOT_CAUSE_AUDIT_OR_TEST_AUTH_ROUTE_DECISION"
+}
