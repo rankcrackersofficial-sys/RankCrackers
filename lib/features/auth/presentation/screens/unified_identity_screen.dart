@@ -37,7 +37,7 @@ class UnifiedIdentityScreen extends ConsumerStatefulWidget {
 
 class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     with SingleTickerProviderStateMixin {
-  // 🔱 Controllers
+  // Controllers
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
@@ -46,15 +46,23 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   final TextEditingController districtController = TextEditingController();
   final TextEditingController missionController = TextEditingController();
 
-  // 🔱 Focus Nodes
+  // Focus Nodes
   final FocusNode stateFocusNode = FocusNode();
   final FocusNode districtFocusNode = FocusNode();
   final FocusNode missionFocusNode = FocusNode();
 
-  // 🔱 State
+  // State
   List<String> districtsList = [];
   Recruitment? selectedMission;
   bool _isSaving = false;
+  bool _identityEstablished = false;
+
+  bool get _canSubmitIdentity =>
+      nameController.text.trim().isNotEmpty &&
+      mobileController.text.trim().length == 10 &&
+      stateController.text.trim().isNotEmpty &&
+      districtController.text.trim().isNotEmpty &&
+      selectedMission != null;
 
   late AnimationController _animationController;
   late Animation<double> glowAnimation;
@@ -79,6 +87,16 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
 
+    for (final controller in [
+      nameController,
+      mobileController,
+      stateController,
+      districtController,
+      missionController,
+    ]) {
+      controller.addListener(_refreshIdentityCta);
+    }
+
     if (!widget.disableFirebaseAuthLookupForTest) {
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
@@ -87,8 +105,21 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     }
   }
 
+  void _refreshIdentityCta() {
+    if (mounted) setState(() {});
+  }
+
   @override
   void dispose() {
+    for (final controller in [
+      nameController,
+      mobileController,
+      stateController,
+      districtController,
+      missionController,
+    ]) {
+      controller.removeListener(_refreshIdentityCta);
+    }
     emailController.dispose();
     passwordController.dispose();
     nameController.dispose();
@@ -103,7 +134,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     super.dispose();
   }
 
-  // 🔱 AUTH ACTIONS
+  // AUTH ACTIONS
   Future<void> _onEmailLogin() async {
     final email = emailController.text.trim();
     final password = passwordController.text.trim();
@@ -164,7 +195,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     if (success) _showSnackBar("Password reset link sent to your email.");
   }
 
-  // 🔱 IDENTITY ACTIONS
+  // IDENTITY ACTIONS
   Future<void> _establishIdentity() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
@@ -194,8 +225,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       final mobile = mobileController.text.trim();
       final stateStr = stateController.text.trim();
 
-      // 🔱 STEP 1: Save Local Truth Immediately (Non-blocking)
-      await SessionManager.completeLogin(); // 🔱 Ensure login state is marked
+      // Step 1: Save local truth immediately.
+      await SessionManager.completeLogin();
       await SessionManager.completeProfile(
           studentName: name, studentCity: city);
       await SessionManager.saveFirebaseIdentity(
@@ -210,17 +241,21 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         variantId: selectedMission!.variantCode,
       );
 
-      debugPrint("🔱 PROFILE SAVED");
-      debugPrint("🔱 MISSION SAVED");
+      debugPrint("PROFILE SAVED");
+      debugPrint("MISSION SAVED");
 
-      // 🔱 STEP 2: Execute Instant Navigation after brief buffer for disk flush
+      if (mounted) {
+        setState(() => _identityEstablished = true);
+      }
+
+      // Step 2: Show the established badge briefly before dashboard navigation.
       await Future.delayed(const Duration(milliseconds: 500));
 
       if (!mounted) return;
-      debugPrint("🔱 GOING TO DASHBOARD");
+      debugPrint("GOING TO DASHBOARD");
       context.go(AppRoutes.dashboard);
 
-      // 🔱 STEP 3: Background Operations (Sovereign Threading)
+      // Step 3: Background operations run after navigation starts.
       // These run after navigation starts and don't block the user.
       unawaited(FirestoreService.saveUserProfile(uid: user.uid, profileData: {
         'name': name,
@@ -233,14 +268,14 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         'updatedAt': FieldValue.serverTimestamp(),
         'email': user.email,
         'photoUrl': user.photoURL,
-      }).then((_) => debugPrint("🔱 CLOUD SYNC COMPLETE")));
+      }).then((_) => debugPrint("CLOUD SYNC COMPLETE")));
 
-      // 🔱 LEVEL-12.4
+      // LEVEL-12.4
       // Disable hydration temporarily
       /*
       unawaited(KnowledgeEngine.instance.initialize(recruitment: selectedMission, force: true)
           .timeout(const Duration(seconds: 10))
-          .then((_) => debugPrint("🔱 ENGINE HYDRATION TRIGGERED")));
+          .then((_) => debugPrint("ENGINE HYDRATION TRIGGERED")));
       */
     } catch (e) {
       _showSnackBar("Identity Save Error: $e");
@@ -249,7 +284,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     }
   }
 
-  // 🔱 MODAL SELECTORS
+  // MODAL SELECTORS
   void _showSearchSheet({
     required String title,
     required List<String> items,
@@ -358,32 +393,23 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                     if (!showProfileSetup)
                       _buildLoginSection(authState.isLoading)
                     else
-                      _buildIdentityForm(allMissions),
+                      _buildIdentityForm(allMissions,
+                          userPhotoUrl: user?.photoURL),
                     SizedBox(height: ResponsiveHelper.sectionSpacing(context)),
                     _buildFooter(),
                   ],
                 );
-
-                if (ResponsiveHelper.isCompact(context)) {
-                  return SingleChildScrollView(
-                    physics: const BouncingScrollPhysics(),
-                    padding: EdgeInsets.symmetric(
-                        horizontal: ResponsiveHelper.wp(context, 0.07)),
-                    child: Center(
-                      child: ConstrainedBox(
-                        constraints: const BoxConstraints(maxWidth: 500),
-                        child: content,
-                      ),
-                    ),
-                  );
-                }
-
-                return Center(
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(maxWidth: 500),
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: ResponsiveHelper.wp(context, 0.07)),
+                return SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  keyboardDismissBehavior:
+                      ScrollViewKeyboardDismissBehavior.onDrag,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: ResponsiveHelper.wp(context, 0.07),
+                    vertical: ResponsiveHelper.compactGap(context),
+                  ),
+                  child: Center(
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 500),
                       child: content,
                     ),
                   ),
@@ -523,97 +549,270 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     );
   }
 
-  Widget _buildIdentityForm(List<Recruitment> missions) {
-    return Column(
-      children: [
-        _miniField(
-          nameController,
-          "Full Name",
-          Icons.person_outline_rounded,
-          capitalization: TextCapitalization.words,
-          onChanged: (value) {
-            if (value.isNotEmpty) {
-              final formatted = value
-                  .split(' ')
-                  .map((e) => e.isEmpty
-                      ? ''
-                      : '${e[0].toUpperCase()}${e.substring(1).toLowerCase()}')
-                  .join(' ');
-              if (formatted != value) {
-                nameController.value = TextEditingValue(
-                  text: formatted,
-                  selection: TextSelection.collapsed(offset: formatted.length),
-                );
+  Widget _buildIdentityForm(
+    List<Recruitment> missions, {
+    String? userPhotoUrl,
+  }) {
+    return Container(
+      padding: EdgeInsets.all(ResponsiveHelper.isCompact(context) ? 14 : 18),
+      decoration: BoxDecoration(
+        color: AppColors.surface.withValues(alpha: 0.72),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: goldAccent.withValues(alpha: 0.16)),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.26),
+            blurRadius: 22,
+            offset: const Offset(0, 12),
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          _buildProfilePhotoPrompt(userPhotoUrl),
+          const SizedBox(height: 14),
+          _miniField(
+            nameController,
+            "Full Name",
+            Icons.person_outline_rounded,
+            capitalization: TextCapitalization.words,
+            onChanged: (value) {
+              if (value.isNotEmpty) {
+                final formatted = value
+                    .split(' ')
+                    .map((e) => e.isEmpty
+                        ? ''
+                        : '${e[0].toUpperCase()}${e.substring(1).toLowerCase()}')
+                    .join(' ');
+                if (formatted != value) {
+                  nameController.value = TextEditingValue(
+                    text: formatted,
+                    selection:
+                        TextSelection.collapsed(offset: formatted.length),
+                  );
+                }
               }
-            }
-          },
-        ),
-        const SizedBox(height: 12),
-        _miniField(
-            mobileController, "Mobile Number", Icons.phone_android_rounded,
-            keyboard: TextInputType.phone),
-        const SizedBox(height: 12),
-        _miniSelector(
-          title: "STATE / UT",
-          hint: "Select State",
-          controller: stateController,
-          onTap: () => _showSearchSheet(
-            title: "Select State",
-            items: IndiaStates.statesAndUTs,
-            onSelected: (val) {
-              setState(() {
-                stateController.text = val;
-                districtController.clear();
-              });
             },
           ),
-        ),
-        const SizedBox(height: 12),
-        _miniSelector(
-          title: "DISTRICT",
-          hint: "Select District",
-          controller: districtController,
-          enabled: stateController.text.isNotEmpty,
-          onTap: () {
-            if (stateController.text.isEmpty) return;
-            _showSearchSheet(
-              title: "Select District",
-              items: IndiaDistricts.districts[stateController.text] ?? [],
-              onSelected: (val) =>
-                  setState(() => districtController.text = val),
-            );
-          },
-        ),
-        const SizedBox(height: 12),
-        _miniSelector(
-          title: "TARGET MISSION",
-          hint: "Select Exam",
-          controller: missionController,
-          onTap: () => _showSearchSheet(
-            title: "Select Target Mission",
-            items: missions.map((m) => m.title).toList(),
-            onSelected: (val) {
-              setState(() {
-                missionController.text = val;
-                selectedMission = missions.firstWhere((m) => m.title == val);
-              });
+          const SizedBox(height: 12),
+          _miniField(
+            mobileController,
+            "Mobile Number",
+            Icons.phone_android_rounded,
+            keyboard: TextInputType.phone,
+          ),
+          const SizedBox(height: 12),
+          _miniSelector(
+            title: "STATE / UT",
+            hint: "Select State",
+            controller: stateController,
+            onTap: () => _showSearchSheet(
+              title: "Select State",
+              items: IndiaStates.statesAndUTs,
+              onSelected: (val) {
+                setState(() {
+                  stateController.text = val;
+                  districtController.clear();
+                });
+              },
+            ),
+          ),
+          const SizedBox(height: 12),
+          _miniSelector(
+            title: "DISTRICT",
+            hint: "Select District",
+            controller: districtController,
+            enabled: stateController.text.isNotEmpty,
+            onTap: () {
+              if (stateController.text.isEmpty) return;
+              _showSearchSheet(
+                title: "Select District",
+                items: IndiaDistricts.districts[stateController.text] ?? [],
+                onSelected: (val) =>
+                    setState(() => districtController.text = val),
+              );
             },
           ),
+          const SizedBox(height: 12),
+          _miniSelector(
+            title: "TARGET MISSION",
+            hint: "Select Exam",
+            controller: missionController,
+            onTap: () => _showSearchSheet(
+              title: "Select Target Mission",
+              items: missions.map((m) => m.title).toList(),
+              onSelected: (val) {
+                setState(() {
+                  missionController.text = val;
+                  selectedMission = missions.firstWhere((m) => m.title == val);
+                });
+              },
+            ),
+          ),
+          const SizedBox(height: 24),
+          if (_identityEstablished)
+            _buildIdentityEstablishedBadge()
+          else
+            _SovereignIdentityCta(
+              text: _isSaving ? "ESTABLISHING IDENTITY" : "ESTABLISH IDENTITY",
+              isLoading: _isSaving,
+              enabled: _canSubmitIdentity && !_isSaving,
+              onTap:
+                  _canSubmitIdentity && !_isSaving ? _establishIdentity : null,
+            ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildProfilePhotoPrompt(String? userPhotoUrl) {
+    final hasPhoto = userPhotoUrl != null && userPhotoUrl.isNotEmpty;
+
+    return InkWell(
+      borderRadius: BorderRadius.circular(18),
+      onTap: () => _showSnackBar(
+        "Profile photo can be updated after identity setup.",
+      ),
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: royalBlack.withValues(alpha: 0.48),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: Colors.white.withValues(alpha: 0.08)),
         ),
-        const SizedBox(height: 24),
-        PremiumButton(
-          text: "ESTABLISH IDENTITY",
-          onTap: _establishIdentity,
-          isLoading: _isSaving,
+        child: Row(
+          children: [
+            Container(
+              width: 54,
+              height: 54,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: goldAccent.withValues(alpha: 0.45)),
+                image: hasPhoto
+                    ? DecorationImage(
+                        image: NetworkImage(userPhotoUrl),
+                        fit: BoxFit.cover,
+                      )
+                    : null,
+              ),
+              child: hasPhoto
+                  ? null
+                  : Icon(
+                      Icons.person_add_alt_1_rounded,
+                      color: goldAccent.withValues(alpha: 0.82),
+                      size: 25,
+                    ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Profile Photo",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTypography.cardTitle.copyWith(fontSize: 13),
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    hasPhoto
+                        ? "Synced from your signed-in account."
+                        : "Add or sync your face card after identity setup.",
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTypography.subtitle.copyWith(fontSize: 10),
+                  ),
+                ],
+              ),
+            ),
+            Icon(
+              Icons.camera_alt_rounded,
+              color: goldAccent.withValues(alpha: 0.65),
+              size: 18,
+            ),
+          ],
         ),
-      ],
+      ),
+    );
+  }
+
+  Widget _buildIdentityEstablishedBadge() {
+    return Container(
+      width: double.infinity,
+      constraints: const BoxConstraints(minHeight: 62),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            const Color(0xFF101522).withValues(alpha: 0.92),
+            const Color(0xFF070A12).withValues(alpha: 0.96),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: goldAccent.withValues(alpha: 0.46)),
+        boxShadow: [
+          BoxShadow(
+            color: goldAccent.withValues(alpha: 0.11),
+            blurRadius: 22,
+            offset: const Offset(0, 8),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 36,
+            height: 36,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: goldAccent.withValues(alpha: 0.12),
+              border: Border.all(color: goldAccent.withValues(alpha: 0.5)),
+            ),
+            child: const Icon(
+              Icons.verified_rounded,
+              color: goldAccent,
+              size: 19,
+            ),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "IDENTITY ESTABLISHED",
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.sora(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.9,
+                  ),
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  "Sovereign profile secured",
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppTypography.subtitle.copyWith(fontSize: 10),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 
   Widget _buildFooter() {
     return Center(
       child: Text(
-        "Secure • Sovereign • AI Driven",
+        "Secure | Sovereign | AI Driven",
         style: AppTypography.label.copyWith(
           fontSize: 7,
           color: Colors.white12,
@@ -694,6 +893,164 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
             const Icon(Icons.keyboard_arrow_down_rounded,
                 color: Colors.white10, size: 18),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _SovereignIdentityCta extends StatefulWidget {
+  const _SovereignIdentityCta({
+    required this.text,
+    required this.enabled,
+    required this.isLoading,
+    required this.onTap,
+  });
+
+  final String text;
+  final bool enabled;
+  final bool isLoading;
+  final VoidCallback? onTap;
+
+  @override
+  State<_SovereignIdentityCta> createState() => _SovereignIdentityCtaState();
+}
+
+class _SovereignIdentityCtaState extends State<_SovereignIdentityCta> {
+  bool _pressed = false;
+
+  static const Color _gold = Color(0xFFD4AF37);
+  static const Color _deepGold = Color(0xFF8F6D1D);
+  static const Color _black = Color(0xFF070A12);
+
+  void _setPressed(bool value) {
+    if (!widget.enabled || widget.isLoading) return;
+    if (_pressed == value) return;
+    setState(() => _pressed = value);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final active = widget.enabled || widget.isLoading;
+    final goldStrength = active ? 1.0 : 0.34;
+
+    return Semantics(
+      button: !widget.isLoading,
+      enabled: widget.enabled,
+      label: widget.text,
+      child: GestureDetector(
+        onTap: widget.enabled && !widget.isLoading ? widget.onTap : null,
+        onTapDown: (_) => _setPressed(true),
+        onTapCancel: () => _setPressed(false),
+        onTapUp: (_) => _setPressed(false),
+        child: AnimatedScale(
+          duration: const Duration(milliseconds: 90),
+          curve: Curves.easeOut,
+          scale: _pressed ? 0.985 : 1,
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 180),
+            width: double.infinity,
+            constraints: const BoxConstraints(minHeight: 58),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color.lerp(
+                      const Color(0xFF33270F), _gold, 0.28 * goldStrength)!,
+                  Color.lerp(
+                      _black, const Color(0xFF171109), 0.72 * goldStrength)!,
+                  Color.lerp(_black, _deepGold, 0.28 * goldStrength)!,
+                ],
+              ),
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(
+                color: _gold.withValues(alpha: active ? 0.58 : 0.18),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: _gold.withValues(alpha: active ? 0.14 : 0.0),
+                  blurRadius: 22,
+                  offset: const Offset(0, 10),
+                ),
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.32),
+                  blurRadius: 12,
+                  offset: const Offset(0, 8),
+                ),
+              ],
+            ),
+            child: Stack(
+              children: [
+                Positioned.fill(
+                  top: 0,
+                  bottom: null,
+                  child: Container(
+                    height: 1,
+                    decoration: BoxDecoration(
+                      color:
+                          Colors.white.withValues(alpha: active ? 0.24 : 0.06),
+                      borderRadius: const BorderRadius.vertical(
+                        top: Radius.circular(18),
+                      ),
+                    ),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 31,
+                      height: 31,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: _black.withValues(alpha: 0.36),
+                        border: Border.all(
+                          color: _gold.withValues(alpha: active ? 0.42 : 0.16),
+                        ),
+                      ),
+                      child: Icon(
+                        Icons.shield_outlined,
+                        color: _gold.withValues(alpha: active ? 0.86 : 0.32),
+                        size: 17,
+                      ),
+                    ),
+                    const SizedBox(width: 11),
+                    Flexible(
+                      child: Text(
+                        widget.text,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.sora(
+                          color: active
+                              ? Colors.white
+                              : Colors.white.withValues(alpha: 0.38),
+                          fontSize: 12,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: 0.9,
+                        ),
+                      ),
+                    ),
+                    if (widget.isLoading) ...[
+                      const SizedBox(width: 11),
+                      SizedBox(
+                        width: 16,
+                        height: 16,
+                        child: CircularProgressIndicator(
+                          strokeWidth: 2,
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                            _gold.withValues(alpha: 0.82),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
