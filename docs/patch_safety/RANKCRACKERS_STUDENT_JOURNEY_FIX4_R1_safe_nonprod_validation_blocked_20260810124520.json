@@ -1,0 +1,43 @@
+﻿{
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R1_BLOCKED_BY_PRODUCTION_BACKEND_CONFIGURATION",
+  "requiredBaseline": "4b5d5a0cae40655cf41228626a184053b1508313",
+  "currentHead": "4b5d5a0cae40655cf41228626a184053b1508313",
+  "gradleHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "requiredGradleHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "productionConfigFound": {
+    "firebasercDefault": "rankcrackers-55",
+    "firebaseOptionsProjectId": "rankcrackers-55",
+    "androidGoogleServicesProjectId": "rankcrackers-55"
+  },
+  "emulatorConfigFound": {
+    "firebaseJsonAuth": "127.0.0.1:9099",
+    "firebaseJsonFirestore": "127.0.0.1:8080",
+    "firebaseJsonUi": "127.0.0.1:4000",
+    "appSideAuthEmulatorHookFound": false,
+    "appSideFirestoreEmulatorHookFound": false
+  },
+  "validation": {
+    "attemptedLiveUiProfileSave": false,
+    "reason": "would target production Firebase",
+    "productionWriteAttempted": false,
+    "firestoreWriteAttempted": false
+  },
+  "fix4RepairStillLocked": {
+    "clientPrivilegedFieldsRemoved": true,
+    "privilegedFields": ["role", "accessLevel", "founder", "admin"],
+    "rulesChanged": false,
+    "writePathChanged": false,
+    "operationChanged": false
+  },
+  "safety": {
+    "productionWriteAttempted": false,
+    "firestoreWrite": false,
+    "rulesChange": false,
+    "authChange": false,
+    "schemaChange": false,
+    "routeChange": false,
+    "studentDelivery": false,
+    "deploy": false
+  },
+  "recommendedNextGate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R2_EMULATOR_PROFILE_VALIDATION_WIRING_PREP"
+}
