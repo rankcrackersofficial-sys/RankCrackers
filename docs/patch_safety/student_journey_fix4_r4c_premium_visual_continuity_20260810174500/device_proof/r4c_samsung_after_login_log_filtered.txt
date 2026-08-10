@@ -1,0 +1,17 @@
+08-10 19:18:18.725  3558  8019 W WifiService: Permission violation - getScanResults not allowed for uid=10333, packageName=com.whatsapp, reason=java.lang.SecurityException: UID 10333 has no location permission
+08-10 19:18:18.910 10372 10372 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.auth.aang.events.services.START dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentApiService }
+08-10 19:18:19.309 19306 19306 I [AUTHFW][PASS]AuthFwApp: otlv40
+08-10 19:18:20.927  8217 26802 E DatabaseUtils: Writing exception to parcel
+08-10 19:18:20.927  8217 26802 E DatabaseUtils: java.lang.IllegalArgumentException: Volume phoneStorage not found
+08-10 19:18:20.927  8217 26802 E DatabaseUtils: 	at com.android.providers.media.MediaProvider$FallbackException.translateForQuery(MediaProvider.java:12677)
+08-10 19:18:20.929  8217 26802 E DatabaseUtils: Writing exception to parcel
+08-10 19:18:20.929  8217 26802 E DatabaseUtils: java.lang.IllegalArgumentException: Volume phoneStorage not found
+08-10 19:18:20.929  8217 26802 E DatabaseUtils: 	at com.android.providers.media.MediaProvider$FallbackException.translateForQuery(MediaProvider.java:12677)
+08-10 19:18:21.744  3558  7000 W WifiService: Permission violation - getScanResults not allowed for uid=10333, packageName=com.whatsapp, reason=java.lang.SecurityException: UID 10333 has no location permission
+08-10 19:18:24.763  3558  8014 W WifiService: Permission violation - getScanResults not allowed for uid=10333, packageName=com.whatsapp, reason=java.lang.SecurityException: UID 10333 has no location permission
+08-10 19:18:27.224 19164 19558 W ContentResolver: java.lang.IllegalArgumentException: No item at content://media/external/file/1000963066
+08-10 19:18:27.224 19164 19558 W ContentResolver: 	at android.os.ParcelableException.readFromParcel(ParcelableException.java:56)
+08-10 19:18:27.224 19164 19558 W ContentResolver: 	at android.os.ParcelableException$1.createFromParcel(ParcelableException.java:82)
+08-10 19:18:27.224 19164 19558 W ContentResolver: 	at android.os.ParcelableException$1.createFromParcel(ParcelableException.java:79)
+08-10 19:18:27.778  3558  8014 W WifiService: Permission violation - getScanResults not allowed for uid=10333, packageName=com.whatsapp, reason=java.lang.SecurityException: UID 10333 has no location permission
+08-10 19:18:29.298  3558  4520 D ActivityManager: freezing 19306 com.samsung.android.authfw

@@ -1,0 +1,61 @@
+﻿{
+    "gate":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4C",
+    "verdict":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4C_CODE_AND_DEVICE_PROOF_READY_FOR_MANUAL_PIXEL_REVIEW",
+    "startingHead":  "380ed6161508a00ee6451294c581a7cddca66d86",
+    "knownUnrelatedDirtyFile":  "android/app/build.gradle.kts",
+    "knownUnrelatedDirtyHash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+    "tokenInventory":  {
+                           "background":  "AppColors.background",
+                           "primarySurface":  "AppColors.surface",
+                           "liftedSurface":  "AppColors.surface2",
+                           "fieldSurface":  "AppColors.elevatedSurface",
+                           "border":  "AppColors.border / AppColors.borderSoft",
+                           "primaryAccent":  "AppColors.gold",
+                           "secondaryAccent":  "AppColors.info",
+                           "sharedBackground":  "TacticalNoirBackground"
+                       },
+    "repairs":  [
+                    "Unified Identity uses TacticalNoirBackground and canonical AppColors background.",
+                    "Profile form/card/inputs moved to canonical navy surface hierarchy.",
+                    "Profile Photo affordance refined without becoming the primary action.",
+                    "Establish Identity CTA proportions refined, not redesigned.",
+                    "Identity Established seal uses canonical surface family and avoids unsupported IDENTITY VERIFIED claim.",
+                    "Mission Realm inherits TacticalNoirBackground without mission data/filter changes.",
+                    "Account shortcut label Bug changed to Issue without removing option.",
+                    "Profile photo async context warning repaired with mounted guard."
+                ],
+    "validation":  {
+                       "dartFormat":  "PASS",
+                       "targetedFlutterAnalyze":  "PASS",
+                       "gitDiffCheck":  "PASS",
+                       "r4bRegressionStrings":  "PASS"
+                   },
+    "deviceAvailability":  {
+                               "pixel5Visible":  false,
+                               "visibleDevices":  [
+                                                      "SM S911B",
+                                                      "Chrome",
+                                                      "Edge"
+                                                  ],
+                               "physicalPixelProof":  "PENDING",
+                               "samsungPhysicalProof":  "LOGIN_LEVEL_CAPTURED_PROFILE_ROUTE_PENDING"
+                           },
+    "safety":  {
+                   "productionRead":  false,
+                   "productionWrite":  false,
+                   "rulesChange":  false,
+                   "authArchitectureChange":  false,
+                   "firebaseConfigSwap":  false,
+                   "deploy":  false,
+                   "studentPublish":  false,
+                   "missionCountHardcode":  false,
+                   "fakeKnowledgeMatrix":  false,
+                   "fakeMastery":  false,
+                   "academicContentMutation":  false,
+                   "crucibleAllocationMutation":  false,
+                   "profileFlowRewrite":  false,
+                   "uiOptionRemoval":  false,
+                   "gradleTouch":  false
+               },
+    "nextGate":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R5_PHYSICAL_PIXEL5_END_TO_END_VISUAL_QA"
+}

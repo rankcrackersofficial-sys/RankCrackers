@@ -1,0 +1,12 @@
+08-10 19:16:09.662 20005 20049 I FA      :   adb shell setprop debug.firebase.analytics.app com.truecaller
+08-10 19:16:10.352 20005 20107 E GoogleApiManager: java.lang.SecurityException: Unknown calling package name 'com.google.android.gms'.
+08-10 19:16:10.352 20005 20107 E GoogleApiManager: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3388)
+08-10 19:16:10.352 20005 20107 E GoogleApiManager: 	at android.os.Parcel.createException(Parcel.java:3372)
+08-10 19:16:10.352 20005 20107 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:3355)
+08-10 19:16:10.352 20005 20107 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:3297)
+08-10 19:16:10.435 20005 20107 E GoogleApiManager: java.lang.SecurityException: Unknown calling package name 'com.google.android.gms'.
+08-10 19:16:10.435 20005 20107 E GoogleApiManager: 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3388)
+08-10 19:16:10.435 20005 20107 E GoogleApiManager: 	at android.os.Parcel.createException(Parcel.java:3372)
+08-10 19:16:10.435 20005 20107 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:3355)
+08-10 19:16:10.435 20005 20107 E GoogleApiManager: 	at android.os.Parcel.readException(Parcel.java:3297)
+08-10 19:16:10.437 20005 20108 W FlagStore: java.util.concurrent.ExecutionException: griq: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}

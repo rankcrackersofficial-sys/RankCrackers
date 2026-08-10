@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
+import '../../../../core/theme/tactical_noir_background.dart';
 import '../../../../core/utils/app_routes.dart';
 import '../../../../shared/session/session_manager.dart';
 import '../../../../data/india_states.dart';
@@ -151,92 +152,100 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
       canPop: false,
       child: Scaffold(
         backgroundColor: AppColors.background,
-        body: SafeArea(
-          child: LayoutBuilder(
-            builder: (context, constraints) {
-              return SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
-                padding: EdgeInsets.symmetric(
-                  horizontal: ResponsiveHelper.wp(context, 0.06),
-                  vertical: ResponsiveHelper.hp(context, 0.02),
-                ),
-                child: Center(
-                  child: ConstrainedBox(
-                    constraints: BoxConstraints(
-                      minHeight: constraints.maxHeight,
-                      maxWidth: ResponsiveHelper.isTablet(context) ? 600 : 500,
-                    ),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        _buildHeader(),
-                        SizedBox(height: ResponsiveHelper.compactGap(context)),
-                        if (isChangingState) ...[
-                          _buildStateSearchSection(publishedStates),
-                          const SizedBox(height: 16),
-                        ],
-                        _buildCategorySelector(),
-                        SizedBox(
-                            height: ResponsiveHelper.sectionSpacing(context)),
-                        SmartSearchField(
-                          title: 'SEARCH MISSION',
-                          hint: 'Type Exam Name',
-                          controller: examSearchController,
-                          suggestions:
-                              searchResults.map((e) => e.title).toList(),
-                          onChanged: (q) => _searchMissions(q, allMissions),
-                          onSelected: (title) {
-                            final recruitment =
-                                allMissions.firstWhere((r) => r.title == title);
-                            setState(() {
-                              selectedRecruitmentId = recruitment.id;
-                              selectedCategory = recruitment.examCategory;
-                              examSearchController.text = title;
-                              searchResults = [];
-                            });
-                          },
-                        ),
-                        SizedBox(height: ResponsiveHelper.compactGap(context)),
-                        if (missions.isNotEmpty) ...[
-                          Text(
-                            selectedCategory == 'competitive'
-                                ? 'ðŸ›¡ COMPETITIVE MISSIONS'
-                                : 'ðŸŽ“ QUALIFYING MISSIONS',
-                            style: AppTypography.label.copyWith(
-                                fontSize: 8,
-                                color: AppColors.gold,
-                                letterSpacing: 1.5),
+        body: TacticalNoirBackground(
+          child: SafeArea(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                return SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: ResponsiveHelper.wp(context, 0.06),
+                    vertical: ResponsiveHelper.hp(context, 0.02),
+                  ),
+                  child: Center(
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        minHeight: constraints.maxHeight,
+                        maxWidth:
+                            ResponsiveHelper.isTablet(context) ? 600 : 500,
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          _buildHeader(),
+                          SizedBox(
+                              height: ResponsiveHelper.compactGap(context)),
+                          if (isChangingState) ...[
+                            _buildStateSearchSection(publishedStates),
+                            const SizedBox(height: 16),
+                          ],
+                          _buildCategorySelector(),
+                          SizedBox(
+                              height: ResponsiveHelper.sectionSpacing(context)),
+                          SmartSearchField(
+                            title: 'SEARCH MISSION',
+                            hint: 'Type Exam Name',
+                            controller: examSearchController,
+                            suggestions:
+                                searchResults.map((e) => e.title).toList(),
+                            onChanged: (q) => _searchMissions(q, allMissions),
+                            onSelected: (title) {
+                              final recruitment = allMissions
+                                  .firstWhere((r) => r.title == title);
+                              setState(() {
+                                selectedRecruitmentId = recruitment.id;
+                                selectedCategory = recruitment.examCategory;
+                                examSearchController.text = title;
+                                searchResults = [];
+                              });
+                            },
                           ),
-                          const SizedBox(height: 12),
-                          // ðŸ”± Performance Fix: Using a constrained list inside the Column
-                          ...missions.take(10).map((r) => _buildMissionCard(r)),
-                          if (missions.length > 10)
-                            Padding(
-                              padding: const EdgeInsets.only(top: 8),
-                              child: Center(
-                                  child: Text(
-                                      "+ ${missions.length - 10} more missions available",
-                                      style: AppTypography.label.copyWith(
-                                          fontSize: 6, color: Colors.white10))),
+                          SizedBox(
+                              height: ResponsiveHelper.compactGap(context)),
+                          if (missions.isNotEmpty) ...[
+                            Text(
+                              selectedCategory == 'competitive'
+                                  ? 'ðŸ›¡ COMPETITIVE MISSIONS'
+                                  : 'ðŸŽ“ QUALIFYING MISSIONS',
+                              style: AppTypography.label.copyWith(
+                                  fontSize: 8,
+                                  color: AppColors.gold,
+                                  letterSpacing: 1.5),
                             ),
-                        ] else
-                          _buildEmptyState(),
-                        SizedBox(
-                            height: ResponsiveHelper.sectionSpacing(context)),
-                        if (_isLoading)
-                          const Center(
-                              child: Padding(
-                            padding: EdgeInsets.only(bottom: 20),
-                            child: CircularProgressIndicator(
-                                color: AppColors.gold),
-                          )),
-                      ],
+                            const SizedBox(height: 12),
+                            // ðŸ”± Performance Fix: Using a constrained list inside the Column
+                            ...missions
+                                .take(10)
+                                .map((r) => _buildMissionCard(r)),
+                            if (missions.length > 10)
+                              Padding(
+                                padding: const EdgeInsets.only(top: 8),
+                                child: Center(
+                                    child: Text(
+                                        "+ ${missions.length - 10} more missions available",
+                                        style: AppTypography.label.copyWith(
+                                            fontSize: 6,
+                                            color: Colors.white10))),
+                              ),
+                          ] else
+                            _buildEmptyState(),
+                          SizedBox(
+                              height: ResponsiveHelper.sectionSpacing(context)),
+                          if (_isLoading)
+                            const Center(
+                                child: Padding(
+                              padding: EdgeInsets.only(bottom: 20),
+                              child: CircularProgressIndicator(
+                                  color: AppColors.gold),
+                            )),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              );
-            },
+                );
+              },
+            ),
           ),
         ),
       ),

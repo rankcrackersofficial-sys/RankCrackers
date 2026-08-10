@@ -8,6 +8,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
+import '../../../../core/theme/tactical_noir_background.dart';
 import '../../../../core/utils/app_routes.dart';
 import '../../../../core/widgets/premium_button.dart';
 import '../../../../shared/session/session_manager.dart';
@@ -61,8 +62,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   late AnimationController _animationController;
   late Animation<double> glowAnimation;
 
-  static const Color goldAccent = Color(0xFFD4AF37);
-  static const Color royalBlack = Color(0xFF070A12);
+  static const Color goldAccent = AppColors.gold;
+  static const Color royalBlack = AppColors.background;
 
   @override
   void initState() {
@@ -350,50 +351,55 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     final showProfileSetup = widget.forceProfileSetupForTest || user != null;
 
     return Scaffold(
-      backgroundColor: royalBlack,
+      backgroundColor: AppColors.background,
       resizeToAvoidBottomInset: true,
-      body: Stack(
-        children: [
-          _buildAura(),
-          SafeArea(
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                Widget content = Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    SizedBox(height: ResponsiveHelper.sectionSpacing(context)),
-                    _buildLogo(),
-                    SizedBox(height: ResponsiveHelper.compactGap(context)),
-                    _buildHeader(),
-                    SizedBox(height: ResponsiveHelper.sectionSpacing(context)),
-                    if (!showProfileSetup)
-                      _buildLoginSection(authState.isLoading)
-                    else
-                      _buildIdentityForm(userPhotoUrl: user?.photoURL),
-                    SizedBox(height: ResponsiveHelper.sectionSpacing(context)),
-                    _buildFooter(),
-                  ],
-                );
-                return SingleChildScrollView(
-                  physics: const BouncingScrollPhysics(),
-                  keyboardDismissBehavior:
-                      ScrollViewKeyboardDismissBehavior.onDrag,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: ResponsiveHelper.wp(context, 0.07),
-                    vertical: ResponsiveHelper.compactGap(context),
-                  ),
-                  child: Center(
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxWidth: 500),
-                      child: content,
+      body: TacticalNoirBackground(
+        child: Stack(
+          children: [
+            _buildAura(),
+            SafeArea(
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  Widget content = Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      SizedBox(
+                          height: ResponsiveHelper.sectionSpacing(context)),
+                      _buildLogo(),
+                      SizedBox(height: ResponsiveHelper.compactGap(context)),
+                      _buildHeader(),
+                      SizedBox(
+                          height: ResponsiveHelper.sectionSpacing(context)),
+                      if (!showProfileSetup)
+                        _buildLoginSection(authState.isLoading)
+                      else
+                        _buildIdentityForm(userPhotoUrl: user?.photoURL),
+                      SizedBox(
+                          height: ResponsiveHelper.sectionSpacing(context)),
+                      _buildFooter(),
+                    ],
+                  );
+                  return SingleChildScrollView(
+                    physics: const BouncingScrollPhysics(),
+                    keyboardDismissBehavior:
+                        ScrollViewKeyboardDismissBehavior.onDrag,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: ResponsiveHelper.wp(context, 0.07),
+                      vertical: ResponsiveHelper.compactGap(context),
                     ),
-                  ),
-                );
-              },
+                    child: Center(
+                      child: ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 500),
+                        child: content,
+                      ),
+                    ),
+                  );
+                },
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -555,17 +561,22 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            const Color(0xFF172131).withValues(alpha: 0.92),
-            const Color(0xFF101827).withValues(alpha: 0.96),
+            AppColors.surface2.withValues(alpha: 0.96),
+            AppColors.surface.withValues(alpha: 0.98),
           ],
         ),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: goldAccent.withValues(alpha: 0.24)),
+        border: Border.all(color: AppColors.border.withValues(alpha: 0.92)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.36),
-            blurRadius: 26,
-            offset: const Offset(0, 12),
+            color: Colors.black.withValues(alpha: 0.34),
+            blurRadius: 28,
+            offset: const Offset(0, 14),
+          ),
+          BoxShadow(
+            color: AppColors.gold.withValues(alpha: 0.035),
+            blurRadius: 18,
+            offset: const Offset(0, -2),
           ),
         ],
       ),
@@ -662,9 +673,16 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       child: Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: const Color(0xFF152033).withValues(alpha: 0.9),
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              AppColors.elevatedSurface.withValues(alpha: 0.96),
+              AppColors.surface2.withValues(alpha: 0.92),
+            ],
+          ),
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: goldAccent.withValues(alpha: 0.18)),
+          border: Border.all(color: AppColors.border.withValues(alpha: 0.9)),
         ),
         child: Row(
           children: [
@@ -673,7 +691,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
               height: 54,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(color: goldAccent.withValues(alpha: 0.45)),
+                border: Border.all(
+                    color: goldAccent.withValues(alpha: 0.38), width: 1.2),
                 image: hasPhoto
                     ? DecorationImage(
                         image: NetworkImage(userPhotoUrl),
@@ -704,7 +723,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                   Text(
                     hasPhoto
                         ? "Synced from your signed-in account."
-                        : "Add or sync your face card after identity setup.",
+                        : "Your profile photo can be added after identity setup.",
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: AppTypography.subtitle.copyWith(fontSize: 10),
@@ -733,8 +752,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            const Color(0xFF101522).withValues(alpha: 0.92),
-            const Color(0xFF070A12).withValues(alpha: 0.96),
+            AppColors.elevatedSurface.withValues(alpha: 0.96),
+            AppColors.surface.withValues(alpha: 0.98),
           ],
         ),
         borderRadius: BorderRadius.circular(18),
@@ -819,9 +838,9 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     return Container(
       height: ResponsiveHelper.fieldHeight(context),
       decoration: BoxDecoration(
-        color: const Color(0xFF1B2638),
+        color: AppColors.elevatedSurface.withValues(alpha: 0.94),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF2A3850)),
+        border: Border.all(color: AppColors.border.withValues(alpha: 0.95)),
       ),
       child: TextField(
         controller: controller,
@@ -856,10 +875,10 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         padding: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
           color: enabled
-              ? const Color(0xFF1B2638)
-              : const Color(0xFF121A27).withValues(alpha: 0.72),
+              ? AppColors.elevatedSurface.withValues(alpha: 0.94)
+              : AppColors.surface.withValues(alpha: 0.72),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: const Color(0xFF2A3850)),
+          border: Border.all(color: AppColors.border.withValues(alpha: 0.95)),
         ),
         child: Row(
           children: [
@@ -936,8 +955,8 @@ class _SovereignIdentityCtaState extends State<_SovereignIdentityCta> {
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 180),
             width: double.infinity,
-            constraints: const BoxConstraints(minHeight: 58),
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            constraints: const BoxConstraints(minHeight: 56),
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 11),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
@@ -987,8 +1006,8 @@ class _SovereignIdentityCtaState extends State<_SovereignIdentityCta> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 31,
-                      height: 31,
+                      width: 29,
+                      height: 29,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: _black.withValues(alpha: 0.36),
@@ -999,7 +1018,7 @@ class _SovereignIdentityCtaState extends State<_SovereignIdentityCta> {
                       child: Icon(
                         Icons.shield_outlined,
                         color: _gold.withValues(alpha: active ? 0.86 : 0.32),
-                        size: 17,
+                        size: 16,
                       ),
                     ),
                     const SizedBox(width: 11),

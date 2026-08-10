@@ -1,0 +1,8 @@
+{
+    "kind":  "identitytoolkit#SignupNewUserResponse",
+    "localId":  "1rK557JxcTBODUlkH5AdNnyRtJVg",
+    "email":  "r4c.samsung.qa@rankcrackers.test",
+    "idToken":  "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJlbWFpbCI6InI0Yy5zYW1zdW5nLnFhQHJhbmtjcmFja2Vycy50ZXN0IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJhdXRoX3RpbWUiOjE3ODYzNjk2NTYsInVzZXJfaWQiOiIxcks1NTdKeGNUQk9EVWxrSDVBZE5ueVJ0SlZnIiwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJyNGMuc2Ftc3VuZy5xYUByYW5rY3JhY2tlcnMudGVzdCJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn0sImlhdCI6MTc4NjM2OTY1NiwiZXhwIjoxNzg2MzczMjU2LCJhdWQiOiJyYW5rY3JhY2tlcnMtNTUiLCJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vcmFua2NyYWNrZXJzLTU1Iiwic3ViIjoiMXJLNTU3SnhjVEJPRFVsa0g1QWRObnlSdEpWZyJ9.",
+    "refreshToken":  "eyJfQXV0aEVtdWxhdG9yUmVmcmVzaFRva2VuIjoiRE8gTk9UIE1PRElGWSIsImxvY2FsSWQiOiIxcks1NTdKeGNUQk9EVWxrSDVBZE5ueVJ0SlZnIiwicHJvdmlkZXIiOiJwYXNzd29yZCIsImV4dHJhQ2xhaW1zIjp7fSwicHJvamVjdElkIjoicmFua2NyYWNrZXJzLTU1In0=",
+    "expiresIn":  "3600"
+}

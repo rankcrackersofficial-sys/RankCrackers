@@ -42,7 +42,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     final idToken = await user.getIdTokenResult();
     if (mounted) {
       setState(() {
-        _isAdmin = idToken.claims?['admin'] == true || idToken.claims?['founder'] == true;
+        _isAdmin = idToken.claims?['admin'] == true ||
+            idToken.claims?['founder'] == true;
       });
     }
   }
@@ -59,19 +60,26 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
       final user = FirebaseAuth.instance.currentUser;
       if (user == null) return;
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('🔱 UPLOADING AVATAR...')));
+      ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('🔱 UPLOADING AVATAR...')));
 
       try {
-        final storageRef = FirebaseStorage.instance.ref().child('user_photos').child('${user.uid}.jpg');
+        final storageRef = FirebaseStorage.instance
+            .ref()
+            .child('user_photos')
+            .child('${user.uid}.jpg');
         await storageRef.putFile(File(image.path));
         final url = await storageRef.getDownloadURL();
         await SessionManager.saveStudentPhoto(url);
         await user.updatePhotoURL(url);
+        if (!mounted) return;
         ref.invalidate(sessionUserProvider);
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('🔱 PROFILE PHOTO UPDATED')));
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('🔱 PROFILE PHOTO UPDATED')));
       } catch (e) {
         if (!mounted) return;
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Upload Failed: $e')));
+        ScaffoldMessenger.of(context)
+            .showSnackBar(SnackBar(content: Text('Upload Failed: $e')));
       }
     }
   }
@@ -90,21 +98,27 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
           decoration: const InputDecoration(
             hintText: "Enter details for the command team...",
             hintStyle: TextStyle(color: Colors.white10),
-            border: OutlineInputBorder(borderSide: BorderSide(color: AppColors.borderSoft)),
+            border: OutlineInputBorder(
+                borderSide: BorderSide(color: AppColors.borderSoft)),
           ),
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(context), child: const Text("CANCEL")),
+          TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text("CANCEL")),
           TextButton(
             onPressed: () async {
               if (controller.text.isEmpty) return;
-              await SupportService.createTicket(type: type, message: controller.text);
+              await SupportService.createTicket(
+                  type: type, message: controller.text);
               if (context.mounted) {
                 Navigator.pop(context);
-                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('🔱 TICKET SUBMITTED')));
+                ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('🔱 TICKET SUBMITTED')));
               }
             },
-            child: const Text("SUBMIT", style: TextStyle(color: AppColors.gold)),
+            child:
+                const Text("SUBMIT", style: TextStyle(color: AppColors.gold)),
           ),
         ],
       ),
@@ -116,7 +130,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     final sessionUser = ref.watch(sessionUserProvider).valueOrNull;
     final readiness = ref.watch(missionReadinessProvider);
     final stats = ref.watch(userProfileStatsProvider);
-    
+
     final engine = KnowledgeEngine.instance;
     final momentum = engine.momentumState;
     final coverage = engine.coverageState;
@@ -129,7 +143,10 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             builder: (context, constraints) {
               return Center(
                 child: ConstrainedBox(
-                  constraints: BoxConstraints(maxWidth: ResponsiveHelper.isTablet(context) ? 700 : double.infinity),
+                  constraints: BoxConstraints(
+                      maxWidth: ResponsiveHelper.isTablet(context)
+                          ? 700
+                          : double.infinity),
                   child: CustomScrollView(
                     physics: const BouncingScrollPhysics(),
                     slivers: [
@@ -142,19 +159,31 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                           momentum: momentum,
                         ),
                       ),
-                      
+
                       // 🔱 Performance Fold (Optimized v4.0)
                       SliverPadding(
-                        padding: EdgeInsets.symmetric(horizontal: ResponsiveHelper.wp(context, 0.05), vertical: 8),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: ResponsiveHelper.wp(context, 0.05),
+                            vertical: 8),
                         sliver: SliverGrid(
                           delegate: SliverChildListDelegate([
-                            _performanceCard(Icons.flash_on_rounded, stats['totalBattles'].toString(), 'Battles'),
-                            _performanceCard(Icons.auto_graph_rounded, '${(readiness?.score ?? 0).toInt()}%', 'Readiness'),
-                            _performanceCard(Icons.local_fire_department, '${momentum?.studyStreakDays ?? 0}d', 'Streak'),
-                            _performanceCard(Icons.workspace_premium, '${((coverage?.coveragePercent ?? 0) * 100).toInt()}%', 'Coverage'),
+                            _performanceCard(Icons.flash_on_rounded,
+                                stats['totalBattles'].toString(), 'Battles'),
+                            _performanceCard(
+                                Icons.auto_graph_rounded,
+                                '${(readiness?.score ?? 0).toInt()}%',
+                                'Readiness'),
+                            _performanceCard(Icons.local_fire_department,
+                                '${momentum?.studyStreakDays ?? 0}d', 'Streak'),
+                            _performanceCard(
+                                Icons.workspace_premium,
+                                '${((coverage?.coveragePercent ?? 0) * 100).toInt()}%',
+                                'Coverage'),
                           ]),
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: ResponsiveHelper.isTablet(context) ? 4 : 2,
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount:
+                                ResponsiveHelper.isTablet(context) ? 4 : 2,
                             crossAxisSpacing: 10,
                             mainAxisSpacing: 10,
                             childAspectRatio: 2.2,
@@ -166,7 +195,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       _buildAccountSettings(),
                       _buildSupportSection(),
                       _buildAdaptiveInsights(engine),
-                      
+
                       const SliverToBoxAdapter(child: SizedBox(height: 100)),
                     ],
                   ),
@@ -188,9 +217,12 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
           Icon(icon, color: AppColors.gold, size: 16),
           FittedBox(
             fit: BoxFit.scaleDown,
-            child: Text(value, style: AppTypography.hero.copyWith(fontSize: 20)),
+            child:
+                Text(value, style: AppTypography.hero.copyWith(fontSize: 20)),
           ),
-          Text(label.toUpperCase(), style: AppTypography.label.copyWith(fontSize: 6, color: Colors.white12)),
+          Text(label.toUpperCase(),
+              style: AppTypography.label
+                  .copyWith(fontSize: 6, color: Colors.white24)),
         ],
       ),
     );
@@ -199,17 +231,22 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   Widget _buildPreparationControls(String? currentExam) {
     return SliverToBoxAdapter(
       child: Padding(
-        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 16, ResponsiveHelper.wp(context, 0.05), 0),
+        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 16,
+            ResponsiveHelper.wp(context, 0.05), 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _sectionLabel('PREPARATION'),
             _controlTile(Icons.language_rounded, 'Language', 'Hindi Medium'),
             const SizedBox(height: 8),
-            _controlTile(Icons.shield_rounded, 'Current Mission', currentExam ?? 'Select Mission', onTap: () => context.go(AppRoutes.missionRealm)),
+            _controlTile(Icons.shield_rounded, 'Current Mission',
+                currentExam ?? 'Select Mission',
+                onTap: () => context.go(AppRoutes.missionRealm)),
             if (_isAdmin) ...[
               const SizedBox(height: 8),
-              _controlTile(Icons.admin_panel_settings_rounded, 'Command Center', 'Sovereign Control', onTap: () => context.push(AppRoutes.admin)),
+              _controlTile(Icons.admin_panel_settings_rounded, 'Command Center',
+                  'Sovereign Control',
+                  onTap: () => context.push(AppRoutes.admin)),
             ],
           ],
         ),
@@ -220,18 +257,26 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   Widget _buildAccountSettings() {
     return SliverToBoxAdapter(
       child: Padding(
-        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24, ResponsiveHelper.wp(context, 0.05), 0),
+        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
+            ResponsiveHelper.wp(context, 0.05), 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _sectionLabel('ACCOUNT'),
             Row(
               children: [
-                Expanded(child: _miniControlTile(Icons.edit_rounded, 'Identity', onTap: () {})),
+                Expanded(
+                    child: _miniControlTile(Icons.edit_rounded, 'Identity',
+                        onTap: () {})),
                 const SizedBox(width: 8),
-                Expanded(child: _miniControlTile(Icons.camera_alt_rounded, 'Avatar', onTap: _updatePhoto)),
+                Expanded(
+                    child: _miniControlTile(Icons.camera_alt_rounded, 'Avatar',
+                        onTap: _updatePhoto)),
                 const SizedBox(width: 8),
-                Expanded(child: _miniControlTile(Icons.phone_android_rounded, 'Mobile', onTap: () {})),
+                Expanded(
+                    child: _miniControlTile(
+                        Icons.phone_android_rounded, 'Mobile',
+                        onTap: () {})),
               ],
             ),
           ],
@@ -243,18 +288,26 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   Widget _buildSupportSection() {
     return SliverToBoxAdapter(
       child: Padding(
-        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24, ResponsiveHelper.wp(context, 0.05), 0),
+        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
+            ResponsiveHelper.wp(context, 0.05), 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _sectionLabel('SUPPORT'),
             Row(
               children: [
-                Expanded(child: _miniControlTile(Icons.help_outline_rounded, 'Help', onTap: () => _showSupportDialog('help'))),
+                Expanded(
+                    child: _miniControlTile(Icons.help_outline_rounded, 'Help',
+                        onTap: () => _showSupportDialog('help'))),
                 const SizedBox(width: 8),
-                Expanded(child: _miniControlTile(Icons.bug_report_rounded, 'Bug', onTap: () => _showSupportDialog('bug_report'))),
+                Expanded(
+                    child: _miniControlTile(
+                        Icons.report_problem_outlined, 'Issue',
+                        onTap: () => _showSupportDialog('issue_report'))),
                 const SizedBox(width: 8),
-                Expanded(child: _miniControlTile(Icons.logout_rounded, 'Exit', onTap: () async {
+                Expanded(
+                    child: _miniControlTile(Icons.logout_rounded, 'Exit',
+                        onTap: () async {
                   await ref.read(authNotifierProvider.notifier).signOut();
                   if (mounted) context.go(AppRoutes.login);
                 })),
@@ -269,11 +322,14 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   Widget _sectionLabel(String text) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 6, left: 4),
-      child: Text(text, style: AppTypography.label.copyWith(fontSize: 7, color: Colors.white24, letterSpacing: 1.0)),
+      child: Text(text,
+          style: AppTypography.label.copyWith(
+              fontSize: 7, color: Colors.white30, letterSpacing: 1.0)),
     );
   }
 
-  Widget _controlTile(IconData icon, String title, String value, {VoidCallback? onTap}) {
+  Widget _controlTile(IconData icon, String title, String value,
+      {VoidCallback? onTap}) {
     return GestureDetector(
       onTap: onTap,
       child: DarkCard(
@@ -286,12 +342,16 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title, style: AppTypography.label.copyWith(fontSize: 7, color: Colors.white24)),
-                  Text(value, style: AppTypography.cardTitle.copyWith(fontSize: 11)),
+                  Text(title,
+                      style: AppTypography.label
+                          .copyWith(fontSize: 7, color: Colors.white24)),
+                  Text(value,
+                      style: AppTypography.cardTitle.copyWith(fontSize: 11)),
                 ],
               ),
             ),
-            const Icon(Icons.arrow_forward_ios_rounded, size: 10, color: Colors.white10),
+            const Icon(Icons.arrow_forward_ios_rounded,
+                size: 10, color: Colors.white10),
           ],
         ),
       ),
@@ -317,7 +377,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
 
   Widget _buildAdaptiveInsights(KnowledgeEngine engine) {
     final recommendations = engine.getRecommendations(limit: 1);
-    final String insight = recommendations.isNotEmpty 
+    final String insight = recommendations.isNotEmpty
         ? "Priority Focus: ${recommendations.first.title}. Strengthening this will boost overall mission readiness."
         : "Mission metrics nominal. Maintain current streak for maximum retention.";
 
@@ -329,11 +389,15 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('ADAPTIVE INSIGHT', style: AppTypography.label.copyWith(fontSize: 7, color: AppColors.gold)),
+              Text('ADAPTIVE INSIGHT',
+                  style: AppTypography.label.copyWith(
+                      fontSize: 7,
+                      color: AppColors.gold.withValues(alpha: 0.82))),
               const SizedBox(height: 4),
               Text(
                 insight,
-                style: AppTypography.body.copyWith(fontSize: 10, height: 1.4, color: Colors.white70),
+                style: AppTypography.body
+                    .copyWith(fontSize: 10, height: 1.4, color: Colors.white70),
               ),
             ],
           ),
