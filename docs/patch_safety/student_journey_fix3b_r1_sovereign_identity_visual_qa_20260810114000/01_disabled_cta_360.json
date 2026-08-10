@@ -1,0 +1,14 @@
+{
+  "name": "01_disabled_cta_360",
+  "width": 360.0,
+  "height": 800.0,
+  "textScale": 1.0,
+  "keyboardInset": 0.0,
+  "mode": "disabled",
+  "markers": [
+    "Profile Photo",
+    "ESTABLISH IDENTITY"
+  ],
+  "png": "docs/patch_safety/student_journey_fix3b_r1_sovereign_identity_visual_qa_20260810114000/01_disabled_cta_360.png",
+  "notes": "Integrated UnifiedIdentityScreen disabled state before profile fields are completed."
+}

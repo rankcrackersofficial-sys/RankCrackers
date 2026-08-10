@@ -1,0 +1,13 @@
+{
+  "name": "04_keyboard_open_360",
+  "width": 360.0,
+  "height": 640.0,
+  "textScale": 1.0,
+  "keyboardInset": 280.0,
+  "mode": "enabled",
+  "markers": [
+    "ESTABLISH IDENTITY"
+  ],
+  "png": "docs/patch_safety/student_journey_fix3b_r1_sovereign_identity_visual_qa_20260810114000/04_keyboard_open_360.png",
+  "notes": "Integrated UnifiedIdentityScreen with all identity fields completed."
+}
