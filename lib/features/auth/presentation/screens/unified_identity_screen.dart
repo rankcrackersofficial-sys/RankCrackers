@@ -45,6 +45,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   final TextEditingController districtController = TextEditingController();
 
   // Focus Nodes
+  final FocusNode emailFocusNode = FocusNode();
+  final FocusNode passwordFocusNode = FocusNode();
   final FocusNode stateFocusNode = FocusNode();
   final FocusNode districtFocusNode = FocusNode();
 
@@ -52,6 +54,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   List<String> districtsList = [];
   bool _isSaving = false;
   bool _identityEstablished = false;
+  bool _passwordVisible = false;
 
   bool get _canSubmitIdentity =>
       nameController.text.trim().isNotEmpty &&
@@ -91,6 +94,9 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       controller.addListener(_refreshIdentityCta);
     }
 
+    emailFocusNode.addListener(_refreshIdentityCta);
+    passwordFocusNode.addListener(_refreshIdentityCta);
+
     if (!widget.disableFirebaseAuthLookupForTest) {
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
@@ -119,6 +125,10 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     mobileController.dispose();
     stateController.dispose();
     districtController.dispose();
+    emailFocusNode.removeListener(_refreshIdentityCta);
+    passwordFocusNode.removeListener(_refreshIdentityCta);
+    emailFocusNode.dispose();
+    passwordFocusNode.dispose();
     stateFocusNode.dispose();
     districtFocusNode.dispose();
     _animationController.dispose();
@@ -484,11 +494,36 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   Widget _buildLoginSection(bool isLoading) {
     return Column(
       children: [
-        _miniField(emailController, "Email Address", Icons.email_outlined,
-            keyboard: TextInputType.emailAddress),
+        _miniField(
+          emailController,
+          "Email Address",
+          Icons.email_outlined,
+          keyboard: TextInputType.emailAddress,
+          focusNode: emailFocusNode,
+          minimalSurface: true,
+        ),
         const SizedBox(height: 12),
-        _miniField(passwordController, "Password", Icons.lock_outline_rounded,
-            obscure: true),
+        _miniField(
+          passwordController,
+          "Password",
+          Icons.lock_outline_rounded,
+          obscure: !_passwordVisible,
+          focusNode: passwordFocusNode,
+          minimalSurface: true,
+          suffixIcon: IconButton(
+            tooltip: _passwordVisible ? "Hide password" : "Show password",
+            splashRadius: 18,
+            onPressed: () =>
+                setState(() => _passwordVisible = !_passwordVisible),
+            icon: Icon(
+              _passwordVisible
+                  ? Icons.visibility_off_outlined
+                  : Icons.visibility_outlined,
+              color: goldAccent.withValues(alpha: 0.54),
+              size: 18,
+            ),
+          ),
+        ),
         Align(
           alignment: Alignment.centerRight,
           child: TextButton(
@@ -519,24 +554,39 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         ),
         const SizedBox(height: 20),
         InkWell(
-          onTap: _continueWithGoogle,
+          onTap: isLoading ? null : _continueWithGoogle,
           borderRadius: BorderRadius.circular(16),
-          child: Container(
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 160),
             width: double.infinity,
             height: 56,
             decoration: BoxDecoration(
               gradient: AppColors.madhavCardGradient,
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: goldAccent.withValues(alpha: 0.2)),
+              border: Border.all(
+                color: goldAccent.withValues(alpha: isLoading ? 0.32 : 0.2),
+              ),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset("assets/images/google.png", width: 20),
+                if (isLoading)
+                  SizedBox(
+                    width: 18,
+                    height: 18,
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2,
+                      valueColor: AlwaysStoppedAnimation<Color>(
+                        goldAccent.withValues(alpha: 0.78),
+                      ),
+                    ),
+                  )
+                else
+                  Image.asset("assets/images/google.png", width: 20),
                 const SizedBox(width: 12),
                 Flexible(
                   child: Text(
-                    "Continue with Google",
+                    isLoading ? "Opening Google..." : "Continue with Google",
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: GoogleFonts.poppins(
@@ -834,26 +884,59 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     bool obscure = false,
     TextCapitalization capitalization = TextCapitalization.none,
     Function(String)? onChanged,
+    FocusNode? focusNode,
+    bool minimalSurface = false,
+    Widget? suffixIcon,
   }) {
-    return Container(
+    final isFocused = focusNode?.hasFocus ?? false;
+    final fieldBorder = minimalSurface
+        ? (isFocused
+            ? goldAccent.withValues(alpha: 0.64)
+            : AppColors.border.withValues(alpha: 0.58))
+        : AppColors.border.withValues(alpha: 0.95);
+    final fieldFill = minimalSurface
+        ? Colors.white.withValues(alpha: isFocused ? 0.035 : 0.018)
+        : AppColors.elevatedSurface.withValues(alpha: 0.94);
+
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 160),
       height: ResponsiveHelper.fieldHeight(context),
       decoration: BoxDecoration(
-        color: AppColors.elevatedSurface.withValues(alpha: 0.94),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.border.withValues(alpha: 0.95)),
+        color: fieldFill,
+        borderRadius: BorderRadius.circular(minimalSurface ? 14 : 12),
+        border: Border.all(color: fieldBorder, width: minimalSurface ? 1.0 : 1),
+        boxShadow: minimalSurface
+            ? null
+            : [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.18),
+                  blurRadius: 12,
+                  offset: const Offset(0, 6),
+                ),
+              ],
       ),
       child: TextField(
         controller: controller,
+        focusNode: focusNode,
         keyboardType: keyboard,
         obscureText: obscure,
         textCapitalization: capitalization,
         onChanged: onChanged,
+        autofillHints: keyboard == TextInputType.emailAddress
+            ? const [AutofillHints.email]
+            : obscure
+                ? const [AutofillHints.password]
+                : null,
         style: const TextStyle(color: Colors.white, fontSize: 13),
         decoration: InputDecoration(
           hintText: hint,
-          hintStyle: const TextStyle(color: Colors.white10, fontSize: 13),
+          hintStyle: TextStyle(
+            color: Colors.white.withValues(alpha: minimalSurface ? 0.34 : 0.10),
+            fontSize: 13,
+          ),
           prefixIcon:
-              Icon(icon, color: goldAccent.withValues(alpha: 0.5), size: 18),
+              Icon(icon, color: goldAccent.withValues(alpha: 0.56), size: 18),
+          suffixIcon: suffixIcon,
           contentPadding: const EdgeInsets.symmetric(horizontal: 16),
           border: InputBorder.none,
         ),

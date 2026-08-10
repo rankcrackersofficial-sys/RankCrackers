@@ -1,0 +1,81 @@
+{
+  "gate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4D_LOGIN_AUTH_GATE_AND_PREMIUM_INPUT_REPAIR",
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4D_IMPLEMENTED_ANALYZE_PASSED_BLOCKED_BY_FRESH_SAMSUNG_INSTALL_TOOLCHAIN_VM_CRASH",
+  "baselineHead": "a49758743d13c576ab3c89f45c85f0e3949e50b0",
+  "device": {
+    "route": "Samsung physical device",
+    "serial": "RZCW12FBFXZ",
+    "model": "SM S911B"
+  },
+  "changes": {
+    "googleAuth": [
+      "Google sign-in split into account-picker, Google-token, and Firebase-credential stages.",
+      "Stage-specific timeouts added: picker 25s, token 20s, Firebase credential 20s.",
+      "PlatformException, TimeoutException, cancellation, and unknown errors now map to student-safe messages.",
+      "Raw error details remain in debug evidence path, not student UI.",
+      "Auth notifier prevents duplicate sign-in calls while loading and always clears loading on failure/cancel/timeout."
+    ],
+    "loginVisual": [
+      "Email/password login fields changed to minimal premium transparent/near-transparent surface.",
+      "Thin restrained border/focus line added through FocusNode-driven state.",
+      "Password visibility control preserved/added without removing password behavior.",
+      "Google button now disables during auth loading and shows Opening Google... spinner."
+    ]
+  },
+  "oldEvidenceCorrection": {
+    "r4d_google_after_tap_xmlPackage": "com.whatsapp",
+    "conclusion": "Old after-tap XML was not RankCrackers and must not be used as Google auth proof."
+  },
+  "freshSamsungEvidence": {
+    "rankCrackersForeground": true,
+    "initialUiLabelsFound": [
+      "RankCrackers",
+      "SOVEREIGN IDENTITY",
+      "Show password",
+      "Forgot Password?",
+      "LOGIN / CONTINUE",
+      "Continue with Google"
+    ],
+    "postTapUiReturnedToLogin": true,
+    "spinnerStuckAfterTap": false,
+    "rawTechnicalErrorVisibleToStudent": false,
+    "freshInstallBlocked": true,
+    "freshInstallBlocker": "Flutter/Dart VM crash during compileFlutterBuildDebug, repeated twice."
+  },
+  "validation": {
+    "dartFormat": "PASS",
+    "targetedFlutterAnalyze": "PASS_NO_ISSUES",
+    "gitDiffCheck": "PASS",
+    "freshSamsungBuildInstall": "BLOCKED_BY_FLUTTER_TOOLCHAIN_VM_CRASH",
+    "productionWrite": "NO",
+    "deploy": "NO"
+  },
+  "worktree": {
+    "knownUnrelatedDirtyFile": "android/app/build.gradle.kts",
+    "knownUnrelatedGradleHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4"
+  },
+  "evidenceFiles": {
+    "firebase_emulators.err.log": 0,
+    "firebase_emulators.out.log": 1575,
+    "r4d_after_repair_google_tap.png": 876904,
+    "r4d_after_repair_google_tap.xml": 6927,
+    "r4d_after_repair_google_tap_logcat.txt": 236088,
+    "r4d_after_repair_samsung_initial.png": 835662,
+    "r4d_after_repair_samsung_initial.xml": 7346,
+    "r4d_google_after_tap.png": 139159,
+    "r4d_google_after_tap.xml": 12677,
+    "r4d_google_filtered_log.txt": 15438,
+    "r4d_login_initial.png": 2669821
+  },
+  "safety": [
+    "NO_PRODUCTION_WRITE",
+    "NO_PRODUCTION_AUTH",
+    "NO_RULES_CHANGE",
+    "NO_FIREBASE_CONFIG_SWAP",
+    "NO_DEPLOY",
+    "NO_STUDENT_PUBLISH",
+    "NO_PROFILE_REDESIGN",
+    "NO_UI_OPTION_REMOVAL"
+  ],
+  "recommendedNextStep": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4D_R1_FRESH_SAMSUNG_INSTALL_AFTER_FLUTTER_TOOLCHAIN_STABILIZATION"
+}

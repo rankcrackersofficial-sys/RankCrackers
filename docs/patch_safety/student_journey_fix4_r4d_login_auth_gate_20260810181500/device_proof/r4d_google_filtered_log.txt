@@ -1,0 +1,89 @@
+08-10 19:32:03.238  2546  2806 E HQSession.cpp: Connection closed with error err=Transport error: 0x1 msg=Error on socket write Network is unreachable, Operation not permitted proto=, client CID=, server CID=, local=<uninitialized address>, <uninitialized address>=upstream, drain=none
+08-10 19:32:03.291  2546  2768 W fb4a.AppInitScheduler|Schedule:   Executing 219:InitPushabilityCheck
+08-10 19:32:03.292  2546  2768 W fb4a.AppInitScheduler|Run: Running InitPushabilityCheck, order=97, priorityHint=NORMAL 
+08-10 19:32:03.312  2546  2768 W fb4a.AppInitScheduler|Run:   Finished InitPushabilityCheck in 21ms
+08-10 19:32:03.351  2546  2699 W fb4a.AppInitScheduler|Run: SKIP AppInit 385:PreloadVideoPrivateSharing for start destination 6
+08-10 19:32:03.351  2546  2699 W fb4a.AppInitScheduler|Run:   Finished PreloadVideoPrivateSharing in 0ms
+08-10 19:32:03.504 10372  1697 I NearbyMediums: Current Tracked Scanning Clients are : {NearbyConnections.EnvironmentMonitor, NearbySharing, NearbyConnections.TxAdvertisement}
+08-10 19:32:03.610  8217  8226 I MediaProvider: Filtering owner package name for jio.cloud.drive, projection: [title_key, instance_id, compilation, disc_number, duration, is_ringtone, album_artist, resolution, orientation, artist, author, inferred_date, height, is_drm, bucket_display_name, is_audiobook, owner_package_name, volume_name, title_resource_uri, date_modified, writer, date_expires, composer, bits_per_sample, _display_name, is_recording, datetaken, mime_type, is_notification, bitrate, cd_track_number, _id, xmp, year, null as oem_metadata, _data, _size, album, genre, is_alarm, title, track, width, is_music, samplerate, album_key, is_favorite, is_trashed, group_id, document_id, artist_id, generation_added, artist_key, genre_key, is_download, generation_modified, is_pending, date_added, is_podcast, capture_framerate, album_id, num_tracks, original_document_id, genre_id, bucket_id, bookmark, relative_path]
+08-10 19:32:03.828  8217  8226 I MediaProvider: Filtering owner package name for jio.cloud.drive, projection: [title_key, instance_id, compilation, disc_number, duration, is_ringtone, album_artist, resolution, orientation, artist, author, inferred_date, height, is_drm, bucket_display_name, is_audiobook, owner_package_name, volume_name, title_resource_uri, date_modified, writer, date_expires, composer, bits_per_sample, _display_name, is_recording, datetaken, mime_type, is_notification, bitrate, cd_track_number, _id, xmp, year, null as oem_metadata, _data, _size, album, genre, is_alarm, title, track, width, is_music, samplerate, album_key, is_favorite, is_trashed, group_id, document_id, artist_id, generation_added, artist_key, genre_key, is_download, generation_modified, is_pending, date_added, is_podcast, capture_framerate, album_id, num_tracks, original_document_id, genre_id, bucket_id, bookmark, relative_path]
+08-10 19:32:03.951  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+08-10 19:32:03.952  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+08-10 19:32:03.952  3558  4809 D InetDiagMessage: Destroyed live tcp sockets for uids={10129} in 2ms
+08-10 19:32:03.954  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+08-10 19:32:03.954  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+08-10 19:32:03.954  3558  4809 D InetDiagMessage: Destroyed live tcp sockets for uids={10383} in 2ms
+08-10 19:32:03.955  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+08-10 19:32:03.956  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+08-10 19:32:03.956  3558  4809 D InetDiagMessage: Destroyed live tcp sockets for uids={10235} in 2ms
+08-10 19:32:03.957  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+08-10 19:32:03.957  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+08-10 19:32:03.957  3558  4809 D InetDiagMessage: Destroyed live tcp sockets for uids={5004} in 1ms
+08-10 19:32:04.022  3558  4613 E AppOps  : java.lang.SecurityException: Specified package "com.android.phone" under uid 10094 but it is not
+08-10 19:32:04.517  3558  5749 W Binder  : 	at com.android.server.am.FreecessHandler$MainHandler.handleLcdOnFreeze(qb/111793157 87ddd35bc5d2c408c38f6a57f2ac1076f9dbda659e7b2a275d56e1c946eea8c8:55)
+08-10 19:32:04.517  3558  5749 W Binder  : 	at com.android.server.am.FreecessHandler$MainHandler.handleMessage(qb/111793157 87ddd35bc5d2c408c38f6a57f2ac1076f9dbda659e7b2a275d56e1c946eea8c8:1686)
+08-10 19:32:04.523  3558  5749 D FreecessHandler: skipping freeze com.rankcrackers.app(10623) result : 2
+08-10 19:32:06.769  3558  5749 D FreecessHandler: skipping freeze com.google.android.inputmethod.latin(10385) result : 11
+08-10 19:32:08.025  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+08-10 19:32:08.026  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+08-10 19:32:08.026  3558  4809 D InetDiagMessage: Destroyed live tcp sockets for uids={10327} in 2ms
+08-10 19:32:08.027  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+08-10 19:32:08.028  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+08-10 19:32:08.028  3558  4809 D InetDiagMessage: Destroyed live tcp sockets for uids={20327} in 2ms
+08-10 19:32:08.032  5712  5712 W adbd    : timeout expired while reading data after flushing socket, closing
+08-10 19:32:08.422 32326 32699 W NearbyPresence: TidepoolIdentityProvider: Main Tidepool status toggle not enabled! Returned empty shared credentials. [CONTEXT service_id=317 ]
+08-10 19:32:08.608  2546  2777 W soft_error.cpp: [DGWClientConfig] : sgConnectTimeout: value 0 outside valid range [1, 120] <force_oncall:mi_client_infra:force_oncall>
+08-10 19:32:08.608  2546  2777 W soft_error.cpp: [DGWClientConfig] : sgPingTimeout: value 0 outside valid range [1, 60] <force_oncall:mi_client_infra:force_oncall>
+08-10 19:32:08.608  2546  2777 W soft_error.cpp: [DGWClientConfig] : tunnelConnectTimeout: value 0 outside valid range [1, 120] <force_oncall:mi_client_infra:force_oncall>
+08-10 19:32:08.608  2546  2777 W soft_error.cpp: [DGWClientConfig] : tunnelConnectAckTimeout: value 0 outside valid range [1, 120] <force_oncall:mi_client_infra:force_oncall>
+08-10 19:32:08.933  3558  5749 D FreecessHandler: skipping freeze com.whatsapp(15010333) result : 7
+08-10 19:32:09.114  8217  8226 E DatabaseUtils: Writing exception to parcel
+08-10 19:32:09.114  8217  8226 E DatabaseUtils: java.lang.IllegalArgumentException: Volume phoneStorage not found
+08-10 19:32:09.114  8217  8226 E DatabaseUtils: 	at com.android.providers.media.MediaProvider$FallbackException.translateForQuery(MediaProvider.java:12677)
+08-10 19:32:09.115  8217  8226 E DatabaseUtils: Writing exception to parcel
+08-10 19:32:09.115  8217  8226 E DatabaseUtils: java.lang.IllegalArgumentException: Volume phoneStorage not found
+08-10 19:32:09.115  8217  8226 E DatabaseUtils: 	at com.android.providers.media.MediaProvider$FallbackException.translateForQuery(MediaProvider.java:12677)
+08-10 19:32:09.431  3558  4809 D InetDiagMessage: Destroyed 1 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+08-10 19:32:09.432  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+08-10 19:32:09.432  3558  4809 D InetDiagMessage: Destroyed live tcp sockets for uids={10607} in 2ms
+08-10 19:32:09.433  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET, states=14
+08-10 19:32:09.434  3558  4809 D InetDiagMessage: Destroyed 0 sockets, proto=IPPROTO_TCP, family=AF_INET6, states=14
+08-10 19:32:09.434  3558  4809 D InetDiagMessage: Destroyed live tcp sockets for uids={20607} in 1ms
+08-10 19:32:10.024  2546  2807 D nativeloader: Load /data/data/com.facebook.katana/lib-compressed/libfbsocketthreadlocalscope.so using class loader ns clns-9 (caller=/data/app/~~t_uhRE9E_FJFMVLZNCXLdw==/com.facebook.katana-wF89BuaWu8O8mJH4BBXzoA==/base.apk): ok
+08-10 19:32:10.225  2546  3156 I AdrenoGLES-0: OpenGL ES Shader Compiler Version: E031.41.03.64
+08-10 19:32:10.534  3558  5749 D FreecessHandler: skipping freeze com.rankcrackers.app(10623) result : 2
+08-10 19:32:10.582  2546  2804 E fb4a.ColdstartExperimentsController: java.lang.IllegalStateException: Main DexStore is null
+08-10 19:32:10.774  3558  7211 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.composer.shareintent.ShareToStatusAlias newState = 2 callingPackage = com.facebook.katana
+08-10 19:32:10.775  3558  3586 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.composer.shareintent.ImplicitShareIntentHandlerDefaultAlias newState = 1 callingPackage = com.facebook.katana
+08-10 19:32:10.776  3558  3586 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.composer.shareintent.AddToStoryAlias newState = 1 callingPackage = com.facebook.katana
+08-10 19:32:10.778  3558  3586 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.composer.shareintent.ShareToGroupsAlias newState = 1 callingPackage = com.facebook.katana
+08-10 19:32:10.779  3558  3586 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.composer.shareintent.ShareToGroupsSimpleLabelAlias newState = 2 callingPackage = com.facebook.katana
+08-10 19:32:11.020  3558  3586 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.inspiration.fbshorts.shareintent.InpirationFbShortsShareAlias newState = 1 callingPackage = com.facebook.katana
+08-10 19:32:11.022  3558  3586 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.inspiration.fbshorts.shareintent.InpirationFbShortsSharePhotoAlias newState = 2 callingPackage = com.facebook.katana
+08-10 19:32:11.023  3558  3586 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.inspiration.fbshorts.shareintent.InpirationFbShortsShareMultipleAlias newState = 1 callingPackage = com.facebook.katana
+08-10 19:32:11.026  3558  3586 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = class com.facebook.inspiration.platformsharing.activity.InspirationBaseExternalShareActivity newState = 1 callingPackage = com.facebook.katana
+08-10 19:32:11.039  3558  8016 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.inspiration.platformsharing.activity.InspirationCameraShareMultipleCollageAlias newState = 2 callingPackage = com.facebook.katana
+08-10 19:32:11.041  3558  3586 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.inspiration.platformsharing.activity.InspirationCameraShareToStoryTextAlias newState = 1 callingPackage = com.facebook.katana
+08-10 19:32:11.043  3558  3586 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.inspiration.platformsharing.activity.InspirationCameraShareToStoryTextSimpleLabelAlias newState = 2 callingPackage = com.facebook.katana
+08-10 19:32:11.173  3177  3177 W PlatformAconfigPackage: android.os.flagging.AconfigStorageReadException: ERROR_CANNOT_READ_STORAGE_FILE: Fail to mmap storage
+08-10 19:32:11.189  3177  3177 E FeatureFlagsImplExport: android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package android.xr cannot be found on the device
+08-10 19:32:11.479  3558  3588 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.timeline.stagingground.Fb4aProfilePictureShareActivityAlias newState = 1 callingPackage = com.facebook.katana
+08-10 19:32:11.481  3558  3588 D PackageManager: setEnabledSetting : userId = 0 packageName = com.facebook.katana cmp = com.facebook.timeline.stagingground.WorkProfilePictureShareActivityAlias newState = 2 callingPackage = com.facebook.katana
+08-10 19:32:11.838  2105  2178 E minksocket: MinkIPC_QRTR_Service: client with node 1 port 4cd3 went down
+08-10 19:32:11.838  2105  2180 E minksocket: MinkIPC_QRTR_Service: client with node 1 port 4cd3 went down
+08-10 19:32:11.838  2105  2178 E minksocket: MinkIPC_QRTR_Service: client with node 1 port 4cd4 went down
+08-10 19:32:11.838  2105  2180 E minksocket: MinkIPC_QRTR_Service: client with node 1 port 4cd4 went down
+08-10 19:32:11.839  2105  2180 E minksocket: MinkIPC_QRTR_Service: client with node 1 port 4cd5 went down
+08-10 19:32:11.839  2105  2178 E minksocket: MinkIPC_QRTR_Service: client with node 1 port 4cd5 went down
+08-10 19:32:11.839  2105  2178 E minksocket: MinkIPC_QRTR_Service: client with node 1 port 4cd6 went down
+08-10 19:32:11.839  2105  2180 E minksocket: MinkIPC_QRTR_Service: client with node 1 port 4cd6 went down
+08-10 19:32:11.854  2105  2178 E minksocket: MinkIPC_QRTR_Service: client with node 1 port 4cd7 went down
+08-10 19:32:11.854  2105  2180 E minksocket: MinkIPC_QRTR_Service: client with node 1 port 4cd7 went down
+08-10 19:32:12.096  8217  3382 D PickerSyncLockManager: Trying to acquire lock com.android.providers.media.photopicker.sync.CloseableReentrantLock@ec730e5[Unlocked]. Lock Name = CLOUD_PROVIDER_LOCK. Threads that may be waiting to acquire this lock = [] with timeout.
+08-10 19:32:12.108  8217  3382 D PickerSyncLockManager: Trying to acquire lock com.android.providers.media.photopicker.sync.CloseableReentrantLock@ec730e5[Unlocked]. Lock Name = CLOUD_PROVIDER_LOCK. Threads that may be waiting to acquire this lock = [] with timeout.
+08-10 19:32:12.120  8217  3382 D PickerSyncLockManager: Trying to acquire lock com.android.providers.media.photopicker.sync.CloseableReentrantLock@ec730e5[Unlocked]. Lock Name = CLOUD_PROVIDER_LOCK. Threads that may be waiting to acquire this lock = [] with timeout.
+08-10 19:32:12.125  8217  3382 D PickerSyncLockManager: Trying to acquire lock com.android.providers.media.photopicker.sync.CloseableReentrantLock@ec730e5[Unlocked]. Lock Name = CLOUD_PROVIDER_LOCK. Threads that may be waiting to acquire this lock = [] with timeout.
+08-10 19:32:12.129  8217  3382 D PickerSyncLockManager: Trying to acquire lock com.android.providers.media.photopicker.sync.CloseableReentrantLock@ec730e5[Unlocked]. Lock Name = CLOUD_PROVIDER_LOCK. Threads that may be waiting to acquire this lock = [] with timeout.
+08-10 19:32:12.162  3558  4493 W JobServiceContext: Sending onNetworkChanged for a job that isn't started. JobStatus{603612a #u0a623/779956392 com.rankcrackers.app/com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService u=0 s=10623 TIME=-243ms:none NET READY}
+08-10 19:32:12.344  3558  4955 D NetdEventListenerService: DNS Requested by 158, 10623(com.rankcrackers.app), SUCCESS, 31ms
+08-10 19:32:12.779  3558  5749 D FreecessHandler: skipping freeze com.google.android.inputmethod.latin(10385) result : 11

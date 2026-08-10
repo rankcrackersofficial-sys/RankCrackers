@@ -119,6 +119,8 @@ class AuthNotifier extends StateNotifier<SecureAuthState> {
   // =====================================================
 
   Future<bool> signInWithGoogle() async {
+    if (state.isLoading) return false;
+
     try {
       state = state.copyWith(isLoading: true, errorMessage: null);
 
@@ -149,6 +151,10 @@ class AuthNotifier extends StateNotifier<SecureAuthState> {
   }
 
   String _getAuthErrorMessage(dynamic e) {
+    if (e is AuthFlowException) {
+      return e.studentMessage;
+    }
+
     if (e is FirebaseAuthException) {
       switch (e.code) {
         case 'user-not-found':
@@ -167,7 +173,7 @@ class AuthNotifier extends StateNotifier<SecureAuthState> {
           return e.message ?? 'Authentication failed.';
       }
     }
-    return e.toString();
+    return 'Authentication could not complete. Please try again.';
   }
 }
 
@@ -175,7 +181,8 @@ class AuthNotifier extends StateNotifier<SecureAuthState> {
 // PROVIDER
 // =====================================================
 
-final authNotifierProvider = StateNotifierProvider<AuthNotifier, SecureAuthState>((ref) {
+final authNotifierProvider =
+    StateNotifierProvider<AuthNotifier, SecureAuthState>((ref) {
   final repository = ref.watch(authRepositoryProvider);
   return AuthNotifier(repository);
 });
