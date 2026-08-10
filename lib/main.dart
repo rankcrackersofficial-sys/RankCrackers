@@ -6,6 +6,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'firebase_options.dart';
 import 'core/router/app_router.dart';
+import 'core/firebase/firebase_emulator_config.dart';
 import 'core/ai/ai_queue_service.dart';
 import 'core/theme/app_theme.dart';
 import 'core/errors/global_error_handler.dart';
@@ -19,6 +20,7 @@ Future<void> main() async {
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
+    await configureFirebaseEmulatorsFromDartDefines();
 
     // 🔱 SESSION BOOTSTRAP (Level-12.8 Hardening)
     await SessionManager.initialize();
@@ -26,19 +28,19 @@ Future<void> main() async {
     // 🔱 APP CHECK INITIALIZATION
     try {
       await FirebaseAppCheck.instance.activate(
-        androidProvider: kDebugMode ? AndroidProvider.debug : AndroidProvider.playIntegrity,
+        androidProvider:
+            kDebugMode ? AndroidProvider.debug : AndroidProvider.playIntegrity,
         appleProvider: AppleProvider.deviceCheck,
       );
     } catch (e) {
       debugPrint('⚠️ App Check failed: $e');
     }
-    
+
     runApp(
       const ProviderScope(
         child: RankCrackersApp(),
       ),
     );
-    
   } catch (e, stack) {
     GlobalErrorHandler.handleFatal(e, stack);
   }

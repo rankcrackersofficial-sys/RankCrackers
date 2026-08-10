@@ -1,0 +1,46 @@
+{
+  "verdictTarget": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R2_EMULATOR_PROFILE_VALIDATION_WIRING_PREP_PASSED",
+  "startingHead": "c94ff10d6798426f6a722d713bbf599bf1ab84b4",
+  "requiredBaseline": "c94ff10d6798426f6a722d713bbf599bf1ab84b4",
+  "gradleHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "requiredGradleHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "modifiedFiles": [
+    "lib/core/firebase/firebase_emulator_config.dart",
+    "lib/main.dart",
+    "test/student_journey/student_journey_fix4_r2_emulator_config_test.dart",
+    "docs/patch_safety/RANKCRACKERS_STUDENT_JOURNEY_FIX4_R1_safe_nonprod_validation_blocked_20260810124520.md"
+  ],
+  "optIn": {
+    "defaultUseEmulator": false,
+    "requiredFlag": "RC_USE_FIREBASE_EMULATOR=true",
+    "requiredHost": "RC_FIREBASE_EMULATOR_HOST",
+    "authPortDefault": 9099,
+    "firestorePortDefault": 8080
+  },
+  "failClosed": {
+    "missingHostThrows": true,
+    "invalidPortsThrow": true,
+    "releaseModeRejectsEmulator": true,
+    "silentProductionFallback": false
+  },
+  "verification": {
+    "targetedAnalyze": "PASS",
+    "emulatorConfigTests": "PASS_4_OF_4",
+    "debugApkBuild": "PASS"
+  },
+  "notPerformed": {
+    "profileSave": false,
+    "firestoreWrite": false,
+    "productionBackendCall": false,
+    "deploy": false
+  },
+  "safety": {
+    "productionWrite": false,
+    "firestoreRulesChange": false,
+    "firebaseOptionsReplacement": false,
+    "googleServicesReplacement": false,
+    "firebasercChange": false,
+    "deploy": false
+  },
+  "nextGate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R3_EMULATOR_PROFILE_ESTABLISHMENT_SAVE_READBACK_VALIDATION"
+}
