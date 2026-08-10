@@ -60,7 +60,9 @@ class _SubjectSelectorTileState extends State<SubjectSelectorTile> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("Subjects", style: AppTypography.label.copyWith(fontSize: 10, color: Colors.white38)),
+          Text("Subjects",
+              style: AppTypography.label
+                  .copyWith(fontSize: 10, color: Colors.white38)),
           const SizedBox(height: 12),
           TextField(
             controller: _searchController,
@@ -68,11 +70,15 @@ class _SubjectSelectorTileState extends State<SubjectSelectorTile> {
             style: AppTypography.body.copyWith(fontSize: 14),
             decoration: InputDecoration(
               hintText: "Search Subject (e.g. Physics)",
-              hintStyle: AppTypography.body.copyWith(fontSize: 14, color: Colors.white12),
-              prefixIcon: const Icon(Icons.search_rounded, color: AppColors.gold, size: 18),
+              hintStyle: AppTypography.body
+                  .copyWith(fontSize: 14, color: Colors.white12),
+              prefixIcon: const Icon(Icons.search_rounded,
+                  color: AppColors.gold, size: 18),
               filled: true,
               fillColor: Colors.white.withValues(alpha: 0.03),
-              border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none),
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide.none),
               contentPadding: const EdgeInsets.symmetric(vertical: 0),
             ),
           ),
@@ -81,7 +87,9 @@ class _SubjectSelectorTileState extends State<SubjectSelectorTile> {
             Wrap(
               spacing: 8,
               runSpacing: 8,
-              children: widget.selectedSubjects.map((s) => _subjectChip(s, true)).toList(),
+              children: widget.selectedSubjects
+                  .map((s) => _subjectChip(s, true))
+                  .toList(),
             ),
             const SizedBox(height: 16),
             const Divider(color: Colors.white10, height: 1),
@@ -96,14 +104,23 @@ class _SubjectSelectorTileState extends State<SubjectSelectorTile> {
               itemBuilder: (context, index) {
                 final s = _suggestions[index];
                 final isSelected = widget.selectedSubjects.contains(s);
-                return ListTile(
-                  dense: true,
-                  contentPadding: EdgeInsets.zero,
-                  title: Text(s, style: AppTypography.body.copyWith(fontSize: 13, color: isSelected ? AppColors.gold : Colors.white70)),
-                  trailing: isSelected 
-                      ? const Icon(Icons.check_circle_rounded, color: AppColors.gold, size: 18)
-                      : const Icon(Icons.add_circle_outline_rounded, color: Colors.white10, size: 18),
-                  onTap: () => _toggleSubject(s),
+                return Material(
+                  color: Colors.transparent,
+                  child: ListTile(
+                    dense: true,
+                    contentPadding: EdgeInsets.zero,
+                    title: Text(s,
+                        style: AppTypography.body.copyWith(
+                            fontSize: 13,
+                            color:
+                                isSelected ? AppColors.gold : Colors.white70)),
+                    trailing: isSelected
+                        ? const Icon(Icons.check_circle_rounded,
+                            color: AppColors.gold, size: 18)
+                        : const Icon(Icons.add_circle_outline_rounded,
+                            color: Colors.white10, size: 18),
+                    onTap: () => _toggleSubject(s),
+                  ),
                 );
               },
             ),
@@ -126,7 +143,9 @@ class _SubjectSelectorTileState extends State<SubjectSelectorTile> {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(label, style: AppTypography.label.copyWith(fontSize: 9, color: AppColors.gold)),
+            Text(label,
+                style: AppTypography.label
+                    .copyWith(fontSize: 9, color: AppColors.gold)),
             const SizedBox(width: 4),
             const Icon(Icons.close_rounded, size: 12, color: AppColors.gold),
           ],

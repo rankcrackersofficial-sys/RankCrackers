@@ -311,13 +311,16 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                     child: ListView.builder(
                       itemCount: filteredItems.length,
                       itemBuilder: (context, index) {
-                        return ListTile(
-                          title: Text(filteredItems[index],
-                              style: const TextStyle(color: Colors.white70)),
-                          onTap: () {
-                            onSelected(filteredItems[index]);
-                            Navigator.pop(context);
-                          },
+                        return Material(
+                          color: Colors.transparent,
+                          child: ListTile(
+                            title: Text(filteredItems[index],
+                                style: const TextStyle(color: Colors.white70)),
+                            onTap: () {
+                              onSelected(filteredItems[index]);
+                              Navigator.pop(context);
+                            },
+                          ),
                         );
                       },
                     ),

@@ -149,28 +149,58 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
               SliverPadding(
                 padding: EdgeInsets.symmetric(
                     horizontal: ResponsiveHelper.wp(context, 0.05)),
-                sliver: SliverGrid.count(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  childAspectRatio: 2.2,
-                  children: [
-                    _compactPillarCard(Icons.local_fire_department, 'PRACTICE',
-                        () => context.go(AppRoutes.crucible),
-                        color: Colors.orangeAccent),
-                    _compactPillarCard(
-                        Icons.menu_book_rounded,
-                        'DIGIBOOK',
-                        () =>
-                            context.go(AppRoutes.digibook, extra: priorityNode),
-                        color: Colors.blueAccent),
-                    _compactPillarCard(Icons.account_tree_rounded, 'SYLLABUS',
-                        () => context.go(AppRoutes.syllabus),
-                        color: Colors.purpleAccent),
-                    _compactPillarCard(Icons.rocket_launch_rounded, 'JOBS',
-                        () => context.go(AppRoutes.recruitment),
-                        color: AppColors.gold),
-                  ],
+                sliver: SliverToBoxAdapter(
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: _compactPillarCard(
+                              Icons.local_fire_department,
+                              'THE CRUCIBLE',
+                              () => context.go(AppRoutes.crucible),
+                              color: Colors.orangeAccent,
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: _compactPillarCard(
+                              Icons.menu_book_rounded,
+                              'DIGIBOOK',
+                              () => context.go(
+                                AppRoutes.digibook,
+                                extra: priorityNode,
+                              ),
+                              color: Colors.blueAccent,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 10),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: _compactPillarCard(
+                              Icons.account_tree_rounded,
+                              'SYLLABUS',
+                              () => context.go(AppRoutes.syllabus),
+                              color: Colors.purpleAccent,
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: _compactPillarCard(
+                              Icons.travel_explore_rounded,
+                              'CAREER SIGNALS',
+                              () => context.go(AppRoutes.recruitment),
+                              color: AppColors.gold,
+                              secondary: true,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
 
@@ -255,7 +285,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
   }
 
   Widget _compactPillarCard(IconData icon, String label, VoidCallback onTap,
-      {required Color color}) {
+      {required Color color, bool secondary = false}) {
     return GestureDetector(
       onTap: onTap,
       child: DarkCard(
@@ -263,13 +293,20 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: color.withValues(alpha: 0.6), size: 18),
+            Icon(
+              icon,
+              color: color.withValues(alpha: secondary ? 0.48 : 0.68),
+              size: secondary ? 16 : 18,
+            ),
             const SizedBox(height: 2),
             Text(label,
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: AppTypography.label.copyWith(
-                    fontSize: 7,
+                    fontSize: secondary ? 6.4 : 7,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white70)),
+                    color: secondary ? Colors.white54 : Colors.white70)),
           ],
         ),
       ),
@@ -286,8 +323,8 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("TODAY'S PRIORITY",
-            style: AppTypography.label
-                .copyWith(fontSize: 8, color: Colors.white12)),
+            style: AppTypography.label.copyWith(
+                fontSize: 8, letterSpacing: 1.0, color: Colors.white30)),
         const SizedBox(height: 8),
         DarkCard(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -297,11 +334,16 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(priorityNode?.title ?? 'No Active Weakness',
+                    Text(
+                        priorityNode?.title ??
+                            'Your first priority unlocks after the first assessment',
                         style: AppTypography.cardTitle.copyWith(fontSize: 13)),
-                    Text('Target: ${(masteryValue * 100).toInt()}% Mastery',
+                    Text(
+                        priorityNode == null
+                            ? 'No weakness has been inferred yet. Start learning to build your map.'
+                            : 'Target: ${(masteryValue * 100).toInt()}% Mastery',
                         style: AppTypography.body
-                            .copyWith(fontSize: 9, color: Colors.white24)),
+                            .copyWith(fontSize: 9, color: Colors.white38)),
                   ],
                 ),
               ),
@@ -325,8 +367,8 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text("MISSION STATUS",
-            style: AppTypography.label
-                .copyWith(fontSize: 8, color: Colors.white12)),
+            style: AppTypography.label.copyWith(
+                fontSize: 8, letterSpacing: 1.0, color: Colors.white30)),
         const SizedBox(height: 8),
         DarkCard(
           padding: const EdgeInsets.all(12),

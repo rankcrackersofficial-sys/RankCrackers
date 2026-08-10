@@ -34,7 +34,8 @@ class CrucibleScreen extends ConsumerStatefulWidget {
 
 class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   // 🔱 enrollmentDate now relative for stabilization
-  final DateTime enrollmentDate = DateTime.now().subtract(const Duration(days: 16));
+  final DateTime enrollmentDate =
+      DateTime.now().subtract(const Duration(days: 16));
   late int currentDay;
   late int currentPhase;
   late double progress;
@@ -79,13 +80,15 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     final nodes = knowledge.allNodes
         .where((e) => e.examId.toLowerCase() == selectedExamId.toLowerCase())
         .toList();
-    
-    final scheduleIndex = CrucibleClockEngine.getScheduleIndex(enrollmentTime: enrollmentDate);
+
+    final scheduleIndex =
+        CrucibleClockEngine.getScheduleIndex(enrollmentTime: enrollmentDate);
     final currentCycleDay = scheduleIndex * 2 + 1;
     final phase = (currentCycleDay ~/ 15) + 1;
     final remainingHours = CrucibleClockEngine.getHoursRemaining();
-    final plan = CrucibleMasterEngine.generatePlan(nodes: nodes, states: states);
-    
+    final plan =
+        CrucibleMasterEngine.generatePlan(nodes: nodes, states: states);
+
     final missions = plan.isEmpty
         ? ['No Active Mission']
         : plan.take(3).map((e) => e['topicName'].toString()).toList();
@@ -101,7 +104,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     final missionComplete = coverage.coveragePercent;
     final pending = 1.0 - coverage.coveragePercent;
     final weakCount = coverage.weakNodes;
-    final weakAreas = coverage.totalNodes == 0 ? 0.0 : weakCount / coverage.totalNodes;
+    final weakAreas =
+        coverage.totalNodes == 0 ? 0.0 : weakCount / coverage.totalNodes;
 
     final priorityNode = BattleEngine.getPriorityNode(
       nodes,
@@ -109,8 +113,10 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
       riskFactor: knowledge.riskState?.overallRisk ?? 0.0,
     );
 
-    final macroTestActive = CrucibleClockEngine.isMacroTestWindow(enrollmentTime: enrollmentDate);
-    final rebuildMode = CrucibleClockEngine.isRebuildPhase(enrollmentTime: enrollmentDate);
+    final macroTestActive =
+        CrucibleClockEngine.isMacroTestWindow(enrollmentTime: enrollmentDate);
+    final rebuildMode =
+        CrucibleClockEngine.isRebuildPhase(enrollmentTime: enrollmentDate);
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -129,19 +135,24 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                   momentum: momentum,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: AppSpacing.screenPadding),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: AppSpacing.screenPadding),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 16),
-                      Text('THE CRUCIBLE', style: AppTypography.hero.copyWith(fontSize: 22)),
+                      Text('THE CRUCIBLE',
+                          style: AppTypography.hero.copyWith(fontSize: 22)),
                       const SizedBox(height: 6),
-                      Text('99 Day Tactical Ascension Protocol • Day $currentDay', style: AppTypography.label),
+                      Text(
+                          '100 Day Tactical Ascension Protocol • Day $currentDay',
+                          style: AppTypography.label),
                       const SizedBox(height: 28),
-
-                      LiveTimerCard(day: currentCycleDay, phase: phase, hours: remainingHours),
+                      LiveTimerCard(
+                          day: currentCycleDay,
+                          phase: phase,
+                          hours: remainingHours),
                       const SizedBox(height: 24),
-
                       BattleEngineCard(
                         dayCount: currentDay,
                         progress: progress,
@@ -151,7 +162,6 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                         activeTopics: missions,
                       ),
                       const SizedBox(height: 24),
-
                       MissionBlueprintCard(
                         missions: plan.map((e) {
                           final nodeId = e['topicId'].toString();
@@ -163,12 +173,14 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                             'completed': 'In Progress',
                             'running': e['priority'].toString().toUpperCase(),
                             'locked': 'Next Session',
-                            'onTap': node != null ? () => context.go(AppRoutes.digibook, extra: node) : null,
+                            'onTap': node != null
+                                ? () =>
+                                    context.go(AppRoutes.digibook, extra: node)
+                                : null,
                           };
                         }).toList(),
                       ),
                       const SizedBox(height: 24),
-
                       if (macroTestActive)
                         Container(
                           margin: const EdgeInsets.only(bottom: 20),
@@ -176,34 +188,44 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                           decoration: BoxDecoration(
                             color: Colors.red.withValues(alpha: 0.08),
                             borderRadius: BorderRadius.circular(14),
-                            border: Border.all(color: Colors.red.withValues(alpha: 0.2)),
+                            border: Border.all(
+                                color: Colors.red.withValues(alpha: 0.2)),
                           ),
                           child: const Row(
                             children: [
                               Icon(Icons.warning_amber, color: Colors.red),
                               SizedBox(width: 12),
-                              Expanded(child: Text('Macro Test Window Active', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold))),
+                              Expanded(
+                                  child: Text('Macro Test Window Active',
+                                      style: TextStyle(
+                                          color: Colors.red,
+                                          fontWeight: FontWeight.bold))),
                             ],
                           ),
                         ),
-
                       if (rebuildMode) ...[
-                        RebuildZoneCard(weakZones: weakCount, priorityTopic: priorityNode?.title ?? 'No Risk'),
+                        RebuildZoneCard(
+                            weakZones: weakCount,
+                            priorityTopic: priorityNode?.title ?? 'No Risk'),
                         const SizedBox(height: 24),
                       ],
-
                       TacticalRoadmapCard(
                         roadmap: [
                           {
                             'day': 'DAY $currentDay',
-                            'firstTask': missions.isNotEmpty ? missions[0] : 'Rest',
-                            'secondTask': missions.length > 1 ? missions[1] : 'MCQ Practice',
+                            'firstTask':
+                                missions.isNotEmpty ? missions[0] : 'Rest',
+                            'secondTask': missions.length > 1
+                                ? missions[1]
+                                : 'MCQ Practice',
                             'thirdTask': 'Revision Cycle',
                             'locked': false,
                           },
                           {
                             'day': 'DAY ${currentDay + 1}',
-                            'firstTask': missions.length > 2 ? missions[2] : 'Next Subject',
+                            'firstTask': missions.length > 2
+                                ? missions[2]
+                                : 'Next Subject',
                             'secondTask': 'Subject Drill',
                             'thirdTask': 'Daily Battle',
                             'locked': false,
@@ -217,7 +239,6 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                           },
                         ],
                       ),
-                      
                       const SizedBox(height: 100),
                     ],
                   ),

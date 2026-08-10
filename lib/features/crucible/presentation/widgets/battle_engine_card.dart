@@ -31,8 +31,9 @@ class BattleEngineCard extends StatelessWidget {
         children: [
           // 🔱 PREMIUM CARD DNA
           Text(
-            "99 DAYS BATTLE",
-            style: AppTypography.cardTitle.copyWith(color: AppColors.gold, letterSpacing: 2.5, fontSize: 11),
+            "100 DAYS BATTLE",
+            style: AppTypography.cardTitle.copyWith(
+                color: AppColors.gold, letterSpacing: 2.5, fontSize: 11),
           ),
 
           const SizedBox(height: 18),
@@ -58,20 +59,19 @@ class BattleEngineCard extends StatelessWidget {
                   ],
                 ),
               ),
-
               const SizedBox(width: 24),
-
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Cycle Active",
-                      style: AppTypography.label.copyWith(color: AppColors.secondaryText),
+                      style: AppTypography.label
+                          .copyWith(color: AppColors.secondaryText),
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      "Day $dayCount of 99",
+                      "Day $dayCount of 100",
                       style: AppTypography.section.copyWith(fontSize: 18),
                     ),
                     const SizedBox(height: 4),

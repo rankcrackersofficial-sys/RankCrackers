@@ -143,7 +143,8 @@ class _ArchiveNodeCard extends StatelessWidget {
                 shape: BoxShape.circle,
                 color: AppColors.gold.withValues(alpha: 0.12),
               ),
-              child: const Icon(Icons.auto_stories_rounded, color: AppColors.gold),
+              child:
+                  const Icon(Icons.auto_stories_rounded, color: AppColors.gold),
             ),
             const SizedBox(width: 18),
             Expanded(
@@ -159,7 +160,8 @@ class _ArchiveNodeCard extends StatelessWidget {
                 ],
               ),
             ),
-            const Icon(Icons.arrow_forward_ios_rounded, size: 16, color: AppColors.gold),
+            const Icon(Icons.arrow_forward_ios_rounded,
+                size: 16, color: AppColors.gold),
           ],
         ),
       ),
@@ -182,7 +184,8 @@ class _ArchiveNodeCard extends StatelessWidget {
             children: [
               Text(
                 "MISSION ASSETS",
-                style: AppTypography.label.copyWith(color: AppColors.gold, letterSpacing: 2),
+                style: AppTypography.label
+                    .copyWith(color: AppColors.gold, letterSpacing: 2),
               ),
               const SizedBox(height: 8),
               Text(
@@ -201,7 +204,8 @@ class _ArchiveNodeCard extends StatelessWidget {
                   ),
                 )
               else
-                ...realm.assets.map((asset) => _AssetTile(asset: asset, realmId: realm.realmId)),
+                ...realm.assets.map((asset) =>
+                    _AssetTile(asset: asset, realmId: realm.realmId)),
               const SizedBox(height: 16),
             ],
           ),
@@ -224,37 +228,46 @@ class _AssetTile extends ConsumerWidget {
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
-      child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        tileColor: Colors.white.withValues(alpha: 0.03),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        leading: Icon(
-          _getIconForType(type),
-          color: AppColors.gold,
-        ),
-        title: Text(title, style: AppTypography.body.copyWith(fontWeight: FontWeight.bold)),
-        subtitle: Text(type, style: AppTypography.label.copyWith(fontSize: 10, color: Colors.white38)),
-        trailing: const Icon(Icons.file_download_outlined, color: Colors.white24),
-        onTap: () async {
-          if (url.isNotEmpty) {
-            // 🔱 Secure Download Flow (Audit GAP Hardened)
-            final repo = ref.read(archiveRepositoryProvider);
-            final secureUrl = await repo.getSecureUrl(url, realmId: realmId, assetType: type);
-            
-            if (secureUrl != null) {
-              final uri = Uri.parse(secureUrl);
-              if (await canLaunchUrl(uri)) {
-                await launchUrl(uri);
-              }
-            } else {
-              if (context.mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text("Unable to generate secure link."))
-                );
+      child: Material(
+        color: Colors.transparent,
+        child: ListTile(
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          tileColor: Colors.white.withValues(alpha: 0.03),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          leading: Icon(
+            _getIconForType(type),
+            color: AppColors.gold,
+          ),
+          title: Text(title,
+              style: AppTypography.body.copyWith(fontWeight: FontWeight.bold)),
+          subtitle: Text(type,
+              style: AppTypography.label
+                  .copyWith(fontSize: 10, color: Colors.white38)),
+          trailing:
+              const Icon(Icons.file_download_outlined, color: Colors.white24),
+          onTap: () async {
+            if (url.isNotEmpty) {
+              // 🔱 Secure Download Flow (Audit GAP Hardened)
+              final repo = ref.read(archiveRepositoryProvider);
+              final secureUrl = await repo.getSecureUrl(url,
+                  realmId: realmId, assetType: type);
+
+              if (secureUrl != null) {
+                final uri = Uri.parse(secureUrl);
+                if (await canLaunchUrl(uri)) {
+                  await launchUrl(uri);
+                }
+              } else {
+                if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                      content: Text("Unable to generate secure link.")));
+                }
               }
             }
-          }
-        },
+          },
+        ),
       ),
     );
   }

@@ -1,0 +1,45 @@
+﻿{
+  "gate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4B",
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4B_SHELL_CONTRACT_KNOWLEDGE_MAP_CRUCIBLE_AND_REDSCREEN_REPAIR_PASSED_WITH_VISUAL_PROOF_PENDING",
+  "startingHead": "a896e61e3f134ff96461d42bf886a5cdcfdd2614",
+  "knownUnrelatedDirtyFile": "android/app/build.gradle.kts",
+  "knownUnrelatedDirtyHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "redScreenCorrection": "Treated as RankCrackers journey defect and repaired via Material ancestor guards, not global error hiding.",
+  "repairs": {
+    "dashboardPrimaryHub": ["THE CRUCIBLE", "DIGIBOOK", "SYLLABUS"],
+    "secondaryCareerSurface": "CAREER SIGNALS",
+    "knowledgeMapEmptyState": "Truthful no-data state; no fake mastery/weakness counts when nodes are unavailable.",
+    "crucibleDuration": "100-day student-facing contract restored.",
+    "opportunitiesTone": "Recruitment-heavy labels softened without feature removal.",
+    "listTileMaterialGuards": [
+      "Unified Identity selection dialog",
+      "Mission Realm card verified guarded",
+      "Archive asset tile",
+      "Deep Profile subject selector"
+    ]
+  },
+  "validation": {
+    "dartFormat": "PASS",
+    "targetedFlutterAnalyze": "PASS",
+    "gitDiffCheck": "PASS"
+  },
+  "safety": {
+    "productionRead": false,
+    "productionWrite": false,
+    "rulesChange": false,
+    "firebaseConfigSwap": false,
+    "deploy": false,
+    "studentPublish": false,
+    "missionCountHardcode": false,
+    "fakeKnowledgeMatrix": false,
+    "fakeMastery": false,
+    "opportunitiesRemoval": false,
+    "errorWidgetSuppression": false
+  },
+  "evidenceLimitations": [
+    "Physical Pixel visual proof pending",
+    "Back gesture proof pending after latest shell-contract changes",
+    "No production mission parity read performed by safety rule"
+  ],
+  "recommendedNextGate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R5_DEVICE_GESTURE_AND_SHELL_VISUAL_QA"
+}

@@ -39,7 +39,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
     setState(() {
       filteredNodes = nodes.where((node) {
         return node.topicHindi.toLowerCase().contains(value.toLowerCase()) ||
-               node.topic.toLowerCase().contains(value.toLowerCase());
+            node.topic.toLowerCase().contains(value.toLowerCase());
       }).toList();
     });
   }
@@ -68,8 +68,12 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                 ),
               ),
               _buildSearchSection(),
-              _buildAdaptiveSummary(knowledge),
-              _buildKnowledgeGrid(knowledge),
+              if (nodes.isEmpty)
+                _buildTruthfulEmptyState()
+              else ...[
+                _buildAdaptiveSummary(knowledge),
+                _buildKnowledgeGrid(knowledge),
+              ],
               const SliverToBoxAdapter(
                 child: SizedBox(height: 120),
               ),
@@ -87,7 +91,8 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('KNOWLEDGE MAP', style: AppTypography.hero.copyWith(fontSize: 22)),
+            Text('KNOWLEDGE MAP',
+                style: AppTypography.hero.copyWith(fontSize: 22)),
             const SizedBox(height: 16),
             Container(
               decoration: BoxDecoration(
@@ -103,12 +108,66 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                   border: InputBorder.none,
                   hintText: 'Search Topics (खोजें...)',
                   hintStyle: AppTypography.body.copyWith(color: Colors.white10),
-                  prefixIcon: const Icon(Icons.search_rounded, color: AppColors.gold),
+                  prefixIcon:
+                      const Icon(Icons.search_rounded, color: AppColors.gold),
                   contentPadding: const EdgeInsets.all(18),
                 ),
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTruthfulEmptyState() {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 8, 20, 0),
+        child: DarkCard(
+          padding: const EdgeInsets.all(22),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    width: 42,
+                    height: 42,
+                    decoration: BoxDecoration(
+                      color: AppColors.gold.withValues(alpha: 0.10),
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(
+                        color: AppColors.gold.withValues(alpha: 0.22),
+                      ),
+                    ),
+                    child: const Icon(
+                      Icons.account_tree_outlined,
+                      color: AppColors.gold,
+                    ),
+                  ),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Text(
+                      'Knowledge map is preparing',
+                      style: AppTypography.cardTitle.copyWith(
+                        color: Colors.white70,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Text(
+                'Your syllabus matrix is not available in this session yet. No mastery, weakness, or progress data has been invented.',
+                style: AppTypography.body.copyWith(
+                  color: Colors.white38,
+                  fontSize: 12,
+                  height: 1.45,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -160,7 +219,8 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
         delegate: SliverChildBuilderDelegate(
           (context, index) {
             final node = filteredNodes[index];
-            final state = knowledge.getState(node.id) ?? NodeRuntimeState(nodeId: node.id);
+            final state = knowledge.getState(node.id) ??
+                NodeRuntimeState(nodeId: node.id);
             return _knowledgeNodeCard(node, state);
           },
           childCount: filteredNodes.length,
@@ -189,14 +249,16 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
               node.subjectHindi,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: AppTypography.cardTitle.copyWith(fontSize: 13, color: AppColors.gold),
+              style: AppTypography.cardTitle
+                  .copyWith(fontSize: 13, color: AppColors.gold),
             ),
             const SizedBox(height: 10),
             Text(
               node.topicHindi,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: AppTypography.subtitle.copyWith(color: AppColors.primaryText),
+              style:
+                  AppTypography.subtitle.copyWith(color: AppColors.primaryText),
             ),
             const Spacer(),
             ClipRRect(
@@ -206,7 +268,9 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                 minHeight: 4,
                 backgroundColor: Colors.white.withValues(alpha: 0.05),
                 valueColor: AlwaysStoppedAnimation(
-                  state.mastery > 0.7 ? AppColors.gold : AppColors.error.withValues(alpha: 0.6),
+                  state.mastery > 0.7
+                      ? AppColors.gold
+                      : AppColors.error.withValues(alpha: 0.6),
                 ),
               ),
             ),
@@ -216,19 +280,24 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                 Icon(
                   state.mastery >= 0.85
                       ? Icons.verified_rounded
-                      : state.mastery < 0.50 
-                        ? Icons.bolt_rounded 
-                        : Icons.pending_rounded,
+                      : state.mastery < 0.50
+                          ? Icons.bolt_rounded
+                          : Icons.pending_rounded,
                   size: 14,
-                  color: state.mastery >= 0.85 ? AppColors.gold : AppColors.secondaryText,
+                  color: state.mastery >= 0.85
+                      ? AppColors.gold
+                      : AppColors.secondaryText,
                 ),
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
                     state.mastery >= 0.85
                         ? 'Mastered'
-                        : state.mastery < 0.50 ? 'Weak Zone' : 'In Progress',
-                    style: AppTypography.label.copyWith(fontSize: 8, color: AppColors.secondaryText),
+                        : state.mastery < 0.50
+                            ? 'Weak Zone'
+                            : 'In Progress',
+                    style: AppTypography.label
+                        .copyWith(fontSize: 8, color: AppColors.secondaryText),
                   ),
                 ),
               ],

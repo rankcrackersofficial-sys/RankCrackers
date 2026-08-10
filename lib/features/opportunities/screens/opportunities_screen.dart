@@ -14,10 +14,12 @@ class OpportunitiesScreen extends ConsumerStatefulWidget {
   const OpportunitiesScreen({super.key});
 
   @override
-  ConsumerState<OpportunitiesScreen> createState() => _OpportunitiesScreenState();
+  ConsumerState<OpportunitiesScreen> createState() =>
+      _OpportunitiesScreenState();
 }
 
-class _OpportunitiesScreenState extends ConsumerState<OpportunitiesScreen> with SingleTickerProviderStateMixin {
+class _OpportunitiesScreenState extends ConsumerState<OpportunitiesScreen>
+    with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -43,7 +45,7 @@ class _OpportunitiesScreenState extends ConsumerState<OpportunitiesScreen> with 
             children: [
               Padding(
                 padding: const EdgeInsets.fromLTRB(24, 24, 24, 16),
-                child: Text("OPPORTUNITIES", style: AppTypography.hero),
+                child: Text("CAREER SIGNALS", style: AppTypography.hero),
               ),
               _buildPersonalReportCard(), // 🔱 BATCH-2: Personal Recruitment Report
               const SizedBox(height: 12),
@@ -55,9 +57,10 @@ class _OpportunitiesScreenState extends ConsumerState<OpportunitiesScreen> with 
                 labelColor: AppColors.gold,
                 unselectedLabelColor: Colors.white30,
                 labelPadding: const EdgeInsets.symmetric(horizontal: 20),
-                labelStyle: AppTypography.label.copyWith(fontSize: 11, fontWeight: FontWeight.bold),
+                labelStyle: AppTypography.label
+                    .copyWith(fontSize: 11, fontWeight: FontWeight.bold),
                 tabs: const [
-                  Tab(text: "MATCHES FOR YOU"),
+                  Tab(text: "ELIGIBLE PATHS"),
                   Tab(text: "ALMOST ELIGIBLE"),
                   Tab(text: "CLOSING SOON"),
                   Tab(text: "NEW THIS WEEK"),
@@ -92,33 +95,44 @@ class _OpportunitiesScreenState extends ConsumerState<OpportunitiesScreen> with 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("PERSONAL RECRUITMENT REPORT", style: AppTypography.label.copyWith(color: AppColors.gold, letterSpacing: 1.0)),
-                const Icon(Icons.verified_user_rounded, color: AppColors.gold, size: 16),
+                Text("CAREER ELIGIBILITY SNAPSHOT",
+                    style: AppTypography.label
+                        .copyWith(color: AppColors.gold, letterSpacing: 1.0)),
+                const Icon(Icons.verified_user_rounded,
+                    color: AppColors.gold, size: 16),
               ],
             ),
             const SizedBox(height: 20),
             Row(
               children: [
-                Expanded(child: _reportStat("Eligible Recruitments", "12")),
-                Expanded(child: _reportStat("High Priority", "4")),
+                Expanded(child: _reportStat("Eligible Paths", "12")),
+                Expanded(child: _reportStat("Priority Alerts", "4")),
                 Expanded(child: _reportStat("Age Safe", "YES", isStatus: true)),
               ],
             ),
             const SizedBox(height: 18),
             Row(
               children: [
-                Expanded(child: _reportStat("Category Benefits", "ACTIVE", isStatus: true)),
+                Expanded(
+                    child: _reportStat("Category Benefits", "ACTIVE",
+                        isStatus: true)),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
                   decoration: BoxDecoration(
                     color: AppColors.gold.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: AppColors.gold.withValues(alpha: 0.2)),
+                    border: Border.all(
+                        color: AppColors.gold.withValues(alpha: 0.2)),
                   ),
                   child: Column(
                     children: [
-                      Text("87", style: AppTypography.hero.copyWith(fontSize: 22, color: AppColors.gold)),
-                      Text("SCORE", style: AppTypography.label.copyWith(fontSize: 7, color: AppColors.gold)),
+                      Text("87",
+                          style: AppTypography.hero
+                              .copyWith(fontSize: 22, color: AppColors.gold)),
+                      Text("SCORE",
+                          style: AppTypography.label
+                              .copyWith(fontSize: 7, color: AppColors.gold)),
                     ],
                   ),
                 ),
@@ -134,9 +148,14 @@ class _OpportunitiesScreenState extends ConsumerState<OpportunitiesScreen> with 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label.toUpperCase(), style: AppTypography.label.copyWith(fontSize: 8, color: Colors.white24)),
+        Text(label.toUpperCase(),
+            style: AppTypography.label
+                .copyWith(fontSize: 8, color: Colors.white24)),
         const SizedBox(height: 4),
-        Text(value, style: AppTypography.cardTitle.copyWith(fontSize: 14, color: isStatus ? Colors.greenAccent : Colors.white)),
+        Text(value,
+            style: AppTypography.cardTitle.copyWith(
+                fontSize: 14,
+                color: isStatus ? Colors.greenAccent : Colors.white)),
       ],
     );
   }
@@ -152,7 +171,8 @@ class _OpportunitiesScreenState extends ConsumerState<OpportunitiesScreen> with 
       itemCount: matches.length,
       itemBuilder: (context, index) {
         final match = matches[index];
-        final opportunity = allOpps.firstWhere((o) => o.id == match.opportunityId);
+        final opportunity =
+            allOpps.firstWhere((o) => o.id == match.opportunityId);
         return Padding(
           padding: const EdgeInsets.only(bottom: 16),
           child: OpportunityCard(opportunity: opportunity, match: match),
@@ -165,14 +185,17 @@ class _OpportunitiesScreenState extends ConsumerState<OpportunitiesScreen> with 
     final matches = ref.watch(almostEligibleOpportunitiesProvider);
     final allOpps = ref.watch(allOpportunitiesProvider).asData?.value ?? [];
 
-    if (matches.isEmpty) return _placeholderTab("No opportunities in 'Almost Eligible' range.");
+    if (matches.isEmpty) {
+      return _placeholderTab("No opportunities in 'Almost Eligible' range.");
+    }
 
     return ListView.builder(
       padding: const EdgeInsets.all(20),
       itemCount: matches.length,
       itemBuilder: (context, index) {
         final match = matches[index];
-        final opportunity = allOpps.firstWhere((o) => o.id == match.opportunityId);
+        final opportunity =
+            allOpps.firstWhere((o) => o.id == match.opportunityId);
         return Padding(
           padding: const EdgeInsets.only(bottom: 16),
           child: OpportunityCard(opportunity: opportunity, match: match),
@@ -186,14 +209,22 @@ class _OpportunitiesScreenState extends ConsumerState<OpportunitiesScreen> with 
     final filtered = OpportunityFilterService.getClosingSoon(allOpps);
     final allMatches = ref.watch(opportunityMatchesProvider);
 
-    if (filtered.isEmpty) return _placeholderTab("No opportunities closing this week.");
+    if (filtered.isEmpty) {
+      return _placeholderTab("No opportunities closing this week.");
+    }
 
     return ListView.builder(
       padding: const EdgeInsets.all(20),
       itemCount: filtered.length,
       itemBuilder: (context, index) {
         final opportunity = filtered[index];
-        final match = allMatches.firstWhere((m) => m.opportunityId == opportunity.id, orElse: () => OpportunityMatch(uid: '', opportunityId: opportunity.id, eligible: false, matchScore: 0));
+        final match = allMatches.firstWhere(
+            (m) => m.opportunityId == opportunity.id,
+            orElse: () => OpportunityMatch(
+                uid: '',
+                opportunityId: opportunity.id,
+                eligible: false,
+                matchScore: 0));
         return Padding(
           padding: const EdgeInsets.only(bottom: 16),
           child: OpportunityCard(opportunity: opportunity, match: match),
@@ -207,14 +238,22 @@ class _OpportunitiesScreenState extends ConsumerState<OpportunitiesScreen> with 
     final filtered = OpportunityFilterService.getNewThisWeek(allOpps);
     final allMatches = ref.watch(opportunityMatchesProvider);
 
-    if (filtered.isEmpty) return _placeholderTab("No new notifications this week.");
+    if (filtered.isEmpty) {
+      return _placeholderTab("No new notifications this week.");
+    }
 
     return ListView.builder(
       padding: const EdgeInsets.all(20),
       itemCount: filtered.length,
       itemBuilder: (context, index) {
         final opportunity = filtered[index];
-        final match = allMatches.firstWhere((m) => m.opportunityId == opportunity.id, orElse: () => OpportunityMatch(uid: '', opportunityId: opportunity.id, eligible: false, matchScore: 0));
+        final match = allMatches.firstWhere(
+            (m) => m.opportunityId == opportunity.id,
+            orElse: () => OpportunityMatch(
+                uid: '',
+                opportunityId: opportunity.id,
+                eligible: false,
+                matchScore: 0));
         return Padding(
           padding: const EdgeInsets.only(bottom: 16),
           child: OpportunityCard(opportunity: opportunity, match: match),
@@ -225,7 +264,8 @@ class _OpportunitiesScreenState extends ConsumerState<OpportunitiesScreen> with 
 
   Widget _placeholderTab(String message) {
     return Center(
-      child: Text(message, style: AppTypography.body.copyWith(color: Colors.white24)),
+      child: Text(message,
+          style: AppTypography.body.copyWith(color: Colors.white24)),
     );
   }
 }
