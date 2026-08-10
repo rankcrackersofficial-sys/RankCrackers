@@ -33,6 +33,10 @@ class RecruitmentRepository {
     return FirestoreService.streamRecruitments();
   }
 
+  static Stream<List<Recruitment>> streamPublished() {
+    return FirestoreService.streamPublishedRecruitments();
+  }
+
   static Stream<List<Recruitment>> streamDrafts() {
     return stream().map((list) => list.where((r) => r.status != 'published').toList());
   }

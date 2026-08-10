@@ -15,9 +15,7 @@ import '../../../../core/utils/responsive_helper.dart';
 import '../../../../core/firebase/firestore_service.dart';
 import '../../../../data/india_states.dart';
 import '../../../../data/india_districts.dart';
-import '../../../../core/models/recruitment.dart';
 import '../providers/auth_provider.dart';
-import '../providers/mission_realm_provider.dart';
 
 class UnifiedIdentityScreen extends ConsumerStatefulWidget {
   const UnifiedIdentityScreen(
@@ -44,16 +42,13 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   final TextEditingController mobileController = TextEditingController();
   final TextEditingController stateController = TextEditingController();
   final TextEditingController districtController = TextEditingController();
-  final TextEditingController missionController = TextEditingController();
 
   // Focus Nodes
   final FocusNode stateFocusNode = FocusNode();
   final FocusNode districtFocusNode = FocusNode();
-  final FocusNode missionFocusNode = FocusNode();
 
   // State
   List<String> districtsList = [];
-  Recruitment? selectedMission;
   bool _isSaving = false;
   bool _identityEstablished = false;
 
@@ -61,8 +56,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       nameController.text.trim().isNotEmpty &&
       mobileController.text.trim().length == 10 &&
       stateController.text.trim().isNotEmpty &&
-      districtController.text.trim().isNotEmpty &&
-      selectedMission != null;
+      districtController.text.trim().isNotEmpty;
 
   late AnimationController _animationController;
   late Animation<double> glowAnimation;
@@ -92,7 +86,6 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       mobileController,
       stateController,
       districtController,
-      missionController,
     ]) {
       controller.addListener(_refreshIdentityCta);
     }
@@ -116,7 +109,6 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       mobileController,
       stateController,
       districtController,
-      missionController,
     ]) {
       controller.removeListener(_refreshIdentityCta);
     }
@@ -126,10 +118,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     mobileController.dispose();
     stateController.dispose();
     districtController.dispose();
-    missionController.dispose();
     stateFocusNode.dispose();
     districtFocusNode.dispose();
-    missionFocusNode.dispose();
     _animationController.dispose();
     super.dispose();
   }
@@ -212,10 +202,6 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       _showSnackBar("Please select your location");
       return;
     }
-    if (selectedMission == null) {
-      _showSnackBar("Please select your target mission");
-      return;
-    }
 
     setState(() => _isSaving = true);
 
@@ -233,16 +219,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           uid: user.uid, email: user.email ?? '');
       await SessionManager.saveStudentMobile(mobile);
 
-      await SessionManager.saveMissionIdentity(
-        examId: selectedMission!.examId,
-        examName: selectedMission!.title,
-        recruitmentId: selectedMission!.id,
-        examBlueprintId: selectedMission!.examBlueprintId,
-        variantId: selectedMission!.variantCode,
-      );
-
-      debugPrint("PROFILE SAVED");
-      debugPrint("MISSION SAVED");
+      debugPrint('PROFILE SAVED');
 
       if (mounted) {
         setState(() => _identityEstablished = true);
@@ -252,8 +229,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       await Future.delayed(const Duration(milliseconds: 500));
 
       if (!mounted) return;
-      debugPrint("GOING TO DASHBOARD");
-      context.go(AppRoutes.dashboard);
+      debugPrint("GOING TO MISSION REALM");
+      context.go(AppRoutes.missionRealm);
 
       // Step 3: Background operations run after navigation starts.
       // These run after navigation starts and don't block the user.
@@ -263,8 +240,6 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         'state': stateStr,
         'mobile': mobile,
         'onboardingCompleted': true,
-        'selectedExam': selectedMission!.examId,
-        'selectedExamName': selectedMission!.title,
         'updatedAt': FieldValue.serverTimestamp(),
         'email': user.email,
         'photoUrl': user.photoURL,
@@ -273,7 +248,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       // LEVEL-12.4
       // Disable hydration temporarily
       /*
-      unawaited(KnowledgeEngine.instance.initialize(recruitment: selectedMission, force: true)
+      unawaited(KnowledgeEngine.instance.initialize(recruitment: /* mission selected later in Mission Realm */ null, force: true)
           .timeout(const Duration(seconds: 10))
           .then((_) => debugPrint("ENGINE HYDRATION TRIGGERED")));
       */
@@ -370,7 +345,6 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     final authState = ref.watch(authNotifierProvider);
     final user = authState.user;
     final showProfileSetup = widget.forceProfileSetupForTest || user != null;
-    final allMissions = ref.watch(publishedRecruitmentsProvider);
 
     return Scaffold(
       backgroundColor: royalBlack,
@@ -393,8 +367,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                     if (!showProfileSetup)
                       _buildLoginSection(authState.isLoading)
                     else
-                      _buildIdentityForm(allMissions,
-                          userPhotoUrl: user?.photoURL),
+                      _buildIdentityForm(userPhotoUrl: user?.photoURL),
                     SizedBox(height: ResponsiveHelper.sectionSpacing(context)),
                     _buildFooter(),
                   ],
@@ -549,8 +522,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     );
   }
 
-  Widget _buildIdentityForm(
-    List<Recruitment> missions, {
+  Widget _buildIdentityForm({
     String? userPhotoUrl,
   }) {
     return Container(
@@ -632,22 +604,6 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                     setState(() => districtController.text = val),
               );
             },
-          ),
-          const SizedBox(height: 12),
-          _miniSelector(
-            title: "TARGET MISSION",
-            hint: "Select Exam",
-            controller: missionController,
-            onTap: () => _showSearchSheet(
-              title: "Select Target Mission",
-              items: missions.map((m) => m.title).toList(),
-              onSelected: (val) {
-                setState(() {
-                  missionController.text = val;
-                  selectedMission = missions.firstWhere((m) => m.title == val);
-                });
-              },
-            ),
           ),
           const SizedBox(height: 24),
           if (_identityEstablished)

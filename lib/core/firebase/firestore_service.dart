@@ -264,6 +264,16 @@ class FirestoreService {
     return snapshot.docs.map((doc) => Recruitment.fromMap(doc.data())).toList();
   }
 
+  static Stream<List<Recruitment>> streamPublishedRecruitments() {
+    return _firestore
+        .collection(recruitmentCollection)
+        .where('status', isEqualTo: 'published')
+        .snapshots()
+        .map((snapshot) {
+      return snapshot.docs.map((doc) => Recruitment.fromMap(doc.data())).toList();
+    });
+  }
+
   static Future<Recruitment?> fetchRecruitment(String id) async {
     final doc = await _firestore.collection(recruitmentCollection).doc(id).get();
     if (!doc.exists) return null;

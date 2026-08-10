@@ -1,0 +1,59 @@
+﻿{
+    "verdict":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R3_PHYSICAL_PIXEL5_PROFILE_ESTABLISHMENT_SAVE_READBACK_VALIDATION_PASSED_WITH_SUCCESS_SEAL_CAPTURE_LIMITATION",
+    "device":  "Pixel 5 physical device",
+    "deviceSerial":  "11251FDD4003TB",
+    "firebaseBackend":  "EMULATOR",
+    "emulatorHost":  "192.168.1.8",
+    "authPort":  9099,
+    "firestorePort":  8080,
+    "emulatorUid":  "f550BxwOWrB9MFZ2g5ASFbDBJR56",
+    "documentPath":  "users/f550BxwOWrB9MFZ2g5ASFbDBJR56",
+    "profileSaved":  true,
+    "cloudSyncComplete":  true,
+    "postIdentityRoute":  "Mission Realm",
+    "targetMissionOnIdentityScreen":  "REMOVED",
+    "targetMissionExpectedLocation":  "Mission Realm",
+    "storedKeys":  [
+                       "city",
+                       "email",
+                       "mobile",
+                       "name",
+                       "onboardingCompleted",
+                       "photoUrl",
+                       "state",
+                       "updatedAt"
+                   ],
+    "forbiddenClientKeysAbsent":  [
+                                      "role",
+                                      "accessLevel",
+                                      "founder",
+                                      "admin"
+                                  ],
+    "storedOrdinaryFields":  {
+                                 "name":  "YUVRAJ SINGH",
+                                 "mobile":  "9694402255",
+                                 "state":  "Rajasthan",
+                                 "city":  "Sri Ganganagar",
+                                 "email":  "rankcrackers.55@gmail.com",
+                                 "onboardingCompleted":  true
+                             },
+    "safety":  [
+                   "NO_PRODUCTION_WRITE",
+                   "NO_PRODUCTION_AUTH",
+                   "NO_RULES_CHANGE",
+                   "NO_FIREBASE_CONFIG_SWAP",
+                   "NO_DEPLOY",
+                   "NO_STUDENT_PUBLISH"
+               ],
+    "evidenceFiles":  [
+                          "docs/patch_safety/rankcrackers_fix4_r3_physical_identity_no_mission_flutter.out.log",
+                          "docs/patch_safety/rankcrackers_fix4_r3_physical_identity_after_save_window.xml",
+                          "docs/patch_safety/rankcrackers_fix4_r3_physical_lan2_window_profile.xml"
+                      ],
+    "notes":  [
+                  "Identity/Profile screen no longer asks for Target Mission.",
+                  "Target Mission is now correctly deferred to Mission Realm.",
+                  "Physical Pixel 5 connected to Firebase emulators over LAN; no production backend write was used.",
+                  "Functional save/read-back passed. Success seal visual state remains limited because navigation follows the brief established state quickly."
+              ]
+}

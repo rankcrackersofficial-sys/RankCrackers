@@ -3,7 +3,7 @@ import '../../../../core/backend/recruitment_repository.dart';
 import '../../../../core/models/recruitment.dart';
 
 final recruitmentsProvider = StreamProvider<List<Recruitment>>((ref) {
-  return RecruitmentRepository.stream();
+  return RecruitmentRepository.streamPublished();
 });
 
 /// 🔱 Published Mission Filter
