@@ -1,0 +1,37 @@
+﻿{
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R3_BLOCKED_BY_PRE_PROFILE_EMULATOR_RECRUITMENTS_RULE_CONTRACT",
+  "startingHead": "8fe0915d888b89b43c6c012ad89cdd0236e4a108",
+  "androidTarget": "emulator-5554 / RankCrackers_QA_API35",
+  "firebaseAuthEmulator": "127.0.0.1:9099",
+  "firestoreEmulator": "127.0.0.1:8080",
+  "appEmulatorHost": "10.0.2.2",
+  "emulatorBackendStartupProof": "RC_FIREBASE_BACKEND=EMULATOR auth=10.0.2.2:9099 firestore=10.0.2.2:8080",
+  "productionFallbackObserved": false,
+  "profileSubmitReached": false,
+  "usersUidWriteCompleted": false,
+  "usersUidReadbackCompleted": false,
+  "blocker": {
+    "collection": "recruitments",
+    "operation": "list/query",
+    "ruleMessage": "Property status is undefined on object. for list @ L44",
+    "appProvider": "publishedRecruitmentsProvider",
+    "appProviderFile": "lib/features/auth/presentation/providers/mission_realm_provider.dart"
+  },
+  "evidenceFiles": {
+    "flutterRunLog": "docs/patch_safety/rankcrackers_fix4_r3_flutter_run_emulator.log",
+    "flutterRunStderrLog": "docs/patch_safety/rankcrackers_fix4_r3_flutter_run_emulator.err.log",
+    "firebaseEmulatorStdoutLog": "docs/patch_safety/rankcrackers_fix4_r3_firebase_emulators.out.log",
+    "firebaseEmulatorStderrLog": "docs/patch_safety/rankcrackers_fix4_r3_firebase_emulators.err.log"
+  },
+  "safety": {
+    "productionWrite": false,
+    "productionAuthObserved": false,
+    "rulesChange": false,
+    "firebaseConfigSwap": false,
+    "deploy": false,
+    "studentPublish": false,
+    "profileRedesign": false,
+    "profileSaveCompleted": false
+  },
+  "nextRecommendedGate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R3A_PRE_PROFILE_RECRUITMENTS_EMULATOR_RULE_CONTRACT_AUDIT"
+}
