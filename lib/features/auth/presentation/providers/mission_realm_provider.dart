@@ -18,13 +18,20 @@ final publishedStatesProvider = Provider<List<String>>((ref) {
   return published.map((r) => r.state).toSet().toList();
 });
 
-final filteredRecruitmentsProvider = Provider.family<List<Recruitment>, String>((ref, state) {
+final filteredRecruitmentsProvider =
+    Provider.family<List<Recruitment>, String>((ref, state) {
   final published = ref.watch(publishedRecruitmentsProvider);
-  return published.where((r) => r.state.toLowerCase() == state.toLowerCase() || r.state.toLowerCase() == 'central').toList();
+  return published
+      .where((r) =>
+          r.state.toLowerCase() == state.toLowerCase() ||
+          r.state.toLowerCase() == 'central')
+      .toList();
 });
 
 /// 🔱 Exam Category Filtering (Amendment v3.0)
-final filteredRecruitmentsByCategoryProvider = Provider.family<List<Recruitment>, ({String state, String category})>((ref, arg) {
+final filteredRecruitmentsByCategoryProvider =
+    Provider.family<List<Recruitment>, ({String state, String category})>(
+        (ref, arg) {
   final stateMissions = ref.watch(filteredRecruitmentsProvider(arg.state));
   return stateMissions.where((r) => r.examCategory == arg.category).toList();
 });

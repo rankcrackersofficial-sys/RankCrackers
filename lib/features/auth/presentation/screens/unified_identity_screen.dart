@@ -398,25 +398,45 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   Widget _buildAura() {
     final double screenHeight = ResponsiveHelper.height(context);
     final double screenWidth = ResponsiveHelper.width(context);
-    return Positioned(
-      top: -screenHeight * 0.1,
-      left: -screenWidth * 0.2,
-      child: AnimatedBuilder(
-        animation: _animationController,
-        builder: (context, child) {
-          return Container(
-            width: screenWidth * 0.8,
-            height: screenWidth * 0.8,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: RadialGradient(colors: [
-                goldAccent.withValues(alpha: glowAnimation.value),
-                Colors.transparent
-              ]),
+    return AnimatedBuilder(
+      animation: _animationController,
+      builder: (context, child) {
+        return Stack(
+          children: [
+            Positioned(
+              top: -screenHeight * 0.12,
+              left: -screenWidth * 0.26,
+              child: Container(
+                width: screenWidth * 0.86,
+                height: screenWidth * 0.86,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: RadialGradient(colors: [
+                    goldAccent.withValues(alpha: glowAnimation.value * 0.78),
+                    Colors.transparent,
+                  ]),
+                ),
+              ),
             ),
-          );
-        },
-      ),
+            Positioned(
+              right: -screenWidth * 0.28,
+              bottom: screenHeight * 0.08,
+              child: Container(
+                width: screenWidth * 0.92,
+                height: screenWidth * 0.92,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: RadialGradient(colors: [
+                    const Color(0xFF1C7FA3).withValues(alpha: 0.075),
+                    const Color(0xFF0B1D33).withValues(alpha: 0.035),
+                    Colors.transparent,
+                  ]),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 
@@ -528,13 +548,20 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     return Container(
       padding: EdgeInsets.all(ResponsiveHelper.isCompact(context) ? 14 : 18),
       decoration: BoxDecoration(
-        color: AppColors.surface.withValues(alpha: 0.72),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            const Color(0xFF172131).withValues(alpha: 0.92),
+            const Color(0xFF101827).withValues(alpha: 0.96),
+          ],
+        ),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: goldAccent.withValues(alpha: 0.16)),
+        border: Border.all(color: goldAccent.withValues(alpha: 0.24)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.26),
-            blurRadius: 22,
+            color: Colors.black.withValues(alpha: 0.36),
+            blurRadius: 26,
             offset: const Offset(0, 12),
           ),
         ],
@@ -632,9 +659,9 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       child: Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: royalBlack.withValues(alpha: 0.48),
+          color: const Color(0xFF152033).withValues(alpha: 0.9),
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: Colors.white.withValues(alpha: 0.08)),
+          border: Border.all(color: goldAccent.withValues(alpha: 0.18)),
         ),
         child: Row(
           children: [
@@ -789,9 +816,9 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     return Container(
       height: ResponsiveHelper.fieldHeight(context),
       decoration: BoxDecoration(
-        color: AppColors.surface,
+        color: const Color(0xFF1B2638),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.borderSoft),
+        border: Border.all(color: const Color(0xFF2A3850)),
       ),
       child: TextField(
         controller: controller,
@@ -826,10 +853,10 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         padding: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
           color: enabled
-              ? AppColors.surface
-              : AppColors.surface.withValues(alpha: 0.5),
+              ? const Color(0xFF1B2638)
+              : const Color(0xFF121A27).withValues(alpha: 0.72),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: AppColors.borderSoft),
+          border: Border.all(color: const Color(0xFF2A3850)),
         ),
         child: Row(
           children: [

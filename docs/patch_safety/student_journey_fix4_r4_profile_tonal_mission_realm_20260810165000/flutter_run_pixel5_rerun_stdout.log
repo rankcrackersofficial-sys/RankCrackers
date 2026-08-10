@@ -1,0 +1,536 @@
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 61.0.0 (105.0.0 available)
+  _flutterfire_internals 1.3.59 (1.3.76 available)
+  analyzer 5.13.0 (14.1.0 available)
+  archive 3.6.1 (4.0.9 available)
+  build 2.4.1 (4.0.10 available)
+  build_config 1.1.2 (1.3.2 available)
+  build_daemon 4.1.1 (4.1.5 available)
+  build_resolvers 2.4.2 (3.0.4 available)
+  build_runner 2.4.13 (2.16.0 available)
+  build_runner_core 7.3.2 (9.3.2 available)
+  built_value 8.12.6 (8.12.7 available)
+  cli_util 0.4.2 (0.5.2 available)
+  cloud_firestore 5.6.12 (6.8.0 available)
+  cloud_firestore_platform_interface 6.6.12 (8.0.6 available)
+  cloud_firestore_web 4.4.12 (5.7.2 available)
+  cloud_functions 5.6.2 (6.3.6 available)
+  cloud_functions_platform_interface 5.8.2 (6.0.6 available)
+  cloud_functions_web 4.11.5 (5.1.12 available)
+  connectivity_plus 6.1.5 (7.3.1 available)
+  cross_file 0.3.5+2 (0.3.5+4 available)
+  dart_style 2.3.2 (3.1.12 available)
+  device_info_plus 11.5.0 (13.2.0 available)
+  device_info_plus_platform_interface 7.0.3 (8.1.0 available)
+  dio 5.9.2 (5.11.0 available)
+  dio_web_adapter 2.1.2 (2.2.1 available)
+  equatable 2.0.8 (2.1.0 available)
+  extension 0.6.0 (1.0.0 available)
+  file_picker 8.3.7 (11.0.3 available)
+  firebase_app_check 0.3.2+10 (0.4.6 available)
+  firebase_app_check_platform_interface 0.1.1+10 (0.4.2 available)
+  firebase_app_check_web 0.2.0+14 (0.2.6 available)
+  firebase_auth 5.7.0 (6.5.7 available)
+  firebase_auth_platform_interface 7.7.3 (9.0.6 available)
+  firebase_auth_web 5.15.3 (6.2.6 available)
+  firebase_core 3.15.2 (4.13.0 available)
+  firebase_core_platform_interface 6.0.3 (8.1.0 available)
+  firebase_core_web 2.24.1 (3.10.0 available)
+  firebase_crashlytics 4.3.10 (5.2.7 available)
+  firebase_crashlytics_platform_interface 3.8.10 (3.8.27 available)
+  firebase_performance 0.10.1+10 (0.11.4+6 available)
+  firebase_performance_platform_interface 0.1.5+10 (0.2.0+6 available)
+  firebase_performance_web 0.1.7+16 (0.1.8+12 available)
+  firebase_storage 12.4.10 (13.4.6 available)
+  firebase_storage_platform_interface 5.2.10 (6.0.6 available)
+  firebase_storage_web 3.10.17 (3.11.12 available)
+  flutter_native_splash 2.4.4 (2.4.8 available)
+  flutter_riverpod 2.6.1 (3.4.2 available)
+  flutter_secure_storage 9.2.4 (11.0.0 available)
+  flutter_secure_storage_linux 1.2.3 (3.0.2 available)
+  flutter_secure_storage_macos 3.1.3 (4.0.0 available)
+  flutter_secure_storage_platform_interface 1.1.2 (2.0.3 available)
+  flutter_secure_storage_web 1.2.1 (2.1.1 available)
+  flutter_secure_storage_windows 3.1.2 (4.2.2 available)
+  go_router 17.3.0 (17.4.0 available)
+  google_fonts 6.3.3 (8.2.1 available)
+  google_mlkit_commons 0.9.0 (0.12.0 available)
+  google_mlkit_text_recognition 0.14.0 (0.16.0 available)
+  google_sign_in 6.3.0 (7.2.0 available)
+  google_sign_in_android 6.2.1 (7.2.16 available)
+  google_sign_in_ios 5.9.0 (6.3.0 available)
+  google_sign_in_platform_interface 2.5.0 (3.1.0 available)
+  google_sign_in_web 0.12.4+4 (1.1.3 available)
+  hooks 2.0.2 (2.1.0 available)
+  image 4.3.0 (4.9.1 available)
+  image_picker 1.2.2 (1.2.3 available)
+  intl 0.19.0 (0.20.3 available)
+  jni 1.0.0 (1.0.3 available)
+  jni_flutter 1.0.1 (1.0.2 available)
+  js 0.6.7 (0.7.2 available)
+  matcher 0.12.19 (0.12.20 available)
+  meta 1.18.0 (1.19.0 available)
+  objective_c 9.4.1 (9.5.0 available)
+  package_config 2.2.0 (3.0.0 available)
+  package_info_plus 8.3.1 (10.2.1 available)
+  package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+  path_provider_linux 2.2.1 (2.2.2 available)
+  record_use 0.6.0 (1.1.0 available)
+  riverpod 2.6.1 (3.4.2 available)
+  shared_preferences_android 2.4.26 (2.4.27 available)
+  shelf_web_socket 2.0.1 (3.0.0 available)
+  source_gen 1.5.0 (4.2.4 available)
+  syncfusion_flutter_core 28.2.12 (34.2.2 available)
+  syncfusion_flutter_pdf 28.2.12 (34.2.2 available)
+  synchronized 3.4.1 (3.4.1+1 available)
+  test_api 0.7.11 (0.7.13 available)
+  uuid 4.5.3 (4.6.0 available)
+  vector_math 2.2.0 (2.4.2 available)
+  win32 5.15.0 (6.4.0 available)
+  win32_registry 2.1.0 (3.0.3 available)
+  xml 6.6.1 (7.0.1 available)
+Got dependencies!
+90 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Launching lib\main.dart on Pixel 5 in debug mode...
+Running Gradle task 'assembleDebug'...                          
+Running Gradle task 'assembleDebug'...                             63.6s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...           6.3s
+I/FlutterActivityAndFragmentDelegate(24016): If you are attempting to set --enable-dart-profiling via Intent extras to launch a Flutter component outside of using the Flutter CLI, note that support for setting engine flags on Android via Intent will soon be dropped; see https://github.com/flutter/flutter/issues/180686 for more information on this breaking change. To migrate, set --enable-dart-profiling or any other flags specified via Intent extras on the command line instead or see https://github.com/flutter/flutter/blob/main/docs/engine/Flutter-Android-Engine-Flags.md for alternative methods.
+D/FlutterJNI(24016): Beginning load of flutter...
+D/FlutterJNI(24016): flutter (null) was loaded normally!
+I/flutter (24016): [IMPORTANT:flutter/shell/platform/android/android_context_vk_impeller.cc(62)] Using the Impeller rendering backend (Vulkan).
+I/flutter (24016): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+D/FlutterRenderer(24016): Width is zero. 0,0
+D/FlutterRenderer(24016): Width is zero. 0,0
+D/FlutterJNI(24016): Sending viewport metrics to the engine.
+D/FlutterJNI(24016): Sending viewport metrics to the engine.
+I/flutter (24016): RC_FIREBASE_BACKEND=EMULATOR auth=192.168.1.8:9099 firestore=192.168.1.8:8080
+I/flutter (24016): 🔱 SESSION: Core initialized and cached.
+I/flutter (24016): 🔱 ROUTER REDIRECT: /
+I/flutter (24016): 🔱 SPLASH START
+I/flutter (24016): 🔱 STEP-1: Splash Initialization Started
+Syncing files to device Pixel 5...                              
+I/Choreographer(24016): Skipped 80 frames!  The application may be doing too much work on its main thread.
+Syncing files to device Pixel 5...                                 212ms
+
+Flutter run key commands.
+r Hot reload. 
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on Pixel 5 is available at: http://127.0.0.1:49722/erV29AfCbUA=/
+The Flutter DevTools debugger and profiler on Pixel 5 is available at: http://127.0.0.1:49722/erV29AfCbUA=/devtools/?uri=ws://127.0.0.1:49722/erV29AfCbUA=/ws
+I/Choreographer(24016): Skipped 44 frames!  The application may be doing too much work on its main thread.
+I/flutter (24016): 🔱 STEP-2: Handing over authority to Sovereign Router.
+I/flutter (24016): 🔱 ROUTER REDIRECT: /login
+I/flutter (24016): 🔱 ROUTER: Mission missing, routing to Realm
+I/flutter (24016): 🔱 ROUTER REDIRECT: /mission-realm
+I/flutter (24016): 🔱 ROUTER: Mission missing, routing to Realm
+W/System  (24016): Ignoring header X-Firebase-Locale because its value was null.
+W/DynamiteModule(24016): Local module descriptor class for com.google.android.gms.providerinstaller.dynamite not found.
+I/DynamiteModule(24016): Considering local module com.google.android.gms.providerinstaller.dynamite:0 and remote module com.google.android.gms.providerinstaller.dynamite:0
+W/ProviderInstaller(24016): Failed to load providerinstaller module: No acceptable module com.google.android.gms.providerinstaller.dynamite found. Local version is 0 and remote version is 0.
+D/nativeloader(24016): Configuring clns-5 for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~slORqLUlIdtFi2q3jvTt_Q==/com.google.android.gms-Wwx7XDv2F_3Z-gbpTLOQdg==/lib/arm64:/data/app/~~slORqLUlIdtFi2q3jvTt_Q==/com.google.android.gms-Wwx7XDv2F_3Z-gbpTLOQdg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+W/ankcrackers.app(24016): Loading /data/misc/apexdata/com.android.art/dalvik-cache/arm64/system@framework@com.android.location.provider.jar@classes.odex non-executable as it requires an image which we failed to load
+D/nativeloader(24016): Configuring clns-6 for other apk /system/framework/com.android.location.provider.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~slORqLUlIdtFi2q3jvTt_Q==/com.google.android.gms-Wwx7XDv2F_3Z-gbpTLOQdg==/lib/arm64:/data/app/~~slORqLUlIdtFi2q3jvTt_Q==/com.google.android.gms-Wwx7XDv2F_3Z-gbpTLOQdg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+D/nativeloader(24016): Configuring clns-7 for other apk /system/framework/com.android.media.remotedisplay.jar. target_sdk_version=37, uses_libraries=ALL, library_path=/data/app/~~slORqLUlIdtFi2q3jvTt_Q==/com.google.android.gms-Wwx7XDv2F_3Z-gbpTLOQdg==/lib/arm64:/data/app/~~slORqLUlIdtFi2q3jvTt_Q==/com.google.android.gms-Wwx7XDv2F_3Z-gbpTLOQdg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+D/nativeloader(24016): Configuring clns-8 for other apk /data/app/~~slORqLUlIdtFi2q3jvTt_Q==/com.google.android.gms-Wwx7XDv2F_3Z-gbpTLOQdg==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~slORqLUlIdtFi2q3jvTt_Q==/com.google.android.gms-Wwx7XDv2F_3Z-gbpTLOQdg==/lib/arm64:/data/app/~~slORqLUlIdtFi2q3jvTt_Q==/com.google.android.gms-Wwx7XDv2F_3Z-gbpTLOQdg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+W/ProviderInstaller(24016): Failed to report request stats: com.google.android.gms.common.security.ProviderInstallerImpl.reportRequestStats [class android.content.Context, long, long]
+I/ankcrackers.app(24016): hiddenapi: Accessing hidden method Ldalvik/system/VMStack;->getStackClass2()Ljava/lang/Class; (runtime_flags=0, domain=core-platform, api=unsupported) from Lhlvx; (domain=app, TargetSdkVersion=36) using reflection: allowed
+E/GoogleApiManager(24016): Failed to get service from broker. 
+E/GoogleApiManager(24016): java.lang.SecurityException: Unknown calling package name 'com.google.android.gms'.
+E/GoogleApiManager(24016): 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3057)
+E/GoogleApiManager(24016): 	at android.os.Parcel.createException(Parcel.java:3041)
+E/GoogleApiManager(24016): 	at android.os.Parcel.readException(Parcel.java:3024)
+E/GoogleApiManager(24016): 	at android.os.Parcel.readException(Parcel.java:2966)
+E/GoogleApiManager(24016): 	at bkhl.a(:com.google.android.gms@262932029@26.29.32 (190400-956293556):36)
+E/GoogleApiManager(24016): 	at bkfe.y(:com.google.android.gms@262932029@26.29.32 (190400-956293556):144)
+E/GoogleApiManager(24016): 	at bjkz.run(:com.google.android.gms@262932029@26.29.32 (190400-956293556):42)
+E/GoogleApiManager(24016): 	at android.os.Handler.handleCallback(Handler.java:958)
+E/GoogleApiManager(24016): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+E/GoogleApiManager(24016): 	at ddfw.mv(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+E/GoogleApiManager(24016): 	at ddfw.dispatchMessage(:com.google.android.gms@262932029@26.29.32 (190400-956293556):5)
+E/GoogleApiManager(24016): 	at android.os.Looper.loopOnce(Looper.java:205)
+E/GoogleApiManager(24016): 	at android.os.Looper.loop(Looper.java:294)
+E/GoogleApiManager(24016): 	at android.os.HandlerThread.run(HandlerThread.java:67)
+W/GoogleApiManager(24016): Not showing notification since connectionResult is not user-facing: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+W/FlagRegistrar(24016): Failed to register com.google.android.gms.providerinstaller#com.rankcrackers.app
+W/FlagRegistrar(24016): gqpy: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+W/FlagRegistrar(24016): 	at gqqa.a(:com.google.android.gms@262932029@26.29.32 (190400-956293556):13)
+W/FlagRegistrar(24016): 	at hrll.d(:com.google.android.gms@262932029@26.29.32 (190400-956293556):3)
+W/FlagRegistrar(24016): 	at hrln.run(:com.google.android.gms@262932029@26.29.32 (190400-956293556):139)
+W/FlagRegistrar(24016): 	at hrny.execute(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagRegistrar(24016): 	at hrlv.f(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagRegistrar(24016): 	at hrlv.m(:com.google.android.gms@262932029@26.29.32 (190400-956293556):101)
+W/FlagRegistrar(24016): 	at hrlv.q(:com.google.android.gms@262932029@26.29.32 (190400-956293556):16)
+W/FlagRegistrar(24016): 	at gjxb.hE(:com.google.android.gms@262932029@26.29.32 (190400-956293556):35)
+W/FlagRegistrar(24016): 	at fvxi.run(:com.google.android.gms@262932029@26.29.32 (190400-956293556):12)
+W/FlagRegistrar(24016): 	at hrny.execute(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagRegistrar(24016): 	at fvxj.b(:com.google.android.gms@262932029@26.29.32 (190400-956293556):18)
+W/FlagRegistrar(24016): 	at fvxy.b(:com.google.android.gms@262932029@26.29.32 (190400-956293556):34)
+W/FlagRegistrar(24016): 	at fvya.c(:com.google.android.gms@262932029@26.29.32 (190400-956293556):23)
+W/FlagRegistrar(24016): 	at bjih.e(:com.google.android.gms@262932029@26.29.32 (190400-956293556):9)
+W/FlagRegistrar(24016): 	at bjkx.r(:com.google.android.gms@262932029@26.29.32 (190400-956293556):48)
+W/FlagRegistrar(24016): 	at bjkx.d(:com.google.android.gms@262932029@26.29.32 (190400-956293556):10)
+W/FlagRegistrar(24016): 	at bjkx.g(:com.google.android.gms@262932029@26.29.32 (190400-956293556):191)
+W/FlagRegistrar(24016): 	at bjkz.run(:com.google.android.gms@262932029@26.29.32 (190400-956293556):74)
+W/FlagRegistrar(24016): 	at android.os.Handler.handleCallback(Handler.java:958)
+W/FlagRegistrar(24016): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+W/FlagRegistrar(24016): 	at ddfw.mv(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagRegistrar(24016): 	at ddfw.dispatchMessage(:com.google.android.gms@262932029@26.29.32 (190400-956293556):5)
+W/FlagRegistrar(24016): 	at android.os.Looper.loopOnce(Looper.java:205)
+W/FlagRegistrar(24016): 	at android.os.Looper.loop(Looper.java:294)
+W/FlagRegistrar(24016): 	at android.os.HandlerThread.run(HandlerThread.java:67)
+W/FlagRegistrar(24016): Caused by: bjgm: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+W/FlagRegistrar(24016): 	at bkeq.a(:com.google.android.gms@262932029@26.29.32 (190400-956293556):15)
+W/FlagRegistrar(24016): 	at bjik.a(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagRegistrar(24016): 	at bjih.e(:com.google.android.gms@262932029@26.29.32 (190400-956293556):5)
+W/FlagRegistrar(24016): 	... 11 more
+W/FlagStore(24016): Unable to update local snapshot for com.google.android.gms.providerinstaller#com.rankcrackers.app, may result in stale flags.
+W/FlagStore(24016): java.util.concurrent.ExecutionException: gqpy: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+W/FlagStore(24016): 	at hrlv.j(:com.google.android.gms@262932029@26.29.32 (190400-956293556):21)
+W/FlagStore(24016): 	at hrme.t(:com.google.android.gms@262932029@26.29.32 (190400-956293556):24)
+W/FlagStore(24016): 	at hrlv.get(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagStore(24016): 	at hrqn.a(:com.google.android.gms@262932029@26.29.32 (190400-956293556):2)
+W/FlagStore(24016): 	at hrpd.s(:com.google.android.gms@262932029@26.29.32 (190400-956293556):10)
+W/FlagStore(24016): 	at gqvi.d(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagStore(24016): 	at gqum.run(:com.google.android.gms@262932029@26.29.32 (190400-956293556):5)
+W/FlagStore(24016): 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:520)
+W/FlagStore(24016): 	at java.util.concurrent.FutureTask.run(FutureTask.java:328)
+W/FlagStore(24016): 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:323)
+W/FlagStore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/FlagStore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/FlagStore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/FlagStore(24016): Caused by: gqpy: 17: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+W/FlagStore(24016): 	at gqqa.a(:com.google.android.gms@262932029@26.29.32 (190400-956293556):13)
+W/FlagStore(24016): 	at hrll.d(:com.google.android.gms@262932029@26.29.32 (190400-956293556):3)
+W/FlagStore(24016): 	at hrln.run(:com.google.android.gms@262932029@26.29.32 (190400-956293556):139)
+W/FlagStore(24016): 	at hrny.execute(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagStore(24016): 	at hrlv.f(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagStore(24016): 	at hrlv.m(:com.google.android.gms@262932029@26.29.32 (190400-956293556):101)
+W/FlagStore(24016): 	at hrlv.q(:com.google.android.gms@262932029@26.29.32 (190400-956293556):16)
+W/FlagStore(24016): 	at gjxb.hE(:com.google.android.gms@262932029@26.29.32 (190400-956293556):35)
+W/FlagStore(24016): 	at fvxi.run(:com.google.android.gms@262932029@26.29.32 (190400-956293556):12)
+W/FlagStore(24016): 	at hrny.execute(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagStore(24016): 	at fvxj.b(:com.google.android.gms@262932029@26.29.32 (190400-956293556):18)
+W/FlagStore(24016): 	at fvxy.b(:com.google.android.gms@262932029@26.29.32 (190400-956293556):34)
+W/FlagStore(24016): 	at fvyf.B(:com.google.android.gms@262932029@26.29.32 (190400-956293556):17)
+W/FlagStore(24016): 	at fvxa.run(:com.google.android.gms@262932029@26.29.32 (190400-956293556):60)
+W/FlagStore(24016): 	at hrny.execute(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagStore(24016): 	at fvxb.b(:com.google.android.gms@262932029@26.29.32 (190400-956293556):8)
+W/FlagStore(24016): 	at fvxy.b(:com.google.android.gms@262932029@26.29.32 (190400-956293556):34)
+W/FlagStore(24016): 	at fvya.c(:com.google.android.gms@262932029@26.29.32 (190400-956293556):23)
+W/FlagStore(24016): 	at bjih.e(:com.google.android.gms@262932029@26.29.32 (190400-956293556):9)
+W/FlagStore(24016): 	at bjkx.r(:com.google.android.gms@262932029@26.29.32 (190400-956293556):48)
+W/FlagStore(24016): 	at bjkx.d(:com.google.android.gms@262932029@26.29.32 (190400-956293556):10)
+W/FlagStore(24016): 	at bjkx.g(:com.google.android.gms@262932029@26.29.32 (190400-956293556):191)
+W/FlagStore(24016): 	at bjkz.run(:com.google.android.gms@262932029@26.29.32 (190400-956293556):74)
+W/FlagStore(24016): 	at android.os.Handler.handleCallback(Handler.java:958)
+W/FlagStore(24016): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+W/FlagStore(24016): 	at ddfw.mv(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagStore(24016): 	at ddfw.dispatchMessage(:com.google.android.gms@262932029@26.29.32 (190400-956293556):5)
+W/FlagStore(24016): 	at android.os.Looper.loopOnce(Looper.java:205)
+W/FlagStore(24016): 	at android.os.Looper.loop(Looper.java:294)
+W/FlagStore(24016): 	at android.os.HandlerThread.run(HandlerThread.java:67)
+W/FlagStore(24016): Caused by: bjgm: 17: API: Phenotype.API is not available on this device. Connection failed with: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+W/FlagStore(24016): 	at bkeq.a(:com.google.android.gms@262932029@26.29.32 (190400-956293556):15)
+W/FlagStore(24016): 	at bjik.a(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+W/FlagStore(24016): 	at bjih.e(:com.google.android.gms@262932029@26.29.32 (190400-956293556):5)
+W/FlagStore(24016): 	... 11 more
+I/ProviderInstaller(24016): Installed default security provider AndroidOpenSSL (via CompatProvider)
+W/com.rankcrackers.app(24016): type=1400 audit(0.0:33040): avc:  denied  { search } for  comm=466972656261736520426C6F636B69 name="/" dev="sda15" ino=2 scontext=u:r:untrusted_app:s0:c131,c257,c512,c768 tcontext=u:object_r:metadata_file:s0 tclass=dir permissive=0 app=com.rankcrackers.app
+E/FeatureFlagsImplExport(24016): android.os.flagging.AconfigStorageReadException: ERROR_PACKAGE_NOT_FOUND: package com.android.libcore cannot be found on the device
+W/WindowOnBackDispatcher(24016): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(24016): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+W/System  (24016): Ignoring header X-Firebase-Locale because its value was null.
+W/LocalRequestInterceptor(24016): Error getting App Check token; using placeholder token instead. Error: com.google.firebase.FirebaseException: Error returned from API. code: 403 body: App attestation failed.
+W/LocalRequestInterceptor(24016): Error getting App Check token; using placeholder token instead. Error: com.google.firebase.FirebaseException: Error returned from API. code: 403 body: App attestation failed.
+W/Firestore(24016): (25.1.4) [FirestoreCallCredentials]: Failed to get auth token: com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ].
+W/Firestore(24016): (25.1.4) [WatchStream]: (f4f1469) Stream closed with status: Status{code=UNAUTHENTICATED, description=null, cause=com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ]
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaei.zza(com.google.firebase:firebase-auth@@23.2.1:18)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafh.zza(com.google.firebase:firebase-auth@@23.2.1:21)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaex.zza(com.google.firebase:firebase-auth@@23.2.1:32)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaez.zza(com.google.firebase:firebase-auth@@23.2.1:71)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaeg.zza(com.google.firebase:firebase-auth@@23.2.1:46)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaal.zza(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:15)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:64)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaet.zza(com.google.firebase:firebase-auth@@23.2.1:48)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaam.zzb(com.google.firebase:firebase-auth@@23.2.1:108)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaef.zzb(com.google.firebase:firebase-auth@@23.2.1:86)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzacs.zza(com.google.firebase:firebase-auth@@23.2.1:13)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafj.run(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+W/Firestore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/Firestore(24016): }.
+W/Firestore(24016): (25.1.4) [OnlineStateTracker]: Could not reach Cloud Firestore backend. Connection failed 1 times. Most recent error: Status{code=UNAUTHENTICATED, description=null, cause=com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ]
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaei.zza(com.google.firebase:firebase-auth@@23.2.1:18)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafh.zza(com.google.firebase:firebase-auth@@23.2.1:21)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaex.zza(com.google.firebase:firebase-auth@@23.2.1:32)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaez.zza(com.google.firebase:firebase-auth@@23.2.1:71)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaeg.zza(com.google.firebase:firebase-auth@@23.2.1:46)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaal.zza(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:15)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:64)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaet.zza(com.google.firebase:firebase-auth@@23.2.1:48)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaam.zzb(com.google.firebase:firebase-auth@@23.2.1:108)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaef.zzb(com.google.firebase:firebase-auth@@23.2.1:86)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzacs.zza(com.google.firebase:firebase-auth@@23.2.1:13)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafj.run(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+W/Firestore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/Firestore(24016): }
+W/Firestore(24016): This typically indicates that your device does not have a healthy Internet connection at the moment. The client will operate in offline mode until it is able to successfully connect to the backend.
+W/System  (24016): Ignoring header X-Firebase-Locale because its value was null.
+W/LocalRequestInterceptor(24016): Error getting App Check token; using placeholder token instead. Error: com.google.firebase.FirebaseException: Too many attempts.
+W/Firestore(24016): (25.1.4) [FirestoreCallCredentials]: Failed to get auth token: com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ].
+W/Firestore(24016): (25.1.4) [WatchStream]: (f4f1469) Stream closed with status: Status{code=UNAUTHENTICATED, description=null, cause=com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ]
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaei.zza(com.google.firebase:firebase-auth@@23.2.1:18)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafh.zza(com.google.firebase:firebase-auth@@23.2.1:21)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaex.zza(com.google.firebase:firebase-auth@@23.2.1:32)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaez.zza(com.google.firebase:firebase-auth@@23.2.1:71)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaeg.zza(com.google.firebase:firebase-auth@@23.2.1:46)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaal.zza(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:15)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:64)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaet.zza(com.google.firebase:firebase-auth@@23.2.1:48)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaam.zzb(com.google.firebase:firebase-auth@@23.2.1:108)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaef.zzb(com.google.firebase:firebase-auth@@23.2.1:86)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzacs.zza(com.google.firebase:firebase-auth@@23.2.1:13)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafj.run(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+W/Firestore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/Firestore(24016): }.
+D/ProfileInstaller(24016): Installing profile for com.rankcrackers.app
+W/System  (24016): Ignoring header X-Firebase-Locale because its value was null.
+W/LocalRequestInterceptor(24016): Error getting App Check token; using placeholder token instead. Error: com.google.firebase.FirebaseException: Too many attempts.
+W/Firestore(24016): (25.1.4) [FirestoreCallCredentials]: Failed to get auth token: com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ].
+W/Firestore(24016): (25.1.4) [WatchStream]: (f4f1469) Stream closed with status: Status{code=UNAUTHENTICATED, description=null, cause=com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ]
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaei.zza(com.google.firebase:firebase-auth@@23.2.1:18)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafh.zza(com.google.firebase:firebase-auth@@23.2.1:21)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaex.zza(com.google.firebase:firebase-auth@@23.2.1:32)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaez.zza(com.google.firebase:firebase-auth@@23.2.1:71)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaeg.zza(com.google.firebase:firebase-auth@@23.2.1:46)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaal.zza(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:15)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:64)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaet.zza(com.google.firebase:firebase-auth@@23.2.1:48)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaam.zzb(com.google.firebase:firebase-auth@@23.2.1:108)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaef.zzb(com.google.firebase:firebase-auth@@23.2.1:86)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzacs.zza(com.google.firebase:firebase-auth@@23.2.1:13)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafj.run(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+W/Firestore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/Firestore(24016): }.
+W/System  (24016): Ignoring header X-Firebase-Locale because its value was null.
+W/LocalRequestInterceptor(24016): Error getting App Check token; using placeholder token instead. Error: com.google.firebase.FirebaseException: Too many attempts.
+W/Firestore(24016): (25.1.4) [FirestoreCallCredentials]: Failed to get auth token: com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ].
+W/Firestore(24016): (25.1.4) [WatchStream]: (f4f1469) Stream closed with status: Status{code=UNAUTHENTICATED, description=null, cause=com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ]
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaei.zza(com.google.firebase:firebase-auth@@23.2.1:18)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafh.zza(com.google.firebase:firebase-auth@@23.2.1:21)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaex.zza(com.google.firebase:firebase-auth@@23.2.1:32)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaez.zza(com.google.firebase:firebase-auth@@23.2.1:71)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaeg.zza(com.google.firebase:firebase-auth@@23.2.1:46)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaal.zza(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:15)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:64)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaet.zza(com.google.firebase:firebase-auth@@23.2.1:48)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaam.zzb(com.google.firebase:firebase-auth@@23.2.1:108)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaef.zzb(com.google.firebase:firebase-auth@@23.2.1:86)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzacs.zza(com.google.firebase:firebase-auth@@23.2.1:13)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafj.run(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+W/Firestore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/Firestore(24016): }.
+W/System  (24016): Ignoring header X-Firebase-Locale because its value was null.
+I/ankcrackers.app(24016): Background concurrent copying GC freed 7741KB AllocSpace bytes, 56(1776KB) LOS objects, 79% free, 6239KB/30MB, paused 173us,139us total 175.786ms
+W/LocalRequestInterceptor(24016): Error getting App Check token; using placeholder token instead. Error: com.google.firebase.FirebaseException: Error returned from API. code: 403 body: App attestation failed.
+W/Firestore(24016): (25.1.4) [FirestoreCallCredentials]: Failed to get auth token: com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ].
+W/Firestore(24016): (25.1.4) [WatchStream]: (f4f1469) Stream closed with status: Status{code=UNAUTHENTICATED, description=null, cause=com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ]
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaei.zza(com.google.firebase:firebase-auth@@23.2.1:18)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafh.zza(com.google.firebase:firebase-auth@@23.2.1:21)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaex.zza(com.google.firebase:firebase-auth@@23.2.1:32)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaez.zza(com.google.firebase:firebase-auth@@23.2.1:71)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaeg.zza(com.google.firebase:firebase-auth@@23.2.1:46)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaal.zza(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:15)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:64)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaet.zza(com.google.firebase:firebase-auth@@23.2.1:48)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaam.zzb(com.google.firebase:firebase-auth@@23.2.1:108)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaef.zzb(com.google.firebase:firebase-auth@@23.2.1:86)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzacs.zza(com.google.firebase:firebase-auth@@23.2.1:13)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafj.run(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+W/Firestore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/Firestore(24016): }.
+W/System  (24016): Ignoring header X-Firebase-Locale because its value was null.
+W/LocalRequestInterceptor(24016): Error getting App Check token; using placeholder token instead. Error: com.google.firebase.FirebaseException: Too many attempts.
+W/Firestore(24016): (25.1.4) [FirestoreCallCredentials]: Failed to get auth token: com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ].
+W/Firestore(24016): (25.1.4) [WatchStream]: (f4f1469) Stream closed with status: Status{code=UNAUTHENTICATED, description=null, cause=com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ]
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaei.zza(com.google.firebase:firebase-auth@@23.2.1:18)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafh.zza(com.google.firebase:firebase-auth@@23.2.1:21)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaex.zza(com.google.firebase:firebase-auth@@23.2.1:32)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaez.zza(com.google.firebase:firebase-auth@@23.2.1:71)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaeg.zza(com.google.firebase:firebase-auth@@23.2.1:46)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaal.zza(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:15)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:64)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaet.zza(com.google.firebase:firebase-auth@@23.2.1:48)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaam.zzb(com.google.firebase:firebase-auth@@23.2.1:108)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaef.zzb(com.google.firebase:firebase-auth@@23.2.1:86)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzacs.zza(com.google.firebase:firebase-auth@@23.2.1:13)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafj.run(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+W/Firestore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/Firestore(24016): }.
+E/GoogleApiManager(24016): Failed to get service from broker. 
+E/GoogleApiManager(24016): java.lang.SecurityException: Unknown calling package name 'com.google.android.gms'.
+E/GoogleApiManager(24016): 	at android.os.Parcel.createExceptionOrNull(Parcel.java:3057)
+E/GoogleApiManager(24016): 	at android.os.Parcel.createException(Parcel.java:3041)
+E/GoogleApiManager(24016): 	at android.os.Parcel.readException(Parcel.java:3024)
+E/GoogleApiManager(24016): 	at android.os.Parcel.readException(Parcel.java:2966)
+E/GoogleApiManager(24016): 	at bkhl.a(:com.google.android.gms@262932029@26.29.32 (190400-956293556):36)
+E/GoogleApiManager(24016): 	at bkfe.y(:com.google.android.gms@262932029@26.29.32 (190400-956293556):144)
+E/GoogleApiManager(24016): 	at bjkz.run(:com.google.android.gms@262932029@26.29.32 (190400-956293556):42)
+E/GoogleApiManager(24016): 	at android.os.Handler.handleCallback(Handler.java:958)
+E/GoogleApiManager(24016): 	at android.os.Handler.dispatchMessage(Handler.java:99)
+E/GoogleApiManager(24016): 	at ddfw.mv(:com.google.android.gms@262932029@26.29.32 (190400-956293556):1)
+E/GoogleApiManager(24016): 	at ddfw.dispatchMessage(:com.google.android.gms@262932029@26.29.32 (190400-956293556):5)
+E/GoogleApiManager(24016): 	at android.os.Looper.loopOnce(Looper.java:205)
+E/GoogleApiManager(24016): 	at android.os.Looper.loop(Looper.java:294)
+E/GoogleApiManager(24016): 	at android.os.HandlerThread.run(HandlerThread.java:67)
+W/GoogleApiManager(24016): Not showing notification since connectionResult is not user-facing: ConnectionResult{statusCode=DEVELOPER_ERROR, resolution=null, message=null, clientMethodKey=null}
+W/System  (24016): Ignoring header X-Firebase-Locale because its value was null.
+W/LocalRequestInterceptor(24016): Error getting App Check token; using placeholder token instead. Error: com.google.firebase.FirebaseException: Error returned from API. code: 403 body: App attestation failed.
+W/Firestore(24016): (25.1.4) [FirestoreCallCredentials]: Failed to get auth token: com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ].
+W/Firestore(24016): (25.1.4) [WatchStream]: (f4f1469) Stream closed with status: Status{code=UNAUTHENTICATED, description=null, cause=com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ]
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaei.zza(com.google.firebase:firebase-auth@@23.2.1:18)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafh.zza(com.google.firebase:firebase-auth@@23.2.1:21)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaex.zza(com.google.firebase:firebase-auth@@23.2.1:32)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaez.zza(com.google.firebase:firebase-auth@@23.2.1:71)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaeg.zza(com.google.firebase:firebase-auth@@23.2.1:46)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaal.zza(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:15)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:64)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaet.zza(com.google.firebase:firebase-auth@@23.2.1:48)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaam.zzb(com.google.firebase:firebase-auth@@23.2.1:108)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaef.zzb(com.google.firebase:firebase-auth@@23.2.1:86)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzacs.zza(com.google.firebase:firebase-auth@@23.2.1:13)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafj.run(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+W/Firestore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/Firestore(24016): }.
+W/System  (24016): Ignoring header X-Firebase-Locale because its value was null.
+W/LocalRequestInterceptor(24016): Error getting App Check token; using placeholder token instead. Error: com.google.firebase.FirebaseException: Too many attempts.
+W/Firestore(24016): (25.1.4) [FirestoreCallCredentials]: Failed to get auth token: com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ].
+W/Firestore(24016): (25.1.4) [WatchStream]: (f4f1469) Stream closed with status: Status{code=UNAUTHENTICATED, description=null, cause=com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ]
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaei.zza(com.google.firebase:firebase-auth@@23.2.1:18)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafh.zza(com.google.firebase:firebase-auth@@23.2.1:21)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaex.zza(com.google.firebase:firebase-auth@@23.2.1:32)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaez.zza(com.google.firebase:firebase-auth@@23.2.1:71)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaeg.zza(com.google.firebase:firebase-auth@@23.2.1:46)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaal.zza(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:15)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:64)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaet.zza(com.google.firebase:firebase-auth@@23.2.1:48)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaam.zzb(com.google.firebase:firebase-auth@@23.2.1:108)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaef.zzb(com.google.firebase:firebase-auth@@23.2.1:86)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzacs.zza(com.google.firebase:firebase-auth@@23.2.1:13)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafj.run(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+W/Firestore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/Firestore(24016): }.
+W/System  (24016): Ignoring header X-Firebase-Locale because its value was null.
+W/LocalRequestInterceptor(24016): Error getting App Check token; using placeholder token instead. Error: com.google.firebase.FirebaseException: Error returned from API. code: 403 body: App attestation failed.
+W/Firestore(24016): (25.1.4) [FirestoreCallCredentials]: Failed to get auth token: com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ].
+W/Firestore(24016): (25.1.4) [WatchStream]: (f4f1469) Stream closed with status: Status{code=UNAUTHENTICATED, description=null, cause=com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ]
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaei.zza(com.google.firebase:firebase-auth@@23.2.1:18)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafh.zza(com.google.firebase:firebase-auth@@23.2.1:21)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaex.zza(com.google.firebase:firebase-auth@@23.2.1:32)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaez.zza(com.google.firebase:firebase-auth@@23.2.1:71)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaeg.zza(com.google.firebase:firebase-auth@@23.2.1:46)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaal.zza(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:15)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:64)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaet.zza(com.google.firebase:firebase-auth@@23.2.1:48)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaam.zzb(com.google.firebase:firebase-auth@@23.2.1:108)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaef.zzb(com.google.firebase:firebase-auth@@23.2.1:86)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzacs.zza(com.google.firebase:firebase-auth@@23.2.1:13)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafj.run(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+W/Firestore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/Firestore(24016): }.
+W/System  (24016): Ignoring header X-Firebase-Locale because its value was null.
+W/LocalRequestInterceptor(24016): Error getting App Check token; using placeholder token instead. Error: com.google.firebase.FirebaseException: Too many attempts.
+W/Firestore(24016): (25.1.4) [FirestoreCallCredentials]: Failed to get auth token: com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ].
+W/Firestore(24016): (25.1.4) [WatchStream]: (f4f1469) Stream closed with status: Status{code=UNAUTHENTICATED, description=null, cause=com.google.firebase.FirebaseException: An internal error has occurred. [ INVALID_REFRESH_TOKEN ]
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaei.zza(com.google.firebase:firebase-auth@@23.2.1:18)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafh.zza(com.google.firebase:firebase-auth@@23.2.1:21)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaex.zza(com.google.firebase:firebase-auth@@23.2.1:32)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaez.zza(com.google.firebase:firebase-auth@@23.2.1:71)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaeg.zza(com.google.firebase:firebase-auth@@23.2.1:46)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaal.zza(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:15)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafm.zza(com.google.firebase:firebase-auth@@23.2.1:64)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaet.zza(com.google.firebase:firebase-auth@@23.2.1:48)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaam.zzb(com.google.firebase:firebase-auth@@23.2.1:108)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzaef.zzb(com.google.firebase:firebase-auth@@23.2.1:86)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzacs.zza(com.google.firebase:firebase-auth@@23.2.1:13)
+W/Firestore(24016): 	at com.google.android.gms.internal.firebase-auth-api.zzafj.run(com.google.firebase:firebase-auth@@23.2.1:3)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+W/Firestore(24016): 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory.lambda$newThread$0$com-google-firebase-concurrent-CustomThreadFactory(CustomThreadFactory.java:47)
+W/Firestore(24016): 	at com.google.firebase.concurrent.CustomThreadFactory$$ExternalSyntheticLambda0.run(D8$$SyntheticClass:0)
+W/Firestore(24016): 	at java.lang.Thread.run(Thread.java:1572)
+W/Firestore(24016): }.
+I/TRuntime.CctTransportBackend(24016): Making request to: https://firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog
+I/flutter (24016): 🔱 KNOWLEDGE INIT START
+I/flutter (24016): KnowledgeEngine: Live streams initiated.
+I/flutter (24016): 🔱 ROUTER REDIRECT: /dashboard
+I/flutter (24016): 🔱 ROUTER PASSED
+W/WindowOnBackDispatcher(24016): OnBackInvokedCallback is not enabled for the application.
+W/WindowOnBackDispatcher(24016): Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+I/flutter (24016): 🔱 NODE STREAM RECEIVED: Type = List<MicroTopicNode>
+I/flutter (24016): 🔱 DELTA AGGREGATION: 0 nodes refreshed.
+I/flutter (24016): 🔱 BENCHMARK [FullAggregation]: 10ms
+I/flutter (24016): 🔱 KNOWLEDGE INIT COMPLETE
+I/flutter (24016): 🔱 KNOWLEDGE: NO NODES FOUND
+I/flutter (24016): 🔱 PROGRESS STREAM RECEIVED: Type = List<Map<String, dynamic>>
+I/flutter (24016): 🔱 TELEMETRY: Captured mission_hydration in 729ms [SUCCESS]
+Lost connection to device.

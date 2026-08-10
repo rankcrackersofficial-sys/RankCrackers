@@ -1,0 +1,36 @@
+{
+    "validation":  {
+                       "format":  "PASS",
+                       "targetedAnalyze":  "PASS",
+                       "knowledgeVisual":  "PENDING",
+                       "backSwipePhysicalGesture":  "PENDING",
+                       "physicalMissionRealm":  "PASS"
+                   },
+    "baseline":  "bf17498e8e08c47c1fd8f8a74965eb3296750855",
+    "gradleHash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+    "redScreenRepair":  "Mission Realm ListTile wrapped in transparent Material",
+    "backend":  "EMULATOR 192.168.1.8:9099/8080",
+    "missionVisible":  "JEE Main 2027",
+    "physicalDevice":  "Pixel 5 11251FDD4003TB",
+    "knowledgeMapRepair":  "Truthful premium first-use empty state, no fake mastery data",
+    "safety":  {
+                   "deploy":  false,
+                   "gradleTouch":  false,
+                   "missionFabrication":  false,
+                   "hardcodedThreeMissions":  false,
+                   "productionWrite":  false,
+                   "rulesChange":  false,
+                   "productionRead":  false,
+                   "studentPublish":  false,
+                   "authChange":  false
+               },
+    "redScreenReproduced":  "ListTile Material assertion",
+    "missionActions":  [
+                           "SMART START",
+                           "QUICK START"
+                       ],
+    "missionSelectionPage":  "Mission Realm",
+    "verdict":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4_PROFILE_MISSION_PARITY_AND_ERROR_REPAIR_PASSED_WITH_EVIDENCE_LIMITATIONS",
+    "profileTargetMissionOnProfile":  false,
+    "backSwipeRepair":  "MainNavigationShell PopScope guard"
+}

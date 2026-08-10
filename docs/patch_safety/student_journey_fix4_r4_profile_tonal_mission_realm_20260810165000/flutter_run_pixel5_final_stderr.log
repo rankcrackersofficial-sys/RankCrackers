@@ -1,0 +1,18 @@
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Settings file 'C:\RankCrackers\RankCrackers-55\android\settings.gradle.kts' line: 20
+
+* What went wrong:
+An exception occurred applying plugin request [id: 'dev.flutter.flutter-plugin-loader', version: '1.0.0']
+> Could not find implementation class 'com.flutter.gradle.FlutterAppPluginLoaderPlugin' for plugin 'dev.flutter.flutter-plugin-loader' specified in jar:file:/C:/Users/yuvra/.gradle/caches/8.14/transforms/3d00c7a08fafc5b69a6e59b207cffabe/transformed/original/gradle-1.0.0.jar!/META-INF/gradle-plugins/dev.flutter.flutter-plugin-loader.properties.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 2s
+Error: Gradle task assembleDebug failed with exit code 1

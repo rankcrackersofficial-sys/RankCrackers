@@ -110,7 +110,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
           .initialize(recruitment: recruitment, force: true)
           .timeout(const Duration(seconds: 5), onTimeout: () {
         debugPrint(
-            "🔱 MISSION START: Engine hydration slow. Moving to dashboard anyway.");
+            "ðŸ”± MISSION START: Engine hydration slow. Moving to dashboard anyway.");
       });
 
       if (!mounted) return;
@@ -127,7 +127,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
         context.go(AppRoutes.dashboard);
       }
     } catch (e) {
-      debugPrint("🔱 MISSION REALM ERROR: $e");
+      debugPrint("ðŸ”± MISSION REALM ERROR: $e");
       if (mounted) context.go(AppRoutes.dashboard);
     } finally {
       if (mounted) setState(() => _isLoading = false);
@@ -201,15 +201,15 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                         if (missions.isNotEmpty) ...[
                           Text(
                             selectedCategory == 'competitive'
-                                ? '🛡 COMPETITIVE MISSIONS'
-                                : '🎓 QUALIFYING MISSIONS',
+                                ? 'ðŸ›¡ COMPETITIVE MISSIONS'
+                                : 'ðŸŽ“ QUALIFYING MISSIONS',
                             style: AppTypography.label.copyWith(
                                 fontSize: 8,
                                 color: AppColors.gold,
                                 letterSpacing: 1.5),
                           ),
                           const SizedBox(height: 12),
-                          // 🔱 Performance Fix: Using a constrained list inside the Column
+                          // ðŸ”± Performance Fix: Using a constrained list inside the Column
                           ...missions.take(10).map((r) => _buildMissionCard(r)),
                           if (missions.length > 10)
                             Padding(
@@ -363,22 +363,25 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
       ),
       child: Column(
         children: [
-          ListTile(
-            onTap: () => setState(() =>
-                selectedRecruitmentId = isExpanded ? null : recruitment.id),
-            title: Text(recruitment.title,
-                style: AppTypography.cardTitle.copyWith(
-                    fontSize: 13,
-                    color: isExpanded ? AppColors.gold : Colors.white70)),
-            subtitle: Text("${recruitment.state} • ${recruitment.year}",
-                style: AppTypography.body
-                    .copyWith(fontSize: 9, color: Colors.white24)),
-            trailing: Icon(
-                isExpanded
-                    ? Icons.keyboard_arrow_up_rounded
-                    : Icons.keyboard_arrow_down_rounded,
-                color: Colors.white10,
-                size: 16),
+          Material(
+            color: Colors.transparent,
+            child: ListTile(
+              onTap: () => setState(() =>
+                  selectedRecruitmentId = isExpanded ? null : recruitment.id),
+              title: Text(recruitment.title,
+                  style: AppTypography.cardTitle.copyWith(
+                      fontSize: 13,
+                      color: isExpanded ? AppColors.gold : Colors.white70)),
+              subtitle: Text("${recruitment.state} • ${recruitment.year}",
+                  style: AppTypography.body
+                      .copyWith(fontSize: 9, color: Colors.white24)),
+              trailing: Icon(
+                  isExpanded
+                      ? Icons.keyboard_arrow_up_rounded
+                      : Icons.keyboard_arrow_down_rounded,
+                  color: Colors.white10,
+                  size: 16),
+            ),
           ),
           if (isExpanded)
             Padding(

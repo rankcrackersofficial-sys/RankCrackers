@@ -15,80 +15,91 @@ class MainNavigationShell extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final activeDashboardSection = ref.watch(dashboardActiveSectionProvider);
-    final int effectiveIndex = _calculateEffectiveIndex(navigationShell.currentIndex, activeDashboardSection);
+    final int effectiveIndex = _calculateEffectiveIndex(
+      navigationShell.currentIndex,
+      activeDashboardSection,
+    );
 
-    return Scaffold(
-      body: navigationShell,
-      bottomNavigationBar: Container(
-        height: 78,
-        decoration: BoxDecoration(
-          color: AppColors.surface,
-          border: const Border(
-            top: BorderSide(
-              color: AppColors.borderSoft,
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, result) {
+        if (didPop) return;
+        if (navigationShell.currentIndex != 0) {
+          navigationShell.goBranch(0, initialLocation: true);
+        }
+      },
+      child: Scaffold(
+        body: navigationShell,
+        bottomNavigationBar: Container(
+          height: 78,
+          decoration: BoxDecoration(
+            color: AppColors.surface,
+            border: const Border(
+              top: BorderSide(
+                color: AppColors.borderSoft,
+              ),
             ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.24),
+                blurRadius: 20,
+              ),
+            ],
           ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.24),
-              blurRadius: 20,
-            ),
-          ],
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            // Dashboard
-            _navItem(
-              context,
-              icon: Icons.home_rounded,
-              index: 0,
-              effectiveIndex: effectiveIndex,
-            ),
-            // Crucible
-            _navItem(
-              context,
-              icon: Icons.local_fire_department_rounded,
-              index: 1,
-              effectiveIndex: effectiveIndex,
-            ),
-            // DigiBook
-            _navItem(
-              context,
-              icon: Icons.auto_stories_rounded,
-              index: 2,
-              effectiveIndex: effectiveIndex,
-            ),
-            // Syllabus
-            _navItem(
-              context,
-              icon: Icons.account_tree_rounded,
-              index: 3,
-              effectiveIndex: effectiveIndex,
-            ),
-            // Opportunities
-            _navItem(
-              context,
-              icon: Icons.work_outline_rounded,
-              index: 4,
-              effectiveIndex: effectiveIndex,
-            ),
-          ],
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              _navItem(
+                context,
+                icon: Icons.home_rounded,
+                index: 0,
+                effectiveIndex: effectiveIndex,
+              ),
+              _navItem(
+                context,
+                icon: Icons.local_fire_department_rounded,
+                index: 1,
+                effectiveIndex: effectiveIndex,
+              ),
+              _navItem(
+                context,
+                icon: Icons.auto_stories_rounded,
+                index: 2,
+                effectiveIndex: effectiveIndex,
+              ),
+              _navItem(
+                context,
+                icon: Icons.account_tree_rounded,
+                index: 3,
+                effectiveIndex: effectiveIndex,
+              ),
+              _navItem(
+                context,
+                icon: Icons.work_outline_rounded,
+                index: 4,
+                effectiveIndex: effectiveIndex,
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
   int _calculateEffectiveIndex(int currentIndex, DashboardSection section) {
-    // 🔱 Scroll-Driven Logic: If we are on Dashboard branch, override highlight based on scroll.
     if (currentIndex != 0) return currentIndex;
 
     switch (section) {
-      case DashboardSection.crucible: return 1;
-      case DashboardSection.digibook: return 2;
-      case DashboardSection.syllabus: return 3;
-      case DashboardSection.tools: return 4; // 🔱 Maps to Opportunities Highlight
-      default: return 0;
+      case DashboardSection.crucible:
+        return 1;
+      case DashboardSection.digibook:
+        return 2;
+      case DashboardSection.syllabus:
+        return 3;
+      case DashboardSection.tools:
+        return 4;
+      default:
+        return 0;
     }
   }
 

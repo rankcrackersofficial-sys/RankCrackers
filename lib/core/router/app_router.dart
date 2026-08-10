@@ -245,31 +245,77 @@ final GoRouter appRouter = GoRouter(
                     if (allNodes.isEmpty) {
                       return Scaffold(
                         backgroundColor: AppColors.background,
-                        body: Center(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              const Icon(
-                                Icons.menu_book_outlined,
-                                size: 48,
-                                color: AppColors.gold,
+                        body: SafeArea(
+                          child: Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(24),
+                              child: Container(
+                                constraints:
+                                    const BoxConstraints(maxWidth: 420),
+                                padding: const EdgeInsets.all(22),
+                                decoration: BoxDecoration(
+                                  color: AppColors.surface,
+                                  borderRadius: BorderRadius.circular(20),
+                                  border:
+                                      Border.all(color: AppColors.borderSoft),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color:
+                                          Colors.black.withValues(alpha: 0.28),
+                                      blurRadius: 24,
+                                      offset: const Offset(0, 14),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    const Icon(
+                                      Icons.auto_stories_outlined,
+                                      size: 46,
+                                      color: AppColors.gold,
+                                    ),
+                                    const SizedBox(height: 16),
+                                    Text(
+                                      'DigiBook is preparing your first map',
+                                      textAlign: TextAlign.center,
+                                      style: AppTypography.cardTitle.copyWith(
+                                        color: Colors.white70,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 10),
+                                    Text(
+                                      'Your learning matrix is not available in this test session yet. No mastery or study data has been invented.',
+                                      textAlign: TextAlign.center,
+                                      style: AppTypography.body.copyWith(
+                                        color: Colors.white38,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 18),
+                                    OutlinedButton(
+                                      onPressed:
+                                          KnowledgeEngine.instance.isHydrating
+                                              ? null
+                                              : () => KnowledgeEngine.instance
+                                                      .initialize(
+                                                    force: true,
+                                                  ),
+                                      style: OutlinedButton.styleFrom(
+                                        side: const BorderSide(
+                                          color: AppColors.borderSoft,
+                                        ),
+                                      ),
+                                      child: Text(
+                                        KnowledgeEngine.instance.isHydrating
+                                            ? 'Checking...'
+                                            : 'Check again',
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                              const SizedBox(height: 16),
-                              Text(
-                                "NO KNOWLEDGE MATRIX FOUND",
-                                style: AppTypography.label,
-                              ),
-                              const SizedBox(height: 20),
-                              ElevatedButton(
-                                onPressed: () {
-                                  if (!KnowledgeEngine.instance.isHydrating) {
-                                    KnowledgeEngine.instance
-                                        .initialize(force: true);
-                                  }
-                                },
-                                child: const Text("RETRY SYNC"),
-                              ),
-                            ],
+                            ),
                           ),
                         ),
                       );
