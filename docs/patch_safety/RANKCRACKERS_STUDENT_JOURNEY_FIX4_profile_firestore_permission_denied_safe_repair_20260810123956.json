@@ -1,0 +1,39 @@
+﻿{
+  "verdictTarget": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_PROFILE_FIRESTORE_PERMISSION_DENIED_SAFE_REPAIR_PASSED",
+  "startingHead": "731bffe7babd041da94b79aec8b5c701e32c58a5",
+  "gradleHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "requiredGradleHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "failingFirestoreContract": {
+    "path": "users/{uid}",
+    "operation": "set(profileData, merge:true)",
+    "requiredAuth": "request.auth.uid == uid",
+    "caller": "UnifiedIdentityScreen._establishIdentity",
+    "service": "FirestoreService.saveUserProfile"
+  },
+  "rootCause": {
+    "clientInjectedSensitiveFields": ["role", "admin", "founder", "accessLevel"],
+    "ruleRejectedSensitiveUpdate": true,
+    "rulesWereCorrect": true
+  },
+  "repair": {
+    "removedClientSensitiveFieldInjection": true,
+    "firestoreRulesChanged": false,
+    "authLogicChanged": false,
+    "profilePayloadChanged": false,
+    "writePathChanged": false,
+    "writeOperationChanged": false
+  },
+  "verification": {
+    "dartAnalyzeFirestoreService": "PASS",
+    "liveDeviceProfileSaveProof": "PENDING"
+  },
+  "safety": {
+    "firestoreRulesLoosening": false,
+    "authChange": false,
+    "profileSchemaExpansion": false,
+    "routeChange": false,
+    "studentDelivery": false,
+    "deploy": false,
+    "atomicCellMutation": false
+  }
+}

@@ -402,14 +402,7 @@ class FirestoreService {
     required String uid,
     required Map<String, dynamic> profileData,
   }) async {
-    // 🔱 Sovereign Identity Law: Ensure Founder Role is set if UID matches
-    if (uid == FounderIdentity.founderUid) {
-      profileData['role'] = 'founder';
-      profileData['admin'] = true;
-      profileData['founder'] = true;
-      profileData['accessLevel'] = 9;
-    }
-
+    // Personal profile setup must not write privileged role fields from client.
     await _firestore
         .collection('users')
         .doc(uid)
