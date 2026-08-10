@@ -1,0 +1,51 @@
+﻿{
+  "verdict": "RANKCRACKERS_ENV_ANDROID_TARGET_PREP_PASSED",
+  "startingHead": "0ea30b6c8dcb279887280364f2b50c0d156f9400",
+  "knownUnrelatedDirtyFile": "android/app/build.gradle.kts",
+  "knownUnrelatedDirtyHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "androidSdkPath": "C:\\Users\\yuvra\\AppData\\Local\\Android\\Sdk",
+  "androidStudioPresent": true,
+  "adbPresent": true,
+  "emulatorPackagePresent": true,
+  "cmdlineToolsBeforePrep": false,
+  "systemImagesBeforePrep": false,
+  "existingAvdBeforePrep": false,
+  "cmdlineToolsInstalled": true,
+  "cmdlineToolsDownloadSha256": "90ae805d20434428bffcb699c290860f19bb5f66a67e6b330067e3de801fb04a",
+  "systemImageInstalled": "system-images;android-35;google_apis;x86_64",
+  "qaAvdCreated": "RankCrackers_QA_API35",
+  "qaEmulatorSerial": "emulator-5554",
+  "qaEmulatorBootCompleted": true,
+  "qaEmulatorAndroidRelease": "15",
+  "qaEmulatorAndroidSdk": "35",
+  "flutterAndroidTargetsVisible": true,
+  "flutterVisibleAndroidTargets": [
+    {
+      "name": "Pixel 5",
+      "id": "11251FDD4003TB",
+      "platform": "android-arm64",
+      "android": "Android 14 (API 34)",
+      "routeNote": "physical device; do not use 10.0.2.2 without separate adb reverse or host proof"
+    },
+    {
+      "name": "sdk gphone64 x86 64",
+      "id": "emulator-5554",
+      "platform": "android-x64",
+      "android": "Android 15 (API 35) (emulator)",
+      "routeNote": "preferred R3 emulator target; Firebase emulator host 10.0.2.2"
+    }
+  ],
+  "flutterVisibleAvd": "RankCrackers_QA_API35",
+  "safety": {
+    "profileSetupSave": false,
+    "firestoreWrite": false,
+    "productionWrite": false,
+    "authMutation": false,
+    "rulesDeploy": false,
+    "firebaseConfigSwap": false,
+    "studentDelivery": false,
+    "deploy": false,
+    "productCodeChange": false
+  },
+  "nextAuthorizedStep": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R3_EMULATOR_PROFILE_ESTABLISHMENT_SAVE_READBACK_VALIDATION"
+}
