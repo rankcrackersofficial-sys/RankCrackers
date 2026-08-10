@@ -891,20 +891,31 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     final isFocused = focusNode?.hasFocus ?? false;
     final fieldBorder = minimalSurface
         ? (isFocused
-            ? goldAccent.withValues(alpha: 0.64)
-            : AppColors.border.withValues(alpha: 0.58))
+            ? goldAccent.withValues(alpha: 0.42)
+            : goldAccent.withValues(alpha: 0.18))
         : AppColors.border.withValues(alpha: 0.95);
     final fieldFill = minimalSurface
-        ? Colors.white.withValues(alpha: isFocused ? 0.035 : 0.018)
+        ? Colors.transparent
         : AppColors.elevatedSurface.withValues(alpha: 0.94);
+    final fieldGradient = minimalSurface
+        ? LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              AppColors.surface2.withValues(alpha: isFocused ? 0.44 : 0.34),
+              AppColors.surface.withValues(alpha: isFocused ? 0.36 : 0.28),
+            ],
+          )
+        : null;
 
     return AnimatedContainer(
       duration: const Duration(milliseconds: 160),
-      height: ResponsiveHelper.fieldHeight(context),
+      height: minimalSurface ? 56 : ResponsiveHelper.fieldHeight(context),
       decoration: BoxDecoration(
         color: fieldFill,
-        borderRadius: BorderRadius.circular(minimalSurface ? 14 : 12),
-        border: Border.all(color: fieldBorder, width: minimalSurface ? 1.0 : 1),
+        gradient: fieldGradient,
+        borderRadius: BorderRadius.circular(minimalSurface ? 16 : 12),
+        border: Border.all(color: fieldBorder, width: 1),
         boxShadow: minimalSurface
             ? null
             : [
@@ -934,8 +945,9 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
             color: Colors.white.withValues(alpha: minimalSurface ? 0.34 : 0.10),
             fontSize: 13,
           ),
-          prefixIcon:
-              Icon(icon, color: goldAccent.withValues(alpha: 0.56), size: 18),
+          prefixIcon: Icon(icon,
+              color: goldAccent.withValues(alpha: minimalSurface ? 0.62 : 0.56),
+              size: 18),
           suffixIcon: suffixIcon,
           contentPadding: const EdgeInsets.symmetric(horizontal: 16),
           border: InputBorder.none,
