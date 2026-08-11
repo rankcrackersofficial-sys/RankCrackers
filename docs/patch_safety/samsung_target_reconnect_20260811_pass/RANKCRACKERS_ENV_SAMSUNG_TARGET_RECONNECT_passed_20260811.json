@@ -1,0 +1,31 @@
+﻿{
+    "verdict":  "RANKCRACKERS_ENV_SAMSUNG_TARGET_RECONNECT_PASSED",
+    "startingHead":  "1e6554f36851555d02a550b6e5a46d2ae3edd87a",
+    "expectedSerial":  "RZCW12FBFXZ",
+    "adbState":  "device",
+    "model":  "SM-S911B",
+    "androidRelease":  "16",
+    "androidSdk":  "36",
+    "flutterVisible":  true,
+    "flutterLabel":  "SM S911B (mobile) • RZCW12FBFXZ • android-arm64 • Android 16 (API 36)",
+    "pixel5SubstituteUsed":  false,
+    "productCodeChange":  false,
+    "productionRead":  false,
+    "productionWrite":  false,
+    "rulesChange":  false,
+    "deploy":  false,
+    "studentPublish":  false,
+    "firebaseConfigSwap":  false,
+    "gradleTouch":  false,
+    "safetyProof":  [
+                        "NO_PRODUCT_CODE_CHANGE",
+                        "NO_PRODUCTION_READ",
+                        "NO_PRODUCTION_WRITE",
+                        "NO_RULES_CHANGE",
+                        "NO_DEPLOY",
+                        "NO_STUDENT_PUBLISH",
+                        "NO_FIREBASE_CONFIG_SWAP",
+                        "NO_GRADLE_TOUCH"
+                    ],
+    "nextGate":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3_SAMSUNG_CANONICAL_MISSION_SELECTION_AND_DASHBOARD_CONTEXT_VISUAL_VALIDATION"
+}
