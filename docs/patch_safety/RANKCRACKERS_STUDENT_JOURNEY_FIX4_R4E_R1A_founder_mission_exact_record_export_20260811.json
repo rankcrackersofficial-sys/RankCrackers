@@ -1,0 +1,127 @@
+{
+  "gate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R1A",
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R1A_BLOCKED_REQUIRES_ONE_TIME_READ_ONLY_PRODUCTION_MISSION_EXPORT",
+  "mode": "READ_ONLY_EVIDENCE_ONLY",
+  "baseline": {
+    "branch": "safety/rc-g2-pre-notification-schema",
+    "startingHead": "6be21cfbdc616286c118757a54da051a09652243",
+    "knownUnrelatedDirtyFile": "android/app/build.gradle.kts",
+    "gradleHashPreserved": "4319efa3f9e08cc36fa19ee480112de9edb938f4"
+  },
+  "founderInventoryTarget": {
+    "total": 3,
+    "competitive": 2,
+    "qualifying": 1,
+    "permissionToFabricate": false
+  },
+  "exactRecordsRecovered": 0,
+  "exactInventoryFileCreated": false,
+  "founderPanelExportCapability": {
+    "missionControlReadDisplay": {
+      "file": "lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart",
+      "collections": [
+        "mission_realms",
+        "recruitments"
+      ],
+      "exactThreeRecordExport": false
+    },
+    "webDeliveryPreview": {
+      "file": "lib/main_web.dart",
+      "collections": [
+        "mission_realms",
+        "recruitments"
+      ],
+      "exactThreeSurfaceParityExport": false
+    },
+    "studentCatalogReadMethod": {
+      "method": "FirestoreService.streamStudentMissionCatalog()",
+      "collection": "student_mission_catalog",
+      "filters": [
+        "cardVisible == true",
+        "userPanelVisible == true",
+        "archived == false"
+      ],
+      "exactInventoryExport": false
+    }
+  },
+  "candidateMissions": [
+    {
+      "realmId": "jee_main_2026",
+      "sourceEvidence": [
+        "functions/canonical_mission_registry.js",
+        "assets/data/preview/jee_main_2027/*",
+        "tests/evidence docs"
+      ],
+      "exactFounderRecordExported": false,
+      "eligibility": "ELIGIBILITY_NOT_PROVEN"
+    },
+    {
+      "realmId": "neet_(ug)-2027",
+      "sourceEvidence": [
+        "functions/canonical_mission_registry.js",
+        "NEET evidence docs",
+        "functions/apply_student_catalog_readiness.js"
+      ],
+      "exactFounderRecordExported": false,
+      "eligibility": "ELIGIBILITY_NOT_PROVEN"
+    },
+    {
+      "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "sourceEvidence": [
+        "functions/canonical_mission_registry.js",
+        "functions/apply_student_catalog_readiness.js"
+      ],
+      "exactFounderRecordExported": false,
+      "eligibility": "ELIGIBILITY_NOT_PROVEN"
+    }
+  ],
+  "threeSurfaceParity": {
+    "mission_realms": "NOT_RECOVERED",
+    "recruitments": "NOT_RECOVERED",
+    "student_mission_catalog": "NOT_RECOVERED",
+    "reason": "No safe local/export capability exposed exact three existing records; production read remains locked."
+  },
+  "sourceContractVerdict": "STUDENT_MISSION_CATALOG_IS_CANONICAL_STUDENT_SOURCE",
+  "sourceContractReason": [
+    "FirestoreService has streamStudentMissionCatalog with visibility filters.",
+    "Rules/docs align authenticated student reads to cardVisible, userPanelVisible, archived.",
+    "Catalog access audit classifies mirrored catalog fields as public-safe.",
+    "Current Mission Realm runtime still uses recruitments, but R1A does not authorize rebinding."
+  ],
+  "requiredNextGate": "ONE_TIME_READ_ONLY_PRODUCTION_MISSION_EXPORT",
+  "nextGateScope": {
+    "readOnly": true,
+    "threeExistingMissionsOnly": true,
+    "paths": [
+      "mission_realms/{realmId}",
+      "recruitments/{same realmId}",
+      "student_mission_catalog/{same realmId}"
+    ],
+    "noQuerySweepBeyondRequiredMissions": true,
+    "noWrite": true,
+    "noUpdate": true,
+    "noBackfill": true,
+    "noDeploy": true
+  },
+  "safetyProof": {
+    "NO_PRODUCTION_READ": true,
+    "NO_PRODUCTION_WRITE": true,
+    "NO_FIRESTORE_WRITE": true,
+    "NO_FIRESTORE_UPDATE": true,
+    "NO_BACKFILL": true,
+    "NO_RULES_CHANGE": true,
+    "NO_DEPLOY": true,
+    "NO_STUDENT_PUBLISH": true,
+    "NO_MISSION_REALM_REPAIR": true,
+    "NO_DASHBOARD_REPAIR": true,
+    "NO_MOJIBAKE_PATCH": true,
+    "NO_FAKE_JEE_FALLBACK_REMOVAL": true,
+    "NO_VISUAL_QA": true,
+    "NO_MISSION_CREATION": true,
+    "NO_MISSION_FABRICATION": true,
+    "NO_MISSION_CATEGORY_GUESSING": true,
+    "NO_VISIBILITY_GUESSING": true,
+    "NO_HARDCODED_3_MISSIONS": true,
+    "NO_GRADLE_TOUCH": true
+  }
+}
