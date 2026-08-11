@@ -1,0 +1,81 @@
+{
+  "gate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R2",
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R2_CANONICAL_MISSION_AND_DASHBOARD_TRUTH_REPAIR_PASSED_WITH_VISUAL_HARNESS_FLAGS",
+  "baseline": "8c71d027c7adc9f669033c72559ac192b6fe70dc",
+  "mode": "NON_PRODUCTION_REPAIR_USING_LOCKED_SANITIZED_EXPORT",
+  "sourceExport": {
+    "path": "docs/patch_safety/FOUNDER_MISSION_EXACT_PRODUCTION_INVENTORY_20260811065513.json",
+    "sha256": "1C8C7C8BF25DD869CFE697B0433FA8945E330EFC190DDC1D6A6C711EBE116E9D",
+    "productionReadExceptionClosed": true
+  },
+  "exactMissions": [
+    {
+      "realmId": "jee_main_2026",
+      "displayName": "JEE Main 2027"
+    },
+    {
+      "realmId": "neet_(ug)-2027",
+      "displayName": "NEET (UG)-2027"
+    },
+    {
+      "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "displayName": "RPSC 1st Grade"
+    }
+  ],
+  "implementation": {
+    "studentSource": "STUDENT_MISSION_CATALOG",
+    "recruitmentPrimarySourceRemoved": true,
+    "normalRuntimeJeeManifestFallbackRemoved": true,
+    "emulatorFixtureCreatedFromLockedExport": true,
+    "categoryGuesses": 0,
+    "categoryUi": "AVAILABLE_MISSIONS_CATEGORY_NEUTRAL",
+    "founderMissionCategoryMappingRequired": true,
+    "dashboardMissingAsZero": 0,
+    "dashboardFakeLowFallback": 0,
+    "mojibakeCountInMissionRealm": 0,
+    "exactMissionCountHardcodedInRuntime": false
+  },
+  "projectionDivergenceRecorded": {
+    "sourceContractVerdict": "PRODUCTION_PARITY_SHOWS_MIGRATION_INCOMPLETE",
+    "rpscVisibilityDivergence": "mission_realms.userPanelVisible=false, student_mission_catalog.userPanelVisible=true",
+    "statusesDiverge": "mission_realms ACTIVE, recruitments draft, student_mission_catalog PREPARING/COMING_SOON",
+    "productionRecordsMutated": false
+  },
+  "changedFiles": [
+    "assets/data/emulator/founder_mission_exact_production_inventory_20260811065513.json",
+    "lib/core/backend/recruitment_repository.dart",
+    "lib/core/firebase/firestore_service.dart",
+    "lib/features/auth/presentation/providers/mission_realm_provider.dart",
+    "lib/features/auth/presentation/screens/mission_realm_screen.dart",
+    "lib/features/dashboard/presentation/screens/dashboard_screen.dart",
+    "lib/shared/widgets/command_header.dart",
+    "pubspec.yaml",
+    "test/student_journey/student_journey_fix2_visual_device_qa_test.dart",
+    "test/student_journey/student_journey_fix4_r4e_r2_contract_test.dart"
+  ],
+  "validation": {
+    "dartAnalyzeTargeted": "PASS",
+    "r4eR2ContractTest": "PASS_5_OF_5",
+    "studentJourneyFix2VisualHarness": "BLOCKED_BY_EXISTING_HARNESS_LIFECYCLE_TIMEOUT_AND_DISPOSED_KNOWLEDGE_ENGINE",
+    "visualHarnessAcceptedAsProof": false,
+    "flutterBuildApkDebug": "PASS"
+  },
+  "safetyProof": {
+    "NO_PRODUCTION_READ": true,
+    "NO_PRODUCTION_WRITE": true,
+    "NO_RULES_CHANGE": true,
+    "NO_BACKFILL": true,
+    "NO_DEPLOY": true,
+    "NO_STUDENT_PUBLISH": true,
+    "NO_MISSION_CREATION": true,
+    "NO_MISSION_FABRICATION": true,
+    "NO_MISSION_CATEGORY_GUESSING": true,
+    "NO_HARDCODED_2_COMPETITIVE_1_QUALIFYING": true,
+    "NO_ACADEMIC_DATA_MUTATION": true,
+    "NO_CRUCIBLE_ALLOCATION_MUTATION": true,
+    "NO_PROFILE_REWRITE": true,
+    "NO_GRADLE_TOUCH": true,
+    "gradleHashPreserved": "4319efa3f9e08cc36fa19ee480112de9edb938f4"
+  },
+  "nextRecommendedGate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3_SAMSUNG_EMULATOR_VISUAL_VALIDATION_OR_HARNESS_LIFECYCLE_CLOSURE"
+}

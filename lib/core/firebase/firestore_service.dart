@@ -20,7 +20,8 @@ class FirestoreService {
 
   static const String nodeCollection = 'micro_nodes';
   static const String recruitmentCollection = 'recruitments';
-  static const String stateRegistryCollection = 'published_states'; // 🔱 Amendment v3.0: State Registry Law
+  static const String stateRegistryCollection =
+      'published_states'; // 🔱 Amendment v3.0: State Registry Law
   static const String variantCollection = 'mission_variants';
   static const String blueprintCollection = 'blueprints';
   static const String protocolCollection = 'protocols';
@@ -30,32 +31,39 @@ class FirestoreService {
   static const String atomicRiskCollection = 'atomic_risk';
   static const String sentinelDraftCollection = 'sentinel_drafts';
   static const String aiQueueCollection = 'ai_queue';
-  static const String notificationCandidateCollection = 'notification_candidates';
-  static const String studentMissionCatalogCollection = 'student_mission_catalog';
+  static const String notificationCandidateCollection =
+      'notification_candidates';
+  static const String studentMissionCatalogCollection =
+      'student_mission_catalog';
 
   // 🔱 EXTRACTION REALM (Document 50J)
   static const String semanticUnitCollection = 'semantic_units';
   static const String atomicFactCollection = 'atomic_facts';
   static const String factRelationshipCollection = 'fact_relationships';
-  static const String transformationLineageCollection = 'transformation_lineage';
+  static const String transformationLineageCollection =
+      'transformation_lineage';
   static const String verifiedFactCollection = 'verified_facts';
   static const String factIntelligenceCollection = 'fact_intelligence';
-  static const String verificationCandidateCollection = 'verification_candidates';
+  static const String verificationCandidateCollection =
+      'verification_candidates';
 
   // ===================================================
   // AI WORKER OPS 🔱
   // ===================================================
 
   static Stream<List<Map<String, dynamic>>> streamAIQueue() {
-    return _firestore.collection(aiQueueCollection).snapshots().map((snap) =>
-        snap.docs.map((doc) => doc.data()).toList());
+    return _firestore
+        .collection(aiQueueCollection)
+        .snapshots()
+        .map((snap) => snap.docs.map((doc) => doc.data()).toList());
   }
 
   // ===================================================
   // NOTIFICATION CANDIDATES 🔱
   // ===================================================
 
-  static Future<void> saveNotificationCandidate(NotificationCandidate candidate) async {
+  static Future<void> saveNotificationCandidate(
+      NotificationCandidate candidate) async {
     await _firestore
         .collection(notificationCandidateCollection)
         .doc(candidate.id)
@@ -66,7 +74,9 @@ class FirestoreService {
     return _firestore
         .collection(notificationCandidateCollection)
         .snapshots()
-        .map((snap) => snap.docs.map((doc) => NotificationCandidate.fromMap(doc.data())).toList());
+        .map((snap) => snap.docs
+            .map((doc) => NotificationCandidate.fromMap(doc.data()))
+            .toList());
   }
 
   // ===================================================
@@ -81,15 +91,17 @@ class FirestoreService {
   }
 
   static Stream<List<SentinelDraft>> streamSentinelDrafts() {
-    return _firestore
-        .collection(sentinelDraftCollection)
-        .snapshots()
-        .map((snap) => snap.docs.map((doc) => SentinelDraft.fromMap(doc.data())).toList());
+    return _firestore.collection(sentinelDraftCollection).snapshots().map(
+        (snap) =>
+            snap.docs.map((doc) => SentinelDraft.fromMap(doc.data())).toList());
   }
 
-  static Stream<List<Map<String, dynamic>>> streamCollection(String collection) {
-    return _firestore.collection(collection).snapshots().map((snap) =>
-        snap.docs.map((doc) => doc.data()).toList());
+  static Stream<List<Map<String, dynamic>>> streamCollection(
+      String collection) {
+    return _firestore
+        .collection(collection)
+        .snapshots()
+        .map((snap) => snap.docs.map((doc) => doc.data()).toList());
   }
 
   static Stream<List<Map<String, dynamic>>> streamStudentMissionCatalog() {
@@ -99,7 +111,8 @@ class FirestoreService {
         .where('userPanelVisible', isEqualTo: true)
         .where('archived', isEqualTo: false)
         .snapshots()
-        .map((snap) => snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList());
+        .map((snap) =>
+            snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList());
   }
 
   // ===================================================
@@ -116,16 +129,19 @@ class FirestoreService {
       });
     }
     final snapshot = await query.get();
-    return snapshot.docs.map((doc) => doc.data() as Map<String, dynamic>).toList();
+    return snapshot.docs
+        .map((doc) => doc.data() as Map<String, dynamic>)
+        .toList();
   }
 
   // ===================================================
   // BATCH UPLOAD HARDENING 🔱
   // ===================================================
-  
+
   /// Performs an idempotent, atomic batch upload.
   /// Implements Duplicate Detection and All-or-Nothing Commit.
-  static Future<void> uploadBatch(String collection, List<Map<String, dynamic>> items) async {
+  static Future<void> uploadBatch(
+      String collection, List<Map<String, dynamic>> items) async {
     final batch = _firestore.batch();
     final colRef = _firestore.collection(collection);
 
@@ -140,7 +156,8 @@ class FirestoreService {
 
     try {
       await batch.commit();
-      debugPrint('🔱 BATCH COMMIT SUCCESS: $collection (${items.length} items)');
+      debugPrint(
+          '🔱 BATCH COMMIT SUCCESS: $collection (${items.length} items)');
     } catch (e) {
       debugPrint('🔱 BATCH COMMIT FAILED: $e');
       rethrow; // Ensure upper layers can handle rollback logic
@@ -151,10 +168,7 @@ class FirestoreService {
   // UPLOAD NODE 🔱
   // ===================================================
   static Future<void> uploadNode(MicroTopicNode node) async {
-    await _firestore
-        .collection(nodeCollection)
-        .doc(node.id)
-        .set(node.toMap());
+    await _firestore.collection(nodeCollection).doc(node.id).set(node.toMap());
   }
 
   // ===================================================
@@ -178,7 +192,8 @@ class FirestoreService {
   }
 
   static void addStateRegistryToBatch(WriteBatch batch, String state) {
-    final ref = _firestore.collection(stateRegistryCollection).doc(state.toLowerCase());
+    final ref =
+        _firestore.collection(stateRegistryCollection).doc(state.toLowerCase());
     batch.set(ref, {'name': state, 'updatedAt': FieldValue.serverTimestamp()});
   }
 
@@ -200,7 +215,8 @@ class FirestoreService {
   // ===================================================
   // PROTOCOL STATE 🔱
   // ===================================================
-  static Future<void> saveProtocolState(String uid, CrucibleProtocolState state) async {
+  static Future<void> saveProtocolState(
+      String uid, CrucibleProtocolState state) async {
     await _firestore
         .collection('users')
         .doc(uid)
@@ -209,14 +225,16 @@ class FirestoreService {
         .set(state.toMap());
   }
 
-  static Stream<CrucibleProtocolState?> streamProtocolState(String uid, String recruitmentId) {
+  static Stream<CrucibleProtocolState?> streamProtocolState(
+      String uid, String recruitmentId) {
     return _firestore
         .collection('users')
         .doc(uid)
         .collection(protocolCollection)
         .doc(recruitmentId)
         .snapshots()
-        .map((snap) => snap.exists ? CrucibleProtocolState.fromMap(snap.data()!) : null);
+        .map((snap) =>
+            snap.exists ? CrucibleProtocolState.fromMap(snap.data()!) : null);
   }
 
   // ===================================================
@@ -235,7 +253,9 @@ class FirestoreService {
         .where('recruitmentId', isEqualTo: recruitmentId)
         .orderBy('scheduleIndex')
         .snapshots()
-        .map((snap) => snap.docs.map((doc) => CrucibleSchedule.fromMap(doc.data())).toList());
+        .map((snap) => snap.docs
+            .map((doc) => CrucibleSchedule.fromMap(doc.data()))
+            .toList());
   }
 
   // ===================================================
@@ -270,12 +290,62 @@ class FirestoreService {
         .where('status', isEqualTo: 'published')
         .snapshots()
         .map((snapshot) {
-      return snapshot.docs.map((doc) => Recruitment.fromMap(doc.data())).toList();
+      return snapshot.docs
+          .map((doc) => Recruitment.fromMap(doc.data()))
+          .toList();
+    });
+  }
+
+  static Recruitment _studentCatalogDocToRecruitment(
+      String docId, Map<String, dynamic> data) {
+    final title =
+        (data['displayName'] ?? data['title'] ?? data['name'] ?? docId)
+            .toString();
+    final missionId =
+        (data['missionId'] ?? data['realmId'] ?? docId).toString();
+    final yearValue = data['year'] ?? data['examYear'];
+    final year = yearValue is int
+        ? yearValue
+        : int.tryParse(yearValue?.toString() ?? '') ?? 0;
+    final blueprintValue = (data['examBlueprintId'] ?? '').toString();
+
+    return Recruitment(
+      id: docId,
+      recruitmentGroupId: 'student_mission_catalog',
+      boardId: (data['boardId'] ?? '').toString(),
+      examId: missionId,
+      examBlueprintId:
+          blueprintValue.isEmpty ? '${missionId}_blueprint' : blueprintValue,
+      title: title,
+      titleHindi: (data['titleHindi'] ?? title).toString(),
+      year: year,
+      state: (data['state'] ?? 'Central').toString(),
+      examCategory:
+          (data['category'] ?? data['type'] ?? 'category_pending').toString(),
+      status: (data['status'] ?? 'CATALOG_VISIBLE').toString(),
+      examDifficulty: 0.6,
+      variantCode: (data['variantCode'] ?? missionId).toString(),
+      version: 'student_mission_catalog',
+    );
+  }
+
+  static Stream<List<Recruitment>> streamStudentMissionCatalogRecruitments() {
+    return _firestore
+        .collection(studentMissionCatalogCollection)
+        .where('cardVisible', isEqualTo: true)
+        .where('userPanelVisible', isEqualTo: true)
+        .where('archived', isEqualTo: false)
+        .snapshots()
+        .map((snapshot) {
+      return snapshot.docs
+          .map((doc) => _studentCatalogDocToRecruitment(doc.id, doc.data()))
+          .toList();
     });
   }
 
   static Future<Recruitment?> fetchRecruitment(String id) async {
-    final doc = await _firestore.collection(recruitmentCollection).doc(id).get();
+    final doc =
+        await _firestore.collection(recruitmentCollection).doc(id).get();
     if (!doc.exists) return null;
     return Recruitment.fromMap(doc.data()!);
   }
@@ -284,8 +354,13 @@ class FirestoreService {
   // LIVE RECRUITMENT STREAM 🔱
   // ===================================================
   static Stream<List<Recruitment>> streamRecruitments() {
-    return _firestore.collection(recruitmentCollection).snapshots().map((snapshot) {
-      return snapshot.docs.map((doc) => Recruitment.fromMap(doc.data())).toList();
+    return _firestore
+        .collection(recruitmentCollection)
+        .snapshots()
+        .map((snapshot) {
+      return snapshot.docs
+          .map((doc) => Recruitment.fromMap(doc.data()))
+          .toList();
     });
   }
 
@@ -293,7 +368,8 @@ class FirestoreService {
   // FETCH BLUEPRINT 🔱
   // ===================================================
   static Future<ExamBlueprint?> fetchBlueprint(String blueprintId) async {
-    final doc = await _firestore.collection(blueprintCollection).doc(blueprintId).get();
+    final doc =
+        await _firestore.collection(blueprintCollection).doc(blueprintId).get();
     if (!doc.exists) return null;
     return ExamBlueprint.fromMap(doc.data()!);
   }
@@ -302,8 +378,13 @@ class FirestoreService {
   // LIVE BLUEPRINT STREAM 🔱
   // ===================================================
   static Stream<List<ExamBlueprint>> streamBlueprints() {
-    return _firestore.collection(blueprintCollection).snapshots().map((snapshot) {
-      return snapshot.docs.map((doc) => ExamBlueprint.fromMap(doc.data())).toList();
+    return _firestore
+        .collection(blueprintCollection)
+        .snapshots()
+        .map((snapshot) {
+      return snapshot.docs
+          .map((doc) => ExamBlueprint.fromMap(doc.data()))
+          .toList();
     });
   }
 
@@ -312,7 +393,9 @@ class FirestoreService {
   // ===================================================
   static Future<List<MicroTopicNode>> fetchNodes() async {
     final snapshot = await _firestore.collection(nodeCollection).get();
-    return snapshot.docs.map((doc) => MicroTopicNode.fromMap(doc.data())).toList();
+    return snapshot.docs
+        .map((doc) => MicroTopicNode.fromMap(doc.data()))
+        .toList();
   }
 
   static Future<List<MicroTopicNode>> fetchNodesByExam(String examId) async {
@@ -320,13 +403,16 @@ class FirestoreService {
         .collection(nodeCollection)
         .where('examId', isEqualTo: examId)
         .get();
-    return snapshot.docs.map((doc) => MicroTopicNode.fromMap(doc.data())).toList();
+    return snapshot.docs
+        .map((doc) => MicroTopicNode.fromMap(doc.data()))
+        .toList();
   }
 
   // ===================================================
   // NOTIFICATIONS 🔱
   // ===================================================
-  static Future<void> saveNotification(String uid, NotificationEvent event) async {
+  static Future<void> saveNotification(
+      String uid, NotificationEvent event) async {
     await _firestore
         .collection('users')
         .doc(uid)
@@ -342,7 +428,9 @@ class FirestoreService {
         .collection('notifications')
         .orderBy('timestamp', descending: true)
         .snapshots()
-        .map((snapshot) => snapshot.docs.map((e) => NotificationEvent.fromMap(e.data())).toList());
+        .map((snapshot) => snapshot.docs
+            .map((e) => NotificationEvent.fromMap(e.data()))
+            .toList());
   }
 
   // ===================================================
@@ -350,7 +438,9 @@ class FirestoreService {
   // ===================================================
   static Stream<List<MicroTopicNode>> streamNodes() {
     return _firestore.collection(nodeCollection).snapshots().map((snapshot) {
-      return snapshot.docs.map((doc) => MicroTopicNode.fromMap(doc.data())).toList();
+      return snapshot.docs
+          .map((doc) => MicroTopicNode.fromMap(doc.data()))
+          .toList();
     });
   }
 
@@ -361,7 +451,9 @@ class FirestoreService {
         .where('examId', isEqualTo: examId)
         .snapshots()
         .map((snapshot) {
-      return snapshot.docs.map((doc) => MicroTopicNode.fromMap(doc.data())).toList();
+      return snapshot.docs
+          .map((doc) => MicroTopicNode.fromMap(doc.data()))
+          .toList();
     });
   }
 
@@ -443,9 +535,9 @@ class FirestoreService {
       }
       return null;
     }
-    
+
     final data = doc.data()!;
-    
+
     // 🔱 Hardened Role Injection
     if (uid == FounderIdentity.founderUid) {
       data['role'] = 'founder';
@@ -454,14 +546,15 @@ class FirestoreService {
       data['founder'] = true;
       data['accessLevel'] = 9;
     }
-    
+
     return UserProfile.fromMap(data);
   }
 
   // ===================================================
   // ATOMIC MASTERY 🔱
   // ===================================================
-  static Future<void> saveAtomicMastery(String uid, AtomicMasteryState state) async {
+  static Future<void> saveAtomicMastery(
+      String uid, AtomicMasteryState state) async {
     await _firestore
         .collection('users')
         .doc(uid)
@@ -476,13 +569,16 @@ class FirestoreService {
         .doc(uid)
         .collection(atomicMasteryCollection)
         .snapshots()
-        .map((snap) => snap.docs.map((doc) => AtomicMasteryState.fromMap(doc.data())).toList());
+        .map((snap) => snap.docs
+            .map((doc) => AtomicMasteryState.fromMap(doc.data()))
+            .toList());
   }
 
   // ===================================================
   // ATOMIC COVERAGE 🔱
   // ===================================================
-  static Future<void> saveAtomicCoverage(String uid, AtomicCoverageState state) async {
+  static Future<void> saveAtomicCoverage(
+      String uid, AtomicCoverageState state) async {
     await _firestore
         .collection('users')
         .doc(uid)
@@ -497,7 +593,9 @@ class FirestoreService {
         .doc(uid)
         .collection(atomicCoverageCollection)
         .snapshots()
-        .map((snap) => snap.docs.map((doc) => AtomicCoverageState.fromMap(doc.data())).toList());
+        .map((snap) => snap.docs
+            .map((doc) => AtomicCoverageState.fromMap(doc.data()))
+            .toList());
   }
 
   // ===================================================
@@ -518,6 +616,8 @@ class FirestoreService {
         .doc(uid)
         .collection(atomicRiskCollection)
         .snapshots()
-        .map((snap) => snap.docs.map((doc) => AtomicRiskState.fromMap(doc.data())).toList());
+        .map((snap) => snap.docs
+            .map((doc) => AtomicRiskState.fromMap(doc.data()))
+            .toList());
   }
 }

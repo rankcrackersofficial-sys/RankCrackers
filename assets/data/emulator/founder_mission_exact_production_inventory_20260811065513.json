@@ -1,0 +1,65 @@
+{
+  "source": "ONE_TIME_PRODUCTION_EXPORT_DERIVED",
+  "environment": "EMULATOR_ONLY",
+  "sourceEvidence": "docs/patch_safety/FOUNDER_MISSION_EXACT_PRODUCTION_INVENTORY_20260811065513.json",
+  "categoryStatus": "FOUNDER_MISSION_CATEGORY_MAPPING_REQUIRED",
+  "missions": [
+    {
+      "realmId": "jee_main_2026",
+      "missionId": "jee_main_2026",
+      "displayName": "JEE Main 2027",
+      "title": "JEE Main 2027",
+      "year": 2027,
+      "status": "PREPARING",
+      "userPanelVisible": true,
+      "cardVisible": true,
+      "category": null,
+      "eligibility": "STUDENT_ELIGIBLE_PROVEN",
+      "projectionDivergence": {
+        "missionRealmsStatus": "ACTIVE",
+        "recruitmentsStatus": "draft",
+        "studentMissionCatalogStatus": "PREPARING",
+        "missionRealmsUserPanelVisible": true,
+        "studentCatalogUserPanelVisible": true
+      }
+    },
+    {
+      "realmId": "neet_(ug)-2027",
+      "missionId": "neet_(ug)-2027",
+      "displayName": "NEET (UG)-2027",
+      "title": "NEET (UG)-2027",
+      "year": 2026,
+      "status": "COMING_SOON",
+      "userPanelVisible": true,
+      "cardVisible": true,
+      "category": null,
+      "eligibility": "STUDENT_ELIGIBLE_PROVEN",
+      "projectionDivergence": {
+        "missionRealmsStatus": "ACTIVE",
+        "recruitmentsStatus": "draft",
+        "studentMissionCatalogStatus": "COMING_SOON",
+        "missionRealmsUserPanelVisible": true,
+        "studentCatalogUserPanelVisible": true
+      }
+    },
+    {
+      "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "displayName": "RPSC 1st Grade",
+      "title": "RPSC 1st Grade",
+      "year": 2026,
+      "status": "COMING_SOON",
+      "userPanelVisible": true,
+      "cardVisible": true,
+      "category": null,
+      "eligibility": "STUDENT_ELIGIBLE_PROVEN",
+      "projectionDivergence": {
+        "missionRealmsStatus": "ACTIVE",
+        "recruitmentsStatus": "draft",
+        "studentMissionCatalogStatus": "COMING_SOON",
+        "missionRealmsUserPanelVisible": false,
+        "studentCatalogUserPanelVisible": true
+      }
+    }
+  ]
+}

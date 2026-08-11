@@ -6,13 +6,13 @@ final recruitmentsProvider = StreamProvider<List<Recruitment>>((ref) {
   return RecruitmentRepository.streamPublished();
 });
 
-/// 🔱 Published Mission Filter
+/// Student Mission Realm uses student_mission_catalog as the canonical
+/// student-facing mission source. The name is preserved for older tests/routes,
+/// but this no longer means recruitments(status == published).
 final publishedRecruitmentsProvider = Provider<List<Recruitment>>((ref) {
-  final all = ref.watch(recruitmentsProvider).value ?? [];
-  return all.where((r) => r.status == 'published').toList();
+  return ref.watch(recruitmentsProvider).value ?? const <Recruitment>[];
 });
 
-/// 🔱 State Visibility Law
 final publishedStatesProvider = Provider<List<String>>((ref) {
   final published = ref.watch(publishedRecruitmentsProvider);
   return published.map((r) => r.state).toSet().toList();
@@ -28,10 +28,13 @@ final filteredRecruitmentsProvider =
       .toList();
 });
 
-/// 🔱 Exam Category Filtering (Amendment v3.0)
 final filteredRecruitmentsByCategoryProvider =
     Provider.family<List<Recruitment>, ({String state, String category})>(
         (ref, arg) {
   final stateMissions = ref.watch(filteredRecruitmentsProvider(arg.state));
-  return stateMissions.where((r) => r.examCategory == arg.category).toList();
+  return stateMissions
+      .where((r) =>
+          r.examCategory == arg.category ||
+          r.examCategory == 'category_pending')
+      .toList();
 });

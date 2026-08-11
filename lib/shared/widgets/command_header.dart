@@ -23,6 +23,20 @@ class CommandHeader extends StatelessWidget {
     this.momentum,
   });
 
+  String _missionEvidenceLine() {
+    final hasReadiness = readiness != null;
+    final hasMomentum = momentum != null;
+    if (!hasReadiness && !hasMomentum) {
+      return 'MISSION EVIDENCE PENDING';
+    }
+    final readinessText = hasReadiness
+        ? 'READINESS ${readiness!.score.toInt()}%'
+        : 'READINESS PENDING';
+    final streakText =
+        hasMomentum ? 'STREAK ${momentum!.studyStreakDays}D' : 'STREAK PENDING';
+    return '$readinessText - $streakText';
+  }
+
   String _greeting() {
     final hour = DateTime.now().hour;
     if (hour < 12) return 'Good Morning';
@@ -52,9 +66,10 @@ class CommandHeader extends StatelessWidget {
                   backgroundColor: AppColors.surface,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(30),
-                    child: userPhoto != null 
+                    child: userPhoto != null
                         ? Image.network(userPhoto!, fit: BoxFit.cover)
-                        : Image.asset('assets/images/logo.png', fit: BoxFit.cover),
+                        : Image.asset('assets/images/logo.png',
+                            fit: BoxFit.cover),
                   ),
                 ),
               ),
@@ -82,42 +97,34 @@ class CommandHeader extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  _greeting().toUpperCase(), 
-                  style: AppTypography.label.copyWith(
-                    color: Colors.white54, 
-                    fontSize: ResponsiveHelper.sp(context, 8), 
-                    letterSpacing: 1.5
-                  )
-                ),
+                Text(_greeting().toUpperCase(),
+                    style: AppTypography.label.copyWith(
+                        color: Colors.white54,
+                        fontSize: ResponsiveHelper.sp(context, 8),
+                        letterSpacing: 1.5)),
                 const SizedBox(height: 2),
-                Text(
-                  userName.toUpperCase(), 
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: AppTypography.hero.copyWith(
-                    fontSize: ResponsiveHelper.sp(context, 18), 
-                    color: Colors.white
-                  )
-                ),
+                Text(userName.toUpperCase(),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTypography.hero.copyWith(
+                        fontSize: ResponsiveHelper.sp(context, 18),
+                        color: Colors.white)),
                 const SizedBox(height: 2),
                 Text(
                   examName.toUpperCase(),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.label.copyWith(
-                    fontSize: ResponsiveHelper.sp(context, 10), 
-                    color: Colors.white70
-                  ),
+                      fontSize: ResponsiveHelper.sp(context, 10),
+                      color: Colors.white70),
                 ),
                 Text(
-                  "READINESS ${(readiness?.score ?? 0).toInt()}% • STREAK ${momentum?.studyStreakDays ?? 0}D",
+                  _missionEvidenceLine(),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.label.copyWith(
-                    fontSize: ResponsiveHelper.sp(context, 9), 
-                    color: AppColors.gold
-                  ),
+                      fontSize: ResponsiveHelper.sp(context, 9),
+                      color: AppColors.gold),
                 ),
               ],
             ),
@@ -126,11 +133,8 @@ class CommandHeader extends StatelessWidget {
             onPressed: () {
               context.push(AppRoutes.notificationCenter);
             },
-            icon: Icon(
-              Icons.notifications_none_rounded, 
-              color: AppColors.gold, 
-              size: ResponsiveHelper.sp(context, 24)
-            ),
+            icon: Icon(Icons.notifications_none_rounded,
+                color: AppColors.gold, size: ResponsiveHelper.sp(context, 24)),
           ),
         ],
       ),

@@ -25,7 +25,6 @@ class MissionRealmScreen extends ConsumerStatefulWidget {
 class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   String? selectedRecruitmentId;
   String selectedState = 'Rajasthan';
-  String selectedCategory = 'competitive';
   bool isChangingState = false;
   bool _isLoading = false;
 
@@ -71,7 +70,6 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
 
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('user_state', selectedState);
-    await prefs.setString('user_exam_category', recruitment.examCategory);
   }
 
   void _searchStates(String query) {
@@ -111,7 +109,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
           .initialize(recruitment: recruitment, force: true)
           .timeout(const Duration(seconds: 5), onTimeout: () {
         debugPrint(
-            "ðŸ”± MISSION START: Engine hydration slow. Moving to dashboard anyway.");
+            'MISSION START: Engine hydration slow. Moving to dashboard anyway.');
       });
 
       if (!mounted) return;
@@ -128,7 +126,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
         context.go(AppRoutes.dashboard);
       }
     } catch (e) {
-      debugPrint("ðŸ”± MISSION REALM ERROR: $e");
+      debugPrint('MISSION REALM ERROR: $e');
       if (mounted) context.go(AppRoutes.dashboard);
     } finally {
       if (mounted) setState(() => _isLoading = false);
@@ -141,11 +139,8 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     final publishedStates = ref.watch(publishedStatesProvider);
 
     final missions = allMissions.where((r) {
-      final isStateMatch =
-          r.state.toLowerCase() == selectedState.toLowerCase() ||
-              r.state.toLowerCase() == 'central';
-      final isCategoryMatch = r.examCategory == selectedCategory;
-      return isStateMatch && isCategoryMatch;
+      return r.state.toLowerCase() == selectedState.toLowerCase() ||
+          r.state.toLowerCase() == 'central';
     }).toList();
 
     return PopScope(
@@ -180,7 +175,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                             _buildStateSearchSection(publishedStates),
                             const SizedBox(height: 16),
                           ],
-                          _buildCategorySelector(),
+                          _buildMissionSourceNotice(),
                           SizedBox(
                               height: ResponsiveHelper.sectionSpacing(context)),
                           SmartSearchField(
@@ -195,7 +190,6 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                                   .firstWhere((r) => r.title == title);
                               setState(() {
                                 selectedRecruitmentId = recruitment.id;
-                                selectedCategory = recruitment.examCategory;
                                 examSearchController.text = title;
                                 searchResults = [];
                               });
@@ -204,17 +198,8 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                           SizedBox(
                               height: ResponsiveHelper.compactGap(context)),
                           if (missions.isNotEmpty) ...[
-                            Text(
-                              selectedCategory == 'competitive'
-                                  ? 'ðŸ›¡ COMPETITIVE MISSIONS'
-                                  : 'ðŸŽ“ QUALIFYING MISSIONS',
-                              style: AppTypography.label.copyWith(
-                                  fontSize: 8,
-                                  color: AppColors.gold,
-                                  letterSpacing: 1.5),
-                            ),
+                            _buildAvailableMissionsLabel(),
                             const SizedBox(height: 12),
-                            // ðŸ”± Performance Fix: Using a constrained list inside the Column
                             ...missions
                                 .take(10)
                                 .map((r) => _buildMissionCard(r)),
@@ -223,7 +208,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                                 padding: const EdgeInsets.only(top: 8),
                                 child: Center(
                                     child: Text(
-                                        "+ ${missions.length - 10} more missions available",
+                                        '+ ${missions.length - 10} more missions available',
                                         style: AppTypography.label.copyWith(
                                             fontSize: 6,
                                             color: Colors.white10))),
@@ -284,9 +269,10 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     );
   }
 
-  Widget _buildCategorySelector() {
+  Widget _buildMissionSourceNotice() {
     return Container(
-      height: 40,
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(10),
@@ -294,38 +280,33 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
       ),
       child: Row(
         children: [
-          _categoryTab('COMPETITIVE', 'competitive'),
-          _categoryTab('QUALIFYING', 'qualifying'),
+          const Icon(Icons.verified_outlined, color: AppColors.gold, size: 16),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              'Founder missions verified. Category mapping is pending source proof.',
+              style: AppTypography.body.copyWith(
+                color: Colors.white54,
+                fontSize: 10,
+              ),
+            ),
+          ),
         ],
       ),
     );
   }
 
-  Widget _categoryTab(String label, String category) {
-    final bool isSelected = selectedCategory == category;
-    return Expanded(
-      child: GestureDetector(
-        onTap: () => setState(() {
-          selectedCategory = category;
-          selectedRecruitmentId = null;
-        }),
-        child: Container(
-          decoration: BoxDecoration(
-            color: isSelected ? AppColors.gold : Colors.transparent,
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: Center(
-            child: Text(
-              label,
-              style: AppTypography.label.copyWith(
-                color: isSelected ? Colors.black : Colors.white38,
-                fontSize: 8,
-                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-              ),
-            ),
-          ),
+  Widget _buildAvailableMissionsLabel() {
+    return Row(
+      children: [
+        const Icon(Icons.view_list_rounded, color: AppColors.gold, size: 15),
+        const SizedBox(width: 8),
+        Text(
+          'AVAILABLE MISSIONS',
+          style: AppTypography.label
+              .copyWith(fontSize: 8, color: AppColors.gold, letterSpacing: 1.5),
         ),
-      ),
+      ],
     );
   }
 
@@ -356,6 +337,29 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     );
   }
 
+  String _missionMeta(Recruitment recruitment) {
+    final year =
+        recruitment.year > 0 ? recruitment.year.toString() : 'Year pending';
+    final status = _studentStatusLabel(recruitment.status);
+    final category = recruitment.examCategory == 'category_pending'
+        ? 'Category pending verification'
+        : recruitment.examCategory;
+    return '$year - $status - $category';
+  }
+
+  String _studentStatusLabel(String raw) {
+    switch (raw.toUpperCase()) {
+      case 'PREPARING':
+        return 'Preparing';
+      case 'COMING_SOON':
+        return 'Coming soon';
+      case 'ACTIVE':
+        return 'Active';
+      default:
+        return raw.isEmpty ? 'Status pending' : raw;
+    }
+  }
+
   Widget _buildMissionCard(Recruitment recruitment) {
     final bool isExpanded = selectedRecruitmentId == recruitment.id;
 
@@ -381,7 +385,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                   style: AppTypography.cardTitle.copyWith(
                       fontSize: 13,
                       color: isExpanded ? AppColors.gold : Colors.white70)),
-              subtitle: Text("${recruitment.state} • ${recruitment.year}",
+              subtitle: Text(_missionMeta(recruitment),
                   style: AppTypography.body
                       .copyWith(fontSize: 9, color: Colors.white24)),
               trailing: Icon(
@@ -441,7 +445,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 40),
       child: Center(
-          child: Text('No $selectedCategory missions for $selectedState.',
+          child: Text('No verified missions available for $selectedState yet.',
               style: AppTypography.body
                   .copyWith(color: Colors.white10, fontSize: 13))),
     );

@@ -358,7 +358,7 @@ class _JourneyCase {
       screen: _JourneyScreen.missionRealm,
       size: size,
       textScale: textScale,
-      markers: const ['Mission Realm', 'SEARCH MISSION', 'COMPETITIVE'],
+      markers: const ['Mission Realm', 'SEARCH MISSION', 'AVAILABLE MISSIONS'],
     );
   }
 
@@ -372,7 +372,7 @@ class _JourneyCase {
       screen: _JourneyScreen.dashboard,
       size: size,
       textScale: textScale,
-      markers: const ['MISSION HUB', 'PRACTICE', 'DIGIBOOK'],
+      markers: const ['MISSION HUB', 'THE CRUCIBLE', 'DIGIBOOK'],
     );
   }
 

@@ -317,7 +317,6 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
       MicroTopicNode? priorityNode, KnowledgeEngine knowledge) {
     final state =
         priorityNode != null ? knowledge.getState(priorityNode.id) : null;
-    final masteryValue = state?.mastery ?? 0.0;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -341,7 +340,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                     Text(
                         priorityNode == null
                             ? 'No weakness has been inferred yet. Start learning to build your map.'
-                            : 'Target: ${(masteryValue * 100).toInt()}% Mastery',
+                            : state == null
+                                ? 'Mastery evidence pending. Start learning to build a real priority signal.'
+                                : 'Target: ${(state.mastery * 100).toInt()}% Mastery',
                         style: AppTypography.body
                             .copyWith(fontSize: 9, color: Colors.white38)),
                   ],
@@ -375,20 +376,38 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _statusItem("READINESS", "${(readiness?.score ?? 0).toInt()}%",
-                  AppColors.gold),
               _statusItem(
-                  "COVERAGE",
-                  "${((coverage?.coveragePercent ?? 0) * 100).toInt()}%",
-                  Colors.blueAccent),
-              _statusItem("STREAK", "${momentum?.studyStreakDays ?? 0}d",
-                  Colors.orangeAccent),
+                "READINESS",
+                readiness == null ? "PENDING" : "${readiness.score.toInt()}%",
+                AppColors.gold,
+              ),
               _statusItem(
-                  "RISK",
-                  risk?.highRisk == true ? "HIGH" : "LOW",
-                  risk?.highRisk == true
-                      ? Colors.redAccent
-                      : Colors.greenAccent),
+                "COVERAGE",
+                coverage == null
+                    ? "STARTS SOON"
+                    : "${(coverage.coveragePercent * 100).toInt()}%",
+                Colors.blueAccent,
+              ),
+              _statusItem(
+                "STREAK",
+                momentum == null
+                    ? "NO ACTIVITY"
+                    : "${momentum.studyStreakDays}d",
+                Colors.orangeAccent,
+              ),
+              _statusItem(
+                "RISK",
+                risk == null
+                    ? "NEEDS EVIDENCE"
+                    : risk.highRisk
+                        ? "HIGH"
+                        : "LOW",
+                risk == null
+                    ? Colors.white38
+                    : risk.highRisk
+                        ? Colors.redAccent
+                        : Colors.greenAccent,
+              ),
             ],
           ),
         ),
@@ -397,14 +416,24 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
   }
 
   Widget _statusItem(String label, String value, Color color) {
-    return Column(
-      children: [
-        Text(value,
-            style: AppTypography.hero.copyWith(fontSize: 16, color: color)),
-        Text(label,
-            style: AppTypography.label
-                .copyWith(fontSize: 6, color: Colors.white10)),
-      ],
+    return Expanded(
+      child: Column(
+        children: [
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(value,
+                maxLines: 1,
+                textAlign: TextAlign.center,
+                style: AppTypography.hero.copyWith(fontSize: 16, color: color)),
+          ),
+          Text(label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+              style: AppTypography.label
+                  .copyWith(fontSize: 6, color: Colors.white10)),
+        ],
+      ),
     );
   }
 }
