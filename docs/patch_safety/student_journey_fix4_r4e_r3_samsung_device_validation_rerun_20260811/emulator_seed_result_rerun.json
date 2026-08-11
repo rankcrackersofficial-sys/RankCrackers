@@ -1,0 +1,41 @@
+{
+  "environment": "FIRESTORE_EMULATOR_ONLY",
+  "projectId": "rankcrackers-55",
+  "source": "assets/data/emulator/founder_mission_exact_production_inventory_20260811065513.json",
+  "writtenCount": 3,
+  "readBackCount": 3,
+  "writtenIds": [
+    "jee_main_2026",
+    "neet_(ug)-2027",
+    "RPSC_FIRST_GRADE2026_2026_1782713222215"
+  ],
+  "docs": [
+    {
+      "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "displayName": "RPSC 1st Grade",
+      "title": "RPSC 1st Grade",
+      "userPanelVisible": true,
+      "cardVisible": true,
+      "category": null,
+      "categoryStatus": "CATEGORY_PENDING_VERIFICATION"
+    },
+    {
+      "id": "jee_main_2026",
+      "displayName": "JEE Main 2027",
+      "title": "JEE Main 2027",
+      "userPanelVisible": true,
+      "cardVisible": true,
+      "category": null,
+      "categoryStatus": "CATEGORY_PENDING_VERIFICATION"
+    },
+    {
+      "id": "neet_(ug)-2027",
+      "displayName": "NEET (UG)-2027",
+      "title": "NEET (UG)-2027",
+      "userPanelVisible": true,
+      "cardVisible": true,
+      "category": null,
+      "categoryStatus": "CATEGORY_PENDING_VERIFICATION"
+    }
+  ]
+}

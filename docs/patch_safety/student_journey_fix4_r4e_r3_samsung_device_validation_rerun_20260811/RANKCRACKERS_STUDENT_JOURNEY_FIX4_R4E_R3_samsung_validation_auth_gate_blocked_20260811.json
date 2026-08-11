@@ -1,0 +1,63 @@
+﻿{
+    "verdict":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3_BLOCKED_BY_AUTH_GATE_GOOGLE_SPINNER_AND_EMAIL_LOGIN_ACTIVATION",
+    "startingHead":  "21857d3113ff9e66ad94326a9f07ae88fb2072f1",
+    "samsung":  {
+                    "serial":  "RZCW12FBFXZ",
+                    "api":  36,
+                    "model":  "SM-S911B",
+                    "android":  "16",
+                    "flutterVisible":  true
+                },
+    "emulator":  {
+                     "auth9099Reachable":  true,
+                     "firestore8080Reachable":  true,
+                     "productionWrite":  false,
+                     "rulesWarning":  "temporary config resolved firestore.rules relative to docs path; emulator defaulted to permissive local rules",
+                     "productionRead":  false,
+                     "firestoreRulesLoadedCleanly":  false
+                 },
+    "fixture":  {
+                    "readBackCount":  3,
+                    "environment":  "FIRESTORE_EMULATOR_ONLY",
+                    "missions":  [
+                                     "JEE Main 2027",
+                                     "NEET (UG)-2027",
+                                     "RPSC 1st Grade"
+                                 ],
+                    "writtenCount":  3
+                },
+    "authGate":  {
+                     "emailFieldFilledCorrectly":  true,
+                     "googleReturnedToOpeningSpinner":  true,
+                     "googleCtaResponded":  true,
+                     "missionRealmReached":  false,
+                     "googleAccountChooserOpened":  true,
+                     "googleAccountSelectionAttempted":  true,
+                     "passwordFieldFilled":  true,
+                     "emailPasswordUserCreated":  true,
+                     "loginScreenReached":  true,
+                     "emailPasswordTransitionToMission":  false
+                 },
+    "missionProof":  {
+                         "availableMissionsVisible":  "NOT_PROVEN",
+                         "dashboardContext":  "NOT_PROVEN",
+                         "jeeVisible":  "NOT_PROVEN",
+                         "neetVisible":  "NOT_PROVEN",
+                         "rpscVisible":  "NOT_PROVEN"
+                     },
+    "productCodeChange":  false,
+    "gradleHash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+    "safetyProof":  [
+                        "NO_PRODUCTION_READ",
+                        "NO_PRODUCTION_WRITE",
+                        "NO_RULES_CHANGE",
+                        "NO_DEPLOY",
+                        "NO_STUDENT_PUBLISH",
+                        "NO_FIREBASE_CONFIG_SWAP",
+                        "NO_GRADLE_TOUCH",
+                        "NO_MISSION_BACKFILL",
+                        "NO_DASHBOARD_MUTATION",
+                        "NO_PRODUCT_CODE_CHANGE_DURING_R4E_R3_RERUN"
+                    ],
+    "recommendedNextGate":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3A_SAMSUNG_AUTH_GATE_UNBLOCK_FOR_MISSION_VALIDATION"
+}
