@@ -1,0 +1,38 @@
+﻿{
+    "verdict":  "RANKCRACKERS_ENV_SAMSUNG_TARGET_RECONNECT_BLOCKED_BY_USB_DRIVER_OR_CONNECTION",
+    "targetDevice":  "Samsung SM-S911B",
+    "expectedSerial":  "RZCW12FBFXZ",
+    "adbState":  "not_found",
+    "flutterVisible":  false,
+    "adbVisibleDevices":  [
+                              {
+                                  "serial":  "11251FDD4003TB",
+                                  "model":  "Pixel_5",
+                                  "state":  "device"
+                              }
+                          ],
+    "windowsSamsungInterfacesDetected":  true,
+    "productCodeChange":  false,
+    "productionRead":  false,
+    "productionWrite":  false,
+    "rulesChange":  false,
+    "deploy":  false,
+    "studentPublish":  false,
+    "firebaseConfigSwap":  false,
+    "gradleTouch":  false,
+    "requiredPassConditions":  [
+                                   "adb -s RZCW12FBFXZ get-state =\u003e device",
+                                   "flutter devices shows Samsung SM-S911B / RZCW12FBFXZ"
+                               ],
+    "safetyProof":  [
+                        "NO_PRODUCT_CODE_CHANGE",
+                        "NO_PRODUCTION_READ",
+                        "NO_PRODUCTION_WRITE",
+                        "NO_RULES_CHANGE",
+                        "NO_DEPLOY",
+                        "NO_STUDENT_PUBLISH",
+                        "NO_FIREBASE_CONFIG_SWAP",
+                        "NO_GRADLE_TOUCH"
+                    ],
+    "recommendedNextStep":  "Restore Samsung ADB visibility, then rerun R4E-R3 Samsung validation."
+}
