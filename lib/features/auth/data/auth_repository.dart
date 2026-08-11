@@ -23,6 +23,19 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<UserCredential?> signInWithGoogle() async {
     try {
+      debugPrint('G00_PREVIOUS_GOOGLE_SESSION_CLEAR_STARTED');
+      await _googleSignIn.signOut().timeout(
+            const Duration(seconds: 8),
+            onTimeout: () => throw const AuthFlowException(
+              code: 'google-session-clear-timeout',
+              stage: 'G_TIMEOUT',
+              studentMessage:
+                  'Google sign-in could not reset the previous account. Please try again.',
+              rawMessage: 'GoogleSignIn.signOut timed out after 8 seconds.',
+            ),
+          );
+      debugPrint('G00_PREVIOUS_GOOGLE_SESSION_CLEAR_COMPLETE');
+
       debugPrint('G02_ACCOUNT_PICKER_REQUESTED');
       final GoogleSignInAccount? googleUser = await _googleSignIn
           .signIn()

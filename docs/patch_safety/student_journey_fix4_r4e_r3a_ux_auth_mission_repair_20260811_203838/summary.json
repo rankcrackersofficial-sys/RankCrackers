@@ -1,0 +1,31 @@
+{
+    "knownUnrelatedDirty":  {
+                                "hash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+                                "path":  "android/app/build.gradle.kts"
+                            },
+    "verdict":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3A_UX_AUTH_MISSION_REPAIR_IMPLEMENTED",
+    "validation":  {
+                       "emulator_config_test":  "PASS",
+                       "dart_analyze_auth_repository":  "PASS",
+                       "flutter_analyze_touched_ui":  "PASS",
+                       "dart_format":  "PASS",
+                       "auth_state_cleanup_test":  "PASS"
+                   },
+    "safety":  {
+                   "productionWrite":  "NO",
+                   "rulesChange":  "NO",
+                   "productionRead":  "NO",
+                   "gradleTouch":  "NO",
+                   "studentPublish":  "NO",
+                   "deploy":  "NO",
+                   "firebaseConfigSwap":  "NO"
+               },
+    "addressed":  [
+                      "google_account_choice_control",
+                      "profile_switch_account",
+                      "mission_realm_logout",
+                      "source_based_mission_grouping",
+                      "smart_quick_start_clipping",
+                      "physical_device_emulator_host_mapping"
+                  ]
+}

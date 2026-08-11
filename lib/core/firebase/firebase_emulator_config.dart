@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/foundation.dart';
 
 class FirebaseEmulatorConfig {
@@ -64,8 +65,26 @@ Future<FirebaseEmulatorConfig>
   }
 
   final host = config.host.trim();
-  await FirebaseAuth.instance.useAuthEmulator(host, config.authPort);
-  FirebaseFirestore.instance.useFirestoreEmulator(host, config.firestorePort);
+  final deviceKind = await _resolveDeviceKindForEmulatorDiagnostics();
+  debugPrint('RC_FIREBASE_EMULATOR_TRACE INPUT_HOST=$host');
+  debugPrint('RC_FIREBASE_EMULATOR_TRACE RESOLVED_AUTH_HOST=$host');
+  debugPrint('RC_FIREBASE_EMULATOR_TRACE RESOLVED_FIRESTORE_HOST=$host');
+  debugPrint('RC_FIREBASE_EMULATOR_TRACE DEVICE_KIND=$deviceKind');
+  debugPrint(
+    'RC_FIREBASE_EMULATOR_TRACE SOURCE_FILE='
+    'lib/core/firebase/firebase_emulator_config.dart '
+    'SOURCE_FUNCTION=configureFirebaseEmulatorsFromDartDefines',
+  );
+  await FirebaseAuth.instance.useAuthEmulator(
+    host,
+    config.authPort,
+    automaticHostMapping: false,
+  );
+  FirebaseFirestore.instance.useFirestoreEmulator(
+    host,
+    config.firestorePort,
+    automaticHostMapping: false,
+  );
 
   debugPrint(
     'RC_FIREBASE_BACKEND=EMULATOR '
@@ -73,4 +92,18 @@ Future<FirebaseEmulatorConfig>
     'firestore=$host:${config.firestorePort}',
   );
   return config;
+}
+
+Future<String> _resolveDeviceKindForEmulatorDiagnostics() async {
+  if (kIsWeb) return 'web';
+  if (defaultTargetPlatform != TargetPlatform.android) {
+    return defaultTargetPlatform.name;
+  }
+  try {
+    final android = await DeviceInfoPlugin().androidInfo;
+    return android.isPhysicalDevice ? 'android_physical' : 'android_emulator';
+  } catch (error) {
+    debugPrint('RC_FIREBASE_EMULATOR_TRACE DEVICE_KIND_ERROR=$error');
+    return 'android_unknown';
+  }
 }

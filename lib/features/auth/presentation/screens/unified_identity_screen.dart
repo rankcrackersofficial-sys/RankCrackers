@@ -206,6 +206,19 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     if (success) _showSnackBar("Password reset link sent to your email.");
   }
 
+  Future<void> _switchAccount() async {
+    if (_isSaving) return;
+    FocusScope.of(context).unfocus();
+    setState(() {
+      _identityEstablished = false;
+      _isSaving = false;
+    });
+    await ref.read(authNotifierProvider.notifier).signOut();
+    await SessionManager.logout();
+    if (!mounted) return;
+    context.go(AppRoutes.login);
+  }
+
   // IDENTITY ACTIONS
   Future<void> _establishIdentity() async {
     final user = FirebaseAuth.instance.currentUser;
@@ -391,6 +404,10 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                       _buildHeader(),
                       SizedBox(
                           height: ResponsiveHelper.sectionSpacing(context)),
+                      if (showProfileSetup) ...[
+                        _buildAccountControlBar(user?.email),
+                        SizedBox(height: ResponsiveHelper.compactGap(context)),
+                      ],
                       if (!showProfileSetup)
                         _buildLoginSection(authState.isLoading)
                       else
@@ -498,6 +515,50 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildAccountControlBar(String? email) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+      decoration: BoxDecoration(
+        color: AppColors.surface.withValues(alpha: 0.68),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: AppColors.borderSoft),
+      ),
+      child: Row(
+        children: [
+          Icon(
+            Icons.account_circle_outlined,
+            size: 16,
+            color: goldAccent.withValues(alpha: 0.72),
+          ),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(
+              email?.isNotEmpty == true ? email! : 'Signed in account',
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: AppTypography.subtitle.copyWith(fontSize: 10),
+            ),
+          ),
+          TextButton.icon(
+            onPressed: _switchAccount,
+            style: TextButton.styleFrom(
+              foregroundColor: goldAccent,
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              minimumSize: const Size(0, 32),
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            ),
+            icon: const Icon(Icons.logout_rounded, size: 15),
+            label: Text(
+              'Switch',
+              style: AppTypography.label.copyWith(fontSize: 9),
+            ),
+          ),
+        ],
+      ),
     );
   }
 

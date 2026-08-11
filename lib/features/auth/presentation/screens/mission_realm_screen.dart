@@ -13,6 +13,7 @@ import '../../../../core/models/recruitment.dart';
 import '../../../../core/knowledge/knowledge_engine.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import '../../../profile/presentation/widgets/smart_search_field.dart';
+import '../providers/auth_provider.dart';
 import '../providers/mission_realm_provider.dart';
 
 class MissionRealmScreen extends ConsumerStatefulWidget {
@@ -133,6 +134,14 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     }
   }
 
+  Future<void> _logoutToIdentity() async {
+    if (_isLoading) return;
+    await ref.read(authNotifierProvider.notifier).signOut();
+    await SessionManager.logout();
+    if (!mounted) return;
+    context.go(AppRoutes.login);
+  }
+
   @override
   Widget build(BuildContext context) {
     final allMissions = ref.watch(publishedRecruitmentsProvider);
@@ -197,23 +206,9 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                           ),
                           SizedBox(
                               height: ResponsiveHelper.compactGap(context)),
-                          if (missions.isNotEmpty) ...[
-                            _buildAvailableMissionsLabel(),
-                            const SizedBox(height: 12),
-                            ...missions
-                                .take(10)
-                                .map((r) => _buildMissionCard(r)),
-                            if (missions.length > 10)
-                              Padding(
-                                padding: const EdgeInsets.only(top: 8),
-                                child: Center(
-                                    child: Text(
-                                        '+ ${missions.length - 10} more missions available',
-                                        style: AppTypography.label.copyWith(
-                                            fontSize: 6,
-                                            color: Colors.white10))),
-                              ),
-                          ] else
+                          if (missions.isNotEmpty)
+                            _buildMissionGroups(missions)
+                          else
                             _buildEmptyState(),
                           SizedBox(
                               height: ResponsiveHelper.sectionSpacing(context)),
@@ -256,14 +251,31 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
             ],
           ),
         ),
-        IconButton(
-          onPressed: () => setState(() => isChangingState = !isChangingState),
-          icon: Icon(
-              isChangingState
-                  ? Icons.close_rounded
-                  : Icons.edit_location_alt_rounded,
-              color: AppColors.gold,
-              size: 20),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            IconButton(
+              tooltip: 'Logout',
+              onPressed: _logoutToIdentity,
+              icon: Icon(
+                Icons.logout_rounded,
+                color: Colors.white54,
+                size: 19,
+              ),
+            ),
+            IconButton(
+              tooltip:
+                  isChangingState ? 'Close state selector' : 'Change state',
+              onPressed: () =>
+                  setState(() => isChangingState = !isChangingState),
+              icon: Icon(
+                  isChangingState
+                      ? Icons.close_rounded
+                      : Icons.edit_location_alt_rounded,
+                  color: AppColors.gold,
+                  size: 20),
+            ),
+          ],
         ),
       ],
     );
@@ -307,6 +319,116 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
               .copyWith(fontSize: 8, color: AppColors.gold, letterSpacing: 1.5),
         ),
       ],
+    );
+  }
+
+  Widget _buildMissionGroups(List<Recruitment> missions) {
+    final competitive = missions
+        .where((mission) => _missionCategoryKey(mission) == 'competitive')
+        .toList();
+    final qualifying = missions
+        .where((mission) => _missionCategoryKey(mission) == 'qualifying')
+        .toList();
+    final pending = missions
+        .where((mission) => _missionCategoryKey(mission) == 'pending')
+        .toList();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _buildAvailableMissionsLabel(),
+        const SizedBox(height: 12),
+        if (competitive.isNotEmpty)
+          _buildMissionGroup(
+            title: 'COMPETITIVE MISSIONS',
+            subtitle: 'Rank-driven exams with source-backed category.',
+            missions: competitive,
+          ),
+        if (qualifying.isNotEmpty)
+          _buildMissionGroup(
+            title: 'QUALIFYING MISSIONS',
+            subtitle: 'Eligibility-focused exams with source-backed category.',
+            missions: qualifying,
+          ),
+        if (pending.isNotEmpty)
+          _buildMissionGroup(
+            title: 'CATEGORY PENDING VERIFICATION',
+            subtitle:
+                'Visible missions whose category is not yet source-proven.',
+            missions: pending,
+          ),
+      ],
+    );
+  }
+
+  String _missionCategoryKey(Recruitment recruitment) {
+    final category = recruitment.examCategory.trim().toLowerCase();
+    if (category.contains('competitive')) return 'competitive';
+    if (category.contains('qualifying')) return 'qualifying';
+    return 'pending';
+  }
+
+  Widget _buildMissionGroup({
+    required String title,
+    required String subtitle,
+    required List<Recruitment> missions,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 14),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+            decoration: BoxDecoration(
+              color: AppColors.surface.withValues(alpha: 0.72),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: AppColors.borderSoft),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppTypography.label.copyWith(
+                    fontSize: 8,
+                    color: AppColors.gold,
+                    letterSpacing: 1.1,
+                  ),
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  subtitle,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppTypography.body.copyWith(
+                    fontSize: 9,
+                    color: Colors.white38,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
+          ...missions.take(10).map((r) => _buildMissionCard(r)),
+          if (missions.length > 10)
+            Padding(
+              padding: const EdgeInsets.only(top: 2),
+              child: Center(
+                child: Text(
+                  '+ ${missions.length - 10} more missions available',
+                  style: AppTypography.label.copyWith(
+                    fontSize: 6,
+                    color: Colors.white24,
+                  ),
+                ),
+              ),
+            ),
+        ],
+      ),
     );
   }
 
@@ -396,47 +518,108 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                   size: 16),
             ),
           ),
-          if (isExpanded)
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: SizedBox(
-                      height: 38,
-                      child: ElevatedButton(
-                        onPressed: () => _startMission(recruitment, true),
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.gold,
-                            foregroundColor: Colors.black,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8))),
-                        child: const Text('SMART START',
-                            style: TextStyle(
-                                fontSize: 10, fontWeight: FontWeight.bold)),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: SizedBox(
-                      height: 38,
-                      child: OutlinedButton(
-                        onPressed: () => _startMission(recruitment, false),
-                        style: OutlinedButton.styleFrom(
-                            side: const BorderSide(color: AppColors.borderSoft),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(8))),
-                        child: Text('QUICK START',
-                            style: AppTypography.label
-                                .copyWith(fontSize: 8, color: Colors.white60)),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+          if (isExpanded) _buildMissionActionButtons(recruitment),
         ],
+      ),
+    );
+  }
+
+  Widget _buildMissionActionButtons(Recruitment recruitment) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final useStackedButtons = constraints.maxWidth < 292;
+          final buttonWidth = useStackedButtons
+              ? constraints.maxWidth
+              : (constraints.maxWidth - 10) / 2;
+          return Wrap(
+            spacing: 10,
+            runSpacing: 10,
+            children: [
+              SizedBox(
+                width: buttonWidth,
+                child: _missionActionButton(
+                  label: 'SMART START',
+                  icon: Icons.auto_awesome_rounded,
+                  filled: true,
+                  onPressed: () => _startMission(recruitment, true),
+                ),
+              ),
+              SizedBox(
+                width: buttonWidth,
+                child: _missionActionButton(
+                  label: 'QUICK START',
+                  icon: Icons.play_arrow_rounded,
+                  filled: false,
+                  onPressed: () => _startMission(recruitment, false),
+                ),
+              ),
+            ],
+          );
+        },
+      ),
+    );
+  }
+
+  Widget _missionActionButton({
+    required String label,
+    required IconData icon,
+    required bool filled,
+    required VoidCallback onPressed,
+  }) {
+    final child = FittedBox(
+      fit: BoxFit.scaleDown,
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icon, size: 14),
+          const SizedBox(width: 6),
+          Text(
+            label,
+            maxLines: 1,
+            style: TextStyle(
+              fontSize: 10,
+              fontWeight: FontWeight.w800,
+              letterSpacing: 0.4,
+              color: filled ? Colors.black : Colors.white70,
+            ),
+          ),
+        ],
+      ),
+    );
+
+    if (filled) {
+      return SizedBox(
+        height: 42,
+        child: ElevatedButton(
+          onPressed: onPressed,
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColors.gold,
+            foregroundColor: Colors.black,
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(9),
+            ),
+          ),
+          child: child,
+        ),
+      );
+    }
+
+    return SizedBox(
+      height: 42,
+      child: OutlinedButton(
+        onPressed: onPressed,
+        style: OutlinedButton.styleFrom(
+          foregroundColor: Colors.white70,
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          side: const BorderSide(color: AppColors.borderSoft),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(9),
+          ),
+        ),
+        child: child,
       ),
     );
   }
