@@ -1,0 +1,110 @@
+{
+  "source": "one_time_read_only_production_export",
+  "projectId": "rankcrackers-55",
+  "recordCount": 3,
+  "missions": [
+    {
+      "realmId": "jee_main_2026",
+      "displayName": "JEE Main 2027",
+      "category": null,
+      "status": "ACTIVE",
+      "createdAt": "2026-07-06T14:00:16.649Z",
+      "updatedAt": "2026-07-19T15:24:23.701Z",
+      "eligibility": "STUDENT_ELIGIBLE_PROVEN",
+      "missionRealms": {
+        "title": "JEE Main 2027",
+        "name": "JEE Main 2027",
+        "status": "ACTIVE",
+        "updatedAt": "2026-07-19T15:24:23.701Z",
+        "visibility": "USER_VISIBLE",
+        "userPanelVisible": true
+      },
+      "recruitments": {
+        "title": "JEE Main 2027",
+        "year": 2027,
+        "status": "draft",
+        "createdAt": "2026-07-06T14:00:16.649Z",
+        "updatedAt": "2026-07-19T15:24:24.075Z"
+      },
+      "studentMissionCatalog": {
+        "missionId": "jee_main_2026",
+        "displayName": "JEE Main 2027",
+        "title": "JEE Main 2027",
+        "name": "JEE Main 2027",
+        "examName": "JEE Main 2027",
+        "year": 2027,
+        "status": "PREPARING",
+        "userPanelVisible": true,
+        "cardVisible": true,
+        "createdAt": "2026-07-13T07:24:13.154Z",
+        "updatedAt": "2026-07-19T15:24:24.677Z"
+      }
+    },
+    {
+      "realmId": "neet_(ug)-2027",
+      "displayName": "NEET (UG)-2027",
+      "category": null,
+      "status": "ACTIVE",
+      "createdAt": "2026-07-06T15:26:26.781Z",
+      "updatedAt": "2026-07-10T11:52:24.441Z",
+      "eligibility": "STUDENT_ELIGIBLE_PROVEN",
+      "missionRealms": {
+        "title": "NEET (UG)-2027",
+        "name": "NEET (UG)-2027",
+        "status": "ACTIVE",
+        "visibility": "USER_VISIBLE",
+        "userPanelVisible": true
+      },
+      "recruitments": {
+        "title": "NEET (UG)-2027",
+        "year": 2026,
+        "status": "draft",
+        "createdAt": "2026-07-06T15:26:26.781Z"
+      },
+      "studentMissionCatalog": {
+        "title": "NEET (UG)-2027",
+        "name": "NEET (UG)-2027",
+        "year": 2026,
+        "status": "COMING_SOON",
+        "userPanelVisible": true,
+        "cardVisible": true,
+        "createdAt": "2026-07-06T15:26:26.419Z",
+        "updatedAt": "2026-07-10T11:52:24.441Z"
+      }
+    },
+    {
+      "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "displayName": "RPSC 1st Grade",
+      "category": null,
+      "status": "ACTIVE",
+      "createdAt": "2026-06-29T06:07:16.227Z",
+      "updatedAt": "2026-07-04T08:15:54.764Z",
+      "eligibility": "STUDENT_ELIGIBLE_PROVEN",
+      "missionRealms": {
+        "title": "RPSC 1st Grade",
+        "name": "RPSC 1st Grade",
+        "status": "ACTIVE",
+        "createdAt": "2026-06-29T06:07:16.227Z",
+        "updatedAt": "2026-07-04T08:15:54.764Z",
+        "visibility": "visible_to_users",
+        "userPanelVisible": false
+      },
+      "recruitments": {
+        "title": "RPSC 1st Grade",
+        "year": 2026,
+        "status": "draft",
+        "updatedAt": "2026-07-04T08:15:55.154Z"
+      },
+      "studentMissionCatalog": {
+        "title": "RPSC 1st Grade",
+        "name": "RPSC 1st Grade",
+        "year": 2026,
+        "status": "COMING_SOON",
+        "userPanelVisible": true,
+        "cardVisible": true,
+        "createdAt": "2026-06-29T06:07:16.227Z",
+        "updatedAt": "2026-07-10T11:52:26.218Z"
+      }
+    }
+  ]
+}

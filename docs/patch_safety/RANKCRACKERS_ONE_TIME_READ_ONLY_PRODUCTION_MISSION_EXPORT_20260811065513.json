@@ -1,0 +1,546 @@
+{
+  "gate": "ONE_TIME_READ_ONLY_PRODUCTION_MISSION_EXPORT",
+  "authorization": "EXPLICIT_ONE_TIME_PRODUCTION_READ_EXCEPTION_GRANTED",
+  "verdict": "RANKCRACKERS_ONE_TIME_READ_ONLY_PRODUCTION_MISSION_EXPORT_PASSED_WITH_PROJECTION_DIVERGENCE",
+  "baseline": {
+    "expectedHead": "39d853f2f2b2d24e87ff02019cc530a7827b2d22",
+    "branch": "safety/rc-g2-pre-notification-schema"
+  },
+  "mode": "PRODUCTION_READ_ONLY_EVIDENCE_EXPORT_ONLY",
+  "projectId": "rankcrackers-55",
+  "productionReadExceptionUsed": true,
+  "productionWriteCount": 0,
+  "startedAt": "2026-08-11T06:55:13.806Z",
+  "completedAt": "2026-08-11T06:55:36.692Z",
+  "candidateRealmIds": [
+    "jee_main_2026",
+    "neet_(ug)-2027",
+    "RPSC_FIRST_GRADE2026_2026_1782713222215"
+  ],
+  "readAccounting": {
+    "mission_realms": 3,
+    "recruitments": 3,
+    "student_mission_catalog": 3,
+    "totalProductionReads": 9,
+    "totalProductionWrites": 0,
+    "readPolicy": "DIRECT_DOCUMENT_GETS_ONLY",
+    "collectionScans": 0,
+    "queries": 0
+  },
+  "rawReadProof": [
+    {
+      "timestamp": "2026-08-11T06:55:29.531Z",
+      "projectId": "rankcrackers-55",
+      "documentPath": "mission_realms/jee_main_2026",
+      "exists": true,
+      "documentId": "jee_main_2026",
+      "readMethod": "firebase-admin direct document get"
+    },
+    {
+      "timestamp": "2026-08-11T06:55:29.927Z",
+      "projectId": "rankcrackers-55",
+      "documentPath": "recruitments/jee_main_2026",
+      "exists": true,
+      "documentId": "jee_main_2026",
+      "readMethod": "firebase-admin direct document get"
+    },
+    {
+      "timestamp": "2026-08-11T06:55:31.306Z",
+      "projectId": "rankcrackers-55",
+      "documentPath": "student_mission_catalog/jee_main_2026",
+      "exists": true,
+      "documentId": "jee_main_2026",
+      "readMethod": "firebase-admin direct document get"
+    },
+    {
+      "timestamp": "2026-08-11T06:55:31.689Z",
+      "projectId": "rankcrackers-55",
+      "documentPath": "mission_realms/neet_(ug)-2027",
+      "exists": true,
+      "documentId": "neet_(ug)-2027",
+      "readMethod": "firebase-admin direct document get"
+    },
+    {
+      "timestamp": "2026-08-11T06:55:33.040Z",
+      "projectId": "rankcrackers-55",
+      "documentPath": "recruitments/neet_(ug)-2027",
+      "exists": true,
+      "documentId": "neet_(ug)-2027",
+      "readMethod": "firebase-admin direct document get"
+    },
+    {
+      "timestamp": "2026-08-11T06:55:33.470Z",
+      "projectId": "rankcrackers-55",
+      "documentPath": "student_mission_catalog/neet_(ug)-2027",
+      "exists": true,
+      "documentId": "neet_(ug)-2027",
+      "readMethod": "firebase-admin direct document get"
+    },
+    {
+      "timestamp": "2026-08-11T06:55:34.956Z",
+      "projectId": "rankcrackers-55",
+      "documentPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "exists": true,
+      "documentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "readMethod": "firebase-admin direct document get"
+    },
+    {
+      "timestamp": "2026-08-11T06:55:35.304Z",
+      "projectId": "rankcrackers-55",
+      "documentPath": "recruitments/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "exists": true,
+      "documentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "readMethod": "firebase-admin direct document get"
+    },
+    {
+      "timestamp": "2026-08-11T06:55:36.691Z",
+      "projectId": "rankcrackers-55",
+      "documentPath": "student_mission_catalog/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "exists": true,
+      "documentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "readMethod": "firebase-admin direct document get"
+    }
+  ],
+  "inventoryVerification": {
+    "exactRecordCount": 3,
+    "founderExpectedTotal": 3,
+    "competitiveCount": 0,
+    "founderExpectedCompetitive": 2,
+    "qualifyingCount": 0,
+    "founderExpectedQualifying": 1,
+    "missingMissionRealms": []
+  },
+  "sourceContractVerdict": "PRODUCTION_PARITY_SHOWS_MIGRATION_INCOMPLETE",
+  "criticalVisibilityQuestion": {
+    "missionProjectionVisibilityDivergence": true,
+    "founderCreatedMissionsRemainHidden": [],
+    "visibilityFlagsPromoted": [
+      "jee_main_2026",
+      "neet_(ug)-2027",
+      "RPSC_FIRST_GRADE2026_2026_1782713222215"
+    ],
+    "surfaceVisibilityDivergence": true,
+    "catalogHiddenWithRecruitmentPublished": false
+  },
+  "missions": [
+    {
+      "realmId": "jee_main_2026",
+      "missionRealms": {
+        "documentPath": "mission_realms/jee_main_2026",
+        "documentId": "jee_main_2026",
+        "exists": true,
+        "selectedFields": {
+          "title": "JEE Main 2027",
+          "name": "JEE Main 2027",
+          "status": "ACTIVE",
+          "updatedAt": "2026-07-19T15:24:23.701Z",
+          "visibility": "USER_VISIBLE",
+          "userPanelVisible": true
+        }
+      },
+      "recruitments": {
+        "documentPath": "recruitments/jee_main_2026",
+        "documentId": "jee_main_2026",
+        "exists": true,
+        "selectedFields": {
+          "title": "JEE Main 2027",
+          "year": 2027,
+          "status": "draft",
+          "createdAt": "2026-07-06T14:00:16.649Z",
+          "updatedAt": "2026-07-19T15:24:24.075Z"
+        }
+      },
+      "studentMissionCatalog": {
+        "documentPath": "student_mission_catalog/jee_main_2026",
+        "documentId": "jee_main_2026",
+        "exists": true,
+        "selectedFields": {
+          "missionId": "jee_main_2026",
+          "displayName": "JEE Main 2027",
+          "title": "JEE Main 2027",
+          "name": "JEE Main 2027",
+          "examName": "JEE Main 2027",
+          "year": 2027,
+          "status": "PREPARING",
+          "userPanelVisible": true,
+          "cardVisible": true,
+          "createdAt": "2026-07-13T07:24:13.154Z",
+          "updatedAt": "2026-07-19T15:24:24.677Z"
+        }
+      },
+      "eligibility": "STUDENT_ELIGIBLE_PROVEN",
+      "parityMatrix": [
+        {
+          "field": "realmId",
+          "values": {
+            "studentMissionCatalog": "jee_main_2026"
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "displayName",
+          "values": {
+            "missionRealms": "JEE Main 2027",
+            "recruitments": "JEE Main 2027",
+            "studentMissionCatalog": "JEE Main 2027"
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "category",
+          "values": {},
+          "result": "MISSING"
+        },
+        {
+          "field": "examYear",
+          "values": {
+            "recruitments": 2027,
+            "studentMissionCatalog": 2027
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "status",
+          "values": {
+            "missionRealms": "ACTIVE",
+            "recruitments": "draft",
+            "studentMissionCatalog": "PREPARING"
+          },
+          "result": "DIFFER"
+        },
+        {
+          "field": "visibility",
+          "values": {
+            "missionRealms": "USER_VISIBLE"
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "studentVisible",
+          "values": {},
+          "result": "MISSING"
+        },
+        {
+          "field": "catalogVisible",
+          "values": {},
+          "result": "MISSING"
+        },
+        {
+          "field": "userPanelVisible",
+          "values": {
+            "missionRealms": true,
+            "studentMissionCatalog": true
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "cardVisible",
+          "values": {
+            "studentMissionCatalog": true
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "createdAt",
+          "values": {
+            "recruitments": "2026-07-06T14:00:16.649Z",
+            "studentMissionCatalog": "2026-07-13T07:24:13.154Z"
+          },
+          "result": "DIFFER"
+        },
+        {
+          "field": "updatedAt",
+          "values": {
+            "missionRealms": "2026-07-19T15:24:23.701Z",
+            "recruitments": "2026-07-19T15:24:24.075Z",
+            "studentMissionCatalog": "2026-07-19T15:24:24.677Z"
+          },
+          "result": "DIFFER"
+        }
+      ]
+    },
+    {
+      "realmId": "neet_(ug)-2027",
+      "missionRealms": {
+        "documentPath": "mission_realms/neet_(ug)-2027",
+        "documentId": "neet_(ug)-2027",
+        "exists": true,
+        "selectedFields": {
+          "title": "NEET (UG)-2027",
+          "name": "NEET (UG)-2027",
+          "status": "ACTIVE",
+          "visibility": "USER_VISIBLE",
+          "userPanelVisible": true
+        }
+      },
+      "recruitments": {
+        "documentPath": "recruitments/neet_(ug)-2027",
+        "documentId": "neet_(ug)-2027",
+        "exists": true,
+        "selectedFields": {
+          "title": "NEET (UG)-2027",
+          "year": 2026,
+          "status": "draft",
+          "createdAt": "2026-07-06T15:26:26.781Z"
+        }
+      },
+      "studentMissionCatalog": {
+        "documentPath": "student_mission_catalog/neet_(ug)-2027",
+        "documentId": "neet_(ug)-2027",
+        "exists": true,
+        "selectedFields": {
+          "title": "NEET (UG)-2027",
+          "name": "NEET (UG)-2027",
+          "year": 2026,
+          "status": "COMING_SOON",
+          "userPanelVisible": true,
+          "cardVisible": true,
+          "createdAt": "2026-07-06T15:26:26.419Z",
+          "updatedAt": "2026-07-10T11:52:24.441Z"
+        }
+      },
+      "eligibility": "STUDENT_ELIGIBLE_PROVEN",
+      "parityMatrix": [
+        {
+          "field": "realmId",
+          "values": {},
+          "result": "MISSING"
+        },
+        {
+          "field": "displayName",
+          "values": {
+            "missionRealms": "NEET (UG)-2027",
+            "recruitments": "NEET (UG)-2027",
+            "studentMissionCatalog": "NEET (UG)-2027"
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "category",
+          "values": {},
+          "result": "MISSING"
+        },
+        {
+          "field": "examYear",
+          "values": {
+            "recruitments": 2026,
+            "studentMissionCatalog": 2026
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "status",
+          "values": {
+            "missionRealms": "ACTIVE",
+            "recruitments": "draft",
+            "studentMissionCatalog": "COMING_SOON"
+          },
+          "result": "DIFFER"
+        },
+        {
+          "field": "visibility",
+          "values": {
+            "missionRealms": "USER_VISIBLE"
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "studentVisible",
+          "values": {},
+          "result": "MISSING"
+        },
+        {
+          "field": "catalogVisible",
+          "values": {},
+          "result": "MISSING"
+        },
+        {
+          "field": "userPanelVisible",
+          "values": {
+            "missionRealms": true,
+            "studentMissionCatalog": true
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "cardVisible",
+          "values": {
+            "studentMissionCatalog": true
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "createdAt",
+          "values": {
+            "recruitments": "2026-07-06T15:26:26.781Z",
+            "studentMissionCatalog": "2026-07-06T15:26:26.419Z"
+          },
+          "result": "DIFFER"
+        },
+        {
+          "field": "updatedAt",
+          "values": {
+            "studentMissionCatalog": "2026-07-10T11:52:24.441Z"
+          },
+          "result": "MATCH"
+        }
+      ]
+    },
+    {
+      "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "missionRealms": {
+        "documentPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "documentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "exists": true,
+        "selectedFields": {
+          "title": "RPSC 1st Grade",
+          "name": "RPSC 1st Grade",
+          "status": "ACTIVE",
+          "createdAt": "2026-06-29T06:07:16.227Z",
+          "updatedAt": "2026-07-04T08:15:54.764Z",
+          "visibility": "visible_to_users",
+          "userPanelVisible": false
+        }
+      },
+      "recruitments": {
+        "documentPath": "recruitments/RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "documentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "exists": true,
+        "selectedFields": {
+          "title": "RPSC 1st Grade",
+          "year": 2026,
+          "status": "draft",
+          "updatedAt": "2026-07-04T08:15:55.154Z"
+        }
+      },
+      "studentMissionCatalog": {
+        "documentPath": "student_mission_catalog/RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "documentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "exists": true,
+        "selectedFields": {
+          "title": "RPSC 1st Grade",
+          "name": "RPSC 1st Grade",
+          "year": 2026,
+          "status": "COMING_SOON",
+          "userPanelVisible": true,
+          "cardVisible": true,
+          "createdAt": "2026-06-29T06:07:16.227Z",
+          "updatedAt": "2026-07-10T11:52:26.218Z"
+        }
+      },
+      "eligibility": "STUDENT_ELIGIBLE_PROVEN",
+      "parityMatrix": [
+        {
+          "field": "realmId",
+          "values": {},
+          "result": "MISSING"
+        },
+        {
+          "field": "displayName",
+          "values": {
+            "missionRealms": "RPSC 1st Grade",
+            "recruitments": "RPSC 1st Grade",
+            "studentMissionCatalog": "RPSC 1st Grade"
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "category",
+          "values": {},
+          "result": "MISSING"
+        },
+        {
+          "field": "examYear",
+          "values": {
+            "recruitments": 2026,
+            "studentMissionCatalog": 2026
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "status",
+          "values": {
+            "missionRealms": "ACTIVE",
+            "recruitments": "draft",
+            "studentMissionCatalog": "COMING_SOON"
+          },
+          "result": "DIFFER"
+        },
+        {
+          "field": "visibility",
+          "values": {
+            "missionRealms": "visible_to_users"
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "studentVisible",
+          "values": {},
+          "result": "MISSING"
+        },
+        {
+          "field": "catalogVisible",
+          "values": {},
+          "result": "MISSING"
+        },
+        {
+          "field": "userPanelVisible",
+          "values": {
+            "missionRealms": false,
+            "studentMissionCatalog": true
+          },
+          "result": "DIFFER"
+        },
+        {
+          "field": "cardVisible",
+          "values": {
+            "studentMissionCatalog": true
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "createdAt",
+          "values": {
+            "missionRealms": "2026-06-29T06:07:16.227Z",
+            "studentMissionCatalog": "2026-06-29T06:07:16.227Z"
+          },
+          "result": "MATCH"
+        },
+        {
+          "field": "updatedAt",
+          "values": {
+            "missionRealms": "2026-07-04T08:15:54.764Z",
+            "recruitments": "2026-07-04T08:15:55.154Z",
+            "studentMissionCatalog": "2026-07-10T11:52:26.218Z"
+          },
+          "result": "DIFFER"
+        }
+      ]
+    }
+  ],
+  "safetyProof": {
+    "NO_WRITE": true,
+    "NO_SET": true,
+    "NO_UPDATE": true,
+    "NO_MERGE": true,
+    "NO_CREATE": true,
+    "NO_DELETE": true,
+    "NO_TRANSACTION": true,
+    "NO_BATCH": true,
+    "NO_BACKFILL": true,
+    "NO_RULES_CHANGE": true,
+    "NO_IAM_CHANGE": true,
+    "NO_DEPLOY": true,
+    "NO_STUDENT_PUBLISH": true,
+    "NO_MISSION_ACTIVATION": true,
+    "NO_VISIBILITY_CHANGE": true,
+    "NO_STATUS_CHANGE": true,
+    "NO_PROJECTION_REBUILD": true,
+    "NO_REPAIR_DURING_EXPORT": true,
+    "NO_DASHBOARD_CHANGE": true,
+    "NO_MISSION_REALM_CHANGE": true,
+    "NO_FALLBACK_REMOVAL": true,
+    "NO_MOJIBAKE_PATCH": true,
+    "NO_GRADLE_TOUCH": true
+  }
+}
