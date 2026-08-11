@@ -1,0 +1,31 @@
+﻿{
+    "verdict":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3A_IMPLEMENTED_AND_STATIC_VALIDATED_BLOCKED_BY_SAMSUNG_DEVICE_DISCONNECT",
+    "baseline":  "2d52695b94115128f5b77c3ad367243e6950e208",
+    "workingHead":  "2d52695b94115128f5b77c3ad367243e6950e208",
+    "authCodeRepair":  "PASS",
+    "targetedAnalyze":  "PASS",
+    "focusedAuthStateTest":  "PASS",
+    "flutterRunSamsungLaunch":  "PARTIAL_PASS_APP_INSTALLED_AND_LAUNCHED",
+    "samsungDeviceFinalStatus":  "ABSENT_FROM_ADB_AND_FLUTTER_DEVICES",
+    "googleFullFlow":  "NOT_PROVEN",
+    "emailFullFlow":  "NOT_PROVEN",
+    "emulatorConfigStatus":  "CANONICAL_ROOT_EMULATORS_STARTED_NO_DOCS_TEMP_CONFIG_WARNING_OBSERVED",
+    "physicalDeviceHostRoute":  "FLAG_FIREBASE_ANDROID_SDK_MAPPED_127_0_0_1_TO_10_0_2_2_DURING_PHYSICAL_SAMSUNG_LAUNCH",
+    "gradleHash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+    "productionRead":  0,
+    "productionWrite":  0,
+    "rulesChange":  false,
+    "deploy":  false,
+    "studentPublish":  false,
+    "firebaseConfigSwap":  false,
+    "gradleTouchedByThisGate":  false,
+    "changedProductFiles":  [
+                                "lib/features/auth/data/auth_repository.dart",
+                                "lib/features/auth/presentation/providers/auth_provider.dart",
+                                "lib/features/auth/presentation/screens/unified_identity_screen.dart"
+                            ],
+    "addedTests":  [
+                       "test/student_journey/student_journey_fix4_r4e_r3a_auth_state_cleanup_test.dart"
+                   ],
+    "nextStep":  "Reconnect Samsung and rerun R3A using a proven physical-device emulator host route; do not rerun mission/dashboard R4E-R3 until both auth methods pass."
+}

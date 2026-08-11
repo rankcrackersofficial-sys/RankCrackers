@@ -1,0 +1,36 @@
+﻿{
+    "adbReverse":  [
+                       {
+                           "value":  "UsbFfs tcp:8080 tcp:8080",
+                           "PSPath":  "C:\\RankCrackers\\RankCrackers-55\\docs\\patch_safety\\student_journey_fix4_r4e_r3a_samsung_auth_gate_20260811_180323\\adb_reverse.txt",
+                           "PSParentPath":  "C:\\RankCrackers\\RankCrackers-55\\docs\\patch_safety\\student_journey_fix4_r4e_r3a_samsung_auth_gate_20260811_180323",
+                           "PSChildName":  "adb_reverse.txt",
+                           "PSDrive":  "C",
+                           "PSProvider":  "Microsoft.PowerShell.Core\\FileSystem",
+                           "ReadCount":  1
+                       },
+                       {
+                           "value":  "UsbFfs tcp:9099 tcp:9099",
+                           "PSPath":  "C:\\RankCrackers\\RankCrackers-55\\docs\\patch_safety\\student_journey_fix4_r4e_r3a_samsung_auth_gate_20260811_180323\\adb_reverse.txt",
+                           "PSParentPath":  "C:\\RankCrackers\\RankCrackers-55\\docs\\patch_safety\\student_journey_fix4_r4e_r3a_samsung_auth_gate_20260811_180323",
+                           "PSChildName":  "adb_reverse.txt",
+                           "PSDrive":  "C",
+                           "PSProvider":  "Microsoft.PowerShell.Core\\FileSystem",
+                           "ReadCount":  2
+                       },
+                       {
+                           "value":  "",
+                           "PSPath":  "C:\\RankCrackers\\RankCrackers-55\\docs\\patch_safety\\student_journey_fix4_r4e_r3a_samsung_auth_gate_20260811_180323\\adb_reverse.txt",
+                           "PSParentPath":  "C:\\RankCrackers\\RankCrackers-55\\docs\\patch_safety\\student_journey_fix4_r4e_r3a_samsung_auth_gate_20260811_180323",
+                           "PSChildName":  "adb_reverse.txt",
+                           "PSDrive":  "C",
+                           "PSProvider":  "Microsoft.PowerShell.Core\\FileSystem",
+                           "ReadCount":  3
+                       }
+                   ],
+    "passwordCommitted":  false,
+    "uid":  "OyXwRgY1mZYJcUpb751Ki4C15zZi",
+    "emulatorTestUserExists":  true,
+    "seedStatus":  "created",
+    "email":  "rankcrackers.qa.r3a@example.com"
+}

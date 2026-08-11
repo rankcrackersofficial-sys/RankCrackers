@@ -137,15 +137,19 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
 
   // AUTH ACTIONS
   Future<void> _onEmailLogin() async {
+    debugPrint('E01_LOGIN_BUTTON_PRESSED');
+    FocusScope.of(context).unfocus();
     final email = emailController.text.trim();
     final password = passwordController.text.trim();
 
     if (email.isEmpty ||
         !RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(email)) {
+      debugPrint('E_VALIDATION_FAILED=email');
       _showSnackBar("Please enter a valid email address");
       return;
     }
     if (password.length < 6) {
+      debugPrint('E_VALIDATION_FAILED=password');
       _showSnackBar("Password must be at least 6 characters");
       return;
     }
@@ -156,12 +160,14 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         );
 
     if (success && mounted) {
+      debugPrint('E06_ROUTE_DECISION_STARTED');
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
         setState(() {
           nameController.text = user.displayName ?? '';
         });
       }
+      debugPrint('E07_ROUTE_DECISION_COMPLETE');
     } else {
       final error = ref.read(authNotifierProvider).errorMessage;
       if (error != null) _showSnackBar(error);
@@ -169,15 +175,19 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   }
 
   Future<void> _continueWithGoogle() async {
+    debugPrint('G01_GOOGLE_BUTTON_PRESSED');
+    FocusScope.of(context).unfocus();
     final success =
         await ref.read(authNotifierProvider.notifier).signInWithGoogle();
     if (success && mounted) {
+      debugPrint('G13_ROUTE_DECISION_STARTED');
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
         setState(() {
           nameController.text = user.displayName ?? '';
         });
       }
+      debugPrint('G14_ROUTE_DECISION_COMPLETE');
     } else {
       final error = ref.read(authNotifierProvider).errorMessage;
       if (error != null) _showSnackBar(error);

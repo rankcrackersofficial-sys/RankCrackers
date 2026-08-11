@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../domain/repositories/auth_repository.dart';
@@ -39,11 +42,13 @@ class SecureAuthState {
     bool? isLoading,
     String? errorMessage,
     User? user,
+    bool clearError = false,
+    bool clearUser = false,
   }) {
     return SecureAuthState(
       isLoading: isLoading ?? this.isLoading,
-      errorMessage: errorMessage,
-      user: user ?? this.user,
+      errorMessage: clearError ? null : errorMessage ?? this.errorMessage,
+      user: clearUser ? null : user ?? this.user,
     );
   }
 }
@@ -71,20 +76,36 @@ class AuthNotifier extends StateNotifier<SecureAuthState> {
     required String password,
   }) async {
     try {
-      state = state.copyWith(isLoading: true, errorMessage: null);
+      debugPrint('E02_FORM_VALIDATION_PASS');
+      state = state.copyWith(isLoading: true, clearError: true);
 
-      final credential = await _repository.authenticate(
-        email: email,
-        password: password,
-      );
+      final credential = await _repository
+          .authenticate(
+            email: email,
+            password: password,
+          )
+          .timeout(
+            const Duration(seconds: 35),
+            onTimeout: () => throw const AuthFlowException(
+              code: 'email-timeout',
+              stage: 'E_TIMEOUT',
+              studentMessage:
+                  'Email login took too long. Check your connection and try again.',
+              rawMessage: 'Email authenticate timed out after 35 seconds.',
+            ),
+          );
 
       state = state.copyWith(
         isLoading: false,
         user: credential?.user,
       );
+      if (credential?.user != null) {
+        debugPrint('E05_AUTH_STATE_USER_PRESENT');
+      }
 
       return credential != null;
     } catch (e) {
+      debugPrint('E_AUTH_TERMINAL: ${_terminalStageFor(e)}');
       state = state.copyWith(
         isLoading: false,
         errorMessage: _getAuthErrorMessage(e),
@@ -99,7 +120,7 @@ class AuthNotifier extends StateNotifier<SecureAuthState> {
 
   Future<bool> forgotPassword(String email) async {
     try {
-      state = state.copyWith(isLoading: true, errorMessage: null);
+      state = state.copyWith(isLoading: true, clearError: true);
 
       await _repository.forgotPassword(email);
 
@@ -122,17 +143,30 @@ class AuthNotifier extends StateNotifier<SecureAuthState> {
     if (state.isLoading) return false;
 
     try {
-      state = state.copyWith(isLoading: true, errorMessage: null);
+      state = state.copyWith(isLoading: true, clearError: true);
 
-      final credential = await _repository.signInWithGoogle();
+      final credential = await _repository.signInWithGoogle().timeout(
+            const Duration(seconds: 75),
+            onTimeout: () => throw const AuthFlowException(
+              code: 'google-flow-timeout',
+              stage: 'G_TIMEOUT',
+              studentMessage:
+                  'Google sign-in took too long. Check your connection and try again.',
+              rawMessage: 'Google sign-in flow timed out after 75 seconds.',
+            ),
+          );
 
       state = state.copyWith(
         isLoading: false,
         user: credential?.user,
       );
+      if (credential?.user != null) {
+        debugPrint('G12_AUTH_STATE_USER_PRESENT');
+      }
 
       return credential != null;
     } catch (e) {
+      debugPrint('G_AUTH_TERMINAL: ${_terminalStageFor(e)}');
       state = state.copyWith(
         isLoading: false,
         errorMessage: _getAuthErrorMessage(e),
@@ -147,7 +181,25 @@ class AuthNotifier extends StateNotifier<SecureAuthState> {
 
   Future<void> signOut() async {
     await _repository.signOut();
-    state = state.copyWith(user: null);
+    state = state.copyWith(clearUser: true);
+  }
+
+  String _terminalStageFor(dynamic e) {
+    if (e is AuthFlowException) return e.stage;
+    if (e is FirebaseAuthException) {
+      switch (e.code) {
+        case 'user-not-found':
+          return 'E_USER_NOT_FOUND';
+        case 'wrong-password':
+          return 'E_WRONG_PASSWORD';
+        case 'invalid-credential':
+          return 'E_INVALID_CREDENTIAL';
+        default:
+          return 'FIREBASE_EXCEPTION_${e.code}';
+      }
+    }
+    if (e is TimeoutException) return 'TIMEOUT_EXCEPTION';
+    return 'UNKNOWN_EXCEPTION';
   }
 
   String _getAuthErrorMessage(dynamic e) {

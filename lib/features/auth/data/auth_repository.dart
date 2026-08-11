@@ -8,7 +8,7 @@ import '../domain/repositories/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final GoogleSignIn _googleSignIn = GoogleSignIn(scopes: const ['email']);
 
   @override
   Stream<User?> get authStateChanges => _auth.authStateChanges();
@@ -22,97 +22,117 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<UserCredential?> signInWithGoogle() async {
-    const accountPickerStage = 'GOOGLE_ACCOUNT_PICKER';
-    const credentialStage = 'GOOGLE_CREDENTIAL_TOKEN';
-    const firebaseStage = 'FIREBASE_AUTH_CREDENTIAL';
-
     try {
-      debugPrint('GOOGLE AUTH [$accountPickerStage]: Starting flow.');
+      debugPrint('G02_ACCOUNT_PICKER_REQUESTED');
       final GoogleSignInAccount? googleUser = await _googleSignIn
           .signIn()
           .timeout(
             const Duration(seconds: 25),
             onTimeout: () => throw const AuthFlowException(
               code: 'google-picker-timeout',
-              stage: accountPickerStage,
+              stage: 'G_TIMEOUT',
               studentMessage:
                   'Google sign-in did not open in time. Check your connection and try again.',
               rawMessage: 'Google account picker timed out after 25 seconds.',
             ),
           );
 
+      debugPrint('G03_ACCOUNT_PICKER_RETURNED');
       if (googleUser == null) {
-        debugPrint('GOOGLE AUTH [$accountPickerStage]: User cancelled.');
+        debugPrint('G_CANCELLED');
         throw const AuthFlowException(
           code: 'google-cancelled',
-          stage: accountPickerStage,
+          stage: 'G_CANCELLED',
           studentMessage: 'Google sign-in was cancelled. Try again when ready.',
           rawMessage: 'GoogleSignIn.signIn returned null.',
         );
       }
 
-      debugPrint('GOOGLE AUTH [$accountPickerStage]: Account selected.');
+      debugPrint('G04_ACCOUNT_SELECTED');
+      debugPrint('G05_GOOGLE_AUTH_REQUESTED');
       final GoogleSignInAuthentication googleAuth =
           await googleUser.authentication.timeout(
         const Duration(seconds: 20),
         onTimeout: () => throw const AuthFlowException(
           code: 'google-token-timeout',
-          stage: credentialStage,
+          stage: 'G_TIMEOUT',
           studentMessage:
               'Google sign-in could not complete. Check your connection and try again.',
           rawMessage: 'Google token acquisition timed out after 20 seconds.',
         ),
       );
 
-      debugPrint('GOOGLE AUTH [$credentialStage]: Token stage complete.');
+      debugPrint('G06_GOOGLE_AUTH_RETURNED');
+      final bool idTokenPresent = googleAuth.idToken?.isNotEmpty == true;
+      final bool accessTokenPresent =
+          googleAuth.accessToken?.isNotEmpty == true;
+      debugPrint('G07_ID_TOKEN_PRESENT=$idTokenPresent');
+      debugPrint('G08_ACCESS_TOKEN_PRESENT=$accessTokenPresent');
+
+      if (!idTokenPresent && !accessTokenPresent) {
+        throw const AuthFlowException(
+          code: 'google-token-missing',
+          stage: 'G_UNKNOWN_EXCEPTION',
+          studentMessage:
+              'Google sign-in returned without a usable credential. Please try again.',
+          rawMessage: 'Both Google idToken and accessToken were absent.',
+        );
+      }
+
       final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
+      debugPrint('G09_FIREBASE_CREDENTIAL_CREATED');
 
+      debugPrint('G10_FIREBASE_SIGNIN_STARTED');
       final result = await _auth.signInWithCredential(credential).timeout(
             const Duration(seconds: 20),
             onTimeout: () => throw const AuthFlowException(
               code: 'firebase-credential-timeout',
-              stage: firebaseStage,
+              stage: 'G_TIMEOUT',
               studentMessage:
                   'Google sign-in reached RankCrackers but could not finish. Please try again.',
               rawMessage:
                   'FirebaseAuth.signInWithCredential timed out after 20 seconds.',
             ),
           );
-      debugPrint('GOOGLE AUTH [$firebaseStage]: Sign-in successful.');
+      debugPrint('G11_FIREBASE_SIGNIN_RETURNED');
       return result;
     } on AuthFlowException catch (e) {
-      debugPrint(
-          'GOOGLE AUTH FLOW ERROR: ${e.stage}/${e.code} - ${e.rawMessage ?? e.studentMessage}');
+      debugPrint('GOOGLE_AUTH_TERMINAL=${e.stage}/${e.code}');
       rethrow;
     } on FirebaseAuthException catch (e) {
-      debugPrint('GOOGLE AUTH FIREBASE ERROR: ${e.code} - ${e.message}');
+      debugPrint('G_FIREBASE_EXCEPTION=${e.code}');
       rethrow;
     } on PlatformException catch (e) {
-      debugPrint('GOOGLE AUTH PLATFORM ERROR: ${e.code} - ${e.message}');
+      final String code = e.code == 'sign_in_canceled'
+          ? 'google-cancelled'
+          : 'google-platform-${e.code}';
+      final String stage =
+          e.code == 'sign_in_canceled' ? 'G_CANCELLED' : 'G_PLATFORM_EXCEPTION';
+      debugPrint('$stage=${e.code}');
       throw AuthFlowException(
-        code: 'google-platform-${e.code}',
-        stage: 'GOOGLE_PLATFORM_BRIDGE',
+        code: code,
+        stage: stage,
         studentMessage:
             'Google sign-in could not complete. Check your connection and try again.',
         rawMessage: '${e.code}: ${e.message ?? e.details ?? e.toString()}',
       );
     } on TimeoutException catch (e) {
-      debugPrint('GOOGLE AUTH TIMEOUT ERROR: ${e.message ?? e.toString()}');
+      debugPrint('G_TIMEOUT=${e.message ?? e.toString()}');
       throw AuthFlowException(
         code: 'google-timeout',
-        stage: 'GOOGLE_AUTH_TIMEOUT',
+        stage: 'G_TIMEOUT',
         studentMessage:
             'Google sign-in took too long. Check your connection and try again.',
         rawMessage: e.message ?? e.toString(),
       );
     } catch (e) {
-      debugPrint('GOOGLE AUTH UNKNOWN ERROR: $e');
+      debugPrint('G_UNKNOWN_EXCEPTION=$e');
       throw AuthFlowException(
         code: 'google-unknown',
-        stage: 'GOOGLE_AUTH_UNKNOWN',
+        stage: 'G_UNKNOWN_EXCEPTION',
         studentMessage:
             'Google sign-in could not start. Check your connection and try again.',
         rawMessage: e.toString(),
@@ -129,10 +149,24 @@ class AuthRepositoryImpl implements AuthRepository {
     required String email,
     required String password,
   }) async {
-    return await _auth.signInWithEmailAndPassword(
-      email: email.trim(),
-      password: password.trim(),
-    );
+    debugPrint('E03_FIREBASE_EMAIL_SIGNIN_STARTED');
+    final credential = await _auth
+        .signInWithEmailAndPassword(
+          email: email.trim(),
+          password: password.trim(),
+        )
+        .timeout(
+          const Duration(seconds: 20),
+          onTimeout: () => throw const AuthFlowException(
+            code: 'email-signin-timeout',
+            stage: 'E_TIMEOUT',
+            studentMessage:
+                'Email login took too long. Check your connection and try again.',
+            rawMessage: 'Firebase email sign-in timed out after 20 seconds.',
+          ),
+        );
+    debugPrint('E04_FIREBASE_EMAIL_SIGNIN_RETURNED');
+    return credential;
   }
 
   @override
@@ -140,10 +174,25 @@ class AuthRepositoryImpl implements AuthRepository {
     required String email,
     required String password,
   }) async {
-    return await _auth.createUserWithEmailAndPassword(
-      email: email.trim(),
-      password: password.trim(),
-    );
+    debugPrint('E03_FIREBASE_EMAIL_CREATE_STARTED');
+    final credential = await _auth
+        .createUserWithEmailAndPassword(
+          email: email.trim(),
+          password: password.trim(),
+        )
+        .timeout(
+          const Duration(seconds: 20),
+          onTimeout: () => throw const AuthFlowException(
+            code: 'email-create-timeout',
+            stage: 'E_TIMEOUT',
+            studentMessage:
+                'Email account setup took too long. Check your connection and try again.',
+            rawMessage:
+                'Firebase email account create timed out after 20 seconds.',
+          ),
+        );
+    debugPrint('E04_FIREBASE_EMAIL_CREATE_RETURNED');
+    return credential;
   }
 
   @override
@@ -152,22 +201,17 @@ class AuthRepositoryImpl implements AuthRepository {
     required String password,
   }) async {
     try {
-      // 🔱 Attempt Login
       return await signInWithEmail(
         email: email,
         password: password,
       );
     } on FirebaseAuthException catch (e) {
-      // 🔱 If user doesn't exist, create account
       if (e.code == 'user-not-found' || e.code == 'invalid-credential') {
-        try {
-          return await createAccount(
-            email: email,
-            password: password,
-          );
-        } catch (error) {
-          rethrow;
-        }
+        debugPrint('E_USER_NOT_FOUND_OR_INVALID_CREDENTIAL_CREATE_FALLBACK');
+        return await createAccount(
+          email: email,
+          password: password,
+        );
       }
       rethrow;
     }
