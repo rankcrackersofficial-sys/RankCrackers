@@ -99,6 +99,18 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     });
   }
 
+  void _showMissionStartError() {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor: const Color(0xFF111625),
+        content: Text(
+          'Mission could not start yet. Please try again.',
+          style: AppTypography.body.copyWith(color: Colors.white),
+        ),
+      ),
+    );
+  }
+
   Future<void> _startMission(Recruitment recruitment, bool isSmart) async {
     if (_isLoading) return;
     setState(() => _isLoading = true);
@@ -110,7 +122,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
           .initialize(recruitment: recruitment, force: true)
           .timeout(const Duration(seconds: 5), onTimeout: () {
         debugPrint(
-            'MISSION START: Engine hydration slow. Moving to dashboard anyway.');
+            'MISSION START: Engine hydration slow. Continuing with saved mission.');
       });
 
       if (!mounted) return;
@@ -128,7 +140,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
       }
     } catch (e) {
       debugPrint('MISSION REALM ERROR: $e');
-      if (mounted) context.go(AppRoutes.dashboard);
+      if (mounted) _showMissionStartError();
     } finally {
       if (mounted) setState(() => _isLoading = false);
     }
@@ -193,10 +205,10 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                             controller: examSearchController,
                             suggestions:
                                 searchResults.map((e) => e.title).toList(),
-                            onChanged: (q) => _searchMissions(q, allMissions),
+                            onChanged: (q) => _searchMissions(q, missions),
                             onSelected: (title) {
-                              final recruitment = allMissions
-                                  .firstWhere((r) => r.title == title);
+                              final recruitment =
+                                  missions.firstWhere((r) => r.title == title);
                               setState(() {
                                 selectedRecruitmentId = recruitment.id;
                                 examSearchController.text = title;
@@ -413,20 +425,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
             ),
           ),
           const SizedBox(height: 10),
-          ...missions.take(10).map((r) => _buildMissionCard(r)),
-          if (missions.length > 10)
-            Padding(
-              padding: const EdgeInsets.only(top: 2),
-              child: Center(
-                child: Text(
-                  '+ ${missions.length - 10} more missions available',
-                  style: AppTypography.label.copyWith(
-                    fontSize: 6,
-                    color: Colors.white24,
-                  ),
-                ),
-              ),
-            ),
+          ...missions.map((r) => _buildMissionCard(r)),
         ],
       ),
     );
@@ -463,10 +462,19 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     final year =
         recruitment.year > 0 ? recruitment.year.toString() : 'Year pending';
     final status = _studentStatusLabel(recruitment.status);
-    final category = recruitment.examCategory == 'category_pending'
-        ? 'Category pending verification'
-        : recruitment.examCategory;
+    final category = _studentCategoryLabel(recruitment);
     return '$year - $status - $category';
+  }
+
+  String _studentCategoryLabel(Recruitment recruitment) {
+    switch (_missionCategoryKey(recruitment)) {
+      case 'competitive':
+        return 'Competitive mission';
+      case 'qualifying':
+        return 'Qualifying mission';
+      default:
+        return 'Category pending verification';
+    }
   }
 
   String _studentStatusLabel(String raw) {
@@ -478,7 +486,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
       case 'ACTIVE':
         return 'Active';
       default:
-        return raw.isEmpty ? 'Status pending' : raw;
+        return 'Status pending verification';
     }
   }
 
