@@ -1,0 +1,118 @@
+{
+  "gate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E",
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_BLOCKED_BY_FOUNDER_MISSION_SOURCE",
+  "startingHead": "79b1c23f17a0c11251eaa198dcdd00ed6f4cfa2e",
+  "branch": "safety/rc-g2-pre-notification-schema",
+  "knownUnrelatedDirtyFile": "android/app/build.gradle.kts",
+  "gradleHashPreserved": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "founderSourceAudit": {
+    "founderUi": "lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart",
+    "callable": "handleSentinelAction",
+    "action": "launch_exam_mission",
+    "canonicalMissionPath": "mission_realms/{realmId}",
+    "legacyStudentDiscoveryMirror": "recruitments/{realmId}",
+    "studentSafeProjectionPath": "student_mission_catalog/{realmId}",
+    "studentSafeProjectionDefaults": {
+      "userPanelVisible": false,
+      "cardVisible": false,
+      "visibility.studentVisible": false,
+      "visibility.catalogVisible": false,
+      "visibility.userPanelVisible": false
+    },
+    "exactFounderInventoryProvenSafely": false,
+    "requiredFounderInventory": {
+      "total": 3,
+      "competitive": 2,
+      "qualifying": 1
+    }
+  },
+  "studentMissionRealmAudit": {
+    "screen": "lib/features/auth/presentation/screens/mission_realm_screen.dart",
+    "provider": "publishedRecruitmentsProvider",
+    "repository": "RecruitmentRepository.streamPublished()",
+    "currentFirestoreSource": "recruitments where status == published",
+    "emulatorFallbackPresent": true,
+    "emulatorFallbackSource": "assets/data/preview/jee_main_2027/assessment_preview_manifest.json",
+    "emulatorFallbackMission": {
+      "id": "jee_main_2026",
+      "title": "JEE Main 2027",
+      "category": "competitive",
+      "state": "Central",
+      "status": "published"
+    },
+    "mojibakeCategoryLabelsFound": true
+  },
+  "canonicalRegistryAudit": {
+    "file": "functions/canonical_mission_registry.js",
+    "knownPilotIds": [
+      "jee_main_2026",
+      "neet_(ug)-2027",
+      "RPSC_FIRST_GRADE2026_2026_1782713222215"
+    ],
+    "registryAloneIsSufficientForStudentCards": false
+  },
+  "dashboardTruthAudit": {
+    "screen": "lib/features/dashboard/presentation/screens/dashboard_screen.dart",
+    "fakeDefaultRisks": [
+      "readiness fallback to 0%",
+      "coverage fallback to 0%",
+      "streak fallback to 0d",
+      "risk fallback to LOW",
+      "mastery fallback to 0.0",
+      "Target X% Mastery without provenance"
+    ],
+    "pillarsPreserved": [
+      "THE CRUCIBLE",
+      "DIGIBOOK",
+      "SYLLABUS"
+    ]
+  },
+  "visibilityMatrix": [
+    {
+      "mission": "jee_main_2026 / JEE Main 2027",
+      "founderSourceRecord": "not safely proven",
+      "studentSourceRecord": "emulator fallback can synthesize one Recruitment",
+      "visible": "yes in emulator fallback",
+      "reason": "local fallback, not proven Founder binding"
+    },
+    {
+      "mission": "neet_(ug)-2027",
+      "founderSourceRecord": "canonical ID known, full record not safely proven",
+      "studentSourceRecord": "not proven",
+      "visible": "not proven",
+      "reason": "no safe local/non-production record proving visibility"
+    },
+    {
+      "mission": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "founderSourceRecord": "canonical ID known, full record not safely proven",
+      "studentSourceRecord": "not proven",
+      "visible": "not proven",
+      "reason": "no safe local/non-production record proving visibility"
+    }
+  ],
+  "nextRequiredSource": [
+    "emulator seed with exact three Founder mission records",
+    "committed local canonical catalog with exact Founder mission records and source proof",
+    "Founder Panel non-production data source"
+  ],
+  "safetyProof": {
+    "NO_PRODUCTION_WRITE": true,
+    "NO_PRODUCTION_READ": true,
+    "NO_RULES_CHANGE": true,
+    "NO_DEPLOY": true,
+    "NO_STUDENT_PUBLISH": true,
+    "NO_MISSION_FABRICATION": true,
+    "NO_LOCAL_FAKE_MISSION": true,
+    "NO_HARDCODED_MISSION_COUNT": true,
+    "NO_FAKE_PERCENTAGE": true,
+    "NO_FAKE_RISK": true,
+    "NO_FAKE_MASTERY": true,
+    "NO_FAKE_PROGRESS": true,
+    "NO_FAKE_PRIORITY": true,
+    "NO_FAKE_READINESS": true,
+    "NO_ACADEMIC_DATA_MUTATION": true,
+    "NO_CRUCIBLE_ALLOCATION_MUTATION": true,
+    "NO_PROFILE_REWRITE": true,
+    "NO_GRADLE_TOUCH": true
+  }
+}
