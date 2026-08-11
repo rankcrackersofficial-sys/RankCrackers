@@ -1,0 +1,36 @@
+﻿{
+    "verdict":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3_BLOCKED_BY_NO_SAMSUNG_DEVICE_TARGET",
+    "acceptedScope":  "environment_device_availability_blocker",
+    "requiredHead":  "c49b1e277e9ce886254ae18f16e30e6fbd53f386",
+    "observedHead":  "c49b1e277e9ce886254ae18f16e30e6fbd53f386",
+    "knownDirtyFile":  "android/app/build.gradle.kts",
+    "observedGradleHash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+    "samsungTarget":  "RZCW12FBFXZ",
+    "adbDeviceVisible":  false,
+    "flutterAndroidDeviceVisible":  false,
+    "seededMissionCount":  3,
+    "seededMissions":  [
+                           "JEE Main 2027",
+                           "NEET (UG)-2027",
+                           "RPSC 1st Grade"
+                       ],
+    "productionRead":  false,
+    "productionWrite":  false,
+    "rulesChange":  false,
+    "firebaseConfigSwap":  false,
+    "deploy":  false,
+    "studentPublish":  false,
+    "productCodeChange":  false,
+    "safetyProof":  [
+                        "NO_PRODUCTION_READ",
+                        "NO_PRODUCTION_WRITE",
+                        "NO_RULES_CHANGE",
+                        "NO_FIREBASE_CONFIG_SWAP",
+                        "NO_DEPLOY",
+                        "NO_STUDENT_PUBLISH",
+                        "NO_PRODUCT_CODE_CHANGE",
+                        "NO_MISSION_BACKFILL",
+                        "NO_DASHBOARD_MUTATION"
+                    ],
+    "recommendedNextStep":  "Reconnect Samsung device and rerun R4E-R3 with emulator/non-production backend only."
+}
