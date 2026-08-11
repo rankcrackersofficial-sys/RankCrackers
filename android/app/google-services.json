@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "667342482948",
+    "firebase_url": "https://rankcrackers-55-default-rtdb.firebaseio.com",
     "project_id": "rankcrackers-55",
     "storage_bucket": "rankcrackers-55.firebasestorage.app"
   },
@@ -19,6 +20,14 @@
           "android_info": {
             "package_name": "com.rankcrackers.app",
             "certificate_hash": "d8fa249636ed3ce0ed47282c10237aec4021a15d"
+          }
+        },
+        {
+          "client_id": "667342482948-bkfr6ujtdekhdvca0ffg3c9j6a1h1442.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rankcrackers.app",
+            "certificate_hash": "a8963a09e3485db7606b5bce96ca74f70486891c"
           }
         },
         {
