@@ -1,0 +1,128 @@
+{
+  "gate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R1",
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R1_BLOCKED_BY_MISSING_FOUNDER_MISSION_EVIDENCE",
+  "mode": "READ_ONLY_REPOSITORY_EVIDENCE_RECOVERY",
+  "startingHead": "0f240fdfca6f64d79b9e2d5cd7e096ff3de54b45",
+  "branch": "safety/rc-g2-pre-notification-schema",
+  "knownUnrelatedDirtyFile": "android/app/build.gradle.kts",
+  "gradleHashPreserved": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "founderInventoryTarget": {
+    "total": 3,
+    "competitive": 2,
+    "qualifying": 1,
+    "permissionToFabricate": false
+  },
+  "recoveredFounderRecordsAdequate": 0,
+  "candidateMissions": [
+    {
+      "realmId": "jee_main_2026",
+      "evidenceFound": [
+        "functions/canonical_mission_registry.js",
+        "assets/data/preview/jee_main_2027/*",
+        "functions/test_mission_mirror.js",
+        "docs syllabus/PYQ evidence"
+      ],
+      "adequateFounderCreatedRecord": false,
+      "missing": [
+        "current Founder record source",
+        "current visibility",
+        "current category from source record",
+        "creation timestamp from source record"
+      ]
+    },
+    {
+      "realmId": "neet_(ug)-2027",
+      "evidenceFound": [
+        "functions/canonical_mission_registry.js",
+        "NEET pagewise authorization/evidence files",
+        "functions/apply_student_catalog_readiness.js"
+      ],
+      "adequateFounderCreatedRecord": false,
+      "missing": [
+        "current Founder record source",
+        "current category from source record",
+        "current visibility",
+        "creation timestamp from source record"
+      ]
+    },
+    {
+      "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "evidenceFound": [
+        "functions/canonical_mission_registry.js",
+        "functions/apply_student_catalog_readiness.js"
+      ],
+      "adequateFounderCreatedRecord": false,
+      "missing": [
+        "current Founder record source",
+        "current category from source record",
+        "current visibility",
+        "creation timestamp from source record"
+      ]
+    }
+  ],
+  "mappingContract": {
+    "founderLaunchUi": "lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart",
+    "callable": "functions/callable/handle_sentinel_action.js",
+    "action": "launch_exam_mission",
+    "canonicalShellPath": "mission_realms/{realmId}",
+    "legacyMirrorPath": "recruitments/{realmId}",
+    "studentSafeProjectionPath": "student_mission_catalog/{realmId}",
+    "exactThreeSurfaceRecordsRecovered": false
+  },
+  "visibilityGovernance": {
+    "safeDefaults": {
+      "userPanelVisible": false,
+      "cardVisible": false,
+      "visibility.studentVisible": false,
+      "visibility.catalogVisible": false,
+      "visibility.userPanelVisible": false
+    },
+    "readRulesRequire": [
+      "cardVisible == true",
+      "userPanelVisible == true",
+      "archived == false"
+    ],
+    "automaticActiveToVisibleMappingRemoved": true,
+    "safeEventToTurnVisibleTrueFound": false
+  },
+  "sourceContractVerdict": "SOURCE_CONTRACT_AMBIGUOUS",
+  "sourceContractNotes": [
+    "Current Student Mission Realm reads recruitments where status == published.",
+    "FirestoreService also has streamStudentMissionCatalog with visibility filters.",
+    "Historical architecture points to student_mission_catalog as safer student projection.",
+    "UI has not yet been rebound to the student-safe projection."
+  ],
+  "fallbackReport": {
+    "source": "lib/core/backend/recruitment_repository.dart",
+    "asset": "assets/data/preview/jee_main_2027/assessment_preview_manifest.json",
+    "condition": "RC_USE_FIREBASE_EMULATOR true and recruitments stream empty or throws",
+    "fallbackMission": {
+      "id": "jee_main_2026",
+      "title": "JEE Main 2027",
+      "category": "competitive",
+      "state": "Central",
+      "status": "published"
+    },
+    "classification": "PRODUCT_RUNTIME_FAKE_FALLBACK"
+  },
+  "safeSourceForR4ERepair": [
+    "Founder-authorized export of existing three mission records",
+    "emulator seed generated from exact export",
+    "committed canonical catalog generated from exact export"
+  ],
+  "safetyProof": {
+    "NO_PRODUCTION_READ": true,
+    "NO_PRODUCTION_WRITE": true,
+    "NO_FIRESTORE_WRITE": true,
+    "NO_RULES_CHANGE": true,
+    "NO_DEPLOY": true,
+    "NO_STUDENT_PUBLISH": true,
+    "NO_MISSION_CREATION": true,
+    "NO_MISSION_FABRICATION": true,
+    "NO_MISSION_CATEGORY_GUESSING": true,
+    "NO_VISIBILITY_GUESSING": true,
+    "NO_HARDCODED_3_MISSION_FIX": true,
+    "NO_DASHBOARD_REPAIR_YET": true,
+    "NO_GRADLE_TOUCH": true
+  }
+}
