@@ -1,0 +1,59 @@
+{
+  "program": "RANKCRACKERS_STUDENT_PILLARS_R2_FASTTRACK_WAVE1",
+  "baselineHead": "36f00384cfe5a629e52cd1af54316d2453a39e2d",
+  "models": {
+    "factory": "gemini-3.6-flash",
+    "review": "gemini-3.1-pro-preview",
+    "normalizer": "gemini-3.5-flash-lite"
+  },
+  "syllabus": {
+    "baselineVerified": 211,
+    "denominator": 417,
+    "pendingPool": 206,
+    "waveAtomCount": 26,
+    "flashParallelism": 8,
+    "proParallelism": 4,
+    "verifiedRequiresOfficialSource": true,
+    "verifiedRequiresProReview": true,
+    "allowModelOnlyPromotion": false
+  },
+  "crucible": {
+    "baselineQuestionPacksReady": 1,
+    "assessmentDenominator": 8,
+    "baselineMacroReviewed": 1,
+    "macroDenominator": 7,
+    "baselineMajorReviewed": 0,
+    "majorDenominator": 1,
+    "baselineAnswerKeysVerified": 1,
+    "remainingSlots": 7,
+    "flashDraftParallelism": 7,
+    "proReviewParallelism": 4,
+    "studentReadyPromotionAllowed": false
+  },
+  "digibook": {
+    "baselineApprovedAtoms": 2,
+    "denominator": 417,
+    "remainingAtoms": 415,
+    "waveAtomCount": 20,
+    "flashParallelism": 8,
+    "proParallelism": 4,
+    "approvedRequiresOfficialSource": true,
+    "approvedRequiresProReview": true,
+    "allowRuntimeGeneration": false
+  },
+  "retry": {
+    "maxAutomaticRetries": 2,
+    "continueIndependentTasksAfterFailure": true
+  },
+  "safety": {
+    "productionRead": false,
+    "productionWrite": false,
+    "firestoreWrite": false,
+    "rulesChange": false,
+    "deploy": false,
+    "studentPublish": false,
+    "studentRuntimeAi": false,
+    "modelOnlyCanonicalPromotion": false,
+    "gradleTouch": false
+  }
+}

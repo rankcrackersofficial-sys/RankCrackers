@@ -1,0 +1,7 @@
+{
+  "baselineHead": "36f00384cfe5a629e52cd1af54316d2453a39e2d",
+  "approvedAtomIds": [],
+  "pendingReviewAtomIds": [],
+  "rejectedOrHeldAtomIds": [],
+  "blocker": "Expected ',' or ']' after array element in JSON at position 36953 (line 515 column 6)"
+}

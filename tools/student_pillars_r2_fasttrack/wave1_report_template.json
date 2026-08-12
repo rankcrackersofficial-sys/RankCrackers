@@ -1,0 +1,37 @@
+﻿{
+  "baselineHead": "36f00384cfe5a629e52cd1af54316d2453a39e2d",
+  "syllabus": {
+    "baselineVerified": 211,
+    "denominator": 417,
+    "attempted": 26,
+    "newlyVerified": 0,
+    "stillPending": 0,
+    "heldForSource": 26,
+    "totalVerified": 211,
+    "modelOnlyPromotions": 0
+  },
+  "crucible": {
+    "questionPacksReady": 1,
+    "macroReviewed": 1,
+    "majorReviewed": 0,
+    "answerKeysVerified": 1,
+    "studentReady": false
+  },
+  "digibook": {
+    "baselineApprovedAtoms": 2,
+    "denominator": 417,
+    "attempted": 20,
+    "newlyApproved": 0,
+    "pendingReview": 0,
+    "rejectedOrHeld": 20,
+    "approvedAtoms": 2,
+    "modelOnlyPromotions": 0
+  },
+  "models": {
+    "flashActual": "gemini-3.6-flash",
+    "proActual": "gemini-3.1-pro-preview",
+    "silentFallbackCount": 0
+  },
+  "modelOnlyCanonicalPromotions": 0,
+  "productionReady": false
+}

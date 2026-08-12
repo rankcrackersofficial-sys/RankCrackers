@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 
 const { GoogleGenAI } = require("@google/genai");
 
@@ -8,6 +8,12 @@ const DEFAULT_MODELS = Object.freeze({
   deepReasoningPro: "gemini-3.1-pro-preview",
   factoryFlash: "gemini-3.6-flash",
   bulkLite: "gemini-3.5-flash-lite",
+});
+
+const WORKLOADS = Object.freeze({
+  deepReasoningPro: "deepReasoningPro",
+  factoryFlash: "factoryFlash",
+  bulkLite: "bulkLite",
 });
 
 function requireEnv(name) {
@@ -109,6 +115,7 @@ async function generateFactoryContent({ workload = "factoryFlash", contents, con
 
 module.exports = {
   DEFAULT_MODELS,
+  WORKLOADS,
   createVertexFactoryClient,
   resolveModel,
   generateFactoryContent,

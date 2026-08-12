@@ -1,0 +1,26 @@
+{
+  "baselineHead": "36f00384cfe5a629e52cd1af54316d2453a39e2d",
+  "macroTest2": {
+    "slotId": "macro_test_2",
+    "phaseId": "phase_2",
+    "selectedAtomCount": 18,
+    "questionPackReady": true,
+    "reviewed": true,
+    "answerKeyVerified": true,
+    "verifiedAcademicAnswerKey": true,
+    "officialAnswerKey": false,
+    "studentReady": false,
+    "draftFile": "crucible_macro_test_2_flash_draft.json",
+    "reviewFile": "crucible_macro_test_2_pro_review.json",
+    "blocker": null
+  },
+  "summary": {
+    "questionPacksReady": 2,
+    "macroReviewed": 2,
+    "majorReviewed": 0,
+    "answerKeysVerified": 2,
+    "studentReady": false
+  },
+  "officialAnswerKey": false,
+  "answerKeyTerminology": "VERIFIED_ACADEMIC_ANSWER_KEY_NOT_OFFICIAL_ANSWER_KEY"
+}

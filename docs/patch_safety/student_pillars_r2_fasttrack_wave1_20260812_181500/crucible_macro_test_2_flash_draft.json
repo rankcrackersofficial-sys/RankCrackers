@@ -1,0 +1,325 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null
+  },
+  "draft": {
+    "testId": "macro_test_2",
+    "phaseId": "phase_2",
+    "questions": [
+      {
+        "itemId": "item_macro_2_01",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U14_T_B0A88EE2_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "In a series LCR circuit, the inductance $L = 10\\text{ mH}$, capacitance $C = 1\\ \\mu\\text{F}$, and resistance $R = 100\\ \\Omega$. What is the quality factor ($Q$-factor) of this resonant circuit?",
+        "options": [
+          "1",
+          "10",
+          "100",
+          "0.1"
+        ],
+        "answer": "1",
+        "shortSolution": "Resonant angular frequency $\\omega_0 = \\frac{1}{\\sqrt{LC}} = \\frac{1}{\\sqrt{10^{-2} \\times 10^{-6}}} = 10^4\\text{ rad/s}$. The Q-factor is $Q = \\frac{\\omega_0 L}{R} = \\frac{10^4 \\times 10^{-2}}{100} = 1$.",
+        "difficulty": "EASY"
+      },
+      {
+        "itemId": "item_macro_2_02",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U07_T_9B7A2E2F_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "A wire of initial length $2\\text{ m}$ and cross-sectional area $1\\text{ mm}^2$ is stretched by a force of $100\\text{ N}$. If Young's modulus of the wire is $2 \\times 10^{11}\\text{ N/m}^2$, find the elastic potential energy stored in the wire in millijoules (mJ).",
+        "options": [],
+        "answer": "50",
+        "shortSolution": "Elastic potential energy $U = \\frac{1}{2} \\frac{F^2 L}{A Y} = \\frac{1}{2} \\frac{100^2 \\times 2}{10^{-6} \\times 2 \\times 10^{11}} = 0.05\\text{ J} = 50\\text{ mJ}$.",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "itemId": "item_macro_2_03",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U13_T_135929B2_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "A moving coil galvanometer has a resistance of $50\\ \\Omega$ and yields full-scale deflection for a current of $2\\text{ mA}$. The series resistance required to convert it into a voltmeter reading up to $10\\text{ V}$ is:",
+        "options": [
+          "4950 \\Omega",
+          "5000 \\Omega",
+          "4900 \\Omega",
+          "5050 \\Omega"
+        ],
+        "answer": "4950 \\Omega",
+        "shortSolution": "Using $V = I_g(R_g + R) \\implies 10 = 2 \\times 10^{-3} (50 + R) \\implies 5000 = 50 + R \\implies R = 4950\\ \\Omega$.",
+        "difficulty": "EASY"
+      },
+      {
+        "itemId": "item_macro_2_04",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U07_T_7C57F2F3_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Two spherical raindrops with radii in the ratio $1 : 2$ fall vertically through air. Assuming laminar viscous drag, the ratio of their terminal velocities $v_1 / v_2$ is:",
+        "options": [
+          "1 : 4",
+          "1 : 2",
+          "1 : 8",
+          "1 : 16"
+        ],
+        "answer": "1 : 4",
+        "shortSolution": "Terminal velocity $v_t = \\frac{2 r^2 (\\rho - \\sigma) g}{9 \\eta} \\propto r^2$. Therefore, $v_1 / v_2 = (r_1 / r_2)^2 = (1 / 2)^2 = 1 / 4$.",
+        "difficulty": "EASY"
+      },
+      {
+        "itemId": "item_macro_2_05",
+        "atomId": "JEE_MAIN_2026_PHY_U05_T_ab220534",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "A uniform solid sphere of mass $2\\text{ kg}$ and radius $0.5\\text{ m}$ rotates about a fixed axis passing through its center of mass with an angular velocity of $10\\text{ rad/s}$. Calculate its angular momentum in $\\text{kg}\\cdot\\text{m}^2/\\text{s}$.",
+        "options": [],
+        "answer": "2",
+        "shortSolution": "Moment of inertia $I = \\frac{2}{5} M R^2 = \\frac{2}{5} \\times 2 \\times (0.5)^2 = 0.2\\text{ kg}\\cdot\\text{m}^2$. Angular momentum $L = I \\omega = 0.2 \\times 10 = 2\\text{ kg}\\cdot\\text{m}^2/\\text{s}$.",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "itemId": "item_macro_2_06",
+        "atomId": "JEE_MAIN_2026_PHY_U12_T_3f967b4d",
+        "type": "SINGLE_SELECT",
+        "stem": "As the temperature of a metallic conductor increases, its electrical resistance increases primarily because:",
+        "options": [
+          "the relaxation time of free electrons decreases",
+          "the electron drift velocity increases",
+          "the density of free electrons decreases",
+          "the relaxation time of free electrons increases"
+        ],
+        "answer": "the relaxation time of free electrons decreases",
+        "shortSolution": "Resistivity $\\rho = \\frac{m}{n e^2 \\tau}$. Higher temperature increases thermal vibrations, causing more frequent collisions, which decreases the average relaxation time $\\tau$ and increases resistance.",
+        "difficulty": "EASY"
+      },
+      {
+        "itemId": "item_macro_2_07",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_1206BA8A_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Which of the following organic compounds will NOT undergo a Cannizzaro reaction when treated with concentrated sodium hydroxide solution?",
+        "options": [
+          "Acetaldehyde",
+          "Benzaldehyde",
+          "Formaldehyde",
+          "2,2-Dimethylpropanal"
+        ],
+        "answer": "Acetaldehyde",
+        "shortSolution": "Cannizzaro reaction is given by aldehydes lacking $\\alpha$-hydrogens. Acetaldehyde ($\\text{CH}_3\\text{CHO}$) contains $\\alpha$-hydrogens and undergoes aldol condensation instead.",
+        "difficulty": "EASY"
+      },
+      {
+        "itemId": "item_macro_2_08",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_4FB800BA_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "For the galvanic cell reaction $\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$, the standard cell potential $E^\\circ_{\\text{cell}} = 1.10\\text{ V}$. What is the magnitude of standard Gibbs energy change $\\Delta G^\\circ$ in $\\text{kJ/mol}$? (Use $F = 96500\\text{ C/mol}$ and round to the nearest integer).",
+        "options": [],
+        "answer": "212",
+        "shortSolution": "$\\Delta G^\\circ = -n F E^\\circ_{\\text{cell}} = -2 \\times 96500 \\times 1.10 = -212300\\text{ J/mol} = -212.3\\text{ kJ/mol}$. Magnitude is approximately $212\\text{ kJ/mol}$.",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "itemId": "item_macro_2_09",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_57A38BE5_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Which of the following thermodynamic parameters is classified as an extensive property?",
+        "options": [
+          "Enthalpy",
+          "Temperature",
+          "Pressure",
+          "Molar heat capacity"
+        ],
+        "answer": "Enthalpy",
+        "shortSolution": "Extensive properties depend on the mass/quantity of matter in the system. Enthalpy is extensive, whereas temperature, pressure, and molar heat capacity are intensive.",
+        "difficulty": "EASY"
+      },
+      {
+        "itemId": "item_macro_2_10",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_6CD948DD_CH002",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "Calculate the pH of a $10^{-3}\\text{ M}$ aqueous solution of a fully dissociated monobasic strong acid at $25^\\circ\\text{C}$.",
+        "options": [],
+        "answer": "3",
+        "shortSolution": "Since the acid is monobasic and fully dissociated, $[\\text{H}^+] = 10^{-3}\\text{ M}$. $\\text{pH} = -\\log_{10}[\\text{H}^+] = -\\log_{10}(10^{-3}) = 3$.",
+        "difficulty": "EASY"
+      },
+      {
+        "itemId": "item_macro_2_11",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_E1C482B9_CH002",
+        "type": "SINGLE_SELECT",
+        "stem": "In the Reimer-Tiemann reaction of phenol with chloroform in the presence of aqueous $\\text{NaOH}$ to yield salicylaldehyde, the active electrophile is:",
+        "options": [
+          "Dichlorocarbene (:CCl2)",
+          "Trichloromethyl cation (+CCl3)",
+          "Formyl cation (+CHO)",
+          "Chlorocarbene (:CHCl)"
+        ],
+        "answer": "Dichlorocarbene (:CCl2)",
+        "shortSolution": "Chloroform ($\\text{CHCl}_3$) reacts with hydroxide ion to generate dichlorocarbene ($:\\text{CCl}_2$), a neutral electron-deficient species acting as the electrophile.",
+        "difficulty": "MEDIUM"
+      },
+      {
+        "itemId": "item_macro_2_12",
+        "atomId": "JEE_MAIN_2026_CHEM_U13_T_daee150c",
+        "type": "SINGLE_SELECT",
+        "stem": "In Lassaigne's test for qualitative detection of nitrogen in an organic compound, the characteristic Prussian blue complex formed is:",
+        "options": [
+          "Fe4[Fe(CN)6]3",
+          "Fe3[Fe(CN)6]2",
+          "Na4[Fe(CN)5NOS]",
+          "Fe(SCN)3"
+        ],
+        "answer": "Fe4[Fe(CN)6]3",
+        "shortSolution": "Sodium cyanide formed during fusion reacts with $\\text{FeSO}_4$ and ferric ions to form iron(III) hexacyanoferrate(II), $\\text{Fe}_4[\\text{Fe}(\\text{CN})_6]_3$, which gives the Prussian blue color.",
+        "difficulty": "EASY"
+      }
+    ]
+  },
+  "selectedAtoms": [
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U14_T_B0A88EE2_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Alternating Currents, Peak And RMS Value Of Alternating Current/voltage, Reactance And Impedance, LCR Series Circuit, Resonance, Power In AC Circuits, Wattless Current, AC Generator And Transformer",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U07_T_9B7A2E2F_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Elastic Behaviour, Stress-strain Relationship, Hooke's Law, Young's Modulus, Bulk Modulus And Modulus Of Rigidity",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U13_T_135929B2_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Force On A Moving Charge In Uniform Magnetic And Electric Fields, Force On A Current-carrying Conductor In A Uniform Magnetic Field, The Force Between Two Parallel Currents Carrying Conductors-definition Of Ampere, Torque Experienced By A Current Loop In A Uniform Magnetic Field: Moving Coil Galvanometer, Its Sensitivity And Conversion To Ammeter And Voltmeter",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U07_T_7C57F2F3_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Pressure Due To A Fluid Column, Pascal's Law And Its Applications, Effect Of Gravity On Fluid Pressure, Viscosity, Stoke’s Law, Terminal Velocity, Streamline And Turbulent Flow, Critical Velocity, Bernoulli's Principle And Its Applications",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_S_F36CEE9A_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "The Plot Of The Angle Of Deviation Vs Angle Of Incidence For A Triangular Prism",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_2026_PHY_U01_CH03_TOP01_002",
+      "subject": "Physics",
+      "unit": "Unit 1",
+      "chapter": "Chapter 3",
+      "topic": "Laws Of Motion",
+      "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U12_T_3f967b4d",
+      "subject": "Physics",
+      "unit": "UNIT 12: Current Electricity",
+      "chapter": "Unit 12 Current Electricity",
+      "topic": "Electric Current Drift Velocity Mobility And Their Relation With Electric Current Ohm S Law Electrical Resistance I V Characteristics Of Ohmic And Non Ohmic Conductors Electrical Energy And Power Electrical Resistivity And Conductivity Series And Parallel Combinations Of Resistors Temperature Dependence Of Resistance",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U17_T_b62ad18c",
+      "subject": "Physics",
+      "unit": "UNIT 17: Dual Nature Of Matter And Radiation",
+      "chapter": "Unit 17 Dual Nature Of Matter And Radiation",
+      "topic": "Dual Nature Of Radiation Photoelectric Effect Hertz And Lenard S Observations Einstein S Photoelectric Equation Particle Nature Of Light",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U20_T_7b7aafa4_S_07515e6d",
+      "subject": "Physics",
+      "unit": "UNIT 20: Experimental Skills",
+      "chapter": "Unit 20 Experimental Skills",
+      "topic": "Metre Scale The Mass Of A Given Object By The Principle Of Moments",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U05_T_ab220534",
+      "subject": "Physics",
+      "unit": "UNIT 5: Rotational Motion",
+      "chapter": "Unit 5 Rotational Motion",
+      "topic": "Basic Concepts Of Rotational Motion Moment Of A Force Torque Angular Momentum Conservation Of Angular Momentum And Its Applications",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_1206BA8A_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Aldehyde And Ketones: Nature Of Carbonyl Group, Nucleophilic Addition To >C=O Group, Relative Reactivities Of Aldehydes And Ketones, Important Reactions Such As - Nucleophilic Addition Reactions (addition Of HCN, NH3 And Its Derivatives), Grignard Reagent, Oxidation, Reduction (Wolf Kishner And Clemmensen), The Acidity Of 𝐀 -hydrogen. Aldol Condensation, Cannizzaro Reaction, Haloform Reaction, Chemical Tests To Distinguish Between Aldehydes And Ketones.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_FE6942BA_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Chemical Principles Involved In The Following Experiments: 1. Enthalpy Of Solution Of CuSO4 2. Enthalpy Of Neutralization Of Strong Acid And Strong Base. 3. Preparation Of Lyophilic And Lyophobic Sols. 4. Kinetic Study Of The Reaction Of Iodide Ions With Hydrogen Peroxide At Room Temperature.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_4FB800BA_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Electrochemical Cells - Electrolytic And Galvanic Cells, Different Types Of Electrodes, Electrode Potentials Including Standard Electrode Potential, Half-cell And Cell Reactions, Emf Of A Galvanic Cell And Its Measurement, Nernst Equation And Its Applications, Relationship Between Cell Potential And Gibbs' Energy Change, Dry Cell And Lead Accumulator, Fuel Cells.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_57A38BE5_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Fundamentals Of Thermodynamics: System And Surroundings, Extensive And Intensive Properties, State Functions, Entropy, Types Of Processes.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_6CD948DD_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Ionic Equilibrium: Weak And Strong Electrolytes, Ionization Of Electrolytes, Various Concepts Of Acids And Bases (Arrhenius, Bronsted - Lowry And Lewis) And Their Ionization, Acid-base Equilibria (including Multistage Ionization) And Ionization Constants, Ionization Of Water, PH Scale, Common Ion Effect, Hydrolysis Of Salts And PH Of Their Solutions, The Solubility Of Sparingly Soluble Salts, Solubility Products And Buffer Solutions.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_E1C482B9_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Phenols: Acidic Nature, Electrophilic Substitution Reactions, Halogenation, Nitration And Sulphonation, Reimer - Tiemann Reaction.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_8F891667_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "The Chemistry Involved In The Preparation Of The Following: Inorganic Compounds, Mohr’s Salt, Potash Alum. Organic Compounds: Acetanilide, P-nitro Acetanilide, Aniline Yellow, Iodoform.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U13_T_daee150c",
+      "subject": "Chemistry",
+      "unit": "UNIT 13: PURIFICATION AND CHARACTERISATION OF ORGANIC COMPOUNDS",
+      "chapter": "Unit 13 Purification And Characterisation Of Organic Compounds",
+      "topic": "Qualitative Analysis Detection Of Nitrogen Sulphur Phosphorus And Halogens",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    }
+  ]
+}
