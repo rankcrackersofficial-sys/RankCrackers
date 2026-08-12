@@ -1,0 +1,48 @@
+{
+  "verdict": "RANKCRACKERS_R2B_MACRO_TEST_1_PRO_REVIEW_PASS",
+  "slotId": "macro_test_1",
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null
+  },
+  "review": {
+    "verdict": "PASS",
+    "itemCountReviewed": 12,
+    "allItemsSourceAligned": true,
+    "allAnswersTechnicallyCorrect": true,
+    "allSolutionsTechnicallyCorrect": true,
+    "noMultipleCorrectRisk": true,
+    "noScopeLeakage": true,
+    "answerKeysVerified": true,
+    "reviewedMacroSlot": true,
+    "studentReady": false,
+    "officialAnswerKey": false,
+    "modelOnlyCanonicalPromotion": false,
+    "blockingIssues": [],
+    "reviewNotes": [
+      "All 12 items align perfectly with the provided syllabus topics (Kinematics and Laws of Motion).",
+      "Conceptual representations and physical interpretations of inertia, reference frames, and constant acceleration equations are technically accurate.",
+      "Calculations in numeric and multiple-choice items were verified and found to be correct, with no ambiguity found in distractors or wording."
+    ]
+  },
+  "sourceArtifacts": [
+    "docs/assessment/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_ORIGINAL_ITEM_DRAFT_PACK_V1.json",
+    "docs/assessment/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_ANSWER_SOLUTION_CONTRACT_V1.json",
+    "docs/digibook/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_V1.json"
+  ],
+  "safety": {
+    "studentReady": false,
+    "officialAnswerKey": false,
+    "firestoreWrite": false,
+    "productionRead": false,
+    "deploy": false,
+    "modelOnlyCanonicalPromotion": false
+  }
+}

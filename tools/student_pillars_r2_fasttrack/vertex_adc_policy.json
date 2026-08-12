@@ -1,0 +1,26 @@
+{
+  "backend": "vertex_ai",
+  "authentication": "application_default_credentials",
+  "apiKeyRequired": false,
+  "requiredEnvironment": [
+    "GOOGLE_CLOUD_PROJECT"
+  ],
+  "optionalEnvironment": {
+    "GOOGLE_CLOUD_LOCATION": "global",
+    "RC_VERTEX_MODEL_PRO": "gemini-3.1-pro-preview",
+    "RC_VERTEX_MODEL_FLASH": "gemini-3.6-flash",
+    "RC_VERTEX_MODEL_LITE": "gemini-3.5-flash-lite"
+  },
+  "forbidden": [
+    "COMMITTED_GOOGLE_APPLICATION_CREDENTIALS_JSON",
+    "COMMITTED_GEMINI_API_KEY",
+    "COMMITTED_GOOGLE_API_KEY",
+    "STUDENT_RUNTIME_VERTEX_CLIENT"
+  ],
+  "safety": {
+    "studentRuntimeAi": false,
+    "modelOutputCanonicalTruth": false,
+    "productionFirestoreRead": false,
+    "productionFirestoreWrite": false
+  }
+}

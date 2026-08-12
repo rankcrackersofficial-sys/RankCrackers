@@ -1,0 +1,73 @@
+{
+  "verdict": "RANKCRACKERS_STUDENT_PILLARS_R2_FASTTRACK_VERTEX_FACTORY_ACTIVATED_AND_FIRST_LIVE_ACADEMIC_MOVEMENT_PASSED_WITH_PARTIAL_DENOMINATOR_MOVEMENT",
+  "generatedAt": "2026-08-12T18:05:00+05:30",
+  "startingHead": "04c2884e62e5ce282b34b4a40a52a750c4e0e746",
+  "vertex": {
+    "sdk": "@google/genai",
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "adcAvailable": true,
+    "aiplatformApiEnabled": true,
+    "apiKeyRequired": false,
+    "apiKeyCommitted": false,
+    "flashProbe": {
+      "model": "gemini-3.6-flash",
+      "workload": "factoryFlash",
+      "passed": true,
+      "fallbackUsed": false
+    },
+    "proReview": {
+      "model": "gemini-3.1-pro-preview",
+      "workload": "deepReasoningPro",
+      "passed": true,
+      "fallbackUsed": false,
+      "itemsReviewed": 12
+    }
+  },
+  "denominatorMovement": {
+    "syllabus": {
+      "verifiedBefore": 211,
+      "verifiedAfter": 211,
+      "denominator": 417
+    },
+    "crucible": {
+      "questionPacksReadyBefore": 1,
+      "questionPacksReadyAfter": 1,
+      "questionPacksTotal": 8,
+      "macroReviewedBefore": 0,
+      "macroReviewedAfter": 1,
+      "macroTotal": 7,
+      "majorReviewedBefore": 0,
+      "majorReviewedAfter": 0,
+      "majorTotal": 1,
+      "answerKeysVerifiedBefore": 0,
+      "answerKeysVerifiedAfter": 1,
+      "answerKeysTotal": 8
+    },
+    "digibook": {
+      "approvedBefore": 2,
+      "approvedAfter": 2,
+      "denominator": 417
+    }
+  },
+  "validation": {
+    "vertexPolicy": "PASS",
+    "factoryProbe": "PASS",
+    "crucibleRegister": "PASS",
+    "progress": "PASS",
+    "jsSyntax": "PASS"
+  },
+  "knownUnrelatedGradleHash": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "safety": {
+    "productionRead": false,
+    "productionWrite": false,
+    "firestoreWrite": false,
+    "rulesChange": false,
+    "deploy": false,
+    "studentRuntimeAi": false,
+    "modelOnlyCanonicalPromotion": false,
+    "studentReady": false,
+    "productionReady": false
+  }
+}

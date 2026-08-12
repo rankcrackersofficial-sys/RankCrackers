@@ -1,0 +1,44 @@
+{
+  "verdict": "RANKCRACKERS_STUDENT_PILLARS_R2_FASTTRACK_PROGRESS_AFTER_VERTEX_BATCH",
+  "generatedAt": "2026-08-12T17:55:00+05:30",
+  "baselineCommit": "04c2884e62e5ce282b34b4a40a52a750c4e0e746",
+  "syllabus": {
+    "baselineVerified": 211,
+    "newlyVerified": 0,
+    "remainingPending": 206,
+    "totalVerified": 211,
+    "denominator": 417,
+    "studentReady": false
+  },
+  "crucible": {
+    "macroReviewed": 1,
+    "macroTotal": 7,
+    "majorReviewed": 0,
+    "majorTotal": 1,
+    "questionPacksReady": 1,
+    "questionPacksTotal": 8,
+    "answerKeysVerified": 1,
+    "answerKeysTotal": 8,
+    "studentReady": false
+  },
+  "digibook": {
+    "baselineApprovedAtoms": 2,
+    "newlyApprovedAtoms": 0,
+    "approvedAtoms": 2,
+    "denominator": 417,
+    "studentReady": false
+  },
+  "adaptiveUi": {
+    "overflowCount": 0,
+    "redScreenCount": 0
+  },
+  "productionReady": false,
+  "safety": {
+    "productionRead": false,
+    "productionWrite": false,
+    "firestoreWrite": false,
+    "studentRuntimeAi": false,
+    "deploy": false,
+    "modelOnlyCanonicalPromotion": false
+  }
+}

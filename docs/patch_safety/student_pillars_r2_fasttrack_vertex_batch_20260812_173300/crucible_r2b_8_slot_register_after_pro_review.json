@@ -1,0 +1,116 @@
+{
+  "verdict": "RANKCRACKERS_R2B_CRUCIBLE_8_SLOT_REGISTER_AFTER_PRO_REVIEW",
+  "generatedAt": "2026-08-12T17:55:00+05:30",
+  "baselineCommit": "04c2884e62e5ce282b34b4a40a52a750c4e0e746",
+  "slots": [
+    {
+      "slotId": "macro_test_1",
+      "slotType": "MACRO",
+      "questionCount": 12,
+      "questionPackReady": true,
+      "reviewed": true,
+      "answerKeyVerified": true,
+      "studentReady": false,
+      "sourceEvidence": [
+        {
+          "sourceType": "ORIGINAL_ITEM_DRAFT_PACK",
+          "reference": "docs/assessment/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_ORIGINAL_ITEM_DRAFT_PACK_V1.json"
+        },
+        {
+          "sourceType": "ANSWER_SOLUTION_CONTRACT",
+          "reference": "docs/assessment/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_ANSWER_SOLUTION_CONTRACT_V1.json"
+        },
+        {
+          "sourceType": "DIGIBOOK_SOURCE_LINEAGE",
+          "reference": "docs/digibook/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_V1.json"
+        },
+        {
+          "sourceType": "VERTEX_PRO_REVIEW",
+          "reference": "docs/patch_safety/student_pillars_r2_fasttrack_vertex_batch_20260812_173300/macro_test_1_pro_review.json"
+        }
+      ]
+    },
+    {
+      "slotId": "macro_test_2",
+      "slotType": "MACRO",
+      "questionCount": 0,
+      "questionPackReady": false,
+      "reviewed": false,
+      "answerKeyVerified": false,
+      "studentReady": false
+    },
+    {
+      "slotId": "macro_test_3",
+      "slotType": "MACRO",
+      "questionCount": 0,
+      "questionPackReady": false,
+      "reviewed": false,
+      "answerKeyVerified": false,
+      "studentReady": false
+    },
+    {
+      "slotId": "macro_test_4",
+      "slotType": "MACRO",
+      "questionCount": 0,
+      "questionPackReady": false,
+      "reviewed": false,
+      "answerKeyVerified": false,
+      "studentReady": false
+    },
+    {
+      "slotId": "macro_test_5",
+      "slotType": "MACRO",
+      "questionCount": 0,
+      "questionPackReady": false,
+      "reviewed": false,
+      "answerKeyVerified": false,
+      "studentReady": false
+    },
+    {
+      "slotId": "macro_test_6",
+      "slotType": "MACRO",
+      "questionCount": 0,
+      "questionPackReady": false,
+      "reviewed": false,
+      "answerKeyVerified": false,
+      "studentReady": false
+    },
+    {
+      "slotId": "macro_test_7",
+      "slotType": "MACRO",
+      "questionCount": 0,
+      "questionPackReady": false,
+      "reviewed": false,
+      "answerKeyVerified": false,
+      "studentReady": false
+    },
+    {
+      "slotId": "major_test_1",
+      "slotType": "MAJOR",
+      "questionCount": 0,
+      "questionPackReady": false,
+      "reviewed": false,
+      "answerKeyVerified": false,
+      "studentReady": false
+    }
+  ],
+  "summary": {
+    "macroReviewed": 1,
+    "macroTotal": 7,
+    "majorReviewed": 0,
+    "majorTotal": 1,
+    "questionPacksReady": 1,
+    "questionPacksTotal": 8,
+    "answerKeysVerified": 1,
+    "answerKeysTotal": 8,
+    "studentReady": false
+  },
+  "safety": {
+    "productionRead": false,
+    "productionWrite": false,
+    "firestoreWrite": false,
+    "studentRuntimeAi": false,
+    "deploy": false,
+    "modelOnlyCanonicalPromotion": false
+  }
+}
