@@ -1,0 +1,62 @@
+{
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3A_SAMSUNG_AUTH_GATE_PASSED_WITH_GOOGLE_ROUTE_FIX",
+  "startingHead": "0e22e31f6baa646cae40e8a1cb7df5e1ccbcd305",
+  "device": {
+    "model": "Samsung SM-S911B",
+    "serial": "RZCW12FBFXZ",
+    "backend": "FIREBASE_EMULATOR_NON_PRODUCTION_ONLY",
+    "authEmulator": "127.0.0.1:9099 via adb reverse",
+    "firestoreEmulator": "127.0.0.1:8080 via adb reverse"
+  },
+  "gradleHashPreserved": "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+  "codeRepair": {
+    "file": "lib/features/auth/presentation/screens/unified_identity_screen.dart",
+    "change": "Use authState.user ?? FirebaseAuth.instance.currentUser for profile setup route visibility.",
+    "authBypass": false
+  },
+  "emailFlow": {
+    "E01_LOGIN_BUTTON_PRESSED": true,
+    "E02_FORM_VALIDATION_PASS": true,
+    "E03_FIREBASE_EMAIL_SIGNIN_STARTED": true,
+    "E03_FIREBASE_EMAIL_CREATE_STARTED": true,
+    "E04_FIREBASE_EMAIL_CREATE_RETURNED": true,
+    "E05_AUTH_STATE_USER_PRESENT": true,
+    "E06_ROUTE_DECISION_STARTED": true,
+    "E07_ROUTE_DECISION_COMPLETE": true,
+    "result": "PASS"
+  },
+  "googleFlow": {
+    "G00_PREVIOUS_GOOGLE_SESSION_CLEAR_STARTED": true,
+    "G00_PREVIOUS_GOOGLE_SESSION_CLEAR_COMPLETE": true,
+    "G01_GOOGLE_BUTTON_PRESSED": true,
+    "G02_ACCOUNT_PICKER_REQUESTED": true,
+    "G03_ACCOUNT_PICKER_RETURNED": true,
+    "G04_ACCOUNT_SELECTED": true,
+    "G05_GOOGLE_AUTH_REQUESTED": true,
+    "G06_GOOGLE_AUTH_RETURNED": true,
+    "G07_ID_TOKEN_PRESENT": true,
+    "G08_ACCESS_TOKEN_PRESENT": true,
+    "G09_FIREBASE_CREDENTIAL_CREATED": true,
+    "G10_FIREBASE_SIGNIN_STARTED": true,
+    "G11_FIREBASE_SIGNIN_RETURNED": true,
+    "G12_AUTH_STATE_USER_PRESENT": true,
+    "G13_ROUTE_DECISION_STARTED": true,
+    "G14_ROUTE_DECISION_COMPLETE": true,
+    "accountPickerVisible": true,
+    "silentAutoPickObserved": false,
+    "routeReachedProfileSetup": true,
+    "result": "PASS"
+  },
+  "rawEvidenceCommitted": false,
+  "rawEvidenceReason": "Raw screenshots/XML contain personal Google account identifiers.",
+  "safety": {
+    "NO_PRODUCTION_READ": true,
+    "NO_PRODUCTION_WRITE": true,
+    "NO_RULES_CHANGE": true,
+    "NO_DEPLOY": true,
+    "NO_STUDENT_PUBLISH": true,
+    "NO_FIREBASE_CONFIG_SWAP": true,
+    "NO_GRADLE_TOUCH": true
+  },
+  "nextGate": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3"
+}

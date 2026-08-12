@@ -380,7 +380,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   @override
   Widget build(BuildContext context) {
     final authState = ref.watch(authNotifierProvider);
-    final user = authState.user;
+    final user = authState.user ?? FirebaseAuth.instance.currentUser;
     final showProfileSetup = widget.forceProfileSetupForTest || user != null;
 
     return Scaffold(
