@@ -1,0 +1,50 @@
+{
+    "verdict":  "RANKCRACKERS_STUDENT_PILLARS_R2B_CRUCIBLE_PACK_REGISTER_PARTIAL_MOVEMENT_PASS",
+    "baseline":  "5252a3f56e84c2a6f843f6e95845d47d6c75fc53",
+    "movement":  {
+                     "syllabusBefore":  "211/417",
+                     "syllabusAfter":  "211/417",
+                     "cruciblePacksBefore":  "0/8",
+                     "cruciblePacksAfter":  "1/8",
+                     "macroReviewedBefore":  "0/7",
+                     "macroReviewedAfter":  "0/7",
+                     "majorReviewedBefore":  "0/1",
+                     "majorReviewedAfter":  "0/1",
+                     "answerKeysBefore":  "0/8",
+                     "answerKeysAfter":  "0/8",
+                     "digibookBefore":  "2/417",
+                     "digibookAfter":  "2/417"
+                 },
+    "registeredSlot":  {
+                           "slotId":  "macro_test_1",
+                           "title":  "Mechanics Foundations Macro Candidate Pack",
+                           "questionCount":  12,
+                           "questionPackReady":  true,
+                           "reviewed":  false,
+                           "answerKeyVerified":  false,
+                           "studentReady":  false
+                       },
+    "modelUsage":  {
+                       "flash":  0,
+                       "pro":  0,
+                       "lite":  0,
+                       "reason":  "Existing repository evidence registration; live model execution blocked by missing Gemini/Vertex credentials."
+                   },
+    "validation":  {
+                       "crucibleR2B":  "PASS",
+                       "fasttrackProgress":  "PASS",
+                       "fasttrackPolicy":  "PASS",
+                       "gradleHash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4"
+                   },
+    "safety":  [
+                   "NO_PRODUCTION_READ",
+                   "NO_PRODUCTION_WRITE",
+                   "NO_RULES_CHANGE",
+                   "NO_DEPLOY",
+                   "NO_STUDENT_PUBLISH",
+                   "NO_FIREBASE_CONFIG_SWAP",
+                   "NO_GRADLE_TOUCH",
+                   "NO_STUDENT_RUNTIME_AI",
+                   "MODEL_OUTPUT_NOT_CANONICAL_TRUTH"
+               ]
+}

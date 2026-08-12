@@ -1,0 +1,79 @@
+{
+  "program": "RANKCRACKERS_STUDENT_PILLARS_R2_FASTTRACK",
+  "baseline": "5252a3f56e84c2a6f843f6e95845d47d6c75fc53",
+  "models": {
+    "factory": "gemini-3.6-flash",
+    "adjudicator": "gemini-3.1-pro-preview",
+    "normalizer": "gemini-3.5-flash-lite"
+  },
+  "execution": {
+    "parallelStreams": true,
+    "maxParallelStreams": 3,
+    "defaultBatchParallelism": 8,
+    "maximumBatchParallelism": 12,
+    "silentFallback": false,
+    "recordActualModel": true,
+    "recordFallbackReason": true
+  },
+  "syllabus": {
+    "totalInventory": 430,
+    "previewEligible": 417,
+    "heldExcluded": 13,
+    "baselineHierarchyVerified": 211,
+    "baselineHierarchyPending": 206,
+    "targetHierarchyVerified": 417,
+    "batchSize": 26,
+    "expectedBatchCount": 8,
+    "maxParallelBatches": 8,
+    "factoryModel": "gemini-3.6-flash",
+    "verifiedCandidateReviewModel": "gemini-3.1-pro-preview",
+    "proReviewRequiredForVerifiedPromotion": true,
+    "allowGuessing": false
+  },
+  "crucible": {
+    "days": 100,
+    "phases": 7,
+    "schedules": 42,
+    "rebuildWindows": 7,
+    "allocatedAtoms": 417,
+    "macroSlots": 7,
+    "majorSlots": 1,
+    "assessmentSlots": 8,
+    "maxParallelSlots": 8,
+    "draftModel": "gemini-3.6-flash",
+    "technicalReviewModel": "gemini-3.1-pro-preview",
+    "answerReviewModel": "gemini-3.1-pro-preview",
+    "studentReadyRequiresReviewedPack": true,
+    "studentReadyRequiresVerifiedAnswerKey": true
+  },
+  "digibook": {
+    "missionAtomDenominator": 417,
+    "baselineApprovedAtoms": 2,
+    "remainingAtoms": 415,
+    "batchSize": 20,
+    "expectedBatchCount": 21,
+    "maxParallelBatches": 8,
+    "draftModel": "gemini-3.6-flash",
+    "reviewModel": "gemini-3.1-pro-preview",
+    "proReviewRequiredForApprovedPromotion": true,
+    "runtimeGenerationAllowed": false
+  },
+  "studentUi": {
+    "liveAiAllowed": false,
+    "localAcademicGuessingAllowed": false,
+    "sourceBackedProjectionOnly": true,
+    "requiredViewportWidths": [320, 360, 393, 412],
+    "physicalSamsungRequired": true,
+    "maxAllowedOverflow": 0,
+    "maxAllowedRedScreens": 0
+  },
+  "safety": {
+    "productionRead": false,
+    "productionWrite": false,
+    "rulesChange": false,
+    "deploy": false,
+    "studentPublish": false,
+    "gradleTouch": false,
+    "modelOutputCanonicalByItself": false
+  }
+}

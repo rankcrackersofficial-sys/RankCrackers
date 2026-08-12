@@ -1,0 +1,115 @@
+{
+    "verdict":  "RANKCRACKERS_STUDENT_PILLARS_R2B_CRUCIBLE_PACK_REGISTER_PARTIAL_MOVEMENT_PASS",
+    "baseline":  "5252a3f56e84c2a6f843f6e95845d47d6c75fc53",
+    "note":  "Existing Mechanics Foundations authored assessment pack is registered as one Macro question-pack candidate. It is not reviewed, not answer-key-verified, not student-ready.",
+    "slots":  [
+                  {
+                      "slotId":  "macro_test_1",
+                      "slotType":  "MACRO",
+                      "phaseId":  "phase_1",
+                      "title":  "Mechanics Foundations Macro Candidate Pack",
+                      "questionCount":  12,
+                      "questionPackReady":  true,
+                      "reviewed":  false,
+                      "answerKeyVerified":  false,
+                      "studentReady":  false,
+                      "questionPackStatus":  "DRAFT_FOR_INDEPENDENT_REVIEW",
+                      "answerContractStatus":  "DRAFT_FOR_INDEPENDENT_REVIEW",
+                      "requestedModel":  "NOT_USED_EXISTING_REPO_ARTIFACT",
+                      "actualModel":  "NOT_USED_EXISTING_REPO_ARTIFACT",
+                      "workload":  "existing_artifact_registration",
+                      "fallbackUsed":  false,
+                      "fallbackReason":  "NOT_APPLICABLE",
+                      "sourceEvidence":  [
+                                             {
+                                                 "sourceType":  "INTERNAL_AUTHORED_ASSESSMENT",
+                                                 "reference":  "docs/assessment/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_ORIGINAL_ITEM_DRAFT_PACK_V1.json"
+                                             },
+                                             {
+                                                 "sourceType":  "INTERNAL_ANSWER_SOLUTION_CONTRACT",
+                                                 "reference":  "docs/assessment/internal/JEE_MAIN_2026_PHYSICS_MECHANICS_FOUNDATIONS_ANSWER_SOLUTION_CONTRACT_V1.json"
+                                             },
+                                             {
+                                                 "sourceType":  "TARGETED_CONSISTENCY_REVIEW",
+                                                 "reference":  "docs/patch_safety/RANKCRACKERS_VS1E_R2_FIX1_targeted_re_review_20260805180500.json"
+                                             }
+                                         ]
+                  },
+                  {
+                      "slotId":  "macro_test_2",
+                      "slotType":  "MACRO",
+                      "phaseId":  "phase_2",
+                      "questionCount":  0,
+                      "questionPackReady":  false,
+                      "reviewed":  false,
+                      "answerKeyVerified":  false,
+                      "studentReady":  false,
+                      "blocker":  "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+                  },
+                  {
+                      "slotId":  "macro_test_3",
+                      "slotType":  "MACRO",
+                      "phaseId":  "phase_3",
+                      "questionCount":  0,
+                      "questionPackReady":  false,
+                      "reviewed":  false,
+                      "answerKeyVerified":  false,
+                      "studentReady":  false,
+                      "blocker":  "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+                  },
+                  {
+                      "slotId":  "macro_test_4",
+                      "slotType":  "MACRO",
+                      "phaseId":  "phase_4",
+                      "questionCount":  0,
+                      "questionPackReady":  false,
+                      "reviewed":  false,
+                      "answerKeyVerified":  false,
+                      "studentReady":  false,
+                      "blocker":  "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+                  },
+                  {
+                      "slotId":  "macro_test_5",
+                      "slotType":  "MACRO",
+                      "phaseId":  "phase_5",
+                      "questionCount":  0,
+                      "questionPackReady":  false,
+                      "reviewed":  false,
+                      "answerKeyVerified":  false,
+                      "studentReady":  false,
+                      "blocker":  "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+                  },
+                  {
+                      "slotId":  "macro_test_6",
+                      "slotType":  "MACRO",
+                      "phaseId":  "phase_6",
+                      "questionCount":  0,
+                      "questionPackReady":  false,
+                      "reviewed":  false,
+                      "answerKeyVerified":  false,
+                      "studentReady":  false,
+                      "blocker":  "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+                  },
+                  {
+                      "slotId":  "macro_test_7",
+                      "slotType":  "MACRO",
+                      "phaseId":  "phase_7",
+                      "questionCount":  0,
+                      "questionPackReady":  false,
+                      "reviewed":  false,
+                      "answerKeyVerified":  false,
+                      "studentReady":  false,
+                      "blocker":  "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+                  },
+                  {
+                      "slotId":  "major_test_final",
+                      "slotType":  "MAJOR",
+                      "questionCount":  0,
+                      "questionPackReady":  false,
+                      "reviewed":  false,
+                      "answerKeyVerified":  false,
+                      "studentReady":  false,
+                      "blocker":  "REVIEWED_FULL_MISSION_QUESTION_POOL_NOT_AVAILABLE"
+                  }
+              ]
+}
