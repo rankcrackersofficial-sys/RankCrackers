@@ -1,0 +1,63 @@
+{
+  "verdict": "RANKCRACKERS_STUDENT_PILLARS_R1_CANONICAL_STATUS_AND_BINDING_AUDIT_PASSED",
+  "baseline": {
+    "startingHead": "e7b70ce40447fe7bb45a900f09f94a70998082a1",
+    "branch": "safety/rc-g2-pre-notification-schema"
+  },
+  "safety": {
+    "NO_PRODUCTION_READ": true,
+    "NO_PRODUCTION_WRITE": true,
+    "NO_RULES_CHANGE": true,
+    "NO_DEPLOY": true,
+    "NO_STUDENT_PUBLISH": true,
+    "NO_FIREBASE_CONFIG_SWAP": true,
+    "NO_SYLLABUS_FABRICATION": true,
+    "NO_HIERARCHY_GUESSING": true,
+    "NO_CRUCIBLE_FAKE_READY": true,
+    "NO_TEST_CONTENT_FABRICATION": true,
+    "NO_DIGIBOOK_BULK_GENERATION": true,
+    "NO_MISSION_VARIABLE_GUESSING": true,
+    "NO_GRADLE_TOUCH": true
+  },
+  "syllabus": {
+    "inventory": {"totalAtoms": null, "previewEligible": null, "heldOrExcluded": null, "sourceProof": []},
+    "hierarchyVerified": {"numerator": null, "denominator": null, "sourceProof": []},
+    "hierarchyPending": {"numerator": null, "denominator": null, "sourceProof": []},
+    "blockers": [],
+    "studentBinding": "BLOCKED",
+    "studentReadiness": "NOT_READY",
+    "surfaceTruth": "BLOCKED_BY_CANONICAL_DATA"
+  },
+  "crucible": {
+    "structure": {"totalDays": null, "phases": null, "schedules": null, "rebuildWindows": null, "macroSlots": null, "majorSlots": null, "missingAtoms": null, "duplicateAtoms": null, "sourceProof": []},
+    "atomAllocation": {"numerator": null, "denominator": null, "sourceProof": []},
+    "reviewedMacroSlots": {"numerator": null, "denominator": null, "sourceProof": []},
+    "reviewedMajorSlots": {"numerator": null, "denominator": null, "sourceProof": []},
+    "questionPacksReady": {"numerator": null, "denominator": null, "sourceProof": []},
+    "answerKeysVerified": {"numerator": null, "denominator": null, "sourceProof": []},
+    "studentBinding": "BLOCKED",
+    "studentReadiness": "NOT_READY",
+    "surfaceTruth": "BLOCKED_BY_REVIEW"
+  },
+  "digibook": {
+    "approvedAtomCoverage": {"numerator": null, "denominator": null, "sourceProof": []},
+    "pilotInventory": {"formulas": null, "misconceptions": null, "workedExamples": null, "selfChecks": null, "sourceProof": []},
+    "studentBinding": "BLOCKED",
+    "studentReadiness": "NOT_READY",
+    "surfaceTruth": "PARTIAL_TRUTHFUL_PREVIEW"
+  },
+  "founderToStudentBinding": [],
+  "missionVariableBinding": [],
+  "adaptiveUi": {
+    "viewports": [
+      {"width": 320, "height": 800, "overflowCount": null, "redScreenCount": null},
+      {"width": 360, "height": 800, "overflowCount": null, "redScreenCount": null},
+      {"width": 393, "height": 873, "overflowCount": null, "redScreenCount": null},
+      {"width": 412, "height": 915, "overflowCount": null, "redScreenCount": null}
+    ],
+    "riskRegister": []
+  },
+  "nextRepairSequence": [],
+  "studentJourneyR4ER3Status": "PENDING",
+  "productionReadiness": "NOT_READY"
+}

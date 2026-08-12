@@ -1,0 +1,457 @@
+{
+  "verdict": "RANKCRACKERS_STUDENT_PILLARS_R1_CANONICAL_STATUS_AND_BINDING_AUDIT_PASSED",
+  "baseline": {
+    "startingHead": "e7b70ce40447fe7bb45a900f09f94a70998082a1",
+    "branch": "safety/rc-g2-pre-notification-schema"
+  },
+  "safety": {
+    "NO_PRODUCTION_READ": true,
+    "NO_PRODUCTION_WRITE": true,
+    "NO_RULES_CHANGE": true,
+    "NO_DEPLOY": true,
+    "NO_STUDENT_PUBLISH": true,
+    "NO_FIREBASE_CONFIG_SWAP": true,
+    "NO_SYLLABUS_FABRICATION": true,
+    "NO_HIERARCHY_GUESSING": true,
+    "NO_CRUCIBLE_FAKE_READY": true,
+    "NO_TEST_CONTENT_FABRICATION": true,
+    "NO_DIGIBOOK_BULK_GENERATION": true,
+    "NO_MISSION_VARIABLE_GUESSING": true,
+    "NO_GRADLE_TOUCH": true
+  },
+  "syllabus": {
+    "inventory": {
+      "totalAtoms": 430,
+      "previewEligible": 417,
+      "heldOrExcluded": 13,
+      "subjectCounts": {
+        "Chemistry": 160,
+        "Mathematics": 92,
+        "Physics": 165
+      },
+      "sourceProof": [
+        {
+          "path": "assets/data/preview/jee_main_2027/syllabus_preview_tree.json",
+          "sourceType": "PREVIEW_ONLY",
+          "note": "current repository source"
+        }
+      ]
+    },
+    "hierarchyVerified": {
+      "numerator": 211,
+      "denominator": 417,
+      "sourceProof": [
+        {
+          "path": "assets/data/preview/jee_main_2027/syllabus_preview_tree.json",
+          "sourceType": "PREVIEW_ONLY",
+          "note": "current repository source"
+        }
+      ]
+    },
+    "hierarchyPending": {
+      "numerator": 206,
+      "denominator": 417,
+      "sourceProof": [
+        {
+          "path": "assets/data/preview/jee_main_2027/syllabus_preview_tree.json",
+          "sourceType": "PREVIEW_ONLY",
+          "note": "current repository source"
+        }
+      ]
+    },
+    "blockers": [
+      {
+        "blocker": "UNIT_SOURCE_MISSING+CHAPTER_SOURCE_MISSING",
+        "count": 163
+      },
+      {
+        "blocker": "SOURCE_AMBIGUOUS",
+        "count": 43
+      }
+    ],
+    "studentBinding": "PARTIAL",
+    "studentReadiness": "NOT_READY",
+    "surfaceTruth": "PARTIAL_TRUTHFUL_PREVIEW",
+    "studentBindingNote": "Student UI can render truthful preview/pending states, but hierarchy is not fully source-resolved."
+  },
+  "crucible": {
+    "structure": {
+      "totalDays": 100,
+      "phases": 7,
+      "schedules": 42,
+      "rebuildWindows": 7,
+      "macroSlots": 7,
+      "majorSlots": 1,
+      "missingAtoms": 0,
+      "duplicateAtoms": 0,
+      "sourceProof": [
+        {
+          "path": "assets/data/preview/jee_main_2027/crucible_preview_plan.json",
+          "sourceType": "PREVIEW_ONLY",
+          "note": "current repository source"
+        }
+      ]
+    },
+    "atomAllocation": {
+      "numerator": 417,
+      "denominator": 417,
+      "sourceProof": [
+        {
+          "path": "assets/data/preview/jee_main_2027/crucible_preview_plan.json",
+          "sourceType": "PREVIEW_ONLY",
+          "note": "current repository source"
+        }
+      ]
+    },
+    "reviewedMacroSlots": {
+      "numerator": 0,
+      "denominator": 7,
+      "sourceProof": [
+        {
+          "path": "assets/data/preview/jee_main_2027/crucible_preview_plan.json",
+          "sourceType": "PREVIEW_ONLY",
+          "note": "current repository source"
+        }
+      ]
+    },
+    "reviewedMajorSlots": {
+      "numerator": 0,
+      "denominator": 1,
+      "sourceProof": [
+        {
+          "path": "assets/data/preview/jee_main_2027/crucible_preview_plan.json",
+          "sourceType": "PREVIEW_ONLY",
+          "note": "current repository source"
+        }
+      ]
+    },
+    "questionPacksReady": {
+      "numerator": 0,
+      "denominator": 8,
+      "sourceProof": [
+        {
+          "path": "assets/data/preview/jee_main_2027/crucible_preview_plan.json",
+          "sourceType": "PREVIEW_ONLY",
+          "note": "current repository source"
+        }
+      ]
+    },
+    "answerKeysVerified": {
+      "numerator": 0,
+      "denominator": 8,
+      "sourceProof": [
+        {
+          "path": "assets/data/preview/jee_main_2027/assessment_preview_manifest.json",
+          "sourceType": "PREVIEW_ONLY",
+          "note": "assessment manifest shows draft independent-review state, not verified answer keys"
+        }
+      ]
+    },
+    "studentBinding": "PARTIAL",
+    "studentReadiness": "NOT_READY",
+    "surfaceTruth": "BLOCKED_BY_REVIEW",
+    "assessmentSlotRegister": [
+      {
+        "slotId": "macro_test_1",
+        "slotType": "MACRO",
+        "phaseId": "phase_1",
+        "questionPackExists": false,
+        "questionCount": 0,
+        "questionSource": "NONE_PROVEN",
+        "reviewed": false,
+        "answerKeyPresent": false,
+        "answerKeyVerified": false,
+        "contentLock": false,
+        "studentReady": false,
+        "blocker": "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+      },
+      {
+        "slotId": "macro_test_2",
+        "slotType": "MACRO",
+        "phaseId": "phase_2",
+        "questionPackExists": false,
+        "questionCount": 0,
+        "questionSource": "NONE_PROVEN",
+        "reviewed": false,
+        "answerKeyPresent": false,
+        "answerKeyVerified": false,
+        "contentLock": false,
+        "studentReady": false,
+        "blocker": "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+      },
+      {
+        "slotId": "macro_test_3",
+        "slotType": "MACRO",
+        "phaseId": "phase_3",
+        "questionPackExists": false,
+        "questionCount": 0,
+        "questionSource": "NONE_PROVEN",
+        "reviewed": false,
+        "answerKeyPresent": false,
+        "answerKeyVerified": false,
+        "contentLock": false,
+        "studentReady": false,
+        "blocker": "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+      },
+      {
+        "slotId": "macro_test_4",
+        "slotType": "MACRO",
+        "phaseId": "phase_4",
+        "questionPackExists": false,
+        "questionCount": 0,
+        "questionSource": "NONE_PROVEN",
+        "reviewed": false,
+        "answerKeyPresent": false,
+        "answerKeyVerified": false,
+        "contentLock": false,
+        "studentReady": false,
+        "blocker": "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+      },
+      {
+        "slotId": "macro_test_5",
+        "slotType": "MACRO",
+        "phaseId": "phase_5",
+        "questionPackExists": false,
+        "questionCount": 0,
+        "questionSource": "NONE_PROVEN",
+        "reviewed": false,
+        "answerKeyPresent": false,
+        "answerKeyVerified": false,
+        "contentLock": false,
+        "studentReady": false,
+        "blocker": "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+      },
+      {
+        "slotId": "macro_test_6",
+        "slotType": "MACRO",
+        "phaseId": "phase_6",
+        "questionPackExists": false,
+        "questionCount": 0,
+        "questionSource": "NONE_PROVEN",
+        "reviewed": false,
+        "answerKeyPresent": false,
+        "answerKeyVerified": false,
+        "contentLock": false,
+        "studentReady": false,
+        "blocker": "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+      },
+      {
+        "slotId": "macro_test_7",
+        "slotType": "MACRO",
+        "phaseId": "phase_7",
+        "questionPackExists": false,
+        "questionCount": 0,
+        "questionSource": "NONE_PROVEN",
+        "reviewed": false,
+        "answerKeyPresent": false,
+        "answerKeyVerified": false,
+        "contentLock": false,
+        "studentReady": false,
+        "blocker": "REVIEWED_QUESTION_POOL_NOT_AVAILABLE"
+      },
+      {
+        "slotId": "major_test_final",
+        "slotType": "MAJOR",
+        "questionPackExists": false,
+        "questionCount": 0,
+        "questionSource": "NONE_PROVEN",
+        "reviewed": false,
+        "answerKeyPresent": false,
+        "answerKeyVerified": false,
+        "contentLock": false,
+        "studentReady": false,
+        "blocker": "REVIEWED_FULL_MISSION_QUESTION_POOL_NOT_AVAILABLE"
+      }
+    ]
+  },
+  "digibook": {
+    "approvedAtomCoverage": {
+      "numerator": 2,
+      "denominator": 417,
+      "sourceProof": [
+        {
+          "path": "assets/data/preview/jee_main_2027/digibook_preview_catalog.json",
+          "sourceType": "PREVIEW_ONLY",
+          "note": "current repository source"
+        }
+      ]
+    },
+    "pilotInventory": {
+      "formulas": 7,
+      "misconceptions": 8,
+      "workedExamples": 7,
+      "selfChecks": 10,
+      "sourceProof": [
+        {
+          "path": "assets/data/preview/jee_main_2027/digibook_preview_catalog.json",
+          "sourceType": "PREVIEW_ONLY",
+          "note": "current repository source"
+        }
+      ]
+    },
+    "studentBinding": "PARTIAL",
+    "studentReadiness": "NOT_READY",
+    "surfaceTruth": "PARTIAL_TRUTHFUL_PREVIEW",
+    "coverageNote": "Mechanics Foundations pilot exists; whole mission coverage remains pending."
+  },
+  "founderToStudentBinding": [
+    {
+      "field": "missionId/displayMission",
+      "canonicalSource": "mission_preview_manifest and student_mission_catalog projection",
+      "projection": "student_mission_catalog semantics",
+      "studentModel": "Recruitment.id/title/examId",
+      "providerOrRepository": "publishedRecruitmentsProvider / FirestoreService",
+      "studentUi": "Mission Realm and Dashboard header",
+      "status": "PARTIAL"
+    },
+    {
+      "field": "examCategory",
+      "canonicalSource": "Founder mission/recruitment source",
+      "projection": "student_mission_catalog.examCategory/missionType",
+      "studentModel": "Recruitment.examCategory",
+      "providerOrRepository": "FirestoreService._studentCatalogDocToRecruitment",
+      "studentUi": "Mission Realm ALL/COMPETITIVE/QUALIFYING filters",
+      "status": "PARTIAL"
+    },
+    {
+      "field": "missionVariables",
+      "canonicalSource": "Founder mission variable packs",
+      "projection": "student_mission_catalog.missionVariables",
+      "studentModel": "Recruitment.missionVariables",
+      "providerOrRepository": "FirestoreService._extractMissionVariables",
+      "studentUi": "Mission Realm MISSION VARIABLES panel",
+      "status": "PARTIAL"
+    },
+    {
+      "field": "syllabus atoms",
+      "canonicalSource": "syllabus_preview_tree.json",
+      "projection": "preview asset only",
+      "studentModel": "preview syllabus models/widgets",
+      "providerOrRepository": "preview data loader path",
+      "studentUi": "Syllabus preview surfaces",
+      "status": "PARTIAL"
+    },
+    {
+      "field": "crucible plan",
+      "canonicalSource": "crucible_preview_plan.json",
+      "projection": "preview asset only",
+      "studentModel": "preview plan models/widgets",
+      "providerOrRepository": "preview data loader path",
+      "studentUi": "Crucible preview surfaces",
+      "status": "PARTIAL"
+    },
+    {
+      "field": "digibook pilot",
+      "canonicalSource": "digibook_preview_catalog.json",
+      "projection": "preview asset only",
+      "studentModel": "preview digibook models/widgets",
+      "providerOrRepository": "preview data loader path",
+      "studentUi": "DigiBook preview surfaces",
+      "status": "PARTIAL"
+    }
+  ],
+  "missionVariableBinding": [
+    {
+      "field": "medium/language",
+      "canonicalSource": "Founder missionVariables.mediumPolicy/supportedMediums/defaultMedium",
+      "projection": "student_mission_catalog.missionVariables",
+      "studentModel": "Recruitment.missionVariables",
+      "providerOrRepository": "FirestoreService._extractMissionVariables",
+      "studentUi": "Mission Realm MEDIUM chip only when source-backed",
+      "status": "PARTIAL"
+    },
+    {
+      "field": "paper",
+      "canonicalSource": "Founder paper_variables",
+      "projection": "student_mission_catalog.missionVariables.paper_variables",
+      "studentModel": "Recruitment.missionVariables",
+      "providerOrRepository": "FirestoreService._extractMissionVariables",
+      "studentUi": "Mission Realm PAPERS chip only when source-backed",
+      "status": "PARTIAL"
+    },
+    {
+      "field": "subject/teaching subject",
+      "canonicalSource": "Founder subject_variables",
+      "projection": "student_mission_catalog.missionVariables.subject_variables",
+      "studentModel": "Recruitment.missionVariables",
+      "providerOrRepository": "FirestoreService._extractMissionVariables",
+      "studentUi": "Mission Realm SUBJECTS chip only when source-backed",
+      "status": "PARTIAL"
+    },
+    {
+      "field": "category",
+      "canonicalSource": "Founder category/examCategory/category_variables",
+      "projection": "student_mission_catalog category + missionVariables",
+      "studentModel": "Recruitment.examCategory + missionVariables",
+      "providerOrRepository": "FirestoreService + MissionRealm category key",
+      "studentUi": "Category filters plus CATEGORY chip only when source-backed",
+      "status": "PARTIAL"
+    },
+    {
+      "field": "variant",
+      "canonicalSource": "Founder variant/variantCode",
+      "projection": "student_mission_catalog.variantCode",
+      "studentModel": "Recruitment.variantCode",
+      "providerOrRepository": "SessionManager.saveMissionIdentity",
+      "studentUi": "Mission selection context, not yet proven across all pillars",
+      "status": "PARTIAL"
+    }
+  ],
+  "adaptiveUi": {
+    "viewports": [
+      {
+        "width": 320,
+        "height": 800,
+        "overflowCount": 0,
+        "redScreenCount": 0
+      },
+      {
+        "width": 360,
+        "height": 800,
+        "overflowCount": 0,
+        "redScreenCount": 0
+      },
+      {
+        "width": 393,
+        "height": 873,
+        "overflowCount": 0,
+        "redScreenCount": 0
+      },
+      {
+        "width": 412,
+        "height": 915,
+        "overflowCount": 0,
+        "redScreenCount": 0
+      }
+    ],
+    "riskRegister": [
+      {
+        "surface": "Dashboard",
+        "risk": "Recent Samsung screenshots showed clipped Sentinel Intel CTA before R3C; requires R4E-R3/R5 device proof after R3D/R3C lineage.",
+        "severity": "MODERATE"
+      },
+      {
+        "surface": "Smart Start Diagnostic Combat",
+        "risk": "Long mission labels previously overflowed; R3C source repair exists but full journey proof remains pending.",
+        "severity": "MODERATE"
+      },
+      {
+        "surface": "Syllabus/Crucible/DigiBook",
+        "risk": "R1 did not run a fresh multi-viewport visual harness; counts are not final premium device proof.",
+        "severity": "MODERATE"
+      }
+    ]
+  },
+  "nextRepairSequence": [
+    "SOURCE TRUTH: resolve 206 pending syllabus hierarchy records from authorized syllabus/notification source or keep pending states.",
+    "CANONICAL MODEL: create source-backed hierarchy resolver/register for Unit and Chapter parent proof.",
+    "PROJECTION: project resolved syllabus hierarchy and Founder mission variables into student-safe branch selection.",
+    "STUDENT MODEL: bind selected mission variables to syllabus/crucible/digibook branch models without hardcoded JEE fallback.",
+    "CRUCIBLE CONTENT: attach reviewed Macro/Major question packs and verified answer/solution evidence before student-ready claim.",
+    "DIGIBOOK EXPANSION: expand from Mechanics Foundations pilot to controlled atom batches with review gates.",
+    "ADAPTIVE UI: run Samsung + 320/360/393/412 visual proof for Dashboard, Syllabus, Crucible, DigiBook.",
+    "DEVICE PROOF: rerun R4E-R3 Samsung canonical mission/dashboard flow."
+  ],
+  "studentJourneyR4ER3Status": "PENDING_AFTER_R3D_R3C_REPAIRS",
+  "productionReadiness": "NOT_READY"
+}
