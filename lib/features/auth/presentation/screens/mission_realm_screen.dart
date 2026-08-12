@@ -132,6 +132,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
           AppRoutes.diagnosticTest,
           extra: {
             'exam': recruitment.examId,
+            'examName': recruitment.title,
             'variant': recruitment.variantCode,
             'state': recruitment.state,
           },

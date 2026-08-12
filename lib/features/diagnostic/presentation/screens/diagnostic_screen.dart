@@ -53,14 +53,15 @@ class _DiagnosticScreenState extends State<DiagnosticScreen> {
       backgroundColor: AppColors.background,
       body: TacticalNoirBackground(
         child: SafeArea(
-          child: _isLoading 
-            ? const Center(child: CircularProgressIndicator(color: AppColors.gold))
-            : Column(
-                children: [
-                  _buildHeader(),
-                  Expanded(child: _buildCombatArea()),
-                ],
-              ),
+          child: _isLoading
+              ? const Center(
+                  child: CircularProgressIndicator(color: AppColors.gold))
+              : Column(
+                  children: [
+                    _buildHeader(),
+                    Expanded(child: _buildCombatArea()),
+                  ],
+                ),
         ),
       ),
     );
@@ -76,12 +77,21 @@ class _DiagnosticScreenState extends State<DiagnosticScreen> {
             icon: const Icon(Icons.close_rounded, color: Colors.white38),
           ),
           const SizedBox(width: 12),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("DIAGNOSTIC COMBAT", style: AppTypography.label),
-              Text(widget.examName, style: AppTypography.hero.copyWith(fontSize: 18)),
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("DIAGNOSTIC COMBAT", style: AppTypography.label),
+                const SizedBox(height: 4),
+                Text(
+                  widget.examName,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style:
+                      AppTypography.hero.copyWith(fontSize: 18, height: 1.08),
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -90,11 +100,21 @@ class _DiagnosticScreenState extends State<DiagnosticScreen> {
 
   Widget _buildCombatArea() {
     if (_questions.isEmpty) {
-      return Center(child: Text("NO COMBAT DATA AVAILABLE", style: AppTypography.label));
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Text(
+            "NO COMBAT DATA AVAILABLE",
+            textAlign: TextAlign.center,
+            style: AppTypography.label,
+          ),
+        ),
+      );
     }
-    
+
     return Center(
-      child: Text("COMBAT READY: ${_questions.length} QUESTIONS", style: AppTypography.hero),
+      child: Text("COMBAT READY: ${_questions.length} QUESTIONS",
+          style: AppTypography.hero),
     );
   }
 }

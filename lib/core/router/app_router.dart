@@ -123,7 +123,8 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) {
         final data = state.extra as Map?;
         return DiagnosticScreen(
-          examName: data?['exam'] ?? 'Universal Diagnostic',
+          examName:
+              data?['examName'] ?? data?['exam'] ?? 'Universal Diagnostic',
           variant: data?['variant'] ?? '',
           state: data?['state'] ?? 'Central',
         );
@@ -134,7 +135,8 @@ final GoRouter appRouter = GoRouter(
       builder: (context, state) {
         final data = state.extra as Map?;
         return DiagnosticScreen(
-          examName: data?['exam'] ?? 'Universal Diagnostic',
+          examName:
+              data?['examName'] ?? data?['exam'] ?? 'Universal Diagnostic',
           variant: data?['variant'] ?? '',
           state: data?['state'] ?? 'Central',
         );
