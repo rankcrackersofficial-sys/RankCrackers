@@ -1,24 +1,75 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 /**
- * 🔱 GEMINI AI SERVICE v2.0
- * Supports tiered model routing (Flash vs Pro).
+ * Gemini AI Service v3.0
+ * Task-aware model routing for backend/offline academic factory work.
  */
 
-// 🔱 RATE LIMITER (In-memory for basic protection)
 let lastRequestTime = 0;
-const MIN_INTERVAL_MS = 1000; // Reduced to 1s for higher throughput
+const MIN_INTERVAL_MS = 1000;
 
-const DEFAULT_PRO_MODEL = "gemini-2.5-pro";
-const DEFAULT_FLASH_MODEL = "gemini-2.5-flash";
+const GEMINI_MODELS = Object.freeze({
+  PRO: "gemini-3.1-pro-preview",
+  FLASH: "gemini-3.6-flash",
+  LITE: "gemini-3.5-flash-lite",
+  FLASH_FALLBACK: "gemini-3.5-flash",
+});
 
-function resolveGeminiModel(modelType = "pro") {
-  const explicitModel = (process.env.RC_VERTEX_MODEL || process.env.RC_GEMINI_MODEL || "").trim();
-  if (explicitModel) return explicitModel;
-  return modelType === "flash" ? DEFAULT_FLASH_MODEL : DEFAULT_PRO_MODEL;
+function cleanEnv(name) {
+  const value = process.env[name];
+  return typeof value === "string" && value.trim() ? value.trim() : null;
 }
 
-async function callGemini(prompt, modelType = "pro") {
+function normalizeGeminiWorkload(workload = "factoryFlash") {
+  if (workload === "pro") return "deepReasoningPro";
+  if (workload === "flash") return "factoryFlash";
+  if (workload === "lite") return "bulkLite";
+  return workload || "factoryFlash";
+}
+
+function resolveGeminiModel(workload = "factoryFlash") {
+  const compatibilityOverride = cleanEnv("RC_VERTEX_MODEL") || cleanEnv("RC_GEMINI_MODEL");
+  if (compatibilityOverride) {
+    return {
+      model: compatibilityOverride,
+      source: "compatibility_override",
+      workload: normalizeGeminiWorkload(workload),
+      fallbackUsed: false,
+    };
+  }
+
+  const normalized = normalizeGeminiWorkload(workload);
+
+  if (normalized === "deepReasoningPro") {
+    const override = cleanEnv("RC_VERTEX_MODEL_PRO");
+    return {
+      model: override || GEMINI_MODELS.PRO,
+      source: override ? "task_override" : "policy_default",
+      workload: normalized,
+      fallbackUsed: false,
+    };
+  }
+
+  if (normalized === "bulkLite") {
+    const override = cleanEnv("RC_VERTEX_MODEL_LITE");
+    return {
+      model: override || GEMINI_MODELS.LITE,
+      source: override ? "task_override" : "policy_default",
+      workload: normalized,
+      fallbackUsed: false,
+    };
+  }
+
+  const override = cleanEnv("RC_VERTEX_MODEL_FLASH");
+  return {
+    model: override || GEMINI_MODELS.FLASH,
+    source: override ? "task_override" : "policy_default",
+    workload: "factoryFlash",
+    fallbackUsed: false,
+  };
+}
+
+async function callGemini(prompt, workload = "factoryFlash") {
   const now = Date.now();
   if (now - lastRequestTime < MIN_INTERVAL_MS) {
     const wait = MIN_INTERVAL_MS - (now - lastRequestTime);
@@ -30,15 +81,14 @@ async function callGemini(prompt, modelType = "pro") {
   if (!apiKey) throw new Error("GEMINI_API_KEY_MISSING");
 
   const genAI = new GoogleGenerativeAI(apiKey);
-  const modelName = resolveGeminiModel(modelType);
+  const modelResolution = resolveGeminiModel(workload);
 
   try {
     const model = genAI.getGenerativeModel({
-        model: modelName,
-        generationConfig: {
-            responseMimeType: "application/json",
-            temperature: 0.1,
-        }
+      model: modelResolution.model,
+      generationConfig: {
+        responseMimeType: "application/json",
+      },
     });
 
     const result = await model.generateContent(prompt);
@@ -48,30 +98,29 @@ async function callGemini(prompt, modelType = "pro") {
     if (!text) throw new Error("GEMINI_EMPTY_RESPONSE");
 
     return text;
-
   } catch (error) {
-    console.error(`🔱 GEMINI API ERROR (${modelType}):`, error.message);
+    console.error(`GEMINI API ERROR (${modelResolution.workload}/${modelResolution.model}):`, error.message);
     throw new Error(`GEMINI_FAILURE: ${error.message}`);
   }
 }
 
-/**
- * 🔱 WORKHORSE LAYER (High Volume / Low Cost)
- */
 async function callFlash(prompt) {
-    return await callGemini(prompt, "flash");
+  return await callGemini(prompt, "factoryFlash");
 }
 
-/**
- * 🔱 STRATEGIC LAYER (High Quality / Complex Tasks)
- */
+async function callLite(prompt) {
+  return await callGemini(prompt, "bulkLite");
+}
+
 async function callPro(prompt) {
-    return await callGemini(prompt, "pro");
+  return await callGemini(prompt, "deepReasoningPro");
 }
 
 module.exports = {
   callGemini,
   callFlash,
+  callLite,
   callPro,
-  resolveGeminiModel
+  resolveGeminiModel,
+  GEMINI_MODELS,
 };

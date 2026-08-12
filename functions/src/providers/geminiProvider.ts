@@ -6,19 +6,26 @@ const genAI = new GoogleGenerativeAI(
   process.env.GEMINI_API_KEY!,
 );
 
+function cleanEnv(name: string): string | null {
+  const value = process.env[name];
+  return typeof value === 'string' && value.trim() ? value.trim() : null;
+}
+
 function resolveGeminiProviderModel(): string {
   return (
-    process.env.RC_VERTEX_MODEL ||
-    process.env.RC_GEMINI_MODEL ||
-    'gemini-2.5-pro'
-  ).trim();
+    cleanEnv('RC_VERTEX_MODEL') ||
+    cleanEnv('RC_GEMINI_MODEL') ||
+    cleanEnv('RC_VERTEX_MODEL_FLASH') ||
+    'gemini-3.6-flash'
+  );
 }
 
 export async function generateGemini(
   prompt: string,
 ) {
+  const modelName = resolveGeminiProviderModel();
   const model = genAI.getGenerativeModel({
-    model: resolveGeminiProviderModel(),
+    model: modelName,
   });
 
   const result = await model.generateContent(
@@ -29,5 +36,6 @@ export async function generateGemini(
 
   return {
     text: response,
+    model: modelName,
   };
 }

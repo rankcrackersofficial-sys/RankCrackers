@@ -1,0 +1,50 @@
+{
+    "verdict":  "RANKCRACKERS_VERTEX_GEMINI_3X_TASK_AWARE_MODEL_ROUTING_PASSED",
+    "baseline":  "e09201efefc82d63ca6c6a027ee86c2c27cd8312",
+    "defaults":  {
+                     "deepReasoningPro":  "gemini-3.1-pro-preview",
+                     "factoryFlash":  "gemini-3.6-flash",
+                     "bulkLite":  "gemini-3.5-flash-lite",
+                     "intermediateFlash":  "gemini-3.5-flash"
+                 },
+    "overrides":  {
+                      "compatibility":  [
+                                            "RC_VERTEX_MODEL",
+                                            "RC_GEMINI_MODEL"
+                                        ],
+                      "taskSpecific":  [
+                                           "RC_VERTEX_MODEL_PRO",
+                                           "RC_VERTEX_MODEL_FLASH",
+                                           "RC_VERTEX_MODEL_LITE"
+                                       ]
+                  },
+    "validation":  {
+                       "vertex3xPolicy":  "PASS",
+                       "jsonParse":  "PASS",
+                       "nodeCheckGeminiService":  "PASS",
+                       "nodeCheckGeminiProvider":  "PASS",
+                       "resolverDefaultAndOverride":  "PASS",
+                       "r2ValidatorsPyCompile":  "PASS",
+                       "forbiddenModelAudit":  "PASS_ONLY_VALIDATOR_FORBIDDEN_LIST_REFERENCES"
+                   },
+    "sdkAudit":  {
+                     "deprecatedGoogleCloudVertexAiFound":  false,
+                     "googleGenAiFound":  false,
+                     "currentPackage":  "@google/generative-ai",
+                     "packageLockPresent":  false,
+                     "migrationPerformed":  false
+                 },
+    "safety":  [
+                   "NO_PRODUCTION_READ",
+                   "NO_PRODUCTION_WRITE",
+                   "NO_RULES_CHANGE",
+                   "NO_DEPLOY",
+                   "NO_STUDENT_PUBLISH",
+                   "NO_FIREBASE_CONFIG_SWAP",
+                   "NO_GRADLE_TOUCH",
+                   "NO_STUDENT_RUNTIME_AI",
+                   "MODEL_OUTPUT_NOT_CANONICAL_TRUTH",
+                   "REVIEW_REQUIRED_BEFORE_STUDENT_DELIVERY",
+                   "SILENT_MODEL_FALLBACK_DISABLED"
+               ]
+}

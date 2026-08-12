@@ -1,9 +1,48 @@
 {
   "enabled": true,
   "modelSelection": {
-    "source": "environment",
-    "environmentVariable": "RC_VERTEX_MODEL",
-    "allowHigherCapabilityTier": true
+    "source": "task_aware_environment_policy",
+    "allowHigherCapabilityTier": true,
+    "defaults": {
+      "deepReasoningPro": "gemini-3.1-pro-preview",
+      "factoryFlash": "gemini-3.6-flash",
+      "bulkLite": "gemini-3.5-flash-lite",
+      "intermediateFlash": "gemini-3.5-flash"
+    },
+    "taskOverrides": {
+      "deepReasoningPro": "RC_VERTEX_MODEL_PRO",
+      "factoryFlash": "RC_VERTEX_MODEL_FLASH",
+      "bulkLite": "RC_VERTEX_MODEL_LITE"
+    },
+    "compatibilityOverrides": [
+      "RC_VERTEX_MODEL",
+      "RC_GEMINI_MODEL"
+    ],
+    "fallbackPolicy": {
+      "proUnavailable": "gemini-3.6-flash",
+      "flashUnavailable": "gemini-3.5-flash",
+      "silentFallbackAllowed": false,
+      "fallbackMustBeRecorded": true
+    }
+  },
+  "taskRouting": {
+    "syllabusOfficialSourceExtraction": "factoryFlash",
+    "syllabusHierarchyCandidate": "factoryFlash",
+    "syllabusHierarchyAmbiguityAdjudication": "deepReasoningPro",
+    "syllabusHierarchyConflictResolution": "deepReasoningPro",
+    "crucibleQuestionDraft": "factoryFlash",
+    "crucibleDistractorDraft": "factoryFlash",
+    "crucibleTechnicalReview": "deepReasoningPro",
+    "crucibleAnswerCrossCheck": "deepReasoningPro",
+    "digibookConceptDraft": "factoryFlash",
+    "digibookFormulaCandidate": "factoryFlash",
+    "digibookMisconceptionDraft": "factoryFlash",
+    "digibookWorkedExampleDraft": "factoryFlash",
+    "digibookSourceAdjudication": "deepReasoningPro",
+    "digibookFinalCrossCheck": "deepReasoningPro",
+    "metadataNormalization": "bulkLite",
+    "jsonNormalization": "bulkLite",
+    "simpleClassification": "bulkLite"
   },
   "allowedUses": [
     "official_source_extraction_assistance",
@@ -25,6 +64,10 @@
     "englishFirstOfficialSources": true,
     "sourceGroundingRequired": true,
     "reviewRequiredBeforeStudentDelivery": true,
-    "modelOutputIsCanonicalTruth": false
+    "modelOutputIsCanonicalTruth": false,
+    "studentRuntimeAiAllowed": false,
+    "proPreviewIsSinglePointOfFailure": false,
+    "recordActualModelPerArtifact": true,
+    "recordFallbackPerArtifact": true
   }
 }

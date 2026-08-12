@@ -166,7 +166,7 @@ exports.structuralWorker = functions
         type: 'STRUCTURAL',
         status: 'success',
         tokens: estTokens,
-        model: usedFallback ? 'rule-based' : 'gemini-2.5-flash',
+        model: usedFallback ? 'rule-based' : 'backend_policy_controlled_gemini_factory_flash',
         latencyMs: latencyMs,
         workflowId: workflowId,
         correlationId: correlationId,
