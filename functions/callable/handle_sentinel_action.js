@@ -4,6 +4,57 @@ const crypto = require("crypto");
 const { logFounderActivity } = require("../services/audit_service");
 const { getLifecycleBlueprint } = require("../helpers/blueprints");
 const { validateOrResolveId } = require("../canonical_mission_registry");
+const MISSION_VARIABLE_PACK_KEYS = [
+  'vacancy_variables',
+  'eligibility_variables',
+  'paper_variables',
+  'category_variables',
+  'subject_variables',
+  'department_variables',
+  'fee_variables',
+  'date_variables',
+  'relaxation_variables',
+  'link_variables',
+  'amendment_variables',
+];
+
+function cloneJsonValue(value) {
+  if (value === undefined || value === null) return undefined;
+  try {
+    return JSON.parse(JSON.stringify(value));
+  } catch (_) {
+    return undefined;
+  }
+}
+
+function mergeVariableMap(target, value) {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return;
+  for (const [key, entry] of Object.entries(value)) {
+    if (entry !== undefined && entry !== null) target[key] = cloneJsonValue(entry);
+  }
+}
+
+function collectMissionVariables(...sources) {
+  const variables = {};
+  for (const source of sources) {
+    if (!source || typeof source !== 'object') continue;
+    mergeVariableMap(variables, source.missionVariables);
+    mergeVariableMap(variables, source.mission_variables);
+    mergeVariableMap(variables, source.variablePacks);
+    mergeVariableMap(variables, source.variable_packs);
+    mergeVariableMap(variables, source.variables);
+    for (const key of MISSION_VARIABLE_PACK_KEYS) {
+      const value = source[key];
+      if (Array.isArray(value) && value.length > 0) variables[key] = cloneJsonValue(value);
+      else if (value && typeof value === 'object' && Object.keys(value).length > 0) variables[key] = cloneJsonValue(value);
+    }
+    for (const key of ['mediumPolicy', 'supportedMediums', 'defaultMedium']) {
+      const value = source[key];
+      if (value !== undefined && value !== null && String(value).trim() !== '') variables[key] = cloneJsonValue(value);
+    }
+  }
+  return variables;
+}
 function normalizeMissionCategory(value) {
   const raw = String(value || '').trim().toLowerCase();
   if (raw === 'competitive') return 'competitive';
@@ -759,6 +810,7 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
     organizationCode: orgCode,
     priority: realmData.priority || recruitmentData.priority || 5,
     sortOrder: realmData.priority || recruitmentData.priority || 5,
+    missionVariables: collectMissionVariables(realmData, recruitmentData),
     source: {
       missionRealmPath: `mission_realms/${realmId}`,
       mirroredBy: 'handleSentinelAction',

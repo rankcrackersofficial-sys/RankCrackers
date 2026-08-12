@@ -1,21 +1,27 @@
 import 'package:equatable/equatable.dart';
 
+Map<String, dynamic> _asStringDynamicMap(dynamic value) {
+  if (value is Map) return Map<String, dynamic>.from(value);
+  return const {};
+}
+
 /// 🔱 RECRUITMENT LAW: The Mission Identity.
 /// Repesents an official recruitment (e.g., REET 2024, RAS 2025).
 class Recruitment extends Equatable {
   final String id;
   final String recruitmentGroupId;
-  final String boardId; 
+  final String boardId;
   final String examId;
   final String examBlueprintId;
   final String title;
   final String titleHindi;
   final int year;
   final String state;
-  final String examCategory; 
-  final String status; 
-  final double examDifficulty; 
+  final String examCategory;
+  final String status;
+  final double examDifficulty;
   final String variantCode;
+  final Map<String, dynamic> missionVariables;
   final String version;
   final DateTime? examDate;
 
@@ -33,6 +39,7 @@ class Recruitment extends Equatable {
     this.status = 'draft',
     this.examDifficulty = 0.6,
     this.variantCode = '',
+    this.missionVariables = const {},
     this.version = '1.0.0',
     this.examDate,
   });
@@ -52,6 +59,7 @@ class Recruitment extends Equatable {
       'status': status,
       'examDifficulty': examDifficulty,
       'variantCode': variantCode,
+      'missionVariables': missionVariables,
       'version': version,
       'examDate': examDate?.toIso8601String(),
     };
@@ -72,8 +80,10 @@ class Recruitment extends Equatable {
       status: map['status'] ?? 'draft',
       examDifficulty: (map['examDifficulty'] ?? 0.6).toDouble(),
       variantCode: map['variantCode'] ?? '',
+      missionVariables: _asStringDynamicMap(map['missionVariables']),
       version: map['version'] ?? '1.0.0',
-      examDate: map['examDate'] != null ? DateTime.parse(map['examDate']) : null,
+      examDate:
+          map['examDate'] != null ? DateTime.parse(map['examDate']) : null,
     );
   }
 
@@ -91,6 +101,7 @@ class Recruitment extends Equatable {
     String? status,
     double? examDifficulty,
     String? variantCode,
+    Map<String, dynamic>? missionVariables,
     String? version,
     DateTime? examDate,
   }) {
@@ -108,11 +119,13 @@ class Recruitment extends Equatable {
       status: status ?? this.status,
       examDifficulty: examDifficulty ?? this.examDifficulty,
       variantCode: variantCode ?? this.variantCode,
+      missionVariables: missionVariables ?? this.missionVariables,
       version: version ?? this.version,
       examDate: examDate ?? this.examDate,
     );
   }
 
   @override
-  List<Object?> get props => [id, examId, title, year, status];
+  List<Object?> get props =>
+      [id, examId, title, year, status, missionVariables];
 }

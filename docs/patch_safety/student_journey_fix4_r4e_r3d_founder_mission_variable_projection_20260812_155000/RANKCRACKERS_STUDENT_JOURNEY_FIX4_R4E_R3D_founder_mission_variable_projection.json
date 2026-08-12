@@ -1,0 +1,35 @@
+{
+    "startingHead":  "5ac5a3fa4f0d0280de68421404256da6ef5b3113",
+    "validations":  {
+                        "backfillNodeCheck":  "PASS",
+                        "contractTests":  "PASS_6_OF_6",
+                        "flutterAnalyzeTargeted":  "PASS",
+                        "dartFormat":  "PASS",
+                        "callableNodeCheck":  "PASS"
+                    },
+    "nextGate":  "RANKCRACKERS_STUDENT_PILLARS_R1_CANONICAL_STATUS_AND_BINDING_AUDIT",
+    "verdict":  "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3D_FOUNDER_MISSION_VARIABLE_PROJECTION_CONTRACT_REPAIR_PASSED",
+    "acceptedScope":  "code_contract_static_validation_only",
+    "safety":  {
+                   "noFakeDashboardData":  true,
+                   "noFirebaseConfigSwap":  true,
+                   "noProductionRead":  true,
+                   "noGradleTouch":  true,
+                   "noDeploy":  true,
+                   "noProductionWrite":  true,
+                   "noStudentPublish":  true,
+                   "noCategoryGuessing":  true,
+                   "noRulesChange":  true
+               },
+    "preservedGradleHash":  "4319efa3f9e08cc36fa19ee480112de9edb938f4",
+    "knownUnrelatedDirtyFile":  "android/app/build.gradle.kts",
+    "implementation":  {
+                           "firestoreStudentCatalogExtraction":  true,
+                           "backfillCatalogProjection":  true,
+                           "callableCatalogShellProjection":  true,
+                           "missionRealmVariablePanel":  true,
+                           "recruitmentModelMissionVariables":  true,
+                           "sourceBackedChipsOnly":  true,
+                           "pendingStateWhenNoFounderVariables":  true
+                       }
+}

@@ -296,6 +296,61 @@ class FirestoreService {
     });
   }
 
+  static const List<String> _missionVariablePackKeys = [
+    'vacancy_variables',
+    'eligibility_variables',
+    'paper_variables',
+    'category_variables',
+    'subject_variables',
+    'department_variables',
+    'fee_variables',
+    'date_variables',
+    'relaxation_variables',
+    'link_variables',
+    'amendment_variables',
+  ];
+
+  static Map<String, dynamic> _extractMissionVariables(
+    Map<String, dynamic> data,
+  ) {
+    final variables = <String, dynamic>{};
+
+    void mergeMap(dynamic value) {
+      if (value is Map) {
+        value.forEach((key, entry) {
+          if (entry != null) variables[key.toString()] = entry;
+        });
+      }
+    }
+
+    mergeMap(data['missionVariables']);
+    mergeMap(data['mission_variables']);
+    mergeMap(data['variablePacks']);
+    mergeMap(data['variable_packs']);
+    mergeMap(data['variables']);
+
+    for (final key in _missionVariablePackKeys) {
+      final value = data[key];
+      if (value is List && value.isNotEmpty) variables[key] = value;
+      if (value is Map && value.isNotEmpty) variables[key] = value;
+    }
+
+    final mediumPolicy = data['mediumPolicy'];
+    if (mediumPolicy != null && mediumPolicy.toString().trim().isNotEmpty) {
+      variables['mediumPolicy'] = mediumPolicy;
+    }
+    final supportedMediums = data['supportedMediums'];
+    if (supportedMediums is List && supportedMediums.isNotEmpty) {
+      variables['supportedMediums'] = supportedMediums;
+    }
+    final defaultMedium = data['defaultMedium'];
+    if (defaultMedium != null && defaultMedium.toString().trim().isNotEmpty) {
+      variables['defaultMedium'] = defaultMedium;
+    }
+
+    return variables;
+  }
+
   static Recruitment _studentCatalogDocToRecruitment(
       String docId, Map<String, dynamic> data) {
     final title =
@@ -330,6 +385,7 @@ class FirestoreService {
       status: (data['status'] ?? 'CATALOG_VISIBLE').toString(),
       examDifficulty: 0.6,
       variantCode: (data['variantCode'] ?? missionId).toString(),
+      missionVariables: _extractMissionVariables(data),
       version: 'student_mission_catalog',
     );
   }

@@ -604,6 +604,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                   size: 16),
             ),
           ),
+          if (isExpanded) _buildMissionVariablePanel(recruitment),
           if (isExpanded) _buildMissionActionButtons(recruitment),
         ],
       ),
@@ -646,6 +647,109 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
         },
       ),
     );
+  }
+
+  Widget _buildMissionVariablePanel(Recruitment recruitment) {
+    final chips = _missionVariableChips(recruitment.missionVariables);
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: const Color(0xFF0D121C).withValues(alpha: 0.78),
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: AppColors.borderSoft),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'MISSION VARIABLES',
+              style: AppTypography.label.copyWith(
+                color: AppColors.gold,
+                fontSize: 8,
+                letterSpacing: 1.1,
+              ),
+            ),
+            const SizedBox(height: 8),
+            if (chips.isEmpty)
+              Text(
+                'Mission variables pending Founder projection',
+                style: AppTypography.body.copyWith(
+                  color: Colors.white38,
+                  fontSize: 10,
+                ),
+              )
+            else
+              Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: chips,
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  List<Widget> _missionVariableChips(Map<String, dynamic> variables) {
+    final specs = <String, String>{
+      'mediumPolicy': 'MEDIUM',
+      'supportedMediums': 'MEDIUM',
+      'paper_variables': 'PAPERS',
+      'subject_variables': 'SUBJECTS',
+      'vacancy_variables': 'VACANCY',
+      'eligibility_variables': 'ELIGIBILITY',
+      'category_variables': 'CATEGORY',
+      'department_variables': 'DEPARTMENTS',
+      'date_variables': 'DATES',
+      'fee_variables': 'FEES',
+    };
+
+    final labels = <String>{};
+    for (final entry in specs.entries) {
+      final value = variables[entry.key];
+      if (_studentVariableValue(value)) {
+        labels.add(entry.value);
+      }
+    }
+
+    return labels
+        .map(
+          (label) => Container(
+            padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 6),
+            decoration: BoxDecoration(
+              color: AppColors.gold.withValues(alpha: 0.1),
+              borderRadius: BorderRadius.circular(999),
+              border: Border.all(color: AppColors.gold.withValues(alpha: 0.35)),
+            ),
+            child: Text(
+              label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: AppTypography.label.copyWith(
+                color: AppColors.gold,
+                fontSize: 7,
+                letterSpacing: 0.7,
+              ),
+            ),
+          ),
+        )
+        .toList();
+  }
+
+  int _variablePackCount(dynamic value) {
+    if (value is Map) return value.values.where(_studentVariableValue).length;
+    if (value is Iterable) return value.where(_studentVariableValue).length;
+    return _studentVariableValue(value) ? 1 : 0;
+  }
+
+  bool _studentVariableValue(dynamic value) {
+    if (value == null) return false;
+    if (value is String) return value.trim().isNotEmpty;
+    if (value is num || value is bool) return true;
+    return _variablePackCount(value) > 0;
   }
 
   Widget _missionActionButton({

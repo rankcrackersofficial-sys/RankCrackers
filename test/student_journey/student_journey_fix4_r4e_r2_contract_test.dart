@@ -68,6 +68,29 @@ void main() {
     expect(firestore, contains("data['missionType']"));
   });
 
+  test('Founder mission variables are projected without local guessing', () {
+    final model = File('lib/core/models/recruitment.dart').readAsStringSync();
+    final firestore =
+        File('lib/core/firebase/firestore_service.dart').readAsStringSync();
+    final missionRealm = File(missionRealmPath).readAsStringSync();
+    final callable =
+        File('functions/callable/handle_sentinel_action.js').readAsStringSync();
+    final backfill = File('functions/backfill_student_mission_catalog.js')
+        .readAsStringSync();
+
+    expect(model, contains('missionVariables'));
+    expect(firestore, contains('_extractMissionVariables'));
+    expect(firestore, contains("'subject_variables'"));
+    expect(firestore, contains("'paper_variables'"));
+    expect(firestore, contains("data['variablePacks']"));
+    expect(callable, contains('collectMissionVariables'));
+    expect(backfill, contains('collectMissionVariables'));
+    expect(missionRealm, contains('MISSION VARIABLES'));
+    expect(
+        missionRealm, contains('Mission variables pending Founder projection'));
+    expect(missionRealm, contains("'subject_variables': 'SUBJECTS'"));
+    expect(missionRealm, contains("'paper_variables': 'PAPERS'"));
+  });
   test('Dashboard missing evidence is not rendered as fake zero or LOW', () {
     final dashboard = File(dashboardPath).readAsStringSync();
     final header = File(commandHeaderPath).readAsStringSync();

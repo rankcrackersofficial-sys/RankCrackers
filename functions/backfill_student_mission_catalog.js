@@ -190,6 +190,7 @@ function buildCatalogPayload(id, data, now) {
         organizationCode: orgCode,
         priority: data.priority || 5,
         sortOrder: data.priority || 5,
+        missionVariables: collectMissionVariables(data),
         source: {
             missionRealmPath: `mission_realms/${id}`,
             mirroredBy: 'backfill_student_mission_catalog',
@@ -217,6 +218,54 @@ if (require.main === module) {
 }
 
 
+const MISSION_VARIABLE_PACK_KEYS = [
+    'vacancy_variables',
+    'eligibility_variables',
+    'paper_variables',
+    'category_variables',
+    'subject_variables',
+    'department_variables',
+    'fee_variables',
+    'date_variables',
+    'relaxation_variables',
+    'link_variables',
+    'amendment_variables',
+];
+
+function cloneJsonValue(value) {
+    if (value === undefined || value === null) return undefined;
+    try {
+        return JSON.parse(JSON.stringify(value));
+    } catch (_) {
+        return undefined;
+    }
+}
+
+function mergeVariableMap(target, value) {
+    if (!value || typeof value !== 'object' || Array.isArray(value)) return;
+    for (const [key, entry] of Object.entries(value)) {
+        if (entry !== undefined && entry !== null) target[key] = cloneJsonValue(entry);
+    }
+}
+
+function collectMissionVariables(data = {}) {
+    const variables = {};
+    mergeVariableMap(variables, data.missionVariables);
+    mergeVariableMap(variables, data.mission_variables);
+    mergeVariableMap(variables, data.variablePacks);
+    mergeVariableMap(variables, data.variable_packs);
+    mergeVariableMap(variables, data.variables);
+    for (const key of MISSION_VARIABLE_PACK_KEYS) {
+        const value = data[key];
+        if (Array.isArray(value) && value.length > 0) variables[key] = cloneJsonValue(value);
+        else if (value && typeof value === 'object' && Object.keys(value).length > 0) variables[key] = cloneJsonValue(value);
+    }
+    for (const key of ['mediumPolicy', 'supportedMediums', 'defaultMedium']) {
+        const value = data[key];
+        if (value !== undefined && value !== null && String(value).trim() !== '') variables[key] = cloneJsonValue(value);
+    }
+    return variables;
+}
 function normalizeMissionCategory(value) {
     const raw = String(value || '').trim().toLowerCase();
     if (raw === 'competitive') return 'competitive';
