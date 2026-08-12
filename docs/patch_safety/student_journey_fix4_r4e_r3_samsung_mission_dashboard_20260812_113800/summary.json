@@ -1,0 +1,87 @@
+{
+  "verdict": "RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3_BLOCKED_BY_EXTERNAL_DEVICE_INTERRUPTION_AFTER_PARTIAL_MISSION_REALM_PASS",
+  "baselineHead": "a5bee58df901436f59cc7430d95d136613910620",
+  "device": {
+    "model": "Samsung SM-S911B",
+    "serial": "RZCW12FBFXZ"
+  },
+  "backend": {
+    "mode": "FIREBASE_EMULATOR_NON_PRODUCTION_ONLY",
+    "auth": "127.0.0.1:9099 via adb reverse",
+    "firestore": "127.0.0.1:8080 via adb reverse",
+    "productionRead": false,
+    "productionWrite": false
+  },
+  "lineage": {
+    "currentBranch": "safety/rc-g2-pre-notification-schema",
+    "currentHeadAtGateStart": "a5bee58df901436f59cc7430d95d136613910620",
+    "c400996IsAncestorOfA5bee58": true,
+    "historyRewrite": false
+  },
+  "missionFixture": {
+    "seedRoute": "BACKEND_ADMIN_SDK_TO_FIRESTORE_EMULATOR_ONLY",
+    "writtenCount": 3,
+    "readBackCount": 3,
+    "missions": [
+      {
+        "realmId": "jee_main_2026",
+        "displayName": "JEE Main 2027",
+        "category": null,
+        "renderedCategory": "CATEGORY PENDING VERIFICATION"
+      },
+      {
+        "realmId": "neet_(ug)-2027",
+        "displayName": "NEET (UG)-2027",
+        "category": null,
+        "renderedCategory": "CATEGORY PENDING VERIFICATION"
+      },
+      {
+        "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "displayName": "RPSC 1st Grade",
+        "category": null,
+        "renderedCategory": "CATEGORY PENDING VERIFICATION"
+      }
+    ]
+  },
+  "partialMissionRealmProof": {
+    "missionRealmVisible": true,
+    "availableMissionsVisible": true,
+    "categoryPendingVisible": true,
+    "exactMissionsVisible": 3,
+    "syntheticFallbackObserved": false,
+    "guessedCompetitiveQualifyingGroupingObserved": false,
+    "rawBackendIdsObservedInPrimaryCards": false,
+    "mojibakeObserved": false,
+    "logoutVisible": true,
+    "smartStartVisible": true,
+    "quickStartVisible": true
+  },
+  "blocked": {
+    "reason": "Samsung foreground switched to external Phone/In-call UI before Dashboard validation could complete.",
+    "foregroundPackageAtBlocker": "com.samsung.android.incallui",
+    "rankCrackersProductFailure": false,
+    "unsafeCallScreenInteractionPerformed": false
+  },
+  "notValidated": [
+    "JEE Quick Start Dashboard context",
+    "NEET mission switch Dashboard context",
+    "RPSC Dashboard context",
+    "Dashboard truth audit",
+    "Android back navigation",
+    "continuous video proof"
+  ],
+  "safety": {
+    "NO_AUTH_BYPASS": true,
+    "NO_PRODUCTION_READ": true,
+    "NO_PRODUCTION_WRITE": true,
+    "NO_RULES_CHANGE": true,
+    "NO_DEPLOY": true,
+    "NO_STUDENT_PUBLISH": true,
+    "NO_FIREBASE_CONFIG_SWAP": true,
+    "NO_MISSION_FABRICATION": true,
+    "NO_CATEGORY_GUESSING": true,
+    "NO_FAKE_DASHBOARD_DATA": true,
+    "NO_GRADLE_TOUCH": true
+  },
+  "nextAction": "Rerun RANKCRACKERS_STUDENT_JOURNEY_FIX4_R4E_R3 after Samsung external overlay/call screen is cleared."
+}
