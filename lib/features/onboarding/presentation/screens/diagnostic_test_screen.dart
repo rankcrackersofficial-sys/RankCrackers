@@ -44,7 +44,8 @@ class DiagnosticTestScreen extends ConsumerStatefulWidget {
   const DiagnosticTestScreen({super.key});
 
   @override
-  ConsumerState<DiagnosticTestScreen> createState() => _DiagnosticTestScreenState();
+  ConsumerState<DiagnosticTestScreen> createState() =>
+      _DiagnosticTestScreenState();
 }
 
 class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
@@ -80,7 +81,9 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
         _loadUniversalDiagnostic();
       } else {
         setState(() {
-          questions = snapshot.docs.map((doc) => DiagnosticQuestion.fromMap(doc.data(), doc.id)).toList();
+          questions = snapshot.docs
+              .map((doc) => DiagnosticQuestion.fromMap(doc.data(), doc.id))
+              .toList();
           isLoading = false;
         });
       }
@@ -94,11 +97,19 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
       questions = [
         DiagnosticQuestion(
           id: 'universal_1',
-          questionText: "Which of the following is essential for high-velocity learning?",
-          options: ["Passive Reading", "Active Recall", "Massive Highlighting", "Rote Memorization"],
+          questionText:
+              "Which of the following is essential for high-velocity learning?",
+          options: [
+            "Passive Reading",
+            "Active Recall",
+            "Massive Highlighting",
+            "Rote Memorization"
+          ],
           correctOptionIndex: 1,
-          explanation: "Active Recall forces the brain to retrieve information, strengthening neural pathways.",
-          conceptInsight: "RankCrackers utilizes active recall to ensure 100% retention.",
+          explanation:
+              "Active Recall forces the brain to retrieve information, strengthening neural pathways.",
+          conceptInsight:
+              "RankCrackers utilizes active recall to ensure 100% retention.",
         ),
       ];
       isLoading = false;
@@ -150,11 +161,14 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(24.0),
+              SafeArea(
+                top: false,
+                minimum: const EdgeInsets.fromLTRB(20, 8, 20, 16),
                 child: PremiumButton(
                   text: showFeedback
-                      ? (currentQuestionIndex == questions.length - 1 ? "Finish Assessment" : "Next Question")
+                      ? (currentQuestionIndex == questions.length - 1
+                          ? "Finish Assessment"
+                          : "Next Question")
                       : "Submit Answer",
                   onTap: showFeedback ? _nextQuestion : _submitAnswer,
                 ),
@@ -221,25 +235,34 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
       sliver: SliverGrid(
         delegate: SliverChildListDelegate(
           [
-            _metricCard(icon: Icons.psychology_rounded, value: '82%', label: 'Retention'),
-            _metricCard(icon: Icons.flash_on_rounded, value: '14s', label: 'Reaction'),
-            _metricCard(icon: Icons.memory_rounded, value: 'Moderate', label: 'Recall'),
-            _metricCard(icon: Icons.auto_graph_rounded, value: 'Stable', label: 'Focus'),
+            _metricCard(
+                icon: Icons.psychology_rounded,
+                value: '82%',
+                label: 'Retention'),
+            _metricCard(
+                icon: Icons.flash_on_rounded, value: '14s', label: 'Reaction'),
+            _metricCard(
+                icon: Icons.memory_rounded, value: 'Moderate', label: 'Recall'),
+            _metricCard(
+                icon: Icons.auto_graph_rounded,
+                value: 'Stable',
+                label: 'Focus'),
           ],
         ),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 16,
           mainAxisSpacing: 16,
-          childAspectRatio: 1.02,
+          childAspectRatio: 1.12,
         ),
       ),
     );
   }
 
-  Widget _metricCard({required IconData icon, required String value, required String label}) {
+  Widget _metricCard(
+      {required IconData icon, required String value, required String label}) {
     return Container(
-      padding: const EdgeInsets.all(18),
+      padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
         color: AppColors.surface,
         borderRadius: BorderRadius.circular(18),
@@ -249,13 +272,17 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Icon(icon, color: AppColors.gold, size: 22),
-          const Spacer(),
+          const SizedBox(height: 12),
           FittedBox(
             fit: BoxFit.scaleDown,
-            child: Text(value, maxLines: 1, style: AppTypography.hero.copyWith(fontSize: 38)),
+            child: Text(value,
+                maxLines: 1, style: AppTypography.hero.copyWith(fontSize: 32)),
           ),
           const SizedBox(height: 8),
-          Text(label, maxLines: 1, overflow: TextOverflow.ellipsis, style: AppTypography.label),
+          Text(label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: AppTypography.label),
         ],
       ),
     );
@@ -265,9 +292,11 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
   // QUESTION CHAMBER 🔱
   // ==========================================================
   Widget _buildQuestionChamber() {
-    if (questions.isEmpty) return const SliverToBoxAdapter(child: SizedBox.shrink());
+    if (questions.isEmpty) {
+      return const SliverToBoxAdapter(child: SizedBox.shrink());
+    }
     final q = questions[currentQuestionIndex];
-    
+
     return SliverToBoxAdapter(
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -302,22 +331,31 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
   Widget _buildQuestionCard({required String question}) {
     return DarkCard(
       padding: const EdgeInsets.all(24),
-      child: Text(question, style: AppTypography.body.copyWith(height: 1.8, fontSize: 18, color: Colors.white)),
+      child: Text(question,
+          style: AppTypography.body
+              .copyWith(height: 1.8, fontSize: 18, color: Colors.white)),
     );
   }
 
   Widget _optionCard({required String option, required bool selected}) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 220),
-      padding: const EdgeInsets.all(18),
+      padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: selected ? AppColors.gold.withValues(alpha: 0.1) : AppColors.surface,
+        color: selected
+            ? AppColors.gold.withValues(alpha: 0.1)
+            : AppColors.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: selected ? AppColors.gold : AppColors.borderSoft),
+        border:
+            Border.all(color: selected ? AppColors.gold : AppColors.borderSoft),
       ),
       child: Row(
         children: [
-          Expanded(child: Text(option, style: AppTypography.body.copyWith(color: selected ? Colors.white : AppColors.secondaryText))),
+          Expanded(
+              child: Text(option,
+                  style: AppTypography.body.copyWith(
+                      color:
+                          selected ? Colors.white : AppColors.secondaryText))),
         ],
       ),
     );
@@ -333,17 +371,22 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
           children: [
             Row(
               children: [
-                const Icon(Icons.psychology_rounded, color: Colors.greenAccent, size: 20),
+                const Icon(Icons.psychology_rounded,
+                    color: Colors.greenAccent, size: 20),
                 const SizedBox(width: 10),
-                Text("Correct Insight", style: AppTypography.cardTitle.copyWith(color: Colors.greenAccent)),
+                Text("Correct Insight",
+                    style: AppTypography.cardTitle
+                        .copyWith(color: Colors.greenAccent)),
               ],
             ),
             const SizedBox(height: 12),
             Text(q.explanation, style: AppTypography.body),
             const SizedBox(height: 18),
-            Text("तथ्यात्मक समझ (Concept Insight)", style: AppTypography.label.copyWith(color: AppColors.gold)),
+            Text("तथ्यात्मक समझ (Concept Insight)",
+                style: AppTypography.label.copyWith(color: AppColors.gold)),
             const SizedBox(height: 8),
-            Text(q.conceptInsight, style: AppTypography.body.copyWith(fontSize: 13)),
+            Text(q.conceptInsight,
+                style: AppTypography.body.copyWith(fontSize: 13)),
           ],
         ),
       ),
@@ -361,7 +404,9 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('तुलनात्मक प्रतिबिंब (Cognitive Reflection)', style: AppTypography.cardTitle.copyWith(color: AppColors.gold)),
+              Text('तुलनात्मक प्रतिबिंब (Cognitive Reflection)',
+                  style:
+                      AppTypography.cardTitle.copyWith(color: AppColors.gold)),
               const SizedBox(height: 14),
               Text(
                 'आपकी प्रतिक्रिया का समय (Reaction Time) स्थिर है, लेकिन कुछ क्षेत्रों में सटीकता की आवश्यकता है।',
@@ -374,4 +419,3 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
     );
   }
 }
-

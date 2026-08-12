@@ -148,7 +148,7 @@ async function main() {
 function buildCatalogPayload(id, data, now) {
     const title = data.name || data.title || '';
     const year = data.year || data.exam_year || 2026;
-    const category = data.examCategory || data.exam_category || 'competitive';
+    const category = normalizeMissionCategory(data.examCategory || data.exam_category || data.category || data.missionType);
     const isArchived = data.status === 'ARCHIVED' || data.completion_status === 'ARCHIVED';
     const orgCode = data.org || data.organizationCode || '';
 
@@ -216,3 +216,10 @@ if (require.main === module) {
     main().catch(console.error);
 }
 
+
+function normalizeMissionCategory(value) {
+    const raw = String(value || '').trim().toLowerCase();
+    if (raw === 'competitive') return 'competitive';
+    if (raw === 'qualifying') return 'qualifying';
+    return 'category_pending';
+}

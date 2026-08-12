@@ -320,8 +320,13 @@ class FirestoreService {
       titleHindi: (data['titleHindi'] ?? title).toString(),
       year: year,
       state: (data['state'] ?? 'Central').toString(),
-      examCategory:
-          (data['category'] ?? data['type'] ?? 'category_pending').toString(),
+      examCategory: (data['examCategory'] ??
+              data['exam_category'] ??
+              data['missionType'] ??
+              data['category'] ??
+              data['type'] ??
+              'category_pending')
+          .toString(),
       status: (data['status'] ?? 'CATALOG_VISIBLE').toString(),
       examDifficulty: 0.6,
       variantCode: (data['variantCode'] ?? missionId).toString(),

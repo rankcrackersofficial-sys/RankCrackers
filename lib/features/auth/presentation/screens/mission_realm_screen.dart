@@ -28,6 +28,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   String selectedState = 'Rajasthan';
   bool isChangingState = false;
   bool _isLoading = false;
+  String _categoryFilter = 'all';
 
   final TextEditingController stateController = TextEditingController();
   final TextEditingController examSearchController = TextEditingController();
@@ -163,6 +164,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
       return r.state.toLowerCase() == selectedState.toLowerCase() ||
           r.state.toLowerCase() == 'central';
     }).toList();
+    final visibleMissions = _filterMissionsByCategory(missions);
 
     return PopScope(
       canPop: false,
@@ -199,16 +201,20 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                           _buildMissionSourceNotice(),
                           SizedBox(
                               height: ResponsiveHelper.sectionSpacing(context)),
+                          _buildMissionCategorySwitcher(missions),
+                          SizedBox(
+                              height: ResponsiveHelper.compactGap(context)),
                           SmartSearchField(
                             title: 'SEARCH MISSION',
                             hint: 'Type Exam Name',
                             controller: examSearchController,
                             suggestions:
                                 searchResults.map((e) => e.title).toList(),
-                            onChanged: (q) => _searchMissions(q, missions),
+                            onChanged: (q) =>
+                                _searchMissions(q, visibleMissions),
                             onSelected: (title) {
-                              final recruitment =
-                                  missions.firstWhere((r) => r.title == title);
+                              final recruitment = visibleMissions
+                                  .firstWhere((r) => r.title == title);
                               setState(() {
                                 selectedRecruitmentId = recruitment.id;
                                 examSearchController.text = title;
@@ -218,8 +224,8 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                           ),
                           SizedBox(
                               height: ResponsiveHelper.compactGap(context)),
-                          if (missions.isNotEmpty)
-                            _buildMissionGroups(missions)
+                          if (visibleMissions.isNotEmpty)
+                            _buildMissionGroups(visibleMissions)
                           else
                             _buildEmptyState(),
                           SizedBox(
@@ -320,6 +326,77 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     );
   }
 
+  List<Recruitment> _filterMissionsByCategory(List<Recruitment> missions) {
+    switch (_categoryFilter) {
+      case 'competitive':
+        return missions
+            .where((mission) => _missionCategoryKey(mission) == 'competitive')
+            .toList();
+      case 'qualifying':
+        return missions
+            .where((mission) => _missionCategoryKey(mission) == 'qualifying')
+            .toList();
+      default:
+        return missions;
+    }
+  }
+
+  Widget _buildMissionCategorySwitcher(List<Recruitment> missions) {
+    final competitive = missions
+        .where((mission) => _missionCategoryKey(mission) == 'competitive')
+        .length;
+    final qualifying = missions
+        .where((mission) => _missionCategoryKey(mission) == 'qualifying')
+        .length;
+
+    return Wrap(
+      spacing: 10,
+      runSpacing: 10,
+      children: [
+        _categoryFilterChip('ALL', 'all', missions.length),
+        _categoryFilterChip('COMPETITIVE', 'competitive', competitive),
+        _categoryFilterChip('QUALIFYING', 'qualifying', qualifying),
+      ],
+    );
+  }
+
+  Widget _categoryFilterChip(String label, String value, int count) {
+    final selected = _categoryFilter == value;
+    return InkWell(
+      borderRadius: BorderRadius.circular(999),
+      onTap: () {
+        setState(() {
+          _categoryFilter = value;
+          selectedRecruitmentId = null;
+          examSearchController.clear();
+          searchResults = [];
+        });
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
+        decoration: BoxDecoration(
+          color: selected
+              ? AppColors.gold.withValues(alpha: 0.16)
+              : AppColors.surface.withValues(alpha: 0.84),
+          borderRadius: BorderRadius.circular(999),
+          border: Border.all(
+            color: selected ? AppColors.gold : AppColors.borderSoft,
+          ),
+        ),
+        child: Text(
+          '$label $count',
+          maxLines: 1,
+          overflow: TextOverflow.visible,
+          style: AppTypography.label.copyWith(
+            color: selected ? AppColors.gold : Colors.white54,
+            fontSize: 8,
+            letterSpacing: 0.9,
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildAvailableMissionsLabel() {
     return Row(
       children: [
@@ -375,8 +452,8 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
 
   String _missionCategoryKey(Recruitment recruitment) {
     final category = recruitment.examCategory.trim().toLowerCase();
-    if (category.contains('competitive')) return 'competitive';
-    if (category.contains('qualifying')) return 'qualifying';
+    if (category == 'competitive') return 'competitive';
+    if (category == 'qualifying') return 'qualifying';
     return 'pending';
   }
 

@@ -48,15 +48,24 @@ void main() {
     }
   });
 
-  test('Mission Realm does not guess Competitive or Qualifying categories', () {
+  test('Mission Realm restores source-backed category filters without guessing',
+      () {
     final source = File(missionRealmPath).readAsStringSync();
+    final firestore =
+        File('lib/core/firebase/firestore_service.dart').readAsStringSync();
 
     expect(source, contains('AVAILABLE MISSIONS'));
-    expect(source, contains('Category mapping is pending source proof'));
-    expect(source, contains('Category pending verification'));
-    expect(source, isNot(contains('COMPETITIVE MISSIONS')));
-    expect(source, isNot(contains('QUALIFYING MISSIONS')));
+    expect(source, contains('COMPETITIVE MISSIONS'));
+    expect(source, contains('QUALIFYING MISSIONS'));
+    expect(source, contains('CATEGORY PENDING VERIFICATION'));
+    expect(source, contains("category == 'competitive'"));
+    expect(source, contains("category == 'qualifying'"));
+    expect(source, isNot(contains("category.contains('competitive')")));
+    expect(source, isNot(contains("category.contains('qualifying')")));
     expect(source, isNot(contains('selectedCategory')));
+    expect(firestore, contains("data['examCategory']"));
+    expect(firestore, contains("data['exam_category']"));
+    expect(firestore, contains("data['missionType']"));
   });
 
   test('Dashboard missing evidence is not rendered as fake zero or LOW', () {

@@ -4,6 +4,12 @@ const crypto = require("crypto");
 const { logFounderActivity } = require("../services/audit_service");
 const { getLifecycleBlueprint } = require("../helpers/blueprints");
 const { validateOrResolveId } = require("../canonical_mission_registry");
+function normalizeMissionCategory(value) {
+  const raw = String(value || '').trim().toLowerCase();
+  if (raw === 'competitive') return 'competitive';
+  if (raw === 'qualifying') return 'qualifying';
+  return 'category_pending';
+}
 
 /**
  * SENTINEL ACTION CENTER (Hardened v6.0 - Fully Secure Command Connectivity)
@@ -223,7 +229,7 @@ exports.handleSentinelAction = functions
       // ACTION: LAUNCH EXAM MISSION
       if (action === 'launch_exam_mission') {
         const { notificationId, syllabusId, examName, organization, year, examCategory, cycle, nature } = payload;
-        const catCode = (examCategory || 'default').toLowerCase();
+        const catCode = normalizeMissionCategory(examCategory);
         const targetYear = year || 2026;
 
         // Resolve canonical mission ID from shared registry
@@ -702,7 +708,15 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
 
   const name = realmData.exam_name || realmData.recruitment_name || recruitmentData.title || '';
   const year = parseInt(realmData.exam_year || recruitmentData.year || 2026, 10);
-  const category = realmData.exam_category || recruitmentData.examCategory || 'competitive';
+  const category = normalizeMissionCategory(
+    realmData.exam_category ||
+    realmData.examCategory ||
+    realmData.category ||
+    recruitmentData.examCategory ||
+    recruitmentData.exam_category ||
+    recruitmentData.category ||
+    recruitmentData.missionType
+  );
   const lifecycleStatus = realmData.status || recruitmentData.nature || 'PASSIVE';
   const isArchived = lifecycleStatus === 'ARCHIVED' || realmData.completion_status === 'ARCHIVED';
   const orgCode = realmData.organizationCode || recruitmentData.organizationCode || recruitmentData.org || '';
@@ -849,3 +863,4 @@ function assertMissionActionAuthorized(auth, action) {
     }
   }
 }
+
