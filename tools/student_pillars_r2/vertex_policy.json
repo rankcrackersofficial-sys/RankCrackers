@@ -1,0 +1,30 @@
+{
+  "enabled": true,
+  "modelSelection": {
+    "source": "environment",
+    "environmentVariable": "RC_VERTEX_MODEL",
+    "allowHigherCapabilityTier": true
+  },
+  "allowedUses": [
+    "official_source_extraction_assistance",
+    "syllabus_hierarchy_candidate_resolution",
+    "crucible_question_draft_generation",
+    "crucible_answer_candidate_generation",
+    "digibook_draft_generation",
+    "cross_check_assistance"
+  ],
+  "forbiddenUses": [
+    "student_runtime_chat",
+    "student_runtime_answer_generation",
+    "unsourced_academic_truth",
+    "automatic_student_publish",
+    "automatic_ready_promotion",
+    "automatic_answer_key_approval"
+  ],
+  "requirements": {
+    "englishFirstOfficialSources": true,
+    "sourceGroundingRequired": true,
+    "reviewRequiredBeforeStudentDelivery": true,
+    "modelOutputIsCanonicalTruth": false
+  }
+}

@@ -9,7 +9,16 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 let lastRequestTime = 0;
 const MIN_INTERVAL_MS = 1000; // Reduced to 1s for higher throughput
 
-async function callGemini(prompt, modelType = "flash") {
+const DEFAULT_PRO_MODEL = "gemini-2.5-pro";
+const DEFAULT_FLASH_MODEL = "gemini-2.5-flash";
+
+function resolveGeminiModel(modelType = "pro") {
+  const explicitModel = (process.env.RC_VERTEX_MODEL || process.env.RC_GEMINI_MODEL || "").trim();
+  if (explicitModel) return explicitModel;
+  return modelType === "flash" ? DEFAULT_FLASH_MODEL : DEFAULT_PRO_MODEL;
+}
+
+async function callGemini(prompt, modelType = "pro") {
   const now = Date.now();
   if (now - lastRequestTime < MIN_INTERVAL_MS) {
     const wait = MIN_INTERVAL_MS - (now - lastRequestTime);
@@ -21,7 +30,7 @@ async function callGemini(prompt, modelType = "flash") {
   if (!apiKey) throw new Error("GEMINI_API_KEY_MISSING");
 
   const genAI = new GoogleGenerativeAI(apiKey);
-  const modelName = modelType === "pro" ? "gemini-1.5-pro" : "gemini-1.5-flash";
+  const modelName = resolveGeminiModel(modelType);
 
   try {
     const model = genAI.getGenerativeModel({
@@ -63,5 +72,6 @@ async function callPro(prompt) {
 module.exports = {
   callGemini,
   callFlash,
-  callPro
+  callPro,
+  resolveGeminiModel
 };

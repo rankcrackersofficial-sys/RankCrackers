@@ -1,0 +1,53 @@
+{
+    "verdict":  "RANKCRACKERS_STUDENT_PILLARS_R2_EXECUTION_CONTRACT_AND_VERTEX_HIGHER_TIER_POLICY_PASSED",
+    "startingHead":  "9b40e1857a3bbb17830f83338726cd69a49eacc9",
+    "modelSelection":  {
+                           "environmentVariable":  "RC_VERTEX_MODEL",
+                           "compatibilityEnvironmentVariable":  "RC_GEMINI_MODEL",
+                           "defaultProModel":  "gemini-2.5-pro",
+                           "defaultFlashModel":  "gemini-2.5-flash",
+                           "studentRuntimeAI":  false
+                       },
+    "allowedUses":  [
+                        "official_source_extraction_assistance",
+                        "syllabus_hierarchy_candidate_resolution",
+                        "crucible_question_draft_generation",
+                        "crucible_answer_candidate_generation",
+                        "digibook_draft_generation",
+                        "cross_check_assistance"
+                    ],
+    "forbiddenUses":  [
+                          "student_runtime_chat",
+                          "student_runtime_answer_generation",
+                          "unsourced_academic_truth",
+                          "automatic_student_publish",
+                          "automatic_ready_promotion",
+                          "automatic_answer_key_approval"
+                      ],
+    "requirements":  {
+                         "sourceGroundingRequired":  true,
+                         "reviewRequiredBeforeStudentDelivery":  true,
+                         "modelOutputIsCanonicalTruth":  false,
+                         "officialAnswerRequiresOfficialSource":  true
+                     },
+    "validation":  {
+                       "nodeCheckGeminiService":  "PASS",
+                       "nodeCheckGeminiProviderLib":  "PASS",
+                       "pythonValidatorsPyCompile":  "PASS",
+                       "vertexPolicyJsonParse":  "PASS",
+                       "dartAnalyzeKnowledgeWorker":  "PASS",
+                       "geminiModelResolver":  "PASS"
+                   },
+    "safety":  [
+                   "NO_PRODUCTION_READ",
+                   "NO_PRODUCTION_WRITE",
+                   "NO_RULES_CHANGE",
+                   "NO_DEPLOY",
+                   "NO_STUDENT_PUBLISH",
+                   "NO_FIREBASE_CONFIG_SWAP",
+                   "NO_GRADLE_TOUCH",
+                   "NO_STUDENT_RUNTIME_AI",
+                   "MODEL_OUTPUT_NOT_CANONICAL_TRUTH",
+                   "REVIEW_REQUIRED_BEFORE_STUDENT_DELIVERY"
+               ]
+}

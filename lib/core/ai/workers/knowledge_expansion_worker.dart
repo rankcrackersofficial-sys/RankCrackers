@@ -23,7 +23,7 @@ class KnowledgeExpansionWorker {
       'keywords': [topicTitle.toLowerCase(), ...microTopics.map((m) => m.toLowerCase())],
       'difficulty': 3,
       'metadata': {
-        'provider': 'gemini-1.5-pro',
+        'provider': 'backend_policy_controlled_gemini_high_capability',
         'tokens': 842,
         'temperature': 0.2,
       }
