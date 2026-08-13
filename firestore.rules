@@ -97,8 +97,36 @@ service cloud.firestore {
     }
 
     match /question_bank/{questionId} {
-      allow read: if resource.data.status == 'published' || isFounder();
+      allow read, write: if isFounder();
+    }
+
+    match /published_questions/{questionId} {
+      allow read: if request.auth != null && resource.data.status == 'published';
       allow write: if isFounder();
+    }
+
+    match /answer_keys/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /solution_verifications/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /reviewer_registry/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /publication_registry/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /pyq_evidence/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /lineage_registry/{id} {
+      allow read, write: if isFounder();
     }
 
     match /ai_queue/{taskId} {

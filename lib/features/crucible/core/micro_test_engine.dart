@@ -1,6 +1,33 @@
+import 'dart:convert';
 import 'dart:math';
+import 'package:crypto/crypto.dart';
+import 'package:meta/meta.dart';
 import '../../../core/models/question_model.dart';
 import '../models/crucible_schedule.dart';
+
+/// 🔱 SOLUTION VERIFICATION RECORD
+/// Binds solution verification status, version, text signature, and answer consistency.
+class SolutionVerificationRecord {
+  final String questionId;
+  final String questionLineageId;
+  final int version;
+  final String solutionStatus; // e.g. 'verified'
+  final String solutionHash; // SHA-256 hash of verified solution text
+  final String reviewingAuthority;
+  final String verifiedAnswerValue; // Must match answer key (MCQ index or Numerical decimal string)
+  final DateTime verifiedAt;
+
+  const SolutionVerificationRecord({
+    required this.questionId,
+    required this.questionLineageId,
+    required this.version,
+    required this.solutionStatus,
+    required this.solutionHash,
+    required this.reviewingAuthority,
+    required this.verifiedAnswerValue,
+    required this.verifiedAt,
+  });
+}
 
 /// 🔱 QUESTION TRUST SNAPSHOT
 /// An immutable, read-only container of authoritative academic evidence.
@@ -11,11 +38,12 @@ class QuestionTrustSnapshot {
   
   final Map<String, String> reviewerAuthorities; // reviewerId -> role
   final Set<String> verifiedAnswerKeys; // questionId
-  final Map<String, String> verifiedAnswerKeyValues; // questionId -> expected answerIndex string
+  final Map<String, String> verifiedAnswerKeyValues; // questionId -> expected answer value string
   final Set<String> studentReadyQuestionIds; // questionId
   
   final Map<String, String> pyqPaperEvidence; // questionId -> officialPaperId
   final Map<String, int> activeQuestionVersions; // lineageId -> activeVersion
+  final Map<String, SolutionVerificationRecord> verifiedSolutions; // questionId -> solution record
 
   const QuestionTrustSnapshot({
     required this.verifiedFactIds,
@@ -27,6 +55,7 @@ class QuestionTrustSnapshot {
     required this.studentReadyQuestionIds,
     required this.pyqPaperEvidence,
     required this.activeQuestionVersions,
+    required this.verifiedSolutions,
   });
 
   const QuestionTrustSnapshot.empty()
@@ -38,24 +67,44 @@ class QuestionTrustSnapshot {
         verifiedAnswerKeyValues = const {},
         studentReadyQuestionIds = const {},
         pyqPaperEvidence = const {},
-        activeQuestionVersions = const {};
+        activeQuestionVersions = const {},
+        verifiedSolutions = const {};
 }
 
 /// 🔱 QUESTION TRUST REPOSITORY
 /// Authoritative trust store for resolving read-only academic evidence snapshots.
 class QuestionTrustRepository {
   static QuestionTrustSnapshot _productionSnapshot = const QuestionTrustSnapshot.empty();
+  static bool _isHydrated = false;
+
+  static bool get isHydrated => _isHydrated;
 
   static QuestionTrustSnapshot getAuthoritativeSnapshot() {
     return _productionSnapshot;
   }
 
-  static void setAuthoritativeSnapshot(QuestionTrustSnapshot snapshot) {
+  /// Authoritative server-side/admin hydration path. Loaded by trust loaders.
+  static void initializeAuthoritativeSnapshot(QuestionTrustSnapshot snapshot) {
     _productionSnapshot = snapshot;
+    _isHydrated = true;
+  }
+
+  /// Test-only injection path. Isolated from production execution.
+  @visibleForTesting
+  static void initializeForTest(QuestionTrustSnapshot snapshot) {
+    _productionSnapshot = snapshot;
+    _isHydrated = true;
+  }
+
+  /// Test-only reset path.
+  @visibleForTesting
+  static void resetForTest() {
+    _productionSnapshot = const QuestionTrustSnapshot.empty();
+    _isHydrated = false;
   }
 }
 
-/// 🔱 MICRO TEST ENGINE (C2-FIX2 Compliant)
+/// 🔱 MICRO TEST ENGINE (C2-FIX4 Compliant)
 /// Authoritative gatekeeper for Crucible Micro factory assembly.
 class MicroTestEngine {
 
@@ -66,7 +115,7 @@ class MicroTestEngine {
   // ===================================================
 
   /// Stable platform-independent seed derivation based on canonical inputs.
-  /// Does not depend on runtime-specific hashCode behavior.
+  /// Used ONLY for deterministic assembly reproducibility; NOT a security primitive.
   static int deriveSeed({
     required String microTestId,
     required String scheduleId,
@@ -83,6 +132,14 @@ class MicroTestEngine {
     return hash;
   }
 
+  /// Cryptographic SHA-256 digest to verify solution text integrity.
+  static String hashSolution(String? text) {
+    if (text == null) return '';
+    final clean = text.trim();
+    final bytes = utf8.encode(clean);
+    return sha256.convert(bytes).toString();
+  }
+
   // ===================================================
   // 2. QUESTION ELIGIBILITY GATES
   // ===================================================
@@ -95,6 +152,13 @@ class MicroTestEngine {
     List<String> allowedAtomIds, {
     QuestionTrustSnapshot? trustSnapshot,
   }) {
+    // -------------------------------------------------
+    // Fail-Closed Hydration Check
+    // -------------------------------------------------
+    if (trustSnapshot == null && !QuestionTrustRepository.isHydrated) {
+      return 'TRUST_SNAPSHOT_NOT_READY';
+    }
+
     final trust = trustSnapshot ?? QuestionTrustRepository.getAuthoritativeSnapshot();
 
     // -------------------------------------------------
@@ -121,8 +185,8 @@ class MicroTestEngine {
       if (question.options.isNotEmpty) {
         return 'schema/type invalid: numerical options must be empty';
       }
-      if (question.answerIndex < 0) {
-        return 'schema/type invalid: numerical answer index must not be negative';
+      if (question.numericalAnswer == null) {
+        return 'schema/type invalid: numericalAnswer must be present for numerical type';
       }
     } else {
       return 'schema/type invalid: unsupported question type';
@@ -186,25 +250,63 @@ class MicroTestEngine {
     }
 
     // -------------------------------------------------
-    // E. Academic Answer Key & Explanation Gate
+    // E. Academic Answer Key Gate
     // -------------------------------------------------
     if (!trust.verifiedAnswerKeys.contains(question.id)) {
       return 'answer key academically unverified: key lacks professional verification';
     }
+    
     final expectedVal = trust.verifiedAnswerKeyValues[question.id];
-    if (expectedVal != question.answerIndex.toString()) {
-      return 'answer key academically unverified: answer key value conflict';
-    }
-
-    // Solution/explanation checks
-    if (solutionRequiredForStudentReady) {
-      if (question.solution == null || question.solution!.trim().isEmpty) {
-        return 'solution verification missing where required: missing explanation/solution';
+    if (type == 'numerical') {
+      final expectedDouble = double.tryParse(expectedVal ?? '');
+      if (expectedDouble == null || expectedDouble != question.numericalAnswer) {
+        return 'answer key academically unverified: answer key value conflict';
+      }
+    } else {
+      if (expectedVal != question.answerIndex.toString()) {
+        return 'answer key academically unverified: answer key value conflict';
       }
     }
 
     // -------------------------------------------------
-    // F. PYQ Claim Proof
+    // F. Solution Verification Gate (Decoupled Concept)
+    // -------------------------------------------------
+    if (solutionRequiredForStudentReady) {
+      if (question.solution == null || question.solution!.trim().isEmpty) {
+        return 'solution verification missing where required: missing explanation/solution';
+      }
+      final solRecord = trust.verifiedSolutions[question.id];
+      if (solRecord == null) {
+        return 'solution verification missing where required: solution verification record is missing';
+      }
+      if (solRecord.version != question.version) {
+        return 'solution verification missing where required: solution version mismatch';
+      }
+      if (solRecord.solutionStatus != 'verified') {
+        return 'solution verification missing where required: solution status is not verified';
+      }
+      final currentHash = hashSolution(question.solution);
+      if (solRecord.solutionHash != currentHash) {
+        return 'solution verification missing where required: solution text hash mismatch';
+      }
+      if (type == 'numerical') {
+        final expectedDouble = double.tryParse(solRecord.verifiedAnswerValue);
+        if (expectedDouble == null || expectedDouble != question.numericalAnswer) {
+          return 'solution verification missing where required: solution answer consistency mismatch';
+        }
+      } else {
+        if (solRecord.verifiedAnswerValue != question.answerIndex.toString()) {
+          return 'solution verification missing where required: solution answer consistency mismatch';
+        }
+      }
+      final solReviewerRole = trust.reviewerAuthorities[solRecord.reviewingAuthority];
+      if (solReviewerRole == null || solReviewerRole == 'AI' || solReviewerRole == 'system') {
+        return 'solution verification missing where required: solution reviewer authority unresolved';
+      }
+    }
+
+    // -------------------------------------------------
+    // G. PYQ Claim Proof
     // -------------------------------------------------
     if (question.isPYQ) {
       final paperEvidence = trust.pyqPaperEvidence[question.id];
@@ -214,7 +316,7 @@ class MicroTestEngine {
     }
 
     // -------------------------------------------------
-    // G. Publication / Student-Ready Gate
+    // H. Publication / Student-Ready Gate
     // -------------------------------------------------
     if (question.status != 'published') {
       return 'student publication gate false: question status is not published';
@@ -224,7 +326,7 @@ class MicroTestEngine {
     }
 
     // -------------------------------------------------
-    // H. Version & Lineage Safety
+    // I. Version & Lineage Safety
     // -------------------------------------------------
     final lineageId = question.questionLineageId ?? question.id;
     final activeVersion = trust.activeQuestionVersions[lineageId];
@@ -262,10 +364,9 @@ class MicroTestEngine {
         trustSnapshot: trustSnapshot,
       );
       if (eligibilityError == null) {
-        // Enforce logical lineage uniqueness inside the assembled set
         final lineage = q.questionLineageId ?? q.id;
         if (seenLineages.contains(lineage)) {
-          continue; // Prevent two versions/IDs of same logical item from co-entering
+          continue; 
         }
         eligible.add(q);
         seenIds.add(q.id);
@@ -277,10 +378,8 @@ class MicroTestEngine {
       return []; // Deficit exists: NOT_READY
     }
 
-    // Stable sorting by ID
     eligible.sort((a, b) => a.id.compareTo(b.id));
 
-    // Seed derivation
     final seed = manualSeed ?? deriveSeed(
       microTestId: 'micro_unknown',
       scheduleId: scheduleId,
@@ -342,7 +441,6 @@ class MicroTestEngine {
       final temporalStart = learningStart.add(const Duration(hours: 47));
       final temporalEnd = learningStart.add(const Duration(hours: 48));
 
-      // Calculate pool stats for this schedule
       int currentEligibleCount = 0;
       final Set<String> blockerReasonsSet = {};
 
@@ -356,8 +454,9 @@ class MicroTestEngine {
         if (err == null) {
           currentEligibleCount++;
         } else {
-          // Parse specific blocker category from error string
-          if (err.startsWith('source provenance unresolved')) {
+          if (err == 'TRUST_SNAPSHOT_NOT_READY') {
+            blockerReasonsSet.add('TRUST_SNAPSHOT_NOT_READY');
+          } else if (err.startsWith('source provenance unresolved')) {
             blockerReasonsSet.add('source provenance unresolved');
           } else if (err.startsWith('review authority unresolved')) {
             blockerReasonsSet.add('review authority unresolved');

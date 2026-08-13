@@ -29,6 +29,9 @@ class QuestionModel {
   final String? questionType; // mcq_single, numerical
   final String? solution; // explanation / worked solution
   final String? questionLineageId; // logical item identity key
+  
+  // 🔱 C2-FIX4 SECURITY & DECIMAL FIELDS
+  final double? numericalAnswer; // signed decimal/double numerical answer
 
   const QuestionModel({
     required this.id,
@@ -53,6 +56,7 @@ class QuestionModel {
     this.questionType,
     this.solution,
     this.questionLineageId,
+    this.numericalAnswer,
   });
 
   QuestionModel copyWith({
@@ -78,6 +82,7 @@ class QuestionModel {
     String? questionType,
     String? solution,
     String? questionLineageId,
+    double? numericalAnswer,
   }) {
     return QuestionModel(
       id: id ?? this.id,
@@ -102,6 +107,36 @@ class QuestionModel {
       questionType: questionType ?? this.questionType,
       solution: solution ?? this.solution,
       questionLineageId: questionLineageId ?? this.questionLineageId,
+      numericalAnswer: numericalAnswer ?? this.numericalAnswer,
+    );
+  }
+
+  /// Returns a copy of the question with correct answer and solution stripped out.
+  QuestionModel toStudentSafeProjection() {
+    return QuestionModel(
+      id: id,
+      nodeId: nodeId,
+      factId: factId,
+      atomicTopicIds: atomicTopicIds,
+      examId: examId,
+      subjectId: subjectId,
+      question: question,
+      options: options,
+      answerIndex: -1, // Staged sentinel / masked value
+      difficulty: difficulty,
+      status: status,
+      version: version,
+      lastAdminId: lastAdminId,
+      lastAction: lastAction,
+      updatedAt: updatedAt,
+      verifiedBy: verifiedBy,
+      verifiedAt: verifiedAt,
+      sourceType: sourceType,
+      isPYQ: isPYQ,
+      questionType: questionType,
+      solution: null, // Private solution hidden
+      questionLineageId: questionLineageId,
+      numericalAnswer: null, // Private numerical answer hidden
     );
   }
 
@@ -129,6 +164,7 @@ class QuestionModel {
       'questionType': questionType,
       'solution': solution,
       'questionLineageId': questionLineageId,
+      'numericalAnswer': numericalAnswer,
     };
   }
 
@@ -161,6 +197,9 @@ class QuestionModel {
       questionType: map['questionType'],
       solution: map['solution'],
       questionLineageId: map['questionLineageId'],
+      numericalAnswer: map['numericalAnswer'] != null 
+          ? (map['numericalAnswer'] as num).toDouble() 
+          : null,
     );
   }
 }
