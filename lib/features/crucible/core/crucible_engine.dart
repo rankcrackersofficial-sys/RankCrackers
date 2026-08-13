@@ -384,4 +384,61 @@ class CrucibleEngine {
     final node = nodes.firstWhere((n) => n.id == id);
     return node.prerequisiteIds.where((preId) => nodes.any((n) => n.id == preId)).length;
   }
+
+  // ===================================================
+  // ASSESSMENT CONTRACT SEMANTICS 🔱
+  // ===================================================
+
+  static DateTime getGrandSimulationDayStart(DateTime protocolStartTime) {
+    return protocolStartTime.add(const Duration(days: 98));
+  }
+
+  static DateTime getGrandSimulationDayEnd(DateTime protocolStartTime) {
+    return protocolStartTime.add(const Duration(days: 99));
+  }
+
+  static DateTime getMajorTestDayStart(DateTime protocolStartTime) {
+    return protocolStartTime.add(const Duration(days: 99));
+  }
+
+  static DateTime getMajorTestDayEnd(DateTime protocolStartTime) {
+    return protocolStartTime.add(const Duration(days: 100));
+  }
+
+  /// Retrieves the Grand Simulation assessment contract.
+  static CrucibleAssessmentContract getGrandSimulationContract({
+    CrucibleAssessmentContract? injectedContract,
+  }) {
+    if (injectedContract != null) {
+      return injectedContract;
+    }
+    // Authoritative rule does not define this yet, remains unresolved
+    return const CrucibleAssessmentContract();
+  }
+
+  /// Retrieves the Major Examination assessment contract.
+  static CrucibleAssessmentContract getMajorTestContract({
+    CrucibleAssessmentContract? injectedContract,
+  }) {
+    if (injectedContract != null) {
+      return injectedContract;
+    }
+    // Authoritative rule does not define this yet, remains unresolved
+    return const CrucibleAssessmentContract();
+  }
 }
+
+class CrucibleAssessmentContract {
+  final int? questionCount;
+  final Duration? attemptDuration;
+  final String? paperStructure;
+
+  const CrucibleAssessmentContract({
+    this.questionCount,
+    this.attemptDuration,
+    this.paperStructure,
+  });
+
+  bool get isResolved => questionCount != null && attemptDuration != null && paperStructure != null;
+}
+

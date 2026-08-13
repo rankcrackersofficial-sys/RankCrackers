@@ -632,5 +632,76 @@ void main() {
         expect(slot['macroId'], 'macro_${expectedPhase.toString().padLeft(2, '0')}');
       }
     });
+
+    test('Crucible C1 Terminal Event Semantics (C1-FIX4)', () {
+      final enrollment = DateTime(2026, 8, 13, 10, 0);
+      final pStart = CrucibleClockEngine.getNormalizedStart(enrollment);
+
+      // 1. Day 99 Grand Simulation due envelope exists, but has no hardcoded 24h duration
+      final simStart = CrucibleEngine.getGrandSimulationDayStart(pStart);
+      final simEnd = CrucibleEngine.getGrandSimulationDayEnd(pStart);
+      expect(simStart, pStart.add(const Duration(days: 98)));
+      expect(simEnd, pStart.add(const Duration(days: 99)));
+
+      final defaultSimContract = CrucibleEngine.getGrandSimulationContract();
+      expect(defaultSimContract.attemptDuration, isNull);
+      expect(defaultSimContract.isResolved, false);
+
+      // 2. Day 100 Major Test due envelope exists, but has no hardcoded 24h duration
+      final majorStart = CrucibleEngine.getMajorTestDayStart(pStart);
+      final majorEnd = CrucibleEngine.getMajorTestDayEnd(pStart);
+      expect(majorStart, pStart.add(const Duration(days: 99)));
+      expect(majorEnd, pStart.add(const Duration(days: 100)));
+
+      final defaultMajorContract = CrucibleEngine.getMajorTestContract();
+      expect(defaultMajorContract.attemptDuration, isNull);
+      expect(defaultMajorContract.isResolved, false);
+
+      // 3. Exam Contract Injection: Exposes injected actual duration
+      final injectedMajor180 = CrucibleEngine.getMajorTestContract(
+        injectedContract: const CrucibleAssessmentContract(
+          questionCount: 90,
+          attemptDuration: Duration(minutes: 180),
+          paperStructure: 'JEE_MAIN_2027_TACTICAL_BATTLE',
+        ),
+      );
+      expect(injectedMajor180.isResolved, true);
+      expect(injectedMajor180.attemptDuration?.inMinutes, 180);
+
+      final injectedMajor120 = CrucibleEngine.getMajorTestContract(
+        injectedContract: const CrucibleAssessmentContract(
+          questionCount: 75,
+          attemptDuration: Duration(minutes: 120),
+          paperStructure: 'RPSC_LECTURER_PHYSICS_COMPRESS',
+        ),
+      );
+      expect(injectedMajor120.isResolved, true);
+      expect(injectedMajor120.attemptDuration?.inMinutes, 120);
+
+      // 4. Day 101 sentinel does not fabricate submission/completion
+      final stateMajor = CrucibleProtocolState(
+        recruitmentId: 'jee_main_2027',
+        phaseIndex: 7,
+        scheduleIndex: 42,
+        currentScheduleId: 'sch_jee_main_2027_42',
+        status: 'major_test',
+        scheduleStartTime: pStart.add(const Duration(days: 99)),
+        protocolStartTime: pStart,
+        currentBoundaryTime: pStart.add(const Duration(days: 100)),
+        isVIP: false,
+        isStalled: false,
+      );
+
+      final stateCompleted = CrucibleEngine.evaluateState(
+        state: stateMajor,
+        now: pStart.add(const Duration(days: 100, hours: 2)), // Day 101
+        completedMicroIds: [],
+        completedRebuildIds: [],
+        completedMacroIds: [],
+        isMajorTestSubmitted: false, // NOT SUBMITTED
+        assessmentReadiness: {},
+      );
+      expect(stateCompleted.status, 'major_test'); // Remains major_test (blocked, unresolved)
+    });
   });
 }
