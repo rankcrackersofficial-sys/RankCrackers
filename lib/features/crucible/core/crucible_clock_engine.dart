@@ -12,6 +12,32 @@ class CrucibleClockEngine {
   static const int terminalDaySentinel = 101;
 
   // ===================================================
+  // GET SOVEREIGN NORMALIZED START
+  // ===================================================
+
+  static DateTime getNormalizedStart(DateTime enrollmentTime) {
+    final hour = enrollmentTime.hour;
+    if (hour >= 10 && hour < 22) {
+      return DateTime(
+        enrollmentTime.year,
+        enrollmentTime.month,
+        enrollmentTime.day,
+        10, 0, 0
+      );
+    } else {
+      final targetDate = hour >= 22
+          ? enrollmentTime.add(const Duration(days: 1))
+          : enrollmentTime;
+      return DateTime(
+        targetDate.year,
+        targetDate.month,
+        targetDate.day,
+        10, 0, 0
+      );
+    }
+  }
+
+  // ===================================================
   // GET CURRENT TACTICAL START
   // ===================================================
 
@@ -66,7 +92,8 @@ class CrucibleClockEngine {
     required DateTime enrollmentTime,
   }) {
     final now = DateTime.now();
-    final difference = now.difference(enrollmentTime);
+    final normalizedStart = getNormalizedStart(enrollmentTime);
+    final difference = now.difference(normalizedStart);
     final days = difference.inDays;
     final phaseDay = days % 14;
 
@@ -106,7 +133,8 @@ class CrucibleClockEngine {
   static bool isRebuildPhase({
     required DateTime enrollmentTime,
   }) {
-    final difference = DateTime.now().difference(enrollmentTime);
+    final normalizedStart = getNormalizedStart(enrollmentTime);
+    final difference = DateTime.now().difference(normalizedStart);
     final days = difference.inDays;
     final phaseDay = days % 14;
     return phaseDay == 12 || phaseDay == 13;
@@ -120,7 +148,8 @@ class CrucibleClockEngine {
     required DateTime enrollmentTime,
   }) {
     final now = DateTime.now();
-    final difference = now.difference(enrollmentTime);
+    final normalizedStart = getNormalizedStart(enrollmentTime);
+    final difference = now.difference(normalizedStart);
     final days = difference.inDays;
     final phaseDay = days % 14;
     return phaseDay == 13 && now.hour >= 9 && now.hour <= 11;
