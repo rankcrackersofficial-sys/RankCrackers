@@ -2,91 +2,174 @@ import 'dart:math';
 import '../../../core/models/question_model.dart';
 import '../models/crucible_schedule.dart';
 
-/// 🔱 MICRO TEST ENGINE (C2 Compliant)
-/// Sovereign authority for gating, validating, and assembling Micro Tests.
+/// 🔱 MICRO TEST ENGINE (C2-FIX1 Compliant)
+/// Hardened authority for Crucible Micro question contracts and academic safety gates.
 class MicroTestEngine {
 
   // ===================================================
-  // 1. QUESTION ELIGIBILITY GATE
+  // AUTHORITATIVE REGISTRIES FOR TRUST GATE RESOLUTION
+  // ===================================================
+  static final Set<String> verifiedFactIds = {};
+  static final Map<String, String> factSourceDocuments = {}; // factId -> sourceDocumentId
+  static final Set<String> heldFactIds = {}; // unverified or held facts
+  
+  static final Map<String, String> reviewerAuthorities = {}; // reviewerId -> role (e.g. 'PRO_REVIEWER')
+  static final Set<String> verifiedAnswerKeys = {}; // questionId
+  static final Set<String> studentReadyQuestionIds = {}; // questionId
+  
+  static final Map<String, String> pyqPaperEvidence = {}; // questionId -> officialPaperId
+  
+  static final Map<String, int> activeQuestionVersions = {}; // questionId -> activeVersion
+
+  /// Clears all registries for testing containment.
+  static void clearRegistries() {
+    verifiedFactIds.clear();
+    factSourceDocuments.clear();
+    heldFactIds.clear();
+    reviewerAuthorities.clear();
+    verifiedAnswerKeys.clear();
+    studentReadyQuestionIds.clear();
+    pyqPaperEvidence.clear();
+    activeQuestionVersions.clear();
+  }
+
+  // ===================================================
+  // 1. QUESTION ELIGIBILITY GATES
   // ===================================================
 
-  /// Deterministically evaluates a question's eligibility for a given schedule.
-  /// Returns a rejection reason string if ineligible, or null if fully eligible.
+  /// Validates a question against all academic governance and provenance contracts.
+  /// Returns null if fully eligible, or a specific blocker string.
   static String? checkQuestionEligibility(
     QuestionModel question,
     String scheduleId,
     List<String> allowedAtomIds,
   ) {
-    // A. Schema Invalidation Checks
-    if (question.id.isEmpty) return 'schema invalid: missing questionId';
-    if (question.question.trim().isEmpty) return 'schema invalid: missing stem';
-    if (question.examId.isEmpty) return 'schema invalid: missing examId';
-    if (question.subjectId.isEmpty) return 'schema invalid: missing subjectId';
-    if (question.options.isEmpty) return 'schema invalid: missing options';
-    
-    // Malformed options checks
-    if (question.options.length != 4) {
-      return 'answer key unverified: MCQs must have exactly 4 options';
+    // -------------------------------------------------
+    // A. Schema & Type Validity
+    // -------------------------------------------------
+    if (question.id.isEmpty || question.question.trim().isEmpty || question.examId.isEmpty || question.subjectId.isEmpty) {
+      return 'schema/type invalid: missing basic fields';
     }
-    for (final opt in question.options) {
-      if (opt.trim().isEmpty) {
-        return 'answer key unverified: option contains empty string';
+
+    // Determine type by options list length:
+    final isMCQ = question.options.isNotEmpty;
+
+    if (isMCQ) {
+      if (question.options.length != 4) {
+        return 'answer schema invalid: MCQ options count must equal 4';
+      }
+      for (final opt in question.options) {
+        if (opt.trim().isEmpty) {
+          return 'answer schema invalid: MCQ option contains empty text';
+        }
+      }
+      if (question.answerIndex < 0 || question.answerIndex >= 4) {
+        return 'answer schema invalid: MCQ answerIndex out of bounds';
+      }
+    } else {
+      // Numerical / integer type: options are empty.
+      // Do NOT artificially enforce options.length == 4.
+      // Just check if answerIndex is valid (often 0 or a placeholder index)
+      if (question.answerIndex < 0) {
+        return 'schema/type invalid: numerical answer index must not be negative';
       }
     }
 
-    // Answer index boundary checks
-    if (question.answerIndex < 0 || question.answerIndex >= question.options.length) {
-      return 'answer key unverified: correct answer index out of bounds';
-    }
-
-    // B. Scope Leakage / Mapping Checks
-    if (question.atomicTopicIds.isEmpty) {
-      return 'mapping error: question must map to at least one atomic ID';
-    }
-    
-    // Ensure ALL atomicTopicIds of the question are within the schedule's allowed list
-    for (final atomId in question.atomicTopicIds) {
-      if (!allowedAtomIds.contains(atomId)) {
-        return 'mapping error: atom $atomId is outside the current schedule scope';
-      }
-    }
-
-    // C. Source & Governance Checks
-    if (question.status == 'draft') {
-      return 'review failed: question is in draft status';
-    }
-    
-    if (question.status != 'verified' && question.status != 'published') {
-      return 'review failed: question is not academically verified or published';
-    }
-
-    // Provenance checks
-    if (question.verifiedBy == null || question.verifiedBy!.trim().isEmpty) {
-      return 'source not verified: missing verifier signature';
-    }
-    if (question.verifiedAt == null) {
-      return 'source not verified: missing verification timestamp';
-    }
-
-    // Model self-review check (prevents AI self-promotion)
-    if (question.verifiedBy == 'system' || question.verifiedBy == 'gemini') {
-      return 'model-only promotion: question verified by model instead of human authority';
-    }
-
-    // D. Safe placeholders / preview checks
+    // Unsafe placeholders
     final stemLower = question.question.toLowerCase();
     if (stemLower.contains('placeholder') || stemLower.contains('todo') || stemLower.contains('preview')) {
-      return 'other: unsafe placeholder or preview content detected';
+      return 'schema/type invalid: unsafe placeholder or preview content detected';
+    }
+
+    // -------------------------------------------------
+    // B. Atom & Node Resolution (Scope Isolation)
+    // -------------------------------------------------
+    if (question.atomicTopicIds.isEmpty) {
+      return 'atom/source mapping invalid: missing atomic mapping';
+    }
+    for (final atomId in question.atomicTopicIds) {
+      if (!allowedAtomIds.contains(atomId)) {
+        return 'atom/source mapping invalid: atom $atomId is outside schedule scope';
+      }
+    }
+
+    // -------------------------------------------------
+    // C. Source Provenance Gate
+    // -------------------------------------------------
+    if (question.factId == null || question.factId!.isEmpty) {
+      return 'source provenance unresolved: missing factId';
+    }
+    if (!verifiedFactIds.contains(question.factId)) {
+      return 'source provenance unresolved: factId ${question.factId} is unverified or unregistered';
+    }
+    if (heldFactIds.contains(question.factId)) {
+      return 'source provenance unresolved: fact ${question.factId} is academically held/rejected';
+    }
+    final sourceDoc = factSourceDocuments[question.factId];
+    if (sourceDoc == null || sourceDoc.isEmpty) {
+      return 'source provenance unresolved: missing fact source document lineage';
+    }
+
+    // -------------------------------------------------
+    // D. Reviewer Authority Gate (Human Authority Law)
+    // -------------------------------------------------
+    if (question.status == 'draft') {
+      return 'review authority unresolved: question is in draft status';
+    }
+    if (question.verifiedBy == null || question.verifiedBy!.isEmpty) {
+      return 'review authority unresolved: missing verification signature';
+    }
+    if (question.verifiedAt == null) {
+      return 'review authority unresolved: missing verification date';
+    }
+    final role = reviewerAuthorities[question.verifiedBy];
+    if (role == null || role == 'AI' || role == 'system') {
+      return 'review authority unresolved: verifier has unverified review authority';
+    }
+
+    // -------------------------------------------------
+    // E. Academic Key Verification Gate
+    // -------------------------------------------------
+    if (!verifiedAnswerKeys.contains(question.id)) {
+      return 'answer key academically unverified: key lacks professional verification';
+    }
+
+    // -------------------------------------------------
+    // F. PYQ Claim Proof
+    // -------------------------------------------------
+    if (question.isPYQ) {
+      final paperEvidence = pyqPaperEvidence[question.id];
+      if (paperEvidence == null || paperEvidence.isEmpty) {
+        return 'unproven PYQ claim: missing official paper evidence for PYQ claim';
+      }
+    }
+
+    // -------------------------------------------------
+    // G. Publication / Student-Ready Gate
+    // -------------------------------------------------
+    if (question.status != 'published') {
+      return 'student publication gate false: question status is not published';
+    }
+    if (!studentReadyQuestionIds.contains(question.id)) {
+      return 'student publication gate false: publication eligibility has not been granted';
+    }
+
+    // -------------------------------------------------
+    // H. Version / Supersession Safety
+    // -------------------------------------------------
+    final activeVersion = activeQuestionVersions[question.id];
+    if (activeVersion != null && question.version < activeVersion) {
+      return 'superseded/conflicting version: version is superseded';
     }
 
     return null; // Fully eligible
   }
 
   // ===================================================
-  // 2. DETERMINISTIC ASSEMBLY
+  // 2. DETERMINISTIC MICRO ASSEMBLY
   // ===================================================
 
-  /// Assembles a Micro Test of exactly 50 questions from the pool.
+  /// Deterministically assembles exactly 50 eligible questions using a stable seed.
   static List<QuestionModel> assembleMicroTest({
     required String scheduleId,
     required List<String> allowedAtomIds,
@@ -111,7 +194,7 @@ class MicroTestEngine {
       return []; // Deficit exists: NOT_READY
     }
 
-    // Deterministic sort by ID to ensure a stable baseline
+    // Stable sorting by ID
     eligible.sort((a, b) => a.id.compareTo(b.id));
 
     // Seeded random selection
@@ -139,7 +222,6 @@ class MicroTestEngine {
   }) {
     final List<Map<String, dynamic>> manifests = [];
 
-    // Filter schedules to study schedules (schedules 1 to 42)
     final studySchedules = schedules
         .where((s) => s.scheduleIndex >= 1 && s.scheduleIndex <= 42)
         .toList()
@@ -149,7 +231,7 @@ class MicroTestEngine {
       final schedule = studySchedules.firstWhere(
         (s) => s.scheduleIndex == i,
         orElse: () => CrucibleSchedule(
-          id: 'sch_unknown_$i',
+          id: 'sch_jee_main_2027_$i',
           recruitmentId: 'jee_main_2027',
           scheduleIndex: i,
           nodeIds: const [],
@@ -170,34 +252,41 @@ class MicroTestEngine {
 
       // Calculate pool stats for this schedule
       int currentEligibleCount = 0;
-      final List<String> blockerReasons = [];
+      final Set<String> blockerReasonsSet = {};
 
       for (final q in pool) {
         final err = checkQuestionEligibility(q, schedule.id, schedule.atomicTopicIds);
         if (err == null) {
           currentEligibleCount++;
+        } else {
+          // Parse specific blocker category from error string
+          if (err.startsWith('source provenance unresolved')) {
+            blockerReasonsSet.add('source provenance unresolved');
+          } else if (err.startsWith('review authority unresolved')) {
+            blockerReasonsSet.add('review authority unresolved');
+          } else if (err.startsWith('answer schema invalid')) {
+            blockerReasonsSet.add('answer schema invalid');
+          } else if (err.startsWith('answer key academically unverified')) {
+            blockerReasonsSet.add('answer key academically unverified');
+          } else if (err.startsWith('atom/source mapping invalid')) {
+            blockerReasonsSet.add('atom/source mapping invalid');
+          } else if (err.startsWith('unproven PYQ claim')) {
+            blockerReasonsSet.add('unproven PYQ claim');
+          } else if (err.startsWith('student publication gate false')) {
+            blockerReasonsSet.add('student publication gate false');
+          } else if (err.startsWith('superseded/conflicting version')) {
+            blockerReasonsSet.add('superseded/conflicting version');
+          } else if (err.startsWith('schema/type invalid')) {
+            blockerReasonsSet.add('schema/type invalid');
+          } else {
+            blockerReasonsSet.add('other');
+          }
         }
       }
 
       final deficit = max(0, 50 - currentEligibleCount);
       if (deficit > 0) {
-        blockerReasons.add('insufficient eligible questions');
-      }
-
-      // Check for held atoms
-      bool hasHeldAtom = false;
-      for (final q in pool) {
-        for (final atomId in q.atomicTopicIds) {
-          if (schedule.atomicTopicIds.contains(atomId)) {
-            // Held atoms logic (unverified verifier or status unverified)
-            if (q.status != 'verified' && q.status != 'published') {
-              hasHeldAtom = true;
-            }
-          }
-        }
-      }
-      if (hasHeldAtom) {
-        blockerReasons.add('atom academically held');
+        blockerReasonsSet.add('insufficient eligible questions');
       }
 
       manifests.add({
@@ -212,7 +301,7 @@ class MicroTestEngine {
         'currentEligibleQuestionCount': currentEligibleCount,
         'deficit': deficit,
         'readinessState': currentEligibleCount >= 50 ? 'READY' : 'NOT_READY',
-        'blockerReasons': blockerReasons,
+        'blockerReasons': blockerReasonsSet.toList()..sort(),
         'poolVersion': '1.0.0',
       });
     }
