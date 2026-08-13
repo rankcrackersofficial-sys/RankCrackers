@@ -2,59 +2,110 @@ import 'dart:math';
 import '../../../core/models/question_model.dart';
 import '../models/crucible_schedule.dart';
 
-/// 🔱 MICRO TEST ENGINE (C2-FIX1 Compliant)
-/// Hardened authority for Crucible Micro question contracts and academic safety gates.
+/// 🔱 QUESTION TRUST SNAPSHOT
+/// An immutable, read-only container of authoritative academic evidence.
+class QuestionTrustSnapshot {
+  final Set<String> verifiedFactIds;
+  final Map<String, String> factSourceDocuments; // factId -> sourceDocumentId
+  final Set<String> heldFactIds; // unverified or held facts
+  
+  final Map<String, String> reviewerAuthorities; // reviewerId -> role
+  final Set<String> verifiedAnswerKeys; // questionId
+  final Map<String, String> verifiedAnswerKeyValues; // questionId -> expected answerIndex string
+  final Set<String> studentReadyQuestionIds; // questionId
+  
+  final Map<String, String> pyqPaperEvidence; // questionId -> officialPaperId
+  final Map<String, int> activeQuestionVersions; // lineageId -> activeVersion
+
+  const QuestionTrustSnapshot({
+    required this.verifiedFactIds,
+    required this.factSourceDocuments,
+    required this.heldFactIds,
+    required this.reviewerAuthorities,
+    required this.verifiedAnswerKeys,
+    required this.verifiedAnswerKeyValues,
+    required this.studentReadyQuestionIds,
+    required this.pyqPaperEvidence,
+    required this.activeQuestionVersions,
+  });
+
+  const QuestionTrustSnapshot.empty()
+      : verifiedFactIds = const {},
+        factSourceDocuments = const {},
+        heldFactIds = const {},
+        reviewerAuthorities = const {},
+        verifiedAnswerKeys = const {},
+        verifiedAnswerKeyValues = const {},
+        studentReadyQuestionIds = const {},
+        pyqPaperEvidence = const {},
+        activeQuestionVersions = const {};
+}
+
+/// 🔱 QUESTION TRUST REPOSITORY
+/// Authoritative trust store for resolving read-only academic evidence snapshots.
+class QuestionTrustRepository {
+  static QuestionTrustSnapshot _productionSnapshot = const QuestionTrustSnapshot.empty();
+
+  static QuestionTrustSnapshot getAuthoritativeSnapshot() {
+    return _productionSnapshot;
+  }
+
+  static void setAuthoritativeSnapshot(QuestionTrustSnapshot snapshot) {
+    _productionSnapshot = snapshot;
+  }
+}
+
+/// 🔱 MICRO TEST ENGINE (C2-FIX2 Compliant)
+/// Authoritative gatekeeper for Crucible Micro factory assembly.
 class MicroTestEngine {
 
-  // ===================================================
-  // AUTHORITATIVE REGISTRIES FOR TRUST GATE RESOLUTION
-  // ===================================================
-  static final Set<String> verifiedFactIds = {};
-  static final Map<String, String> factSourceDocuments = {}; // factId -> sourceDocumentId
-  static final Set<String> heldFactIds = {}; // unverified or held facts
-  
-  static final Map<String, String> reviewerAuthorities = {}; // reviewerId -> role (e.g. 'PRO_REVIEWER')
-  static final Set<String> verifiedAnswerKeys = {}; // questionId
-  static final Set<String> studentReadyQuestionIds = {}; // questionId
-  
-  static final Map<String, String> pyqPaperEvidence = {}; // questionId -> officialPaperId
-  
-  static final Map<String, int> activeQuestionVersions = {}; // questionId -> activeVersion
+  static const bool solutionRequiredForStudentReady = true;
 
-  /// Clears all registries for testing containment.
-  static void clearRegistries() {
-    verifiedFactIds.clear();
-    factSourceDocuments.clear();
-    heldFactIds.clear();
-    reviewerAuthorities.clear();
-    verifiedAnswerKeys.clear();
-    studentReadyQuestionIds.clear();
-    pyqPaperEvidence.clear();
-    activeQuestionVersions.clear();
+  // ===================================================
+  // 1. STABLE SEED DERIVATION
+  // ===================================================
+
+  /// Stable platform-independent seed derivation based on canonical inputs.
+  /// Does not depend on runtime-specific hashCode behavior.
+  static int deriveSeed({
+    required String microTestId,
+    required String scheduleId,
+    required String poolVersion,
+    required String assemblyVersion,
+    required int attemptOrdinal,
+  }) {
+    final key = '$microTestId:$scheduleId:$poolVersion:$assemblyVersion:$attemptOrdinal';
+    int hash = 2166136261;
+    for (int i = 0; i < key.length; i++) {
+      hash = (hash ^ key.codeUnitAt(i)) * 16777619;
+      hash = hash & 0xFFFFFFFF; // Clamp to 32-bit unsigned
+    }
+    return hash;
   }
 
   // ===================================================
-  // 1. QUESTION ELIGIBILITY GATES
+  // 2. QUESTION ELIGIBILITY GATES
   // ===================================================
 
-  /// Validates a question against all academic governance and provenance contracts.
+  /// Validates a question against the authoritative trust snapshot.
   /// Returns null if fully eligible, or a specific blocker string.
   static String? checkQuestionEligibility(
     QuestionModel question,
     String scheduleId,
-    List<String> allowedAtomIds,
-  ) {
+    List<String> allowedAtomIds, {
+    QuestionTrustSnapshot? trustSnapshot,
+  }) {
+    final trust = trustSnapshot ?? QuestionTrustRepository.getAuthoritativeSnapshot();
+
     // -------------------------------------------------
-    // A. Schema & Type Validity
+    // A. Explicit Question Type Gate
     // -------------------------------------------------
-    if (question.id.isEmpty || question.question.trim().isEmpty || question.examId.isEmpty || question.subjectId.isEmpty) {
-      return 'schema/type invalid: missing basic fields';
+    if (question.questionType == null || question.questionType!.trim().isEmpty) {
+      return 'schema/type invalid: type is unresolved';
     }
 
-    // Determine type by options list length:
-    final isMCQ = question.options.isNotEmpty;
-
-    if (isMCQ) {
+    final type = question.questionType!.trim();
+    if (type == 'mcq_single') {
       if (question.options.length != 4) {
         return 'answer schema invalid: MCQ options count must equal 4';
       }
@@ -66,13 +117,20 @@ class MicroTestEngine {
       if (question.answerIndex < 0 || question.answerIndex >= 4) {
         return 'answer schema invalid: MCQ answerIndex out of bounds';
       }
-    } else {
-      // Numerical / integer type: options are empty.
-      // Do NOT artificially enforce options.length == 4.
-      // Just check if answerIndex is valid (often 0 or a placeholder index)
+    } else if (type == 'numerical') {
+      if (question.options.isNotEmpty) {
+        return 'schema/type invalid: numerical options must be empty';
+      }
       if (question.answerIndex < 0) {
         return 'schema/type invalid: numerical answer index must not be negative';
       }
+    } else {
+      return 'schema/type invalid: unsupported question type';
+    }
+
+    // Basic fields validation
+    if (question.id.isEmpty || question.question.trim().isEmpty || question.examId.isEmpty || question.subjectId.isEmpty) {
+      return 'schema/type invalid: missing basic fields';
     }
 
     // Unsafe placeholders
@@ -99,13 +157,13 @@ class MicroTestEngine {
     if (question.factId == null || question.factId!.isEmpty) {
       return 'source provenance unresolved: missing factId';
     }
-    if (!verifiedFactIds.contains(question.factId)) {
+    if (!trust.verifiedFactIds.contains(question.factId)) {
       return 'source provenance unresolved: factId ${question.factId} is unverified or unregistered';
     }
-    if (heldFactIds.contains(question.factId)) {
+    if (trust.heldFactIds.contains(question.factId)) {
       return 'source provenance unresolved: fact ${question.factId} is academically held/rejected';
     }
-    final sourceDoc = factSourceDocuments[question.factId];
+    final sourceDoc = trust.factSourceDocuments[question.factId];
     if (sourceDoc == null || sourceDoc.isEmpty) {
       return 'source provenance unresolved: missing fact source document lineage';
     }
@@ -122,23 +180,34 @@ class MicroTestEngine {
     if (question.verifiedAt == null) {
       return 'review authority unresolved: missing verification date';
     }
-    final role = reviewerAuthorities[question.verifiedBy];
+    final role = trust.reviewerAuthorities[question.verifiedBy];
     if (role == null || role == 'AI' || role == 'system') {
       return 'review authority unresolved: verifier has unverified review authority';
     }
 
     // -------------------------------------------------
-    // E. Academic Key Verification Gate
+    // E. Academic Answer Key & Explanation Gate
     // -------------------------------------------------
-    if (!verifiedAnswerKeys.contains(question.id)) {
+    if (!trust.verifiedAnswerKeys.contains(question.id)) {
       return 'answer key academically unverified: key lacks professional verification';
+    }
+    final expectedVal = trust.verifiedAnswerKeyValues[question.id];
+    if (expectedVal != question.answerIndex.toString()) {
+      return 'answer key academically unverified: answer key value conflict';
+    }
+
+    // Solution/explanation checks
+    if (solutionRequiredForStudentReady) {
+      if (question.solution == null || question.solution!.trim().isEmpty) {
+        return 'solution verification missing where required: missing explanation/solution';
+      }
     }
 
     // -------------------------------------------------
     // F. PYQ Claim Proof
     // -------------------------------------------------
     if (question.isPYQ) {
-      final paperEvidence = pyqPaperEvidence[question.id];
+      final paperEvidence = trust.pyqPaperEvidence[question.id];
       if (paperEvidence == null || paperEvidence.isEmpty) {
         return 'unproven PYQ claim: missing official paper evidence for PYQ claim';
       }
@@ -150,14 +219,15 @@ class MicroTestEngine {
     if (question.status != 'published') {
       return 'student publication gate false: question status is not published';
     }
-    if (!studentReadyQuestionIds.contains(question.id)) {
+    if (!trust.studentReadyQuestionIds.contains(question.id)) {
       return 'student publication gate false: publication eligibility has not been granted';
     }
 
     // -------------------------------------------------
-    // H. Version / Supersession Safety
+    // H. Version & Lineage Safety
     // -------------------------------------------------
-    final activeVersion = activeQuestionVersions[question.id];
+    final lineageId = question.questionLineageId ?? question.id;
+    final activeVersion = trust.activeQuestionVersions[lineageId];
     if (activeVersion != null && question.version < activeVersion) {
       return 'superseded/conflicting version: version is superseded';
     }
@@ -166,27 +236,40 @@ class MicroTestEngine {
   }
 
   // ===================================================
-  // 2. DETERMINISTIC MICRO ASSEMBLY
+  // 3. DETERMINISTIC MICRO ASSEMBLY
   // ===================================================
 
-  /// Deterministically assembles exactly 50 eligible questions using a stable seed.
+  /// Deterministically assembles exactly 50 eligible questions using a derived seed.
   static List<QuestionModel> assembleMicroTest({
     required String scheduleId,
     required List<String> allowedAtomIds,
     required List<QuestionModel> pool,
     int requiredCount = 50,
-    int seed = 42,
+    QuestionTrustSnapshot? trustSnapshot,
+    int? manualSeed,
   }) {
     final List<QuestionModel> eligible = [];
     final Set<String> seenIds = {};
+    final Set<String> seenLineages = {};
 
     for (final q in pool) {
       if (seenIds.contains(q.id)) continue;
       
-      final eligibilityError = checkQuestionEligibility(q, scheduleId, allowedAtomIds);
+      final eligibilityError = checkQuestionEligibility(
+        q,
+        scheduleId,
+        allowedAtomIds,
+        trustSnapshot: trustSnapshot,
+      );
       if (eligibilityError == null) {
+        // Enforce logical lineage uniqueness inside the assembled set
+        final lineage = q.questionLineageId ?? q.id;
+        if (seenLineages.contains(lineage)) {
+          continue; // Prevent two versions/IDs of same logical item from co-entering
+        }
         eligible.add(q);
         seenIds.add(q.id);
+        seenLineages.add(lineage);
       }
     }
 
@@ -197,7 +280,15 @@ class MicroTestEngine {
     // Stable sorting by ID
     eligible.sort((a, b) => a.id.compareTo(b.id));
 
-    // Seeded random selection
+    // Seed derivation
+    final seed = manualSeed ?? deriveSeed(
+      microTestId: 'micro_unknown',
+      scheduleId: scheduleId,
+      poolVersion: '1.0.0',
+      assemblyVersion: '1.0.0',
+      attemptOrdinal: 1,
+    );
+
     final random = Random(seed);
     final List<QuestionModel> selected = [];
     final tempPool = List<QuestionModel>.from(eligible);
@@ -211,7 +302,7 @@ class MicroTestEngine {
   }
 
   // ===================================================
-  // 3. 42-SLOT MANIFEST GENERATION
+  // 4. 42-SLOT MANIFEST GENERATION
   // ===================================================
 
   /// Produces the complete 42-slot Micro manifest.
@@ -219,6 +310,7 @@ class MicroTestEngine {
     required List<CrucibleSchedule> schedules,
     required List<QuestionModel> pool,
     required DateTime protocolStartTime,
+    QuestionTrustSnapshot? trustSnapshot,
   }) {
     final List<Map<String, dynamic>> manifests = [];
 
@@ -255,7 +347,12 @@ class MicroTestEngine {
       final Set<String> blockerReasonsSet = {};
 
       for (final q in pool) {
-        final err = checkQuestionEligibility(q, schedule.id, schedule.atomicTopicIds);
+        final err = checkQuestionEligibility(
+          q,
+          schedule.id,
+          schedule.atomicTopicIds,
+          trustSnapshot: trustSnapshot,
+        );
         if (err == null) {
           currentEligibleCount++;
         } else {
@@ -268,6 +365,8 @@ class MicroTestEngine {
             blockerReasonsSet.add('answer schema invalid');
           } else if (err.startsWith('answer key academically unverified')) {
             blockerReasonsSet.add('answer key academically unverified');
+          } else if (err.startsWith('solution verification missing where required')) {
+            blockerReasonsSet.add('solution verification missing where required');
           } else if (err.startsWith('atom/source mapping invalid')) {
             blockerReasonsSet.add('atom/source mapping invalid');
           } else if (err.startsWith('unproven PYQ claim')) {

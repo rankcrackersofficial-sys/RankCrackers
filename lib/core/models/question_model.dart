@@ -24,6 +24,11 @@ class QuestionModel {
   final DateTime? verifiedAt; // 🔱 Added: Verification Traceability
   final String sourceType; 
   final bool isPYQ; // 🔱 Added: Constitutional Evidence Law
+  
+  // 🔱 C2-FIX2 HARDENED FIELDS
+  final String? questionType; // mcq_single, numerical
+  final String? solution; // explanation / worked solution
+  final String? questionLineageId; // logical item identity key
 
   const QuestionModel({
     required this.id,
@@ -45,6 +50,9 @@ class QuestionModel {
     this.verifiedAt,
     this.sourceType = 'admin',
     this.isPYQ = false,
+    this.questionType,
+    this.solution,
+    this.questionLineageId,
   });
 
   QuestionModel copyWith({
@@ -67,6 +75,9 @@ class QuestionModel {
     DateTime? verifiedAt,
     String? sourceType,
     bool? isPYQ,
+    String? questionType,
+    String? solution,
+    String? questionLineageId,
   }) {
     return QuestionModel(
       id: id ?? this.id,
@@ -88,6 +99,9 @@ class QuestionModel {
       verifiedAt: verifiedAt ?? this.verifiedAt,
       sourceType: sourceType ?? this.sourceType,
       isPYQ: isPYQ ?? this.isPYQ,
+      questionType: questionType ?? this.questionType,
+      solution: solution ?? this.solution,
+      questionLineageId: questionLineageId ?? this.questionLineageId,
     );
   }
 
@@ -112,6 +126,9 @@ class QuestionModel {
       'verifiedAt': verifiedAt?.millisecondsSinceEpoch,
       'sourceType': sourceType,
       'isPYQ': isPYQ,
+      'questionType': questionType,
+      'solution': solution,
+      'questionLineageId': questionLineageId,
     };
   }
 
@@ -141,6 +158,9 @@ class QuestionModel {
           : null,
       sourceType: map['sourceType'] ?? 'admin',
       isPYQ: map['isPYQ'] ?? false,
+      questionType: map['questionType'],
+      solution: map['solution'],
+      questionLineageId: map['questionLineageId'],
     );
   }
 }
