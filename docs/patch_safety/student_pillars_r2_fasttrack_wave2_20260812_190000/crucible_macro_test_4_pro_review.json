@@ -1,0 +1,26 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "PASS",
+    "itemCountReviewed": 12,
+    "allAnswersTechnicallyCorrect": true,
+    "allSolutionsTechnicallyCorrect": true,
+    "noMultipleCorrectRisk": true,
+    "noScopeLeakage": true,
+    "answerKeysVerified": true,
+    "reviewedSlot": "macro_test_4",
+    "blockingIssues": [],
+    "reviewNotes": "All items are well-framed, technically correct, and map accurately to the provided source atoms. Difficulty levels are appropriate, and there are no instances of ambiguity, multiple correct options, or scope leakage."
+  }
+}

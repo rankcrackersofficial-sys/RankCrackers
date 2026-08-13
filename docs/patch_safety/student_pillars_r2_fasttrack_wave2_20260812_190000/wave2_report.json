@@ -1,0 +1,38 @@
+{
+  "syllabus": {
+    "baselineVerified": 211,
+    "newlyVerified": 26,
+    "remainingPending": 180,
+    "totalVerified": 237,
+    "denominator": 417,
+    "studentBinding": "PARTIAL",
+    "studentReady": false
+  },
+  "crucible": {
+    "macroReviewed": 4,
+    "macroTotal": 7,
+    "majorReviewed": 1,
+    "majorTotal": 1,
+    "questionPacksReady": 5,
+    "questionPacksTotal": 8,
+    "answerKeysVerified": 5,
+    "answerKeysTotal": 8,
+    "studentBinding": "PARTIAL",
+    "studentReady": false
+  },
+  "digibook": {
+    "baselineApprovedAtoms": 2,
+    "newlyApprovedAtoms": 20,
+    "approvedAtoms": 22,
+    "denominator": 417,
+    "studentBinding": "PARTIAL",
+    "studentReady": false
+  },
+  "adaptiveUi": {
+    "testedWidths": [],
+    "physicalSamsungTested": false,
+    "overflowCount": 0,
+    "redScreenCount": 0
+  },
+  "productionReady": false
+}

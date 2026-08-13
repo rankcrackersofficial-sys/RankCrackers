@@ -1,0 +1,103 @@
+{
+  "baselineHead": "3bee1c0f519e35440754254114d50fe703e2f7e9",
+  "results": {
+    "macro_test_3": {
+      "slotId": "macro_test_3",
+      "phaseId": "phase_3",
+      "selectedAtomCount": 18,
+      "questionPackReady": true,
+      "reviewed": true,
+      "answerKeyVerified": true,
+      "verifiedAcademicAnswerKey": true,
+      "officialAnswerKey": false,
+      "studentReady": false,
+      "draftFile": "crucible_macro_test_3_flash_draft.json",
+      "reviewFile": "crucible_macro_test_3_pro_review.json",
+      "blocker": null
+    },
+    "macro_test_4": {
+      "slotId": "macro_test_4",
+      "phaseId": "phase_4",
+      "selectedAtomCount": 18,
+      "questionPackReady": true,
+      "reviewed": true,
+      "answerKeyVerified": true,
+      "verifiedAcademicAnswerKey": true,
+      "officialAnswerKey": false,
+      "studentReady": false,
+      "draftFile": "crucible_macro_test_4_flash_draft.json",
+      "reviewFile": "crucible_macro_test_4_pro_review.json",
+      "blocker": null
+    },
+    "macro_test_5": {
+      "slotId": "macro_test_5",
+      "phaseId": "phase_5",
+      "selectedAtomCount": 18,
+      "questionPackReady": false,
+      "reviewed": false,
+      "answerKeyVerified": false,
+      "verifiedAcademicAnswerKey": false,
+      "officialAnswerKey": false,
+      "studentReady": false,
+      "draftFile": "crucible_macro_test_5_flash_draft.json",
+      "reviewFile": "crucible_macro_test_5_pro_review.json",
+      "blocker": "PRO_REVIEW_DID_NOT_PASS"
+    },
+    "macro_test_6": {
+      "slotId": "macro_test_6",
+      "phaseId": "phase_6",
+      "selectedAtomCount": 18,
+      "questionPackReady": false,
+      "reviewed": false,
+      "answerKeyVerified": false,
+      "verifiedAcademicAnswerKey": false,
+      "officialAnswerKey": false,
+      "studentReady": false,
+      "draftFile": "crucible_macro_test_6_flash_draft.json",
+      "reviewFile": "crucible_macro_test_6_pro_review.json",
+      "blocker": "PRO_REVIEW_DID_NOT_PASS"
+    },
+    "macro_test_7": {
+      "slotId": "macro_test_7",
+      "phaseId": "phase_7",
+      "selectedAtomCount": 18,
+      "questionPackReady": false,
+      "reviewed": false,
+      "answerKeyVerified": false,
+      "verifiedAcademicAnswerKey": false,
+      "officialAnswerKey": false,
+      "studentReady": false,
+      "draftFile": "crucible_macro_test_7_flash_draft.json",
+      "reviewFile": "crucible_macro_test_7_pro_review.json",
+      "blocker": "PRO_REVIEW_DID_NOT_PASS"
+    },
+    "major_test_final": {
+      "slotId": "major_test_final",
+      "phaseId": "phase_7",
+      "selectedAtomCount": 45,
+      "questionPackReady": true,
+      "reviewed": true,
+      "answerKeyVerified": true,
+      "verifiedAcademicAnswerKey": true,
+      "officialAnswerKey": false,
+      "studentReady": false,
+      "draftFile": "crucible_major_test_final_flash_draft.json",
+      "reviewFile": "crucible_major_test_final_pro_review.json",
+      "blocker": null
+    }
+  },
+  "summary": {
+    "macroReviewed": 4,
+    "macroTotal": 7,
+    "majorReviewed": 1,
+    "majorTotal": 1,
+    "questionPacksReady": 5,
+    "questionPacksTotal": 8,
+    "answerKeysVerified": 5,
+    "answerKeysTotal": 8,
+    "studentBinding": "PARTIAL",
+    "studentReady": false
+  },
+  "officialAnswerKey": false,
+  "answerKeyTerminology": "VERIFIED_ACADEMIC_ANSWER_KEY_NOT_OFFICIAL_ANSWER_KEY"
+}

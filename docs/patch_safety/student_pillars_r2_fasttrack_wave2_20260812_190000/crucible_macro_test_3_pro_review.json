@@ -1,0 +1,26 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "PASS",
+    "itemCountReviewed": 12,
+    "allAnswersTechnicallyCorrect": true,
+    "allSolutionsTechnicallyCorrect": true,
+    "noMultipleCorrectRisk": true,
+    "noScopeLeakage": true,
+    "answerKeysVerified": true,
+    "reviewedSlot": "macro_test_3",
+    "blockingIssues": [],
+    "reviewNotes": "All items are technically correct and map perfectly to the assigned atoms. The stems are clear and unambiguous, without any multiple-correct risk. Solutions accurately reflect the required steps to arrive at the answers."
+  }
+}

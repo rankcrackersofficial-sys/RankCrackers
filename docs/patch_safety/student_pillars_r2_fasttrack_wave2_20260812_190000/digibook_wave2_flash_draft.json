@@ -1,0 +1,2435 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "selectedAtoms": [
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U11_T_0DB42BEA_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Actinoids - Electronic Configuration And Oxidation States.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_C9AC8CA6_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Alcohols: Identification Of Primary, Secondary And Tertiary Alcohols, Mechanism Of Dehydration.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_1206BA8A_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Aldehyde And Ketones: Nature Of Carbonyl Group, Nucleophilic Addition To >C=O Group, Relative Reactivities Of Aldehydes And Ketones, Important Reactions Such As - Nucleophilic Addition Reactions (addition Of HCN, NH3 And Its Derivatives), Grignard Reagent, Oxidation, Reduction (Wolf Kishner And Clemmensen), The Acidity Of 𝐀 -hydrogen. Aldol Condensation, Cannizzaro Reaction, Haloform Reaction, Chemical Tests To Distinguish Between Aldehydes And Ketones.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_1206BA8A_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Aldehyde And Ketones: Nature Of Carbonyl Group, Nucleophilic Addition To >C=O Group, Relative Reactivities Of Aldehydes And Ketones, Important Reactions Such As - Nucleophilic Addition Reactions (addition Of HCN, NH3 And Its Derivatives), Grignard Reagent, Oxidation, Reduction (Wolf Kishner And Clemmensen), The Acidity Of 𝐀 -hydrogen. Aldol Condensation, Cannizzaro Reaction, Haloform Reaction, Chemical Tests To Distinguish Between Aldehydes And Ketones.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_BCA9920C_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Alkanes - Conformations: Sawhorse And Newman Projections (of Ethane), Mechanism Of Halogenation Of Alkanes.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_B270826F_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Alkenes - Geometrical Isomerism, Mechanism Of Electrophilic Addition, Addition Of Hydrogen, Halogens, Water, Hydrogen Halides (Markownikoffs And Peroxide Effect), Ozonolysis And Polymerization.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_B270826F_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Alkenes - Geometrical Isomerism, Mechanism Of Electrophilic Addition, Addition Of Hydrogen, Halogens, Water, Hydrogen Halides (Markownikoffs And Peroxide Effect), Ozonolysis And Polymerization.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_D8B93C4B_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Alkynes - Acidic Character, Addition Of Hydrogen, Halogens, Water And Hydrogen Halides, Polymerization.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U18_T_19C1F7E4_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Amines: Nomenclature, Classification, Structure, Basic Character And Identification Of Primary, Secondary And Tertiary Amines And Their Basic Character.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U18_T_19C1F7E4_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Amines: Nomenclature, Classification, Structure, Basic Character And Identification Of Primary, Secondary And Tertiary Amines And Their Basic Character.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_97ACB2E0_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Aromatic Hydrocarbons - Nomenclature, Benzene - Structure And Aromaticity, Mechanism Of Electrophilic Substitution, Halogenation, Nitration.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U13_T_0B6FC591_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Calculations Of Empirical Formulae And Molecular Formulae, Numerical Problems In Organic Quantitative Analysis,",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_69EF29B0_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "CARBOHYDRATES – Classification, Aldoses And Ketoses, Monosaccharides (glucose And Fructose) And Constituent Monosaccharides Of Oligosaccharides (sucrose, Lactose And Maltose).",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_69EF29B0_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "CARBOHYDRATES – Classification, Aldoses And Ketoses, Monosaccharides (glucose And Fructose) And Constituent Monosaccharides Of Oligosaccharides (sucrose, Lactose And Maltose).",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_3944DA40_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Carboxylic Acids: Acidic Strength And Factors Affecting It.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_FE6942BA_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Chemical Principles Involved In The Following Experiments: 1. Enthalpy Of Solution Of CuSO4 2. Enthalpy Of Neutralization Of Strong Acid And Strong Base. 3. Preparation Of Lyophilic And Lyophobic Sols. 4. Kinetic Study Of The Reaction Of Iodide Ions With Hydrogen Peroxide At Room Temperature.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_FE6942BA_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Chemical Principles Involved In The Following Experiments: 1. Enthalpy Of Solution Of CuSO4 2. Enthalpy Of Neutralization Of Strong Acid And Strong Base. 3. Preparation Of Lyophilic And Lyophobic Sols. 4. Kinetic Study Of The Reaction Of Iodide Ions With Hydrogen Peroxide At Room Temperature.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_7CAF568B_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Chemical Principles Involved In The Qualitative Salt Analysis: Cations – Pb2+, Cu2+, Al3+, Fe3+, Zn2+, Ni2+, Ca2+, Ba2+, Mg2+, NH4+ Anions- CO32−, S2-, SO42−, NO3-, NO2-, Cl-, Br-, I- ( Insoluble Salts Excluded).",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_7CAF568B_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Chemical Principles Involved In The Qualitative Salt Analysis: Cations – Pb2+, Cu2+, Al3+, Fe3+, Zn2+, Ni2+, Ca2+, Ba2+, Mg2+, NH4+ Anions- CO32−, S2-, SO42−, NO3-, NO2-, Cl-, Br-, I- ( Insoluble Salts Excluded).",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_671F479D_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Classification, Isomerism, IUPAC Nomenclature, General Methods Of Preparation, Properties And Reactions.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    }
+  ],
+  "draft": {
+    "items": [
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U11_T_0DB42BEA_CH001",
+        "overview": "Actinoids are the fourteen elements following Actinium (from Thorium, Z=90 to Lawrencium, Z=103) where the 5f subshell is progressively filled. Unlike lanthanoids, actinoids exhibit a much broader range of oxidation states and complex electronic configurations because the 5f, 6d, and 7s orbitals are comparable in energy.",
+        "concepts": [
+          {
+            "title": "Electronic Configuration of Actinoids",
+            "explanation": "The general electronic configuration of actinoids is [Rn] 5f^{1-14} 6d^{0-2} 7s^2. Due to the small energy difference between 5f, 6d, and 7s subshells, electrons can easily shift between 5f and 6d orbitals. For instance, Thorium (Th, Z=90) has the configuration [Rn] 6d^2 7s^2 with zero 5f electrons, whereas Curium (Cm, Z=96) features a stable half-filled 5f subshell with [Rn] 5f^7 6d^1 7s^2."
+          },
+          {
+            "title": "Oxidation States of Actinoids",
+            "explanation": "Actinoids show a wide variety of oxidation states ranging from +3 to +7. Early actinoids (such as Th, Pa, U, Np, Pu) display variable higher oxidation states because all 5f, 6d, and 7s electrons can participate in bonding. The maximum oxidation state increases from +4 in Th to +7 in Np and Pu, after which it decreases. Towards the end of the series, the +3 oxidation state becomes the most stable, similar to lanthanoids."
+          },
+          {
+            "title": "Actinoid Contraction and 5f Shielding",
+            "explanation": "There is a progressive decrease in atomic and ionic radii across the actinoid series known as actinoid contraction. This effect is greater from element to element than lanthanoid contraction because 5f orbitals extend further in space and exert a poorer shielding effect on outer electrons than 4f orbitals."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "General Electronic Configuration of Actinoids",
+            "formula": "[Rn] 5f^{1-14} 6d^{0-2} 7s^2",
+            "applicability": "Applies to actinoid elements from Z = 90 (Th) to Z = 103 (Lr)",
+            "variables": [
+              {
+                "symbol": "[Rn]",
+                "meaning": "Radon core configuration (Z = 86)",
+                "unit": "dimensionless"
+              }
+            ]
+          },
+          {
+            "label": "Spin-only Magnetic Moment",
+            "formula": "\\mu_{s} = \\sqrt{n(n+2)} \\text{ BM}",
+            "applicability": "Approximation formula used to calculate magnetic moment of ions containing unpaired electrons",
+            "variables": [
+              {
+                "symbol": "\\mu_{s}",
+                "meaning": "Spin-only magnetic moment",
+                "unit": "Bohr Magnetons (BM)"
+              },
+              {
+                "symbol": "n",
+                "meaning": "Number of unpaired electrons",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Actinoids predominantly show only the +3 oxidation state just like lanthanoids.",
+            "correction": "While +3 is common, early actinoids exhibit a broad spectrum of oxidation states up to +7 (e.g., Np and Pu) due to similar energy levels of 5f, 6d, and 7s orbitals."
+          },
+          {
+            "misconception": "Thorium (Th, Z=90) has one 5f electron in its ground state.",
+            "correction": "Thorium has a ground state electronic configuration of [Rn] 6d^2 7s^2, meaning it has zero electrons in the 5f subshell."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Write the electronic configuration of Uranium (Z = 92) in its ground state and determine the electronic configuration of the U^4+ ion.",
+            "steps": [
+              "Step 1: Find the neutral electronic configuration of Uranium (Z = 92). The noble gas core is Radon ([Rn], Z = 86). The remaining 6 electrons enter 5f, 6d, and 7s orbitals as [Rn] 5f^3 6d^1 7s^2.",
+              "Step 2: To form U^4+, remove 4 electrons from the outermost orbitals in sequence (first from 7s, then 6d, then 5f).",
+              "Step 3: Removing 2 electrons from 7s, 1 from 6d, and 1 from 5f leaves [Rn] 5f^2."
+            ],
+            "answer": "Ground state U: [Rn] 5f^3 6d^1 7s^2; U^4+ ion: [Rn] 5f^2."
+          },
+          {
+            "problem": "Which actinoid elements exhibit the maximum oxidation state of +7, and why can early actinoids achieve such high oxidation states?",
+            "steps": [
+              "Step 1: Identify the elements reaching +7 oxidation state. Neptunium (Np, Z = 93) and Plutonium (Pu, Z = 94) reach the +7 state.",
+              "Step 2: Explain the underlying reason. In early actinoids, the energy levels of 5f, 6d, and 7s orbitals are very close to each other. This allows all valence electrons (5f, 6d, and 7s) to participate in bond formation."
+            ],
+            "answer": "Neptunium (Np) and Plutonium (Pu) exhibit the +7 oxidation state because the 5f, 6d, and 7s energy levels are comparable, permitting participation of all valence electrons."
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Why is actinoid contraction greater from element to element than lanthanoid contraction?",
+            "answer": "5f orbitals extend broader in space than 4f orbitals, leading to weaker and poorer shielding of outer valence electrons by 5f electrons compared to 4f electrons."
+          },
+          {
+            "question": "What is the ground-state electronic configuration of Curium (Z = 96)?",
+            "answer": "[Rn] 5f^7 6d^1 7s^2, due to the extra stability of a half-filled 5f subshell."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class 12 Chemistry, Chapter 8: The d- and f-Block Elements",
+          "Lee, J. D., Concise Inorganic Chemistry, 5th Edition"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_C9AC8CA6_CH001",
+        "overview": "This section covers experimental methods used to distinguish primary (1°), secondary (2°), and tertiary (3°) alcohols (such as the Lucas Test, Victor Meyer Test, Oxidation, and Catalytic Dehydrogenation), as well as the step-by-step E1 mechanism of acid-catalyzed dehydration of alcohols including carbocation rearrangements.",
+        "concepts": [
+          {
+            "title": "Identification Tests for Alcohols",
+            "explanation": "Differentiation of 1°, 2°, and 3° alcohols relies on structural reactivity. 1. Lucas Test: Uses anhydrous ZnCl2 and conc. HCl. 3° alcohols react immediately giving turbidity; 2° alcohols show turbidity within 5 minutes; 1° alcohols do not produce turbidity at room temperature. 2. Victor Meyer Test: Alcohol is converted to alkyl iodide (P + I2), then to nitroalkane (AgNO2), treated with nitrous acid (HNO2), and finally made alkaline with NaOH. 1° alcohol gives a blood-red solution (nitrolic acid sodium salt), 2° alcohol gives a blue solution (pseudonitrol), and 3° alcohol remains colorless. 3. Catalytic Dehydrogenation over Cu at 573 K: 1° alcohol yields an aldehyde, 2° alcohol yields a ketone, and 3° alcohol undergoes dehydration to yield an alkene."
+          },
+          {
+            "title": "Mechanism of Acid-Catalyzed Dehydration of Alcohols",
+            "explanation": "Dehydration converts alcohols into alkenes using concentrated H2SO4 or H3PO4 at high temperatures. The process generally follows an E1 mechanism for 2° and 3° alcohols: Step 1: Fast protonation of the hydroxyl group by acid to form a protonated alcohol (oxonium ion). Step 2: Slow (rate-determining step) loss of a water molecule to form a carbocation intermediate. Carbocation rearrangements (1,2-hydride or 1,2-methyl shifts) can occur if a more stable carbocation can form. Step 3: Fast removal of a proton by a base (such as H2O) to form the most stable alkene, following Zaitsev's rule (more substituted alkene)."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Reactivity Order for Lucas Test and Acid-Catalyzed Dehydration",
+            "formula": "Reactivity: 3° Alcohol > 2° Alcohol > 1° Alcohol",
+            "applicability": "Applies to reactions passing through a carbocation intermediate, such as SN1 halogenation with HCl/ZnCl2 and E1 acid-catalyzed dehydration.",
+            "variables": [
+              {
+                "symbol": "3° Alcohol",
+                "meaning": "Tertiary alcohol forming stable 3° carbocation",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "2° Alcohol",
+                "meaning": "Secondary alcohol forming 2° carbocation",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "1° Alcohol",
+                "meaning": "Primary alcohol forming unstable 1° carbocation",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Passing 3° alcohol vapors over heated copper (Cu at 573 K) produces a carbonyl compound like aldehydes or ketones.",
+            "correction": "3° alcohols lack an alpha-hydrogen atom required for dehydrogenation. Therefore, they undergo dehydration (loss of water) instead, yielding alkenes."
+          },
+          {
+            "misconception": "Acid-catalyzed dehydration of 3,3-dimethylbutan-2-ol gives 3,3-dimethylbut-1-ene as the major product.",
+            "correction": "The initial secondary carbocation undergoes a 1,2-methyl shift to form a more stable tertiary carbocation, leading to 2,3-dimethylbut-2-ene as the major Zaitsev product."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Predict the major product obtained when 3,3-dimethylbutan-2-ol is heated with concentrated H2SO4.",
+            "steps": [
+              "Step 1: Protonation of the -OH group of 3,3-dimethylbutan-2-ol gives the oxonium ion.",
+              "Step 2: Loss of H2O yields a 2° carbocation: (CH3)3C-CH(+)-CH3.",
+              "Step 3: A 1,2-methyl shift occurs from the adjacent quaternary carbon to form a more stable 3° carbocation: (CH3)2C(+)-CH(CH3)2.",
+              "Step 4: Loss of H+ from the 3° carbocation yields the most substituted alkene according to Zaitsev's rule: 2,3-dimethylbut-2-ene."
+            ],
+            "answer": "2,3-dimethylbut-2-ene"
+          },
+          {
+            "problem": "An organic compound 'X' (C4H10O) turns Lucas reagent turbid within 5 minutes. When 'X' is treated with Cu at 573 K, compound 'Y' is formed. Identify 'X' and 'Y'.",
+            "steps": [
+              "Step 1: Reactivity with Lucas reagent within 5 minutes indicates that 'X' is a secondary (2°) alcohol.",
+              "Step 2: The 4-carbon 2° alcohol formula C4H10O corresponds to Butan-2-ol.",
+              "Step 3: Catalytic dehydrogenation of a 2° alcohol (Butan-2-ol) over Cu at 573 K yields a ketone (Butan-2-one)."
+            ],
+            "answer": "X = Butan-2-ol, Y = Butan-2-one"
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "What colors are observed in the Victor Meyer test for primary, secondary, and tertiary alcohols, respectively?",
+            "answer": "Primary alcohol gives Red color, Secondary alcohol gives Blue color, and Tertiary alcohol gives Colorless solution (Red, Blue, Colorless)."
+          },
+          {
+            "question": "Which step is the rate-determining step in the acid-catalyzed dehydration of secondary and tertiary alcohols?",
+            "answer": "The loss of a water molecule from the protonated alcohol to form the carbocation intermediate."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class 12 Chemistry, Chapter 11: Alcohols, Phenols and Ethers - Section 11.4.4 Chemical Reactions",
+          "Morrison & Boyd, Organic Chemistry, Chapter on Alcohols: Reactions and Mechanisms"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_1206BA8A_CH001",
+        "overview": "Aldehydes and ketones contain the polar carbonyl group (>C=O), where the electrophilic sp2 hybridized carbon undergoes characteristic nucleophilic addition reactions. Reactivity is governed by steric hindrance and electronic (+I and resonance) effects, making aldehydes generally more reactive than ketones. Key transformations include additions of HCN, NaHSO3, Grignard reagents, and ammonia derivatives, reductions via Clemmensen and Wolff-Kishner methods, oxidations using Tollens' and Fehling's reagents, as well as reactions mediated by alpha-hydrogen acidity including Aldol condensation, Cannizzaro reaction, and Haloform reaction.",
+        "concepts": [
+          {
+            "title": "Nature of Carbonyl Group and Nucleophilic Addition",
+            "explanation": "The carbonyl carbon is sp2 hybridized and planar, bonded to oxygen by a double bond. Electronegative oxygen pulls pi-electron density toward itself, imparting electrophilic character to the carbonyl carbon. Attacking nucleophiles add perpendicular to the carbonyl plane, transforming the sp2 carbon into a tetrahedral sp3 alkoxide intermediate that subsequently accepts a proton."
+          },
+          {
+            "title": "Relative Reactivity of Aldehydes and Ketones",
+            "explanation": "Aldehydes are generally more reactive than ketones toward nucleophilic attack due to steric and electronic factors. Ketones have two alkyl groups providing steric hindrance to the approaching nucleophile and stabilizing the electrophilic carbon through electron-donating (+I) inductive effects, reducing its partial positive charge compared to aldehydes."
+          },
+          {
+            "title": "Nucleophilic Addition Reactions",
+            "explanation": "Hydrogen cyanide adds to carbonyls (base-catalyzed) forming cyanohydrins. Ammonia derivatives (NH2-Z) react via nucleophilic addition followed by dehydration to yield imines, oximes, or hydrazones at mildly acidic pH (~3.5-4.5). Grignard reagents add to produce primary alcohols (from formaldehyde), secondary alcohols (from other aldehydes), and tertiary alcohols (from ketones) after acid hydrolysis."
+          },
+          {
+            "title": "Reduction and Oxidation Reactions",
+            "explanation": "Clemmensen reduction (Zn-Hg / conc. HCl) converts carbonyls to methylene groups in acid-stable molecules, whereas Wolff-Kishner reduction (NH2NH2 / KOH / ethylene glycol, heat) achieves the same transformation under basic conditions. Mild oxidants like Tollens' reagent (ammoniacal AgNO3) and Fehling's solution oxidize aldehydes to carboxylates, serving as diagnostic tests to distinguish aldehydes from ketones."
+          },
+          {
+            "title": "Reactions Involving Alpha-Hydrogen",
+            "explanation": "Alpha-hydrogens in carbonyl compounds are acidic because the resulting enolate ion is stabilized by resonance. Weak or dilute bases induce Aldol condensation in compounds with alpha-hydrogens, yielding beta-hydroxy carbonyls that readily dehydrate to alpha,beta-unsaturated carbonyls. Non-enolizable aldehydes undergo self-redox Cannizzaro reactions in concentrated alkali. Methyl ketones react with X2/NaOH in the haloform reaction to yield haloform (CHX3) and carboxylate salts."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Cyanohydrin Formation Equilibrium Constant",
+            "formula": "K_eq = [Cyanohydrin] / ([RCHO] * [HCN])",
+            "applicability": "Reversible nucleophilic addition of HCN to aldehydes and ketones",
+            "variables": [
+              {
+                "symbol": "K_eq",
+                "meaning": "Equilibrium constant of nucleophilic addition",
+                "unit": "L/mol"
+              },
+              {
+                "symbol": "[Cyanohydrin]",
+                "meaning": "Equilibrium concentration of cyanohydrin product",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "[RCHO]",
+                "meaning": "Equilibrium concentration of carbonyl compound",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "[HCN]",
+                "meaning": "Equilibrium concentration of hydrogen cyanide",
+                "unit": "mol/L"
+              }
+            ]
+          },
+          {
+            "label": "Acidity Constant of Alpha-Hydrogen",
+            "formula": "K_a = ([Enolate-][H+]) / [Keto]",
+            "applicability": "Deprotonation of alpha-hydrogen by strong or weak base to yield enolate",
+            "variables": [
+              {
+                "symbol": "K_a",
+                "meaning": "Acid dissociation constant of carbonyl alpha-hydrogen",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "[Enolate-]",
+                "meaning": "Concentration of resonance-stabilized enolate anion",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "[H+]",
+                "meaning": "Concentration of solvated proton",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "[Keto]",
+                "meaning": "Concentration of un-ionized keto form",
+                "unit": "mol/L"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Clemmensen reduction and Wolff-Kishner reduction are completely interchangeable for any carbonyl reduction.",
+            "correction": "Clemmensen reduction uses strongly acidic conditions (conc. HCl) and will destroy acid-sensitive functional groups (e.g., acetals, -OH, C=C double bonds), whereas Wolff-Kishner uses strongly basic conditions (KOH) and will affect base-sensitive functional groups."
+          },
+          {
+            "misconception": "Tollens' test is positive for all carbonyl compounds.",
+            "correction": "Tollens' test is positive for all aldehydes (aliphatic and aromatic) and alpha-hydroxy ketones, but gives negative results for simple ketones."
+          },
+          {
+            "misconception": "Formaldehyde can undergo Aldol condensation in dilute NaOH solution.",
+            "correction": "Formaldehyde lacks alpha-hydrogens entirely, so it cannot form an enolate ion required for Aldol condensation; instead, it undergoes Cannizzaro reaction in concentrated alkali."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Arrange the following carbonyl compounds in increasing order of reactivity toward nucleophilic addition reactions: Acetone, Benzaldehyde, Acetaldehyde, Formaldehyde. Explain the order.",
+            "steps": [
+              "Analyze steric hindrance around carbonyl carbon: Formaldehyde (0 alkyl/aryl groups) < Acetaldehyde (1 methyl group) < Acetone (2 methyl groups).",
+              "Analyze electronic (+I and resonance) effects: Acetone has two +I methyl groups reducing electrophilicity. Benzaldehyde has a phenyl ring whose pi-electrons delocalize into the carbonyl group, significantly reducing positive charge on the carbonyl carbon compared to aliphatic aldehydes.",
+              "Combine effects: Formaldehyde is the most reactive, followed by Acetaldehyde, Benzaldehyde, and Acetone.",
+              "Order of reactivity: Acetone < Benzaldehyde < Acetaldehyde < Formaldehyde."
+            ],
+            "answer": "Acetone < Benzaldehyde < Acetaldehyde < Formaldehyde"
+          },
+          {
+            "problem": "An organic compound A with molecular formula C3H6O forms a phenylhydrazone, gives a positive iodoform test, but does not reduce Fehling's solution. Identify compound A and write the product formed when it reacts with HCN.",
+            "steps": [
+              "Since compound A forms a phenylhydrazone, it contains a carbonyl group (>C=O).",
+              "Since A does not reduce Fehling's solution, it is a ketone, not an aliphatic aldehyde.",
+              "With molecular formula C3H6O and being a ketone, compound A must be Propanone (Acetone, CH3COCH3).",
+              "Propanone contains a CH3-C=O group, which explains the positive iodoform test.",
+              "Reaction of Propanone with HCN yields Acetone cyanohydrin: (CH3)2C(OH)CN."
+            ],
+            "answer": "Compound A is Propanone (Acetone). The product with HCN is 2-hydroxy-2-methylpropanenitrile (Acetone cyanohydrin)."
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Which reagent is used in Fehling's test, and what is the positive visual observation observed for aliphatic aldehydes?",
+            "answer": "Fehling's test uses an aqueous mixture of CuSO4 (Fehling A) and alkaline sodium potassium tartrate (Fehling B). A positive test yields a reddish-brown precipitate of Cuprous Oxide (Cu2O)."
+          },
+          {
+            "question": "Why does Benzaldehyde undergo Cannizzaro reaction instead of Aldol condensation when treated with 50% NaOH?",
+            "answer": "Benzaldehyde lacks alpha-hydrogens, preventing enolate ion formation needed for Aldol condensation. Thus, in concentrated alkali (50% NaOH), it undergoes disproportionation via hydride transfer (Cannizzaro reaction)."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class 12 Chemistry, Chapter 12: Aldehydes, Ketones and Carboxylic Acids",
+          "JEE Main Official Chemistry Syllabus - Organic Compounds Containing Oxygen"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_1206BA8A_CH002",
+        "overview": "This topic covers the structure, reactivity patterns, and essential chemical transformations of aldehydes and ketones, including nucleophilic addition, reduction, reactions governed by alpha-hydrogen acidity, and laboratory distinction tests.",
+        "concepts": [
+          {
+            "title": "Nature of Carbonyl Group and Relative Reactivity",
+            "explanation": "The carbonyl carbon is sp2 hybridized and trigonal planar. Due to the electronegativity difference between carbon and oxygen, the C=O bond is strongly polarized. Aldehydes are generally more reactive than ketones toward nucleophilic addition due to less steric hindrance and lower +I inductive stabilization of the partial positive charge on the carbonyl carbon."
+          },
+          {
+            "title": "Nucleophilic Addition Reactions",
+            "explanation": "Nucleophiles attack the electrophilic carbonyl carbon to form a tetrahedral alkoxide intermediate, which subsequently gets protonated. Key examples include HCN addition (forming cyanohydrins), Grignard addition (forming alcohols), and reaction with ammonia derivatives (Z-NH2 forming oximes, hydrazones, and 2,4-DNP derivatives via addition-elimination)."
+          },
+          {
+            "title": "Reduction Reactions",
+            "explanation": "Carbonyl groups can be reduced to methylene groups (-CH2-) via Clemmensen reduction (using Zn-Hg/conc. HCl, suitable for base-sensitive substrates) or Wolff-Kishner reduction (using NH2NH2/KOH/ethylene glycol, suitable for acid-sensitive substrates)."
+          },
+          {
+            "title": "Alpha-Hydrogen Acidity: Aldol vs. Cannizzaro Reactions",
+            "explanation": "Alpha-hydrogens of carbonyl compounds are acidic due to resonance stabilization of the resulting enolate ion. Dilute alkali induces Aldol condensation in compounds with alpha-hydrogens to yield beta-hydroxy carbonyls that dehydrate upon heating. Aldehydes lacking alpha-hydrogens undergo Cannizzaro reaction in concentrated alkali, undergoing disproportionation to an alcohol and a carboxylic acid salt."
+          },
+          {
+            "title": "Haloform Reaction and Chemical Distinction Tests",
+            "explanation": "Compounds with a CH3C=O group (or CH3CH(OH)- group) react with X2 and NaOH to yield a haloform (e.g., yellow CHI3 precipitate). Tollens' reagent (ammoniacal AgNO3) oxidizes all aldehydes to form a silver mirror, while Fehling's reagent oxidizes aliphatic aldehydes to give a red Cu2O precipitate."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Reactivity Order in Nucleophilic Addition",
+            "formula": "HCHO > RCHO > R2CO > ArCOR > Ar2CO",
+            "applicability": "Predicting the relative rate of nucleophilic attack across different carbonyl structures",
+            "variables": [
+              {
+                "symbol": "R",
+                "meaning": "Alkyl substituent",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "Ar",
+                "meaning": "Aryl substituent",
+                "unit": "dimensionless"
+              }
+            ]
+          },
+          {
+            "label": "Haloform Reaction Stoichiometry",
+            "formula": "R-CO-CH3 + 3 X2 + 4 NaOH -> R-COONa + CHX3 + 3 NaX + 3 H2O",
+            "applicability": "Stoichiometric relationship for oxidation of methyl ketones with halogen in base",
+            "variables": [
+              {
+                "symbol": "X",
+                "meaning": "Halogen atom (Cl, Br, or I)",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "CHX3",
+                "meaning": "Haloform product (e.g., CHI3 for Iodoform)",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Clemmensen reduction and Wolff-Kishner reduction are identical in scope and can be interchanged freely.",
+            "correction": "Clemmensen uses strongly acidic conditions (conc. HCl) which will degrade acid-sensitive functional groups like acetals or alcohols, whereas Wolff-Kishner uses strong base (KOH) which affects base-sensitive groups like esters or alkyl halides."
+          },
+          {
+            "misconception": "Benzaldehyde undergoes self-Aldol condensation when treated with dilute alkali.",
+            "correction": "Benzaldehyde lacks alpha-hydrogens and cannot form an enolate ion; thus, it undergoes Cannizzaro reaction in concentrated alkali rather than self-Aldol condensation."
+          },
+          {
+            "misconception": "Fehling's test gives a positive result for both aliphatic and aromatic aldehydes.",
+            "correction": "Fehling's reagent is a weaker oxidizing agent than Tollens' reagent and oxidizes aliphatic aldehydes, but fails to oxidize aromatic aldehydes like benzaldehyde."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Arrange the following in increasing order of reactivity towards nucleophilic addition: Acetophenone, p-Tolualdehyde, Benzaldehyde, p-Nitrobenzaldehyde.",
+            "steps": [
+              "Step 1: Compare ketones versus aldehydes. Acetophenone is a ketone and is least reactive due to steric hindrance and resonance stabilization.",
+              "Step 2: Analyze substituted benzaldehydes. Electron-withdrawing groups (-NO2) enhance the electrophilicity of carbonyl carbon, increasing reactivity.",
+              "Step 3: Electron-donating groups (-CH3) reduce electrophilicity, decreasing reactivity compared to unsubstituted benzaldehyde.",
+              "Step 4: Combine the order: Acetophenone < p-Tolualdehyde < Benzaldehyde < p-Nitrobenzaldehyde."
+            ],
+            "answer": "Acetophenone < p-Tolualdehyde < Benzaldehyde < p-Nitrobenzaldehyde"
+          },
+          {
+            "problem": "What is the major organic product obtained when propanone (acetone) is treated with dilute NaOH and subsequently heated?",
+            "steps": [
+              "Step 1: Propanone has alpha-hydrogens. Dilute NaOH abstracts an alpha-proton to form an enolate.",
+              "Step 2: Enolate attacks another propanone molecule to form 4-hydroxy-4-methylpentan-2-one (Aldol product).",
+              "Step 3: Heating causes dehydration (loss of H2O) between alpha and beta carbons.",
+              "Step 4: Dehydration yields 4-methylpent-3-en-2-one (Mesityl oxide)."
+            ],
+            "answer": "4-methylpent-3-en-2-one (Mesityl oxide)"
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Which reagent and condition can selectively reduce the carbonyl group of 4-oxopentanoic acid to a methylene group without affecting the carboxylic acid group?",
+            "answer": "Wolff-Kishner reduction (NH2NH2 / KOH in ethylene glycol), because the reaction is basic and will not undergo side reactions typical of acid-catalyzed esterification or dehydration."
+          },
+          {
+            "question": "How can Pentan-2-one and Pentan-3-one be distinguished using a simple chemical test?",
+            "answer": "By using the Iodoform test (I2 + NaOH). Pentan-2-one is a methyl ketone and forms a yellow precipitate of CHI3, whereas Pentan-3-one does not."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class 12 Chemistry, Chapter 12: Aldehydes, Ketones and Carboxylic Acids",
+          "JEE Main Official Chemistry Syllabus: Organic Compounds Containing Oxygen"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_BCA9920C_CH001",
+        "overview": "This atom covers the fundamental spatial arrangements of alkanes (conformations of ethane via Sawhorse and Newman projections) and the step-by-step mechanism of free radical halogenation, including reactivity and selectivity principles.",
+        "concepts": [
+          {
+            "title": "Conformations of Ethane",
+            "explanation": "Conformations are the spatial arrangements of atoms arising from free rotation around carbon-carbon single bond axis. Ethane exhibits infinite conformations, bounded by two extremes: the staggered conformation (dihedral angle 60 degrees, minimum torsional strain, maximum stability) and the eclipsed conformation (dihedral angle 0 degrees, maximum torsional strain, minimum stability)."
+          },
+          {
+            "title": "Sawhorse and Newman Projections",
+            "explanation": "Sawhorse projections view the C-C bond obliquely from a central axis, highlighting spatial orientations of C-H bonds. Newman projections view the C-C bond head-on along the bond axis; the front carbon is represented as a point/vertex and the back carbon as a circle."
+          },
+          {
+            "title": "Free Radical Halogenation Mechanism",
+            "explanation": "Halogenation of alkanes proceeds through a radical chain mechanism consisting of three distinct phases: Initiation (homolytic cleavage of halogen molecules by light or heat), Propagation (hydrogen abstraction by halogen radical followed by alkyl radical reaction with X2), and Termination (coupling of any two free radicals)."
+          },
+          {
+            "title": "Reactivity vs. Selectivity Principle",
+            "explanation": "Halogen reactivity follows F2 > Cl2 > Br2 > I2. Bromination is highly selective for tertiary C-H over secondary and primary C-H due to its endothermic hydrogen abstraction step (late transition state resembling the radical). Chlorination is more reactive and less selective."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Torsional Energy Barrier of Ethane",
+            "formula": "E_eclipsed - E_staggered = 12.55 kJ/mol (approx 3.0 kcal/mol)",
+            "applicability": "Applies to energy difference between staggered and eclipsed conformations of ethane.",
+            "variables": [
+              {
+                "symbol": "E_eclipsed",
+                "meaning": "Potential energy of eclipsed conformer",
+                "unit": "kJ/mol"
+              },
+              {
+                "symbol": "E_staggered",
+                "meaning": "Potential energy of staggered conformer",
+                "unit": "kJ/mol"
+              }
+            ]
+          },
+          {
+            "label": "Relative Chlorination Reactivity Ratios (at 298 K)",
+            "formula": "3° H : 2° H : 1° H = 5.0 : 3.8 : 1.0",
+            "applicability": "Used to calculate product distribution in free-radical chlorination of alkanes.",
+            "variables": [
+              {
+                "symbol": "R_3deg",
+                "meaning": "Relative reactivity rate per tertiary hydrogen",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "R_2deg",
+                "meaning": "Relative reactivity rate per secondary hydrogen",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "R_1deg",
+                "meaning": "Relative reactivity rate per primary hydrogen",
+                "unit": "dimensionless"
+              }
+            ]
+          },
+          {
+            "label": "Relative Bromination Reactivity Ratios (at 400 K)",
+            "formula": "3° H : 2° H : 1° H = 1600 : 82 : 1",
+            "applicability": "Used to calculate product distribution in free-radical bromination of alkanes.",
+            "variables": [
+              {
+                "symbol": "R_3deg",
+                "meaning": "Relative reactivity rate per tertiary hydrogen",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "R_2deg",
+                "meaning": "Relative reactivity rate per secondary hydrogen",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "R_1deg",
+                "meaning": "Relative reactivity rate per primary hydrogen",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Conformers of ethane are constitutional isomers that can be isolated at room temperature.",
+            "correction": "Conformers interconvert continuously at room temperature because the rotational energy barrier (12.55 kJ/mol) is easily overcome by thermal energy."
+          },
+          {
+            "misconception": "Chlorination of an alkane always yields the 3-degree alkyl chloride as the major product.",
+            "correction": "Product yield depends on both relative reactivity AND statistical abundance of hydrogen types. If 1-degree hydrogens significantly outnumber 3-degree hydrogens, 1-chloroalkane can be the major product in chlorination."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Calculate the percentage yield of 1-chloro-2-methylpropane and 2-chloro-2-methylpropane obtained from free radical chlorination of 2-methylpropane (isobutane) assuming relative reactivity ratios 3°:1° = 5:1.",
+            "steps": [
+              "Step 1: Identify the number of primary (1°) and tertiary (3°) hydrogens in 2-methylpropane. There are 9 primary hydrogens and 1 tertiary hydrogen.",
+              "Step 2: Calculate relative amount of 1° product: Amount(1°) = 9 x 1 = 9.",
+              "Step 3: Calculate relative amount of 3° product: Amount(3°) = 1 x 5 = 5.",
+              "Step 4: Calculate total relative amount: Total = 9 + 5 = 14.",
+              "Step 5: Compute percentage yields: % 1-chloro-2-methylpropane = (9 / 14) * 100 = 64.29%. % 2-chloro-2-methylpropane = (5 / 14) * 100 = 35.71%."
+            ],
+            "answer": "1-chloro-2-methylpropane = 64.29%, 2-chloro-2-methylpropane = 35.71%."
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "What is the dihedral angle between C-H bonds in the staggered and eclipsed conformations of ethane, respectively?",
+            "answer": "In staggered ethane, the dihedral angle is 60 degrees; in eclipsed ethane, the dihedral angle is 0 degrees."
+          },
+          {
+            "question": "Why is free radical bromination significantly more regioselective than chlorination?",
+            "answer": "The hydrogen abstraction step in bromination is endothermic, resulting in a late transition state resembling the free radical, making radical stability differences paramount. In chlorination, the step is exothermic with an early transition state."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Chemistry Class 11, Chapter 13: Hydrocarbons - Alkanes, Conformations and Halogenation",
+          "JEE Main Syllabus - Section: Organic Chemistry (Hydrocarbons)"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_B270826F_CH001",
+        "overview": "This topic covers the chemical behavior, stereochemistry, and reaction mechanisms of alkenes. Focus areas include geometrical isomerism (cis/trans and E/Z descriptors), electrophilic addition mechanism (carbocation intermediates and rearrangements), addition reactions (hydrogenation, halogenation via cyclic halonium ions, hydration, and hydrohalogenation following Markovnikov or Kharasch peroxide rules), structural determination through ozonolysis, and addition polymerization.",
+        "concepts": [
+          {
+            "title": "Geometrical Isomerism (cis/trans and E/Z Nomenclature)",
+            "explanation": "Geometrical isomerism occurs due to restricted rotation around the carbon-carbon double bond. It requires each doubly bonded carbon atom to be attached to two non-identical groups. In cis-trans system, identical or similar groups on the same side form the cis-isomer, and on opposite sides form the trans-isomer. For tri- and tetra-substituted alkenes, the Cahn-Ingold-Prelog (CIP) priority rules assign priorities based on atomic number: if the highest-priority groups on each carbon are on the same side, the isomer is Z (Zusammen); if on opposite sides, it is E (Entgegen)."
+          },
+          {
+            "title": "Mechanism of Electrophilic Addition Reactions",
+            "explanation": "Alkenes act as nucleophiles due to the presence of an exposed pi-electron cloud above and below the C=C bond axis. Electrophilic addition proceeds via two main steps: slow attack by an electrophile (E+) forming a carbocation intermediate (rate-determining step), followed by rapid attack of a nucleophile (Nu-). Because free carbocations can rearrange via 1,2-hydride or 1,2-alkyl shifts to attain greater stability (3 deg > 2 deg > 1 deg), rearranged products often predominate."
+          },
+          {
+            "title": "Markovnikov's Rule and the Peroxide (Kharasch) Effect",
+            "explanation": "Markovnikov's rule states that in ionic addition of unsymmetrical reagents (like HX) to an unsymmetrical alkene, the electrophilic part (H+) attaches to the double-bonded carbon bearing more hydrogen atoms, yielding the more stable carbocation intermediate. Conversely, when HBr reacts with alkenes in the presence of organic peroxides, addition follows an anti-Markovnikov pathway via a free radical chain mechanism (Kharasch effect), where the bromine radical adds to the carbon with more hydrogen atoms to yield a more stable secondary or tertiary alkyl radical."
+          },
+          {
+            "title": "Addition of Halogens, Water, and Hydrogen",
+            "explanation": "Catalytic hydrogenation (H2 with Ni, Pt, or Pd) adds hydrogen across the C=C bond via syn-addition. Halogenation (Br2/CCl4) proceeds through a cyclic halonium ion intermediate, preventing carbocation rearrangement and resulting strictly in anti-addition (giving meso or racemic dibromides). Acid-catalyzed hydration yields Markovnikov alcohols with potential carbocation rearrangement, whereas hydroboration-oxidation gives anti-Markovnikov syn-hydration without carbocation intermediates."
+          },
+          {
+            "title": "Ozonolysis and Polymerization",
+            "explanation": "Ozonolysis involves addition of ozone across the C=C double bond to form an ozonide intermediate, followed by cleavage. Reductive ozonolysis (using O3 followed by Zn/H2O or Me2S) breaks C=C into aldehydes and ketones without further oxidation. Oxidative ozonolysis (O3 followed by H2O2) converts aldehydes to carboxylic acids. Addition polymerization occurs when alkene monomer units undergo repeated self-addition under high temperature, pressure, or radical/ionic initiators to form macromolecules like polyethene, polypropylene, and PVC."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Degree of Unsaturation (Double Bond Equivalent)",
+            "formula": "DBE = C + 1 - (H / 2) + (N / 2) - (X / 2)",
+            "applicability": "Calculates the combined number of rings and pi-bonds in an organic molecule given its molecular formula.",
+            "variables": [
+              {
+                "symbol": "C",
+                "meaning": "Number of carbon atoms",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "H",
+                "meaning": "Number of hydrogen atoms",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "N",
+                "meaning": "Number of nitrogen atoms",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "X",
+                "meaning": "Number of halogen atoms (F, Cl, Br, I)",
+                "unit": "dimensionless"
+              }
+            ]
+          },
+          {
+            "label": "Reductive Ozonolysis Bond Cleavage Rule",
+            "formula": "R1R2C=CR3R4 + O3 --(Zn / H2O)--> R1COR2 + R3COR4",
+            "applicability": "Predicts carbonyl cleavage products formed upon treating an alkene with ozone followed by zinc dust and water.",
+            "variables": [
+              {
+                "symbol": "R1, R2, R3, R4",
+                "meaning": "Alkyl, aryl, or hydrogen substituents on the alkene double bond",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "The peroxide effect (anti-Markovnikov addition) occurs with all hydrogen halides (HCl, HBr, HI).",
+            "correction": "The peroxide effect is observed exclusively with HBr. For HCl, the H-Cl bond dissociation energy is too high for propagation, and for HI, the iodine radical rapidly recombines into I2 rather than adding to the alkene."
+          },
+          {
+            "misconception": "Reductive ozonolysis of any alkene containing =CH- group produces carboxylic acids.",
+            "correction": "Reductive ozonolysis (Zn/H2O or Me2S) preserves the aldehyde group (=CH- gives -CHO). Oxidative ozonolysis (using H2O2) is required to convert aldehydes to carboxylic acids."
+          },
+          {
+            "misconception": "Halogenation of alkenes in CCl4 yields a mixture of syn- and anti-addition products.",
+            "correction": "Halogenation proceeds via a three-membered cyclic halonium ion intermediate, which blocks one face of the alkene and forces the halide ion to attack exclusively from the opposite face, resulting purely in anti-addition."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Predict the major product obtained when 3-methylbut-1-ene is treated with HBr in the absence of peroxides.",
+            "steps": [
+              "Step 1: Protonation of 3-methylbut-1-ene (CH3-CH(CH3)-CH=CH2) by H+ yields a secondary carbocation: CH3-CH(CH3)-CH(+)-CH3.",
+              "Step 2: The secondary carbocation undergoes a 1,2-hydride shift from the adjacent tertiary carbon to generate a more stable tertiary carbocation: CH3-C(+)(CH3)-CH2-CH3.",
+              "Step 3: Nucleophilic attack of Br- on the tertiary carbocation produces 2-bromo-2-methylbutane as the major product."
+            ],
+            "answer": "2-bromo-2-methylbutane"
+          },
+          {
+            "problem": "An alkene 'X' on reductive ozonolysis yields propanone and ethanal in 1:1 molar ratio. Determine the structure and IUPAC name of alkene 'X'.",
+            "steps": [
+              "Step 1: Identify the carbonyl products: Propanone is (CH3)2C=O and Ethanal is CH3-CH=O.",
+              "Step 2: Reconstruct the original double bond by aligning the carbonyl oxygen atoms facing each other and removing them: (CH3)2C=O + O=CH-CH3.",
+              "Step 3: Connect the carbon atoms with a double bond: (CH3)2C=CH-CH3.",
+              "Step 4: Assign the IUPAC name for (CH3)2C=CH-CH3, which is 2-methylbut-2-ene."
+            ],
+            "answer": "2-methylbut-2-ene"
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Why does but-1-ene not show geometrical isomerism whereas but-2-ene does?",
+            "answer": "But-1-ene has two identical hydrogen atoms on carbon-1 (C1), failing the criterion for geometrical isomerism. In but-2-ene, both carbon-2 and carbon-3 are attached to two distinct groups (-H and -CH3), allowing cis and trans configurations."
+          },
+          {
+            "question": "What is the major product when propene reacts with HBr in the presence of benzoyl peroxide?",
+            "answer": "1-bromopropane, because the presence of peroxide initiates a free radical mechanism leading to anti-Markovnikov addition."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Chemistry Class 11, Chapter 13: Hydrocarbons - Section 13.3 Alkenes",
+          "JEE Main Syllabus 2026: Organic Chemistry - Hydrocarbons (Alkenes)"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_B270826F_CH002",
+        "overview": "This atom covers the essential chemistry of alkenes, including geometrical isomerism (cis/trans and E/Z systems), electrophilic addition reaction mechanisms, regioselective addition of hydrogen halides (Markovnikov and peroxide anti-Markovnikov effects), addition of hydrogen, halogens, and water, as well as ozonolysis cleavage and addition polymerization.",
+        "concepts": [
+          {
+            "title": "Geometrical Isomerism in Alkenes",
+            "explanation": "Due to restricted rotation about the carbon-carbon double bond (C=C), alkenes with different substituents on each sp2 carbon exhibit geometrical isomerism. In the cis/trans nomenclature, 'cis' refers to similar groups on the same side, whereas 'trans' refers to similar groups on opposite sides. For tri- or tetra-substituted alkenes, Cahn-Ingold-Prelog (CIP) priority rules determine E/Z configurations: 'E' (Entgegen) indicates higher priority groups are on opposite sides, while 'Z' (Zusammen) indicates higher priority groups are on the same side."
+          },
+          {
+            "title": "Electrophilic Addition Mechanism",
+            "explanation": "The electron-rich pi-bond of an alkene acts as a nucleophile, reacting with an electrophile to form a carbocation intermediate (or a cyclic three-membered intermediate like a bromonium ion). In the second step, a nucleophile attacks the intermediate to yield the addition product. When unsymmetrical alkenes react, the electrophile adds to form the more stable carbocation intermediate, dictating the regiochemistry."
+          },
+          {
+            "title": "Addition of HX: Markovnikov Rule and Peroxide Effect",
+            "explanation": "According to Markovnikov's rule, when an unsymmetrical reagent (HX) adds to an unsymmetrical alkene, the hydrogen atom attaches to the sp2 carbon with more hydrogen atoms, yielding the product derived from the more stable carbocation intermediate. Carbocation rearrangements (1,2-hydride or 1,2-alkyl shifts) can occur. In the presence of organic peroxides (ROOR) and light/heat, HBr adds in an anti-Markovnikov fashion via a free radical mechanism (Kharasch effect). This peroxide effect is specific to HBr because both propagation steps in free radical addition are exothermic only for HBr, and not for HCl or HI."
+          },
+          {
+            "title": "Addition of Halogens, Hydrogen, and Water",
+            "explanation": "Catalytic Hydrogenation: H2 adds across C=C in the presence of Ni, Pt, or Pd via syn-addition. Halogenation: X2 (Br2 or Cl2) in CCl4 adds via a cyclic halonium ion intermediate, resulting in anti-addition (decolorization of bromine water is a test for unsaturation). Hydration: Direct acid-catalyzed hydration proceeds via carbocation intermediate (Markovnikov addition with possible rearrangement). Hydroboration-Oxidation (B2H6 followed by H2O2/OH-) gives anti-Markovnikov hydration via syn-addition without carbocation rearrangement. Oxymercuration-Demercuration gives Markovnikov addition without rearrangement."
+          },
+          {
+            "title": "Ozonolysis and Polymerization",
+            "explanation": "Ozonolysis cleaves C=C bonds. Reductive ozonolysis (O3 followed by Zn/H2O or (CH3)2S) breaks the C=C bond to yield aldehydes and/or ketones without further oxidation of aldehydes. Oxidative ozonolysis (O3 followed by H2O2) converts aldehydes to carboxylic acids (formaldehyde becomes CO2 and H2O). Polymerization involves repeated addition of alkene monomers (e.g., ethene to polyethene, propene to polypropylene) via radical, cationic, or anionic mechanisms."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Degree of Unsaturation / Double Bond Equivalent (DBE)",
+            "formula": "DBE = C + 1 - \\frac{H}{2} - \\frac{X}{2} + \\frac{N}{2}",
+            "applicability": "Used to determine the total number of rings and pi bonds in an organic molecule with molecular formula C_c H_h X_x N_n O_o.",
+            "variables": [
+              {
+                "symbol": "C",
+                "meaning": "Number of Carbon atoms",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "H",
+                "meaning": "Number of Hydrogen atoms",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "X",
+                "meaning": "Number of Halogen atoms (F, Cl, Br, I)",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "N",
+                "meaning": "Number of Nitrogen atoms",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "The peroxide effect (anti-Markovnikov addition) occurs with all hydrohalic acids (HCl, HBr, HI).",
+            "correction": "The peroxide effect operates ONLY with HBr. For HCl, the H-Cl bond dissociation energy is too high for the propagation step with bromine radicals, and for HI, the I-I recombination energy causes iodine radicals to form I2 rather than adding to the alkene."
+          },
+          {
+            "misconception": "Ozonolysis always yields carboxylic acids.",
+            "correction": "Ozonolysis yields aldehydes and ketones under reductive conditions (Zn/H2O or Me2S). Carboxylic acids are formed only under oxidative conditions (H2O2)."
+          },
+          {
+            "misconception": "Halogenation of alkenes occurs via simple carbocation and gives syn-addition.",
+            "correction": "Halogenation (Br2 or Cl2) proceeds via a cyclic halonium ion intermediate, which forces the nucleophilic halide ion to attack from the opposite face, resulting in stereospecific anti-addition."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Predict the main organic product formed when 3-methylbut-1-ene reacts with (a) HBr in the absence of peroxides, and (b) HBr in the presence of peroxides.",
+            "steps": [
+              "Step 1: Analyze structure of 3-methylbut-1-ene: CH3-CH(CH3)-CH=CH2.",
+              "Step 2: Reaction (a) - HBr in absence of peroxides follows electrophilic addition (Markovnikov) via carbocation intermediate.",
+              "Protonation gives a secondary carbocation: CH3-CH(CH3)-CH(+)-CH3.",
+              "A 1,2-hydride shift occurs to form a more stable tertiary carbocation: CH3-C(+)(CH3)-CH2-CH3.",
+              "Bromide ion attacks the tertiary carbocation to yield 2-bromo-2-methylbutane as the major product.",
+              "Step 3: Reaction (b) - HBr in presence of peroxides proceeds via free radical mechanism (anti-Markovnikov).",
+              "Bromine radical adds to the terminal carbon to give the more stable secondary free radical: CH3-CH(CH3)-CH(*)-CH2Br.",
+              "Abstraction of H from HBr yields 1-bromo-3-methylbutane as the major product without rearrangement."
+            ],
+            "answer": "(a) 2-bromo-2-methylbutane; (b) 1-bromo-3-methylbutane"
+          },
+          {
+            "problem": "An alkene 'A' (C6H12) on reductive ozonolysis gives propanal and propan-2-one. Identify alkene 'A' and give its E/Z designation if applicable.",
+            "steps": [
+              "Step 1: Write structures of the ozonolysis products: Propanal is CH3-CH2-CHO; Propan-2-one (acetone) is CH3-C(=O)-CH3.",
+              "Step 2: Rejoin the two carbonyl carbon atoms with a double bond by removing oxygen atoms: CH3-CH2-CH=C(CH3)2.",
+              "Step 3: Name the alkene: 2-methylpent-2-ene.",
+              "Step 4: Check for geometrical isomerism: Carbon-2 has two identical methyl groups (-CH3), so it cannot exhibit geometrical isomerism (no E/Z designation)."
+            ],
+            "answer": "Alkene 'A' is 2-methylpent-2-ene. It does not exhibit E/Z isomerism."
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Which of the following alkenes can exhibit geometrical isomerism: (I) But-1-ene, (II) But-2-ene, (III) Propene, (IV) 2-Methylbut-2-ene?",
+            "answer": "Only But-2-ene (II) exhibits geometrical isomerism (cis-but-2-ene and trans-but-2-ene). The others have two identical hydrogen atoms or methyl groups on at least one sp2 carbon."
+          },
+          {
+            "question": "What is the major stereochemical outcome when cis-but-2-ene reacts with Br2 in CCl4?",
+            "answer": "Anti-addition of Br2 across cis-but-2-ene yields a racemic mixture of (2R,3R)-2,3-dibromobutane and (2S,3S)-2,3-dibromobutane."
+          },
+          {
+            "question": "Compare the hydration products of 1-methylcyclohexene obtained by (i) Acid-catalyzed hydration, (ii) Oxymercuration-demercuration, and (iii) Hydroboration-oxidation.",
+            "answer": "(i) and (ii) give 1-methylcyclohexan-1-ol (Markovnikov product). (iii) gives trans-2-methylcyclohexan-1-ol (anti-Markovnikov, syn-addition product)."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Chemistry Class 11, Chapter 13: Hydrocarbons - Section 13.3 (Alkenes)",
+          "Organic Chemistry by Morrison & Boyd - Electrophilic Addition and Free Radical Addition to Alkenes"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_D8B93C4B_CH001",
+        "overview": "Alkynes are unsaturated hydrocarbons containing at least one carbon-carbon triple bond. Their chemical behavior is governed by the high electronegativity of sp-hybridized carbons, leading to acidic hydrogen in terminal alkynes, and electrophilic/nucleophilic addition reactions across the triple bond, including hydrogenation, halogenation, hydrohalogenation, hydration, and polymerization.",
+        "concepts": [
+          {
+            "title": "Acidic Character of Terminal Alkynes",
+            "explanation": "Terminal alkynes possess a hydrogen atom bonded to an sp-hybridized carbon atom. Because sp hybrid orbitals have 50% s-character, the electrons in the C-H bond are tightly held by the carbon nucleus, making the carbon highly electronegative. Consequently, terminal alkynes readily donate a proton to strong bases like Na or NaNH2 to form alkynides, unlike internal alkynes, alkanes, or alkenes."
+          },
+          {
+            "title": "Addition of Hydrogen (Hydrogenation)",
+            "explanation": "Alkynes can undergo complete reduction to alkanes with H2 in the presence of Ni, Pt, or Pd. Controlled reduction yields alkenes: Lindlar's catalyst (palladium on calcium carbonate poisoned with lead acetate/quinoline) produces cis-alkenes via syn-addition, while sodium in liquid ammonia (Birch reduction) yields trans-alkenes via anti-addition."
+          },
+          {
+            "title": "Addition of Halogens and Hydrogen Halides",
+            "explanation": "Addition of halogens (Br2 or Cl2) proceeds stepwise, initially forming 1,2-dihaloalkenes and finally 1,1,2,2-tetrahaloalkanes. Addition of HX follows Markovnikov's rule in a two-step process to yield geminal dihalides (gem-dihalides) as the final major product."
+          },
+          {
+            "title": "Addition of Water (Kucherov Reaction)",
+            "explanation": "Alkynes react with water in the presence of dilute H2SO4 and HgSO4 catalyst at 333 K. The reaction proceeds via Markovnikov addition to form an unstable enol intermediate, which rapidly tautomerizes into a stable carbonyl compound (ethyne yields acetaldehyde, whereas higher alkynes yield ketones)."
+          },
+          {
+            "title": "Polymerization of Alkynes",
+            "explanation": "Linear polymerization of ethyne under suitable conditions produces polyacetylene (polyethyne), a conducting polymer. Cyclic polymerization occurs when ethyne is passed through a red-hot iron tube at 873 K, forming benzene."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Acidic Strength Relative Order",
+            "formula": "HC≡CH > CH2=CH2 > CH3-CH3",
+            "applicability": "Comparison of hydrocarbon acidity based on s-character of hybrid orbitals (sp > sp2 > sp3)",
+            "variables": [
+              {
+                "symbol": "s-character",
+                "meaning": "Percentage of s-orbital character in hybrid orbital (sp=50%, sp2=33.3%, sp3=25%)",
+                "unit": "percent"
+              }
+            ]
+          },
+          {
+            "label": "Kucherov Reaction Hydration",
+            "formula": "R-C≡CH + H2O --(1% HgSO4 / 40% H2SO4, 333K)--> [R-C(OH)=CH2] ---> R-CO-CH3",
+            "applicability": "Conversion of terminal alkynes to methyl ketones via Markovnikov addition and enol-keto tautomerization",
+            "variables": [
+              {
+                "symbol": "R",
+                "meaning": "Alkly or aryl group",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "All alkynes react with sodium metal or sodamide (NaNH2) to liberate hydrogen gas.",
+            "correction": "Only terminal alkynes (alkynes with a -C≡C-H group) react with Na or NaNH2 because only sp-hybridized C-H bonds are sufficiently acidic."
+          },
+          {
+            "misconception": "Lindlar's reduction of alkynes yields trans-alkenes.",
+            "correction": "Lindlar's catalyst provides stereospecific syn-addition of hydrogen to yield cis-alkenes. Trans-alkenes are obtained using Na in liquid NH3 (Birch reduction)."
+          },
+          {
+            "misconception": "Hydration of ethyne yields an alcohol directly.",
+            "correction": "Hydration initially forms vinyl alcohol (an enol), which is unstable and immediately tautomerizes to acetaldehyde (ethanal)."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Identify the major organic product formed when propyne is reacted with dilute H2SO4 in the presence of HgSO4 at 333 K.",
+            "steps": [
+              "Step 1: Propyne (CH3-C≡CH) undergoes electrophilic addition of water catalyzed by Hg2+ and H+.",
+              "Step 2: Apply Markovnikov's rule for the addition of H+ and OH- across the triple bond. The OH group attaches to the carbon with fewer hydrogens (C-2), forming an enol: CH3-C(OH)=CH2.",
+              "Step 3: The enol tautomerizes rapidly from the less stable enol form to the more stable keto form.",
+              "Step 4: CH3-C(OH)=CH2 converts to CH3-CO-CH3 (Propan-2-one / Acetone)."
+            ],
+            "answer": "Propan-2-one (Acetone)"
+          },
+          {
+            "problem": "Predict the product formed when propyne reacts with 2 equivalents of HBr.",
+            "steps": [
+              "Step 1: First addition of HBr to CH3-C≡CH follows Markovnikov's rule, adding H to C-1 and Br to C-2, giving 2-bromopropene (CH3-C(Br)=CH2).",
+              "Step 2: Second addition of HBr to 2-bromopropene also follows Markovnikov's rule. Br attaches to C-2 (bearing the halogen already) and H to C-1.",
+              "Step 3: This forms a geminal dihalide: 2,2-dibromopropane (CH3-C(Br)2-CH3)."
+            ],
+            "answer": "2,2-Dibromopropane"
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "What product is formed when ethyne is passed through a red-hot iron tube at 873 K?",
+            "answer": "Benzene (C6H6) via cyclic polymerization of three ethyne molecules."
+          },
+          {
+            "question": "Which reagent can be used to chemically distinguish between 1-butyne and 2-butyne?",
+            "answer": "Ammoniacal silver nitrate solution (Tollens' reagent) or ammoniacal cuprous chloride. 1-butyne (a terminal alkyne) forms a precipitate, whereas 2-butyne (an internal alkyne) does not react."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Chemistry Class 11, Chapter 13: Hydrocarbons - Section 13.5: Alkynes",
+          "JEE Main Official Syllabus: Hydrocarbons - Alkyne Reactions"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U18_T_19C1F7E4_CH001",
+        "overview": "Amines are nitrogen-containing organic derivatives of ammonia wherein one, two, or three hydrogen atoms are replaced by alkyl or aryl groups. This topic covers the classification into primary, secondary, and tertiary amines, IUPAC and common nomenclature, pyramidal geometry with sp3 hybridization, periodic trends in basic character across gas and aqueous phases, and crucial chemical tests used to distinguish primary, secondary, and tertiary amines.",
+        "concepts": [
+          {
+            "title": "Classification and Nomenclature of Amines",
+            "explanation": "Amines are classified as primary (1°), secondary (2°), or tertiary (3°) depending on whether one, two, or three alkyl/aryl groups are attached to the nitrogen atom. In common naming, aliphatic amines are named as alkylamines (e.g., methylamine). In IUPAC nomenclature, they are named as alkanamines by replacing the suffix '-e' of the alkane with '-amine'. For secondary and tertiary amines, the prefix 'N-' is used to designate substituent alkyl groups attached to nitrogen."
+          },
+          {
+            "title": "Structure and Geometry",
+            "explanation": "The nitrogen atom in amines is sp3 hybridized with a trigonal pyramidal geometry due to the presence of one unshared lone pair of electrons. Bond angles (e.g., C-N-C or C-N-H) are slightly less than the ideal tetrahedral angle of 109.5° (typically around 108°) because of lone pair-bond pair repulsion. Tertiary amines display nitrogen inversion (pyramidal inversion) rapidly at room temperature unless constrained."
+          },
+          {
+            "title": "Basic Character in Gaseous and Aqueous Phases",
+            "explanation": "Amines are basic due to the availability of the lone pair of electrons on nitrogen to accept a proton. In the gaseous phase, electron-releasing (+I) alkyl groups increase electron density on nitrogen, making basicity order strictly 3° > 2° > 1° > NH3. In aqueous solutions, basic strength depends on a balance of three factors: (+I) inductive effect, steric hindrance, and hydration stabilization of the conjugate ammonium cation. Consequently, in water: For methyl-substituted amines, the basicity order is (CH3)2NH (2°) > CH3NH2 (1°) > (CH3)3N (3°) > NH3 (pKb: 3.27, 3.38, 4.22, 4.75 respectively). For ethyl-substituted amines, the basicity order is (C2H5)2NH (2°) > (C2H5)3N (3°) > C2H5NH2 (1°) > NH3. Arylamines (e.g., aniline) are significantly less basic than aliphatic amines because the lone pair on nitrogen is delocalized into the aromatic pi-system via resonance."
+          },
+          {
+            "title": "Distinguishing Tests for 1°, 2°, and 3° Amines",
+            "explanation": "1. Hinsberg's Test: Reaction with benzenesulfonyl chloride (C6H5SO2Cl). Primary amines yield N-alkylbenzenesulfonamide, which dissolves in aqueous KOH due to acidic N-H hydrogen. Secondary amines form N,N-dialkylbenzenesulfonamide, insoluble in aqueous KOH due to absence of acidic N-H hydrogen. Tertiary amines do not react. 2. Carbylamine Test: Primary amines (1° aliphatic or aromatic) when heated with chloroform (CHCl3) and ethanolic KOH produce foul-smelling isocyanides (carbylamines). Secondary and tertiary amines do not show this test. 3. Nitrous Acid Test: Primary aliphatic amines react with HNO2 to yield aliphatic diazonium salts, which decompose to evolve N2 gas quantitatively along with alcohols. Primary aromatic amines form stable aryldiazonium salts at 0-5 °C. Secondary amines form yellow oily nitrosamines with HNO2."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Basicity Constant (Kb) of Amines",
+            "formula": "K_b = \\frac{[RNH_3^+][OH^-]}{[RNH_2]}",
+            "applicability": "Quantifies the basic strength of an amine in aqueous solution during protonation.",
+            "variables": [
+              {
+                "symbol": "[RNH_3^+]",
+                "meaning": "Molar concentration of the conjugated alkylammonium ion",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "[OH^-]",
+                "meaning": "Molar concentration of hydroxide ions",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "[RNH_2]",
+                "meaning": "Molar concentration of unprotonated amine",
+                "unit": "mol/L"
+              }
+            ]
+          },
+          {
+            "label": "pKb Relationship",
+            "formula": "p K_b = -\\log_{10}(K_b)",
+            "applicability": "Expresses basic strength logarithmically; lower pKb value denotes stronger basicity.",
+            "variables": [
+              {
+                "symbol": "pKb",
+                "meaning": "Negative logarithm of basicity constant",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "Kb",
+                "meaning": "Basicity constant",
+                "unit": "mol/L"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Tertiary amines are always more basic than primary and secondary amines in all conditions.",
+            "correction": "This is only true in the gas phase. In aqueous solution, hydration energy of conjugate acid cations and steric hindrance override the purely inductive trend, placing 2° amines as the most basic."
+          },
+          {
+            "misconception": "Aniline is more basic than ammonia because of the electron-donating nature of the phenyl ring.",
+            "correction": "The phenyl ring acts as an electron-withdrawing group via resonance (-R effect). The lone pair of nitrogen is delocalized over the benzene ring, making aniline significantly less basic than ammonia."
+          },
+          {
+            "misconception": "Secondary amines give a positive Carbylamine test.",
+            "correction": "Only 1° aliphatic and 1° aromatic amines react with chloroform and KOH to form isocyanides. 2° and 3° amines do not give this reaction."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Arrange the following compounds in increasing order of their basic strength in aqueous solution: CH3NH2, (CH3)2NH, (CH3)3N, C6H5NH2, NH3.",
+            "steps": [
+              "Step 1: Identify aromatic vs aliphatic amines. C6H5NH2 (aniline) has its nitrogen lone pair delocalized into the benzene ring, making it the weakest base among all.",
+              "Step 2: Compare NH3 with aliphatic amines. Aliphatic methylamines have +I inductive effects from methyl groups, making them stronger bases than NH3.",
+              "Step 3: Determine the relative basicity of methyl-substituted aliphatic amines in aqueous medium. In water, the combined effects of inductive (+I), steric, and hydration stabilization give the order: Dimethylamine (2°) > Methylamine (1°) > Trimethylamine (3°).",
+              "Step 4: Combine all parts in increasing basic strength order: C6H5NH2 < NH3 < (CH3)3N < CH3NH2 < (CH3)2NH."
+            ],
+            "answer": "C6H5NH2 < NH3 < (CH3)3N < CH3NH2 < (CH3)2NH"
+          },
+          {
+            "problem": "An organic compound 'A' (C3H9N) reacts with benzenesulfonyl chloride to give a product 'B' which is insoluble in aqueous KOH solution. Identify compound 'A' and write its structural formula.",
+            "steps": [
+              "Step 1: Compound 'A' has the molecular formula C3H9N, corresponding to an aliphatic amine.",
+              "Step 2: Analysis of reaction with Hinsberg's reagent (benzenesulfonyl chloride): 1° amines form products soluble in KOH; 2° amines form products insoluble in KOH; 3° amines do not react.",
+              "Step 3: Since product 'B' is insoluble in KOH, 'A' must be a secondary (2°) amine.",
+              "Step 4: The 2° amine isomer of formula C3H9N is N-methyl-ethanamine (ethylmethylamine), CH3-NH-CH2-CH3."
+            ],
+            "answer": "Compound 'A' is N-methylethanamine (or ethylmethylamine), structure: CH3-NH-CH2CH3."
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "What gas is evolved when ethylamine reacts with nitrous acid (HNO2) at room temperature, and what primary organic compound is formed?",
+            "answer": "Nitrogen gas (N2) is evolved quantitatively, and ethanol (C2H5OH) is formed as the main organic product."
+          },
+          {
+            "question": "Why is N,N-dimethylaniline less basic than N,N-dimethylcyclohexylamine?",
+            "answer": "In N,N-dimethylaniline, the lone pair on nitrogen is delocalized into the aromatic pi-system via resonance. In N,N-dimethylcyclohexylamine, the cyclohexane ring is saturated (non-aromatic), so the lone pair remains localized on nitrogen and readily available for protonation."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class 12 Chemistry, Chapter 13: Amines",
+          "JEE Main Official Syllabus - Organic Chemistry: Organic Compounds Containing Nitrogen"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U18_T_19C1F7E4_CH002",
+        "overview": "This topic covers the classification, nomenclature, structure, basicity trends, and experimental identification tests (Hinsberg test, Carbylamine test, Nitrous acid test) for primary, secondary, and tertiary amines.",
+        "concepts": [
+          {
+            "title": "Classification and Structure of Amines",
+            "explanation": "Amines are derivative compounds of ammonia where one, two, or three hydrogen atoms are replaced by alkyl or aryl groups, classifying them into primary (1°), secondary (2°), and tertiary (3°) amines. Nitrogen is sp3 hybridized with a trigonal pyramidal geometry due to the presence of one unshared lone pair of electrons."
+          },
+          {
+            "title": "Basic Character in Gas Phase vs. Aqueous Phase",
+            "explanation": "Amines act as Lewis bases due to the lone pair on nitrogen. In the gas phase, basicity purely follows the +I inductive effect: 3° > 2° > 1° > NH3. In aqueous medium, basicity depends on a combination of inductive effect, steric hindrance, and solvation energy of the conjugate ammonium cation. For methyl-substituted amines in water, the basicity order is 2° > 1° > 3° > NH3 (Me2NH > MeNH2 > Me3N > NH3). For ethyl-substituted amines in water, the basicity order is 2° > 3° > 1° > NH3 (Et2NH > Et3N > EtNH2 > NH3)."
+          },
+          {
+            "title": "Basicity of Aromatic Amines",
+            "explanation": "Aromatic amines such as aniline are significantly less basic than aliphatic amines or ammonia because the lone pair on the nitrogen atom is delocalized into the benzene ring by resonance. Electron-donating groups (-OCH3, -CH3) at the para/meta position increase basicity, whereas electron-withdrawing groups (-NO2, -CN, -halogen) decrease basicity."
+          },
+          {
+            "title": "Identification Tests for Amines",
+            "explanation": "Primary, secondary, and tertiary amines can be distinguished using specific chemical tests: 1) Carbylamine Test: Only primary amines (aliphatic and aromatic) react with chloroform and alcoholic KOH to produce foul-smelling isocyanides. 2) Hinsberg Test: Benzenesulfonyl chloride reacts with 1° amines to give an alkali-soluble product, with 2° amines to give an alkali-insoluble product, and does not react with 3° amines."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Basicity Constant Relation",
+            "formula": "pK_b = -\\log_{10}(K_b)",
+            "applicability": "Quantifying the basic strength of an amine; lower pKb indicates a stronger base.",
+            "variables": [
+              {
+                "symbol": "K_b",
+                "meaning": "Base dissociation constant",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "pK_b",
+                "meaning": "Negative logarithm of base dissociation constant",
+                "unit": "dimensionless"
+              }
+            ]
+          },
+          {
+            "label": "Relation Between Conjugate Acid and Base Dissociation Constants",
+            "formula": "pK_a + pK_b = pK_w = 14 \\text{ (at 298 K)}",
+            "applicability": "Relating the acidity of the ammonium conjugate acid to the basicity of the amine.",
+            "variables": [
+              {
+                "symbol": "pK_a",
+                "meaning": "Acidity constant of the conjugate acid",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "pK_b",
+                "meaning": "Basicity constant of the amine",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Tertiary amines are always the most basic in aqueous solutions because they have three alkyl groups contributing +I effect.",
+            "correction": "In aqueous solutions, basicity is governed by a balance of inductive effect, solvation energy of conjugate cations, and steric hindrance. This makes secondary amines more basic than tertiary amines in water."
+          },
+          {
+            "misconception": "The Carbylamine test can distinguish aliphatic primary amines from aromatic primary amines.",
+            "correction": "The Carbylamine test is positive for ALL primary amines, both aliphatic and aromatic. It distinguishes primary amines from secondary and tertiary amines, not aliphatic from aromatic primary amines."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Arrange the following compounds in decreasing order of basic strength in an aqueous medium: C2H5NH2, (C2H5)2NH, (C2H5)3N, NH3.",
+            "steps": [
+              "Identify the physical state/medium specified: aqueous medium.",
+              "Recall the combined effect of inductive, steric, and solvation factors for ethyl-substituted amines in water.",
+              "The standard experimental order of basicity for ethyl-substituted amines in aqueous solution is 2° > 3° > 1° > NH3.",
+              "Apply this order: (C2H5)2NH > (C2H5)3N > C2H5NH2 > NH3."
+            ],
+            "answer": "(C2H5)2NH > (C2H5)3N > C2H5NH2 > NH3"
+          },
+          {
+            "problem": "An organic compound 'X' with molecular formula C3H9N reacts with benzenesulfonyl chloride to form a precipitate that is insoluble in aqueous NaOH. Identify the structure and IUPAC name of compound 'X'.",
+            "steps": [
+              "Analyze the reaction with benzenesulfonyl chloride (Hinsberg Reagent).",
+              "Primary amines react to form a product containing an acidic N-H bond, making it soluble in NaOH.",
+              "Secondary amines react to form a N,N-disubstituted sulfonamide with no acidic N-H bond, making it insoluble in NaOH.",
+              "Tertiary amines do not react with Hinsberg Reagent.",
+              "Since the product is insoluble in NaOH, 'X' must be a secondary amine with molecular formula C3H9N.",
+              "The secondary amine corresponding to C3H9N is CH3-NH-CH2CH3.",
+              "Assign the IUPAC name: N-methylethanamine."
+            ],
+            "answer": "N-methylethanamine [CH3-NH-CH2CH3]"
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Why is aniline less basic than aliphatic primary amines like methylamine?",
+            "answer": "In aniline, the lone pair of electrons on nitrogen is involved in resonance delocalization into the benzene ring, reducing its availability for protonation. In methylamine, the +I effect of the methyl group increases electron density on nitrogen, making it a stronger base."
+          },
+          {
+            "question": "What is the expected order of basicity for methyl-substituted amines in the gas phase?",
+            "answer": "(CH3)3N > (CH3)2NH > CH3NH2 > NH3, because in the gas phase only the +I inductive effect determines basicity."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class 12 Chemistry, Chapter 13: Amines",
+          "JEE Main Syllabus: Organic Compounds Containing Nitrogen"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_97ACB2E0_CH001",
+        "overview": "This learning module covers the foundational principles of aromatic hydrocarbons, focusing on the structure and resonance stability of benzene, Hückel's rule of aromaticity, the general mechanism of electrophilic aromatic substitution (EAS), and specific application reactions: halogenation and nitration.",
+        "concepts": [
+          {
+            "title": "Benzene Structure and Aromaticity",
+            "explanation": "Benzene is a planar, cyclic, conjugated ring system with six sp2 hybridized carbon atoms. According to Hückel's rule, a cyclic, planar, fully conjugated system containing (4n + 2) pi electrons (where n is a non-negative integer) exhibits aromatic stability due to delocalization of pi electrons."
+          },
+          {
+            "title": "Electrophilic Aromatic Substitution (EAS) Mechanism",
+            "explanation": "EAS proceeds via a two-step mechanism: (1) Formation of an electrophile (E+), followed by electrophilic attack on the benzene ring to yield a resonance-stabilized arenium ion (sigma complex/Wheland intermediate) in the rate-determining step. (2) Deprotonation of the arenium ion by a base to restore aromaticity in a fast step."
+          },
+          {
+            "title": "Halogenation of Benzene",
+            "explanation": "Benzene reacts with halogens (Cl2 or Br2) in the presence of a Lewis acid catalyst (such as FeCl3, AlCl3, or FeBr3). The catalyst polarizes the halogen molecule to generate a reactive halonium ion (Cl+ or Br+) that acts as the electrophile."
+          },
+          {
+            "title": "Nitration of Benzene",
+            "explanation": "Nitration involves reacting benzene with a nitrating mixture containing concentrated HNO3 and concentrated H2SO4 at 50-60°C. H2SO4 protonates HNO3, leading to the loss of a water molecule and generation of the nitronium ion (NO2+), which acts as the active electrophile."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Hückel's Rule of Aromaticity",
+            "formula": "N_{pi} = 4n + 2",
+            "applicability": "Applies to monocyclic, planar, fully conjugated systems to test for aromaticity.",
+            "variables": [
+              {
+                "symbol": "N_{pi}",
+                "meaning": "Total number of delocalized pi electrons in the ring",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "n",
+                "meaning": "Non-negative integer (0, 1, 2, 3...)",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Benzene readily undergoes addition reactions because it contains three double bonds like alkenes.",
+            "correction": "Benzene prefers substitution reactions over addition reactions because substitution retains the thermodynamically favorable aromatic ring stability, whereas addition destroys aromaticity."
+          },
+          {
+            "misconception": "In nitration, nitric acid acts as an acid.",
+            "correction": "In the nitrating mixture, sulfuric acid is a stronger acid than nitric acid; therefore, nitric acid accepts a proton from sulfuric acid, acting as a base to generate the nitronium ion."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Which of the following ring systems is aromatic: Cyclooctatetraene, Cyclopentadienyl anion, or Cycloheptatrienyl cation?",
+            "steps": [
+              "Step 1: Apply Hückel's criteria: planar, cyclic, continuous p-orbital overlap, and (4n+2) pi electrons.",
+              "Step 2: Cyclooctatetraene has 8 pi electrons (4n system) and adopts a non-planar tub conformation, so it is non-aromatic.",
+              "Step 3: Cyclopentadienyl anion has 5 carbons in a ring with 6 pi electrons (4(1)+2, n=1) and is planar, so it is aromatic.",
+              "Step 4: Cycloheptatrienyl cation (tropylium ion) has 7 carbons in a ring with 6 pi electrons (4(1)+2, n=1) and is planar, so it is aromatic."
+            ],
+            "answer": "Both Cyclopentadienyl anion and Cycloheptatrienyl cation are aromatic."
+          },
+          {
+            "problem": "Explain the role of anhydrous AlCl3 in the chlorination of benzene.",
+            "steps": [
+              "Step 1: Chlorine alone is not electrophilic enough to attack the aromatic ring.",
+              "Step 2: Anhydrous AlCl3 acts as a Lewis acid and accepts a chloride ion pair from Cl2.",
+              "Step 3: This interaction forms the [AlCl4]- complex and generates the chloronium ion (Cl+), which is strong enough to attack benzene."
+            ],
+            "answer": "Anhydrous AlCl3 serves as a Lewis acid catalyst to generate the electrophilic chloronium ion (Cl+)."
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "What is the rate-determining step in the electrophilic substitution mechanism of benzene?",
+            "answer": "The formation of the carbocation intermediate (arenium ion/sigma complex) via electrophilic attack on the benzene ring."
+          },
+          {
+            "question": "Why is H2SO4 necessary in the nitration of benzene?",
+            "answer": "Concentrated H2SO4 acts as a catalyst and protonates HNO3 to generate the active electrophile, nitronium ion (NO2+)."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Chemistry Class 11, Chapter 13: Hydrocarbons",
+          "Organic Chemistry by Morrison and Boyd, Chapter on Aromatic Compounds and Electrophilic Substitution"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U13_T_0B6FC591_CH001",
+        "overview": "This topic covers the determination of empirical and molecular formulas of organic compounds based on elemental composition, alongside analytical procedures for quantitative estimation of carbon, hydrogen, nitrogen, halogens, sulfur, and phosphorus using classical methods such as Liebig, Dumas, Kjeldahl, and Carius methods.",
+        "concepts": [
+          {
+            "title": "Empirical and Molecular Formulas",
+            "explanation": "The empirical formula represents the simplest whole-number ratio of atoms of different elements present in a compound. The molecular formula shows the exact number of atoms of each element present in a single molecule of the compound. Molecular Formula = n * (Empirical Formula), where n is an integer obtained by dividing the molecular mass by the empirical formula mass."
+          },
+          {
+            "title": "Estimation of Carbon and Hydrogen (Liebig Method)",
+            "explanation": "A known mass of an organic compound is completely oxidized by heating with cupric oxide (CuO). Carbon present converts to carbon dioxide (absorbed by KOH solution) and hydrogen converts to water (absorbed by anhydrous CaCl2). The mass increases of CaCl2 and KOH tubes give the masses of H2O and CO2 produced, respectively."
+          },
+          {
+            "title": "Estimation of Nitrogen (Dumas and Kjeldahl Methods)",
+            "explanation": "In Dumas method, the compound is heated with CuO in a CO2 atmosphere, converting all nitrogen into nitrogen gas (N2), which is collected over KOH solution and measured at STP. In Kjeldahl method, nitrogen is converted into ammonium sulfate using concentrated H2SO4, liberated as ammonia gas using excess NaOH, and titrated against standard acid."
+          },
+          {
+            "title": "Estimation of Halogens and Sulfur (Carius Method)",
+            "explanation": "In the Carius method, an organic compound is heated with fuming nitric acid in the presence of AgNO3 (for halogens) or BaCl2 (for sulfur) inside a sealed tube (Carius tube). Halogens precipitate as silver halides (AgX), and sulfur oxidizes to sulfate and precipitates as barium sulfate (BaSO4)."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Percentage of Carbon (Liebig Method)",
+            "formula": "Percentage of Carbon = (12 / 44) * (m_CO2 / m_compound) * 100",
+            "applicability": "Quantitative analysis of carbon in organic compounds using CuO combustion.",
+            "variables": [
+              {
+                "symbol": "m_CO2",
+                "meaning": "Mass of carbon dioxide collected",
+                "unit": "g"
+              },
+              {
+                "symbol": "m_compound",
+                "meaning": "Mass of organic compound analyzed",
+                "unit": "g"
+              }
+            ]
+          },
+          {
+            "label": "Percentage of Nitrogen (Kjeldahl Method)",
+            "formula": "Percentage of Nitrogen = (1.4 * N * V) / m_compound",
+            "applicability": "Quantitative estimation of nitrogen in organic compounds excluding nitro, azo, and heterocyclic ring nitrogen.",
+            "variables": [
+              {
+                "symbol": "N",
+                "meaning": "Normality of neutralized acid solution",
+                "unit": "N or eq/L"
+              },
+              {
+                "symbol": "V",
+                "meaning": "Volume of standard acid neutralized by ammonia",
+                "unit": "mL"
+              },
+              {
+                "symbol": "m_compound",
+                "meaning": "Mass of organic compound analyzed",
+                "unit": "g"
+              }
+            ]
+          },
+          {
+            "label": "Percentage of Halogen (Carius Method)",
+            "formula": "Percentage of Halogen = (M_X / M_AgX) * (m_AgX / m_compound) * 100",
+            "applicability": "Quantitative estimation of chlorine, bromine, or iodine.",
+            "variables": [
+              {
+                "symbol": "M_X",
+                "meaning": "Atomic mass of halogen X",
+                "unit": "g/mol"
+              },
+              {
+                "symbol": "M_AgX",
+                "meaning": "Molar mass of silver halide precipitate",
+                "unit": "g/mol"
+              },
+              {
+                "symbol": "m_AgX",
+                "meaning": "Mass of silver halide precipitate formed",
+                "unit": "g"
+              },
+              {
+                "symbol": "m_compound",
+                "meaning": "Mass of organic compound analyzed",
+                "unit": "g"
+              }
+            ]
+          },
+          {
+            "label": "Molecular Formula Multiplier",
+            "formula": "n = Molar Mass / Empirical Formula Mass",
+            "applicability": "Determining molecular formula from empirical formula and molecular weight.",
+            "variables": [
+              {
+                "symbol": "n",
+                "meaning": "Integral multiplication factor",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Kjeldahl's method can be used for all nitrogen-containing organic compounds.",
+            "correction": "Kjeldahl's method fails for organic compounds containing nitrogen in nitro (-NO2) groups, azo groups (-N=N-), and nitrogen present in heterocyclic rings (e.g., pyridine), because nitrogen in these structures does not quantitatively convert to ammonium sulfate."
+          },
+          {
+            "misconception": "The gas volume measured over water in the Dumas method can be directly used in ideal gas equations at given pressure.",
+            "correction": "The total pressure observed includes water vapor pressure (aqueous tension). The dry nitrogen pressure must be calculated as P_dry = P_observed - Aqueous Tension before converting the volume to standard temperature and pressure (STP)."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "An organic compound contains 40.0% Carbon, 6.7% Hydrogen, and 53.3% Oxygen by mass. If its molecular mass is 180 g/mol, determine its empirical formula and molecular formula.",
+            "steps": [
+              "Step 1: Divide percentage composition by atomic mass to find mole ratio: C = 40.0 / 12 = 3.33, H = 6.7 / 1 = 6.70, O = 53.3 / 16 = 3.33.",
+              "Step 2: Divide each value by the smallest ratio (3.33) to get simple ratio: C = 1, H = 2, O = 1. Empirical formula = CH2O.",
+              "Step 3: Calculate Empirical Formula Mass = 12 + (2 * 1) + 16 = 30 g/mol.",
+              "Step 4: Find integer n = Molecular Mass / Empirical Mass = 180 / 30 = 6.",
+              "Step 5: Multiply empirical formula by 6: Molecular Formula = C6H12O6."
+            ],
+            "answer": "Empirical Formula = CH2O, Molecular Formula = C6H12O6"
+          },
+          {
+            "problem": "In a Kjeldahl estimation of nitrogen, 0.50 g of an organic compound neutralized 10 mL of 1 M H2SO4 solution. Calculate the percentage of nitrogen in the compound.",
+            "steps": [
+              "Step 1: Calculate the normality of H2SO4 solution: Normality = Molarity * Basicity = 1 M * 2 = 2 N.",
+              "Step 2: Calculate equivalents of acid neutralized, which equals equivalents of ammonia produced: Volume V = 10 mL, Normality N = 2 N.",
+              "Step 3: Apply Kjeldahl percentage formula: %N = (1.4 * N * V) / mass_compound = (1.4 * 2 * 10) / 0.50.",
+              "Step 4: %N = 28 / 0.50 = 56%."
+            ],
+            "answer": "56%"
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Why is aqueous tension subtracted from total atmospheric pressure during the Dumas method calculation?",
+            "answer": "Because nitrogen gas is collected over water, making the gas moist. Subtraction of aqueous tension yields the partial pressure of pure dry nitrogen gas required for STP volume calculations."
+          },
+          {
+            "question": "0.25 g of an organic compound gave 0.287 g of AgCl in Carius estimation. What is the percentage of chlorine in the compound? (Atomic masses: Ag = 108, Cl = 35.5)",
+            "answer": "% Cl = (35.5 / 143.5) * (0.287 / 0.25) * 100 = 28.4%."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Chemistry Class 11, Chapter 12: Organic Chemistry - Some Basic Principles and Techniques (Quantitative Analysis)",
+          "JEE Main Official Chemistry Syllabus: Calculation of Empirical and Molecular Formulae, Estimation of C, H, N, Halogens, S, P"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_69EF29B0_CH001",
+        "overview": "Carbohydrates are polyhydroxy aldehydes or polyhydroxy ketones, or compounds that yield these units upon hydrolysis. They are broadly categorized into monosaccharides, oligosaccharides, and polysaccharides, as well as reducing and non-reducing sugars based on their reactivity toward Tollen's and Fehling's reagents. Monosaccharides such as glucose and fructose exhibit cyclic hemiacetal and hemiketal structures resulting in alpha and beta anomers that undergo mutarotation. Oligosaccharides like sucrose, lactose, and maltose are composed of monosaccharide units held together by glycosidic linkages.",
+        "concepts": [
+          {
+            "title": "Classification and Reducing Property of Carbohydrates",
+            "explanation": "Carbohydrates are classified by complexity: monosaccharides (cannot be hydrolyzed further), oligosaccharides (yield 2 to 10 monosaccharide units), and polysaccharides (yield many units). Sugars possessing a free hemiacetal or hemiketal hydroxyl group (or a free carbonyl group) reduce Tollen's reagent and Fehling's solution and are termed reducing sugars. Non-reducing sugars, such as sucrose, have all anomeric carbons tied in glycosidic bonds."
+          },
+          {
+            "title": "Monosaccharides: D-Glucose and D-Fructose",
+            "explanation": "Glucose is an aldohexose containing five hydroxyl groups and one aldehyde group. In solution, it exists predominantly in six-membered pyranose ring structures (alpha-D-glucopyranose and beta-D-glucopyranose) formed by intramolecular hemiacetal addition between the C1 aldehyde and C5 hydroxyl group. Fructose is a ketohexose existing as five-membered furanose rings formed by hemiketal formation between C2 carbonyl and C5 hydroxyl groups. Dynamic equilibrium between alpha and beta forms in aqueous solution causes mutarotation."
+          },
+          {
+            "title": "Structure and Linkages of Oligosaccharides",
+            "explanation": "Disaccharides consist of two monosaccharide units connected by an ether link called a glycosidic linkage formed via condensation: Maltose consists of two alpha-D-glucose units joined by an alpha(1->4) glycosidic linkage (reducing sugar). Lactose consists of beta-D-galactose and beta-D-glucose linked via a beta(1->4) glycosidic bond (reducing sugar). Sucrose consists of alpha-D-glucose (C1) and beta-D-fructose (C2) connected by an alpha-1,beta-2 glycosidic linkage (non-reducing sugar)."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Specific Optical Rotation",
+            "formula": "[\\alpha]_D^T = \\frac{\\alpha}{l \\cdot c}",
+            "applicability": "Determining optical activity and purity of sugar solutions during polarimetry and mutarotation studies.",
+            "variables": [
+              {
+                "symbol": "[\\alpha]_D^T",
+                "meaning": "Specific rotation at temperature T using sodium D line",
+                "unit": "deg mL / (g dm)"
+              },
+              {
+                "symbol": "\\alpha",
+                "meaning": "Observed optical rotation angle",
+                "unit": "degrees"
+              },
+              {
+                "symbol": "l",
+                "meaning": "Path length of polarimeter tube",
+                "unit": "dm"
+              },
+              {
+                "symbol": "c",
+                "meaning": "Concentration of sugar solution",
+                "unit": "g/mL"
+              }
+            ]
+          },
+          {
+            "label": "General Carbohydrate Formula",
+            "formula": "C_x(H_2O)_y",
+            "applicability": "General stoichiometry for traditional hydrates of carbon, though not universally diagnostic.",
+            "variables": [
+              {
+                "symbol": "x",
+                "meaning": "Number of carbon atoms",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "y",
+                "meaning": "Number of water equivalents",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "All carbohydrates strictly satisfy the empirical formula C_x(H_2O)_y.",
+            "correction": "Rhamnose (C6H12O5) and deoxyribose (C5H10O4) are carbohydrates that do not satisfy this formula, whereas acetic acid (C2H4O2) satisfies it but is not a carbohydrate."
+          },
+          {
+            "misconception": "Fructose is a ketose, so it cannot reduce Fehling's solution or Tollen's reagent.",
+            "correction": "In alkaline media (Fehling's or Tollen's reagents), alpha-hydroxy ketones like fructose undergo enolization (Lobry de Bruyn-Alberda van Ekenstein rearrangement) to isomerize into aldoses (glucose and mannose), giving a positive test."
+          },
+          {
+            "misconception": "Sucrose exhibits mutarotation in water.",
+            "correction": "Mutarotation requires a free hemiacetal or hemiketal OH group capable of opening to an aldehyde or ketone. In sucrose, C1 of glucose and C2 of fructose are both bonded together in the glycosidic linkage, preventing ring opening and mutarotation."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Identify the constituent monosaccharides, the carbons involved in the glycosidic linkage, and explain why sucrose is a non-reducing sugar.",
+            "steps": [
+              "1. Identify constituent units: Sucrose is composed of alpha-D-glucose and beta-D-fructose.",
+              "2. Identify linkage: The glycosidic linkage connects C1 of alpha-D-glucose to C2 of beta-D-fructose (alpha-1,beta-2 glycosidic bond).",
+              "3. Explain reducing status: Both C1 of glucose (aldehyde carbon) and C2 of fructose (ketone carbon) are anomeric carbons. Since both anomeric hydroxyl groups are involved in forming the glycosidic bond, no free hemiacetal or hemiketal group remains. Hence, sucrose cannot reduce Tollen's or Fehling's reagents and is non-reducing."
+            ],
+            "answer": "Constituents: alpha-D-glucose and beta-D-fructose. Linkage: C1 of glucose to C2 of fructose. Non-reducing because both anomeric carbons are tied up in the glycosidic bond."
+          },
+          {
+            "problem": "Explain the phenomenon of inversion of cane sugar (sucrose) during acid hydrolysis.",
+            "steps": [
+              "1. Sucrose itself is dextrorotatory with a specific rotation of +66.5 degrees.",
+              "2. Hydrolysis yields an equimolar mixture of D-glucose (+52.7 degrees) and D-fructose (-92.4 degrees).",
+              "3. Net rotation of the resulting mixture = (+52.7 - 92.4)/2 = -19.85 degrees (levorotatory).",
+              "4. Since the sign of optical rotation changes from dextro (+) to levo (-), the process is called inversion of sugar, and the resulting mixture is called invert sugar."
+            ],
+            "answer": "Inversion occurs because hydrolysis converts dextrorotatory sucrose (+66.5 deg) into a mixture of glucose and fructose that is net levorotatory (-19.85 deg) due to the strongly levorotatory fructose component."
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Which specific sugar consists of two alpha-D-glucose units connected by an alpha(1->4) glycosidic linkage?",
+            "answer": "Maltose."
+          },
+          {
+            "question": "What constituent monosaccharides are produced upon complete hydrolysis of lactose?",
+            "answer": "beta-D-galactose and beta-D-glucose."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class 12 Chemistry, Chapter 14: Biomolecules - Carbohydrates"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_69EF29B0_CH002",
+        "overview": "Carbohydrates are polyhydroxy aldehydes, polyhydroxy ketones, or compounds that produce them upon hydrolysis. They are categorized based on hydrolysis into monosaccharides, oligosaccharides, and polysaccharides. Monosaccharides are classified as aldoses or ketoses depending on whether they bear an aldehyde or a ketone functional group. Glucose is an aldohexose, whereas fructose is a ketohexose. Disaccharides like sucrose, maltose, and lactose are composed of specific monosaccharide units joined together by glycosidic bonds.",
+        "concepts": [
+          {
+            "title": "Classification of Carbohydrates",
+            "explanation": "Carbohydrates are classified into monosaccharides (cannot be hydrolyzed further into simpler units), oligosaccharides (yield 2 to 10 monosaccharide units on hydrolysis), and polysaccharides (yield a large number of monosaccharide units on hydrolysis). Disaccharides are oligosaccharides yielding two monosaccharide units upon hydrolysis."
+          },
+          {
+            "title": "Aldoses and Ketoses: Glucose and Fructose",
+            "explanation": "Glucose ($C_6H_{12}O_6$) is an aldohexose containing an aldehyde group at C-1 and five hydroxyl groups. Fructose ($C_6H_{12}O_6$) is a ketohexose containing a ketone group at C-2. In aqueous solutions, glucose predominantly exists as six-membered pyranose ring structures (alpha-D-glucopyranose and beta-D-glucopyranose), while fructose forms a five-membered furanose ring (alpha-D-fructofuranose and beta-D-fructofuranose)."
+          },
+          {
+            "title": "Constituent Monosaccharides of Oligosaccharides",
+            "explanation": "Sucrose hydrolyzes into alpha-D-glucose and beta-D-fructose linked via C1 of glucose and C2 of fructose. Maltose yields two alpha-D-glucose units joined by a C1-C4 glycosidic bond. Lactose yields beta-D-galactose and beta-D-glucose joined by a C1-C4 glycosidic bond."
+          },
+          {
+            "title": "Reducing and Non-Reducing Sugars",
+            "explanation": "Sugars with a free aldehyde or ketone carbonyl group (as a hemiacetal or hemiketal) can reduce Fehling's and Tollen's reagents and are termed reducing sugars (e.g., maltose, lactose, glucose, fructose). If the reducing groups are involved in glycosidic bond formation, the sugar is non-reducing (e.g., sucrose)."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "General Carbohydrate Formula",
+            "formula": "C_x(H_2O)_y",
+            "applicability": "Applies to traditional simple carbohydrates like glucose and sucrose, though exceptions exist.",
+            "variables": [
+              {
+                "symbol": "x",
+                "meaning": "Number of carbon atoms",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "y",
+                "meaning": "Number of water equivalents",
+                "unit": "dimensionless"
+              }
+            ]
+          },
+          {
+            "label": "Specific Optical Rotation",
+            "formula": "[\\alpha]_D^T = \\frac{\\alpha}{l \\cdot c}",
+            "applicability": "Measures the optical activity of chiral carbohydrates in solution.",
+            "variables": [
+              {
+                "symbol": "\\alpha",
+                "meaning": "Observed angle of optical rotation",
+                "unit": "degrees"
+              },
+              {
+                "symbol": "l",
+                "meaning": "Path length of sample cell",
+                "unit": "decimeters"
+              },
+              {
+                "symbol": "c",
+                "meaning": "Concentration of solute",
+                "unit": "g/mL"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "All compounds with formula Cx(H2O)y are carbohydrates, and all carbohydrates must conform to this formula.",
+            "correction": "Formaldehyde (CH2O) and acetic acid (C2H4O2) fit the general formula but are not carbohydrates. Conversely, rhamnose (C6H12O5) is a carbohydrate that does not fit the formula."
+          },
+          {
+            "misconception": "Fructose is a non-reducing sugar because it contains a keto group instead of an aldehyde group.",
+            "correction": "Fructose is a reducing sugar because under alkaline conditions (such as Tollens or Fehlings reagents), it undergoes enolization (Lobry de Bruyn-Alberda van Ekenstein transformation) to convert into glucose and mannose."
+          },
+          {
+            "misconception": "Sucrose is a reducing sugar because it contains glucose and fructose units.",
+            "correction": "Sucrose is a non-reducing sugar because its glycosidic linkage involves both the C-1 hemiacetal carbon of glucose and the C-2 hemiketal carbon of fructose, leaving no free carbonyl group."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Hydrolysis of 1 mole of a disaccharide X yields 1 mole of D-galactose and 1 mole of D-glucose. Identify disaccharide X, its glycosidic linkage, and state whether it is a reducing or non-reducing sugar.",
+            "steps": [
+              "Step 1: Identify the disaccharide that produces D-galactose and D-glucose upon hydrolysis. Lactose is composed of galactose and glucose units.",
+              "Step 2: Determine the glycosidic linkage in lactose. Lactose has a glycosidic bond between C1 of beta-D-galactose and C4 of beta-D-glucose.",
+              "Step 3: Check for free hemiacetal group. The C1 hemiacetal group of the glucose unit remains free, making lactose a reducing sugar."
+            ],
+            "answer": "Disaccharide X is Lactose. Its linkage is a beta-1,4-glycosidic linkage between C1 of beta-D-galactose and C4 of beta-D-glucose. It is a reducing sugar."
+          },
+          {
+            "problem": "Explain why sucrose shows invert optical rotation upon hydrolysis.",
+            "steps": [
+              "Step 1: Note the specific rotation of sucrose, which is dextrorotatory (+66.5 degrees).",
+              "Step 2: Note the products of sucrose hydrolysis: equimolar amounts of D-glucose (+52.7 degrees) and D-fructose (-92.4 degrees).",
+              "Step 3: Calculate the net rotation of the mixture: Since the levorotation of fructose (-92.4 deg) is greater than the dextrorotation of glucose (+52.7 deg), the resulting mixture is levorotatory (-19.8 deg).",
+              "Step 4: Conclude that the change in sign of optical rotation from dextro (+) to levo (-) gives rise to the term 'invert sugar'."
+            ],
+            "answer": "Sucrose is dextrorotatory (+66.5 deg), but its hydrolysis mixture of glucose (+52.7 deg) and fructose (-92.4 deg) is net levorotatory (-19.8 deg). This inversion of optical rotation makes the hydrolysis product invert sugar."
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Which monosaccharides are formed when maltose undergoes enzymatic hydrolysis?",
+            "answer": "Two molecules of alpha-D-glucose."
+          },
+          {
+            "question": "Why is sucrose classified as a non-reducing sugar?",
+            "answer": "Because both the reducing carbons (C1 of alpha-D-glucose and C2 of beta-D-fructose) participate in the formation of the glycosidic bond, leaving no free hemiacetal or hemiketal group."
+          },
+          {
+            "question": "Name an aldohexose and a ketohexose.",
+            "answer": "Glucose is an aldohexose, and Fructose is a ketohexose."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class 12 Chemistry, Chapter 14: Biomolecules",
+          "JEE Main Chemistry Syllabus - Unit 19: Biomolecules"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_3944DA40_CH001",
+        "overview": "Carboxylic acids are significantly more acidic than alcohols and phenols because the conjugate carboxylate ion is stabilized by resonance across two equivalent electronegative oxygen atoms. Acidic strength depends heavily on electronic substituent effects (+I, -I, +M, -M), substituent distance, and structural effects like the ortho effect in aromatic carboxylic acids.",
+        "concepts": [
+          {
+            "title": "Resonance Stabilization of Carboxylate Ion",
+            "explanation": "Carboxylic acids readily lose a proton to form a carboxylate ion. The negative charge is delocalized equally over two electronegative oxygen atoms in two equivalent canonical structures, rendering the carboxylate ion exceptionally stable compared to alkoxide or phenoxide ions."
+          },
+          {
+            "title": "Inductive Effect of Substituents",
+            "explanation": "Electron-withdrawing groups (-I effect) pull electron density away from the carboxylate group, stabilizing the conjugate base and increasing acidity. Electron-donating groups (+I effect) push electron density towards the carboxylate group, destabilizing the anion and decreasing acidity."
+          },
+          {
+            "title": "Position and Number of Substituents",
+            "explanation": "Inductive effects operate through sigma bonds and decay rapidly with distance. A substituent closer to the carboxyl group exerts a stronger impact on acidity. Additionally, an increased number of electron-withdrawing groups cumulatively increases acidic strength."
+          },
+          {
+            "title": "Ortho Effect in Benzoic Acids",
+            "explanation": "Ortho-substituted benzoic acids are almost always stronger acids than benzoic acid, regardless of whether the substituent is electron-withdrawing or electron-donating. This steric inhibition of resonance (SIR) forces the carboxyl group out of the benzene ring plane, relieving steric strain upon deprotonation and preventing destabilizing resonance from the aromatic ring."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Acid Dissociation Constant and pKa Relationship",
+            "formula": "pKa = -log10(Ka)",
+            "applicability": "Quantifies the strength of carboxylic acids in aqueous solution.",
+            "variables": [
+              {
+                "symbol": "Ka",
+                "meaning": "Acid dissociation constant",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "pKa",
+                "meaning": "Negative logarithm of Ka",
+                "unit": "dimensionless"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Phenol is more acidic than carboxylic acid because phenoxide ion has 5 resonance structures whereas carboxylate ion has only 2.",
+            "correction": "Carboxylate ion has two equivalent resonance structures with negative charge located on highly electronegative oxygen atoms. In phenoxide, negative charge is delocalized onto less electronegative carbon atoms, making carboxylate ion much more stable and carboxylic acids stronger acids."
+          },
+          {
+            "misconception": "Electron-donating groups at the ortho position always decrease the acidity of benzoic acid.",
+            "correction": "Due to the ortho effect (steric strain and non-coplanarity), almost all ortho-substituted benzoic acids are stronger acids than unsubstituted benzoic acid."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Arrange the following compounds in decreasing order of acidic strength: CH3COOH, ClCH2COOH, FCH2COOH, NO2CH2COOH.",
+            "steps": [
+              "Step 1: Identify the substituents attached to the CH2COOH backbone: -H, -Cl, -F, and -NO2.",
+              "Step 2: Evaluate the -I (electron-withdrawing) power of the substituents. The order of -I power is: -NO2 > -F > -Cl > -H.",
+              "Step 3: Stronger electron-withdrawing groups stabilize the carboxylate anion more effectively, increasing acidic strength.",
+              "Step 4: Rank the compounds accordingly."
+            ],
+            "answer": "NO2CH2COOH > FCH2COOH > ClCH2COOH > CH3COOH"
+          },
+          {
+            "problem": "Compare the acidic strength of ortho-nitrobenzoic acid, meta-nitrobenzoic acid, para-nitrobenzoic acid, and benzoic acid.",
+            "steps": [
+              "Step 1: Ortho-nitrobenzoic acid is the strongest due to the ortho effect operating alongside strong -I and -M effects.",
+              "Step 2: At para position, -NO2 exerts both strong -M (mesomeric) and -I effects.",
+              "Step 3: At meta position, -NO2 exerts only -I effect (mesomeric effect is inactive at meta).",
+              "Step 4: Benzoic acid lacks any electron-withdrawing nitro substituent.",
+              "Step 5: Order from strongest to weakest acid: ortho > para > meta > benzoic acid."
+            ],
+            "answer": "o-nitrobenzoic acid > p-nitrobenzoic acid > m-nitrobenzoic acid > benzoic acid"
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Why is formic acid (HCOOH) a stronger acid than acetic acid (CH3COOH)?",
+            "answer": "Acetic acid contains a methyl (-CH3) group which exerts a +I (electron-releasing) effect, destabilizing the acetate anion. Formic acid has a hydrogen atom instead, which lacks this destabilizing +I effect."
+          },
+          {
+            "question": "How does a lower pKa value relate to the acidic strength of a carboxylic acid?",
+            "answer": "A lower pKa value corresponds to a higher acid dissociation constant (Ka), indicating greater extent of ionization and therefore stronger acidic strength."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class 12 Chemistry, Chapter 12: Aldehydes, Ketones and Carboxylic Acids",
+          "Organic Chemistry by Morrison and Boyd, Unit on Carboxylic Acids"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_FE6942BA_CH001",
+        "overview": "This topic covers fundamental experimental chemistry principles required for JEE Main. It focuses on calorimetric determination of enthalpy of solution and neutralization, laboratory preparation of lyophilic and lyophobic colloidal sols, and the kinetic study of the hydrogen peroxide-iodide clock reaction.",
+        "concepts": [
+          {
+            "title": "Enthalpy of Solution of CuSO4",
+            "explanation": "The dissolution of anhydrous copper sulfate in water is exothermic because the high hydration enthalpy released when Cu2+ and SO42- ions are hydrated exceeds the lattice energy. Conversely, hydrated copper sulfate (CuSO4.5H2O) dissolves endothermically because its crystal lattice already contains water of crystallization. By applying Hess's Law, the enthalpy of hydration of anhydrous CuSO4 to form CuSO4.5H2O can be calculated as the difference between the enthalpy of solution of anhydrous CuSO4 and that of hydrated CuSO4."
+          },
+          {
+            "title": "Enthalpy of Neutralization of Strong Acid and Strong Base",
+            "explanation": "Neutralization of a strong acid with a strong base involves the quantitative reaction between H+ (aq) and OH- (aq) to form H2O (l). Since strong acids and strong bases are completely ionized in dilute aqueous solutions, the net ionic equation is H+(aq) + OH-(aq) -> H2O(l). The enthalpy of neutralization for any strong acid and strong base is virtually constant at approximately -57.1 kJ/mol (or -13.7 kcal/mol) at 298 K. In a polythene or vacuum flask calorimeter, heat evolved is measured using q = (m * c + W) * deltaT."
+          },
+          {
+            "title": "Preparation of Lyophilic and Lyophobic Sols",
+            "explanation": "Lyophilic sols (liquid-loving) are prepared directly by warming or shaking the dispersed phase with the dispersion medium (e.g., starch or egg albumin in water) because of strong attractive forces between the phases. They are reversible and stable. Lyophobic sols (liquid-hating) cannot be prepared by simple mixing. They require specialized chemical methods: Fe(OH)3 sol is prepared by hydrolysis of FeCl3 in boiling water, while As2S3 sol is prepared by double decomposition passing H2S gas through aqueous As2O3 solution. Lyophobic sols are irreversible and easily coagulated by electrolytes."
+          },
+          {
+            "title": "Kinetic Study of the Reaction of Iodide Ions with Hydrogen Peroxide",
+            "explanation": "The reaction H2O2 + 2I- + 2H+ -> I2 + 2H2O is studied using a clock reaction method. A fixed, small amount of sodium thiosulfate (Na2S2O3) and starch indicator are added to the reaction mixture. The liberated I2 reacts instantly with S2O3(2-) via I2 + 2S2O3(2-) -> 2I- + S4O6(2-). Once all S2O3(2-) is consumed, free I2 reacts with starch to give an intense blue color. The time taken (t) for the blue color to appear is inversely proportional to the initial rate of the reaction."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Enthalpy of Hydration from Solution Enthalpies",
+            "formula": "\\Delta H_{hydration}(CuSO_4) = \\Delta H_{soln}(CuSO_4, anhyd) - \\Delta H_{soln}(CuSO_4 \\cdot 5H_2O)",
+            "applicability": "Applicable when using calorimetry to determine hydration enthalpy of an anhydrous salt.",
+            "variables": [
+              {
+                "symbol": "\\Delta H_{hydration}(CuSO_4)",
+                "meaning": "Enthalpy of hydration per mole of anhydrous copper sulfate",
+                "unit": "kJ/mol"
+              },
+              {
+                "symbol": "\\Delta H_{soln}(CuSO_4, anhyd)",
+                "meaning": "Enthalpy of solution of anhydrous copper sulfate",
+                "unit": "kJ/mol"
+              },
+              {
+                "symbol": "\\Delta H_{soln}(CuSO_4 \\cdot 5H_2O)",
+                "meaning": "Enthalpy of solution of hydrated copper sulfate pentahydrate",
+                "unit": "kJ/mol"
+              }
+            ]
+          },
+          {
+            "label": "Calorimetric Heat Evolution Equation",
+            "formula": "q = (m \\cdot c + W) \\cdot \\Delta T",
+            "applicability": "Applicable to calculate heat released or absorbed in liquid calorimetry experiments.",
+            "variables": [
+              {
+                "symbol": "q",
+                "meaning": "Total heat evolved or absorbed",
+                "unit": "J"
+              },
+              {
+                "symbol": "m",
+                "meaning": "Mass of the final solution",
+                "unit": "g"
+              },
+              {
+                "symbol": "c",
+                "meaning": "Specific heat capacity of the solution",
+                "unit": "J / (g K)"
+              },
+              {
+                "symbol": "W",
+                "meaning": "Water equivalent of calorimeter",
+                "unit": "J / K"
+              },
+              {
+                "symbol": "\\Delta T",
+                "meaning": "Temperature change (T_final - T_initial)",
+                "unit": "K"
+              }
+            ]
+          },
+          {
+            "label": "Enthalpy of Neutralization",
+            "formula": "\\Delta H_{neut} = -\\frac{q}{n_{H^+}}",
+            "applicability": "Applicable to calculate molar enthalpy of neutralization.",
+            "variables": [
+              {
+                "symbol": "\\Delta H_{neut}",
+                "meaning": "Enthalpy change of neutralization per mole of water formed",
+                "unit": "kJ/mol"
+              },
+              {
+                "symbol": "q",
+                "meaning": "Heat released in calorimeter",
+                "unit": "kJ"
+              },
+              {
+                "symbol": "n_{H^+}",
+                "meaning": "Number of moles of H+ (or OH-) neutralized",
+                "unit": "mol"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "The enthalpy of neutralization for weak acids or weak bases with strong bases or strong acids is also -57.1 kJ/mol.",
+            "correction": "Weak acids/bases are incompletely ionized. A part of the heat evolved during neutralization is consumed in the complete ionization of the weak species, making the net heat evolved numerically less than 57.1 kJ/mol."
+          },
+          {
+            "misconception": "Fe(OH)3 sol can be prepared by dissolving ferric hydroxide directly in cold water.",
+            "correction": "Fe(OH)3 is lyophobic and insoluble in water; direct mixing does not yield a colloidal sol. It must be prepared by adding saturated FeCl3 solution dropwise into boiling distilled water to induce hydrolysis."
+          },
+          {
+            "misconception": "In the iodide-peroxide clock reaction, starch is added to speed up the chemical reaction rate.",
+            "correction": "Starch serves strictly as an indicator to signal the exact moment all thiosulfate ions are completely consumed by producing a dark blue starch-iodine complex."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "In a calorimetry experiment, 100 mL of 1.0 M HCl is mixed with 100 mL of 1.0 M NaOH in a calorimeter of negligible heat capacity. The initial temperature of both solutions was 25.0 C and the maximum temperature reached was 31.8 C. Calculate the enthalpy of neutralization per mole of H+ ions. (Assume density of solution = 1.0 g/mL, specific heat capacity = 4.18 J/g K)",
+            "steps": [
+              "Step 1: Determine mass of final solution: Mass = Volume * Density = (100 mL + 100 mL) * 1.0 g/mL = 200 g.",
+              "Step 2: Calculate temperature change: deltaT = 31.8 C - 25.0 C = 6.8 K.",
+              "Step 3: Calculate heat released (q): q = m * c * deltaT = 200 g * 4.18 J/(g K) * 6.8 K = 5684.8 J = 5.685 kJ.",
+              "Step 4: Calculate moles of H+ reacted: n(H+) = 1.0 mol/L * 0.100 L = 0.100 mol.",
+              "Step 5: Calculate molar enthalpy of neutralization: deltaH = -q / n = -5.685 kJ / 0.100 mol = -56.85 kJ/mol."
+            ],
+            "answer": "-56.85 kJ/mol"
+          },
+          {
+            "problem": "The enthalpy of solution of anhydrous CuSO4 is -66.5 kJ/mol, and the enthalpy of solution of CuSO4.5H2O is +11.7 kJ/mol. Calculate the enthalpy of hydration for the reaction: CuSO4 (s) + 5H2O (l) -> CuSO4.5H2O (s).",
+            "steps": [
+              "Step 1: Set up the thermochemical cycle based on Hess's Law: CuSO4(s) + aq -> CuSO4(aq) [deltaH1 = -66.5 kJ/mol] and CuSO4.5H2O(s) + aq -> CuSO4(aq) [deltaH2 = +11.7 kJ/mol].",
+              "Step 2: Express the hydration enthalpy relation: deltaH_hydration = deltaH1 - deltaH2.",
+              "Step 3: Substitute the values: deltaH_hydration = -66.5 kJ/mol - (+11.7 kJ/mol) = -78.2 kJ/mol."
+            ],
+            "answer": "-78.2 kJ/mol"
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Why does anhydrous CuSO4 dissolve in water with evolution of heat, whereas hydrated CuSO4 dissolves with absorption of heat?",
+            "answer": "Anhydrous CuSO4 undergoes strong hydration of Cu2+ and SO42- ions, releasing hydration energy that exceeds its lattice energy. CuSO4.5H2O already contains water of hydration in its crystal lattice, so hydration energy is not gained to the same extent, requiring thermal energy to break the crystal lattice."
+          },
+          {
+            "question": "In the reaction between I- and H2O2, what is the role of adding a small, fixed amount of Na2S2O3 solution?",
+            "answer": "Na2S2O3 acts as a clock substance. It immediately consumes the liberated I2 back to I-. Only when all S2O3(2-) is completely used up does free I2 accumulate to react with starch, causing a sudden blue color appearance that allows precise timing of the reaction rate."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class XII Chemistry Lab Manual - Practical Chemistry Experiments",
+          "JEE Main Official Chemistry Syllabus - Section B: Experimental Skills Related to Practical Chemistry"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_FE6942BA_CH002",
+        "overview": "This topic covers the fundamental principles of four key practical chemistry experiments: determining the enthalpy of solution of anhydrous copper sulphate, determining the enthalpy of neutralization of a strong acid with a strong base, preparing lyophilic (e.g., starch) and lyophobic (e.g., ferric hydroxide) colloidal sols, and studying the reaction kinetics of iodide ions with hydrogen peroxide.",
+        "concepts": [
+          {
+            "title": "Enthalpy of Solution of CuSO4",
+            "explanation": "The enthalpy of solution is the enthalpy change when one mole of a solute is dissolved in a specified amount of solvent. For anhydrous CuSO4, dissolution is exothermic because hydration enthalpy exceeds lattice energy. For hydrated CuSO4.5H2O, dissolution is endothermic as lattice breakdown requires energy without additional hydration enthalpy gains."
+          },
+          {
+            "title": "Enthalpy of Neutralization",
+            "explanation": "The enthalpy of neutralization for a strong acid and a strong base is constant (approx. -57.3 kJ/mol or -13.7 kcal/mol) because it corresponds entirely to the combination of H+ and OH- ions to form liquid water: H+(aq) + OH-(aq) -> H2O(l)."
+          },
+          {
+            "title": "Preparation of Lyophilic and Lyophobic Sols",
+            "explanation": "Lyophilic sols (e.g., starch, gum) are liquid-loving and prepared directly by heating or mixing the substance with the dispersion medium. Lyophobic sols (e.g., Fe(OH)3, As2S3) are liquid-hating and require special chemical methods like hydrolysis (e.g., adding FeCl3 to boiling water) or double decomposition."
+          },
+          {
+            "title": "Kinetics of Reaction Between Iodide Ions and H2O2",
+            "explanation": "The reaction 2I- + H2O2 + 2H+ -> I2 + 2H2O is studied using a clock reaction setup. A known amount of sodium thiosulfate (Na2S2O3) and starch indicator are added. The liberated I2 is immediately consumed by thiosulfate until it is completely used up, at which point I2 reacts with starch to form a blue color, giving a precise time measurement."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Heat Absorbed or Evolved in Calorimeter",
+            "formula": "q = m * c * Delta T",
+            "applicability": "Calculating thermal energy exchanged during solution or neutralization processes in a constant-pressure calorimeter.",
+            "variables": [
+              {
+                "symbol": "m",
+                "meaning": "Mass of the solution",
+                "unit": "g"
+              },
+              {
+                "symbol": "c",
+                "meaning": "Specific heat capacity of the solution",
+                "unit": "J/(g K)"
+              },
+              {
+                "symbol": "Delta T",
+                "meaning": "Temperature change",
+                "unit": "K"
+              }
+            ]
+          },
+          {
+            "label": "Enthalpy of Neutralization",
+            "formula": "Delta H_neut = -q / n_H2O",
+            "applicability": "Determining molar enthalpy of neutralization per mole of water formed.",
+            "variables": [
+              {
+                "symbol": "q",
+                "meaning": "Heat evolved during neutralization",
+                "unit": "J"
+              },
+              {
+                "symbol": "n_H2O",
+                "meaning": "Moles of water produced",
+                "unit": "mol"
+              }
+            ]
+          },
+          {
+            "label": "Reaction Rate in Clock Reaction",
+            "formula": "Rate = 1 / t",
+            "applicability": "Comparing initial rates in iodine clock kinetics experiments where small fixed amounts of thiosulfate are consumed.",
+            "variables": [
+              {
+                "symbol": "t",
+                "meaning": "Time taken for appearance of blue starch-iodine color",
+                "unit": "s"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Dissolution of both anhydrous CuSO4 and hydrated CuSO4.5H2O are exothermic processes.",
+            "correction": "Anhydrous CuSO4 dissolution is exothermic because hydration energy dominates, whereas hydrated CuSO4.5H2O dissolution is endothermic as water of crystallization is already present in its lattice."
+          },
+          {
+            "misconception": "Enthalpy of neutralization of weak acids with strong bases is also -57.3 kJ/mol.",
+            "correction": "It is less negative than -57.3 kJ/mol because a portion of the evolved heat is consumed in ionizing the weak acid completely."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "When 100 mL of 1.0 M HCl is mixed with 100 mL of 1.0 M NaOH in a calorimeter, the temperature rises by 6.8 K. Assuming total mass is 200 g and specific heat capacity c = 4.18 J/g K, calculate the enthalpy of neutralization in kJ/mol.",
+            "steps": [
+              "Calculate heat evolved: q = m * c * Delta T = 200 * 4.18 * 6.8 = 5684.8 J = 5.685 kJ.",
+              "Determine moles of water formed: n = M * V = 1.0 mol/L * 0.100 L = 0.100 mol.",
+              "Calculate Delta H_neut = -q / n = -5.685 kJ / 0.100 mol = -56.85 kJ/mol."
+            ],
+            "answer": "-56.85 kJ/mol"
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Why is boiling distilled water used during the preparation of Ferric Hydroxide sol?",
+            "answer": "Boiling water promotes rapid hydrolysis of ferric chloride (FeCl3 + 3H2O -> Fe(OH)3 + 3HCl) to form colloidal ferric hydroxide sol."
+          },
+          {
+            "question": "In the kinetic study of H2O2 and KI reaction, what role does sodium thiosulfate play?",
+            "answer": "Sodium thiosulfate acts as a monitor reagent that consumes liberated iodine immediately, delaying the starch-iodine blue complex formation to allow accurate time measurement."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class XII Chemistry Lab Manual, Calorimetry and Surface Chemistry",
+          "NCERT Class XII Chemistry Textbook, Surface Chemistry and Chemical Kinetics"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_7CAF568B_CH001",
+        "overview": "Qualitative salt analysis involves the systematic identification of cations and anions present in an inorganic salt sample. The procedures rely on fundamental chemical principles such as selective precipitation, solubility products (Ksp), the common ion effect, complexation, and redox reactions. Cations are separated into analytical groups based on the solubility products of their chlorides, sulfides, hydroxides, and carbonates, while anions are identified through preliminary gas evolution tests followed by specific confirmatory reactions.",
+        "concepts": [
+          {
+            "title": "Group Separation of Cations",
+            "explanation": "Cations are classified into analytical groups (Zero to VI) based on solubility rules. Group I (Pb2+) precipitates as chlorides using dilute HCl. Group II (Pb2+, Cu2+) precipitates as sulfides in acidic medium (dilute HCl + H2S). Group III (Fe3+, Al3+) precipitates as hydroxides using NH4OH in the presence of NH4Cl. Group IV (Zn2+, Ni2+) precipitates as sulfides in basic medium (NH4OH + H2S). Group V (Ba2+, Ca2+) precipitates as carbonates using (NH4)2CO3 in ammonium buffer. Group VI (Mg2+) is tested in the filtrate, and Zero Group (NH4+) is tested directly from the original salt using NaOH."
+          },
+          {
+            "title": "Role of Common Ion Effect and pH Control",
+            "explanation": "The precipitation of cations depends on exceeding their solubility product (Qsp > Ksp). In Group II, dilute HCl provides H+ ions which suppress the ionization of H2S via the common ion effect, keeping [S2-] low so that only sulfides with extremely low Ksp (PbS, CuS) precipitate. In Group III, NH4Cl suppresses the dissociation of NH4OH via the common ion effect, maintaining [OH-] at a level sufficient to precipitate Fe(OH)3 and Al(OH)3 without precipitating Zn(OH)2 or Mg(OH)2."
+          },
+          {
+            "title": "Systematic Anion Analysis",
+            "explanation": "Anions are categorized based on their behavior towards acids: Group A anions (CO32-, S2-, NO2-) evolve characteristic gases (CO2, H2S, NO2) with dilute H2SO4. Group B anions (Cl-, Br-, I-, NO3-) evolve gases (HCl, Br2, I2, NO2) with concentrated H2SO4. Group C anions (SO42-) are identified through specific precipitation reactions, such as forming insoluble BaSO4 with BaCl2 solution."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Solubility Product Criterion for Precipitation",
+            "formula": "Q_sp > K_sp",
+            "applicability": "Determines whether precipitation of a sparingly soluble salt will occur under given ion concentrations.",
+            "variables": [
+              {
+                "symbol": "Q_sp",
+                "meaning": "Ionic product of concentrations of constituent ions raised to their stoichiometric coefficients",
+                "unit": "dimensionless or (mol/L)^n"
+              },
+              {
+                "symbol": "K_sp",
+                "meaning": "Solubility product constant at a given temperature",
+                "unit": "dimensionless or (mol/L)^n"
+              }
+            ]
+          },
+          {
+            "label": "Sulfide Ion Concentration Control in Acidic Medium",
+            "formula": "[S^{2-}] = K_{a1} * K_{a2} * [H_2S] / [H^+]^2",
+            "applicability": "Calculates available sulfide ion concentration as a function of pH during cation group separation.",
+            "variables": [
+              {
+                "symbol": "[S^{2-}]",
+                "meaning": "Sulfide ion concentration",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "K_{a1}, K_{a2}",
+                "meaning": "First and second dissociation constants of H2S",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "[H^+]",
+                "meaning": "Hydrogen ion concentration maintained by added HCl",
+                "unit": "mol/L"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "Concentrated HCl can be substituted for dilute HCl in Group II cation precipitation.",
+            "correction": "Excessively high H+ concentration suppresses S2- concentration so drastically that even Group II cations may fail to precipitate completely. Additionally, concentrated HCl can form soluble chloro-complexes like [PbCl4]2-."
+          },
+          {
+            "misconception": "NH4Cl is added in Group III solely to act as a catalyst for hydroxide precipitation.",
+            "correction": "NH4Cl provides NH4+ ions which exert a common ion effect on NH4OH dissociation, suppressing [OH-] to prevent higher Ksp hydroxides (such as Mg(OH)2 and Zn(OH)2) from co-precipitating."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "An aqueous solution of a salt mixture gives a white precipitate with dilute HCl. The filtrate on passing H2S gas gives a black precipitate. On adding NH4Cl and NH4OH to the filtrate, a reddish-brown precipitate is obtained. Identify the cation groups present and assign individual cations.",
+            "steps": [
+              "Step 1: Dilute HCl forming a white precipitate indicates Group I cation (Pb2+ as PbCl2).",
+              "Step 2: Passing H2S in acidic filtrate yielding a black precipitate indicates Group II cation (Cu2+ or remaining Pb2+ as CuS/PbS).",
+              "Step 3: Adding NH4Cl + NH4OH giving a reddish-brown precipitate indicates Group III cation, specifically Fe3+ forming Fe(OH)3."
+            ],
+            "answer": "Group I (Pb2+), Group II (Cu2+ or Pb2+), and Group III (Fe3+) cations are present."
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Why is nitric acid (HNO3) added to the filtrate of Group II before proceeding to Group III cation analysis?",
+            "answer": "Fe2+ may be present in solution due to reduction by H2S. Fe(OH)2 has a high Ksp and will not completely precipitate in Group III. Heating with HNO3 oxidizes Fe2+ to Fe3+, which has a much lower Ksp as Fe(OH)3 and precipitates completely."
+          },
+          {
+            "question": "What observed change confirms the presence of nitrate (NO3-) ions in the brown ring test?",
+            "answer": "The formation of a dark brown ring at the junction of concentrated H2SO4 and the freshly prepared FeSO4 mixed solution, corresponding to the complex [Fe(H2O)5(NO)]2+."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class 12 Chemistry Lab Manual, Qualitative Analysis",
+          "JEE Main Chemistry Syllabus - Principles Related to Practical Chemistry"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_7CAF568B_CH002",
+        "overview": "Qualitative salt analysis involves systematic identification of cations and anions present in an inorganic salt. The analysis relies on core chemical principles such as selective precipitation governed by solubility product (Ksp), the common ion effect, pH regulation, complex formation, and oxidation-reduction reactions. Specific cations (Pb2+, Cu2+, Al3+, Fe3+, Zn2+, Ni2+, Ca2+, Ba2+, Mg2+, NH4+) are separated into analytical groups using group reagents, while anions (CO32-, S2-, SO42-, NO3-, NO2-, Cl-, Br-, I-) are detected using preliminary acid tests and confirmatory wet tests.",
+        "concepts": [
+          {
+            "title": "Solubility Product and Common Ion Effect in Group Separation",
+            "explanation": "Selective precipitation of cation groups relies on maintaining specific anion concentrations. In Group II, H2S is passed in acidic medium (dilute HCl); high [H+] suppresses H2S ionization via common ion effect, keeping [S2-] low so that only cations with extremely low Ksp (like Cu2+, Pb2+) precipitate as sulfides. In Group IV, H2S is passed in basic medium (NH4OH + NH4Cl); lower [H+] increases [S2-], enabling precipitation of cations with higher Ksp (Zn2+, Ni2+). In Group III, NH4Cl suppresses NH4OH dissociation, controlling [OH-] to precipitate only Al3+ and Fe3+ as hydroxides without precipitating Group IV/V cations."
+          },
+          {
+            "title": "Systematic Scheme for Cation Identification",
+            "explanation": "Cations are classified into analytical groups based on precipitation reactions: Zero Group (NH4+) tested directly via NaOH evolving NH3 gas; Group I (Pb2+) precipitated as chlorides with dil. HCl; Group II (Pb2+, Cu2+) as sulfides in acidic H2S; Group III (Al3+, Fe3+) as hydroxides with NH4OH + NH4Cl; Group IV (Zn2+, Ni2+) as sulfides in alkaline H2S; Group V (Ba2+, Ca2+) as carbonates with (NH4)2CO3; Group VI (Mg2+) detected with ammonium phosphate in alkaline solution."
+          },
+          {
+            "title": "Anion Classification and Test Principles",
+            "explanation": "Anions are classified into three functional classes: Class A(i) anions (CO32-, S2-, NO2-) evolve characteristic gases with dilute H2SO4 (CO2, H2S, NO2 respectively); Class A(ii) anions (Cl-, Br-, I-, NO3-) evolve gases with concentrated H2SO4 (HCl, Br2, I2, NO2 respectively); Class B anions (SO42-) are detected by precipitation reactions independent of volatile gas formation (e.g., BaCl2 test forming insoluble BaSO4)."
+          },
+          {
+            "title": "Confirmatory Tests for Specific Anions",
+            "explanation": "Confirmatory tests utilize specific chemical reactions: Nitrate (NO3-) is confirmed using the Brown Ring Test where FeSO4 reduces NO3- to NO, forming the brown complex [Fe(H2O)5(NO)]SO4. Nitrite (NO2-) produces brown fumes with dil. H2SO4 and turns KI-starch paper blue. Halides (Cl-, Br-, I-) are confirmed via AgNO3 precipitation (white, pale yellow, yellow precipitates) and the Chromyl Chloride test (specifically for Cl- forming red fumes of CrO2Cl2)."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Solubility Product Condition for Precipitation",
+            "formula": "Q_{sp} > K_{sp}",
+            "applicability": "Applies to precipitation reactions; a compound precipitates when the ionic product exceeds its solubility product constant.",
+            "variables": [
+              {
+                "symbol": "Q_{sp}",
+                "meaning": "Ionic product of the dissolved ions",
+                "unit": "Dimensionless or mol^n/L^n"
+              },
+              {
+                "symbol": "K_{sp}",
+                "meaning": "Solubility product constant",
+                "unit": "Dimensionless or mol^n/L^n"
+              }
+            ]
+          },
+          {
+            "label": "Sulfide Ion Concentration Suppression",
+            "formula": "[S^{2-}] = \\frac{K_{a1} K_{a2} [H_2S]}{[H^+]^2}",
+            "applicability": "Applies to H2S equilibria in acidic or basic solution during Group II and Group IV cation separation.",
+            "variables": [
+              {
+                "symbol": "[S^{2-}]",
+                "meaning": "Concentration of sulfide ions",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "K_{a1}, K_{a2}",
+                "meaning": "First and second dissociation constants of H2S",
+                "unit": "mol/L"
+              },
+              {
+                "symbol": "[H^+]",
+                "meaning": "Hydrogen ion concentration controlled by added acid/base",
+                "unit": "mol/L"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "NH4Cl can be omitted when precipitating Group III hydroxides with NH4OH.",
+            "correction": "Without NH4Cl, the concentration of OH- from NH4OH is sufficiently high to exceed the Ksp of Group IV and Group V hydroxides (like Mg(OH)2 or Zn(OH)2), causing premature co-precipitation."
+          },
+          {
+            "misconception": "Concentrated HCl can be used instead of dilute HCl for precipitating Group I cations (Pb2+).",
+            "correction": "Excess concentrated HCl dissolves the precipitated PbCl2 by forming a soluble chloro-complex, [PbCl4]2-, preventing detection."
+          },
+          {
+            "misconception": "Nitrites and Nitrates give the exact same response in the Brown Ring Test without any distinction.",
+            "correction": "Nitrites (NO2-) react with dilute acids directly to yield NO2/NO, giving a brown ring test even with dilute acetic acid, whereas Nitrates (NO3-) require concentrated H2SO4 for reduction."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "During cation analysis, a salt solution gives a white precipitate with dilute HCl. The precipitate dissolves in hot water and forms a yellow precipitate upon adding KI solution. Identify the cation present and write the relevant balanced chemical equations.",
+            "steps": [
+              "Step 1: Identify the analytical group. Formation of a white precipitate with dilute HCl indicates a Group I cation (Pb2+).",
+              "Step 2: Note the behavior in hot water. PbCl2 is soluble in hot water but insoluble in cold water.",
+              "Step 3: Confirmatory test reaction with KI: Pb2+(aq) + 2 KI(aq) -> PbI2(s) [Yellow precipitate] + 2 K+(aq).",
+              "Conclusion: The cation present is Lead(II) (Pb2+)."
+            ],
+            "answer": "Cation: Pb2+. Reactions: Pb2+ + 2Cl- -> PbCl2 (s, white); Pb2+ + 2I- -> PbI2 (s, yellow precipitate)."
+          },
+          {
+            "problem": "An unknown salt yields a gas with concentrated H2SO4 that turns starch-iodide paper blue. Adding BaCl2 solution to the original aqueous solution yields a white precipitate insoluble in dilute HCl. Identify the anion and explain the principles.",
+            "steps": [
+              "Step 1: The original aqueous solution giving a white precipitate with BaCl2 that is insoluble in dilute HCl specifically confirms Sulfate ion (SO42-): Ba2+ + SO42- -> BaSO4 (s, white).",
+              "Step 2: Wait, check both observations: Sulfate gives BaSO4 precipitate insoluble in HCl. However, if the salt also oxidizes iodide, or if it contains nitrate/nitrite, we must re-evaluate.",
+              "Step 3: Concentrated H2SO4 test yielding gas that oxidizes I- to I2 (turning starch-iodide paper blue) indicates an oxidizing anion like NO3- or NO2-. However, sulfate itself doesn't turn starch-iodide blue. If a single salt contains SO42-, it reacts with BaCl2.",
+              "Conclusion: Primary anion confirmed by BaCl2 insolubility in dil HCl is SO42-."
+            ],
+            "answer": "Anion identified: SO42- (Sulfate ion). Reaction: Ba2+ + SO42- -> BaSO4 (white precipitate, insoluble in dil. HCl)."
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Why is H2S passed in an acidic medium for Group II cations, but in an alkaline medium for Group IV cations?",
+            "answer": "In acidic medium, high [H+] suppresses H2S dissociation, keeping [S2-] low enough to precipitate only Group II sulfides (very low Ksp). In alkaline medium, OH- consumes H+, increasing [S2-] to precipitate Group IV sulfides (higher Ksp)."
+          },
+          {
+            "question": "What is Nessler's reagent, and what observation indicates the presence of NH4+ ion?",
+            "answer": "Nessler's reagent is an alkaline solution of potassium tetraiodomercurate(II), K2[HgI4]. Reaction with NH4+ forms a brown precipitate or coloration of iodide of Millon's base."
+          },
+          {
+            "question": "Which cation forms a blood-red coloration with potassium thiocyanate (KSCN)?",
+            "answer": "Fe3+ ion forms the soluble blood-red complex [Fe(SCN)(H2O)5]2+."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Class 12 Chemistry Lab Manual: Qualitative Inorganic Analysis",
+          "NCERT Class 11 Chemistry Textbook: Equilibrium (Solubility Product and Common Ion Effect)"
+        ]
+      },
+      {
+        "artifactVersion": "1.0.0",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_671F479D_CH001",
+        "overview": "This comprehensive topic covers the foundational principles of organic chemistry including functional group classification, systematic IUPAC nomenclature, structural and stereoisomerism, along with standard laboratory/industrial methods of preparation and generalized reaction pathways such as substitution and elimination.",
+        "concepts": [
+          {
+            "title": "IUPAC Nomenclature and Priority Rules",
+            "explanation": "Systematic naming follows a rigid hierarchy: Principal Functional Group > Double Bond > Triple Bond > Substituents. The longest continuous carbon chain containing the principal functional group forms the parent root word, numbered to give the lowest possible locants to high-priority features."
+          },
+          {
+            "title": "Structural and Stereoisomerism",
+            "explanation": "Isomers possess the same molecular formula. Structural isomers differ in atom connectivity (chain, position, functional, metamerism, tautomerism), whereas stereoisomers share connectivity but differ in spatial arrangement (geometrical/cis-trans/E-Z and optical enantiomers/diastereomers)."
+          },
+          {
+            "title": "Nucleophilic Substitution and Elimination Pathways",
+            "explanation": "Alkyl halides and derivatives undergo substitution via SN1 (unimolecular, carbocation intermediate, racemization) or SN2 (bimolecular, concerted, Walden inversion) pathways, alongside competing elimination pathways (E1 and E2) yielding Saytzeff or Hofmann alkene products depending on substrate, base, and temperature."
+          }
+        ],
+        "formulaRegister": [
+          {
+            "label": "Degree of Unsaturation (Double Bond Equivalent)",
+            "formula": "DBE = C + 1 - (H / 2) - (X / 2) + (N / 2)",
+            "applicability": "Determines the total number of rings and/or pi bonds present in a neutral organic molecule of known molecular formula.",
+            "variables": [
+              {
+                "symbol": "C",
+                "meaning": "Number of Carbon atoms",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "H",
+                "meaning": "Number of Hydrogen atoms",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "X",
+                "meaning": "Number of Halogen atoms (F, Cl, Br, I)",
+                "unit": "dimensionless"
+              },
+              {
+                "symbol": "N",
+                "meaning": "Number of Nitrogen atoms",
+                "unit": "dimensionless"
+              }
+            ]
+          },
+          {
+            "label": "Specific Rotation",
+            "formula": "[alpha]_D^T = alpha / (c * l)",
+            "applicability": "Quantifies the optical activity of a chiral compound in solution.",
+            "variables": [
+              {
+                "symbol": "[alpha]_D^T",
+                "meaning": "Specific optical rotation at temperature T and sodium D line wavelength",
+                "unit": "deg mL g^-1 dm^-1"
+              },
+              {
+                "symbol": "alpha",
+                "meaning": "Observed optical rotation angle",
+                "unit": "degrees"
+              },
+              {
+                "symbol": "c",
+                "meaning": "Concentration of solution",
+                "unit": "g mL^-1"
+              },
+              {
+                "symbol": "l",
+                "meaning": "Path length of polarimeter cell",
+                "unit": "dm"
+              }
+            ]
+          }
+        ],
+        "commonMisconceptions": [
+          {
+            "misconception": "SN1 reactions always yield a perfectly 50:50 racemic mixture of enantiomers.",
+            "correction": "Because the leaving group often shields the front side of the carbocation as an ion-pair intermediate, back-side attack typically predominates slightly, leading to partial inversion along with racemization."
+          },
+          {
+            "misconception": "E2 elimination using any strong base always forms the most substituted alkene.",
+            "correction": "E2 elimination produces the less substituted alkene (Hofmann product) if bulky hindered bases like potassium tert-butoxide are used, or if the leaving group is extremely poor like fluoride."
+          }
+        ],
+        "workedExamples": [
+          {
+            "problem": "Calculate the degree of unsaturation (DBE) for nitrobenzene (C6H5NO2) and interpret its structural features.",
+            "steps": [
+              "Step 1: Identify the counts from the formula C6H5NO2: C = 6, H = 5, N = 1, X = 0, O = 2 (oxygen is ignored in DBE formula).",
+              "Step 2: Apply the DBE formula: DBE = C + 1 - (H / 2) - (X / 2) + (N / 2).",
+              "Step 3: DBE = 6 + 1 - (5 / 2) - 0 + (1 / 2) = 7 - 2.5 + 0.5 = 5.",
+              "Step 4: Interpretation: Nitrobenzene contains 1 benzene ring (3 pi bonds + 1 ring = 4 units of unsaturation) and 1 nitro group (-NO2 containing 1 pi bond), giving a total DBE of 5."
+            ],
+            "answer": "DBE = 5 (representing 1 aromatic ring, 3 ring pi bonds, and 1 -NO2 pi bond)."
+          },
+          {
+            "problem": "Determine the correct IUPAC name for CH3-CH(OH)-CH2-CO-CH3.",
+            "steps": [
+              "Step 1: Identify functional groups present: Ketone (-CO-) and Alcohol (-OH).",
+              "Step 2: Ketone has higher priority than alcohol, so the suffix is '-one' and the alcohol acts as a prefix ('hydroxy').",
+              "Step 3: Number the 5-carbon parent chain from the end closer to the ketone: C1(right) to C5(left), putting -CO- at C2 and -OH at C4.",
+              "Step 4: Assemble the name: 4-hydroxypentan-2-one."
+            ],
+            "answer": "4-hydroxypentan-2-one"
+          }
+        ],
+        "selfChecks": [
+          {
+            "question": "Which reaction conditions favor SN2 over SN1 for a secondary alkyl halide?",
+            "answer": "Polar aprotic solvents (e.g., acetone, DMSO, DMF), strong non-bulky nucleophiles (e.g., I-, OH-), and lower reaction temperatures favor SN2."
+          },
+          {
+            "question": "How many meso isomers exist for 2,3-dichlorobutane?",
+            "answer": "One meso isomer exists (the (2R,3S) configuration, which possesses an internal plane of symmetry)."
+          }
+        ],
+        "sourceReferences": [
+          "NCERT Chemistry Class 11, Unit 12: Organic Chemistry - Some Basic Principles and Techniques",
+          "NCERT Chemistry Class 12, Unit 10: Haloalkanes and Haloarenes",
+          "JEE Main Official Syllabus: Organic Chemistry Fundamentals and Isomerism"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "PASS",
+    "itemCountReviewed": 30,
+    "allAnswersTechnicallyCorrect": true,
+    "allSolutionsTechnicallyCorrect": true,
+    "noMultipleCorrectRisk": true,
+    "noScopeLeakage": true,
+    "answerKeysVerified": true,
+    "reviewedSlot": "major_test_final",
+    "blockingIssues": [],
+    "reviewNotes": "All 30 items have been carefully reviewed. The questions are conceptually sound, mathematically accurate, and aligned well with their respective syllabus topics. There are no multiple-correct risks, and the units and formatting for numeric entries are appropriate. The draft passes QA without any needed corrections."
+  }
+}

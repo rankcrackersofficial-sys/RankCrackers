@@ -1,0 +1,321 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "slotId": "macro_test_3",
+    "phaseId": "phase_3",
+    "items": [
+      {
+        "itemId": "item_macro_3_01",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U05_T_AB220534_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "A particle of mass 2 kg is moving along the line y = 3 m with a constant speed of 4 m/s in the positive x-direction. What is the magnitude of its angular momentum about the origin?",
+        "answer": "24 kg m^2/s",
+        "shortSolution": "Angular momentum L = m * v * r_perp = 2 kg * 4 m/s * 3 m = 24 kg m^2/s.",
+        "difficulty": "EASY",
+        "options": [
+          "24 kg m^2/s",
+          "12 kg m^2/s",
+          "8 kg m^2/s",
+          "6 kg m^2/s"
+        ]
+      },
+      {
+        "itemId": "item_macro_3_02",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U12_T_3F967B4D_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "A wire of resistance 10 ohms is stretched to double its original length keeping its volume constant. What is its new resistance in ohms?",
+        "answer": "40",
+        "shortSolution": "Resistance R = rho * L / A. With constant volume V = A * L, R = rho * L^2 / V. Doubling length quadruples resistance. New resistance = 40 ohms.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_macro_3_03",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U19_T_78C6321C_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Which of the following semiconductor devices operates in reverse bias breakdown region as a voltage regulator?",
+        "answer": "Zener diode",
+        "shortSolution": "A Zener diode is specially designed to operate in reverse breakdown region to provide a constant breakdown voltage.",
+        "difficulty": "EASY",
+        "options": [
+          "Zener diode",
+          "Light Emitting Diode (LED)",
+          "Forward biased p-n junction diode",
+          "Solar cell"
+        ]
+      },
+      {
+        "itemId": "item_macro_3_04",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U16_T_22599887_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "Two thin lenses of focal lengths +20 cm and -40 cm are kept in contact. What is the focal length of the combination in cm?",
+        "answer": "40",
+        "shortSolution": "Combined power P = 1/f1 + 1/f2 = 1/20 - 1/40 = 1/40 cm^-1. Therefore, equivalent focal length f = +40 cm.",
+        "difficulty": "MEDIUM",
+        "options": null
+      },
+      {
+        "itemId": "item_macro_3_05",
+        "atomId": "JEE_2026_PHY_U01_CH04_TOP01_002",
+        "type": "SINGLE_SELECT",
+        "stem": "A block of mass 5 kg lies on a rough horizontal surface with coefficient of static friction 0.4. If a horizontal force of 10 N is applied on the block (g = 10 m/s^2), what is the magnitude of the friction force acting on the block?",
+        "answer": "10 N",
+        "shortSolution": "Maximum static friction = mu_s * m * g = 0.4 * 5 * 10 = 20 N. Since applied force (10 N) is less than 20 N, friction equals applied force = 10 N.",
+        "difficulty": "EASY",
+        "options": [
+          "10 N",
+          "20 N",
+          "50 N",
+          "0 N"
+        ]
+      },
+      {
+        "itemId": "item_macro_3_06",
+        "atomId": "JEE_MAIN_2026_PHY_U18_T_370f0b7f",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "If the mass defect in a nuclear reaction is 0.02 u, calculate the energy released in MeV. (Take 1 u = 931.5 MeV)",
+        "answer": "18.63",
+        "shortSolution": "Energy released E = 0.02 * 931.5 MeV = 18.63 MeV.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_macro_3_07",
+        "atomId": "JEE_MAIN_2026_PHY_U05_T_2218270c",
+        "type": "SINGLE_SELECT",
+        "stem": "What is the moment of inertia of a uniform solid sphere of mass M and radius R about a axis tangent to its surface?",
+        "answer": "7/5 M R^2",
+        "shortSolution": "Using the parallel axis theorem: I = I_cm + M * R^2 = (2/5) M R^2 + M R^2 = (7/5) M R^2.",
+        "difficulty": "EASY",
+        "options": [
+          "7/5 M R^2",
+          "2/5 M R^2",
+          "3/5 M R^2",
+          "5/3 M R^2"
+        ]
+      },
+      {
+        "itemId": "item_macro_3_08",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_BCA9920C_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "In Newman projections of ethane, which conformation has the lowest potential energy and maximum stability?",
+        "answer": "Staggered",
+        "shortSolution": "The staggered conformation minimizes torsional strain and electron pair repulsion between C-H bonds.",
+        "difficulty": "EASY",
+        "options": [
+          "Staggered",
+          "Eclipsed",
+          "Skew",
+          "Fully eclipsed"
+        ]
+      },
+      {
+        "itemId": "item_macro_3_09",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_70C6FE5A_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "The molar conductivity of 0.01 M CH3COOH solution is 40 S cm^2 mol^-1. If its limiting molar conductivity is 400 S cm^2 mol^-1, calculate its degree of dissociation as a percentage.",
+        "answer": "10",
+        "shortSolution": "Degree of dissociation alpha = Lambda_m / Lambda_m^0 = 40 / 400 = 0.10, which corresponds to 10%.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_macro_3_10",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U01_T_8B08B474_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "What is the number of moles of CO2 produced when 30 g of ethane (C2H6, molar mass = 30 g/mol) undergoes complete combustion in excess oxygen?",
+        "answer": "2",
+        "shortSolution": "1 mole (30 g) of ethane combustion yields 2 moles of CO2 according to C2H6 + 3.5 O2 -> 2 CO2 + 3 H2O.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_macro_3_11",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_A78DC902_CH002",
+        "type": "SINGLE_SELECT",
+        "stem": "Which chemical bond links consecutive amino acid units together in a polypeptide chain?",
+        "answer": "Peptide bond",
+        "shortSolution": "Amino acid residues in proteins are joined by peptide bonds (-CO-NH- linkages).",
+        "difficulty": "EASY",
+        "options": [
+          "Peptide bond",
+          "Ester bond",
+          "Glycosidic bond",
+          "Phosphodiester bond"
+        ]
+      },
+      {
+        "itemId": "item_macro_3_12",
+        "atomId": "JEE_MAIN_2026_CHEM_U14_T_0d2707c4",
+        "type": "SINGLE_SELECT",
+        "stem": "Which of the following carbocations is the most stable?",
+        "answer": "(CH3)3C+",
+        "shortSolution": "The tertiary carbocation (CH3)3C+ has 9 hyperconjugative alpha-hydrogens and strong +I effects, giving maximum stability.",
+        "difficulty": "EASY",
+        "options": [
+          "(CH3)3C+",
+          "(CH3)2CH+",
+          "CH3CH2+",
+          "CH3+"
+        ]
+      }
+    ]
+  },
+  "selectedAtoms": [
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U05_T_AB220534_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Basic Concepts Of Rotational Motion, Moment Of A Force, Torque, Angular Momentum, Conservation Of Angular Momentum And Its Applications",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U12_T_3F967B4D_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Electric Current: Drift Velocity, Mobility And Their Relation With Electric Current, Ohm's Law, Electrical Resistance, I-V Characteristics Of Ohmic And Non-ohmic Conductors, Electrical Energy And Power, Electrical Resistivity And Conductivity, Series And Parallel Combinations Of Resistors, Temperature Dependence Of Resistance",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U19_T_78C6321C_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "I-V Characteristics Of LED, The Photodiode, Solar Cell, Zener Diode, Zener Diode As A Voltage Regulator",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U16_T_22599887_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Refraction Of Light At Plane And Spherical Surfaces, Thin Lens Formula And Lens Maker Formula, Total Internal Reflection And Its Applications, Magnification, Power Of A Lens, Combination Of Thin Lenses In Contact, Refraction Of Light Through A Prism, Microscope And Astronomical Telescope (reflecting And Refracting) And Their Magnifying Powers",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U08_T_6EA3EB0F_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Thermal Equilibrium And The Concept Of Temperature, Zeroth Law Of Thermodynamics, Heat, Work And Internal Energy",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_2026_PHY_U01_CH04_TOP01_002",
+      "subject": "Physics",
+      "unit": "Unit 1",
+      "chapter": "Chapter 4",
+      "topic": "Friction",
+      "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U12_T_230585a1",
+      "subject": "Physics",
+      "unit": "UNIT 12: Current Electricity",
+      "chapter": "Unit 12 Current Electricity",
+      "topic": "Kirchhoff S Laws And Their Applications Wheatstone Bridge Metre Bridge",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U18_T_370f0b7f",
+      "subject": "Physics",
+      "unit": "UNIT 18: Atoms And Nuclei",
+      "chapter": "Unit 18 Atoms And Nuclei",
+      "topic": "Composition And Size Of Nucleus Atomic Masses Mass Energy Relation Mass Defect Binding Energy Per Nucleon And Its Variation With Mass Number Nuclear Fission And Fusion",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U20_T_7b7aafa4_S_15f04c3e",
+      "subject": "Physics",
+      "unit": "UNIT 20: Experimental Skills",
+      "chapter": "Unit 20 Experimental Skills",
+      "topic": "Simple Pendulum Dissipation Of Energy By Plotting A Graph Between The Square Of Amplitude And Time",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U05_T_2218270c",
+      "subject": "Physics",
+      "unit": "UNIT 5: Rotational Motion",
+      "chapter": "Unit 5 Rotational Motion",
+      "topic": "The Moment Of Inertia The Radius Of Gyration Values Of Moments Of Inertia For Simple Geometrical Objects Parallel And Perpendicular Axes Theorems And Their Applications",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_BCA9920C_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Alkanes - Conformations: Sawhorse And Newman Projections (of Ethane), Mechanism Of Halogenation Of Alkanes.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_7CAF568B_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Chemical Principles Involved In The Qualitative Salt Analysis: Cations – Pb2+, Cu2+, Al3+, Fe3+, Zn2+, Ni2+, Ca2+, Ba2+, Mg2+, NH4+ Anions- CO32−, S2-, SO42−, NO3-, NO2-, Cl-, Br-, I- ( Insoluble Salts Excluded).",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_70C6FE5A_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Electrolytic And Metallic Conduction, Conductance In Electrolytic Solutions, Molar Conductivities And Their Variation With Concentration, Kohlrausch’s Law And Its Applications.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_4724FDF9_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "General Introduction And Importance Of Biomolecules.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U01_T_8B08B474_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Matter And Its Nature, Dalton's Atomic Theory, Concept Of Atom, Molecule, Element And Compound, Laws Of Chemical Combination, Atomic And Molecular Masses, Mole Concept, Molar Mass, Percentage Composition, Empirical And Molecular Formulae, Chemical Equations And Stoichiometry.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_A78DC902_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "PROTEINS - Elementary Idea Of 𝐀 -amino Acids, Peptide Bond, Polypeptides, Proteins: Primary, Secondary, Tertiary And Quaternary Structure (qualitative Idea Only), Denaturation Of Proteins, Enzymes.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_7E474892_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "The Chemistry Involved In The Titrimetric Exercises – Acids, Bases And The Use Of Indicators, Oxalic-acid Vs KMnO4, Mohr’s Salt Vs KMnO4",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U14_T_0d2707c4",
+      "subject": "Chemistry",
+      "unit": "UNIT 14: SOME BASIC PRINCIPLES OF ORGANIC CHEMISTRY",
+      "chapter": "Unit 14 Some Basic Principles Of Organic Chemistry",
+      "topic": "Covalent Bond Fission Homolytic And Heterolytic Free Radicals Carbocations And Carbanions Stability Of Carbocations And Free Radicals Electrophiles And Nucleophiles",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    }
+  ]
+}

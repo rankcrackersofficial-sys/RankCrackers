@@ -1,0 +1,326 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "slotId": "macro_test_4",
+    "phaseId": "phase_4",
+    "items": [
+      {
+        "itemId": "item_m4_01",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U05_T_8B5D7BD6_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Two particles of masses 2 kg and 3 kg are located at positions (1, 2) m and (4, 7) m respectively. What is the x-coordinate of their centre of mass?",
+        "answer": "2.8 m",
+        "shortSolution": "x_cm = (m1*x1 + m2*x2) / (m1 + m2) = (2*1 + 3*4) / (2 + 3) = 14 / 5 = 2.8 m.",
+        "difficulty": "EASY",
+        "options": [
+          "2.2 m",
+          "2.8 m",
+          "3.0 m",
+          "3.2 m"
+        ]
+      },
+      {
+        "itemId": "item_m4_02",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U11_T_D9BB723F_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "An infinite line charge produces an electric field of 9 x 10^4 N/C at a distance of 2 cm. What is the linear charge density in microcoulombs per meter (uC/m)?",
+        "answer": "0.1",
+        "shortSolution": "E = lambda / (2*pi*epsilon_0*r) => lambda = 2*pi*epsilon_0*r*E = E*r / (2*k) = (9x10^4 * 0.02) / (2*9x10^9) = 10^-7 C/m = 0.1 uC/m.",
+        "difficulty": "MEDIUM",
+        "options": null
+      },
+      {
+        "itemId": "item_m4_03",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U16_T_1AC10D18_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "In Young's double slit experiment, if the separation between the slits is halved and the distance between the slits and the screen is doubled, the fringe width will:",
+        "answer": "Become four times",
+        "shortSolution": "Fringe width beta = lambda*D/d. If D' = 2D and d' = d/2, then beta' = lambda*(2D)/(d/2) = 4*beta.",
+        "difficulty": "EASY",
+        "options": [
+          "Remain unchanged",
+          "Become double",
+          "Become four times",
+          "Become half"
+        ]
+      },
+      {
+        "itemId": "item_m4_04",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_S_79CE3A67_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "A screw gauge has a pitch of 0.5 mm and 50 divisions on its circular scale. Calculate its least count in micrometers (um).",
+        "answer": "10",
+        "shortSolution": "Least count = Pitch / Total divisions = 0.5 mm / 50 = 0.01 mm = 10 um.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_m4_05",
+        "atomId": "JEE_MAIN_2026_PHY_U10_T_6d4c5624",
+        "type": "SINGLE_SELECT",
+        "stem": "A simple pendulum has a time period T on the surface of the Earth. If it is taken to a planet where the acceleration due to gravity is 4 times that of Earth, its new time period will be:",
+        "answer": "T / 2",
+        "shortSolution": "Time period T = 2*pi*sqrt(L/g). On the new planet, g' = 4g, so T' = 2*pi*sqrt(L/(4g)) = T/2.",
+        "difficulty": "EASY",
+        "options": [
+          "T / 4",
+          "T / 2",
+          "2T",
+          "4T"
+        ]
+      },
+      {
+        "itemId": "item_m4_06",
+        "atomId": "JEE_MAIN_2026_PHY_U13_T_7e085a33",
+        "type": "SINGLE_SELECT",
+        "stem": "The magnetic field at the center of a circular current-carrying loop of radius R is B. What is the magnetic field at a point on its axis at a distance R from the center?",
+        "answer": "B / (2*sqrt(2))",
+        "shortSolution": "B_center = mu_0*I/(2R). B_axis = mu_0*I*R^2 / (2*(R^2+x^2)^(3/2)). For x = R, B_axis = mu_0*I*R^2 / (2*(2R^2)^(3/2)) = B_center / (2*sqrt(2)).",
+        "difficulty": "MEDIUM",
+        "options": [
+          "B / 2",
+          "B / (2*sqrt(2))",
+          "B / 4",
+          "B / 8"
+        ]
+      },
+      {
+        "itemId": "item_m4_07",
+        "atomId": "JEE_MAIN_2026_PHY_U19_T_bff01bdd",
+        "type": "SINGLE_SELECT",
+        "stem": "In forward biasing of a p-n junction diode, the width of the depletion layer:",
+        "answer": "Decreases",
+        "shortSolution": "Forward bias opposes the built-in potential barrier, thereby reducing the width of the depletion region.",
+        "difficulty": "EASY",
+        "options": [
+          "Increases",
+          "Decreases",
+          "Remains constant",
+          "First increases then decreases"
+        ]
+      },
+      {
+        "itemId": "item_m4_08",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_B270826F_CH002",
+        "type": "SINGLE_SELECT",
+        "stem": "Ozonolysis of 2-butene followed by reductive workup with Zn/H2O yields:",
+        "answer": "Two molecules of ethanal",
+        "shortSolution": "CH3-CH=CH-CH3 + O3 followed by Zn/H2O cleaves the double bond to yield 2 molecules of CH3CHO (ethanal).",
+        "difficulty": "EASY",
+        "options": [
+          "Two molecules of methanal",
+          "Two molecules of ethanal",
+          "One molecule of ethanal and one molecule of propanal",
+          "Two molecules of propanone"
+        ]
+      },
+      {
+        "itemId": "item_m4_09",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_CBD2C95D_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "Find the oxidation number of chromium in potassium dichromate (K2Cr2O7).",
+        "answer": "6",
+        "shortSolution": "2(+1) + 2(x) + 7(-2) = 0 => 2 + 2x - 14 = 0 => 2x = 12 => x = +6.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_m4_10",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_B5566C33_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Which of the following statements regarding dynamic chemical equilibrium is correct?",
+        "answer": "The rate of forward reaction equals the rate of reverse reaction.",
+        "shortSolution": "At dynamic equilibrium, forward and reverse reactions occur at equal rates, keeping the concentrations constant.",
+        "difficulty": "EASY",
+        "options": [
+          "The forward and reverse reactions stop completely.",
+          "The concentration of reactants and products must be equal.",
+          "The rate of forward reaction equals the rate of reverse reaction.",
+          "The equilibrium constant depends on initial concentrations."
+        ]
+      },
+      {
+        "itemId": "item_m4_11",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U13_T_DAEE150C_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "In Lassaigne's test for the detection of nitrogen, the Prussian blue coloration is due to the formation of:",
+        "answer": "Fe4[Fe(CN)6]3",
+        "shortSolution": "Prussian blue precipitate is ferric ferrocyanide with the chemical formula Fe4[Fe(CN)6]3.",
+        "difficulty": "MEDIUM",
+        "options": [
+          "Fe4[Fe(CN)6]3",
+          "Fe3[Fe(CN)6]2",
+          "Na4[Fe(CN)6]",
+          "Fe(SCN)3"
+        ]
+      },
+      {
+        "itemId": "item_m4_12",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_F4B904D5_CH002",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "A system absorbs 500 J of heat and does 200 J of work on the surroundings. What is the change in internal energy (in J) of the system?",
+        "answer": "300",
+        "shortSolution": "According to the first law of thermodynamics, delta U = q + w. Here q = +500 J and w = -200 J (work done by the system). Thus delta U = 500 - 200 = 300 J.",
+        "difficulty": "EASY",
+        "options": null
+      }
+    ]
+  },
+  "selectedAtoms": [
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U05_T_8B5D7BD6_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Centre Of Mass Of A Two-particle System, Centre Of Mass Of A Rigid Body",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U11_T_D9BB723F_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Electric Flux, Gauss's Law And Its Applications To Find Field Due To Infinitely Long Uniformly Charged Straight Wire, Uniformly Charged Infinite Plane Sheet And Uniformly Charged Thin Spherical Shell",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U16_T_1AC10D18_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Interference: Young's Double-slit Experiment And Expression For Fringe Width, Coherent Sources And Sustained Interference Of Light",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_S_79CE3A67_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Screw Gauge - Its Use To Determine The Thickness/diameter Of Thin Sheet/wire",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_S_5D54C7E9_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Vernier Calipers - Its Use To Measure The Internal And External Diameter And Depth Of A Vessel",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U10_T_6d4c5624",
+      "subject": "Physics",
+      "unit": "UNIT 10: Oscillations And Waves",
+      "chapter": "Unit 10 Oscillations And Waves",
+      "topic": "Energy In S H M Kinetic And Potential Energies Simple Pendulum Derivation Of Expression For Its Time Period",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U13_T_7e085a33",
+      "subject": "Physics",
+      "unit": "UNIT 13: Magnetic Effects Of Current And Magnetism",
+      "chapter": "Unit 13 Magnetic Effects Of Current And Magnetism",
+      "topic": "Biot Savart Law And Its Application To The Current Carrying Circular Loop",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U19_T_bff01bdd",
+      "subject": "Physics",
+      "unit": "UNIT 19: Electronic Devices",
+      "chapter": "Unit 19 Electronic Devices",
+      "topic": "Semiconductors Semiconductor Diode I V Characteristics In Forward And Reverse Bias Diode As A Rectifier",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U20_T_7b7aafa4_S_bf9b6934",
+      "subject": "Physics",
+      "unit": "UNIT 20: Experimental Skills",
+      "chapter": "Unit 20 Experimental Skills",
+      "topic": "Surface Tension Of Water By Capillary Rise And Effect Of Detergents",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U06_T_b821705d",
+      "subject": "Physics",
+      "unit": "UNIT 6: Gravitation",
+      "chapter": "Unit 6 Gravitation",
+      "topic": "Gravitational Potential Energy Gravitational Potential",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_B270826F_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Alkenes - Geometrical Isomerism, Mechanism Of Electrophilic Addition, Addition Of Hydrogen, Halogens, Water, Hydrogen Halides (Markownikoffs And Peroxide Effect), Ozonolysis And Polymerization.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_E3BD6323_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Common Types Of Organic Reactions- Substitution, Addition, Elimination And Rearrangement.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_CBD2C95D_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Electronic Concepts Of Oxidation And Reduction, Redox Reactions, Oxidation Number, Rules For Assigning Oxidation Number And Balancing Of Redox Reactions.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_D5C327F6_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "General Methods Of Preparation, Properties, Reactions And Uses.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_B5566C33_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Meaning Of Equilibrium Is The Concept Of Dynamic Equilibrium.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U13_T_DAEE150C_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Qualitative Analysis - Detection Of Nitrogen, Sulphur, Phosphorus And Halogens.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_F4B904D5_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "The First Law Of Thermodynamics - Concept Of Work, Heat, Internal Energy And Enthalpy, Heat Capacity, Molar Heat Capacity, Hess’s Law Of Constant Heat Summation, Enthalpies Of Bond Dissociation, Combustion, Formation, Atomization, Sublimation, Phase Transition, Hydration, Ionization And Solution.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U14_T_626f9d1b",
+      "subject": "Chemistry",
+      "unit": "UNIT 14: SOME BASIC PRINCIPLES OF ORGANIC CHEMISTRY",
+      "chapter": "Unit 14 Some Basic Principles Of Organic Chemistry",
+      "topic": "Tetravalency Of Carbon Shapes Of Simple Molecules Hybridization S And P Classification Of Organic Compounds Based On Functional Groups And Those Containing Halogens Oxygen Nitrogen And Sulphur Homologous Series Isomerism Structural And Stereoisomerism",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    }
+  ]
+}

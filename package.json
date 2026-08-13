@@ -95,7 +95,8 @@
         "apply:rcx4e:p15-authorized": "node functions/apply_rc_x4e_p15_authorized_pagewise_native.js",
         "audit:rcx4e:p15-authorized-result": "node functions/audit_rc_x4e_p15_authorized_apply_result.js",
         "audit:mission:mirror-current-flow": "node functions/audit_mission_mirror_current_flow.js",
-        "audit:mission:catalog-shell-contract": "node functions/audit_mission_catalog_shell_contract.js"
+        "audit:mission:catalog-shell-contract": "node functions/audit_mission_catalog_shell_contract.js",
+        "run:wave2:parallel:factory": "node tools/student_pillars_r2_fasttrack/run_wave2_parallel_factory.js"
     },
     "dependencies": {
         "@google/genai": "^2.16.0",

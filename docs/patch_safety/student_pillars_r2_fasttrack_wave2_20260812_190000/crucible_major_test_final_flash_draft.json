@@ -1,0 +1,787 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "slotId": "major_test_final",
+    "phaseId": "phase_7",
+    "items": [
+      {
+        "itemId": "item_01",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U06_T_5F4143EE_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "What is the acceleration due to gravity at a depth equal to half the radius of the Earth, given surface gravity g?",
+        "answer": "g/2",
+        "shortSolution": "At depth d, g' = g(1 - d/R). For d = R/2, g' = g(1 - 1/2) = g/2.",
+        "difficulty": "EASY",
+        "options": [
+          "g/4",
+          "g/2",
+          "3g/4",
+          "g"
+        ]
+      },
+      {
+        "itemId": "item_02",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U17_T_B62AD18C_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "If the work function of a metal is 2.0 eV, find the threshold wavelength in nm. (Take hc = 1240 eV nm)",
+        "answer": "620",
+        "shortSolution": "Lambda_threshold = hc / W = 1240 / 2.0 = 620 nm.",
+        "difficulty": "MEDIUM",
+        "options": null
+      },
+      {
+        "itemId": "item_03",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Which instrument is best suited for measuring the diameter of a thin wire with high precision?",
+        "answer": "Screw gauge",
+        "shortSolution": "A screw gauge provides higher precision (least count ~ 0.01 mm or 0.001 cm) for thin wire diameters compared to vernier calipers or meters.",
+        "difficulty": "EASY",
+        "options": [
+          "Meter scale",
+          "Vernier calipers",
+          "Screw gauge",
+          "Spherometer"
+        ]
+      },
+      {
+        "itemId": "item_04",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U10_T_3F7679C2_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "A simple harmonic motion is represented by x(t) = 5 cos(10 t + pi/4). What is its angular frequency in rad/s?",
+        "answer": "10",
+        "shortSolution": "Comparing with x(t) = A cos(omega t + phi), angular frequency omega = 10 rad/s.",
+        "difficulty": "EASY",
+        "options": [
+          "5",
+          "10",
+          "20",
+          "10 pi"
+        ]
+      },
+      {
+        "itemId": "item_05",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U02_T_057CEE13_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "A body starts from rest with uniform acceleration 2 m/s^2. Find the distance traveled in meters in the 3rd second.",
+        "answer": "5",
+        "shortSolution": "S_nth = u + a/2(2n - 1) = 0 + (2/2)(2*3 - 1) = 5 m.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_06",
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP02_002",
+        "type": "SINGLE_SELECT",
+        "stem": "A particle moves in a circle of radius 2 m with constant speed 4 m/s. What is its centripetal acceleration in m/s^2?",
+        "answer": "8",
+        "shortSolution": "Centripetal acceleration a_c = v^2 / r = 4^2 / 2 = 16 / 2 = 8 m/s^2.",
+        "difficulty": "EASY",
+        "options": [
+          "2",
+          "4",
+          "8",
+          "16"
+        ]
+      },
+      {
+        "itemId": "item_07",
+        "atomId": "JEE_MAIN_2026_PHY_U11_T_d9bb723f",
+        "type": "SINGLE_SELECT",
+        "stem": "What is the electric flux through a closed Gaussian surface enclosing a total charge Q in vacuum?",
+        "answer": "Q / epsilon_0",
+        "shortSolution": "According to Gauss Law, net electric flux through any closed surface is equal to Q_enclosed / epsilon_0.",
+        "difficulty": "EASY",
+        "options": [
+          "Q * epsilon_0",
+          "Q / epsilon_0",
+          "Q / (2 * epsilon_0)",
+          "Zero"
+        ]
+      },
+      {
+        "itemId": "item_08",
+        "atomId": "JEE_MAIN_2026_PHY_U16_T_39a55f0d",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "An object is placed 20 cm in front of a concave mirror of focal length 10 cm. Find the magnitude of image distance in cm.",
+        "answer": "20",
+        "shortSolution": "Using 1/v + 1/u = 1/f: 1/v + 1/(-20) = 1/(-10) => 1/v = -1/10 + 1/20 = -1/20, so v = -20 cm.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_09",
+        "atomId": "JEE_MAIN_2026_PHY_U20_T_7b7aafa4_S_53c5ce3a",
+        "type": "SINGLE_SELECT",
+        "stem": "In a terminal velocity experiment, if the radius of a spherical body is doubled, the terminal velocity becomes:",
+        "answer": "4 times",
+        "shortSolution": "Terminal velocity v_t is proportional to r^2. Doubling the radius increases v_t by a factor of 2^2 = 4.",
+        "difficulty": "MEDIUM",
+        "options": [
+          "2 times",
+          "4 times",
+          "8 times",
+          "16 times"
+        ]
+      },
+      {
+        "itemId": "item_10",
+        "atomId": "JEE_MAIN_2026_PHY_U04_T_87eb50db",
+        "type": "SINGLE_SELECT",
+        "stem": "In a perfectly elastic one-dimensional collision between two equal masses where one is initially at rest, what happens to their velocities?",
+        "answer": "Velocities are exchanged",
+        "shortSolution": "For equal masses colliding elastically in 1D, v1 = u2 and v2 = u1. The moving mass stops and the target mass moves with initial speed.",
+        "difficulty": "EASY",
+        "options": [
+          "Both move together",
+          "Velocities are exchanged",
+          "First mass continues with double velocity",
+          "Both come to rest"
+        ]
+      },
+      {
+        "itemId": "item_11",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U11_T_0DB42BEA_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Which oxidation state is common to all actinoids in general?",
+        "answer": "+3",
+        "shortSolution": "Although actinoids exhibit variable oxidation states, +3 is the most common and characteristic oxidation state across the series.",
+        "difficulty": "EASY",
+        "options": [
+          "+2",
+          "+3",
+          "+4",
+          "+6"
+        ]
+      },
+      {
+        "itemId": "item_12",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_3944DA40_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Which of the following carboxylic acids is strongest?",
+        "answer": "Trichloroacetic acid",
+        "shortSolution": "Electron-withdrawing groups increase acidity by stabilizing the carboxylate anion. Trichloroacetic acid has three strong -I groups.",
+        "difficulty": "EASY",
+        "options": [
+          "Acetic acid",
+          "Monochloroacetic acid",
+          "Dichloroacetic acid",
+          "Trichloroacetic acid"
+        ]
+      },
+      {
+        "itemId": "item_13",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U05_T_7ECB31D5_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "Calculate the molarity of a solution containing 10 g of NaOH in 250 mL of solution. (Molar mass of NaOH = 40 g/mol)",
+        "answer": "1",
+        "shortSolution": "Moles of NaOH = 10 / 40 = 0.25 mol. Molarity = 0.25 / 0.25 L = 1.0 M.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_14",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_6D173CFD_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "What is the C-O-C bond angle in diethyl ether approximately?",
+        "answer": "111 degrees",
+        "shortSolution": "The C-O-C bond angle in ethers is slightly greater than the tetrahedral angle (~111.7 degrees) due to steric repulsion between alkyl groups.",
+        "difficulty": "MEDIUM",
+        "options": [
+          "90 degrees",
+          "104.5 degrees",
+          "109.5 degrees",
+          "111 degrees"
+        ]
+      },
+      {
+        "itemId": "item_15",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_17981AE4_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Which factor favors the formation of an ionic bond?",
+        "answer": "Low ionization enthalpy of cation and high electron gain enthalpy of anion",
+        "shortSolution": "Low ionization enthalpy of metal allows easy cation formation, and high negative electron gain enthalpy favors anion formation.",
+        "difficulty": "EASY",
+        "options": [
+          "High ionization enthalpy of metal",
+          "Low electron gain enthalpy of non-metal",
+          "Low lattice energy",
+          "Low ionization enthalpy of cation and high electron gain enthalpy of anion"
+        ]
+      },
+      {
+        "itemId": "item_16",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_0E497615_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Which nitrogenous base is present in RNA but not in DNA?",
+        "answer": "Uracil",
+        "shortSolution": "RNA contains Uracil (U) instead of Thymine (T) which is found in DNA.",
+        "difficulty": "EASY",
+        "options": [
+          "Adenine",
+          "Guanine",
+          "Thymine",
+          "Uracil"
+        ]
+      },
+      {
+        "itemId": "item_17",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_626F9D1B_CH002",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "How many sigma bonds are present in a molecule of ethyne (C2H2)?",
+        "answer": "3",
+        "shortSolution": "Ethyne (H-C#C-H) contains two C-H sigma bonds and one C-C sigma bond in the triple bond, giving a total of 3 sigma bonds.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_18",
+        "atomId": "JEE_MAIN_2026_CHEM_U12_T_6f2e41d5",
+        "type": "SINGLE_SELECT",
+        "stem": "What is the coordination number of Fe in [Fe(EDTA)]-?",
+        "answer": "6",
+        "shortSolution": "EDTA is a hexadentate ligand, so it forms 6 coordination bonds with the central metal ion.",
+        "difficulty": "EASY",
+        "options": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ]
+      },
+      {
+        "itemId": "item_19",
+        "atomId": "JEE_MAIN_2026_CHEM_U17_T_6d173cfd",
+        "type": "SINGLE_SELECT",
+        "stem": "Ethers are functional isomers of which class of organic compounds?",
+        "answer": "Alcohols",
+        "shortSolution": "Ethers (R-O-R') and monohydric alcohols (R-OH) share the general molecular formula C_n H_(2n+2) O and are functional isomers.",
+        "difficulty": "EASY",
+        "options": [
+          "Aldehydes",
+          "Alcohols",
+          "Carboxylic acids",
+          "Ketones"
+        ]
+      },
+      {
+        "itemId": "item_20",
+        "atomId": "JEE_MAIN_2026_CHEM_U03_T_4e0dc7ce",
+        "type": "SINGLE_SELECT",
+        "stem": "According to Lewis structure, how many valence electrons surround the central atom in an octet compliant species?",
+        "answer": "8",
+        "shortSolution": "The octet rule states that atoms gain, lose or share electrons to achieve 8 valence electrons.",
+        "difficulty": "EASY",
+        "options": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ]
+      },
+      {
+        "itemId": "item_21",
+        "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U3_T004_004_ADD001",
+        "type": "SINGLE_SELECT",
+        "stem": "For a non-singular square matrix A of order 3, det(adj A) is equal to:",
+        "answer": "(det A)^2",
+        "shortSolution": "For a matrix A of order n, det(adj A) = (det A)^(n-1). For n = 3, det(adj A) = (det A)^2.",
+        "difficulty": "EASY",
+        "options": [
+          "det A",
+          "(det A)^2",
+          "(det A)^3",
+          "1 / det A"
+        ]
+      },
+      {
+        "itemId": "item_22",
+        "atomId": "JEE_MAIN_2026_P1_MATHEMATICS_U2_T003_003",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "Find the modulus of the complex number z = 3 + 4i.",
+        "answer": "5",
+        "shortSolution": "|z| = sqrt(3^2 + 4^2) = sqrt(9 + 16) = sqrt(25) = 5.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_23",
+        "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U11_T002_002_ADD001",
+        "type": "SINGLE_SELECT",
+        "stem": "If a line makes equal angles with the coordinate axes, what is the value of cos^2(alpha) + cos^2(beta) + cos^2(gamma)?",
+        "answer": "1",
+        "shortSolution": "The sum of squares of direction cosines for any line is l^2 + m^2 + n^2 = 1.",
+        "difficulty": "EASY",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      {
+        "itemId": "item_24",
+        "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U8_T003_003_ADD001",
+        "type": "SINGLE_SELECT",
+        "stem": "Evaluate integral of x * e^x dx.",
+        "answer": "(x - 1)e^x + C",
+        "shortSolution": "Using integration by parts: integral(x e^x dx) = x e^x - integral(e^x dx) = (x - 1)e^x + C.",
+        "difficulty": "EASY",
+        "options": [
+          "x e^x + C",
+          "(x - 1)e^x + C",
+          "(x + 1)e^x + C",
+          "e^x + C"
+        ]
+      },
+      {
+        "itemId": "item_25",
+        "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U3_T001_001_ADD001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "If matrix A is of order 2x3 and matrix B is of order 3x4, find the number of entries in matrix AB.",
+        "answer": "8",
+        "shortSolution": "Matrix AB will have dimension 2x4, which has 2 * 4 = 8 entries.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_26",
+        "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U1_T004_004_ADD001",
+        "type": "SINGLE_SELECT",
+        "stem": "Let R be a relation on set A defined by x R y if x = y. What type of relation is R?",
+        "answer": "Equivalence relation",
+        "shortSolution": "Reflexive (x=x), symmetric (x=y => y=x), and transitive (x=y and y=z => x=z). Hence it is an equivalence relation.",
+        "difficulty": "EASY",
+        "options": [
+          "Reflexive only",
+          "Symmetric only",
+          "Transitive only",
+          "Equivalence relation"
+        ]
+      },
+      {
+        "itemId": "item_27",
+        "atomId": "JEE_MAIN_2026_P1_MATHEMATICS_U11_T001_001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "Find the distance between points (1, 2, 3) and (4, 6, 3) in 3D space.",
+        "answer": "5",
+        "shortSolution": "d = sqrt((4-1)^2 + (6-2)^2 + (3-3)^2) = sqrt(9 + 16 + 0) = sqrt(25) = 5.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_28",
+        "atomId": "JEE_MAIN_2026_PHY_U16_T_22599887",
+        "type": "SINGLE_SELECT",
+        "stem": "What is the focal length of a thin convex lens of power +5 D?",
+        "answer": "20 cm",
+        "shortSolution": "Power P = 1 / f(m). f = 1 / 5 m = 0.2 m = 20 cm.",
+        "difficulty": "EASY",
+        "options": [
+          "10 cm",
+          "20 cm",
+          "50 cm",
+          "100 cm"
+        ]
+      },
+      {
+        "itemId": "item_29",
+        "atomId": "JEE_MAIN_2026_PHY_U20_T_7b7aafa4",
+        "type": "SINGLE_SELECT",
+        "stem": "In a Vernier Calliper, 10 vernier scale divisions equal 9 main scale divisions (1 MSD = 1 mm). What is the least count?",
+        "answer": "0.1 mm",
+        "shortSolution": "Least count = 1 MSD - 1 VSD = 1 mm - 0.9 mm = 0.1 mm.",
+        "difficulty": "EASY",
+        "options": [
+          "0.01 mm",
+          "0.1 mm",
+          "1 mm",
+          "0.05 mm"
+        ]
+      },
+      {
+        "itemId": "item_30",
+        "atomId": "JEE_MAIN_2026_PHY_U04_T_017fc3ac",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "A spring with spring constant k = 200 N/m is stretched by 0.1 m. Calculate the potential energy stored in Joules.",
+        "answer": "1",
+        "shortSolution": "U = 1/2 k x^2 = 0.5 * 200 * (0.1)^2 = 100 * 0.01 = 1 J.",
+        "difficulty": "EASY",
+        "options": null
+      }
+    ]
+  },
+  "selectedAtoms": [
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U06_T_5F4143EE_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Acceleration Due To Gravity And Its Variation With Altitude And Depth",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U17_T_B62AD18C_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Dual Nature Of Radiation, Photoelectric Effect, Hertz And Lenard's Observations, Einstein's Photoelectric Equation, Particle Nature Of Light",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Familiarity With The Basic Approach And Observations Of The Experiments And Activities",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U10_T_3F7679C2_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Oscillations And Periodic Motion: Time Period, Frequency, Displacement As A Function Of Time, Periodic Functions",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U02_T_057CEE13_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "The Frame Of Reference, Motion In A Straight Line, Speed And Velocity, Uniform And Non-uniform Motion, Average Speed And Instantaneous Velocity, Uniformly Accelerated Motion, Velocity-time, Position-time Graph, Relations For Uniformly Accelerated Motion, Relative Velocity",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_2026_PHY_U01_CH03_TOP02_002",
+      "subject": "Physics",
+      "unit": "Unit 1",
+      "chapter": "Chapter 3",
+      "topic": "Circular Motion",
+      "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U11_T_d9bb723f",
+      "subject": "Physics",
+      "unit": "UNIT 11: Electrostatics",
+      "chapter": "Unit 11 Electrostatics",
+      "topic": "Electric Flux Gauss S Law And Its Applications To Find Field Due To Infinitely Long Uniformly Charged Straight Wire Uniformly Charged Infinite Plane Sheet And Uniformly Charged Thin Spherical Shell",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U16_T_39a55f0d",
+      "subject": "Physics",
+      "unit": "UNIT 16: Optics",
+      "chapter": "Unit 16 Optics",
+      "topic": "Reflection Of Light Spherical Mirrors Mirror Formula",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U20_T_7b7aafa4_S_53c5ce3a",
+      "subject": "Physics",
+      "unit": "UNIT 20: Experimental Skills",
+      "chapter": "Unit 20 Experimental Skills",
+      "topic": "Co Efficient Of Viscosity Of A Given Viscous Liquid By Measuring The Terminal Velocity Of A Given Spherical Body",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U04_T_87eb50db",
+      "subject": "Physics",
+      "unit": "UNIT 4: Work, Energy And Power",
+      "chapter": "Unit 4 Work Energy And Power",
+      "topic": "Elastic And Inelastic Collisions In One And Two Dimensions",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U11_T_0DB42BEA_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Actinoids - Electronic Configuration And Oxidation States.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_3944DA40_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Carboxylic Acids: Acidic Strength And Factors Affecting It.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U05_T_7ECB31D5_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Different Methods For Expressing The Concentration Of Solution - Molality, Molarity, Mole Fraction, Percentage (by Volume And Mass Both), The Vapour Pressure Of Solutions And Raoult's Law - Ideal And Non-ideal Solutions, Vapour Pressure - Composition, Plots For Ideal And Non- Ideal Solutions, Colligative Properties Of Dilute Solutions - A Relative Lowering Of Vapour Pressure, Depression Of Freezing Point, The Elevation Of Boiling Point And Osmotic Pressure, Determination Of Molecular Mass Using Colligative Properties, Abnormal Value Of Molar Mass, Van’t Hoff Factor And Its Significance.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_6D173CFD_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Ethers: Structure.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_17981AE4_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Ionic Bonding: Formation Of Ionic Bonds, Factors Affecting The Formation Of Ionic Bonds; Calculation Of Lattice Enthalpy.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_0E497615_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "NUCLEIC ACIDS – Chemical Constitution Of DNA And RNA, Biological Functions Of Nucleic Acids.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_626F9D1B_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Tetravalency Of Carbon, Shapes Of Simple Molecules - Hybridization (s And P): Classification Of Organic Compounds Based On Functional Groups And Those Containing Halogens, Oxygen, Nitrogen And Sulphur, Homologous Series: Isomerism - Structural And Stereoisomerism.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U12_T_6f2e41d5",
+      "subject": "Chemistry",
+      "unit": "UNIT 12: COORDINATION COMPOUNDS",
+      "chapter": "Unit 12 Coordination Compounds",
+      "topic": "Introduction To Coordination Compounds Werner S Theory Ligands Coordination Number Denticity Chelation Iupac Nomenclature Of Mononuclear Co Ordination Compounds Isomerism Bonding Valence Bond Approach And Basic Ideas Of Crystal Field Theory Colour And Magnetic Properties Importance Of Coordination Compounds In Qualitative Analysis Extraction Of Metals And In Biological Systems",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U17_T_6d173cfd",
+      "subject": "Chemistry",
+      "unit": "UNIT 17: ORGANIC COMPOUNDS CONTAINING OXYGEN",
+      "chapter": "Unit 17 Organic Compounds Containing Oxygen",
+      "topic": "Ethers Structure",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U03_T_4e0dc7ce",
+      "subject": "Chemistry",
+      "unit": "UNIT 3: CHEMICAL BONDING AND MOLECULAR STRUCTURE",
+      "chapter": "Unit 3 Chemical Bonding And Molecular Structure",
+      "topic": "Kossel Lewis Approach To Chemical Bond Formation The Concept Of Ionic And Covalent Bonds",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U3_T004_004_ADD001",
+      "subject": "Mathematics",
+      "unit": "Adjoint And Inverse Of A Square Matrix",
+      "chapter": "B.Tech.)",
+      "topic": "Adjoint And Inverse Of A Square Matrix",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_P1_MATHEMATICS_U2_T003_003",
+      "subject": "Mathematics",
+      "unit": "COMPLEX NUMBERS AND QUADRATIC EQUATIONS",
+      "chapter": "Paper 1 B E B Tech Mathematics Complex Numbers And Quadratic Equations Argand Diagram Algebra Of Complex Numbers Modulus And Argument Or Amplitude Of A Complex Number",
+      "topic": "Argand Diagram, Algebra Of Complex Numbers, Modulus And Argument (or Amplitude) Of A Complex Number",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U11_T002_002_ADD001",
+      "subject": "Mathematics",
+      "unit": "Direction Ratios And Direction Cosines And The Angle Between Two Intersecting Lines",
+      "chapter": "B.Tech.)",
+      "topic": "Direction Ratios And Direction Cosines And The Angle Between Two Intersecting Lines",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U8_T003_003_ADD001",
+      "subject": "Mathematics",
+      "unit": "Integration By Substitution, By Parts And By Partial Fractions",
+      "chapter": "B.Tech.)",
+      "topic": "Integration By Substitution, By Parts And By Partial Fractions",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U3_T001_001_ADD001",
+      "subject": "Mathematics",
+      "unit": "Matrices, Algebra Of Matrices, Type Of Matrices",
+      "chapter": "B.Tech.)",
+      "topic": "Matrices, Algebra Of Matrices, Type Of Matrices",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U1_T004_004_ADD001",
+      "subject": "Mathematics",
+      "unit": "Relations, Type Of Relations, Equivalence Relations, Functions",
+      "chapter": "B.Tech.)",
+      "topic": "Relations, Type Of Relations, Equivalence Relations, Functions",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_P1_MATHEMATICS_U11_T001_001",
+      "subject": "Mathematics",
+      "unit": "THREE DIMENSIONAL GEOMETRY",
+      "chapter": "Paper 1 B E B Tech Mathematics Three Dimensional Geometry Coordinates Of A Point In Space The Distance Between Two Points Section Formula",
+      "topic": "Coordinates Of A Point In Space, The Distance Between Two Points, Section Formula",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U16_T_22599887",
+      "subject": "Physics",
+      "unit": "UNIT 16: Optics",
+      "chapter": "Unit 16 Optics",
+      "topic": "Refraction Of Light At Plane And Spherical Surfaces Thin Lens Formula And Lens Maker Formula Total Internal Reflection And Its Applications Magnification Power Of A Lens Combination Of Thin Lenses In Contact Refraction Of Light Through A Prism Microscope And Astronomical Telescope Reflecting And Refracting And Their Magnifying Powers",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U20_T_7b7aafa4",
+      "subject": "Physics",
+      "unit": "UNIT 20: Experimental Skills",
+      "chapter": "Unit 20 Experimental Skills",
+      "topic": "Familiarity With The Basic Approach And Observations Of The Experiments And Activities",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U04_T_017fc3ac",
+      "subject": "Physics",
+      "unit": "UNIT 4: Work, Energy And Power",
+      "chapter": "Unit 4 Work Energy And Power",
+      "topic": "The Potential Energy Of A Spring Conservation Of Mechanical Energy Conservative And Non Conservative Forces Motion In A Vertical Circle",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U18_T_D2B6C8CB_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Alpha-particle Scattering Experiment, Rutherford's Model Of Atom, Bohr Model, Energy Levels, Hydrogen Spectrum",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U03_T_6202B09B_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Dynamics Of Uniform Circular Motion, Centripetal Force And Its Applications: Vehicle On A Level Circular Road, Vehicle On A Banked Road",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U03_T_0059FC83_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Force And Inertia, Newton’s First Law Of Motion, Momentum, Newton’s Second Law Of Motion, Impulse, Newton’s Third Law Of Motion",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U16_T_12CCE903_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Polarization: Plane-polarized Light, Brewster's Law, Uses Of Plane-polarized Light And Polaroid",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U05_T_2218270C_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "The Moment Of Inertia, The Radius Of Gyration, Values Of Moments Of Inertia For Simple Geometrical Objects, Parallel And Perpendicular Axes Theorems And Their Applications",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_2026_PHY_U01_CH03_TOP01_001",
+      "subject": "Physics",
+      "unit": "Unit 1",
+      "chapter": "Chapter 3",
+      "topic": "Laws Of Motion",
+      "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U11_T_b7d61472",
+      "subject": "Physics",
+      "unit": "UNIT 11: Electrostatics",
+      "chapter": "Unit 11 Electrostatics",
+      "topic": "Electric Potential And Its Calculation For A Point Charge Electric Dipole And System Of Charges Potential Difference Equipotential Surfaces Electrical Potential Energy Of A System Of Two Point Charges And Of Electric Dipole In An Electrostatic Field",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U13_T_0b6fc591",
+      "subject": "Chemistry",
+      "unit": "UNIT 13: PURIFICATION AND CHARACTERISATION OF ORGANIC COMPOUNDS",
+      "chapter": "Unit 13 Purification And Characterisation Of Organic Compounds",
+      "topic": "Calculations Of Empirical Formulae And Molecular Formulae Numerical Problems In Organic Quantitative Analysis",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U17_T_d5c327f6",
+      "subject": "Chemistry",
+      "unit": "UNIT 17: ORGANIC COMPOUNDS CONTAINING OXYGEN",
+      "chapter": "Unit 17 Organic Compounds Containing Oxygen",
+      "topic": "General Methods Of Preparation Properties Reactions And Uses",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U03_T_8796fe37",
+      "subject": "Chemistry",
+      "unit": "UNIT 3: CHEMICAL BONDING AND MOLECULAR STRUCTURE",
+      "chapter": "Unit 3 Chemical Bonding And Molecular Structure",
+      "topic": "Molecular Orbital Theory Its Important Features Lcaos Types Of Molecular Orbitals Bonding Antibonding Sigma And Pi Bonds Molecular Orbital Electronic Configurations Of Homonuclear Diatomic Molecules The Concept Of Bond Order Bond Length And Bond Energy",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_C9AC8CA6_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Alcohols: Identification Of Primary, Secondary And Tertiary Alcohols, Mechanism Of Dehydration.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_FE6942BA_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Chemical Principles Involved In The Following Experiments: 1. Enthalpy Of Solution Of CuSO4 2. Enthalpy Of Neutralization Of Strong Acid And Strong Base. 3. Preparation Of Lyophilic And Lyophobic Sols. 4. Kinetic Study Of The Reaction Of Iodide Ions With Hydrogen Peroxide At Room Temperature.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U05_T_7ECB31D5_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Different Methods For Expressing The Concentration Of Solution - Molality, Molarity, Mole Fraction, Percentage (by Volume And Mass Both), The Vapour Pressure Of Solutions And Raoult's Law - Ideal And Non-ideal Solutions, Vapour Pressure - Composition, Plots For Ideal And Non- Ideal Solutions, Colligative Properties Of Dilute Solutions - A Relative Lowering Of Vapour Pressure, Depression Of Freezing Point, The Elevation Of Boiling Point And Osmotic Pressure, Determination Of Molecular Mass Using Colligative Properties, Abnormal Value Of Molar Mass, Van’t Hoff Factor And Its Significance.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_E96BD490_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Friedel-Craft's Alkylation And Acylation, Directive Influence Of The Functional Group In Mono- Substituted Benzene.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_6CD948DD_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Ionic Equilibrium: Weak And Strong Electrolytes, Ionization Of Electrolytes, Various Concepts Of Acids And Bases (Arrhenius, Bronsted - Lowry And Lewis) And Their Ionization, Acid-base Equilibria (including Multistage Ionization) And Ionization Constants, Ionization Of Water, PH Scale, Common Ion Effect, Hydrolysis Of Salts And PH Of Their Solutions, The Solubility Of Sparingly Soluble Salts, Solubility Products And Buffer Solutions.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    }
+  ]
+}

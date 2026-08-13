@@ -1,0 +1,326 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "slotId": "macro_test_7",
+    "phaseId": "phase_7",
+    "items": [
+      {
+        "itemId": "item_1",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U01_T_54665F87_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "What is the dimensional formula for surface tension?",
+        "answer": "M L^0 T^-2",
+        "shortSolution": "Surface tension = Force / Length = [M L T^-2] / [L] = [M L^0 T^-2].",
+        "difficulty": "EASY",
+        "options": [
+          "M L^0 T^-2",
+          "M L T^-2",
+          "M L^2 T^-2",
+          "M L^-1 T^-1"
+        ]
+      },
+      {
+        "itemId": "item_2",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U05_T_1367A8D3_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "A uniform rod of length 2 m and mass 4 kg is hinged at one end and held horizontally. The torque acting on the rod about the hinge due to gravity is (take g = 10 m/s^2):",
+        "answer": "40 N m",
+        "shortSolution": "Torque = Mg * (L/2) = 4 * 10 * (2/2) = 40 N m.",
+        "difficulty": "EASY",
+        "options": [
+          "40 N m",
+          "20 N m",
+          "80 N m",
+          "10 N m"
+        ]
+      },
+      {
+        "itemId": "item_3",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_S_07515E6D_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "A uniform metre scale is balanced at the 50 cm mark. When a body of unknown mass m is suspended from the 10 cm mark, it is balanced by hanging a 100 g mass at the 90 cm mark. Find the mass m in grams.",
+        "answer": "100",
+        "shortSolution": "By principle of moments about 50 cm mark: m * (50 - 10) = 100 * (90 - 50) => 40m = 4000 => m = 100 g.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_4",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U07_T_70841273_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Excess pressure inside a spherical soap bubble of radius R and surface tension T is:",
+        "answer": "4T / R",
+        "shortSolution": "A soap bubble has two free surfaces, so excess pressure = 2 * (2T / R) = 4T / R.",
+        "difficulty": "EASY",
+        "options": [
+          "4T / R",
+          "2T / R",
+          "T / R",
+          "8T / R"
+        ]
+      },
+      {
+        "itemId": "item_5",
+        "atomId": "JEE_MAIN_2026_PHY_U11_T_fa74cad3",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "Two point charges q1 = +2 uC and q2 = +8 uC are placed 30 cm apart in vacuum. At what distance in cm from q1 along the line joining them is the net electric field zero?",
+        "answer": "10",
+        "shortSolution": "E1 = E2 => k*2/x^2 = k*8/(30-x)^2 => 1/x = 2/(30-x) => 30-x = 2x => 3x = 30 => x = 10 cm.",
+        "difficulty": "MEDIUM",
+        "options": null
+      },
+      {
+        "itemId": "item_6",
+        "atomId": "JEE_MAIN_2026_PHY_U16_T_18160817",
+        "type": "SINGLE_SELECT",
+        "stem": "In a single slit diffraction experiment, light of wavelength 600 nm passes through a slit of width 0.2 mm. The angular width of the central maximum in radians is:",
+        "answer": "6 x 10^-3 rad",
+        "shortSolution": "Angular width = 2 * lambda / a = 2 * (600 x 10^-9) / (0.2 x 10^-3) = 6 x 10^-3 rad.",
+        "difficulty": "MEDIUM",
+        "options": [
+          "6 x 10^-3 rad",
+          "3 x 10^-3 rad",
+          "1.2 x 10^-2 rad",
+          "1.5 x 10^-3 rad"
+        ]
+      },
+      {
+        "itemId": "item_7",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_69EF29B0_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Which of the following disaccharides consists of glucose and fructose units?",
+        "answer": "Sucrose",
+        "shortSolution": "Sucrose is composed of alpha-D-glucose and beta-D-fructose joined by a glycosidic linkage.",
+        "difficulty": "EASY",
+        "options": [
+          "Sucrose",
+          "Maltose",
+          "Lactose",
+          "Cellobiose"
+        ]
+      },
+      {
+        "itemId": "item_8",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH002",
+        "type": "SINGLE_SELECT",
+        "stem": "Prussian blue color obtained in Lassaigne's test for nitrogen is due to the formation of:",
+        "answer": "Fe4[Fe(CN)6]3",
+        "shortSolution": "The blue complex formed is ferriferrocyanide, Fe4[Fe(CN)6]3.",
+        "difficulty": "EASY",
+        "options": [
+          "Fe4[Fe(CN)6]3",
+          "Fe3[Fe(CN)6]2",
+          "Na4[Fe(CN)6]",
+          "Fe(SCN)3"
+        ]
+      },
+      {
+        "itemId": "item_9",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_A337813A_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "For a reaction A(g) + B(g) <=> 2C(g), the equilibrium constant Kc is 16 at 300 K. If 1 mole of A and 1 mole of B are placed in a 1 L container, find the equilibrium concentration of C in mol/L.",
+        "answer": "1.33",
+        "shortSolution": "Let x be moles of C formed. Kc = (2x)^2 / ((1-x)(1-x)) = 16 => 2x/(1-x) = 4 => 2x = 4 - 4x => 6x = 4 => x = 2/3. Concentration of C = 2x = 4/3 = 1.33.",
+        "difficulty": "MEDIUM",
+        "options": null
+      },
+      {
+        "itemId": "item_10",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U12_T_6F2E41D5_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "What is the coordination number and oxidation state of Fe in [Fe(CN)6]^3-?",
+        "answer": "Coordination number = 6, Oxidation state = +3",
+        "shortSolution": "Six CN- ligands attach to Fe, so C.N. = 6. Oxidation state x + 6(-1) = -3 => x = +3.",
+        "difficulty": "EASY",
+        "options": [
+          "Coordination number = 6, Oxidation state = +3",
+          "Coordination number = 6, Oxidation state = +2",
+          "Coordination number = 4, Oxidation state = +3",
+          "Coordination number = 6, Oxidation state = 0"
+        ]
+      },
+      {
+        "itemId": "item_11",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U02_T_C2AFC301_CH002",
+        "type": "SINGLE_SELECT",
+        "stem": "What is the maximum number of electrons that can be accommodated in a subshell with l = 2?",
+        "answer": "10",
+        "shortSolution": "For l = 2 (d subshell), the number of orbitals is 2l + 1 = 5. Max electrons = 2 * 5 = 10.",
+        "difficulty": "EASY",
+        "options": [
+          "10",
+          "6",
+          "2",
+          "14"
+        ]
+      },
+      {
+        "itemId": "item_12",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U08_T_A597926E_CH002",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "For a first order reaction, the half-life is 20 minutes. Calculate the rate constant of the reaction in min^-1. (Take ln 2 = 0.693, give answer rounded to 3 decimal places)",
+        "answer": "0.035",
+        "shortSolution": "k = ln(2) / t_1/2 = 0.693 / 20 = 0.03465 min^-1, which rounds to 0.035.",
+        "difficulty": "EASY",
+        "options": null
+      }
+    ]
+  },
+  "selectedAtoms": [
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U01_T_54665F87_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Dimensions Of Physics Quantities, Dimensional Analysis And Its Applications",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U05_T_1367A8D3_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Equilibrium Of Rigid Bodies, Rigid Body Rotation And Equations Of Rotational Motion, Comparison Of Linear And Rotational Motions",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_S_07515E6D_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Metre Scale - The Mass Of A Given Object By The Principle Of Moments",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U07_T_70841273_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Surface Energy And Surface Tension, Angle Of Contact, Excess Of Pressure Across A Curved Surface, Application Of Surface Tension: Drops, Bubbles And Capillary Rise",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U01_T_deb95734",
+      "subject": "Physics",
+      "unit": "UNIT 1: Units And Measurements",
+      "chapter": "Unit 1 Units And Measurements",
+      "topic": "Units Of Measurements System Of Units Si Units Fundamental And Derived Units",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U11_T_fa74cad3",
+      "subject": "Physics",
+      "unit": "UNIT 11: Electrostatics",
+      "chapter": "Unit 11 Electrostatics",
+      "topic": "Electric Charges Conservation Of Charge Coulomb S Law Forces Between Two Point Charges Forces Between Multiple Charges Superposition Principle And Continuous Charge Distribution",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U16_T_18160817",
+      "subject": "Physics",
+      "unit": "UNIT 16: Optics",
+      "chapter": "Unit 16 Optics",
+      "topic": "Diffraction Due To A Single Slit Width Of Central Maximum",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_2026_PHY_U02_CH01_TOP02_001",
+      "subject": "Physics",
+      "unit": "Unit 2",
+      "chapter": "Chapter 1",
+      "topic": "Linear Momentum",
+      "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U03_T_0059fc83",
+      "subject": "Physics",
+      "unit": "UNIT 3: Laws Of Motion",
+      "chapter": "Unit 3 Laws Of Motion",
+      "topic": "Force And Inertia Newton S First Law Of Motion Momentum Newton S Second Law Of Motion Impulse Newton S Third Law Of Motion",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U08_T_6ea3eb0f",
+      "subject": "Physics",
+      "unit": "UNIT 8: Thermodynamics",
+      "chapter": "Unit 8 Thermodynamics",
+      "topic": "Thermal Equilibrium And The Concept Of Temperature Zeroth Law Of Thermodynamics Heat Work And Internal Energy",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_69EF29B0_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "CARBOHYDRATES – Classification, Aldoses And Ketoses, Monosaccharides (glucose And Fructose) And Constituent Monosaccharides Of Oligosaccharides (sucrose, Lactose And Maltose).",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Detection Of Extra Elements (Nitrogen, Sulphur, Halogens) In Organic Compounds, Detection Of The Following Functional Groups, Hydroxyl (alcoholic And Phenolic), Carbonyl (aldehyde And Ketones) Carboxyl And Amino Groups In Organic Compounds.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_A337813A_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Equilibrium Involving Chemical Processes: Law Of Chemical Equilibrium, Equilibrium Constants (Kp And Kc) And Their Significance, The Significance Of Δ G And Δ G ° In Chemical Equilibrium, Factors Affecting Equilibrium Concentration, Pressure, Temperature, The Effect Of Catalyst, Le Chatelier’s Principle.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U12_T_6F2E41D5_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Introduction To Coordination Compounds. Werner's Theory, Ligands, Coordination Number, Denticity, Chelation, IUPAC Nomenclature Of Mononuclear Co-ordination Compounds, Isomerism, Bonding: Valence Bond Approach And Basic Ideas Of Crystal Field Theory, Colour And Magnetic Properties, Importance Of Coordination Compounds (in Qualitative Analysis, Extraction Of Metals And In Biological Systems).",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U02_T_C2AFC301_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Nature Of Electromagnetic Radiation, Photoelectric Effect, Spectrum Of The Hydrogen Atom, Bohr Model Of A Hydrogen Atom - Its Postulates, Derivation Of The Relations For The Energy Of The Electron And Radii Of The Different Orbits, Limitations Of Bohr's Model, Dual Nature Of Matter, De Broglie's Relationship, Heisenberg Uncertainty Principle, Elementary Ideas Of Quantum Mechanics, The Quantum Mechanical Model Of The Atom And Its Important Features, Concept Of Atomic Orbitals As One-electron Wave Functions, Variation Of 𝐀 And 𝐀 2 With R For 1s And 2s Orbitals, Various Quantum Numbers (principal, Angular Momentum And Magnetic Quantum Numbers) And Their Significance, Shapes Of S, P And D - Orbitals, Electron Spin And Spin Quantum Number, Rules For Filling Electrons In Orbitals – Aufbau Principle, Pauli's Exclusion Principle And Hund's Rule, Electronic Configuration Of Elements And Extra Stability Of Half-filled And Completely Filled Orbitals.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U08_T_A597926E_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Rate Of A Chemical Reaction, Factors Affecting The Rate Of Reactions: Concentration, Temperature, Pressure And Catalyst, Elementary And Complex Reactions, Order And Molecularity Of Reactions, Rate Law, Rate Constant And Its Units, Differential And Integral Forms Of Zero And First-order Reactions, Their Characteristics And Half-lives, The Effect Of Temperature On The Rate Of Reactions, Arrhenius Theory, Activation Energy And Its Calculation, Collision Theory Of Bi-molecular Gaseous Reactions (no Derivation).",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U11_T_0db42bea",
+      "subject": "Chemistry",
+      "unit": "UNIT 11: D - And F- BLOCK ELEMENTS",
+      "chapter": "Unit 11 D And F Block Elements",
+      "topic": "Actinoids Electronic Configuration And Oxidation States",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U17_T_c9ac8ca6",
+      "subject": "Chemistry",
+      "unit": "UNIT 17: ORGANIC COMPOUNDS CONTAINING OXYGEN",
+      "chapter": "Unit 17 Organic Compounds Containing Oxygen",
+      "topic": "Alcohols Identification Of Primary Secondary And Tertiary Alcohols Mechanism Of Dehydration",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "slotId": "macro_test_6",
+    "phaseId": "phase_6",
+    "items": [
+      {
+        "itemId": "item_1",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U11_T_D72DF3ED_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "A parallel plate capacitor with plate area A and separation d is filled with a dielectric slab of dielectric constant K = 4 covering half the distance between the plates. What is the equivalent capacitance of the system?",
+        "answer": "(8/5) * (eps0*A/d)",
+        "shortSolution": "C1 = K*eps0*A/(d/2) = 8*eps0*A/d, C2 = eps0*A/(d/2) = 2*eps0*A/d. In series, Ceq = C1*C2/(C1+C2) = (16/10) * eps0*A/d = (8/5)*eps0*A/d.",
+        "difficulty": "EASY",
+        "options": [
+          "(8/5) * (eps0*A/d)",
+          "(5/8) * (eps0*A/d)",
+          "(4/5) * (eps0*A/d)",
+          "(2/5) * (eps0*A/d)"
+        ]
+      },
+      {
+        "itemId": "item_2",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U10_T_6D4C5624_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "A simple pendulum of length 1 m has a time period T. If the length is increased to 4 m, the new time period becomes x * T. Find the value of x.",
+        "answer": "2",
+        "shortSolution": "T = 2*pi*sqrt(L/g). Since L becomes 4 times, T becomes sqrt(4) = 2 times. Thus x = 2.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_3",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U03_T_10A164C1_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "A bomb of mass 12 kg initially at rest explodes into two pieces of masses 4 kg and 8 kg. If the velocity of the 4 kg piece is 12 m/s, what is the magnitude of the velocity of the 8 kg piece in m/s?",
+        "answer": "6",
+        "shortSolution": "By conservation of linear momentum, 0 = 4*12 + 8*v => v = -6 m/s. Magnitude is 6 m/s.",
+        "difficulty": "EASY",
+        "options": [
+          "6",
+          "12",
+          "24",
+          "3"
+        ]
+      },
+      {
+        "itemId": "item_4",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_S_2DA2B71D_CH001",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "In a specific heat measurement using the method of mixtures, 100 g of a solid at 100 degrees Celsius is dropped into 200 g of water at 20 degrees Celsius. The final equilibrium temperature is 30 degrees Celsius. Ignoring the heat capacity of the calorimeter, find the specific heat capacity of the solid in cal/(g deg C). (Take specific heat of water as 1 cal/(g deg C)). Round off to two decimal places.",
+        "answer": "0.29",
+        "shortSolution": "Heat lost = Heat gained. 100 * s * (100 - 30) = 200 * 1 * (30 - 20) => 7000 * s = 2000 => s = 2/7 approx 0.29 cal/g deg C.",
+        "difficulty": "MEDIUM",
+        "options": null
+      },
+      {
+        "itemId": "item_5",
+        "atomId": "JEE_MAIN_2026_PHY_U01_T_54665f87",
+        "type": "SINGLE_SELECT",
+        "stem": "The dimensional formula for Planck's constant is same as that of:",
+        "answer": "Angular Momentum",
+        "shortSolution": "Both Planck's constant h and Angular Momentum L have dimensions [M L^2 T^-1].",
+        "difficulty": "EASY",
+        "options": [
+          "Angular Momentum",
+          "Linear Momentum",
+          "Energy",
+          "Power"
+        ]
+      },
+      {
+        "itemId": "item_6",
+        "atomId": "JEE_MAIN_2026_PHY_U10_T_13e4057b",
+        "type": "SINGLE_SELECT",
+        "stem": "A progressive wave equation is given by y = 0.05 sin(200*t - 2*x) where x, y are in meters and t in seconds. What is the speed of the wave in m/s?",
+        "answer": "100",
+        "shortSolution": "Wave speed v = omega / k = 200 / 2 = 100 m/s.",
+        "difficulty": "EASY",
+        "options": [
+          "100",
+          "200",
+          "50",
+          "400"
+        ]
+      },
+      {
+        "itemId": "item_7",
+        "atomId": "JEE_MAIN_2026_PHY_U15_T_1bf70372",
+        "type": "SINGLE_SELECT",
+        "stem": "Which component of the electromagnetic spectrum is used in RADAR systems for aircraft navigation?",
+        "answer": "Microwaves",
+        "shortSolution": "Microwaves are used in RADAR systems due to their short wavelengths suitable for aircraft navigation.",
+        "difficulty": "EASY",
+        "options": [
+          "Microwaves",
+          "Infrared waves",
+          "Ultraviolet rays",
+          "X-rays"
+        ]
+      },
+      {
+        "itemId": "item_8",
+        "atomId": "JEE_MAIN_2026_PHY_U07_T_7c57f2f3",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "A small spherical ball of radius r falls through a viscous fluid with terminal speed v. If another ball of same density but radius 2r falls through the same fluid, its terminal speed will be x * v. Find the value of x.",
+        "answer": "4",
+        "shortSolution": "Terminal velocity v_t is proportional to r^2. Therefore, doubling the radius increases the terminal speed by a factor of 2^2 = 4.",
+        "difficulty": "MEDIUM",
+        "options": null
+      },
+      {
+        "itemId": "item_9",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_97ACB2E0_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "What is the electrophile involved in the nitration of benzene using a mixture of concentrated HNO3 and concentrated H2SO4?",
+        "answer": "NO2 setup ion",
+        "shortSolution": "Nitration involves the nitronium ion (NO2+) generated by protonation and dehydration of HNO3 by H2SO4.",
+        "difficulty": "EASY",
+        "options": [
+          "NO2 setup ion",
+          "NO+ ion",
+          "NO3- ion",
+          "HNO2 molecule"
+        ]
+      },
+      {
+        "itemId": "item_10",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_36668546_CH002",
+        "type": "SINGLE_SELECT",
+        "stem": "According to VSEPR theory, the geometry and shape of the SF4 molecule are respectively:",
+        "answer": "Trigonal bipyramidal, See-saw",
+        "shortSolution": "SF4 has 5 electron pairs (4 bonding, 1 lone pair), giving a trigonal bipyramidal electron geometry and a see-saw molecular shape.",
+        "difficulty": "EASY",
+        "options": [
+          "Trigonal bipyramidal, See-saw",
+          "Tetrahedral, Square planar",
+          "Octahedral, Square planar",
+          "Trigonal bipyramidal, Bent"
+        ]
+      },
+      {
+        "itemId": "item_11",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_8796FE37_CH002",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "What is the bond order of the O2+ ion according to Molecular Orbital Theory?",
+        "answer": "2.5",
+        "shortSolution": "O2+ has 15 electrons. Electronic configuration gives (Nb - Na)/2 = (10 - 5)/2 = 2.5.",
+        "difficulty": "MEDIUM",
+        "options": null
+      },
+      {
+        "itemId": "item_12",
+        "atomId": "JEE_MAIN_2026_CHEM_U15_T_e96bd490",
+        "type": "SINGLE_SELECT",
+        "stem": "In Friedel-Crafts alkylation of benzene with 1-chloropropane in the presence of anhydrous AlCl3, the major product obtained is:",
+        "answer": "Isopropylbenzene",
+        "shortSolution": "The primary carbocation formed rearranges via a 1,2-hydride shift to form a more stable secondary carbocation, giving isopropylbenzene (cumene) as the major product.",
+        "difficulty": "MEDIUM",
+        "options": [
+          "Isopropylbenzene",
+          "n-Propylbenzene",
+          "Chlorobenzene",
+          "Ethylbenzene"
+        ]
+      }
+    ]
+  },
+  "selectedAtoms": [
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U11_T_D72DF3ED_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Conductors And Insulators, Dielectrics And Electric Polarization, Capacitors And Capacitance, The Combination Of Capacitors In Series And Parallel And Capacitance Of A Parallel Plate Capacitor With And Without Dielectric Medium Between The Plates, Energy Stored In A Capacitor",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U10_T_6D4C5624_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Energy In S.H.M.: Kinetic And Potential Energies, Simple Pendulum: Derivation Of Expression For Its Time Period",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U03_T_10A164C1_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Law Of Conservation Of Linear Momentum And Its Applications, Equilibrium Of Concurrent Forces",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_S_2DA2B71D_CH001",
+      "subject": "Physics",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Specific Heat Capacity Of A Given (i) Solid And (ii) Liquid By Method Of Mixtures",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U01_T_54665f87",
+      "subject": "Physics",
+      "unit": "UNIT 1: Units And Measurements",
+      "chapter": "Unit 1 Units And Measurements",
+      "topic": "Dimensions Of Physics Quantities Dimensional Analysis And Its Applications",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U10_T_13e4057b",
+      "subject": "Physics",
+      "unit": "UNIT 10: Oscillations And Waves",
+      "chapter": "Unit 10 Oscillations And Waves",
+      "topic": "Wave Motion Longitudinal And Transverse Waves Speed Of The Travelling Wave Displacement Relation For A Progressive Wave",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U15_T_1bf70372",
+      "subject": "Physics",
+      "unit": "UNIT 15: Electromagnetic Waves",
+      "chapter": "Unit 15 Electromagnetic Waves",
+      "topic": "Applications Of Electromagnetic Waves",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_2026_PHY_U02_CH01_TOP02_002",
+      "subject": "Physics",
+      "unit": "Unit 2",
+      "chapter": "Chapter 1",
+      "topic": "Collisions",
+      "sourceTraceStatus": "SOURCE_TRACE_UNCONFIRMED_IN_PREVIEW_BUNDLE"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U20_T_7b7aafa4_S_5d54c7e9",
+      "subject": "Physics",
+      "unit": "UNIT 20: Experimental Skills",
+      "chapter": "Unit 20 Experimental Skills",
+      "topic": "Vernier Calipers Its Use To Measure The Internal And External Diameter And Depth Of A Vessel",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_PHY_U07_T_7c57f2f3",
+      "subject": "Physics",
+      "unit": "UNIT 7: Properties Of Solids And Liquids",
+      "chapter": "Unit 7 Properties Of Solids And Liquids",
+      "topic": "Pressure Due To A Fluid Column Pascal S Law And Its Applications Effect Of Gravity On Fluid Pressure Viscosity Stoke S Law Terminal Velocity Streamline And Turbulent Flow Critical Velocity Bernoulli S Principle And Its Applications",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_97ACB2E0_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Aromatic Hydrocarbons - Nomenclature, Benzene - Structure And Aromaticity, Mechanism Of Electrophilic Substitution, Halogenation, Nitration.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_36668546_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Covalent Bonding: Concept Of Electronegativity, Fajan’s Rule, Dipole Moment, Valence Shell Electron Pair Repulsion (VSEPR ) Theory And Shapes Of Simple Molecules.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_2A259182_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Equilibria Involving Physical Processes: Solid-liquid, Liquid-gas, Gas-gas And Solid-gas Equilibria, Henry's Law. General Characteristics Of Equilibrium Involving Physical Processes.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_FBF10486_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Hormones (General Introduction)",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_8796FE37_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Molecular Orbital Theory - Its Important Features, LCAOs, Types Of Molecular Orbitals (bonding, Antibonding), Sigma And Pi-bonds, Molecular Orbital Electronic Configurations Of Homonuclear Diatomic Molecules, The Concept Of Bond Order, Bond Length And Bond Energy.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_224D254F_CH002",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Quantum Mechanical Approach To Covalent Bonding: Valence Bond Theory - Its Important Features, The Concept Of Hybridization Involving S, P And D Orbitals, Resonance.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U16_T_1E309C25_CH001",
+      "subject": "Chemistry",
+      "unit": "General Unit",
+      "chapter": "General Chapter",
+      "topic": "Uses, Environmental Effects Of Chloroform, Iodoform, Freons And DDT.",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    },
+    {
+      "atomId": "JEE_MAIN_2026_CHEM_U15_T_e96bd490",
+      "subject": "Chemistry",
+      "unit": "UNIT 15: HYDROCARBONS",
+      "chapter": "Unit 15 Hydrocarbons",
+      "topic": "Friedel Craft S Alkylation And Acylation Directive Influence Of The Functional Group In Mono Substituted Benzene",
+      "sourceTraceStatus": "SOURCE_TRACE_PRESENT"
+    }
+  ]
+}

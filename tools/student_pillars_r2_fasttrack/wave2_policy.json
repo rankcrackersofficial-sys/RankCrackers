@@ -1,0 +1,42 @@
+{
+  "baseline": "3bee1c0f519e35440754254114d50fe703e2f7e9",
+  "syllabus": {
+    "verified": 211,
+    "denominator": 417,
+    "heldWave1": 26,
+    "repeatModelInferenceWithoutNewSource": false,
+    "requireOfficialSourceRecovery": true
+  },
+  "crucible": {
+    "packsReady": 2,
+    "packsTotal": 8,
+    "macroReviewed": 2,
+    "macroTotal": 7,
+    "majorReviewed": 0,
+    "majorTotal": 1,
+    "answerKeysVerified": 2,
+    "answerKeysTotal": 8,
+    "continueRemainingSlots": true
+  },
+  "digibook": {
+    "approvedAtoms": 2,
+    "denominator": 417,
+    "heldWave1": 20,
+    "rerunSameHeldAtomsFirst": true,
+    "structuredOutputRequired": true,
+    "freeFormJsonAllowed": false
+  },
+  "models": {
+    "factory": "gemini-3.6-flash",
+    "review": "gemini-3.1-pro-preview"
+  },
+  "safety": {
+    "productionRead": false,
+    "productionWrite": false,
+    "firestoreWrite": false,
+    "studentPublish": false,
+    "studentRuntimeAi": false,
+    "modelOnlyCanonicalPromotion": false,
+    "gradleTouch": false
+  }
+}
