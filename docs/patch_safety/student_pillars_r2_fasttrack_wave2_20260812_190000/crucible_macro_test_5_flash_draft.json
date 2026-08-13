@@ -125,14 +125,14 @@
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_0D2707C4_CH002",
         "type": "SINGLE_SELECT",
         "stem": "Among the following carbocations, which one exhibits the highest stability due to hyperconjugation and inductive effect?",
-        "answer": "(CH3)3C constellation",
+        "answer": "(CH3)3C+",
         "shortSolution": "Tert-butyl carbocation (CH3)3C+ has 9 alpha-hydrogens providing maximum hyperconjugative stabilization.",
         "difficulty": "EASY",
         "options": [
-          "(CH3)3C constellation",
-          "(CH3)2CH constellation",
-          "CH3CH2 constellation",
-          "CH3 constellation"
+          "(CH3)3C+",
+          "(CH3)2CH+",
+          "CH3CH2+",
+          "CH3+"
         ]
       },
       {
@@ -164,7 +164,7 @@
         "itemId": "item_12",
         "atomId": "JEE_MAIN_2026_CHEM_U15_T_d8b93c4b",
         "type": "SINGLE_SELECT",
-        "stem": "Which of the following hydrocarbons possesses terminal acidic hydrogen and reacts with sodamide (NaNH2) to liberate hydrogen gas?",
+        "stem": "Which of the following hydrocarbons possesses terminal acidic hydrogen and reacts with sodamide (NaNH2) to liberate ammonia (NH3) gas?",
         "answer": "Ethyne",
         "shortSolution": "Terminal alkynes like ethyne have acidic sp-hybridized C-H bonds and react with strong bases like NaNH2.",
         "difficulty": "EASY",

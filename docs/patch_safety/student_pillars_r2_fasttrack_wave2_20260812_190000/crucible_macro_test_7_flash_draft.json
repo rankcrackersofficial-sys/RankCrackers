@@ -129,7 +129,7 @@
         "itemId": "item_9",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_A337813A_CH001",
         "type": "NUMERIC_RESPONSE",
-        "stem": "For a reaction A(g) + B(g) <=> 2C(g), the equilibrium constant Kc is 16 at 300 K. If 1 mole of A and 1 mole of B are placed in a 1 L container, find the equilibrium concentration of C in mol/L.",
+        "stem": "For a reaction A(g) + B(g) <=> 2C(g), the equilibrium constant Kc is 16 at 300 K. If 1 mole of A and 1 mole of B are placed in a 1 L container, find the equilibrium concentration of C in mol/L (rounded to two decimal places).",
         "answer": "1.33",
         "shortSolution": "Let x be moles of C formed. Kc = (2x)^2 / ((1-x)(1-x)) = 16 => 2x/(1-x) = 4 => 2x = 4 - 4x => 6x = 4 => x = 2/3. Concentration of C = 2x = 4/3 = 1.33.",
         "difficulty": "MEDIUM",
