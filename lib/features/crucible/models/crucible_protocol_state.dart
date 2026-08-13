@@ -14,6 +14,9 @@ class CrucibleProtocolState extends Equatable {
   final DateTime? lastProgressAt; // 🔱 ADDED: Stall detection anchor
   final bool isVIP;
   final bool isStalled;
+  final bool isPaused; // 🔱 ADDED: Pause tracking flag
+  final DateTime? pausedAt; // 🔱 ADDED: When the pause started
+  final int pausedDurationMs; // 🔱 ADDED: Accumulated pause duration in milliseconds
 
   const CrucibleProtocolState({
     required this.recruitmentId,
@@ -27,6 +30,9 @@ class CrucibleProtocolState extends Equatable {
     this.lastProgressAt,
     required this.isVIP,
     required this.isStalled,
+    this.isPaused = false,
+    this.pausedAt,
+    this.pausedDurationMs = 0,
   });
 
   CrucibleProtocolState copyWith({
@@ -41,6 +47,10 @@ class CrucibleProtocolState extends Equatable {
     DateTime? lastProgressAt,
     bool? isVIP,
     bool? isStalled,
+    bool? isPaused,
+    DateTime? pausedAt,
+    bool clearPausedAt = false,
+    int? pausedDurationMs,
   }) {
     return CrucibleProtocolState(
       recruitmentId: recruitmentId ?? this.recruitmentId,
@@ -54,6 +64,9 @@ class CrucibleProtocolState extends Equatable {
       lastProgressAt: lastProgressAt ?? this.lastProgressAt,
       isVIP: isVIP ?? this.isVIP,
       isStalled: isStalled ?? this.isStalled,
+      isPaused: isPaused ?? this.isPaused,
+      pausedAt: clearPausedAt ? null : (pausedAt ?? this.pausedAt),
+      pausedDurationMs: pausedDurationMs ?? this.pausedDurationMs,
     );
   }
 
@@ -70,6 +83,9 @@ class CrucibleProtocolState extends Equatable {
       'lastProgressAt': lastProgressAt?.millisecondsSinceEpoch,
       'isVIP': isVIP,
       'isStalled': isStalled,
+      'isPaused': isPaused,
+      'pausedAt': pausedAt?.millisecondsSinceEpoch,
+      'pausedDurationMs': pausedDurationMs,
     };
   }
 
@@ -88,6 +104,11 @@ class CrucibleProtocolState extends Equatable {
           : null,
       isVIP: map['isVIP'] ?? false,
       isStalled: map['isStalled'] ?? false,
+      isPaused: map['isPaused'] ?? false,
+      pausedAt: map['pausedAt'] != null 
+          ? DateTime.fromMillisecondsSinceEpoch(map['pausedAt']) 
+          : null,
+      pausedDurationMs: map['pausedDurationMs'] ?? 0,
     );
   }
 
@@ -104,5 +125,8 @@ class CrucibleProtocolState extends Equatable {
     lastProgressAt,
     isVIP,
     isStalled,
+    isPaused,
+    pausedAt,
+    pausedDurationMs,
   ];
 }

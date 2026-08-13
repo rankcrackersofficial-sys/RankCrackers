@@ -56,8 +56,9 @@ function main() {
     }
     seen.add(item.atomId);
 
-    if (item.modelOnlyProof !== false) {
-      fail(`${label}: modelOnlyProof must be false`);
+    const modelOnly = item.modelOnlyPromotion !== undefined ? item.modelOnlyPromotion : item.modelOnlyProof;
+    if (modelOnly !== false) {
+      fail(`${label}: modelOnlyPromotion must be false`);
     }
 
     if (item.sourceStatus === "SOURCE_PROVEN") {
