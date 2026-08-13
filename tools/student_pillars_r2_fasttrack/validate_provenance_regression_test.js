@@ -103,6 +103,55 @@ function runTest() {
     if (fs.existsSync(invalidPath2)) fs.unlinkSync(invalidPath2);
   }
 
+  // Test Case 4: Contradictory values (modelOnlyPromotion=false, modelOnlyProof=true)
+  const invalidPayload3 = {
+    items: Array.from({ length: 26 }, (_, i) => {
+      const item = {
+        ...validItem,
+        atomId: `${validItem.atomId}_${i}`,
+        modelOnlyPromotion: false,
+        modelOnlyProof: true
+      };
+      return item;
+    })
+  };
+  const invalidPath3 = path.join(tempDir, "temp_invalid_recovery_3.json");
+  fs.writeFileSync(invalidPath3, JSON.stringify(invalidPayload3, null, 2));
+
+  try {
+    execSync(`node tools/student_pillars_r2_fasttrack/validate_wave2_source_provenance.js "${invalidPath3}"`, { stdio: "ignore" });
+    console.error("Test Case 4 Failed: Contradictory values (promo=false, proof=true) should have failed validation.");
+    process.exit(1);
+  } catch (err) {
+    console.log("Test Case 4 Passed: Contradictory values successfully blocked.");
+  } finally {
+    if (fs.existsSync(invalidPath3)) fs.unlinkSync(invalidPath3);
+  }
+
+  // Test Case 5: Malformed/non-boolean value (modelOnlyPromotion="false")
+  const invalidPayload4 = {
+    items: Array.from({ length: 26 }, (_, i) => {
+      const item = {
+        ...validItem,
+        atomId: `${validItem.atomId}_${i}`,
+        modelOnlyPromotion: "false"
+      };
+      return item;
+    })
+  };
+  const invalidPath4 = path.join(tempDir, "temp_invalid_recovery_4.json");
+  fs.writeFileSync(invalidPath4, JSON.stringify(invalidPayload4, null, 2));
+
+  try {
+    execSync(`node tools/student_pillars_r2_fasttrack/validate_wave2_source_provenance.js "${invalidPath4}"`, { stdio: "ignore" });
+    console.error("Test Case 5 Failed: Malformed non-boolean value should have failed validation.");
+    process.exit(1);
+  } catch (err) {
+    console.log("Test Case 5 Passed: Malformed non-boolean value successfully blocked.");
+  } finally {
+    if (fs.existsSync(invalidPath4)) fs.unlinkSync(invalidPath4);
+  }
+
   console.log("All validator regression tests passed successfully!");
 }
 

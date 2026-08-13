@@ -56,9 +56,13 @@ function main() {
     }
     seen.add(item.atomId);
 
-    const modelOnly = item.modelOnlyPromotion !== undefined ? item.modelOnlyPromotion : item.modelOnlyProof;
-    if (modelOnly !== false) {
+    const promo = item.modelOnlyPromotion;
+    const proof = item.modelOnlyProof;
+    if (promo !== undefined && promo !== false) {
       fail(`${label}: modelOnlyPromotion must be false`);
+    }
+    if (proof !== undefined && proof !== false) {
+      fail(`${label}: modelOnlyProof must be false`);
     }
 
     if (item.sourceStatus === "SOURCE_PROVEN") {

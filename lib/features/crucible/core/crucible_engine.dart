@@ -208,13 +208,7 @@ class CrucibleEngine {
       if (isMajorTestPassed) {
         return state.copyWith(status: 'completed', lastProgressAt: now);
       }
-      final bool isMajorReady = assessmentReadiness['major_test_final'] ?? false;
-      if (isMajorReady) {
-        return state.copyWith(status: 'major_test', lastProgressAt: now);
-      } else {
-        // blocked on academic readiness
-        return state.copyWith(status: 'major_test', lastProgressAt: now);
-      }
+      return state.copyWith(status: 'major_test', lastProgressAt: now);
     }
 
     String status = state.status;
@@ -237,7 +231,18 @@ class CrucibleEngine {
           if (scheduleIndex % 6 == 0) {
             status = 'rebuild';
             scheduleStartTime = now;
-            currentBoundaryTime = now.add(const Duration(hours: 48));
+
+            // Rebuild window ends exactly when the Phase Macro Test starts (09:00 AM on the Macro Test Day)
+            final targetDay = phaseIndex == 7 ? 99 : (phaseIndex * 14);
+            final pStart = state.protocolStartTime;
+            final macroStartDateTime = DateTime(
+              pStart.year,
+              pStart.month,
+              pStart.day + (targetDay - 1),
+              9, 0, 0
+            );
+
+            currentBoundaryTime = macroStartDateTime;
           } else {
             scheduleIndex += 1;
             status = 'study';
@@ -250,20 +255,27 @@ class CrucibleEngine {
           final bool isReady = assessmentReadiness[microId] ?? false;
           if (isReady) {
             // Can display micro_test transition screen
-          } else {
-            // Blocked on academic readiness - remains stuck here
           }
         }
       }
     } else if (status == 'rebuild') {
-      final elapsed = now.difference(scheduleStartTime);
-      final bool rebuildCompleted = elapsed >= const Duration(hours: 48) || 
+      // Rebuild completes once the clock reaches or exceeds the boundary time (Macro start time)
+      final bool rebuildCompleted = now.isAfter(currentBoundaryTime) || 
+          now.isAtSameMomentAs(currentBoundaryTime) ||
           completedRebuildIds.contains('rebuild_window_$phaseIndex');
 
       if (rebuildCompleted) {
         status = 'macro_test';
         scheduleStartTime = now;
-        currentBoundaryTime = now.add(const Duration(hours: 24));
+        
+        // Macro Test window ends at 11:00 AM of the same day.
+        final macroEnd = DateTime(
+          now.year,
+          now.month,
+          now.day,
+          11, 0, 0
+        );
+        currentBoundaryTime = macroEnd.isBefore(now) ? now.add(const Duration(hours: 2)) : macroEnd;
       }
     } else if (status == 'macro_test') {
       final macroId = 'macro_test_$phaseIndex';
@@ -273,7 +285,16 @@ class CrucibleEngine {
         if (phaseIndex == 7) {
           status = 'major_test';
           scheduleStartTime = now;
-          currentBoundaryTime = now.add(const Duration(hours: 24));
+          
+          // Major Test starts on Day 100 at 10:00 AM.
+          final pStart = state.protocolStartTime;
+          final majorStartDateTime = DateTime(
+            pStart.year,
+            pStart.month,
+            pStart.day + 99,
+            10, 0, 0
+          );
+          currentBoundaryTime = majorStartDateTime;
         } else {
           phaseIndex += 1;
           scheduleIndex += 1;
@@ -287,8 +308,6 @@ class CrucibleEngine {
         final bool isReady = assessmentReadiness[macroId] ?? false;
         if (isReady) {
           // Macro test is ready to take
-        } else {
-          // Blocked on academic readiness
         }
       }
     } else if (status == 'major_test') {
@@ -299,8 +318,6 @@ class CrucibleEngine {
         final bool isReady = assessmentReadiness['major_test_final'] ?? false;
         if (isReady) {
           // Major test is ready to take
-        } else {
-          // Blocked on academic readiness
         }
       }
     }

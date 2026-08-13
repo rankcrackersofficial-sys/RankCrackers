@@ -8,6 +8,9 @@ class CrucibleClockEngine {
   static const int courseStartHour = 10;
   static const int testStartHour = 9;
 
+  /// Day 101 is used as an internal terminal sentinel day signifying completion of the 100-day timeline.
+  static const int terminalDaySentinel = 101;
+
   // ===================================================
   // GET CURRENT TACTICAL START
   // ===================================================
@@ -23,19 +26,6 @@ class CrucibleClockEngine {
   }
 
   // ===================================================
-  // NORMALIZE START TIME
-  // ===================================================
-
-  static DateTime getNormalizedStart(DateTime time) {
-    return DateTime(
-      time.year,
-      time.month,
-      time.day,
-      courseStartHour,
-    );
-  }
-
-  // ===================================================
   // CALCULATE ACTIVE ELAPSED DURATION
   // ===================================================
 
@@ -43,22 +33,16 @@ class CrucibleClockEngine {
     required dynamic state, // Supports CrucibleProtocolState
     required DateTime now,
   }) {
-    final normalizedStart = getNormalizedStart(state.protocolStartTime);
-    if (now.isBefore(normalizedStart)) {
+    final start = state.protocolStartTime as DateTime;
+    if (now.isBefore(start)) {
       return Duration.zero;
     }
 
-    int elapsedMs = now.difference(normalizedStart).inMilliseconds;
-    elapsedMs -= (state.pausedDurationMs as int);
+    final currentNow = (state.isPaused as bool) && state.pausedAt != null
+        ? state.pausedAt as DateTime
+        : now;
 
-    if ((state.isPaused as bool) && state.pausedAt != null) {
-      final pauseOffset = now.difference(state.pausedAt as DateTime).inMilliseconds;
-      if (pauseOffset > 0) {
-        elapsedMs -= pauseOffset;
-      }
-    }
-
-    return Duration(milliseconds: elapsedMs < 0 ? 0 : elapsedMs);
+    return currentNow.difference(start);
   }
 
   // ===================================================
@@ -71,7 +55,7 @@ class CrucibleClockEngine {
   }) {
     final elapsed = calculateActiveElapsed(state: state, now: now);
     final day = (elapsed.inSeconds ~/ (24 * 3600)) + 1;
-    return day.clamp(1, 101);
+    return day.clamp(1, terminalDaySentinel);
   }
 
   // ===================================================
@@ -81,10 +65,19 @@ class CrucibleClockEngine {
   static int getScheduleIndex({
     required DateTime enrollmentTime,
   }) {
-    final cycleStart = getNormalizedStart(enrollmentTime);
-    final difference = DateTime.now().difference(cycleStart);
+    final now = DateTime.now();
+    final difference = now.difference(enrollmentTime);
     final days = difference.inDays;
-    return days ~/ 2;
+    final phaseDay = days % 14;
+
+    final phaseIndex = (days ~/ 14).clamp(0, 6);
+    int studyDayOffset = phaseDay;
+    if (phaseDay >= 12) {
+      studyDayOffset = 11; // Caps index during rebuild/macro
+    }
+
+    final scheduleIdx = (phaseIndex * 6) + (studyDayOffset ~/ 2);
+    return scheduleIdx.clamp(0, 41);
   }
 
   // ===================================================
@@ -115,7 +108,7 @@ class CrucibleClockEngine {
   }) {
     final difference = DateTime.now().difference(enrollmentTime);
     final days = difference.inDays;
-    final phaseDay = days % 15;
+    final phaseDay = days % 14;
     return phaseDay == 12 || phaseDay == 13;
   }
 
@@ -129,8 +122,8 @@ class CrucibleClockEngine {
     final now = DateTime.now();
     final difference = now.difference(enrollmentTime);
     final days = difference.inDays;
-    final phaseDay = days % 15;
-    return phaseDay == 14 && now.hour >= 9 && now.hour <= 11;
+    final phaseDay = days % 14;
+    return phaseDay == 13 && now.hour >= 9 && now.hour <= 11;
   }
 
   // ===================================================
