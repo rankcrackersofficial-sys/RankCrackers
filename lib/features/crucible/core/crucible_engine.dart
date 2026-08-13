@@ -6,7 +6,6 @@ import '../../../core/models/micro_topic_node.dart';
 import '../../../core/models/atomic_risk_state.dart';
 import '../models/crucible_schedule.dart';
 import '../models/crucible_protocol_state.dart';
-import 'crucible_clock_engine.dart';
 
 /// 🔱 CRUCIBLE ENGINE (Document 45 Compliant)
 /// Sovereign authority for orchestrating the 100-Day Tactical Protocol.
@@ -133,7 +132,7 @@ class CrucibleEngine {
   // C1 DETERMINISTIC TRANSITIONS & LIFE CYCLES 🔱
   // ===================================================
 
-  /// Pause the protocol and store the timestamp.
+  /// Pause the protocol (student interaction paused, sovereign clock continues).
   static CrucibleProtocolState pauseProtocol(CrucibleProtocolState state, DateTime now) {
     if (state.isPaused) return state;
     return state.copyWith(
@@ -143,28 +142,13 @@ class CrucibleEngine {
     );
   }
 
-  /// Resume the protocol, shifting absolute timelines by the pause duration.
-  /// (Aligned to 24-hour day steps to prevent wall-clock schedule drift)
+  /// Resume the protocol (Sovereign Start Law: protocolStartTime remains unchanged).
   static CrucibleProtocolState resumeProtocol(CrucibleProtocolState state, DateTime now) {
     if (!state.isPaused || state.pausedAt == null) return state;
-
-    final pausedMs = now.difference(state.pausedAt!).inMilliseconds;
-    
-    // Aligns the shift to the nearest multiple of 24 hours to preserve the 10:00 AM rhythm
-    final pausedDays = (pausedMs / 86400000).round();
-    final alignedMs = pausedDays * 86400000;
-
-    final shiftedProtocolStart = state.protocolStartTime.add(Duration(milliseconds: alignedMs));
-    final shiftedScheduleStart = state.scheduleStartTime.add(Duration(milliseconds: alignedMs));
-    final shiftedBoundary = state.currentBoundaryTime.add(Duration(milliseconds: alignedMs));
 
     return state.copyWith(
       isPaused: false,
       clearPausedAt: true,
-      protocolStartTime: shiftedProtocolStart,
-      scheduleStartTime: shiftedScheduleStart,
-      currentBoundaryTime: shiftedBoundary,
-      pausedDurationMs: state.pausedDurationMs + alignedMs,
       lastProgressAt: now,
     );
   }
@@ -200,23 +184,15 @@ class CrucibleEngine {
     required List<String> completedMicroIds,
     required List<String> completedRebuildIds,
     required List<String> completedMacroIds,
-    required bool isMajorTestPassed,
+    required bool isMajorTestSubmitted,
     required Map<String, bool> assessmentReadiness,
   }) {
-    // 1. If currently paused, time and state transitions are frozen.
+    // 1. If currently paused, student session state is frozen.
     if (state.isPaused) {
       return state;
     }
 
-    final int currentDay = CrucibleClockEngine.getProtocolDay(state: state, now: now);
-
-    // Day 101+ Terminal handling.
-    if (currentDay >= 101) {
-      if (isMajorTestPassed) {
-        return state.copyWith(status: 'completed', lastProgressAt: now);
-      }
-      return state.copyWith(status: 'major_test', lastProgressAt: now);
-    }
+    final elapsed = now.difference(state.protocolStartTime);
 
     String status = state.status;
     int phaseIndex = state.phaseIndex;
@@ -225,75 +201,64 @@ class CrucibleEngine {
     DateTime currentBoundaryTime = state.currentBoundaryTime;
     String currentScheduleId = state.currentScheduleId;
 
-    if (currentDay == 100) {
+    if (elapsed.inSeconds >= 100 * 24 * 3600) {
+      // Day 101+ Terminal handling.
+      if (isMajorTestSubmitted) {
+        status = 'completed';
+      } else {
+        status = 'major_test';
+      }
+      phaseIndex = 7;
+      scheduleIndex = 42;
+      scheduleStartTime = state.protocolStartTime.add(const Duration(days: 99));
+      currentBoundaryTime = state.protocolStartTime.add(const Duration(days: 100));
+    } else if (elapsed.inSeconds >= 99 * 24 * 3600) {
+      // Day 100: Major Test (elapsed 99 days to 100 days)
       status = 'major_test';
       phaseIndex = 7;
       scheduleIndex = 42;
       scheduleStartTime = state.protocolStartTime.add(const Duration(days: 99));
-      currentBoundaryTime = scheduleStartTime.add(const Duration(days: 1));
-    } else if (currentDay == 99) {
+      currentBoundaryTime = state.protocolStartTime.add(const Duration(days: 100));
+    } else if (elapsed.inSeconds >= 98 * 24 * 3600) {
+      // Day 99: Grand Simulation (elapsed 98 days to 99 days)
       status = 'grand_simulation';
       phaseIndex = 7;
       scheduleIndex = 42;
       scheduleStartTime = state.protocolStartTime.add(const Duration(days: 98));
-      currentBoundaryTime = scheduleStartTime.add(const Duration(days: 1));
+      currentBoundaryTime = state.protocolStartTime.add(const Duration(days: 99));
     } else {
-      // currentDay is between 1 and 98
-      phaseIndex = (currentDay - 1) ~/ 14 + 1;
-      final int dp = currentDay - (phaseIndex - 1) * 14; // Day within phase (1 to 14)
+      // Day 1-98 (elapsed 0 days to 98 days)
+      phaseIndex = (elapsed.inSeconds ~/ (14 * 24 * 3600)) + 1;
+      final phaseStart = state.protocolStartTime.add(Duration(days: (phaseIndex - 1) * 14));
+      final elapsedWithinPhase = now.difference(phaseStart);
 
-      if (dp <= 12) {
+      final rebuildStart = const Duration(days: 12);
+      final macroStart = const Duration(days: 12, hours: 23); // Day 14, 09:00 AM (12 days + 23 hours)
+      final macroEnd = const Duration(days: 13, hours: 1);    // Day 14, 11:00 AM (13 days + 1 hour)
+      final phaseEnd = const Duration(days: 14);
+
+      if (elapsedWithinPhase < rebuildStart) {
         status = 'study';
-        final int scheduleOffset = (dp - 1) ~/ 2; // 0 to 5
+        final int scheduleOffset = elapsedWithinPhase.inHours ~/ 48; // 0 to 5
         scheduleIndex = (phaseIndex - 1) * 6 + scheduleOffset + 1;
-        
-        final phaseStart = state.protocolStartTime.add(Duration(days: (phaseIndex - 1) * 14));
         scheduleStartTime = phaseStart.add(Duration(days: scheduleOffset * 2));
         currentBoundaryTime = scheduleStartTime.add(const Duration(hours: 48));
         currentScheduleId = 'sch_${state.recruitmentId}_$scheduleIndex';
-      } else if (dp == 13) {
+      } else if (elapsedWithinPhase < macroStart) {
         status = 'rebuild';
         scheduleIndex = phaseIndex * 6;
-        final phaseStart = state.protocolStartTime.add(Duration(days: (phaseIndex - 1) * 14));
-        scheduleStartTime = phaseStart.add(const Duration(days: 12)); // Day 13 start
-        
-        // Rebuild ends on Day 14 at 09:00 AM
-        currentBoundaryTime = phaseStart.add(const Duration(days: 13, hours: 9)); 
+        scheduleStartTime = phaseStart.add(rebuildStart);
+        currentBoundaryTime = phaseStart.add(macroStart);
+      } else if (elapsedWithinPhase < macroEnd) {
+        status = 'macro_test';
+        scheduleIndex = phaseIndex * 6;
+        scheduleStartTime = phaseStart.add(macroStart);
+        currentBoundaryTime = phaseStart.add(macroEnd);
       } else {
-        // dp == 14
-        final phaseStart = state.protocolStartTime.add(Duration(days: (phaseIndex - 1) * 14));
-        final macroStart = phaseStart.add(const Duration(days: 13, hours: 9)); // Day 14, 09:00 AM
-        final macroEnd = phaseStart.add(const Duration(days: 13, hours: 11)); // Day 14, 11:00 AM
-
-        if (now.isBefore(macroStart)) {
-          status = 'rebuild';
-          scheduleIndex = phaseIndex * 6;
-          scheduleStartTime = phaseStart.add(const Duration(days: 12));
-          currentBoundaryTime = macroStart;
-        } else if (now.isBefore(macroEnd)) {
-          status = 'macro_test';
-          scheduleIndex = phaseIndex * 6;
-          scheduleStartTime = macroStart;
-          currentBoundaryTime = macroEnd;
-        } else {
-          // Beyond the Macro Test window, transition to next phase's study block automatically
-          if (phaseIndex < 7) {
-            phaseIndex += 1;
-            scheduleIndex = (phaseIndex - 1) * 6 + 1;
-            status = 'study';
-            
-            final nextPhaseStart = state.protocolStartTime.add(Duration(days: (phaseIndex - 1) * 14));
-            scheduleStartTime = nextPhaseStart;
-            currentBoundaryTime = scheduleStartTime.add(const Duration(hours: 48));
-            currentScheduleId = 'sch_${state.recruitmentId}_$scheduleIndex';
-          } else {
-            // Day 98 after 11:00 AM is Phase 7 recovery time
-            status = 'study';
-            scheduleIndex = 42;
-            scheduleStartTime = macroEnd;
-            currentBoundaryTime = state.protocolStartTime.add(const Duration(days: 98)); 
-          }
-        }
+        status = 'phase_transition_recovery';
+        scheduleIndex = phaseIndex * 6;
+        scheduleStartTime = phaseStart.add(macroEnd);
+        currentBoundaryTime = phaseStart.add(phaseEnd);
       }
     }
 
@@ -306,6 +271,31 @@ class CrucibleEngine {
       currentBoundaryTime: currentBoundaryTime,
       lastProgressAt: now,
     );
+  }
+
+  /// Generates the temporal metadata slot for a given schedule index.
+  static Map<String, dynamic> getTemporalSlotMetadata({
+    required int scheduleIndex,
+    required DateTime protocolStartTime,
+    required List<String> assignedAtoms,
+  }) {
+    final int phaseIndex = (scheduleIndex - 1) ~/ 6 + 1;
+    final int scheduleOffset = (scheduleIndex - 1) % 6;
+    final phaseStart = protocolStartTime.add(Duration(days: (phaseIndex - 1) * 14));
+    final learningStart = phaseStart.add(Duration(days: scheduleOffset * 2));
+    final microEligibilityStart = learningStart.add(const Duration(hours: 47));
+    final microEligibilityEnd = learningStart.add(const Duration(hours: 48));
+    final macroId = 'macro_${phaseIndex.toString().padLeft(2, '0')}';
+
+    return {
+      'scheduleId': 'sch_jee_main_2027_$scheduleIndex',
+      'assignedAtoms': assignedAtoms,
+      'learningStart': learningStart,
+      'microEligibilityStart': microEligibilityStart,
+      'microEligibilityEnd': microEligibilityEnd,
+      'phaseId': 'phase_$phaseIndex',
+      'macroId': macroId,
+    };
   }
 
   /// Calculates the lifecycle state of a target schedule dynamically.

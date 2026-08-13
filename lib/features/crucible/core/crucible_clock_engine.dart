@@ -63,12 +63,9 @@ class CrucibleClockEngine {
     if (now.isBefore(start)) {
       return Duration.zero;
     }
-
-    final currentNow = (state.isPaused as bool) && state.pausedAt != null
-        ? state.pausedAt as DateTime
-        : now;
-
-    return currentNow.difference(start);
+    // SOVEREIGN_PROTOCOL_CLOCK_DOES_NOT_PAUSE
+    // Time continues ticking forward even while paused.
+    return now.difference(start);
   }
 
   // ===================================================

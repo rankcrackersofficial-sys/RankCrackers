@@ -4,7 +4,7 @@ import 'package:rank_crackers/features/crucible/core/crucible_clock_engine.dart'
 import 'package:rank_crackers/features/crucible/core/crucible_engine.dart';
 
 void main() {
-  group('Crucible C1 Sovereign Start Law (C1-FIX2)', () {
+  group('Crucible C1 Sovereign Start Law (C1-FIX3)', () {
     test('Boundary: 09:59 AM enrollment -> same day 10:00 AM start', () {
       final enrollment = DateTime(2026, 8, 13, 9, 59);
       final start = CrucibleClockEngine.getNormalizedStart(enrollment);
@@ -35,7 +35,7 @@ void main() {
       expect(start, DateTime(2026, 8, 14, 10, 0));
     });
 
-    test('Boundary: 00:00 AM next day -> same day (next day relative) 10:00 AM start', () {
+    test('Boundary: 00:00 AM next day -> same day 10:00 AM start', () {
       final enrollment = DateTime(2026, 8, 14, 0, 0);
       final start = CrucibleClockEngine.getNormalizedStart(enrollment);
       expect(start, DateTime(2026, 8, 14, 10, 0));
@@ -214,18 +214,18 @@ void main() {
   });
 
   group('Crucible C1 Phase Transition Clock & Rebuild', () {
-    test('End of schedule 6 Micro Test transitions to Rebuild Window 1', () {
+    test('End of schedule 6 Micro Test transitions to Rebuild Window 1 on Day 13 10:00 AM', () {
       final enrollment = DateTime(2026, 8, 13, 10, 0);
       final pStart = CrucibleClockEngine.getNormalizedStart(enrollment);
       
-      // Schedule 6 ends at Day 12, 10:00 AM (which is 12 days elapsed)
+      // Schedule 6 starts on Day 11 10:00 AM and ends on Day 13 10:00 AM (12 days elapsed)
       final state = CrucibleProtocolState(
         recruitmentId: 'jee_main_2027',
         phaseIndex: 1,
         scheduleIndex: 6,
         currentScheduleId: 'sch_jee_main_2027_6',
         status: 'study',
-        scheduleStartTime: pStart.add(const Duration(days: 10)), // Sch 6 starts at Day 11, 10:00 AM
+        scheduleStartTime: pStart.add(const Duration(days: 10)),
         protocolStartTime: pStart,
         currentBoundaryTime: pStart.add(const Duration(days: 12)),
         isVIP: false,
@@ -236,18 +236,18 @@ void main() {
       final nextState = CrucibleEngine.evaluateState(
         state: state,
         now: nowEnd,
-        completedMicroIds: ['micro_06'], // Micro 6 completed
+        completedMicroIds: ['micro_06'], 
         completedRebuildIds: [],
         completedMacroIds: [],
-        isMajorTestPassed: false,
+        isMajorTestSubmitted: false,
         assessmentReadiness: {},
       );
 
       expect(nextState.status, 'rebuild');
-      expect(nextState.currentBoundaryTime, pStart.add(const Duration(days: 13, hours: 9))); // Day 14, 09:00 AM
+      expect(nextState.currentBoundaryTime, pStart.add(const Duration(days: 13)).subtract(const Duration(hours: 1))); // Day 14, 09:00 AM
     });
 
-    test('Rebuild Day 13 and Day 14 morning are active, then transition to Macro at 09:00 AM', () {
+    test('Rebuild Day 13 is active, then transitions to Macro at 09:00 AM on Day 14', () {
       final enrollment = DateTime(2026, 8, 13, 10, 0);
       final pStart = CrucibleClockEngine.getNormalizedStart(enrollment);
       
@@ -259,12 +259,12 @@ void main() {
         status: 'rebuild',
         scheduleStartTime: pStart.add(const Duration(days: 12)),
         protocolStartTime: pStart,
-        currentBoundaryTime: pStart.add(const Duration(days: 13, hours: 9)), // Day 14, 09:00 AM
+        currentBoundaryTime: pStart.add(const Duration(days: 13)).subtract(const Duration(hours: 1)), // Day 14, 09:00 AM
         isVIP: false,
         isStalled: false,
       );
 
-      // 1. Day 13, 05:00 PM is rebuild
+      // 1. Day 13, 05:00 PM (12d 7h elapsed) is rebuild
       final nowRebuild = pStart.add(const Duration(days: 12, hours: 7));
       var nextState = CrucibleEngine.evaluateState(
         state: state,
@@ -272,26 +272,26 @@ void main() {
         completedMicroIds: ['micro_06'],
         completedRebuildIds: [],
         completedMacroIds: [],
-        isMajorTestPassed: false,
+        isMajorTestSubmitted: false,
         assessmentReadiness: {},
       );
       expect(nextState.status, 'rebuild');
 
-      // 2. Day 14, 09:00 AM transitions to macro_test
-      final nowMacro = pStart.add(const Duration(days: 13, hours: 9));
+      // 2. Day 14, 09:00 AM (12d 23h elapsed) transitions to macro_test
+      final nowMacro = pStart.add(const Duration(days: 12, hours: 23)); 
       nextState = CrucibleEngine.evaluateState(
         state: state,
         now: nowMacro,
         completedMicroIds: ['micro_06'],
         completedRebuildIds: [],
         completedMacroIds: [],
-        isMajorTestPassed: false,
+        isMajorTestSubmitted: false,
         assessmentReadiness: {},
       );
       expect(nextState.status, 'macro_test');
     });
 
-    test('Day 14 at 11:00 AM close transitions to Phase 2 Schedule 7 automatically (Never-Wait)', () {
+    test('Day 14 at 11:00 AM close transitions to Phase Transition Recovery block', () {
       final enrollment = DateTime(2026, 8, 13, 10, 0);
       final pStart = CrucibleClockEngine.getNormalizedStart(enrollment);
       
@@ -301,65 +301,90 @@ void main() {
         scheduleIndex: 6,
         currentScheduleId: 'sch_jee_main_2027_6',
         status: 'macro_test',
-        scheduleStartTime: pStart.add(const Duration(days: 13, hours: 9)),
+        scheduleStartTime: pStart.add(const Duration(days: 12, hours: 23)),
         protocolStartTime: pStart,
-        currentBoundaryTime: pStart.add(const Duration(days: 13, hours: 11)), // Day 14, 11:00 AM
+        currentBoundaryTime: pStart.add(const Duration(days: 13, hours: 1)), // Day 14, 11:00 AM (13d 1h elapsed)
         isVIP: false,
         isStalled: false,
       );
 
-      // Evaluate past 11:00 AM without completing Macro Test
-      final nowPast = pStart.add(const Duration(days: 13, hours: 11, minutes: 1));
+      // Evaluate past 11:00 AM (13 days 1 hour 1 minute elapsed)
+      final nowPast = pStart.add(const Duration(days: 13, hours: 1, minutes: 1));
       final nextState = CrucibleEngine.evaluateState(
         state: state,
         now: nowPast,
         completedMicroIds: ['micro_06'],
         completedRebuildIds: [],
-        completedMacroIds: [], // Not completed!
-        isMajorTestPassed: false,
+        completedMacroIds: [],
+        isMajorTestSubmitted: false,
         assessmentReadiness: {},
       );
 
-      // Never-Wait transitions to Phase 2 study
-      expect(nextState.phaseIndex, 2);
-      expect(nextState.scheduleIndex, 7);
-      expect(nextState.status, 'study');
+      expect(nextState.status, 'phase_transition_recovery');
+      expect(nextState.scheduleStartTime, pStart.add(const Duration(days: 13, hours: 1)));
+      expect(nextState.currentBoundaryTime, pStart.add(const Duration(days: 14))); // Day 15, 10:00 AM
     });
   });
 
   group('Crucible C1 Final Sequence & Backlog', () {
-    test('Macro 7 concludes on Day 98', () {
+    test('Macro 7 concludes on Day 98, Day 99 is Grand Simulation, Day 100 is Major', () {
       final enrollment = DateTime(2026, 8, 13, 10, 0);
       final pStart = CrucibleClockEngine.getNormalizedStart(enrollment);
       
-      // Day 98 starts at 97 days elapsed
-      final nowMacro7 = pStart.add(const Duration(days: 97, hours: 9)); // Day 98, 09:00 AM
-      final state = CrucibleProtocolState(
+      // Day 98 starts at 97 days elapsed. 09:00 AM is 96d 23h elapsed.
+      final nowMacro7 = pStart.add(const Duration(days: 96, hours: 23)); 
+      var state = CrucibleProtocolState(
         recruitmentId: 'jee_main_2027',
         phaseIndex: 7,
         scheduleIndex: 42,
         currentScheduleId: 'sch_jee_main_2027_42',
         status: 'macro_test',
-        scheduleStartTime: pStart.add(const Duration(days: 97, hours: 9)),
+        scheduleStartTime: pStart.add(const Duration(days: 96, hours: 23)),
         protocolStartTime: pStart,
-        currentBoundaryTime: pStart.add(const Duration(days: 97, hours: 11)),
+        currentBoundaryTime: pStart.add(const Duration(days: 97, hours: 1)),
         isVIP: false,
         isStalled: false,
       );
 
-      final nextState = CrucibleEngine.evaluateState(
+      // Complete Macro 7.
+      state = CrucibleEngine.evaluateState(
         state: state,
-        now: nowMacro7.add(const Duration(hours: 2)), // After 11:00 AM
+        now: nowMacro7.add(const Duration(hours: 2)), // 11:00 AM Day 98
         completedMicroIds: ['micro_42'],
         completedRebuildIds: [],
-        completedMacroIds: ['macro_test_7'], // Completed
-        isMajorTestPassed: false,
+        completedMacroIds: ['macro_test_7'], 
+        isMajorTestSubmitted: false,
         assessmentReadiness: {},
       );
 
-      // Day 99 is Grand Simulation
-      final dayOnRecovery = CrucibleClockEngine.getProtocolDay(state: nextState, now: pStart.add(const Duration(days: 98, hours: 5)));
-      expect(dayOnRecovery, 99);
+      // Verify recovery transition
+      expect(state.status, 'phase_transition_recovery');
+
+      // Verify Day 99 Grand Simulation (98 days elapsed)
+      final grandSimTime = pStart.add(const Duration(days: 98, hours: 2)); 
+      state = CrucibleEngine.evaluateState(
+        state: state,
+        now: grandSimTime,
+        completedMicroIds: ['micro_42'],
+        completedRebuildIds: [],
+        completedMacroIds: ['macro_test_7'],
+        isMajorTestSubmitted: false,
+        assessmentReadiness: {},
+      );
+      expect(state.status, 'grand_simulation');
+
+      // Verify Day 100 Major Test (99 days elapsed)
+      final majorTime = pStart.add(const Duration(days: 99, hours: 2)); 
+      state = CrucibleEngine.evaluateState(
+        state: state,
+        now: majorTime,
+        completedMicroIds: ['micro_42'],
+        completedRebuildIds: [],
+        completedMacroIds: ['macro_test_7'],
+        isMajorTestSubmitted: false,
+        assessmentReadiness: {},
+      );
+      expect(state.status, 'major_test');
     });
 
     test('Never-Wait Progression does not freeze on overdue micro tests', () {
@@ -387,7 +412,7 @@ void main() {
         completedMicroIds: [], // Empty!
         completedRebuildIds: [],
         completedMacroIds: [],
-        isMajorTestPassed: false,
+        isMajorTestSubmitted: false,
         assessmentReadiness: {},
       );
 
@@ -397,8 +422,8 @@ void main() {
     });
   });
 
-  group('Crucible C1 Pause Semantic Safety', () {
-    test('Regression Case: Pause rounding preserves 10:00 AM clock alignment', () {
+  group('Crucible C1 Pause Clock Invariance (C1-FIX3)', () {
+    test('Pause does not freeze sovereign clock nor shift boundaries', () {
       final enrollment = DateTime(2026, 8, 13, 10, 0);
       final pStart = CrucibleClockEngine.getNormalizedStart(enrollment);
 
@@ -415,25 +440,197 @@ void main() {
         isStalled: false,
       );
 
-      // 1. Pause for 5 hours (rounds to 0 days shift)
-      var t = pStart.add(const Duration(hours: 12));
-      state = CrucibleEngine.pauseProtocol(state, t);
-      t = t.add(const Duration(hours: 5));
-      state = CrucibleEngine.resumeProtocol(state, t);
+      // Pause at 12 hours active
+      final pauseTime = pStart.add(const Duration(hours: 12));
+      state = CrucibleEngine.pauseProtocol(state, pauseTime);
+      expect(state.isPaused, true);
 
-      // Start time remains exactly at 10:00 AM
-      expect(state.protocolStartTime.hour, 10);
-      expect(state.protocolStartTime.minute, 0);
+      // Clock continues ticking forward while paused. Let's resume 10 hours later
+      final resumeTime = pauseTime.add(const Duration(hours: 10));
+      state = CrucibleEngine.resumeProtocol(state, resumeTime);
+      expect(state.isPaused, false);
 
-      // 2. Pause for 24 hours (shifts by exactly 1 day = 24 hours)
-      t = t.add(const Duration(hours: 10));
-      state = CrucibleEngine.pauseProtocol(state, t);
-      t = t.add(const Duration(hours: 24));
-      state = CrucibleEngine.resumeProtocol(state, t);
+      // Verify that start times and schedule anchors remain UNCHANGED
+      expect(state.protocolStartTime, pStart);
+      expect(state.scheduleStartTime, pStart);
 
-      // Start time STILL remains exactly at 10:00 AM
-      expect(state.protocolStartTime.hour, 10);
-      expect(state.protocolStartTime.minute, 0);
+      // Verify active elapsed time is calculated correctly (not frozen or rounding)
+      final elapsed = CrucibleClockEngine.calculateActiveElapsed(state: state, now: resumeTime);
+      expect(elapsed.inHours, 22); // Ticked forward by 22h total (12h + 10h)
+    });
+  });
+
+  group('Crucible 100-Day Temporal Golden Test', () {
+    test('Verify complete Phase 1 through Day 100 lifecycle rhythm', () {
+      final enrollment = DateTime(2026, 8, 13, 10, 0);
+      final pStart = CrucibleClockEngine.getNormalizedStart(enrollment);
+      
+      var state = CrucibleProtocolState(
+        recruitmentId: 'jee_main_2027',
+        phaseIndex: 1,
+        scheduleIndex: 1,
+        currentScheduleId: 'sch_jee_main_2027_1',
+        status: 'study',
+        scheduleStartTime: pStart,
+        protocolStartTime: pStart,
+        currentBoundaryTime: pStart.add(const Duration(hours: 48)),
+        isVIP: false,
+        isStalled: false,
+      );
+
+      // --- PHASE 1 ---
+      // Schedule 1: Day 1-2
+      expect(CrucibleClockEngine.getProtocolDay(state: state, now: pStart.add(const Duration(hours: 23))), 1);
+      state = CrucibleEngine.evaluateState(
+        state: state,
+        now: pStart.add(const Duration(hours: 48)), // End of Sch 1
+        completedMicroIds: ['micro_01'],
+        completedRebuildIds: [],
+        completedMacroIds: [],
+        isMajorTestSubmitted: false,
+        assessmentReadiness: {},
+      );
+      expect(state.scheduleIndex, 2);
+      expect(state.status, 'study');
+
+      // Schedule 6: Day 11-12
+      final sch6Start = pStart.add(const Duration(days: 10));
+      state = CrucibleEngine.evaluateState(
+        state: state,
+        now: sch6Start.add(const Duration(hours: 48)), // End of Sch 6 (Day 13 10:00 AM)
+        completedMicroIds: ['micro_01', 'micro_02', 'micro_03', 'micro_04', 'micro_05', 'micro_06'],
+        completedRebuildIds: [],
+        completedMacroIds: [],
+        isMajorTestSubmitted: false,
+        assessmentReadiness: {},
+      );
+      expect(state.status, 'rebuild');
+      expect(state.currentBoundaryTime, pStart.add(const Duration(days: 13)).subtract(const Duration(hours: 1))); // Day 14, 09:00 AM
+
+      // Rebuild ending Day 14, 09:00 AM -> Macro 1
+      state = CrucibleEngine.evaluateState(
+        state: state,
+        now: pStart.add(const Duration(days: 13)).subtract(const Duration(hours: 1)),
+        completedMicroIds: ['micro_06'],
+        completedRebuildIds: [],
+        completedMacroIds: [],
+        isMajorTestSubmitted: false,
+        assessmentReadiness: {},
+      );
+      expect(state.status, 'macro_test');
+      expect(state.currentBoundaryTime, pStart.add(const Duration(days: 13, hours: 1))); // Day 14, 11:00 AM
+
+      // Macro 1 ending Day 14, 11:00 AM -> Phase Transition Recovery
+      state = CrucibleEngine.evaluateState(
+        state: state,
+        now: pStart.add(const Duration(days: 13, hours: 1)),
+        completedMicroIds: ['micro_06'],
+        completedRebuildIds: [],
+        completedMacroIds: [],
+        isMajorTestSubmitted: false,
+        assessmentReadiness: {},
+      );
+      expect(state.status, 'phase_transition_recovery');
+      expect(state.currentBoundaryTime, pStart.add(const Duration(days: 14))); // Day 15, 10:00 AM
+
+      // --- PHASE 2 sovereign anchor ---
+      state = CrucibleEngine.evaluateState(
+        state: state,
+        now: pStart.add(const Duration(days: 14)), // Day 15, 10:00 AM
+        completedMicroIds: ['micro_06'],
+        completedRebuildIds: [],
+        completedMacroIds: [],
+        isMajorTestSubmitted: false,
+        assessmentReadiness: {},
+      );
+      expect(state.phaseIndex, 2);
+      expect(state.scheduleIndex, 7);
+      expect(state.status, 'study');
+
+      // --- FINAL SEQUENCE (Phase 7) ---
+      // Day 98 Macro 7
+      final stateMacro7 = CrucibleProtocolState(
+        recruitmentId: 'jee_main_2027',
+        phaseIndex: 7,
+        scheduleIndex: 42,
+        currentScheduleId: 'sch_jee_main_2027_42',
+        status: 'macro_test',
+        scheduleStartTime: pStart.add(const Duration(days: 96, hours: 23)),
+        protocolStartTime: pStart,
+        currentBoundaryTime: pStart.add(const Duration(days: 97, hours: 1)),
+        isVIP: false,
+        isStalled: false,
+      );
+
+      final stateRecovery = CrucibleEngine.evaluateState(
+        state: stateMacro7,
+        now: pStart.add(const Duration(days: 97, hours: 1)), // Day 98, 11:00 AM
+        completedMicroIds: ['micro_42'],
+        completedRebuildIds: [],
+        completedMacroIds: ['macro_test_7'],
+        isMajorTestSubmitted: false,
+        assessmentReadiness: {},
+      );
+      expect(stateRecovery.status, 'phase_transition_recovery');
+
+      // Day 99 Grand Simulation
+      final stateSim = CrucibleEngine.evaluateState(
+        state: stateRecovery,
+        now: pStart.add(const Duration(days: 98, hours: 2)), // Day 99, 12:00 PM
+        completedMicroIds: ['micro_42'],
+        completedRebuildIds: [],
+        completedMacroIds: ['macro_test_7'],
+        isMajorTestSubmitted: false,
+        assessmentReadiness: {},
+      );
+      expect(stateSim.status, 'grand_simulation');
+
+      // Day 100 Major Test
+      final stateMajor = CrucibleEngine.evaluateState(
+        state: stateSim,
+        now: pStart.add(const Duration(days: 99, hours: 2)), // Day 100, 12:00 PM
+        completedMicroIds: ['micro_42'],
+        completedRebuildIds: [],
+        completedMacroIds: ['macro_test_7'],
+        isMajorTestSubmitted: false,
+        assessmentReadiness: {},
+      );
+      expect(stateMajor.status, 'major_test');
+
+      // Day 101 Terminal
+      final stateCompleted = CrucibleEngine.evaluateState(
+        state: stateMajor,
+        now: pStart.add(const Duration(days: 100, hours: 2)), // Day 101, 12:00 PM
+        completedMicroIds: ['micro_42'],
+        completedRebuildIds: [],
+        completedMacroIds: ['macro_test_7'],
+        isMajorTestSubmitted: true,
+        assessmentReadiness: {},
+      );
+      expect(stateCompleted.status, 'completed');
+    });
+
+    test('Micro Factory Readiness: Verify 42/42 temporal micro slots metadata can be resolved', () {
+      final enrollment = DateTime(2026, 8, 13, 10, 0);
+      final pStart = CrucibleClockEngine.getNormalizedStart(enrollment);
+
+      for (int i = 1; i <= 42; i++) {
+        final slot = CrucibleEngine.getTemporalSlotMetadata(
+          scheduleIndex: i,
+          protocolStartTime: pStart,
+          assignedAtoms: ['atom_1', 'atom_2'],
+        );
+
+        expect(slot['scheduleId'], 'sch_jee_main_2027_$i');
+        expect(slot['assignedAtoms'], contains('atom_1'));
+        expect(slot['learningStart'], isNotNull);
+        expect(slot['microEligibilityStart'], isNotNull);
+        expect(slot['microEligibilityEnd'], isNotNull);
+        
+        final expectedPhase = (i - 1) ~/ 6 + 1;
+        expect(slot['phaseId'], 'phase_$expectedPhase');
+        expect(slot['macroId'], 'macro_${expectedPhase.toString().padLeft(2, '0')}');
+      }
     });
   });
 }
