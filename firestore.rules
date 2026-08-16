@@ -103,7 +103,12 @@ service cloud.firestore {
 
     match /published_questions/{questionId} {
       allow read: if request.auth != null && (resource == null || resource.data.status == 'published');
-      allow write: if isFounder();
+      allow create, update: if isFounder() && request.resource.data.keys().hasOnly([
+        'id', 'questionLineageId', 'version', 'questionType', 'question', 'options',
+        'difficulty', 'examId', 'subjectId', 'nodeId', 'atomicTopicIds', 'status',
+        'isPYQ', 'verifiedBy', 'verifiedAt'
+      ]);
+      allow delete: if isFounder();
     }
 
     match /answer_keys/{id} {

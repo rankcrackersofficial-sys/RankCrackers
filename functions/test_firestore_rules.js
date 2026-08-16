@@ -168,6 +168,69 @@ async function main() {
     await assertSucceeds(founderDb.collection('system_config').doc('global').get());
   });
 
+  // 13. Safe published_questions field allowlist checks (even for Founder!)
+  await runTestCase('Founder CANNOT write published_questions document with answerIndex', async () => {
+    await assertFails(founderDb.collection('published_questions').doc('pq_fail_1').set({
+      id: 'pq_fail_1',
+      question: 'Stem',
+      status: 'published',
+      answerIndex: 2
+    }));
+  });
+
+  await runTestCase('Founder CANNOT write published_questions document with solution', async () => {
+    await assertFails(founderDb.collection('published_questions').doc('pq_fail_2').set({
+      id: 'pq_fail_2',
+      question: 'Stem',
+      status: 'published',
+      solution: 'Private explanation'
+    }));
+  });
+
+  await runTestCase('Founder CANNOT write published_questions document with numericalAnswer', async () => {
+    await assertFails(founderDb.collection('published_questions').doc('pq_fail_3').set({
+      id: 'pq_fail_3',
+      question: 'Stem',
+      status: 'published',
+      numericalAnswer: 4.5
+    }));
+  });
+
+  await runTestCase('Founder CAN write published_questions document with ONLY allowed fields', async () => {
+    await assertSucceeds(founderDb.collection('published_questions').doc('pq_success_1').set({
+      id: 'pq_success_1',
+      questionLineageId: 'lin_success',
+      version: 1,
+      questionType: 'mcq_single',
+      question: 'What is allowed?',
+      options: ['This', 'That'],
+      status: 'published',
+      isPYQ: false
+    }));
+  });
+
+  // 14. PRO Reviewer Workflow Integration checks: Founder direct writes permitted, non-founders blocked
+  await runTestCase('Founder CAN write to solution_verifications (registry write workflow)', async () => {
+    await assertSucceeds(founderDb.collection('solution_verifications').doc('sv_q1').set({
+      solutionStatus: 'verified',
+      solutionHash: 'sha256_hash_value',
+      reviewingAuthority: 'admin_reviewer_1'
+    }));
+  });
+
+  await runTestCase('Founder CAN write to reviewer_registry', async () => {
+    await assertSucceeds(founderDb.collection('reviewer_registry').doc('rev_1').set({
+      role: 'PRO_REVIEWER',
+      active: true
+    }));
+  });
+
+  await runTestCase('Founder CAN write to publication_registry', async () => {
+    await assertSucceeds(founderDb.collection('publication_registry').doc('pub_q1').set({
+      studentReady: true
+    }));
+  });
+
   // ===================================================
   // 2. SERVER MATERIALIZER & LEAK TESTS
   // ===================================================
