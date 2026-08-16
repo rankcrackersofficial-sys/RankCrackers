@@ -40,10 +40,10 @@ class MacroTestEngine {
     required String scheduleId,
     required List<String> allowedAtomIds,
     required List<QuestionModel> pool,
+    required String recruitmentId,
     int requiredCount = 100,
     QuestionTrustSnapshot? trustSnapshot,
     int? manualSeed,
-    String? recruitmentId,
   }) {
     final List<QuestionModel> eligible = [];
     final Set<String> seenIds = {};
@@ -52,7 +52,7 @@ class MacroTestEngine {
     for (final q in pool) {
       if (seenIds.contains(q.id)) continue;
 
-      if (recruitmentId != null && q.examId != recruitmentId) {
+      if (q.examId != recruitmentId) {
         continue;
       }
 

@@ -82,6 +82,7 @@ void main() {
         pool: pool,
         requiredCount: 100,
         trustSnapshot: trust,
+        recruitmentId: 'jee_main_2026',
       );
       expect(testCount99, isEmpty); // Deficit locks assembly
 
@@ -144,6 +145,7 @@ void main() {
         pool: pool100,
         requiredCount: 100,
         trustSnapshot: trust100,
+        recruitmentId: 'jee_main_2026',
       );
       expect(testCount100.length, 100);
     });
@@ -221,6 +223,7 @@ void main() {
         requiredCount: 100,
         trustSnapshot: trust,
         manualSeed: 12345,
+        recruitmentId: 'jee_main_2026',
       );
 
       // Run assembly 2 with same seed
@@ -232,6 +235,7 @@ void main() {
         requiredCount: 100,
         trustSnapshot: trust,
         manualSeed: 12345,
+        recruitmentId: 'jee_main_2026',
       );
 
       expect(assembled1.length, 100);
@@ -249,6 +253,7 @@ void main() {
         requiredCount: 100,
         trustSnapshot: trust,
         manualSeed: 54321,
+        recruitmentId: 'jee_main_2026',
       );
 
       bool orderDiffers = false;
@@ -336,6 +341,7 @@ void main() {
         pool: poolWithDuplicates,
         requiredCount: 1,
         trustSnapshot: trust,
+        recruitmentId: 'jee_main_2026',
       );
       expect(assembled.length, 1);
     });
