@@ -417,7 +417,7 @@ void main() {
       expect(err, contains('outside schedule scope'));
     });
 
-    test('Other-mission/wrong recruitment ID rejection', () {
+    test('Missing exam ID rejection', () {
       final qWrongMission = baseQuestion.copyWith(examId: '');
       final err = MicroTestEngine.checkQuestionEligibility(
         qWrongMission,
@@ -426,6 +426,35 @@ void main() {
         trustSnapshot: trust,
       );
       expect(err, contains('schema/type invalid: missing basic fields'));
+    });
+
+    test('Valid-but-wrong mission / recruitment ID rejection', () {
+      final qWrongMission = baseQuestion.copyWith(examId: 'neet_2026');
+      final err = MicroTestEngine.checkQuestionEligibility(
+        qWrongMission,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trust,
+        recruitmentId: 'jee_main_2026',
+      );
+      expect(err, contains('schema/type invalid: wrong recruitment exam mission ID'));
+    });
+
+    test('Fixture questions isolation from production inventory', () {
+      final pool = [baseQuestion];
+      final assembled = MacroTestEngine.assembleMacroTest(
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_01',
+        allowedAtomIds: const ['atom_01'],
+        pool: pool,
+        requiredCount: 1,
+        trustSnapshot: trust,
+        recruitmentId: 'jee_main_2026',
+      );
+      expect(assembled.length, 1);
+      // Verify that QuestionTrustRepository and local snapshots remain purely memory-based
+      // and do not invoke any cloud DB persistent mutation routines.
+      expect(QuestionTrustRepository.isHydrated, isFalse);
     });
 
     test('Source unresolved / missing fact ID or held fact rejection', () {

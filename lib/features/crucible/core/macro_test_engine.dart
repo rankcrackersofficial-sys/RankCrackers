@@ -43,6 +43,7 @@ class MacroTestEngine {
     int requiredCount = 100,
     QuestionTrustSnapshot? trustSnapshot,
     int? manualSeed,
+    String? recruitmentId,
   }) {
     final List<QuestionModel> eligible = [];
     final Set<String> seenIds = {};
@@ -56,6 +57,7 @@ class MacroTestEngine {
         scheduleId,
         allowedAtomIds,
         trustSnapshot: trustSnapshot,
+        recruitmentId: recruitmentId,
       );
       if (eligibilityError == null) {
         final lineage = q.questionLineageId ?? q.id;

@@ -151,6 +151,7 @@ class MicroTestEngine {
     String scheduleId,
     List<String> allowedAtomIds, {
     QuestionTrustSnapshot? trustSnapshot,
+    String? recruitmentId,
   }) {
     // -------------------------------------------------
     // Fail-Closed Hydration Check
@@ -195,6 +196,10 @@ class MicroTestEngine {
     // Basic fields validation
     if (question.id.isEmpty || question.question.trim().isEmpty || question.examId.isEmpty || question.subjectId.isEmpty) {
       return 'schema/type invalid: missing basic fields';
+    }
+
+    if (recruitmentId != null && question.examId != recruitmentId) {
+      return 'schema/type invalid: wrong recruitment exam mission ID';
     }
 
     // Unsafe placeholders
