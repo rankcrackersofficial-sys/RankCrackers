@@ -1,0 +1,979 @@
+{
+  "verdict": "AAF_005B_SOURCE_PACK_RESOLVER_PARTIAL_SOURCE_CANDIDATES_FOUND_WAVE1_HELD",
+  "head": "fdd426545309bb0bb371e408dc6bf0d61048a1ff",
+  "selectedAmtnId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001",
+  "sourceResolverExecuted": true,
+  "sourceCandidates": [
+    {
+      "sourceId": "SRC_NCERT_TEXTBOOK_PORTAL",
+      "trustClass": "OFFICIAL_ENTRY_POINT",
+      "title": "NCERT Textbooks PDF portal, Classes I-XII",
+      "url": "https://ncert.nic.in/textbook.php",
+      "resolvedUse": "Official publication entry point for NCERT Chemistry textbooks; not yet attached as extracted claim-level source text.",
+      "claimCoverage": "SOURCE_DISCOVERY_ONLY"
+    },
+    {
+      "sourceId": "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9",
+      "trustClass": "NCERT_TEXT_MIRROR_SEARCHABLE",
+      "title": "SATHEE NCERT Class 11 Chemistry, Organic Chemistry: Some Basic Principles and Techniques, Qualitative Analysis section",
+      "url": "https://sathee.iitk.ac.in/ncert-books/ncert-books-theory/class-11/nbt-che-11/chemistry-11-chapter-12-organic-chemistrysome-basic-principles-and-techniques/",
+      "resolvedUse": "Searchable NCERT-derived text confirms this is the right chapter family for qualitative organic analysis and Lassaigne test. Needs extracted locators/excerpts before claim-level PASS.",
+      "claimCoverage": "PARTIAL_FOR_LASSAIGNE_AND_ELEMENT_DETECTION"
+    },
+    {
+      "sourceId": "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+      "trustClass": "OFFICIAL_ENTRY_POINT",
+      "title": "NCERT Science Laboratory Manual portal, Chemistry Unit 8: Tests for Functional Groups in Organic Compounds",
+      "url": "https://ncert.ncert.org.in/science-laboratory-manual.php?ln=en",
+      "resolvedUse": "Official lab manual entry point for functional group tests. Exact Unit 8 text/PDF/extract still required before procedure claims pass.",
+      "claimCoverage": "SOURCE_DISCOVERY_ONLY_FOR_FUNCTIONAL_GROUP_PROCEDURES"
+    },
+    {
+      "sourceId": "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC",
+      "trustClass": "OFFICIAL_SOURCE_REQUIRED_NOT_ATTACHED",
+      "title": "NCERT Class 12 Chemistry: Aldehydes, Ketones and Carboxylic Acids",
+      "url": "https://ncert.nic.in/textbook.php",
+      "resolvedUse": "Needed for aldehyde/ketone/carboxylic-acid factual claims and exceptions. Exact extracted locator not yet attached.",
+      "claimCoverage": "UNRESOLVED_REQUIRED_SOURCE"
+    },
+    {
+      "sourceId": "SRC_NCERT_CLASS12_CHEM_AMINES",
+      "trustClass": "OFFICIAL_SOURCE_REQUIRED_NOT_ATTACHED",
+      "title": "NCERT Class 12 Chemistry: Amines",
+      "url": "https://ncert.nic.in/textbook.php",
+      "resolvedUse": "Needed for amine/diazonium/azo-dye claims. Exact extracted locator not yet attached.",
+      "claimCoverage": "UNRESOLVED_REQUIRED_SOURCE"
+    }
+  ],
+  "wave0RevalidationExecuted": true,
+  "summary": {
+    "totalClaims": 51,
+    "supportedByExistingSyllabusScope": 3,
+    "sourceCandidateFoundLocatorPending": 38,
+    "sourceDepthUnresolved": 10,
+    "claimCleanPass": false,
+    "wave1Unlocked": false
+  },
+  "wave0RepairPerformed": false,
+  "wave0RepairReason": "No repair performed because exact claim-level source locators are not attached yet; minimum governed repair requires source proof first.",
+  "wave1EligibilityManifestCreated": true,
+  "wave1Eligible": false,
+  "wave1HoldReason": "Detailed claim support remains locator/extract pending. Source candidates were found, but they are not yet an attached claim-level source pack.",
+  "modelMemoryUsedAsEvidence": false,
+  "firebaseRead": "NO",
+  "firebaseWrite": "NO",
+  "vertexUsed": "NO",
+  "geminiUsed": "NO",
+  "publicationPerformed": "NO",
+  "studentReady": "NO",
+  "modelOnlyCanonicalPromotions": 0,
+  "silentModelFallbacks": 0,
+  "unsourcedStudentReadyItems": 0,
+  "revalidatedClaims": [
+    {
+      "claimId": "CLAIM_0001",
+      "claimTextSummary": "The AMTN belongs under JEE Main 2026 Chemistry Unit 20, Principles Related to Practical Chemistry.",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": true,
+      "derivedFromSupportedFacts": false,
+      "unsupported": false,
+      "conflicting": false,
+      "trustClass": "SOURCE_SCOPE_SUPPORTED",
+      "revalidationStatus": "SUPPORTED_BY_EXISTING_SYLLABUS_SCOPE_SOURCE",
+      "sourcePackAction": "NO_REPAIR_NEEDED"
+    },
+    {
+      "claimId": "CLAIM_0002",
+      "claimTextSummary": "Qualitative organic analysis is within the Practical Chemistry scope for this AMTN.",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": true,
+      "derivedFromSupportedFacts": false,
+      "unsupported": false,
+      "conflicting": false,
+      "trustClass": "SOURCE_SCOPE_SUPPORTED",
+      "revalidationStatus": "SUPPORTED_BY_EXISTING_SYLLABUS_SCOPE_SOURCE",
+      "sourcePackAction": "NO_REPAIR_NEEDED"
+    },
+    {
+      "claimId": "CLAIM_0003",
+      "claimTextSummary": "The draft should cover laboratory identification/testing concepts rather than unrelated chemistry units.",
+      "claimClass": "RELATIONSHIP",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": true,
+      "derivedFromSupportedFacts": false,
+      "unsupported": false,
+      "conflicting": false,
+      "trustClass": "SOURCE_SCOPE_SUPPORTED",
+      "revalidationStatus": "SUPPORTED_BY_EXISTING_SYLLABUS_SCOPE_SOURCE",
+      "sourcePackAction": "NO_REPAIR_NEEDED"
+    },
+    {
+      "claimId": "CLAIM_0004",
+      "claimTextSummary": "Lassaigne's Test (Sodium Fusion Test): Organic compounds are covalently bonded and do not undergo direct ionic reactions",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0005",
+      "claimTextSummary": "Lassaigne's Test (Sodium Fusion Test): Heating the compound with metallic sodium converts covalently bound Nitrogen, Sulphur, and Halogens into ionic sodium salts (NaCN, Na2S, NaX) in the sodium fusion extract (Lassaigne's extract)",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0006",
+      "claimTextSummary": "Detection of Nitrogen, Sulphur, and Halogens: Nitrogen is detected by reacting the extract with ferrous sulphate and ferric ions to yield Prussian blue, Fe4[Fe(CN)6]3",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0007",
+      "claimTextSummary": "Detection of Nitrogen, Sulphur, and Halogens: Sulphur is detected by sodium nitroprusside test giving a purple color, or lead acetate test forming black PbS",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0008",
+      "claimTextSummary": "Detection of Nitrogen, Sulphur, and Halogens: Halogens are detected using silver nitrate solution after boiling with concentrated HNO3 to decompose CN- and S2- ions",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0009",
+      "claimTextSummary": "Detection of Hydroxyl Groups (Alcoholic vs Phenolic): Alcohols react with Ceric Ammonium Nitrate to give a red color, and show turbidity differences with Lucas Reagent (conc",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0010",
+      "claimTextSummary": "Detection of Hydroxyl Groups (Alcoholic vs Phenolic): HCl + ZnCl2)",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0011",
+      "claimTextSummary": "Detection of Hydroxyl Groups (Alcoholic vs Phenolic): Phenols show neutral FeCl3 test (violet color), Phthalein dye test (pink with NaOH), and do not react with Lucas reagent",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0012",
+      "claimTextSummary": "Detection of Carbonyl Groups (Aldehydes and Ketones): Both aldehydes and ketones give an orange-red precipitate with 2,4-DNP",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0013",
+      "claimTextSummary": "Detection of Carbonyl Groups (Aldehydes and Ketones): Aldehydes are differentiated using Tollen's test (silver mirror) and Fehling's test (red Cu2O precipitate)",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0014",
+      "claimTextSummary": "Detection of Carbonyl Groups (Aldehydes and Ketones): Note that aromatic aldehydes do not reduce Fehling's solution",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0015",
+      "claimTextSummary": "Detection of Carboxyl and Amino Groups: Carboxylic acids liberate brisk effervescence of CO2 with NaHCO3 solution",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0016",
+      "claimTextSummary": "Detection of Carboxyl and Amino Groups: Primary amines give the carbylamine test (foul-smelling isocyanide)",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0017",
+      "claimTextSummary": "Detection of Carboxyl and Amino Groups: Primary aliphatic amines evolve N2 gas with HNO2, whereas primary aromatic amines form azo dyes",
+      "claimClass": "FACT",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0018",
+      "claimTextSummary": "Prussian Blue Formation (Nitrogen Test) equation: 6 NaCN + FeSO4 -> Na4[Fe(CN)6] + Na2SO4; 3 Na4[Fe(CN)6] + 4 FeCl3 -> Fe4[Fe(CN)6]3 + 12 NaCl",
+      "claimClass": "REACTION/EQUATION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0019",
+      "claimTextSummary": "Prussian Blue Formation (Nitrogen Test) applicability: Detection of Nitrogen in organic compounds",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0020",
+      "claimTextSummary": "Sulphur Detection Complex equation: Na2S + Na2[Fe(CN)5NO] -> Na4[Fe(CN)5NOS]",
+      "claimClass": "REACTION/EQUATION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0021",
+      "claimTextSummary": "Sulphur Detection Complex applicability: Confirmation of sulphur using sodium nitroprusside",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0022",
+      "claimTextSummary": "Thiocyanate Formation (Joint N & S Test) equation: Na + C + N + S -> NaSCN; 3 NaSCN + FeCl3 -> Fe(SCN)3 + 3 NaCl",
+      "claimClass": "REACTION/EQUATION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_DEPTH_UNRESOLVED",
+      "sourcePackAction": "HOLD_PENDING_SOURCE_PACK"
+    },
+    {
+      "claimId": "CLAIM_0023",
+      "claimTextSummary": "Thiocyanate Formation (Joint N & S Test) applicability: Detection when both Nitrogen and Sulphur are present together",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0024",
+      "claimTextSummary": "Misconception statement: Benzaldehyde gives a positive Fehling's test because it is an aldehyde.",
+      "claimClass": "MISCONCEPTION_CORRECTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0025",
+      "claimTextSummary": "Correction: Fehling's reagent is a weak oxidizing agent and cannot oxidize aromatic aldehydes like benzaldehyde. Only aliphatic aldehydes reduce Fehling's solution.",
+      "claimClass": "MISCONCEPTION_CORRECTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0026",
+      "claimTextSummary": "Misconception statement: Phenols give effervescence with NaHCO3 just like carboxylic acids.",
+      "claimClass": "MISCONCEPTION_CORRECTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0027",
+      "claimTextSummary": "Correction: Phenols are weaker acids than carbonic acid (H2CO3) and cannot displace CO2 from NaHCO3, except for highly nitrated phenols like picric acid.",
+      "claimClass": "MISCONCEPTION_CORRECTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0028",
+      "claimTextSummary": "Misconception statement: Concentrated HNO3 is added in the silver nitrate test for halogens just to make the solution acidic.",
+      "claimClass": "MISCONCEPTION_CORRECTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_DEPTH_UNRESOLVED",
+      "sourcePackAction": "HOLD_PENDING_SOURCE_PACK"
+    },
+    {
+      "claimId": "CLAIM_0029",
+      "claimTextSummary": "Correction: HNO3 is added specifically to decompose NaCN and Na2S present in the extract, preventing interfering precipitates of AgCN or Ag2S.",
+      "claimClass": "MISCONCEPTION_CORRECTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_DEPTH_UNRESOLVED",
+      "sourcePackAction": "HOLD_PENDING_SOURCE_PACK"
+    },
+    {
+      "claimId": "CLAIM_0030",
+      "claimTextSummary": "Worked example problem: An organic compound containing Nitrogen and Sulphur yields a blood-red color upon adding neutral FeCl3 solution to its sodium fusion extract. Explain the reaction and state why Prussian blue was not formed.",
+      "claimClass": "EXAMPLE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0031",
+      "claimTextSummary": "Step 1: During sodium fusion, if both N and S are present, sodium thiocyanate (NaSCN) is formed instead of separate NaCN and Na2S.",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_DEPTH_UNRESOLVED",
+      "sourcePackAction": "HOLD_PENDING_SOURCE_PACK"
+    },
+    {
+      "claimId": "CLAIM_0032",
+      "claimTextSummary": "Step 2: Reaction: Na + C + N + S -> NaSCN.",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_DEPTH_UNRESOLVED",
+      "sourcePackAction": "HOLD_PENDING_SOURCE_PACK"
+    },
+    {
+      "claimId": "CLAIM_0033",
+      "claimTextSummary": "Step 3: Treatment with FeCl3 solution yields ferric thiocyanate complex, Fe(SCN)3, which gives a characteristic blood-red coloration.",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_DEPTH_UNRESOLVED",
+      "sourcePackAction": "HOLD_PENDING_SOURCE_PACK"
+    },
+    {
+      "claimId": "CLAIM_0034",
+      "claimTextSummary": "Step 4: Prussian blue is not formed because free cyanide ions (CN-) are absent as all cyanide is bound as SCN-.",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0035",
+      "claimTextSummary": "Worked example answer: Blood-red color is due to Fe(SCN)3 formation. Excess sodium was not used, leaving N and S combined as NaSCN instead of forming separate NaCN and Na2S.",
+      "claimClass": "EXAMPLE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_DEPTH_UNRESOLVED",
+      "sourcePackAction": "HOLD_PENDING_SOURCE_PACK"
+    },
+    {
+      "claimId": "CLAIM_0036",
+      "claimTextSummary": "Worked example problem: How can you chemically distinguish between Aniline and Ethylamine using a laboratory test?",
+      "claimClass": "EXAMPLE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_AMINES"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0037",
+      "claimTextSummary": "Step 1: Perform the Azo Dye Test.",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_AMINES"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0038",
+      "claimTextSummary": "Step 2: Dissolve the compound in dil. HCl, cool to 0-5 degrees C, and add cold NaNO2 solution (HNO2 formed in situ).",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_AMINES"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0039",
+      "claimTextSummary": "Step 3: Add the resulting solution to a cold alkaline solution of beta-naphthol.",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_DEPTH_UNRESOLVED",
+      "sourcePackAction": "HOLD_PENDING_SOURCE_PACK"
+    },
+    {
+      "claimId": "CLAIM_0040",
+      "claimTextSummary": "Step 4: Aniline (primary aromatic amine) forms a stable diazonium salt which couples with beta-naphthol to give a brilliant orange/red azo dye.",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_AMINES"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0041",
+      "claimTextSummary": "Step 5: Ethylamine (primary aliphatic amine) forms an unstable diazonium salt that decomposes immediately with brisk effervescence of N2 gas and no dye is formed.",
+      "claimClass": "PROCEDURE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_AMINES"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0042",
+      "claimTextSummary": "Worked example answer: Aniline gives a positive Azo Dye test (orange/red dye), whereas Ethylamine evolves N2 gas with effervescence.",
+      "claimClass": "EXAMPLE",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_AMINES"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0043",
+      "claimTextSummary": "Self-check question: Which of the following compounds will NOT give a positive sodium bicarbonate test? Option A: Formic acid, Option B: Benzoic acid, Option C: Phenol, Option D: Picric acid.",
+      "claimClass": "SELF_CHECK_ASSERTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0044",
+      "claimTextSummary": "Self-check answer: Option C. Phenol is less acidic than H2CO3 and fails to liberate CO2 from NaHCO3. Picric acid is strongly acidic due to three electron-withdrawing NO2 groups and gives a positive test.",
+      "claimClass": "SELF_CHECK_ASSERTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0045",
+      "claimTextSummary": "Self-check question: A sodium fusion extract gives a pale yellow precipitate sparingly soluble in ammonium hydroxide when treated with AgNO3 solution. The element present is: Option A: Chlorine, Option B: Bromine, Option C: Iodine, Option D: Nitrogen.",
+      "claimClass": "SELF_CHECK_ASSERTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_SATHEE_NCERT_CH11_ORGANIC_12_9"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0046",
+      "claimTextSummary": "Self-check answer: Option B. Silver bromide (AgBr) forms a pale yellow precipitate that is sparingly soluble in NH4OH solution.",
+      "claimClass": "SELF_CHECK_ASSERTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_DEPTH_UNRESOLVED",
+      "sourcePackAction": "HOLD_PENDING_SOURCE_PACK"
+    },
+    {
+      "claimId": "CLAIM_0047",
+      "claimTextSummary": "Self-check question: Lucas reagent reacts fastest with which of the following alcohols at room temperature? Option A: 1-Butanol, Option B: 2-Butanol, Option C: 2-Methylpropan-2-ol, Option D: Ethanol.",
+      "claimClass": "SELF_CHECK_ASSERTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0048",
+      "claimTextSummary": "Self-check answer: Option C. Lucas reagent reacts via an SN1 mechanism involving a carbocation intermediate. 2-Methylpropan-2-ol is a tertiary alcohol and forms an immediate turbidity.",
+      "claimClass": "SELF_CHECK_ASSERTION",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "NEEDS_DETAILED_SOURCE_PACK",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0049",
+      "claimTextSummary": "Draft cites reference: NCERT Class 12 Chemistry, Chapter 12: Aldehydes, Ketones and Carboxylic Acids",
+      "claimClass": "OTHER",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "REFERENCE_NAMED_BUT_NOT_ATTACHED",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_ALDEHYDE_KETONE_CARBOXYLIC"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0050",
+      "claimTextSummary": "Draft cites reference: NCERT Class 12 Chemistry, Chapter 13: Amines",
+      "claimClass": "OTHER",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "REFERENCE_NAMED_BUT_NOT_ATTACHED",
+      "revalidationStatus": "SOURCE_CANDIDATE_FOUND_EXACT_LOCATOR_PENDING",
+      "candidateSourceIds": [
+        "SRC_NCERT_LAB_MANUAL_PORTAL_CHEM_UNIT_8",
+        "SRC_NCERT_CLASS12_CHEM_AMINES"
+      ],
+      "sourcePackAction": "HOLD_PENDING_EXTRACTED_LOCATOR"
+    },
+    {
+      "claimId": "CLAIM_0051",
+      "claimTextSummary": "Draft cites reference: NCERT Class 11 Chemistry, Chapter 12: Organic Chemistry - Some Basic Principles and Techniques",
+      "claimClass": "OTHER",
+      "sourceId": "SRC_0001",
+      "sourceLocator": "JEE main Syllabus 2026.pdf::page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "directlySupported": false,
+      "derivedFromSupportedFacts": false,
+      "unsupported": true,
+      "conflicting": false,
+      "trustClass": "REFERENCE_NAMED_BUT_NOT_ATTACHED",
+      "revalidationStatus": "SOURCE_DEPTH_UNRESOLVED",
+      "sourcePackAction": "HOLD_PENDING_SOURCE_PACK"
+    }
+  ],
+  "finalLine": "AAF_005B_WAVE1_HELD_UNTIL_EXTRACTED_CLAIM_LEVEL_SOURCE_PACK_READY"
+}
