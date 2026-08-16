@@ -307,6 +307,65 @@ async function main() {
       }
     });
 
+    await runTestCase('Macro-origin evidence enters C4 while canonical Mastery/Coverage/Risk/Battle/Rebuild remain fail-closed', async () => {
+      const sessionMacro = await createAttemptSession({
+        db,
+        userId: 'student_user_123',
+        macroTestId: 'macro_c4_test',
+        scheduleId: 'sch_c4_macro',
+        questionIds: ['q_mcq_exact'],
+        questionVersions: { q_mcq_exact: 1 },
+        poolVersion: 1,
+        assemblyVersion: 1,
+        attemptOrdinal: 2, // Ordinal 2 to prevent collision
+        isRunnable: true
+      });
+
+      await evaluateAttempt({
+        db,
+        attemptSessionId: sessionMacro.attemptSessionId,
+        responses: { q_mcq_exact: '1' },
+        submittedAt: new Date().toISOString()
+      });
+
+      const metrics = await consumeEvidenceOutboxEvents({ db });
+      totalEventsConsumed += metrics.eventsConsumed;
+
+      if (metrics.eventsConsumed !== 1) {
+        throw new Error(`Expected 1 outbox event consumed for macro, got: ${metrics.eventsConsumed}`);
+      }
+
+      // Verify mastery remains fail-closed
+      const masteryDoc = await db.collection('users').doc('student_user_123').collection('atomic_mastery').doc('atom_phy_01').get();
+      if (masteryDoc.exists && (masteryDoc.data().mastery !== null || masteryDoc.data().status !== 'Unknown')) {
+        throw new Error('Macro evidence should fail-closed with Unknown mastery');
+      }
+
+      // Verify coverage remains fail-closed
+      const covDoc = await db.collection('users').doc('student_user_123').collection('atomic_coverage').doc('atom_phy_01').get();
+      if (covDoc.exists && (covDoc.data().coverageScore !== null || covDoc.data().status !== 'Incomplete')) {
+        throw new Error('Macro evidence should fail-closed with Incomplete coverage');
+      }
+
+      // Verify risk remains fail-closed
+      const riskDoc = await db.collection('users').doc('student_user_123').collection('atomic_risk').doc('atom_phy_01').get();
+      if (riskDoc.exists && (riskDoc.data().riskScore !== null || riskDoc.data().status !== 'Incomplete')) {
+        throw new Error('Macro evidence should fail-closed with Incomplete risk');
+      }
+
+      // Verify battle remains fail-closed
+      const battleDoc = await db.collection('users').doc('student_user_123').collection('battle_priority').doc('atom_phy_01').get();
+      if (battleDoc.exists && (battleDoc.data().battleScore !== null || battleDoc.data().status !== 'Incomplete')) {
+        throw new Error('Macro evidence should fail-closed with Incomplete battle priority');
+      }
+
+      // Verify rebuild candidate remains fail-closed
+      const rebuildDoc = await db.collection('users').doc('student_user_123').collection('rebuild_candidates').doc('atom_phy_01').get();
+      if (rebuildDoc.exists && (rebuildDoc.data().rebuildScore !== null || rebuildDoc.data().isRebuild !== false)) {
+        throw new Error('Macro evidence should fail-closed with no rebuild candidate status');
+      }
+    });
+
   });
 
   console.log(`\n==============================================`);

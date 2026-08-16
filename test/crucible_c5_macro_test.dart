@@ -148,6 +148,119 @@ void main() {
       expect(testCount100.length, 100);
     });
 
+    test('Deterministic exact 100 selection when pool > 100 and seed stability', () {
+      final pool = List.generate(120, (i) {
+        return QuestionModel(
+          id: 'q_${i.toString().padLeft(3, '0')}',
+          nodeId: 'node_1',
+          examId: 'jee_main_2026',
+          subjectId: 'Physics',
+          question: 'Stem $i',
+          options: const ['A', 'B', 'C', 'D'],
+          answerIndex: 0,
+          difficulty: QuestionDifficulty.medium,
+          status: 'published',
+          version: 1,
+          lastAdminId: 'admin_human_01',
+          updatedAt: DateTime(2026, 8, 13),
+          verifiedBy: 'admin_human_02',
+          verifiedAt: DateTime(2026, 8, 13),
+          atomicTopicIds: const ['atom_01'],
+          factId: 'fact_01',
+          questionType: 'mcq_single',
+          solution: 'Verified explanation.',
+          questionLineageId: 'lin_${i.toString().padLeft(3, '0')}',
+        );
+      });
+
+      final verifiedFactIds = {'fact_01'};
+      final factSourceDocuments = {'fact_01': 'doc_01'};
+      final reviewerAuthorities = {'admin_human_02': 'PRO_REVIEWER'};
+      final verifiedAnswerKeys = <String>{};
+      final verifiedAnswerKeyValues = <String, String>{};
+      final studentReadyQuestionIds = <String>{};
+      final activeQuestionVersions = <String, int>{};
+      final verifiedSolutions = <String, SolutionVerificationRecord>{};
+
+      for (final q in pool) {
+        verifiedAnswerKeys.add(q.id);
+        verifiedAnswerKeyValues[q.id] = '0';
+        studentReadyQuestionIds.add(q.id);
+        activeQuestionVersions[q.questionLineageId!] = 1;
+        verifiedSolutions[q.id] = SolutionVerificationRecord(
+          questionId: q.id,
+          questionLineageId: q.questionLineageId!,
+          version: 1,
+          solutionStatus: 'verified',
+          solutionHash: MicroTestEngine.hashSolution(q.solution),
+          reviewingAuthority: 'admin_human_02',
+          verifiedAnswerValue: '0',
+          verifiedAt: DateTime(2026, 8, 13),
+        );
+      }
+
+      final trust = QuestionTrustSnapshot(
+        verifiedFactIds: verifiedFactIds,
+        factSourceDocuments: factSourceDocuments,
+        heldFactIds: const {},
+        reviewerAuthorities: reviewerAuthorities,
+        verifiedAnswerKeys: verifiedAnswerKeys,
+        verifiedAnswerKeyValues: verifiedAnswerKeyValues,
+        studentReadyQuestionIds: studentReadyQuestionIds,
+        pyqPaperEvidence: const {},
+        activeQuestionVersions: activeQuestionVersions,
+        verifiedSolutions: verifiedSolutions,
+      );
+
+      // Run assembly 1
+      final assembled1 = MacroTestEngine.assembleMacroTest(
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_01',
+        allowedAtomIds: const ['atom_01'],
+        pool: pool,
+        requiredCount: 100,
+        trustSnapshot: trust,
+        manualSeed: 12345,
+      );
+
+      // Run assembly 2 with same seed
+      final assembled2 = MacroTestEngine.assembleMacroTest(
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_01',
+        allowedAtomIds: const ['atom_01'],
+        pool: pool,
+        requiredCount: 100,
+        trustSnapshot: trust,
+        manualSeed: 12345,
+      );
+
+      expect(assembled1.length, 100);
+      expect(assembled2.length, 100);
+      for (int i = 0; i < 100; i++) {
+        expect(assembled1[i].id, assembled2[i].id);
+      }
+
+      // Run assembly 3 with different seed
+      final assembled3 = MacroTestEngine.assembleMacroTest(
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_01',
+        allowedAtomIds: const ['atom_01'],
+        pool: pool,
+        requiredCount: 100,
+        trustSnapshot: trust,
+        manualSeed: 54321,
+      );
+
+      bool orderDiffers = false;
+      for (int i = 0; i < 100; i++) {
+        if (assembled1[i].id != assembled3[i].id) {
+          orderDiffers = true;
+          break;
+        }
+      }
+      expect(orderDiffers, isTrue); // Demonstrates deterministic seed stability variations
+    });
+
     test('Macro seed derivation is reproducible and stable', () {
       final seed1 = MacroTestEngine.deriveSeed(
         macroTestId: 'macro_01',
@@ -291,6 +404,178 @@ void main() {
         trustSnapshot: trust,
       );
       expect(err, contains('atom atom_future_01 is outside schedule scope'));
+    });
+
+    test('Unknown atom rejection', () {
+      final qWrongAtom = baseQuestion.copyWith(atomicTopicIds: const ['atom_unknown_999']);
+      final err = MicroTestEngine.checkQuestionEligibility(
+        qWrongAtom,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trust,
+      );
+      expect(err, contains('outside schedule scope'));
+    });
+
+    test('Other-mission/wrong recruitment ID rejection', () {
+      final qWrongMission = baseQuestion.copyWith(examId: '');
+      final err = MicroTestEngine.checkQuestionEligibility(
+        qWrongMission,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trust,
+      );
+      expect(err, contains('schema/type invalid: missing basic fields'));
+    });
+
+    test('Source unresolved / missing fact ID or held fact rejection', () {
+      final qNoFact = baseQuestion.copyWith(factId: '');
+      final errNoFact = MicroTestEngine.checkQuestionEligibility(
+        qNoFact,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trust,
+      );
+      expect(errNoFact, contains('missing factId'));
+
+      final qUnregisteredFact = baseQuestion.copyWith(factId: 'fact_unregistered');
+      final errUnregistered = MicroTestEngine.checkQuestionEligibility(
+        qUnregisteredFact,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trust,
+      );
+      expect(errUnregistered, contains('unverified or unregistered'));
+
+      final trustHeld = QuestionTrustSnapshot(
+        verifiedFactIds: const {'fact_01'},
+        factSourceDocuments: const {'fact_01': 'doc_01'},
+        heldFactIds: const {'fact_01'}, // Fact is held
+        reviewerAuthorities: const {'admin_human_01': 'PRO_REVIEWER'},
+        verifiedAnswerKeys: const {'q_valid_01'},
+        verifiedAnswerKeyValues: const {'q_valid_01': '0'},
+        studentReadyQuestionIds: const {'q_valid_01'},
+        pyqPaperEvidence: const {},
+        activeQuestionVersions: const {'lin_01': 1},
+        verifiedSolutions: trust.verifiedSolutions,
+      );
+
+      final errHeld = MicroTestEngine.checkQuestionEligibility(
+        baseQuestion,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trustHeld,
+      );
+      expect(errHeld, contains('academically held/rejected'));
+    });
+
+    test('Answer key unverified or value conflict rejection', () {
+      final trustNoKey = QuestionTrustSnapshot(
+        verifiedFactIds: const {'fact_01'},
+        factSourceDocuments: const {'fact_01': 'doc_01'},
+        heldFactIds: const {},
+        reviewerAuthorities: const {'admin_human_01': 'PRO_REVIEWER'},
+        verifiedAnswerKeys: const {}, // No keys
+        verifiedAnswerKeyValues: const {},
+        studentReadyQuestionIds: const {'q_valid_01'},
+        pyqPaperEvidence: const {},
+        activeQuestionVersions: const {'lin_01': 1},
+        verifiedSolutions: trust.verifiedSolutions,
+      );
+
+      final errNoKey = MicroTestEngine.checkQuestionEligibility(
+        baseQuestion,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trustNoKey,
+      );
+      expect(errNoKey, contains('key lacks professional verification'));
+
+      final trustConflictingKey = QuestionTrustSnapshot(
+        verifiedFactIds: const {'fact_01'},
+        factSourceDocuments: const {'fact_01': 'doc_01'},
+        heldFactIds: const {},
+        reviewerAuthorities: const {'admin_human_01': 'PRO_REVIEWER'},
+        verifiedAnswerKeys: const {'q_valid_01'},
+        verifiedAnswerKeyValues: const {'q_valid_01': '3'}, // Conflicting answer
+        studentReadyQuestionIds: const {'q_valid_01'},
+        pyqPaperEvidence: const {},
+        activeQuestionVersions: const {'lin_01': 1},
+        verifiedSolutions: trust.verifiedSolutions,
+      );
+
+      final errConflict = MicroTestEngine.checkQuestionEligibility(
+        baseQuestion,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trustConflictingKey,
+      );
+      expect(errConflict, contains('answer key value conflict'));
+    });
+
+    test('Solution unverified or hash mismatch rejection', () {
+      final trustNoSolution = QuestionTrustSnapshot(
+        verifiedFactIds: const {'fact_01'},
+        factSourceDocuments: const {'fact_01': 'doc_01'},
+        heldFactIds: const {},
+        reviewerAuthorities: const {'admin_human_01': 'PRO_REVIEWER'},
+        verifiedAnswerKeys: const {'q_valid_01'},
+        verifiedAnswerKeyValues: const {'q_valid_01': '0'},
+        studentReadyQuestionIds: const {'q_valid_01'},
+        pyqPaperEvidence: const {},
+        activeQuestionVersions: const {'lin_01': 1},
+        verifiedSolutions: const {}, // Missing solutions
+      );
+
+      final errNoSolution = MicroTestEngine.checkQuestionEligibility(
+        baseQuestion,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trustNoSolution,
+      );
+      expect(errNoSolution, contains('solution verification record is missing'));
+
+      final trustHashMismatch = QuestionTrustSnapshot(
+        verifiedFactIds: const {'fact_01'},
+        factSourceDocuments: const {'fact_01': 'doc_01'},
+        heldFactIds: const {},
+        reviewerAuthorities: const {'admin_human_01': 'PRO_REVIEWER'},
+        verifiedAnswerKeys: const {'q_valid_01'},
+        verifiedAnswerKeyValues: const {'q_valid_01': '0'},
+        studentReadyQuestionIds: const {'q_valid_01'},
+        pyqPaperEvidence: const {},
+        activeQuestionVersions: const {'lin_01': 1},
+        verifiedSolutions: {
+          'q_valid_01': SolutionVerificationRecord(
+            questionId: 'q_valid_01',
+            questionLineageId: 'lin_01',
+            version: 1,
+            solutionStatus: 'verified',
+            solutionHash: 'wrong_sha256_hash', // Conflicting hash
+            reviewingAuthority: 'admin_human_01',
+            verifiedAnswerValue: '0',
+            verifiedAt: DateTime(2026, 8, 13),
+          )
+        },
+      );
+
+      final errHash = MicroTestEngine.checkQuestionEligibility(
+        baseQuestion,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trustHashMismatch,
+      );
+      expect(errHash, contains('solution text hash mismatch'));
+    });
+
+    test('Unhydrated repository fails closed with TRUST_SNAPSHOT_NOT_READY', () {
+      final err = MicroTestEngine.checkQuestionEligibility(
+        baseQuestion,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: null, // Forces fail-closed
+      );
+      expect(err, equals('TRUST_SNAPSHOT_NOT_READY'));
     });
 
     test('Inactive/Unapproved/Draft status question is rejected', () {

@@ -492,6 +492,118 @@ async function main() {
       }
     });
 
+    await runTestCase('NOT_READY Macro session-open denial', async () => {
+      let denied = false;
+      try {
+        await createAttemptSession({
+          db,
+          userId: 'student_user_123',
+          macroTestId: 'macro_nr',
+          scheduleId: 'sch_nr_macro',
+          questionIds: ['q_mcq_exact'],
+          questionVersions: { q_mcq_exact: 1 },
+          poolVersion: 1,
+          assemblyVersion: 1,
+          attemptOrdinal: 1,
+          isRunnable: false // NOT_READY
+        });
+      } catch (err) {
+        if (err.message.includes('NOT_READY')) denied = true;
+      }
+      if (!denied) throw new Error('Expected NOT_READY macro test to reject session creation.');
+    });
+
+    await runTestCase('Stale Macro session evaluation rejection', async () => {
+      const session = await createAttemptSession({
+        db,
+        userId: 'student_user_123',
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_stale_macro',
+        questionIds: ['q_mcq_exact'],
+        questionVersions: { q_mcq_exact: 1 },
+        poolVersion: 1,
+        assemblyVersion: 1,
+        attemptOrdinal: 1,
+        isRunnable: true
+      });
+      const staleSessionId = session.attemptSessionId;
+
+      // Insert pre-existing result in macro_attempts
+      await db.collection('macro_attempts').doc(staleSessionId).set({
+        attemptSessionId: staleSessionId,
+        userId: 'student_user_123',
+        status: 'submitted',
+        evaluated: true,
+        score: 1
+      });
+
+      // Try evaluating again
+      const result = await evaluateAttempt({
+        db,
+        attemptSessionId: staleSessionId,
+        responses: { q_mcq_exact: '1' },
+        submittedAt: new Date().toISOString()
+      });
+      if (result.score !== 1) throw new Error('Expected stale evaluation to return existing result without recalculating.');
+    });
+
+    await runTestCase('Expired Macro session evaluation rejection', async () => {
+      const expiredSessionId = 'session_expired_macro_test';
+      const pastDate = new Date(Date.now() - 3600 * 1000); // 1 hour ago
+      
+      await db.collection('attempt_sessions').doc(expiredSessionId).set({
+        attemptSessionId: expiredSessionId,
+        userId: 'student_user_123',
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_exp_macro',
+        questionIds: ['q_mcq_exact'],
+        questionVersions: { q_mcq_exact: 1 },
+        poolVersion: 1,
+        assemblyVersion: 1,
+        attemptOrdinal: 1,
+        openedAt: pastDate.toISOString(),
+        expiresAt: pastDate.toISOString(),
+        status: 'opened'
+      });
+
+      let rejected = false;
+      try {
+        await evaluateAttempt({
+          db,
+          attemptSessionId: expiredSessionId,
+          responses: { q_mcq_exact: '1' },
+          submittedAt: new Date().toISOString()
+        });
+      } catch (err) {
+        if (err.message.includes('EXPIRED_SESSION')) rejected = true;
+      }
+      if (!rejected) throw new Error('Expected expired macro session to reject evaluation.');
+    });
+
+    await runTestCase('Authoritative Macro session and attempts write denial for student', async () => {
+      await assertFails(otherDb.collection('attempt_sessions').doc('session_macro_direct_write').set({
+        attemptSessionId: 'session_macro_direct_write',
+        userId: 'student_user_123',
+        macroTestId: 'macro_01'
+      }));
+      await assertFails(otherDb.collection('macro_attempts').doc('session_macro_direct_write').set({
+        attemptSessionId: 'session_macro_direct_write',
+        userId: 'student_user_123',
+        evaluated: true
+      }));
+    });
+
+    await runTestCase('Authoritative AtomicEvidence and EvidenceOutbox write denial for student', async () => {
+      await assertFails(otherDb.collection('atomic_evidence_records').doc('evidence_direct').set({
+        attemptSessionId: 'session_direct',
+        assessmentType: 'macro'
+      }));
+      await assertFails(otherDb.collection('evidence_outbox').doc('outbox_direct').set({
+        attemptSessionId: 'session_direct',
+        eventStatus: 'pending_processing'
+      }));
+    });
+
     await runTestCase('CROSS_USER_ATTEMPT_ACCESS = 0: Student cannot read or write another users macro attempt', async () => {
       await db.collection('macro_attempts').doc('session_macro_cross_user').set({
         attemptSessionId: 'session_macro_cross_user',
