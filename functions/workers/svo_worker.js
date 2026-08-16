@@ -29,7 +29,7 @@ exports.svoWorker = functions
     if (task.type !== 'SVO_EXTRACTION') return;
 
     // 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
-    if (task.runId || task.jobId || task.idempotencyKey) {
+    if (task.queueContract === 'academic_factory_v1') {
       console.log(`🔱 SVO QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
       return;
     }

@@ -18,7 +18,7 @@ exports.encodingWorker = functions.firestore
     if (task.type !== 'ENCODING_NORMALIZATION') return;
 
     // 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
-    if (task.runId || task.jobId || task.idempotencyKey) {
+    if (task.queueContract === 'academic_factory_v1') {
       console.log(`🔱 ENCODING QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
       return;
     }

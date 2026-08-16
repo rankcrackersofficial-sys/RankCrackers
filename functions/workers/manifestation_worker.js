@@ -21,7 +21,7 @@ exports.knowledgeManifestationWorker = functions
     if (task.type !== 'MANIFEST_KNOWLEDGE') return;
 
     // 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
-    if (task.runId || task.jobId || task.idempotencyKey) {
+    if (task.queueContract === 'academic_factory_v1') {
       console.log(`🔱 MANIFESTATION QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
       return;
     }

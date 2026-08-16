@@ -23,7 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.queueWorker = void 0;
+exports.queueWorker = exports.isLegacyGenericTask = exports.SPECIALIZED_TASK_TYPES = void 0;
 const functions = __importStar(require("firebase-functions"));
 const admin = __importStar(require("firebase-admin"));
 const providerExecutor_1 = require("../providers/providerExecutor");
@@ -35,7 +35,7 @@ if (admin.apps.length === 0) {
  * 🔱 LEGACY QUEUE QUARANTINE (AAF-004A)
  * Tasks handled by specialized workers or the new AAF system must be ignored by this worker.
  */
-const SPECIALIZED_TASK_TYPES = [
+exports.SPECIALIZED_TASK_TYPES = [
     'MANIFEST_KNOWLEDGE',
     'STRUCTURAL',
     'SVO_EXTRACTION',
@@ -44,6 +44,22 @@ const SPECIALIZED_TASK_TYPES = [
     'docxParse',
     'xlsxParse'
 ];
+/**
+ * 🛡️ OWNERSHIP CLASSIFIER
+ * Decides if a task document should be handled by the legacy generic worker.
+ */
+function isLegacyGenericTask(data) {
+    if (!data || !data.type)
+        return false;
+    // 1. AAF Guard: Locked queue discriminator
+    if (data.queueContract === 'academic_factory_v1')
+        return false;
+    // 2. Specialized Type Guard
+    if (exports.SPECIALIZED_TASK_TYPES.includes(data.type))
+        return false;
+    return true;
+}
+exports.isLegacyGenericTask = isLegacyGenericTask;
 exports.queueWorker = functions.firestore
     .document('ai_queue/{taskId}')
     .onCreate(async (snap, context) => {
@@ -51,22 +67,12 @@ exports.queueWorker = functions.firestore
     if (!data)
         return;
     const taskId = context.params.taskId;
+    // 🛡️ OWNERSHIP CHECK
+    if (!isLegacyGenericTask(data)) {
+        console.log(`🔱 QUEUE QUARANTINE: Task ${taskId} is AAF or Specialized. Ignoring.`);
+        return;
+    }
     const { type, provider, payload } = data;
-    // 🛡️ AAF GUARD: If task has AAF identifiers, it belongs to the Autonomous Factory system.
-    if (data.runId || data.jobId || data.idempotencyKey) {
-        console.log(`🔱 QUEUE QUARANTINE: Task ${taskId} is an AAF job. Ignoring in legacy worker.`);
-        return;
-    }
-    // 🛡️ SPECIALIZATION GUARD: Ignore types handled by dedicated workers.
-    if (SPECIALIZED_TASK_TYPES.includes(type)) {
-        console.log(`🔱 QUEUE QUARANTINE: Task ${taskId} type '${type}' is specialized. Ignoring in legacy worker.`);
-        return;
-    }
-    // 🛡️ UNKNOWN TASK FAIL-CLOSED: If type is missing or not in prompt factory, ignore or fail.
-    if (!type) {
-        console.warn(`🔱 QUEUE QUARANTINE: Task ${taskId} has no type. Ignoring.`);
-        return;
-    }
     const taskRef = snap.ref;
     try {
         // 🛡️ ATOMIC CLAIM: Ensure this generic worker claims the task before processing.
@@ -152,4 +158,3 @@ exports.queueWorker = functions.firestore
         }
     }
 });
-//# sourceMappingURL=queueWorker.js.map

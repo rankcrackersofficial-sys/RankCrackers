@@ -39,7 +39,7 @@ exports.sentinelBackgroundWorker = functions
     if (beforeTask && beforeTask.status === task.status) return;
 
     // 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
-    if (task.runId || task.jobId || task.idempotencyKey) {
+    if (task.queueContract === 'academic_factory_v1') {
       console.log(`🔱 SENTINEL QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
       return;
     }
@@ -47,6 +47,9 @@ exports.sentinelBackgroundWorker = functions
     const { type, payload } = task;
 
     if (type === 'STRUCTURAL' || type === 'SVO_EXTRACTION') return;
+
+    // 🛡️ GENERIC TASK GUARD: mcq, digibook, and revision are handled by the generic queue worker.
+    if (['mcq', 'digibook', 'revision'].includes(type)) return;
 
     const startTime = Date.now();
     const taskRef = admin.firestore().collection("ai_queue").doc(taskId);
