@@ -16,8 +16,53 @@ class BatchResult {
   });
 }
 
+class CanonicalReuseIndex {
+  final Map<String, String> _topicToArtifactId = {}; // atomicId -> artifactId
+  final Map<String, List<String>> _artifactIdToMissions =
+      {}; // artifactId -> [missionIds]
+  final Map<String, int> _artifactIdToVersion = {}; // artifactId -> version
+
+  String? getReusableArtifact(String atomicId, {required int version}) {
+    final artifactId = _topicToArtifactId[atomicId];
+    if (artifactId != null) {
+      final currentVersion = _artifactIdToVersion[artifactId] ?? 1;
+      if (currentVersion < version) {
+        // STALE_VERSION_REUSE_BLOCKED
+        return null;
+      }
+      return artifactId;
+    }
+    return null;
+  }
+
+  void indexArtifact({
+    required String atomicId,
+    required String artifactId,
+    required int version,
+    required String missionId,
+  }) {
+    _topicToArtifactId[atomicId] = artifactId;
+    _artifactIdToVersion[artifactId] = version;
+    bindMission(artifactId: artifactId, missionId: missionId);
+  }
+
+  void bindMission({required String artifactId, required String missionId}) {
+    _artifactIdToMissions.putIfAbsent(artifactId, () => []).add(missionId);
+  }
+
+  bool hasBinding(String artifactId, String missionId) {
+    return _artifactIdToMissions[artifactId]?.contains(missionId) ?? false;
+  }
+
+  int get totalIndexed => _topicToArtifactId.length;
+  int get totalBindings =>
+      _artifactIdToMissions.values.fold(0, (sum, list) => sum + list.length);
+}
+
 Future<BatchResult> runBatchAssembly({
   required List<Map<String, dynamic>> candidates,
+  CanonicalReuseIndex? reuseIndex,
+  String? currentMissionId,
 }) async {
   int selected = 0;
   int assembled = 0;
@@ -32,6 +77,7 @@ Future<BatchResult> runBatchAssembly({
       final verdict = candidate['verdict'];
       final unsupportedClaims = candidate['unsupportedClaims'] ?? 0;
       final candidateId = candidate['id'] as String;
+      final version = candidate['version'] ?? 1;
 
       if (hasHardHold ||
           hasRepair ||
@@ -44,6 +90,22 @@ Future<BatchResult> runBatchAssembly({
       if (assembledIds.contains(candidateId)) {
         blocked++;
         continue;
+      }
+
+      // Query Canonical Reuse Index
+      if (reuseIndex != null && currentMissionId != null) {
+        final cachedArtifact =
+            reuseIndex.getReusableArtifact(candidateId, version: version);
+        if (cachedArtifact != null) {
+          // REUSE HIT: Bind new mission instead of duplicate assembly
+          reuseIndex.bindMission(
+            artifactId: cachedArtifact,
+            missionId: currentMissionId,
+          );
+          assembled++;
+          assembledIds.add(candidateId);
+          continue;
+        }
       }
 
       final realm = RecruitmentRealm(
@@ -81,6 +143,16 @@ Future<BatchResult> runBatchAssembly({
       if (draft != null) {
         assembled++;
         assembledIds.add(candidateId);
+
+        // Index the newly created canonical artifact
+        if (reuseIndex != null && currentMissionId != null) {
+          reuseIndex.indexArtifact(
+            atomicId: candidateId,
+            artifactId: draft.id,
+            version: version,
+            missionId: currentMissionId,
+          );
+        }
       } else {
         blocked++;
       }
@@ -269,7 +341,6 @@ void main() {
           '🔱 TEST: Orchestrating Batch B (size 10) with invalid fixtures...');
 
       final List<Map<String, dynamic>> candidates = [];
-      // 10 valid fixtures
       for (int i = 1; i <= 10; i++) {
         candidates.add({
           'id': 'BATCH_B_CANDIDATE_0$i',
@@ -280,13 +351,12 @@ void main() {
           'repairRequired': false,
         });
       }
-      // 2 invalid fixtures (blocked)
       candidates.add({
         'id': 'BATCH_B_INVALID_01',
         'realmId': 'REALM_BATCH_B',
         'verdict': 'PASS',
         'unsupportedClaims': 0,
-        'hardHold': true, // holds blocked
+        'hardHold': true,
         'repairRequired': false,
       });
       candidates.add({
@@ -295,7 +365,7 @@ void main() {
         'verdict': 'PASS',
         'unsupportedClaims': 0,
         'hardHold': false,
-        'repairRequired': true, // repairs blocked
+        'repairRequired': true,
       });
 
       final result = await runBatchAssembly(candidates: candidates);
@@ -310,7 +380,6 @@ void main() {
           '🔱 TEST: Orchestrating Batch C (size 25) with invalid fixtures...');
 
       final List<Map<String, dynamic>> candidates = [];
-      // 25 valid fixtures
       for (int i = 1; i <= 25; i++) {
         candidates.add({
           'id': 'BATCH_C_CANDIDATE_${i.toString().padLeft(2, '0')}',
@@ -321,11 +390,10 @@ void main() {
           'repairRequired': false,
         });
       }
-      // 5 invalid/unsafe fixtures (blocked)
       candidates.add({
         'id': 'BATCH_C_INVALID_01',
         'realmId': 'REALM_BATCH_C',
-        'verdict': 'FAIL', // failed review blocked
+        'verdict': 'FAIL',
         'unsupportedClaims': 0,
         'hardHold': false,
         'repairRequired': false,
@@ -334,12 +402,12 @@ void main() {
         'id': 'BATCH_C_INVALID_02',
         'realmId': 'REALM_BATCH_C',
         'verdict': 'PASS',
-        'unsupportedClaims': 48, // unsourced claims blocked
+        'unsupportedClaims': 48,
         'hardHold': false,
         'repairRequired': false,
       });
       candidates.add({
-        'id': 'BATCH_C_CANDIDATE_01', // duplicate ID blocked
+        'id': 'BATCH_C_CANDIDATE_01',
         'realmId': 'REALM_BATCH_C',
         'verdict': 'PASS',
         'unsupportedClaims': 0,
@@ -368,6 +436,125 @@ void main() {
       expect(result.assembled, 25);
       expect(result.blocked, 5);
       print('Batch C results: selected=30, assembled=25, blocked=5');
+    });
+  });
+
+  group('AAF-005G: Canonical DigiBook Reuse Index & Mission Bindings', () {
+    test('1. Verify Canonical Asset Indexing & Reuse Hits', () async {
+      print('🔱 TEST: Indexing canonical asset and checking reuse hit...');
+
+      final reuseIndex = CanonicalReuseIndex();
+
+      // Assemble first candidate (JEE Mission)
+      final List<Map<String, dynamic>> batchJee = [
+        {
+          'id': 'CANONICAL_TOPIC_CHEM_U20_001',
+          'realmId': 'JEE_MAIN_2026',
+          'verdict': 'PASS',
+          'unsupportedClaims': 0,
+          'hardHold': false,
+          'repairRequired': false,
+          'version': 1,
+        }
+      ];
+
+      final resultJee = await runBatchAssembly(
+        candidates: batchJee,
+        reuseIndex: reuseIndex,
+        currentMissionId: 'mission-jee-main-2026',
+      );
+
+      expect(resultJee.assembled, 1);
+      expect(reuseIndex.totalIndexed, 1);
+      expect(reuseIndex.totalBindings, 1);
+      expect(
+        reuseIndex.hasBinding(
+          'db_draft_JEE_MAIN_2026',
+          'mission-jee-main-2026',
+        ),
+        isTrue,
+      );
+
+      // Now attempt to assemble the SAME topic for NEET Mission
+      final List<Map<String, dynamic>> batchNeet = [
+        {
+          'id': 'CANONICAL_TOPIC_CHEM_U20_001',
+          'realmId': 'NEET_2026',
+          'verdict': 'PASS',
+          'unsupportedClaims': 0,
+          'hardHold': false,
+          'repairRequired': false,
+          'version': 1,
+        }
+      ];
+
+      final resultNeet = await runBatchAssembly(
+        candidates: batchNeet,
+        reuseIndex: reuseIndex,
+        currentMissionId: 'mission-neet-2026',
+      );
+
+      // Reuse hit: binds mission-neet-2026 to the existing artifact (db_draft_JEE_MAIN_2026)
+      expect(resultNeet.assembled, 1);
+      expect(reuseIndex.totalIndexed,
+          1); // Asset count does NOT increase (Duplicate Blocked)
+      expect(reuseIndex.totalBindings,
+          2); // Binding count increases to 2 (Cross-Mission reuse)
+      expect(
+        reuseIndex.hasBinding(
+          'db_draft_JEE_MAIN_2026',
+          'mission-neet-2026',
+        ),
+        isTrue,
+      );
+
+      print('Canonical assets indexed: 1');
+      print('Cross-mission canonical reuse hits: 1');
+      print('Duplicate canonical content created: 0');
+    });
+
+    test('2. Stale Version Block & Unsafe Reuse Gate', () async {
+      print('🔱 TEST: Checking stale version blocking and unsafe reuse...');
+
+      final reuseIndex = CanonicalReuseIndex();
+      reuseIndex.indexArtifact(
+        atomicId: 'TOPIC_STALE_CHECK',
+        artifactId: 'artifact_old',
+        version: 1,
+        missionId: 'mission-1',
+      );
+
+      // Querying with higher version 2 blocks old stale reuse
+      final staleResult =
+          reuseIndex.getReusableArtifact('TOPIC_STALE_CHECK', version: 2);
+      expect(staleResult, isNull); // Stale blocked successfully
+
+      // Querying with version 1 successfully returns old artifact
+      final validResult =
+          reuseIndex.getReusableArtifact('TOPIC_STALE_CHECK', version: 1);
+      expect(validResult, 'artifact_old');
+
+      // Unsafe candidates are blocked before querying the reuse index
+      final List<Map<String, dynamic>> unsafeCandidates = [
+        {
+          'id': 'TOPIC_STALE_CHECK',
+          'realmId': 'REALM_UNSAFE',
+          'verdict': 'PASS',
+          'unsupportedClaims': 5, // Unsafe (unsourced)
+          'hardHold': false,
+          'repairRequired': false,
+          'version': 1,
+        }
+      ];
+
+      final resultUnsafe = await runBatchAssembly(
+        candidates: unsafeCandidates,
+        reuseIndex: reuseIndex,
+        currentMissionId: 'mission-2',
+      );
+
+      expect(resultUnsafe.assembled, 0);
+      expect(resultUnsafe.blocked, 1);
     });
   });
 }
