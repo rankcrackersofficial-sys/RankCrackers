@@ -23,14 +23,14 @@ async function runTestCase(name, fn) {
 }
 
 async function main() {
-  console.log('Starting Crucible C4-FIX1 Evidence Consumer & Rebuild Engine Integration Tests...');
+  console.log('Starting Crucible C4-FIX2 Constitutional Analytics Integration Tests...');
 
   const path = require('path');
   const rulesPath = path.resolve(__dirname, '../firestore.rules');
   const rulesContent = require('fs').readFileSync(rulesPath, 'utf8');
 
   const testEnv = await initializeTestEnvironment({
-    projectId: 'rankcrackers-c4-rebuild-concurrency',
+    projectId: 'rankcrackers-c4-rebuild-constitutional',
     firestore: {
       rules: rulesContent
     }
@@ -130,13 +130,12 @@ async function main() {
       totalEventsConsumed += finalMetrics.eventsConsumed;
       if (finalMetrics.eventsConsumed !== 1) throw new Error('Expected 1 outbox event consumed');
 
-      // Mastery score: assessmentEvidence (1.0) * 0.40 + readingEvidence (0.0) * 0.20 + retention (1.0) * 0.10 + difficulty (0.5) * 0.10 = 0.40 + 0.10 + 0.05 = 0.55
       const masteryDoc = await db.collection('users').doc('student_user_123').collection('atomic_mastery').doc('atom_phy_01').get();
-      if (!masteryDoc.exists || masteryDoc.data().mastery !== 0.55) {
-        throw new Error(`Mastery for atom_phy_01 should be 0.55, got: ${masteryDoc.data()?.mastery}`);
+      if (!masteryDoc.exists || masteryDoc.data().mastery !== 0.8775) {
+        throw new Error(`Mastery for atom_phy_01 should be 0.8775, got: ${masteryDoc.data()?.mastery}`);
       }
-      if (masteryDoc.data().status !== 'Developing') {
-        throw new Error(`Mastery status should be Developing, got: ${masteryDoc.data()?.status}`);
+      if (masteryDoc.data().status !== 'Mastered') {
+        throw new Error(`Mastery status should be Mastered, got: ${masteryDoc.data()?.status}`);
       }
     });
 
@@ -144,7 +143,7 @@ async function main() {
     // TEST 7: CANONICAL RISK DEFICIENCY EFFECT
     // ===================================================
     await runTestCase('Incorrect evidence risk effect: flags high risk and updates stats', async () => {
-      // Seed two failed attempts for atom_chem_01
+      // Seed three failed attempts for atom_chem_01 to trigger persistent rebuild candidacy later
       const sessionRisk1 = await createAttemptSession({
         db,
         userId: 'student_user_123',
@@ -185,11 +184,30 @@ async function main() {
         submittedAt: new Date().toISOString()
       });
 
+      const sessionRisk3 = await createAttemptSession({
+        db,
+        userId: 'student_user_123',
+        microTestId: 'micro_c4_risk3',
+        scheduleId: 'sch_c4',
+        questionIds: ['q_num_tol'],
+        questionVersions: { q_num_tol: 2 },
+        poolVersion: 1,
+        assemblyVersion: 1,
+        attemptOrdinal: 5,
+        isRunnable: true
+      });
+
+      await evaluateAttempt({
+        db,
+        attemptSessionId: sessionRisk3.attemptSessionId,
+        responses: { q_num_tol: '10.00' }, // Incorrect
+        submittedAt: new Date().toISOString()
+      });
+
       finalMetrics = await consumeEvidenceOutboxEvents({ db });
       totalEventsConsumed += finalMetrics.eventsConsumed;
-      if (finalMetrics.eventsConsumed !== 2) throw new Error('Expected 2 events consumed for risk tests');
+      if (finalMetrics.eventsConsumed !== 3) throw new Error('Expected 3 events consumed for risk tests');
 
-      // Assert Risk updates (atom_chem_01 has 100% assessmentWeakness, riskScore should exceed 0.60)
       const riskDoc = await db.collection('users').doc('student_user_123').collection('atomic_risk').doc('atom_chem_01').get();
       if (!riskDoc.exists || riskDoc.data().isRisk !== true) {
         throw new Error('atom_chem_01 should be high risk');
@@ -207,7 +225,8 @@ async function main() {
       if (!covDoc.exists) throw new Error('Coverage doc should exist');
 
       const data = covDoc.data();
-      if (!data.encountered || !data.assessed || data.evidenceBackedCoverage !== false) {
+      // Since it has 3 incorrect attempts, evidenceBackedCoverage must be true (attempts >= 3)
+      if (!data.encountered || !data.assessed || data.evidenceBackedCoverage !== true) {
         throw new Error(`Coverage fields semantic mismatch: ${JSON.stringify(data)}`);
       }
     });
@@ -220,7 +239,8 @@ async function main() {
       if (!rebuildDoc.exists) throw new Error('Rebuild doc should exist for atom_chem_01');
 
       const data = rebuildDoc.data();
-      if (data.isRebuild !== true || data.reason !== 'low_mastery') {
+      // accuracy is 0.0 < 0.4 and totalAttempts is 3, so failed_battles should be the reason code
+      if (data.isRebuild !== true || data.reason !== 'failed_battles') {
         throw new Error(`Rebuild candidate reason mismatch: ${JSON.stringify(data)}`);
       }
     });
@@ -238,7 +258,7 @@ async function main() {
         questionVersions: { q_mcq_exact: 1 },
         poolVersion: 1,
         assemblyVersion: 1,
-        attemptOrdinal: 5,
+        attemptOrdinal: 6,
         isRunnable: true
       });
 
@@ -298,7 +318,7 @@ async function main() {
   console.log("CLIENT_WRITABLE_ANALYTIC_TRUTH_PATHS = 0");
   console.log("==========================================");
 
-  console.log("\nTHE_CRUCIBLE_C4_FIX1_CANONICAL_ANALYTICS_PASSED");
+  console.log("\nTHE_CRUCIBLE_C4_FIX2_CONSTITUTIONAL_ANALYTICS_PASSED");
 
   await testEnv.clearFirestore();
   await testEnv.cleanup();

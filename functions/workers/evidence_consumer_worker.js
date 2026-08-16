@@ -1,9 +1,17 @@
 "use strict";
 
 /**
- * 🔱 Crucible C4 Evidence Consumer & Rebuild Engine Worker
- * Fully audit-compliant canonical analytics calculations and transaction safety.
+ * 🔱 Crucible C4-FIX2 Evidence Consumer & Rebuild Engine Worker
+ * Fully constitutional analytics calculations and concurrency safety.
  */
+
+function calculateRetention(lastEvidenceAtStr) {
+  if (!lastEvidenceAtStr) return 0.0;
+  const lastEvidenceAt = new Date(lastEvidenceAtStr);
+  const daysElapsed = Math.max(0, (Date.now() - lastEvidenceAt.getTime()) / (3600 * 24 * 1000));
+  if (daysElapsed <= 1) return 1.0;
+  return Math.min(1.0, Math.max(0.0, Math.exp(-daysElapsed / 30)));
+}
 
 async function consumeEvidenceOutboxEvents({ db }) {
   const outboxRef = db.collection('evidence_outbox');
@@ -85,15 +93,20 @@ async function consumeEvidenceOutboxEvents({ db }) {
         const correctAttempts = history.filter(h => h.outcome === 'correct').length;
         const accuracy = assessedAttempts > 0 ? (correctAttempts / assessedAttempts) : 0.0;
 
-        // 🔱 Canonical Mastery Engine calculation
-        const assessmentEvidence = accuracy;
-        const readingEvidence = previousMastery > 0 ? 0.5 : 0.0;
-        const revisionEvidence = 0.0;
-        const retention = 1.0; // Diagnostic recency
+        // 1. Retention Calculation (Ebbinghaus forgetting curve decay)
+        const lastEvidenceAtStr = history.length > 0 ? history[history.length - 1].timestamp : null;
+        const retention = calculateRetention(lastEvidenceAtStr);
+
+        // 2. Consistency Calculation
+        const winRate = totalAttempts > 0 ? (correctAttempts / totalAttempts) : 0.0;
+        const volumeBonus = Math.min(1.0, totalAttempts / 20.0) * 0.2;
+        const consistency = totalAttempts > 0 ? Math.min(1.0, Math.max(0.0, winRate * 0.8 + volumeBonus)) : 0.0;
+
+        // 3. Difficulty
         const difficulty = 0.5;
 
-        // score = assessmentEvidence * 0.40 + readingEvidence * 0.20 + revisionEvidence * 0.20 + retention * 0.10 + difficulty * 0.10
-        const masteryScore = (assessmentEvidence * 0.40) + (readingEvidence * 0.20) + (retention * 0.10) + (difficulty * 0.10);
+        // 🔱 MasteryScore = Accuracy*0.40 + Consistency*0.25 + Retention*0.20 + Difficulty*0.15
+        const masteryScore = (accuracy * 0.40) + (consistency * 0.25) + (retention * 0.20) + (difficulty * 0.15);
         const finalMastery = Math.min(1.0, Math.max(0.0, masteryScore));
 
         let masteryStatus = 'Unknown';
@@ -102,9 +115,12 @@ async function consumeEvidenceOutboxEvents({ db }) {
         else if (finalMastery > 0.40) masteryStatus = 'Developing';
         else if (finalMastery > 0.20) masteryStatus = 'Learning';
 
-        // 🔱 Canonical Coverage Engine calculation
-        const coverageScore = (readingEvidence * 0.35) + (assessmentEvidence * 0.45) + (revisionEvidence * 0.20);
-        
+        // 🔱 CoverageScore = ScheduleCompletion*0.40 + AssessmentEvidence*0.40 + AtomicVerification*0.20
+        const scheduleCompletion = totalAttempts > 0 ? 1.0 : 0.0;
+        const assessmentEvidence = accuracy;
+        const atomicVerification = correctAttempts >= 1 ? 1.0 : 0.0;
+
+        const coverageScore = (scheduleCompletion * 0.40) + (assessmentEvidence * 0.40) + (atomicVerification * 0.20);
         const encountered = totalAttempts > 0;
         const assessed = assessedAttempts > 0;
         const evidenceBackedCoverage = totalAttempts >= 3 || correctAttempts >= 1;
@@ -114,34 +130,41 @@ async function consumeEvidenceOutboxEvents({ db }) {
         else if (coverageScore >= 0.60) coverageStatus = 'Covered';
         else if (coverageScore > 0.0) coverageStatus = 'In Progress';
 
-        // 🔱 Canonical Risk Engine calculation
+        // 🔱 RiskScore = CoverageDeficiency*0.25 + MasteryDeficiency*0.35 + AssessmentWeakness*0.25 + RecencyWeakness*0.15
         const coverageDeficiency = 1.0 - coverageScore;
         const masteryDeficiency = 1.0 - finalMastery;
         const assessmentWeakness = 1.0 - accuracy;
-        const recencyWeakness = 0.0;
+        const recencyWeakness = 1.0 - retention;
 
         const riskScore = (coverageDeficiency * 0.25) + (masteryDeficiency * 0.35) + (assessmentWeakness * 0.25) + (recencyWeakness * 0.15);
         const isRisk = totalAttempts >= 2 && riskScore >= 0.60;
 
         let riskStatus = 'Minimal';
-        if (riskScore >= 0.80) riskStatus = 'Critical';
-        else if (riskScore >= 0.60) riskStatus = 'High';
-        else if (riskScore >= 0.40) riskStatus = 'Moderate';
-        else if (riskScore >= 0.20) riskStatus = 'Low';
+        const riskPercent = riskScore * 100;
+        if (riskPercent >= 81) riskStatus = 'Critical';
+        else if (riskPercent >= 61) riskStatus = 'High';
+        else if (riskPercent >= 41) riskStatus = 'Moderate';
+        else if (riskPercent >= 21) riskStatus = 'Low';
 
-        // 🔱 Canonical Rebuild Engine calculation
+        // 🔱 BattleScore = Risk*0.40 + MissionWeight*0.25 + AssessmentWeakness*0.20 + DependencyImpact*0.15
+        const missionWeight = 0.5;
+        const dependencyImpact = 0.0;
+        const battleScore = (riskScore * 0.40) + (missionWeight * 0.25) + (assessmentWeakness * 0.20) + (dependencyImpact * 0.15);
+        const isBattlePriority = evidenceBackedCoverage && battleScore >= 0.50;
+
+        // 🔱 Rebuild candidate based on persistent weakness (at least 3 attempts)
         let rebuildReason = null;
-        if (finalMastery < 0.50) {
-          rebuildReason = 'low_mastery';
-        } else if (totalAttempts >= 2 && accuracy < 0.4) {
-          rebuildReason = 'failed_battles';
+        if (totalAttempts >= 3) {
+          if (retention < 0.50 && finalMastery < 0.40) {
+            rebuildReason = 'mastery_decay';
+          } else if (accuracy < 0.4) {
+            rebuildReason = 'failed_battles';
+          } else if (riskScore >= 0.80) {
+            rebuildReason = 'risk_signals';
+          }
         }
-
         const isRebuild = rebuildReason !== null;
-        const rebuildPriorityScore = ((1.0 - finalMastery) * 50.0) + 15.0; // defaulted importance/difficulty
-
-        // 🔱 Battle Priority calculation
-        const isBattlePriority = evidenceBackedCoverage && finalMastery < 0.60;
+        const rebuildPriorityScore = ((1.0 - finalMastery) * 50.0) + 15.0;
 
         txAtoms.push({
           atomId,
@@ -198,7 +221,6 @@ async function consumeEvidenceOutboxEvents({ db }) {
         });
       }
 
-      // Mark outbox event processed inside the same transaction
       transaction.update(eventRef, { eventStatus: 'processed' });
       return { txAtoms };
     });
