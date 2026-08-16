@@ -1,0 +1,223 @@
+import 'package:flutter_test/flutter_test.dart';
+import 'package:rank_crackers/core/models/question_model.dart';
+import 'package:rank_crackers/core/models/question_difficulty.dart';
+import 'package:rank_crackers/features/crucible/models/crucible_schedule.dart';
+import 'package:rank_crackers/features/crucible/core/micro_test_engine.dart';
+import 'package:rank_crackers/features/crucible/core/macro_test_engine.dart';
+
+void main() {
+  setUp(() {
+    QuestionTrustRepository.resetForTest();
+  });
+
+  group('Crucible C5 Macro Test Engine Assembly Laws', () {
+    test('100-Question Target Assembly Law is enforced', () {
+      final pool = List.generate(99, (i) {
+        return QuestionModel(
+          id: 'q_${i.toString().padLeft(3, '0')}',
+          nodeId: 'node_1',
+          examId: 'jee_main_2026',
+          subjectId: 'Physics',
+          question: 'Stem $i',
+          options: const ['A', 'B', 'C', 'D'],
+          answerIndex: 0,
+          difficulty: QuestionDifficulty.medium,
+          status: 'published',
+          version: 1,
+          lastAdminId: 'admin_human_01',
+          updatedAt: DateTime(2026, 8, 13),
+          verifiedBy: 'admin_human_02',
+          verifiedAt: DateTime(2026, 8, 13),
+          atomicTopicIds: const ['atom_01'],
+          factId: 'fact_01',
+          questionType: 'mcq_single',
+          solution: 'Verified explanation.',
+          questionLineageId: 'lin_${i.toString().padLeft(3, '0')}',
+        );
+      });
+
+      final verifiedFactIds = {'fact_01'};
+      final factSourceDocuments = {'fact_01': 'doc_01'};
+      final reviewerAuthorities = {'admin_human_02': 'PRO_REVIEWER'};
+      final verifiedAnswerKeys = <String>{};
+      final verifiedAnswerKeyValues = <String, String>{};
+      final studentReadyQuestionIds = <String>{};
+      final activeQuestionVersions = <String, int>{};
+      final verifiedSolutions = <String, SolutionVerificationRecord>{};
+
+      for (final q in pool) {
+        verifiedAnswerKeys.add(q.id);
+        verifiedAnswerKeyValues[q.id] = '0';
+        studentReadyQuestionIds.add(q.id);
+        activeQuestionVersions[q.questionLineageId!] = 1;
+        verifiedSolutions[q.id] = SolutionVerificationRecord(
+          questionId: q.id,
+          questionLineageId: q.questionLineageId!,
+          version: 1,
+          solutionStatus: 'verified',
+          solutionHash: MicroTestEngine.hashSolution(q.solution),
+          reviewingAuthority: 'admin_human_02',
+          verifiedAnswerValue: '0',
+          verifiedAt: DateTime(2026, 8, 13),
+        );
+      }
+
+      final trust = QuestionTrustSnapshot(
+        verifiedFactIds: verifiedFactIds,
+        factSourceDocuments: factSourceDocuments,
+        heldFactIds: const {},
+        reviewerAuthorities: reviewerAuthorities,
+        verifiedAnswerKeys: verifiedAnswerKeys,
+        verifiedAnswerKeyValues: verifiedAnswerKeyValues,
+        studentReadyQuestionIds: studentReadyQuestionIds,
+        pyqPaperEvidence: const {},
+        activeQuestionVersions: activeQuestionVersions,
+        verifiedSolutions: verifiedSolutions,
+      );
+
+      final testCount99 = MacroTestEngine.assembleMacroTest(
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_01',
+        allowedAtomIds: const ['atom_01'],
+        pool: pool,
+        requiredCount: 100,
+        trustSnapshot: trust,
+      );
+      expect(testCount99, isEmpty); // Deficit locks assembly
+
+      // Add 1 more to reach 100 questions
+      final pool100 = List<QuestionModel>.from(pool)
+        ..add(QuestionModel(
+          id: 'q_100',
+          nodeId: 'node_1',
+          examId: 'jee_main_2026',
+          subjectId: 'Physics',
+          question: 'Stem 100',
+          options: const ['A', 'B', 'C', 'D'],
+          answerIndex: 0,
+          difficulty: QuestionDifficulty.medium,
+          status: 'published',
+          version: 1,
+          lastAdminId: 'admin_human_01',
+          updatedAt: DateTime(2026, 8, 13),
+          verifiedBy: 'admin_human_02',
+          verifiedAt: DateTime(2026, 8, 13),
+          atomicTopicIds: const ['atom_01'],
+          factId: 'fact_01',
+          questionType: 'mcq_single',
+          solution: 'Verified explanation.',
+          questionLineageId: 'lin_100',
+        ));
+      
+      verifiedAnswerKeys.add('q_100');
+      verifiedAnswerKeyValues['q_100'] = '0';
+      studentReadyQuestionIds.add('q_100');
+      activeQuestionVersions['lin_100'] = 1;
+      verifiedSolutions['q_100'] = SolutionVerificationRecord(
+        questionId: 'q_100',
+        questionLineageId: 'lin_100',
+        version: 1,
+        solutionStatus: 'verified',
+        solutionHash: MicroTestEngine.hashSolution('Verified explanation.'),
+        reviewingAuthority: 'admin_human_02',
+        verifiedAnswerValue: '0',
+        verifiedAt: DateTime(2026, 8, 13),
+      );
+
+      final trust100 = QuestionTrustSnapshot(
+        verifiedFactIds: verifiedFactIds,
+        factSourceDocuments: factSourceDocuments,
+        heldFactIds: const {},
+        reviewerAuthorities: reviewerAuthorities,
+        verifiedAnswerKeys: verifiedAnswerKeys,
+        verifiedAnswerKeyValues: verifiedAnswerKeyValues,
+        studentReadyQuestionIds: studentReadyQuestionIds,
+        pyqPaperEvidence: const {},
+        activeQuestionVersions: activeQuestionVersions,
+        verifiedSolutions: verifiedSolutions,
+      );
+
+      final testCount100 = MacroTestEngine.assembleMacroTest(
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_01',
+        allowedAtomIds: const ['atom_01'],
+        pool: pool100,
+        requiredCount: 100,
+        trustSnapshot: trust100,
+      );
+      expect(testCount100.length, 100);
+    });
+
+    test('Macro seed derivation is reproducible and stable', () {
+      final seed1 = MacroTestEngine.deriveSeed(
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_06',
+        poolVersion: '1.0.0',
+        assemblyVersion: '1.0.0',
+        attemptOrdinal: 1,
+      );
+      final seed2 = MacroTestEngine.deriveSeed(
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_06',
+        poolVersion: '1.0.0',
+        assemblyVersion: '1.0.0',
+        attemptOrdinal: 1,
+      );
+      expect(seed1, equals(seed2));
+    });
+  });
+
+  group('Crucible C5 7-Slot Macro Manifest Mapping', () {
+    test('Verify complete 7-slot temporal manifest mapping', () {
+      final List<CrucibleSchedule> schedules = List.generate(42, (i) {
+        final idx = i + 1;
+        return CrucibleSchedule(
+          id: 'sch_jee_main_2027_$idx',
+          recruitmentId: 'jee_main_2027',
+          scheduleIndex: idx,
+          nodeIds: const ['node_1'],
+          atomicTopicIds: ['atom_$idx'],
+          scheduleType: 'study',
+          targetHours: 4.0,
+          blueprintId: 'default',
+          digibookSessionId: 'default',
+        );
+      });
+
+      final pool = <QuestionModel>[];
+      final protocolStartTime = DateTime(2026, 8, 13, 10, 0);
+
+      final manifests = MacroTestEngine.build7SlotMacroManifest(
+        schedules: schedules,
+        pool: pool,
+        protocolStartTime: protocolStartTime,
+      );
+
+      expect(manifests.length, 7);
+
+      // Verify slot 1 details
+      final slot1 = manifests.first;
+      expect(slot1['macroTestId'], 'macro_01');
+      expect(slot1['phaseId'], 'phase_1');
+      expect(slot1['requiredQuestionCount'], 100);
+      expect(slot1['deficit'], 100);
+      expect(slot1['readinessState'], 'NOT_READY');
+
+      // Verify temporal boundaries for Phase 1 Macro
+      // Day 14 09:00 AM to Day 14 11:00 AM (12 days 23 hours to 13 days 1 hour)
+      final expectedStart1 = protocolStartTime.add(const Duration(days: 12, hours: 23));
+      final expectedEnd1 = protocolStartTime.add(const Duration(days: 13, hours: 1));
+      expect(slot1['temporalEligibilityStart'], expectedStart1);
+      expect(slot1['temporalEligibilityEnd'], expectedEnd1);
+
+      // Verify temporal boundaries for Phase 2 Macro (Phase start = protocolStartTime + 14 days)
+      final slot2 = manifests[1];
+      final phase2Start = protocolStartTime.add(const Duration(days: 14));
+      final expectedStart2 = phase2Start.add(const Duration(days: 12, hours: 23));
+      final expectedEnd2 = phase2Start.add(const Duration(days: 13, hours: 1));
+      expect(slot2['macroTestId'], 'macro_02');
+      expect(slot2['temporalEligibilityStart'], expectedStart2);
+      expect(slot2['temporalEligibilityEnd'], expectedEnd2);
+    });
+  });
+}

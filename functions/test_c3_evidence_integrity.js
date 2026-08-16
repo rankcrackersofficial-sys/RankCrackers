@@ -449,6 +449,68 @@ async function main() {
       if (outboxSnap.size !== 1) throw new Error('Duplicate outbox created');
     });
 
+    await runTestCase('Macro Attempt Session Creation & Evaluation with assessmentType = macro', async () => {
+      const macroSessionId = 'session_student_user_123_sch_macro_01_ord1';
+      await createAttemptSession({
+        db,
+        userId: 'student_user_123',
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_macro_01',
+        questionIds: ['q_mcq_exact'],
+        questionVersions: { q_mcq_exact: 1 },
+        poolVersion: 1,
+        assemblyVersion: 1,
+        attemptOrdinal: 1,
+        isRunnable: true
+      });
+
+      // Verify session collection has the session
+      const sessionDoc = await db.collection('attempt_sessions').doc(macroSessionId).get();
+      if (!sessionDoc.exists) throw new Error('Expected macro attempt session to be created.');
+      if (sessionDoc.data().macroTestId !== 'macro_01') throw new Error('Expected macroTestId to match.');
+
+      // Evaluate Macro Attempt
+      await evaluateAttempt({
+        db,
+        attemptSessionId: macroSessionId,
+        responses: { q_mcq_exact: '1' },
+        submittedAt: new Date().toISOString()
+      });
+
+      // Verify result exists in macro_attempts instead of micro_attempts
+      const microAttemptDoc = await db.collection('micro_attempts').doc(macroSessionId).get();
+      if (microAttemptDoc.exists) throw new Error('Macro attempt should not be written to micro_attempts.');
+
+      const macroAttemptDoc = await db.collection('macro_attempts').doc(macroSessionId).get();
+      if (!macroAttemptDoc.exists) throw new Error('Macro attempt should be written to macro_attempts.');
+
+      // Verify evidence records assessmentType === 'macro'
+      const evidenceSnap = await db.collection('atomic_evidence_records').where('attemptSessionId', '==', macroSessionId).get();
+      if (evidenceSnap.size === 0) throw new Error('Expected atomic evidence records to be created.');
+      for (const doc of evidenceSnap.docs) {
+        if (doc.data().assessmentType !== 'macro') throw new Error('Expected assessmentType to be macro.');
+      }
+    });
+
+    await runTestCase('CROSS_USER_ATTEMPT_ACCESS = 0: Student cannot read or write another users macro attempt', async () => {
+      await db.collection('macro_attempts').doc('session_macro_cross_user').set({
+        attemptSessionId: 'session_macro_cross_user',
+        userId: 'student_user_123',
+        status: 'submitted',
+        evaluated: true,
+        score: 5
+      });
+
+      await assertFails(otherDb.collection('macro_attempts').doc('session_macro_cross_user').get());
+
+      await assertFails(otherDb.collection('macro_attempts').doc('session_macro_cross_user_new').set({
+        attemptSessionId: 'session_macro_cross_user_new',
+        userId: 'student_user_123',
+        status: 'submitted',
+        responses: {}
+      }));
+    });
+
   });
 
   console.log(`\n==============================================`);

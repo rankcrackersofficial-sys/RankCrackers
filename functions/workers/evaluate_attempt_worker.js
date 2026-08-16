@@ -10,6 +10,7 @@ async function createAttemptSession({
   db,
   userId,
   microTestId,
+  macroTestId,
   scheduleId,
   questionIds,
   questionVersions,
@@ -19,7 +20,7 @@ async function createAttemptSession({
   isRunnable = true
 }) {
   if (!isRunnable) {
-    throw new Error("NOT_READY: Micro test is not runnable due to pending questions or scope issues.");
+    throw new Error("NOT_READY: Test is not runnable due to pending questions or scope issues.");
   }
 
   const attemptSessionId = `session_${userId}_${scheduleId}_ord${attemptOrdinal}`;
@@ -36,7 +37,8 @@ async function createAttemptSession({
   const sessionData = {
     attemptSessionId,
     userId,
-    microTestId,
+    microTestId: microTestId || null,
+    macroTestId: macroTestId || null,
     scheduleId,
     questionIds,
     questionVersions, // Map of questionId -> version
@@ -58,21 +60,23 @@ async function evaluateAttempt({
   responses,
   submittedAt
 }) {
-  const attemptRef = db.collection('micro_attempts').doc(attemptSessionId);
-
-  // 1. Transactional Idempotency: Check if already evaluated
-  const existingAttempt = await attemptRef.get();
-  if (existingAttempt.exists) {
-    console.log(`[Evaluator] Attempt for session ${attemptSessionId} already evaluated. Returning existing result.`);
-    return existingAttempt.data();
-  }
-
-  // 2. Fetch Session
+  // 1. Fetch Session to check if it is micro or macro
   const sessionDoc = await db.collection('attempt_sessions').doc(attemptSessionId).get();
   if (!sessionDoc.exists) {
     throw new Error("INVALID_SESSION: Attempt session does not exist.");
   }
   const session = sessionDoc.data();
+
+  const isMacro = session.macroTestId !== undefined && session.macroTestId !== null && session.macroTestId !== "";
+  const attemptCollection = isMacro ? 'macro_attempts' : 'micro_attempts';
+  const attemptRef = db.collection(attemptCollection).doc(attemptSessionId);
+
+  // 2. Transactional Idempotency: Check if already evaluated
+  const existingAttempt = await attemptRef.get();
+  if (existingAttempt.exists) {
+    console.log(`[Evaluator] Attempt for session ${attemptSessionId} already evaluated. Returning existing result.`);
+    return existingAttempt.data();
+  }
 
   const now = new Date();
   if (new Date(session.expiresAt) < now) {
@@ -159,7 +163,7 @@ async function evaluateAttempt({
         questionVersion: question.version || 1,
         atomId,
         authoritativeAtomIds: question.atomicTopicIds || [],
-        assessmentType: 'micro',
+        assessmentType: isMacro ? 'macro' : 'micro',
         scheduleId: session.scheduleId,
         outcome,
         evidenceStatus,

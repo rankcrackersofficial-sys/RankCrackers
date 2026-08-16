@@ -207,6 +207,18 @@ service cloud.firestore {
       allow update, delete: if false;
     }
 
+    match /macro_attempts/{attemptId} {
+      allow read: if request.auth != null && (resource == null || resource.data.userId == request.auth.uid || isFounder());
+      allow create: if request.auth != null
+                    && request.resource.data.userId == request.auth.uid
+                    && request.resource.data.status == 'submitted'
+                    && !request.resource.data.keys().hasAny([
+                         'score', 'correctness', 'evaluated', 'verifiedAnswerKeys', 'answerKeys',
+                         'atomicTopicIds', 'questionVersions', 'mastery', 'coverage', 'risk'
+                       ]);
+      allow update, delete: if false;
+    }
+
     // 🔱 USER PERSONAL TRUTH RULES
     match /users/{userId} {
       // 🔱 Audit Fix: Users cannot write to their own role or sensitive fields
