@@ -167,6 +167,168 @@ void main() {
     });
   });
 
+  group('Crucible C5 Macro Engine Security & Policy Matrix', () {
+    final baseQuestion = QuestionModel(
+      id: 'q_valid_01',
+      nodeId: 'node_physics_1',
+      examId: 'jee_main_2026',
+      subjectId: 'Physics',
+      question: r'Valid stem question text',
+      options: const ['A', 'B', 'C', 'D'],
+      answerIndex: 0,
+      difficulty: QuestionDifficulty.easy,
+      status: 'published',
+      version: 1,
+      lastAdminId: 'admin_human_01',
+      updatedAt: DateTime(2026, 8, 13),
+      verifiedBy: 'admin_human_01',
+      verifiedAt: DateTime(2026, 8, 13),
+      atomicTopicIds: const ['atom_01'],
+      factId: 'fact_01',
+      questionType: 'mcq_single',
+      solution: 'Explanation.',
+      questionLineageId: 'lin_01',
+    );
+
+    final trust = QuestionTrustSnapshot(
+      verifiedFactIds: const {'fact_01'},
+      factSourceDocuments: const {'fact_01': 'doc_01'},
+      heldFactIds: const {},
+      reviewerAuthorities: const {'admin_human_01': 'PRO_REVIEWER'},
+      verifiedAnswerKeys: const {'q_valid_01'},
+      verifiedAnswerKeyValues: const {'q_valid_01': '0'},
+      studentReadyQuestionIds: const {'q_valid_01'},
+      pyqPaperEvidence: const {},
+      activeQuestionVersions: const {'lin_01': 1},
+      verifiedSolutions: {
+        'q_valid_01': SolutionVerificationRecord(
+          questionId: 'q_valid_01',
+          questionLineageId: 'lin_01',
+          version: 1,
+          solutionStatus: 'verified',
+          solutionHash: MicroTestEngine.hashSolution('Explanation.'),
+          reviewingAuthority: 'admin_human_01',
+          verifiedAnswerValue: '0',
+          verifiedAt: DateTime(2026, 8, 13),
+        )
+      },
+    );
+
+    test('Duplicate Question IDs are filtered out from Macro assembly', () {
+      final poolWithDuplicates = [baseQuestion, baseQuestion];
+      final assembled = MacroTestEngine.assembleMacroTest(
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_01',
+        allowedAtomIds: const ['atom_01'],
+        pool: poolWithDuplicates,
+        requiredCount: 1,
+        trustSnapshot: trust,
+      );
+      expect(assembled.length, 1);
+    });
+
+    test('Lineage Collision is blocked (only active version is used)', () {
+      final oldVersion = baseQuestion.copyWith(id: 'q_old_01', version: 1);
+      final newVersion = baseQuestion.copyWith(id: 'q_new_01', version: 2);
+      
+      final trustWithLineageCollision = QuestionTrustSnapshot(
+        verifiedFactIds: const {'fact_01'},
+        factSourceDocuments: const {'fact_01': 'doc_01'},
+        heldFactIds: const {},
+        reviewerAuthorities: const {'admin_human_01': 'PRO_REVIEWER'},
+        verifiedAnswerKeys: const {'q_old_01', 'q_new_01'},
+        verifiedAnswerKeyValues: const {'q_old_01': '0', 'q_new_01': '0'},
+        studentReadyQuestionIds: const {'q_old_01', 'q_new_01'},
+        pyqPaperEvidence: const {},
+        activeQuestionVersions: const {'lin_01': 2}, // Active is 2
+        verifiedSolutions: {
+          'q_old_01': SolutionVerificationRecord(
+            questionId: 'q_old_01',
+            questionLineageId: 'lin_01',
+            version: 1,
+            solutionStatus: 'verified',
+            solutionHash: MicroTestEngine.hashSolution('Explanation.'),
+            reviewingAuthority: 'admin_human_01',
+            verifiedAnswerValue: '0',
+            verifiedAt: DateTime(2026, 8, 13),
+          ),
+          'q_new_01': SolutionVerificationRecord(
+            questionId: 'q_new_01',
+            questionLineageId: 'lin_01',
+            version: 2,
+            solutionStatus: 'verified',
+            solutionHash: MicroTestEngine.hashSolution('Explanation.'),
+            reviewingAuthority: 'admin_human_01',
+            verifiedAnswerValue: '0',
+            verifiedAt: DateTime(2026, 8, 13),
+          )
+        },
+      );
+
+      final errOld = MicroTestEngine.checkQuestionEligibility(
+        oldVersion,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trustWithLineageCollision,
+      );
+      expect(errOld, contains('version is superseded'));
+
+      final errNew = MicroTestEngine.checkQuestionEligibility(
+        newVersion,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trustWithLineageCollision,
+      );
+      expect(errNew, isNull);
+    });
+
+    test('Future/Wrong Phase atom leakage is blocked', () {
+      final qWrongAtom = baseQuestion.copyWith(atomicTopicIds: const ['atom_future_01']);
+      final err = MicroTestEngine.checkQuestionEligibility(
+        qWrongAtom,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trust,
+      );
+      expect(err, contains('atom atom_future_01 is outside schedule scope'));
+    });
+
+    test('Inactive/Unapproved/Draft status question is rejected', () {
+      final qDraft = baseQuestion.copyWith(status: 'draft');
+      final err = MicroTestEngine.checkQuestionEligibility(
+        qDraft,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trust,
+      );
+      expect(err, contains('review authority unresolved'));
+    });
+
+    test('Lacking human verification or AI verifier is rejected', () {
+      final qAiVerified = baseQuestion.copyWith(verifiedBy: 'ai_normalizer');
+      final trustAi = QuestionTrustSnapshot(
+        verifiedFactIds: const {'fact_01'},
+        factSourceDocuments: const {'fact_01': 'doc_01'},
+        heldFactIds: const {},
+        reviewerAuthorities: const {'ai_normalizer': 'AI'}, // Unverified role
+        verifiedAnswerKeys: const {'q_valid_01'},
+        verifiedAnswerKeyValues: const {'q_valid_01': '0'},
+        studentReadyQuestionIds: const {'q_valid_01'},
+        pyqPaperEvidence: const {},
+        activeQuestionVersions: const {'lin_01': 1},
+        verifiedSolutions: trust.verifiedSolutions,
+      );
+
+      final err = MicroTestEngine.checkQuestionEligibility(
+        qAiVerified,
+        'sch_01',
+        const ['atom_01'],
+        trustSnapshot: trustAi,
+      );
+      expect(err, contains('review authority unresolved'));
+    });
+  });
+
   group('Crucible C5 7-Slot Macro Manifest Mapping', () {
     test('Verify complete 7-slot temporal manifest mapping', () {
       final List<CrucibleSchedule> schedules = List.generate(42, (i) {
