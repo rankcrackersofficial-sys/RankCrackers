@@ -1,0 +1,83 @@
+{
+  "artifactType": "AAF_FASTTRACK_DIGIBOOK_WAVE0_INDEPENDENT_REVIEW",
+  "artifactVersion": "wave0.local.private.review.v1",
+  "metadata": {
+    "runId": "aaf_fasttrack_digibook_wave0_20260816",
+    "missionId": "jee_main_2026",
+    "selectedAmtnId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001",
+    "head": "26061be007f1d7b7c92c98a5d93efb1218350387",
+    "workerMode": "LOCAL_GOVERNED_ARTIFACT_CREATION_FROM_SOURCE_VERIFIED_DRAFT_CONTEXT",
+    "currentRunModelCalls": 0,
+    "firebaseRead": false,
+    "firebaseWrite": false,
+    "publicationPerformed": false,
+    "studentReady": false,
+    "importReady": false,
+    "modelOnlyCanonicalPromotions": 0,
+    "silentModelFallbacks": 0,
+    "unsourcedStudentReadyItems": 0,
+    "sourceVerified": true,
+    "sourceSufficient": true,
+    "existingFinalDigibookBeforeRun": false,
+    "existingFactoryStateJobBeforeRun": null
+  },
+  "reviewMethod": "LOCAL_INDEPENDENT_REVIEW_OVER_SOURCE_GATE_STRUCTURE_AND_EXISTING_DEEP_REVIEW_CONTEXT",
+  "draftArtifact": "docs/patch_safety/aaf_fasttrack_digibook_wave0_source_verified_creation_20260816/DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001_wave0_draft.json",
+  "draftSha256": "580ef17f9328774e9d477520d9276e62e4d1df810498e6818a520fc5725b16a0",
+  "baseReviewContext": {
+    "path": "docs/patch_safety/jee_main_2026/digibook_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001_review.json",
+    "sha256": "153fe9b3eecf0b189eb64cfef9cee126a2d0c66bc6b5faf347d79bd27aa5ed27",
+    "modelMetadata": {
+      "backend": "vertex_ai",
+      "project": "rankcrackers-55",
+      "location": "global",
+      "requestedModel": "gemini-3.1-pro-preview",
+      "actualModel": "gemini-3.1-pro-preview",
+      "workload": "deepReasoningPro",
+      "modelSource": "policy_default",
+      "fallbackUsed": false,
+      "fallbackReason": null,
+      "structuredOutput": true
+    },
+    "review": {
+      "verdict": "PASS",
+      "itemCountReviewed": 1,
+      "approvedAtomIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001"
+      ],
+      "pendingReviewAtomIds": [],
+      "rejectedOrHeldAtomIds": [],
+      "blockingIssues": [],
+      "reviewNotes": "The content is academically accurate and perfectly aligns with the JEE Main curriculum. The chemical reactions, conceptual explanations, worked examples, and self-checks are completely correct. The coverage of distinguishing tests (Lassaigne's extract, functional groups) is excellent and captures all critical nuances.",
+      "conceptCorrectnessPass": true,
+      "formulaPass": true,
+      "selfCheckPass": true,
+      "workedExampleMathPass": true
+    }
+  },
+  "checks": {
+    "sourceStatusIsSourceProven": true,
+    "sourceIsOfficialDocument": true,
+    "modelOnlyProofFalse": true,
+    "draftHasOverview": true,
+    "draftHasConcepts": true,
+    "draftHasFormulaRegister": true,
+    "draftHasMisconceptions": true,
+    "draftHasWorkedExamples": true,
+    "draftHasSelfChecks": true,
+    "existingDeepReviewPassed": true,
+    "noPublicationFlags": true,
+    "studentReadyFalse": true
+  },
+  "verdict": "PASS",
+  "repairRequired": false,
+  "hardHold": false,
+  "reviewNotes": "Wave-0 local/private artifact is source-gated by official JEE Main 2026 syllabus evidence and cross-checked against an existing independent review PASS. It is not student-ready and is not publication-ready until persistent queue and publication gates bind it.",
+  "safetyLabels": {
+    "localPrivateOnly": true,
+    "studentReady": false,
+    "publicationPerformed": false,
+    "requiresPersistentQueueBinding": true,
+    "requiresPublicationGate": true
+  }
+}

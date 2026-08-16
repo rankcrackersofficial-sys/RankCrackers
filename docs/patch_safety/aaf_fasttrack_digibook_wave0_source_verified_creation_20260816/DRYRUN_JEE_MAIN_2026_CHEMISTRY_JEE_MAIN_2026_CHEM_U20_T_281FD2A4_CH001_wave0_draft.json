@@ -1,0 +1,195 @@
+{
+  "artifactType": "AAF_FASTTRACK_DIGIBOOK_WAVE0_DRAFT",
+  "artifactVersion": "wave0.local.private.v1",
+  "metadata": {
+    "runId": "aaf_fasttrack_digibook_wave0_20260816",
+    "missionId": "jee_main_2026",
+    "selectedAmtnId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001",
+    "head": "26061be007f1d7b7c92c98a5d93efb1218350387",
+    "workerMode": "LOCAL_GOVERNED_ARTIFACT_CREATION_FROM_SOURCE_VERIFIED_DRAFT_CONTEXT",
+    "currentRunModelCalls": 0,
+    "firebaseRead": false,
+    "firebaseWrite": false,
+    "publicationPerformed": false,
+    "studentReady": false,
+    "importReady": false,
+    "modelOnlyCanonicalPromotions": 0,
+    "silentModelFallbacks": 0,
+    "unsourcedStudentReadyItems": 0,
+    "sourceVerified": true,
+    "sourceSufficient": true,
+    "existingFinalDigibookBeforeRun": false,
+    "existingFactoryStateJobBeforeRun": null
+  },
+  "sourceProof": {
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001",
+    "sourceStatus": "SOURCE_PROVEN",
+    "verifiedUnit": "UNIT 20",
+    "verifiedChapter": "PRINCIPLES RELATED TO PRACTICAL CHEMISTRY",
+    "unitSource": {
+      "sourceClass": "OFFICIAL_SOURCE",
+      "document": "JEE main Syllabus 2026.pdf",
+      "locator": "page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905"
+    },
+    "chapterSource": {
+      "sourceClass": "OFFICIAL_SOURCE",
+      "document": "JEE main Syllabus 2026.pdf",
+      "locator": "page 10",
+      "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905"
+    },
+    "modelOnlyProof": false
+  },
+  "sourceContext": {
+    "sourceIndexPath": "docs/patch_safety/syllabus_source_recovery.json",
+    "officialDocument": "JEE main Syllabus 2026.pdf",
+    "locator": "page 10",
+    "sourceHash": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905"
+  },
+  "baseDraftContext": {
+    "path": "docs/patch_safety/jee_main_2026/digibook_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001_draft.json",
+    "sha256": "6406cd4b915c5e2d2d3e73900fb169827a712513fa7ac0833fb6e1622b948f3f",
+    "modelMetadata": {
+      "backend": "vertex_ai",
+      "project": "rankcrackers-55",
+      "location": "global",
+      "requestedModel": "gemini-3.6-flash",
+      "actualModel": "gemini-3.6-flash",
+      "workload": "factoryFlash",
+      "modelSource": "policy_default",
+      "fallbackUsed": false,
+      "fallbackReason": null,
+      "structuredOutput": true
+    }
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001",
+    "overview": "Qualitative organic analysis involves the systematic identification of extra elements such as Nitrogen, Sulphur, and Halogens through Lassaigne's test, followed by chemical tests to identify functional groups like alcohols, phenols, aldehydes, ketones, carboxylic acids, and amines.",
+    "concepts": [
+      {
+        "title": "Lassaigne's Test (Sodium Fusion Test)",
+        "explanation": "Organic compounds are covalently bonded and do not undergo direct ionic reactions. Heating the compound with metallic sodium converts covalently bound Nitrogen, Sulphur, and Halogens into ionic sodium salts (NaCN, Na2S, NaX) in the sodium fusion extract (Lassaigne's extract)."
+      },
+      {
+        "title": "Detection of Nitrogen, Sulphur, and Halogens",
+        "explanation": "Nitrogen is detected by reacting the extract with ferrous sulphate and ferric ions to yield Prussian blue, Fe4[Fe(CN)6]3. Sulphur is detected by sodium nitroprusside test giving a purple color, or lead acetate test forming black PbS. Halogens are detected using silver nitrate solution after boiling with concentrated HNO3 to decompose CN- and S2- ions."
+      },
+      {
+        "title": "Detection of Hydroxyl Groups (Alcoholic vs Phenolic)",
+        "explanation": "Alcohols react with Ceric Ammonium Nitrate to give a red color, and show turbidity differences with Lucas Reagent (conc. HCl + ZnCl2). Phenols show neutral FeCl3 test (violet color), Phthalein dye test (pink with NaOH), and do not react with Lucas reagent."
+      },
+      {
+        "title": "Detection of Carbonyl Groups (Aldehydes and Ketones)",
+        "explanation": "Both aldehydes and ketones give an orange-red precipitate with 2,4-DNP. Aldehydes are differentiated using Tollen's test (silver mirror) and Fehling's test (red Cu2O precipitate). Note that aromatic aldehydes do not reduce Fehling's solution."
+      },
+      {
+        "title": "Detection of Carboxyl and Amino Groups",
+        "explanation": "Carboxylic acids liberate brisk effervescence of CO2 with NaHCO3 solution. Primary amines give the carbylamine test (foul-smelling isocyanide). Primary aliphatic amines evolve N2 gas with HNO2, whereas primary aromatic amines form azo dyes."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Prussian Blue Formation (Nitrogen Test)",
+        "formula": "6 NaCN + FeSO4 -> Na4[Fe(CN)6] + Na2SO4; 3 Na4[Fe(CN)6] + 4 FeCl3 -> Fe4[Fe(CN)6]3 + 12 NaCl",
+        "applicability": "Detection of Nitrogen in organic compounds",
+        "variables": [
+          {
+            "symbol": "Fe4[Fe(CN)6]3",
+            "meaning": "Ferriferrocyanide (Prussian Blue complex)",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Sulphur Detection Complex",
+        "formula": "Na2S + Na2[Fe(CN)5NO] -> Na4[Fe(CN)5NOS]",
+        "applicability": "Confirmation of sulphur using sodium nitroprusside",
+        "variables": [
+          {
+            "symbol": "Na4[Fe(CN)5NOS]",
+            "meaning": "Sodium thionitroprusside (purple complex)",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Thiocyanate Formation (Joint N & S Test)",
+        "formula": "Na + C + N + S -> NaSCN; 3 NaSCN + FeCl3 -> Fe(SCN)3 + 3 NaCl",
+        "applicability": "Detection when both Nitrogen and Sulphur are present together",
+        "variables": [
+          {
+            "symbol": "Fe(SCN)3",
+            "meaning": "Ferric thiocyanate (blood red color)",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Benzaldehyde gives a positive Fehling's test because it is an aldehyde.",
+        "correction": "Fehling's reagent is a weak oxidizing agent and cannot oxidize aromatic aldehydes like benzaldehyde. Only aliphatic aldehydes reduce Fehling's solution."
+      },
+      {
+        "misconception": "Phenols give effervescence with NaHCO3 just like carboxylic acids.",
+        "correction": "Phenols are weaker acids than carbonic acid (H2CO3) and cannot displace CO2 from NaHCO3, except for highly nitrated phenols like picric acid."
+      },
+      {
+        "misconception": "Concentrated HNO3 is added in the silver nitrate test for halogens just to make the solution acidic.",
+        "correction": "HNO3 is added specifically to decompose NaCN and Na2S present in the extract, preventing interfering precipitates of AgCN or Ag2S."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "An organic compound containing Nitrogen and Sulphur yields a blood-red color upon adding neutral FeCl3 solution to its sodium fusion extract. Explain the reaction and state why Prussian blue was not formed.",
+        "steps": [
+          "Step 1: During sodium fusion, if both N and S are present, sodium thiocyanate (NaSCN) is formed instead of separate NaCN and Na2S.",
+          "Step 2: Reaction: Na + C + N + S -> NaSCN.",
+          "Step 3: Treatment with FeCl3 solution yields ferric thiocyanate complex, Fe(SCN)3, which gives a characteristic blood-red coloration.",
+          "Step 4: Prussian blue is not formed because free cyanide ions (CN-) are absent as all cyanide is bound as SCN-."
+        ],
+        "answer": "Blood-red color is due to Fe(SCN)3 formation. Excess sodium was not used, leaving N and S combined as NaSCN instead of forming separate NaCN and Na2S."
+      },
+      {
+        "problem": "How can you chemically distinguish between Aniline and Ethylamine using a laboratory test?",
+        "steps": [
+          "Step 1: Perform the Azo Dye Test.",
+          "Step 2: Dissolve the compound in dil. HCl, cool to 0-5 degrees C, and add cold NaNO2 solution (HNO2 formed in situ).",
+          "Step 3: Add the resulting solution to a cold alkaline solution of beta-naphthol.",
+          "Step 4: Aniline (primary aromatic amine) forms a stable diazonium salt which couples with beta-naphthol to give a brilliant orange/red azo dye.",
+          "Step 5: Ethylamine (primary aliphatic amine) forms an unstable diazonium salt that decomposes immediately with brisk effervescence of N2 gas and no dye is formed."
+        ],
+        "answer": "Aniline gives a positive Azo Dye test (orange/red dye), whereas Ethylamine evolves N2 gas with effervescence."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following compounds will NOT give a positive sodium bicarbonate test? Option A: Formic acid, Option B: Benzoic acid, Option C: Phenol, Option D: Picric acid.",
+        "answer": "Option C. Phenol is less acidic than H2CO3 and fails to liberate CO2 from NaHCO3. Picric acid is strongly acidic due to three electron-withdrawing NO2 groups and gives a positive test."
+      },
+      {
+        "question": "A sodium fusion extract gives a pale yellow precipitate sparingly soluble in ammonium hydroxide when treated with AgNO3 solution. The element present is: Option A: Chlorine, Option B: Bromine, Option C: Iodine, Option D: Nitrogen.",
+        "answer": "Option B. Silver bromide (AgBr) forms a pale yellow precipitate that is sparingly soluble in NH4OH solution."
+      },
+      {
+        "question": "Lucas reagent reacts fastest with which of the following alcohols at room temperature? Option A: 1-Butanol, Option B: 2-Butanol, Option C: 2-Methylpropan-2-ol, Option D: Ethanol.",
+        "answer": "Option C. Lucas reagent reacts via an SN1 mechanism involving a carbocation intermediate. 2-Methylpropan-2-ol is a tertiary alcohol and forms an immediate turbidity."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 12 Chemistry, Chapter 12: Aldehydes, Ketones and Carboxylic Acids",
+      "NCERT Class 12 Chemistry, Chapter 13: Amines",
+      "NCERT Class 11 Chemistry, Chapter 12: Organic Chemistry - Some Basic Principles and Techniques"
+    ]
+  },
+  "safetyLabels": {
+    "localPrivateOnly": true,
+    "studentReady": false,
+    "publicationPerformed": false,
+    "requiresPersistentQueueBinding": true,
+    "requiresPublicationGate": true,
+    "officialSourceBackedSyllabusScope": true,
+    "modelOnlyCanonicalPromotion": false
+  }
+}
