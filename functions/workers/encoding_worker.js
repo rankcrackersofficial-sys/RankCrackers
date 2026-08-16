@@ -17,6 +17,12 @@ exports.encodingWorker = functions.firestore
 
     if (task.type !== 'ENCODING_NORMALIZATION') return;
 
+    // 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
+    if (task.runId || task.jobId || task.idempotencyKey) {
+      console.log(`🔱 ENCODING QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
+      return;
+    }
+
     const { payload } = task;
     const docId = payload.id;
     const taskRef = admin.firestore().collection("ai_queue").doc(taskId);

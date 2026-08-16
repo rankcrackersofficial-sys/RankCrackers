@@ -38,6 +38,12 @@ exports.sentinelBackgroundWorker = functions
     if (task.status !== 'received' && task.status !== 'parsing') return;
     if (beforeTask && beforeTask.status === task.status) return;
 
+    // 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
+    if (task.runId || task.jobId || task.idempotencyKey) {
+      console.log(`🔱 SENTINEL QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
+      return;
+    }
+
     const { type, payload } = task;
 
     if (type === 'STRUCTURAL' || type === 'SVO_EXTRACTION') return;

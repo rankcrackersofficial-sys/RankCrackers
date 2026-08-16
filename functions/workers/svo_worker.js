@@ -28,6 +28,12 @@ exports.svoWorker = functions
     // Only process SVO_EXTRACTION tasks
     if (task.type !== 'SVO_EXTRACTION') return;
 
+    // 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
+    if (task.runId || task.jobId || task.idempotencyKey) {
+      console.log(`🔱 SVO QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
+      return;
+    }
+
     const { payload } = task;
     const startTime = Date.now();
     const taskRef = admin.firestore().collection("ai_queue").doc(taskId);

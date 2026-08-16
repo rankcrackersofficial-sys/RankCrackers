@@ -1,0 +1,223 @@
+﻿{
+    "handoffId":  "AAF_005F_WAVE1_PRIVATE_HANDOFF_20260816",
+    "createdFrom":  "AAF-005E",
+    "groundingCommit":  "3d091b5ddd0ed8680d4f2e0b7a0b067500d1423d",
+    "integratedHeadAtStart":  "6b80bf82c2e88a5438b59af5cc71b06c72605c70",
+    "totalCandidates":  10,
+    "candidates":  [
+                       {
+                           "candidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                           "mode":  "REUSE",
+                           "canonicalBlocksReused":  6,
+                           "canonicalBlocksExtended":  0,
+                           "newCanonicalBlocksCreated":  0,
+                           "sourcePacksReused":  [
+                                                     "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                                                     "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS",
+                                                     "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS",
+                                                     "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC",
+                                                     "CSP_CHEM_NCERT_XII_AMINES"
+                                                 ],
+                           "duplicateGenerationBlocked":  true,
+                           "modelGenerationCall":  "NO",
+                           "modelMemoryUsedAsEvidence":  0,
+                           "privateAssemblyEligible":  true,
+                           "factVerificationStatus":  "PENDING_AAF006",
+                           "publicationEligible":  false,
+                           "studentReady":  false
+                       },
+                       {
+                           "candidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                           "mode":  "REUSE",
+                           "canonicalBlocksReused":  6,
+                           "canonicalBlocksExtended":  0,
+                           "newCanonicalBlocksCreated":  0,
+                           "sourcePacksReused":  [
+                                                     "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                                                     "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS",
+                                                     "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS",
+                                                     "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC",
+                                                     "CSP_CHEM_NCERT_XII_AMINES"
+                                                 ],
+                           "duplicateGenerationBlocked":  true,
+                           "modelGenerationCall":  "NO",
+                           "modelMemoryUsedAsEvidence":  0,
+                           "privateAssemblyEligible":  true,
+                           "factVerificationStatus":  "PENDING_AAF006",
+                           "publicationEligible":  false,
+                           "studentReady":  false
+                       },
+                       {
+                           "candidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                           "mode":  "REUSE",
+                           "canonicalBlocksReused":  6,
+                           "canonicalBlocksExtended":  0,
+                           "newCanonicalBlocksCreated":  0,
+                           "sourcePacksReused":  [
+                                                     "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                                                     "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS",
+                                                     "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS",
+                                                     "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC",
+                                                     "CSP_CHEM_NCERT_XII_AMINES"
+                                                 ],
+                           "duplicateGenerationBlocked":  true,
+                           "modelGenerationCall":  "NO",
+                           "modelMemoryUsedAsEvidence":  0,
+                           "privateAssemblyEligible":  true,
+                           "factVerificationStatus":  "PENDING_AAF006",
+                           "publicationEligible":  false,
+                           "studentReady":  false
+                       },
+                       {
+                           "candidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                           "mode":  "EXTEND",
+                           "canonicalBlocksReused":  4,
+                           "canonicalBlocksExtended":  2,
+                           "newCanonicalBlocksCreated":  0,
+                           "sourcePacksReused":  [
+                                                     "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                                                     "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS",
+                                                     "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS",
+                                                     "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC",
+                                                     "CSP_CHEM_NCERT_XII_AMINES"
+                                                 ],
+                           "duplicateGenerationBlocked":  true,
+                           "modelGenerationCall":  "NO",
+                           "modelMemoryUsedAsEvidence":  0,
+                           "privateAssemblyEligible":  true,
+                           "factVerificationStatus":  "PENDING_AAF006",
+                           "publicationEligible":  false,
+                           "studentReady":  false
+                       },
+                       {
+                           "candidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                           "mode":  "EXTEND",
+                           "canonicalBlocksReused":  4,
+                           "canonicalBlocksExtended":  2,
+                           "newCanonicalBlocksCreated":  0,
+                           "sourcePacksReused":  [
+                                                     "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                                                     "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS",
+                                                     "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS",
+                                                     "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC",
+                                                     "CSP_CHEM_NCERT_XII_AMINES"
+                                                 ],
+                           "duplicateGenerationBlocked":  true,
+                           "modelGenerationCall":  "NO",
+                           "modelMemoryUsedAsEvidence":  0,
+                           "privateAssemblyEligible":  true,
+                           "factVerificationStatus":  "PENDING_AAF006",
+                           "publicationEligible":  false,
+                           "studentReady":  false
+                       },
+                       {
+                           "candidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                           "mode":  "EXTEND",
+                           "canonicalBlocksReused":  4,
+                           "canonicalBlocksExtended":  2,
+                           "newCanonicalBlocksCreated":  0,
+                           "sourcePacksReused":  [
+                                                     "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                                                     "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS",
+                                                     "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS",
+                                                     "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC",
+                                                     "CSP_CHEM_NCERT_XII_AMINES"
+                                                 ],
+                           "duplicateGenerationBlocked":  true,
+                           "modelGenerationCall":  "NO",
+                           "modelMemoryUsedAsEvidence":  0,
+                           "privateAssemblyEligible":  true,
+                           "factVerificationStatus":  "PENDING_AAF006",
+                           "publicationEligible":  false,
+                           "studentReady":  false
+                       },
+                       {
+                           "candidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                           "mode":  "EXTEND",
+                           "canonicalBlocksReused":  4,
+                           "canonicalBlocksExtended":  2,
+                           "newCanonicalBlocksCreated":  0,
+                           "sourcePacksReused":  [
+                                                     "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                                                     "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS",
+                                                     "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS",
+                                                     "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC",
+                                                     "CSP_CHEM_NCERT_XII_AMINES"
+                                                 ],
+                           "duplicateGenerationBlocked":  true,
+                           "modelGenerationCall":  "NO",
+                           "modelMemoryUsedAsEvidence":  0,
+                           "privateAssemblyEligible":  true,
+                           "factVerificationStatus":  "PENDING_AAF006",
+                           "publicationEligible":  false,
+                           "studentReady":  false
+                       },
+                       {
+                           "candidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                           "mode":  "EXTEND",
+                           "canonicalBlocksReused":  4,
+                           "canonicalBlocksExtended":  2,
+                           "newCanonicalBlocksCreated":  0,
+                           "sourcePacksReused":  [
+                                                     "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                                                     "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS",
+                                                     "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS",
+                                                     "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC",
+                                                     "CSP_CHEM_NCERT_XII_AMINES"
+                                                 ],
+                           "duplicateGenerationBlocked":  true,
+                           "modelGenerationCall":  "NO",
+                           "modelMemoryUsedAsEvidence":  0,
+                           "privateAssemblyEligible":  true,
+                           "factVerificationStatus":  "PENDING_AAF006",
+                           "publicationEligible":  false,
+                           "studentReady":  false
+                       },
+                       {
+                           "candidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                           "mode":  "EXTEND",
+                           "canonicalBlocksReused":  4,
+                           "canonicalBlocksExtended":  2,
+                           "newCanonicalBlocksCreated":  0,
+                           "sourcePacksReused":  [
+                                                     "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                                                     "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS",
+                                                     "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS",
+                                                     "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC",
+                                                     "CSP_CHEM_NCERT_XII_AMINES"
+                                                 ],
+                           "duplicateGenerationBlocked":  true,
+                           "modelGenerationCall":  "NO",
+                           "modelMemoryUsedAsEvidence":  0,
+                           "privateAssemblyEligible":  true,
+                           "factVerificationStatus":  "PENDING_AAF006",
+                           "publicationEligible":  false,
+                           "studentReady":  false
+                       },
+                       {
+                           "candidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                           "mode":  "EXTEND",
+                           "canonicalBlocksReused":  4,
+                           "canonicalBlocksExtended":  2,
+                           "newCanonicalBlocksCreated":  0,
+                           "sourcePacksReused":  [
+                                                     "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                                                     "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS",
+                                                     "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS",
+                                                     "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC",
+                                                     "CSP_CHEM_NCERT_XII_AMINES"
+                                                 ],
+                           "duplicateGenerationBlocked":  true,
+                           "modelGenerationCall":  "NO",
+                           "modelMemoryUsedAsEvidence":  0,
+                           "privateAssemblyEligible":  true,
+                           "factVerificationStatus":  "PENDING_AAF006",
+                           "publicationEligible":  false,
+                           "studentReady":  false
+                       }
+                   ],
+    "factVerificationStatus":  "PENDING_AAF006",
+    "publicationEligible":  false,
+    "firebaseWrite":  "NO",
+    "queueWrite":  "NO"
+}

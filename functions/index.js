@@ -39,6 +39,7 @@ const { physicalStorageCleanupWorker } = require("./workers/physical_storage_cle
 const { certificateRegistryWorker } = require("./workers/certificate_worker");
 const { certificateRenderWorker } = require("./workers/renderer_worker");
 const { knowledgeManifestationWorker } = require("./workers/manifestation_worker");
+const { queueWorker } = require("./lib/workers/queueWorker");
 
 exports.sentinelBackgroundWorker = sentinelBackgroundWorker;
 exports.structuralWorker = structuralWorker;
@@ -52,6 +53,7 @@ exports.physicalStorageCleanupWorker = physicalStorageCleanupWorker;
 exports.certificateRegistryWorker = certificateRegistryWorker;
 exports.certificateRenderWorker = certificateRenderWorker;
 exports.knowledgeManifestationWorker = knowledgeManifestationWorker;
+exports.queueWorker = queueWorker;
 
 // 🔱 FOUNDER ALERT EXPORTS
 const { founderCriticalAlert } = require("./workers/alert_worker");

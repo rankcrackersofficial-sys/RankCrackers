@@ -20,6 +20,12 @@ exports.knowledgeManifestationWorker = functions
 
     if (task.type !== 'MANIFEST_KNOWLEDGE') return;
 
+    // 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
+    if (task.runId || task.jobId || task.idempotencyKey) {
+      console.log(`🔱 MANIFESTATION QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
+      return;
+    }
+
     const { payload } = task;
     const { sourceDocumentId, nodeIds, examId } = payload; // 🔱 Added: examId scoping
     const db = admin.firestore();

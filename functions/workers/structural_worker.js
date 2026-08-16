@@ -26,6 +26,12 @@ exports.structuralWorker = functions
     // Only process STRUCTURAL tasks
     if (task.type !== 'STRUCTURAL') return;
 
+    // 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
+    if (task.runId || task.jobId || task.idempotencyKey) {
+      console.log(`🔱 STRUCTURAL QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
+      return;
+    }
+
     const { payload } = task;
     const startTime = Date.now();
     const taskRef = admin.firestore().collection("ai_queue").doc(taskId);
