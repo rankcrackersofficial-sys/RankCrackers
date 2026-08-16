@@ -1,0 +1,138 @@
+﻿{
+    "masterCode":  "RANKCRACKERS_AUTONOMOUS_ACADEMIC_FACTORY_V1",
+    "verdict":  "AAF_005C_CANONICAL_SOURCE_REUSE_LAYER_PARTIAL_LOCATORS_READY_WAVE1_HELD",
+    "repositoryRoot":  "C:\\RankCrackers\\RankCrackers-55",
+    "branch":  "safety/rc-g2-pre-notification-schema",
+    "head":  "86c80626ba9579231015fd335f9f7ef4f3eb7419",
+    "baselineRequired":  "86c80626ba9579231015fd335f9f7ef4f3eb7419",
+    "baselinePresent":  true,
+    "canonicalSourcePacksReused":  1,
+    "newCanonicalSourcePacksCreated":  5,
+    "duplicateSourcePackCreationBlocked":  1,
+    "canonicalBlocksReused":  1,
+    "canonicalBlocksExtended":  0,
+    "newCanonicalBlocksRequired":  5,
+    "unsafeReuseBlocked":  5,
+    "missionBindingsPrepared":  1,
+    "wave0RepairRequired":  "YES_AFTER_EXTRACT_PACK",
+    "wave0IndependentRereview":  "NOT_RUN_EXTRACT_PACK_PENDING",
+    "wave0FinalStatus":  "HELD_BY_EXTRACT_PENDING",
+    "wave1SourceReadyCount":  0,
+    "wave1ReuseReadyCount":  0,
+    "wave1ExtensionRequiredCount":  5,
+    "wave1NewCreationRequiredCount":  0,
+    "wave1HardHoldCount":  10,
+    "wave1CandidateMatrix":  {
+                                 "reusePlan":  "Reuse the five Chemistry source packs after extraction across JEE/NEET/state-exam AMTNs",
+                                 "heldForSourceExtraction":  10,
+                                 "eligibleNow":  0,
+                                 "totalCandidateAMTNs":  10
+                             },
+    "sourcePacks":  [
+                        {
+                            "locator":  "JEE main Syllabus 2026.pdf page 10 Unit 20 Principles Related to Practical Chemistry",
+                            "reuse":  "Mission scope and AMTN eligibility only",
+                            "authority":  "NTA/JEE syllabus PDF already locked locally",
+                            "sourcePackId":  "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                            "sourceType":  "SYLLABUS_SCOPE",
+                            "status":  "LOCKED_EXISTING"
+                        },
+                        {
+                            "locator":  "Class XI Chemistry, Organic Chemistry - Some Basic Principles and Techniques, section 12.9 qualitative analysis",
+                            "status":  "CANDIDATE_LOCATOR_FOUND_EXTRACT_PENDING",
+                            "reuse":  "Lassaigne test, detection of C/H/N/S/halogens, qualitative analysis foundations",
+                            "authority":  "NCERT/SATHEE searchable NCERT text",
+                            "sourcePackId":  "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS",
+                            "sourceType":  "TEXTBOOK_CHAPTER",
+                            "url":  "https://sathee.iitk.ac.in/ncert-books/ncert-books-theory/class-11/nbt-che-11/chemistry-11-chapter-12-organic-chemistrysome-basic-principles-and-techniques/"
+                        },
+                        {
+                            "locator":  "Chemistry Unit 7 Systematic Qualitative Analysis",
+                            "status":  "CANDIDATE_LOCATOR_FOUND_EXTRACT_PENDING",
+                            "reuse":  "Procedure and observation claims for qualitative analysis only after extract",
+                            "authority":  "Official NCERT laboratory manual portal",
+                            "sourcePackId":  "CSP_CHEM_NCERT_LAB_MANUAL_QUAL_ANALYSIS",
+                            "sourceType":  "LAB_MANUAL_UNIT",
+                            "url":  "https://ncert.nic.in/science-laboratory-manual.php"
+                        },
+                        {
+                            "locator":  "Chemistry Unit 8 Tests for Functional Groups in Organic Compounds",
+                            "status":  "CANDIDATE_LOCATOR_FOUND_EXTRACT_PENDING",
+                            "reuse":  "Procedure claims for functional-group tests only after extract",
+                            "authority":  "Official NCERT laboratory manual portal",
+                            "sourcePackId":  "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS",
+                            "sourceType":  "LAB_MANUAL_UNIT",
+                            "url":  "https://ncert.nic.in/science-laboratory-manual.php"
+                        },
+                        {
+                            "locator":  "Class XII Chemistry Part II, Aldehydes, Ketones and Carboxylic Acids; oxidation and distinguishing tests",
+                            "status":  "CANDIDATE_LOCATOR_FOUND_EXTRACT_PENDING",
+                            "reuse":  "Tollens, Fehling, iodoform, carbonyl/carboxyl test theory after extract",
+                            "authority":  "NCERT textbook portal / NCERT mirrored text",
+                            "sourcePackId":  "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC",
+                            "sourceType":  "TEXTBOOK_CHAPTER",
+                            "url":  "https://ncert.nic.in/textbook.php?lech2=3-7"
+                        },
+                        {
+                            "locator":  "Class XII Chemistry Part II, Amines",
+                            "status":  "CANDIDATE_LOCATOR_FOUND_EXTRACT_PENDING",
+                            "reuse":  "Amines and diazonium/dye-test claims after extract",
+                            "authority":  "NCERT textbook portal",
+                            "sourcePackId":  "CSP_CHEM_NCERT_XII_AMINES",
+                            "sourceType":  "TEXTBOOK_CHAPTER",
+                            "url":  "https://ncert.nic.in/textbook.php?lech2=3-7"
+                        }
+                    ],
+    "canonicalBlocks":  [
+                            {
+                                "status":  "REUSABLE_NOW_FOR_SCOPE_ONLY",
+                                "blockId":  "CBLOCK_SCOPE_UNIT20",
+                                "sourcePackId":  "CSP_CHEM_NCERT_SCOPE_JEE_MAIN_2026_UNIT20",
+                                "claimCoverage":  3
+                            },
+                            {
+                                "status":  "REUSE_CANDIDATE_EXTRACT_PENDING",
+                                "blockId":  "CBLOCK_LASSAIGNE_AND_ELEMENT_DETECTION",
+                                "claimCoverageEstimate":  12,
+                                "sourcePackId":  "CSP_CHEM_NCERT_XI_ORGANIC_QUAL_ANALYSIS"
+                            },
+                            {
+                                "status":  "REUSE_CANDIDATE_EXTRACT_PENDING",
+                                "blockId":  "CBLOCK_SYSTEMATIC_QUAL_ANALYSIS_PROCEDURES",
+                                "claimCoverageEstimate":  10,
+                                "sourcePackId":  "CSP_CHEM_NCERT_LAB_MANUAL_QUAL_ANALYSIS"
+                            },
+                            {
+                                "status":  "REUSE_CANDIDATE_EXTRACT_PENDING",
+                                "blockId":  "CBLOCK_FUNCTIONAL_GROUP_LAB_TESTS",
+                                "claimCoverageEstimate":  12,
+                                "sourcePackId":  "CSP_CHEM_NCERT_LAB_MANUAL_FUNCTIONAL_GROUPS"
+                            },
+                            {
+                                "status":  "REUSE_CANDIDATE_EXTRACT_PENDING",
+                                "blockId":  "CBLOCK_CARBONYL_DISTINGUISHING_TESTS",
+                                "claimCoverageEstimate":  11,
+                                "sourcePackId":  "CSP_CHEM_NCERT_XII_ALDEHYDES_KETONES_CARBOXYLIC"
+                            },
+                            {
+                                "status":  "REUSE_CANDIDATE_EXTRACT_PENDING",
+                                "blockId":  "CBLOCK_AMINES_DIAZONIUM_TESTS",
+                                "claimCoverageEstimate":  3,
+                                "sourcePackId":  "CSP_CHEM_NCERT_XII_AMINES"
+                            }
+                        ],
+    "modelMemoryUsedAsEvidence":  0,
+    "modelOnlyCanonicalPromotions":  0,
+    "silentModelFallbacks":  0,
+    "unsourcedStudentReadyItems":  0,
+    "directAiPublicWrites":  0,
+    "firebaseRead":  "NO",
+    "firebaseWrite":  "NO",
+    "queueWrite":  "NO",
+    "vertexUsed":  "NO",
+    "geminiUsed":  "NO",
+    "publicationPerformed":  "NO",
+    "studentReady":  "NO",
+    "nextRequiredGate":  "AAF_005D_EXTRACT_TEXT_LOCATORS_AND_CLAIM_MATRIX_FROM_CANONICAL_SOURCE_PACKS",
+    "finalLine":  "AAF_CANONICAL_SOURCE_REUSE_LAYER_PARTIAL_READY_EXTRACT_PACK_REQUIRED_BEFORE_CLAIM_GROUNDED_DIGIBOOK_SCALEOUT"
+}
