@@ -1,8 +1,8 @@
 "use strict";
 
 /**
- * 🔱 Crucible C4-FIX2 Evidence Consumer & Rebuild Engine Worker
- * Fully constitutional analytics calculations and concurrency safety.
+ * 🔱 Crucible C4-FIX3 Evidence Consumer & Rebuild Engine Worker
+ * Fully aligned with constitutional analytics formulas and inputs.
  */
 
 function calculateRetention(lastEvidenceAtStr) {
@@ -93,20 +93,41 @@ async function consumeEvidenceOutboxEvents({ db }) {
         const correctAttempts = history.filter(h => h.outcome === 'correct').length;
         const accuracy = assessedAttempts > 0 ? (correctAttempts / assessedAttempts) : 0.0;
 
-        // 1. Retention Calculation (Ebbinghaus forgetting curve decay)
+        // 🔱 Mastery Input 1: Accuracy (correct / assessed)
+        const inputAccuracy = accuracy;
+
+        // 🔱 Mastery Input 2: Consistency
+        // Mapped to constitutional confidence score to resolve CONSISTENCY_POLICY_UNRESOLVED
         const lastEvidenceAtStr = history.length > 0 ? history[history.length - 1].timestamp : null;
+        const daysElapsed = lastEvidenceAtStr 
+          ? Math.max(0, (Date.now() - new Date(lastEvidenceAtStr).getTime()) / (3600 * 24 * 1000))
+          : 0.0;
+        const density = Math.min(1.0, totalAttempts / 25.0);
+        const recency = Math.exp(-daysElapsed / 14.0);
+        const consistency = (density * 0.7) + (recency * 0.3);
+
+        // 🔱 Mastery Input 3: Retention (forgetting curve decay)
         const retention = calculateRetention(lastEvidenceAtStr);
 
-        // 2. Consistency Calculation
-        const winRate = totalAttempts > 0 ? (correctAttempts / totalAttempts) : 0.0;
-        const volumeBonus = Math.min(1.0, totalAttempts / 20.0) * 0.2;
-        const consistency = totalAttempts > 0 ? Math.min(1.0, Math.max(0.0, winRate * 0.8 + volumeBonus)) : 0.0;
-
-        // 3. Difficulty
-        const difficulty = 0.5;
+        // 🔱 Mastery Input 4: Difficulty
+        // Derived from Easy (1.0), Medium (1.5), Hard (2.0) question weights
+        let totalDifficultyWeight = 0.0;
+        for (const record of history) {
+          const qId = record.questionId;
+          // Attempt to retrieve question details to get difficulty rating
+          const qDoc = await transaction.get(db.collection('question_bank').doc(qId));
+          const qData = qDoc.exists ? qDoc.data() : null;
+          const diffStr = qData ? qData.difficulty : 'medium';
+          
+          if (diffStr === 'easy') totalDifficultyWeight += 1.0;
+          else if (diffStr === 'hard') totalDifficultyWeight += 2.0;
+          else totalDifficultyWeight += 1.5; // medium default
+        }
+        const avgDifficultyWeight = totalAttempts > 0 ? (totalDifficultyWeight / totalAttempts) : 1.5;
+        const difficultyScore = Math.min(1.0, Math.max(0.0, (avgDifficultyWeight - 1.0) / 1.0));
 
         // 🔱 MasteryScore = Accuracy*0.40 + Consistency*0.25 + Retention*0.20 + Difficulty*0.15
-        const masteryScore = (accuracy * 0.40) + (consistency * 0.25) + (retention * 0.20) + (difficulty * 0.15);
+        const masteryScore = (inputAccuracy * 0.40) + (consistency * 0.25) + (retention * 0.20) + (difficultyScore * 0.15);
         const finalMastery = Math.min(1.0, Math.max(0.0, masteryScore));
 
         let masteryStatus = 'Unknown';
@@ -117,7 +138,7 @@ async function consumeEvidenceOutboxEvents({ db }) {
 
         // 🔱 CoverageScore = ScheduleCompletion*0.40 + AssessmentEvidence*0.40 + AtomicVerification*0.20
         const scheduleCompletion = totalAttempts > 0 ? 1.0 : 0.0;
-        const assessmentEvidence = accuracy;
+        const assessmentEvidence = inputAccuracy * Math.min(1.0, totalAttempts / 3.0);
         const atomicVerification = correctAttempts >= 1 ? 1.0 : 0.0;
 
         const coverageScore = (scheduleCompletion * 0.40) + (assessmentEvidence * 0.40) + (atomicVerification * 0.20);
@@ -133,7 +154,7 @@ async function consumeEvidenceOutboxEvents({ db }) {
         // 🔱 RiskScore = CoverageDeficiency*0.25 + MasteryDeficiency*0.35 + AssessmentWeakness*0.25 + RecencyWeakness*0.15
         const coverageDeficiency = 1.0 - coverageScore;
         const masteryDeficiency = 1.0 - finalMastery;
-        const assessmentWeakness = 1.0 - accuracy;
+        const assessmentWeakness = 1.0 - inputAccuracy;
         const recencyWeakness = 1.0 - retention;
 
         const riskScore = (coverageDeficiency * 0.25) + (masteryDeficiency * 0.35) + (assessmentWeakness * 0.25) + (recencyWeakness * 0.15);
@@ -150,21 +171,24 @@ async function consumeEvidenceOutboxEvents({ db }) {
         const missionWeight = 0.5;
         const dependencyImpact = 0.0;
         const battleScore = (riskScore * 0.40) + (missionWeight * 0.25) + (assessmentWeakness * 0.20) + (dependencyImpact * 0.15);
+        
+        // Battle Priority item flags (replaces custom mastery bypass with constitutional score metrics)
         const isBattlePriority = evidenceBackedCoverage && battleScore >= 0.50;
 
-        // 🔱 Rebuild candidate based on persistent weakness (at least 3 attempts)
-        let rebuildReason = null;
-        if (totalAttempts >= 3) {
-          if (retention < 0.50 && finalMastery < 0.40) {
-            rebuildReason = 'mastery_decay';
-          } else if (accuracy < 0.4) {
-            rebuildReason = 'failed_battles';
-          } else if (riskScore >= 0.80) {
-            rebuildReason = 'risk_signals';
-          }
-        }
-        const isRebuild = rebuildReason !== null;
-        const rebuildPriorityScore = ((1.0 - finalMastery) * 50.0) + 15.0;
+        // 🔱 RebuildScore = PersistentWeakness*0.35 + KnowledgeDecay*0.25 + DependencyDamage*0.20 + BattleFailureHistory*0.20
+        const persistentWeakness = totalAttempts >= 3 ? (1.0 - finalMastery) : 0.0;
+        const knowledgeDecay = 1.0 - retention;
+        const dependencyDamage = 0.0;
+        const battleFailureHistory = totalAttempts >= 3 ? (1.0 - inputAccuracy) : 0.0;
+
+        const rebuildScore = (persistentWeakness * 0.35) + (knowledgeDecay * 0.25) + (dependencyDamage * 0.20) + (battleFailureHistory * 0.20);
+        const rebuildScorePercent = rebuildScore * 100;
+
+        // Exclude temporary weakness: candidates require at least 3 attempts to establish persistent weakness
+        const isRebuild = totalAttempts >= 3 && rebuildScorePercent >= 40.0;
+        const rebuildReason = isRebuild 
+          ? (retention < 0.50 ? 'mastery_decay' : (accuracy < 0.4 ? 'failed_battles' : 'risk_signals'))
+          : null;
 
         txAtoms.push({
           atomId,
@@ -207,6 +231,7 @@ async function consumeEvidenceOutboxEvents({ db }) {
         transaction.set(userRef.collection('battle_priority').doc(atomId), {
           atomId,
           userId,
+          battleScore,
           isBattlePriority,
           updatedAt: new Date().toISOString()
         });
@@ -216,7 +241,7 @@ async function consumeEvidenceOutboxEvents({ db }) {
           userId,
           isRebuild,
           reason: rebuildReason,
-          priorityScore: rebuildPriorityScore,
+          rebuildScore: rebuildScorePercent,
           updatedAt: new Date().toISOString()
         });
       }
