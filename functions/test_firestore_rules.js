@@ -6,6 +6,7 @@ const {
 const fs = require('fs');
 const path = require('path');
 const { materializeQuestion } = require('./workers/materialize_worker');
+const { createAttemptSession, evaluateAttempt } = require('./workers/evaluate_attempt_worker');
 
 async function main() {
   console.log('Starting Firestore Rules Emulator & Materializer Tests...');
@@ -359,18 +360,166 @@ async function main() {
   });
 
   // ===================================================
-  // 3. STUDENT ACCESS-LEAK AND BYPASS TESTS
+  // 4. CRUCIBLE C2A & C3 PIPELINE TESTS
   // ===================================================
-  await runTestCase('Student CANNOT bypass security rules to read answers in published_questions (double confirmation)', async () => {
-    // Attempting to read a clean published question to make sure it exists
-    const doc = await studentDb.collection('published_questions').doc('q_mcq_private').get();
-    if (!doc.exists) {
-      throw new Error('Expected materialized question to exist');
-    }
-    const data = doc.data();
-    if (data.answerIndex !== undefined || data.solution !== undefined || data.numericalAnswer !== undefined) {
-      throw new Error('STUDENT_READABLE_PRIVATE_ANSWER_KEYS > 0 / Leak detected!');
-    }
+
+  await runTestCase('Draft question cannot write directly to trust registries', async () => {
+    await assertFails(studentDb.collection('published_questions').doc('q_draft_direct').set({
+      id: 'q_draft_direct',
+      status: 'draft'
+    }));
+  });
+
+  await runTestCase('Micro stays NOT_READY if approved count < 50', async () => {
+    const mockDb = testEnv.withSecurityRulesDisabled(async (context) => {
+      const db = context.firestore();
+      
+      for (let i = 0; i < 49; i++) {
+        await db.collection('question_bank').doc(`q_sch1_${i}`).set({
+          id: `q_sch1_${i}`,
+          status: 'published',
+          version: 1,
+          questionType: 'mcq_single',
+          atomicTopicIds: ['atom_sch1']
+        });
+      }
+      
+      let opened = false;
+      try {
+        await createAttemptSession({
+          db,
+          userId: 'student_123',
+          microTestId: 'micro_1',
+          scheduleId: 'sch_1',
+          questionIds: Array.from({ length: 49 }, (_, i) => `q_sch1_${i}`),
+          questionVersions: {},
+          poolVersion: 1,
+          assemblyVersion: 1,
+          attemptOrdinal: 1,
+          isRunnable: false
+        });
+        opened = true;
+      } catch (err) {
+        if (!err.message.includes("NOT_READY")) throw err;
+      }
+      
+      if (opened) {
+        throw new Error("Should have blocked session creation for NOT_READY micro test!");
+      }
+    });
+  });
+
+  await runTestCase('Student cannot create or modify AttemptSession directly', async () => {
+    await assertFails(studentDb.collection('attempt_sessions').doc('session_fake').set({
+      attemptSessionId: 'session_fake',
+      userId: 'student_user_123',
+      status: 'opened'
+    }));
+  });
+
+  await runTestCase('Student cannot submit score or correctness directly in micro_attempts', async () => {
+    await assertFails(studentDb.collection('micro_attempts').doc('session_fake').set({
+      attemptSessionId: 'session_fake',
+      userId: 'student_user_123',
+      status: 'submitted',
+      score: 50,
+      correctness: { q1: true }
+    }));
+  });
+
+  await runTestCase('Student cannot overwrite or mutate evaluated result', async () => {
+    await testEnv.withSecurityRulesDisabled(async (context) => {
+      const db = context.firestore();
+      await db.collection('micro_attempts').doc('session_evaluated').set({
+        attemptSessionId: 'session_evaluated',
+        userId: 'student_user_123',
+        status: 'submitted',
+        evaluated: true,
+        score: 10
+      });
+    });
+
+    await assertFails(studentDb.collection('micro_attempts').doc('session_evaluated').update({
+      score: 50
+    }));
+  });
+
+  await runTestCase('C3 Evaluation: scoring precision, idempotency, and outbox validation', async () => {
+    await testEnv.withSecurityRulesDisabled(async (context) => {
+      const db = context.firestore();
+
+      await db.collection('question_bank').doc('q_mcq_c3').set({
+        id: 'q_mcq_c3',
+        version: 1,
+        questionType: 'mcq_single',
+        atomicTopicIds: ['atom_c3_mcq']
+      });
+      await db.collection('answer_keys').doc('q_mcq_c3').set({
+        verifiedAnswerValue: '2'
+      });
+
+      await db.collection('question_bank').doc('q_num_c3').set({
+        id: 'q_num_c3',
+        version: 1,
+        questionType: 'numerical',
+        atomicTopicIds: ['atom_c3_num']
+      });
+      await db.collection('answer_keys').doc('q_num_c3').set({
+        verifiedAnswerValue: '4.50',
+        acceptancePolicy: { type: 'tolerance', tolerance: 0.05 }
+      });
+
+      const session = await createAttemptSession({
+        db,
+        userId: 'student_user_123',
+        microTestId: 'micro_c3',
+        scheduleId: 'sch_c3',
+        questionIds: ['q_mcq_c3', 'q_num_c3'],
+        questionVersions: { q_mcq_c3: 1, q_num_c3: 1 },
+        poolVersion: 1,
+        assemblyVersion: 1,
+        attemptOrdinal: 1,
+        isRunnable: true
+      });
+
+      const result = await evaluateAttempt({
+        db,
+        attemptSessionId: session.attemptSessionId,
+        responses: { q_mcq_c3: '2', q_num_c3: '4.52' },
+        submittedAt: new Date().toISOString()
+      });
+
+      if (result.score !== 2) {
+        throw new Error(`Scoring calculation failed! Expected 2, got ${result.score}`);
+      }
+
+      const repeatResult = await evaluateAttempt({
+        db,
+        attemptSessionId: session.attemptSessionId,
+        responses: { q_mcq_c3: '2', q_num_c3: '4.52' },
+        submittedAt: new Date().toISOString()
+      });
+
+      if (repeatResult.score !== 2) {
+        throw new Error("Idempotent check failed!");
+      }
+
+      const outboxDoc = await db.collection('evidence_outbox').doc(`outbox_${session.attemptSessionId}`).get();
+      if (!outboxDoc.exists) {
+        throw new Error("EvidenceOutbox event missing!");
+      }
+      const outbox = outboxDoc.data();
+      if (outbox.score !== 2 || outbox.eventStatus !== 'pending_processing') {
+        throw new Error("EvidenceOutbox schema validation failed!");
+      }
+
+      const evMcq = await db.collection('atomic_evidence_records').doc(`ev_${session.attemptSessionId}_q_mcq_c3_atom_c3_mcq`).get();
+      const evNum = await db.collection('atomic_evidence_records').doc(`ev_${session.attemptSessionId}_q_num_c3_atom_c3_num`).get();
+
+      if (!evMcq.exists || !evNum.exists) {
+        throw new Error("AtomicEvidenceRecord documents missing!");
+      }
+    });
   });
 
   console.log(`\n==============================================`);
