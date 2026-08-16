@@ -1,0 +1,135 @@
+﻿{
+    "masterCode":  "RANKCRACKERS_AUTONOMOUS_ACADEMIC_FACTORY_V1",
+    "verdict":  "AAF_005E_GROUNDED_CANONICAL_DIGIBOOK_READY_FOR_REUSE_FIRST_ASSEMBLY",
+    "repositoryRoot":  "C:\\RankCrackers\\RankCrackers-55",
+    "branch":  "safety/rc-g2-pre-notification-schema",
+    "head":  "08242567d131754ffd0640f2a69a830eda9b047d",
+    "claimsExpected":  51,
+    "totalClaims":  51,
+    "directSupported":  45,
+    "derivedSupported":  6,
+    "sourceLocatorPending":  0,
+    "sourceMissing":  0,
+    "sourceInsufficient":  0,
+    "sourceConflict":  0,
+    "removedByRepair":  1,
+    "exactExtractsCreated":  5,
+    "sourceDocumentsUsed":  [
+                                "JEE main Syllabus 2026.pdf",
+                                "NCERT Class XI Organic Chemistry mirror",
+                                "NCERT Chemistry Laboratory Manual mirror",
+                                "NCERT Class XII Chemistry Part II Unit 8 PDF",
+                                "NCERT Class XII Chemistry Part II Unit 9 PDF"
+                            ],
+    "sourceDocumentHashes":  {
+                                 "EXT_LAB_FUNCTIONAL_GROUPS_ALCOHOL_PHENOL":  "4460c17192161612fd2c48d8c32ec526dd3709cbb0e99c75406b677b619448f7",
+                                 "EXT_ALDEHYDE_KETONE_TESTS":  "f7c92474994ef06776fefaa75aafbd6acfbd444df954f2d63db53b70a33390b1",
+                                 "EXT_SCOPE_UNIT20":  "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+                                 "EXT_ORG_LASSAIGNE":  "5ab2e0f46f590ec019f5fd0be20c5545dd92f04d668ad5eb7fc47fb4f43d2777",
+                                 "EXT_AMINES_TESTS_DIAZONIUM":  "1208f46b5f61e3319a738d828fd3eb392d5c442bc8d5758547cf66f82dd4cce4"
+                             },
+    "canonicalSourcePacksReused":  6,
+    "newCanonicalSourcePacksCreated":  0,
+    "duplicateSourceRegistrationBlocked":  6,
+    "wave0RepairRequired":  "YES_MINIMAL",
+    "wave0RepairCompleted":  "YES_EVIDENCE_LEVEL",
+    "repairedClaims":  [
+                           {
+                               "claimId":  "CLAIM_0010",
+                               "repair":  "Merged broken Lucas reagent fragment into CLAIM_0009 evidence context; removed standalone fragment claim."
+                           },
+                           {
+                               "claimId":  "CLAIM_0025",
+                               "repair":  "Removed overstatement that Fehling reagent is weak; retained NCERT-supported distinction that aromatic aldehydes do not respond."
+                           },
+                           {
+                               "claimId":  "CLAIM_0027",
+                               "repair":  "Reworded phenol/NaHCO3 explanation to lab-manual-supported acidity/solubility statement; retained nitrated phenol exception."
+                           },
+                           {
+                               "claimId":  "CLAIM_0039",
+                               "repair":  "Replaced beta-naphthol-specific coupling detail with NCERT-supported diazonium coupling with phenol/aniline."
+                           },
+                           {
+                               "claimId":  "CLAIM_0042",
+                               "repair":  "Changed orange/red dye wording to source-supported coloured azo product."
+                           },
+                           {
+                               "claimId":  "CLAIM_0048",
+                               "repair":  "Removed unsupported SN1/carbocation explanation; retained source-supported immediate Lucas turbidity for tertiary alcohol."
+                           }
+                       ],
+    "previousContentHash":  "580ef17f9328774e9d477520d9276e62e4d1df810498e6818a520fc5725b16a0",
+    "finalContentHash":  "REPAIR_PATCH_MANIFEST_ONLY_NO_FULL_DRAFT_REGENERATION",
+    "independentRereviewExecuted":  "YES_EVIDENCE_LEVEL",
+    "independentRereviewVerdict":  "PASS_WITH_REPAIR_NOTES",
+    "finalReviewHash":  "7f2bf43d732b8d03e9b81598206d00d9434f730fd9929115917831c701c8f4f8",
+    "wave0FinalStatus":  "APPROVED_PRIVATE_CLAIM_GROUNDED",
+    "assemblyEligible":  true,
+    "assemblyHandoffCreated":  true,
+    "assemblyHandoffHash":  "f43c16f9a827f01e7f235bd63aa127a025077c128e8b01ab18c5de347e6838f6",
+    "canonicalBlocksReused":  6,
+    "canonicalBlocksExtended":  5,
+    "newCanonicalBlocksRequired":  0,
+    "duplicateGenerationBlocked":  10,
+    "unsafeReuseBlocked":  0,
+    "wave1TotalCandidates":  10,
+    "wave1ReuseReady":  3,
+    "wave1ExtensionReady":  7,
+    "wave1CreateNewReady":  0,
+    "wave1HardHold":  0,
+    "wave1ReadyTotal":  10,
+    "extracts":  [
+                     {
+                         "extractId":  "EXT_SCOPE_UNIT20",
+                         "locator":  "page 10 Unit 20",
+                         "supports":  "CLAIM_0001..0003",
+                         "source":  "JEE main Syllabus 2026.pdf",
+                         "hash":  "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905"
+                     },
+                     {
+                         "locator":  "Philoid lines 910-963 / SATHEE 12.9.2",
+                         "extractId":  "EXT_ORG_LASSAIGNE",
+                         "source":  "NCERT Class XI Organic Chemistry mirror",
+                         "supports":  "CLAIM_0004..0008, CLAIM_0018..0023, CLAIM_0028..0035, CLAIM_0045..0046, CLAIM_0051",
+                         "hash":  "5ab2e0f46f590ec019f5fd0be20c5545dd92f04d668ad5eb7fc47fb4f43d2777",
+                         "sourceUrl":  "https://philoid.com/ncert/chapter/kech202"
+                     },
+                     {
+                         "locator":  "Unit 8 Tests for Functional Groups, lines 140-318, 368-397",
+                         "extractId":  "EXT_LAB_FUNCTIONAL_GROUPS_ALCOHOL_PHENOL",
+                         "source":  "NCERT Chemistry Laboratory Manual mirror",
+                         "supports":  "CLAIM_0009..0011, CLAIM_0026..0027, CLAIM_0043..0044, CLAIM_0047..0048",
+                         "hash":  "4460c17192161612fd2c48d8c32ec526dd3709cbb0e99c75406b677b619448f7",
+                         "sourceUrl":  "https://studylib.net/doc/8431569/%C2%A9-ncert-not-to-be-republished"
+                     },
+                     {
+                         "locator":  "lech203.pdf pages 11-13 lines 435, 461-473, 480-517",
+                         "extractId":  "EXT_ALDEHYDE_KETONE_TESTS",
+                         "source":  "NCERT Class XII Chemistry Part II Unit 8 PDF",
+                         "supports":  "CLAIM_0012..0015, CLAIM_0024..0025, CLAIM_0049",
+                         "hash":  "f7c92474994ef06776fefaa75aafbd6acfbd444df954f2d63db53b70a33390b1",
+                         "sourceUrl":  "https://ncert.nic.in/textbook/pdf/lech203.pdf"
+                     },
+                     {
+                         "locator":  "lech204.pdf pages 12,15,17 lines 444-460, 557-562, 645-654",
+                         "extractId":  "EXT_AMINES_TESTS_DIAZONIUM",
+                         "source":  "NCERT Class XII Chemistry Part II Unit 9 PDF",
+                         "supports":  "CLAIM_0016..0017, CLAIM_0036..0042, CLAIM_0050",
+                         "hash":  "1208f46b5f61e3319a738d828fd3eb392d5c442bc8d5758547cf66f82dd4cce4",
+                         "sourceUrl":  "https://ncert.nic.in/textbook/pdf/lech204.pdf"
+                     }
+                 ],
+    "modelMemoryUsedAsEvidence":  0,
+    "modelOnlyCanonicalPromotions":  0,
+    "silentModelFallbacks":  0,
+    "unsourcedStudentReadyItems":  0,
+    "directAiPublicWrites":  0,
+    "firebaseRead":  "NO",
+    "firebaseWrite":  "NO",
+    "queueWrite":  "NO",
+    "publication":  "NO",
+    "vertexUsed":  "NO",
+    "geminiUsed":  "NO",
+    "finalLine":  "AAF_GROUNDED_CANONICAL_DIGIBOOK_READY_FOR_REUSE_FIRST_ASSEMBLY_AND_SCALEOUT"
+}
