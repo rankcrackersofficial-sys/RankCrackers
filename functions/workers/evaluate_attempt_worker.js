@@ -140,19 +140,31 @@ async function evaluateAttempt({
     correctness[qId] = isCorrect;
     if (isCorrect) {
       totalScore += 1;
+    }
 
-      // Authoritative Atom Mapping derived from server question metadata
-      const atomIds = question.atomicTopicIds || [];
-      for (const atomId of atomIds) {
-        evidenceRecords.push({
-          userId: session.userId,
-          attemptSessionId,
-          questionId: qId,
-          atomId,
-          evidenceStatus: 'VERIFIED_CORRECT',
-          timestamp: submittedAt
-        });
-      }
+    // Authoritative Atom Mapping derived from server question metadata
+    const atomIds = question.atomicTopicIds || [];
+    const outcome = studentResponse === undefined || studentResponse === null 
+      ? 'unanswered' 
+      : (isCorrect ? 'correct' : 'incorrect');
+    const evidenceStatus = isCorrect ? 'VERIFIED_CORRECT' : 'VERIFIED_INCORRECT';
+
+    for (const atomId of atomIds) {
+      evidenceRecords.push({
+        attemptSessionId,
+        attemptResultId: attemptSessionId,
+        userId: session.userId,
+        questionId: qId,
+        questionLineageId: question.questionLineageId || question.id || '',
+        questionVersion: question.version || 1,
+        atomId,
+        authoritativeAtomIds: question.atomicTopicIds || [],
+        assessmentType: 'micro',
+        scheduleId: session.scheduleId,
+        outcome,
+        evidenceStatus,
+        timestamp: submittedAt
+      });
     }
   }
 

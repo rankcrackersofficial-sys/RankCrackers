@@ -219,7 +219,24 @@ service cloud.firestore {
         allow read, write: if request.auth != null && request.auth.uid == userId;
       }
       match /atomic_mastery/{atomicId} {
-        allow read, write: if request.auth != null && request.auth.uid == userId;
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow write: if isFounder();
+      }
+      match /atomic_coverage/{atomicId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow write: if isFounder();
+      }
+      match /atomic_risk/{atomicId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow write: if isFounder();
+      }
+      match /battle_priority/{atomicId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow write: if isFounder();
+      }
+      match /rebuild_candidates/{atomicId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow write: if isFounder();
       }
       match /notifications/{notificationId} {
         allow read, write: if request.auth != null && request.auth.uid == userId;
