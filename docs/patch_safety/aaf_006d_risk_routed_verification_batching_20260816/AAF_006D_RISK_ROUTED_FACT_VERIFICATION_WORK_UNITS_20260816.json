@@ -1,0 +1,447 @@
+﻿{
+    "batchId":  "AAF_006D_RISK_ROUTED_FACT_VERIFICATION_WORK_UNITS_20260816",
+    "head":  "3765c1e4d9d8db389d12e52d11ec483a077892ec",
+    "sourceDossierHash":  "844f821e7e26fb899cdbcbc46ec3b586f27b1d3d5a1125e048893141f35ea4d3",
+    "candidateIdDefectDetected":  true,
+    "candidateIdDefectRepair":  "Stable verifier IDs assigned by dossier ordinal WAVE1_CHEM_PRACTICAL_01..10; sourceCandidateId preserved for audit.",
+    "jobs":  [
+                 {
+                     "jobId":  "PVJ_WAVE1_CHEM_PRACTICAL_01",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_01",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PRIMARY_VERIFICATION",
+                     "claimCount":  51,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "RVJ_WAVE1_CHEM_PRACTICAL_01",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_01",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "REACTION_EQUATION",
+                     "claimCount":  3,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PRJ_WAVE1_CHEM_PRACTICAL_01",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_01",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PROCEDURE",
+                     "claimCount":  16,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "CPJ_WAVE1_CHEM_PRACTICAL_01",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_01",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "CROSS_PROVIDER_AFTER_PRIMARY",
+                     "claimCount":  19,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PVJ_WAVE1_CHEM_PRACTICAL_02",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_02",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PRIMARY_VERIFICATION",
+                     "claimCount":  51,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "RVJ_WAVE1_CHEM_PRACTICAL_02",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_02",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "REACTION_EQUATION",
+                     "claimCount":  3,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PRJ_WAVE1_CHEM_PRACTICAL_02",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_02",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PROCEDURE",
+                     "claimCount":  16,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "CPJ_WAVE1_CHEM_PRACTICAL_02",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_02",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "CROSS_PROVIDER_AFTER_PRIMARY",
+                     "claimCount":  19,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PVJ_WAVE1_CHEM_PRACTICAL_03",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_03",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PRIMARY_VERIFICATION",
+                     "claimCount":  51,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "RVJ_WAVE1_CHEM_PRACTICAL_03",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_03",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "REACTION_EQUATION",
+                     "claimCount":  3,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PRJ_WAVE1_CHEM_PRACTICAL_03",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_03",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PROCEDURE",
+                     "claimCount":  16,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "CPJ_WAVE1_CHEM_PRACTICAL_03",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_03",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "CROSS_PROVIDER_AFTER_PRIMARY",
+                     "claimCount":  19,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PVJ_WAVE1_CHEM_PRACTICAL_04",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_04",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PRIMARY_VERIFICATION",
+                     "claimCount":  57,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "RVJ_WAVE1_CHEM_PRACTICAL_04",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_04",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "REACTION_EQUATION",
+                     "claimCount":  4,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PRJ_WAVE1_CHEM_PRACTICAL_04",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_04",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PROCEDURE",
+                     "claimCount":  19,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "SSJ_WAVE1_CHEM_PRACTICAL_04",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_04",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "STANDARD_SENSITIVE",
+                     "claimCount":  1,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "CPJ_WAVE1_CHEM_PRACTICAL_04",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_04",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "CROSS_PROVIDER_AFTER_PRIMARY",
+                     "claimCount":  24,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PVJ_WAVE1_CHEM_PRACTICAL_05",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_05",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PRIMARY_VERIFICATION",
+                     "claimCount":  57,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "RVJ_WAVE1_CHEM_PRACTICAL_05",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_05",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "REACTION_EQUATION",
+                     "claimCount":  4,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PRJ_WAVE1_CHEM_PRACTICAL_05",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_05",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PROCEDURE",
+                     "claimCount":  19,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "CPJ_WAVE1_CHEM_PRACTICAL_05",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_05",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "CROSS_PROVIDER_AFTER_PRIMARY",
+                     "claimCount":  23,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PVJ_WAVE1_CHEM_PRACTICAL_06",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_06",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PRIMARY_VERIFICATION",
+                     "claimCount":  57,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "RVJ_WAVE1_CHEM_PRACTICAL_06",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_06",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "REACTION_EQUATION",
+                     "claimCount":  4,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PRJ_WAVE1_CHEM_PRACTICAL_06",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_06",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PROCEDURE",
+                     "claimCount":  19,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "CPJ_WAVE1_CHEM_PRACTICAL_06",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_06",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "CROSS_PROVIDER_AFTER_PRIMARY",
+                     "claimCount":  23,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PVJ_WAVE1_CHEM_PRACTICAL_07",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_07",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PRIMARY_VERIFICATION",
+                     "claimCount":  57,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "RVJ_WAVE1_CHEM_PRACTICAL_07",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_07",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "REACTION_EQUATION",
+                     "claimCount":  4,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PRJ_WAVE1_CHEM_PRACTICAL_07",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_07",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PROCEDURE",
+                     "claimCount":  19,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "SSJ_WAVE1_CHEM_PRACTICAL_07",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_07",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "STANDARD_SENSITIVE",
+                     "claimCount":  1,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "CPJ_WAVE1_CHEM_PRACTICAL_07",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_07",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "CROSS_PROVIDER_AFTER_PRIMARY",
+                     "claimCount":  24,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PVJ_WAVE1_CHEM_PRACTICAL_08",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_08",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PRIMARY_VERIFICATION",
+                     "claimCount":  57,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "RVJ_WAVE1_CHEM_PRACTICAL_08",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_08",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "REACTION_EQUATION",
+                     "claimCount":  4,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PRJ_WAVE1_CHEM_PRACTICAL_08",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_08",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PROCEDURE",
+                     "claimCount":  19,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "CPJ_WAVE1_CHEM_PRACTICAL_08",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_08",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "CROSS_PROVIDER_AFTER_PRIMARY",
+                     "claimCount":  23,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PVJ_WAVE1_CHEM_PRACTICAL_09",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_09",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PRIMARY_VERIFICATION",
+                     "claimCount":  57,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "RVJ_WAVE1_CHEM_PRACTICAL_09",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_09",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "REACTION_EQUATION",
+                     "claimCount":  4,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PRJ_WAVE1_CHEM_PRACTICAL_09",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_09",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PROCEDURE",
+                     "claimCount":  19,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "CPJ_WAVE1_CHEM_PRACTICAL_09",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_09",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "CROSS_PROVIDER_AFTER_PRIMARY",
+                     "claimCount":  23,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PVJ_WAVE1_CHEM_PRACTICAL_10",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_10",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PRIMARY_VERIFICATION",
+                     "claimCount":  57,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "RVJ_WAVE1_CHEM_PRACTICAL_10",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_10",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "REACTION_EQUATION",
+                     "claimCount":  4,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "PRJ_WAVE1_CHEM_PRACTICAL_10",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_10",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "PROCEDURE",
+                     "claimCount":  19,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "SSJ_WAVE1_CHEM_PRACTICAL_10",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_10",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "STANDARD_SENSITIVE",
+                     "claimCount":  1,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 },
+                 {
+                     "jobId":  "CPJ_WAVE1_CHEM_PRACTICAL_10",
+                     "candidateId":  "WAVE1_CHEM_PRACTICAL_10",
+                     "sourceCandidateId":  "WAVE1_CHEM_PRACTICAL_%02d",
+                     "candidateIdRepaired":  true,
+                     "jobLane":  "CROSS_PROVIDER_AFTER_PRIMARY",
+                     "claimCount":  24,
+                     "modelCallsScheduled":  0,
+                     "publicationEligible":  false
+                 }
+             ],
+    "safety":  {
+                   "queueWrite":  "NO",
+                   "primaryModelCalls":  0,
+                   "secondaryModelCalls":  0,
+                   "publication":  "NO",
+                   "firebaseRead":  "NO",
+                   "firebaseWrite":  "NO"
+               }
+}
