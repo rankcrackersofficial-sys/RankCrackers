@@ -52,12 +52,15 @@ class MacroTestEngine {
     for (final q in pool) {
       if (seenIds.contains(q.id)) continue;
 
+      if (recruitmentId != null && q.examId != recruitmentId) {
+        continue;
+      }
+
       final eligibilityError = MicroTestEngine.checkQuestionEligibility(
         q,
         scheduleId,
         allowedAtomIds,
         trustSnapshot: trustSnapshot,
-        recruitmentId: recruitmentId,
       );
       if (eligibilityError == null) {
         final lineage = q.questionLineageId ?? q.id;

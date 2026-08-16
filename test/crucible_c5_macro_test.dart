@@ -430,14 +430,17 @@ void main() {
 
     test('Valid-but-wrong mission / recruitment ID rejection', () {
       final qWrongMission = baseQuestion.copyWith(examId: 'neet_2026');
-      final err = MicroTestEngine.checkQuestionEligibility(
-        qWrongMission,
-        'sch_01',
-        const ['atom_01'],
+      final pool = [qWrongMission];
+      final assembled = MacroTestEngine.assembleMacroTest(
+        macroTestId: 'macro_01',
+        scheduleId: 'sch_01',
+        allowedAtomIds: const ['atom_01'],
+        pool: pool,
+        requiredCount: 1,
         trustSnapshot: trust,
         recruitmentId: 'jee_main_2026',
       );
-      expect(err, contains('schema/type invalid: wrong recruitment exam mission ID'));
+      expect(assembled, isEmpty);
     });
 
     test('Fixture questions isolation from production inventory', () {
