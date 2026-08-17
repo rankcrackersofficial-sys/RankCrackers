@@ -1,0 +1,2102 @@
+{
+  "artifactId": "AAF_006F_EVALUATOR_FIXTURES_20260817",
+  "perfectFixture": [
+    {
+      "caseId": "STABLE_POS_001",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_002",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_003",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_004",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_005",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_006",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_007",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_008",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_009",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_010",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_011",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_012",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_013",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_014",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_015",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_016",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_POS_001",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_POS_002",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_POS_003",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_POS_004",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_POS_005",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_POS_006",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_POS_007",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_POS_008",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_POS_009",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_001",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_002",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_003",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_004",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_005",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_006",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_007",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_008",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_009",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_010",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_011",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_POS_012",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STD_POS_001",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STD_POS_002",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STD_POS_003",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STD_POS_004",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STD_POS_005",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_007",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_008",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_009",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_010",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_011",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_012",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_007",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_008",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_009",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_010",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_011",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_012",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_013",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_014",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_007",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_008",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_009",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_010",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_007",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_008",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_007",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_008",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "REPAIR_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "REPAIR_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "REPAIR_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "REPAIR_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "REPAIR_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "REUSE_CASE_001",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "REUSE_CASE_002",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "REUSE_CASE_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "REUSE_CASE_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "CPR_CASE_001",
+      "verifierDecision": "APPROVE",
+      "evidenceFieldsPresent": [
+        "primaryDecision",
+        "secondaryDecision",
+        "riskClass",
+        "policyVersion",
+        "publicationGate"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "CPR_CASE_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "primaryDecision",
+        "secondaryDecision",
+        "riskClass",
+        "policyVersion",
+        "publicationGate"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    },
+    {
+      "caseId": "CPR_CASE_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceFieldsPresent": [
+        "primaryDecision",
+        "secondaryDecision",
+        "riskClass",
+        "policyVersion",
+        "publicationGate"
+      ],
+      "provider": "FIXTURE_PRIMARY",
+      "sourceConflictOverrideUsed": "NO"
+    }
+  ],
+  "attacks": {
+    "sourceConflictAttack": [
+      {
+        "caseId": "SRC_CONFLICT_001",
+        "verifierDecision": "APPROVE",
+        "providerConfidence": 0.99,
+        "expectedEvaluatorDecision": "FAIL_FATAL_SOURCE_CONFLICT_OVERRIDES_AI_PASS"
+      },
+      {
+        "caseId": "SRC_CONFLICT_002",
+        "verifierDecision": "APPROVE",
+        "providerConfidence": 0.99,
+        "expectedEvaluatorDecision": "FAIL_FATAL_SOURCE_CONFLICT_OVERRIDES_AI_PASS"
+      },
+      {
+        "caseId": "SRC_CONFLICT_003",
+        "verifierDecision": "APPROVE",
+        "providerConfidence": 0.99,
+        "expectedEvaluatorDecision": "FAIL_FATAL_SOURCE_CONFLICT_OVERRIDES_AI_PASS"
+      }
+    ],
+    "unsourcedAttack": [
+      {
+        "caseId": "UNSRC_NEG_001",
+        "verifierDecision": "APPROVE",
+        "sourceExtractHash": null,
+        "expectedEvaluatorDecision": "FAIL_UNSOURCED_APPROVAL"
+      },
+      {
+        "caseId": "UNSRC_NEG_002",
+        "verifierDecision": "APPROVE",
+        "sourceExtractHash": null,
+        "expectedEvaluatorDecision": "FAIL_UNSOURCED_APPROVAL"
+      },
+      {
+        "caseId": "UNSRC_NEG_003",
+        "verifierDecision": "APPROVE",
+        "sourceExtractHash": null,
+        "expectedEvaluatorDecision": "FAIL_UNSOURCED_APPROVAL"
+      }
+    ],
+    "staleVersionAttack": [
+      {
+        "caseId": "STALE_NEG_001",
+        "verifierDecision": "APPROVE",
+        "verificationRevision": "old",
+        "expectedEvaluatorDecision": "FAIL_STALE_VERSION_APPROVAL"
+      },
+      {
+        "caseId": "STALE_NEG_002",
+        "verifierDecision": "APPROVE",
+        "verificationRevision": "old",
+        "expectedEvaluatorDecision": "FAIL_STALE_VERSION_APPROVAL"
+      },
+      {
+        "caseId": "STALE_NEG_003",
+        "verifierDecision": "APPROVE",
+        "verificationRevision": "old",
+        "expectedEvaluatorDecision": "FAIL_STALE_VERSION_APPROVAL"
+      }
+    ],
+    "repairInvalidationAttack": [
+      {
+        "caseId": "REPAIR_NEG_001",
+        "verifierDecision": "APPROVE",
+        "repairRevision": "new",
+        "verificationRevision": "old",
+        "expectedEvaluatorDecision": "FAIL_REPAIR_INVALIDATION_APPROVAL"
+      },
+      {
+        "caseId": "REPAIR_NEG_002",
+        "verifierDecision": "APPROVE",
+        "repairRevision": "new",
+        "verificationRevision": "old",
+        "expectedEvaluatorDecision": "FAIL_REPAIR_INVALIDATION_APPROVAL"
+      },
+      {
+        "caseId": "REPAIR_NEG_003",
+        "verifierDecision": "APPROVE",
+        "repairRevision": "new",
+        "verificationRevision": "old",
+        "expectedEvaluatorDecision": "FAIL_REPAIR_INVALIDATION_APPROVAL"
+      }
+    ],
+    "hashIdentityAttack": [
+      {
+        "caseId": "HASH_NEG_001",
+        "verifierDecision": "APPROVE",
+        "aliasPromotedToCanonicalId": true,
+        "expectedEvaluatorDecision": "FAIL_HASH_OR_IDENTITY_ATTACK"
+      },
+      {
+        "caseId": "HASH_NEG_002",
+        "verifierDecision": "APPROVE",
+        "aliasPromotedToCanonicalId": true,
+        "expectedEvaluatorDecision": "FAIL_HASH_OR_IDENTITY_ATTACK"
+      },
+      {
+        "caseId": "HASH_NEG_003",
+        "verifierDecision": "APPROVE",
+        "aliasPromotedToCanonicalId": true,
+        "expectedEvaluatorDecision": "FAIL_HASH_OR_IDENTITY_ATTACK"
+      }
+    ],
+    "partialRunAttack": [
+      {
+        "caseId": "STABLE_POS_001",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_002",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_003",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_004",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_005",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_006",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_007",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_008",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_009",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_010",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_011",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_012",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_013",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_014",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_015",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_016",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "RXN_POS_001",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "RXN_POS_002",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "RXN_POS_003",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "RXN_POS_004",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "RXN_POS_005",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "RXN_POS_006",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "RXN_POS_007",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "RXN_POS_008",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "RXN_POS_009",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_001",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_002",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_003",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_004",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_005",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_006",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_007",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_008",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_009",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_010",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_011",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "PROC_POS_012",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STD_POS_001",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STD_POS_002",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STD_POS_003",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STD_POS_004",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STD_POS_005",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "RXN_NEG_001",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "RXN_NEG_002",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "RXN_NEG_003",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "RXN_NEG_004",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "RXN_NEG_005",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "RXN_NEG_006",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "RXN_NEG_007",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "RXN_NEG_008",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "RXN_NEG_009",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "RXN_NEG_010",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "RXN_NEG_011",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "RXN_NEG_012",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_001",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_002",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_003",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_004",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_005",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_006",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_007",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_008",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_009",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_010",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_011",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_012",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_013",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "PROC_NEG_014",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "SRC_CONFLICT_001",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "SRC_CONFLICT_002",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "SRC_CONFLICT_003",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "SRC_CONFLICT_004",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "SRC_CONFLICT_005",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "SRC_CONFLICT_006",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "SRC_CONFLICT_007",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "SRC_CONFLICT_008",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "SRC_CONFLICT_009",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "SRC_CONFLICT_010",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "UNSRC_NEG_001",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "UNSRC_NEG_002",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "UNSRC_NEG_003",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "UNSRC_NEG_004",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "UNSRC_NEG_005",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "UNSRC_NEG_006",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "UNSRC_NEG_007",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "UNSRC_NEG_008",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "HASH_NEG_001",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "HASH_NEG_002",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "HASH_NEG_003",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "HASH_NEG_004",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "HASH_NEG_005",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "HASH_NEG_006",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "HASH_NEG_007",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "HASH_NEG_008",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "STALE_NEG_001",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "STALE_NEG_002",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "STALE_NEG_003",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "STALE_NEG_004",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "STALE_NEG_005",
+        "verifierDecision": "REJECT_OR_HOLD"
+      },
+      {
+        "caseId": "STALE_NEG_006",
+        "verifierDecision": "REJECT_OR_HOLD"
+      }
+    ],
+    "duplicateResponseAttack": [
+      {
+        "caseId": "STABLE_POS_001",
+        "verifierDecision": "APPROVE"
+      },
+      {
+        "caseId": "STABLE_POS_001",
+        "verifierDecision": "APPROVE"
+      }
+    ],
+    "providerDisagreementAttack": [
+      {
+        "caseId": "CPR_CASE_001",
+        "primaryDecision": "APPROVE",
+        "secondaryDecision": "REJECT",
+        "expectedEvaluatorDecision": "FAIL_PROVIDER_DISAGREEMENT_REQUIRES_REVIEW"
+      },
+      {
+        "caseId": "CPR_CASE_002",
+        "primaryDecision": "APPROVE",
+        "secondaryDecision": "REJECT",
+        "expectedEvaluatorDecision": "FAIL_PROVIDER_DISAGREEMENT_REQUIRES_REVIEW"
+      }
+    ]
+  }
+}

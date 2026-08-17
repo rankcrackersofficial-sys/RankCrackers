@@ -1,0 +1,2154 @@
+{
+  "artifactId": "AAF_006F_DETERMINISTIC_FACT_CHECKER_EVALUATOR_SPEC_20260817",
+  "benchmarkAuthorityCommit": "585298b55d875044185ae4b5bb738ee4ec3e6342",
+  "benchmarkCases": 112,
+  "oracleCases": 112,
+  "scoringContract": {
+    "allCaseIdsRequired": true,
+    "duplicateResponsesFatal": true,
+    "partialRunsFatal": true,
+    "zeroToleranceFalseApprovalFatal": true,
+    "zeroToleranceFailureCanBeOffsetByScore": false,
+    "sourceConflictOverridesAiPass": true,
+    "providerDisagreementRequiresReview": true,
+    "staleHashOrVersionRequiresReverification": true,
+    "aliasPromotionRejected": true,
+    "publicationEligibleAlwaysFalseInBenchmark": true
+  },
+  "passCriteria": {
+    "oracleMatched": 112,
+    "oracleMismatched": 0,
+    "zeroToleranceFalseApprovals": 0,
+    "duplicateResponses": 0,
+    "missingResponses": 0,
+    "fatalAttacksPassed": 0
+  },
+  "oracle": [
+    {
+      "caseId": "STABLE_POS_001",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_002",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_003",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_004",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_005",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_006",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_007",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_008",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_009",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_010",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_011",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_012",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_013",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_014",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_015",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STABLE_POS_016",
+      "polarity": "POSITIVE",
+      "family": "STABLE_FACT_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "RXN_POS_001",
+      "polarity": "POSITIVE",
+      "family": "REACTION_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "RXN_POS_002",
+      "polarity": "POSITIVE",
+      "family": "REACTION_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "RXN_POS_003",
+      "polarity": "POSITIVE",
+      "family": "REACTION_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "RXN_POS_004",
+      "polarity": "POSITIVE",
+      "family": "REACTION_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "RXN_POS_005",
+      "polarity": "POSITIVE",
+      "family": "REACTION_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "RXN_POS_006",
+      "polarity": "POSITIVE",
+      "family": "REACTION_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "RXN_POS_007",
+      "polarity": "POSITIVE",
+      "family": "REACTION_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "RXN_POS_008",
+      "polarity": "POSITIVE",
+      "family": "REACTION_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "RXN_POS_009",
+      "polarity": "POSITIVE",
+      "family": "REACTION_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_001",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_002",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_003",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_004",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_005",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_006",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_007",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_008",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_009",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_010",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_011",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "PROC_POS_012",
+      "polarity": "POSITIVE",
+      "family": "PROCEDURE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STD_POS_001",
+      "polarity": "POSITIVE",
+      "family": "STANDARD_SENSITIVE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STD_POS_002",
+      "polarity": "POSITIVE",
+      "family": "STANDARD_SENSITIVE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STD_POS_003",
+      "polarity": "POSITIVE",
+      "family": "STANDARD_SENSITIVE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STD_POS_004",
+      "polarity": "POSITIVE",
+      "family": "STANDARD_SENSITIVE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "STD_POS_005",
+      "polarity": "POSITIVE",
+      "family": "STANDARD_SENSITIVE_POSITIVE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "RXN_NEG_001",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "RXN_NEG_002",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "RXN_NEG_003",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "RXN_NEG_004",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "RXN_NEG_005",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "RXN_NEG_006",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "RXN_NEG_007",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "RXN_NEG_008",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "RXN_NEG_009",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "RXN_NEG_010",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "RXN_NEG_011",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "RXN_NEG_012",
+      "polarity": "NEGATIVE",
+      "family": "REACTION_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_001",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_002",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_003",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_004",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_005",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_006",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_007",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_008",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_009",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_010",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_011",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_012",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_013",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "PROC_NEG_014",
+      "polarity": "NEGATIVE",
+      "family": "PROCEDURE_NEGATIVE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "groundedFactIds",
+        "sourceExtractHash"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_001",
+      "polarity": "NEGATIVE",
+      "family": "SOURCE_CONFLICT",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": true,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_002",
+      "polarity": "NEGATIVE",
+      "family": "SOURCE_CONFLICT",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": true,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_003",
+      "polarity": "NEGATIVE",
+      "family": "SOURCE_CONFLICT",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": true,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_004",
+      "polarity": "NEGATIVE",
+      "family": "SOURCE_CONFLICT",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": true,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_005",
+      "polarity": "NEGATIVE",
+      "family": "SOURCE_CONFLICT",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": true,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_006",
+      "polarity": "NEGATIVE",
+      "family": "SOURCE_CONFLICT",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": true,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_007",
+      "polarity": "NEGATIVE",
+      "family": "SOURCE_CONFLICT",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": true,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_008",
+      "polarity": "NEGATIVE",
+      "family": "SOURCE_CONFLICT",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": true,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_009",
+      "polarity": "NEGATIVE",
+      "family": "SOURCE_CONFLICT",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": true,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_010",
+      "polarity": "NEGATIVE",
+      "family": "SOURCE_CONFLICT",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "sourceConflictOverridesAiPass": true,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "UNSRC_NEG_001",
+      "polarity": "NEGATIVE",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "UNSRC_NEG_002",
+      "polarity": "NEGATIVE",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "UNSRC_NEG_003",
+      "polarity": "NEGATIVE",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "UNSRC_NEG_004",
+      "polarity": "NEGATIVE",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "UNSRC_NEG_005",
+      "polarity": "NEGATIVE",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "UNSRC_NEG_006",
+      "polarity": "NEGATIVE",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "UNSRC_NEG_007",
+      "polarity": "NEGATIVE",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "UNSRC_NEG_008",
+      "polarity": "NEGATIVE",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "HASH_NEG_001",
+      "polarity": "NEGATIVE",
+      "family": "HASH_IDENTITY_ATTACK",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "HASH_NEG_002",
+      "polarity": "NEGATIVE",
+      "family": "HASH_IDENTITY_ATTACK",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "HASH_NEG_003",
+      "polarity": "NEGATIVE",
+      "family": "HASH_IDENTITY_ATTACK",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "HASH_NEG_004",
+      "polarity": "NEGATIVE",
+      "family": "HASH_IDENTITY_ATTACK",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "HASH_NEG_005",
+      "polarity": "NEGATIVE",
+      "family": "HASH_IDENTITY_ATTACK",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "HASH_NEG_006",
+      "polarity": "NEGATIVE",
+      "family": "HASH_IDENTITY_ATTACK",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "HASH_NEG_007",
+      "polarity": "NEGATIVE",
+      "family": "HASH_IDENTITY_ATTACK",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "HASH_NEG_008",
+      "polarity": "NEGATIVE",
+      "family": "HASH_IDENTITY_ATTACK",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "STALE_NEG_001",
+      "polarity": "NEGATIVE",
+      "family": "STALE_VERSION",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "STALE_NEG_002",
+      "polarity": "NEGATIVE",
+      "family": "STALE_VERSION",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "STALE_NEG_003",
+      "polarity": "NEGATIVE",
+      "family": "STALE_VERSION",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "STALE_NEG_004",
+      "polarity": "NEGATIVE",
+      "family": "STALE_VERSION",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "STALE_NEG_005",
+      "polarity": "NEGATIVE",
+      "family": "STALE_VERSION",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "STALE_NEG_006",
+      "polarity": "NEGATIVE",
+      "family": "STALE_VERSION",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "REPAIR_NEG_001",
+      "polarity": "NEGATIVE",
+      "family": "REPAIR_INVALIDATION",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "REPAIR_NEG_002",
+      "polarity": "NEGATIVE",
+      "family": "REPAIR_INVALIDATION",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "REPAIR_NEG_003",
+      "polarity": "NEGATIVE",
+      "family": "REPAIR_INVALIDATION",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "REPAIR_NEG_004",
+      "polarity": "NEGATIVE",
+      "family": "REPAIR_INVALIDATION",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "REPAIR_NEG_005",
+      "polarity": "NEGATIVE",
+      "family": "REPAIR_INVALIDATION",
+      "severity": "ZERO_TOLERANCE",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": true,
+      "falseApprovalFatal": true,
+      "requiredEvidence": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": false
+    },
+    {
+      "caseId": "REUSE_CASE_001",
+      "polarity": "POSITIVE",
+      "family": "CANONICAL_REUSE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "REUSE_CASE_002",
+      "polarity": "POSITIVE",
+      "family": "CANONICAL_REUSE",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "REUSE_CASE_003",
+      "polarity": "NEGATIVE",
+      "family": "CANONICAL_REUSE",
+      "severity": "NORMAL",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "REUSE_CASE_004",
+      "polarity": "NEGATIVE",
+      "family": "CANONICAL_REUSE",
+      "severity": "NORMAL",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "CPR_CASE_001",
+      "polarity": "POSITIVE",
+      "family": "PROVISIONAL_CROSS_PROVIDER",
+      "severity": "NORMAL",
+      "oracleDecision": "APPROVE",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "primaryDecision",
+        "secondaryDecision",
+        "riskClass",
+        "policyVersion",
+        "publicationGate"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "CPR_CASE_002",
+      "polarity": "NEGATIVE",
+      "family": "PROVISIONAL_CROSS_PROVIDER",
+      "severity": "NORMAL",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "primaryDecision",
+        "secondaryDecision",
+        "riskClass",
+        "policyVersion",
+        "publicationGate"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    },
+    {
+      "caseId": "CPR_CASE_003",
+      "polarity": "NEGATIVE",
+      "family": "PROVISIONAL_CROSS_PROVIDER",
+      "severity": "NORMAL",
+      "oracleDecision": "REJECT_OR_HOLD",
+      "zeroTolerance": false,
+      "falseApprovalFatal": false,
+      "requiredEvidence": [
+        "primaryDecision",
+        "secondaryDecision",
+        "riskClass",
+        "policyVersion",
+        "publicationGate"
+      ],
+      "sourceConflictOverridesAiPass": false,
+      "scoreOffsetAllowed": true
+    }
+  ]
+}

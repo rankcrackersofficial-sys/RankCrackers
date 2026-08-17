@@ -1,0 +1,42 @@
+{
+  "verdict": "AAF_006F_INDEPENDENT_FACT_CHECKER_BENCHMARK_EVALUATOR_READY",
+  "headBefore": "78025065d5acdaab8743ceab28e9b5fc49ce986c",
+  "headAfter": "PENDING_COMMIT",
+  "benchmarkAuthorityCommit": "585298b55d875044185ae4b5bb738ee4ec3e6342",
+  "benchmarkCases": 112,
+  "oracleCases": 112,
+  "oracleMatched": 112,
+  "oracleMismatched": 0,
+  "zeroToleranceCases": 63,
+  "zeroToleranceFalseApprovalDetection": "PASS",
+  "perfectFixture": "PASS",
+  "sourceConflictAttack": "PASS",
+  "unsourcedAttack": "PASS",
+  "staleVersionAttack": "PASS",
+  "repairInvalidationAttack": "PASS",
+  "hashIdentityAttack": "PASS",
+  "partialRunAttack": "PASS",
+  "duplicateResponseAttack": "PASS",
+  "providerDisagreementAttack": "PASS",
+  "sourceConflictOverridesAiPass": true,
+  "zeroToleranceFailureCanBeOffsetByScore": false,
+  "aaf006aAvailable": "PENDING_EXTERNAL_LANE",
+  "aaf006aPolicyMapping": "READY_FOR_MAPPING",
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseRead": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO",
+    "canonicalContentModified": "NO"
+  },
+  "commit": "PENDING_COMMIT",
+  "finalLine": "AAF_INDEPENDENT_FACT_CHECKERS_CAN_NOW_BE_OBJECTIVELY_VALIDATED_AGAINST_LOCKED_PRODUCTION_BENCHMARK",
+  "sha256Matrix": {
+    "AAF_006F_REPORT.json": "4CF73297EC5C8AAC153BE47446DBB8A71AF2EA9A8A9A9C03EE297BEE6FDF5177",
+    "AAF_006F_REPORT.md": "D37E8FAD38A3E952718A8BE784458DDB5B53059344E9263D5FCA4494E22186EB",
+    "fact_checker_evaluator_fixtures.json": "54DA3B8AC1479081D464BF3964A86B9410709A3BDC39BB89221337678B73671E",
+    "fact_checker_evaluator_manifest.json": "A033EF9048DD6DBEF1896643AF20F9D4B641ADB1FDFE470040B1ABE6D27C1C0E",
+    "fact_checker_evaluator_spec.json": "F3BE13CAD424380525B5DFAD2E3F48F0E2B5826A120D6BEDDB6D8316080ABD48"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "manifestId": "AAF_006F_INDEPENDENT_FACT_CHECKER_BENCHMARK_EVALUATOR_MANIFEST_20260817",
+  "masterCode": "RANKCRACKERS_AUTONOMOUS_ACADEMIC_FACTORY_V1",
+  "headBefore": "78025065d5acdaab8743ceab28e9b5fc49ce986c",
+  "benchmarkAuthorityCommit": "585298b55d875044185ae4b5bb738ee4ec3e6342",
+  "benchmarkCases": 112,
+  "oracleCases": 112,
+  "oracleMatched": 112,
+  "oracleMismatched": 0,
+  "zeroToleranceCases": 63,
+  "positiveCases": 45,
+  "negativeCases": 67,
+  "families": {
+    "family": "",
+    "count": 112
+  },
+  "attackFixtureExpectations": {
+    "perfectFixture": "PASS",
+    "sourceConflictAttack": "PASS",
+    "unsourcedAttack": "PASS",
+    "staleVersionAttack": "PASS",
+    "repairInvalidationAttack": "PASS",
+    "hashIdentityAttack": "PASS",
+    "partialRunAttack": "PASS",
+    "duplicateResponseAttack": "PASS",
+    "providerDisagreementAttack": "PASS"
+  },
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseRead": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO",
+    "canonicalContentModified": "NO"
+  },
+  "finalLine": "AAF_INDEPENDENT_FACT_CHECKERS_CAN_NOW_BE_OBJECTIVELY_VALIDATED_AGAINST_LOCKED_PRODUCTION_BENCHMARK"
+}
