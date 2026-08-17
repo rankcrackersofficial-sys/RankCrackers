@@ -1,0 +1,38 @@
+{
+  "verdict": "AAF_006K_VERIFIER_QUALIFICATION_CONTROL_PLANE_READY",
+  "headBefore": "1211407dc3c8ebd777c6aed3c2aa694f37fc2342",
+  "headAfter": "PENDING_COMMIT",
+  "aaf006aAvailable": "PENDING_EXTERNAL_LANE",
+  "aaf006bAdapterAvailable": "PENDING_BACKEND_LANE",
+  "benchmarkCases": 112,
+  "zeroToleranceCases": 63,
+  "providerAdapterHandshake": "READY",
+  "qualificationResultImmutable": "YES",
+  "qualificationReusableAfterMaterialVerifierChange": false,
+  "replayQualificationCanUnlockWave1": false,
+  "staleQualificationCanUnlockRealClaims": false,
+  "unqualifiedResultLedgerAcceptance": false,
+  "controlPlaneAttackClasses": 16,
+  "controlPlaneAttacksPassed": 16,
+  "controlPlaneAttacksFailed": 0,
+  "realProviderExecution": "NO",
+  "realProviderBenchmarkRunAllowed": false,
+  "realWave1ClaimsSubmitted": 0,
+  "realWave1RunAllowed": false,
+  "publicationEligible": false,
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO"
+  },
+  "commit": "PENDING_COMMIT",
+  "finalLine": "AAF_REAL_VERIFIER_QUALIFICATION_CONTROL_PLANE_IS_READY_AND_WILL_FAIL_CLOSED_UNTIL_AAF006A_AND_REAL_AAF006B_ARE_ACCEPTED",
+  "sha256Matrix": {
+    "AAF_006K_REPORT.json": "5F77EEE04C61A36B55BC7CC06CC4AB1C504E7879A44C42D4D6BA688561FAA391",
+    "AAF_006K_REPORT.md": "C97953B735CE37B590B45D537865ABEAF736D24D2A006683CF11F6772E1077D7",
+    "control_plane_attack_fixtures.json": "04571190CCFCE89195A82B19423FADDB3656C0979BB5A695202E7D54ABD8251C",
+    "verifier_qualification_control_plane_manifest.json": "9734C1C84725D7A6290D94D8FD6AC04D5D8CAB40F10C19CAB61A4F2D586055F4",
+    "verifier_qualification_control_plane.json": "C410DDA870C1DF79F53345B0C3CE428CE2B691BED889BB1DD49D58DE8D39B3B5"
+  }
+}

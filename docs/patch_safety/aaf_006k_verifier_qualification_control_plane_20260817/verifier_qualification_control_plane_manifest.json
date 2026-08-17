@@ -1,0 +1,29 @@
+{
+  "manifestId": "AAF_006K_VERIFIER_QUALIFICATION_CONTROL_PLANE_MANIFEST_20260817",
+  "headBefore": "1211407dc3c8ebd777c6aed3c2aa694f37fc2342",
+  "benchmarkCases": 112,
+  "zeroToleranceCases": 63,
+  "aaf006aAvailable": "PENDING_EXTERNAL_LANE",
+  "aaf006bAdapterAvailable": "PENDING_BACKEND_LANE",
+  "providerAdapterHandshake": "READY",
+  "qualificationResultImmutable": "YES",
+  "qualificationReusableAfterMaterialVerifierChange": false,
+  "replayQualificationCanUnlockWave1": false,
+  "staleQualificationCanUnlockRealClaims": false,
+  "unqualifiedResultLedgerAcceptance": false,
+  "controlPlaneAttackClasses": 16,
+  "controlPlaneAttacksPassed": 16,
+  "controlPlaneAttacksFailed": 0,
+  "realProviderExecution": "NO",
+  "realProviderBenchmarkRunAllowed": false,
+  "realWave1ClaimsSubmitted": 0,
+  "realWave1RunAllowed": false,
+  "publicationEligible": false,
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO"
+  },
+  "finalLine": "AAF_REAL_VERIFIER_QUALIFICATION_CONTROL_PLANE_IS_READY_AND_WILL_FAIL_CLOSED_UNTIL_AAF006A_AND_REAL_AAF006B_ARE_ACCEPTED"
+}

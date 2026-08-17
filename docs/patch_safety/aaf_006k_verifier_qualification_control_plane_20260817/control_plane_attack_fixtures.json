@@ -1,0 +1,135 @@
+{
+  "artifactId": "AAF_006K_CONTROL_PLANE_ATTACK_FIXTURES_20260817",
+  "attackClasses": [
+    "missing_aaf006a_policy",
+    "missing_aaf006b_adapter",
+    "replay_qualification_unlock_attempt",
+    "stale_qualification_unlock_attempt",
+    "material_verifier_change_reuse_attempt",
+    "unqualified_result_ledger_acceptance",
+    "partial_benchmark_qualification",
+    "zero_tolerance_false_approval",
+    "source_conflict_provider_override",
+    "provider_disagreement_auto_pass",
+    "oracle_leak_qualification",
+    "duplicate_benchmark_response",
+    "unknown_benchmark_case",
+    "hash_mismatch_qualification",
+    "real_wave1_before_qualification",
+    "publication_from_qualification_only"
+  ],
+  "attacks": [
+    {
+      "attackClass": "missing_aaf006a_policy",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "missing_aaf006b_adapter",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "replay_qualification_unlock_attempt",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "stale_qualification_unlock_attempt",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "material_verifier_change_reuse_attempt",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "unqualified_result_ledger_acceptance",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "partial_benchmark_qualification",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "zero_tolerance_false_approval",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "source_conflict_provider_override",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "provider_disagreement_auto_pass",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "oracle_leak_qualification",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "duplicate_benchmark_response",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "unknown_benchmark_case",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "hash_mismatch_qualification",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "real_wave1_before_qualification",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "publication_from_qualification_only",
+      "status": "PASS",
+      "expectedControlPlaneDecision": "FAIL_CLOSED",
+      "realProviderExecution": "NO",
+      "publicationEligible": false
+    }
+  ]
+}
