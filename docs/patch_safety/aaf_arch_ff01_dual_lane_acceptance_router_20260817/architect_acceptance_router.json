@@ -1,0 +1,126 @@
+{
+  "artifactId": "AAF_ARCH_FF01_DUAL_LANE_ACCEPTANCE_AND_FIX_ROUTER",
+  "masterCode": "RANKCRACKERS_AUTONOMOUS_ACADEMIC_FACTORY_V1",
+  "scope": "ChatGPT architect control tower only; docs/evidence and next-command routing only.",
+  "ownershipBoundary": {
+    "chatgpt": [
+      "architect review",
+      "commit/authority reconciliation",
+      "audit/evidence docs",
+      "exact next commands"
+    ],
+    "androidStudio": [
+      "AAF-004D",
+      "workers",
+      "queue",
+      "Functions integration",
+      "Git ancestry authority"
+    ],
+    "antiGravity": [
+      "AAF-006B real verifier backend",
+      "provider transport",
+      "policy bridge",
+      "verifier execution implementation"
+    ]
+  },
+  "acceptanceMatrices": {
+    "aaf004d": {
+      "passRequires": [
+        "current HEAD contains accepted AAF-004D implementation ancestry or explicit supersession evidence",
+        "non-ancestral FIX2 semantic changes are preserved or explicitly superseded",
+        "13/13 canonical worker bindings present",
+        "0 non-canonical worker type registrations",
+        "0 duplicate handler ownership collisions",
+        "real compile passes",
+        "targeted registry/semantic tests pass",
+        "no history rewrite/reset/cherry-pick performed unless already separately authorized",
+        "external dirty work preserved"
+      ],
+      "passVerdict": "AAF_004D_FINAL_GIT_ANCESTRY_AND_SEMANTIC_SUPERSESSION_ACCEPTED",
+      "fixRouters": {
+        "missingFix2SemanticChange": "AAF-004D-PREQ12-FIX3-SURGICAL-SEMANTIC-SUPERSESSION-REPAIR",
+        "ancestryUnclear": "AAF-004D-PREQ12-FIX3-COMMIT-ANCESTRY-EVIDENCE-REPAIR",
+        "workerParityRegression": "AAF-004D-FIX5-CANONICAL-WORKER-PARITY-REPAIR",
+        "compileFailure": "AAF-004D-FIX5-REAL-COMPILE-LOCK-REPAIR",
+        "dirtyScopeViolation": "AAF-004D-PREQ12-BLOCKED-BY-UNAUTHORIZED-STAGED-SCOPE"
+      }
+    },
+    "aaf006b": {
+      "passRequires": [
+        "006B consumes locked 006A policy and does not reinterpret it",
+        "sourceHash/evidenceHash/claimHash/sourcePackHash/inputManifestHash/approvedEvidenceSetHash are bound",
+        "source locators are bound and model memory is not evidence",
+        "source conflict overrides provider pass",
+        "provider finding remains separate from governed decision",
+        "provider disagreement cannot auto-pass",
+        "stale temporal and stale pre-repair results fail closed",
+        "006L request-envelope schema compatible 112/112",
+        "no shared executeProvider silent geminiFlash substitution",
+        "provider/model identity locked",
+        "no ai_tasks lifecycle authority",
+        "no sentinel_drafts writes",
+        "0 direct AAF state writes by verifier",
+        "tests use fake provider only",
+        "live model calls 0",
+        "real benchmark submitted 0/112",
+        "real Wave-1 submitted 0/552",
+        "publication false"
+      ],
+      "passVerdict": "AAF_006B_R2_REAL_INDEPENDENT_VERIFIER_BACKEND_ACCEPTED_FOR_112_CASE_QUALIFICATION",
+      "fixRouters": {
+        "policyParityMismatch": "AAF-006B-R2-FIX1-006A-POLICY-PARITY-REPAIR",
+        "providerSubstitution": "AAF-006B-R2-FIX1-SILENT-PROVIDER-SUBSTITUTION-QUARANTINE",
+        "sourceBoundaryGap": "AAF-006B-R2-FIX1-SOURCE-BOUNDARY-AND-HASH-BINDING-REPAIR",
+        "lifecycleOwnershipViolation": "AAF-006B-R2-FIX1-LEGACY-LIFECYCLE-OWNERSHIP-QUARANTINE",
+        "liveCallsDetected": "AAF-006B-R2-ABORTED-BY-LIVE-PROVIDER-EXECUTION",
+        "benchmarkPremature": "AAF-006B-R2-ABORTED-BY-PREMATURE-BENCHMARK-SUBMISSION",
+        "publicationLeak": "AAF-006B-R2-ABORTED-BY-PUBLICATION-ELIGIBILITY-LEAK",
+        "compileFailure": "AAF-006B-R2-FIX1-REAL-COMPILE-LOCK-REPAIR"
+      }
+    },
+    "aaf006m": {
+      "unlockRequires": [
+        "AAF-004D final authority reconciliation accepted",
+        "AAF-006B R2 accepted",
+        "AAF-006A policy locked",
+        "AAF-006K/006L launch/control-plane locked",
+        "AAF-006F evaluator locked",
+        "AAF-006G ceremony locked",
+        "AAF-006J ledger locked"
+      ],
+      "realQualificationContract": [
+        "run exactly 112 benchmark cases",
+        "enforce 63 zero-tolerance cases",
+        "0 oracle leakage to provider",
+        "0 real Wave-1 claim submissions before verifier qualification",
+        "0 publication eligibility from benchmark pass alone",
+        "006F evaluator decides objective score",
+        "006G ceremony grants or denies verifier eligibility"
+      ],
+      "passVerdict": "AAF_006M_REAL_112_CASE_VERIFIER_QUALIFICATION_PASSED"
+    }
+  },
+  "cumulativeProgressTemplate": {
+    "aaf001To003": "LOCKED",
+    "aaf004ABC": "LOCKED",
+    "aaf004D": "PENDING_FINAL_AUTHORITY_RECONCILIATION",
+    "aaf005": "ACCEPTED",
+    "aaf006A": "LOCKED",
+    "aaf006CTo006L": "LOCKED",
+    "aaf006B": "PENDING_R2_ACCEPTANCE",
+    "realBenchmark": "0/112",
+    "realWave1": "0/552",
+    "publication": "FALSE"
+  },
+  "safety": {
+    "chatgptBackendSourceFilesModified": 0,
+    "chatgptFunctionsFilesModified": 0,
+    "chatgptWorkerFilesModified": 0,
+    "chatgptProviderCodeModified": 0,
+    "realProviderExecution": "NO",
+    "realBenchmarkCasesSubmitted": 0,
+    "realWave1ClaimsSubmitted": 0,
+    "publication": "NO"
+  },
+  "finalLine": "AAF_ARCHITECT_CONTROL_TOWER_IS_READY_TO_ACCEPT_OR_SURGICALLY_FIX_004D_AND_006B_WITHOUT_ANOTHER_DISCOVERY_CYCLE"
+}
