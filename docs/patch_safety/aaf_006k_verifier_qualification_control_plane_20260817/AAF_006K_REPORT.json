@@ -1,7 +1,7 @@
 {
   "verdict": "AAF_006K_VERIFIER_QUALIFICATION_CONTROL_PLANE_READY",
   "headBefore": "1211407dc3c8ebd777c6aed3c2aa694f37fc2342",
-  "headAfter": "PENDING_COMMIT",
+  "headAfter": "bfe7436cdda30c5eae5bc6f4eecd6922879403ac",
   "aaf006aAvailable": "PENDING_EXTERNAL_LANE",
   "aaf006bAdapterAvailable": "PENDING_BACKEND_LANE",
   "benchmarkCases": 112,
@@ -26,7 +26,7 @@
     "queueWrite": "NO",
     "publication": "NO"
   },
-  "commit": "PENDING_COMMIT",
+  "commit": "bfe7436cdda30c5eae5bc6f4eecd6922879403ac",
   "finalLine": "AAF_REAL_VERIFIER_QUALIFICATION_CONTROL_PLANE_IS_READY_AND_WILL_FAIL_CLOSED_UNTIL_AAF006A_AND_REAL_AAF006B_ARE_ACCEPTED",
   "sha256Matrix": {
     "AAF_006K_REPORT.json": "5F77EEE04C61A36B55BC7CC06CC4AB1C504E7879A44C42D4D6BA688561FAA391",
