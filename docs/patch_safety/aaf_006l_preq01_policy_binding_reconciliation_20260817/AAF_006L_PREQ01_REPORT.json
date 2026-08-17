@@ -1,0 +1,26 @@
+{
+  "verdict": "AAF_006L_PREQ01_POLICY_BINDING_RECONCILIATION_PASSED",
+  "repository_root": "C:\\RankCrackers\\RankCrackers-55",
+  "head_before": "29ef1c69",
+  "aaf006a_authority_commit": "9bc0e5eb",
+  "aaf006a_ancestor_of_head": "YES",
+  "aaf006l_authority_commit": "29ef1c69",
+  "aaf006l_artifacts_modified": "NO",
+  "policy_binding_status": "AAF006A_POLICY_ACCEPTED",
+  "provider_adapter_binding_status": "PENDING_REAL_AAF006B_ADAPTER",
+  "real_qualification_launch_allowed": "FALSE",
+  "real_provider_execution": "NO",
+  "real_wave1_claims_submitted": 0,
+  "publication_eligible": "FALSE",
+  "safety": {
+    "model_fact_check_used": "NO",
+    "firebase_read": "NO",
+    "firebase_write": "NO",
+    "queue_write": "NO",
+    "publication": "NO",
+    "canonical_content_modified": "NO",
+    "academic_claims_modified": "NO",
+    "deploy": "NO"
+  },
+  "final_line": "AAF_006L_IS_POLICY_BOUND_TO_AAF006A_AND_WAITING_ONLY_FOR_REAL_AAF006B_ADAPTER"
+}
