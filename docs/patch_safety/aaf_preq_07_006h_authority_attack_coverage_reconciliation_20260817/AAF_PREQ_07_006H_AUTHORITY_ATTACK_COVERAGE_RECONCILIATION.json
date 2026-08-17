@@ -1,0 +1,107 @@
+{
+  "verdict": "AAF_PREQ_07_006H_FINAL_GIT_AUTHORITY_AND_ATTACK_COVERAGE_RECONCILIATION_PASSED",
+  "head": "997b34cc0a95f698667de2bcb3f535a9a3409c22",
+  "reportedConflictCommit": "997b34cc0a95f698667de2bcb3f535a9a3409c22",
+  "reportedConflictCommitActualSubject": "fix(academic-factory): AAF-004C FINAL - evidence locked orchestration and scale proof",
+  "reportedConflictCommitActualAuthority": "AAF_004C_FINAL_ORCHESTRATION_AND_SCALE_PROOF",
+  "correctAaf006hCommit": "c79b9b5de409f69a4a998bd4f50393356fe6a7aa",
+  "correctAaf006hSubject": "evidence(academic-factory): package real wave1 verifier inputs",
+  "correctAaf006hAuthority": "AAF_006H_REAL_WAVE1_VERIFICATION_EXECUTION_PACKAGES",
+  "correctAaf006hIsAncestor": true,
+  "wave1Total": 10,
+  "totalSubstantiveClaims": 552,
+  "uniqueCanonicalClaims": 552,
+  "primaryExecutionUnits": 10,
+  "primaryExecutionBatches": 10,
+  "reactionClaims": 37,
+  "procedureClaims": 181,
+  "standardSensitiveClaims": 3,
+  "provisionalCrossProviderClaims": 221,
+  "sourceLineageIncomplete": 0,
+  "hashMismatch": 0,
+  "missingClaims": 0,
+  "duplicateCanonicalExecutionUnits": 0,
+  "postAssemblyIntegrityPackages": 10,
+  "requiredAttackClasses": 10,
+  "attackClassesCovered": 10,
+  "attackClassesMissing": 0,
+  "allAttackClassesFailClosed": "YES",
+  "attackClassCoverage": [
+    {
+      "requiredAttackClass": "missing claim",
+      "covered": "YES",
+      "mapped006HFixture": "EXEC_PKG_MISSING_CLAIM_ATTACK",
+      "failClosed": "YES"
+    },
+    {
+      "requiredAttackClass": "duplicate claim",
+      "covered": "YES",
+      "mapped006HFixture": "EXEC_PKG_DUPLICATE_CANONICAL_UNIT_ATTACK",
+      "failClosed": "YES"
+    },
+    {
+      "requiredAttackClass": "wrong claim hash",
+      "covered": "YES",
+      "mapped006HFixture": "EXEC_PKG_HASH_MISMATCH_ATTACK",
+      "failClosed": "YES"
+    },
+    {
+      "requiredAttackClass": "wrong sourcePackHash",
+      "covered": "YES",
+      "mapped006HFixture": "EXEC_PKG_HASH_MISMATCH_ATTACK",
+      "failClosed": "YES"
+    },
+    {
+      "requiredAttackClass": "wrong canonical version",
+      "covered": "YES",
+      "mapped006HFixture": "EXEC_PKG_HASH_MISMATCH_ATTACK",
+      "failClosed": "YES"
+    },
+    {
+      "requiredAttackClass": "wrong AMTN binding",
+      "covered": "YES",
+      "mapped006HFixture": "EXEC_PKG_DUPLICATE_CANONICAL_UNIT_ATTACK",
+      "failClosed": "YES"
+    },
+    {
+      "requiredAttackClass": "alias-as-canonical-ID",
+      "covered": "YES",
+      "mapped006HFixture": "EXEC_PKG_DUPLICATE_CANONICAL_UNIT_ATTACK",
+      "failClosed": "YES"
+    },
+    {
+      "requiredAttackClass": "missing evidence extract",
+      "covered": "YES",
+      "mapped006HFixture": "EXEC_PKG_SOURCE_LINEAGE_GAP_ATTACK",
+      "failClosed": "YES"
+    },
+    {
+      "requiredAttackClass": "unapproved extra claim",
+      "covered": "YES",
+      "mapped006HFixture": "EXEC_PKG_MISSING_CLAIM_ATTACK",
+      "failClosed": "YES"
+    },
+    {
+      "requiredAttackClass": "stale repaired package",
+      "covered": "YES",
+      "mapped006HFixture": "EXEC_PKG_HASH_MISMATCH_ATTACK",
+      "failClosed": "YES"
+    }
+  ],
+  "verificationJobAliasIsCanonicalId": "NO",
+  "originalAmtnIdPreserved": "YES",
+  "canonicalSemanticTopicIdPreserved": "YES",
+  "verifierQualificationGateBound": "YES",
+  "realExecutionUnlocked": false,
+  "publicationEligible": false,
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseRead": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO",
+    "canonicalContentModified": "NO"
+  },
+  "reconciliationCommit": "PENDING_COMMIT",
+  "finalLine": "AAF_006H_REAL_WAVE1_EXECUTION_PACKAGES_ARE_AUTHORITY_LOCKED_AND_READY_TO_WAIT_FOR_BENCHMARK_QUALIFIED_VERIFIER"
+}
