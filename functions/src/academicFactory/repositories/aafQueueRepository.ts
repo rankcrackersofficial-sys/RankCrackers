@@ -1,5 +1,5 @@
 import * as admin from 'firebase-admin';
-import { AafJobMetadata } from '../models/aafJob';
+import { AafJobMetadata, AafJobState } from '../models/aafJob';
 
 const QUEUE_COLLECTION = 'ai_queue';
 const DEFAULT_LEASE_DURATION_MS = 5 * 60 * 1000; // 5 minutes
@@ -175,6 +175,68 @@ export class AafQueueRepository {
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
       });
 
+      return true;
+    });
+  }
+
+  /**
+   * 🛡️ WORK START (LEASED -> RUNNING)
+   */
+  async startRunning(idempotencyKey: string, workerId: string): Promise<boolean> {
+    const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
+    return await this.db.runTransaction(async (transaction) => {
+      const snap = await transaction.get(docRef);
+      if (!snap.exists) return false;
+      const data = snap.data() as AafJobMetadata;
+      if (data.state !== 'leased' || data.leaseOwner !== workerId) return false;
+
+      transaction.update(docRef, {
+        state: 'running',
+        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
+      return true;
+    });
+  }
+
+  /**
+   * 🛡️ STATE TRANSITION (MANUAL/AUTO)
+   */
+  async updateState(idempotencyKey: string, newState: AafJobState, options: {
+    error?: string,
+    outputHash?: string,
+    clearLease?: boolean
+  } = {}): Promise<void> {
+    const update: any = {
+      state: newState,
+      updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    };
+    if (options.error) update.lastError = options.error;
+    if (options.outputHash) update.outputHash = options.outputHash;
+    if (options.clearLease) {
+      update.leaseOwner = null;
+      update.leaseExpiresAtUtc = null;
+    }
+    if (newState === 'approved') {
+        update.finishedAt = admin.firestore.FieldValue.serverTimestamp();
+    }
+    await this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey).update(update);
+  }
+
+  /**
+   * 🛡️ DEPENDENCY UNLOCK (waitingDependency -> ready)
+   */
+  async unlockDependency(idempotencyKey: string): Promise<boolean> {
+    const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
+    return await this.db.runTransaction(async (transaction) => {
+      const snap = await transaction.get(docRef);
+      if (!snap.exists) return false;
+      const data = snap.data() as AafJobMetadata;
+      if (data.state !== 'waitingDependency') return false;
+
+      transaction.update(docRef, {
+        state: 'ready',
+        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
       return true;
     });
   }

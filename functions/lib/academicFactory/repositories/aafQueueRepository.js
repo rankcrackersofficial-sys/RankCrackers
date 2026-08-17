@@ -200,6 +200,65 @@ class AafQueueRepository {
         });
     }
     /**
+     * 🛡️ WORK START (LEASED -> RUNNING)
+     */
+    async startRunning(idempotencyKey, workerId) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
+        return await this.db.runTransaction(async (transaction) => {
+            const snap = await transaction.get(docRef);
+            if (!snap.exists)
+                return false;
+            const data = snap.data();
+            if (data.state !== 'leased' || data.leaseOwner !== workerId)
+                return false;
+            transaction.update(docRef, {
+                state: 'running',
+                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+            });
+            return true;
+        });
+    }
+    /**
+     * 🛡️ STATE TRANSITION (MANUAL/AUTO)
+     */
+    async updateState(idempotencyKey, newState, options = {}) {
+        const update = {
+            state: newState,
+            updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+        };
+        if (options.error)
+            update.lastError = options.error;
+        if (options.outputHash)
+            update.outputHash = options.outputHash;
+        if (options.clearLease) {
+            update.leaseOwner = null;
+            update.leaseExpiresAtUtc = null;
+        }
+        if (newState === 'approved') {
+            update.finishedAt = admin.firestore.FieldValue.serverTimestamp();
+        }
+        await this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey).update(update);
+    }
+    /**
+     * 🛡️ DEPENDENCY UNLOCK (waitingDependency -> ready)
+     */
+    async unlockDependency(idempotencyKey) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
+        return await this.db.runTransaction(async (transaction) => {
+            const snap = await transaction.get(docRef);
+            if (!snap.exists)
+                return false;
+            const data = snap.data();
+            if (data.state !== 'waitingDependency')
+                return false;
+            transaction.update(docRef, {
+                state: 'ready',
+                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+            });
+            return true;
+        });
+    }
+    /**
      * 🛡️ TERMINAL SUCCESS
      */
     async complete(idempotencyKey, outputHash) {
