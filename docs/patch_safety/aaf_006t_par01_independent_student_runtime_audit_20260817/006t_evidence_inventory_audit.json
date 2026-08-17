@@ -1,0 +1,58 @@
+{
+  "artifactId": "006t_evidence_inventory_audit",
+  "inventoryStatus": "VERIFIED",
+  "subFiles": [
+    {
+      "fileName": "student_repository_binding_reaudit.json",
+      "hash": "A2772DD661F6B781E758B2E9C93FC15F72B78AED1F49C32DCBA0F5591ADB911E"
+    },
+    {
+      "fileName": "552_runtime_inventory_recomputation.json",
+      "hash": "9DF744C3AFB154232B798779415DC7F26FA9DD6372F8EE55EA86CA0DCBA2AC7E"
+    },
+    {
+      "fileName": "runtime_authority_binding_reaudit.json",
+      "hash": "076DD209BD11475971479056A7215BC5690E3286BE0636B57C9DE4409809982F"
+    },
+    {
+      "fileName": "runtime_student_schema_reaudit.json",
+      "hash": "CF476981B1094D7F1F5FB797C8393BEF9E3BCB790629ECA905A33ED68658F061"
+    },
+    {
+      "fileName": "runtime_journey_evidence_reaudit.json",
+      "hash": "4760F7610D3662F1E3DEF31528AF1F97C89481BD2A184370254A8D55F7CAF620"
+    },
+    {
+      "fileName": "real_data_substitution_audit.json",
+      "hash": "6C0A29428889B1F037EA6B463AACC96C01F09A9EFB7533E5ED1DA40BD016F713"
+    },
+    {
+      "fileName": "runtime_access_boundary_reaudit.json",
+      "hash": "6359BC6EFFBECE86B32E5BC98CD0F0E0AAE739CA46EB0E4D03C260BAF55D1B58"
+    },
+    {
+      "fileName": "adaptive_runtime_evidence_reaudit.json",
+      "hash": "0BDC7E0FCEB5FFDE16558D2F35BEEABE6AA29115E93C1256213AA7AC53F38135"
+    },
+    {
+      "fileName": "runtime_failure_state_reaudit.json",
+      "hash": "A26C79C9F7244D58BB55672DB2288612F0B9013F83553221DC845B20EE7049B6"
+    },
+    {
+      "fileName": "runtime_cache_offline_reaudit.json",
+      "hash": "4F5BFADD650D378BC1289AE429FECC21B649D3BDDC4348864223459112E3BC84"
+    },
+    {
+      "fileName": "runtime_regression_command_reaudit.json",
+      "hash": "41418D6BC738BFB87D0BE63328B5BE4D096E4DCC17C504AA32EB919B5C461AE1"
+    },
+    {
+      "fileName": "dirty_worktree_safety_reaudit.json",
+      "hash": "4600386DA7395CF4C24261078781A88EBFDC8951B367A4A9C059B57021BF59AA"
+    },
+    {
+      "fileName": "student_runtime_final_authority_decision.json",
+      "hash": "C8D1A8D9C36382ED3C380207D9324A74F9D68343470DB2596205779E921DC1E4"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "artifactId": "runtime_journey_evidence_reaudit",
+  "entryRoute": "/digibook",
+  "loadDetailRoute": "/digibook/chapter/:id",
+  "navigationVerified": "PASS",
+  "renderingVerified": "PASS"
+}
