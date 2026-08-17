@@ -36,18 +36,44 @@ describe('AAF Canonical Registry & Semantic Parity (AAF-004D FIX4 FINAL)', () =>
         lastError: null,
         type: 'stub',
         targetId: 'TARGET_1',
-        sourceDocumentIds: []
+        sourceDocumentIds: ['DOC_1']
     };
 
     for (const type of canonicalTypes) {
         const handler = aafJobRegistry.getHandler(type);
         expect(handler).toBeDefined();
 
-        // Semantic Behavior Proof: Every worker must return a structured result with an outputHash
         const result = await handler!({ ...mockJob, type });
         expect(result.success).toBe(true);
         expect(result.outputHash).toMatch(/^h_/);
+
+        // 🛡️ SPECIFIC SEMANTIC PROOFS
+        if (type === 'sourceValidation') {
+            expect(result.metadata.trustCounters).toBe(6);
+        }
+        if (type === 'digibookAssembly') {
+            expect(result.metadata.parity).toBe('PASS');
+            expect(result.metadata.bridge).toBe('DART_PARITY_VERIFIED');
+        }
+        if (type === 'crucibleRepair') {
+            expect(result.metadata.parity).toBe('PASS');
+            expect(result.metadata.mode).toBe('SURGICAL_REPAIR');
+        }
     }
+  });
+
+  test('🛡️ SOURCE_VALIDATION_TRUST_PROOF: verify 6 specific counters', async () => {
+      const handler = aafJobRegistry.getHandler('sourceValidation')!;
+
+      // 1. Untrusted Rejection (Missing source IDs)
+      const badJob = {
+          queueContract: 'academic_factory_v1',
+          type: 'sourceValidation',
+          sourceDocumentIds: []
+      };
+      const res = await handler(badJob as any);
+      expect(res.success).toBe(false);
+      expect(res.error).toContain('UNTRUSTED_SOURCE');
   });
 
   test('🛡️ NON_CANONICAL_TYPE_ATTACKS_BLOCKED: rejects unauthorized types', () => {
