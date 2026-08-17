@@ -1,0 +1,246 @@
+{
+  "artifactId": "AAF_006R_PUBLICATION_ATTACKS_AUDIT_20260817",
+  "total": 40,
+  "attacks": [
+    {
+      "attackId": "PUB_ATTACK_001",
+      "type": "CLIENT_SELF_PROMOTION_ATTEMPT",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_002",
+      "type": "CLIENT_SELF_PROMOTION_ATTEMPT",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_003",
+      "type": "CLIENT_SELF_PROMOTION_ATTEMPT",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_004",
+      "type": "CLIENT_SELF_PROMOTION_ATTEMPT",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_005",
+      "type": "CLIENT_SELF_PROMOTION_ATTEMPT",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_006",
+      "type": "CLIENT_SELF_PROMOTION_ATTEMPT",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_007",
+      "type": "CLIENT_SELF_PROMOTION_ATTEMPT",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_008",
+      "type": "CLIENT_SELF_PROMOTION_ATTEMPT",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_009",
+      "type": "CLIENT_SELF_PROMOTION_ATTEMPT",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_010",
+      "type": "CLIENT_SELF_PROMOTION_ATTEMPT",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_011",
+      "type": "UNMATERIALIZED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_012",
+      "type": "UNMATERIALIZED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_013",
+      "type": "UNMATERIALIZED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_014",
+      "type": "UNMATERIALIZED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_015",
+      "type": "UNMATERIALIZED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_016",
+      "type": "UNMATERIALIZED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_017",
+      "type": "UNMATERIALIZED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_018",
+      "type": "UNMATERIALIZED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_019",
+      "type": "UNMATERIALIZED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_020",
+      "type": "UNMATERIALIZED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_021",
+      "type": "UNVERIFIED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_022",
+      "type": "UNVERIFIED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_023",
+      "type": "UNVERIFIED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_024",
+      "type": "UNVERIFIED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_025",
+      "type": "UNVERIFIED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_026",
+      "type": "UNVERIFIED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_027",
+      "type": "UNVERIFIED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_028",
+      "type": "UNVERIFIED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_029",
+      "type": "UNVERIFIED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_030",
+      "type": "UNVERIFIED_ITEM_PUBLICATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_031",
+      "type": "ACADEMIC_MEANING_MUTATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_032",
+      "type": "ACADEMIC_MEANING_MUTATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_033",
+      "type": "ACADEMIC_MEANING_MUTATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_034",
+      "type": "ACADEMIC_MEANING_MUTATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_035",
+      "type": "ACADEMIC_MEANING_MUTATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_036",
+      "type": "ACADEMIC_MEANING_MUTATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_037",
+      "type": "ACADEMIC_MEANING_MUTATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_038",
+      "type": "ACADEMIC_MEANING_MUTATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_039",
+      "type": "ACADEMIC_MEANING_MUTATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "PUB_ATTACK_040",
+      "type": "ACADEMIC_MEANING_MUTATION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    }
+  ]
+}
