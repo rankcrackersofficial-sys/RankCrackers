@@ -46,7 +46,7 @@ exports.sentinelBackgroundWorker = functions
 
     const { type, payload } = task;
 
-    if (type === 'STRUCTURAL' || type === 'SVO_EXTRACTION') return;
+    if (type === 'STRUCTURAL' || type === 'SVO_EXTRACTION' || type === 'MANIFEST_KNOWLEDGE' || type === 'ENCODING_NORMALIZATION') return;
 
     // 🛡️ GENERIC TASK GUARD: mcq, digibook, and revision are handled by the generic queue worker.
     if (['mcq', 'digibook', 'revision'].includes(type)) return;

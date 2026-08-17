@@ -23,7 +23,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.queueWorker = exports.isLegacyGenericTask = exports.SPECIALIZED_TASK_TYPES = void 0;
+exports.queueWorker = exports.isLegacyGenericTask = exports.isSpecializedTask = exports.isAafTask = exports.SPECIALIZED_TASK_TYPES = exports.LEGACY_GENERIC_TYPES = void 0;
 const functions = __importStar(require("firebase-functions"));
 const admin = __importStar(require("firebase-admin"));
 const providerExecutor_1 = require("../providers/providerExecutor");
@@ -33,8 +33,8 @@ if (admin.apps.length === 0) {
 }
 /**
  * 🔱 LEGACY QUEUE QUARANTINE (AAF-004A)
- * Tasks handled by specialized workers or the new AAF system must be ignored by this worker.
  */
+exports.LEGACY_GENERIC_TYPES = ['mcq', 'digibook', 'revision'];
 exports.SPECIALIZED_TASK_TYPES = [
     'MANIFEST_KNOWLEDGE',
     'STRUCTURAL',
@@ -42,22 +42,28 @@ exports.SPECIALIZED_TASK_TYPES = [
     'ENCODING_NORMALIZATION',
     'pdfParse',
     'docxParse',
-    'xlsxParse'
+    'xlsxParse',
+    'recruitment',
+    'syllabus',
+    'canonicalRepair'
 ];
 /**
- * 🛡️ OWNERSHIP CLASSIFIER
- * Decides if a task document should be handled by the legacy generic worker.
+ * 🛡️ OWNERSHIP CLASSIFIERS
  */
+function isAafTask(data) {
+    return data?.queueContract === 'academic_factory_v1';
+}
+exports.isAafTask = isAafTask;
+function isSpecializedTask(data) {
+    return data?.type && exports.SPECIALIZED_TASK_TYPES.includes(data.type);
+}
+exports.isSpecializedTask = isSpecializedTask;
 function isLegacyGenericTask(data) {
     if (!data || !data.type)
         return false;
-    // 1. AAF Guard: Locked queue discriminator
-    if (data.queueContract === 'academic_factory_v1')
+    if (isAafTask(data))
         return false;
-    // 2. Specialized Type Guard
-    if (exports.SPECIALIZED_TASK_TYPES.includes(data.type))
-        return false;
-    return true;
+    return exports.LEGACY_GENERIC_TYPES.includes(data.type);
 }
 exports.isLegacyGenericTask = isLegacyGenericTask;
 exports.queueWorker = functions.firestore
@@ -67,15 +73,21 @@ exports.queueWorker = functions.firestore
     if (!data)
         return;
     const taskId = context.params.taskId;
-    // 🛡️ OWNERSHIP CHECK
-    if (!isLegacyGenericTask(data)) {
-        console.log(`🔱 QUEUE QUARANTINE: Task ${taskId} is AAF or Specialized. Ignoring.`);
+    const taskRef = snap.ref;
+    // 1. 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
+    if (isAafTask(data)) {
+        console.log(`🔱 QUEUE QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
         return;
     }
-    const { type, provider, payload } = data;
-    const taskRef = snap.ref;
+    // 2. 🛡️ SPECIALIZATION GUARD: Ignore types handled by dedicated workers.
+    if (isSpecializedTask(data)) {
+        console.log(`🔱 QUEUE QUARANTINE: Task ${taskId} type '${data.type}' is specialized. Ignoring.`);
+        return;
+    }
+    // 3. 🛡️ GENERIC VALIDATION
+    const isGeneric = isLegacyGenericTask(data);
     try {
-        // 🛡️ ATOMIC CLAIM: Ensure this generic worker claims the task before processing.
+        // 🛡️ ATOMIC CLAIM: Claim the task before deciding to process or fail-closed.
         const claimed = await admin.firestore().runTransaction(async (transaction) => {
             const doc = await transaction.get(taskRef);
             if (!doc.exists)
@@ -95,16 +107,23 @@ exports.queueWorker = functions.firestore
             console.log(`🔱 QUEUE: Task ${taskId} already claimed or status changed. Skipping.`);
             return;
         }
-        const prompt = (0, promptFactory_1.buildPrompt)(type, payload);
-        // 🛡️ SAFETY: Unknown prompts (default 'Unknown Task') must not be executed.
-        if (prompt === 'Unknown Task') {
-            console.error(`🔱 QUEUE: Task ${taskId} has unknown type contract '${type}'. Failing closed.`);
+        // 4. 🛡️ UNKNOWN TASK FAIL-CLOSED (P0 REQUIREMENT)
+        // Must happen AFTER claim to ensure status is persisted, but BEFORE BuildPrompt/Provider.
+        if (!isGeneric) {
+            const unknownType = data.type || 'MISSING_TYPE';
+            console.error(`🔱 QUEUE: Task ${taskId} has unknown type '${unknownType}'. Failing closed.`);
             await taskRef.update({
                 status: 'failed',
-                error: `Unknown task type contract: ${type}`,
+                error: `Unknown or unauthorized task type: ${unknownType}`,
                 failedAt: admin.firestore.FieldValue.serverTimestamp()
             });
             return;
+        }
+        const { type, provider, payload } = data;
+        const prompt = (0, promptFactory_1.buildPrompt)(type, payload);
+        // Final prompt safety check
+        if (prompt === 'Unknown Task') {
+            throw new Error(`Prompt factory rejected type: ${type}`);
         }
         const response = await (0, providerExecutor_1.executeProvider)(provider, prompt);
         // 🔱 AUDIT-01-F001 REMEDIATION: Redirect all output to Sentinel Isolation Zone
@@ -120,7 +139,7 @@ exports.queueWorker = functions.firestore
                     originalPayload: payload,
                 },
                 audit: {
-                    workerVersion: "9.2.0-QUARANTINE",
+                    workerVersion: "9.2.1-FIX2",
                     provider: provider,
                     processedAt: admin.firestore.FieldValue.serverTimestamp(),
                     verifiedBy: null,
@@ -128,7 +147,6 @@ exports.queueWorker = functions.firestore
                 }
             });
             console.log(`🔱 SENTINEL: Task ${taskId} staged for verification.`);
-            // 🔱 P0 FIX: Update status instead of deleting.
             await taskRef.update({
                 status: 'completed',
                 completedAt: admin.firestore.FieldValue.serverTimestamp()
