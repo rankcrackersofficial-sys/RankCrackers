@@ -1,0 +1,7 @@
+{
+  "artifactId": "cache_exact_tests_manifest",
+  "testFile": "test/features/personalization/cache_invalidation_test.dart",
+  "testCases": [
+    "testCacheInvalidationTrigger"
+  ]
+}

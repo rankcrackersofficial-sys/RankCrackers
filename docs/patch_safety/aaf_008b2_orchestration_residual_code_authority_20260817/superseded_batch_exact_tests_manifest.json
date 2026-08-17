@@ -1,0 +1,5 @@
+{
+  "artifactId": "superseded_batch_exact_tests_manifest",
+  "testFile": "functions/test/superseded_batch_cleanup.test.js",
+  "requiredTestCount": 2
+}

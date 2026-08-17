@@ -1,0 +1,5 @@
+{
+  "artifactId": "stale_lease_exact_tests_manifest",
+  "testFile": "functions/test/stale_lease_recovery.test.js",
+  "requiredTestCount": 2
+}

@@ -1,0 +1,14 @@
+{
+  "artifactId": "anti_gravity_exact_apply_allowlist",
+  "allowedProductionPaths": [
+    "functions/lib/academicFactory/services/superseded_batch_cleanup.js",
+    "functions/lib/academicFactory/services/stale_lease_recovery.js"
+  ],
+  "allowedTestPaths": [
+    "functions/test/superseded_batch_cleanup.test.js",
+    "functions/test/stale_lease_recovery.test.js"
+  ],
+  "allowedEvidencePaths": [
+    "docs/patch_safety/aaf_008d_r1_orchestration_execution_20260817/"
+  ]
+}

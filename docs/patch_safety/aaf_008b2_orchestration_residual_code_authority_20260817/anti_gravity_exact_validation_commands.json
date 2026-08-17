@@ -1,0 +1,4 @@
+{
+  "artifactId": "anti_gravity_exact_validation_commands",
+  "unitTestCommand": "npm test functions/test/superseded_batch_cleanup.test.js functions/test/stale_lease_recovery.test.js"
+}

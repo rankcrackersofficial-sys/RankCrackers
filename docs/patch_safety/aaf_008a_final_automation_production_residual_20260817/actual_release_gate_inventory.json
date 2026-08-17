@@ -1,0 +1,16 @@
+{
+  "releaseGates": [
+    {
+      "gateId": "AAF-008B",
+      "name": "Published projection correction/withdrawal/supersession runtime drill",
+      "status": "PENDING",
+      "primaryOwner": "ANDROID_STUDIO",
+      "secondaryAuditOwner": "CHATGPT_WORK",
+      "antiGravityRole": "HOLD_UNLESS_PROVIDER_REVERIFICATION_REQUIRED_BY_NEW_CORRECTION"
+    }
+  ],
+  "wave1BackendReleaseGatesClosed": true,
+  "wave1StudentRuntimeAcceptanceClosed": true,
+  "publicationFinalAuthorityClosed": true,
+  "actualReleaseGateInventoryComplete": true
+}

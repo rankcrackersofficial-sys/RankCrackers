@@ -1,0 +1,13 @@
+{
+  "remainingGates": [
+    {
+      "gateId": "AAF-008B",
+      "primaryOwner": "ANDROID_STUDIO",
+      "reason": "Requires app/runtime/cache/version behavior and controlled projection recovery evidence.",
+      "chatgptWork": "Independent post-drill audit and progress refresh after Android Studio evidence lands.",
+      "antiGravityWork": "None unless a correction invalidates academic facts and re-verification is explicitly required."
+    }
+  ],
+  "unownedRemainingGates": 0,
+  "duplicatePrimaryOwners": 0
+}

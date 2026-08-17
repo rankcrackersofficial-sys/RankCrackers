@@ -1,0 +1,11 @@
+{
+  "staleLeases": "covered by AAF-007B simulation, pending live recovery drill only as part of AAF-008B if correction work is queued",
+  "retryExhaustion": "covered by AAF-007B simulation, no Wave-1 unresolved retry exhaustion",
+  "partialMaterialization": "covered by AAF-006Q complete 552/552 materialization and fail-closed replay behavior",
+  "partialPublication": "covered by AAF-006S complete 552/552 publication and AAF-006S-PAR01 audit",
+  "conflictingReplay": "covered by AAF-006Q/006S conflicting replay fails-closed reports",
+  "canonicalSupersession": "remaining live drill in AAF-008B",
+  "withdrawalCorrection": "remaining live drill in AAF-008B",
+  "cacheVersionRecovery": "remaining live runtime drill in AAF-008B",
+  "unknownRecoveryGaps": 0
+}

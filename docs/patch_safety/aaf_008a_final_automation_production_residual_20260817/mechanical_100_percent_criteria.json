@@ -1,0 +1,20 @@
+{
+  "factoryStructureReady100Criteria": [
+    "AAF-008B evidence exists",
+    "correction or withdrawal event is bound to an existing published Wave-1 projection",
+    "canonical version supersession or withdrawal identity is preserved",
+    "stale public projection is not accepted as current",
+    "runtime cache/version refresh is proven",
+    "private fields remain inaccessible",
+    "no direct AI public write",
+    "ChatGPT independent AAF-008B-PAR01 audit passes"
+  ],
+  "fullAutomationReady100Criteria": [
+    "all 50 denominator gates are complete",
+    "AAF-008B primary evidence passes",
+    "AAF-008B independent audit passes",
+    "AAF-007E-R4 recomputes 20/20 structure and 50/50 full automation without denominator shrinkage"
+  ],
+  "unknownStructureResidual": 0,
+  "unknownAutomationResidual": 0
+}

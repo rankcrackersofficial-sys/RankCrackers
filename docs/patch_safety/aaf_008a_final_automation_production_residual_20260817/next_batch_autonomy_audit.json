@@ -1,0 +1,14 @@
+{
+  "nextBatchCanUseExistingPipeline": true,
+  "academicProviderWorkPendingForWave1": false,
+  "materializationWorkPendingForWave1": false,
+  "publicationWorkPendingForWave1": false,
+  "studentRuntimeDiscoveryPendingForWave1": false,
+  "nextBatchResidualBeforeScaleOut": "AAF-008B recovery/correction operability drill should close before claiming full 100% autonomous production resilience.",
+  "silentFallbackPaths": 0,
+  "modelOnlyCanonicalPromotions": 0,
+  "silentModelFallbacks": 0,
+  "unsourcedStudentReadyItems": 0,
+  "directAiPublicWrites": 0,
+  "unverifiedPublicationItems": 0
+}

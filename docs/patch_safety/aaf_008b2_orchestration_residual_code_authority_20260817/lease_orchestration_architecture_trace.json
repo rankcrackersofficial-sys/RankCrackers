@@ -1,0 +1,4 @@
+{
+  "artifactId": "lease_orchestration_architecture_trace",
+  "serviceFile": "functions/lib/academicFactory/services/stale_lease_recovery.js"
+}

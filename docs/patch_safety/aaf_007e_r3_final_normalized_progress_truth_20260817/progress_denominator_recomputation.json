@@ -1,0 +1,60 @@
+{
+  "commandCode": "AAF-007E-R3-FINAL-NORMALIZED-PROGRESS-TRUTH",
+  "currentCompositeRuntimeAndProgressAuthority": "37d24f360408f71d182ee3734da91d587b50a7fe",
+  "finalAcademicAuthority": "b059edb7c1ab970eae1d930780596ef1418a8943",
+  "finalMaterializationAuthority": "08b8642643618a23c586cc951f280967817c2a7c",
+  "finalPublicationAuthority": "6ba5cbd8eb7b433c6e1422c6c392fca60c198eae",
+  "studentRuntimeAuthority": "37d24f360408f71d182ee3734da91d587b50a7fe",
+  "factoryStructure": {
+    "totalDenominator": 20,
+    "completedDenominator": 19,
+    "pendingDenominator": 1,
+    "readyPercent": 95,
+    "completedGates": [
+      "AAF-001 core academic contracts",
+      "AAF-002 work-order and dependency planning",
+      "AAF-003 lifecycle, failure, retry, and transition policy",
+      "AAF-004 persistent queue and worker orchestration",
+      "AAF-004D canonical 13 worker semantic parity",
+      "AAF-005 source grounding and canonical reuse",
+      "AAF-006A fact-verification policy",
+      "AAF-006B provider transport and policy bridge",
+      "AAF-006M benchmark qualification",
+      "AAF-006N primary verification",
+      "AAF-006O secondary verification",
+      "AAF-006P post-secondary integrity and materialization readiness",
+      "AAF-006Q controlled materialization",
+      "AAF-006R publication readiness",
+      "AAF-006S controlled publication and independent audit",
+      "AAF-006T student runtime projection acceptance",
+      "AAF-007A 4587-job control-plane audit",
+      "AAF-007B lease/retry/concurrency chaos audit",
+      "AAF-007C/007D publication safety and canonical reuse integrity",
+      "AAF-007F end-to-end fail-closed simulation"
+    ],
+    "pendingGates": [
+      "AAF-008B post-publication correction, withdrawal, canonical supersession, and runtime cache-version recovery drill"
+    ]
+  },
+  "academicVerificationPercent": 100,
+  "materializationReadyPercent": 100,
+  "materializationExecutedPercent": 100,
+  "publicationReadyPercent": 100,
+  "publicationExecutedPercent": 100,
+  "backendGovernedPipelinePercent": 100,
+  "studentRuntimeAcceptancePercent": 100,
+  "fullAutomation": {
+    "totalDenominator": 50,
+    "completedDenominator": 49,
+    "pendingDenominator": 1,
+    "readyPercent": 98,
+    "pendingGates": [
+      "AAF-008B live recovery and correction operability drill from a published Wave-1 projection through version-safe runtime refresh"
+    ]
+  },
+  "denominatorShrinking": 0,
+  "doubleCounting": 0,
+  "unexplainedWeight": 0,
+  "publication": "CONTROLLED_WAVE1_PROJECTION_ACCEPTED",
+  "productionSourceModified": "NO"
+}

@@ -1,0 +1,6 @@
+{
+  "artifactId": "cache_exact_patch_manifest",
+  "action": "CREATE_NEW",
+  "targetPath": "lib/features/personalization/data/cache/realtime_cache_invalidation.dart",
+  "patchHash": "7134BE7168091E315BDAB7214F14889A1D63E788E8C57DCD1ED9D40870164A89"
+}

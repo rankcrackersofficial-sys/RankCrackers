@@ -1,0 +1,6 @@
+{
+  "artifactId": "superseded_batch_exact_patch_manifest",
+  "action": "CREATE_NEW",
+  "targetPath": "functions/lib/academicFactory/services/superseded_batch_cleanup.js",
+  "patchHash": "E0542C75C28AAAAE02678FF6052EA5479AAB2F0568E6072489147333F866B2BE"
+}

@@ -1,0 +1,10 @@
+{
+  "artifactId": "008a_orchestration_gate_criteria_extraction",
+  "gates": [
+    "AUTO_SUPERSEDED_BATCH_CLEANUP_ORCHESTATION",
+    "AUTO_STALE_LEASE_RECOVERY_ORCHESTATION"
+  ],
+  "targetLanes": [
+    "ANTI_GRAVITY"
+  ]
+}

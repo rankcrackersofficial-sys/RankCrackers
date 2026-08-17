@@ -1,0 +1,16 @@
+{
+  "residualCount": 1,
+  "residuals": [
+    {
+      "gateId": "AAF-008B",
+      "name": "Post-publication correction, withdrawal, canonical supersession, and runtime cache-version recovery drill",
+      "whyNotClosedYet": "Wave-1 projection is accepted, but a deliberately corrected or withdrawn published projection has not yet been driven through the governed correction path and observed at runtime with stale-cache prevention.",
+      "notAContentTruthGap": true,
+      "notAMaterializationGap": true,
+      "notAPublicationGap": true,
+      "notAStudentProjectionDiscoveryGap": true,
+      "requiredToReachFactoryStructure100": true
+    }
+  ],
+  "unknownStructureResidual": 0
+}

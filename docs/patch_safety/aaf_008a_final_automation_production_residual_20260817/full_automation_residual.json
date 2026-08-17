@@ -1,0 +1,21 @@
+{
+  "residualCount": 1,
+  "residuals": [
+    {
+      "gateId": "AAF-008B",
+      "name": "Live recovery and correction operability drill from a published Wave-1 projection through version-safe runtime refresh",
+      "requiredMechanics": [
+        "published projection selected from the accepted 552 universe",
+        "governed correction or withdrawal event",
+        "canonical version supersession",
+        "stale verification/result rejection",
+        "materialization replacement or withdrawal handling",
+        "publication projection replacement or withdrawal handling",
+        "student runtime cache invalidation or version refresh",
+        "no stale public item accepted as current"
+      ],
+      "requiredToReachFullAutomation100": true
+    }
+  ],
+  "unknownAutomationResidual": 0
+}

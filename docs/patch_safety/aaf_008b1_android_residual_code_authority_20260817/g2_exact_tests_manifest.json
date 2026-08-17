@@ -1,0 +1,8 @@
+{
+  "artifactId": "g2_exact_tests_manifest",
+  "testFile": "test/features/notifications/g2_routing_test.dart",
+  "testCases": [
+    "testNotificationRoutingSuccess",
+    "testNotificationRoutingDeny"
+  ]
+}
