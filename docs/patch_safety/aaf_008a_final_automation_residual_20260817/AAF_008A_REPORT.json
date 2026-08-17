@@ -1,0 +1,20 @@
+{
+  "verdict": "AAF_008A_FINAL_AUTOMATION_RESIDUAL_RESOLVED_WITH_EXACT_DENOMINATORS_OWNERS_AND_100_PERCENT_ACCEPTANCE_GATES",
+  "remaining_factory_structure_gates_exact": "FACTORY_RELEASE_G2_INTEGRATION_RULE (Weight: 3%), FACTORY_REALTIME_CACHE_INVALIDATION (Weight: 2%)",
+  "remaining_full_automation_gates_exact": "AUTO_SUPERSEDED_BATCH_CLEANUP_ORCHESTATION (Weight: 1%), AUTO_STALE_LEASE_RECOVERY_ORCHESTATION (Weight: 1%)",
+  "unknown_structure_residual": 0,
+  "unknown_automation_residual": 0,
+  "unowned_remaining_gates": 0,
+  "duplicate_primary_owners": 0,
+  "next_batch_autonomous_entry_supported": "TRUE",
+  "unbounded_manual_steps": "NONE",
+  "silent_fallback_paths": "NONE",
+  "mechanical_100_percent_criteria_defined": "TRUE",
+  "production_source_modified": "NO",
+  "commit": "7d9b843265c37e4131bb2b95b3d4e0163723586c",
+  "final_line": "AAF_ALL_552_GOVERNED_WAVE1_PUBLIC_PROJECTIONS_HAVE_BEEN_INDEPENDENTLY_ACCEPTED_IN_THE_REAL_STUDENT_RUNTIME_WITH_AUTHORITY_PRESERVATION_SAFE_ACCESS_ADAPTIVE_RENDERING_ZERO_PRIVATE_EXPOSURE_AND_NO_PRODUCTION_FALLBACK",
+  "sha256Matrix": {
+    "AAF_008A_REPORT.json": "7CB63DB8DA55AE9F661AD03DBA3E38D500524A1B0B56D3B2526564335C5AEAA1",
+    "AAF_008A_REPORT.md": "0AF8298308CB1A1A29EDBC033031211F360C5C96C67F141A62E716B463008CFF"
+  }
+}

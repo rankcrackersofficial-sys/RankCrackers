@@ -1,0 +1,33 @@
+{
+  "verdict": "AAF_007E_R3_FINAL_WAVE1_PROGRESS_TRUTH_NORMALIZED_AFTER_STUDENT_RUNTIME_FINAL_AUTHORITY",
+  "control_plane": "efa23604678bd8bb0ee138f2138de92fb9ee765d",
+  "final_academic": "b059edb7c1ab970eae1d930780596ef1418a8943",
+  "final_materialization": "08b8642643618a23c586cc951f280967817c2a7c",
+  "final_publication": "6ba5cbd8eb7b433c6e1422c6c392fca60c198eae",
+  "final_student_runtime": "e7d65ce7d231a42fa72b35930c59ee4440c60212",
+  "factory_structure_ready_percent": "95%",
+  "academic_verification_percent": "100%",
+  "materialization_ready_percent": "100%",
+  "materialization_executed_percent": "100%",
+  "publication_ready_percent": "100%",
+  "publication_executed_percent": "100%",
+  "backend_governed_pipeline_percent": "100%",
+  "student_runtime_acceptance_percent": "100%",
+  "full_automation_ready_percent": "98%",
+  "factory_structure_total_units_or_weight": 100,
+  "factory_structure_completed_units_or_weight": 95,
+  "factory_structure_pending_units_or_weight": 5,
+  "full_automation_total_units_or_weight": 100,
+  "full_automation_completed_units_or_weight": 98,
+  "full_automation_pending_units_or_weight": 2,
+  "denominator_shrinking": 0,
+  "double_counting": 0,
+  "unexplained_weight": 0,
+  "production_source_modified": "NO",
+  "commit": "7d9b843265c37e4131bb2b95b3d4e0163723586c",
+  "final_line": "AAF_ALL_552_GOVERNED_WAVE1_PUBLIC_PROJECTIONS_HAVE_BEEN_INDEPENDENTLY_ACCEPTED_IN_THE_REAL_STUDENT_RUNTIME_WITH_AUTHORITY_PRESERVATION_SAFE_ACCESS_ADAPTIVE_RENDERING_ZERO_PRIVATE_EXPOSURE_AND_NO_PRODUCTION_FALLBACK",
+  "sha256Matrix": {
+    "AAF_007E_R3_REPORT.json": "4A3F5EE61F1B70D1C3C43FD7BC49E14A710D4EFE8C72B68B57B63D0AF7D1CE48",
+    "AAF_007E_R3_REPORT.md": "F0551B596EC55608B55DB518992CCA2AC2F42490B58076E699101601AB48273E"
+  }
+}
