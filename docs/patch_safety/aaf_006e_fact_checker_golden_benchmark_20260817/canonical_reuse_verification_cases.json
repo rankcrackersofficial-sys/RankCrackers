@@ -1,0 +1,47 @@
+{
+  "artifactId": "AAF_006E_CANONICAL_REUSE_VERIFICATION_CASES_20260817",
+  "purpose": "Benchmark cases proving canonical reuse avoids duplicate fact-checking only when hashes and versions match.",
+  "cases": [
+    {
+      "caseId": "REUSE_POS_001",
+      "polarity": "POSITIVE",
+      "claimType": "CANONICAL_REUSE",
+      "claimSummary": "Same canonical block version and same source extract hash are reused across compatible mission bindings.",
+      "expectedVerifierDecision": "REUSE_VERIFICATION_ALLOWED",
+      "mustCheck": ["canonicalBlockId", "canonicalVersion", "sourceExtractHash", "missionBindingScope"],
+      "attackVector": "NONE"
+    },
+    {
+      "caseId": "REUSE_NEG_001",
+      "polarity": "NEGATIVE",
+      "claimType": "CANONICAL_REUSE",
+      "claimSummary": "Same topic title but different source extract hash attempts to reuse previous verification.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "mustCheck": ["canonicalBlockId", "sourceExtractHash", "contentHash"],
+      "attackVector": "TITLE_ONLY_REUSE"
+    },
+    {
+      "caseId": "REUSE_NEG_002",
+      "polarity": "NEGATIVE",
+      "claimType": "CANONICAL_REUSE",
+      "claimSummary": "Canonical block is valid for JEE but mission binding adds unsupported teacher-recruitment-specific fact.",
+      "expectedVerifierDecision": "MISSION_BINDING_EXTENSION_REQUIRED",
+      "mustCheck": ["missionBindingScope", "addedClaims", "sourceLineage"],
+      "attackVector": "MISSION_SPECIFIC_UNSOURCED_EXTENSION"
+    },
+    {
+      "caseId": "REUSE_NEG_003",
+      "polarity": "NEGATIVE",
+      "claimType": "CANONICAL_REUSE",
+      "claimSummary": "A repaired canonical block tries to inherit old post-assembly verification.",
+      "expectedVerifierDecision": "POST_ASSEMBLY_RECHECK_REQUIRED",
+      "mustCheck": ["repairRevision", "postAssemblyHash", "verificationRevision"],
+      "attackVector": "POST_ASSEMBLY_STALE_PASS"
+    }
+  ],
+  "safety": {
+    "duplicateGenerationBlocked": true,
+    "staleVerificationsReused": 0,
+    "publication": "NO"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "artifactId": "AAF_006E_REACTION_ATTACK_CASES_20260817",
+  "purpose": "Golden and adversarial reaction/equation cases for source-grounded fact-check worker validation.",
+  "sourceBaseline": {
+    "aaf006dCommit": "bccb170f21550d14e94c507661ffd95691aaa72d",
+    "workUnits": "docs/patch_safety/aaf_006d_risk_routed_verification_batching_20260816/AAF_006D_RISK_ROUTED_FACT_VERIFICATION_WORK_UNITS_20260816.json"
+  },
+  "cases": [
+    {
+      "caseId": "RXN_POS_001",
+      "polarity": "POSITIVE",
+      "claimType": "REACTION_EQUATION",
+      "verificationLane": "REACTION_EQUATION",
+      "claimSummary": "A halide-confirmation reaction must preserve reagent, observation, and inference exactly as source-backed.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "mustCheck": ["reactants", "products", "reagent", "observation", "inference", "sourceExtractHash"],
+      "attackVector": "NONE"
+    },
+    {
+      "caseId": "RXN_NEG_001",
+      "polarity": "NEGATIVE",
+      "claimType": "REACTION_EQUATION",
+      "verificationLane": "REACTION_EQUATION",
+      "claimSummary": "Unsupported product substitution in a qualitative-analysis reaction.",
+      "expectedVerifierDecision": "REJECT_OR_DISPUTE",
+      "mustCheck": ["reactants", "products", "stoichiometry", "sourceExtractHash"],
+      "attackVector": "PRODUCT_SUBSTITUTION"
+    },
+    {
+      "caseId": "RXN_NEG_002",
+      "polarity": "NEGATIVE",
+      "claimType": "REACTION_EQUATION",
+      "verificationLane": "REACTION_EQUATION",
+      "claimSummary": "Correct test name but unsupported observation color is inserted.",
+      "expectedVerifierDecision": "REJECT_OR_DISPUTE",
+      "mustCheck": ["reagent", "condition", "observation", "inference"],
+      "attackVector": "OBSERVATION_SWAP"
+    },
+    {
+      "caseId": "RXN_NEG_003",
+      "polarity": "NEGATIVE",
+      "claimType": "REACTION_EQUATION",
+      "verificationLane": "REACTION_EQUATION",
+      "claimSummary": "Balanced-looking reaction with missing charge/state evidence.",
+      "expectedVerifierDecision": "REJECT_OR_ESCALATE",
+      "mustCheck": ["charges", "stateSymbolsIfClaimed", "sourceLocator", "sourceExtractHash"],
+      "attackVector": "PLAUSIBLE_UNSOURCED_EQUATION"
+    },
+    {
+      "caseId": "RXN_NEG_004",
+      "polarity": "NEGATIVE",
+      "claimType": "REACTION_EQUATION",
+      "verificationLane": "REACTION_EQUATION",
+      "claimSummary": "Equation copied from a different practical test and attached to a valid locator.",
+      "expectedVerifierDecision": "REJECT",
+      "mustCheck": ["sourceLocator", "claimToExtractAlignment", "testName", "products"],
+      "attackVector": "SOURCE_CONTEXT_MISMATCH"
+    }
+  ],
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "canonicalContentModified": "NO",
+    "publication": "NO"
+  }
+}

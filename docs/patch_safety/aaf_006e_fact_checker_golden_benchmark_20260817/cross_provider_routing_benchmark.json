@@ -1,0 +1,52 @@
+{
+  "artifactId": "AAF_006E_CROSS_PROVIDER_ROUTING_BENCHMARK_20260817",
+  "purpose": "Benchmark cases for provisional cross-provider routing policy reconciliation.",
+  "inputNormalization": {
+    "provisionalCrossProviderClaimsFromAAF006D": 221,
+    "finalRequiredPolicyOwner": "AAF-006A",
+    "policyNote": "006E does not decide final mandatory second-provider counts."
+  },
+  "cases": [
+    {
+      "caseId": "CPR_POS_001",
+      "polarity": "POSITIVE",
+      "claimType": "PROVISIONAL_CROSS_PROVIDER",
+      "claimSummary": "Reaction/procedure claim is routed for second-provider verification after primary verifier completes.",
+      "expectedVerifierDecision": "SECOND_PROVIDER_AFTER_PRIMARY",
+      "mustCheck": ["primaryDecision", "riskClass", "sourceExtractHash"],
+      "attackVector": "NONE"
+    },
+    {
+      "caseId": "CPR_POS_002",
+      "polarity": "POSITIVE",
+      "claimType": "STANDARD_SENSITIVE",
+      "claimSummary": "Standard-sensitive claim remains escalated unless AAF-006A policy explicitly downgrades it.",
+      "expectedVerifierDecision": "POLICY_RECONCILIATION_REQUIRED",
+      "mustCheck": ["standardSensitivity", "policyVersion", "finalEscalationReason"],
+      "attackVector": "NONE"
+    },
+    {
+      "caseId": "CPR_NEG_001",
+      "polarity": "NEGATIVE",
+      "claimType": "CROSS_PROVIDER_ROUTING",
+      "claimSummary": "Claim marked primary-pass attempts publication before cross-provider required lane completes.",
+      "expectedVerifierDecision": "PUBLICATION_BLOCKED",
+      "mustCheck": ["crossProviderStatus", "publicationGate", "allRequiredLanesComplete"],
+      "attackVector": "EARLY_PUBLICATION"
+    },
+    {
+      "caseId": "CPR_NEG_002",
+      "polarity": "NEGATIVE",
+      "claimType": "CROSS_PROVIDER_ROUTING",
+      "claimSummary": "Secondary provider conflict is overridden by primary provider confidence.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "mustCheck": ["primaryDecision", "secondaryDecision", "conflictPolicy", "noAiOverride"],
+      "attackVector": "CONFIDENCE_OVERRIDE"
+    }
+  ],
+  "safety": {
+    "primaryModelCalls": 0,
+    "secondaryModelCalls": 0,
+    "publication": "NO"
+  }
+}

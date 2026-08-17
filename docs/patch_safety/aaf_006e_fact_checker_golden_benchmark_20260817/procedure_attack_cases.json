@@ -1,0 +1,61 @@
+{
+  "artifactId": "AAF_006E_PROCEDURE_ATTACK_CASES_20260817",
+  "purpose": "Procedure-level positive and adversarial cases for chemistry practical fact-check validation.",
+  "cases": [
+    {
+      "caseId": "PROC_POS_001",
+      "polarity": "POSITIVE",
+      "claimType": "PROCEDURE",
+      "verificationLane": "PROCEDURE",
+      "claimSummary": "Procedure step is supported only when sample, reagent, operation, condition, observation, and inference all match the source extract.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "mustCheck": ["sample", "reagent", "operation", "condition", "observation", "inference", "limitationsIfClaimed"],
+      "attackVector": "NONE"
+    },
+    {
+      "caseId": "PROC_NEG_001",
+      "polarity": "NEGATIVE",
+      "claimType": "PROCEDURE",
+      "verificationLane": "PROCEDURE",
+      "claimSummary": "Correct reagent with unsupported heating condition added.",
+      "expectedVerifierDecision": "REJECT_OR_DISPUTE",
+      "mustCheck": ["operation", "condition", "sourceExtractHash"],
+      "attackVector": "UNSUPPORTED_CONDITION"
+    },
+    {
+      "caseId": "PROC_NEG_002",
+      "polarity": "NEGATIVE",
+      "claimType": "PROCEDURE",
+      "verificationLane": "PROCEDURE",
+      "claimSummary": "Observation is correct for a related test but not for this source-backed procedure.",
+      "expectedVerifierDecision": "REJECT",
+      "mustCheck": ["testIdentity", "observation", "inference", "sourceContext"],
+      "attackVector": "CROSS_TEST_OBSERVATION_LEAK"
+    },
+    {
+      "caseId": "PROC_NEG_003",
+      "polarity": "NEGATIVE",
+      "claimType": "PROCEDURE",
+      "verificationLane": "PROCEDURE",
+      "claimSummary": "Procedure omits a required safety or limitation while claiming the method is definitive.",
+      "expectedVerifierDecision": "REJECT_OR_REPAIR_REQUIRED",
+      "mustCheck": ["limitationsIfClaimed", "overstatement", "sourceExtractHash"],
+      "attackVector": "OVERSTATED_INFERENCE"
+    },
+    {
+      "caseId": "PROC_NEG_004",
+      "polarity": "NEGATIVE",
+      "claimType": "PROCEDURE",
+      "verificationLane": "PROCEDURE",
+      "claimSummary": "Self-check answer depends on an unsupported procedural fact.",
+      "expectedVerifierDecision": "REJECT_OR_HOLD_SELF_CHECK",
+      "mustCheck": ["selfCheckClaimIds", "groundedFactIds", "answerSupport"],
+      "attackVector": "UNSUPPORTED_SELF_CHECK_DEPENDENCY"
+    }
+  ],
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "canonicalContentModified": "NO",
+    "publication": "NO"
+  }
+}

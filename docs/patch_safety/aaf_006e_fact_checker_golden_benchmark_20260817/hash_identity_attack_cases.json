@@ -1,0 +1,47 @@
+{
+  "artifactId": "AAF_006E_HASH_IDENTITY_ATTACK_CASES_20260817",
+  "purpose": "Hash, version, and identity adversarial cases for canonical verification workers.",
+  "cases": [
+    {
+      "caseId": "HASH_NEG_001",
+      "polarity": "NEGATIVE",
+      "claimType": "HASH_ATTACK",
+      "claimSummary": "Canonical content text changes while the old verification hash is reused.",
+      "expectedVerifierDecision": "REJECT_STALE_VERIFICATION",
+      "mustCheck": ["canonicalContentHash", "verificationInputHash", "version"],
+      "attackVector": "STALE_HASH_REUSE"
+    },
+    {
+      "caseId": "HASH_NEG_002",
+      "polarity": "NEGATIVE",
+      "claimType": "STALE_VERSION",
+      "claimSummary": "Canonical version increments after repair, but previous fact-check pass is still attached.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "mustCheck": ["canonicalVersion", "repairRevision", "verificationRevision"],
+      "attackVector": "REPAIR_INVALIDATION_BYPASS"
+    },
+    {
+      "caseId": "HASH_NEG_003",
+      "polarity": "NEGATIVE",
+      "claimType": "IDENTITY_ATTACK",
+      "claimSummary": "Verification job alias is used as canonical AMTN identity.",
+      "expectedVerifierDecision": "REJECT_IDENTITY_SUBSTITUTION",
+      "mustCheck": ["verificationJobAlias", "originalAmtnId", "canonicalSemanticTopicId"],
+      "attackVector": "ALIAS_PROMOTION"
+    },
+    {
+      "caseId": "HASH_POS_001",
+      "polarity": "POSITIVE",
+      "claimType": "HASH_IDENTITY",
+      "claimSummary": "Canonical content hash, source extract hash, AMTN identity, and verifier alias are all distinct and aligned.",
+      "expectedVerifierDecision": "SUPPORTED_FOR_VERIFICATION_INPUT",
+      "mustCheck": ["canonicalContentHash", "sourceExtractHash", "originalAmtnId", "canonicalSemanticTopicId", "verificationJobAlias"],
+      "attackVector": "NONE"
+    }
+  ],
+  "safety": {
+    "canonicalContentModified": "NO",
+    "modelFactCheckUsed": "NO",
+    "publication": "NO"
+  }
+}

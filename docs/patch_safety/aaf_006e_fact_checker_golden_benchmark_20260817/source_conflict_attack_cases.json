@@ -1,0 +1,47 @@
+{
+  "artifactId": "AAF_006E_SOURCE_CONFLICT_ATTACK_CASES_20260817",
+  "purpose": "Cases that force verifier workers to route source conflicts instead of allowing AI to override sources.",
+  "cases": [
+    {
+      "caseId": "SRC_CONFLICT_001",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONFLICT",
+      "claimSummary": "Two authoritative extracts disagree on a condition or observation.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "mustCheck": ["sourceAHash", "sourceBHash", "conflictField", "noAiOverride"],
+      "attackVector": "AUTHORITY_CONFLICT"
+    },
+    {
+      "caseId": "SRC_CONFLICT_002",
+      "polarity": "NEGATIVE",
+      "claimType": "UNSOURCED_PLAUSIBLE",
+      "claimSummary": "A plausible chemistry fact appears without an immutable source extract.",
+      "expectedVerifierDecision": "REJECT_OR_HOLD",
+      "mustCheck": ["sourceExtractHash", "locator", "modelMemoryNotEvidence"],
+      "attackVector": "PLAUSIBLE_MODEL_MEMORY"
+    },
+    {
+      "caseId": "SRC_CONFLICT_003",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONTEXT_MISMATCH",
+      "claimSummary": "A source locator points to the right chapter but not to the asserted procedure.",
+      "expectedVerifierDecision": "REJECT_OR_LOCATOR_REPAIR",
+      "mustCheck": ["pageLocator", "sectionLocator", "claimToExtractAlignment"],
+      "attackVector": "BROAD_LOCATOR_FALSE_PASS"
+    },
+    {
+      "caseId": "SRC_CONFLICT_004",
+      "polarity": "POSITIVE",
+      "claimType": "SOURCE_CONSISTENT",
+      "claimSummary": "Independent extracts support the same claim without contradiction.",
+      "expectedVerifierDecision": "SUPPORTED_WITH_REUSE_CANDIDATE",
+      "mustCheck": ["sourceAHash", "sourceBHash", "claimToExtractAlignment"],
+      "attackVector": "NONE"
+    }
+  ],
+  "safety": {
+    "sourceConflictsOverriddenByAi": 0,
+    "modelFactCheckUsed": "NO",
+    "publication": "NO"
+  }
+}

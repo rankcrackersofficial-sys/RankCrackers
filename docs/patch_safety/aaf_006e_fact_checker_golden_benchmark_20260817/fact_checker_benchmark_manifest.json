@@ -1,0 +1,51 @@
+{
+  "manifestId": "AAF_006E_FACT_CHECKER_BENCHMARK_MANIFEST_20260817",
+  "masterCode": "RANKCRACKERS_AUTONOMOUS_ACADEMIC_FACTORY_V1",
+  "baseline": {
+    "aaf006dCommit": "bccb170f21550d14e94c507661ffd95691aaa72d",
+    "aaf006dAccepted": true,
+    "verificationJobAliasIsCanonicalId": false,
+    "originalAmtnIdMustBePreserved": true,
+    "canonicalSemanticTopicIdMustBePreserved": true
+  },
+  "benchmarkFiles": [
+    "reaction_attack_cases.json",
+    "procedure_attack_cases.json",
+    "source_conflict_attack_cases.json",
+    "hash_identity_attack_cases.json",
+    "canonical_reuse_verification_cases.json",
+    "cross_provider_routing_benchmark.json"
+  ],
+  "acceptanceContract": {
+    "mustRejectUnsupportedPlausibleFacts": true,
+    "mustRejectStaleHashes": true,
+    "mustRejectAliasPromotion": true,
+    "mustBlockPublicationBeforeAllRequiredLanes": true,
+    "mustRouteSourceConflictsToReview": true,
+    "mustAllowReuseOnlyWithMatchingCanonicalVersionAndHashes": true
+  },
+  "counters": {
+    "totalBenchmarkCases": 26,
+    "positiveCases": 6,
+    "negativeCases": 20,
+    "reactionCases": 5,
+    "procedureCases": 5,
+    "sourceConflictCases": 4,
+    "unsourcedPlausibleCases": 1,
+    "hashAttackCases": 4,
+    "staleVersionCases": 2,
+    "repairInvalidationCases": 2,
+    "canonicalReuseCases": 4,
+    "provisionalCrossProviderCases": 4
+  },
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "geminiUsed": "NO",
+    "claudeUsed": "NO",
+    "firebaseRead": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO",
+    "canonicalContentModified": "NO"
+  }
+}
