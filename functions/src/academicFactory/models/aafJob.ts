@@ -27,13 +27,14 @@ export type AafJobState =
 export interface AafJobMetadata {
   // 🛡️ Contract Authority
   queueContract: 'academic_factory_v1';
+  schemaVersion: number;
 
   // 🛡️ Identity (Flattened)
   runId: string;
   jobId: string;
   missionId: string;
   canonicalTargetId: string;
-  idempotencyKey: string;    // RUN_ID:JOB_ID
+  idempotencyKey: string;    // Stabilized in AAF-002 Planner
 
   // 🛡️ State Machine
   state: AafJobState;
@@ -44,6 +45,9 @@ export interface AafJobMetadata {
   leaseOwner: string | null;
   leaseExpiresAtUtc: admin.firestore.Timestamp | null;
   nextRetryAtUtc: admin.firestore.Timestamp | null;
+
+  // 🛡️ Dependencies
+  dependencyJobIds: string[]; // List of idempotencyKeys this job waits for
 
   // 🛡️ Integrity
   inputHash: string;
@@ -59,7 +63,7 @@ export interface AafJobMetadata {
   lastError: string | null;
 
   // 🛡️ Orchestration (Flattened)
-  taskType: string;
-  targetId: string;
+  type: string;        // e.g. 'digibookDraft', 'digibookValidation'
+  targetId: string;    // Local reference ID
   sourceDocumentIds: string[];
 }

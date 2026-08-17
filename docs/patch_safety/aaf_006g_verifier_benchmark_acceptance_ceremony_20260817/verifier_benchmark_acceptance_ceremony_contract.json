@@ -1,0 +1,103 @@
+{
+  "artifactId": "AAF_006G_VERIFIER_BENCHMARK_ACCEPTANCE_CEREMONY_CONTRACT_20260817",
+  "masterCode": "RANKCRACKERS_AUTONOMOUS_ACADEMIC_FACTORY_V1",
+  "benchmarkAuthorityCommit": "585298b55d875044185ae4b5bb738ee4ec3e6342",
+  "evaluatorAuthorityCommit": "22652c21dc55f30b9add7c9de4ac181538dc0c73",
+  "benchmarkCases": 112,
+  "oracleCases": 112,
+  "zeroToleranceCases": 63,
+  "ceremonyRequiredBeforeRealWave1": true,
+  "verifierEligibilityCannotBeGrantedBy": [
+    "PARTIAL_BENCHMARK_RUN",
+    "DUPLICATE_RESPONSE_SET",
+    "UNKNOWN_CASE_ID_SET",
+    "HASH_MISMATCHED_INPUT",
+    "PROVIDER_DISAGREEMENT_AUTO_PASS",
+    "BENCHMARK_PASS_ALONE_AS_PUBLICATION_AUTHORITY"
+  ],
+  "hardInvariants": {
+    "partialBenchmarkCanGrantEligibility": false,
+    "providerDisagreementCanAutoPass": false,
+    "benchmarkPassCanAutoPublishContent": false,
+    "sourceConflictOverridesAiPass": true,
+    "zeroToleranceFailureCanBeOffsetByScore": false,
+    "verificationJobAliasIsCanonicalId": "NO",
+    "originalAmtnIdPreserved": "YES",
+    "canonicalSemanticTopicIdPreserved": "YES"
+  },
+  "acceptanceSequence": [
+    "LOCKED_BENCHMARK_INPUT_HASH_CHECK",
+    "ALL_112_CASE_RESPONSES_REQUIRED",
+    "NO_DUPLICATE_CASE_RESPONSES",
+    "NO_UNKNOWN_CASE_RESPONSES",
+    "ZERO_TOLERANCE_FATAL_SCAN",
+    "PROVIDER_DISAGREEMENT_SCAN",
+    "POST_ASSEMBLY_PUBLICATION_BLOCK_ASSERTION",
+    "CEREMONY_VERDICT_EMIT"
+  ],
+  "attacks": [
+    {
+      "attackId": "CEREMONY_MISSING_CASE_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true,
+      "expectedGate": "REJECT_BENCHMARK_ELIGIBILITY",
+      "invariant": "ALL_112_CASE_IDS_REQUIRED"
+    },
+    {
+      "attackId": "CEREMONY_DUPLICATE_RESPONSE_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true,
+      "expectedGate": "REJECT_DUPLICATE_RESPONSE",
+      "invariant": "DUPLICATE_RESPONSE_ATTACK"
+    },
+    {
+      "attackId": "CEREMONY_UNKNOWN_CASE_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true,
+      "expectedGate": "REJECT_UNKNOWN_CASE_ID",
+      "invariant": "UNKNOWN_CASES_NOT_ALLOWED"
+    },
+    {
+      "attackId": "CEREMONY_HASH_MISMATCH_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true,
+      "expectedGate": "REJECT_HASH_MISMATCH",
+      "invariant": "BENCHMARK_AUTHORITY_HASH_LOCK"
+    },
+    {
+      "attackId": "CEREMONY_SOURCE_CONFLICT_FALSE_APPROVAL_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true,
+      "expectedGate": "REJECT_SOURCE_CONFLICT_FALSE_APPROVAL",
+      "invariant": "SOURCE_CONFLICT_OVERRIDES_AI_PASS_TRUE"
+    },
+    {
+      "attackId": "CEREMONY_UNSOURCED_FALSE_APPROVAL_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true,
+      "expectedGate": "REJECT_UNSOURCED_APPROVAL",
+      "invariant": "MODEL_MEMORY_NOT_EVIDENCE"
+    },
+    {
+      "attackId": "CEREMONY_STALE_VERSION_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true,
+      "expectedGate": "REJECT_STALE_VERSION",
+      "invariant": "REVERIFY_AFTER_VERSION_OR_REPAIR"
+    },
+    {
+      "attackId": "CEREMONY_PROVIDER_DISAGREEMENT_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true,
+      "expectedGate": "ROUTE_TO_DISPUTE_REVIEW",
+      "invariant": "PROVIDER_DISAGREEMENT_CAN_AUTO_PASS_FALSE"
+    },
+    {
+      "attackId": "CEREMONY_ALIAS_IDENTITY_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true,
+      "expectedGate": "REJECT_ALIAS_AS_CANONICAL_ID",
+      "invariant": "VERIFICATION_JOB_ALIAS_IS_CANONICAL_ID_FALSE"
+    }
+  ]
+}

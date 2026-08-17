@@ -50,7 +50,7 @@ class AafQueueRepository {
     /**
      * 🛡️ TRANSACTIONAL ENQUEUE
      * Uses planner-provided idempotencyKey.
-     * Validates strict semantic identity to prevent conflicting overlaps.
+     * Validates exact 9/9 locked immutable fields to prevent logical corruption.
      */
     async enqueue(job) {
         const docRef = this.db.collection(QUEUE_COLLECTION).doc(job.idempotencyKey);
@@ -58,29 +58,33 @@ class AafQueueRepository {
             const snap = await transaction.get(docRef);
             if (snap.exists) {
                 const existing = snap.data();
-                // 🛡️ COMPREHENSIVE SEMANTIC IDENTITY CHECK (9/9 Conflict Attacks)
+                // 🛡️ LOCKED IMMUTABLE CONFLICT CHECK (9/9 Fields)
                 const conflicts = [];
-                if (existing.runId !== job.runId)
-                    conflicts.push('runId');
+                if (existing.schemaVersion !== job.schemaVersion)
+                    conflicts.push('schemaVersion');
                 if (existing.jobId !== job.jobId)
                     conflicts.push('jobId');
+                if (existing.runId !== job.runId)
+                    conflicts.push('runId');
                 if (existing.missionId !== job.missionId)
                     conflicts.push('missionId');
                 if (existing.canonicalTargetId !== job.canonicalTargetId)
                     conflicts.push('canonicalTargetId');
-                if (existing.taskType !== job.taskType)
-                    conflicts.push('taskType');
-                if (existing.inputHash !== job.inputHash)
-                    conflicts.push('inputHash');
+                if (existing.type !== job.type)
+                    conflicts.push('type');
                 if (existing.maxAttempts !== job.maxAttempts)
                     conflicts.push('maxAttempts');
-                if (existing.targetId !== job.targetId)
-                    conflicts.push('targetId');
-                // queueContract is always checked by queryContract field check in caller or guard
+                if (existing.inputHash !== job.inputHash)
+                    conflicts.push('inputHash');
+                // Dependency Check (Deep equality required for arrays)
+                const existingDeps = JSON.stringify([...(existing.dependencyJobIds || [])].sort());
+                const jobDeps = JSON.stringify([...(job.dependencyJobIds || [])].sort());
+                if (existingDeps !== jobDeps)
+                    conflicts.push('dependencyJobIds');
                 if (conflicts.length > 0) {
-                    throw new Error(`AAF_IDENTITY_CONFLICT: Job ${job.idempotencyKey} has mismatching ${conflicts.join(', ')}.`);
+                    throw new Error(`AAF_IDENTITY_CONFLICT: Job ${job.idempotencyKey} mismatch on: ${conflicts.join(', ')}.`);
                 }
-                // 🛡️ IDEMPOTENT REUSE: If identical, we merge updates but preserve history.
+                // 🛡️ IDEMPOTENT REUSE: Update fields that are allowed to change (state, payload etc)
                 transaction.update(docRef, {
                     ...job,
                     updatedAt: admin.firestore.FieldValue.serverTimestamp(),
@@ -151,7 +155,6 @@ class AafQueueRepository {
     }
     /**
      * 🛡️ LEASE RECOVERY (EXPIRED -> READY)
-     * Move expired leased jobs back to ready.
      */
     async recoverExpiredLease(idempotencyKey) {
         const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);

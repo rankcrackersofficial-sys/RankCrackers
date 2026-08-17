@@ -39,29 +39,32 @@ describe('AAF Queue Repository FIX4 FINAL (AAF-004B)', () => {
 
   const sampleJob: AafJobMetadata = {
     queueContract: 'academic_factory_v1',
+    schemaVersion: 1,
     runId: 'RUN_FINAL', jobId: 'JOB_001', missionId: 'JEE_MAIN_2026',
     canonicalTargetId: 'PHYS_001', idempotencyKey: 'RUN_FINAL:JOB_001',
     state: 'ready', attempts: 0, maxAttempts: 3,
     leaseOwner: null, leaseExpiresAtUtc: null, nextRetryAtUtc: null,
+    dependencyJobIds: [],
     inputHash: 'h1', outputHash: null,
     createdAt: admin.firestore.FieldValue.serverTimestamp(),
     updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     startedAt: null, finishedAt: null, lastError: null,
-    taskType: 'digibook', targetId: 'PHYS_001', sourceDocumentIds: []
+    type: 'digibookDraft', targetId: 'PHYS_001', sourceDocumentIds: []
   };
 
-  test('🛡️ CONFLICT_ATTACKS: verify 9/9 semantic identity guards', async () => {
+  test('🛡️ CONFLICT_ATTACKS: verify 9/9 locked immutable fields', async () => {
     await repo.enqueue(sampleJob);
 
     const attacks = [
-        { runId: 'CONFLICT' },
+        { schemaVersion: 2 },
         { jobId: 'CONFLICT' },
+        { runId: 'CONFLICT' },
         { missionId: 'CONFLICT' },
         { canonicalTargetId: 'CONFLICT' },
-        { taskType: 'CONFLICT' },
-        { inputHash: 'CONFLICT' },
+        { type: 'CONFLICT' },
+        { dependencyJobIds: ['DEP_NEW'] },
         { maxAttempts: 99 },
-        { targetId: 'CONFLICT' }
+        { inputHash: 'CONFLICT' }
     ];
 
     for (const attack of attacks) {
@@ -74,7 +77,7 @@ describe('AAF Queue Repository FIX4 FINAL (AAF-004B)', () => {
     const key = 'RETRY_CLAIM_TEST';
     await repo.enqueue({ ...sampleJob, idempotencyKey: key, state: 'retryWait' });
 
-    // 🛡️ CLAIM_READY_BYPASSES_WAKE_RETRY: NO
+    // Should fail because state is not 'ready'
     const result = await repo.claimReadyJob(key, 'worker_1');
     expect(result).toBe(false);
 
@@ -100,17 +103,15 @@ describe('AAF Queue Repository FIX4 FINAL (AAF-004B)', () => {
     expect(await repo.claimReadyJob(key, 'worker_2')).toBe(true);
   });
 
-  test('🛡️ SCALE_IDENTITY_CONSISTENCY: 4,587 logical units unique IDs', () => {
+  test('🛡️ SCALE_IDENTITY_PROOF: logic for 4,587 units', () => {
+    // Verified 11 types x 417 AMTNs = 4587.
     const runId = 'RUN_20260817';
     const keys = new Set();
-    const types = ['mcq','digibook','revision','structural','svo','manifest','encoding','pdf','docx','xlsx','repair'];
+    const aafTypes = ['digibookDraft', 'digibookValidation', 'digibookProReview', 'digibookAssembly', 'mcqDraft', 'mcqValidation', 'revisionDraft', 'revisionValidation', 'structural', 'svo', 'manifest'];
     for(let i=1; i<=417; i++) {
-        types.forEach(t => keys.add(`${runId}:${t}:AMTN_${i}`));
+        aafTypes.forEach(t => keys.add(`${runId}:${t}:AMTN_${i}`));
     }
+    // We check if exactly 4587 unique keys are generated for a single mission run coverage
     expect(keys.size).toBe(4587);
-
-    // Example format verification
-    const exampleKey = `${runId}:digibook:AMTN_101`;
-    expect(exampleKey).toMatch(/^[A-Z0-9_]+:[a-z]+:AMTN_[0-9]+$/);
   });
 });
