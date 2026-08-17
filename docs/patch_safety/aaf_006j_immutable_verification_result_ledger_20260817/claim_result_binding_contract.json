@@ -1,0 +1,13 @@
+{
+  "artifactId": "AAF_006J_CLAIM_BINDING_CONTRACT_20260817",
+  "resultCanBindByAliasOnly": false,
+  "staleResultCanVerifyRepairedClaim": false,
+  "repairRequiresNewResultBinding": true,
+  "sourceConflictCanBeHiddenByProviderPass": false,
+  "providerDisagreementCanAutoVerify": false,
+  "replayFixtureIsRealProviderQualification": false,
+  "unqualifiedProviderResultCanEnterCanonicalDecision": false,
+  "originalAmtnIdPreserved": "YES",
+  "canonicalSemanticTopicIdPreserved": "YES",
+  "verificationJobAliasIsCanonicalId": "NO"
+}

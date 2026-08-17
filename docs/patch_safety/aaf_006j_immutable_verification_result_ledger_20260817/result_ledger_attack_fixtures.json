@@ -1,0 +1,133 @@
+{
+  "artifactId": "AAF_006J_RESULT_LEDGER_ATTACK_FIXTURES_20260817",
+  "attackClasses": [
+    "alias_only_binding",
+    "stale_result_on_repaired_claim",
+    "provider_finding_overwrites_governed_decision",
+    "source_conflict_hidden_by_provider_pass",
+    "provider_disagreement_auto_verify",
+    "replay_fixture_as_real_qualification",
+    "unqualified_provider_result",
+    "duplicate_semantic_result",
+    "silent_conflicting_overwrite",
+    "result_set_hash_tamper",
+    "missing_claim_binding",
+    "wrong_canonical_version_binding",
+    "wrong_source_extract_hash_binding",
+    "wrong_amtn_binding",
+    "partial_result_set",
+    "publication_unlock_from_result_only",
+    "repair_without_new_binding",
+    "unknown_provider_result"
+  ],
+  "attacks": [
+    {
+      "attackClass": "alias_only_binding",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "stale_result_on_repaired_claim",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "provider_finding_overwrites_governed_decision",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "source_conflict_hidden_by_provider_pass",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "provider_disagreement_auto_verify",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "replay_fixture_as_real_qualification",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "unqualified_provider_result",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "duplicate_semantic_result",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "silent_conflicting_overwrite",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "result_set_hash_tamper",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "missing_claim_binding",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "wrong_canonical_version_binding",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "wrong_source_extract_hash_binding",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "wrong_amtn_binding",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "partial_result_set",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "publication_unlock_from_result_only",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "repair_without_new_binding",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "unknown_provider_result",
+      "status": "PASS",
+      "expectedLedgerDecision": "REJECT_OR_HOLD",
+      "failClosed": "YES"
+    }
+  ]
+}

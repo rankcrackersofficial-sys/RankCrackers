@@ -1,0 +1,38 @@
+{
+  "artifactId": "AAF_006J_IMMUTABLE_RESULT_LEDGER_SCHEMA_20260817",
+  "ledgerImmutable": "YES",
+  "appendOnly": true,
+  "providerFindingSeparateFromGovernedDecision": "YES",
+  "requiredResultIdentity": [
+    "resultId",
+    "providerId",
+    "providerModel",
+    "benchmarkQualificationId",
+    "originalAmtnId",
+    "canonicalSemanticTopicId",
+    "claimId",
+    "canonicalVersion",
+    "claimHash",
+    "sourceExtractHash",
+    "resultSetHash",
+    "createdAt"
+  ],
+  "forbiddenShortcuts": [
+    "ALIAS_ONLY_BINDING",
+    "STALE_RESULT_REUSE",
+    "PROVIDER_PASS_AS_GOVERNED_DECISION",
+    "SOURCE_CONFLICT_HIDE",
+    "PROVIDER_DISAGREEMENT_AUTO_VERIFY",
+    "REPLAY_FIXTURE_AS_REAL_PROVIDER"
+  ],
+  "governedDecisionInputs": [
+    "providerFinding",
+    "sourceConflictStatus",
+    "crossProviderStatus",
+    "zeroToleranceStatus",
+    "repairRevision",
+    "canonicalVersion",
+    "resultSetHash"
+  ],
+  "publicationEligible": false
+}

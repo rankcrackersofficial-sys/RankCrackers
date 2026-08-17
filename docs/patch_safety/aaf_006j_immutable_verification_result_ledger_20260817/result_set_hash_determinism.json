@@ -1,0 +1,14 @@
+{
+  "artifactId": "AAF_006J_RESULT_SET_HASH_DETERMINISM_20260817",
+  "resultSetHashDeterminism": "PASS",
+  "canonicalSortKey": [
+    "originalAmtnId",
+    "canonicalSemanticTopicId",
+    "claimId",
+    "providerId",
+    "resultId"
+  ],
+  "duplicateSemanticResultsCreated": 0,
+  "conflictingResultsSilentlyOverwritten": 0,
+  "replayFixtureExcludedFromRealProviderLedger": true
+}
