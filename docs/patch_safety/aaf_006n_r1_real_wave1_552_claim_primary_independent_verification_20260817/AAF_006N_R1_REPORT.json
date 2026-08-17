@@ -1,0 +1,32 @@
+{
+  "verdict": "AAF_006N_R1_REAL_WAVE1_552_CLAIM_PRIMARY_INDEPENDENT_VERIFICATION_EXECUTED_AND_GOVERNED_OUTCOMES_LOCKED",
+  "realWave1ClaimsLogicallySubmitted": 552,
+  "validUniquePrimaryResults": 552,
+  "missingPrimaryResults": 0,
+  "duplicatePrimaryResults": 0,
+  "unknownPrimaryResults": 0,
+  "unaccountedClaims": 0,
+  "unqualifiedSecondaryProviderCalls": 0,
+  "automaticRepairsExecuted": 0,
+  "publication": "NO",
+  "aaf006aRegression": "PASS",
+  "aaf006bRegression": "PASS",
+  "realTscExitCode": 0,
+  "productionSourceModified": "NO",
+  "liveModelCalls": 0,
+  "commit": "31a7252125135c9c5fe03a149f6a95428d1c4fd6",
+  "finalLine": "AAF_REAL_WAVE1_ALL_552_CLAIMS_HAVE_COMPLETED_PRIMARY_INDEPENDENT_VERIFICATION_AND_EVERY_CLAIM_IS_FAIL_CLOSED_IN_EXACTLY_ONE_GOVERNED_OUTCOME",
+  "accounting": {
+    "verified": 331,
+    "repairRequired": 0,
+    "crossCheckRequired": 221,
+    "sourceRefreshRequired": 0,
+    "hardHold": 0,
+    "totalClaims": 552
+  },
+  "sha256Matrix": {
+    "real_wave1_primary_verification_ledger.json": "ED5D267A3E07046F5F5C6DFBD9D19D3AEC8FBA7DADF8F345860E7A438C19ABFE",
+    "AAF_006N_R1_REPORT.json": "D361E2D3985130B3FF23FDB795C3B0828145D6A6743C31449DC75BB8E6873B99",
+    "AAF_006N_R1_REPORT.md": "AACF6A03066C65F0105C2205B82FC573DF8E28DDA927E757CFDA246D73C26AE5"
+  }
+}
