@@ -1,0 +1,10 @@
+{
+  "artifactId": "AAF_006O_MOCK_VS_REAL_PROVIDER_PROVENANCE_20260817",
+  "realSecondaryProviderExecutionProven": false,
+  "realSecondary221ExecutionProven": false,
+  "harnessExecutionAllowed": true,
+  "liveProviderCallsAllowed": false,
+  "providerRunIdsReady": false,
+  "providerResponseHashesReady": false,
+  "explanation": "The 221 records generated in the PAR01 harness are mock validation fixtures. Real provider execution is blocked until primary FIX1 is resolved."
+}
