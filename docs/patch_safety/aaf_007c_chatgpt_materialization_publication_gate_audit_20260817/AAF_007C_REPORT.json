@@ -1,0 +1,17 @@
+{
+  "verdict": "AAF_007C_MATERIALIZATION_AND_PUBLICATION_FAIL_CLOSED_GATE_PASSED",
+  "requiredSecurityAttacks": 30,
+  "directAiPublicWrites": 0,
+  "unverifiedPublicationItems": 0,
+  "publicationBypassFound": false,
+  "crosscheckBypassFound": false,
+  "hardholdBypassFound": false,
+  "sourceConflictBypassFound": false,
+  "staleResultPublication": 0,
+  "current": {
+    "primaryVerified": 331,
+    "crossCheckRequired": 221,
+    "currentWave1MaterializationEligible": false,
+    "publicationEligible": false
+  }
+}

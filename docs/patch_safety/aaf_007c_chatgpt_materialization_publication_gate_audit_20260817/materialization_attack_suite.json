@@ -1,0 +1,212 @@
+[
+  {
+    "attackId": "PUB_ATTACK_01",
+    "name": "verification incomplete",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_02",
+    "name": "secondary unresolved",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_03",
+    "name": "qualification missing",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_04",
+    "name": "sourcePackHash mismatch",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_05",
+    "name": "canonical version mismatch",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_06",
+    "name": "claim identity mismatch",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_07",
+    "name": "006J identity invalid",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_08",
+    "name": "repairRequired",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_09",
+    "name": "sourceRefreshRequired",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_10",
+    "name": "hardHold",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_11",
+    "name": "crossCheckRequired",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_12",
+    "name": "stale verification",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_13",
+    "name": "unqualified provider result",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_14",
+    "name": "source conflict unresolved",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_15",
+    "name": "provider disagreement",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_16",
+    "name": "missing result hash",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_17",
+    "name": "duplicate claim result",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_18",
+    "name": "unknown claim result",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_19",
+    "name": "publication flag pre-set",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_20",
+    "name": "materialization without assembly",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_21",
+    "name": "primary only final wave",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_22",
+    "name": "old ledger reuse",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_23",
+    "name": "contract-only provider",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_24",
+    "name": "post-hoc provenance",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_25",
+    "name": "missing mission",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_26",
+    "name": "missing candidate",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_27",
+    "name": "alias canonical",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_28",
+    "name": "denominator shrink",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_29",
+    "name": "terminal failure hidden",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  },
+  {
+    "attackId": "PUB_ATTACK_30",
+    "name": "manual override",
+    "materializationAllowed": false,
+    "publicationAllowed": false,
+    "intercepted": true
+  }
+]

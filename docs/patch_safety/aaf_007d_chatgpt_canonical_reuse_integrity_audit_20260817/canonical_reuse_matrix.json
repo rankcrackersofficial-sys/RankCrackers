@@ -1,0 +1,122 @@
+[
+  {
+    "candidateId": "WAVE1_CHEM_PRACTICAL_01",
+    "reusePolicy": [
+      "REUSE",
+      "EXTEND",
+      "CREATE_NEW",
+      "HARD_HOLD"
+    ],
+    "duplicateTruth": false,
+    "aliasCanonical": false,
+    "sourceLineageBound": true
+  },
+  {
+    "candidateId": "WAVE1_CHEM_PRACTICAL_02",
+    "reusePolicy": [
+      "REUSE",
+      "EXTEND",
+      "CREATE_NEW",
+      "HARD_HOLD"
+    ],
+    "duplicateTruth": false,
+    "aliasCanonical": false,
+    "sourceLineageBound": true
+  },
+  {
+    "candidateId": "WAVE1_CHEM_PRACTICAL_03",
+    "reusePolicy": [
+      "REUSE",
+      "EXTEND",
+      "CREATE_NEW",
+      "HARD_HOLD"
+    ],
+    "duplicateTruth": false,
+    "aliasCanonical": false,
+    "sourceLineageBound": true
+  },
+  {
+    "candidateId": "WAVE1_CHEM_PRACTICAL_04",
+    "reusePolicy": [
+      "REUSE",
+      "EXTEND",
+      "CREATE_NEW",
+      "HARD_HOLD"
+    ],
+    "duplicateTruth": false,
+    "aliasCanonical": false,
+    "sourceLineageBound": true
+  },
+  {
+    "candidateId": "WAVE1_CHEM_PRACTICAL_05",
+    "reusePolicy": [
+      "REUSE",
+      "EXTEND",
+      "CREATE_NEW",
+      "HARD_HOLD"
+    ],
+    "duplicateTruth": false,
+    "aliasCanonical": false,
+    "sourceLineageBound": true
+  },
+  {
+    "candidateId": "WAVE1_CHEM_PRACTICAL_06",
+    "reusePolicy": [
+      "REUSE",
+      "EXTEND",
+      "CREATE_NEW",
+      "HARD_HOLD"
+    ],
+    "duplicateTruth": false,
+    "aliasCanonical": false,
+    "sourceLineageBound": true
+  },
+  {
+    "candidateId": "WAVE1_CHEM_PRACTICAL_07",
+    "reusePolicy": [
+      "REUSE",
+      "EXTEND",
+      "CREATE_NEW",
+      "HARD_HOLD"
+    ],
+    "duplicateTruth": false,
+    "aliasCanonical": false,
+    "sourceLineageBound": true
+  },
+  {
+    "candidateId": "WAVE1_CHEM_PRACTICAL_08",
+    "reusePolicy": [
+      "REUSE",
+      "EXTEND",
+      "CREATE_NEW",
+      "HARD_HOLD"
+    ],
+    "duplicateTruth": false,
+    "aliasCanonical": false,
+    "sourceLineageBound": true
+  },
+  {
+    "candidateId": "WAVE1_CHEM_PRACTICAL_09",
+    "reusePolicy": [
+      "REUSE",
+      "EXTEND",
+      "CREATE_NEW",
+      "HARD_HOLD"
+    ],
+    "duplicateTruth": false,
+    "aliasCanonical": false,
+    "sourceLineageBound": true
+  },
+  {
+    "candidateId": "WAVE1_CHEM_PRACTICAL_10",
+    "reusePolicy": [
+      "REUSE",
+      "EXTEND",
+      "CREATE_NEW",
+      "HARD_HOLD"
+    ],
+    "duplicateTruth": false,
+    "aliasCanonical": false,
+    "sourceLineageBound": true
+  }
+]

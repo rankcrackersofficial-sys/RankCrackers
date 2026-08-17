@@ -1,0 +1,11 @@
+{
+  "plannedBaseJobs": 4587,
+  "finalDenominators": {
+    "successful": 4587,
+    "partialFailure": 4587,
+    "repairRequired": 4587,
+    "hardHold": 4587,
+    "terminalFailure": 4587
+  },
+  "denominatorDrift": 0
+}

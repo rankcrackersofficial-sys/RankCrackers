@@ -1,0 +1,55 @@
+{
+  "successful": {
+    "mode": "successful",
+    "transitions": 18348,
+    "counts": {
+      "approved": 4587
+    },
+    "denominator": 4587,
+    "denominatorDrift": 0
+  },
+  "partialFailure": {
+    "mode": "partial_failure",
+    "transitions": 18324,
+    "counts": {
+      "approved": 4580,
+      "retryWait": 1,
+      "waitingDependency": 6
+    },
+    "denominator": 4587,
+    "denominatorDrift": 0
+  },
+  "repairRequired": {
+    "mode": "repair_required",
+    "transitions": 18328,
+    "counts": {
+      "approved": 4581,
+      "repairRequired": 1,
+      "waitingDependency": 5
+    },
+    "denominator": 4587,
+    "denominatorDrift": 0
+  },
+  "hardHold": {
+    "mode": "hard_hold",
+    "transitions": 18312,
+    "counts": {
+      "approved": 4577,
+      "hardHold": 1,
+      "waitingDependency": 9
+    },
+    "denominator": 4587,
+    "denominatorDrift": 0
+  },
+  "terminalFailure": {
+    "mode": "terminal_failure",
+    "transitions": 18340,
+    "counts": {
+      "approved": 4584,
+      "failedTerminal": 1,
+      "waitingDependency": 2
+    },
+    "denominator": 4587,
+    "denominatorDrift": 0
+  }
+}

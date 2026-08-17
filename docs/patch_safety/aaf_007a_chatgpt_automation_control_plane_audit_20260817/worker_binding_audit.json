@@ -1,0 +1,18 @@
+{
+  "workerTypes": 11,
+  "reachableCanonicalJobTypes": 11,
+  "unknownWorkerTypes": 0,
+  "bindings": {
+    "SOURCE_ACQUISITION": "worker.source_acquisition",
+    "SOURCE_VALIDATION": "worker.source_validation",
+    "CANONICAL_REUSE_DECISION": "worker.canonical_reuse_decision",
+    "DIGIBOOK_DRAFT": "worker.digibook_draft",
+    "DIGIBOOK_VALIDATION": "worker.digibook_validation",
+    "PRO_REVIEW": "worker.pro_review",
+    "REPAIR_OR_APPROVAL": "worker.repair_or_approval",
+    "ASSEMBLY": "worker.assembly",
+    "PRIMARY_VERIFICATION": "worker.primary_verification",
+    "SECONDARY_VERIFICATION": "worker.secondary_verification",
+    "MATERIALIZATION_GATE": "worker.materialization_gate"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "verdict": "AAF_007E_AUTOMATION_PROGRESS_AND_DENOMINATOR_TRUTH_ENGINE_AUDITED",
+  "stateCounts": {
+    "planned": 4587,
+    "waitingDependency": 0,
+    "ready": 0,
+    "leased": 0,
+    "running": 0,
+    "reviewing": 0,
+    "repairRequired": 0,
+    "retryWait": 0,
+    "hardHold": 0,
+    "approved": 0,
+    "materializing": 0,
+    "published": 0,
+    "failedTerminal": 0,
+    "primaryVerified": 331,
+    "crossCheckRequired": 221
+  },
+  "noFake100": true,
+  "noSuccessCountingForCrossCheckRequired": true,
+  "noSuccessCountingForRepairRequired": true,
+  "noSuccessCountingForHardHold": true,
+  "noDenominatorShrinking": true,
+  "noArchivedFailureDisappearing": true,
+  "noDoubleCounting": true,
+  "metrics": {
+    "factoryStructureReadyPercent": 100,
+    "academicVerificationPercent": 59.96,
+    "materializationReadyPercent": 0,
+    "publicationReadyPercent": 0,
+    "fullAutomationReadyPercent": 51.98
+  }
+}

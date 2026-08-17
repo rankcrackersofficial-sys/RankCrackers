@@ -1,0 +1,23 @@
+[
+  {
+    "attack": "duplicate_dispatch",
+    "intercepted": true,
+    "canonicalWrites": 0,
+    "statePreserved": true
+  },
+  {
+    "attack": "concurrent_completion",
+    "intercepted": true,
+    "statePreserved": true
+  },
+  {
+    "attack": "duplicate_queue_delivery",
+    "intercepted": true,
+    "statePreserved": true
+  },
+  {
+    "attack": "out_of_order_result_delivery",
+    "intercepted": true,
+    "statePreserved": true
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "attack": "retry_exhaustion",
+    "intercepted": true,
+    "statePreserved": true
+  },
+  {
+    "attack": "repair_loop",
+    "intercepted": true,
+    "statePreserved": true
+  }
+]

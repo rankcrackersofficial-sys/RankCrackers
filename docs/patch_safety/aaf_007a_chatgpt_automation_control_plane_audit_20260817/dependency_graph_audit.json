@@ -1,0 +1,13 @@
+{
+  "plannedBaseJobs": 4587,
+  "uniqueJobKeys": 4587,
+  "duplicateJobKeys": 0,
+  "unknownWorkerTypes": 0,
+  "missingDependencies": 0,
+  "dependencyCycles": 0,
+  "prematureReadyJobs": 0,
+  "dependencyBypasses": 0,
+  "denominatorDrift": 0,
+  "unaccountedJobs": 0,
+  "publicationWrites": 0
+}

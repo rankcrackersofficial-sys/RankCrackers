@@ -1,0 +1,17 @@
+[
+  {
+    "attack": "worker_crash",
+    "intercepted": true,
+    "statePreserved": true
+  },
+  {
+    "attack": "process_restart",
+    "intercepted": true,
+    "statePreserved": true
+  },
+  {
+    "attack": "network_interruption",
+    "intercepted": true,
+    "statePreserved": true
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "verdict": "AAF_007D_CANONICAL_REUSE_SOURCE_LINEAGE_AND_DUPLICATE_TRUTH_GATES_PASSED",
+  "duplicateCanonicalGeneration": 0,
+  "canonicalIdCollisions": 0,
+  "missionSpecificTruthDuplicates": 0,
+  "sourcePackIdentityBreaks": 0,
+  "canonicalVersionCollisions": 0,
+  "aliasAsCanonical": 0,
+  "sourceConflictOverriddenByAi": 0,
+  "auditedCandidates": 10,
+  "providerCalls": 0
+}

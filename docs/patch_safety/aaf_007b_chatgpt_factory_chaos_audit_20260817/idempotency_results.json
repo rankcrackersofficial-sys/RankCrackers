@@ -1,0 +1,18 @@
+{
+  "verdict": "AAF_007B_FACTORY_LEASE_RETRY_CONCURRENCY_AND_IDEMPOTENCY_CHAOS_GATES_PASSED",
+  "oneActiveLeasePerJob": true,
+  "staleLeaseCannotComplete": true,
+  "doubleCompletionAccepted": 0,
+  "duplicateDispatchCanonicalWrites": 0,
+  "retryCountOverflow": 0,
+  "failedTerminalResurrection": 0,
+  "hardHoldAutoRelease": 0,
+  "repairBypass": 0,
+  "exactOnceGovernedResultIdentity": true,
+  "crashRecoveryPreservesState": true,
+  "attackCount": 13,
+  "safety": {
+    "providerCalls": 0,
+    "publication": "NO"
+  }
+}

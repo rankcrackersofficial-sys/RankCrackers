@@ -1,0 +1,197 @@
+[
+  {
+    "stage": "SOURCE_RECEIVED",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "SOURCE_ACQUISITION",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "SOURCE_VALIDATION",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "CANONICAL_REUSE_DECISION",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "DIGIBOOK_DRAFT",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "DIGIBOOK_VALIDATION",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "PRO_REVIEW",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "REPAIR_IF_NEEDED",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "ASSEMBLY",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "PRIMARY_VERIFICATION",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "SECONDARY_VERIFICATION_WHEN_POLICY_REQUIRES",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "GOVERNED_FINAL_OUTCOME",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "MATERIALIZATION_READINESS",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "MATERIALIZATION",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  },
+  {
+    "stage": "PUBLICATION_GATE",
+    "injectedFailure": true,
+    "reached": [
+      "VALID_NEXT_STATE",
+      "FAIL_CLOSED_HOLD"
+    ],
+    "silentSuccess": false,
+    "dependencyBypass": false,
+    "repairBypass": false,
+    "verificationBypass": false,
+    "publicationBypass": false
+  }
+]

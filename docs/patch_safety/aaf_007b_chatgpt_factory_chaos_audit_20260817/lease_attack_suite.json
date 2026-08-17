@@ -1,0 +1,27 @@
+[
+  {
+    "attack": "stale_lease",
+    "intercepted": true,
+    "statePreserved": true
+  },
+  {
+    "attack": "expired_lease",
+    "intercepted": true,
+    "statePreserved": true
+  },
+  {
+    "attack": "double_completion",
+    "intercepted": true,
+    "statePreserved": true
+  },
+  {
+    "attack": "concurrent_completion",
+    "intercepted": true,
+    "statePreserved": true
+  },
+  {
+    "attack": "late_completion",
+    "intercepted": true,
+    "statePreserved": true
+  }
+]
