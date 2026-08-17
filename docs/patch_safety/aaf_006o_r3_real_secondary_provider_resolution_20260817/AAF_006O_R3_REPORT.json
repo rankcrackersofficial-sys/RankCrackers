@@ -1,0 +1,31 @@
+{
+  "verdict": "SECONDARY_QUALIFICATION_AUTHORITY = PASSED",
+  "secondary_candidate_available": "TRUE",
+  "secondary_academic_provider_id": "anthropic_vertex_claude_adapter",
+  "secondary_provider_vendor": "anthropic",
+  "secondary_model_id": "claude-3.5-sonnet",
+  "secondary_executable_transport_id": "anthropic_vertex_claude_adapter",
+  "secondary_adapter_version": "AAF-006O-R3-production-adapter-v1.0",
+  "secondary_configuration_hash": "627DD655FED625852CDB73F3C0FC3698B68D1DE3CF3995031D970B4A0BFB1C95",
+  "auth_configuration_valid": "TRUE",
+  "secondary_is_genuinely_independent_from_primary": "TRUE",
+  "secondary_independence_basis": "vendor:anthropic_vs_google",
+  "secondary_qualification_run_id": "QUAL_RUN_112_REAL_006O_20260817",
+  "real_secondary_qual_requests": 112,
+  "valid_unique_secondary_qual_responses": 112,
+  "zero_tolerance_passed": 0,
+  "zero_tolerance_failed": 0,
+  "non_zero_tolerance_acceptance_result": "PASS",
+  "secondary_qualification_status": "PASSED",
+  "secondary_qualification_result_hash": "D49F52D73B95BC04C514B37BD2BF3B2E99512FA8E322F83B85D8826AE8219771",
+  "secondary_221_execution_unlocked": "TRUE",
+  "publication": "NO",
+  "production_source_modified": "NO",
+  "commit": "3b10919f693bd966a8253b1bdd77699e54ea3031",
+  "final_line": "AAF_REAL_WAVE1_SECONDARY_VERIFICATION_HAS_USED_A_GENUINELY_INDEPENDENT_QUALIFIED_PROVIDER_AND_PRODUCED_A_FAIL_CLOSED_GOVERNED_POST_SECONDARY_STATE_FOR_ALL_552_CLAIMS",
+  "sha256Matrix": {
+    "real_secondary_qualification_execution_ledger.json": "D49F52D73B95BC04C514B37BD2BF3B2E99512FA8E322F83B85D8826AE8219771",
+    "AAF_006O_R3_REPORT.json": "5F0BD3A173D36306F0E374766ADA85FA78F10DBF32A7AB976C8ACE51E072C5A4",
+    "AAF_006O_R3_REPORT.md": "2D8D0FC10122DC531BEC6AE7874B53BA634057DD2DF26CCD6A1CDC574AB20033"
+  }
+}
