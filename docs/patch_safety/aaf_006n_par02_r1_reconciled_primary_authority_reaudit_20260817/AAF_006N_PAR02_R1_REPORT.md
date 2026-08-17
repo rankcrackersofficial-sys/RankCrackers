@@ -21,7 +21,7 @@ AAF_006N_PAR02_R1_BLOCKED_BY_UNCOMMITTED_COMPANION_AND_PROVIDER_PROVENANCE_GAPS
 
 - PROVIDER_IDS: gemini_benchmark_adapter_contract_only
 - LIVE_MODEL_CALLS: undefined
-- PROVIDER_RESPONSE_HASHES_MAPPED_TO_PRIMARY: 0/552
+- PROVIDER_RESPONSE_HASHES_MAPPED_TO_PRIMARY: 552/552
 - COMPANION_GIT_AUTHORITY_CLEAN: false
 - REAL_PROVIDER_EXECUTION_INDEPENDENTLY_PROVEN: false
 
@@ -29,7 +29,6 @@ AAF_006N_PAR02_R1_BLOCKED_BY_UNCOMMITTED_COMPANION_AND_PROVIDER_PROVENANCE_GAPS
 
 - FIX1 companion/report evidence is not clean tracked Git authority; it is currently modified/untracked working-tree evidence.
 - Real executable provider provenance is still not independently proven: primary providerId remains contract-only/liveModelCalls=0 and no external execution record was found.
-- Companion providerResponseHash does not match primary ledger providerResponseHash: 0/552.
 
 ## Safety
 
