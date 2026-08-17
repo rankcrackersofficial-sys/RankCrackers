@@ -1,0 +1,7 @@
+{
+  "artifactId": "AAF_006O_SECONDARY_INDEPENDENCE_REAUDIT_20260817",
+  "primaryProviderId": "gemini_benchmark_adapter_contract_only",
+  "secondaryProviderId": "claude_benchmark_adapter_contract_only",
+  "isGenuinelyIndependent": true,
+  "vendorDifference": "anthropic_vs_google"
+}
