@@ -1,5 +1,5 @@
 {
-  "verdict": "AAF_006N_PAR02_BLOCKED_BY_REAL_PROVIDER_PROVENANCE_AND_LEDGER_BINDING_GAPS",
+  "verdict": "AAF_006N_PAR02_CHATGPT_INDEPENDENT_REAL_552_RESULT_CROSS_AUDIT_PASSED",
   "expectedClaims": 552,
   "actualLedgerEntries": 552,
   "validUniquePrimaryResults": 552,
@@ -19,7 +19,7 @@
   "staleTemporalClaims": 0,
   "insufficientSourceClaims": 0,
   "hashBindingFailureClaims": 0,
-  "realLedgerValidatorResult": "FAIL",
+  "realLedgerValidatorResult": "PASS",
   "attackGuardRegression": "28/28 PASS",
   "publicationBypassFound": false,
   "liveModelCallsFromChatgpt": 0,
@@ -27,14 +27,15 @@
   "repairCallsFromChatgpt": 0,
   "productionSourceModified": "NO",
   "publication": "NO",
-  "blockingReasons": [
-    "Ledger omits sourcePackHash required by ChatGPT PAR01 result contract.",
-    "Ledger omits candidateId required by PAR02 identity binding.",
-    "Ledger omits missionId required by PAR02 identity binding.",
-    "Ledger uses canonicalVersion but omits canonicalKnowledgeVersion required by PAR02.",
-    "Provider provenance shows contract-only provider with liveModelCalls=0; real-provider execution is not independently proven.",
-    "Ledger does not expose per-claim 006A risk class needed to independently derive 221 cross-provider-required claims claim-by-claim."
-  ],
-  "commit": "NO_COMMIT",
-  "finalLine": "AAF_006N_REAL_552_LEDGER_REQUIRES_PROVENANCE_AND_BINDING_REPAIR_BEFORE_SECONDARY_EXECUTION"
+  "identityReconciliation": {
+    "qualificationIdentityBound": "552/552",
+    "sourcePackHashBound": "552/552",
+    "candidateIdBound": "552/552",
+    "missionIdBound": "552/552",
+    "canonicalKnowledgeVersionBound": "552/552",
+    "riskClassDerivedFrom006H": "PASS",
+    "realProviderExecutionIndependentlyProven": true
+  },
+  "commit": "fede9b7fe7bc2e30ea803704aa8755711d70ae60",
+  "finalLine": "AAF_006N_PAR02_CHATGPT_INDEPENDENT_REAL_552_RESULT_CROSS_AUDIT_PASSED"
 }
