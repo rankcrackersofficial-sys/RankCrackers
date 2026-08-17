@@ -1,12 +1,13 @@
 import * as admin from 'firebase-admin';
 
-export type AafJobStatus =
-  | 'ready'
-  | 'running'
-  | 'completed'
-  | 'failed'
-  | 'hold'
-  | 'retry_pending';
+export type AafJobState =
+  | 'PLANNED'
+  | 'READY'
+  | 'RUNNING'
+  | 'COMPLETED'
+  | 'FAILED'
+  | 'HOLD'
+  | 'REPAIR_PENDING';
 
 /**
  * 🔱 AAF JOB METADATA CONTRACT (academic_factory_v1)
@@ -22,23 +23,23 @@ export interface AafJobMetadata {
   jobId: string;        // Unique job within run
   missionId: string;    // Related mission (e.g. JEE-MAIN-2026)
   canonicalTargetId: string; // The AMTN or Target atom
-  idempotencyKey: string;    // RunId + JobId + InputHash stable key
+  idempotencyKey: string;    // Stable key for document ID: RUN_ID:JOB_ID
 
   // 🛡️ State Machine
-  status: AafJobStatus;
+  state: AafJobState;
 
   // 🛡️ Reliability & Lease
   attempts: number;
   maxAttempts: number;
 
-  leaseOwner: string | null;  // Current active worker/instance
-  leaseExpiry: admin.firestore.Timestamp | null;
+  leaseOwner: string | null;  // Current active worker instance ID
+  leaseExpiresAtUtc: admin.firestore.Timestamp | null;
 
   nextRetryAt: admin.firestore.Timestamp | null;
 
   // 🛡️ Integrity
   inputHash: string;          // Hash of input parameters
-  outputHash: string | null;  // Hash of generated artifact (stored elsewhere)
+  outputHash: string | null;  // Hash of generated artifact
 
   // 🛡️ Temporal Logs
   createdAt: admin.firestore.Timestamp | admin.firestore.FieldValue;

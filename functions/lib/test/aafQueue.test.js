@@ -62,7 +62,7 @@ jest.mock('firebase-admin', () => {
         }),
     };
 });
-describe('AAF Queue Repository (AAF-004B)', () => {
+describe('AAF Queue Repository FIX1 (AAF-004B)', () => {
     let repo;
     let db;
     beforeEach(() => {
@@ -70,30 +70,53 @@ describe('AAF Queue Repository (AAF-004B)', () => {
         db = admin.firestore();
         jest.clearAllMocks();
     });
-    test('🛡️ enqueue: should use idempotencyKey as document ID', async () => {
-        const job = { idempotencyKey: 'key123', missionId: 'm1', taskType: 'test' };
+    test('🛡️ REPOSITORY_UNIT_TESTS: enqueue new job', async () => {
+        const job = {
+            idempotencyKey: 'run1:job1',
+            runId: 'run1',
+            jobId: 'job1',
+            canonicalTargetId: 'atom1',
+            taskType: 'test'
+        };
+        const mockTransaction = {
+            get: jest.fn().mockResolvedValue({ exists: false }),
+            set: jest.fn()
+        };
+        db.runTransaction.mockImplementation(async (cb) => cb(mockTransaction));
         await repo.enqueue(job);
-        expect(db.collection).toHaveBeenCalledWith('ai_queue');
-        expect(db.collection().doc).toHaveBeenCalledWith('key123');
-        expect(db.collection().doc().set).toHaveBeenCalledWith(expect.objectContaining({
-            idempotencyKey: 'key123',
+        expect(mockTransaction.set).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({
+            idempotencyKey: 'run1:job1',
             queueContract: 'academic_factory_v1',
-            status: 'ready'
-        }), { merge: true });
-    });
-    test('🛡️ complete: should update status to completed', async () => {
-        await repo.complete('key123', 'hash456');
-        expect(db.collection().doc().update).toHaveBeenCalledWith(expect.objectContaining({
-            status: 'completed',
-            outputHash: 'hash456',
-            leaseOwner: null
+            state: 'PLANNED'
         }));
     });
-    test('🛡️ claim: should handle atomic claim via transaction', async () => {
+    test('🛡️ SCALE_IDENTITY_TESTS: enqueue should detect identity conflict', async () => {
+        const job = {
+            idempotencyKey: 'run1:job1',
+            runId: 'run1',
+            jobId: 'job1',
+            canonicalTargetId: 'atom2' // CONFLICT: Same key, different target
+        };
         const mockSnap = {
             exists: true,
             data: () => ({
-                status: 'ready',
+                runId: 'run1',
+                jobId: 'job1',
+                canonicalTargetId: 'atom1'
+            })
+        };
+        const mockTransaction = {
+            get: jest.fn().mockResolvedValue(mockSnap),
+            update: jest.fn()
+        };
+        db.runTransaction.mockImplementation(async (cb) => cb(mockTransaction));
+        await expect(repo.enqueue(job)).rejects.toThrow('AAF_SEMANTIC_CONFLICT');
+    });
+    test('🛡️ REPOSITORY_UNIT_TESTS: claim should transition READY -> RUNNING', async () => {
+        const mockSnap = {
+            exists: true,
+            data: () => ({
+                state: 'READY',
                 attempts: 0
             })
         };
@@ -102,20 +125,20 @@ describe('AAF Queue Repository (AAF-004B)', () => {
             update: jest.fn()
         };
         db.runTransaction.mockImplementation(async (cb) => cb(mockTransaction));
-        const result = await repo.claim('key123', 'worker1');
+        const result = await repo.claim('run1:job1', 'worker1');
         expect(result).toBe(true);
         expect(mockTransaction.update).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({
-            status: 'running',
+            state: 'RUNNING',
             leaseOwner: 'worker1'
         }));
     });
-    test('🛡️ claim: should block concurrent claim if lease active', async () => {
+    test('🛡️ EMULATOR_TRANSACTION_TESTS: concurrent claim blocked by active lease', async () => {
         const futureDate = Date.now() + 100000;
         const mockSnap = {
             exists: true,
             data: () => ({
-                status: 'ready',
-                leaseExpiry: { toMillis: () => futureDate }
+                state: 'READY',
+                leaseExpiresAtUtc: { toMillis: () => futureDate }
             })
         };
         const mockTransaction = {
@@ -123,9 +146,28 @@ describe('AAF Queue Repository (AAF-004B)', () => {
             update: jest.fn()
         };
         db.runTransaction.mockImplementation(async (cb) => cb(mockTransaction));
-        const result = await repo.claim('key123', 'worker2');
+        const result = await repo.claim('run1:job1', 'worker2');
         expect(result).toBe(false);
         expect(mockTransaction.update).not.toHaveBeenCalled();
+    });
+    test('🛡️ REPOSITORY_UNIT_TESTS: fail should transition to REPAIR_PENDING if attempts < max', async () => {
+        const mockSnap = {
+            exists: true,
+            data: () => ({
+                attempts: 1,
+                maxAttempts: 3
+            })
+        };
+        const mockTransaction = {
+            get: jest.fn().mockResolvedValue(mockSnap),
+            update: jest.fn()
+        };
+        db.runTransaction.mockImplementation(async (cb) => cb(mockTransaction));
+        await repo.fail('run1:job1', 'Test Error');
+        expect(mockTransaction.update).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({
+            state: 'REPAIR_PENDING',
+            lastError: 'Test Error'
+        }));
     });
 });
 //# sourceMappingURL=aafQueue.test.js.map

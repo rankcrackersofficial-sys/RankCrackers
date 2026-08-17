@@ -40,7 +40,7 @@ const DEFAULT_LEASE_DURATION_MS = 5 * 60 * 1000; // 5 minutes
 const RETRY_BACKOFF_BASE_MS = 60 * 1000; // 1 minute
 /**
  * 🔱 AAF QUEUE REPOSITORY (academic_factory_v1)
- * Persistent Transaction Core for AAF-004B.
+ * Persistent Transaction Core for AAF-004B FIX1.
  * Enforces atomic state transitions and lease-based execution.
  */
 class AafQueueRepository {
@@ -48,50 +48,71 @@ class AafQueueRepository {
         this.db = admin.firestore();
     }
     /**
-     * 🛡️ IDEMPOTENT ENQUEUE
-     * Inserts or merges an AAF job. Use idempotencyKey as Document ID.
+     * 🛡️ TRANSACTIONAL ENQUEUE
+     * Inserts or updates an AAF job while checking for semantic conflicts.
      */
     async enqueue(job) {
         if (!job.idempotencyKey)
             throw new Error('AAF_QUEUE_ERROR: idempotencyKey required for enqueue.');
         const docRef = this.db.collection(QUEUE_COLLECTION).doc(job.idempotencyKey);
-        await docRef.set({
-            ...job,
-            queueContract: 'academic_factory_v1',
-            status: job.status || 'ready',
-            attempts: job.attempts || 0,
-            maxAttempts: job.maxAttempts || 3,
-            createdAt: admin.firestore.FieldValue.serverTimestamp(),
-            updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-        }, { merge: true });
+        await this.db.runTransaction(async (transaction) => {
+            const snap = await transaction.get(docRef);
+            if (snap.exists) {
+                const existing = snap.data();
+                // Verify semantic identity parity (RunId, JobId, canonicalTargetId)
+                if (existing.runId !== job.runId ||
+                    existing.jobId !== job.jobId ||
+                    existing.canonicalTargetId !== job.canonicalTargetId) {
+                    throw new Error(`AAF_SEMANTIC_CONFLICT: Job ${job.idempotencyKey} identity mismatch.`);
+                }
+                // If input changed, it might require a state reset depending on AAF phase (later logic)
+                // For now, if it exists and matches identity, we merge updates.
+                transaction.update(docRef, {
+                    ...job,
+                    updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+                });
+            }
+            else {
+                // Create new job
+                transaction.set(docRef, {
+                    ...job,
+                    queueContract: 'academic_factory_v1',
+                    state: job.state || 'PLANNED',
+                    attempts: job.attempts || 0,
+                    maxAttempts: job.maxAttempts || 3,
+                    createdAt: admin.firestore.FieldValue.serverTimestamp(),
+                    updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+                });
+            }
+        });
         return job.idempotencyKey;
     }
     /**
      * 🛡️ ATOMIC CLAIM (START_RUNNING)
-     * Claims a 'ready' or 'retry_pending' job for execution.
+     * Claims a 'READY' or 'REPAIR_PENDING' job for execution.
      */
-    async claim(jobId, workerId) {
-        const docRef = this.db.collection(QUEUE_COLLECTION).doc(jobId);
+    async claim(idempotencyKey, workerId) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
         return await this.db.runTransaction(async (transaction) => {
             const snap = await transaction.get(docRef);
             if (!snap.exists)
                 return false;
             const data = snap.data();
-            // Only claim if status is 'ready' or 'retry_pending'
-            const isEligible = data.status === 'ready' || data.status === 'retry_pending';
+            // Only claim if state is 'READY' or 'REPAIR_PENDING'
+            const isEligible = data.state === 'READY' || data.state === 'REPAIR_PENDING';
             if (!isEligible)
                 return false;
             // Check for valid lease (if any exists)
             const now = Date.now();
-            if (data.leaseExpiry && data.leaseExpiry.toMillis() > now) {
+            if (data.leaseExpiresAtUtc && data.leaseExpiresAtUtc.toMillis() > now) {
                 // Active lease still exists, concurrent claim blocked.
                 return false;
             }
             const expiryDate = new Date(now + DEFAULT_LEASE_DURATION_MS);
             transaction.update(docRef, {
-                status: 'running',
+                state: 'RUNNING',
                 leaseOwner: workerId,
-                leaseExpiry: admin.firestore.Timestamp.fromDate(expiryDate),
+                leaseExpiresAtUtc: admin.firestore.Timestamp.fromDate(expiryDate),
                 attempts: admin.firestore.FieldValue.increment(1),
                 startedAt: admin.firestore.FieldValue.serverTimestamp(),
                 updatedAt: admin.firestore.FieldValue.serverTimestamp(),
@@ -102,18 +123,18 @@ class AafQueueRepository {
     /**
      * 🛡️ LEASE RENEWAL (HEARTBEAT)
      */
-    async renewLease(jobId, workerId) {
-        const docRef = this.db.collection(QUEUE_COLLECTION).doc(jobId);
+    async renewLease(idempotencyKey, workerId) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
         return await this.db.runTransaction(async (transaction) => {
             const snap = await transaction.get(docRef);
             if (!snap.exists)
                 return false;
             const data = snap.data();
-            if (data.status !== 'running' || data.leaseOwner !== workerId)
+            if (data.state !== 'RUNNING' || data.leaseOwner !== workerId)
                 return false;
             const expiryDate = new Date(Date.now() + DEFAULT_LEASE_DURATION_MS);
             transaction.update(docRef, {
-                leaseExpiry: admin.firestore.Timestamp.fromDate(expiryDate),
+                leaseExpiresAtUtc: admin.firestore.Timestamp.fromDate(expiryDate),
                 updatedAt: admin.firestore.FieldValue.serverTimestamp(),
             });
             return true;
@@ -122,13 +143,13 @@ class AafQueueRepository {
     /**
      * 🛡️ JOB COMPLETION
      */
-    async complete(jobId, outputHash) {
-        const docRef = this.db.collection(QUEUE_COLLECTION).doc(jobId);
+    async complete(idempotencyKey, outputHash) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
         await docRef.update({
-            status: 'completed',
+            state: 'COMPLETED',
             outputHash: outputHash,
             leaseOwner: null,
-            leaseExpiry: null,
+            leaseExpiresAtUtc: null,
             finishedAt: admin.firestore.FieldValue.serverTimestamp(),
             updatedAt: admin.firestore.FieldValue.serverTimestamp(),
         });
@@ -136,8 +157,8 @@ class AafQueueRepository {
     /**
      * 🛡️ JOB FAILURE & RETRY LOGIC
      */
-    async fail(jobId, error) {
-        const docRef = this.db.collection(QUEUE_COLLECTION).doc(jobId);
+    async fail(idempotencyKey, error) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
         await this.db.runTransaction(async (transaction) => {
             const snap = await transaction.get(docRef);
             if (!snap.exists)
@@ -145,10 +166,10 @@ class AafQueueRepository {
             const data = snap.data();
             const canRetry = data.attempts < data.maxAttempts;
             const update = {
-                status: canRetry ? 'retry_pending' : 'failed',
+                state: canRetry ? 'REPAIR_PENDING' : 'FAILED',
                 lastError: error,
                 leaseOwner: null,
-                leaseExpiry: null,
+                leaseExpiresAtUtc: null,
                 updatedAt: admin.firestore.FieldValue.serverTimestamp(),
             };
             if (canRetry) {
