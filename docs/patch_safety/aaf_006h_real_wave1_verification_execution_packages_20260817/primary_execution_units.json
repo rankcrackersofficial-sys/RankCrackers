@@ -1,0 +1,192 @@
+[
+  {
+    "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_01",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_01",
+    "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+    "canonicalMode": "REUSE",
+    "canonicalVersion": "v1.private",
+    "substantiveClaims": 51,
+    "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+    "hashMismatch": false,
+    "publicationEligible": false,
+    "requiredInputs": [
+      "claimMatrix",
+      "sourceExtractHashes",
+      "canonicalContentHash",
+      "benchmarkEvaluatorAuthority",
+      "ceremonyGateAuthority"
+    ],
+    "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_01"
+  },
+  {
+    "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_02",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_02",
+    "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+    "canonicalMode": "REUSE",
+    "canonicalVersion": "v1.private",
+    "substantiveClaims": 51,
+    "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+    "hashMismatch": false,
+    "publicationEligible": false,
+    "requiredInputs": [
+      "claimMatrix",
+      "sourceExtractHashes",
+      "canonicalContentHash",
+      "benchmarkEvaluatorAuthority",
+      "ceremonyGateAuthority"
+    ],
+    "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_02"
+  },
+  {
+    "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_03",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_03",
+    "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+    "canonicalMode": "REUSE",
+    "canonicalVersion": "v1.private",
+    "substantiveClaims": 51,
+    "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+    "hashMismatch": false,
+    "publicationEligible": false,
+    "requiredInputs": [
+      "claimMatrix",
+      "sourceExtractHashes",
+      "canonicalContentHash",
+      "benchmarkEvaluatorAuthority",
+      "ceremonyGateAuthority"
+    ],
+    "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_03"
+  },
+  {
+    "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_04",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_04",
+    "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+    "canonicalMode": "EXTEND",
+    "canonicalVersion": "v1.private",
+    "substantiveClaims": 57,
+    "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+    "hashMismatch": false,
+    "publicationEligible": false,
+    "requiredInputs": [
+      "claimMatrix",
+      "sourceExtractHashes",
+      "canonicalContentHash",
+      "benchmarkEvaluatorAuthority",
+      "ceremonyGateAuthority"
+    ],
+    "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_04"
+  },
+  {
+    "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_05",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_05",
+    "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+    "canonicalMode": "EXTEND",
+    "canonicalVersion": "v1.private",
+    "substantiveClaims": 57,
+    "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+    "hashMismatch": false,
+    "publicationEligible": false,
+    "requiredInputs": [
+      "claimMatrix",
+      "sourceExtractHashes",
+      "canonicalContentHash",
+      "benchmarkEvaluatorAuthority",
+      "ceremonyGateAuthority"
+    ],
+    "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_05"
+  },
+  {
+    "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_06",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_06",
+    "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+    "canonicalMode": "EXTEND",
+    "canonicalVersion": "v1.private",
+    "substantiveClaims": 57,
+    "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+    "hashMismatch": false,
+    "publicationEligible": false,
+    "requiredInputs": [
+      "claimMatrix",
+      "sourceExtractHashes",
+      "canonicalContentHash",
+      "benchmarkEvaluatorAuthority",
+      "ceremonyGateAuthority"
+    ],
+    "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_06"
+  },
+  {
+    "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_07",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_07",
+    "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+    "canonicalMode": "EXTEND",
+    "canonicalVersion": "v1.private",
+    "substantiveClaims": 57,
+    "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+    "hashMismatch": false,
+    "publicationEligible": false,
+    "requiredInputs": [
+      "claimMatrix",
+      "sourceExtractHashes",
+      "canonicalContentHash",
+      "benchmarkEvaluatorAuthority",
+      "ceremonyGateAuthority"
+    ],
+    "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_07"
+  },
+  {
+    "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_08",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_08",
+    "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+    "canonicalMode": "EXTEND",
+    "canonicalVersion": "v1.private",
+    "substantiveClaims": 57,
+    "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+    "hashMismatch": false,
+    "publicationEligible": false,
+    "requiredInputs": [
+      "claimMatrix",
+      "sourceExtractHashes",
+      "canonicalContentHash",
+      "benchmarkEvaluatorAuthority",
+      "ceremonyGateAuthority"
+    ],
+    "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_08"
+  },
+  {
+    "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_09",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_09",
+    "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+    "canonicalMode": "EXTEND",
+    "canonicalVersion": "v1.private",
+    "substantiveClaims": 57,
+    "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+    "hashMismatch": false,
+    "publicationEligible": false,
+    "requiredInputs": [
+      "claimMatrix",
+      "sourceExtractHashes",
+      "canonicalContentHash",
+      "benchmarkEvaluatorAuthority",
+      "ceremonyGateAuthority"
+    ],
+    "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_09"
+  },
+  {
+    "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_10",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_10",
+    "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+    "canonicalMode": "EXTEND",
+    "canonicalVersion": "v1.private",
+    "substantiveClaims": 57,
+    "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+    "hashMismatch": false,
+    "publicationEligible": false,
+    "requiredInputs": [
+      "claimMatrix",
+      "sourceExtractHashes",
+      "canonicalContentHash",
+      "benchmarkEvaluatorAuthority",
+      "ceremonyGateAuthority"
+    ],
+    "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_10"
+  }
+]

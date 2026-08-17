@@ -1,0 +1,38 @@
+[
+  {
+    "executionUnitId": "REAL_WAVE1_STANDARD_WAVE1_CHEM_PRACTICAL_04",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_04",
+    "claimCount": 1,
+    "jobId": "SSJ_WAVE1_CHEM_PRACTICAL_04",
+    "requiredChecks": [
+      "standardSensitivity",
+      "policyVersion",
+      "sourceExtractHash"
+    ],
+    "publicationEligible": false
+  },
+  {
+    "executionUnitId": "REAL_WAVE1_STANDARD_WAVE1_CHEM_PRACTICAL_07",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_07",
+    "claimCount": 1,
+    "jobId": "SSJ_WAVE1_CHEM_PRACTICAL_07",
+    "requiredChecks": [
+      "standardSensitivity",
+      "policyVersion",
+      "sourceExtractHash"
+    ],
+    "publicationEligible": false
+  },
+  {
+    "executionUnitId": "REAL_WAVE1_STANDARD_WAVE1_CHEM_PRACTICAL_10",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_10",
+    "claimCount": 1,
+    "jobId": "SSJ_WAVE1_CHEM_PRACTICAL_10",
+    "requiredChecks": [
+      "standardSensitivity",
+      "policyVersion",
+      "sourceExtractHash"
+    ],
+    "publicationEligible": false
+  }
+]

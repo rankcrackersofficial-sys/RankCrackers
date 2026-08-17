@@ -1,0 +1,122 @@
+[
+  {
+    "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_01",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_01",
+    "requiredChecks": [
+      "canonicalContentHash",
+      "assembledContentHash",
+      "claimMatrixHash",
+      "sourceLineageHash",
+      "verificationResultHash"
+    ],
+    "publicationEligible": false
+  },
+  {
+    "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_02",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_02",
+    "requiredChecks": [
+      "canonicalContentHash",
+      "assembledContentHash",
+      "claimMatrixHash",
+      "sourceLineageHash",
+      "verificationResultHash"
+    ],
+    "publicationEligible": false
+  },
+  {
+    "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_03",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_03",
+    "requiredChecks": [
+      "canonicalContentHash",
+      "assembledContentHash",
+      "claimMatrixHash",
+      "sourceLineageHash",
+      "verificationResultHash"
+    ],
+    "publicationEligible": false
+  },
+  {
+    "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_04",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_04",
+    "requiredChecks": [
+      "canonicalContentHash",
+      "assembledContentHash",
+      "claimMatrixHash",
+      "sourceLineageHash",
+      "verificationResultHash"
+    ],
+    "publicationEligible": false
+  },
+  {
+    "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_05",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_05",
+    "requiredChecks": [
+      "canonicalContentHash",
+      "assembledContentHash",
+      "claimMatrixHash",
+      "sourceLineageHash",
+      "verificationResultHash"
+    ],
+    "publicationEligible": false
+  },
+  {
+    "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_06",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_06",
+    "requiredChecks": [
+      "canonicalContentHash",
+      "assembledContentHash",
+      "claimMatrixHash",
+      "sourceLineageHash",
+      "verificationResultHash"
+    ],
+    "publicationEligible": false
+  },
+  {
+    "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_07",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_07",
+    "requiredChecks": [
+      "canonicalContentHash",
+      "assembledContentHash",
+      "claimMatrixHash",
+      "sourceLineageHash",
+      "verificationResultHash"
+    ],
+    "publicationEligible": false
+  },
+  {
+    "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_08",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_08",
+    "requiredChecks": [
+      "canonicalContentHash",
+      "assembledContentHash",
+      "claimMatrixHash",
+      "sourceLineageHash",
+      "verificationResultHash"
+    ],
+    "publicationEligible": false
+  },
+  {
+    "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_09",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_09",
+    "requiredChecks": [
+      "canonicalContentHash",
+      "assembledContentHash",
+      "claimMatrixHash",
+      "sourceLineageHash",
+      "verificationResultHash"
+    ],
+    "publicationEligible": false
+  },
+  {
+    "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_10",
+    "candidateId": "WAVE1_CHEM_PRACTICAL_10",
+    "requiredChecks": [
+      "canonicalContentHash",
+      "assembledContentHash",
+      "claimMatrixHash",
+      "sourceLineageHash",
+      "verificationResultHash"
+    ],
+    "publicationEligible": false
+  }
+]

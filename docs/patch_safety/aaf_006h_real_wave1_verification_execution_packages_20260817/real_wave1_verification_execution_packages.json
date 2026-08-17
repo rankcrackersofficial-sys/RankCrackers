@@ -1,0 +1,846 @@
+{
+  "artifactId": "AAF_006H_REAL_WAVE1_VERIFICATION_EXECUTION_PACKAGES_20260817",
+  "wave1Total": 10,
+  "totalSubstantiveClaims": 552.0,
+  "uniqueCanonicalClaims": 552.0,
+  "primaryExecutionUnits": [
+    {
+      "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_01",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_01",
+      "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+      "canonicalMode": "REUSE",
+      "canonicalVersion": "v1.private",
+      "substantiveClaims": 51,
+      "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+      "hashMismatch": false,
+      "publicationEligible": false,
+      "requiredInputs": [
+        "claimMatrix",
+        "sourceExtractHashes",
+        "canonicalContentHash",
+        "benchmarkEvaluatorAuthority",
+        "ceremonyGateAuthority"
+      ],
+      "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_01"
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_02",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_02",
+      "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+      "canonicalMode": "REUSE",
+      "canonicalVersion": "v1.private",
+      "substantiveClaims": 51,
+      "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+      "hashMismatch": false,
+      "publicationEligible": false,
+      "requiredInputs": [
+        "claimMatrix",
+        "sourceExtractHashes",
+        "canonicalContentHash",
+        "benchmarkEvaluatorAuthority",
+        "ceremonyGateAuthority"
+      ],
+      "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_02"
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_03",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_03",
+      "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+      "canonicalMode": "REUSE",
+      "canonicalVersion": "v1.private",
+      "substantiveClaims": 51,
+      "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+      "hashMismatch": false,
+      "publicationEligible": false,
+      "requiredInputs": [
+        "claimMatrix",
+        "sourceExtractHashes",
+        "canonicalContentHash",
+        "benchmarkEvaluatorAuthority",
+        "ceremonyGateAuthority"
+      ],
+      "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_03"
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_04",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_04",
+      "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+      "canonicalMode": "EXTEND",
+      "canonicalVersion": "v1.private",
+      "substantiveClaims": 57,
+      "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+      "hashMismatch": false,
+      "publicationEligible": false,
+      "requiredInputs": [
+        "claimMatrix",
+        "sourceExtractHashes",
+        "canonicalContentHash",
+        "benchmarkEvaluatorAuthority",
+        "ceremonyGateAuthority"
+      ],
+      "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_04"
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_05",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_05",
+      "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+      "canonicalMode": "EXTEND",
+      "canonicalVersion": "v1.private",
+      "substantiveClaims": 57,
+      "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+      "hashMismatch": false,
+      "publicationEligible": false,
+      "requiredInputs": [
+        "claimMatrix",
+        "sourceExtractHashes",
+        "canonicalContentHash",
+        "benchmarkEvaluatorAuthority",
+        "ceremonyGateAuthority"
+      ],
+      "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_05"
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_06",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_06",
+      "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+      "canonicalMode": "EXTEND",
+      "canonicalVersion": "v1.private",
+      "substantiveClaims": 57,
+      "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+      "hashMismatch": false,
+      "publicationEligible": false,
+      "requiredInputs": [
+        "claimMatrix",
+        "sourceExtractHashes",
+        "canonicalContentHash",
+        "benchmarkEvaluatorAuthority",
+        "ceremonyGateAuthority"
+      ],
+      "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_06"
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_07",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_07",
+      "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+      "canonicalMode": "EXTEND",
+      "canonicalVersion": "v1.private",
+      "substantiveClaims": 57,
+      "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+      "hashMismatch": false,
+      "publicationEligible": false,
+      "requiredInputs": [
+        "claimMatrix",
+        "sourceExtractHashes",
+        "canonicalContentHash",
+        "benchmarkEvaluatorAuthority",
+        "ceremonyGateAuthority"
+      ],
+      "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_07"
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_08",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_08",
+      "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+      "canonicalMode": "EXTEND",
+      "canonicalVersion": "v1.private",
+      "substantiveClaims": 57,
+      "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+      "hashMismatch": false,
+      "publicationEligible": false,
+      "requiredInputs": [
+        "claimMatrix",
+        "sourceExtractHashes",
+        "canonicalContentHash",
+        "benchmarkEvaluatorAuthority",
+        "ceremonyGateAuthority"
+      ],
+      "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_08"
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_09",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_09",
+      "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+      "canonicalMode": "EXTEND",
+      "canonicalVersion": "v1.private",
+      "substantiveClaims": 57,
+      "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+      "hashMismatch": false,
+      "publicationEligible": false,
+      "requiredInputs": [
+        "claimMatrix",
+        "sourceExtractHashes",
+        "canonicalContentHash",
+        "benchmarkEvaluatorAuthority",
+        "ceremonyGateAuthority"
+      ],
+      "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_09"
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PRIMARY_WAVE1_CHEM_PRACTICAL_10",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_10",
+      "sourceCandidateId": "WAVE1_CHEM_PRACTICAL_%02d",
+      "canonicalMode": "EXTEND",
+      "canonicalVersion": "v1.private",
+      "substantiveClaims": 57,
+      "sourceLineageStatus": "COMPLETE_FROM_AAF005E",
+      "hashMismatch": false,
+      "publicationEligible": false,
+      "requiredInputs": [
+        "claimMatrix",
+        "sourceExtractHashes",
+        "canonicalContentHash",
+        "benchmarkEvaluatorAuthority",
+        "ceremonyGateAuthority"
+      ],
+      "primaryJobId": "PVJ_WAVE1_CHEM_PRACTICAL_10"
+    }
+  ],
+  "reactionExecutionUnits": [
+    {
+      "executionUnitId": "REAL_WAVE1_REACTION_WAVE1_CHEM_PRACTICAL_01",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_01",
+      "claimCount": 3,
+      "jobId": "RVJ_WAVE1_CHEM_PRACTICAL_01",
+      "requiredChecks": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_REACTION_WAVE1_CHEM_PRACTICAL_02",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_02",
+      "claimCount": 3,
+      "jobId": "RVJ_WAVE1_CHEM_PRACTICAL_02",
+      "requiredChecks": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_REACTION_WAVE1_CHEM_PRACTICAL_03",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_03",
+      "claimCount": 3,
+      "jobId": "RVJ_WAVE1_CHEM_PRACTICAL_03",
+      "requiredChecks": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_REACTION_WAVE1_CHEM_PRACTICAL_04",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_04",
+      "claimCount": 4,
+      "jobId": "RVJ_WAVE1_CHEM_PRACTICAL_04",
+      "requiredChecks": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_REACTION_WAVE1_CHEM_PRACTICAL_05",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_05",
+      "claimCount": 4,
+      "jobId": "RVJ_WAVE1_CHEM_PRACTICAL_05",
+      "requiredChecks": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_REACTION_WAVE1_CHEM_PRACTICAL_06",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_06",
+      "claimCount": 4,
+      "jobId": "RVJ_WAVE1_CHEM_PRACTICAL_06",
+      "requiredChecks": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_REACTION_WAVE1_CHEM_PRACTICAL_07",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_07",
+      "claimCount": 4,
+      "jobId": "RVJ_WAVE1_CHEM_PRACTICAL_07",
+      "requiredChecks": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_REACTION_WAVE1_CHEM_PRACTICAL_08",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_08",
+      "claimCount": 4,
+      "jobId": "RVJ_WAVE1_CHEM_PRACTICAL_08",
+      "requiredChecks": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_REACTION_WAVE1_CHEM_PRACTICAL_09",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_09",
+      "claimCount": 4,
+      "jobId": "RVJ_WAVE1_CHEM_PRACTICAL_09",
+      "requiredChecks": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_REACTION_WAVE1_CHEM_PRACTICAL_10",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_10",
+      "claimCount": 4,
+      "jobId": "RVJ_WAVE1_CHEM_PRACTICAL_10",
+      "requiredChecks": [
+        "reactants",
+        "products",
+        "stoichiometry",
+        "chargesIfClaimed",
+        "reagent",
+        "condition",
+        "observation",
+        "inference",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    }
+  ],
+  "procedureExecutionUnits": [
+    {
+      "executionUnitId": "REAL_WAVE1_PROCEDURE_WAVE1_CHEM_PRACTICAL_01",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_01",
+      "claimCount": 16,
+      "jobId": "PRJ_WAVE1_CHEM_PRACTICAL_01",
+      "requiredChecks": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PROCEDURE_WAVE1_CHEM_PRACTICAL_02",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_02",
+      "claimCount": 16,
+      "jobId": "PRJ_WAVE1_CHEM_PRACTICAL_02",
+      "requiredChecks": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PROCEDURE_WAVE1_CHEM_PRACTICAL_03",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_03",
+      "claimCount": 16,
+      "jobId": "PRJ_WAVE1_CHEM_PRACTICAL_03",
+      "requiredChecks": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PROCEDURE_WAVE1_CHEM_PRACTICAL_04",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_04",
+      "claimCount": 19,
+      "jobId": "PRJ_WAVE1_CHEM_PRACTICAL_04",
+      "requiredChecks": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PROCEDURE_WAVE1_CHEM_PRACTICAL_05",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_05",
+      "claimCount": 19,
+      "jobId": "PRJ_WAVE1_CHEM_PRACTICAL_05",
+      "requiredChecks": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PROCEDURE_WAVE1_CHEM_PRACTICAL_06",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_06",
+      "claimCount": 19,
+      "jobId": "PRJ_WAVE1_CHEM_PRACTICAL_06",
+      "requiredChecks": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PROCEDURE_WAVE1_CHEM_PRACTICAL_07",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_07",
+      "claimCount": 19,
+      "jobId": "PRJ_WAVE1_CHEM_PRACTICAL_07",
+      "requiredChecks": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PROCEDURE_WAVE1_CHEM_PRACTICAL_08",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_08",
+      "claimCount": 19,
+      "jobId": "PRJ_WAVE1_CHEM_PRACTICAL_08",
+      "requiredChecks": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PROCEDURE_WAVE1_CHEM_PRACTICAL_09",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_09",
+      "claimCount": 19,
+      "jobId": "PRJ_WAVE1_CHEM_PRACTICAL_09",
+      "requiredChecks": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_PROCEDURE_WAVE1_CHEM_PRACTICAL_10",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_10",
+      "claimCount": 19,
+      "jobId": "PRJ_WAVE1_CHEM_PRACTICAL_10",
+      "requiredChecks": [
+        "sample",
+        "reagent",
+        "operation",
+        "condition",
+        "observation",
+        "inference",
+        "limitationsIfClaimed",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    }
+  ],
+  "standardSensitiveExecutionUnits": [
+    {
+      "executionUnitId": "REAL_WAVE1_STANDARD_WAVE1_CHEM_PRACTICAL_04",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_04",
+      "claimCount": 1,
+      "jobId": "SSJ_WAVE1_CHEM_PRACTICAL_04",
+      "requiredChecks": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_STANDARD_WAVE1_CHEM_PRACTICAL_07",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_07",
+      "claimCount": 1,
+      "jobId": "SSJ_WAVE1_CHEM_PRACTICAL_07",
+      "requiredChecks": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_STANDARD_WAVE1_CHEM_PRACTICAL_10",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_10",
+      "claimCount": 1,
+      "jobId": "SSJ_WAVE1_CHEM_PRACTICAL_10",
+      "requiredChecks": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash"
+      ],
+      "publicationEligible": false
+    }
+  ],
+  "provisionalCrossProviderExecutionUnits": [
+    {
+      "executionUnitId": "REAL_WAVE1_CROSS_PROVIDER_WAVE1_CHEM_PRACTICAL_01",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_01",
+      "provisionalClaimCount": 19,
+      "jobId": "CPJ_WAVE1_CHEM_PRACTICAL_01",
+      "finalCrossProviderRequired": "PENDING_AAF006A",
+      "finalCrossProviderConditional": "PENDING_AAF006A",
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_CROSS_PROVIDER_WAVE1_CHEM_PRACTICAL_02",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_02",
+      "provisionalClaimCount": 19,
+      "jobId": "CPJ_WAVE1_CHEM_PRACTICAL_02",
+      "finalCrossProviderRequired": "PENDING_AAF006A",
+      "finalCrossProviderConditional": "PENDING_AAF006A",
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_CROSS_PROVIDER_WAVE1_CHEM_PRACTICAL_03",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_03",
+      "provisionalClaimCount": 19,
+      "jobId": "CPJ_WAVE1_CHEM_PRACTICAL_03",
+      "finalCrossProviderRequired": "PENDING_AAF006A",
+      "finalCrossProviderConditional": "PENDING_AAF006A",
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_CROSS_PROVIDER_WAVE1_CHEM_PRACTICAL_04",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_04",
+      "provisionalClaimCount": 24,
+      "jobId": "CPJ_WAVE1_CHEM_PRACTICAL_04",
+      "finalCrossProviderRequired": "PENDING_AAF006A",
+      "finalCrossProviderConditional": "PENDING_AAF006A",
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_CROSS_PROVIDER_WAVE1_CHEM_PRACTICAL_05",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_05",
+      "provisionalClaimCount": 23,
+      "jobId": "CPJ_WAVE1_CHEM_PRACTICAL_05",
+      "finalCrossProviderRequired": "PENDING_AAF006A",
+      "finalCrossProviderConditional": "PENDING_AAF006A",
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_CROSS_PROVIDER_WAVE1_CHEM_PRACTICAL_06",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_06",
+      "provisionalClaimCount": 23,
+      "jobId": "CPJ_WAVE1_CHEM_PRACTICAL_06",
+      "finalCrossProviderRequired": "PENDING_AAF006A",
+      "finalCrossProviderConditional": "PENDING_AAF006A",
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_CROSS_PROVIDER_WAVE1_CHEM_PRACTICAL_07",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_07",
+      "provisionalClaimCount": 24,
+      "jobId": "CPJ_WAVE1_CHEM_PRACTICAL_07",
+      "finalCrossProviderRequired": "PENDING_AAF006A",
+      "finalCrossProviderConditional": "PENDING_AAF006A",
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_CROSS_PROVIDER_WAVE1_CHEM_PRACTICAL_08",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_08",
+      "provisionalClaimCount": 23,
+      "jobId": "CPJ_WAVE1_CHEM_PRACTICAL_08",
+      "finalCrossProviderRequired": "PENDING_AAF006A",
+      "finalCrossProviderConditional": "PENDING_AAF006A",
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_CROSS_PROVIDER_WAVE1_CHEM_PRACTICAL_09",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_09",
+      "provisionalClaimCount": 23,
+      "jobId": "CPJ_WAVE1_CHEM_PRACTICAL_09",
+      "finalCrossProviderRequired": "PENDING_AAF006A",
+      "finalCrossProviderConditional": "PENDING_AAF006A",
+      "publicationEligible": false
+    },
+    {
+      "executionUnitId": "REAL_WAVE1_CROSS_PROVIDER_WAVE1_CHEM_PRACTICAL_10",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_10",
+      "provisionalClaimCount": 24,
+      "jobId": "CPJ_WAVE1_CHEM_PRACTICAL_10",
+      "finalCrossProviderRequired": "PENDING_AAF006A",
+      "finalCrossProviderConditional": "PENDING_AAF006A",
+      "publicationEligible": false
+    }
+  ],
+  "postAssemblyIntegrityPackages": [
+    {
+      "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_01",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_01",
+      "requiredChecks": [
+        "canonicalContentHash",
+        "assembledContentHash",
+        "claimMatrixHash",
+        "sourceLineageHash",
+        "verificationResultHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_02",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_02",
+      "requiredChecks": [
+        "canonicalContentHash",
+        "assembledContentHash",
+        "claimMatrixHash",
+        "sourceLineageHash",
+        "verificationResultHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_03",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_03",
+      "requiredChecks": [
+        "canonicalContentHash",
+        "assembledContentHash",
+        "claimMatrixHash",
+        "sourceLineageHash",
+        "verificationResultHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_04",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_04",
+      "requiredChecks": [
+        "canonicalContentHash",
+        "assembledContentHash",
+        "claimMatrixHash",
+        "sourceLineageHash",
+        "verificationResultHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_05",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_05",
+      "requiredChecks": [
+        "canonicalContentHash",
+        "assembledContentHash",
+        "claimMatrixHash",
+        "sourceLineageHash",
+        "verificationResultHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_06",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_06",
+      "requiredChecks": [
+        "canonicalContentHash",
+        "assembledContentHash",
+        "claimMatrixHash",
+        "sourceLineageHash",
+        "verificationResultHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_07",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_07",
+      "requiredChecks": [
+        "canonicalContentHash",
+        "assembledContentHash",
+        "claimMatrixHash",
+        "sourceLineageHash",
+        "verificationResultHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_08",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_08",
+      "requiredChecks": [
+        "canonicalContentHash",
+        "assembledContentHash",
+        "claimMatrixHash",
+        "sourceLineageHash",
+        "verificationResultHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_09",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_09",
+      "requiredChecks": [
+        "canonicalContentHash",
+        "assembledContentHash",
+        "claimMatrixHash",
+        "sourceLineageHash",
+        "verificationResultHash"
+      ],
+      "publicationEligible": false
+    },
+    {
+      "packageId": "REAL_WAVE1_POST_ASSEMBLY_INTEGRITY_WAVE1_CHEM_PRACTICAL_10",
+      "candidateId": "WAVE1_CHEM_PRACTICAL_10",
+      "requiredChecks": [
+        "canonicalContentHash",
+        "assembledContentHash",
+        "claimMatrixHash",
+        "sourceLineageHash",
+        "verificationResultHash"
+      ],
+      "publicationEligible": false
+    }
+  ],
+  "attacks": [
+    {
+      "attackId": "EXEC_PKG_MISSING_CLAIM_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true
+    },
+    {
+      "attackId": "EXEC_PKG_DUPLICATE_CANONICAL_UNIT_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true
+    },
+    {
+      "attackId": "EXEC_PKG_HASH_MISMATCH_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true
+    },
+    {
+      "attackId": "EXEC_PKG_SOURCE_LINEAGE_GAP_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true
+    },
+    {
+      "attackId": "EXEC_PKG_PUBLICATION_ELIGIBLE_TRUE_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true
+    },
+    {
+      "attackId": "EXEC_PKG_CROSS_PROVIDER_PREMATURE_FINALIZATION_ATTACK",
+      "status": "PASS",
+      "fatalIfAccepted": true
+    }
+  ],
+  "realExecutionUnlocked": false,
+  "publicationEligible": false,
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseRead": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO",
+    "canonicalContentModified": "NO"
+  }
+}
