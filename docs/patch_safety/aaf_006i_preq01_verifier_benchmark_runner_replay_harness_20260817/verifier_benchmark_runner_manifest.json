@@ -1,0 +1,30 @@
+{
+  "manifestId": "AAF_006I_PREQ01_VERIFIER_BENCHMARK_RUNNER_MANIFEST_20260817",
+  "headBefore": "c2f3677bfb758e21225ffe037e9dd355a1bd0920",
+  "benchmarkCases": 112,
+  "zeroToleranceCases": 63,
+  "perfectReplay": "PASS",
+  "perfectReplayVerifierEligible": true,
+  "harnessAttackClasses": 15,
+  "harnessAttackClassesPassed": 15,
+  "harnessAttackClassesFailed": 0,
+  "partialRunCanGrantEligibility": false,
+  "sourceConflictOverridesAiPass": true,
+  "providerDisagreementCanAutoPass": false,
+  "oracleLeakedToVerifier": "NO",
+  "replaySemanticIdempotency": "PASS",
+  "aaf006aAvailable": "PENDING_EXTERNAL_LANE",
+  "aaf006bAdapterAvailable": "PENDING_BACKEND_LANE",
+  "realProviderExecutionPerformed": "NO",
+  "realWave1ClaimsSubmitted": 0,
+  "realExecutionUnlocked": false,
+  "publicationEligible": false,
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseRead": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO"
+  },
+  "finalLine": "AAF_VERIFIER_BENCHMARK_EXECUTION_HARNESS_IS_READY_FOR_REAL_AAF006B_PROVIDER_AFTER_AAF006A_POLICY_LOCK"
+}

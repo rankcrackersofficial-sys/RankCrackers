@@ -1,0 +1,40 @@
+{
+  "verdict": "AAF_006I_PREQ01_VERIFIER_BENCHMARK_RUNNER_AND_REPLAY_HARNESS_READY",
+  "headBefore": "c2f3677bfb758e21225ffe037e9dd355a1bd0920",
+  "headAfter": "e83140fd8c1978a1a7d573f0f0109950d8a00660",
+  "benchmarkCases": 112,
+  "zeroToleranceCases": 63,
+  "perfectReplay": "PASS",
+  "perfectReplayVerifierEligible": true,
+  "harnessAttackClasses": 15,
+  "harnessAttackClassesPassed": 15,
+  "harnessAttackClassesFailed": 0,
+  "partialRunCanGrantEligibility": false,
+  "sourceConflictOverridesAiPass": true,
+  "providerDisagreementCanAutoPass": false,
+  "oracleLeakedToVerifier": "NO",
+  "replaySemanticIdempotency": "PASS",
+  "aaf006aAvailable": "PENDING_EXTERNAL_LANE",
+  "aaf006bAdapterAvailable": "PENDING_BACKEND_LANE",
+  "realProviderExecutionPerformed": "NO",
+  "realWave1ClaimsSubmitted": 0,
+  "realExecutionUnlocked": false,
+  "publicationEligible": false,
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseRead": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO"
+  },
+  "commit": "e83140fd8c1978a1a7d573f0f0109950d8a00660",
+  "finalLine": "AAF_VERIFIER_BENCHMARK_EXECUTION_HARNESS_IS_READY_FOR_REAL_AAF006B_PROVIDER_AFTER_AAF006A_POLICY_LOCK",
+  "sha256Matrix": {
+    "AAF_006I_PREQ01_REPORT.json": "B8D4F947C5254F8F0D2726D90CDF2432DFF10986F8E21C46B7662F641501BA0B",
+    "AAF_006I_PREQ01_REPORT.md": "41A37E104C52F302944BF371B4851A496E2E695EC74416D1480D036DFA82247C",
+    "perfect_replay_fixture.json": "543435EF1BB78AE4E70DBD9A4C7B01ED74E5CE837D7FCD6992A542571B46674D",
+    "verifier_benchmark_harness_attack_fixtures.json": "F2F18D6298EB5CC6CB8810EA8FE83F35DF03B44D83FEF9B835722FA848EE3D02",
+    "verifier_benchmark_runner_manifest.json": "2B89D785732D61CFC15C38C1D49F56F8B31FDE23F81BC8FDED81CB09E4BC09AF",
+    "verifier_benchmark_runner_spec.json": "74785769F157B3FD0D4D5B5AADE4B74DA0AC4D7DC7F30B21CA8943F155775CC1"
+  }
+}

@@ -1,0 +1,933 @@
+{
+  "artifactId": "AAF_006I_PREQ01_VERIFIER_BENCHMARK_RUNNER_SPEC_20260817",
+  "benchmarkAuthorityCommit": "585298b55d875044185ae4b5bb738ee4ec3e6342",
+  "evaluatorAuthorityCommit": "22652c21dc55f30b9add7c9de4ac181538dc0c73",
+  "ceremonyReconciliationAuthority": "a1600524f332382ae57bf1bd9be230aa60651982",
+  "benchmarkCases": 112,
+  "zeroToleranceCases": 63,
+  "oracleHiddenFromVerifier": true,
+  "ingestionContract": {
+    "requiresAll112CaseResponses": true,
+    "rejectsDuplicateResponses": true,
+    "rejectsUnknownCaseIds": true,
+    "requiresBenchmarkInputHashMatch": true,
+    "rejectsPartialRuns": true,
+    "blocksPublicationRegardlessOfBenchmarkPass": true,
+    "blocksRealWave1Until006AAnd006BAccepted": true
+  },
+  "replaySemanticIdempotency": {
+    "sameInputSameDecision": true,
+    "replayRunHasNoSideEffects": true,
+    "noProviderCalls": true,
+    "noFirebase": true,
+    "noQueue": true
+  },
+  "perfectReplay": [
+    {
+      "caseId": "STABLE_POS_001",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "3502A74ED245376252EFDCD535C224DFA6F987706399BBA827767031E096F801",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_002",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "8557D51BFEDB76D0523D793A19042C8CE94BD0B5F560F54221274038B87F79C0",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_003",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "7AEF30BCC00A0623B672AAAEB741C4BEC8F2A0AF95499DE040D054EF60ACC3FF",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_004",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "CCFB70C6D2E81E9DDCFDFE0FF4A0C5E8D2A1FB0E3E68D5EE9E85F6506A35013B",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_005",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "659AAF1CFD45C45929542FBF53BE60D85C8C8B7F38BE910513BAEFD5C86470A4",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_006",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "09C5494C31FAB10ECFC0C60B25F1C9D85D62E3DA15449481D870284B0129AFE6",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_007",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "C529ADF10BDF551E533A78EA332CF5FC8AFD84057CE7FEDF91E8F8BC42BB7545",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_008",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "BBD837C9039B14E528F7CC3F4C8BB7284F8F5FD7B2AE191CC5E740FA6C550457",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_009",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "8084FB83C1260772F8417EBB89BBFE754FE5A517B1834760982067C8E51C7E57",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_010",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "65F842E29275632919880DD3804CDB33B9951FD48CFFD9240ADCF4BD83942213",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_011",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "E9EF3B82EF56B9C009491D863AEEF592761F72C5592EE96C6A9A970E58E1EC10",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_012",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "9BECAC5DFC01016B1C3E96D34A4C88F32F5BEF9C794D8C75918BB8B189B7EFAD",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_013",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "A803FDC380853F8FF368B64A9B5384248915ECDF982A89B1DF790BF629A26714",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_014",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "C1DFE26D05FD693B4BCDD7EC6D3DF5AD51F28783D1E5F550F153C1C62CE92A29",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_015",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "00A63828E7BD9AAFA6D05DE9B0532284151CEC128C6F104D8880E04CECC70F68",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STABLE_POS_016",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "65EE7092AE9E108342947E8A5FB745C1D15BF278924BF1A9B3778D32B8034B58",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_POS_001",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "381FE149FFDC3579C3D36EB106496D802B54DB344E9F03ADE3F896AFE3E28A4E",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_POS_002",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "3C3D3ECC8EB22A29BF151EA5AD8D1CC71DA37CCCFA95EB5422E4E633B52B5A60",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_POS_003",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "522EC060F51C41FD98DB2AD81728F2A6C71D78DB848E7F4A4B96BCD6E61D624D",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_POS_004",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "19DB7ACC0947C4658143C73E50E363F11864D8C8C8598CD117BF48213EB9FBCF",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_POS_005",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "F8F839C88D9A97075FAEFB86AD9F341BBC239B6F23BB0D7E776FF48F1E176C3A",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_POS_006",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "5A6E744D2DCF09CFD2E728AB7CA4AA5A5CFE19FF104319E1A41EFA6F38B85ED3",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_POS_007",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "3BE91C6D888EA6EE245ED8D2416E070FBDE56BB6D87B7BD9104D3A14BC9C4542",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_POS_008",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "813E274048F2D4BC5C89D0FC1C2649E4CDFFC18944509B5D4E535B868BECE1D0",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_POS_009",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "AAEECEA1ACAC525607370193F8AC170FFED3A17038A26FD9760EBE0770F8A54A",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_001",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "1B286B33B02A78C8D5161C562684745655D0499172AF85821EAE1D0E894DED0F",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_002",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "CC7253F9B47B7D601C27C4BC7FF1CC9553A167E560E0A1A869BB4C3D88DAAD55",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_003",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "AD69E8F9AB5235FE797A9D558272AD2DE6987B0B89C7BA59BA49A4797ED7E4C1",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_004",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "A7936290DCCD3A295C604F1672E6817A7562D5D1C8D088C0024F7A0BA1963CEB",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_005",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "094FB144C78394DD2967980FB085711F8F4F127E8EC610E7DF90AFC2264B43AD",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_006",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "222D6B2FD663681904EA08324FF7CD3F19C3D2B61DEC4C7D6811C40A44096DDF",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_007",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "1A84E318799A720034D902B4B38EF740DFFB9612DBC143F7694F95E19F182B72",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_008",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "2DF5DF625DDE81C276CC7F422B02079BE028F96CB20FD0A5D3FCFB34A5E74231",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_009",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "34A9E045C05A7674B1E9AFA8AC72559E77AAF73DBC36BADA7C5CC77375D4B020",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_010",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "556534E16AB14560A0339E7225F98C8CD1CA2E0CEAAB976D4F6FD23957ED4DBF",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_011",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "3E7CFB448CA7AF6954E47028D6C561B279CFDB1DA0727E39BCA4F4CF553B3CE2",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_POS_012",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "56331C9B5B88117B576543189FC4088B5D70907D2DDAF63BA4D366421F656A2D",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STD_POS_001",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "3395701BF6CDBDCA194EE2C45ECB36913782C2CA218B376ED35CD92DBA596743",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STD_POS_002",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "288997BD61CF9241D5FA1C9FA74A7D55A3FF0B39F59C221EA6EE0575D1EE12E4",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STD_POS_003",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "8775A712C55C1A7D8160FCC800302E9D999E42FB32D39ADD9D5BD3E9ABF3B1D9",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STD_POS_004",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "39424DAB3B3BB8F54FCE4EC17543BF986CAE22F6B199D7326FF28880A93A24BB",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STD_POS_005",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "70CF96D747F96866213CF9BB86FDA300C33BB2F2069CBCCF56387C4631524A19",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "6814C8E15A5383C7B6B3C5EC9F055696AA5D083FBD56EF2CD5696736F31F7048",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "4C708E2E7D61CBC4D94FF0B25D2086874A6BFB766E355A622CB5919F222101AC",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "B94B0D7F6B3E2C90830FF2877D9215C3DA5F0771F293C5C96DA28DEA2921BBC0",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "CA416FD7E33A5C96CA5ACA46A6CAAA8F6FE88CBF021D203A1C282955D4255868",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "78AC35B720948A156EFDDAF84994B3545482B57088C7EDB81015756314FDF74B",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "D26747221C46ACC7DD8DF2460609D677F4EEA8C9D67A99B4A5F02AA74BAC4616",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_007",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "4D82C9DA4EE220D90A03317C6C8E34B4D07DD23CBC4CF78CBAA1E80CCA06639F",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_008",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "AF80D9568F12B53DCA6753E4119D4C17F6695CCEFE9751A5B8BC23AE107C96D0",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_009",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "B08D6DD00C1285C828EA43D72ECDD40F94A2FB4895F33F5825EE148B40766B7E",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_010",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "5B880567CF765315A34E9DE8599C16987AC435B8F68ABEB385BB80F3A958E38F",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_011",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "063E6F580AF2C0D6D1FA5933CA69BC890D2E283A9EF3122FCFD851B878F6B81D",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "RXN_NEG_012",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "BF4DE984215DA0B51C2E8D970002BA207AD162462421EFEF185BF65848AA9AEE",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "F4561E11727C859B174E02DAA00D0AF17EFC0AB4A476F4858289E71C92DA8F25",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "A3306508F583046F708AA97022A6DF28847393B5308ADD2946B61BF90FD3D926",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "98176809F89D378F528658DF7B096557E50E0DA77D39435DECAD61D47658800A",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "0ED28212F4D6D3795C6F2CD26EE0560A06AA3615A5441C78EA545C9E28CB24FC",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "FF2F1753E1D0F3A402D7ED54078767EFA54D2F009DFFBFD7C12F9BFD9CC6D62A",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "833AA18F94330EB9102480A5C6590AE47758C555BD38D4F746138DBB91F849BF",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_007",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "451DB3458BD05BAF68E255D4283A0C0244F134E9D42DE8A0F7E6F59D53C5392B",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_008",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "ED6E1DCB46AFB4207E359499E7988564A9A96FEA7F395C39333613DA9AB69175",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_009",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "DF126C5D4863DF441E40A7A6731FCBC970B3ECCA5516915B47D545801E1F22F6",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_010",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "DB9AA082617B27E272612789860003DC2E582E3B305DB95C1F81A056C2A37ED4",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_011",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "F4F10FFE84B90D0E6538B3D6BE792B56B045D4569A1D878EAF448902CFA3B458",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_012",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "F6B9327F7E266A9A7BC6EEABCB255CF72CD3E7B06695917B870DBAA48964F010",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_013",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "9BCB5C9E60C5415A9724D904D5E3CCEA771B7C335ACED58F55E3B2DF7DB94100",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "PROC_NEG_014",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "669664565562EE26F6038B0BF08EA4661AAEA003CD58A85FCC366E6DAA12CC05",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "688E01F9631369AA585C8DF1CCD9BB858A1CD9A97F3AA5DC4728C8D0CA220E18",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "70C7D7CFD2D4C1C8ED86C03D5A31BB9FD4C73C317E9543774EED1229A84A5581",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "4F17AA90819475AD6B9E0E1D4925E57651C2CE253A584E7934B1EEE4730A12A5",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "E7638BB48CBE4D0EA1A41903B7639C2B237C538D20C8F39274F750778498CD60",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "D95A399B8E3C6BDB020DD07A3E9753E0587A240782BAE7C290524CD1929C590B",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "51934F044D37382993822BCC5842056B99A7E1CA4B419CC777BF30E39853058B",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_007",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "EC703F3CEA58E783D875A0E7E887F3D8AA504B646DA4FEE1EBF9149726B24539",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_008",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "AD32AB221B90E40C5237A655AB62AF67DFE3FB7B4135E8D91A84D03961461349",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_009",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "74AA72FDF8D1A939AD4A883208246C6C6506CE6BE9397FBB3C7BD514876DD3E8",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "SRC_CONFLICT_010",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "8D5EBCD5ADC51BD7EC12BB7C07D161EA878708600DE0538E3EECCE3C2E5050B0",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "01938AAFBC7BC24603F8EFA11754BCC0733B7E654167AB3A3F1B74970E9780DC",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "B1D6C8FFA1DA363BA82802EF28E25BE906A163107318433D9D1ADAAB54CA571B",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "E516E51822D8DFF58053ED520358E0BCF37D845491F29F44043FCF39520FEDF7",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "5B49242016A20F7155D0B3A5749B6A9DD6CA5F89130316BF7D3D385716D2E64E",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "48CCEEA3EB10C22F9FEF09D6BE0B15D43DC06DDB1B832967D924F8465F8D2F50",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "AF1C67AD64C63C0445332B1F41C43449F75BB1AB827D9D3A858356177C9E969C",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_007",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "6C66B619F8FAA6D63FA043283892DE0C9AA344988CCE542101602B788BA9C22E",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "UNSRC_NEG_008",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "00074E012CA39A149CD714E873A5CC2D6565EDF6263D0AFEDBE17F81954176D0",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "7A400441EC0E56EAFC328EC49EB7643DA75E74F39D71962B9C7AF47BE043168A",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "99C18566BD4A16586214C3249AF68516C259F8AE89D2398D18FBD1CF83E62D59",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "92CD2CAB75374699FF46D3973B889986D3767EE03E9AD828898880B113DF7F22",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "C2EF64E3BCCA42929CAAD03E92F0AC64518AFF61D7A98B694321A907C5A56308",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "57601C2DB641C4224FD7A71026AF3BF311FF5E18D7B7F9C9B8C2437F766563B5",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "0526E2549A22AEC4EC367A527F9F2F05B92687628182A37C5B500FB365AAA8D9",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_007",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "F3EBA1E80647CE2694ECD9F3F25D27B974BA1BB0E75EF24747FA113F9D976AA1",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "HASH_NEG_008",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "1E9ED5CBF2DAADA5F2D409EC3D1B52DA24CADB21B71EE4CAD33E603E46A5B554",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "EAC78FB7845EF777440E8FBB5C7592CAB6EFFD7043AEC333FB3136F6143EB9BF",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "0C13DB33BDBA36A75A8AF5F5B9E697CC7DB58CDAF41D1B71DA5328C4F41F8397",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "3C3516F091E598FECD2FE8C875B3F452F446EF8816AB643D7D0A2D36C131A02D",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "F434F413D5E58199BE7C53AD595ACA4C00BE8488E9A4F6A1EFF26A964220357A",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "4F458C645EE4F537C8AACBD50E1FAA8823A9F48E9A476DE54F0BAE305A7399A2",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "STALE_NEG_006",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "0BD45EF0019450A13738AAA766919B11AEFD6C8B5AC40D444D63ED5EB841B3E8",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "REPAIR_NEG_001",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "F84AE8117DF68FD60F3F48EDEFC9204F780EFD9AC6A58C007B034C539BAEDF8C",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "REPAIR_NEG_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "8362C808B43EC7094A12134E2E7AD9F13E9C22E29E1227D687BC64A2A56F481D",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "REPAIR_NEG_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "0403C236C3A63547C73C20FF63BCE85D6F6A38100FC5DF03C70967573955D7A2",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "REPAIR_NEG_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "02603458F56542D4912C5DB46C4C63836801A6740F2918E86FB393D0F44CC50E",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "REPAIR_NEG_005",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "3656E3ACB185ADFD5ECEAE0FDEC82075CE8D4A3A288ABD452D3C78B1A1ECE90A",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "REUSE_CASE_001",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "63C970189CF6D86515ADF64FF0A43E3E37E106F0496781F8A4E32B8EB1326C9F",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "REUSE_CASE_002",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "F5AF6F5AF337E36E99011B1407F91BF4F03699401831D4C1CD131EE31B40B3FA",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "REUSE_CASE_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "F1E435077ECE41A863A22C8E11443B0CF6AEB40CE6E5690B005A45A17DCC8093",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "REUSE_CASE_004",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "DD0F2838B6D3A6ACEB0485D00790B703543A3CC34C1664B667574B0117D09E04",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "CPR_CASE_001",
+      "verifierDecision": "APPROVE",
+      "evidenceHash": "1791F8493EB24E87106F1428D36D3C729EAA81B4661F7B5C0714DEEFDDB008CB",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "CPR_CASE_002",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "3CB15798C88C20B569D7C63F7BFC3B952290FC81F8E7190C016F47DD4B2C2695",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    },
+    {
+      "caseId": "CPR_CASE_003",
+      "verifierDecision": "REJECT_OR_HOLD",
+      "evidenceHash": "39C229B5CD42B6A2D63C7E5F66636B2368F53A4AFE5FD88E00D33E0C3BFEDFF1",
+      "provider": "REPLAY_FIXTURE",
+      "oracleVisibleToVerifier": "NO"
+    }
+  ],
+  "attackFixtures": [
+    {
+      "attackClass": "missing_case",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "duplicate_response",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "unknown_case",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "hash_mismatch",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "source_conflict_false_approval",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "unsourced_false_approval",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "stale_version_false_approval",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "repair_invalidation_false_approval",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "hash_identity_alias_promotion",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "provider_disagreement_auto_pass",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "partial_run",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "oracle_leak_attempt",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "zero_tolerance_score_offset",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "publication_unlock_attempt",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "real_wave1_submission_attempt",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    }
+  ]
+}

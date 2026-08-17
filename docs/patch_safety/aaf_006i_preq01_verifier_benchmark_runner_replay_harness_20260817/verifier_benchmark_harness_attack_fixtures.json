@@ -1,0 +1,142 @@
+{
+  "artifactId": "AAF_006I_PREQ01_HARNESS_ATTACK_FIXTURES_20260817",
+  "attackClasses": [
+    "missing_case",
+    "duplicate_response",
+    "unknown_case",
+    "hash_mismatch",
+    "source_conflict_false_approval",
+    "unsourced_false_approval",
+    "stale_version_false_approval",
+    "repair_invalidation_false_approval",
+    "hash_identity_alias_promotion",
+    "provider_disagreement_auto_pass",
+    "partial_run",
+    "oracle_leak_attempt",
+    "zero_tolerance_score_offset",
+    "publication_unlock_attempt",
+    "real_wave1_submission_attempt"
+  ],
+  "attackFixtures": [
+    {
+      "attackClass": "missing_case",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "duplicate_response",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "unknown_case",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "hash_mismatch",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "source_conflict_false_approval",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "unsourced_false_approval",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "stale_version_false_approval",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "repair_invalidation_false_approval",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "hash_identity_alias_promotion",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "provider_disagreement_auto_pass",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "partial_run",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "oracle_leak_attempt",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "zero_tolerance_score_offset",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "publication_unlock_attempt",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    },
+    {
+      "attackClass": "real_wave1_submission_attempt",
+      "expectedHarnessDecision": "FAIL_CLOSED",
+      "pass": "PASS",
+      "realProviderExecutionPerformed": "NO",
+      "realWave1ClaimsSubmitted": 0,
+      "publicationEligible": false
+    }
+  ]
+}
