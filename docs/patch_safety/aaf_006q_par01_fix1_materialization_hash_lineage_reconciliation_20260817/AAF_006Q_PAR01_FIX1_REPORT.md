@@ -1,0 +1,59 @@
+# AAF-006Q-PAR01-FIX1 Materialization Hash and Lineage Reconciliation
+
+## Verdict
+
+AAF_006Q_PAR01_FIX1_CONTROLLED_MATERIALIZATION_HASH_AND_LINEAGE_RECONCILIATION_PASSED
+
+## Authorities
+
+- Q_R1_AUTHORITY: f4cb0601e7e7bcf241cb0f73b17bf0c8274d0173
+- PRIOR_PAR01_AUTHORITY: 08b8642643618a23c586cc951f280967817c2a7c
+- FINAL_ACADEMIC_AUTHORITY: b059edb7c1ab970eae1d930780596ef1418a8943
+- MATERIALIZATION_READINESS_AUTHORITY: 299ea6821db194307ff6cf85fff9ad6a761ecccf
+
+## Finding
+
+AAF-006Q-R1 materialization itself is consistent with the actual manifest file:
+
+- Records: 552
+- Unique materialized record IDs: 552
+- Unique claim IDs: 552
+- Missing materialized record IDs: 0
+- Missing claim IDs: 0
+- Lineage intact: 552/552
+- Target: non-public-governed-knowledge-store
+- Public projection writes: 0
+- Publication: NO
+
+## Hash Reconciliation
+
+- Q_R1_REPORTED_MANIFEST_HASH: D3C26103064F5F5F4CB302099F2AC3E7E463C4B72EC27F125E20572128D61C2E
+- ACTUAL_MANIFEST_FILE_HASH: D3C26103064F5F5F4CB302099F2AC3E7E463C4B72EC27F125E20572128D61C2E
+- PAR01_STORED_RESULT_MANIFEST_HASH: 61A63F696404987E136D78796CFB0A06D4D9EE83CA4C2B4E9FE129FF2540DECD
+
+Classification:
+
+PAR01_STALE_OR_INCORRECT_STORED_HASH_FIELD_NOT_A_MATERIALIZATION_OUTPUT_MUTATION
+
+## Verdict Label Reconciliation
+
+The prior PAR01 report used this stale/mismatched label:
+
+AAF_006Q_PAR01_ALL_221_REAL_SECONDARY_RESULTS_INDEPENDENTLY_ACCEPTED_AND_WAVE1_552_ACADEMIC_AUTHORITY_FINAL_LOCKED
+
+That wording belongs to secondary-verification acceptance, not controlled materialization. The corrected materialization audit verdict is:
+
+AAF_006Q_PAR01_FIX1_CONTROLLED_MATERIALIZATION_HASH_AND_LINEAGE_RECONCILIATION_PASSED
+
+## Safety
+
+- Live provider calls: 0
+- Firebase write: NO
+- Queue write: NO
+- Production source modified: NO
+- Public projection writes: 0
+- Publication: NO
+
+## Final Line
+
+AAF_006Q_CONTROLLED_MATERIALIZATION_RECONCILIATION_CONFIRMS_552_NONPUBLIC_OUTPUTS_WITH_COMPLETE_LINEAGE_AND_NO_PUBLICATION_WHILE_CLASSIFYING_PAR01_HASH_AND_VERDICT_TEXT_AS_REPORT_LEVEL_DEFECTS
