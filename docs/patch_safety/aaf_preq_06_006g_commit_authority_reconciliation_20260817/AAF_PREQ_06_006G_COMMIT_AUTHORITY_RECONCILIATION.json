@@ -1,0 +1,47 @@
+{
+  "verdict": "AAF_PREQ_06_006G_COMMIT_AUTHORITY_RECONCILIATION_PASSED_WITH_MIXED_SCOPE_CAVEAT",
+  "head": "97eae067873403bdf09926576cea4c643b439c9e",
+  "mixedCommit": "97eae067873403bdf09926576cea4c643b439c9e",
+  "mixedCommitSubject": "fix(academic-factory): AAF-004B FIX4 FINAL - locked persistent queue authority and emulator proof",
+  "aaf006gEvidenceStatus": "VALID_TRACKED_IN_MIXED_COMMIT",
+  "aaf006gExclusiveCommit": "NO",
+  "aaf006gAuthorityPaths": [
+    "docs/patch_safety/aaf_006g_verifier_benchmark_acceptance_ceremony_20260817/AAF_006G_REPORT.json",
+    "docs/patch_safety/aaf_006g_verifier_benchmark_acceptance_ceremony_20260817/AAF_006G_REPORT.md",
+    "docs/patch_safety/aaf_006g_verifier_benchmark_acceptance_ceremony_20260817/verifier_benchmark_acceptance_ceremony_contract.json",
+    "docs/patch_safety/aaf_006g_verifier_benchmark_acceptance_ceremony_20260817/verifier_benchmark_acceptance_ceremony_manifest.json",
+    "docs/patch_safety/aaf_006g_verifier_benchmark_acceptance_ceremony_20260817/verifier_benchmark_ceremony_attack_fixtures.json"
+  ],
+  "mixedCommitPaths": [
+    "A\tdocs/patch_safety/aaf_006g_verifier_benchmark_acceptance_ceremony_20260817/AAF_006G_REPORT.json",
+    "A\tdocs/patch_safety/aaf_006g_verifier_benchmark_acceptance_ceremony_20260817/AAF_006G_REPORT.md",
+    "A\tdocs/patch_safety/aaf_006g_verifier_benchmark_acceptance_ceremony_20260817/verifier_benchmark_acceptance_ceremony_contract.json",
+    "A\tdocs/patch_safety/aaf_006g_verifier_benchmark_acceptance_ceremony_20260817/verifier_benchmark_acceptance_ceremony_manifest.json",
+    "A\tdocs/patch_safety/aaf_006g_verifier_benchmark_acceptance_ceremony_20260817/verifier_benchmark_ceremony_attack_fixtures.json",
+    "M\tfunctions/lib/academicFactory/repositories/aafQueueRepository.js",
+    "M\tfunctions/lib/academicFactory/repositories/aafQueueRepository.js.map",
+    "M\tfunctions/lib/test/aafQueue.test.js",
+    "M\tfunctions/lib/test/aafQueue.test.js.map",
+    "M\tfunctions/src/academicFactory/models/aafJob.ts",
+    "M\tfunctions/src/academicFactory/repositories/aafQueueRepository.ts",
+    "M\tfunctions/src/test/aafQueue.test.ts"
+  ],
+  "aaf006gVerdict": "AAF_006G_VERIFIER_BENCHMARK_ACCEPTANCE_CEREMONY_READY",
+  "benchmarkCases": 112,
+  "oracleCases": 112,
+  "zeroToleranceCases": 63,
+  "ceremonyAttacksPassed": 9,
+  "ceremonyAttacksFailed": 0,
+  "benchmarkRegenerationRequired": "NO",
+  "productCodeAuthority": "NOT_GRANTED_BY_006G",
+  "backendAuthority": "SEPARATE_AAF004B_LANE",
+  "safety": {
+    "firebaseRead": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO",
+    "canonicalContentModified": "NO",
+    "productCodeModifiedByThisReconciliation": "NO"
+  },
+  "finalLine": "AAF_006G_EVIDENCE_VALID_BUT_TRACKED_IN_MIXED_AAF004B_COMMIT_97EAE067873403BDF09926576CEA4C643B439C9E"
+}
