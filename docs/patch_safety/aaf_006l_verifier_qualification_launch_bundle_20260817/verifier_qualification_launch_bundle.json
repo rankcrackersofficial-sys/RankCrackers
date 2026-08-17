@@ -1,0 +1,31 @@
+{
+  "artifactId": "AAF_006L_VERIFIER_QUALIFICATION_LAUNCH_BUNDLE_20260817",
+  "masterCode": "RANKCRACKERS_AUTONOMOUS_ACADEMIC_FACTORY_V1",
+  "benchmarkCases": 112,
+  "zeroToleranceCases": 63,
+  "providerRequestEnvelopes": 112,
+  "uniqueCaseIds": 112,
+  "missingCases": 0,
+  "duplicateCases": 0,
+  "oracleLeakedToProvider": "NO",
+  "evaluatorExpectationLeakedToProvider": "NO",
+  "qualificationResultLeakedToProvider": "NO",
+  "requestSetHashDeterminism": "PASS",
+  "aaf006aAvailable": "PENDING_EXTERNAL_LANE",
+  "aaf006bAvailable": "PENDING_BACKEND_LANE",
+  "policyBindingStatus": "PENDING_AAF006A_POLICY",
+  "providerAdapterBindingStatus": "PENDING_REAL_AAF006B_ADAPTER",
+  "realQualificationLaunchAllowed": false,
+  "realProviderExecution": "NO",
+  "realWave1CandidatesInLaunchBundle": 0,
+  "realWave1ClaimsInLaunchBundle": 0,
+  "realWave1ClaimsSubmitted": 0,
+  "realVerificationResultsIngested": 0,
+  "publicationEligible": false,
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO"
+  }
+}

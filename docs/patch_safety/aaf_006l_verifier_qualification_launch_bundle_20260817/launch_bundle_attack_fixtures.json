@@ -1,0 +1,119 @@
+{
+  "artifactId": "AAF_006L_LAUNCH_BUNDLE_ATTACK_FIXTURES_20260817",
+  "attackClasses": [
+    "missing_cases_in_launch_request",
+    "duplicate_cases_in_launch_request",
+    "wrong_case_id_request",
+    "oracle_leak_in_launch_envelope",
+    "evaluator_expectation_leak_in_launch_envelope",
+    "qualification_result_pre_leak",
+    "request_set_hash_tamper",
+    "launch_before_aaf006a_policy_accepted",
+    "launch_before_aaf006b_adapter_accepted",
+    "real_provider_execution_attempt",
+    "real_wave1_claims_inclusion",
+    "unsourced_wave1_claims_inclusion",
+    "direct_firebase_write_on_launch",
+    "direct_queue_write_on_launch",
+    "publication_unlock_on_launch",
+    "model_fact_check_bypass_on_launch"
+  ],
+  "attacks": [
+    {
+      "attackClass": "missing_cases_in_launch_request",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "duplicate_cases_in_launch_request",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "wrong_case_id_request",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "oracle_leak_in_launch_envelope",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "evaluator_expectation_leak_in_launch_envelope",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "qualification_result_pre_leak",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "request_set_hash_tamper",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "launch_before_aaf006a_policy_accepted",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "launch_before_aaf006b_adapter_accepted",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "real_provider_execution_attempt",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "real_wave1_claims_inclusion",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "unsourced_wave1_claims_inclusion",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "direct_firebase_write_on_launch",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "direct_queue_write_on_launch",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "publication_unlock_on_launch",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    },
+    {
+      "attackClass": "model_fact_check_bypass_on_launch",
+      "status": "PASS",
+      "expectedLaunchDecision": "REJECT_AND_FAIL_CLOSED",
+      "failClosed": "YES"
+    }
+  ]
+}
