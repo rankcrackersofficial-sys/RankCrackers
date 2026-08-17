@@ -1,0 +1,31 @@
+{
+  "verdict": "AAF_008A_FINAL_AUTOMATION_RESIDUAL_RESOLVED_WITH_EXACT_DENOMINATORS_OWNERS_AND_100_PERCENT_ACCEPTANCE_GATES",
+  "final_residual_definition_authority": "610650bc7196c8e683519720dd26a9c3ce8130b6",
+  "final_academic_authority": "b059edb7c1ab970eae1d930780596ef1418a8943",
+  "final_materialization_authority": "08b8642643618a23c586cc951f280967817c2a7c",
+  "final_publication_authority": "6ba5cbd8eb7b433c6e1422c6c392fca60c198eae",
+  "final_student_runtime_authority": "e7d65ce7d231a42fa72b35930c59ee4440c60212",
+  "implementation_candidate": "0bea487f14a2ae76a21c8a4fdb9f52ba60665f34",
+  "implementation_commit_exists": "TRUE",
+  "implementation_commit_parent": "1dcdf06cb9c7357c70638916a471fb77735a1f0e",
+  "implementation_commit_subject": "feat(academic-factory): AAF-008CD-R1 - implement all four final residual gates",
+  "exact_production_patch_files_present": "TRUE",
+  "exact_test_patch_files_present": "TRUE",
+  "all_modified_paths_have_preimage_hash": "TRUE",
+  "all_patches_apply_cleanly": "TRUE",
+  "placeholder_patches": 0,
+  "pseudocode_patches": 0,
+  "g2_gate_mapped_to_patch_and_test": "TRUE",
+  "cache_gate_mapped_to_patch_and_test": "TRUE",
+  "superseded_batch_gate_mapped_to_patch_and_test": "TRUE",
+  "stale_lease_gate_mapped_to_patch_and_test": "TRUE",
+  "b1_b2_production_path_overlap": "ZERO",
+  "physical_device_proof": "NOT_AVAILABLE",
+  "production_source_modified": "NO",
+  "commit": "be2c31b601b8bd5e407d737b3f83f7c65b146f64",
+  "final_line": "AAF_ALL_552_GOVERNED_WAVE1_PUBLIC_PROJECTIONS_HAVE_BEEN_INDEPENDENTLY_ACCEPTED_IN_THE_REAL_STUDENT_RUNTIME_WITH_AUTHORITY_PRESERVATION_SAFE_ACCESS_ADAPTIVE_RENDERING_ZERO_PRIVATE_EXPOSURE_AND_NO_PRODUCTION_FALLBACK",
+  "sha256Matrix": {
+    "AAF_008E_PAR01_REPORT.json": "6C136A45CD22CEFC22E395C5273BD3FE885202F9FD2117BBBBF72C98422E8512",
+    "AAF_008E_PAR01_REPORT.md": "C81492E9A46447684918A0D2B171662426C2F710ADBB18BDE9BA2AFD1D950C10"
+  }
+}
