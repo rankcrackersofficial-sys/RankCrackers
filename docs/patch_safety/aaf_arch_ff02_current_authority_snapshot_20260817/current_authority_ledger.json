@@ -1,0 +1,34 @@
+{
+  "ledgerId": "AAF_ARCH_FF02_CURRENT_AUTHORITY_LEDGER_20260817",
+  "currentHead": "d98fcc43e89e1b268907d680c2ff6488823b1e5f",
+  "lockedAuthorities": {
+    "aaf006a": "9bc0e5eb",
+    "aaf006l006aBinding": "39dfc6556bf202fb3494d0c1fa5fad1c87fb0d38",
+    "aafArchFf01": "e016be348b6484363564b1a7ffd2e73a71c1d3c5"
+  },
+  "pendingAuthorities": {
+    "aaf004dFinalAuthorityLocked": false,
+    "aaf004dPendingGate": "AAF-004D-PREQ12-FIX2-TO-FINAL-SEMANTIC-SUPERSESSION-AND-AUTHORITY-RECONCILIATION",
+    "aaf006bFinalAccepted": false,
+    "aaf006bPendingGate": "AAF-006B-R2-FIX1-DIRECT-CODE-GATE-RECONCILIATION-AND-PRODUCTION-SAFETY-CLOSEOUT"
+  },
+  "executionCounters": {
+    "realBenchmark": "0/112",
+    "realZeroToleranceRun": "0/63",
+    "realWave1": "0/552",
+    "realVerifierQualified": false,
+    "publicationEligible": false,
+    "aaf006mUnlocked": false
+  },
+  "safety": {
+    "chatgptBackendSourceFilesModified": 0,
+    "chatgptFunctionsFilesModified": 0,
+    "chatgptWorkerFilesModified": 0,
+    "chatgptProviderCodeModified": 0,
+    "realProviderExecution": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO"
+  },
+  "finalLine": "AAF_ARCHITECT_CURRENT_AUTHORITY_LEDGER_IS_FROZEN_AND_THE_FACTORY_IS_WAITING_ONLY_ON_004D_FINAL_AUTHORITY_AND_006B_REAL_VERIFIER_ACCEPTANCE_BEFORE_006M_REAL_QUALIFICATION"
+}
