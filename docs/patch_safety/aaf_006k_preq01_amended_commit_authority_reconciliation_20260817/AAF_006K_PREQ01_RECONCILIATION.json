@@ -1,0 +1,38 @@
+{
+  "verdict": "AAF_006K_PREQ01_CONTROL_PLANE_AUTHORITY_RECONCILIATION_PASSED_WITH_MIXED_COMMIT_CAVEAT",
+  "currentHead": "cf536885ab55a70437fb40220fc45a459e85f2ad",
+  "cf536CommitScope": "MIXED_004D_006K",
+  "prior8917ObjectExists": true,
+  "prior8917IsCf536Ancestor": true,
+  "aaf006kRequiredFilesPresent": "5/5",
+  "aaf006kContentSemanticallyChanged": false,
+  "aaf006kAuthorityMode": "PATH_SCOPED",
+  "benchmarkCases": 112,
+  "zeroToleranceCases": 63,
+  "controlPlaneAttackClasses": 16,
+  "controlPlaneAttacksPassed": 16,
+  "controlPlaneAttacksFailed": 0,
+  "qualificationReusableAfterMaterialVerifierChange": false,
+  "replayQualificationCanUnlockWave1": false,
+  "staleQualificationCanUnlockRealClaims": false,
+  "unqualifiedResultLedgerAcceptance": false,
+  "realProviderExecution": "NO",
+  "realProviderBenchmarkRunAllowed": false,
+  "realWave1RunAllowed": false,
+  "publicationEligible": false,
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO"
+  },
+  "reconciliationCommit": "a1329a02fbc8dc43029a3ee7ac9511bf3d5abae2",
+  "fileHashes": {
+    "AAF_006K_REPORT.json": "EE28A5029A8685896231BB638963202B03C42C7952335ABF3DBE49F4E5B73802",
+    "AAF_006K_REPORT.md": "3F02629BF75AEF84FA65179D2F6C8A6907F7C4257B09D306E86BA2193A0F9C77",
+    "control_plane_attack_fixtures.json": "04571190CCFCE89195A82B19423FADDB3656C0979BB5A695202E7D54ABD8251C",
+    "verifier_qualification_control_plane.json": "C410DDA870C1DF79F53345B0C3CE428CE2B691BED889BB1DD49D58DE8D39B3B5",
+    "verifier_qualification_control_plane_manifest.json": "9734C1C84725D7A6290D94D8FD6AC04D5D8CAB40F10C19CAB61A4F2D586055F4"
+  },
+  "finalLine": "AAF_006K_CONTROL_PLANE_REMAINS_VALID_WITH_PATH_SCOPED_AUTHORITY_AFTER_COMMIT_AMENDMENT"
+}
