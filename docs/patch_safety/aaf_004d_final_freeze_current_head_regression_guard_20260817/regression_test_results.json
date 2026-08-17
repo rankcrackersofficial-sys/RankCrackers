@@ -1,0 +1,11 @@
+{
+  "testSuite": "functions/src/test/aafRegistry.test.ts",
+  "results": [
+    { "name": "CANONICAL_TYPE_REGISTRY_TESTED", "status": "PASS", "count": 13 },
+    { "name": "CANONICAL_TYPE_SEMANTICALLY_TESTED", "status": "PASS", "count": "13/13" },
+    { "name": "SOURCE_VALIDATION_TRUST_PROOF", "status": "PASS" },
+    { "name": "NON_CANONICAL_TYPE_ATTACKS_BLOCKED", "status": "PASS", "count": "12/12" },
+    { "name": "HANDLER_OWNER_COLLISIONS", "status": "PASS" },
+    { "name": "AAF006_FACT_VERIFICATION_BYPASSED", "status": "PASS", "value": "NO" }
+  ]
+}
