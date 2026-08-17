@@ -1,6 +1,5 @@
 import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
-import * as admin from 'firebase-admin';
 
 /**
  * 🔱 STRUCTURAL AAF WORKER ADAPTER

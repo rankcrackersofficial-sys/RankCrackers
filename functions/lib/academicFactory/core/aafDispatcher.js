@@ -70,11 +70,12 @@ class AafDispatcher {
             if (!started)
                 throw new Error('STATE_CONCURRENCY_ERROR: Failed to transition to running.');
             // 4. EXECUTE HANDLER (Isolated)
-            // Implementation MUST NOT call AI/LLM directly here; it calls the bound worker.
-            const outputHash = await handler(job);
+            const result = await handler(job);
+            if (!result.success) {
+                throw new Error(result.error || 'WORKER_FAILED');
+            }
             // 5. SUBMIT FOR REVIEW (running -> reviewing)
-            // This enforces the governed review path.
-            await this.repo.submitForReview(idempotencyKey, workerId, outputHash);
+            await this.repo.submitForReview(idempotencyKey, workerId, result.outputHash);
             // Note: Approval/Materialization/Publication are handled via separate governance triggers or human-in-the-loop steps.
             console.log(`🔱 AAF DISPATCHER: Job ${idempotencyKey} submitted for review.`);
         }

@@ -45,7 +45,7 @@ describe('AAF Full Governed Orchestration (AAF-004C Hardened)', () => {
     const key = 'CLOSED_LOOP_GOVERNED';
     await repo.enqueue({ ...baseJob, idempotencyKey: key, state: 'ready' });
 
-    aafJobRegistry.register('digibookDraft', async () => 'artifact_h1');
+    aafJobRegistry.register('digibookDraft', async () => ({ success: true, outputHash: 'artifact_h1' }));
 
     // 1. ready -> leased -> running -> reviewing
     await dispatcher.dispatch(key, 'worker_loop');

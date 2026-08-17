@@ -1,22 +1,18 @@
-import { AafJobMetadata } from '../models/aafJob';
-
-/**
- * 🔱 AAF JOB HANDLER INTERFACE
- */
-export type AafJobHandler = (job: AafJobMetadata) => Promise<string>; // Returns outputHash
+import { AafWorker } from '../workers/aafWorkerTypes';
 
 /**
  * 🔱 AAF JOB REGISTRY
- * Maps task types to specialized worker implementations.
+ * Maps task types to specialized AAF worker adapters.
+ * Implements AAF-004D Real Governed Worker Bindings.
  */
 class AafJobRegistry {
-  private handlers: Map<string, AafJobHandler> = new Map();
+  private handlers: Map<string, AafWorker> = new Map();
 
-  register(type: string, handler: AafJobHandler) {
+  register(type: string, handler: AafWorker) {
     this.handlers.set(type, handler);
   }
 
-  getHandler(type: string): AafJobHandler | undefined {
+  getHandler(type: string): AafWorker | undefined {
     return this.handlers.get(type);
   }
 
@@ -28,25 +24,37 @@ class AafJobRegistry {
 export const aafJobRegistry = new AafJobRegistry();
 
 /**
- * 🛡️ BOOTSTRAP REGISTRY (REPRESENTATIVE)
- * Real worker bindings happen in AAF-005+.
+ * 🛡️ WORKER BINDINGS (FIXED CONTRACT)
+ * Binding AAF job types to their respective adapters.
  */
-const stubHandler = async (job: AafJobMetadata) => `stub_hash_${job.idempotencyKey}`;
+import { structuralAafWorker } from '../workers/structuralAafWorker';
+import { svoAafWorker } from '../workers/svoAafWorker';
+import { manifestAafWorker } from '../workers/manifestAafWorker';
+import { digibookDraftAafWorker } from '../workers/digibookDraftAafWorker';
+import { encodingAafWorker } from '../workers/encodingAafWorker';
+import { repairAafWorker } from '../workers/repairAafWorker';
 
-const AAF_JOB_TYPES = [
-  'structural',
-  'svo',
-  'manifest',
-  'digibookDraft',
-  'digibookValidation',
-  'digibookProReview',
-  'digibookAssembly',
-  'mcqDraft',
-  'mcqValidation',
-  'revisionDraft',
-  'revisionValidation',
-  'encoding',
-  'repair'
-];
+// 1. structural -> Pass 1
+aafJobRegistry.register('structural', structuralAafWorker);
 
-AAF_JOB_TYPES.forEach(type => aafJobRegistry.register(type, stubHandler));
+// 2. svo -> Pass 2
+aafJobRegistry.register('svo', svoAafWorker);
+
+// 3. manifest -> Pass 3
+aafJobRegistry.register('manifest', manifestAafWorker);
+
+// 4. digibookDraft -> Pass 3 (Mapped to manifestation logic)
+aafJobRegistry.register('digibookDraft', digibookDraftAafWorker);
+
+// 5. encoding -> Normalization
+aafJobRegistry.register('encoding', encodingAafWorker);
+
+// 6. repair -> Canonical Repair
+aafJobRegistry.register('repair', repairAafWorker);
+
+/**
+ * 🛡️ BLOCKED_MISSING_WORKER_CAPABILITY
+ * The following job types currently have no dedicated governed worker in Functions.
+ * mcqDraft, mcqValidation, revisionDraft, revisionValidation,
+ * digibookValidation, digibookProReview, digibookAssembly.
+ */
