@@ -1,0 +1,50 @@
+{
+  "verdict": "AAF_PREQ_08_006J_COMMIT_AUTHORITY_RECONCILIATION_PASSED_WITH_MIXED_SCOPE_CAVEAT",
+  "head": "4ca9a8f719c39a4e3a98f08cc975d4d8088bdef1",
+  "mixedCommit": "4ca9a8f719c39a4e3a98f08cc975d4d8088bdef1",
+  "mixedCommitSubject": "feat(academic-factory): add verifier benchmark replay harness",
+  "aaf006jEvidenceStatus": "VALID_TRACKED_IN_MIXED_COMMIT",
+  "aaf006jExclusiveCommit": "NO",
+  "aaf006jAuthorityPaths": [
+    "docs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/AAF_006J_REPORT.json",
+    "docs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/AAF_006J_REPORT.md",
+    "docs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/claim_result_binding_contract.json",
+    "docs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/empty_real_result_ledger.json",
+    "docs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/immutable_result_ledger_manifest.json",
+    "docs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/immutable_result_ledger_schema.json",
+    "docs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/result_ledger_attack_fixtures.json",
+    "docs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/result_set_hash_determinism.json"
+  ],
+  "mixedCommitPaths": [
+    "A\tdocs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/AAF_006J_REPORT.json",
+    "A\tdocs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/AAF_006J_REPORT.md",
+    "A\tdocs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/claim_result_binding_contract.json",
+    "A\tdocs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/empty_real_result_ledger.json",
+    "A\tdocs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/immutable_result_ledger_manifest.json",
+    "A\tdocs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/immutable_result_ledger_schema.json",
+    "A\tdocs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/result_ledger_attack_fixtures.json",
+    "A\tdocs/patch_safety/aaf_006j_immutable_verification_result_ledger_20260817/result_set_hash_determinism.json",
+    "A\tfunctions/src/test/aafRegistry.test.ts"
+  ],
+  "aaf006jVerdict": "AAF_006J_IMMUTABLE_VERIFICATION_RESULT_LEDGER_AND_CLAIM_BINDING_READY",
+  "wave1Total": 10,
+  "totalSubstantiveClaims": 552,
+  "resultLedgerAttackClassesPassed": 18,
+  "resultLedgerAttackClassesFailed": 0,
+  "realVerificationResultsIngested": 0,
+  "publicationEligible": false,
+  "productCodeAuthority": "NOT_GRANTED_BY_006J",
+  "testCodeAuthority": "NOT_GRANTED_BY_006J",
+  "benchmarkRegenerationRequired": "NO",
+  "ledgerRegenerationRequired": "NO",
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseRead": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO",
+    "canonicalContentModified": "NO",
+    "productCodeModifiedByThisReconciliation": "NO"
+  },
+  "finalLine": "AAF_006J_EVIDENCE_VALID_BUT_TRACKED_IN_MIXED_COMMIT_4CA9A8F719C39A4E3A98F08CC975D4D8088BDEF1"
+}
