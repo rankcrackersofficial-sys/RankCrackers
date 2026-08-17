@@ -1,0 +1,140 @@
+{
+  "artifactId": "AAF_006N_PAR01_WAVE1_VALIDATOR_RESULTS_20260817",
+  "attackFailures": 0,
+  "results": [
+    {
+      "attackId": "ATTACK_01_MISSING_CLAIM",
+      "description": "missing claim result",
+      "intercepted": true,
+      "errorsLogged": [
+        "Ledger size mismatch: got 551, expected 552"
+      ]
+    },
+    {
+      "attackId": "ATTACK_02_DUPLICATE_CLAIM",
+      "description": "duplicate claim result",
+      "intercepted": true,
+      "errorsLogged": [
+        "Ledger size mismatch: got 553, expected 552",
+        "Duplicate result for claim: CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_03_UNKNOWN_CLAIM",
+      "description": "unknown claim",
+      "intercepted": true,
+      "errorsLogged": [
+        "Ledger size mismatch: got 553, expected 552",
+        "Unknown claim ID: UNKNOWN_999"
+      ]
+    },
+    {
+      "attackId": "ATTACK_04_WRONG_CLAIM_HASH",
+      "description": "wrong claim hash",
+      "intercepted": true,
+      "errorsLogged": [
+        "Claim hash mismatch for CLAIM_W1_CP_01_001",
+        "Request hash mismatch for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_05_WRONG_SOURCE_PACK_HASH",
+      "description": "wrong source pack hash",
+      "intercepted": true,
+      "errorsLogged": [
+        "Source pack hash mismatch for CLAIM_W1_CP_01_001",
+        "Request hash mismatch for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_06_WRONG_REQUEST_HASH",
+      "description": "wrong request hash",
+      "intercepted": true,
+      "errorsLogged": [
+        "Request hash mismatch for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_07_WRONG_RESPONSE_HASH",
+      "description": "wrong response hash",
+      "intercepted": true,
+      "errorsLogged": [
+        "Invalid provider response hash for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_08_WRONG_QUALIFICATION_ID",
+      "description": "wrong qualification identity",
+      "intercepted": true,
+      "errorsLogged": [
+        "Wrong qualification identity binding for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_09_TWO_FINAL_OUTCOMES",
+      "description": "two final outcomes",
+      "intercepted": true,
+      "errorsLogged": [
+        "Multiple or zero outcomes for CLAIM_W1_CP_01_001",
+        "Illegal outcome \"undefined\" for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_10_ZERO_FINAL_OUTCOMES",
+      "description": "zero final outcomes",
+      "intercepted": true,
+      "errorsLogged": [
+        "Multiple or zero outcomes for CLAIM_W1_CP_01_001",
+        "Illegal outcome \"undefined\" for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_11_ILLEGAL_VERDICT",
+      "description": "illegal verdict",
+      "intercepted": true,
+      "errorsLogged": [
+        "Illegal outcome \"PUBLISHED\" for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_12_PROVIDER_PASS_AUTO_VERIFIED",
+      "description": "provider PASS auto-verified",
+      "intercepted": true,
+      "errorsLogged": [
+        "Provider PASS auto-verified violation for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_13_SOURCE_CONFLICT_OVERRIDDEN",
+      "description": "source-conflict overridden",
+      "intercepted": true,
+      "errorsLogged": [
+        "Source conflict override violation for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_14_STALE_RESULT_REUSED",
+      "description": "stale result reused",
+      "intercepted": true,
+      "errorsLogged": [
+        "Stale result reused violation for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_15_SECONDARY_UNQUALIFIED_PROVIDER",
+      "description": "secondary result from unqualified provider",
+      "intercepted": true,
+      "errorsLogged": [
+        "Secondary result from unqualified provider for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_16_PUBLIC_PROJECTION_WRITE",
+      "description": "public projection flag/write",
+      "intercepted": true,
+      "errorsLogged": [
+        "Publication flag active violation for CLAIM_W1_CP_01_001"
+      ]
+    }
+  ]
+}

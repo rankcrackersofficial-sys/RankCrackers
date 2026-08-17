@@ -1,0 +1,33 @@
+{
+  "verdict": "AAF_006N_PAR01_CHATGPT_552_CLAIM_CROSS_AUDIT_HARNESS_READY_FOR_REAL_WAVE1_RESULTS",
+  "candidates": 10,
+  "claims": 552,
+  "uniqueClaimIds": 552,
+  "duplicateClaimIds": 0,
+  "missingClaims": 0,
+  "claimHashMismatches": 0,
+  "sourcePackHashMismatches": 0,
+  "inputManifestHashMismatches": 0,
+  "lineageIncomplete": 0,
+  "aliasesAsCanonicalIds": 0,
+  "attackFailures": 0,
+  "realWave1ClaimsSubmitted": 0,
+  "publication": "NO",
+  "productionSourceModified": "NO",
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO"
+  },
+  "commit": "7d516e6887ca7ff37892e945a1355fec77129f60",
+  "finalLine": "AAF_006N_PAR01_CHATGPT_552_CLAIM_CROSS_AUDIT_HARNESS_READY_FOR_REAL_WAVE1_RESULTS",
+  "sha256Matrix": {
+    "AAF_006N_PAR01_REPORT.json": "CE06BFC877004C6BFDE1CF6B8E92A034253DD425183EC34519C2D004CF78A1E1",
+    "AAF_006N_PAR01_REPORT.md": "78D5663C5EE2DB1DC529337A19684E861228650527E264A6728807A0BD45542E",
+    "wave1_552_input_inventory.json": "0238DD76CD597CA35E7A7EAB5DF179303526441157599A016EDB532CB2566928",
+    "552_result_validation_contract.json": "FB98C668E882D31B07DE9468CD07537CBA4BD86987BB2C6BA6AEDBA011E0A04B",
+    "552_attack_matrix.json": "1B67BD0B5D0438E3BE2016DECDE6FE6FE479A054705C06208BBA46910A59A3B8",
+    "chatgpt_wave1_validator_results.json": "3C2E1AD8B4817285CB8AE4736315BBC4AEC3AFB9851D241BEB580D87C18FAD04"
+  }
+}
