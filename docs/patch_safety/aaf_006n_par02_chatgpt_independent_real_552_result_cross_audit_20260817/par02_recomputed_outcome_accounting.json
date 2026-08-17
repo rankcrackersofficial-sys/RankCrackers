@@ -1,0 +1,30 @@
+{
+  "reportedOutcomeCounts": {
+    "verified": 331,
+    "repairRequired": 0,
+    "crossCheckRequired": 221,
+    "sourceRefreshRequired": 0,
+    "hardHold": 0,
+    "totalClaims": 552
+  },
+  "ledgerOutcomeCounts": {
+    "CROSS_CHECK_REQUIRED": 221,
+    "VERIFIED": 331
+  },
+  "chatgptRecomputed": {
+    "verified": 331,
+    "repairRequired": 0,
+    "crossCheckRequired": 221,
+    "sourceRefreshRequired": 0,
+    "hardHold": 0,
+    "method": "Outcome recount only. Full 006A claim-by-claim recomputation is blocked by missing per-claim risk class/sourcePackHash/provenance fields."
+  },
+  "recomputationLimits": [
+    "Ledger omits sourcePackHash required by ChatGPT PAR01 result contract.",
+    "Ledger omits candidateId required by PAR02 identity binding.",
+    "Ledger omits missionId required by PAR02 identity binding.",
+    "Ledger uses canonicalVersion but omits canonicalKnowledgeVersion required by PAR02.",
+    "Provider provenance shows contract-only provider with liveModelCalls=0; real-provider execution is not independently proven.",
+    "Ledger does not expose per-claim 006A risk class needed to independently derive 221 cross-provider-required claims claim-by-claim."
+  ]
+}

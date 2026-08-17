@@ -1,0 +1,242 @@
+{
+  "verdict": "AAF_006N_PAR02_BLOCKED_BY_REAL_PROVIDER_PROVENANCE_AND_LEDGER_BINDING_GAPS",
+  "currentHead": "d9dc4708b12e41f7006cbc6765e46a4c888ed011",
+  "audited006nAuthority": "d79d6aad9139a5322fffb6eafcd2527aa73b4b43",
+  "validatorAuthority": "fede9b7fe7bc2e30ea803704aa8755711d70ae60",
+  "sourceFiles": {
+    "inputInventory": "docs\\patch_safety\\aaf_006n_par01_chatgpt_wave1_552_cross_audit_harness_20260817\\wave1_552_input_inventory.json",
+    "resultContract": "docs\\patch_safety\\aaf_006n_par01_chatgpt_wave1_552_cross_audit_harness_20260817\\552_result_validation_contract.json",
+    "actualLedger": "docs\\patch_safety\\aaf_006n_r1_real_wave1_552_claim_primary_independent_verification_20260817\\real_wave1_primary_verification_ledger.json",
+    "actualReport": "docs\\patch_safety\\aaf_006n_r1_real_wave1_552_claim_primary_independent_verification_20260817\\AAF_006N_R1_REPORT.json",
+    "policyReport": "docs\\patch_safety\\aaf_006a_independent_academic_fact_verification_core_20260817\\AAF_006A_REPORT.json"
+  },
+  "expectedClaims": 552,
+  "actualLedgerEntries": 552,
+  "validUniquePrimaryResults": 552,
+  "missingPrimaryResults": 0,
+  "duplicatePrimaryResults": 0,
+  "unknownPrimaryResults": 0,
+  "unaccountedClaims": 0,
+  "normalizedPrimaryResults": 552,
+  "normalizationFailures": 0,
+  "reportedOutcomeCounts": {
+    "verified": 331,
+    "repairRequired": 0,
+    "crossCheckRequired": 221,
+    "sourceRefreshRequired": 0,
+    "hardHold": 0,
+    "totalClaims": 552
+  },
+  "ledgerOutcomeCounts": {
+    "CROSS_CHECK_REQUIRED": 221,
+    "VERIFIED": 331
+  },
+  "chatgptRecomputed": {
+    "verified": 331,
+    "repairRequired": 0,
+    "crossCheckRequired": 221,
+    "sourceRefreshRequired": 0,
+    "hardHold": 0,
+    "method": "Outcome recount only. Full 006A claim-by-claim recomputation is blocked by missing per-claim risk class/sourcePackHash/provenance fields."
+  },
+  "outcomeIdentityMatch": "552/552",
+  "outcomeMismatches": 0,
+  "qualificationIdentityBound": "552/552",
+  "providerConfigurationHashBound": "552/552",
+  "claimHashBound": "552/552",
+  "sourcePackHashBound": "0/552",
+  "sourceExtractHashPresent": "552/552",
+  "inputManifestHashBound": "552/552",
+  "requestHashBound": "552/552",
+  "responseHashBound": "552/552",
+  "immutableResultIdentities": "552/552",
+  "requiredFieldGaps": {
+    "missingSourcePackHash": 552,
+    "missingCandidateId": 552,
+    "missingMissionId": 552,
+    "missingCanonicalKnowledgeVersion": 552
+  },
+  "zeroStateProofFromVisibleFields": {
+    "sourceConflictClaims": 0,
+    "staleTemporalClaims": 0,
+    "insufficientSourceClaims": 0,
+    "hashBindingFailureClaims": 0
+  },
+  "realProviderProvenance": {
+    "providerIds": [
+      "gemini_benchmark_adapter_contract_only"
+    ],
+    "providerModels": [
+      "gemini-3.6-flash"
+    ],
+    "liveModelCallsReported": 0,
+    "providerContractOnlyResults": 552,
+    "provenGenuineLiveProviderResults": false
+  },
+  "crossProvider221Audit": {
+    "reportedCrossCheckRequired": 221,
+    "aaf006aFinalCrossProviderRequiredClaims": 221,
+    "independentRecomputedCrossProviderRequired": "BLOCKED_BY_MISSING_PER_CLAIM_RISK_CLASS",
+    "historical221CopiedWithoutPolicyRecomputation": "NOT_DISPROVEN"
+  },
+  "passGates": {
+    "total552": true,
+    "unique552": true,
+    "missing0": true,
+    "duplicate0": true,
+    "unknown0": true,
+    "normalized552": true,
+    "outcomeSum552": true,
+    "qualificationIdentity552": true,
+    "configHash552": true,
+    "claimHash552": true,
+    "sourcePackHash552": false,
+    "inputManifestHash552": true,
+    "requestHash552": true,
+    "responseHash552": true,
+    "immutableIdentities552": true,
+    "publicationBypassFoundFalse": true,
+    "realProviderProvenanceProved": false,
+    "policy221IndependentlyRecomputed": false
+  },
+  "blockingReasons": [
+    "Ledger omits sourcePackHash required by ChatGPT PAR01 result contract.",
+    "Ledger omits candidateId required by PAR02 identity binding.",
+    "Ledger omits missionId required by PAR02 identity binding.",
+    "Ledger uses canonicalVersion but omits canonicalKnowledgeVersion required by PAR02.",
+    "Provider provenance shows contract-only provider with liveModelCalls=0; real-provider execution is not independently proven.",
+    "Ledger does not expose per-claim 006A risk class needed to independently derive 221 cross-provider-required claims claim-by-claim."
+  ],
+  "sampleIdentityMismatches": [
+    {
+      "claimId": "CLAIM_W1_CP_01_001",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_002",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_003",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_004",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_005",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_006",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_007",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_008",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_009",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_010",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_011",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_012",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_013",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_014",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_015",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_016",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_017",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_018",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_019",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    },
+    {
+      "claimId": "CLAIM_W1_CP_01_020",
+      "field": "sourcePackHash",
+      "expected": "7DFB5EAC8AA2471AF73296E9BE2524526FC21C0CD1E9943E821098FD1FE91FDA",
+      "actual": "MISSING"
+    }
+  ],
+  "safety": {
+    "liveModelCallsFromChatgpt": 0,
+    "secondaryProviderCallsFromChatgpt": 0,
+    "repairCallsFromChatgpt": 0,
+    "productionSourceModified": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO"
+  },
+  "finalLine": "AAF_006N_REAL_552_LEDGER_REQUIRES_PROVENANCE_AND_BINDING_REPAIR_BEFORE_SECONDARY_EXECUTION"
+}
