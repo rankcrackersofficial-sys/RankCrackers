@@ -1,0 +1,225 @@
+{
+  "artifactId": "AAF_006O_SECONDARY_VALIDATOR_RESULTS_20260817",
+  "validationSuccess": true,
+  "validationErrors": [],
+  "attacksRun": 26,
+  "attacksIntercepted": 26,
+  "attacksFailed": 0,
+  "attackDetails": [
+    {
+      "id": "ATTACK_01_PRIMARY_PROVIDER_REUSE",
+      "desc": "Same primary provider reused as secondary verifier",
+      "intercepted": true,
+      "errors": [
+        "SAME_PRIMARY_PROVIDER_REUSED:CLAIM_W1_CP_01_001",
+        "UNQUALIFIED_SECONDARY_IDENTITY:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_02_PRIMARY_RESPONSE_REUSE",
+      "desc": "Same primary provider response hash reused",
+      "intercepted": true,
+      "errors": [
+        "SAME_PRIMARY_RESPONSE_REUSED:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_03_UNQUALIFIED_SECONDARY_ID",
+      "desc": "Unapproved/unqualified secondary provider ID",
+      "intercepted": true,
+      "errors": [
+        "UNQUALIFIED_SECONDARY_IDENTITY:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_04_WRONG_QUALIFICATION_HASH",
+      "desc": "Mismatched secondary qualification run ID",
+      "intercepted": true,
+      "errors": [
+        "WRONG_SECONDARY_QUALIFICATION_HASH:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_05_WRONG_CLAIM_HASH",
+      "desc": "Claim content hash mismatch in secondary record",
+      "intercepted": true,
+      "errors": [
+        "WRONG_CLAIM_HASH:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_06_WRONG_SOURCE_HASH",
+      "desc": "Source pack hash mismatch in secondary record",
+      "intercepted": true,
+      "errors": [
+        "WRONG_SOURCE_HASH:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_07_WRONG_REQUEST_HASH",
+      "desc": "Request input manifest hash mismatch in secondary record",
+      "intercepted": true,
+      "errors": [
+        "WRONG_REQUEST_HASH:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_08_MISSING_LINKAGE",
+      "desc": "Mismatched primaryResultId linkage",
+      "intercepted": true,
+      "errors": [
+        "MISSING_PRIMARY_SECONDARY_LINKAGE:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_09_PROVIDER_DISAGREEMENT_AUTO_PASS",
+      "desc": "Secondary provider fails/disputes claim but outcome is marked VERIFIED",
+      "intercepted": true,
+      "errors": [
+        "PROVIDER_DISAGREEMENT_AUTO_PASS:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_10_SOURCE_CONFLICT_OVERRIDDEN",
+      "desc": "Source conflict overridden flag set to true",
+      "intercepted": true,
+      "errors": [
+        "SOURCE_CONFLICT_OVERRIDDEN:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_11_MISSING_SECONDARY_RESULT",
+      "desc": "Remove a required secondary verification record from the ledger",
+      "intercepted": true,
+      "errors": [
+        "WRONG_SECONDARY_RESULT_COUNT",
+        "MISSING_SECONDARY_RESULT:CLAIM_W1_CP_10_024"
+      ]
+    },
+    {
+      "id": "ATTACK_12_DUPLICATE_SECONDARY_RESULT",
+      "desc": "Add a duplicate secondary verification record",
+      "intercepted": true,
+      "errors": [
+        "WRONG_SECONDARY_RESULT_COUNT",
+        "DUPLICATE_SECONDARY_RESULT:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_13_UNKNOWN_SECONDARY_CLAIM",
+      "desc": "Provide secondary result for an unknown or unmapped claim ID",
+      "intercepted": true,
+      "errors": [
+        "WRONG_SECONDARY_RESULT_COUNT",
+        "UNKNOWN_SECONDARY_CLAIM:CLAIM_W1_CP_99_999"
+      ]
+    },
+    {
+      "id": "ATTACK_14_AUTOMATIC_PUBLICATION",
+      "desc": "Attempt to set publicationEligible true directly",
+      "intercepted": true,
+      "errors": [
+        "AUTOMATIC_PUBLICATION_VIOLATION:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_15_WRONG_SECONDARY_MODEL",
+      "desc": "Mismatched secondary model ID in record",
+      "intercepted": true,
+      "errors": [
+        "WRONG_SECONDARY_MODEL:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_16_WRONG_SECONDARY_CONFIG_HASH",
+      "desc": "Mismatched configuration hash",
+      "intercepted": true,
+      "errors": [
+        "WRONG_SECONDARY_CONFIG_HASH:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_17_PROVIDER_PASS_DIRECT_OUTCOME",
+      "desc": "Direct provider pass without separate governance check",
+      "intercepted": true,
+      "errors": [
+        "PROVIDER_PASS_AS_GOVERNED_DECISION:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_18_STALE_RESULT_REUSE_FLAG",
+      "desc": "Stale result reuse flag set to true",
+      "intercepted": true,
+      "errors": [
+        "STALE_RESULT_REUSE:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_19_PUBLICATION_WRITE_BYPASS",
+      "desc": "Attempt to write directly to publication ledger",
+      "intercepted": true,
+      "errors": [
+        "AUTOMATIC_PUBLICATION_VIOLATION:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_20_COUNT_MISMATCH_EXTRA",
+      "desc": "Total records count exceeds 221",
+      "intercepted": true,
+      "errors": [
+        "WRONG_SECONDARY_RESULT_COUNT",
+        "CLAIM_NOT_REQUIRING_CROSSCHECK:CLAIM_W1_CP_01_020",
+        "WRONG_CLAIM_HASH:CLAIM_W1_CP_01_020",
+        "WRONG_REQUEST_HASH:CLAIM_W1_CP_01_020"
+      ]
+    },
+    {
+      "id": "ATTACK_21_WRONG_CANONICAL_VERSION",
+      "desc": "Canonical content version mismatch",
+      "intercepted": true,
+      "errors": [
+        "WRONG_CANONICAL_VERSION:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_22_WRONG_ORIGINAL_AMTN_ID",
+      "desc": "Original AMTN ID mismatch",
+      "intercepted": true,
+      "errors": [
+        "WRONG_ORIGINAL_AMTN_ID:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_23_WRONG_TOPIC_ID",
+      "desc": "Canonical semantic topic ID mismatch",
+      "intercepted": true,
+      "errors": [
+        "WRONG_TOPIC_ID:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_24_ALIAS_ONLY_BINDING",
+      "desc": "Attempt to bind using alias-only schema",
+      "intercepted": true,
+      "errors": [
+        "ALIAS_ONLY_BINDING:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_25_REPLAY_FIXTURE_AS_REAL_SECONDARY",
+      "desc": "Using qualification replay fixture directly in result ledger",
+      "intercepted": true,
+      "errors": [
+        "REPLAY_FIXTURE_AS_REAL_SECONDARY:CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "id": "ATTACK_26_MAJORITY_VOTING_ALLOWED",
+      "desc": "Attempt to use majority voting validation policy",
+      "intercepted": true,
+      "errors": [
+        "MAJORITY_VOTING_ALLOWED:CLAIM_W1_CP_01_001"
+      ]
+    }
+  ]
+}

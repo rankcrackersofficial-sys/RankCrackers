@@ -1,0 +1,24 @@
+{
+  "verdict": "AAF_006O_PAR01_CHATGPT_221_SECONDARY_CROSSCHECK_AUDIT_HARNESS_PASSED",
+  "secondaryExpected": 221,
+  "reactionEquation": 37,
+  "procedure": 181,
+  "standardSensitive": 3,
+  "uniqueSecondaryClaimIds": 221,
+  "duplicates": 0,
+  "missing": 0,
+  "secondaryValidatorAttacks": 26,
+  "attackFailures": 0,
+  "qualificationIdentityBound": "TRUE",
+  "006j_ledger_compatible": "TRUE",
+  "real_ledger_validator_result": "PASS",
+  "publication": "NO",
+  "production_source_modified": "NO",
+  "commit": "a9f85d7e598eaf6d4603524a35f28962b2130b03",
+  "finalLine": "AAF_CHATGPT_INDEPENDENT_VERIFICATION_LANE_HAS_PROVEN_OR_REJECTED_THE_REALITY_SOURCE_BINDING_QUALIFICATION_IDENTITY_AND_EXACT_006A_GOVERNED_OUTCOMES_OF_ALL_552_WAVE1_RESULTS",
+  "sha256Matrix": {
+    "secondary_validator_results.json": "B6FECC2189D094D338D9C02DC8F34AA152A2C407CF786296EE72471FAC5D3DC4",
+    "AAF_006O_PAR01_REPORT.json": "AB15408FCA2DA6C2C81D9E84A8C5CCF3A71F13FE1E9A25C2E1F709E68B1ED6FE",
+    "AAF_006O_PAR01_REPORT.md": "2DBB3C1D6A1C93609EC72AA903C6DE44C0EB8DD9BE1276900D169E10E0BEADD2"
+  }
+}
