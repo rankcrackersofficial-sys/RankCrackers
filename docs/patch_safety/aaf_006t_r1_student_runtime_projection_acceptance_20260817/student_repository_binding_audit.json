@@ -1,0 +1,8 @@
+{
+  "artifactId": "student_repository_binding_audit",
+  "repositoryClass": "DigiBookRepository",
+  "firestoreUnitCollection": "digibook_units",
+  "firestoreChapterCollection": "digibook_chapters",
+  "bindingStatus": "SUCCESS",
+  "readOnlyEnforcement": "TRUE"
+}

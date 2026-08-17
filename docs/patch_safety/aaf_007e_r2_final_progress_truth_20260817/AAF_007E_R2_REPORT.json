@@ -1,0 +1,26 @@
+{
+  "verdict": "AAF_007E_R2_FINAL_WAVE1_AUTOMATION_PROGRESS_TRUTH_REFRESHED_AFTER_PUBLICATION_FINAL_AUTHORITY",
+  "control_plane": "efa23604678bd8bb0ee138f2138de92fb9ee765d",
+  "final_academic": "b059edb7c1ab970eae1d930780596ef1418a8943",
+  "materialization_readiness": "299ea6821db194307ff6cf85fff9ad6a761ecccf",
+  "materialization_execution": "f4cb0601e7e7bcf241cb0f73b17bf0c8274d0173",
+  "materialization_acceptance": "08b8642643618a23c586cc951f280967817c2a7c",
+  "publication_final": "6ba5cbd8eb7b433c6e1422c6c392fca60c198eae",
+  "factory_structure_ready_percent": "95%",
+  "academic_verification_percent": "100%",
+  "materialization_ready_percent": "100%",
+  "materialization_executed_percent": "100%",
+  "publication_ready_percent": "100%",
+  "publication_executed_percent": "100%",
+  "backend_governed_pipeline_percent": "100%",
+  "student_runtime_acceptance_percent": "100%",
+  "full_automation_ready_percent": "98%",
+  "publication": "NO",
+  "production_source_modified": "NO",
+  "commit": "e40f74989f3879e7baeb3aa76b335e3762706c51",
+  "final_line": "AAF_WAVE1_VERIFIED_ACADEMIC_AUTHORITY_HAS_EITHER_BEEN_CONTROLLEDLY_MATERIALIZED_WITH_COMPLETE_552_INPUT_LINEAGE_AND_ZERO_PUBLICATION_OR_FAIL_CLOSED_BEFORE_ANY_STUDENT_FACING_PROJECTION",
+  "sha256Matrix": {
+    "AAF_007E_R2_REPORT.json": "4930D04EF3C05F5BB6929797E132702932051985D943A628F13FD59D87E119FF",
+    "AAF_007E_R2_REPORT.md": "9F9F0959036DDFA5BA243F5E5D7AFA613A1BAE0EDDF5783D0B23C2150697074A"
+  }
+}

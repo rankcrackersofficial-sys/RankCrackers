@@ -1,0 +1,6 @@
+{
+  "artifactId": "runtime_access_boundary",
+  "readPermission": "AUTHORIZED_STUDENT_PUBLIC_READ",
+  "writePermission": "DENIED",
+  "selfPromotionChecked": "PASS"
+}

@@ -1,0 +1,17 @@
+{
+  "verdict": "AAF_006T_PRE01_STUDENT_CONSUMER_CONTRACT_IS_BOUND_ONLY_TO_GOVERNED_PUBLIC_PROJECTIONS_AND_FAILS_CLOSED",
+  "public_projection_source_bound": "TRUE",
+  "internal_store_runtime_dependency": "FALSE",
+  "production_mock_fallback": "FALSE",
+  "private_model_fields_reachable": 0,
+  "canonical_version_dropped": 0,
+  "pagination_denominator_drift": 0,
+  "synthetic_error_fallback": 0,
+  "production_source_modified": "NO",
+  "commit": "e40f74989f3879e7baeb3aa76b335e3762706c51",
+  "final_line": "AAF_WAVE1_HAS_EITHER_PASSED_PUBLICATION_AND_STUDENT_PROJECTION_SAFETY_FROM_FINAL_552_ACADEMIC_AUTHORITY_AND_INDEPENDENTLY_ACCEPTED_MATERIALIZATION_OR_FAIL_CLOSED_BEFORE_ANY_PUBLIC_WRITE",
+  "sha256Matrix": {
+    "AAF_006T_PRE01_REPORT.json": "DCA5CA6640D7F1BF6429F93D47B9F5B7DE5410712CCCD80606D9D2914BDDC744",
+    "AAF_006T_PRE01_REPORT.md": "723A06A6893D27DDADE6A3E383D5EB1BD65789418F7DA4833ECBD700F8432956"
+  }
+}

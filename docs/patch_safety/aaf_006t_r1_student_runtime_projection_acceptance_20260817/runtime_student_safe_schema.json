@@ -1,0 +1,17 @@
+{
+  "artifactId": "runtime_student_safe_schema",
+  "allowedFields": [
+    "id",
+    "realm_id",
+    "title",
+    "order",
+    "status"
+  ],
+  "blockedPrivateFields": [
+    "private_solutions",
+    "answer_keys",
+    "ai_raw_metadata",
+    "reviewer_comments"
+  ],
+  "leakCheckPassed": true
+}

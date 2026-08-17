@@ -1,0 +1,7 @@
+{
+  "artifactId": "digibook_runtime_journey",
+  "entryRoute": "/digibook",
+  "loadDetailRoute": "/digibook/chapter/:id",
+  "navigationVerified": "PASS",
+  "renderingVerified": "PASS"
+}
