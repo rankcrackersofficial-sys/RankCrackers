@@ -40,7 +40,7 @@ const DEFAULT_LEASE_DURATION_MS = 5 * 60 * 1000; // 5 minutes
 const RETRY_BACKOFF_BASE_MS = 60 * 1000; // 1 minute
 /**
  * 🔱 AAF QUEUE REPOSITORY (academic_factory_v1)
- * Persistent Transaction Core for AAF-004B FIX4 FINAL.
+ * Persistent Transaction Core for AAF-004C.
  * Enforces strict domain parity, lease authority, and semantic idempotency.
  */
 class AafQueueRepository {
@@ -49,8 +49,6 @@ class AafQueueRepository {
     }
     /**
      * 🛡️ TRANSACTIONAL ENQUEUE
-     * Uses planner-provided idempotencyKey.
-     * Validates exact 9/9 locked immutable fields to prevent logical corruption.
      */
     async enqueue(job) {
         const docRef = this.db.collection(QUEUE_COLLECTION).doc(job.idempotencyKey);
@@ -58,7 +56,6 @@ class AafQueueRepository {
             const snap = await transaction.get(docRef);
             if (snap.exists) {
                 const existing = snap.data();
-                // 🛡️ LOCKED IMMUTABLE CONFLICT CHECK (9/9 Fields)
                 const conflicts = [];
                 if (existing.schemaVersion !== job.schemaVersion)
                     conflicts.push('schemaVersion');
@@ -76,7 +73,6 @@ class AafQueueRepository {
                     conflicts.push('maxAttempts');
                 if (existing.inputHash !== job.inputHash)
                     conflicts.push('inputHash');
-                // Dependency Check (Deep equality required for arrays)
                 const existingDeps = JSON.stringify([...(existing.dependencyJobIds || [])].sort());
                 const jobDeps = JSON.stringify([...(job.dependencyJobIds || [])].sort());
                 if (existingDeps !== jobDeps)
@@ -84,14 +80,12 @@ class AafQueueRepository {
                 if (conflicts.length > 0) {
                     throw new Error(`AAF_IDENTITY_CONFLICT: Job ${job.idempotencyKey} mismatch on: ${conflicts.join(', ')}.`);
                 }
-                // 🛡️ IDEMPOTENT REUSE: Update fields that are allowed to change (state, payload etc)
                 transaction.update(docRef, {
                     ...job,
                     updatedAt: admin.firestore.FieldValue.serverTimestamp(),
                 });
             }
             else {
-                // 🛡️ INITIAL STATE PRESERVATION
                 transaction.set(docRef, {
                     ...job,
                     queueContract: 'academic_factory_v1',
@@ -103,9 +97,47 @@ class AafQueueRepository {
         return job.idempotencyKey;
     }
     /**
-     * 🛡️ ATOMIC CLAIM (READY -> LEASED)
-     * Strictly claims ONLY 'ready' jobs.
-     * RETRYWAIT AND EXPIRED LEASES ARE NOT DIRECTLY CLAIMABLE.
+     * 🛡️ INITIAL ROOT ACTIVATION (planned -> ready)
+     */
+    async activatePlannedRoot(idempotencyKey) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
+        return await this.db.runTransaction(async (transaction) => {
+            const snap = await transaction.get(docRef);
+            if (!snap.exists)
+                return false;
+            const data = snap.data();
+            if (data.state !== 'planned')
+                return false;
+            if (data.dependencyJobIds && data.dependencyJobIds.length > 0)
+                return false;
+            transaction.update(docRef, {
+                state: 'ready',
+                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+            });
+            return true;
+        });
+    }
+    /**
+     * 🛡️ DEPENDENCY UNLOCK (waitingDependency -> ready)
+     */
+    async unlockWaitingJob(idempotencyKey) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
+        return await this.db.runTransaction(async (transaction) => {
+            const snap = await transaction.get(docRef);
+            if (!snap.exists)
+                return false;
+            const data = snap.data();
+            if (data.state !== 'waitingDependency')
+                return false;
+            transaction.update(docRef, {
+                state: 'ready',
+                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+            });
+            return true;
+        });
+    }
+    /**
+     * 🛡️ ATOMIC CLAIM (ready -> leased)
      */
     async claimReadyJob(idempotencyKey, workerId) {
         const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
@@ -114,10 +146,8 @@ class AafQueueRepository {
             if (!snap.exists)
                 return false;
             const data = snap.data();
-            // 🛡️ STATE LOCK: ONLY 'ready' allowed for direct claim.
             if (data.state !== 'ready')
                 return false;
-            // 🛡️ LEASE GUARD: If already leased/running/metadata present, block.
             if (data.leaseOwner || data.leaseExpiresAtUtc)
                 return false;
             const expiryDate = new Date(Date.now() + DEFAULT_LEASE_DURATION_MS);
@@ -133,8 +163,106 @@ class AafQueueRepository {
         });
     }
     /**
+     * 🛡️ START WORK (leased -> running)
+     */
+    async startRunning(idempotencyKey, workerId) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
+        return await this.db.runTransaction(async (transaction) => {
+            const snap = await transaction.get(docRef);
+            if (!snap.exists)
+                return false;
+            const data = snap.data();
+            if (data.state !== 'leased' || data.leaseOwner !== workerId)
+                return false;
+            transaction.update(docRef, {
+                state: 'running',
+                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+            });
+            return true;
+        });
+    }
+    /**
+     * 🛡️ SUBMIT FOR REVIEW (running -> reviewing)
+     */
+    async submitForReview(idempotencyKey, workerId, outputHash) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
+        return await this.db.runTransaction(async (transaction) => {
+            const snap = await transaction.get(docRef);
+            if (!snap.exists)
+                return false;
+            const data = snap.data();
+            if (data.state !== 'running' || data.leaseOwner !== workerId)
+                return false;
+            transaction.update(docRef, {
+                state: 'reviewing',
+                outputHash: outputHash,
+                leaseOwner: null,
+                leaseExpiresAtUtc: null,
+                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+            });
+            return true;
+        });
+    }
+    /**
+     * 🛡️ APPROVE (reviewing -> approved)
+     */
+    async approveJob(idempotencyKey) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
+        return await this.db.runTransaction(async (transaction) => {
+            const snap = await transaction.get(docRef);
+            if (!snap.exists)
+                return false;
+            const data = snap.data();
+            if (data.state !== 'reviewing')
+                return false;
+            transaction.update(docRef, {
+                state: 'approved',
+                finishedAt: admin.firestore.FieldValue.serverTimestamp(),
+                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+            });
+            return true;
+        });
+    }
+    /**
+     * 🛡️ MARK MATERIALIZING (approved -> materializing)
+     */
+    async markMaterializing(idempotencyKey) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
+        return await this.db.runTransaction(async (transaction) => {
+            const snap = await transaction.get(docRef);
+            if (!snap.exists)
+                return false;
+            const data = snap.data();
+            if (data.state !== 'approved')
+                return false;
+            transaction.update(docRef, {
+                state: 'materializing',
+                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+            });
+            return true;
+        });
+    }
+    /**
+     * 🛡️ MARK PUBLISHED (materializing -> published)
+     */
+    async markPublished(idempotencyKey) {
+        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
+        return await this.db.runTransaction(async (transaction) => {
+            const snap = await transaction.get(docRef);
+            if (!snap.exists)
+                return false;
+            const data = snap.data();
+            if (data.state !== 'materializing')
+                return false;
+            transaction.update(docRef, {
+                state: 'published',
+                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+            });
+            return true;
+        });
+    }
+    /**
      * 🛡️ WAKE RETRY (retryWait -> ready)
-     * Explicit authority required to make a retryWait job claimable.
      */
     async wakeRetry(idempotencyKey) {
         const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
@@ -154,7 +282,7 @@ class AafQueueRepository {
         });
     }
     /**
-     * 🛡️ LEASE RECOVERY (EXPIRED -> READY)
+     * 🛡️ LEASE RECOVERY (leased/running expired -> ready)
      */
     async recoverExpiredLease(idempotencyKey) {
         const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
@@ -197,78 +325,6 @@ class AafQueueRepository {
                 updatedAt: admin.firestore.FieldValue.serverTimestamp(),
             });
             return true;
-        });
-    }
-    /**
-     * 🛡️ WORK START (LEASED -> RUNNING)
-     */
-    async startRunning(idempotencyKey, workerId) {
-        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
-        return await this.db.runTransaction(async (transaction) => {
-            const snap = await transaction.get(docRef);
-            if (!snap.exists)
-                return false;
-            const data = snap.data();
-            if (data.state !== 'leased' || data.leaseOwner !== workerId)
-                return false;
-            transaction.update(docRef, {
-                state: 'running',
-                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-            });
-            return true;
-        });
-    }
-    /**
-     * 🛡️ STATE TRANSITION (MANUAL/AUTO)
-     */
-    async updateState(idempotencyKey, newState, options = {}) {
-        const update = {
-            state: newState,
-            updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-        };
-        if (options.error)
-            update.lastError = options.error;
-        if (options.outputHash)
-            update.outputHash = options.outputHash;
-        if (options.clearLease) {
-            update.leaseOwner = null;
-            update.leaseExpiresAtUtc = null;
-        }
-        if (newState === 'approved') {
-            update.finishedAt = admin.firestore.FieldValue.serverTimestamp();
-        }
-        await this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey).update(update);
-    }
-    /**
-     * 🛡️ DEPENDENCY UNLOCK (waitingDependency -> ready)
-     */
-    async unlockDependency(idempotencyKey) {
-        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
-        return await this.db.runTransaction(async (transaction) => {
-            const snap = await transaction.get(docRef);
-            if (!snap.exists)
-                return false;
-            const data = snap.data();
-            if (data.state !== 'waitingDependency')
-                return false;
-            transaction.update(docRef, {
-                state: 'ready',
-                updatedAt: admin.firestore.FieldValue.serverTimestamp(),
-            });
-            return true;
-        });
-    }
-    /**
-     * 🛡️ TERMINAL SUCCESS
-     */
-    async complete(idempotencyKey, outputHash) {
-        await this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey).update({
-            state: 'approved',
-            outputHash: outputHash,
-            leaseOwner: null,
-            leaseExpiresAtUtc: null,
-            finishedAt: admin.firestore.FieldValue.serverTimestamp(),
-            updatedAt: admin.firestore.FieldValue.serverTimestamp(),
         });
     }
     /**
