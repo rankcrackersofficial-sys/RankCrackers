@@ -1,0 +1,10 @@
+{
+  "artifactId": "AAF_006J_VERIFIER_QUALIFICATION_BINDING_SPEC_20260817",
+  "verifierQualificationBindingSupported": true,
+  "requiredFields": [
+    "verifierId",
+    "benchmarkQualificationId",
+    "qualificationStatus",
+    "authorizedAt"
+  ]
+}

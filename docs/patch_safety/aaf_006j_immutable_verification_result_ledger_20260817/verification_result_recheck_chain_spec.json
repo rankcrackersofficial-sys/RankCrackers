@@ -1,0 +1,8 @@
+{
+  "artifactId": "AAF_006J_VERIFICATION_RESULT_RECHECK_CHAIN_SPEC_20260817",
+  "recheckChainSupported": true,
+  "supersessionEnabled": true,
+  "allowStaleRecheck": false,
+  "requiresNewVerifierForRecheck": true,
+  "immutableHistoryPreserved": true
+}
