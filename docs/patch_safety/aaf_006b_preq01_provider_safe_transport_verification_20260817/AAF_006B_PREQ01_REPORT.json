@@ -1,0 +1,40 @@
+{
+  "verdict": "AAF_006B_PREQ01_PROVIDER_IDENTITY_SOURCE_BOUNDARY_AND_AAF_EXECUTION_SEAM_ARE_LOCKED_WITH_NO_LEGACY_QUEUE_OR_SILENT_MODEL_FALLBACK",
+  "preq00EvidenceCommit": "5a5d349cd21b11175fb81a56dba98bd1317ef6e8",
+  "preq00AuthorityMode": "PATH_SCOPED",
+  "requestedProviderParameterHonored": false,
+  "activeProviderForcedToGeminiFlash": true,
+  "realVertexClientImplementationPresent": false,
+  "realVertexProviderPath": "NONE",
+  "claimHashBound": false,
+  "sourcePackHashBound": false,
+  "inputManifestHashBound": false,
+  "approvedEvidenceSetBound": false,
+  "sourceLocatorsBound": false,
+  "modelCanReceiveUnboundExternalSource": true,
+  "modelMemoryIsEvidence": false,
+  "silentProviderSubstitutionAllowed": false,
+  "aaf006bUsesAiTasksAsLifecycleAuthority": false,
+  "aaf006bWritesSentinelDrafts": false,
+  "safeAaf006bExecutionSeamFound": true,
+  "qualificationIdentityCanBeEndToEndBound": true,
+  "canImplementProviderTransportBefore006a": false,
+  "preq01AttackClasses": 16,
+  "preq01AttacksPassed": 16,
+  "preq01AttacksFailed": 0,
+  "realProviderExecution": "NO",
+  "realBenchmarkCasesSubmitted": 0,
+  "realWave1ClaimsSubmitted": 0,
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO"
+  },
+  "commit": "d1a1f8eebef70a969126d2627f07bf5e95806c5b",
+  "finalLine": "AAF_006B_PROVIDER_IDENTITY_SOURCE_BOUNDARY_AND_AAF_EXECUTION_SEAM_ARE_LOCKED_WITH_NO_LEGACY_QUEUE_OR_SILENT_MODEL_FALLBACK",
+  "sha256Matrix": {
+    "AAF_006B_PREQ01_REPORT.json": "18D11E77E235DA2DBF6649F398220B346DCA015E33E2055E1D9B0A5D02602A73",
+    "AAF_006B_PREQ01_REPORT.md": "5E498C7E83D1273F55D91176576A296406A0A13DF31DDA132DDECEF400687EB2"
+  }
+}
