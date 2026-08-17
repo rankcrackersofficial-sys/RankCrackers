@@ -1,0 +1,56 @@
+{
+  "verdict": "AAF_006A_INDEPENDENT_ACADEMIC_FACT_VERIFICATION_CORE_PASSED",
+  "repository_root": "C:\\RankCrackers\\RankCrackers-55",
+  "head_before": "5a5d349cd21b11175fb81a56dba98bd1317ef6e8",
+  "implementation_scope": [
+    "lib/features/academic_factory/domain/engines/academic_fact_verification_core.dart",
+    "test/features/academic_factory/domain/academic_fact_verification_core_test.dart"
+  ],
+  "policy_core": {
+    "source_first_authority": "PASS",
+    "source_conflict_overrides_provider_pass": true,
+    "stale_temporal_claims_fail_closed": true,
+    "repair_requires_new_result_binding": true,
+    "alias_identity_attack_blocked": true,
+    "provider_disagreement_can_auto_pass": false,
+    "publication_eligible_without_fact_gate": false,
+    "reaction_equation_claims_require_cross_provider": true,
+    "procedure_claims_require_cross_provider": true,
+    "standard_sensitive_claims_require_cross_provider": true,
+    "post_assembly_integrity_gate": "PASS"
+  },
+  "required_governance_proof": {
+    "verification_job_alias_is_canonical_id": "NO",
+    "original_amtn_id_preserved": "YES",
+    "canonical_semantic_topic_id_preserved": "YES",
+    "provisional_cross_provider_claims_input": 221,
+    "final_cross_provider_required_claims": 221,
+    "final_cross_provider_conditional_claims": 0,
+    "cross_provider_policy_reconciled": "YES"
+  },
+  "validation": {
+    "targeted_test": "flutter test test/features/academic_factory/domain/academic_fact_verification_core_test.dart",
+    "targeted_test_result": "PASS 15/15",
+    "targeted_analyze": "dart analyze lib/features/academic_factory/domain/engines/academic_fact_verification_core.dart test/features/academic_factory/domain/academic_fact_verification_core_test.dart",
+    "targeted_analyze_result": "PASS no issues found"
+  },
+  "sha256": {
+    "lib/features/academic_factory/domain/engines/academic_fact_verification_core.dart": "813F65894E078556D238DF7D3990FE49703C12B66E1B4DC0B67B103EC015F624",
+    "test/features/academic_factory/domain/academic_fact_verification_core_test.dart": "7A230CF392BE96FBFABC9DDFE246EAA92F98DB7BBDDB86D7E0296B8F6E7AB9E5"
+  },
+  "safety": {
+    "model_fact_check_used": "NO",
+    "gemini_used": "NO",
+    "claude_used": "NO",
+    "firebase_read": "NO",
+    "firebase_write": "NO",
+    "queue_write": "NO",
+    "publication": "NO",
+    "canonical_content_modified": "NO",
+    "academic_claims_modified": "NO",
+    "production_write": "NO",
+    "deploy": "NO"
+  },
+  "next_gate": "AAF-006B independent verifier backend can proceed only after backend adapter authority; real Wave-1 remains locked until benchmark-qualified verifier passes 006F/006G.",
+  "final_line": "AAF_006A_FACT_VERIFICATION_POLICY_CORE_READY_FOR_AAF006B_INDEPENDENT_VERIFIER_BACKEND"
+}
