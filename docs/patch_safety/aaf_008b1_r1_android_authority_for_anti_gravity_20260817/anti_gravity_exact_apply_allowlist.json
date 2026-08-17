@@ -1,0 +1,14 @@
+{
+  "artifactId": "anti_gravity_exact_apply_allowlist",
+  "allowedProductionPaths": [
+    "lib/features/notifications/g2_notification_routing_rule.dart",
+    "lib/features/personalization/data/cache/realtime_cache_invalidation.dart"
+  ],
+  "allowedTestPaths": [
+    "test/features/notifications/g2_routing_test.dart",
+    "test/features/personalization/cache_invalidation_test.dart"
+  ],
+  "allowedEvidencePaths": [
+    "docs/patch_safety/aaf_008cd_r1_four_residual_gates_execution_20260817/"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "artifactId": "g2_existing_architecture_trace",
+  "targetRoute": "/digibook",
+  "routerFile": "lib/core/router/app_router.dart"
+}

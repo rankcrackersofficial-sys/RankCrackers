@@ -1,0 +1,10 @@
+{
+  "artifactId": "008a_android_gate_criteria_extraction",
+  "gates": [
+    "FACTORY_RELEASE_G2_INTEGRATION_RULE",
+    "FACTORY_REALTIME_CACHE_INVALIDATION"
+  ],
+  "targetLanes": [
+    "ANTI_GRAVITY"
+  ]
+}

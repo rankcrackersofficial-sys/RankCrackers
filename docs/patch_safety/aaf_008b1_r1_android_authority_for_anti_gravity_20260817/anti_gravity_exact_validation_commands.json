@@ -1,0 +1,5 @@
+{
+  "artifactId": "anti_gravity_exact_validation_commands",
+  "staticAnalysisCommand": "flutter analyze",
+  "unitTestCommand": "flutter test test/features/notifications/g2_routing_test.dart test/features/personalization/cache_invalidation_test.dart"
+}

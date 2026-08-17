@@ -1,0 +1,6 @@
+{
+  "artifactId": "g2_exact_patch_manifest",
+  "action": "CREATE_NEW",
+  "targetPath": "lib/features/notifications/g2_notification_routing_rule.dart",
+  "patchHash": "D29E60F22B6DEA5F21AFB8F6F95286B2FE3E31A977DBE35E47C3292AA74151A4"
+}
