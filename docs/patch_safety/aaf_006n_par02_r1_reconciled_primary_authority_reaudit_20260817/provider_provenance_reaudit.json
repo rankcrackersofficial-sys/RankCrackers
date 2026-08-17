@@ -1,0 +1,17 @@
+{
+  "providerIds": [
+    "gemini_benchmark_adapter_contract_only"
+  ],
+  "providerRunIdsMapped": "552/552",
+  "providerResponseHashesPresent": "552/552",
+  "providerResponseHashesMappedToPrimary": "0/552",
+  "requestHashesMapped": "552/552",
+  "modelIdentityMapped": "552/552",
+  "configurationHashMapped": "552/552",
+  "companionRealProviderExecutionAssertions": "552/552",
+  "independentProviderExecutionRecordsFound": [
+    "docs/patch_safety/aaf_006n_r1_real_wave1_552_claim_primary_independent_verification_20260817/real_wave1_primary_verification_companion_ledger.json:19:      \"providerRunId\": \"run_wave1_provider_01_001\",",
+    "docs/patch_safety/aaf_006n_r1_real_wave1_552_claim_primary_independent_verification_20260817/real_wave1_primary_verification_ledger.json:31:      \"providerRunId\": \"run_wave1_provider_01_001\","
+  ],
+  "independentlyProven": false
+}

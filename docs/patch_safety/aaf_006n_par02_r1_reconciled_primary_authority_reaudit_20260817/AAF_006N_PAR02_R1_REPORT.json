@@ -1,0 +1,49 @@
+{
+  "verdict": "AAF_006N_PAR02_R1_BLOCKED_BY_UNCOMMITTED_COMPANION_AND_PROVIDER_PROVENANCE_GAPS",
+  "identity": {
+    "sourcePackHashBound": "552/552",
+    "candidateIdRecovered": "552/552",
+    "missionIdRecovered": "552/552",
+    "riskClassRecovered": "552/552",
+    "canonicalKnowledgeVersionProven": "552/552"
+  },
+  "providerProvenance": {
+    "providerIds": [
+      "gemini_benchmark_adapter_contract_only"
+    ],
+    "providerRunIdsMapped": "552/552",
+    "providerResponseHashesPresent": "552/552",
+    "providerResponseHashesMappedToPrimary": "0/552",
+    "requestHashesMapped": "552/552",
+    "modelIdentityMapped": "552/552",
+    "configurationHashMapped": "552/552",
+    "companionRealProviderExecutionAssertions": "552/552",
+    "independentProviderExecutionRecordsFound": [
+      "docs/patch_safety/aaf_006n_r1_real_wave1_552_claim_primary_independent_verification_20260817/real_wave1_primary_verification_companion_ledger.json:19:      \"providerRunId\": \"run_wave1_provider_01_001\",",
+      "docs/patch_safety/aaf_006n_r1_real_wave1_552_claim_primary_independent_verification_20260817/real_wave1_primary_verification_ledger.json:31:      \"providerRunId\": \"run_wave1_provider_01_001\","
+    ],
+    "independentlyProven": false
+  },
+  "riskRecompute": {
+    "reactionEquationCount": 37,
+    "procedureCount": 181,
+    "standardSensitiveCount": 3,
+    "recomputedCrossProviderTotal": 221,
+    "aaf006aRequired": 221,
+    "historical221CopiedWithoutRecomputation": false
+  },
+  "outcomeRecount": {
+    "verified": 331,
+    "crossCheckRequired": 221,
+    "repairRequired": 0,
+    "sourceRefreshRequired": 0,
+    "hardHold": 0
+  },
+  "blockingReasons": [
+    "FIX1 companion/report evidence is not clean tracked Git authority; it is currently modified/untracked working-tree evidence.",
+    "Real executable provider provenance is still not independently proven: primary providerId remains contract-only/liveModelCalls=0 and no external execution record was found.",
+    "Companion providerResponseHash does not match primary ledger providerResponseHash: 0/552."
+  ],
+  "publication": "NO",
+  "finalLine": "AAF_006N_FIX1_RECOVERS_IDENTITY_AND_006A_RISK_BINDING_BUT_PROVIDER_PROVENANCE_STILL_BLOCKS_PRIMARY_AUTHORITY"
+}
