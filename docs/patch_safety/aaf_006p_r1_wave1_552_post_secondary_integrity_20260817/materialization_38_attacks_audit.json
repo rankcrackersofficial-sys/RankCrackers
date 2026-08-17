@@ -1,0 +1,234 @@
+{
+  "artifactId": "AAF_006P_MATERIALIZATION_38_ATTACKS_AUDIT_20260817",
+  "total": 38,
+  "attacks": [
+    {
+      "attackId": "MAT_ATTACK_001",
+      "type": "DUPLICATE_ID_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_002",
+      "type": "DUPLICATE_ID_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_003",
+      "type": "DUPLICATE_ID_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_004",
+      "type": "DUPLICATE_ID_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_005",
+      "type": "DUPLICATE_ID_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_006",
+      "type": "DUPLICATE_ID_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_007",
+      "type": "DUPLICATE_ID_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_008",
+      "type": "DUPLICATE_ID_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_009",
+      "type": "DUPLICATE_ID_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_010",
+      "type": "DUPLICATE_ID_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_011",
+      "type": "STALE_VERIFICATION_BYPASS",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_012",
+      "type": "STALE_VERIFICATION_BYPASS",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_013",
+      "type": "STALE_VERIFICATION_BYPASS",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_014",
+      "type": "STALE_VERIFICATION_BYPASS",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_015",
+      "type": "STALE_VERIFICATION_BYPASS",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_016",
+      "type": "STALE_VERIFICATION_BYPASS",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_017",
+      "type": "STALE_VERIFICATION_BYPASS",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_018",
+      "type": "STALE_VERIFICATION_BYPASS",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_019",
+      "type": "STALE_VERIFICATION_BYPASS",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_020",
+      "type": "STALE_VERIFICATION_BYPASS",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_021",
+      "type": "VERSION_COLLISION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_022",
+      "type": "VERSION_COLLISION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_023",
+      "type": "VERSION_COLLISION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_024",
+      "type": "VERSION_COLLISION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_025",
+      "type": "VERSION_COLLISION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_026",
+      "type": "VERSION_COLLISION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_027",
+      "type": "VERSION_COLLISION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_028",
+      "type": "VERSION_COLLISION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_029",
+      "type": "VERSION_COLLISION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_030",
+      "type": "VERSION_COLLISION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_031",
+      "type": "UNSOURCED_CLAIM_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_032",
+      "type": "UNSOURCED_CLAIM_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_033",
+      "type": "UNSOURCED_CLAIM_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_034",
+      "type": "UNSOURCED_CLAIM_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_035",
+      "type": "UNSOURCED_CLAIM_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_036",
+      "type": "UNSOURCED_CLAIM_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_037",
+      "type": "UNSOURCED_CLAIM_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    },
+    {
+      "attackId": "MAT_ATTACK_038",
+      "type": "UNSOURCED_CLAIM_INJECTION",
+      "status": "BLOCKED",
+      "reconciliationAction": "FAIL_CLOSED"
+    }
+  ]
+}
