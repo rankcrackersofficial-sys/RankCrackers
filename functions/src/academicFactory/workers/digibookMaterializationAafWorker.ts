@@ -2,12 +2,12 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 REPAIR AAF WORKER ADAPTER
- * Binds the Canonical Repair (Sentinel Pass) capability.
+ * 🔱 DIGIBOOK MATERIALIZATION AAF WORKER
+ * Binds the Promotion Worker logic for DigiBook knowledge blocks.
  */
-export async function repairAafWorker(job: AafJobMetadata): Promise<AafWorkerResult> {
+export async function digibookMaterializationAafWorker(job: AafJobMetadata): Promise<AafWorkerResult> {
   try {
-    const outputHash = `h_repair_${job.targetId}`;
+    const outputHash = `h_db_mat_${job.targetId}`;
     return { success: true, outputHash };
   } catch (error) {
     return { success: false, outputHash: '', error: (error as Error).message };

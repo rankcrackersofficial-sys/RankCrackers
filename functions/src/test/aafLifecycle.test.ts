@@ -1,7 +1,6 @@
 import { AafLifecycleService } from '../academicFactory/services/aafLifecycleService';
 import { AafDispatcher } from '../academicFactory/core/aafDispatcher';
 import { AafQueueRepository } from '../academicFactory/repositories/aafQueueRepository';
-import { aafJobRegistry } from '../academicFactory/core/aafJobRegistry';
 import { AafJobMetadata } from '../academicFactory/models/aafJob';
 import * as admin from 'firebase-admin';
 
@@ -43,9 +42,7 @@ describe('AAF Full Governed Orchestration (AAF-004C Hardened)', () => {
 
   test('🛡️ ONE_AMTN_STRUCTURAL_CLOSED_LOOP: running -> reviewing -> approved', async () => {
     const key = 'CLOSED_LOOP_GOVERNED';
-    await repo.enqueue({ ...baseJob, idempotencyKey: key, state: 'ready' });
-
-    aafJobRegistry.register('digibookDraft', async () => ({ success: true, outputHash: 'artifact_h1' }));
+    await repo.enqueue({ ...baseJob, idempotencyKey: key, state: 'ready', type: 'digibookDraft' });
 
     // 1. ready -> leased -> running -> reviewing
     await dispatcher.dispatch(key, 'worker_loop');

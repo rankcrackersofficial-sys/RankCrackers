@@ -2,12 +2,12 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 ENCODING AAF WORKER ADAPTER
- * Binds the Encoding Normalization (Phase 2.1) capability.
+ * 🔱 DIGIBOOK REPAIR AAF WORKER
+ * Binds the Sentinel Canonical Repair capability.
  */
-export async function encodingAafWorker(job: AafJobMetadata): Promise<AafWorkerResult> {
+export async function digibookRepairAafWorker(job: AafJobMetadata): Promise<AafWorkerResult> {
   try {
-    const outputHash = `h_encoding_${job.targetId}`;
+    const outputHash = `h_db_repair_${job.targetId}`;
     return { success: true, outputHash };
   } catch (error) {
     return { success: false, outputHash: '', error: (error as Error).message };

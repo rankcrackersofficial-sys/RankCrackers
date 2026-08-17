@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.aafJobRegistry = void 0;
 /**
- * 🔱 AAF JOB REGISTRY
- * Maps task types to specialized AAF worker adapters.
- * Implements AAF-004D Real Governed Worker Bindings.
+ * 🔱 AAF CANONICAL JOB REGISTRY (FIXED CONTRACT)
+ * Maps the 13 canonical AAF job types to specialized worker adapters.
+ * Implements AAF-004D FIX1.
  */
 class AafJobRegistry {
     constructor() {
@@ -22,31 +22,36 @@ class AafJobRegistry {
 }
 exports.aafJobRegistry = new AafJobRegistry();
 /**
- * 🛡️ WORKER BINDINGS (FIXED CONTRACT)
- * Binding AAF job types to their respective adapters.
+ * 🛡️ CANONICAL WORKER BINDINGS
  */
-const structuralAafWorker_1 = require("../workers/structuralAafWorker");
-const svoAafWorker_1 = require("../workers/svoAafWorker");
-const manifestAafWorker_1 = require("../workers/manifestAafWorker");
+const sourceAcquisitionAafWorker_1 = require("../workers/sourceAcquisitionAafWorker");
+const sourceValidationAafWorker_1 = require("../workers/sourceValidationAafWorker");
 const digibookDraftAafWorker_1 = require("../workers/digibookDraftAafWorker");
-const encodingAafWorker_1 = require("../workers/encodingAafWorker");
-const repairAafWorker_1 = require("../workers/repairAafWorker");
-// 1. structural -> Pass 1
-exports.aafJobRegistry.register('structural', structuralAafWorker_1.structuralAafWorker);
-// 2. svo -> Pass 2
-exports.aafJobRegistry.register('svo', svoAafWorker_1.svoAafWorker);
-// 3. manifest -> Pass 3
-exports.aafJobRegistry.register('manifest', manifestAafWorker_1.manifestAafWorker);
-// 4. digibookDraft -> Pass 3 (Mapped to manifestation logic)
+const digibookRepairAafWorker_1 = require("../workers/digibookRepairAafWorker");
+const digibookMaterializationAafWorker_1 = require("../workers/digibookMaterializationAafWorker");
+const crucibleMaterializationAafWorker_1 = require("../workers/crucibleMaterializationAafWorker");
+// 1. sourceAcquisition -> Sentinel Parsing
+exports.aafJobRegistry.register('sourceAcquisition', sourceAcquisitionAafWorker_1.sourceAcquisitionAafWorker);
+// 2. sourceValidation -> Truth Validation
+exports.aafJobRegistry.register('sourceValidation', sourceValidationAafWorker_1.sourceValidationAafWorker);
+// 3. digibookDraft -> Manifestation Pass 3
 exports.aafJobRegistry.register('digibookDraft', digibookDraftAafWorker_1.digibookDraftAafWorker);
-// 5. encoding -> Normalization
-exports.aafJobRegistry.register('encoding', encodingAafWorker_1.encodingAafWorker);
-// 6. repair -> Canonical Repair
-exports.aafJobRegistry.register('repair', repairAafWorker_1.repairAafWorker);
+// 4. digibookRepair -> Canonical Repair
+exports.aafJobRegistry.register('digibookRepair', digibookRepairAafWorker_1.digibookRepairAafWorker);
+// 5. digibookMaterialization -> Promotion Worker
+exports.aafJobRegistry.register('digibookMaterialization', digibookMaterializationAafWorker_1.digibookMaterializationAafWorker);
+// 6. crucibleMaterialization -> Materialize Worker (Questions)
+exports.aafJobRegistry.register('crucibleMaterialization', crucibleMaterializationAafWorker_1.crucibleMaterializationAafWorker);
 /**
  * 🛡️ BLOCKED_MISSING_WORKER_CAPABILITY
- * The following job types currently have no dedicated governed worker in Functions.
- * mcqDraft, mcqValidation, revisionDraft, revisionValidation,
- * digibookValidation, digibookProReview, digibookAssembly.
+ * The following job types are currently unmapped to governed Cloud Functions:
+ *
+ * - digibookValidation
+ * - digibookProReview (Human/Gate)
+ * - digibookAssembly
+ * - crucibleDraft (MCQ/Revision logic migration pending)
+ * - crucibleValidation
+ * - crucibleProReview (Human/Gate)
+ * - crucibleRepair
  */
 //# sourceMappingURL=aafJobRegistry.js.map
