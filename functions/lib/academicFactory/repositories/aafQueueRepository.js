@@ -40,8 +40,8 @@ const DEFAULT_LEASE_DURATION_MS = 5 * 60 * 1000; // 5 minutes
 const RETRY_BACKOFF_BASE_MS = 60 * 1000; // 1 minute
 /**
  * 🔱 AAF QUEUE REPOSITORY (academic_factory_v1)
- * Persistent Transaction Core for AAF-004B FIX1.
- * Enforces atomic state transitions and lease-based execution.
+ * Persistent Transaction Core for AAF-004B FIX2.
+ * Enforces exact domain lifecycle parity and lease-based authority.
  */
 class AafQueueRepository {
     constructor() {
@@ -49,37 +49,31 @@ class AafQueueRepository {
     }
     /**
      * 🛡️ TRANSACTIONAL ENQUEUE
-     * Inserts or updates an AAF job while checking for semantic conflicts.
+     * Preserves planner-provided state. Detects logical identity conflicts.
      */
     async enqueue(job) {
-        if (!job.idempotencyKey)
-            throw new Error('AAF_QUEUE_ERROR: idempotencyKey required for enqueue.');
         const docRef = this.db.collection(QUEUE_COLLECTION).doc(job.idempotencyKey);
         await this.db.runTransaction(async (transaction) => {
             const snap = await transaction.get(docRef);
             if (snap.exists) {
                 const existing = snap.data();
-                // Verify semantic identity parity (RunId, JobId, canonicalTargetId)
+                // 🛡️ Semantic Identity Check
                 if (existing.runId !== job.runId ||
                     existing.jobId !== job.jobId ||
                     existing.canonicalTargetId !== job.canonicalTargetId) {
-                    throw new Error(`AAF_SEMANTIC_CONFLICT: Job ${job.idempotencyKey} identity mismatch.`);
+                    throw new Error(`AAF_IDENTITY_CONFLICT: Job ${job.idempotencyKey} identity mismatch.`);
                 }
-                // If input changed, it might require a state reset depending on AAF phase (later logic)
-                // For now, if it exists and matches identity, we merge updates.
+                // Update existing job (preserving history, updating fields)
                 transaction.update(docRef, {
                     ...job,
                     updatedAt: admin.firestore.FieldValue.serverTimestamp(),
                 });
             }
             else {
-                // Create new job
+                // 🛡️ State Preservation: initial state comes from planner (job.state)
                 transaction.set(docRef, {
                     ...job,
                     queueContract: 'academic_factory_v1',
-                    state: job.state || 'PLANNED',
-                    attempts: job.attempts || 0,
-                    maxAttempts: job.maxAttempts || 3,
                     createdAt: admin.firestore.FieldValue.serverTimestamp(),
                     updatedAt: admin.firestore.FieldValue.serverTimestamp(),
                 });
@@ -88,8 +82,8 @@ class AafQueueRepository {
         return job.idempotencyKey;
     }
     /**
-     * 🛡️ ATOMIC CLAIM (START_RUNNING)
-     * Claims a 'READY' or 'REPAIR_PENDING' job for execution.
+     * 🛡️ ATOMIC CLAIM (LEASED)
+     * Claims a 'ready' or 'retryWait' job.
      */
     async claim(idempotencyKey, workerId) {
         const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
@@ -98,19 +92,18 @@ class AafQueueRepository {
             if (!snap.exists)
                 return false;
             const data = snap.data();
-            // Only claim if state is 'READY' or 'REPAIR_PENDING'
-            const isEligible = data.state === 'READY' || data.state === 'REPAIR_PENDING';
+            // 🛡️ State Compatibility Check
+            const isEligible = data.state === 'ready' || data.state === 'retryWait';
             if (!isEligible)
                 return false;
-            // Check for valid lease (if any exists)
+            // 🛡️ Lease Conflict Check
             const now = Date.now();
             if (data.leaseExpiresAtUtc && data.leaseExpiresAtUtc.toMillis() > now) {
-                // Active lease still exists, concurrent claim blocked.
-                return false;
+                return false; // Active lease held by another worker
             }
             const expiryDate = new Date(now + DEFAULT_LEASE_DURATION_MS);
             transaction.update(docRef, {
-                state: 'RUNNING',
+                state: 'leased',
                 leaseOwner: workerId,
                 leaseExpiresAtUtc: admin.firestore.Timestamp.fromDate(expiryDate),
                 attempts: admin.firestore.FieldValue.increment(1),
@@ -121,7 +114,7 @@ class AafQueueRepository {
         });
     }
     /**
-     * 🛡️ LEASE RENEWAL (HEARTBEAT)
+     * 🛡️ HEARTBEAT
      */
     async renewLease(idempotencyKey, workerId) {
         const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
@@ -130,7 +123,9 @@ class AafQueueRepository {
             if (!snap.exists)
                 return false;
             const data = snap.data();
-            if (data.state !== 'RUNNING' || data.leaseOwner !== workerId)
+            if (data.state !== 'leased' && data.state !== 'running')
+                return false;
+            if (data.leaseOwner !== workerId)
                 return false;
             const expiryDate = new Date(Date.now() + DEFAULT_LEASE_DURATION_MS);
             transaction.update(docRef, {
@@ -141,21 +136,19 @@ class AafQueueRepository {
         });
     }
     /**
-     * 🛡️ JOB COMPLETION
+     * 🛡️ SUCCESS TRANSITION (MATERIALIZING)
      */
-    async complete(idempotencyKey, outputHash) {
-        const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
-        await docRef.update({
-            state: 'COMPLETED',
+    async markMaterializing(idempotencyKey, outputHash) {
+        await this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey).update({
+            state: 'materializing',
             outputHash: outputHash,
             leaseOwner: null,
             leaseExpiresAtUtc: null,
-            finishedAt: admin.firestore.FieldValue.serverTimestamp(),
             updatedAt: admin.firestore.FieldValue.serverTimestamp(),
         });
     }
     /**
-     * 🛡️ JOB FAILURE & RETRY LOGIC
+     * 🛡️ FAILURE TRANSITION
      */
     async fail(idempotencyKey, error) {
         const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
@@ -166,16 +159,15 @@ class AafQueueRepository {
             const data = snap.data();
             const canRetry = data.attempts < data.maxAttempts;
             const update = {
-                state: canRetry ? 'REPAIR_PENDING' : 'FAILED',
+                state: canRetry ? 'retryWait' : 'failedTerminal',
                 lastError: error,
                 leaseOwner: null,
                 leaseExpiresAtUtc: null,
                 updatedAt: admin.firestore.FieldValue.serverTimestamp(),
             };
             if (canRetry) {
-                // Exponential backoff: base * (2 ^ (attempts - 1))
                 const backoff = RETRY_BACKOFF_BASE_MS * Math.pow(2, data.attempts - 1);
-                update.nextRetryAt = admin.firestore.Timestamp.fromMillis(Date.now() + backoff);
+                update.nextRetryAtUtc = admin.firestore.Timestamp.fromMillis(Date.now() + backoff);
             }
             transaction.update(docRef, update);
         });

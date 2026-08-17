@@ -1,29 +1,39 @@
 import * as admin from 'firebase-admin';
 
+/**
+ * 🔱 AAF DOMAIN LIFECYCLE STATES
+ * Exact 13 states from AAF-003B contract.
+ */
 export type AafJobState =
-  | 'PLANNED'
-  | 'READY'
-  | 'RUNNING'
-  | 'COMPLETED'
-  | 'FAILED'
-  | 'HOLD'
-  | 'REPAIR_PENDING';
+  | 'planned'
+  | 'waitingDependency'
+  | 'ready'
+  | 'leased'
+  | 'running'
+  | 'reviewing'
+  | 'repairRequired'
+  | 'retryWait'
+  | 'hardHold'
+  | 'approved'
+  | 'materializing'
+  | 'published'
+  | 'failedTerminal';
 
 /**
  * 🔱 AAF JOB METADATA CONTRACT (academic_factory_v1)
  * Physical implementation of AAF-004B Persistent Transaction Core.
- * No academic payloads or student data allowed here.
+ * No academic payloads allowed. Flat metadata only.
  */
 export interface AafJobMetadata {
-  // 🛡️ Contract Boundary
+  // 🛡️ Contract Authority
   queueContract: 'academic_factory_v1';
 
-  // 🛡️ Identity
-  runId: string;        // Batch run identifier
-  jobId: string;        // Unique job within run
-  missionId: string;    // Related mission (e.g. JEE-MAIN-2026)
-  canonicalTargetId: string; // The AMTN or Target atom
-  idempotencyKey: string;    // Stable key for document ID: RUN_ID:JOB_ID
+  // 🛡️ Identity (Flattened)
+  runId: string;
+  jobId: string;
+  missionId: string;
+  canonicalTargetId: string;
+  idempotencyKey: string;    // RUN_ID:JOB_ID
 
   // 🛡️ State Machine
   state: AafJobState;
@@ -31,15 +41,13 @@ export interface AafJobMetadata {
   // 🛡️ Reliability & Lease
   attempts: number;
   maxAttempts: number;
-
-  leaseOwner: string | null;  // Current active worker instance ID
+  leaseOwner: string | null;
   leaseExpiresAtUtc: admin.firestore.Timestamp | null;
-
-  nextRetryAt: admin.firestore.Timestamp | null;
+  nextRetryAtUtc: admin.firestore.Timestamp | null;
 
   // 🛡️ Integrity
-  inputHash: string;          // Hash of input parameters
-  outputHash: string | null;  // Hash of generated artifact
+  inputHash: string;
+  outputHash: string | null;
 
   // 🛡️ Temporal Logs
   createdAt: admin.firestore.Timestamp | admin.firestore.FieldValue;
@@ -47,14 +55,11 @@ export interface AafJobMetadata {
   startedAt: admin.firestore.Timestamp | null;
   finishedAt: admin.firestore.Timestamp | null;
 
-  // 🛡️ Failure Propagation
+  // 🛡️ Failure Trace
   lastError: string | null;
 
-  // 🛡️ Orchestration Payload (Reference IDs only)
+  // 🛡️ Orchestration (Flattened)
   taskType: string;
-  payload: {
-    targetId: string;
-    sourceDocumentIds?: string[];
-    [key: string]: any;
-  };
+  targetId: string;
+  sourceDocumentIds: string[];
 }
