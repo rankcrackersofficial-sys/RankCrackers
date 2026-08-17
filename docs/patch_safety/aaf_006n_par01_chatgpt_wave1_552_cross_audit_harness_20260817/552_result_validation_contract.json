@@ -1,28 +1,39 @@
 {
-  "artifactId": "AAF_006N_PAR01_WAVE1_552_RESULT_VALIDATION_CONTRACT_20260817",
-  "rules": {
-    "expectedClaimCount": 552,
-    "uniqueGovernedResultsRequired": true,
-    "outcomeUniverse": [
-      "VERIFIED",
-      "REPAIR_REQUIRED",
-      "CROSS_CHECK_REQUIRED",
-      "SOURCE_REFRESH_REQUIRED",
-      "HARD_HOLD"
-    ],
-    "identityBindingRules": {
-      "claimHashMatchRequired": true,
-      "sourcePackHashMatchRequired": true,
-      "requestHashMatchRequired": true,
-      "providerResponseHashMatchRequired": true,
-      "qualificationIdentityMatchRequired": true
-    },
-    "safetyLocks": {
-      "providerPassAutoVerificationAllowed": false,
-      "sourceConflictOverrideAllowed": false,
-      "staleResultReuseAllowed": false,
-      "unqualifiedSecondaryProviderAllowed": false,
-      "publicationAllowed": false
-    }
-  }
+  "artifactId": "AAF_006N_PAR01_REAL_006N_RESULT_LEDGER_CROSS_AUDIT_CONTRACT_20260817",
+  "sourceInputUniverse": "wave1_552_input_inventory.json",
+  "expectedClaimCount": 552,
+  "requiredResultIdentity": [
+    "candidateId",
+    "originalAmtnId",
+    "missionId",
+    "canonicalSemanticTopicId",
+    "canonicalKnowledgeVersion",
+    "claimId",
+    "claimContentHash",
+    "sourcePackHash",
+    "inputManifestHash",
+    "qualificationRunId",
+    "providerConfigurationHash",
+    "governedOutcome"
+  ],
+  "governedOutcomeUniverse": [
+    "VERIFIED",
+    "REPAIR_REQUIRED",
+    "CROSS_CHECK_REQUIRED",
+    "SOURCE_REFRESH_REQUIRED",
+    "HARD_HOLD"
+  ],
+  "failClosedRules": {
+    "partialLedgerCanPass": false,
+    "unknownClaimCanPass": false,
+    "duplicateClaimCanPass": false,
+    "aliasOnlyBindingCanPass": false,
+    "sourceConflictCanBeHiddenByProviderPass": false,
+    "staleResultCanVerifyRepairedClaim": false,
+    "providerPassCanAutoVerify": false,
+    "publicationCanUnlockFrom006N": false
+  },
+  "compatibleWith006JLedger": true,
+  "compatibleWith006KQualificationControlPlane": true,
+  "realProviderExecutionPerformed": "NO"
 }

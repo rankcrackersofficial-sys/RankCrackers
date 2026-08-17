@@ -1,10 +1,58 @@
 {
-  "artifactId": "AAF_006N_PAR01_WAVE1_VALIDATOR_RESULTS_20260817",
+  "artifactId": "AAF_006N_PAR01_CHATGPT_WAVE1_552_INPUT_VALIDATOR_RESULT_20260817",
+  "verdict": "PASS",
+  "authorities": {
+    "aaf006bFinal": "8d5da5e0140fe18fc7e7dcb80e7b175348884cda",
+    "aaf006mFinalIdentityFreeze": "83272620491547b325eeeb0a318db852253d6fd5",
+    "qualificationRunId": "QUAL_RUN_112_REAL_006M_20260817",
+    "qualificationModelId": "gemini-3.6-flash",
+    "providerAdapterVersion": "AAF-006B-R2-production-contract",
+    "providerConfigurationHash": "89BA9DC60533A094A41435042F26AED68ACE2684A61B60052B62A70BB0D45C53",
+    "qualificationResultHash": "9FC40F526BE317B03AF7EB273635ACEFB367AE218F83F53ABD3049119F09D2BC",
+    "aaf006hContent": "c79b9b5de409f69a4a998bd4f50393356fe6a7aa",
+    "aaf006hReconciliation": "002e9b43c91bb6779126b0592e6d05e96444bd8f",
+    "aaf006j": "1211407dc3c8ebd777c6aed3c2aa694f37fc2342"
+  },
+  "counters": {
+    "wave1Candidates": 10,
+    "expectedClaims": 552,
+    "actualClaims": 552,
+    "uniqueClaimIds": 552,
+    "duplicateClaimIds": 0,
+    "missingClaims": 0,
+    "unknownClaims": 0,
+    "lineageIncomplete": 0,
+    "claimHashMismatches": 0,
+    "sourcePackHashMismatches": 0,
+    "inputManifestHashMismatches": 0,
+    "aliasesUsedAsCanonicalIds": 0
+  },
+  "manifestCrossChecks": {
+    "manifestWave1Total": 10,
+    "manifestTotalSubstantiveClaims": 552,
+    "manifestUniqueCanonicalClaims": 552,
+    "packageWave1Total": 10,
+    "packageTotalSubstantiveClaims": 552
+  },
+  "requiredClaimIdentityFields": [
+    "candidateId",
+    "originalAmtnId",
+    "missionId",
+    "canonicalSemanticTopicId",
+    "canonicalKnowledgeVersion",
+    "claimId",
+    "claimContentHash",
+    "sourcePackHash",
+    "inputManifestHash"
+  ],
+  "errors": [],
+  "attackClasses": 28,
+  "attackClassesPassed": 28,
   "attackFailures": 0,
-  "results": [
+  "attacks": [
     {
       "attackId": "ATTACK_01_MISSING_CLAIM",
-      "description": "missing claim result",
+      "description": "one claim result missing",
       "intercepted": true,
       "errorsLogged": [
         "Ledger size mismatch: got 551, expected 552"
@@ -21,84 +69,80 @@
     },
     {
       "attackId": "ATTACK_03_UNKNOWN_CLAIM",
-      "description": "unknown claim",
+      "description": "unknown claim result",
       "intercepted": true,
       "errorsLogged": [
         "Ledger size mismatch: got 553, expected 552",
-        "Unknown claim ID: UNKNOWN_999"
+        "Unknown claim ID: UNKNOWN_CLAIM"
       ]
     },
     {
       "attackId": "ATTACK_04_WRONG_CLAIM_HASH",
-      "description": "wrong claim hash",
+      "description": "claimContentHash mismatch",
       "intercepted": true,
       "errorsLogged": [
-        "Claim hash mismatch for CLAIM_W1_CP_01_001",
-        "Request hash mismatch for CLAIM_W1_CP_01_001"
+        "claimContentHash mismatch for CLAIM_W1_CP_01_001"
       ]
     },
     {
       "attackId": "ATTACK_05_WRONG_SOURCE_PACK_HASH",
-      "description": "wrong source pack hash",
+      "description": "sourcePackHash mismatch",
       "intercepted": true,
       "errorsLogged": [
-        "Source pack hash mismatch for CLAIM_W1_CP_01_001",
-        "Request hash mismatch for CLAIM_W1_CP_01_001"
+        "sourcePackHash mismatch for CLAIM_W1_CP_01_001"
       ]
     },
     {
-      "attackId": "ATTACK_06_WRONG_REQUEST_HASH",
-      "description": "wrong request hash",
+      "attackId": "ATTACK_06_WRONG_INPUT_MANIFEST_HASH",
+      "description": "inputManifestHash mismatch",
       "intercepted": true,
       "errorsLogged": [
-        "Request hash mismatch for CLAIM_W1_CP_01_001"
+        "inputManifestHash mismatch for CLAIM_W1_CP_01_001"
       ]
     },
     {
-      "attackId": "ATTACK_07_WRONG_RESPONSE_HASH",
-      "description": "wrong response hash",
+      "attackId": "ATTACK_07_ALIAS_AS_CANONICAL_ID",
+      "description": "candidate alias used as canonical semantic topic",
       "intercepted": true,
       "errorsLogged": [
-        "Invalid provider response hash for CLAIM_W1_CP_01_001"
+        "canonicalSemanticTopicId mismatch for CLAIM_W1_CP_01_001"
       ]
     },
     {
-      "attackId": "ATTACK_08_WRONG_QUALIFICATION_ID",
-      "description": "wrong qualification identity",
+      "attackId": "ATTACK_08_WRONG_ORIGINAL_AMTN",
+      "description": "original AMTN binding mismatch",
       "intercepted": true,
       "errorsLogged": [
-        "Wrong qualification identity binding for CLAIM_W1_CP_01_001"
+        "originalAmtnId mismatch for CLAIM_W1_CP_01_001"
       ]
     },
     {
-      "attackId": "ATTACK_09_TWO_FINAL_OUTCOMES",
-      "description": "two final outcomes",
+      "attackId": "ATTACK_09_WRONG_MISSION",
+      "description": "mission binding mismatch",
       "intercepted": true,
       "errorsLogged": [
-        "Multiple or zero outcomes for CLAIM_W1_CP_01_001",
-        "Illegal outcome \"undefined\" for CLAIM_W1_CP_01_001"
+        "missionId mismatch for CLAIM_W1_CP_01_001"
       ]
     },
     {
-      "attackId": "ATTACK_10_ZERO_FINAL_OUTCOMES",
-      "description": "zero final outcomes",
+      "attackId": "ATTACK_10_WRONG_CANONICAL_VERSION",
+      "description": "canonical knowledge version mismatch",
       "intercepted": true,
       "errorsLogged": [
-        "Multiple or zero outcomes for CLAIM_W1_CP_01_001",
-        "Illegal outcome \"undefined\" for CLAIM_W1_CP_01_001"
+        "canonicalKnowledgeVersion mismatch for CLAIM_W1_CP_01_001"
       ]
     },
     {
-      "attackId": "ATTACK_11_ILLEGAL_VERDICT",
-      "description": "illegal verdict",
+      "attackId": "ATTACK_11_ILLEGAL_OUTCOME",
+      "description": "illegal governed outcome",
       "intercepted": true,
       "errorsLogged": [
-        "Illegal outcome \"PUBLISHED\" for CLAIM_W1_CP_01_001"
+        "Illegal governed outcome for CLAIM_W1_CP_01_001: PUBLISHED"
       ]
     },
     {
       "attackId": "ATTACK_12_PROVIDER_PASS_AUTO_VERIFIED",
-      "description": "provider PASS auto-verified",
+      "description": "provider pass treated as governed decision",
       "intercepted": true,
       "errorsLogged": [
         "Provider PASS auto-verified violation for CLAIM_W1_CP_01_001"
@@ -106,7 +150,7 @@
     },
     {
       "attackId": "ATTACK_13_SOURCE_CONFLICT_OVERRIDDEN",
-      "description": "source-conflict overridden",
+      "description": "source conflict hidden by provider pass",
       "intercepted": true,
       "errorsLogged": [
         "Source conflict override violation for CLAIM_W1_CP_01_001"
@@ -114,27 +158,138 @@
     },
     {
       "attackId": "ATTACK_14_STALE_RESULT_REUSED",
-      "description": "stale result reused",
+      "description": "stale pre-repair result reused",
       "intercepted": true,
       "errorsLogged": [
         "Stale result reused violation for CLAIM_W1_CP_01_001"
       ]
     },
     {
-      "attackId": "ATTACK_15_SECONDARY_UNQUALIFIED_PROVIDER",
-      "description": "secondary result from unqualified provider",
+      "attackId": "ATTACK_15_WRONG_QUALIFICATION_RUN",
+      "description": "wrong qualification run identity",
       "intercepted": true,
       "errorsLogged": [
-        "Secondary result from unqualified provider for CLAIM_W1_CP_01_001"
+        "Qualification run mismatch for CLAIM_W1_CP_01_001"
       ]
     },
     {
-      "attackId": "ATTACK_16_PUBLIC_PROJECTION_WRITE",
-      "description": "public projection flag/write",
+      "attackId": "ATTACK_16_PUBLICATION_FLAG",
+      "description": "publication flag/write present",
       "intercepted": true,
       "errorsLogged": [
-        "Publication flag active violation for CLAIM_W1_CP_01_001"
+        "Publication violation for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_17_WRONG_PROVIDER_ADAPTER_VERSION",
+      "description": "providerAdapterVersion mismatch",
+      "intercepted": true,
+      "errorsLogged": [
+        "Provider adapter version mismatch for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_18_WRONG_QUALIFICATION_RESULT_HASH",
+      "description": "qualificationResultHash mismatch",
+      "intercepted": true,
+      "errorsLogged": [
+        "Qualification result hash mismatch for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_19_UNQUALIFIED_SECONDARY_PROVIDER",
+      "description": "unqualified secondary provider used",
+      "intercepted": true,
+      "errorsLogged": [
+        "Unqualified secondary provider violation for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_20_PUBLICATION_WRITE",
+      "description": "publicationWrite true violation",
+      "intercepted": true,
+      "errorsLogged": [
+        "Publication violation for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_21_EMPTY_CLAIM_ID",
+      "description": "claimId is empty",
+      "intercepted": true,
+      "errorsLogged": [
+        "Unknown claim ID: "
+      ]
+    },
+    {
+      "attackId": "ATTACK_22_EMPTY_CLAIM_HASH",
+      "description": "claimContentHash is empty",
+      "intercepted": true,
+      "errorsLogged": [
+        "claimContentHash mismatch for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_23_EMPTY_SOURCE_PACK_HASH",
+      "description": "sourcePackHash is empty",
+      "intercepted": true,
+      "errorsLogged": [
+        "sourcePackHash mismatch for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_24_EMPTY_INPUT_MANIFEST_HASH",
+      "description": "inputManifestHash is empty",
+      "intercepted": true,
+      "errorsLogged": [
+        "inputManifestHash mismatch for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_25_EMPTY_QUALIFICATION_RUN",
+      "description": "qualificationRunId is empty",
+      "intercepted": true,
+      "errorsLogged": [
+        "Qualification run mismatch for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_26_EMPTY_PROVIDER_CONFIG_HASH",
+      "description": "providerConfigurationHash is empty",
+      "intercepted": true,
+      "errorsLogged": [
+        "Provider configuration hash mismatch for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_27_EMPTY_PROVIDER_ADAPTER_VERSION",
+      "description": "providerAdapterVersion is empty",
+      "intercepted": true,
+      "errorsLogged": [
+        "Provider adapter version mismatch for CLAIM_W1_CP_01_001"
+      ]
+    },
+    {
+      "attackId": "ATTACK_28_EMPTY_QUALIFICATION_RESULT_HASH",
+      "description": "qualificationResultHash is empty",
+      "intercepted": true,
+      "errorsLogged": [
+        "Qualification result hash mismatch for CLAIM_W1_CP_01_001"
       ]
     }
-  ]
+  ],
+  "realWave1ClaimsSubmitted": 0,
+  "publicationEligible": false,
+  "safety": {
+    "modelFactCheckUsed": "NO",
+    "liveModelCalls": 0,
+    "realProviderExecution": "NO",
+    "firebaseRead": "NO",
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO",
+    "productionVerifierFilesModified": 0,
+    "providerTransportFilesModified": 0,
+    "workerFilesModified": 0,
+    "queueFilesModified": 0
+  }
 }
