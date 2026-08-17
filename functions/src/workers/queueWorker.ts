@@ -33,7 +33,7 @@ export function isAafTask(data: any): boolean {
 }
 
 export function isSpecializedTask(data: any): boolean {
-  return data?.type && SPECIALIZED_TASK_TYPES.includes(data.type);
+  return !!(data?.type && SPECIALIZED_TASK_TYPES.includes(data.type));
 }
 
 export function isLegacyGenericTask(data: any): boolean {
