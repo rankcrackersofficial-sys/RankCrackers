@@ -1,0 +1,22 @@
+{
+  "authorityId": "AAF-004D",
+  "registryFile": "functions/src/academicFactory/core/aafJobRegistry.ts",
+  "canonicalTypes": [
+    "sourceAcquisition",
+    "sourceValidation",
+    "digibookDraft",
+    "digibookValidation",
+    "digibookProReview",
+    "digibookRepair",
+    "digibookAssembly",
+    "digibookMaterialization",
+    "crucibleDraft",
+    "crucibleValidation",
+    "crucibleProReview",
+    "crucibleRepair",
+    "crucibleMaterialization"
+  ],
+  "registeredCanonicalTypesCount": 13,
+  "realBoundCount": 13,
+  "freezeStatus": "FINAL_FREEZE_RECONCILED"
+}

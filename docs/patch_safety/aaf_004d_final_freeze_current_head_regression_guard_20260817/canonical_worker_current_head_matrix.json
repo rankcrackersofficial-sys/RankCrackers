@@ -1,0 +1,19 @@
+{
+  "matrix": [
+    { "type": "sourceAcquisition", "workerFile": "functions/src/academicFactory/workers/sourceAcquisitionAafWorker.ts", "bound": true },
+    { "type": "sourceValidation", "workerFile": "functions/src/academicFactory/workers/sourceValidationAafWorker.ts", "bound": true },
+    { "type": "digibookDraft", "workerFile": "functions/src/academicFactory/workers/digibookDraftAafWorker.ts", "bound": true },
+    { "type": "digibookValidation", "workerFile": "functions/src/academicFactory/workers/digibookValidationAafWorker.ts", "bound": true },
+    { "type": "digibookProReview", "workerFile": "functions/src/academicFactory/workers/digibookProReviewAafWorker.ts", "bound": true },
+    { "type": "digibookRepair", "workerFile": "functions/src/academicFactory/workers/digibookRepairAafWorker.ts", "bound": true },
+    { "type": "digibookAssembly", "workerFile": "functions/src/academicFactory/workers/digibookAssemblyAafWorker.ts", "bound": true },
+    { "type": "digibookMaterialization", "workerFile": "functions/src/academicFactory/workers/digibookMaterializationAafWorker.ts", "bound": true },
+    { "type": "crucibleDraft", "workerFile": "functions/src/academicFactory/workers/crucibleDraftAafWorker.ts", "bound": true },
+    { "type": "crucibleValidation", "workerFile": "functions/src/academicFactory/workers/crucibleValidationAafWorker.ts", "bound": true },
+    { "type": "crucibleProReview", "workerFile": "functions/src/academicFactory/workers/crucibleProReviewAafWorker.ts", "bound": true },
+    { "type": "crucibleRepair", "workerFile": "functions/src/academicFactory/workers/crucibleRepairAafWorker.ts", "bound": true },
+    { "type": "crucibleMaterialization", "workerFile": "functions/src/academicFactory/workers/crucibleMaterializationAafWorker.ts", "bound": true }
+  ],
+  "totalCanonical": 13,
+  "realBoundCanonical": 13
+}

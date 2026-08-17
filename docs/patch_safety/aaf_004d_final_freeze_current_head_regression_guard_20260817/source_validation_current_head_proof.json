@@ -1,0 +1,6 @@
+{
+  "type": "sourceValidation",
+  "trustParity": "PASS",
+  "trustCounters": 6,
+  "behavior": "UNTRUSTED_SOURCE_REJECTION_ACTIVE"
+}

@@ -1,0 +1,12 @@
+{
+  "head": "1371d705de2b371812ee7a99c44a9395f10e654d",
+  "aaf004dTerminalCommit": "d98fcc43e89e1b268907d680c2ff6488823b1e5f",
+  "isAncestor": true,
+  "ancestryProof": [
+    { "commit": "d98fcc43", "isAncestor": true },
+    { "commit": "5f9280a2", "isAncestor": true },
+    { "commit": "cf536885", "isAncestor": true },
+    { "commit": "85f6c2fb", "isAncestor": true },
+    { "commit": "c2f3677b", "isAncestor": true }
+  ]
+}
