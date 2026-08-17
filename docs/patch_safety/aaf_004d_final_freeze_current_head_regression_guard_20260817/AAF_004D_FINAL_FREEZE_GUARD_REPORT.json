@@ -1,7 +1,13 @@
 {
-  "reportId": "AAF_004D_FINAL_FREEZE_GUARD_20260817",
-  "head": "1371d705de2b371812ee7a99c44a9395f10e654d",
-  "timestamp": "2026-08-17T18:30:00Z",
+  "reportId": "AAF_004D_FINAL_FREEZE_GUARD_RECONCILED_20260817",
+  "currentHead": "fede9b7fa9e2a87895e6361a99863a34a946221d",
+  "aaf004dFinalAuthority": "d98fcc43e89e1b268907d680c2ff6488823b1e5f",
+  "reconciliation": {
+    "gitIdentity": "Commit 18f7613f is the AAF-004D evidence commit. Commit 9fe89bee is a subsequent ChatGPT PAR01 commit. Current HEAD is fede9b7f.",
+    "9feCommitSubject": "feat(academic-factory): AAF-006N PAR01 - ChatGPT 552-claim cross-audit harness",
+    "9feChangedPaths": ["docs/patch_safety/aaf_006n_par01_chatgpt_wave1_552_cross_audit_harness_20260817/AAF_006N_PAR01_REPORT.json"],
+    "evidenceAuthority": "18f7613fa7d351eede5863add759760ab2d93ca9"
+  },
   "thresholds": {
     "AAF004D_FINAL_OBJECT_EXISTS": "YES",
     "REGISTERED_CANONICAL_TYPES": 13,
@@ -15,7 +21,15 @@
     "GENERIC_FALLBACKS": 0,
     "LEGACY_FALLBACKS": 0,
     "AAF006_FACT_VERIFICATION_BYPASSED": "NO",
-    "AAF004A_REGRESSION": "PASS"
+    "AAF004A_REGRESSION": "PASS",
+    "AAF004B_REGRESSION": "PASS",
+    "AAF004C_REGRESSION": "PASS",
+    "REAL_FIRESTORE_EMULATOR": "PASS",
+    "REAL_TSC_EXIT_CODE": "PASS",
+    "006B_FILES_MODIFIED": 0,
+    "006M_FILES_MODIFIED": 0,
+    "006N_PROVIDER_EXECUTION_FILES_MODIFIED": 0,
+    "PROVIDER_FILES_MODIFIED": 0
   },
-  "verdict": "PASS"
+  "verdict": "AAF_004D_FINAL_FREEZE_GUARD_GIT_IDENTITY_AND_ALL_REGRESSION_GATES_RECONCILED"
 }
