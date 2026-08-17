@@ -1,0 +1,183 @@
+{
+  "artifactId": "AAF_006E_FIX1_HASH_IDENTITY_ATTACK",
+  "family": "HASH_IDENTITY_ATTACK",
+  "caseCount": 8,
+  "cases": [
+    {
+      "caseId": "HASH_NEG_001",
+      "family": "HASH_IDENTITY_ATTACK",
+      "polarity": "NEGATIVE",
+      "claimType": "HASH_ATTACK",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Hash identity attack case 1 attempts stale hash, alias promotion, or identity substitution.",
+      "expectedVerifierDecision": "REJECT_IDENTITY_OR_HASH_ATTACK",
+      "attackVector": "ALIAS_PROMOTION",
+      "mustCheck": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "7A400441EC0E56EAFC328EC49EB7643DA75E74F39D71962B9C7AF47BE043168A",
+      "mutationSignature": "7A400441EC0E56EA",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "HASH_NEG_002",
+      "family": "HASH_IDENTITY_ATTACK",
+      "polarity": "NEGATIVE",
+      "claimType": "HASH_ATTACK",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Hash identity attack case 2 attempts stale hash, alias promotion, or identity substitution.",
+      "expectedVerifierDecision": "REJECT_IDENTITY_OR_HASH_ATTACK",
+      "attackVector": "CONTENT_HASH_MISMATCH",
+      "mustCheck": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "99C18566BD4A16586214C3249AF68516C259F8AE89D2398D18FBD1CF83E62D59",
+      "mutationSignature": "99C18566BD4A1658",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "HASH_NEG_003",
+      "family": "HASH_IDENTITY_ATTACK",
+      "polarity": "NEGATIVE",
+      "claimType": "HASH_ATTACK",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Hash identity attack case 3 attempts stale hash, alias promotion, or identity substitution.",
+      "expectedVerifierDecision": "REJECT_IDENTITY_OR_HASH_ATTACK",
+      "attackVector": "SOURCE_HASH_MISMATCH",
+      "mustCheck": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "92CD2CAB75374699FF46D3973B889986D3767EE03E9AD828898880B113DF7F22",
+      "mutationSignature": "92CD2CAB75374699",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "HASH_NEG_004",
+      "family": "HASH_IDENTITY_ATTACK",
+      "polarity": "NEGATIVE",
+      "claimType": "HASH_ATTACK",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Hash identity attack case 4 attempts stale hash, alias promotion, or identity substitution.",
+      "expectedVerifierDecision": "REJECT_IDENTITY_OR_HASH_ATTACK",
+      "attackVector": "STALE_HASH_REUSE",
+      "mustCheck": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "C2EF64E3BCCA42929CAAD03E92F0AC64518AFF61D7A98B694321A907C5A56308",
+      "mutationSignature": "C2EF64E3BCCA4292",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "HASH_NEG_005",
+      "family": "HASH_IDENTITY_ATTACK",
+      "polarity": "NEGATIVE",
+      "claimType": "HASH_ATTACK",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Hash identity attack case 5 attempts stale hash, alias promotion, or identity substitution.",
+      "expectedVerifierDecision": "REJECT_IDENTITY_OR_HASH_ATTACK",
+      "attackVector": "ALIAS_PROMOTION",
+      "mustCheck": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "57601C2DB641C4224FD7A71026AF3BF311FF5E18D7B7F9C9B8C2437F766563B5",
+      "mutationSignature": "57601C2DB641C422",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "HASH_NEG_006",
+      "family": "HASH_IDENTITY_ATTACK",
+      "polarity": "NEGATIVE",
+      "claimType": "HASH_ATTACK",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Hash identity attack case 6 attempts stale hash, alias promotion, or identity substitution.",
+      "expectedVerifierDecision": "REJECT_IDENTITY_OR_HASH_ATTACK",
+      "attackVector": "CONTENT_HASH_MISMATCH",
+      "mustCheck": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "0526E2549A22AEC4EC367A527F9F2F05B92687628182A37C5B500FB365AAA8D9",
+      "mutationSignature": "0526E2549A22AEC4",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "HASH_NEG_007",
+      "family": "HASH_IDENTITY_ATTACK",
+      "polarity": "NEGATIVE",
+      "claimType": "HASH_ATTACK",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Hash identity attack case 7 attempts stale hash, alias promotion, or identity substitution.",
+      "expectedVerifierDecision": "REJECT_IDENTITY_OR_HASH_ATTACK",
+      "attackVector": "SOURCE_HASH_MISMATCH",
+      "mustCheck": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "F3EBA1E80647CE2694ECD9F3F25D27B974BA1BB0E75EF24747FA113F9D976AA1",
+      "mutationSignature": "F3EBA1E80647CE26",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "HASH_NEG_008",
+      "family": "HASH_IDENTITY_ATTACK",
+      "polarity": "NEGATIVE",
+      "claimType": "HASH_ATTACK",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Hash identity attack case 8 attempts stale hash, alias promotion, or identity substitution.",
+      "expectedVerifierDecision": "REJECT_IDENTITY_OR_HASH_ATTACK",
+      "attackVector": "STALE_HASH_REUSE",
+      "mustCheck": [
+        "canonicalContentHash",
+        "sourceExtractHash",
+        "originalAmtnId",
+        "canonicalSemanticTopicId",
+        "verificationJobAlias"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "1E9ED5CBF2DAADA5F2D409EC3D1B52DA24CADB21B71EE4CAD33E603E46A5B554",
+      "mutationSignature": "1E9ED5CBF2DAADA5",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "artifactId": "AAF_006E_FIX1_REPAIR_INVALIDATION",
+  "family": "REPAIR_INVALIDATION",
+  "caseCount": 5,
+  "cases": [
+    {
+      "caseId": "REPAIR_NEG_001",
+      "family": "REPAIR_INVALIDATION",
+      "polarity": "NEGATIVE",
+      "claimType": "REPAIR_INVALIDATION",
+      "verificationLane": "POST_ASSEMBLY_VERIFICATION",
+      "claimSummary": "Repair invalidation case 1 ensures any content repair invalidates older verification results.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "REPAIR_INVALIDATION_BYPASS",
+      "mustCheck": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "F84AE8117DF68FD60F3F48EDEFC9204F780EFD9AC6A58C007B034C539BAEDF8C",
+      "mutationSignature": "F84AE8117DF68FD6",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "REPAIR_NEG_002",
+      "family": "REPAIR_INVALIDATION",
+      "polarity": "NEGATIVE",
+      "claimType": "REPAIR_INVALIDATION",
+      "verificationLane": "POST_ASSEMBLY_VERIFICATION",
+      "claimSummary": "Repair invalidation case 2 ensures any content repair invalidates older verification results.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "REPAIR_INVALIDATION_BYPASS",
+      "mustCheck": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "8362C808B43EC7094A12134E2E7AD9F13E9C22E29E1227D687BC64A2A56F481D",
+      "mutationSignature": "8362C808B43EC709",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "REPAIR_NEG_003",
+      "family": "REPAIR_INVALIDATION",
+      "polarity": "NEGATIVE",
+      "claimType": "REPAIR_INVALIDATION",
+      "verificationLane": "POST_ASSEMBLY_VERIFICATION",
+      "claimSummary": "Repair invalidation case 3 ensures any content repair invalidates older verification results.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "REPAIR_INVALIDATION_BYPASS",
+      "mustCheck": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "0403C236C3A63547C73C20FF63BCE85D6F6A38100FC5DF03C70967573955D7A2",
+      "mutationSignature": "0403C236C3A63547",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "REPAIR_NEG_004",
+      "family": "REPAIR_INVALIDATION",
+      "polarity": "NEGATIVE",
+      "claimType": "REPAIR_INVALIDATION",
+      "verificationLane": "POST_ASSEMBLY_VERIFICATION",
+      "claimSummary": "Repair invalidation case 4 ensures any content repair invalidates older verification results.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "REPAIR_INVALIDATION_BYPASS",
+      "mustCheck": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "02603458F56542D4912C5DB46C4C63836801A6740F2918E86FB393D0F44CC50E",
+      "mutationSignature": "02603458F56542D4",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "REPAIR_NEG_005",
+      "family": "REPAIR_INVALIDATION",
+      "polarity": "NEGATIVE",
+      "claimType": "REPAIR_INVALIDATION",
+      "verificationLane": "POST_ASSEMBLY_VERIFICATION",
+      "claimSummary": "Repair invalidation case 5 ensures any content repair invalidates older verification results.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "REPAIR_INVALIDATION_BYPASS",
+      "mustCheck": [
+        "repairRevision",
+        "previousVerificationHash",
+        "finalContentHash",
+        "postRepairClaimMatrix"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "3656E3ACB185ADFD5ECEAE0FDEC82075CE8D4A3A288ABD452D3C78B1A1ECE90A",
+      "mutationSignature": "3656E3ACB185ADFD",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    }
+  ]
+}

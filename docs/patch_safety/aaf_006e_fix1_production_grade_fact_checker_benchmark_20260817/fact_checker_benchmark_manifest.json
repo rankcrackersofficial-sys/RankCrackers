@@ -1,0 +1,30 @@
+{
+  "manifestId": "AAF_006E_FIX1_PRODUCTION_GRADE_BENCHMARK_MANIFEST_20260817",
+  "headBefore": "cf495e25b0341e179304fef6a3039835075b442f",
+  "originalSeedCases": 26,
+  "benchmarkCasesFile": "production_grade_fact_checker_benchmark_cases.json",
+  "counters": {
+    "totalBenchmarkCases": 112,
+    "positiveCases": 45,
+    "negativeCases": 67,
+    "stableFactPositives": 16,
+    "reactionPositives": 9,
+    "procedurePositives": 12,
+    "standardSensitivePositives": 5,
+    "reactionNegatives": 12,
+    "procedureNegatives": 14,
+    "sourceConflictCases": 10,
+    "unsourcedPlausibleCases": 8,
+    "hashIdentityAttackCases": 8,
+    "staleVersionCases": 6,
+    "repairInvalidationCases": 5,
+    "canonicalReuseCases": 4,
+    "provisionalCrossProviderCases": 3,
+    "zeroToleranceCases": 63,
+    "uniqueInputHashes": 112,
+    "uniqueMutationSignatures": 112,
+    "duplicateCases": 0
+  },
+  "acceptancePassed": true,
+  "finalLine": "AAF_PRODUCTION_FACT_CHECKER_BENCHMARK_LOCKED_READY_TO_VALIDATE_INDEPENDENT_AI_VERIFIERS"
+}

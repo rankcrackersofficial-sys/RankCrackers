@@ -1,0 +1,95 @@
+{
+  "artifactId": "AAF_006E_FIX1_CANONICAL_REUSE",
+  "family": "CANONICAL_REUSE",
+  "caseCount": 4,
+  "cases": [
+    {
+      "caseId": "REUSE_CASE_001",
+      "family": "CANONICAL_REUSE",
+      "polarity": "POSITIVE",
+      "claimType": "CANONICAL_REUSE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Canonical reuse case 1 validates reuse only under matching version, source hash, content hash, and mission binding.",
+      "expectedVerifierDecision": "REUSE_VERIFICATION_ALLOWED",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "63C970189CF6D86515ADF64FF0A43E3E37E106F0496781F8A4E32B8EB1326C9F",
+      "mutationSignature": "63C970189CF6D865",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "REUSE_CASE_002",
+      "family": "CANONICAL_REUSE",
+      "polarity": "POSITIVE",
+      "claimType": "CANONICAL_REUSE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Canonical reuse case 2 validates reuse only under matching version, source hash, content hash, and mission binding.",
+      "expectedVerifierDecision": "REUSE_VERIFICATION_ALLOWED",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "F5AF6F5AF337E36E99011B1407F91BF4F03699401831D4C1CD131EE31B40B3FA",
+      "mutationSignature": "F5AF6F5AF337E36E",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "REUSE_CASE_003",
+      "family": "CANONICAL_REUSE",
+      "polarity": "NEGATIVE",
+      "claimType": "CANONICAL_REUSE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Canonical reuse case 3 validates reuse only under matching version, source hash, content hash, and mission binding.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "TITLE_ONLY_REUSE",
+      "mustCheck": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "F1E435077ECE41A863A22C8E11443B0CF6AEB40CE6E5690B005A45A17DCC8093",
+      "mutationSignature": "F1E435077ECE41A8",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "REUSE_CASE_004",
+      "family": "CANONICAL_REUSE",
+      "polarity": "NEGATIVE",
+      "claimType": "CANONICAL_REUSE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Canonical reuse case 4 validates reuse only under matching version, source hash, content hash, and mission binding.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "TITLE_ONLY_REUSE",
+      "mustCheck": [
+        "canonicalBlockId",
+        "canonicalVersion",
+        "sourceExtractHash",
+        "contentHash",
+        "missionBindingScope"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "DD0F2838B6D3A6ACEB0485D00790B703543A3CC34C1664B667574B0117D09E04",
+      "mutationSignature": "DD0F2838B6D3A6AC",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    }
+  ]
+}

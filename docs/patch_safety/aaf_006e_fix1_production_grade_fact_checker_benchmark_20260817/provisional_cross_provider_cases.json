@@ -1,0 +1,73 @@
+{
+  "artifactId": "AAF_006E_FIX1_PROVISIONAL_CROSS_PROVIDER",
+  "family": "PROVISIONAL_CROSS_PROVIDER",
+  "caseCount": 3,
+  "cases": [
+    {
+      "caseId": "CPR_CASE_001",
+      "family": "PROVISIONAL_CROSS_PROVIDER",
+      "polarity": "POSITIVE",
+      "claimType": "PROVISIONAL_CROSS_PROVIDER",
+      "verificationLane": "CROSS_PROVIDER_AFTER_PRIMARY",
+      "claimSummary": "Cross-provider routing case 1 validates AAF-006A policy reconciliation before publication authority.",
+      "expectedVerifierDecision": "SECOND_PROVIDER_AFTER_PRIMARY",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "primaryDecision",
+        "secondaryDecision",
+        "riskClass",
+        "policyVersion",
+        "publicationGate"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "1791F8493EB24E87106F1428D36D3C729EAA81B4661F7B5C0714DEEFDDB008CB",
+      "mutationSignature": "1791F8493EB24E87",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "CPR_CASE_002",
+      "family": "PROVISIONAL_CROSS_PROVIDER",
+      "polarity": "NEGATIVE",
+      "claimType": "PROVISIONAL_CROSS_PROVIDER",
+      "verificationLane": "CROSS_PROVIDER_AFTER_PRIMARY",
+      "claimSummary": "Cross-provider routing case 2 validates AAF-006A policy reconciliation before publication authority.",
+      "expectedVerifierDecision": "PUBLICATION_BLOCKED_OR_DISPUTE",
+      "attackVector": "EARLY_PUBLICATION_OR_CONFIDENCE_OVERRIDE",
+      "mustCheck": [
+        "primaryDecision",
+        "secondaryDecision",
+        "riskClass",
+        "policyVersion",
+        "publicationGate"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "3CB15798C88C20B569D7C63F7BFC3B952290FC81F8E7190C016F47DD4B2C2695",
+      "mutationSignature": "3CB15798C88C20B5",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "CPR_CASE_003",
+      "family": "PROVISIONAL_CROSS_PROVIDER",
+      "polarity": "NEGATIVE",
+      "claimType": "PROVISIONAL_CROSS_PROVIDER",
+      "verificationLane": "CROSS_PROVIDER_AFTER_PRIMARY",
+      "claimSummary": "Cross-provider routing case 3 validates AAF-006A policy reconciliation before publication authority.",
+      "expectedVerifierDecision": "PUBLICATION_BLOCKED_OR_DISPUTE",
+      "attackVector": "EARLY_PUBLICATION_OR_CONFIDENCE_OVERRIDE",
+      "mustCheck": [
+        "primaryDecision",
+        "secondaryDecision",
+        "riskClass",
+        "policyVersion",
+        "publicationGate"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "39C229B5CD42B6A2D63C7E5F66636B2368F53A4AFE5FD88E00D33E0C3BFEDFF1",
+      "mutationSignature": "39C229B5CD42B6A2",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    }
+  ]
+}

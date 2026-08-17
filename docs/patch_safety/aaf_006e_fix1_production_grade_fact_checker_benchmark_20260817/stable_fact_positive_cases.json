@@ -1,0 +1,343 @@
+{
+  "artifactId": "AAF_006E_FIX1_STABLE_FACT_POSITIVE",
+  "family": "STABLE_FACT_POSITIVE",
+  "caseCount": 16,
+  "cases": [
+    {
+      "caseId": "STABLE_POS_001",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 1 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "3502A74ED245376252EFDCD535C224DFA6F987706399BBA827767031E096F801",
+      "mutationSignature": "3502A74ED2453762",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_002",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 2 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "8557D51BFEDB76D0523D793A19042C8CE94BD0B5F560F54221274038B87F79C0",
+      "mutationSignature": "8557D51BFEDB76D0",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_003",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 3 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "7AEF30BCC00A0623B672AAAEB741C4BEC8F2A0AF95499DE040D054EF60ACC3FF",
+      "mutationSignature": "7AEF30BCC00A0623",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_004",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 4 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "CCFB70C6D2E81E9DDCFDFE0FF4A0C5E8D2A1FB0E3E68D5EE9E85F6506A35013B",
+      "mutationSignature": "CCFB70C6D2E81E9D",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_005",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 5 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "659AAF1CFD45C45929542FBF53BE60D85C8C8B7F38BE910513BAEFD5C86470A4",
+      "mutationSignature": "659AAF1CFD45C459",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_006",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 6 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "09C5494C31FAB10ECFC0C60B25F1C9D85D62E3DA15449481D870284B0129AFE6",
+      "mutationSignature": "09C5494C31FAB10E",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_007",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 7 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "C529ADF10BDF551E533A78EA332CF5FC8AFD84057CE7FEDF91E8F8BC42BB7545",
+      "mutationSignature": "C529ADF10BDF551E",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_008",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 8 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "BBD837C9039B14E528F7CC3F4C8BB7284F8F5FD7B2AE191CC5E740FA6C550457",
+      "mutationSignature": "BBD837C9039B14E5",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_009",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 9 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "8084FB83C1260772F8417EBB89BBFE754FE5A517B1834760982067C8E51C7E57",
+      "mutationSignature": "8084FB83C1260772",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_010",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 10 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "65F842E29275632919880DD3804CDB33B9951FD48CFFD9240ADCF4BD83942213",
+      "mutationSignature": "65F842E292756329",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_011",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 11 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "E9EF3B82EF56B9C009491D863AEEF592761F72C5592EE96C6A9A970E58E1EC10",
+      "mutationSignature": "E9EF3B82EF56B9C0",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_012",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 12 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "9BECAC5DFC01016B1C3E96D34A4C88F32F5BEF9C794D8C75918BB8B189B7EFAD",
+      "mutationSignature": "9BECAC5DFC01016B",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_013",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 13 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "A803FDC380853F8FF368B64A9B5384248915ECDF982A89B1DF790BF629A26714",
+      "mutationSignature": "A803FDC380853F8F",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_014",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 14 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "C1DFE26D05FD693B4BCDD7EC6D3DF5AD51F28783D1E5F550F153C1C62CE92A29",
+      "mutationSignature": "C1DFE26D05FD693B",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_015",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 15 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "00A63828E7BD9AAFA6D05DE9B0532284151CEC128C6F104D8880E04CECC70F68",
+      "mutationSignature": "00A63828E7BD9AAF",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STABLE_POS_016",
+      "family": "STABLE_FACT_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STABLE_FACT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source extract exactly supports stable chemistry fact variant 16 without temporal dependency.",
+      "expectedVerifierDecision": "SUPPORTED_IF_SOURCE_EXTRACT_MATCHES",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "claimText",
+        "sourceExtractHash",
+        "sourceLocator",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "65EE7092AE9E108342947E8A5FB745C1D15BF278924BF1A9B3778D32B8034B58",
+      "mutationSignature": "65EE7092AE9E1083",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    }
+  ]
+}

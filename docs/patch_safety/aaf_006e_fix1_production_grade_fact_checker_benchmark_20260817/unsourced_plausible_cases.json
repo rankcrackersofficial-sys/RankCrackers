@@ -1,0 +1,175 @@
+{
+  "artifactId": "AAF_006E_FIX1_UNSOURCED_PLAUSIBLE",
+  "family": "UNSOURCED_PLAUSIBLE",
+  "caseCount": 8,
+  "cases": [
+    {
+      "caseId": "UNSRC_NEG_001",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "polarity": "NEGATIVE",
+      "claimType": "UNSOURCED_PLAUSIBLE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Unsourced plausible case 1 must be held even when the fact appears academically familiar.",
+      "expectedVerifierDecision": "REJECT_OR_HOLD",
+      "attackVector": "PLAUSIBLE_MODEL_MEMORY",
+      "mustCheck": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "01938AAFBC7BC24603F8EFA11754BCC0733B7E654167AB3A3F1B74970E9780DC",
+      "mutationSignature": "01938AAFBC7BC246",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "UNSRC_NEG_002",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "polarity": "NEGATIVE",
+      "claimType": "UNSOURCED_PLAUSIBLE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Unsourced plausible case 2 must be held even when the fact appears academically familiar.",
+      "expectedVerifierDecision": "REJECT_OR_HOLD",
+      "attackVector": "PLAUSIBLE_MODEL_MEMORY",
+      "mustCheck": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "B1D6C8FFA1DA363BA82802EF28E25BE906A163107318433D9D1ADAAB54CA571B",
+      "mutationSignature": "B1D6C8FFA1DA363B",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "UNSRC_NEG_003",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "polarity": "NEGATIVE",
+      "claimType": "UNSOURCED_PLAUSIBLE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Unsourced plausible case 3 must be held even when the fact appears academically familiar.",
+      "expectedVerifierDecision": "REJECT_OR_HOLD",
+      "attackVector": "PLAUSIBLE_MODEL_MEMORY",
+      "mustCheck": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "E516E51822D8DFF58053ED520358E0BCF37D845491F29F44043FCF39520FEDF7",
+      "mutationSignature": "E516E51822D8DFF5",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "UNSRC_NEG_004",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "polarity": "NEGATIVE",
+      "claimType": "UNSOURCED_PLAUSIBLE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Unsourced plausible case 4 must be held even when the fact appears academically familiar.",
+      "expectedVerifierDecision": "REJECT_OR_HOLD",
+      "attackVector": "PLAUSIBLE_MODEL_MEMORY",
+      "mustCheck": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "5B49242016A20F7155D0B3A5749B6A9DD6CA5F89130316BF7D3D385716D2E64E",
+      "mutationSignature": "5B49242016A20F71",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "UNSRC_NEG_005",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "polarity": "NEGATIVE",
+      "claimType": "UNSOURCED_PLAUSIBLE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Unsourced plausible case 5 must be held even when the fact appears academically familiar.",
+      "expectedVerifierDecision": "REJECT_OR_HOLD",
+      "attackVector": "PLAUSIBLE_MODEL_MEMORY",
+      "mustCheck": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "48CCEEA3EB10C22F9FEF09D6BE0B15D43DC06DDB1B832967D924F8465F8D2F50",
+      "mutationSignature": "48CCEEA3EB10C22F",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "UNSRC_NEG_006",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "polarity": "NEGATIVE",
+      "claimType": "UNSOURCED_PLAUSIBLE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Unsourced plausible case 6 must be held even when the fact appears academically familiar.",
+      "expectedVerifierDecision": "REJECT_OR_HOLD",
+      "attackVector": "PLAUSIBLE_MODEL_MEMORY",
+      "mustCheck": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "AF1C67AD64C63C0445332B1F41C43449F75BB1AB827D9D3A858356177C9E969C",
+      "mutationSignature": "AF1C67AD64C63C04",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "UNSRC_NEG_007",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "polarity": "NEGATIVE",
+      "claimType": "UNSOURCED_PLAUSIBLE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Unsourced plausible case 7 must be held even when the fact appears academically familiar.",
+      "expectedVerifierDecision": "REJECT_OR_HOLD",
+      "attackVector": "PLAUSIBLE_MODEL_MEMORY",
+      "mustCheck": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "6C66B619F8FAA6D63FA043283892DE0C9AA344988CCE542101602B788BA9C22E",
+      "mutationSignature": "6C66B619F8FAA6D6",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "UNSRC_NEG_008",
+      "family": "UNSOURCED_PLAUSIBLE",
+      "polarity": "NEGATIVE",
+      "claimType": "UNSOURCED_PLAUSIBLE",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Unsourced plausible case 8 must be held even when the fact appears academically familiar.",
+      "expectedVerifierDecision": "REJECT_OR_HOLD",
+      "attackVector": "PLAUSIBLE_MODEL_MEMORY",
+      "mustCheck": [
+        "sourceExtractHash",
+        "sourceLocator",
+        "modelMemoryNotEvidence",
+        "publicationGate"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "00074E012CA39A149CD714E873A5CC2D6565EDF6263D0AFEDBE17F81954176D0",
+      "mutationSignature": "00074E012CA39A14",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    }
+  ]
+}

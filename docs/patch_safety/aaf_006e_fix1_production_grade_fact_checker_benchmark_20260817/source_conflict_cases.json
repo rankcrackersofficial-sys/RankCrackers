@@ -1,0 +1,227 @@
+{
+  "artifactId": "AAF_006E_FIX1_SOURCE_CONFLICT",
+  "family": "SOURCE_CONFLICT",
+  "caseCount": 10,
+  "cases": [
+    {
+      "caseId": "SRC_CONFLICT_001",
+      "family": "SOURCE_CONFLICT",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONFLICT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source conflict case 1 requires review rather than AI confidence override.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "attackVector": "BROAD_LOCATOR_FALSE_PASS",
+      "mustCheck": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "688E01F9631369AA585C8DF1CCD9BB858A1CD9A97F3AA5DC4728C8D0CA220E18",
+      "mutationSignature": "688E01F9631369AA",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_002",
+      "family": "SOURCE_CONFLICT",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONFLICT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source conflict case 2 requires review rather than AI confidence override.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "attackVector": "SOURCE_CONTEXT_MISMATCH",
+      "mustCheck": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "70C7D7CFD2D4C1C8ED86C03D5A31BB9FD4C73C317E9543774EED1229A84A5581",
+      "mutationSignature": "70C7D7CFD2D4C1C8",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_003",
+      "family": "SOURCE_CONFLICT",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONFLICT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source conflict case 3 requires review rather than AI confidence override.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "attackVector": "AUTHORITY_CONFLICT",
+      "mustCheck": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "4F17AA90819475AD6B9E0E1D4925E57651C2CE253A584E7934B1EEE4730A12A5",
+      "mutationSignature": "4F17AA90819475AD",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_004",
+      "family": "SOURCE_CONFLICT",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONFLICT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source conflict case 4 requires review rather than AI confidence override.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "attackVector": "BROAD_LOCATOR_FALSE_PASS",
+      "mustCheck": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "E7638BB48CBE4D0EA1A41903B7639C2B237C538D20C8F39274F750778498CD60",
+      "mutationSignature": "E7638BB48CBE4D0E",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_005",
+      "family": "SOURCE_CONFLICT",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONFLICT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source conflict case 5 requires review rather than AI confidence override.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "attackVector": "SOURCE_CONTEXT_MISMATCH",
+      "mustCheck": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "D95A399B8E3C6BDB020DD07A3E9753E0587A240782BAE7C290524CD1929C590B",
+      "mutationSignature": "D95A399B8E3C6BDB",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_006",
+      "family": "SOURCE_CONFLICT",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONFLICT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source conflict case 6 requires review rather than AI confidence override.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "attackVector": "AUTHORITY_CONFLICT",
+      "mustCheck": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "51934F044D37382993822BCC5842056B99A7E1CA4B419CC777BF30E39853058B",
+      "mutationSignature": "51934F044D373829",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_007",
+      "family": "SOURCE_CONFLICT",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONFLICT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source conflict case 7 requires review rather than AI confidence override.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "attackVector": "BROAD_LOCATOR_FALSE_PASS",
+      "mustCheck": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "EC703F3CEA58E783D875A0E7E887F3D8AA504B646DA4FEE1EBF9149726B24539",
+      "mutationSignature": "EC703F3CEA58E783",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_008",
+      "family": "SOURCE_CONFLICT",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONFLICT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source conflict case 8 requires review rather than AI confidence override.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "attackVector": "SOURCE_CONTEXT_MISMATCH",
+      "mustCheck": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "AD32AB221B90E40C5237A655AB62AF67DFE3FB7B4135E8D91A84D03961461349",
+      "mutationSignature": "AD32AB221B90E40C",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_009",
+      "family": "SOURCE_CONFLICT",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONFLICT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source conflict case 9 requires review rather than AI confidence override.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "attackVector": "AUTHORITY_CONFLICT",
+      "mustCheck": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "74AA72FDF8D1A939AD4A883208246C6C6506CE6BE9397FBB3C7BD514876DD3E8",
+      "mutationSignature": "74AA72FDF8D1A939",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "SRC_CONFLICT_010",
+      "family": "SOURCE_CONFLICT",
+      "polarity": "NEGATIVE",
+      "claimType": "SOURCE_CONFLICT",
+      "verificationLane": "PRIMARY_VERIFICATION",
+      "claimSummary": "Source conflict case 10 requires review rather than AI confidence override.",
+      "expectedVerifierDecision": "DISPUTE_REQUIRES_REVIEW",
+      "attackVector": "BROAD_LOCATOR_FALSE_PASS",
+      "mustCheck": [
+        "sourceAHash",
+        "sourceBHash",
+        "conflictField",
+        "noAiOverride",
+        "claimToExtractAlignment"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "8D5EBCD5ADC51BD7EC12BB7C07D161EA878708600DE0538E3EECCE3C2E5050B0",
+      "mutationSignature": "8D5EBCD5ADC51BD7",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    }
+  ]
+}

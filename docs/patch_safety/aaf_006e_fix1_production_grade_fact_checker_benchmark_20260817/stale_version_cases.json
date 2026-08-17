@@ -1,0 +1,133 @@
+{
+  "artifactId": "AAF_006E_FIX1_STALE_VERSION",
+  "family": "STALE_VERSION",
+  "caseCount": 6,
+  "cases": [
+    {
+      "caseId": "STALE_NEG_001",
+      "family": "STALE_VERSION",
+      "polarity": "NEGATIVE",
+      "claimType": "STALE_VERSION",
+      "verificationLane": "POST_ASSEMBLY_VERIFICATION",
+      "claimSummary": "Stale version case 1 tries to reuse a pass after canonical or post-assembly version changes.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "STALE_VERSION_REUSE",
+      "mustCheck": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "EAC78FB7845EF777440E8FBB5C7592CAB6EFFD7043AEC333FB3136F6143EB9BF",
+      "mutationSignature": "EAC78FB7845EF777",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STALE_NEG_002",
+      "family": "STALE_VERSION",
+      "polarity": "NEGATIVE",
+      "claimType": "STALE_VERSION",
+      "verificationLane": "POST_ASSEMBLY_VERIFICATION",
+      "claimSummary": "Stale version case 2 tries to reuse a pass after canonical or post-assembly version changes.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "STALE_VERSION_REUSE",
+      "mustCheck": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "0C13DB33BDBA36A75A8AF5F5B9E697CC7DB58CDAF41D1B71DA5328C4F41F8397",
+      "mutationSignature": "0C13DB33BDBA36A7",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STALE_NEG_003",
+      "family": "STALE_VERSION",
+      "polarity": "NEGATIVE",
+      "claimType": "STALE_VERSION",
+      "verificationLane": "POST_ASSEMBLY_VERIFICATION",
+      "claimSummary": "Stale version case 3 tries to reuse a pass after canonical or post-assembly version changes.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "STALE_VERSION_REUSE",
+      "mustCheck": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "3C3516F091E598FECD2FE8C875B3F452F446EF8816AB643D7D0A2D36C131A02D",
+      "mutationSignature": "3C3516F091E598FE",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STALE_NEG_004",
+      "family": "STALE_VERSION",
+      "polarity": "NEGATIVE",
+      "claimType": "STALE_VERSION",
+      "verificationLane": "POST_ASSEMBLY_VERIFICATION",
+      "claimSummary": "Stale version case 4 tries to reuse a pass after canonical or post-assembly version changes.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "STALE_VERSION_REUSE",
+      "mustCheck": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "F434F413D5E58199BE7C53AD595ACA4C00BE8488E9A4F6A1EFF26A964220357A",
+      "mutationSignature": "F434F413D5E58199",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STALE_NEG_005",
+      "family": "STALE_VERSION",
+      "polarity": "NEGATIVE",
+      "claimType": "STALE_VERSION",
+      "verificationLane": "POST_ASSEMBLY_VERIFICATION",
+      "claimSummary": "Stale version case 5 tries to reuse a pass after canonical or post-assembly version changes.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "STALE_VERSION_REUSE",
+      "mustCheck": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "4F458C645EE4F537C8AACBD50E1FAA8823A9F48E9A476DE54F0BAE305A7399A2",
+      "mutationSignature": "4F458C645EE4F537",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STALE_NEG_006",
+      "family": "STALE_VERSION",
+      "polarity": "NEGATIVE",
+      "claimType": "STALE_VERSION",
+      "verificationLane": "POST_ASSEMBLY_VERIFICATION",
+      "claimSummary": "Stale version case 6 tries to reuse a pass after canonical or post-assembly version changes.",
+      "expectedVerifierDecision": "REVERIFY_REQUIRED",
+      "attackVector": "STALE_VERSION_REUSE",
+      "mustCheck": [
+        "canonicalVersion",
+        "repairRevision",
+        "postAssemblyHash",
+        "verificationRevision"
+      ],
+      "severity": "ZERO_TOLERANCE",
+      "inputHash": "0BD45EF0019450A13738AAA766919B11AEFD6C8B5AC40D444D63ED5EB841B3E8",
+      "mutationSignature": "0BD45EF0019450A1",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    }
+  ]
+}

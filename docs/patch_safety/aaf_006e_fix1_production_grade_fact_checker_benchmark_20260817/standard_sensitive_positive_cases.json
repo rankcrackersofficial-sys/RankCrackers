@@ -1,0 +1,112 @@
+{
+  "artifactId": "AAF_006E_FIX1_STANDARD_SENSITIVE_POSITIVE",
+  "family": "STANDARD_SENSITIVE_POSITIVE",
+  "caseCount": 5,
+  "cases": [
+    {
+      "caseId": "STD_POS_001",
+      "family": "STANDARD_SENSITIVE_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STANDARD_SENSITIVE",
+      "verificationLane": "STANDARD_SENSITIVE",
+      "claimSummary": "Standard-sensitive positive case 1 is accepted only when policy version and source extract both align.",
+      "expectedVerifierDecision": "SUPPORTED_WITH_POLICY_VERSION",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "3395701BF6CDBDCA194EE2C45ECB36913782C2CA218B376ED35CD92DBA596743",
+      "mutationSignature": "3395701BF6CDBDCA",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STD_POS_002",
+      "family": "STANDARD_SENSITIVE_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STANDARD_SENSITIVE",
+      "verificationLane": "STANDARD_SENSITIVE",
+      "claimSummary": "Standard-sensitive positive case 2 is accepted only when policy version and source extract both align.",
+      "expectedVerifierDecision": "SUPPORTED_WITH_POLICY_VERSION",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "288997BD61CF9241D5FA1C9FA74A7D55A3FF0B39F59C221EA6EE0575D1EE12E4",
+      "mutationSignature": "288997BD61CF9241",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STD_POS_003",
+      "family": "STANDARD_SENSITIVE_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STANDARD_SENSITIVE",
+      "verificationLane": "STANDARD_SENSITIVE",
+      "claimSummary": "Standard-sensitive positive case 3 is accepted only when policy version and source extract both align.",
+      "expectedVerifierDecision": "SUPPORTED_WITH_POLICY_VERSION",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "8775A712C55C1A7D8160FCC800302E9D999E42FB32D39ADD9D5BD3E9ABF3B1D9",
+      "mutationSignature": "8775A712C55C1A7D",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STD_POS_004",
+      "family": "STANDARD_SENSITIVE_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STANDARD_SENSITIVE",
+      "verificationLane": "STANDARD_SENSITIVE",
+      "claimSummary": "Standard-sensitive positive case 4 is accepted only when policy version and source extract both align.",
+      "expectedVerifierDecision": "SUPPORTED_WITH_POLICY_VERSION",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "39424DAB3B3BB8F54FCE4EC17543BF986CAE22F6B199D7326FF28880A93A24BB",
+      "mutationSignature": "39424DAB3B3BB8F5",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    },
+    {
+      "caseId": "STD_POS_005",
+      "family": "STANDARD_SENSITIVE_POSITIVE",
+      "polarity": "POSITIVE",
+      "claimType": "STANDARD_SENSITIVE",
+      "verificationLane": "STANDARD_SENSITIVE",
+      "claimSummary": "Standard-sensitive positive case 5 is accepted only when policy version and source extract both align.",
+      "expectedVerifierDecision": "SUPPORTED_WITH_POLICY_VERSION",
+      "attackVector": "NONE",
+      "mustCheck": [
+        "standardSensitivity",
+        "policyVersion",
+        "sourceExtractHash",
+        "canonicalVersion"
+      ],
+      "severity": "NORMAL",
+      "inputHash": "70CF96D747F96866213CF9BB86FDA300C33BB2F2069CBCCF56387C4631524A19",
+      "mutationSignature": "70CF96D747F96866",
+      "modelFactCheckUsed": "NO",
+      "publicationEligible": false
+    }
+  ]
+}
