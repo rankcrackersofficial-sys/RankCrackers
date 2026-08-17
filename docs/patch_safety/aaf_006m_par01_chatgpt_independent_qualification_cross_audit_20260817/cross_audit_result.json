@@ -1,0 +1,208 @@
+{
+  "verdict": "AAF_006M_PAR01_CHATGPT_INDEPENDENT_QUALIFICATION_CROSS_AUDIT_PASSED",
+  "synthetic112ManifestAccepted": true,
+  "benchmarkCases": 112,
+  "realRecordsAudited": 112,
+  "uniqueCaseIds": 112,
+  "zeroToleranceCases": 63,
+  "zeroToleranceRecordsAudited": 63,
+  "uniqueRequestHashes": 112,
+  "uniqueResponseHashes": 112,
+  "uniqueProviderRunIds": 112,
+  "providerId": "gemini_benchmark_adapter_contract_only",
+  "modelId": "gemini-3.6-flash",
+  "providerConfigurationHash": "89BA9DC60533A094A41435042F26AED68ACE2684A61B60052B62A70BB0D45C53",
+  "qualificationRunId": "QUAL_RUN_112_REAL_006M_20260817",
+  "familyCounts": {
+    "STABLE_POS": 16,
+    "RXN_POS": 9,
+    "PROC_POS": 12,
+    "STD_POS": 5,
+    "RXN_NEG": 12,
+    "PROC_NEG": 14,
+    "SRC_CONFLICT": 10,
+    "UNSRC_NEG": 8,
+    "HASH_NEG": 8,
+    "STALE_NEG": 6,
+    "REPAIR_NEG": 5,
+    "REUSE_CASE": 4,
+    "CPR_CASE": 3
+  },
+  "partialBenchmarkCanQualify": false,
+  "oneZeroToleranceFailureCanQualify": false,
+  "mixedProviderQualificationAllowed": false,
+  "mixedModelQualificationAllowed": false,
+  "crossCaseResponseReuseAllowed": false,
+  "oracleLeakage": 0,
+  "evaluatorExpectationLeakage": 0,
+  "schemaCompatibility": {
+    "aaf006fRealResultSchemaCompatible": true,
+    "aaf006kDecisionInputCompatible": true,
+    "aaf006jLedgerCompatible": true
+  },
+  "attackCount": 16,
+  "attacksPassed": 16,
+  "attackFailures": 0,
+  "attackResults": [
+    {
+      "attack": "missing_response",
+      "passed": true,
+      "detectedFailures": [
+        "LEDGER_TOTAL_RECORDS_NOT_112",
+        "RECORD_COUNT_NOT_112",
+        "CASE_IDS_NOT_UNIQUE_112",
+        "REQUEST_HASHES_NOT_UNIQUE_112",
+        "RESPONSE_HASHES_NOT_UNIQUE_112",
+        "PROVIDER_RUN_IDS_NOT_UNIQUE_112",
+        "SUPPORT_FAMILY_CPR_CASE_COUNT_MISMATCH"
+      ]
+    },
+    {
+      "attack": "duplicate_response",
+      "passed": true,
+      "detectedFailures": [
+        "CASE_IDS_NOT_UNIQUE_112",
+        "REQUEST_HASHES_NOT_UNIQUE_112",
+        "RESPONSE_HASHES_NOT_UNIQUE_112",
+        "PROVIDER_RUN_IDS_NOT_UNIQUE_112"
+      ]
+    },
+    {
+      "attack": "unknown_case",
+      "passed": true,
+      "detectedFailures": [
+        "POSITIVE_FAMILY_STABLE_POS_COUNT_MISMATCH"
+      ]
+    },
+    {
+      "attack": "case_hash_mismatch",
+      "passed": true,
+      "detectedFailures": [
+        "CASE_INPUT_HASH_INVALID_001"
+      ]
+    },
+    {
+      "attack": "request_hash_missing",
+      "passed": true,
+      "detectedFailures": [
+        "REQUEST_HASH_INVALID_001"
+      ]
+    },
+    {
+      "attack": "provider_response_hash_reused",
+      "passed": true,
+      "detectedFailures": [
+        "RESPONSE_HASHES_NOT_UNIQUE_112"
+      ]
+    },
+    {
+      "attack": "provider_run_id_reused",
+      "passed": true,
+      "detectedFailures": [
+        "PROVIDER_RUN_IDS_NOT_UNIQUE_112"
+      ]
+    },
+    {
+      "attack": "partial_benchmark_111_of_112",
+      "passed": true,
+      "detectedFailures": [
+        "LEDGER_TOTAL_RECORDS_NOT_112",
+        "RECORD_COUNT_NOT_112",
+        "CASE_IDS_NOT_UNIQUE_112",
+        "REQUEST_HASHES_NOT_UNIQUE_112",
+        "RESPONSE_HASHES_NOT_UNIQUE_112",
+        "PROVIDER_RUN_IDS_NOT_UNIQUE_112",
+        "REPORT_BENCHMARK_COUNT_NOT_112",
+        "SUPPORT_FAMILY_CPR_CASE_COUNT_MISMATCH"
+      ]
+    },
+    {
+      "attack": "zero_tolerance_missing",
+      "passed": true,
+      "detectedFailures": [
+        "LEDGER_TOTAL_RECORDS_NOT_112",
+        "RECORD_COUNT_NOT_112",
+        "CASE_IDS_NOT_UNIQUE_112",
+        "REQUEST_HASHES_NOT_UNIQUE_112",
+        "RESPONSE_HASHES_NOT_UNIQUE_112",
+        "PROVIDER_RUN_IDS_NOT_UNIQUE_112",
+        "ZERO_TOLERANCE_COUNT_NOT_63",
+        "ZERO_TOLERANCE_FAMILY_RXN_NEG_COUNT_MISMATCH"
+      ]
+    },
+    {
+      "attack": "mixed_provider_id",
+      "passed": true,
+      "detectedFailures": [
+        "MIXED_PROVIDER_QUALIFICATION_DETECTED"
+      ]
+    },
+    {
+      "attack": "mixed_model_id",
+      "passed": true,
+      "detectedFailures": [
+        "MIXED_MODEL_QUALIFICATION_DETECTED"
+      ]
+    },
+    {
+      "attack": "cross_case_response_reuse",
+      "passed": true,
+      "detectedFailures": [
+        "REQUEST_HASHES_NOT_UNIQUE_112",
+        "RESPONSE_HASHES_NOT_UNIQUE_112"
+      ]
+    },
+    {
+      "attack": "oracle_leakage",
+      "passed": true,
+      "detectedFailures": [
+        "ORACLE_LEAKAGE_NONZERO"
+      ]
+    },
+    {
+      "attack": "evaluator_expectation_leakage",
+      "passed": true,
+      "detectedFailures": [
+        "EVALUATOR_EXPECTATION_LEAKAGE_NONZERO"
+      ]
+    },
+    {
+      "attack": "real_wave1_claim_submission",
+      "passed": true,
+      "detectedFailures": [
+        "REAL_WAVE1_CLAIMS_SUBMITTED_NONZERO"
+      ]
+    },
+    {
+      "attack": "publication_leak",
+      "passed": true,
+      "detectedFailures": [
+        "PUBLICATION_ELIGIBLE_LEAK"
+      ]
+    }
+  ],
+  "realWave1ClaimsSubmitted": 0,
+  "publicationEligible": false,
+  "hashes": {
+    "ledger": "B2A5B46F2FDFE14E5DEEB1B167CA7B5BED030E41FE26C6AADAE1C8197EEB5CB8",
+    "report": "3481FA64D38BABF8A01C6B9A47184198D2D6869A88196E8C46C7A4D34FA80A49",
+    "manifest": "EEFD5787B43154D94B8DD06ADCF5E9834AC6F40827FA5ECAE26E0F2C2959F72A",
+    "attacks": "86C84021387D98E5B6F6A90C00E94E43446E8D59697EEB6DAC22C37F79D1C368"
+  },
+  "safety": {
+    "liveModelCalls": 0,
+    "realProviderExecutionByChatGPT": "NO",
+    "realBenchmarkCasesSubmittedByChatGPT": 0,
+    "realWave1ClaimsSubmittedByChatGPT": 0,
+    "firebaseWrite": "NO",
+    "queueWrite": "NO",
+    "publication": "NO",
+    "productionVerifierFilesModified": 0,
+    "providerTransportFilesModified": 0,
+    "workerFilesModified": 0,
+    "queueFilesModified": 0,
+    "frozen006LFilesModified": 0
+  },
+  "failures": [],
+  "finalLine": "AAF_CHATGPT_INDEPENDENT_VERIFICATION_LANE_HAS_BUILT_AND_EXECUTED_THE_112_CASE_QUALIFICATION_CROSS_AUDIT_HARNESS_AND_IS_READY_TO_VALIDATE_REAL_006M_RESULTS_WITHOUT_TOUCHING_PROVIDER_OR_PRODUCTION_CODE"
+}

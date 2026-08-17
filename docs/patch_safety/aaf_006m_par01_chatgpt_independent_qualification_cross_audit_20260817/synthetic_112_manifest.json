@@ -1,0 +1,29 @@
+{
+  "manifestId": "AAF_006M_PAR01_SYNTHETIC_112_MANIFEST",
+  "benchmarkCases": 112,
+  "zeroToleranceCases": 63,
+  "positiveFamilies": {
+    "STABLE_POS": 16,
+    "RXN_POS": 9,
+    "PROC_POS": 12,
+    "STD_POS": 5
+  },
+  "zeroToleranceFamilies": {
+    "RXN_NEG": 12,
+    "PROC_NEG": 14,
+    "SRC_CONFLICT": 10,
+    "UNSRC_NEG": 8,
+    "HASH_NEG": 8,
+    "STALE_NEG": 6,
+    "REPAIR_NEG": 5
+  },
+  "nonZeroToleranceSupportFamilies": {
+    "REUSE_CASE": 4,
+    "CPR_CASE": 3
+  },
+  "partialBenchmarkCanQualify": false,
+  "oneZeroToleranceFailureCanQualify": false,
+  "mixedProviderQualificationAllowed": false,
+  "mixedModelQualificationAllowed": false,
+  "crossCaseResponseReuseAllowed": false
+}

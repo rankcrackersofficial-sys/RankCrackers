@@ -1,0 +1,22 @@
+{
+  "attackFixtureId": "AAF_006M_PAR01_CHATGPT_QUALIFICATION_ATTACKS",
+  "attacks": [
+    "missing_response",
+    "duplicate_response",
+    "unknown_case",
+    "case_hash_mismatch",
+    "request_hash_missing",
+    "provider_response_hash_reused",
+    "provider_run_id_reused",
+    "partial_benchmark_111_of_112",
+    "zero_tolerance_missing",
+    "mixed_provider_id",
+    "mixed_model_id",
+    "cross_case_response_reuse",
+    "oracle_leakage",
+    "evaluator_expectation_leakage",
+    "real_wave1_claim_submission",
+    "publication_leak"
+  ],
+  "expectedFailures": 16
+}
