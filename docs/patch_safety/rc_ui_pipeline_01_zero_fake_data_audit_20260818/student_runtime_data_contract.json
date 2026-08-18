@@ -1,0 +1,19 @@
+﻿{
+    "contract":  "Student App must consume governed public/student-safe projections only.",
+    "allowed_states":  [
+                           "REAL_DATA_FROM_BACKEND_AUTHORITY",
+                           "UNAVAILABLE",
+                           "NOT_READY",
+                           "PERMISSION_DENIED_FAIL_CLOSED",
+                           "OFFLINE_CACHE_IF_VERSION_BOUND_TO_PUBLIC_AUTHORITY"
+                       ],
+    "forbidden_states":  [
+                             "LOCAL_FAKE_ACADEMIC_CONTENT",
+                             "LOCAL_SYNTHETIC_CRUCIBLE",
+                             "LOCAL_FAKE_SYLLABUS",
+                             "LOCAL_FAKE_DIGIBOOK",
+                             "INVENTED_PERSONALIZATION_STATE",
+                             "MOCK_DEMO_FALLBACK_IN_RELEASE"
+                         ],
+    "release_mock_demo_fallback_allowed":  false
+}

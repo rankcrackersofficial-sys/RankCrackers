@@ -1,0 +1,12 @@
+﻿{
+    "rule":  "If real governed data is missing, stale, unauthorized, or unverified, the UI must show unavailable/not-ready and a safe retry/refresh path.",
+    "must_not_show":  [
+                          "fake progress",
+                          "fake mastery",
+                          "fake weak topics",
+                          "fake mock tests",
+                          "fake PYQs",
+                          "synthetic academic cards"
+                      ],
+    "cache_rule":  "Offline cache is allowed only when public-authority version/hash binding is present and stale recovery is visible."
+}

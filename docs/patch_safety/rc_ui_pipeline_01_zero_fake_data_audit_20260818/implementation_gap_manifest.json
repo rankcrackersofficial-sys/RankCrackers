@@ -1,0 +1,142 @@
+﻿{
+    "total_known_gaps":  15,
+    "unknown_residuals":  0,
+    "unowned_fixes":  0,
+    "gaps":  [
+                 {
+                     "id":  "STUDENT-FAKE-001",
+                     "severity":  "P0",
+                     "path":  "lib/database/local/dashboard_local_datasource.dart",
+                     "evidence":  "Student dashboard datasource returns empty local values and zero counters.",
+                     "rule":  "Student App must show real backend data or unavailable/not-ready, not local fake/empty academic truth.",
+                     "owner":  "Student runtime implementation",
+                     "route":  "Replace with governed public projection repository or explicit unavailable state."
+                 },
+                 {
+                     "id":  "STUDENT-FAKE-002",
+                     "severity":  "P0",
+                     "path":  "lib/features/dashboard/data/repositories/dashboard_repository.dart",
+                     "evidence":  "Comment states MAPPED FROM LEGACY LOCAL DATA SOURCE; mapTopics returns empty list.",
+                     "rule":  "Dashboard mission/progress context cannot be inferred from legacy local fake data.",
+                     "owner":  "Student runtime implementation",
+                     "route":  "Bind dashboard topics to published authority/progress projections with fail-closed empty state."
+                 },
+                 {
+                     "id":  "STUDENT-FAKE-003",
+                     "severity":  "P0",
+                     "path":  "lib/data/exam_seed_data.dart; lib/core/engines/mission_seed_engine.dart; lib/features/admin/data/admin_upload_engine.dart",
+                     "evidence":  "Seed engines and admin upload seed paths exist.",
+                     "rule":  "Release Student/App pipeline must not use local seed academic content as student truth.",
+                     "owner":  "Student/runtime + pipeline implementation",
+                     "route":  "Fence seeds to tests/dev fixture only and prove release route cannot consume them."
+                 },
+                 {
+                     "id":  "STUDENT-FAKE-004",
+                     "severity":  "P0",
+                     "path":  "lib/core/engines/pyq_linkage_engine.dart; lib/core/ai/workers/pyq_linkage_engine.dart",
+                     "evidence":  "Mock PYQ IDs are generated/returned.",
+                     "rule":  "PYQ/linkage must be source-backed or not ready.",
+                     "owner":  "Student/pipeline implementation",
+                     "route":  "Use backend/source-backed PYQ projection or visible not-ready contract."
+                 },
+                 {
+                     "id":  "STUDENT-FAKE-005",
+                     "severity":  "P0",
+                     "path":  "lib/core/engines/question_engine/distractor_engine.dart",
+                     "evidence":  "Hardcoded fallback distractors exist.",
+                     "rule":  "Question/distractor content cannot be invented in release.",
+                     "owner":  "Student/pipeline implementation",
+                     "route":  "Disable release fallback; use verified question bank or unavailable state."
+                 },
+                 {
+                     "id":  "STUDENT-FAKE-006",
+                     "severity":  "P1",
+                     "path":  "lib/features/onboarding/presentation/screens/diagnostic_test_screen.dart",
+                     "evidence":  "Fallback path if AI questions are missing.",
+                     "rule":  "Diagnostic content must be source-backed or explicitly unavailable.",
+                     "owner":  "Student runtime implementation",
+                     "route":  "Convert fallback into no-content/not-ready state unless verified questions are present."
+                 },
+                 {
+                     "id":  "STUDENT-FAKE-007",
+                     "severity":  "P1",
+                     "path":  "lib/features/opportunities/data/repositories/sentinel_repository.dart; lib/features/opportunities/presentation/screens/sentinel_center_screen.dart",
+                     "evidence":  "Mock notifications/placeholders exist for Sentinel.",
+                     "rule":  "Student opportunities/intel cannot display fake alerts as real state.",
+                     "owner":  "Student runtime implementation",
+                     "route":  "Bind to governed notification projection or display empty/unavailable."
+                 },
+                 {
+                     "id":  "STUDENT-FAKE-008",
+                     "severity":  "P1",
+                     "path":  "lib/features/test_analysis/presentation/screens/test_analysis_screen.dart; lib/features/dashboard/presentation/widgets/battle_tools/test_arena_card.dart",
+                     "evidence":  "Mock test labels and fixed counts are visible in student surfaces.",
+                     "rule":  "Counts/test labels must come from real backend or not-ready state.",
+                     "owner":  "Student runtime implementation",
+                     "route":  "Replace hardcoded academic metrics with projection-backed values."
+                 },
+                 {
+                     "id":  "FOUNDER-CTRL-001",
+                     "severity":  "P1",
+                     "path":  "lib/web/founder/mission_control/mission_documents_tab.dart",
+                     "evidence":  "Founder document category list contains sample/model/practice labels.",
+                     "rule":  "Founder may classify source material, but must not create local fake student content.",
+                     "owner":  "Founder web implementation",
+                     "route":  "Label as source-document taxonomy only; prove no direct student-ready publication without backend verification."
+                 },
+                 {
+                     "id":  "FOUNDER-CTRL-002",
+                     "severity":  "P1",
+                     "path":  "lib/web/founder/mission_control/mission_documents_tab.dart",
+                     "evidence":  "File-name/title fallback is used for uploaded document title.",
+                     "rule":  "Fallback metadata is acceptable only as draft source metadata, not student academic truth.",
+                     "owner":  "Founder web implementation",
+                     "route":  "Keep draft-only and require governed approval/materialization before student projection."
+                 },
+                 {
+                     "id":  "FOUNDER-CTRL-004",
+                     "severity":  "P1",
+                     "path":  "Founder web controls broadly",
+                     "evidence":  "No complete runtime proof yet that every visible Founder button is a governed backend action or disabled with reason.",
+                     "rule":  "Founder Web required controls cannot be decorative/no-op.",
+                     "owner":  "Founder web implementation",
+                     "route":  "Run control inventory and no-op attack test."
+                 },
+                 {
+                     "id":  "PIPELINE-FAKE-001",
+                     "severity":  "P0",
+                     "path":  "functions/src/providers/providerExecutor.ts",
+                     "evidence":  "executeProvider forces geminiFlash and executeGemini returns mock generated text.",
+                     "rule":  "No silent model fallback and no mock provider output may become canonical/public.",
+                     "owner":  "Pipeline implementation",
+                     "route":  "Fail closed or call qualified provider; preserve requested provider/model identity."
+                 },
+                 {
+                     "id":  "PIPELINE-FAKE-002",
+                     "severity":  "P0",
+                     "path":  "functions/workers/structural_worker.js",
+                     "evidence":  "Rule-based fallbackSegmenter persists semantic_units with promptVersion FALLBACK_V1 after AI/orchestration failure.",
+                     "rule":  "Fallback extraction may be draft-only, never student-ready/canonical without verification.",
+                     "owner":  "Pipeline implementation",
+                     "route":  "Mark fallback as review-required and block promotion/public projection."
+                 },
+                 {
+                     "id":  "PIPELINE-FAKE-003",
+                     "severity":  "P0",
+                     "path":  "functions/callable/handle_mission_action.js",
+                     "evidence":  "Writes isMockData: !isProduction into participant attempts.",
+                     "rule":  "Non-production/mock metadata must never drive student academic truth.",
+                     "owner":  "Pipeline implementation",
+                     "route":  "Keep mock flag out of student-ready projections and add production guard."
+                 },
+                 {
+                     "id":  "PIPELINE-FAKE-004",
+                     "severity":  "P1",
+                     "path":  "lib/core/ai/workers/syllabus_pipeline_workers.dart; lib/core/ai/workers/duplicate_detection_worker.dart",
+                     "evidence":  "Placeholder LLM/vector-similarity workers exist.",
+                     "rule":  "Pipeline placeholders cannot be treated as verified automation output.",
+                     "owner":  "Pipeline implementation",
+                     "route":  "Fail closed or route through governed AAF source/provenance/review stack."
+                 }
+             ]
+}

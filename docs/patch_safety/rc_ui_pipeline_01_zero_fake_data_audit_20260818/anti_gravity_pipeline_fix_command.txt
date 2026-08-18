@@ -1,0 +1,15 @@
+﻿COMMAND_CODE: RC-PIPELINE-ZERO-FAKE-DATA-FIX
+OWNER: ANTI_GRAVITY
+SCOPE: Quarantine or fail-close mock/provider/fallback paths so no unverified or synthetic output can become canonical, materialized, or student-public.
+TARGETS:
+- functions/src/providers/providerExecutor.ts
+- functions/workers/structural_worker.js
+- functions/callable/handle_mission_action.js
+- lib/core/ai/workers/syllabus_pipeline_workers.dart
+- lib/core/ai/workers/duplicate_detection_worker.dart
+HARD RULES:
+NO silent provider/model fallback.
+NO mock provider output as real.
+NO fallback segmentation promoted without review.
+NO direct public writes from unverified workers.
+PASS requires fail-closed tests and no publication bypass.

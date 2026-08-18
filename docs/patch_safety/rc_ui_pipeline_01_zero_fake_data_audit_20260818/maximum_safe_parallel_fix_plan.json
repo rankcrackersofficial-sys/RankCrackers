@@ -1,0 +1,47 @@
+﻿{
+    "status":  "READY",
+    "android_studio_status":  "DISABLED_BY_OWNER_LOCK_UNLESS_FOUNDER_REENABLES",
+    "lanes":  [
+                  {
+                      "lane":  "Student Zero-Fake UI Fix",
+                      "preferred_owner":  "Anti-Gravity unless Android Studio explicitly re-enabled",
+                      "paths":  [
+                                    "lib/features",
+                                    "lib/database",
+                                    "lib/data",
+                                    "lib/core/engines"
+                                ],
+                      "can_parallelize_with":  [
+                                                   "Founder Web Fix",
+                                                   "Pipeline Fix"
+                                               ]
+                  },
+                  {
+                      "lane":  "Founder Web Control Plane Fix",
+                      "owner":  "Anti-Gravity",
+                      "paths":  [
+                                    "lib/web/founder"
+                                ],
+                      "can_parallelize_with":  [
+                                                   "Student Zero-Fake UI Fix",
+                                                   "Pipeline Fix"
+                                               ]
+                  },
+                  {
+                      "lane":  "Shared Pipeline Zero-Fake Fix",
+                      "owner":  "Anti-Gravity",
+                      "paths":  [
+                                    "functions",
+                                    "lib/core/ai"
+                                ],
+                      "can_parallelize_with":  [
+                                                   "Founder Web Fix"
+                                               ]
+                  }
+              ],
+    "conflicts":  [
+                      "Do not let any lane clean unrelated dirty/staged files",
+                      "Do not make student UI consume pipeline drafts directly",
+                      "Do not turn mock provider output into canonical truth"
+                  ]
+}

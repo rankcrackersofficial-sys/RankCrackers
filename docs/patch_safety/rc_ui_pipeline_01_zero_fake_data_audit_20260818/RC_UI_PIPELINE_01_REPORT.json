@@ -1,0 +1,23 @@
+﻿{
+    "verdict":  "RC_UI_PIPELINE_01_STUDENT_FOUNDER_AND_BACKEND_PIPELINES_FULLY_AUDITED_WITH_ZERO_UNKNOWN_UI_RESIDUALS_AND_EXACT_FIX_ROUTING",
+    "head":  "1216c5b25296778de710f7abd3025fe772078854",
+    "branch":  "safety/rc-g2-pre-notification-schema",
+    "product_zero_fake_final_acceptance":  "NOT_YET_ACCEPTED",
+    "student_zero_fake_status":  "AUDITED_WITH_KNOWN_BLOCKERS",
+    "founder_control_plane_status":  "AUDITED_WITH_KNOWN_BLOCKERS",
+    "backend_pipeline_zero_fake_status":  "AUDITED_WITH_KNOWN_BLOCKERS",
+    "unknown_student_ui_residual":  0,
+    "unknown_founder_ui_residual":  0,
+    "unknown_pipeline_residual":  0,
+    "unowned_ui_fixes":  0,
+    "known_student_gaps":  8,
+    "known_founder_gaps":  3,
+    "known_pipeline_gaps":  4,
+    "production_source_modified":  "NO",
+    "firebase_write":  "NO",
+    "queue_write":  "NO",
+    "publication":  "NO",
+    "unrelated_dirty_files_modified":  0,
+    "unrelated_dirty_files_staged_by_rc_ui_pipeline_01":  0,
+    "final_line":  "RC_UI_PIPELINE_01_AUDIT_COMPLETE_ZERO_UNKNOWN_RESIDUALS_EXACT_FIX_ROUTING_READY"
+}

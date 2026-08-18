@@ -1,0 +1,20 @@
+﻿COMMAND_CODE: RC-STUDENT-ZERO-FAKE-UI-FIX
+OWNER_NOTE: Android Studio is disabled by current owner lock unless Founder explicitly re-enables it. If not re-enabled, Anti-Gravity must execute this exact scope.
+SCOPE: Replace Student App fake/local/synthetic academic surfaces with governed public projection repositories or explicit unavailable/not-ready states.
+TARGETS:
+- lib/database/local/dashboard_local_datasource.dart
+- lib/features/dashboard/data/repositories/dashboard_repository.dart
+- lib/data/exam_seed_data.dart
+- lib/core/engines/mission_seed_engine.dart
+- lib/core/engines/pyq_linkage_engine.dart
+- lib/core/ai/workers/pyq_linkage_engine.dart
+- lib/core/engines/question_engine/distractor_engine.dart
+- lib/features/onboarding/presentation/screens/diagnostic_test_screen.dart
+- lib/features/opportunities/data/repositories/sentinel_repository.dart
+- lib/features/test_analysis/presentation/screens/test_analysis_screen.dart
+- lib/features/dashboard/presentation/widgets/battle_tools/test_arena_card.dart
+HARD RULES:
+NO fake academic content in release.
+NO local synthetic Crucible/Syllabus/DigiBook.
+NO invented personalization state.
+PASS requires real backend data or unavailable/not-ready on every affected surface.

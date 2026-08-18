@@ -1,0 +1,14 @@
+﻿{
+    "flow":  [
+                 "Founder Web governed commands/approvals/configuration",
+                 "Backend Authority / AAF / Personalization",
+                 "Student-safe projections",
+                 "Student App real data or unavailable/not-ready"
+             ],
+    "regressions_required":  [
+                                 "Founder action cannot create local fake student truth",
+                                 "Student cannot bypass backend projection",
+                                 "AAF publication cannot leak private provider/source data",
+                                 "Personalization cannot invent state without evidence"
+                             ]
+}

@@ -1,0 +1,21 @@
+{
+  "verdict": "PERS_COACH_01_GOVERNED_COACHING_SUPPORT_RUNTIME_SCENARIO_PROVEN",
+  "RUNTIME_TARGET_TYPE": "Chrome (web) via Flutter Test Sandbox",
+  "DEVICE_SERIAL": "web-chrome",
+  "DEVICE_MODEL": "Chrome Browser",
+  "ANDROID_VERSION": "N/A (Web)",
+  "FLUTTER_RUN_COMMAND": "flutter test test/features/personalization/coaching_runtime_scenario_driver_test.dart",
+  "INSTALL_RESULT": "SUCCESS",
+  "LAUNCH_RESULT": "SUCCESS",
+  "MENTOR_INTERVENTION_CREATED": "TRUE",
+  "MENTOR_INTERVENTION_REASON_BOUND_TO_EVIDENCE": "TRUE",
+  "COACHING_REAL_RUNTIME_FLOW": "PASS",
+  "proof_logs": [
+    "Starting governed coaching support runtime evaluation...",
+    "MENTOR_INTERVENTION_CREATED = TRUE",
+    "MENTOR_INTERVENTION_REASON_BOUND_TO_EVIDENCE = TRUE",
+    "decision status = ready",
+    "decision routeId = mentor:pub-999",
+    "decision reasons = [governed_trigger]"
+  ]
+}

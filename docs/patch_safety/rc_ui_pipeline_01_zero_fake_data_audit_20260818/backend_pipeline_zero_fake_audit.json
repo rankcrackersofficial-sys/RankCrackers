@@ -1,0 +1,52 @@
+﻿{
+    "status":  "AUDITED_WITH_KNOWN_BLOCKERS",
+    "pipeline_zero_fake_final_accepted":  false,
+    "findings":  [
+                     {
+                         "id":  "PIPELINE-FAKE-001",
+                         "severity":  "P0",
+                         "path":  "functions/src/providers/providerExecutor.ts",
+                         "evidence":  "executeProvider forces geminiFlash and executeGemini returns mock generated text.",
+                         "rule":  "No silent model fallback and no mock provider output may become canonical/public.",
+                         "owner":  "Pipeline implementation",
+                         "route":  "Fail closed or call qualified provider; preserve requested provider/model identity."
+                     },
+                     {
+                         "id":  "PIPELINE-FAKE-002",
+                         "severity":  "P0",
+                         "path":  "functions/workers/structural_worker.js",
+                         "evidence":  "Rule-based fallbackSegmenter persists semantic_units with promptVersion FALLBACK_V1 after AI/orchestration failure.",
+                         "rule":  "Fallback extraction may be draft-only, never student-ready/canonical without verification.",
+                         "owner":  "Pipeline implementation",
+                         "route":  "Mark fallback as review-required and block promotion/public projection."
+                     },
+                     {
+                         "id":  "PIPELINE-FAKE-003",
+                         "severity":  "P0",
+                         "path":  "functions/callable/handle_mission_action.js",
+                         "evidence":  "Writes isMockData: !isProduction into participant attempts.",
+                         "rule":  "Non-production/mock metadata must never drive student academic truth.",
+                         "owner":  "Pipeline implementation",
+                         "route":  "Keep mock flag out of student-ready projections and add production guard."
+                     },
+                     {
+                         "id":  "PIPELINE-FAKE-004",
+                         "severity":  "P1",
+                         "path":  "lib/core/ai/workers/syllabus_pipeline_workers.dart; lib/core/ai/workers/duplicate_detection_worker.dart",
+                         "evidence":  "Placeholder LLM/vector-similarity workers exist.",
+                         "rule":  "Pipeline placeholders cannot be treated as verified automation output.",
+                         "owner":  "Pipeline implementation",
+                         "route":  "Fail closed or route through governed AAF source/provenance/review stack."
+                     },
+                     {
+                         "id":  "PIPELINE-REAL-001",
+                         "severity":  "INFO",
+                         "path":  "Published Wave-1 AAF authorities",
+                         "evidence":  "Prior authorities record 552/552 governed academic publication pipeline complete.",
+                         "rule":  "Student and Founder frontends must consume projections from backend authority, not parallel local truth.",
+                         "owner":  "Cross-platform pipeline",
+                         "route":  "Bridge UI repositories to published projections and enforce no private leaks."
+                     }
+                 ],
+    "unknown_pipeline_residual":  0
+}

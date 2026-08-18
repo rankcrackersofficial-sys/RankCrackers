@@ -1,0 +1,43 @@
+﻿{
+    "status":  "AUDITED_WITH_KNOWN_BLOCKERS",
+    "founder_control_plane_final_accepted":  false,
+    "findings":  [
+                     {
+                         "id":  "FOUNDER-CTRL-001",
+                         "severity":  "P1",
+                         "path":  "lib/web/founder/mission_control/mission_documents_tab.dart",
+                         "evidence":  "Founder document category list contains sample/model/practice labels.",
+                         "rule":  "Founder may classify source material, but must not create local fake student content.",
+                         "owner":  "Founder web implementation",
+                         "route":  "Label as source-document taxonomy only; prove no direct student-ready publication without backend verification."
+                     },
+                     {
+                         "id":  "FOUNDER-CTRL-002",
+                         "severity":  "P1",
+                         "path":  "lib/web/founder/mission_control/mission_documents_tab.dart",
+                         "evidence":  "File-name/title fallback is used for uploaded document title.",
+                         "rule":  "Fallback metadata is acceptable only as draft source metadata, not student academic truth.",
+                         "owner":  "Founder web implementation",
+                         "route":  "Keep draft-only and require governed approval/materialization before student projection."
+                     },
+                     {
+                         "id":  "FOUNDER-CTRL-003",
+                         "severity":  "INFO",
+                         "path":  "lib/web/founder/study_master/study_master_library_web.dart; lib/web/founder/mission_control/mission_documents_tab.dart",
+                         "evidence":  "Founder controls write/stream Firestore-backed study library, ingestion refinery and ai_queue records.",
+                         "rule":  "Real control-plane bindings are present.",
+                         "owner":  "Founder web implementation",
+                         "route":  "Preserve real backend action binding; add no-op/control acceptance tests."
+                     },
+                     {
+                         "id":  "FOUNDER-CTRL-004",
+                         "severity":  "P1",
+                         "path":  "Founder web controls broadly",
+                         "evidence":  "No complete runtime proof yet that every visible Founder button is a governed backend action or disabled with reason.",
+                         "rule":  "Founder Web required controls cannot be decorative/no-op.",
+                         "owner":  "Founder web implementation",
+                         "route":  "Run control inventory and no-op attack test."
+                     }
+                 ],
+    "unknown_founder_ui_residual":  0
+}

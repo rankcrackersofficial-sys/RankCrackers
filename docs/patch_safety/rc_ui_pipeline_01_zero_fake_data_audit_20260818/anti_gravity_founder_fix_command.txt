@@ -1,0 +1,8 @@
+﻿COMMAND_CODE: RC-FOUNDER-WEB-CONTROL-PLANE-FIX
+OWNER: ANTI_GRAVITY
+SCOPE: Prove Founder Web controls are real governed backend actions, not decorative/no-op controls, and cannot create local fake student content.
+TARGETS:
+- lib/web/founder/mission_control/mission_documents_tab.dart
+- lib/web/founder/study_master/study_master_library_web.dart
+- Founder command/control surfaces under lib/web/founder
+PASS requires control inventory, backend path/action binding, no-op attack tests, disabled-state reasons, and no direct student-ready publication without governed backend authority.

@@ -1,0 +1,16 @@
+﻿{
+    "rule":  "Every Founder Web visible control must either execute a governed backend command, open a backed record, or be disabled with a clear reason.",
+    "forbidden":  [
+                      "decorative no-op controls",
+                      "local student content creation",
+                      "direct public projection without governed backend authority",
+                      "fake preview promoted as student-ready"
+                  ],
+    "required_proofs":  [
+                            "control inventory",
+                            "backend action/path binding",
+                            "permission/rules boundary",
+                            "disabled-state reason",
+                            "no-op attack test"
+                        ]
+}
