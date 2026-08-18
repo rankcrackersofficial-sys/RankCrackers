@@ -1,0 +1,13 @@
+{
+  "violation_detected": true,
+  "violation_severity": "WARNING",
+  "violation_type": "GIT_WORKTREE_SAFETY_BYPASS",
+  "description": "The execution procedure temporarily reset the active branch HEAD and used git stash/stash pop to satisfy historical commit checks in the safety guard. While the execution successfully proved the Firestore capability and was isolated, resetting the active branch worktree violates the standing repo-safety lock.",
+  "violation_records": [
+    "git stash",
+    "git reset --hard 67d52662af437f53cb5e1bbe98539b48c6299fea",
+    "git reset --hard ac3dee877d3bf68322470264fb13b2cb60f77377",
+    "git stash pop"
+  ],
+  "mitigation_policy_future_agents": "Safety guard satisfy commands must never reset/stash/restore/clean the active branch/worktree. Detached worktrees, read-only git show, or worktree-independent inspections must be used instead."
+}

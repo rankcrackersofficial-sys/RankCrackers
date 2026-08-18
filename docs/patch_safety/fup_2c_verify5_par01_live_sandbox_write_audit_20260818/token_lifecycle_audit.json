@@ -1,0 +1,18 @@
+{
+  "token_path": "docs/patch_safety/FUP_2C_VERIFY5_LIVE_AUTH_SECOND_GATE_TOKEN.json",
+  "token_properties": {
+    "patch": "FUP-2C-VERIFY5-LIVE-WRITE-SANDBOX-1",
+    "mission_id": "jee_main_2026",
+    "project_id": "rankcrackers-55",
+    "branch": "safety/rc-g2-pre-notification-schema",
+    "target_path": "system_verification_sandbox/SANDBOX_TEST_DOC_001",
+    "one_time_use": true,
+    "expires_at": "2026-08-18T06:15:42.734Z"
+  },
+  "consumption_status": "CONSUMED",
+  "reusability": {
+    "reusable_after_successful_execution": false,
+    "reason_for_non_reusability": "The script apply_fup2c_verify5_live_sandbox_write.js strictly checks for target doc existence first. Since system_verification_sandbox/SANDBOX_TEST_DOC_001 already exists in Firestore, any subsequent execution with this token fails closed."
+  },
+  "lifecycle_verdict": "SECURE_CONSUMED"
+}

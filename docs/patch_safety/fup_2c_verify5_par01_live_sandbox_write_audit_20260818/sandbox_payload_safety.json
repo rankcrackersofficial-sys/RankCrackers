@@ -1,0 +1,24 @@
+{
+  "document_path": "system_verification_sandbox/SANDBOX_TEST_DOC_001",
+  "payload_schema_validated": true,
+  "fields": {
+    "patch": "FUP-2C-VERIFY5-LIVE-WRITE-SANDBOX-1",
+    "mission_id": "jee_main_2026",
+    "purpose": "authorization_sandbox_verification",
+    "academic_write": false,
+    "student_visible": false,
+    "created_by": "founder_authorized_second_gate",
+    "mutation_budget_used": {
+      "create": 1,
+      "update": 0,
+      "delete": 0
+    }
+  },
+  "forbidden_academic_fields_count": 0,
+  "forbidden_academic_fields_checked": [
+    "syllabus_atom_id", "topic_node_id", "atom_id", "fact_id", "question_id",
+    "crucible_item_id", "digibook_unit_id", "publish_status", "founder_approved",
+    "student_published", "production_academic_write"
+  ],
+  "safety_verdict": "PASS"
+}

@@ -1,0 +1,9 @@
+{
+  "target_path": "system_verification_sandbox/SANDBOX_TEST_DOC_001",
+  "expected_writes": 1,
+  "actual_writes": 1,
+  "delta": 0,
+  "reruns_attempted": 0,
+  "execution_result": "FUP_2C_VERIFY5_LIVE_SANDBOX_WRITE_SUCCESS",
+  "post_write_audit": "FUP_2C_VERIFY5_LIVE_SANDBOX_WRITE_RESULT_READY"
+}

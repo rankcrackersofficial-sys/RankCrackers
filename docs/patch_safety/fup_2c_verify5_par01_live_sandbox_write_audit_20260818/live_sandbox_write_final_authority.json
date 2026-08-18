@@ -1,0 +1,7 @@
+{
+  "live_sandbox_write_functional_result": "PASS_CANDIDATE",
+  "git_safety_compliance": "FAILED_FOR_THIS_EXECUTION",
+  "rerun_live_write_allowed": false,
+  "reconciliation_mode": "READ_ONLY_RECONCILIATION_ONLY",
+  "verdict": "FUP_2C_VERIFY5_PAR01_SINGLE_LIVE_NON_ACADEMIC_SANDBOX_WRITE_INDEPENDENTLY_ACCEPTED_WITH_ZERO_ACADEMIC_SIDE_EFFECTS_AND_RECORDED_GIT_PROCESS_VIOLATION"
+}

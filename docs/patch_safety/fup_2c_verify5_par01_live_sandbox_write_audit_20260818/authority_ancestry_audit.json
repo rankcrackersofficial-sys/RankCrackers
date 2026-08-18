@@ -1,0 +1,16 @@
+{
+  "audit_type": "READ_ONLY_ANCESTRY_VERIFICATION",
+  "head_commit": "ac3dee877d3bf68322470264fb13b2cb60f77377",
+  "verified_ancestors": {
+    "0bea487f14a2ae76a21c8a4fdb9f52ba60665f34": {
+      "message": "feat(academic-factory): AAF-008CD-R1 - implement all four final residual gates",
+      "ancestor_of_head": true
+    },
+    "1dcdf06cb9c7357c70638916a471fb77735a1f0e": {
+      "message": "evidence(academic-factory): resolve exact final automation residual",
+      "ancestor_of_0bea487f": true,
+      "ancestor_of_head": true
+    }
+  },
+  "ancestry_verdict": "PASS"
+}

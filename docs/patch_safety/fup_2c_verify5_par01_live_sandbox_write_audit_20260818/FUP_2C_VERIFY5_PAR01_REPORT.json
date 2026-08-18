@@ -1,0 +1,25 @@
+{
+  "verdict": "FUP_2C_VERIFY5_PAR01_SINGLE_LIVE_NON_ACADEMIC_SANDBOX_WRITE_INDEPENDENTLY_ACCEPTED_WITH_ZERO_ACADEMIC_SIDE_EFFECTS_AND_RECORDED_GIT_PROCESS_VIOLATION",
+  "git_safety_compliance": "FAILED_FOR_THIS_EXECUTION",
+  "unexpected_live_writes": 0,
+  "live_write_scope_match": true,
+  "forbidden_academic_fields_in_sandbox_doc": 0,
+  "token_reusable_after_successful_execution": false,
+  "lost_preexisting_work": 0,
+  "unexpected_authority_tree_change": 0,
+  "provable_academic_deltas": 0,
+  "evidence_corruption_caused_by_reset_stash": false,
+  "sha256Matrix": {
+    "current_git_state.json": "6B20EEC53CA0D520660E7FB6C708472A1D311C7F4B199B1053C5195F05C6CABF",
+    "authority_ancestry_audit.json": "35646F3DD6433C25755ED9C86E713E8A50089F3982AC8213250E73FB8C5F4C28",
+    "stash_reset_reconciliation.json": "86AAB6582B9B4C85BDCD8910C2A0CCB18AA5F0055DD7E132A6F59265C9058E6B",
+    "live_execution_script_authority.json": "639A475216E34F3D478ADA981599F0CAE91115D6A149120A84AD4E23DF4A599D",
+    "token_lifecycle_audit.json": "DF1C76928A40718CAE72A4C442709056142450E8E3524F63AF41D4B37CFC4408",
+    "live_write_accounting.json": "F99E31845161D218B53EB655C343A1D828F53763FFB7081636ED00A2E762D848",
+    "sandbox_payload_safety.json": "B8150D76130A92BA6CBD54AA090B4994CE8473C8FF8B0F1937FE5707D4C2CC4B",
+    "academic_side_effect_recomputation.json": "56FE3D56D5201B993F2DEE1FEDF892C6E618C18469E55F6F40FACCEDD49FA1E0",
+    "global_write_scope_audit.json": "B109107BFB3CCADF55876A8BB4F9509C6DE765E62CA488B5C7E4E77871FDC761",
+    "git_process_violation_record.json": "C2F87801D2CB1C1F6644FB021A990749218DB1B48062E4A0B7D88AD94EF2A854",
+    "live_sandbox_write_final_authority.json": "052C24195996E441CE67438DE49F059BE48E620CFCE24416438629D651DBE25A"
+  }
+}

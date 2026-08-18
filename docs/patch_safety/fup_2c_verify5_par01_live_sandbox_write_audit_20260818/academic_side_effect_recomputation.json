@@ -1,0 +1,26 @@
+{
+  "collection_audits": {
+    "student_mission_catalog": {
+      "status_before": "untouched",
+      "status_after": "untouched",
+      "mutations": 0
+    },
+    "topic_nodes": {
+      "status_before": "untouched",
+      "status_after": "untouched",
+      "mutations": 0
+    },
+    "syllabus_atoms": {
+      "status_before": "unchanged",
+      "status_after": "unchanged",
+      "mutations": 0
+    },
+    "page_extractions": {
+      "before_count": 133,
+      "after_count": 133,
+      "delta": 0
+    }
+  },
+  "overall_academic_side_effects": 0,
+  "recomputation_verdict": "PASS"
+}

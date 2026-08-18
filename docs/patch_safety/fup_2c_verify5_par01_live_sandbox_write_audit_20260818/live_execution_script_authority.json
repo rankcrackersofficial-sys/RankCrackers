@@ -1,0 +1,8 @@
+{
+  "execution_script_path": "functions/apply_fup2c_verify5_live_sandbox_write.js",
+  "execution_script_commit_hash": "a808951e18cc874bcf69a475ab2b46c6ab629bf5",
+  "expected_head_governed_in_script": "67d52662af437f53cb5e1bbe98539b48c6299fea",
+  "actual_head_during_execution": "67d52662af437f53cb5e1bbe98539b48c6299fea",
+  "actual_branch_during_execution": "safety/rc-g2-pre-notification-schema",
+  "script_checks_passed": true
+}

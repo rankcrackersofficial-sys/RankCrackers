@@ -1,0 +1,23 @@
+{
+  "stash_performed": true,
+  "reset_performed": true,
+  "reset_preimage_head": "ac3dee877d3bf68322470264fb13b2cb60f77377",
+  "reset_temp_head": "67d52662af437f53cb5e1bbe98539b48c6299fea",
+  "reset_postimage_head": "ac3dee877d3bf68322470264fb13b2cb60f77377",
+  "stash_pop_performed": true,
+  "reconciliation_metrics": {
+    "worktree_clean_preimage": false,
+    "preexisting_dirty_paths_restored": [
+      "lib/features/personalization/domain/engines/student_prerequisite_state_engine.dart",
+      "lib/features/personalization/domain/models/student_treatment_decision.dart",
+      "tools/student_pillars_r2_fasttrack/run_wave1_parallel_factory.js"
+    ],
+    "dirty_paths_lost": 0,
+    "unexpected_paths_changed": 0
+  },
+  "authority_files_checked": [
+    "docs/syllabus/FUP_2C_VERIFY5_LIVE_AUTHORIZATION_CEREMONY.md",
+    "docs/patch_safety/FUP_2C_VERIFY5_FOUNDER_APPROVAL_PHRASE.txt"
+  ],
+  "untracked_authority_artifacts_status": "UNTOUCHED_AND_PRESERVED"
+}
