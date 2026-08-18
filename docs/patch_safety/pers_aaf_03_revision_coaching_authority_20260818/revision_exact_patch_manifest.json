@@ -1,0 +1,24 @@
+{
+    "verdict":  "REVISION_EXACT_PATCH_MANIFEST_READY",
+    "productionFilesToCreate":  [
+                                    "lib/features/personalization/domain/models/student_revision_event.dart",
+                                    "lib/features/personalization/domain/engines/student_revision_closed_loop_engine.dart"
+                                ],
+    "productionFilesToModify":  [
+                                    "lib/features/personalization/domain/models/student_revision_queue.dart",
+                                    "lib/features/personalization/domain/engines/student_revision_queue_engine.dart"
+                                ],
+    "testFilesToCreate":  [
+                              "test/features/personalization/recovery/student_revision_closed_loop_engine_test.dart"
+                          ],
+    "forbiddenPaths":  [
+                           "functions/",
+                           "firestore.rules",
+                           "lib/features/academic_factory/",
+                           "android/",
+                           "ios/",
+                           "web/",
+                           "firebase.json"
+                       ],
+    "noRuntimeExecutionInChatgpt":  true
+}

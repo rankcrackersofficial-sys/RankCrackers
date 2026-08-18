@@ -1,0 +1,36 @@
+{
+    "verdict":  "ANTI_GRAVITY_PARALLEL_LANE_PLAN_READY",
+    "laneRules":  [
+                      "Anti-Gravity owns implementation/runtime/CLI",
+                      "ChatGPT owns acceptance/audit/next commands",
+                      "Android Studio disabled"
+                  ],
+    "parallelCandidates":  [
+                               {
+                                   "code":  "PERS-REV-01",
+                                   "overlap":  "NONE_WITH_AAF_008B",
+                                   "priority":  "P0"
+                               },
+                               {
+                                   "code":  "PERS-COACH-01",
+                                   "overlap":  "NONE_WITH_PERS_REV_01_IF_FILES_SEPARATED",
+                                   "priority":  "P1"
+                               },
+                               {
+                                   "code":  "PERS-PRACTICE-01",
+                                   "overlap":  "DEPENDS_ON_COACH_CONTRACT_ONLY",
+                                   "priority":  "P1"
+                               },
+                               {
+                                   "code":  "PERS-ANALYTICS-01",
+                                   "overlap":  "READS_EVENT_STATE_CONTRACTS_ONLY",
+                                   "priority":  "P1"
+                               },
+                               {
+                                   "code":  "PERS-SCHEDULE-01",
+                                   "overlap":  "READS_REVISION_CONTRACT_OUTPUT",
+                                   "priority":  "P2"
+                               }
+                           ],
+    "maximumSafeParallelism":  "REVISION_PLUS_COACHING_CONTRACTS_CAN_IMPLEMENT_IN_SEPARATE_FILE_SETS"
+}

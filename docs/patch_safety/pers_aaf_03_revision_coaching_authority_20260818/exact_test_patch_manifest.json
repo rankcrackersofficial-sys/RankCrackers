@@ -1,0 +1,12 @@
+{
+    "verdict":  "EXACT_TEST_PATCH_MANIFEST_READY",
+    "tests":  [
+                  "test/features/personalization/recovery/student_revision_closed_loop_engine_test.dart",
+                  "test/features/personalization/recovery/student_coaching_support_engine_test.dart",
+                  "test/features/personalization/recovery/personalized_practice_route_engine_test.dart",
+                  "test/features/personalization/recovery/student_personalization_analytics_engine_test.dart",
+                  "test/features/personalization/recovery/student_schedule_support_engine_test.dart"
+              ],
+    "requiredRegression":  "flutter test test/features/personalization/recovery",
+    "requiredAnalyze":  "dart analyze lib/features/personalization test/features/personalization"
+}

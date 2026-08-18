@@ -1,0 +1,17 @@
+{
+    "verdict":  "ANALYTICS_TRACKING_CONTRACT_FROZEN",
+    "code":  "PERS-ANALYTICS-01",
+    "allowed":  [
+                    "student_progress_from_governed_events",
+                    "dimension_separated_mastery_retention_fluency_prerequisite"
+                ],
+    "forbidden":  [
+                      "fake_progress",
+                      "personality_score",
+                      "risk_claim_without_evidence"
+                  ],
+    "requiredTruth":  [
+                          "unknown_when_missing",
+                          "insufficient_when_under_evidenced"
+                      ]
+}

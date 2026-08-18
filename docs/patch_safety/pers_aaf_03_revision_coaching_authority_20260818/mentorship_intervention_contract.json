@@ -1,0 +1,21 @@
+{
+    "verdict":  "MENTORSHIP_INTERVENTION_CONTRACT_FROZEN",
+    "code":  "PERS-COACH-01A",
+    "allowedInterventions":  [
+                                 "mentor_review_needed",
+                                 "explanation_support",
+                                 "strategy_hint",
+                                 "evidence_gap_review"
+                             ],
+    "forbidden":  [
+                      "diagnosis",
+                      "psychological_label",
+                      "canonical_answer_generation"
+                  ],
+    "failClosed":  [
+                       "missing_evidence",
+                       "stale_canonical_version",
+                       "withdrawn_projection",
+                       "unsupported_reason"
+                   ]
+}

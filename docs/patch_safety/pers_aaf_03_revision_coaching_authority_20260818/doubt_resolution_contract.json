@@ -1,0 +1,19 @@
+{
+    "verdict":  "DOUBT_RESOLUTION_CONTRACT_FROZEN",
+    "code":  "PERS-COACH-01B",
+    "allowed":  [
+                    "route_to_existing_grounded_block",
+                    "ask_clarifying_learning_step",
+                    "flag_source_gap"
+                ],
+    "forbidden":  [
+                      "generate_new_academic_truth",
+                      "answer_from_model_memory",
+                      "reference_private_provider_output"
+                  ],
+    "failClosed":  [
+                       "no_grounded_block",
+                       "source_conflict",
+                       "stale_projection"
+                   ]
+}

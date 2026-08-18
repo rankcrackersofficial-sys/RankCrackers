@@ -1,0 +1,19 @@
+{
+    "verdict":  "SCHEDULE_DISCIPLINE_CONTRACT_FROZEN",
+    "code":  "PERS-SCHEDULE-01",
+    "allowed":  [
+                    "revision_timing",
+                    "practice_cadence",
+                    "focus_window_recommendation"
+                ],
+    "forbidden":  [
+                      "punitive_label",
+                      "medical_or_psychological_claim",
+                      "canonical_content_change"
+                  ],
+    "failClosed":  [
+                       "missing_timezone_safe_utc",
+                       "stale_route",
+                       "insufficient_evidence"
+                   ]
+}

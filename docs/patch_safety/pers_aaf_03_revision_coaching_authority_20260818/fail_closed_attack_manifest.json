@@ -1,0 +1,21 @@
+{
+    "verdict":  "FAIL_CLOSED_ATTACK_MANIFEST_READY",
+    "attacks":  [
+                    "missing_student_id",
+                    "wrong_amtn_id",
+                    "non_utc_timestamp",
+                    "stale_canonical_version",
+                    "withdrawn_public_projection",
+                    "superseded_public_projection",
+                    "unverified_public_projection",
+                    "model_only_academic_claim",
+                    "passive_view_as_mastery",
+                    "hinted_attempt_as_mastery",
+                    "duplicate_revision_completion",
+                    "unsupported_progress_claim",
+                    "personality_label",
+                    "private_provider_leak",
+                    "direct_public_write_attempt"
+                ],
+    "expected":  "ALL_FAIL_CLOSED"
+}

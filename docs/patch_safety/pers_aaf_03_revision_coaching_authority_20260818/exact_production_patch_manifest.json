@@ -1,0 +1,30 @@
+{
+    "verdict":  "EXACT_PRODUCTION_PATCH_MANIFEST_READY",
+    "persRev01":  [
+                      "lib/features/personalization/domain/models/student_revision_event.dart",
+                      "lib/features/personalization/domain/engines/student_revision_closed_loop_engine.dart"
+                  ],
+    "persCoach01":  [
+                        "lib/features/personalization/domain/models/student_coaching_support.dart",
+                        "lib/features/personalization/domain/engines/student_coaching_support_engine.dart"
+                    ],
+    "persPractice01":  [
+                           "lib/features/personalization/domain/models/personalized_practice_route.dart",
+                           "lib/features/personalization/domain/engines/personalized_practice_route_engine.dart"
+                       ],
+    "persAnalytics01":  [
+                            "lib/features/personalization/domain/models/student_personalization_analytics.dart",
+                            "lib/features/personalization/domain/engines/student_personalization_analytics_engine.dart"
+                        ],
+    "persSchedule01":  [
+                           "lib/features/personalization/domain/models/student_schedule_support.dart",
+                           "lib/features/personalization/domain/engines/student_schedule_support_engine.dart"
+                       ],
+    "forbidden":  [
+                      "functions/",
+                      "firestore.rules",
+                      "firebase.json",
+                      "android/",
+                      "lib/features/academic_factory/"
+                  ]
+}

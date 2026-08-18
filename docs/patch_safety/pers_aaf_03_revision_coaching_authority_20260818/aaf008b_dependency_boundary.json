@@ -1,0 +1,17 @@
+{
+    "verdict":  "AAF008B_DEPENDENCY_BOUNDARY_FROZEN",
+    "aaf008bBlocks":  [
+                          "final stale-route/cache recovery acceptance",
+                          "final 101 percent closeout"
+                      ],
+    "aaf008bDoesNotBlock":  [
+                                "revision contract",
+                                "coaching contract",
+                                "practice contract",
+                                "analytics contract",
+                                "schedule contract",
+                                "engagement contract"
+                            ],
+    "antiGravityActive":  "AAF-008B-R1",
+    "chatgptCanProceed":  "PERS-AAF-03_AND_PERS-AAF-04_AUTHORITY_WORK"
+}

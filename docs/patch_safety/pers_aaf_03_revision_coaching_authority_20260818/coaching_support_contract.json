@@ -1,0 +1,33 @@
+{
+    "verdict":  "COACHING_SUPPORT_CONTRACT_FROZEN",
+    "contractCode":  "PERS-COACH-01",
+    "supportTargets":  [
+                           "mentorship",
+                           "doubt_resolution",
+                           "personalized_practice",
+                           "analytics_tracking",
+                           "schedule_discipline",
+                           "engagement_support"
+                       ],
+    "academicBoundary":  "SUPPORT_ONLY_NEVER_CANONICAL_TRUTH",
+    "requiredCommonIdentities":  [
+                                     "studentId",
+                                     "targetAmtnId",
+                                     "canonicalSemanticTopicId",
+                                     "canonicalKnowledgeVersion",
+                                     "publicProjectionId",
+                                     "studentStateVersion",
+                                     "supportDecisionVersion",
+                                     "createdAtUtc"
+                                 ],
+    "prohibited":  [
+                       "psychological profiling",
+                       "personality labeling",
+                       "model-only academic claims",
+                       "unverified content reference",
+                       "withdrawn content reference",
+                       "superseded content reference",
+                       "direct public writes"
+                   ],
+    "readyForParallelImplementation":  true
+}

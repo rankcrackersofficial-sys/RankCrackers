@@ -1,0 +1,18 @@
+{
+    "verdict":  "ENGAGEMENT_SUPPORT_CONTRACT_FROZEN",
+    "code":  "PERS-ENGAGE-01",
+    "allowed":  [
+                    "encouragement_copy",
+                    "streak_context",
+                    "recoverable_next_step"
+                ],
+    "forbidden":  [
+                      "manipulative_pressure",
+                      "mental_health_inference",
+                      "fake achievement"
+                  ],
+    "failClosed":  [
+                       "unsupported_progress_claim",
+                       "missing_evidence"
+                   ]
+}

@@ -1,0 +1,51 @@
+{
+    "verdict":  "REVISION_CLOSED_LOOP_CONTRACT_FROZEN",
+    "contractCode":  "PERS-REV-01",
+    "ownsCanonicalTruth":  false,
+    "inputAuthorities":  [
+                             "StudentEvidenceEvent",
+                             "StudentLearningState",
+                             "StudentRevisionQueue",
+                             "AafPersonalizationBridgeAuthority"
+                         ],
+    "requiredIdentities":  [
+                               "studentId",
+                               "targetAmtnId",
+                               "canonicalSemanticTopicId",
+                               "canonicalKnowledgeVersion",
+                               "publicProjectionId",
+                               "studentStateVersion",
+                               "revisionQueueVersion",
+                               "revisionEventVersion",
+                               "createdAtUtc"
+                           ],
+    "closedLoopStates":  [
+                             "evidence_needed",
+                             "due_today",
+                             "overdue",
+                             "completed",
+                             "rescheduled",
+                             "maintenance",
+                             "blocked_by_stale_aaf_version"
+                         ],
+    "requiredBehavior":  [
+                             "completion requires governed evidence event",
+                             "passive view cannot complete revision",
+                             "hinted or assisted answer cannot silently upgrade mastery",
+                             "stale canonical version invalidates route before scheduling next review",
+                             "withdrawn or superseded public projection blocks revision route",
+                             "duplicate completion event is idempotent and does not create duplicate queue item",
+                             "missing evidence remains evidence_needed, not completed"
+                         ],
+    "failClosedAttacks":  [
+                              "non_utc_event",
+                              "missing_student_identity",
+                              "wrong_amtn_identity",
+                              "stale_canonical_version",
+                              "withdrawn_projection",
+                              "duplicate_completion",
+                              "passive_view_completion",
+                              "unsupported_mastery_upgrade"
+                          ],
+    "readyForAntiGravityImplementation":  true
+}

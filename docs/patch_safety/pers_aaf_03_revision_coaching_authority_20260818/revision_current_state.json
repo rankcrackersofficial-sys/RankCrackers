@@ -1,0 +1,27 @@
+{
+    "verdict":  "REVISION_CURRENT_STATE_AUDITED",
+    "currentHead":  "8d89e50533547ba2c308a80939da60b62e0cc0e3",
+    "generatedAtUtc":  "2026-08-18T06:51:28.3500796Z",
+    "existingContractFiles":  [
+                                  "lib/features/personalization/domain/models/student_revision_queue.dart",
+                                  "lib/features/personalization/domain/engines/student_revision_queue_engine.dart",
+                                  "test/features/personalization/recovery/student_revision_queue_engine_test.dart"
+                              ],
+    "currentCapabilities":  [
+                                "revision queue item identity",
+                                "revision queue ordered sequence",
+                                "UTC due-date classification",
+                                "evidence-needed classification when mastery/retention evidence is insufficient",
+                                "maintenance classification for strong retention and mastered mastery"
+                            ],
+    "currentProof":  "student_revision_queue_engine_test passes inside 33/33 PERS recovery suite",
+    "missingForClosedLoop":  [
+                                 "post-evidence queue mutation contract",
+                                 "completion event ingestion",
+                                 "next review scheduling policy",
+                                 "idempotent queue regeneration identity",
+                                 "stale AAF route invalidation interaction",
+                                 "runtime journey proof"
+                             ],
+    "status":  "PARTIAL_OPEN_CONTRACT_READY_FOR_IMPLEMENTATION"
+}

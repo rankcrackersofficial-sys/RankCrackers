@@ -1,0 +1,19 @@
+{
+    "verdict":  "PERSONALIZED_PRACTICE_CONTRACT_FROZEN",
+    "code":  "PERS-PRACTICE-01",
+    "allowed":  [
+                    "select_existing_verified_items",
+                    "vary_difficulty_order",
+                    "request_evidence_probe"
+                ],
+    "forbidden":  [
+                      "invent_question",
+                      "use_unverified_item",
+                      "promote_hint_assisted_attempt_to_mastery"
+                  ],
+    "failClosed":  [
+                       "no_verified_item",
+                       "withdrawn_projection",
+                       "identity_mismatch"
+                   ]
+}
