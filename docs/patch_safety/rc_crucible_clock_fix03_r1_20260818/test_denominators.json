@@ -1,0 +1,17 @@
+{
+  "sovereign_timeline_tests_passed": 23,
+  "sovereign_timeline_tests_total": 23,
+  "pause_resume_tests_passed": 22,
+  "pause_resume_tests_total": 22,
+  "mission_isolation_tests_passed": 4,
+  "mission_isolation_tests_total": 4,
+  "student_scoped_clock_tests_passed": 10,
+  "student_scoped_clock_tests_total": 10,
+  "mission_mirror_tests_passed": 52,
+  "mission_mirror_tests_total": 52,
+  "mission_link_tests_passed": 4,
+  "mission_link_tests_total": 4,
+  "hygiene_tests_passed": 1,
+  "hygiene_tests_total": 1,
+  "full_flutter_analyze_status": "PASS"
+}

@@ -89,7 +89,6 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
 
     final currentCycleDay = currentDay;
     final phase = currentPhase;
-    final remainingHours = CrucibleClockEngine.getHoursRemaining();
 
     final coverage = CoverageEngine.calculate(
       examId: selectedExamId,
@@ -161,7 +160,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       LiveTimerCard(
                           day: currentCycleDay,
                           phase: phase,
-                          hours: remainingHours),
+                          protocolState: protocolState),
                       const SizedBox(height: 24),
                       BattleEngineCard(
                         dayCount: currentDay,
