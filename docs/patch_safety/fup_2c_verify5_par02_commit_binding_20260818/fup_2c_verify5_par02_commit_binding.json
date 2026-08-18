@@ -1,0 +1,30 @@
+{
+  "par01_commit_sha": "811141d6eb97b798d39e42ec33b781f21bf4b53b",
+  "par01_commit_parent": "ac3dee877d3bf68322470264fb13b2cb60f77377",
+  "par01_commit_subject": "evidence(factory): independently accept verified live sandbox write",
+  "par01_changed_paths": [
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/FUP_2C_VERIFY5_PAR01_REPORT.json",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/FUP_2C_VERIFY5_PAR01_REPORT.md",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/academic_side_effect_recomputation.json",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/authority_ancestry_audit.json",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/current_git_state.json",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/git_process_violation_record.json",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/global_write_scope_audit.json",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/live_execution_script_authority.json",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/live_sandbox_write_final_authority.json",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/live_write_accounting.json",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/sandbox_payload_safety.json",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/stash_reset_reconciliation.json",
+    "docs/patch_safety/fup_2c_verify5_par01_live_sandbox_write_audit_20260818/token_lifecycle_audit.json"
+  ],
+  "par01_changed_paths_all_within": true,
+  "unrelated_paths_committed": 0,
+  "preexisting_dirty_files_committed": 0,
+  "preexisting_dirty_files_status": {
+    "student_prerequisite_state_engine.dart": "outside_commit_and_preserved",
+    "student_treatment_decision.dart": "outside_commit_and_preserved",
+    "run_wave1_parallel_factory.js": "outside_commit_and_preserved"
+  },
+  "fup_2c_verify5_final_authority_binding": "LOCKED",
+  "final_verdict": "FUP_2C_VERIFY5_PAR02_FINAL_LIVE_SANDBOX_WRITE_AUTHORITY_BOUND_TO_EXACT_GIT_COMMIT_AND_EVIDENCE_TREE"
+}
