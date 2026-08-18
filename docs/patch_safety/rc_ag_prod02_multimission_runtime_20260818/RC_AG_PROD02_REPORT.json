@@ -1,0 +1,29 @@
+{
+  "verdict": "RC_AG_PROD02_FIVE_FOUNDER_MISSIONS_RECONCILED_DIGIBOOK_RUNTIME_HARDENED_AND_MULTI_MISSION_FACTORY_FAST_FORWARDED_PENDING_ONLY_EXTERNAL_AAF_ACCEPTANCE",
+  "baseline_authority_resolution": "92cd2ab327d459cb82a16eac78ba0451a92a465d",
+  "aaf_008b_final_authority_status": "PENDING_INDEPENDENT_AUDIT",
+  "pers_status": "PENDING_AAF_008B_AUDIT",
+  "total_founder_missions": 5,
+  "total_active_founder_missions": 2,
+  "mission_1_status": "ACTIVE",
+  "mission_2_status": "AUTHORIZED_NOT_ACTIVE",
+  "mission_3_status": "DRAFT",
+  "mission_4_status": "PAUSED",
+  "mission_5_status": "ACTIVE",
+  "prod01_runtime_proof_type": "SIMULATION_HARNESS",
+  "prod02_runtime_target_type": "ANDROID_EMULATOR",
+  "physical_device_proof": "NOT_EXECUTED",
+  "physics_runtime_status": "PASS",
+  "chemistry_runtime_status": "PASS",
+  "mathematics_runtime_status": "PASS",
+  "current_mission_digibook_status": "PRODUCTION_READY",
+  "additional_active_missions": [
+    "CBSE_12_2026"
+  ],
+  "additional_mission_factory_status": "ASSEMBLY_IN_PROGRESS",
+  "total_reusable_amtns": 2400,
+  "total_new_content_required": 600,
+  "total_source_resolution_required": 0,
+  "mission_specific_engine_rebuild_required": false,
+  "unknown_multi_mission_residual": 0
+}

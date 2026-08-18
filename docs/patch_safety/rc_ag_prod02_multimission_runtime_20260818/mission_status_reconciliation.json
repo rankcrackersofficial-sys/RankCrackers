@@ -1,0 +1,14 @@
+{
+  "reconciliation_status": "SUCCESS",
+  "active_mission_ids": [
+    "JEE_MAIN_2026",
+    "CBSE_12_2026"
+  ],
+  "non_active_mission_ids": [
+    "JEE_ADV_2026",
+    "NEET_2026",
+    "BITSAT_2026"
+  ],
+  "total_active_founder_missions": 2,
+  "active_count_matches_actual_registry": true
+}

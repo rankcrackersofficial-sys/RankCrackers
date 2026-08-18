@@ -1,0 +1,24 @@
+{
+  "missions": {
+    "JEE_MAIN_2026": {
+      "status": "PRODUCTION_READY",
+      "total_amtns": 5000,
+      "reused_amtns": 0,
+      "assembled_amtns": 5000,
+      "academic_pass": 5000,
+      "editorial_pass": 5000,
+      "personalization_safe": 5000,
+      "held": 0
+    },
+    "CBSE_12_2026": {
+      "status": "ASSEMBLY_IN_PROGRESS",
+      "total_amtns": 3000,
+      "reused_amtns": 2400,
+      "assembled_amtns": 1200,
+      "academic_pass": 1200,
+      "editorial_pass": 1200,
+      "personalization_safe": 1200,
+      "held": 0
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "personalization_runtime_status": "PASS",
+  "low_prerequisite_route": "VERIFIED_REDIRECT",
+  "high_mastery_route": "VERIFIED_ACCELERATE",
+  "misconception_risk_route": "VERIFIED_INTERVENE",
+  "retention_decay_route": "VERIFIED_REFRESH",
+  "canonical_content_mutation": 0,
+  "personalization_content_duplication": 0,
+  "personalization_academic_truth_mutations": 0
+}

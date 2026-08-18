@@ -1,0 +1,8 @@
+{
+  "runtime_target_type": "ANDROID_EMULATOR",
+  "physical_device_proof": "NOT_EXECUTED",
+  "emulator_status": "ACTIVE_RUNNING",
+  "flutter_run_command": "flutter run -d emulator-5554",
+  "install_result": "SUCCESS",
+  "launch_result": "SUCCESS"
+}

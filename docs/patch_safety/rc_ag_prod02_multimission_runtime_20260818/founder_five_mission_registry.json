@@ -1,0 +1,70 @@
+{
+  "total_founder_missions": 5,
+  "missions": [
+    {
+      "missionId": "JEE_MAIN_2026",
+      "missionName": "JEE Main 2026",
+      "examRecruitment": "JEE Main",
+      "category": "Engineering",
+      "status": "ACTIVE",
+      "founderAuthorized": true,
+      "activeForStudents": true,
+      "archived": false,
+      "subjectCount": 3,
+      "currentCanonicalVersion": 1,
+      "digibookStatus": "PRODUCTION_READY"
+    },
+    {
+      "missionId": "JEE_ADV_2026",
+      "missionName": "JEE Advanced 2026",
+      "examRecruitment": "JEE Advanced",
+      "category": "Engineering",
+      "status": "AUTHORIZED_NOT_ACTIVE",
+      "founderAuthorized": true,
+      "activeForStudents": false,
+      "archived": false,
+      "subjectCount": 3,
+      "currentCanonicalVersion": 1,
+      "digibookStatus": "READY_TO_ASSEMBLE"
+    },
+    {
+      "missionId": "NEET_2026",
+      "missionName": "NEET UG 2026",
+      "examRecruitment": "NEET UG",
+      "category": "Medical",
+      "status": "DRAFT",
+      "founderAuthorized": true,
+      "activeForStudents": false,
+      "archived": false,
+      "subjectCount": 3,
+      "currentCanonicalVersion": 1,
+      "digibookStatus": "SOURCE_WORK_REQUIRED"
+    },
+    {
+      "missionId": "BITSAT_2026",
+      "missionName": "BITSAT 2026",
+      "examRecruitment": "BITSAT",
+      "category": "Engineering",
+      "status": "PAUSED",
+      "founderAuthorized": true,
+      "activeForStudents": false,
+      "archived": false,
+      "subjectCount": 3,
+      "currentCanonicalVersion": 1,
+      "digibookStatus": "BLOCKED"
+    },
+    {
+      "missionId": "CBSE_12_2026",
+      "missionName": "CBSE Class 12 Boards 2026",
+      "examRecruitment": "CBSE Class 12",
+      "category": "Boards",
+      "status": "ACTIVE",
+      "founderAuthorized": true,
+      "activeForStudents": true,
+      "archived": false,
+      "subjectCount": 5,
+      "currentCanonicalVersion": 1,
+      "digibookStatus": "ASSEMBLY_IN_PROGRESS"
+    }
+  ]
+}
