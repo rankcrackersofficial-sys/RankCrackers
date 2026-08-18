@@ -1,0 +1,24 @@
+{
+  "verdict": "PERS_AAF_01_CLEAN_PERSONALIZATION_SOURCE_AUTHORITY_RESTORED_AND_AAF_VERSION_AWARE_BRIDGE_EXACT_CODE_PACKAGE_READY_FOR_ANTI_GRAVITY",
+  "aafAuthority": "1dcdf06cb9c7357c70638916a471fb77735a1f0e",
+  "persAuto00Authority": "00bdab86641eef654ee9319e16e47a4295072c62",
+  "academic_deltas": 0,
+  "load_compile_gates": "32/32 PASS",
+  "contract_enforcement": {
+    "persCanCreateAcademicTruth": false,
+    "persCanReferenceUnverifiedContent": false,
+    "persCanReferenceWithdrawnContent": false,
+    "persCanReferenceSupersededContent": false,
+    "persCacheCanOverrideNewerCanonicalVersion": false,
+    "aafVersionChangeInvalidatesStalePersRoute": true,
+    "personalizationContentDuplication": 0
+  },
+  "sha256Matrix": {
+    "patches/student_treatment_decision.patch": "F281618B6B5690500F8364FE1B3330FA8E05D03124AF87E31E4D30F058669F78",
+    "patches/student_prerequisite_state_engine.patch": "B4060BF392B2594EE795485FC63BF092530F98C294ED8BAB890CFB8DF47559C7",
+    "patches/run_wave1_parallel_factory.patch": "F7D8504F1820659C13A8A0D9982F2DA35D5E294ACFFA2B1DFA08B8862DE23F97",
+    "tests/aaf_pers_bridge_attacks_test.dart": "6E86D220902614FFAAA7016246E69022E1C8B0D04E455B8E5FB4054B59BF363E",
+    "validation_commands.sh": "036B5FCE6B0B93237A691B6FC0C32D4BA94037C944521FCBF2525B941D00F803",
+    "anti_gravity_allowlist.json": "E5320AF366CAE8C29D9B4D828B0E3849F748F672A1558C079D62A32709B555BF"
+  }
+}
