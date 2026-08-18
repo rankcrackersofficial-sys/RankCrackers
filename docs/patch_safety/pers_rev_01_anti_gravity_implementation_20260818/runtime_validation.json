@@ -1,0 +1,13 @@
+{
+  "runtimeDeviceExecution": "NOT_RUN",
+  "domainRuntimeValidation": "COVERED_BY_UNIT_RECOVERY_TESTS",
+  "requiredBehaviors": {
+    "completionRequiresGovernedEvidence": "PASS",
+    "passiveViewCannotComplete": "PASS",
+    "hintedOrAssistedCannotSilentlyUpgradeMastery": "PASS",
+    "staleCanonicalVersionBlocksRoute": "PASS",
+    "withdrawnSupersededUnverifiedBlocksRoute": "PASS",
+    "duplicateCompletionIdempotent": "PASS",
+    "missingEvidenceRemainsEvidenceNeeded": "PASS"
+  }
+}

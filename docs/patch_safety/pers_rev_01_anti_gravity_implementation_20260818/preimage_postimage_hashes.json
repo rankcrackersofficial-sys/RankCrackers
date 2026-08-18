@@ -1,0 +1,27 @@
+[
+  {
+    "path": "lib/features/personalization/domain/models/student_revision_event.dart",
+    "headSha256": null,
+    "workingSha256": "9B3F820FF2DA62108A4318AFD7634D275DB7A93E5702C7D334B3190A4449A22E"
+  },
+  {
+    "path": "lib/features/personalization/domain/engines/student_revision_closed_loop_engine.dart",
+    "headSha256": null,
+    "workingSha256": "EFD48EEEF4479028F641410C075CDCE3EA1B20A5AF1AB5FD8851836CD01B838E"
+  },
+  {
+    "path": "lib/features/personalization/domain/models/student_revision_queue.dart",
+    "headSha256": "A7305EC038ABEB4193DAF8AC441D6AA1A9293F5CABF5B3F667877C27BAB18B99",
+    "workingSha256": "4D077FE1DA4638A7BBE714E7A558609E7026811334ABFC06BEED82FCC0AFA98C"
+  },
+  {
+    "path": "lib/features/personalization/domain/engines/student_revision_queue_engine.dart",
+    "headSha256": "66F7C75F1FF4C426BBA6782A727282C145272715D0A9B80767B731A1987069C9",
+    "workingSha256": "3C4F2863EF88C6FB1AE9D8D87186ACBE8E3032F98B83120E3AC60F8310D1FCC7"
+  },
+  {
+    "path": "test/features/personalization/recovery/student_revision_closed_loop_engine_test.dart",
+    "headSha256": null,
+    "workingSha256": "4CAFD053E6650CDC611C7FDC26B1040A755C26AD4FCFBC515CD4BFB7CC06837E"
+  }
+]

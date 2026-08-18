@@ -1,0 +1,5 @@
+{
+  "command": "dart analyze lib/features/personalization test/features/personalization",
+  "exitCode": 0,
+  "result": "No issues found!"
+}

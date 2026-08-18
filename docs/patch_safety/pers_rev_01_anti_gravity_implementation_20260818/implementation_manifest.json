@@ -1,0 +1,16 @@
+{
+  "verdict": "PERS_REV_01_REVISION_CLOSED_LOOP_IMPLEMENTATION_MANIFEST",
+  "implementedFiles": [
+    "lib/features/personalization/domain/models/student_revision_event.dart",
+    "lib/features/personalization/domain/engines/student_revision_closed_loop_engine.dart",
+    "lib/features/personalization/domain/models/student_revision_queue.dart",
+    "lib/features/personalization/domain/engines/student_revision_queue_engine.dart",
+    "test/features/personalization/recovery/student_revision_closed_loop_engine_test.dart"
+  ],
+  "forbiddenScopesTouched": [],
+  "notes": [
+    "Closed-loop engine/model created as approved separate authority files.",
+    "Queue engine preserves existing queue-builder behavior and re-exports closed-loop engine for compatibility with pre-existing revision test import.",
+    "No backend, Firebase, queue, provider, AAF truth, android, web, or coaching paths intentionally touched."
+  ]
+}

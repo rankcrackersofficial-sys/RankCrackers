@@ -1,0 +1,5 @@
+[
+  "lib/features/personalization/domain/models/student_revision_event.dart",
+  "lib/features/personalization/domain/engines/student_revision_closed_loop_engine.dart",
+  "test/features/personalization/recovery/student_revision_closed_loop_engine_test.dart"
+]
