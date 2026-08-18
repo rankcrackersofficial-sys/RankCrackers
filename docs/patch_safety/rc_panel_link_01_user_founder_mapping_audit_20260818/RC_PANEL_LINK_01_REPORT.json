@@ -1,0 +1,17 @@
+﻿{
+    "verdict":  "RC_PANEL_LINK_01_USER_PANEL_AND_FOUNDER_WEB_PANEL_LINKING_MISMATCH_AUDIT_COMPLETE_WITH_ZERO_UNKNOWN_RESIDUALS",
+    "head":  "a1dd423bd77740da35b058cb2443a20c7c4c5167",
+    "user_surfaces":  13,
+    "founder_surfaces":  10,
+    "user_options_missing_founder_control":  4,
+    "user_options_partial_founder_control":  7,
+    "founder_confirmed_waste_options":  0,
+    "founder_weak_or_indirect_options":  3,
+    "unknown_linking_residual":  0,
+    "unowned_linking_fixes":  0,
+    "production_source_modified":  "NO",
+    "firebase_write":  "NO",
+    "queue_write":  "NO",
+    "publication":  "NO",
+    "final_line":  "RC_PANEL_LINK_01_READY_FOR_TARGETED_LINKING_FIX_OR_NOT_READY_STATE_ENFORCEMENT"
+}

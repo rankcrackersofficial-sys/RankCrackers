@@ -1,0 +1,39 @@
+﻿{
+    "unknown_residual":  0,
+    "unowned_fixes":  0,
+    "mismatch_groups":  [
+                            {
+                                "type":  "USER_WITHOUT_FOUNDER_CONTROL",
+                                "surfaces":  [
+                                                 "Career Signals",
+                                                 "Rank Radar",
+                                                 "Performance / Progress",
+                                                 "Notifications"
+                                             ],
+                                "severity":  "P0",
+                                "fix":  "Create Founder governed control/health surface or make Student Not Ready."
+                            },
+                            {
+                                "type":  "USER_WITH_PARTIAL_FOUNDER_CONTROL",
+                                "surfaces":  [
+                                                 "PYQ Vault",
+                                                 "Test Arena",
+                                                 "Revision Desk",
+                                                 "Sentinel Intel",
+                                                 "Planner"
+                                             ],
+                                "severity":  "P1",
+                                "fix":  "Bind exact Founder controls to backend projections and Student runtime states."
+                            },
+                            {
+                                "type":  "FOUNDER_WITH_INDIRECT_OR_NON_STUDENT_LINK",
+                                "surfaces":  [
+                                                 "Revenue / Subscription Control",
+                                                 "Admin Governance",
+                                                 "System Ops / Dev Mode"
+                                             ],
+                                "severity":  "INFO",
+                                "fix":  "Keep if access/platform-governance; do not count as academic student feature."
+                            }
+                        ]
+}

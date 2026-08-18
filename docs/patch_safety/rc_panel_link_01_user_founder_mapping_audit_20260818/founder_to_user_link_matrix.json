@@ -1,0 +1,78 @@
+﻿{
+    "valid_core_or_platform":  8,
+    "partial_or_weak":  1,
+    "business_non_academic":  1,
+    "waste_confirmed":  0,
+    "rows":  [
+                 {
+                     "id":  "FOUNDER-001",
+                     "surface":  "Mission Control",
+                     "userLink":  "Mission Realm / Dashboard mission context",
+                     "status":  "VALID_CORE_CONTROL",
+                     "waste":  false
+                 },
+                 {
+                     "id":  "FOUNDER-002",
+                     "surface":  "Document Command Center",
+                     "userLink":  "Syllabus / DigiBook / PYQ source pipeline",
+                     "status":  "VALID_PIPELINE_CONTROL",
+                     "waste":  false
+                 },
+                 {
+                     "id":  "FOUNDER-003",
+                     "surface":  "Verification Center",
+                     "userLink":  "Syllabus/PYQ/Exam rule correctness",
+                     "status":  "VALID_CORE_CONTROL",
+                     "waste":  false
+                 },
+                 {
+                     "id":  "FOUNDER-004",
+                     "surface":  "Factory Hub",
+                     "userLink":  "Crucible / DigiBook generation-review",
+                     "status":  "VALID_CORE_CONTROL",
+                     "waste":  false
+                 },
+                 {
+                     "id":  "FOUNDER-005",
+                     "surface":  "Publish Gate",
+                     "userLink":  "Student visibility / rollback",
+                     "status":  "VALID_CONTROL_NEEDS_HEALTH_LINK",
+                     "waste":  false
+                 },
+                 {
+                     "id":  "FOUNDER-006",
+                     "surface":  "Admin Governance / Access Security",
+                     "userLink":  "Permissions/privacy",
+                     "status":  "VALID_PLATFORM_CONTROL",
+                     "waste":  false
+                 },
+                 {
+                     "id":  "FOUNDER-007",
+                     "surface":  "System Ops / Dev Mode",
+                     "userLink":  "System health/recovery",
+                     "status":  "VALID_IF_GATED",
+                     "waste":  false
+                 },
+                 {
+                     "id":  "FOUNDER-008",
+                     "surface":  "Study Master Library",
+                     "userLink":  "DigiBook/Syllabus source bank",
+                     "status":  "VALID_PIPELINE_CONTROL",
+                     "waste":  false
+                 },
+                 {
+                     "id":  "FOUNDER-009",
+                     "surface":  "Intelligence Room / Recent Activity",
+                     "userLink":  "Sentinel/Notifications/Career potential",
+                     "status":  "PARTIAL_OR_WEAK_LINK",
+                     "waste":  false
+                 },
+                 {
+                     "id":  "FOUNDER-010",
+                     "surface":  "Revenue / Subscription Control",
+                     "userLink":  "Access/paywall not academic",
+                     "status":  "VALID_BUSINESS_CONTROL_NOT_STUDENT_ACADEMIC",
+                     "waste":  false
+                 }
+             ]
+}

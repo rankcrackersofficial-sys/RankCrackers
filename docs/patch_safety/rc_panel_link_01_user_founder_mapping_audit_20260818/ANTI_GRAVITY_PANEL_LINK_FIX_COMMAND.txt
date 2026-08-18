@@ -1,0 +1,24 @@
+﻿COMMAND_CODE: RC-PANEL-LINK-01-ANTI-GRAVITY-USER-FOUNDER-LINKING-FIX
+OWNER: ANTI_GRAVITY
+MODE: EXECUTE_NOW
+
+P0 USER OPTIONS WITHOUT CLEAN FOUNDER CONTROL:
+- Career Signals
+- Rank Radar
+- Performance / Progress
+- Notifications
+
+P1 PARTIAL LINKS NEEDING PROOF:
+- PYQ Vault
+- Test Arena
+- Revision Desk
+- Sentinel Intel
+- Planner/Schedule
+
+RULES:
+If governed backend/control data exists, bind it.
+If not, Student must show Not Ready/Unavailable.
+Founder gets health/control truth, not private student details.
+Founder cannot directly mutate score/mastery/academic truth.
+No fake/demo/mock student data.
+
