@@ -1,0 +1,19 @@
+{
+  "batch": 3,
+  "editorial_pass_atoms": 475,
+  "pedagogical_sequence_enforced": true,
+  "sequence": [
+    "refresher",
+    "intuition",
+    "core_concept",
+    "explanation",
+    "diagram",
+    "formula",
+    "example",
+    "misconception",
+    "pyq",
+    "checkpoint",
+    "quick_revision"
+  ],
+  "violations_found": 0
+}
