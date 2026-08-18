@@ -1,0 +1,10 @@
+{
+    "lib/features/personalization/domain/models/student_revision_queue.dart": {
+        "pre": "sha256:d82e219717171e86a51d8d9b1c7c9a81",
+        "post": "sha256:e93f320828282f97b62e9e0c2d8d0b92"
+    },
+    "lib/features/personalization/domain/engines/student_revision_queue_engine.dart": {
+        "pre": "sha256:f0414309393930a7c73f0f1f3e4e1c03",
+        "post": "sha256:a1525410404041b8d84f1f2f4f5f2d14"
+    }
+}

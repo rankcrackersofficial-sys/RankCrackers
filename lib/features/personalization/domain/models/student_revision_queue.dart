@@ -6,7 +6,10 @@ enum StudentRevisionQueueState {
   overdue,
   dueToday,
   evidenceNeeded,
+  completed,
+  rescheduled,
   maintenance,
+  blockedByStaleAafVersion,
   upcoming,
 }
 
@@ -19,6 +22,8 @@ final class StudentRevisionQueueItem {
     required this.sequenceRank,
     required this.reviewAtUtc,
     required this.required,
+    required this.canonicalKnowledgeVersion,
+    required this.publicProjectionId,
   });
 
   final String revisionItemId;
@@ -28,13 +33,17 @@ final class StudentRevisionQueueItem {
   final int sequenceRank;
   final DateTime reviewAtUtc;
   final bool required;
+  final int canonicalKnowledgeVersion;
+  final String publicProjectionId;
 
   void validate() {
     if (revisionItemId.trim().isEmpty ||
         studentId.trim().isEmpty ||
         amtnId.trim().isEmpty ||
         sequenceRank <= 0 ||
-        !reviewAtUtc.isUtc) {
+        !reviewAtUtc.isUtc ||
+        canonicalKnowledgeVersion <= 0 ||
+        publicProjectionId.trim().isEmpty) {
       throw const FormatException('Invalid revision queue item.');
     }
   }

@@ -1,0 +1,8 @@
+{
+    "validation_type": "DEDUPLICATION",
+    "tests": [
+        { "id": "unique_amtn_id_preservation", "status": "PASS" },
+        { "id": "duplicate_candidate_removal", "status": "PASS" }
+    ],
+    "verdict": "PASS"
+}
