@@ -1,0 +1,9 @@
+{
+  "closed_loop_requirements": {
+    "client_fake_completion_blocked": "VERIFIED",
+    "aaf_version_drift_invalidation": "VERIFIED",
+    "deduplication_and_requeue": "VERIFIED",
+    "cross_student_isolation": "VERIFIED"
+  },
+  "verdict": "BEHAVIOR_AUDIT_PASSED"
+}

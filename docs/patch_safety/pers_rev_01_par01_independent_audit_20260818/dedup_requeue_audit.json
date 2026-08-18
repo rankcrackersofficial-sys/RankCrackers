@@ -1,0 +1,6 @@
+{
+  "requirement": "Deduplication and requeue logic",
+  "implementation": "filterAndDeduplicate uses composite key (studentId, amtnId, version, projectionId)",
+  "test_evidence": "test/features/personalization/pers_rev_01_closed_loop_test.dart -> '5. Deduplication preserves unique items only - PASS'",
+  "verdict": "LOGIC_VERIFIED"
+}
