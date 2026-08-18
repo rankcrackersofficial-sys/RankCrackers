@@ -1,0 +1,16 @@
+{
+    "verdict":  "PERS_AAF_01_CLEAN_PERSONALIZATION_AUTHORITY_AND_GOVERNED_AAF_VERSION_BRIDGE_CODE_RESTORED",
+    "persAuto00Authority":  "00bdab86641eef654ee9319e16e47a4295072c62",
+    "productionFilesTrackedOrStaged":  21,
+    "testFilesTrackedOrStaged":  15,
+    "targetedRecoveryTests":  "33/33 PASS",
+    "focusedAnalyze":  "PASS",
+    "ambiguousProductionAuthorityFiles":  0,
+    "backupOrFragmentFilesPromoted":  0,
+    "backendTouched":  "NO",
+    "providerCalls":  0,
+    "firebaseWrites":  0,
+    "queueWrites":  0,
+    "publicationWrites":  0,
+    "nextGate":  "PERS-AAF-02_PERSONALIZATION_STAGE_REVALIDATION_AND_VERSION_RECOVERY_BINDING"
+}

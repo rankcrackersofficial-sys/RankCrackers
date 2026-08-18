@@ -1,0 +1,23 @@
+{
+    "verdict":  "PERS_AAF_01_GOVERNED_AAF_VERSION_BRIDGE_BOUND",
+    "bridgeFile":  "lib/features/personalization/domain/models/aaf_personalization_bridge.dart",
+    "routeContractFile":  "lib/features/personalization/domain/models/digibook_personalization_route.dart",
+    "routeEngineFile":  "lib/features/personalization/domain/engines/digibook_personalization_route_engine.dart",
+    "requiredIdentities":  [
+                               "studentId",
+                               "targetAmtnId",
+                               "canonicalSemanticTopicId",
+                               "canonicalKnowledgeVersion",
+                               "publicProjectionId",
+                               "studentStateVersion",
+                               "treatmentDecisionVersion",
+                               "routeVersion",
+                               "createdAtUtc"
+                           ],
+    "persCanCreateAcademicTruth":  false,
+    "persCanReferenceUnverifiedContent":  false,
+    "persCanReferenceWithdrawnContent":  false,
+    "persCanReferenceSupersededContent":  false,
+    "aafVersionChangeInvalidatesStalePersRoute":  true,
+    "withdrawnProjectionTest":  "PASS_FAIL_CLOSED"
+}

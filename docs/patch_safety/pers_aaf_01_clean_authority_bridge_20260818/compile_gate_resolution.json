@@ -1,0 +1,25 @@
+{
+    "verdict":  "PERS_AAF_01_FAILED_LOAD_COMPILE_GATES_RESOLVED",
+    "failedLoadCompileGate1":  {
+                                   "currentStatus":  "PASS",
+                                   "file":  "crucible_personalization_blueprint_engine_test.dart",
+                                   "priorStatus":  "FAILED_AT_PERS_AUTO_00"
+                               },
+    "failedLoadCompileGate2":  {
+                                   "currentStatus":  "PASS_WITH_AAF_BRIDGE_BINDING",
+                                   "file":  "digibook_personalization_integration_test.dart",
+                                   "priorStatus":  "FAILED_AT_PERS_AUTO_00"
+                               },
+    "failedLoadCompileGate3":  {
+                                   "currentStatus":  "PASS",
+                                   "file":  "student_prerequisite_state_engine_test.dart",
+                                   "priorStatus":  "FAILED_AT_PERS_AUTO_00"
+                               },
+    "failedLoadCompileGate4":  {
+                                   "currentStatus":  "PASS",
+                                   "file":  "student_treatment_decision_engine_test.dart",
+                                   "priorStatus":  "FAILED_AT_PERS_AUTO_00"
+                               },
+    "targetedRecoveryTests":  "33/33 PASS",
+    "focusedAnalyze":  "PASS"
+}

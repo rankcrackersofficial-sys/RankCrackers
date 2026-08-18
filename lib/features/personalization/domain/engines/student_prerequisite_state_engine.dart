@@ -1,100 +1,110 @@
-/// RankCrackers deterministic Prerequisite State Engine.
-        throw const FormatException(
-          'StudentPrerequisiteStateEngine state map contains empty AMTN key.',
-        );
-      }
+/// RankCrackers deterministic prerequisite readiness engine.
+/// CODE NO: PERS-08-R2
+library;
 
+import '../models/student_learning_state.dart';
 
-      if (state.studentId != studentId) {
-        throw const FormatException(
-          'StudentPrerequisiteStateEngine received state for another student.',
-        );
-      }
+final class StudentPrerequisiteDiagnosis {
+  const StudentPrerequisiteDiagnosis({
+    required this.studentId,
+    required this.targetAmtnId,
+    required this.calculatedAtUtc,
+    required this.readiness,
+    required this.confidence,
+    required this.blockingPrerequisiteAmtnIds,
+    required this.weakPrerequisiteAmtnIds,
+  });
 
-
-      if (state.amtnId != key) {
-        throw const FormatException(
-          'StudentPrerequisiteStateEngine state map key does not match '
-          'StudentLearningState.amtnId.',
-        );
-      }
-    }
-  }
-
-
-  int _confidenceRank(
-    StudentLearningStateConfidence confidence,
-  ) {
-    switch (confidence) {
-      case StudentLearningStateConfidence.insufficient:
-        return 0;
-      case StudentLearningStateConfidence.low:
-        return 1;
-      case StudentLearningStateConfidence.medium:
-        return 2;
-      case StudentLearningStateConfidence.high:
-        return 3;
-    }
-  }
+  final String studentId;
+  final String targetAmtnId;
+  final DateTime calculatedAtUtc;
+  final StudentPrerequisiteReadiness readiness;
+  final StudentLearningStateConfidence confidence;
+  final List<String> blockingPrerequisiteAmtnIds;
+  final List<String> weakPrerequisiteAmtnIds;
 }
 
+final class StudentPrerequisiteStateEngine {
+  const StudentPrerequisiteStateEngine();
 
-extension StudentPrerequisiteReadinessWire
-    on StudentPrerequisiteReadiness {
-  String get wireName {
-    switch (this) {
-      case StudentPrerequisiteReadiness.unknown:
-        return 'unknown';
-      case StudentPrerequisiteReadiness.blocked:
-        return 'blocked';
-      case StudentPrerequisiteReadiness.fragile:
-        return 'fragile';
-      case StudentPrerequisiteReadiness.ready:
-        return 'ready';
+  StudentPrerequisiteDiagnosis diagnose({
+    required String studentId,
+    required String targetAmtnId,
+    required DateTime calculatedAtUtc,
+    required Map<String, StudentLearningState> prerequisiteStates,
+  }) {
+    if (!calculatedAtUtc.isUtc) {
+      throw const FormatException('calculatedAtUtc must be UTC.');
     }
-  }
-}
-
-
-extension StudentPrerequisiteDiagnosisWire
-    on StudentPrerequisiteDiagnosis {
-  String get wireName {
-    switch (this) {
-      case StudentPrerequisiteDiagnosis.unknown:
-        return 'unknown';
-      case StudentPrerequisiteDiagnosis.targetConceptRepair:
-        return 'target_concept_repair';
-      case StudentPrerequisiteDiagnosis.prerequisiteRepair:
-        return 'prerequisite_repair';
-      case StudentPrerequisiteDiagnosis.mixedRepair:
-        return 'mixed_repair';
-      case StudentPrerequisiteDiagnosis.prerequisitesReady:
-        return 'prerequisites_ready';
+    if (prerequisiteStates.isEmpty) {
+      return StudentPrerequisiteDiagnosis(
+        studentId: studentId,
+        targetAmtnId: targetAmtnId,
+        calculatedAtUtc: calculatedAtUtc,
+        readiness: StudentPrerequisiteReadiness.ready,
+        confidence: StudentLearningStateConfidence.high,
+        blockingPrerequisiteAmtnIds: const [],
+        weakPrerequisiteAmtnIds: const [],
+      );
     }
-  }
-}
 
+    final blocking = <String>[];
+    final weak = <String>[];
+    var insufficient = false;
 
-extension StudentPrerequisiteStateReasonWire
-    on StudentPrerequisiteStateReason {
-  String get wireName {
-    switch (this) {
-      case StudentPrerequisiteStateReason.ready:
-        return 'ready';
-      case StudentPrerequisiteStateReason.masteryTooLow:
-        return 'mastery_too_low';
-      case StudentPrerequisiteStateReason.retentionTooLow:
-        return 'retention_too_low';
-      case StudentPrerequisiteStateReason.insufficientEvidence:
-        return 'insufficient_evidence';
-      case StudentPrerequisiteStateReason.staleEvidence:
-        return 'stale_evidence';
-      case StudentPrerequisiteStateReason.missingState:
-        return 'missing_state';
-      case StudentPrerequisiteStateReason.optionalPrerequisiteNotReady:
-        return 'optional_prerequisite_not_ready';
-      case StudentPrerequisiteStateReason.mandatoryPrerequisiteNotReady:
-        return 'mandatory_prerequisite_not_ready';
+    for (final entry in prerequisiteStates.entries) {
+      final s = entry.value;
+      if (s.studentId != studentId || s.amtnId != entry.key) {
+        throw const FormatException('Prerequisite state identity mismatch.');
+      }
+
+      if (s.masteryConfidence == StudentLearningStateConfidence.insufficient) {
+        insufficient = true;
+        weak.add(entry.key);
+        continue;
+      }
+
+      if (s.masteryBand == StudentMasteryBand.emerging) {
+        blocking.add(entry.key);
+      } else if (s.masteryBand == StudentMasteryBand.developing) {
+        weak.add(entry.key);
+      }
     }
+
+    if (blocking.isNotEmpty) {
+      return StudentPrerequisiteDiagnosis(
+        studentId: studentId,
+        targetAmtnId: targetAmtnId,
+        calculatedAtUtc: calculatedAtUtc,
+        readiness: StudentPrerequisiteReadiness.blocked,
+        confidence: StudentLearningStateConfidence.high,
+        blockingPrerequisiteAmtnIds: List.unmodifiable(blocking),
+        weakPrerequisiteAmtnIds: List.unmodifiable(weak),
+      );
+    }
+
+    if (weak.isNotEmpty || insufficient) {
+      return StudentPrerequisiteDiagnosis(
+        studentId: studentId,
+        targetAmtnId: targetAmtnId,
+        calculatedAtUtc: calculatedAtUtc,
+        readiness: StudentPrerequisiteReadiness.partial,
+        confidence: insufficient
+            ? StudentLearningStateConfidence.low
+            : StudentLearningStateConfidence.medium,
+        blockingPrerequisiteAmtnIds: const [],
+        weakPrerequisiteAmtnIds: List.unmodifiable(weak),
+      );
+    }
+
+    return StudentPrerequisiteDiagnosis(
+      studentId: studentId,
+      targetAmtnId: targetAmtnId,
+      calculatedAtUtc: calculatedAtUtc,
+      readiness: StudentPrerequisiteReadiness.ready,
+      confidence: StudentLearningStateConfidence.high,
+      blockingPrerequisiteAmtnIds: const [],
+      weakPrerequisiteAmtnIds: const [],
+    );
   }
 }

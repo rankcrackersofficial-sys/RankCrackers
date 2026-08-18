@@ -1,0 +1,227 @@
+{
+    "verdict":  "PERS_AAF_01_SOURCE_AUTHORITY_RESTORED_PENDING_COMMIT",
+    "productionFiles":  [
+                            {
+                                "path":  "lib/features/personalization/data/cache/realtime_cache_invalidation.dart",
+                                "exists":  true,
+                                "sha256":  "6B7FD0742200458FF7A38ED01E6C99A9F49474A63713731620C4EB8561D5610C",
+                                "trackedAtHead":  true
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/models/aaf_personalization_bridge.dart",
+                                "exists":  true,
+                                "sha256":  "59AFD95940CF3F719113469EE1F9C653711F29EE7E82DC4CF1C23DF8F00A83E5",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/engines/crucible_personalization_blueprint_engine.dart",
+                                "exists":  true,
+                                "sha256":  "55E0320CCA4B327AA9FEFE150B0D89684D39CE9303A7C66D302C4F6DD1AB2F84",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/engines/crucible_personalized_item_selector.dart",
+                                "exists":  true,
+                                "sha256":  "0A7BC5E7DA05176123328C3B1C02DA82DF19F24A81302B6A2AEDA17922B6DB70",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/engines/digibook_personalization_route_engine.dart",
+                                "exists":  true,
+                                "sha256":  "37AF2F0211124B506B6FF24F56AE6C456345AE85F481F5FD21C15AC319B2C61D",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/engines/student_fluency_engine.dart",
+                                "exists":  true,
+                                "sha256":  "2E8C25BEB9F0757A6D0E0A15C37ACFABDF2E842E0BABB401D3A18A822DB704D9",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/engines/student_learning_state_engine.dart",
+                                "exists":  true,
+                                "sha256":  "4C98DFE21188F082C5D555550C2A6A1058EDC0CB761910B8D420F34001528539",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/engines/student_mastery_engine.dart",
+                                "exists":  true,
+                                "sha256":  "9E5903D331E39BA4623ECB713B969B673CF9FD1F72B2ADC5714D26FF2EE4BF1C",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/engines/student_prerequisite_state_engine.dart",
+                                "exists":  true,
+                                "sha256":  "6EB35C6EF6BA5872CC964A49362F6F182EDC9715FD68BE9F808A27CB8BA7F2FE",
+                                "trackedAtHead":  true
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/engines/student_retention_engine.dart",
+                                "exists":  true,
+                                "sha256":  "4EDF7F3804DFA5A57F0D622B41CD30E3E2EB7E318B6F8EFE6576DB2B17637D72",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/engines/student_revision_queue_engine.dart",
+                                "exists":  true,
+                                "sha256":  "B4BE82A90F56DDED33D1B1B41F51143D2061D7D60C15AA91EBB3CCDFE5EC27B0",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/engines/student_treatment_decision_engine.dart",
+                                "exists":  true,
+                                "sha256":  "982FD2400D9A299AA5E412A6108F431ABAD96A41DFC70420D9274BF762604516",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/engines/syllabus_personalization_route_engine.dart",
+                                "exists":  true,
+                                "sha256":  "ACB93EDFD43A8E197D24BDA8B19B79A193536D14847C6CF0BE9ED82AA0797E58",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/models/crucible_personalization_blueprint.dart",
+                                "exists":  true,
+                                "sha256":  "97EA1D121AA766FD3764361C2A2FEDDACB7353A22B506A5F7807738D37A0E5AA",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/models/digibook_personalization_route.dart",
+                                "exists":  true,
+                                "sha256":  "DE99C92135703B793C87C63DF08335BA03CA5A5C3DD7B714FA09FB13001D5B3B",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/models/student_evidence_event.dart",
+                                "exists":  true,
+                                "sha256":  "C8DF7ED3D3D0E4036DBCC9614C64A6C18FF5CEA7D392D79C636DB0D82826F3A8",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/models/student_learning_state.dart",
+                                "exists":  true,
+                                "sha256":  "B8BF9A0B3F7BF82F01F0801A7DC6F7CAF5E8B2C84C190B89EEA8CFE10E417355",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/models/student_revision_queue.dart",
+                                "exists":  true,
+                                "sha256":  "457CADC00F20EAE0D13E075A8BD403739E5421F572ECEB2D62BAC4E847949229",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/models/student_treatment_decision.dart",
+                                "exists":  true,
+                                "sha256":  "43C184CB89748A0AC47D074AE8DF29767D8FB7657EAD0A269A17519D690ACC72",
+                                "trackedAtHead":  true
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/models/syllabus_personalization_route.dart",
+                                "exists":  true,
+                                "sha256":  "8F9C7051E99CEFBD0FC043C7BDE5B7DB46A899AB566E8A89618E220FCDE3D449",
+                                "trackedAtHead":  false
+                            },
+                            {
+                                "path":  "lib/features/personalization/domain/policies/student_evidence_policy.dart",
+                                "exists":  true,
+                                "sha256":  "52C06646B2985EF8C68F1E3EFD9A40DD886082AC6029F2DBDAA4A2FD0A3264BE",
+                                "trackedAtHead":  false
+                            }
+                        ],
+    "testFiles":  [
+                      {
+                          "path":  "test/features/personalization/cache_invalidation_test.dart",
+                          "exists":  true,
+                          "sha256":  "63435AFF3A37B8DB8C0E4AB1C4A1C9CE5496FD36F438F419DF03EF45EC70DA74",
+                          "trackedAtHead":  true
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/crucible_personalization_blueprint_engine_test.dart",
+                          "exists":  true,
+                          "sha256":  "59280E840C7273030A97E9FF637B80BE8A2EA74E1C359BF06C5FB400D07E523A",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/crucible_personalized_item_selector_test.dart",
+                          "exists":  true,
+                          "sha256":  "33336BEC5D6A347F2574EA33BA10C5FA15929C4D94D74905273708EAD4B597B4",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/digibook_personalization_integration_test.dart",
+                          "exists":  true,
+                          "sha256":  "839C1628DC13A6B1D89AB36BF5FC6EA53C996BAB8F18E55D13AD3718FB71C892",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/student_evidence_event_test.dart",
+                          "exists":  true,
+                          "sha256":  "7DED9B44C44702CAFE247855FB5CA8413E37D8D8333E473653BC86C65951ECD1",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/student_evidence_policy_test.dart",
+                          "exists":  true,
+                          "sha256":  "49CDAEF42894994AA6656FF7134E84D01CF84C855FC843A09D3BD646525B9175",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/student_fluency_engine_test.dart",
+                          "exists":  true,
+                          "sha256":  "4A3FCD1A86B9F947860C910B38D55D662632A145F703B681E6BA3C8739091DD9",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/student_learning_state_engine_test.dart",
+                          "exists":  true,
+                          "sha256":  "10A202F9BBB639826D953C7EBDA8635B1372FF8152F2E46917773B59B6620B4A",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/student_learning_state_test.dart",
+                          "exists":  true,
+                          "sha256":  "58DB2FFC2920B8F4F5EEEDECE99319F485378974CEBA4A32EC2B4BCDF98EF5E1",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/student_mastery_engine_test.dart",
+                          "exists":  true,
+                          "sha256":  "8C73359B9454BCB0AF38910CE97ECE0C8FF9234FCAF8FEEB9D3E978FF68352DD",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/student_prerequisite_state_engine_test.dart",
+                          "exists":  true,
+                          "sha256":  "127E822A0843A4EEECCE8B85AFE6C9CBDC3D4D370CF4A64B41F290391192B5EA",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/student_retention_engine_test.dart",
+                          "exists":  true,
+                          "sha256":  "3D14F929AD7DADACA917679CC1F3EDEB191734AC0E4FF971C3A7DAE95E7DCB91",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/student_revision_queue_engine_test.dart",
+                          "exists":  true,
+                          "sha256":  "89D25AAE49DBD6021531B6E74FC0F42B5CD1B34BC2FE2DC9D732B05CC1E1ADFD",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/student_treatment_decision_engine_test.dart",
+                          "exists":  true,
+                          "sha256":  "E7111CB674B81947685B90105CAACFB4733D577733CAE930249011E0BEE1738D",
+                          "trackedAtHead":  false
+                      },
+                      {
+                          "path":  "test/features/personalization/recovery/syllabus_personalization_route_engine_test.dart",
+                          "exists":  true,
+                          "sha256":  "4F6138CC854C6140DBB6EAFB8DB4236931C5F92F6281D68A3F6A474B737589EC",
+                          "trackedAtHead":  false
+                      }
+                  ],
+    "activeProductionAuthorityFiles":  21,
+    "activeTestAuthorityFiles":  15,
+    "backupOrFragmentFilesPromoted":  0,
+    "ambiguousProductionAuthorityFiles":  0
+}
