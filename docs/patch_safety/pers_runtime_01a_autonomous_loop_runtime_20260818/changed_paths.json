@@ -1,0 +1,5 @@
+[
+    "lib/features/personalization/domain/engines/student_autonomous_loop_engine.dart",
+    "lib/features/syllabus/core/autonomous_syllabus_pipeline.dart",
+    "test/features/personalization/pers_runtime_01a_autonomous_loop_test.dart"
+]

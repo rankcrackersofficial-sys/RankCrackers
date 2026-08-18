@@ -1,0 +1,19 @@
+{
+    "master_code": "RANKCRACKERS_AUTONOMOUS_PERSONALIZED_COACHING_OS_V1",
+    "binding_status": "LOCKED",
+    "engines_bound": [
+        "StudentMasteryEngine",
+        "StudentRetentionEngine",
+        "StudentFluencyEngine",
+        "StudentPrerequisiteStateEngine",
+        "StudentLearningStateEngine",
+        "StudentTreatmentDecisionEngine",
+        "SyllabusPersonalizationRouteEngine",
+        "DigiBookPersonalizationRouteEngine",
+        "CruciblePersonalizationBlueprintEngine",
+        "StudentRevisionQueueEngine",
+        "StudentRevisionClosedLoopEngine",
+        "StudentCoachingSupportEngine"
+    ],
+    "verdict": "PASS"
+}

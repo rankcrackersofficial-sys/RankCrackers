@@ -1,0 +1,5 @@
+{
+    "dependency": "AAF-008B",
+    "description": "Autonomous loop ready to consume recovered versions once AAF-008B runtime proof is complete.",
+    "readiness": "WAITING_ON_AAF"
+}

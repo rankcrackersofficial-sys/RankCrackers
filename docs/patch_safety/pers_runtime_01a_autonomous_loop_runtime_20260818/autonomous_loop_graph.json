@@ -1,0 +1,35 @@
+{
+    "nodes": [
+        { "id": "evidence", "type": "input", "source": "StudentEvidenceEvent" },
+        { "id": "bridge", "type": "authority", "source": "AafPersonalizationBridgeAuthority" },
+        { "id": "mastery_estimate", "type": "calculation", "engine": "StudentMasteryEngine" },
+        { "id": "retention_estimate", "type": "calculation", "engine": "StudentRetentionEngine" },
+        { "id": "fluency_estimate", "type": "calculation", "engine": "StudentFluencyEngine" },
+        { "id": "prerequisite_diagnosis", "type": "calculation", "engine": "StudentPrerequisiteStateEngine" },
+        { "id": "learning_state", "type": "assembly", "engine": "StudentLearningStateEngine" },
+        { "id": "treatment_decision", "type": "decision", "engine": "StudentTreatmentDecisionEngine" },
+        { "id": "syllabus_route", "type": "output", "engine": "SyllabusPersonalizationRouteEngine" },
+        { "id": "digibook_route", "type": "output", "engine": "DigiBookPersonalizationRouteEngine" },
+        { "id": "crucible_blueprint", "type": "output", "engine": "CruciblePersonalizationBlueprintEngine" },
+        { "id": "revision_queue", "type": "output", "engine": "StudentRevisionQueueEngine" },
+        { "id": "coaching_decisions", "type": "output", "engine": "StudentCoachingSupportEngine" }
+    ],
+    "edges": [
+        { "from": "evidence", "to": "mastery_estimate" },
+        { "from": "evidence", "to": "retention_estimate" },
+        { "from": "evidence", "to": "fluency_estimate" },
+        { "from": "mastery_estimate", "to": "learning_state" },
+        { "from": "retention_estimate", "to": "learning_state" },
+        { "from": "fluency_estimate", "to": "learning_state" },
+        { "from": "prerequisite_diagnosis", "to": "learning_state" },
+        { "from": "learning_state", "to": "treatment_decision" },
+        { "from": "treatment_decision", "to": "syllabus_route" },
+        { "from": "treatment_decision", "to": "digibook_route" },
+        { "from": "treatment_decision", "to": "crucible_blueprint" },
+        { "from": "learning_state", "to": "coaching_decisions" },
+        { "from": "bridge", "to": "syllabus_route" },
+        { "from": "bridge", "to": "digibook_route" },
+        { "from": "bridge", "to": "crucible_blueprint" },
+        { "from": "bridge", "to": "coaching_decisions" }
+    ]
+}
