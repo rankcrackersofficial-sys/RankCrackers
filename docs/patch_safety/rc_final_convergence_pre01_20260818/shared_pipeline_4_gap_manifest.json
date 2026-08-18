@@ -1,0 +1,34 @@
+{
+  "gap_manifest_id": "SHARED-PIPELINE-4-GAP-MANIFEST",
+  "source_reconciliation_authority": "8e9dea266d3059af479256af15e3763b6540f34d",
+  "gaps": [
+    {
+      "id": "PIPELINE-FAKE-001",
+      "severity": "P0",
+      "file": "functions/src/providers/providerExecutor.ts",
+      "leak_description": "Forced geminiFlash activeProvider and static mock text returned from executeGemini.",
+      "security_rule": "No silent model fallbacks; verify provider configuration; block unverified or mock outputs."
+    },
+    {
+      "id": "PIPELINE-FAKE-002",
+      "severity": "P0",
+      "file": "functions/workers/structural_worker.js",
+      "leak_description": "Rule-based fallbackSegmenter persists semantic_units with promptVersion 'FALLBACK_V1' after AI failure.",
+      "security_rule": "Fallback segmentations must be marked as review-required and blocked from automatic student-ready status."
+    },
+    {
+      "id": "PIPELINE-FAKE-003",
+      "severity": "P0",
+      "file": "functions/callable/handle_mission_action.js",
+      "leak_description": "Writes 'isMockData: !isProduction' flag into participant attempt documents.",
+      "security_rule": "Exclude mock data flags from student-ready projections; segregate production/non-production metadata."
+    },
+    {
+      "id": "PIPELINE-FAKE-004",
+      "severity": "P1",
+      "file": "lib/core/ai/workers/syllabus_pipeline_workers.dart",
+      "leak_description": "Placeholder NLP/vector similarity extraction workers exist in codebase.",
+      "security_rule": "Placeholders cannot drive canonical syllabus decomposition; block promotion until AAF source provenance verified."
+    }
+  ]
+}

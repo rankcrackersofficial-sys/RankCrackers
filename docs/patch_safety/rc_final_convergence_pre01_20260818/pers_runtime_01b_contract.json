@@ -1,0 +1,28 @@
+{
+  "contract_id": "PERS-RUNTIME-01B",
+  "name": "Personalization Final Convergence Runtime Contract",
+  "version": "1.0.0",
+  "status": "FREEZING",
+  "client_safety_rules": {
+    "DIRECT_CLIENT_PROMOTION": false,
+    "CLIENT_SELF_ASSERTED_MASTERY": false,
+    "CLIENT_SELF_ASSERTED_TREATMENT": false
+  },
+  "governed_chains": [
+    {
+      "name": "Founder-to-Student Publication Chain",
+      "flow": "Founder Web -> Backend -> governed state -> Student-safe projection -> Student App",
+      "security_constraint": "Only verified canonical publications can drive student projections. Fallbacks must be review-required."
+    },
+    {
+      "name": "Student Evidence Feedback Loop",
+      "flow": "Student App -> evidence -> Student state -> treatment -> PERS route -> Student App",
+      "security_constraint": "Student actions generate evidence events processed on-server to compute treatment and routing decisions."
+    },
+    {
+      "name": "AAF Integration Chain",
+      "flow": "AAF -> publication -> Student App",
+      "security_constraint": "AAF version recovery and supersession triggers immediately invalidate stale client projections."
+    }
+  ]
+}

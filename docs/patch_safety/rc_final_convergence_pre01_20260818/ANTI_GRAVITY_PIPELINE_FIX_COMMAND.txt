@@ -1,0 +1,12 @@
+COMMAND_CODE: PIPELINE-SHARED-4-GAP-FIX-DRILL
+TARGET_RECONCILIATION: e7c1e9a51e8b771f9b969f5b3fa793a8d14fdadc
+
+STEPS:
+1. Apply code patches outlined in shared_pipeline_exact_patch_manifest.json to the target production files:
+   - functions/src/providers/providerExecutor.ts
+   - functions/workers/structural_worker.js
+   - functions/callable/handle_mission_action.js
+   - lib/core/ai/workers/syllabus_pipeline_workers.dart
+2. Compile Node.js cloud functions via 'npm run build' inside functions/ directory.
+3. Execute unit tests inside functions/ and lib/ directories to ensure zero regressions.
+4. Verify that direct client promotions and client-self-asserted properties remain blocked fail-closed.

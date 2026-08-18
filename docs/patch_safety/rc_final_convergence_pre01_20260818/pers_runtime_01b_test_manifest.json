@@ -1,0 +1,21 @@
+{
+  "test_manifest_id": "PERS-RUNTIME-01B-TEST-MANIFEST",
+  "target_test_files": [
+    {
+      "path": "test/features/personalization/pers_runtime_01a_autonomous_loop_test.dart",
+      "assertion_count": 15,
+      "purpose": "Verify state propagation, treatment decisions, routing, and recomputations without recovery triggers."
+    },
+    {
+      "path": "test/features/personalization/pers_runtime_01b_autonomous_loop_recovery_test.dart",
+      "assertion_count": 20,
+      "purpose": "Verify AAF-008B withdrawal, supersession, cache invalidation, and reconnect state propagation."
+    }
+  ],
+  "expected_cooperative_denominators": {
+    "coaching_tests_passed": "10/10",
+    "personalization_recovery_tests_passed": "33/33",
+    "aaf_bridge_attacks_passed": "21/21",
+    "revision_regression_passed": "31/31"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "patch_manifest_id": "SHARED-PIPELINE-EXACT-PATCH-MANIFEST",
+  "patches": [
+    {
+      "gap_id": "PIPELINE-FAKE-001",
+      "target_file": "functions/src/providers/providerExecutor.ts",
+      "patch_details": "Replace forced 'geminiFlash' and mock executeGemini return with dynamic configuration checks and standard Google AI SDK execution wrapper with fallback checks."
+    },
+    {
+      "gap_id": "PIPELINE-FAKE-002",
+      "target_file": "functions/workers/structural_worker.js",
+      "patch_details": "Add 'reviewRequired: true' field to the semanticUnit object in Firestore when usedFallback is true. Enforce checking of this flag in promotion handlers."
+    },
+    {
+      "gap_id": "PIPELINE-FAKE-003",
+      "target_file": "functions/callable/handle_mission_action.js",
+      "patch_details": "Segregate attempts.isMockData from canonical student states, ensuring non-production client attempts are never written into production student collections."
+    },
+    {
+      "gap_id": "PIPELINE-FAKE-004",
+      "target_file": "lib/core/ai/workers/syllabus_pipeline_workers.dart",
+      "patch_details": "Implement fail-closed validation guard checking AAF publication provenance signatures; block execution if placeholder parsing is invoked."
+    }
+  ]
+}

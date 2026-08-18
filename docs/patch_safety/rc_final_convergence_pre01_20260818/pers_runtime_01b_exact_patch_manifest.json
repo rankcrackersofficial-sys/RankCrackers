@@ -1,0 +1,28 @@
+{
+  "patch_manifest_id": "PERS-RUNTIME-01B-PATCH-MANIFEST",
+  "source_revision": "e7c1e9a51e8b771f9b969f5b3fa793a8d14fdadc",
+  "target_gates": [
+    "AAF_VERSION_BRIDGE",
+    "DIGIBOOK_PERSONALIZATION",
+    "SYLLABUS_PERSONALIZATION",
+    "CRUCIBLE_PERSONALIZATION",
+    "VERSION_RECOVERY_BINDING"
+  ],
+  "patches": [
+    {
+      "file_path": "lib/features/personalization/domain/engines/student_autonomous_loop_engine.dart",
+      "action": "MODIFY",
+      "purpose": "Integrate Digibook, Syllabus, Crucible, and Revision queues into a single synchronous recomputation chain."
+    },
+    {
+      "file_path": "lib/features/personalization/domain/models/student_revision_queue.dart",
+      "action": "MODIFY",
+      "purpose": "Bind public projection identifier and knowledge version matching AAF validation bounds."
+    },
+    {
+      "file_path": "lib/features/personalization/domain/policies/student_evidence_policy.dart",
+      "action": "MODIFY",
+      "purpose": "Enforce strict fail-closed constraints on client-reported evidence events."
+    }
+  ]
+}
