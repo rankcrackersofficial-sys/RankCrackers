@@ -1,0 +1,50 @@
+{
+  "matrix": [
+    {
+      "mission_id": "RPSC_1ST_GRADE",
+      "display_name": "RPSC 1st Grade Teacher",
+      "founder_visible": true,
+      "founder_status": "ACTIVE",
+      "student_published": true,
+      "student_visible": true,
+      "syllabus_bound": true,
+      "digibook_bound": true,
+      "crucible_bound": true,
+      "pers_bound": true,
+      "canonical_version": 1,
+      "projection_version": 1,
+      "mismatch": false
+    },
+    {
+      "mission_id": "JEE_MAIN_2027",
+      "display_name": "JEE Main 2027",
+      "founder_visible": true,
+      "founder_status": "ACTIVE",
+      "student_published": true,
+      "student_visible": true,
+      "syllabus_bound": true,
+      "digibook_bound": true,
+      "crucible_bound": true,
+      "pers_bound": true,
+      "canonical_version": 1,
+      "projection_version": 1,
+      "mismatch": false
+    },
+    {
+      "mission_id": "NEET_UG_2027",
+      "display_name": "NEET UG 2027",
+      "founder_visible": true,
+      "founder_status": "ACTIVE",
+      "student_published": true,
+      "student_visible": true,
+      "syllabus_bound": true,
+      "digibook_bound": true,
+      "crucible_bound": true,
+      "pers_bound": true,
+      "canonical_version": 1,
+      "projection_version": 1,
+      "mismatch": false
+    }
+  ],
+  "unexplained_mismatch": 0
+}

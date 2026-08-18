@@ -1,0 +1,8 @@
+{
+  "automatic_propagation": true,
+  "source_collection": "/founder_missions",
+  "destination_collection": "/student_missions",
+  "trigger_type": "Cloud Firestore Trigger",
+  "trigger_status": "ACTIVE",
+  "replication_delay_ms": 120
+}

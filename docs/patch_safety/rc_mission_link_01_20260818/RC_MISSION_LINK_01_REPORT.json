@@ -1,0 +1,19 @@
+{
+  "actual_head_sha": "da37ca84358d7e2bf196b4cd0e64c0f2e16f3be6",
+  "founder_firebase_project_id": "rankcrackers-prod-founder",
+  "student_firebase_project_id": "rankcrackers-prod-student",
+  "live_founder_missions": 3,
+  "live_student_missions": 3,
+  "rpsc_1st_grade_link_status": "LINKED",
+  "jee_main_2027_link_status": "LINKED",
+  "neet_ug_2027_link_status": "LINKED",
+  "jee_main_2026_origin": "RETIRED",
+  "cbse_12_2026_origin": "RETIRED",
+  "canonical_mission_collection": "/founder_missions",
+  "student_projection_collection": "/student_missions",
+  "duplicate_mission_truth": 0,
+  "mission_identity_forks": 0,
+  "founder_to_student_automatic_propagation": true,
+  "unknown_mission_linkage_residual": 0,
+  "final_verdict": "RC_MISSION_LINK_01_R2_LIVE_FOUNDER_STUDENT_SINGLE_CANONICAL_MISSION_AUTHORITY_FULLY_ACCEPTED"
+}
