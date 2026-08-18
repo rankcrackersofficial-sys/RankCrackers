@@ -1,0 +1,11 @@
+{
+  "changedPaths": [
+    "lib/core/models/recruitment.dart",
+    "lib/core/firebase/firestore_service.dart",
+    "functions/canonical_mission_registry.js",
+    "functions/callable/handle_sentinel_action.js",
+    "functions/backfill_student_mission_catalog.js",
+    "functions/test_mission_mirror.js",
+    "test/features/mission_link/rc_mission_link_01_test.dart"
+  ]
+}

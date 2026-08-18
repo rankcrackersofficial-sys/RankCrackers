@@ -1,0 +1,10 @@
+{
+  "guardFunction": "_hasCanonicalMissionLineage",
+  "passCriteria": [
+    "sourceType == mission_realms",
+    "sourcePath == mission_realms/{sourceMissionId}",
+    "sourceMissionId is non-empty",
+    "sourceMissionId == student_mission_catalog doc id"
+  ],
+  "legacyVisibilityGuard": "Catalog docs failing lineage guard are not rendered in Student Mission Realm stream."
+}

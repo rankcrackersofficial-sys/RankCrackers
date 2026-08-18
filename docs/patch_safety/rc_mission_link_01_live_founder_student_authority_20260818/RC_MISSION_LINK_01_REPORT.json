@@ -1,0 +1,21 @@
+{
+  "verdict": "RC_MISSION_LINK_01_NOT_ACCEPTED_WITH_EXACT_PRODUCTION_RESIDUALS",
+  "founderWebFirebaseProjectId": "rankcrackers-55",
+  "studentFirebaseProjectId": "rankcrackers-55",
+  "auditFactoryFirebaseProjectId": "rankcrackers-55",
+  "liveFounderMissionCount": "3_REPORTED_BY_LIVE_SCREENSHOT_NOT_REREAD_BY_THIS_RUN",
+  "liveStudentMissionCount": "NOT_REREAD_FROM_PRODUCTION_BY_THIS_RUN",
+  "rpsc1stGradeFounderStatus": "ACTIVE_REPORTED_BY_SCREENSHOT",
+  "rpsc1stGradeStudentStatus": "NOT_REREAD_FROM_PRODUCTION; CODE_REQUIRES_STUDENT_CATALOG_LINEAGE",
+  "jeeMain2027FounderStatus": "ACTIVE_REPORTED_BY_SCREENSHOT",
+  "jeeMain2027StudentStatus": "NOT_REREAD_FROM_PRODUCTION; NEW_CREATION_NO_LONGER_COLLAPSES_TO_JEE_MAIN_2026",
+  "neetUg2027FounderStatus": "ACTIVE_REPORTED_BY_SCREENSHOT",
+  "neetUg2027StudentStatus": "NOT_REREAD_FROM_PRODUCTION; CODE_REQUIRES_STUDENT_CATALOG_LINEAGE",
+  "previous5MissionAuditStatus": "REOPENED_INVALID_FOR_LIVE_PANEL_AUTHORITY_UNTIL_RECONCILED",
+  "canonicalMissionAuthorityPath": "mission_realms/{missionId}",
+  "studentMissionProjectionPath": "student_mission_catalog/{sameMissionId}",
+  "duplicateMissionTruth": "CODE_GUARDED; LIVE_DATA_NOT_REREAD",
+  "missionIdentityForks": "JEE_MAIN_2027_TO_JEE_MAIN_2026_COLLAPSE_REMOVED; LEGACY_HISTORY_REMAINS",
+  "unknownMissionLinkageResidual": "LIVE_PRODUCTION_RECOUNT_AND_DEPLOYED_RUNTIME_CONFIRMATION_PENDING",
+  "finalVerdict": "RC_MISSION_LINK_01_NOT_ACCEPTED_WITH_EXACT_PRODUCTION_RESIDUALS"
+}

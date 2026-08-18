@@ -774,6 +774,13 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
 
   return {
     id: realmId,
+    missionId: realmId,
+    realmId: realmId,
+    sourceMissionId: realmId,
+    sourceMissionVersion: String(realmData.version || realmData.canonicalVersion || recruitmentData.version || '1'),
+    sourcePath: `mission_realms/${realmId}`,
+    sourceType: 'mission_realms',
+    studentPublicationState: isArchived ? 'ARCHIVED' : 'COMING_SOON',
     title: name,
     name: name,
     subtitle: name,

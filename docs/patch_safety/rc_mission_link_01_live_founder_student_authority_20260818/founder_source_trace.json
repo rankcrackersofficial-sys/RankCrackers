@@ -1,0 +1,23 @@
+{
+  "canonicalMissionAuthorityPath": "mission_realms/{missionId}",
+  "founderPanelReader": "lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart",
+  "founderPanelQuery": "FirebaseFirestore.instance.collection('mission_realms').where('status', isEqualTo: status)",
+  "founderCreationMirror": "functions/callable/handle_sentinel_action.js buildStudentMissionCatalogShell()",
+  "liveScreenshotMissions": [
+    {
+      "subjectVariables": 2,
+      "founderStatus": "ACTIVE_REPORTED_BY_SCREENSHOT",
+      "title": "RPSC 1st Grade"
+    },
+    {
+      "subjectVariables": 0,
+      "founderStatus": "ACTIVE_REPORTED_BY_SCREENSHOT",
+      "title": "JEE Main 2027"
+    },
+    {
+      "subjectVariables": 0,
+      "founderStatus": "ACTIVE_REPORTED_BY_SCREENSHOT",
+      "title": "NEET (UG)-2027"
+    }
+  ]
+}

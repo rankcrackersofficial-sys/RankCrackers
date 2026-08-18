@@ -23,6 +23,11 @@ class Recruitment extends Equatable {
   final String variantCode;
   final Map<String, dynamic> missionVariables;
   final String version;
+  final String sourceMissionId;
+  final String sourceMissionVersion;
+  final String sourcePath;
+  final String sourceType;
+  final String studentPublicationState;
   final DateTime? examDate;
 
   const Recruitment({
@@ -41,6 +46,11 @@ class Recruitment extends Equatable {
     this.variantCode = '',
     this.missionVariables = const {},
     this.version = '1.0.0',
+    this.sourceMissionId = '',
+    this.sourceMissionVersion = '',
+    this.sourcePath = '',
+    this.sourceType = '',
+    this.studentPublicationState = '',
     this.examDate,
   });
 
@@ -61,6 +71,11 @@ class Recruitment extends Equatable {
       'variantCode': variantCode,
       'missionVariables': missionVariables,
       'version': version,
+      'sourceMissionId': sourceMissionId,
+      'sourceMissionVersion': sourceMissionVersion,
+      'sourcePath': sourcePath,
+      'sourceType': sourceType,
+      'studentPublicationState': studentPublicationState,
       'examDate': examDate?.toIso8601String(),
     };
   }
@@ -82,6 +97,11 @@ class Recruitment extends Equatable {
       variantCode: map['variantCode'] ?? '',
       missionVariables: _asStringDynamicMap(map['missionVariables']),
       version: map['version'] ?? '1.0.0',
+      sourceMissionId: map['sourceMissionId'] ?? '',
+      sourceMissionVersion: map['sourceMissionVersion'] ?? '',
+      sourcePath: map['sourcePath'] ?? '',
+      sourceType: map['sourceType'] ?? '',
+      studentPublicationState: map['studentPublicationState'] ?? '',
       examDate:
           map['examDate'] != null ? DateTime.parse(map['examDate']) : null,
     );
@@ -103,6 +123,11 @@ class Recruitment extends Equatable {
     String? variantCode,
     Map<String, dynamic>? missionVariables,
     String? version,
+    String? sourceMissionId,
+    String? sourceMissionVersion,
+    String? sourcePath,
+    String? sourceType,
+    String? studentPublicationState,
     DateTime? examDate,
   }) {
     return Recruitment(
@@ -121,11 +146,28 @@ class Recruitment extends Equatable {
       variantCode: variantCode ?? this.variantCode,
       missionVariables: missionVariables ?? this.missionVariables,
       version: version ?? this.version,
+      sourceMissionId: sourceMissionId ?? this.sourceMissionId,
+      sourceMissionVersion: sourceMissionVersion ?? this.sourceMissionVersion,
+      sourcePath: sourcePath ?? this.sourcePath,
+      sourceType: sourceType ?? this.sourceType,
+      studentPublicationState:
+          studentPublicationState ?? this.studentPublicationState,
       examDate: examDate ?? this.examDate,
     );
   }
 
   @override
-  List<Object?> get props =>
-      [id, examId, title, year, status, missionVariables];
+  List<Object?> get props => [
+        id,
+        examId,
+        title,
+        year,
+        status,
+        missionVariables,
+        sourceMissionId,
+        sourceMissionVersion,
+        sourcePath,
+        sourceType,
+        studentPublicationState
+      ];
 }

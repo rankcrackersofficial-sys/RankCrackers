@@ -1,0 +1,10 @@
+{
+  "previousFactoryRegistry": "functions/canonical_mission_registry.js / functions scripts using jee_main_2026 and old pilot IDs",
+  "previousFiveMissionAuditStatus": "REOPENED_INVALID_FOR_LIVE_PANEL_AUTHORITY_UNTIL_RECONCILED",
+  "detectedLegacyAuthorityExamples": [
+    "jee_main_2026 appeared as the pilot canonical ID for JEE Main 2027 before this repair.",
+    "functions/test_mission_mirror.js previously asserted JEE Main 2027 -> jee_main_2026.",
+    "many historical audit/apply scripts still reference jee_main_2026 as legacy/factory history."
+  ],
+  "currentGuard": "JEE Main 2027 creation no longer collapses into jee_main_2026."
+}

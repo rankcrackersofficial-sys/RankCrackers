@@ -5,7 +5,7 @@
 
 // Approved pilot alias registry
 const PILOT_ALIASES = {
-  'jee_main_2026': ['jee main', 'jee main 2026', 'jee main 2027'],
+  'jee_main_2026': ['jee main 2026'],
   'neet_(ug)-2027': ['neet', 'neet ug', 'neet (ug) 2027'],
   'RPSC_FIRST_GRADE2026_2026_1782713222215': ['rpsc 1st grade', 'rpsc first grade', 'rpsc first grade 2026']
 };
@@ -19,6 +19,12 @@ const KNOWN_PILOT_IDS = new Set(Object.keys(PILOT_ALIASES));
 function resolveCanonicalMissionId(examName, organization, year, cycle = '') {
   const normName = String(examName || '').trim().toLowerCase();
   const targetYear = parseInt(year || 2026, 10);
+
+  // Preserve the 2026 pilot only for explicit 2026-era JEE Main input.
+  // Later Founder-created missions such as JEE Main 2027 must keep their own identity.
+  if (normName === 'jee main' && targetYear === 2026) {
+    return 'jee_main_2026';
+  }
 
   // 1. Check pilot aliases with exact matching to prevent partial matches
   for (const [canonicalId, aliases] of Object.entries(PILOT_ALIASES)) {

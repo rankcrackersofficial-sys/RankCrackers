@@ -1,0 +1,11 @@
+{
+  "fixed": [
+    "functions/canonical_mission_registry.js removed jee main 2027 alias from jee_main_2026.",
+    "functions/test_mission_mirror.js now asserts JEE Main 2027 canonical identity is rec_nta_jee_main_2027.",
+    "Student stream filters projection docs without canonical mission_realms lineage."
+  ],
+  "residual": [
+    "Existing production records were not rewritten or deleted in this run.",
+    "Fresh live Founder/Student Firestore recount was not performed."
+  ]
+}

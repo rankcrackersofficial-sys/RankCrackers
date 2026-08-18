@@ -1,0 +1,12 @@
+{
+  "studentMissionProjectionPath": "student_mission_catalog/{missionId}",
+  "studentReader": "lib/core/firebase/firestore_service.dart streamStudentMissionCatalogRecruitments()",
+  "studentRealmProvider": "lib/features/auth/presentation/providers/mission_realm_provider.dart via RecruitmentRepository.streamPublished()",
+  "repair": [
+    "Student projection documents are filtered by _hasCanonicalMissionLineage().",
+    "Projection sourceType must be mission_realms.",
+    "sourcePath must equal mission_realms/{sourceMissionId}.",
+    "sourceMissionId must equal student_mission_catalog doc id.",
+    "Recruitment model now carries sourceMissionId/sourceMissionVersion/sourcePath/sourceType/studentPublicationState."
+  ]
+}

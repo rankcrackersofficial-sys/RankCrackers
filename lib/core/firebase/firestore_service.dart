@@ -351,18 +351,79 @@ class FirestoreService {
     return variables;
   }
 
+  static String _catalogString(Map<String, dynamic> data, String key) {
+    final value = data[key];
+    return value == null ? '' : value.toString().trim();
+  }
+
+  static String _catalogSourcePath(String docId, Map<String, dynamic> data) {
+    final direct = _catalogString(data, 'sourcePath');
+    if (direct.isNotEmpty) return direct;
+    final source = data['source'];
+    if (source is Map) {
+      final missionRealmPath = source['missionRealmPath'];
+      if (missionRealmPath != null &&
+          missionRealmPath.toString().trim().isNotEmpty) {
+        return missionRealmPath.toString().trim();
+      }
+    }
+    return 'mission_realms/$docId';
+  }
+
+  static bool _hasCanonicalMissionLineage(
+      String docId, Map<String, dynamic> data) {
+    final sourcePath = _catalogSourcePath(docId, data);
+    final directSourceMissionId = _catalogString(data, 'sourceMissionId');
+    final sourceMissionId = directSourceMissionId.isNotEmpty
+        ? directSourceMissionId
+        : sourcePath.startsWith('mission_realms/')
+            ? sourcePath.substring('mission_realms/'.length).split('/').first
+            : '';
+    final sourceType = _catalogString(data, 'sourceType').isNotEmpty
+        ? _catalogString(data, 'sourceType')
+        : sourcePath.startsWith('mission_realms/')
+            ? 'mission_realms'
+            : '';
+
+    return sourceType == 'mission_realms' &&
+        sourcePath == 'mission_realms/$sourceMissionId' &&
+        sourceMissionId.isNotEmpty &&
+        sourceMissionId == docId;
+  }
+
   static Recruitment _studentCatalogDocToRecruitment(
       String docId, Map<String, dynamic> data) {
     final title =
         (data['displayName'] ?? data['title'] ?? data['name'] ?? docId)
             .toString();
-    final missionId =
-        (data['missionId'] ?? data['realmId'] ?? docId).toString();
+    final sourcePath = _catalogSourcePath(docId, data);
+    final directSourceMissionId = _catalogString(data, 'sourceMissionId');
+    final sourceMissionId = directSourceMissionId.isNotEmpty
+        ? directSourceMissionId
+        : sourcePath.startsWith('mission_realms/')
+            ? sourcePath.substring('mission_realms/'.length).split('/').first
+            : docId;
+    final sourceType = _catalogString(data, 'sourceType').isNotEmpty
+        ? _catalogString(data, 'sourceType')
+        : 'mission_realms';
+    final sourceMissionVersion =
+        _catalogString(data, 'sourceMissionVersion').isNotEmpty
+            ? _catalogString(data, 'sourceMissionVersion')
+            : _catalogString(data, 'canonicalKnowledgeVersion').isNotEmpty
+                ? _catalogString(data, 'canonicalKnowledgeVersion')
+                : _catalogString(data, 'version');
+    final missionId = sourceMissionId;
     final yearValue = data['year'] ?? data['examYear'];
     final year = yearValue is int
         ? yearValue
         : int.tryParse(yearValue?.toString() ?? '') ?? 0;
     final blueprintValue = (data['examBlueprintId'] ?? '').toString();
+    final publicationState =
+        _catalogString(data, 'studentPublicationState').isNotEmpty
+            ? _catalogString(data, 'studentPublicationState')
+            : _catalogString(data, 'catalogStatus').isNotEmpty
+                ? _catalogString(data, 'catalogStatus')
+                : _catalogString(data, 'status');
 
     return Recruitment(
       id: docId,
@@ -387,6 +448,11 @@ class FirestoreService {
       variantCode: (data['variantCode'] ?? missionId).toString(),
       missionVariables: _extractMissionVariables(data),
       version: 'student_mission_catalog',
+      sourceMissionId: sourceMissionId,
+      sourceMissionVersion: sourceMissionVersion,
+      sourcePath: sourcePath,
+      sourceType: sourceType,
+      studentPublicationState: publicationState,
     );
   }
 
@@ -399,6 +465,7 @@ class FirestoreService {
         .snapshots()
         .map((snapshot) {
       return snapshot.docs
+          .where((doc) => _hasCanonicalMissionLineage(doc.id, doc.data()))
           .map((doc) => _studentCatalogDocToRecruitment(doc.id, doc.data()))
           .toList();
     });

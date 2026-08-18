@@ -302,7 +302,7 @@ async function runSuite() {
     
     await handleSentinelAction(data, founderContext);
 
-    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
+    const shell = mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'];
     assert.ok(shell);
     assert.strictEqual(shell.status, 'PRIVATE_REVIEW_LOCKED');
     assert.strictEqual(shell.userPanelVisible, false);
@@ -501,10 +501,10 @@ async function runSuite() {
     };
 
     await handleSentinelAction(data, founderContext);
-    const doc1 = mockDatabaseState.student_mission_catalog['jee_main_2026'];
+    const doc1 = mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'];
     
     await handleSentinelAction(data, founderContext);
-    const doc2 = mockDatabaseState.student_mission_catalog['jee_main_2026'];
+    const doc2 = mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'];
 
     assert.deepStrictEqual(doc1.id, doc2.id);
   });
@@ -638,14 +638,14 @@ async function runSuite() {
     }, /PROHIBITED_WRITE_VIOLATION/);
   });
 
-  // 19. Canonical mapping of JEE Main 2027 to jee_main_2026
-  await testCase("Canonical mapping of JEE Main 2027 to jee_main_2026", async () => {
+  // 19. Canonical JEE Main 2027 must not collapse into the 2026 legacy mission
+  await testCase("Canonical JEE Main 2027 does not map to jee_main_2026", async () => {
     const mapped = resolveCanonicalMissionId('JEE Main', 'NTA', 2027);
-    assert.strictEqual(mapped, 'jee_main_2026');
+    assert.strictEqual(mapped, 'rec_nta_jee_main_2027');
   });
 
-  // 20. Duplicate-Mission Migration Risk (prevent rec_nta_jee_main_2027 creation)
-  await testCase("Duplicate-Mission Migration Risk (prevent rec_nta_jee_main_2027)", async () => {
+  // 20. Live Founder identity must be explicit, not silently downgraded to the 2026 pilot
+  await testCase("Live Founder JEE Main 2027 creates its own canonical identity", async () => {
     resetMockDb();
     const data = {
       action: 'launch_exam_mission',
@@ -659,9 +659,9 @@ async function runSuite() {
     
     await handleSentinelAction(data, founderContext);
 
-    // Verify it resolved to jee_main_2026 and NOT rec_nta_jee_main_2027
-    assert.ok(mockDatabaseState.student_mission_catalog['jee_main_2026']);
-    assert.strictEqual(mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'], undefined);
+    // Verify it resolved to the 2027 canonical identity and did not reuse the legacy 2026 pilot.
+    assert.ok(mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027']);
+    assert.strictEqual(mockDatabaseState.student_mission_catalog['jee_main_2026'], undefined);
   });
 
   // 21. Declare Result write inventory limits writes
@@ -1110,10 +1110,10 @@ async function runSuite() {
     }, /ACCESS DENIED/);
   });
 
-  // 42. Canonical: Pilot alias mapping resolution
-  await testCase("Canonical: Pilot alias mapping resolution", async () => {
+  // 42. Canonical: new live mission identity is not collapsed into a legacy pilot alias
+  await testCase("Canonical: new live mission identity is not collapsed into legacy alias", async () => {
     const resolved = validateOrResolveId('launch_exam_mission', { examCategory: 'competitive', examName: 'JEE Main 2027', year: 2027 });
-    assert.strictEqual(resolved, 'jee_main_2026');
+    assert.strictEqual(resolved, 'rec_central_jee_main_2027_2027');
   });
 
   // 43. Canonical: Legacy non-pilot ID resolution
@@ -1237,7 +1237,7 @@ async function runSuite() {
     };
     
     await handleSentinelAction(data, founderContext);
-    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
+    const shell = mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'];
 
     const expectedActualFields = [
       'id', 'title', 'name', 'subtitle', 'displayTitle', 'examName', 'examYear',
@@ -1268,7 +1268,7 @@ async function runSuite() {
     };
     
     await handleSentinelAction(data, founderContext);
-    assert.ok(mockDatabaseState.student_mission_catalog['jee_main_2026']);
+    assert.ok(mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027']);
   });
 
   // 50. Recovery state machine: PENDING status recovery

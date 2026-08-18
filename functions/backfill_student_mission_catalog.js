@@ -154,6 +154,13 @@ function buildCatalogPayload(id, data, now) {
 
     return {
         id: id,
+        missionId: id,
+        realmId: id,
+        sourceMissionId: id,
+        sourceMissionVersion: String(data.version || data.canonicalVersion || '1'),
+        sourcePath: `mission_realms/${id}`,
+        sourceType: 'mission_realms',
+        studentPublicationState: isArchived ? 'ARCHIVED' : 'COMING_SOON',
         title: title,
         name: title,
         subtitle: title,

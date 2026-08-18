@@ -1,0 +1,17 @@
+{
+  "canonicalMissionAuthorityPath": "mission_realms/{missionId}",
+  "studentProjectionPath": "student_mission_catalog/{sameMissionId}",
+  "requiredProjectionFields": [
+    "sourceMissionId",
+    "sourceMissionVersion",
+    "sourcePath",
+    "sourceType",
+    "studentPublicationState"
+  ],
+  "prohibited": [
+    "Founder mission recreated independently in Student catalog",
+    "JEE Main 2027 silently mapped to jee_main_2026",
+    "student_mission_catalog doc visible without mission_realms lineage",
+    "legacy/factory registry promoted as current live Founder authority without reconciliation"
+  ]
+}

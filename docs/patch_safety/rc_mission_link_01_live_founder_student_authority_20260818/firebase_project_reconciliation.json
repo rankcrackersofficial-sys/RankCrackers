@@ -1,0 +1,13 @@
+{
+  "founderWebFirebaseProjectId": "rankcrackers-55",
+  "studentFirebaseProjectId": "rankcrackers-55",
+  "auditFactoryFirebaseProjectId": "rankcrackers-55",
+  "evidence": [
+    ".firebaserc default = rankcrackers-55",
+    "android/app/google-services.json project_id = rankcrackers-55",
+    "lib/firebase_options.dart Web/Android projectId = rankcrackers-55",
+    "functions/backfill_student_mission_catalog.js projectId = rankcrackers-55"
+  ],
+  "differentFirebaseProjectHypothesis": "NOT_SUPPORTED_BY_REPO_CONFIG",
+  "productionReadPerformed": "NO"
+}
