@@ -1,0 +1,16 @@
+{
+  "pers_implementation_sha": "f23372dcf74621b1418503ea9831ce94c4ca8746",
+  "pers_independent_audit_sha": "pers_runtime_01b_par01_independent_20260818",
+  "aaf_independent_authority_bound": true,
+  "pers_accepted_gates_denominator": "12/12",
+  "old_v1_resurrection": 0,
+  "stale_personalization_route_reused": 0,
+  "withdrawn_route_reused": 0,
+  "superseded_route_reused": 0,
+  "personalization_academic_truth_mutations": 0,
+  "personalization_content_duplication": 0,
+  "personality_profiling": 0,
+  "cross_mission_pers_route_leakage": 0,
+  "unknown_pers_residual": 0,
+  "final_verdict": "PERS_RUNTIME_01B_PAR01_INDEPENDENT_FULL_12_OF_12_PERSONALIZATION_AUTHORITY_ACCEPTED_WITH_ZERO_UNKNOWN_RESIDUALS"
+}
