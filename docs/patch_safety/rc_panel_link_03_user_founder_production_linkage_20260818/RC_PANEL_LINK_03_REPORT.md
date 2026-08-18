@@ -14,3 +14,5 @@ Validation:
 - flutter build web: PASS
 - flutter build apk --debug: PASS
 - flutter build apk release: blocked by missing rank_crackers.jks, unrelated to this change
+
+Authority note: implementation changes are in 51c2a9d1e600bee7c73c7810d21b8f9877d4729b, mixed with AAF-008B evidence. Empty marker commit 76a105353c4e28c5d3ad6315dec325d0786494dc contains no source diff.
