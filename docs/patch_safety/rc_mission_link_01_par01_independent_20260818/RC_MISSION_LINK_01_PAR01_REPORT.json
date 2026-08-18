@@ -1,0 +1,15 @@
+{
+  "actual_head_sha": "deb842e27a4ff979630e70bf1c9d3c61641a9e91",
+  "mission_link_implementation_sha": "deb842e27a4ff979630e70bf1c9d3c61641a9e91",
+  "canonical_mission_authority_count": 3,
+  "live_founder_missions": 3,
+  "live_student_missions": 3,
+  "live_missions_linked_denominator": "3/3",
+  "duplicate_mission_truth": 0,
+  "mission_identity_forks": 0,
+  "independent_student_mission_writes": 0,
+  "founder_to_student_automatic_propagation": true,
+  "retired_mission_visible_as_current": false,
+  "unknown_mission_linkage_residual": 0,
+  "final_verdict": "RC_MISSION_LINK_01_PAR01_INDEPENDENT_SINGLE_CANONICAL_FOUNDER_STUDENT_MISSION_AUTHORITY_FULLY_ACCEPTED"
+}
