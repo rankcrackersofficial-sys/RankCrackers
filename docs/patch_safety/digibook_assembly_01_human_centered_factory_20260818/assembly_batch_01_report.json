@@ -1,0 +1,25 @@
+{
+  "mission": "JEE_MAIN_2026_CHEMISTRY",
+  "batch": 1,
+  "totalAtomsIdentified": 160,
+  "assemblyStrategy": "HUMAN_CENTERED_PEDAGOGICAL_SEQUENCE",
+  "sequence": [
+    "refresher",
+    "intuition",
+    "core_concept",
+    "explanation",
+    "diagram",
+    "formula",
+    "example",
+    "misconception",
+    "pyq",
+    "checkpoint",
+    "quick_revision"
+  ],
+  "governance": {
+    "authority_reconciliation": "PASSED",
+    "collision_protection": "FULL_SHA_ENFORCED",
+    "academic_lineage": "VERIFIED"
+  },
+  "status": "ASSEMBLY_READY"
+}

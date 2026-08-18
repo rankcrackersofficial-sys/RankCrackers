@@ -1,0 +1,7 @@
+{
+  "report": "02_AUTHORITY_INTEGRITY_REPORT",
+  "enforcement": "FULL_SHA_ENFORCED",
+  "collision_resolution": "abd04618 prefix mapped to role-specific full SHAs",
+  "v1_lineage": "e7c1e9a51e8b771f9b969f5b3fa793a8d14fdadc",
+  "status": "SECURE"
+}

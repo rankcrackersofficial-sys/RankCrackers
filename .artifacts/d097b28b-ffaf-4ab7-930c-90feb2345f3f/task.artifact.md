@@ -1,0 +1,7 @@
+- `[x]` Governance: Authority Reconciliation (`authority_reconciliation.json`)
+- `[x]` Governance: Chemistry Mission Inventory (`chemistry_mission_inventory.json`)
+- `[x]` Model: Update `DigiBookBlock` types (`digibook_block.dart`)
+- `[x]` Engine: Update `DigiBookPublicationEngine` (`digibook_publication_engine.dart`)
+- `[/]` Assembly: Execute assembly for 160 Chemistry atoms (Batch 1)
+- `[ ]` Verification: Generate 14+ required governance and validation reports
+- `[ ]` Verification: Run automated tests (`digibook_publication_engine_test.dart`)

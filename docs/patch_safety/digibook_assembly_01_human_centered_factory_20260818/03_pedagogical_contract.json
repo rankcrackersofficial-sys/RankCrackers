@@ -1,0 +1,9 @@
+{
+  "report": "03_PEDAGOGICAL_CONTRACT",
+  "contract_type": "HUMAN_CENTERED_FLOW_V1",
+  "sequence": [
+    "refresher", "intuition", "core_concept", "explanation", "diagram", "formula", "example", "misconception", "pyq", "checkpoint", "quick_revision"
+  ],
+  "enforcement_engine": "DigiBookPublicationEngine v2.2",
+  "status": "ACTIVE"
+}

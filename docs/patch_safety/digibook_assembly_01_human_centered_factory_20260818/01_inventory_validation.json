@@ -1,0 +1,8 @@
+{
+  "report": "01_INVENTORY_VALIDATION",
+  "mission": "JEE_MAIN_2026_CHEMISTRY",
+  "atoms_expected": 160,
+  "atoms_found": 160,
+  "source_tree": "assets/data/preview/jee_main_2027/syllabus_preview_tree.json",
+  "status": "PASS"
+}

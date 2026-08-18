@@ -1,0 +1,15 @@
+{
+  "verdict": "RC_AG_FF02_DIGIBOOK_FACTORY_VERIFICATION_AND_SCALING_ADVANCED_WITH_PERS_FINAL_CONVERGENCE_PENDING_ONLY_INDEPENDENT_AAF_AUDIT",
+  "baseline_authority_resolution": "53d3847646d8acf73fe7715e2afe28e5be74d5a6",
+  "aaf_008b_final_authority_status": "PENDING_INDEPENDENT_AUDIT",
+  "pers_12_of_12_status": "PENDING_INDEPENDENT_AAF_AUDIT",
+  "digibook_eligible_amtns": 160,
+  "digibook_assembled_amtns": 160,
+  "digibook_academic_accepted_amtns": 160,
+  "digibook_editorial_accepted_amtns": 160,
+  "digibook_held_amtns": 0,
+  "next_batch_status": "SCALED_AND_READY",
+  "unknown_aaf_residual": 0,
+  "unknown_pers_residual": 0,
+  "unknown_digibook_residual": 0
+}

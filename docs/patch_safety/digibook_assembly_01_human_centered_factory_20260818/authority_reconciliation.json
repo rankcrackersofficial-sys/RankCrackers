@@ -1,0 +1,21 @@
+{
+  "governance_rule": "USE_FULL_SHA_FOR_ALL_RECORDS",
+  "collisions": [
+    {
+      "prefix": "abd04618",
+      "records": [
+        {
+          "role": "AAF-008B-R1",
+          "full_sha": "abd04618776602e1281df6f8008892182512a874",
+          "description": "Recovery proof V1 to V2 passed"
+        },
+        {
+          "role": "Student Zero-Fake",
+          "full_sha": "abd046186df2f8e441c9cbc4395bb6da69bacd66",
+          "description": "Student UI Zero-Fake implementation"
+        }
+      ]
+    }
+  ],
+  "reconciliation_verdict": "RESOLVED_VIA_FULL_SHA_ENFORCEMENT"
+}
