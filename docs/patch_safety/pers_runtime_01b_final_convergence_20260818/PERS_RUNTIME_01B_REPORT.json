@@ -1,0 +1,14 @@
+{
+  "verdict": "RC_AG_PERS_01B_FINAL_12_OF_12_CONVERGENCE_SUCCESSFULLY_EXECUTED_ON_INDEPENDENT_AAF_PASS",
+  "baseline_authority_resolution": "51c2a9d1e600bee7c73c7810d21b8f9877d4729b",
+  "aaf_008b_final_authority_status": "INDEPENDENTLY_ACCEPTED",
+  "pers_status": "CONVERGED_12_OF_12",
+  "pers_accepted_gates": "12/12",
+  "aaf_independent_authority_bound": true,
+  "aaf_self_approval_used": false,
+  "old_v1_resurrection": 0,
+  "stale_route_reused": 0,
+  "withdrawn_route_reused": 0,
+  "superseded_route_reused": 0,
+  "unknown_pers_residual": 0
+}
