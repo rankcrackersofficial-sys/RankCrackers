@@ -1,0 +1,5 @@
+﻿COMMAND_CODE: RC-END2END-BACKEND-HEALTH-BINDINGS
+OWNER: ANTI_GRAVITY
+OBJECTIVE: Implement governed backend health/incident/version projections for DigiBook, Syllabus, Crucible, AAF, Personalization, Revision, Coaching, Student Delivery, Dashboard tools, and Career Signals.
+RULES: No academic truth mutation. No publication. Founder sees system health/action authority only. Student private details remain protected.
+PASS: health projection exists, incidents lifecycle works, version mismatch class is bound, no fake data path is introduced.

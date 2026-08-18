@@ -1,0 +1,29 @@
+﻿{
+    "tools":  [
+                  {
+                      "tool":  "PYQ Wallet",
+                      "current_policy":  "source-backed PYQ only or Not Ready"
+                  },
+                  {
+                      "tool":  "Test Arena",
+                      "current_policy":  "verified tests only or Not Ready"
+                  },
+                  {
+                      "tool":  "Revision Desk",
+                      "current_policy":  "accepted revision loop only or Not Ready"
+                  },
+                  {
+                      "tool":  "Rank Radar",
+                      "current_policy":  "governed competition signal only or Not Ready"
+                  },
+                  {
+                      "tool":  "Sentinel Intel",
+                      "current_policy":  "governed notification/opportunity projection only or Not Ready"
+                  },
+                  {
+                      "tool":  "Career Signals",
+                      "current_policy":  "profile/qualification/evidence-governed signals only or Not Ready"
+                  }
+              ],
+    "priority":  "DigiBook/Crucible/Syllabus before Career Signals full automation"
+}

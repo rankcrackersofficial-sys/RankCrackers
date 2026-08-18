@@ -1,0 +1,49 @@
+﻿{
+    "new_health_gaps":  6,
+    "unknown_health_residual":  0,
+    "unowned_health_fixes":  0,
+    "gaps":  [
+                 {
+                     "id":  "HEALTH-001",
+                     "area":  "Unified health feed",
+                     "gap":  "No single Founder-visible health projection contract binding AAF, PERS, Student delivery and UI tools.",
+                     "owner":  "Anti-Gravity backend health lane",
+                     "route":  "Create governed health projection/read model; no academic truth mutation."
+                 },
+                 {
+                     "id":  "HEALTH-002",
+                     "area":  "Founder Web health dashboard",
+                     "gap":  "Founder Web needs status/action surface for HEALTHY/NOT_READY/BLOCKED/RECOVERY without no-op controls.",
+                     "owner":  "Anti-Gravity Founder health web lane",
+                     "route":  "Bind controls to governed backend actions or disabled reasons."
+                 },
+                 {
+                     "id":  "HEALTH-003",
+                     "area":  "Student safe failure states",
+                     "gap":  "Student UI needs non-technical safe states matching backend health without leaking private/internal reasons.",
+                     "owner":  "Student health state implementation; Android Studio disabled unless re-enabled",
+                     "route":  "Implement safe unavailable/updating states for core pillars and dashboard tools."
+                 },
+                 {
+                     "id":  "HEALTH-004",
+                     "area":  "Version consistency",
+                     "gap":  "Need explicit version/supersession/cache mismatch contract from backend to Founder and Student.",
+                     "owner":  "Anti-Gravity backend health lane",
+                     "route":  "Bind public projection version, materialized version, client cache version and recovery action."
+                 },
+                 {
+                     "id":  "HEALTH-005",
+                     "area":  "Incident lifecycle",
+                     "gap":  "Pipeline breaks need lifecycle: detected, classified, owner-routed, recovery, resolved, audit.",
+                     "owner":  "Anti-Gravity backend health lane",
+                     "route":  "Create incident lifecycle contract and evidence counters."
+                 },
+                 {
+                     "id":  "HEALTH-006",
+                     "area":  "Career Signals",
+                     "gap":  "Career Signals must not show fake data; needs profile/qualification/evidence-driven signal readiness and Founder-visible pipeline status.",
+                     "owner":  "Anti-Gravity Student/Founder/Pipeline lanes",
+                     "route":  "Keep Not Ready until governed signal pipeline exists; expose health to Founder only."
+                 }
+             ]
+}

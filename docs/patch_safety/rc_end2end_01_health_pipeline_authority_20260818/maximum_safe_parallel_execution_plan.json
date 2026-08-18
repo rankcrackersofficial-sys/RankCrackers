@@ -1,0 +1,36 @@
+﻿{
+    "lanes":  [
+                  {
+                      "lane":  "AAF-008B",
+                      "owner":  "Anti-Gravity",
+                      "status":  "parallel"
+                  },
+                  {
+                      "lane":  "RC-UI-PIPELINE-WAVE1",
+                      "owner":  "Anti-Gravity",
+                      "status":  "parallel"
+                  },
+                  {
+                      "lane":  "End2End Backend Health",
+                      "owner":  "Anti-Gravity",
+                      "status":  "parallel if no owned path conflict"
+                  },
+                  {
+                      "lane":  "Founder Health Web",
+                      "owner":  "Anti-Gravity",
+                      "status":  "after/alongside Founder 3 gaps"
+                  },
+                  {
+                      "lane":  "Student Health States",
+                      "owner":  "Anti-Gravity unless Android Studio explicitly re-enabled",
+                      "status":  "merge with Student zero-fake fixes"
+                  }
+              ],
+    "priority":  [
+                     "AAF-008B if resource constrained",
+                     "Core Student zero-fake pillars",
+                     "Backend health feed",
+                     "Founder health controls",
+                     "Dashboard/Career staged readiness"
+                 ]
+}

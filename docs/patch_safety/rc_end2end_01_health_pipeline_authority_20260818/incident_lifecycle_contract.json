@@ -1,0 +1,29 @@
+﻿{
+    "states":  [
+                   "DETECTED",
+                   "CLASSIFIED",
+                   "ROUTED",
+                   "RECOVERY_IN_PROGRESS",
+                   "RECOVERED",
+                   "AUDITED",
+                   "CLOSED",
+                   "HARD_HOLD"
+               ],
+    "required_fields":  [
+                            "incidentId",
+                            "domain",
+                            "severity",
+                            "studentImpact",
+                            "founderVisibleStatus",
+                            "ownerLane",
+                            "actionAuthority",
+                            "createdAt",
+                            "updatedAt",
+                            "versionHashIfRelevant"
+                        ],
+    "forbidden":  [
+                      "Founder direct mastery mutation",
+                      "Founder direct academic truth rewrite",
+                      "Student private data overexposure"
+                  ]
+}

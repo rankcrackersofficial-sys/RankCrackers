@@ -1,0 +1,11 @@
+﻿{
+    "required_tests":  [
+                           "DigiBook missing projection shows Student Not Ready and Founder NOT_READY",
+                           "Crucible recovery shows Student updating and Founder RECOVERY",
+                           "Syllabus version mismatch shows Founder VERSION_ISSUE and Student updating",
+                           "Career Signals has no governed signal so Student Not Ready",
+                           "Founder cannot mutate mastery/score",
+                           "Offline stale cache cannot show fake data",
+                           "Dashboard tool missing backend data cannot show fake count"
+                       ]
+}

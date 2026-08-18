@@ -1,0 +1,5 @@
+﻿COMMAND_CODE: RC-END2END-STUDENT-HEALTH-SAFE-STATES
+OWNER NOTE: Android Studio is disabled. Execute in Anti-Gravity unless Founder explicitly re-enables Android Studio.
+OBJECTIVE: Bind Student safe failure states to backend health for DigiBook, Crucible, Syllabus, dashboard tools, and Career Signals.
+RULES: Student sees real governed data or safe Not Ready/Unavailable/Updating. No raw internal reason, no fake data, no demo fallback.
+PASS: Every missing/stale/blocked domain renders safe student state and never contradicts Founder backend health truth.

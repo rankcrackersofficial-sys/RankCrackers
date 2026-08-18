@@ -1,0 +1,24 @@
+﻿{
+    "roles":  [
+                  {
+                      "role":  "Founder",
+                      "can_view_health":  true,
+                      "can_trigger_governed_recovery":  true,
+                      "can_mutate_academic_truth":  false,
+                      "can_mutate_student_mastery":  false
+                  },
+                  {
+                      "role":  "Student",
+                      "can_view_own_safe_state":  true,
+                      "can_self_assert_mastery_as_truth":  false
+                  },
+                  {
+                      "role":  "Backend/AAF",
+                      "can_publish_only_after_governed_authority":  true
+                  },
+                  {
+                      "role":  "Personalization",
+                      "can_consume_only_current_verified_public_authority":  true
+                  }
+              ]
+}

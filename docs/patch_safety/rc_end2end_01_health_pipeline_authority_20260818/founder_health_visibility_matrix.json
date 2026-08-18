@@ -1,0 +1,155 @@
+﻿{
+    "rows":  [
+                 {
+                     "domain":  "DigiBook",
+                     "visible_to_founder":  true,
+                     "allowed_statuses":  [
+                                              "HEALTHY",
+                                              "NOT_READY",
+                                              "BLOCKED",
+                                              "RECOVERY",
+                                              "VERSION_ISSUE",
+                                              "DEGRADED",
+                                              "ERROR",
+                                              "HARD_HOLD"
+                                          ],
+                     "private_student_detail_exposed":  false
+                 },
+                 {
+                     "domain":  "Syllabus / Knowledge Map",
+                     "visible_to_founder":  true,
+                     "allowed_statuses":  [
+                                              "HEALTHY",
+                                              "NOT_READY",
+                                              "BLOCKED",
+                                              "RECOVERY",
+                                              "VERSION_ISSUE",
+                                              "DEGRADED",
+                                              "ERROR",
+                                              "HARD_HOLD"
+                                          ],
+                     "private_student_detail_exposed":  false
+                 },
+                 {
+                     "domain":  "Crucible",
+                     "visible_to_founder":  true,
+                     "allowed_statuses":  [
+                                              "HEALTHY",
+                                              "NOT_READY",
+                                              "BLOCKED",
+                                              "RECOVERY",
+                                              "VERSION_ISSUE",
+                                              "DEGRADED",
+                                              "ERROR",
+                                              "HARD_HOLD"
+                                          ],
+                     "private_student_detail_exposed":  false
+                 },
+                 {
+                     "domain":  "AAF",
+                     "visible_to_founder":  true,
+                     "allowed_statuses":  [
+                                              "HEALTHY",
+                                              "NOT_READY",
+                                              "BLOCKED",
+                                              "RECOVERY",
+                                              "VERSION_ISSUE",
+                                              "DEGRADED",
+                                              "ERROR",
+                                              "HARD_HOLD"
+                                          ],
+                     "private_student_detail_exposed":  false
+                 },
+                 {
+                     "domain":  "Personalization",
+                     "visible_to_founder":  true,
+                     "allowed_statuses":  [
+                                              "HEALTHY",
+                                              "NOT_READY",
+                                              "BLOCKED",
+                                              "RECOVERY",
+                                              "VERSION_ISSUE",
+                                              "DEGRADED",
+                                              "ERROR",
+                                              "HARD_HOLD"
+                                          ],
+                     "private_student_detail_exposed":  false
+                 },
+                 {
+                     "domain":  "Revision",
+                     "visible_to_founder":  true,
+                     "allowed_statuses":  [
+                                              "HEALTHY",
+                                              "NOT_READY",
+                                              "BLOCKED",
+                                              "RECOVERY",
+                                              "VERSION_ISSUE",
+                                              "DEGRADED",
+                                              "ERROR",
+                                              "HARD_HOLD"
+                                          ],
+                     "private_student_detail_exposed":  false
+                 },
+                 {
+                     "domain":  "Coaching",
+                     "visible_to_founder":  true,
+                     "allowed_statuses":  [
+                                              "HEALTHY",
+                                              "NOT_READY",
+                                              "BLOCKED",
+                                              "RECOVERY",
+                                              "VERSION_ISSUE",
+                                              "DEGRADED",
+                                              "ERROR",
+                                              "HARD_HOLD"
+                                          ],
+                     "private_student_detail_exposed":  false
+                 },
+                 {
+                     "domain":  "Student Delivery",
+                     "visible_to_founder":  true,
+                     "allowed_statuses":  [
+                                              "HEALTHY",
+                                              "NOT_READY",
+                                              "BLOCKED",
+                                              "RECOVERY",
+                                              "VERSION_ISSUE",
+                                              "DEGRADED",
+                                              "ERROR",
+                                              "HARD_HOLD"
+                                          ],
+                     "private_student_detail_exposed":  false
+                 },
+                 {
+                     "domain":  "Dashboard Tools",
+                     "visible_to_founder":  true,
+                     "allowed_statuses":  [
+                                              "HEALTHY",
+                                              "NOT_READY",
+                                              "BLOCKED",
+                                              "RECOVERY",
+                                              "VERSION_ISSUE",
+                                              "DEGRADED",
+                                              "ERROR",
+                                              "HARD_HOLD"
+                                          ],
+                     "private_student_detail_exposed":  false
+                 },
+                 {
+                     "domain":  "Career Signals",
+                     "visible_to_founder":  true,
+                     "allowed_statuses":  [
+                                              "HEALTHY",
+                                              "NOT_READY",
+                                              "BLOCKED",
+                                              "RECOVERY",
+                                              "VERSION_ISSUE",
+                                              "DEGRADED",
+                                              "ERROR",
+                                              "HARD_HOLD"
+                                          ],
+                     "private_student_detail_exposed":  false
+                 }
+             ],
+    "principle":  "Founder sees system health and governed actions, not unnecessary private student academic/psychological data."
+}

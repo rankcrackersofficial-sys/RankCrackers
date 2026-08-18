@@ -1,0 +1,36 @@
+﻿{
+    "founder_visible_states":  [
+                                   "HEALTHY",
+                                   "NOT_READY",
+                                   "BLOCKED",
+                                   "RECOVERY",
+                                   "VERSION_ISSUE",
+                                   "DEGRADED",
+                                   "ERROR",
+                                   "HARD_HOLD"
+                               ],
+    "student_safe_states":  [
+                                "Ready",
+                                "Content is being prepared",
+                                "Content is updating",
+                                "Temporarily unavailable",
+                                "Action needed later",
+                                "Retry available"
+                            ],
+    "prohibited_student_messages":  [
+                                        "raw stack trace",
+                                        "provider identity",
+                                        "private pipeline details",
+                                        "student psychological labels",
+                                        "internal governance hashes"
+                                    ],
+    "founder_detail_allowed":  [
+                                   "domain",
+                                   "status",
+                                   "version mismatch class",
+                                   "pipeline owner",
+                                   "safe action",
+                                   "incident id",
+                                   "last successful projection timestamp"
+                               ]
+}

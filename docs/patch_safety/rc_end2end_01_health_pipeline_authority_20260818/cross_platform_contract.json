@@ -1,0 +1,9 @@
+﻿{
+    "flows":  [
+                  "Founder -\u003e Backend health/action -\u003e Student safe state",
+                  "Student evidence -\u003e Personalization health -\u003e Founder domain status",
+                  "AAF publication -\u003e Student projection -\u003e Founder visibility",
+                  "Version recovery -\u003e Student cache recovery"
+              ],
+    "contradiction_rule":  "Founder and Student states may differ in detail, never in truth."
+}

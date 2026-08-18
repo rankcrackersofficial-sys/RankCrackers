@@ -1,0 +1,20 @@
+﻿{
+    "domains":  [
+                    "DigiBook",
+                    "Syllabus / Knowledge Map",
+                    "Crucible",
+                    "AAF",
+                    "Personalization",
+                    "Revision",
+                    "Coaching",
+                    "Student Delivery",
+                    "Dashboard Tools",
+                    "Career Signals"
+                ],
+    "existing_ui_pipeline_known_gaps":  15,
+    "new_health_observability_gaps":  6,
+    "unknown_end2end_residual":  0,
+    "unowned_end2end_fixes":  0,
+    "publication":  "NO_CHANGE",
+    "production_source_modified":  "NO"
+}

@@ -1,0 +1,30 @@
+﻿{
+    "mapping":  [
+                    {
+                        "backend":  "PUBLIC_PROJECTION_VERSION_MISMATCH",
+                        "student":  "Content is updating",
+                        "founder":  "VERSION_ISSUE"
+                    },
+                    {
+                        "backend":  "MISSING_PUBLIC_PROJECTION",
+                        "student":  "Content is being prepared",
+                        "founder":  "NOT_READY"
+                    },
+                    {
+                        "backend":  "PIPELINE_HARD_HOLD",
+                        "student":  "Temporarily unavailable",
+                        "founder":  "HARD_HOLD"
+                    },
+                    {
+                        "backend":  "RECOVERY_IN_PROGRESS",
+                        "student":  "Content is updating",
+                        "founder":  "RECOVERY"
+                    },
+                    {
+                        "backend":  "PERMISSION_DENIED",
+                        "student":  "Content unavailable",
+                        "founder":  "ERROR"
+                    }
+                ],
+    "raw_internal_reason_to_student":  false
+}

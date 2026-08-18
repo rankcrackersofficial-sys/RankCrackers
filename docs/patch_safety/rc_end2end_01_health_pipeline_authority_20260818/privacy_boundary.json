@@ -1,0 +1,25 @@
+﻿{
+    "founder_allowed":  [
+                            "aggregate system health",
+                            "pipeline status",
+                            "incident owner",
+                            "domain-level readiness",
+                            "action required"
+                        ],
+    "founder_forbidden":  [
+                              "private raw student evidence unless explicitly authorized",
+                              "psychological labels",
+                              "direct mastery/score mutation",
+                              "private provider responses"
+                          ],
+    "student_allowed":  [
+                            "safe state",
+                            "retry/refresh",
+                            "not-ready reason in student language"
+                        ],
+    "student_forbidden":  [
+                              "internal hashes",
+                              "stack traces",
+                              "provider failure details"
+                          ]
+}

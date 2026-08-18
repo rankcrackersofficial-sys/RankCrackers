@@ -1,0 +1,15 @@
+﻿{
+    "tracked_versions":  [
+                             "sourcePackVersion",
+                             "canonicalKnowledgeVersion",
+                             "materializedVersion",
+                             "publicProjectionVersion",
+                             "studentCacheVersion",
+                             "personalizationInputVersion"
+                         ],
+    "mismatch_behavior":  [
+                              "Founder sees VERSION_ISSUE with domain and recovery action",
+                              "Student sees Content is updating/unavailable",
+                              "Personalization does not consume stale/withdrawn/superseded content"
+                          ]
+}

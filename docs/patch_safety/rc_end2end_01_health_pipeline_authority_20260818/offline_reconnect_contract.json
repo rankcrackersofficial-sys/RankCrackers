@@ -1,0 +1,5 @@
+﻿{
+    "offline_allowed":  "version-bound cached public projection only",
+    "stale_cache_behavior":  "safe updating/unavailable and Founder VERSION_ISSUE if systemic",
+    "reconnect_behavior":  "refresh projection, verify version, no fake fallback"
+}

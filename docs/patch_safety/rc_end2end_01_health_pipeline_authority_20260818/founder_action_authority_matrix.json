@@ -1,0 +1,18 @@
+﻿{
+    "allowed_actions":  [
+                            "retry governed pipeline job",
+                            "open source/review queue",
+                            "approve/reject governed source item where authorized",
+                            "trigger recovery command where authorized",
+                            "mark incident acknowledged",
+                            "view version mismatch"
+                        ],
+    "forbidden_actions":  [
+                              "edit student mastery",
+                              "edit student score",
+                              "force student-ready academic truth",
+                              "override source conflict",
+                              "publish unverified content",
+                              "mutate private student evidence"
+                          ]
+}

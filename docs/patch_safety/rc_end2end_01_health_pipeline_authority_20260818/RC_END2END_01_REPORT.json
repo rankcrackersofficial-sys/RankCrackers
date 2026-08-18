@@ -1,0 +1,19 @@
+﻿{
+    "verdict":  "RC_END2END_01_USER_FOUNDER_PIPELINE_HEALTH_AND_ZERO_MISMATCH_AUTHORITY_FROZEN_WITH_ZERO_UNKNOWN_RESIDUALS_AND_EXACT_FAST_FORWARD_FIX_ROUTING",
+    "head":  "abd046186df2f8e441c9cbc4395bb6da69bacd66",
+    "branch":  "safety/rc-g2-pre-notification-schema",
+    "rc_ui_pipeline_02_authority":  "23729b4c338f69f6749188dcdb2394ca1261b4c8",
+    "domains_bound":  10,
+    "new_health_gaps":  6,
+    "unknown_end2end_residual":  0,
+    "unowned_end2end_fixes":  0,
+    "existing_15_gap_duplication":  0,
+    "student_private_data_unnecessary_exposure_allowed":  false,
+    "founder_direct_mastery_or_score_mutation_allowed":  false,
+    "career_signals_status":  "NOT_READY_UNTIL_GOVERNED_PROFILE_QUALIFICATION_EVIDENCE_SIGNAL_EXISTS",
+    "production_source_modified":  "NO",
+    "firebase_write":  "NO",
+    "queue_write":  "NO",
+    "publication":  "NO",
+    "final_line":  "RC_END2END_01_HEALTH_AUTHORITY_READY_TO_MERGE_WITH_RC_UI_PIPELINE_02_IMPLEMENTATION_WAVE"
+}

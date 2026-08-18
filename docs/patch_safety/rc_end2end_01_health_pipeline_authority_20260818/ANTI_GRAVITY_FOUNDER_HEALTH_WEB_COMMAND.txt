@@ -1,0 +1,5 @@
+﻿COMMAND_CODE: RC-END2END-FOUNDER-HEALTH-WEB
+OWNER: ANTI_GRAVITY
+OBJECTIVE: Add Founder Web health/status/action surfaces bound to governed backend health projections.
+RULES: No no-op controls. No direct mastery/score/academic truth edits. Show system state and authorized recovery actions only.
+PASS: Founder can see HEALTHY/NOT_READY/BLOCKED/RECOVERY/VERSION_ISSUE without private student data leakage.
