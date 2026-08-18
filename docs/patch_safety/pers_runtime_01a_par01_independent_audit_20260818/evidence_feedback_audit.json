@@ -1,0 +1,6 @@
+{
+    "mechanism": "rawEvents -> targetEvents filter -> calculation engines",
+    "identity_preserved": true,
+    "asynchronous_capability": true,
+    "verdict": "PASS"
+}

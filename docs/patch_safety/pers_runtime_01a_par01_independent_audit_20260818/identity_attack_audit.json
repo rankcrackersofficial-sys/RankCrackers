@@ -1,0 +1,7 @@
+{
+    "attack_vector": "Cross-Student Evidence Injection",
+    "scenario": "rawEvents contains Student_B events while bridge is Student_A",
+    "observed_behavior": "Student_B events are filtered out; Student_A state remains isolated",
+    "isolation_proof": "PASSED_VIA_ATTACK_TEST_1",
+    "verdict": "PASS"
+}

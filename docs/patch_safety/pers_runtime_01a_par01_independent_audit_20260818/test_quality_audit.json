@@ -1,0 +1,10 @@
+{
+    "test_files": [
+        "test/features/personalization/pers_runtime_01a_autonomous_loop_test.dart",
+        "test/features/personalization/pers_runtime_01a_attack_audit_test.dart"
+    ],
+    "total_loop_integration_tests": 6,
+    "regression_tests": 41,
+    "pass_rate": "100%",
+    "verdict": "PASS"
+}

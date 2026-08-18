@@ -1,0 +1,8 @@
+{
+    "input": ["StudentEvidenceEvent", "AafPersonalizationBridgeAuthority"],
+    "calculations": ["Mastery", "Retention", "Fluency", "Prerequisites"],
+    "decision": "StudentTreatmentDecision",
+    "outputs": ["SyllabusRoute", "DigiBookRoute", "CrucibleBlueprint", "RevisionQueue", "CoachingDecisions"],
+    "loop_type": "DETERMINISTIC_CLOSED_LOOP",
+    "verdict": "PASS"
+}

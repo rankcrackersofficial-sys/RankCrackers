@@ -1,0 +1,7 @@
+{
+    "attack_vector": "Stale Content Routing",
+    "scenario": "AafPersonalizationBridgeAuthority status = withdrawn / superseded",
+    "observed_behavior": "bridge.validate() throws FormatException; loop execution halted",
+    "fail_closed_proof": "PASSED_VIA_ATTACK_TEST_3",
+    "verdict": "PASS"
+}
