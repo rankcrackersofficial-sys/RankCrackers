@@ -1,0 +1,23 @@
+{
+  "video_id": "rc_student_zero_fake_01_android_studio_20260818",
+  "observations": [
+    {
+      "timestamp": "3-10s",
+      "field": "Today's Dharma Subtitle",
+      "observation": "Claimed generated from weakest nodes despite evidence pending.",
+      "fix_status": "FIXED_CONDITIONAL_TEXT"
+    },
+    {
+      "timestamp": "4-10s",
+      "field": "Tactical Roadmap Day 17",
+      "observation": "Showed 'No Active Mission' and placeholders like 'WCG Practice'.",
+      "fix_status": "FIXED_EVIDENCE_PENDING_OVERRIDE"
+    },
+    {
+      "timestamp": "37-43s",
+      "field": "Status Labels",
+      "observation": "Concatenated/Corrupted 'PENDINGPENDINGPENDINGEVIDENCE' text.",
+      "fix_status": "FIXED_WIDGET_REFACTOR"
+    }
+  ]
+}

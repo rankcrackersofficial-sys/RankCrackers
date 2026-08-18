@@ -1,0 +1,11 @@
+{
+  "target": "TacticalRoadmapCard",
+  "logic": "Replaced hardcoded placeholders with conditional mission data or EVIDENCE PENDING.",
+  "removed_placeholders": [
+    "WCG Practice",
+    "Revision Cycle",
+    "Next Subject",
+    "Subject Drill",
+    "Daily Battle"
+  ]
+}

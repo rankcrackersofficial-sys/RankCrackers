@@ -1,0 +1,23 @@
+{
+  "missionId": "NEET_UG_2027",
+  "syllabus_source": "NEET UG Official Syllabus 2027",
+  "chapters": [
+    {
+      "subject": "BIOLOGY",
+      "chaptersCount": 38,
+      "amtns": 3000
+    },
+    {
+      "subject": "PHYSICS",
+      "chaptersCount": 28,
+      "amtns": 1500
+    },
+    {
+      "subject": "CHEMISTRY",
+      "chaptersCount": 30,
+      "amtns": 1500
+    }
+  ],
+  "totalAmtns": 6000,
+  "derivation_proven": true
+}

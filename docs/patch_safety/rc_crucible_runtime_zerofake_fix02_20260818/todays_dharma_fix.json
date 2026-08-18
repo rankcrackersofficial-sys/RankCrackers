@@ -1,0 +1,8 @@
+{
+  "target": "MissionBlueprintCard",
+  "change": "Subtitle now depends on hasEvidence flag.",
+  "states": {
+    "hasEvidence_true": "Today's tactical objectives generated from your weakest and highest priority learning nodes.",
+    "hasEvidence_false": "Tactical priorities will appear after enough learning evidence is available."
+  }
+}

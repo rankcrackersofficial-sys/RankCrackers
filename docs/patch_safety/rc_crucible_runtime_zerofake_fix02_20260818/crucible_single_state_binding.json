@@ -1,0 +1,8 @@
+{
+  "status": "COMPLIANT",
+  "binding": {
+    "screen": "CrucibleScreen",
+    "state_source": "KnowledgeEngine.instance",
+    "shared_flag": "hasCrucibleEvidence"
+  }
+}

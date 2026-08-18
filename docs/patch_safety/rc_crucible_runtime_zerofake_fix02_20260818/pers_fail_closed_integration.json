@@ -1,0 +1,4 @@
+{
+  "rule": "PERS output hidden or shows pending if treatment evidence unavailable.",
+  "implementation": "MissionBlueprintCard uses hasEvidence to toggle personalization claims."
+}

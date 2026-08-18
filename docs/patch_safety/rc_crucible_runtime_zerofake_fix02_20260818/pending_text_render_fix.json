@@ -1,0 +1,5 @@
+{
+  "target": "BattleEngineCard._evidencePendingRow",
+  "root_cause": "Potential layout overlap or concatenation in simple Row/SpaceBetween.",
+  "fix": "Used Expanded + Container + Explicit Padding to isolate label and status."
+}

@@ -1,0 +1,17 @@
+{
+  "missionId": "RPSC_1ST_GRADE",
+  "subjects": [
+    {
+      "subjectName": "GK_PAPER1",
+      "chaptersCount": 15,
+      "amtns": 400
+    },
+    {
+      "subjectName": "PHYSICS_PAPER2",
+      "chaptersCount": 30,
+      "amtns": 800
+    }
+  ],
+  "totalAmtns": 1200,
+  "verification_proven": true
+}

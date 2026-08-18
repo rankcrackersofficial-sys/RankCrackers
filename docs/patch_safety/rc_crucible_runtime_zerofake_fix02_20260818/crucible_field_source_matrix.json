@@ -1,0 +1,16 @@
+{
+  "fields": {
+    "currentDay": {
+      "source": "lib/features/crucible/presentation/screens/crucible_screen.dart",
+      "logic": "Calculated from enrollmentDate relative to now."
+    },
+    "hasEvidence": {
+      "source": "CoverageEngine.calculate",
+      "logic": "nodes.isNotEmpty && coverage.totalNodes > 0"
+    },
+    "missions": {
+      "source": "CrucibleMasterEngine.generatePlan",
+      "logic": "Sorted nodes based on importance and mastery. Fallback to EVIDENCE PENDING if no evidence."
+    }
+  }
+}

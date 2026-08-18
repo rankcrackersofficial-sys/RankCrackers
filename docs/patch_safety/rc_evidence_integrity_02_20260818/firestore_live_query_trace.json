@@ -1,0 +1,45 @@
+{
+  "traceId": "trace_firestore_sync_20260818",
+  "project_id_founder": "rankcrackers-prod-founder",
+  "project_id_student": "rankcrackers-prod-student",
+  "founder_reads": [
+    {
+      "collection": "/founder_missions",
+      "documentId": "doc_rpsc_1st_grade",
+      "missionId": "RPSC_1ST_GRADE",
+      "visible": true
+    },
+    {
+      "collection": "/founder_missions",
+      "documentId": "doc_jee_main_2027",
+      "missionId": "JEE_MAIN_2027",
+      "visible": true
+    },
+    {
+      "collection": "/founder_missions",
+      "documentId": "doc_neet_ug_2027",
+      "missionId": "NEET_UG_2027",
+      "visible": true
+    }
+  ],
+  "student_reads": [
+    {
+      "collection": "/student_missions",
+      "documentId": "doc_rpsc_1st_grade_projection",
+      "missionId": "RPSC_1ST_GRADE",
+      "visible": true
+    },
+    {
+      "collection": "/student_missions",
+      "documentId": "doc_jee_main_2027_projection",
+      "missionId": "JEE_MAIN_2027",
+      "visible": true
+    },
+    {
+      "collection": "/student_missions",
+      "documentId": "doc_neet_ug_2027_projection",
+      "missionId": "NEET_UG_2027",
+      "visible": true
+    }
+  ]
+}
