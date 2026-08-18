@@ -1,0 +1,6 @@
+{
+    "target": "Exam/Mission Seeds",
+    "mechanism": "kDebugMode fencing + _requireDebug() exception",
+    "release_reachability": 0,
+    "verdict": "PASS"
+}

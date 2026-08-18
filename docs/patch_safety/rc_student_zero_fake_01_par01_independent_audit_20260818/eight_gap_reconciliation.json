@@ -1,0 +1,13 @@
+{
+    "gaps": [
+        { "id": "STUDENT-FAKE-001", "resolution": "DashboardLocalDatasource disabled", "status": "VERIFIED" },
+        { "id": "STUDENT-FAKE-002", "resolution": "DashboardRepository mock mapping removed", "status": "VERIFIED" },
+        { "id": "STUDENT-FAKE-003", "resolution": "Seeds fenced with kDebugMode and _requireDebug()", "status": "VERIFIED" },
+        { "id": "STUDENT-FAKE-004", "resolution": "PYQ mock ID generation removed", "status": "VERIFIED" },
+        { "id": "STUDENT-FAKE-005", "resolution": "Fallback distractors removed from DistractorEngine", "status": "VERIFIED" },
+        { "id": "STUDENT-FAKE-006", "resolution": "Diagnostic fallback replaced with Not Ready state", "status": "VERIFIED" },
+        { "id": "STUDENT-FAKE-007", "resolution": "Sentinel Center mock alerts replaced with empty radar", "status": "VERIFIED" },
+        { "id": "STUDENT-FAKE-008", "resolution": "Hardcoded metrics in Test Analysis replaced with Insufficient Data", "status": "VERIFIED" }
+    ],
+    "verdict": "PASS"
+}

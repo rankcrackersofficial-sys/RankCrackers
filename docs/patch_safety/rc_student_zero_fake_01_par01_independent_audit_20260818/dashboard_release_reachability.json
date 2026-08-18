@@ -1,0 +1,6 @@
+{
+    "target": "Dashboard UI",
+    "reachability_test": "Isar mock topics enumeration",
+    "result": "UNREACHABLE_VIA_EMPTY_RETURNS",
+    "verdict": "PASS"
+}
