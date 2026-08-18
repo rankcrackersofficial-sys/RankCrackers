@@ -1,0 +1,8 @@
+{
+  "audit_type": "GIT_AUTHORITY",
+  "commit_sha": "6515759a4195bade7a4586cabdd964dc46ee8dab",
+  "commit_parent": "82bc2fc614e53b48377059c1800367174c8fbebb",
+  "authorized_domain": "personalization",
+  "unrelated_paths_count": 0,
+  "verdict": "AUTHORIZED_PERSONALIZATION_COMMIT"
+}

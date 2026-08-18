@@ -1,0 +1,7 @@
+{
+  "feature": "mentorship_intervention",
+  "trigger_mechanism": "StudentTreatmentType.mentorReview",
+  "routing_logic": "mentor:{publicProjectionId}",
+  "governance_status": "STRICTLY_GOVERNED",
+  "verdict": "PASS"
+}

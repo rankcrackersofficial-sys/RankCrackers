@@ -1,0 +1,14 @@
+{
+  "contract": "PERS-COACH-01",
+  "parity_check": {
+    "mentorship": "MATCHED",
+    "doubt_resolution": "MATCHED",
+    "personalized_practice": "MATCHED",
+    "analytics_tracking": "MATCHED",
+    "schedule_discipline": "MATCHED",
+    "engagement_support": "MATCHED",
+    "academic_boundary": "ENFORCED",
+    "prohibited_behaviors": "BLOCKED"
+  },
+  "verdict": "FULL_CONTRACT_PARITY"
+}

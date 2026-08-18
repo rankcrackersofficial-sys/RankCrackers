@@ -1,0 +1,6 @@
+{
+  "feature": "personalized_practice",
+  "trigger_mastery_bands": ["emerging", "developing"],
+  "blocking_mastery_bands": ["proficient"],
+  "verdict": "PASS"
+}

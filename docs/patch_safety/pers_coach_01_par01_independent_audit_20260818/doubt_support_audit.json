@@ -1,0 +1,6 @@
+{
+  "feature": "doubt_resolution",
+  "grounding_requirement": "groundedSupportRouteIds must be non-empty",
+  "routing_logic": "routes.first",
+  "verdict": "PASS"
+}
