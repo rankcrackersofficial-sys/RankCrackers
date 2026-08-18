@@ -1,0 +1,14 @@
+{
+    "report_id": "RC_AUTO_PERS_FF01",
+    "timestamp": "2026-08-18T16:30:00Z",
+    "master_code": "RANKCRACKERS_AUTONOMOUS_PERSONALIZED_COACHING_OS_V1",
+    "primary_verdict": "RC_AUTO_PERS_FF01_PERS_FINAL_CONVERGENCE_COMPLETED_AND_DIGIBOOK_ASSEMBLY_STARTED_ON_GOVERNED_CURRENT_AUTHORITY",
+    "aaf_full_automation_status": "50/50",
+    "pers_full_acceptance_status": "12/12",
+    "digibook_assembly_status": "STARTED",
+    "digibook_assembled_count": 1,
+    "digibook_held_count": 0,
+    "unknown_automation_residual": 0,
+    "unknown_personalization_residual": 0,
+    "unknown_digibook_assembly_residual": 0
+}

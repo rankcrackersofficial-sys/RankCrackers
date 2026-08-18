@@ -1,0 +1,10 @@
+{
+    "gates": [
+        { "id": "AAF_VERSION_BRIDGE", "pre": "PASS_CODE_TEST_LEVEL", "post": "FULLY_ACCEPTED" },
+        { "id": "DIGIBOOK_PERSONALIZATION", "pre": "PASS_CODE_TEST_LEVEL", "post": "FULLY_ACCEPTED" },
+        { "id": "SYLLABUS_PERSONALIZATION", "pre": "PASS_CODE_TEST_LEVEL", "post": "FULLY_ACCEPTED" },
+        { "id": "CRUCIBLE_PERSONALIZATION", "pre": "PASS_CODE_TEST_LEVEL", "post": "FULLY_ACCEPTED" },
+        { "id": "VERSION_RECOVERY_BINDING", "pre": "BLOCKED", "post": "FULLY_ACCEPTED" }
+    ],
+    "verdict": "PASS"
+}
