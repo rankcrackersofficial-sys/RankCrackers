@@ -1,0 +1,5 @@
+{
+  "fail_closed_status": "PASS",
+  "network_drop_handling": "LOCK_CURRENT_SAFE_STATE",
+  "credential_revocation_handling": "REVOKE_SESSION_AND_DRAIN_QUEUE"
+}

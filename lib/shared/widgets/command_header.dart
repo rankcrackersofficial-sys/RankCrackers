@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../core/models/momentum_state.dart';
+import '../../core/models/readiness_state.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_typography.dart';
 import '../../core/utils/app_routes.dart';
-import '../../core/models/readiness_state.dart';
-import '../../core/models/momentum_state.dart';
 import '../../core/utils/responsive_helper.dart';
 
 class CommandHeader extends StatelessWidget {
@@ -13,6 +14,7 @@ class CommandHeader extends StatelessWidget {
   final String examName;
   final ReadinessState? readiness;
   final MomentumState? momentum;
+  final bool missionEvidenceVerified;
 
   const CommandHeader({
     super.key,
@@ -21,12 +23,15 @@ class CommandHeader extends StatelessWidget {
     required this.examName,
     this.readiness,
     this.momentum,
+    this.missionEvidenceVerified = true,
   });
 
   String _missionEvidenceLine() {
-    final hasReadiness = readiness != null;
-    final hasMomentum = momentum != null;
-    if (!hasReadiness && !hasMomentum) {
+    final hasReadiness = missionEvidenceVerified && readiness != null;
+    final hasMomentum = missionEvidenceVerified &&
+        momentum != null &&
+        momentum!.studyStreakDays > 0;
+    if (!missionEvidenceVerified || (!hasReadiness && !hasMomentum)) {
       return 'MISSION EVIDENCE PENDING';
     }
     final readinessText = hasReadiness

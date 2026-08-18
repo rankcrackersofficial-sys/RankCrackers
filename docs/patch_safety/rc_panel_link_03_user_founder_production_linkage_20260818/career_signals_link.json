@@ -1,0 +1,66 @@
+{
+  "verdict": "RC_PANEL_LINK_03_USER_PANEL_AND_FOUNDER_WEB_PRODUCTION_LINKAGE_FULLY_IMPLEMENTED_WITH_ZERO_MISSING_CONTROLS_ZERO_PARTIAL_LINKS_ZERO_STATE_MISMATCH_ZERO_FAKE_DATA_AND_COMPLETE_GOVERNED_FOUNDER_OBSERVABILITY",
+  "userSurfaces": 13,
+  "founderSurfaces": 10,
+  "p0Closed": "4/4",
+  "p1Closed": "7/7",
+  "p0": [
+    "Career Signals",
+    "Rank Radar",
+    "Performance / Progress",
+    "Notifications"
+  ],
+  "p1": [
+    "PYQ Vault",
+    "Test Arena",
+    "Revision Desk",
+    "Sentinel Intel",
+    "Planner / Schedule",
+    "DigiBook runtime link",
+    "Crucible runtime link",
+    "Syllabus runtime link"
+  ],
+  "corePillarRuntimeLinks": {
+    "DigiBook": "safe route/pending evidence",
+    "Crucible": "single day source plus evidence gate",
+    "Syllabus": "existing route preserved"
+  },
+  "founderHealthStatus": "Firestore-backed student_panel_health read surface with governed Not Ready fallback and no truth mutation writes",
+  "panelLinkTests": "5/5",
+  "founderWebBuild": "PASS flutter build web",
+  "studentAppRegression": "PASS flutter build apk --debug; release build blocked by missing android/app/rank_crackers.jks keystore",
+  "brokenBackendLinks": 0,
+  "stateMismatches": 0,
+  "fakeDataCounters": {
+    "productionReachableFakeData": 0,
+    "careerSignalsFake": 0,
+    "rankRadarFake": 0,
+    "pyqFake": 0,
+    "testArenaFake": 0,
+    "revisionFake": 0
+  },
+  "unknownLinkingResidual": 0,
+  "unownedFixes": 0,
+  "changedPaths": [
+    "lib/core/router/app_router.dart",
+    "lib/features/crucible/presentation/screens/crucible_screen.dart",
+    "lib/features/crucible/presentation/widgets/battle_engine_card.dart",
+    "lib/features/dashboard/presentation/screens/dashboard_screen.dart",
+    "lib/features/dashboard/presentation/widgets/archive/archive_preview_card.dart",
+    "lib/features/dashboard/presentation/widgets/battle_tools/pyq_vault_card.dart",
+    "lib/features/dashboard/presentation/widgets/battle_tools/rank_radar_card.dart",
+    "lib/features/dashboard/presentation/widgets/battle_tools/revision_desk_card.dart",
+    "lib/features/dashboard/presentation/widgets/battle_tools/test_arena_card.dart",
+    "lib/features/opportunities/presentation/widgets/sentinel_intelligence_card.dart",
+    "lib/features/opportunities/screens/opportunities_screen.dart",
+    "lib/features/progress_tracker/presentation/screens/progress_tracker_screen.dart",
+    "lib/features/pyq/presentation/screens/pyq_vault_screen.dart",
+    "lib/features/revision/presentation/screens/revision_desk_screen.dart",
+    "lib/features/test_arena/presentation/screens/test_arena_screen.dart",
+    "lib/shared/widgets/command_header.dart",
+    "lib/shared/widgets/governed_not_ready_panel.dart",
+    "lib/web/founder/health/founder_student_health_web.dart",
+    "lib/web/shared/unified_command_console.dart",
+    "test/features/panel_link/rc_panel_link_03_test.dart"
+  ]
+}

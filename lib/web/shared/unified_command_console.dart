@@ -18,6 +18,7 @@ import '../founder/ingestion/ingestion_review_web.dart';
 import '../founder/intelligence/intelligence_room_web.dart';
 import '../founder/activity/recent_activity_web.dart';
 import '../founder/system/founder_system_operations_web.dart';
+import '../founder/health/founder_student_health_web.dart';
 import '../founder/revenue/revenue_subscription_control_web.dart';
 import '../founder/access/access_security_web.dart';
 import '../../features/admin/presentation/widgets/review_queue/admin_tasks_list.dart';
@@ -75,7 +76,9 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
   Future<void> _upload() async {
     if (widget.roleMode == ConsoleRoleMode.admin) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Source ingestion is restricted to Founder access in this phase.')),
+        const SnackBar(
+            content: Text(
+                'Source ingestion is restricted to Founder access in this phase.')),
       );
       return;
     }
@@ -83,7 +86,16 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
     final result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
       allowedExtensions: [
-        'pdf', 'docx', 'xlsx', 'json', 'csv', 'txt', 'png', 'jpg', 'jpeg', 'webp',
+        'pdf',
+        'docx',
+        'xlsx',
+        'json',
+        'csv',
+        'txt',
+        'png',
+        'jpg',
+        'jpeg',
+        'webp',
       ],
       withData: true,
     );
@@ -163,7 +175,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
   Widget build(BuildContext context) {
     final modules = _getFilteredModules();
     if (_subTab >= modules.length) _subTab = 0;
-    
+
     final currentModule = modules[_subTab];
 
     return Scaffold(
@@ -184,7 +196,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: List.generate(modules.length, (index) {
-                       return _subTabButton(modules[index].label, index);
+                      return _subTabButton(modules[index].label, index);
                     }),
                   ),
                 ),
@@ -208,65 +220,99 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
     final List<_ConsoleModule> list = [];
 
     if (isFounder) {
-      list.add(_ConsoleModule(label: 'Mission Control', builder: (_) => const MissionControlRoom(roleMode: ConsoleRoleMode.founder)));
-      list.add(_ConsoleModule(label: 'Document Command Center', builder: (_) => const DocumentCommandCenter()));
-      list.add(_ConsoleModule(label: 'Verification Center', builder: (_) => _buildVerificationCenterLanding()));
-      list.add(_ConsoleModule(label: 'Factory Hub', builder: (_) => _buildFactoryHubLanding()));
-      list.add(_ConsoleModule(label: 'Admin Governance', builder: (_) => const AccessSecurityWeb()));
-      list.add(_ConsoleModule(label: 'Publish Gate', builder: (_) => _buildPublishGateLanding()));
-      list.add(_ConsoleModule(label: 'System Ops / Dev Mode', builder: (_) => const FounderSystemOperationsWeb()));
-      
-      // Move Study Master to Secondary or Mission specific? User didn't specify. 
+      list.add(_ConsoleModule(
+          label: 'Mission Control',
+          builder: (_) =>
+              const MissionControlRoom(roleMode: ConsoleRoleMode.founder)));
+      list.add(_ConsoleModule(
+          label: 'Document Command Center',
+          builder: (_) => const DocumentCommandCenter()));
+      list.add(_ConsoleModule(
+          label: 'Verification Center',
+          builder: (_) => _buildVerificationCenterLanding()));
+      list.add(_ConsoleModule(
+          label: 'Factory Hub', builder: (_) => _buildFactoryHubLanding()));
+      list.add(_ConsoleModule(
+          label: 'Admin Governance',
+          builder: (_) => const AccessSecurityWeb()));
+      list.add(_ConsoleModule(
+          label: 'Publish Gate', builder: (_) => _buildPublishGateLanding()));
+      list.add(_ConsoleModule(
+          label: 'System Ops / Dev Mode',
+          builder: (_) => const FounderSystemOperationsWeb()));
+      list.add(_ConsoleModule(
+          label: 'Student Health / Panel Linkage',
+          builder: (_) => const FounderStudentHealthWeb()));
+
+      // Move Study Master to Secondary or Mission specific? User didn't specify.
       // I'll keep it as a secondary essential for now or put it in Factory.
-      list.add(_ConsoleModule(label: 'Study Master Library', builder: (_) => const StudyMasterLibraryWeb(roleMode: ConsoleRoleMode.founder)));
+      list.add(_ConsoleModule(
+          label: 'Study Master Library',
+          builder: (_) =>
+              const StudyMasterLibraryWeb(roleMode: ConsoleRoleMode.founder)));
     } else {
       // Admin Mode - Dynamic filtering using central resolver
-      list.add(_ConsoleModule(label: 'My Work Queue', builder: (_) => AdminTasksList(
-        onOpenTask: (taskId, taskType, missionId) {
-           setState(() {
-              _activeTaskId = taskId;
-              // Map taskType to subTab
-              if (taskType == 'DOCUMENT_REVIEW' || taskType == 'OCR_REPROCESS_REVIEW') {
-                 _subTab = _findModuleIndex('Document Command Center');
-              } else if (taskType.contains('MISSION') || taskType.contains('SYLLABUS') || taskType.contains('PYQ') || taskType.contains('CRUCIBLE') || taskType.contains('BLUEPRINT')) {
-                 _subTab = _findModuleIndex('Mission Control');
-              }
-           });
-        },
-      )));
+      list.add(_ConsoleModule(
+          label: 'My Work Queue',
+          builder: (_) => AdminTasksList(
+                onOpenTask: (taskId, taskType, missionId) {
+                  setState(() {
+                    _activeTaskId = taskId;
+                    // Map taskType to subTab
+                    if (taskType == 'DOCUMENT_REVIEW' ||
+                        taskType == 'OCR_REPROCESS_REVIEW') {
+                      _subTab = _findModuleIndex('Document Command Center');
+                    } else if (taskType.contains('MISSION') ||
+                        taskType.contains('SYLLABUS') ||
+                        taskType.contains('PYQ') ||
+                        taskType.contains('CRUCIBLE') ||
+                        taskType.contains('BLUEPRINT')) {
+                      _subTab = _findModuleIndex('Mission Control');
+                    }
+                  });
+                },
+              )));
 
       if (AdminPermissionResolver.canSeeMissionControl(perms)) {
         list.add(_ConsoleModule(
           label: 'Mission Control Room',
-          builder: (_) => MissionControlRoom(roleMode: ConsoleRoleMode.admin, permissions: perms, taskId: _activeTaskId),
+          builder: (_) => MissionControlRoom(
+              roleMode: ConsoleRoleMode.admin,
+              permissions: perms,
+              taskId: _activeTaskId),
         ));
       }
       if (AdminPermissionResolver.canSeeStudyMaster(perms)) {
         list.add(_ConsoleModule(
           label: 'Study Master Library',
-          builder: (_) => const StudyMasterLibraryWeb(roleMode: ConsoleRoleMode.admin),
+          builder: (_) =>
+              const StudyMasterLibraryWeb(roleMode: ConsoleRoleMode.admin),
         ));
       }
       if (AdminPermissionResolver.canSeeIngestion(perms)) {
         list.add(_ConsoleModule(
           label: 'Document Command Center',
-          builder: (_) => const DocumentCommandCenter(roleMode: ConsoleRoleMode.admin),
+          builder: (_) =>
+              const DocumentCommandCenter(roleMode: ConsoleRoleMode.admin),
         ));
       }
       if (AdminPermissionResolver.canSeeIntelligenceRoom(perms)) {
         list.add(_ConsoleModule(
           label: 'Intelligence Room',
-          builder: (_) => const IntelligenceRoomWeb(roleMode: ConsoleRoleMode.admin),
+          builder: (_) =>
+              const IntelligenceRoomWeb(roleMode: ConsoleRoleMode.admin),
         ));
       }
       if (AdminPermissionResolver.canSeeRecentActivity(perms)) {
         list.add(_ConsoleModule(
           label: 'Recent Activity Log',
-          builder: (_) => const RecentActivityWeb(roleMode: ConsoleRoleMode.admin),
+          builder: (_) =>
+              const RecentActivityWeb(roleMode: ConsoleRoleMode.admin),
         ));
       }
-      
-      list.add(_ConsoleModule(label: 'My Access', builder: (_) => const AdminMyAccessPanel()));
+
+      list.add(_ConsoleModule(
+          label: 'My Access', builder: (_) => const AdminMyAccessPanel()));
     }
 
     return list;
@@ -274,9 +320,12 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
 
   Widget _buildIdentityHeader() {
     final isFounder = widget.roleMode == ConsoleRoleMode.founder;
-    final name = widget.userDoc['name'] ?? widget.userDoc['displayName'] ?? 'Administrator';
-    final designation = widget.userDoc['designation'] ?? (isFounder ? 'Founder & CEO' : 'Administrator');
-    
+    final name = widget.userDoc['name'] ??
+        widget.userDoc['displayName'] ??
+        'Administrator';
+    final designation = widget.userDoc['designation'] ??
+        (isFounder ? 'Founder & CEO' : 'Administrator');
+
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
@@ -294,10 +343,15 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
         const SizedBox(width: 8),
         const Text(
           'SYSTEM ONLINE',
-          style: TextStyle(color: rcGreen, fontSize: 10, fontWeight: FontWeight.bold, letterSpacing: 0.5),
+          style: TextStyle(
+              color: rcGreen,
+              fontSize: 10,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.5),
         ),
         const SizedBox(width: 20),
-        const VerticalDivider(width: 1, color: rcLine, indent: 16, endIndent: 16),
+        const VerticalDivider(
+            width: 1, color: rcLine, indent: 16, endIndent: 16),
         const SizedBox(width: 20),
         Column(
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -305,11 +359,15 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           children: [
             Text(
               name.toString().toUpperCase(),
-              style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 13,
+                  fontWeight: FontWeight.bold),
             ),
             Text(
               designation.toString(),
-              style: TextStyle(color: rcGold, fontSize: 10, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  color: rcGold, fontSize: 10, fontWeight: FontWeight.bold),
             ),
           ],
         ),
@@ -337,12 +395,16 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           onTap: () {
             if (MissionControlRoom.selectedMissionId == null) {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Open a mission from Mission Control first.')),
+                const SnackBar(
+                    content:
+                        Text('Open a mission from Mission Control first.')),
               );
             } else {
               setState(() {
-                MissionControlRoom.targetDetailTab = 1; // Verification Center sub-hub
-                MissionControlRoom.targetSubTab = 1; // Syllabus Review (Direct) sub-tab
+                MissionControlRoom.targetDetailTab =
+                    1; // Verification Center sub-hub
+                MissionControlRoom.targetSubTab =
+                    1; // Syllabus Review (Direct) sub-tab
                 _subTab = _findModuleIndex('Mission Control');
               });
             }
@@ -355,12 +417,16 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           onTap: () {
             if (MissionControlRoom.selectedMissionId == null) {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Open a mission from Mission Control first.')),
+                const SnackBar(
+                    content:
+                        Text('Open a mission from Mission Control first.')),
               );
             } else {
               setState(() {
-                MissionControlRoom.targetDetailTab = 1; // Verification Center sub-hub
-                MissionControlRoom.targetSubTab = 2; // PYQ Review (Direct) sub-tab
+                MissionControlRoom.targetDetailTab =
+                    1; // Verification Center sub-hub
+                MissionControlRoom.targetSubTab =
+                    2; // PYQ Review (Direct) sub-tab
                 _subTab = _findModuleIndex('Mission Control');
               });
             }
@@ -373,12 +439,16 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           onTap: () {
             if (MissionControlRoom.selectedMissionId == null) {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Open a mission from Mission Control first.')),
+                const SnackBar(
+                    content:
+                        Text('Open a mission from Mission Control first.')),
               );
             } else {
               setState(() {
-                MissionControlRoom.targetDetailTab = 1; // Verification Center sub-hub
-                MissionControlRoom.targetSubTab = 0; // AI Proposals / Review sub-tab
+                MissionControlRoom.targetDetailTab =
+                    1; // Verification Center sub-hub
+                MissionControlRoom.targetSubTab =
+                    0; // AI Proposals / Review sub-tab
                 _subTab = _findModuleIndex('Mission Control');
               });
             }
@@ -400,12 +470,15 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           onTap: () {
             if (MissionControlRoom.selectedMissionId == null) {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Open a mission from Mission Control first.')),
+                const SnackBar(
+                    content:
+                        Text('Open a mission from Mission Control first.')),
               );
             } else {
               setState(() {
                 MissionControlRoom.targetDetailTab = 2; // Factory Hub sub-hub
-                MissionControlRoom.targetSubTab = 0; // Crucible Plan Review sub-tab
+                MissionControlRoom.targetSubTab =
+                    0; // Crucible Plan Review sub-tab
                 _subTab = _findModuleIndex('Mission Control');
               });
             }
@@ -418,7 +491,9 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           onTap: () {
             if (MissionControlRoom.selectedMissionId == null) {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Open a mission from Mission Control first.')),
+                const SnackBar(
+                    content:
+                        Text('Open a mission from Mission Control first.')),
               );
             } else {
               setState(() {
@@ -445,7 +520,9 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           onTap: () {
             if (MissionControlRoom.selectedMissionId == null) {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Open a mission from Mission Control first.')),
+                const SnackBar(
+                    content:
+                        Text('Open a mission from Mission Control first.')),
               );
             } else {
               setState(() {
@@ -463,7 +540,9 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           onTap: () {
             if (MissionControlRoom.selectedMissionId == null) {
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Open a mission from Mission Control first.')),
+                const SnackBar(
+                    content:
+                        Text('Open a mission from Mission Control first.')),
               );
             } else {
               setState(() {
@@ -579,7 +658,8 @@ class _PremiumLandingPage extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(width: 4),
-                              Icon(Icons.arrow_forward_rounded, color: rcGold, size: 12),
+                              Icon(Icons.arrow_forward_rounded,
+                                  color: rcGold, size: 12),
                             ],
                           ),
                         ],

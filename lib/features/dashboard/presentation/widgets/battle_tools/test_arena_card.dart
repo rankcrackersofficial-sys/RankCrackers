@@ -11,7 +11,7 @@ class TestArenaCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return const BattleToolCard(
       title: "Test Arena",
-      subtitle: "Compete & Analyze",
+      subtitle: "Not Ready",
       icon: Icons.bolt_rounded,
       glowIcon: Icons.local_fire_department_rounded,
       glowColor: Colors.orange,

@@ -81,10 +81,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
         .where((e) => e.examId.toLowerCase() == selectedExamId.toLowerCase())
         .toList();
 
-    final scheduleIndex =
-        CrucibleClockEngine.getScheduleIndex(enrollmentTime: enrollmentDate);
-    final currentCycleDay = scheduleIndex * 2 + 1;
-    final phase = (currentCycleDay ~/ 15) + 1;
+    final currentCycleDay = currentDay;
+    final phase = currentPhase;
     final remainingHours = CrucibleClockEngine.getHoursRemaining();
     final plan =
         CrucibleMasterEngine.generatePlan(nodes: nodes, states: states);
@@ -101,11 +99,13 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
       atomicStates: knowledge.atomicCoverageStates,
     );
 
-    final missionComplete = coverage.coveragePercent;
-    final pending = 1.0 - coverage.coveragePercent;
-    final weakCount = coverage.weakNodes;
+    final hasCrucibleEvidence = nodes.isNotEmpty && coverage.totalNodes > 0;
+    final missionComplete =
+        hasCrucibleEvidence ? coverage.coveragePercent : 0.0;
+    final pending = hasCrucibleEvidence ? 1.0 - coverage.coveragePercent : 0.0;
+    final weakCount = hasCrucibleEvidence ? coverage.weakNodes : 0;
     final weakAreas =
-        coverage.totalNodes == 0 ? 0.0 : weakCount / coverage.totalNodes;
+        hasCrucibleEvidence ? weakCount / coverage.totalNodes : 0.0;
 
     final priorityNode = BattleEngine.getPriorityNode(
       nodes,
@@ -133,6 +133,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                   examName: sessionUser?.examName ?? selectedExamId,
                   readiness: readiness,
                   momentum: momentum,
+                  missionEvidenceVerified: hasCrucibleEvidence,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(
@@ -160,6 +161,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                         pending: pending,
                         weakAreas: weakAreas,
                         activeTopics: missions,
+                        hasEvidence: hasCrucibleEvidence,
                       ),
                       const SizedBox(height: 24),
                       MissionBlueprintCard(

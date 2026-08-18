@@ -10,7 +10,7 @@ class RankRadarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return const BattleToolCard(
       title: "Rank Radar",
-      subtitle: "Live Competition",
+      subtitle: "Not Ready",
       icon: Icons.leaderboard_rounded,
       glowIcon: Icons.shield_moon_rounded,
       glowColor: Colors.green,

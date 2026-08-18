@@ -85,6 +85,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     final sessionUser = ref.watch(sessionUserProvider).valueOrNull;
     final nodes = ref.watch(allNodesProvider);
 
+    final hasHeaderEvidence =
+        nodes.isNotEmpty && coverage != null && coverage.totalNodes > 0;
+
     final priorityNode = BattleEngine.getPriorityNode(
       nodes,
       knowledge.nodeStates,
@@ -107,6 +110,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                   examName: sessionUser?.examName ?? examName,
                   readiness: readiness,
                   momentum: momentum,
+                  missionEvidenceVerified: hasHeaderEvidence,
                 ),
               ),
 
@@ -158,7 +162,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                             child: _compactPillarCard(
                               Icons.local_fire_department,
                               'THE CRUCIBLE',
-                              () => context.go(AppRoutes.crucible),
+                              () => context.push(AppRoutes.crucible),
                               color: Colors.orangeAccent,
                             ),
                           ),
@@ -167,7 +171,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                             child: _compactPillarCard(
                               Icons.menu_book_rounded,
                               'DIGIBOOK',
-                              () => context.go(
+                              () => context.push(
                                 AppRoutes.digibook,
                                 extra: priorityNode,
                               ),
@@ -183,7 +187,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                             child: _compactPillarCard(
                               Icons.account_tree_rounded,
                               'SYLLABUS',
-                              () => context.go(AppRoutes.syllabus),
+                              () => context.push(AppRoutes.syllabus),
                               color: Colors.purpleAccent,
                             ),
                           ),
@@ -192,7 +196,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                             child: _compactPillarCard(
                               Icons.travel_explore_rounded,
                               'CAREER SIGNALS',
-                              () => context.go(AppRoutes.recruitment),
+                              () => context.push(AppRoutes.recruitment),
                               color: AppColors.gold,
                               secondary: true,
                             ),
@@ -364,6 +368,14 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
       MomentumState? momentum,
       List<MicroTopicNode> nodes,
       KnowledgeEngine knowledge) {
+    final hasMissionNodes = nodes.isNotEmpty;
+    final hasCoverageEvidence =
+        hasMissionNodes && coverage != null && coverage.totalNodes > 0;
+    final hasMomentumEvidence =
+        momentum != null && momentum.studyStreakDays > 0;
+    final hasRiskEvidence = hasCoverageEvidence && risk != null;
+    final hasReadinessEvidence = hasCoverageEvidence && readiness != null;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -378,35 +390,37 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
             children: [
               _statusItem(
                 "READINESS",
-                readiness == null ? "PENDING" : "${readiness.score.toInt()}%",
-                AppColors.gold,
+                hasReadinessEvidence
+                    ? "${readiness.score.toInt()}%"
+                    : "PENDING",
+                hasReadinessEvidence ? AppColors.gold : Colors.white38,
               ),
               _statusItem(
                 "COVERAGE",
-                coverage == null
-                    ? "STARTS SOON"
-                    : "${(coverage.coveragePercent * 100).toInt()}%",
-                Colors.blueAccent,
+                hasCoverageEvidence
+                    ? "${(coverage.coveragePercent * 100).toInt()}%"
+                    : "PENDING",
+                hasCoverageEvidence ? Colors.blueAccent : Colors.white38,
               ),
               _statusItem(
                 "STREAK",
-                momentum == null
-                    ? "NO ACTIVITY"
-                    : "${momentum.studyStreakDays}d",
-                Colors.orangeAccent,
+                hasMomentumEvidence
+                    ? "${momentum.studyStreakDays}d"
+                    : "PENDING",
+                hasMomentumEvidence ? Colors.orangeAccent : Colors.white38,
               ),
               _statusItem(
                 "RISK",
-                risk == null
-                    ? "NEEDS EVIDENCE"
-                    : risk.highRisk
+                hasRiskEvidence
+                    ? risk.highRisk
                         ? "HIGH"
-                        : "LOW",
-                risk == null
-                    ? Colors.white38
-                    : risk.highRisk
+                        : "LOW"
+                    : "EVIDENCE",
+                hasRiskEvidence
+                    ? risk.highRisk
                         ? Colors.redAccent
-                        : Colors.greenAccent,
+                        : Colors.greenAccent
+                    : Colors.white38,
               ),
             ],
           ),

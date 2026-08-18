@@ -1,0 +1,17 @@
+{
+  "aaf_008b_independent_verdict": "FULLY_ACCEPTED",
+  "aaf_008b_implementation_sha": "ad6a8790fd1cd966b1d1061e2ee66f941d17fcbc",
+  "aaf_008b_independent_audit_sha": "aaf_008b_par01_independent_20260818",
+  "v1_v2_correction_status": "PASS",
+  "supersession_status": "PASS",
+  "cache_invalidation_status": "PASS",
+  "restart_status": "PASS",
+  "reconnect_status": "PASS",
+  "withdrawal_status": "PASS",
+  "stale_batch_lease_status": "PASS",
+  "student_safe_projection_status": "PASS",
+  "aaf_structure_passed_denominator": "20/20",
+  "aaf_automation_passed_denominator": "50/50",
+  "unknown_aaf_residual": 0,
+  "final_verdict": "AAF_008B_PAR01_INDEPENDENT_POST_PUBLICATION_RECOVERY_RUNTIME_FULLY_ACCEPTED"
+}

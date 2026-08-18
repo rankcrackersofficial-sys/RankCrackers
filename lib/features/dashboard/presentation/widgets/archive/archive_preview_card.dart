@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/app_routes.dart';
-import '../../../../../core/widgets/dark_card.dart';
 import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/theme/app_typography.dart';
+import '../../../../../core/utils/app_routes.dart';
+import '../../../../../core/widgets/dark_card.dart';
 
 class ArchivePreviewCard extends StatelessWidget {
   const ArchivePreviewCard({super.key});
@@ -12,30 +12,23 @@ class ArchivePreviewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => context.go(AppRoutes.digibook),
+      onTap: () => context.push(AppRoutes.digibook),
       child: DarkCard(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🔱 PREMIUM CARD DNA: Title
             Text(
-              "SACRED ARCHIVE",
+              'SACRED ARCHIVE',
               style: AppTypography.cardTitle,
             ),
-
             const SizedBox(height: 10),
-
-            // 🔱 PREMIUM CARD DNA: Subtitle
             Text(
-              "Continue from Medieval Rajasthan. Linked to today's Crucible mission and revision bookmarks.",
+              'No mission-scoped archive is ready for this mission yet.',
               style: AppTypography.subtitle,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
             ),
-
             const SizedBox(height: 18),
-
-            // 🔱 PREMIUM CARD DNA: Metric/Action Row
             Row(
               children: [
                 const Icon(
@@ -43,20 +36,16 @@ class ArchivePreviewCard extends StatelessWidget {
                   color: AppColors.gold,
                   size: 18,
                 ),
-
                 const SizedBox(width: 8),
-
                 Expanded(
                   child: Text(
-                    "42% Complete • Continue Study",
+                    'ARCHIVE EVIDENCE PENDING',
                     style: AppTypography.label,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
-
                 const SizedBox(width: 8),
-
                 const Icon(
                   Icons.arrow_forward_ios_rounded,
                   size: 12,

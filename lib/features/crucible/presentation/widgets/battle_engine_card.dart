@@ -12,6 +12,7 @@ class BattleEngineCard extends StatelessWidget {
   final double pending;
   final double weakAreas;
   final List<String> activeTopics;
+  final bool hasEvidence;
 
   const BattleEngineCard({
     super.key,
@@ -21,6 +22,7 @@ class BattleEngineCard extends StatelessWidget {
     required this.pending,
     required this.weakAreas,
     required this.activeTopics,
+    required this.hasEvidence,
   });
 
   @override
@@ -47,13 +49,13 @@ class BattleEngineCard extends StatelessWidget {
                   alignment: Alignment.center,
                   children: [
                     CircularProgressIndicator(
-                      value: progress,
+                      value: hasEvidence ? progress : 0.0,
                       strokeWidth: 6,
                       color: AppColors.gold,
                       backgroundColor: Colors.white.withValues(alpha: 0.05),
                     ),
                     Text(
-                      "${(progress * 100).toInt()}%",
+                      hasEvidence ? "${(progress * 100).toInt()}%" : "--",
                       style: AppTypography.metric.copyWith(fontSize: 16),
                     ),
                   ],
@@ -76,7 +78,9 @@ class BattleEngineCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      "Mission protocol active.",
+                      hasEvidence
+                          ? "Mission protocol active."
+                          : "Crucible evidence pending.",
                       style: AppTypography.subtitle.copyWith(fontSize: 11),
                     ),
                   ],
@@ -87,9 +91,15 @@ class BattleEngineCard extends StatelessWidget {
 
           const SizedBox(height: 24),
 
-          ProgressRow(label: "Mission Complete", value: missionComplete),
-          ProgressRow(label: "Pending", value: pending),
-          ProgressRow(label: "Weak Areas", value: weakAreas),
+          if (hasEvidence) ...[
+            ProgressRow(label: "Mission Complete", value: missionComplete),
+            ProgressRow(label: "Pending", value: pending),
+            ProgressRow(label: "Weak Areas", value: weakAreas),
+          ] else ...[
+            _evidencePendingRow("Mission Complete"),
+            _evidencePendingRow("Pending"),
+            _evidencePendingRow("Weak Areas"),
+          ],
 
           const SizedBox(height: 24),
 
@@ -105,7 +115,9 @@ class BattleEngineCard extends StatelessWidget {
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
-                    "Current Priority: ${activeTopics.isNotEmpty ? activeTopics.first : 'None'}",
+                    hasEvidence
+                        ? "Current Priority: ${activeTopics.isNotEmpty ? activeTopics.first : 'None'}"
+                        : "Current Priority: Evidence pending",
                     style: AppTypography.body,
                   ),
                 ),
@@ -115,20 +127,21 @@ class BattleEngineCard extends StatelessWidget {
 
           const SizedBox(height: 24),
 
-          ...activeTopics.take(3).map(
-            (topic) {
-              return Padding(
-                padding: const EdgeInsets.only(
-                  bottom: 12,
-                ),
-                child: SubjectBlock(
-                  title: topic,
-                  completed: 'Mission Active',
-                  pending: 'Pending Revision',
-                ),
-              );
-            },
-          ),
+          if (hasEvidence)
+            ...activeTopics.take(3).map(
+              (topic) {
+                return Padding(
+                  padding: const EdgeInsets.only(
+                    bottom: 12,
+                  ),
+                  child: SubjectBlock(
+                    title: topic,
+                    completed: 'Mission Active',
+                    pending: 'Pending Revision',
+                  ),
+                );
+              },
+            ),
 
           const SizedBox(height: 24),
 
@@ -138,7 +151,9 @@ class BattleEngineCard extends StatelessWidget {
               const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  "Next Micro Test Ready",
+                  hasEvidence
+                      ? "Next Micro Test Ready"
+                      : "Micro Test Evidence Pending",
                   style: AppTypography.cardTitle.copyWith(fontSize: 13),
                 ),
               ),
@@ -148,8 +163,31 @@ class BattleEngineCard extends StatelessWidget {
           const SizedBox(height: 10),
 
           Text(
-            "Upcoming: 50 Questions Micro Test • Tomorrow • 9 AM",
+            hasEvidence
+                ? "Upcoming test schedule comes from the governed Crucible plan."
+                : "No micro test schedule is shown until a governed Crucible plan is available.",
             style: AppTypography.subtitle.copyWith(fontSize: 12),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _evidencePendingRow(String label) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(label,
+              style: AppTypography.body.copyWith(color: Colors.white54)),
+          Text(
+            'EVIDENCE PENDING',
+            style: AppTypography.label.copyWith(
+              color: Colors.white38,
+              fontSize: 8,
+              letterSpacing: 0.8,
+            ),
           ),
         ],
       ),

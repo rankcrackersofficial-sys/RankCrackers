@@ -39,15 +39,21 @@ class SentinelIntelligenceCard extends ConsumerWidget {
             children: [
               _miniAlert(
                   "New",
-                  metricsAsync.valueOrNull?.newAlerts.toString() ?? "0",
+                  metricsAsync.hasValue
+                      ? metricsAsync.valueOrNull!.newAlerts.toString()
+                      : "--",
                   AppColors.info),
               _miniAlert(
                   "Expiry",
-                  metricsAsync.valueOrNull?.expiringForms.toString() ?? "0",
+                  metricsAsync.hasValue
+                      ? metricsAsync.valueOrNull!.expiringForms.toString()
+                      : "--",
                   AppColors.error),
               _miniAlert(
                   "Priority",
-                  metricsAsync.valueOrNull?.highPriorityExams.toString() ?? "0",
+                  metricsAsync.hasValue
+                      ? metricsAsync.valueOrNull!.highPriorityExams.toString()
+                      : "--",
                   AppColors.gold),
             ],
           ),
@@ -63,7 +69,7 @@ class SentinelIntelligenceCard extends ConsumerWidget {
       width: double.infinity,
       height: 46,
       child: ElevatedButton(
-        onPressed: () => context.go(AppRoutes.sentinelCenter),
+        onPressed: () => context.push(AppRoutes.sentinelCenter),
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.tacticalGold,
           foregroundColor: Colors.black,

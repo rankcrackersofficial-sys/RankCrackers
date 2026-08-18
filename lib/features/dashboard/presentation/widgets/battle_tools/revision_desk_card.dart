@@ -10,7 +10,7 @@ class RevisionDeskCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return const BattleToolCard(
       title: "Revision Desk",
-      subtitle: "Weak Topics",
+      subtitle: "Not Ready",
       icon: Icons.refresh_rounded,
       glowIcon: Icons.auto_fix_high_rounded,
       glowColor: Colors.blue,

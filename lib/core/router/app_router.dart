@@ -22,6 +22,10 @@ import '../../features/deep_profile/screens/deep_profile_screen.dart';
 import '../../features/opportunities/screens/opportunities_screen.dart';
 import '../../features/opportunities/presentation/screens/sentinel_center_screen.dart';
 import '../../features/opportunities/presentation/screens/notification_center_screen.dart';
+import '../../features/progress_tracker/presentation/screens/progress_tracker_screen.dart';
+import '../../features/pyq/presentation/screens/pyq_vault_screen.dart';
+import '../../features/revision/presentation/screens/revision_desk_screen.dart';
+import '../../features/test_arena/presentation/screens/test_arena_screen.dart';
 import '../../features/preview/presentation/screens/nebula_founder_preview_screen.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -196,7 +200,22 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.profile,
       builder: (context, state) => const ProfileScreen(),
     ),
-
+    GoRoute(
+      path: AppRoutes.pyqVault,
+      builder: (context, state) => const PyqVaultScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.progressTracker,
+      builder: (context, state) => const ProgressTrackerScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.revisionDesk,
+      builder: (context, state) => const RevisionDeskScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.testArena,
+      builder: (context, state) => const TestArenaScreen(),
+    ),
     // 🔱 Stateful Shell for Root Bottom Navigation
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {

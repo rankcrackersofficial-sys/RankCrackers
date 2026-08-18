@@ -1,0 +1,5 @@
+{
+  "stale_batch_lease_status": "PASS",
+  "lease_timeout_seconds": 1800,
+  "lease_reclaimed_on_timeout": true
+}
