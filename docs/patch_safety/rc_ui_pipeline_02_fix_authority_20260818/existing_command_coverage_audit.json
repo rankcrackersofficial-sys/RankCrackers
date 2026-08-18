@@ -1,0 +1,10 @@
+﻿{
+    "rc01_command_files":  [
+                               "android_studio_student_fix_command.txt",
+                               "anti_gravity_founder_fix_command.txt",
+                               "anti_gravity_pipeline_fix_command.txt"
+                           ],
+    "coverage":  "COMPLETE_BUT_EXECUTOR_NORMALIZATION_REQUIRED",
+    "reason":  "Android Studio was named in one file but current owner lock disables Android Studio; Anti-Gravity must execute implementation unless Founder explicitly re-enables Android Studio.",
+    "all_15_gaps_have_command_route":  true
+}

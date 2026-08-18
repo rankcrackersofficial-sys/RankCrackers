@@ -1,0 +1,10 @@
+﻿{
+    "pass_requires":  [
+                          "Provider/model identity honored or fail closed",
+                          "Mock provider output cannot be canonical/public",
+                          "Fallback segmentation review-required and non-public",
+                          "No direct AI public writes",
+                          "No unverified publication items",
+                          "Personalization only consumes verified/current public authority"
+                      ]
+}

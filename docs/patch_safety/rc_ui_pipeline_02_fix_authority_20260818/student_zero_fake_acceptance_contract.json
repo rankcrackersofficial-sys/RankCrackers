@@ -1,0 +1,16 @@
+﻿{
+    "pass_requires":  [
+                          "PRODUCTION_REACHABLE_FAKE_ACADEMIC_DATA=0",
+                          "Every Student surface either real governed data or safe Not Ready/Unavailable",
+                          "DigiBook/Crucible/Syllabus core pillars first",
+                          "Dashboard tools cannot show fake counts, fake PYQ, fake rank, fake alerts, fake reports",
+                          "Career Signals must be profile/qualification/evidence-driven when implemented; until then Not Ready"
+                      ],
+    "fail_if":  [
+                    "local synthetic Crucible visible",
+                    "fake Syllabus/DigiBook visible",
+                    "mock PYQ/test/rank/alert visible",
+                    "invented personalization visible",
+                    "release demo/mock fallback visible"
+                ]
+}

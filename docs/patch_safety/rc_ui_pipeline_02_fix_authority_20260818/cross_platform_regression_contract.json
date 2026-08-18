@@ -1,0 +1,14 @@
+﻿{
+    "regressions":  [
+                        "Founder to Backend to Student projection binding",
+                        "AAF publication to Student runtime binding",
+                        "Student evidence to Personalization binding",
+                        "Version/supersession/withdrawal to runtime cache recovery",
+                        "Dashboard tools and Career Signals safe unavailable when unimplemented"
+                    ],
+    "no_reopen":  [
+                      "backend Wave1 552 academic authority",
+                      "publication authority",
+                      "accepted Revision/Coaching contracts"
+                  ]
+}

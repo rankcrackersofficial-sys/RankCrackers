@@ -1,0 +1,33 @@
+﻿{
+    "gap_count":  3,
+    "rule":  "Founder Web controls must be governed commands/approvals/configuration only; no local fake student content and no decorative no-op controls.",
+    "gaps":  [
+                 {
+                     "id":  "FOUNDER-CTRL-001",
+                     "severity":  "P1",
+                     "path":  "lib/web/founder/mission_control/mission_documents_tab.dart",
+                     "evidence":  "Founder document category list contains sample/model/practice labels.",
+                     "rule":  "Founder may classify source material, but must not create local fake student content.",
+                     "owner":  "Founder web implementation",
+                     "route":  "Label as source-document taxonomy only; prove no direct student-ready publication without backend verification."
+                 },
+                 {
+                     "id":  "FOUNDER-CTRL-002",
+                     "severity":  "P1",
+                     "path":  "lib/web/founder/mission_control/mission_documents_tab.dart",
+                     "evidence":  "File-name/title fallback is used for uploaded document title.",
+                     "rule":  "Fallback metadata is acceptable only as draft source metadata, not student academic truth.",
+                     "owner":  "Founder web implementation",
+                     "route":  "Keep draft-only and require governed approval/materialization before student projection."
+                 },
+                 {
+                     "id":  "FOUNDER-CTRL-004",
+                     "severity":  "P1",
+                     "path":  "Founder web controls broadly",
+                     "evidence":  "No complete runtime proof yet that every visible Founder button is a governed backend action or disabled with reason.",
+                     "rule":  "Founder Web required controls cannot be decorative/no-op.",
+                     "owner":  "Founder web implementation",
+                     "route":  "Run control inventory and no-op attack test."
+                 }
+             ]
+}

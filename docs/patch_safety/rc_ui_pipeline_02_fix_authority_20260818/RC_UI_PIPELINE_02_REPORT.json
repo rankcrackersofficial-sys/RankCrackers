@@ -1,0 +1,34 @@
+﻿{
+    "verdict":  "RC_UI_PIPELINE_02_ALL_15_KNOWN_UI_AND_PIPELINE_GAPS_BOUND_TO_EXACT_FAST_FORWARD_IMPLEMENTATION_AUTHORITY_WITH_ZERO_UNKNOWN_RESIDUALS",
+    "head":  "c6c588ebe8bf85deb4fa09b37bea3b18433d9842",
+    "branch":  "safety/rc-g2-pre-notification-schema",
+    "rc01_authority":  "8e9dea266d3059af479256af15e3763b6540f34d",
+    "total_known_gaps":  15,
+    "student_known_gaps":  8,
+    "founder_known_gaps":  3,
+    "pipeline_known_gaps":  4,
+    "unknown_student_ui_residual":  0,
+    "unknown_founder_ui_residual":  0,
+    "unknown_pipeline_residual":  0,
+    "unowned_ui_fixes":  0,
+    "core_priority":  [
+                          "DigiBook",
+                          "Crucible",
+                          "Syllabus / Knowledge Map"
+                      ],
+    "dashboard_surfaces_bound":  [
+                                     "PYQ Wallet",
+                                     "Test Arena",
+                                     "Revision Desk",
+                                     "Rank Radar",
+                                     "Sentinel Intel"
+                                 ],
+    "career_signals_status":  "NEXT_PHASE_AFTER_CORE_PILLARS_OR_NOT_READY",
+    "android_studio":  "DISABLED",
+    "normalized_executor":  "ANTI_GRAVITY",
+    "production_source_modified":  "NO",
+    "firebase_write":  "NO",
+    "queue_write":  "NO",
+    "publication":  "NO",
+    "final_line":  "RC_UI_PIPELINE_02_FIX_AUTHORITY_READY_FOR_ANTI_GRAVITY_WAVE1_EXECUTION"
+}

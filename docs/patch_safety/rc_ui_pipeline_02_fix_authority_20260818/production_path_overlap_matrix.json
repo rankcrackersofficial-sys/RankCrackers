@@ -1,0 +1,28 @@
+﻿{
+    "student_paths":  [
+                          "lib/features/dashboard",
+                          "lib/database/local",
+                          "lib/features/opportunities",
+                          "lib/features/test_analysis",
+                          "lib/core/engines/question_engine",
+                          "lib/core/engines/pyq_linkage_engine"
+                      ],
+    "founder_paths":  [
+                          "lib/web/founder",
+                          "lib/web/shared"
+                      ],
+    "pipeline_paths":  [
+                           "functions/src/providers",
+                           "functions/workers",
+                           "functions/callable",
+                           "lib/core/ai/workers"
+                       ],
+    "overlap_risk":  [
+                         {
+                             "paths":  "lib/core/engines and lib/core/ai",
+                             "risk":  "Student and pipeline both touch academic generation/linkage boundaries",
+                             "mitigation":  "Exact file ownership and path staging; no direct student-ready promotion"
+                         }
+                     ],
+    "maximum_safe_parallelism":  "Student UI, Founder Web and Pipeline can run in parallel only with exact path ownership and shared-contract review."
+}

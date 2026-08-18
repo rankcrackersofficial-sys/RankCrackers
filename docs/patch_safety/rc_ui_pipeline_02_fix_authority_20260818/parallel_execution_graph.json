@@ -1,0 +1,28 @@
+﻿{
+    "active_parallelism":  [
+                               {
+                                   "lane":  "AAF-008B-R1",
+                                   "owner":  "Anti-Gravity",
+                                   "priority":  "P0",
+                                   "reason":  "Closes AAF 49/50 to 50/50 and PERS recovery dependency"
+                               },
+                               {
+                                   "lane":  "RC-UI-PIPELINE-WAVE1",
+                                   "owner":  "Anti-Gravity",
+                                   "priority":  "P0/P1",
+                                   "reason":  "Closes 15 known Student/Founder/Pipeline gaps"
+                               },
+                               {
+                                   "lane":  "PERS-RUNTIME independent/final convergence",
+                                   "owner":  "ChatGPT audit + Anti-Gravity runtime as assigned",
+                                   "priority":  "P1"
+                               }
+                           ],
+    "if_resource_limited_order":  [
+                                      "AAF-008B-R1",
+                                      "Student core pillars zero-fake fix",
+                                      "Pipeline provider/fallback quarantine",
+                                      "Founder no-op/control binding",
+                                      "Dashboard tools and Career Signals staged Not Ready/automation follow-up"
+                                  ]
+}

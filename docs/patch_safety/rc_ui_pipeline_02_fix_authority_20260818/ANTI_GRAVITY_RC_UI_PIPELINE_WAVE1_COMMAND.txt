@@ -1,0 +1,39 @@
+﻿MASTER_CODE: RANKCRACKERS_AUTONOMOUS_PERSONALIZED_COACHING_OS
+COMMAND_CODE: RC-UI-PIPELINE-WAVE1-ANTI-GRAVITY-MASTER-FIX
+AGENT: ANTI_GRAVITY
+MODE: EXECUTE_NOW
+
+OBJECTIVE:
+Close all 15 RC-UI-PIPELINE-01 known gaps without reopening accepted AAF publication, academic verification, materialization, Revision, or Coaching authorities.
+
+EXECUTOR NORMALIZATION:
+Android Studio is disabled. Execute Student, Founder, and Pipeline scopes in Anti-Gravity unless Founder explicitly re-enables Android Studio later.
+
+PRIORITY ORDER:
+1. DigiBook, Crucible, Syllabus/Knowledge Map Student runtime must use governed backend projections or Not Ready.
+2. Dashboard tools must stop fake/local data: PYQ Wallet, Test Arena, Revision Desk, Rank Radar, Sentinel Intel.
+3. Career Signals is next-phase automation after core pillars. Until governed profile/qualification/evidence signals exist, show Not Ready only.
+4. Founder Web controls must be real governed actions or disabled with reason.
+5. Pipeline mock/provider/fallback paths must fail closed and never publish/student-ready unverified data.
+
+GOVERNANCE COUNTERS REQUIRED:
+PRODUCTION_REACHABLE_FAKE_ACADEMIC_DATA = 0
+UNSOURCED_STUDENT_READY_ITEMS = 0
+DIRECT_AI_PUBLIC_WRITES = 0
+UNVERIFIED_PUBLICATION_ITEMS = 0
+PERSONALIZATION_ACADEMIC_TRUTH_MUTATIONS = 0
+UNVERIFIED_CONTENT_PERSONALIZED = 0
+WITHDRAWN_CONTENT_PERSONALIZED = 0
+SUPERSEDED_CONTENT_PERSONALIZED = 0
+CLIENT_SELF_ASSERTED_MASTERY_ACCEPTED = 0
+CLIENT_SELF_ASSERTED_TREATMENT_ACCEPTED = 0
+
+OUTPUT FOLDERS:
+docs/patch_safety/rc_student_zero_fake_01_anti_gravity_20260818/
+docs/patch_safety/rc_founder_web_01_anti_gravity_20260818/
+docs/patch_safety/rc_pipeline_binding_01_anti_gravity_20260818/
+
+FINAL VERDICTS:
+RC_STUDENT_ZERO_FAKE_01_ALL_PRODUCTION_STUDENT_SURFACES_USE_ONLY_REAL_GOVERNED_DATA_OR_SAFE_UNAVAILABLE_STATES
+RC_FOUNDER_WEB_01_REQUIRED_CONTROL_PLANE_BOUND_TO_REAL_GOVERNED_BACKEND_WITH_ZERO_FAKE_ACTIONS
+RC_PIPELINE_BINDING_01_FOUNDER_BACKEND_STUDENT_AND_PERSONALIZATION_PIPELINES_ACCEPTED_WITH_ZERO_BROKEN_BINDINGS
