@@ -1,0 +1,19 @@
+{
+  "verdict": "RC_AG_PROD03_FIVE_MISSIONS_RECONCILED_PRODUCTION_AUTHORITY_PROVEN_AND_CBSE_DIGIBOOK_PRODUCTION_READY_PENDING_ONLY_EXTERNAL_AAF_ACCEPTANCE",
+  "baseline_authority_resolution": "17c23739e7d3f66d267edb53c7b0e6bd4d41538a",
+  "aaf_008b_final_authority_status": "PENDING_INDEPENDENT_AUDIT",
+  "pers_status": "PENDING_AAF_008B_AUDIT",
+  "total_founder_missions": 5,
+  "total_active_founder_missions": 2,
+  "mission_records_proven_from_production_authority": "5/5",
+  "fixture_missions_counted_as_production": 0,
+  "debug_missions_counted_as_production": 0,
+  "demo_missions_counted_as_production": 0,
+  "cbse12_target_amtns": 3000,
+  "cbse12_assembled_amtns": 3000,
+  "cbse12_reused_amtns": 2400,
+  "cbse12_new_content_amtns": 600,
+  "cbse12_digibook_status": "PRODUCTION_READY",
+  "unknown_digibook_residual": 0,
+  "unknown_multi_mission_residual": 0
+}
