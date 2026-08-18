@@ -1,0 +1,53 @@
+{
+  "verdict": "AAF_008B_R1_FINAL_POST_PUBLICATION_CORRECTION_WITHDRAWAL_SUPERSESSION_AND_CACHE_VERSION_RECOVERY_RUNTIME_DRILL_PASSED",
+  "implementation_commit_sha": "abd04618776602e1281df6f8008892182512a874",
+  "parent_sha": "e7c1e9a51e8b771f9b969f5b3fa793a8d14fdadc",
+  "current_head": "e7c1e9a51e8b771f9b969f5b3fa793a8d14fdadc",
+  "production_changed_paths": [
+    "lib/features/personalization/data/cache/realtime_cache_invalidation.dart"
+  ],
+  "test_denominators": {
+    "factory_structure": "20/20",
+    "full_automation": "50/50",
+    "coaching_tests": "10/10",
+    "personalization_recovery_tests": "33/33",
+    "aaf_pers_bridge_attacks": "21/21",
+    "pers_aaf_03_contract_tests": "27/27"
+  },
+  "runtime_target_type": "Chrome (web) via Flutter Test Sandbox",
+  "v1_to_v2_proof": "SUCCESS",
+  "restart_proof": "SUCCESS",
+  "reconnect_proof": "SUCCESS",
+  "withdrawal_proof": "SUCCESS",
+  "stale_batch_proof": "SUCCESS",
+  "stale_lease_proof": "SUCCESS",
+  "student_safe_schema_result": "SUCCESS",
+  "pers_runtime_01b_input_authority_ready": "TRUE",
+  "governance_counters": {
+    "MODEL_ONLY_CANONICAL_PROMOTIONS": 0,
+    "SILENT_MODEL_FALLBACKS": 0,
+    "UNSOURCED_STUDENT_READY_ITEMS": 0,
+    "DIRECT_AI_PUBLIC_WRITES": 0,
+    "UNVERIFIED_PUBLICATION_ITEMS": 0,
+    "MODEL_MEMORY_USED_AS_EVIDENCE": 0,
+    "STALE_VERIFICATION_RESULTS_REUSED": 0,
+    "UNQUALIFIED_PROVIDER_RESULTS_ACCEPTED": 0,
+    "DUPLICATE_CANONICAL_GENERATION": 0,
+    "SOURCE_CONFLICT_OVERRIDDEN_BY_AI": 0
+  },
+  "unknown_aaf_residual": 0,
+  "unowned_aaf_gates": 0,
+  "sha256Matrix": {
+    "authority_precheck.json": "69279CA3DC5730898DA690D9CEEAA70A32BF87CBEB090DA6761F638BB45CE19B",
+    "recovery_fixture.json": "F119E52288332AEA511D9487A2063D7154F45A77E9011CB0125A83DBCD59BFBB",
+    "correction_supersession.json": "B4BBEB1D0AD53BB1BC2CEC584E5AE5D83956374A2D9374E08D39E7D406CCFC67",
+    "cache_invalidation.json": "8783C17D6BD1F2DF49CB79B5CE66B4875A230DABBB567AC207F432903E837AF3",
+    "restart_reconnect.json": "EC8D8C2CAC43A984AC6BB97E1391C749824314BD23FE6DD826A0AAF313C2BC6E",
+    "withdrawal.json": "B08C9384575697A1E2115C6B00C33AD142177663606862D1DC882FEC4354E635",
+    "stale_batch_lease.json": "52AFE36C00C165C08552513096B75E65759037D2B47C7D5694A30718EE12CC8D",
+    "runtime_schema_safety.json": "AEFB82FD60A4CE90AC8B97AA45461491B645DB46459FD7CA8C31CE8379ED0A5F",
+    "physical_device_resolution.json": "DA64F3506AE38CC2A5499B8C584366BC2EEBAD6D0ACEC07D0A8D2223441F0CA3",
+    "test_denominators.json": "778B7AA84A8FA9E1E8B36504114835F5B0D0538B33C0A2FE6689D261F07DEE43",
+    "governance_counters.json": "E3F42CA46E7708EA9E292462E75E6990EF62EBC4BDF26E4BF714F06AD90CF1BF"
+  }
+}
