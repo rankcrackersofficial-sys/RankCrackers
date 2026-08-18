@@ -1,0 +1,5 @@
+[
+    "lib/features/personalization/domain/models/student_revision_queue.dart",
+    "lib/features/personalization/domain/engines/student_revision_queue_engine.dart",
+    "test/features/personalization/pers_rev_01_closed_loop_test.dart"
+]

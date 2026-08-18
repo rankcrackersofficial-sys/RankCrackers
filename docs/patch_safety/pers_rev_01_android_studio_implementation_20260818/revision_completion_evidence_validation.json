@@ -1,0 +1,9 @@
+{
+    "validation_type": "COMPLETION_EVIDENCE",
+    "tests": [
+        { "id": "mentor_verified_completion", "status": "PASS" },
+        { "id": "diagnostic_completed_completion", "status": "PASS" },
+        { "id": "passive_view_prohibition", "status": "PASS" }
+    ],
+    "verdict": "PASS"
+}

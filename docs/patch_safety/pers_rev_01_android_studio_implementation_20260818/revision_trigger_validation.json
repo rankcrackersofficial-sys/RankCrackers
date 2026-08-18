@@ -1,0 +1,8 @@
+{
+    "validation_type": "TRIGGER_LOGIC",
+    "tests": [
+        { "id": "weakness_detection", "status": "PASS" },
+        { "id": "retention_decay", "status": "PASS" }
+    ],
+    "verdict": "PASS"
+}
