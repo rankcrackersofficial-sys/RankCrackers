@@ -1,0 +1,28 @@
+{
+  "total_authorized_missions": 1,
+  "total_authorized_subjects": 3,
+  "total_authorized_amtns": 5000,
+  "total_remaining_amtns": 240,
+  "missions": [
+    {
+      "missionId": "jee_main_2026",
+      "subjects": [
+        {
+          "subject": "Physics",
+          "total_amtns": 1500,
+          "allocated_amtns": 1400
+        },
+        {
+          "subject": "Chemistry",
+          "total_amtns": 2000,
+          "allocated_amtns": 1960
+        },
+        {
+          "subject": "Mathematics",
+          "total_amtns": 1500,
+          "allocated_amtns": 1400
+        }
+      ]
+    }
+  ]
+}
