@@ -1,0 +1,12 @@
+{
+  "founder_path_contradiction": {
+    "reported": "/founder_missions",
+    "actual_code_path": "mission_realms/{missionId}",
+    "status": "UNRECONCILED"
+  },
+  "student_path_contradiction": {
+    "reported": "/student_missions",
+    "actual_code_path": "student_mission_catalog/{sameMissionId}",
+    "status": "UNRECONCILED"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "actual_head_sha": "47679d62f09813aee906d9f2262003e6639a5a2f",
+  "expected_repair_commit_sha": "717a28fb4c3f00784cd36fd3101cbd12706ebd0d",
+  "expected_parent_sha": "5d4829b72a82679819dc7a0f00407f3f1fdc272a",
+  "lineage_relation": "SIBLING_BRANCH_NO_DESCENDANT",
+  "contradiction_status": "LINEAGE_SIBLING_FORK_DETECTED"
+}
