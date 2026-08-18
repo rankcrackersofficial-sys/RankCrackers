@@ -443,12 +443,12 @@ class _WebShellState extends State<WebShell> {
           ),
         ];
 
-        // Only Founders see Mission Delivery Preview by default
+        // Only Founders see Mission Delivery Review by default
         if (_isFounder) {
           destinations.add(const NavigationRailDestination(
-            icon: Icon(Icons.preview_outlined),
-            selectedIcon: Icon(Icons.preview),
-            label: Text('Mission Delivery Preview'),
+            icon: Icon(Icons.visibility_outlined),
+            selectedIcon: Icon(Icons.visibility),
+            label: Text('Mission Delivery Review'),
           ));
         }
 
@@ -601,9 +601,9 @@ class UserConsole extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const RcPageTitle(
-            title: 'Mission Delivery Preview',
+            title: 'Mission Delivery Review',
             subtitle:
-                'Preview how published missions and variables appear in the student delivery stream.',
+                'Review how published missions and variables appear in the student delivery stream.',
           ),
           const SizedBox(height: 16),
           Expanded(
@@ -622,8 +622,8 @@ class UserConsole extends StatelessWidget {
                       SizedBox(
                         width: cardWidth,
                         height: 260,
-                        child: const _DeliveryPreviewCard(
-                          title: 'Notification Preview',
+                        child: const _DeliveryReviewCard(
+                          title: 'Notification Review',
                           subtitle: 'How founder notices appear to students.',
                           collection: 'notification_registry',
                           icon: Icons.notifications_active_outlined,
@@ -632,8 +632,8 @@ class UserConsole extends StatelessWidget {
                       SizedBox(
                         width: cardWidth,
                         height: 260,
-                        child: const _DeliveryPreviewCard(
-                          title: 'Mission Realm Preview',
+                        child: const _DeliveryReviewCard(
+                          title: 'Mission Realm Review',
                           subtitle:
                               'Published mission cards visible in user panel.',
                           collection: 'mission_realms',
@@ -643,8 +643,8 @@ class UserConsole extends StatelessWidget {
                       SizedBox(
                         width: cardWidth,
                         height: 260,
-                        child: const _DeliveryPreviewCard(
-                          title: 'Recruitment Preview',
+                        child: const _DeliveryReviewCard(
+                          title: 'Recruitment Review',
                           subtitle:
                               'Recruitment stream as students discover it.',
                           collection: 'recruitments',
@@ -654,8 +654,8 @@ class UserConsole extends StatelessWidget {
                       SizedBox(
                         width: cardWidth,
                         height: 260,
-                        child: const _DeliveryPreviewCard(
-                          title: 'Syllabus Upload Preview',
+                        child: const _DeliveryReviewCard(
+                          title: 'Syllabus Upload Review',
                           subtitle:
                               'Syllabus files uploaded by founder for delivery.',
                           collection: 'ingestion_refinery',
@@ -666,8 +666,8 @@ class UserConsole extends StatelessWidget {
                       SizedBox(
                         width: cardWidth,
                         height: 260,
-                        child: const _DeliveryPreviewCard(
-                          title: 'PYQ Upload Preview',
+                        child: const _DeliveryReviewCard(
+                          title: 'PYQ Upload Review',
                           subtitle:
                               'Previous-year papers visible after processing.',
                           collection: 'ingestion_refinery',
@@ -678,8 +678,8 @@ class UserConsole extends StatelessWidget {
                       SizedBox(
                         width: cardWidth,
                         height: 260,
-                        child: const _DeliveryPreviewCard(
-                          title: 'Study Material Preview',
+                        child: const _DeliveryReviewCard(
+                          title: 'Study Material Review',
                           subtitle:
                               'Study downloads prepared for student access.',
                           collection: 'ingestion_refinery',
@@ -699,13 +699,13 @@ class UserConsole extends StatelessWidget {
   }
 }
 
-class _DeliveryPreviewCard extends StatelessWidget {
+class _DeliveryReviewCard extends StatelessWidget {
   final String title;
   final String subtitle;
   final String collection;
   final String? assetType;
   final IconData icon;
-  const _DeliveryPreviewCard({
+  const _DeliveryReviewCard({
     required this.title,
     required this.subtitle,
     required this.collection,
@@ -723,7 +723,7 @@ class _DeliveryPreviewCard extends StatelessWidget {
     return query;
   }
 
-  void _openPreview(BuildContext context) {
+  void _openReview(BuildContext context) {
     showDialog(
       context: context,
       builder: (context) => Dialog(
@@ -767,7 +767,7 @@ class _DeliveryPreviewCard extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 16),
-                Expanded(child: _PreviewRecordList(query: _query(), limit: 30)),
+                Expanded(child: _ReviewRecordList(query: _query(), limit: 30)),
               ],
             ),
           ),
@@ -780,7 +780,7 @@ class _DeliveryPreviewCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(8),
-      onTap: () => _openPreview(context),
+      onTap: () => _openReview(context),
       child: RcPanel(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -810,14 +810,14 @@ class _DeliveryPreviewCard extends StatelessWidget {
               style: const TextStyle(color: Colors.white54),
             ),
             const SizedBox(height: 10),
-            Expanded(child: _PreviewRecordList(query: _query(), limit: 4)),
+            Expanded(child: _ReviewRecordList(query: _query(), limit: 4)),
             const SizedBox(height: 8),
             Align(
               alignment: Alignment.centerRight,
               child: TextButton.icon(
-                onPressed: () => _openPreview(context),
+                onPressed: () => _openReview(context),
                 icon: const Icon(Icons.open_in_full_rounded, size: 16),
-                label: const Text('Open preview'),
+                label: const Text('Open review'),
               ),
             ),
           ],
@@ -827,10 +827,10 @@ class _DeliveryPreviewCard extends StatelessWidget {
   }
 }
 
-class _PreviewRecordList extends StatelessWidget {
+class _ReviewRecordList extends StatelessWidget {
   final Query<Map<String, dynamic>> query;
   final int limit;
-  const _PreviewRecordList({required this.query, required this.limit});
+  const _ReviewRecordList({required this.query, required this.limit});
 
   @override
   Widget build(BuildContext context) {
@@ -842,7 +842,7 @@ class _PreviewRecordList extends StatelessWidget {
         }
         if (!snapshot.hasData) return const RcCenteredLoader(compact: true);
         final docs = snapshot.data!.docs;
-        if (docs.isEmpty) return const Text('No preview records yet.');
+        if (docs.isEmpty) return const Text('No review records yet.');
         return ListView.separated(
           itemCount: docs.length,
           separatorBuilder: (_, __) => const Divider(color: rcLine),
@@ -857,7 +857,7 @@ class _PreviewRecordList extends StatelessWidget {
                 data['description'] ??
                 data['status'] ??
                 data['documentStatus'] ??
-                'Ready for delivery preview';
+                'Ready for delivery review';
             return ListTile(
               contentPadding: EdgeInsets.zero,
               dense: true,

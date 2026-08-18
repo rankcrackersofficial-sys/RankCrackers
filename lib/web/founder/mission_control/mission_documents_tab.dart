@@ -137,7 +137,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     final currentSubTabLabels = [
       if (isFounder) 'Upload Official Document',
       'Mission Document Directory',
-      if (isFounder) 'Student Document Preview',
+      if (isFounder) 'Student Document Review',
       if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms)) 'Syllabus Atom Verification',
       if (isFounder || AdminPermissionResolver.canSeePyqReview(perms)) 'PYQ Question Review',
     ];
@@ -153,7 +153,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     final bool isFounder = widget.roleMode == ConsoleRoleMode.founder;
     final perms = widget.permissions ?? {};
     int len = 1; // Registry
-    if (isFounder) len += 2; // Upload, Preview
+    if (isFounder) len += 2; // Upload, Review
     if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms)) len++;
     if (isFounder || AdminPermissionResolver.canSeePyqReview(perms)) len++;
 
@@ -165,14 +165,14 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
       String? requestedLabel;
       if (targetIndex == 0) requestedLabel = 'Upload Official Document';
       if (targetIndex == 1) requestedLabel = 'Mission Document Directory';
-      if (targetIndex == 2) requestedLabel = 'Student Document Preview';
+      if (targetIndex == 2) requestedLabel = 'Student Document Review';
       if (targetIndex == 3) requestedLabel = 'Syllabus Atom Verification';
       if (targetIndex == 4) requestedLabel = 'PYQ Question Review';
       
       final currentSubTabLabels = [
         if (isFounder) 'Upload Official Document',
         'Mission Document Directory',
-        if (isFounder) 'Student Document Preview',
+        if (isFounder) 'Student Document Review',
         if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms)) 'Syllabus Atom Verification',
         if (isFounder || AdminPermissionResolver.canSeePyqReview(perms)) 'PYQ Question Review',
       ];
@@ -494,7 +494,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     final status = (data['status'] ?? '').toString().toUpperCase();
     if (status == 'ARCHIVED' || status == 'HIDDEN')
       chips.add('Archived/hidden');
-    if (!_isStudentVisible(data)) chips.add('Hidden from Student Preview');
+    if (!_isStudentVisible(data)) chips.add('Hidden from Student Review');
     if (data['source'] != 'mission_documents_center')
       chips.add('Legacy metadata');
     return chips;
@@ -554,9 +554,9 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
         .showSnackBar(SnackBar(content: Text('$label copied.')));
   }
 
-  void _showExtractionPreview(BuildContext context, Map<String, dynamic> data) {
+  void _showExtractionReview(BuildContext context, Map<String, dynamic> data) {
     if (data['latestDraftId'] != null) {
-      _showSentinelDraftPreview(context, data['latestDraftId']);
+      _showSentinelDraftReview(context, data['latestDraftId']);
       return;
     }
     final fields = <String, Object?>{};
@@ -578,7 +578,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: rcSurface,
-        title: const Text('AI Extraction Preview',
+        title: const Text('AI Extraction Review',
             style: TextStyle(color: rcGold)),
         content: SizedBox(
           width: 720,
@@ -597,7 +597,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     );
   }
 
-  void _showSentinelDraftPreview(BuildContext context, String draftId) {
+  void _showSentinelDraftReview(BuildContext context, String draftId) {
     showDialog(
       context: context,
       builder: (context) => FutureBuilder<DocumentSnapshot<Map<String, dynamic>>>(
@@ -663,7 +663,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             final detailTabs = [
               if (isFounder) const Tab(text: 'Upload Official Document'),
               const Tab(text: 'Mission Document Directory'),
-              if (isFounder) const Tab(text: 'Student Document Preview'),
+              if (isFounder) const Tab(text: 'Student Document Review'),
               if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms)) const Tab(text: 'Syllabus Atom Verification'),
               if (isFounder || AdminPermissionResolver.canSeePyqReview(perms)) const Tab(text: 'PYQ Question Review'),
             ];
@@ -686,7 +686,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                     children: [
                       if (isFounder) _buildUploadSection(variables),
                       _buildRegistrySection(filteredDocs, variables),
-                      if (isFounder) _buildStudentPreviewSection(visibleDocs),
+                      if (isFounder) _buildStudentReviewSection(visibleDocs),
                       if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms))
                       SyllabusAtomVerificationTab(
                         missionId: widget.missionId,
@@ -1064,12 +1064,12 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                   label: const Text('View File')),
               OutlinedButton.icon(
                   onPressed: _hasExtraction(data)
-                      ? () => _showExtractionPreview(context, data)
+                      ? () => _showExtractionReview(context, data)
                       : null,
                   icon: const Icon(Icons.psychology_alt_rounded, size: 16),
                   label: Text(_hasExtraction(data)
-                      ? 'View AI Extraction Preview'
-                      : 'AI extraction preview not connected yet')),
+                      ? 'View AI Extraction Review'
+                      : 'AI extraction review not connected yet')),
               OutlinedButton.icon(
                   onPressed: proposalId.isEmpty
                       ? null
@@ -1133,7 +1133,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     );
   }
 
-  Widget _buildStudentPreviewSection(
+  Widget _buildStudentReviewSection(
       List<QueryDocumentSnapshot<Map<String, dynamic>>> visibleDocs) {
     final isSingleTrack = widget.mission['missionStructureType'] == 'SINGLE_TRACK';
 
@@ -1153,20 +1153,20 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     return ListView(
       padding: const EdgeInsets.all(24),
       children: [
-        _previewGroup('Mission-level (Common) documents', missionDocs),
+        _reviewGroup('Mission-level (Common) documents', missionDocs),
         if (!isSingleTrack) ...[
           const SizedBox(height: 14),
-          _previewGroup('Variable-level documents', variableDocs,
+          _reviewGroup('Variable-level documents', variableDocs,
               groupBy: 'variableName'),
         ],
         const SizedBox(height: 14),
-        _previewGroup('Paper-specific documents', paperDocs,
+        _reviewGroup('Paper-specific documents', paperDocs,
             groupBy: 'paperType'),
       ],
     );
   }
 
-  Widget _previewGroup(
+  Widget _reviewGroup(
       String title, List<QueryDocumentSnapshot<Map<String, dynamic>>> docs,
       {String? groupBy}) {
     return RcPanel(

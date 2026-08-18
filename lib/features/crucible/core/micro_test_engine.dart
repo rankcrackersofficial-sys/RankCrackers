@@ -199,8 +199,8 @@ class MicroTestEngine {
 
     // Unsafe placeholders
     final stemLower = question.question.toLowerCase();
-    if (stemLower.contains('placeholder') || stemLower.contains('todo') || stemLower.contains('preview')) {
-      return 'schema/type invalid: unsafe placeholder or preview content detected';
+    if (stemLower.contains('placeholder') || stemLower.contains('todo') || stemLower.contains('staging')) {
+      return 'schema/type invalid: unsafe placeholder or staging content detected';
     }
 
     // -------------------------------------------------
