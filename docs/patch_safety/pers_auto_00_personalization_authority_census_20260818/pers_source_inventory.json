@@ -1,0 +1,34 @@
+{
+  "masterCode": "RANKCRACKERS_AUTONOMOUS_PERSONALIZED_COACHING_OS_V1",
+  "commandCode": "PERS-AUTO-00",
+  "sourceRoot": "lib/features/personalization",
+  "testRoot": "test/features/personalization/recovery",
+  "productionDartFilesFound": 17,
+  "testDartFilesFound": 14,
+  "trackedModifiedCoreFiles": [
+    "lib/features/personalization/domain/models/student_treatment_decision.dart",
+    "lib/features/personalization/domain/engines/student_prerequisite_state_engine.dart"
+  ],
+  "untrackedRecoveryFilesPresent": true,
+  "notableCoreFiles": [
+    "student_evidence_event.dart",
+    "student_learning_state.dart",
+    "student_evidence_policy.dart",
+    "student_mastery_engine.dart",
+    "student_retention_engine.dart",
+    "student_fluency_engine.dart",
+    "student_prerequisite_state_engine.dart",
+    "student_treatment_decision.dart",
+    "student_treatment_decision_engine.dart",
+    "digibook_personalization_route.dart",
+    "digibook_personalization_route_engine.dart",
+    "syllabus_personalization_route.dart",
+    "syllabus_personalization_route_engine.dart",
+    "crucible_personalization_blueprint.dart",
+    "crucible_personalization_blueprint_engine.dart",
+    "crucible_personalized_item_selector.dart",
+    "student_revision_queue.dart",
+    "student_revision_queue_engine.dart"
+  ],
+  "sourceInventoryVerdict": "SOURCE_PRESENT_BUT_TRACKING_AND_COMPILE_AUTHORITY_NOT_CLEAN"
+}

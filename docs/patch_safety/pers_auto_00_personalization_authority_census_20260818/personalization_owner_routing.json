@@ -1,0 +1,26 @@
+{
+  "gates": [
+    {
+      "gateId": "PERS-AAF-01",
+      "name": "Restore clean tracked personalization source authority and AAF version-aware route identity bridge",
+      "primaryOwner": "CHATGPT_WORK"
+    },
+    {
+      "gateId": "PERS-REV-01",
+      "name": "Revision closed-loop runtime repair",
+      "primaryOwner": "CHATGPT_WORK"
+    },
+    {
+      "gateId": "PERS-RUNTIME-01",
+      "name": "Student runtime consumes PERS routes bound to current AAF public projection",
+      "primaryOwner": "ANTI_GRAVITY"
+    },
+    {
+      "gateId": "PERS-COACH-01",
+      "name": "Governed non-diagnostic coaching intervention layer",
+      "primaryOwner": "CHATGPT_WORK"
+    }
+  ],
+  "unownedGateCount": 0,
+  "duplicatePrimaryOwners": 0
+}

@@ -1,0 +1,10 @@
+{
+  "digibookRouteModelPresent": true,
+  "digibookRouteEnginePresent": true,
+  "declaresNoAiLlm": true,
+  "declaresNoPsychologicalProfiling": true,
+  "changesSequenceDepthSupportOnly": true,
+  "canReferenceUnverifiedContent": false,
+  "currentStatus": "BLOCKED_BY_TREATMENT_COMPILE_AUTHORITY",
+  "requiredRepair": "restore clean StudentTreatmentDecision contract and rerun DigiBook route integration"
+}

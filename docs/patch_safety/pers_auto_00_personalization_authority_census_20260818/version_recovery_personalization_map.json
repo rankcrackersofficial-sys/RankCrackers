@@ -1,0 +1,11 @@
+{
+  "dependsOnAaf008b": true,
+  "v1WithdrawnOrSupersededRequires": [
+    "invalidate cached PERS route",
+    "deny route to withdrawn publicProjectionId",
+    "rebuild route against current canonicalKnowledgeVersion",
+    "preserve student evidence without mutating academic truth",
+    "surface fail-closed state if current projection unavailable"
+  ],
+  "currentStatus": "PENDING_AAF_008B_AND_PERS_BRIDGE_IMPLEMENTATION"
+}

@@ -1,0 +1,8 @@
+{
+  "revisionQueueModelPresent": true,
+  "revisionQueueEnginePresent": true,
+  "revisionQueueTestObservedPass": true,
+  "importedArchitectureStatus": "FAILED_OPEN",
+  "rootCause": "Revision queue primitive exists, but closed-loop runtime binding from retention decay -> queue -> student action -> new evidence -> refreshed state is not proven.",
+  "currentStatus": "OPEN_REQUIRES_CLOSED_LOOP_RUNTIME_AND_AAF_VERSION_BINDING"
+}

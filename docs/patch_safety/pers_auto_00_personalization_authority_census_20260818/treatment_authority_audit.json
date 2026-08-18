@@ -1,0 +1,8 @@
+{
+  "studentTreatmentDecisionFilePresent": true,
+  "studentTreatmentDecisionEnginePresent": true,
+  "treatmentTestsObservedPassing": false,
+  "blockingIssue": "StudentTreatmentDecision compile/load surface failed in targeted suite and blocks downstream route engines.",
+  "treatmentCanCreateAcademicTruth": false,
+  "treatmentAuthorityVerdict": "FAILED_OPEN_REQUIRES_EXACT_SOURCE_REPAIR"
+}

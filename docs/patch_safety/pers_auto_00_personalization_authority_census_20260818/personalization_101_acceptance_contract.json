@@ -1,0 +1,23 @@
+{
+  "definition": "100 percent mechanically complete denominator plus zero unknown residual plus zero unsafe fallback plus zero academic-truth bypass plus fail-closed recovery plus independent audit",
+  "requiredCounters": {
+    "unknownPersonalizationResidual": 0,
+    "unownedGate": 0,
+    "academicTruthMutation": 0,
+    "persReferencesUnverifiedContent": 0,
+    "persReferencesWithdrawnContent": 0,
+    "persReferencesSupersededContent": 0,
+    "persCacheOverridesNewerCanonicalVersion": 0,
+    "personalizationContentDuplication": 0,
+    "modelMemoryUsedAsEvidence": 0,
+    "psychologicalPersonalityProfiling": 0
+  },
+  "acceptanceRequires": [
+    "all PERS tests pass",
+    "AAF version-aware route invalidation passes",
+    "revision closed loop passes",
+    "student runtime route binding passes",
+    "coaching support remains non-diagnostic",
+    "independent audit passes"
+  ]
+}

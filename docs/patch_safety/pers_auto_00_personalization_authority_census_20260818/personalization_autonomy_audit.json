@@ -1,0 +1,23 @@
+{
+  "personalizationTotalUnits": 11,
+  "personalizationCompletedUnits": 3,
+  "personalizationPendingUnits": 8,
+  "completedUnits": [
+    "FOUNDATION partial authority",
+    "CORE_STATE partial authority",
+    "SYLLABUS partial authority"
+  ],
+  "pendingUnits": [
+    "TREATMENT compile authority",
+    "DIGIBOOK route revalidation after treatment repair",
+    "CRUCIBLE blueprint revalidation after treatment repair",
+    "REVISION closed-loop runtime",
+    "RUNTIME integrated PERS route binding",
+    "VERSION_RECOVERY AAF-aware route invalidation",
+    "COACHING_SUPPORT governed intervention layer",
+    "AUTONOMOUS_CLOSED_LOOP evidence-action-evidence loop"
+  ],
+  "unknownPersonalizationResidual": 0,
+  "academicTruthMutation": 0,
+  "silentFallback": 0
+}

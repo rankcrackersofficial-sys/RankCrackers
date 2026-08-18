@@ -1,0 +1,23 @@
+{
+  "aafAuthority": "1dcdf06cb9c7357c70638916a471fb77735a1f0e",
+  "aafRemainingGate": "AAF-008B",
+  "bridgeFieldsRequired": [
+    "studentId",
+    "targetAmtnId",
+    "canonicalSemanticTopicId",
+    "canonicalKnowledgeVersion",
+    "publicProjectionId",
+    "studentStateVersion",
+    "treatmentDecisionVersion",
+    "routeVersion",
+    "createdAtUtc"
+  ],
+  "persCanCreateAcademicTruth": false,
+  "persCanReferenceUnverifiedContent": false,
+  "persCanReferenceWithdrawnContent": false,
+  "persCanReferenceSupersededContent": false,
+  "persCacheCanOverrideNewerCanonicalVersion": false,
+  "aafVersionChangeInvalidatesStalePersRoute": true,
+  "personalizationContentDuplication": 0,
+  "bridgeStatus": "REQUIRED_NOT_YET_FULLY_IMPLEMENTED"
+}

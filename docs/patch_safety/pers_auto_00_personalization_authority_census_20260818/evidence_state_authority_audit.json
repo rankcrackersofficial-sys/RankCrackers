@@ -1,0 +1,11 @@
+{
+  "studentEvidenceEventPresent": true,
+  "studentLearningStatePresent": true,
+  "studentEvidencePolicyPresent": true,
+  "aiOrLlmUsageDetectedInActivePersonalizationSource": 0,
+  "psychologicalPersonalityProfilingPolicy": "PROHIBITED_IN_SOURCE_COMMENTS_AND_METADATA_FILTERS",
+  "forbiddenMetadataFilteringDetected": true,
+  "evidenceCanCreateAcademicTruth": false,
+  "stateCanCreateAcademicTruth": false,
+  "authorityVerdict": "FOUNDATION_AND_CORE_STATE_CONCEPTUALLY_PRESENT_BUT_NOT_FULL_REPO_ACCEPTED_UNTIL_COMPILE_SURFACE_CLEAN"
+}

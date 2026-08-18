@@ -1,0 +1,52 @@
+{
+  "testCommand": "flutter test test/features/personalization/recovery",
+  "testResult": "FAILED",
+  "observedPassingTests": 28,
+  "observedFailingLoads": 4,
+  "stages": {
+    "FOUNDATION": {
+      "status": "PASS_PARTIAL_CURRENT_RUN",
+      "evidence": "student evidence event/policy tests passed before suite failure"
+    },
+    "CORE_STATE": {
+      "status": "PASS_PARTIAL_CURRENT_RUN",
+      "evidence": "learning state/mastery/retention/fluency tests passed before suite failure"
+    },
+    "TREATMENT": {
+      "status": "FAILED_OPEN",
+      "evidence": "student_treatment_decision compile/load failures block treatment engine tests"
+    },
+    "DIGIBOOK_REVALIDATION": {
+      "status": "BLOCKED_BY_TREATMENT_COMPILE_AUTHORITY",
+      "evidence": "DigiBook route integration depends on StudentTreatmentDecision"
+    },
+    "SYLLABUS": {
+      "status": "PASS_PARTIAL_CURRENT_RUN",
+      "evidence": "syllabus route engine test passed after compile failures elsewhere"
+    },
+    "CRUCIBLE": {
+      "status": "BLOCKED_BY_TREATMENT_COMPILE_AUTHORITY",
+      "evidence": "crucible blueprint engine test failed to load through StudentTreatmentDecision"
+    },
+    "REVISION": {
+      "status": "OPEN_REQUIRES_SOURCE_AUTHORITY_RECHECK",
+      "evidence": "revision queue test passed, but imported architecture still marks revision closed-loop as failed/open"
+    },
+    "RUNTIME": {
+      "status": "PENDING",
+      "evidence": "no integrated runtime personalization route binding proof in this census"
+    },
+    "VERSION_RECOVERY": {
+      "status": "PENDING_AAF_008B_DEPENDENT",
+      "evidence": "requires AAF version change invalidating stale PERS routes"
+    },
+    "COACHING_SUPPORT": {
+      "status": "NOT_YET_IMPLEMENTED_AS_RUNTIME_AUTHORITY",
+      "evidence": "no mentor/coaching runtime inventory found in current PERS source census"
+    },
+    "AUTONOMOUS_CLOSED_LOOP": {
+      "status": "NOT_READY",
+      "evidence": "requires evidence -> state -> treatment -> route -> action -> evidence loop with AAF version binding"
+    }
+  }
+}

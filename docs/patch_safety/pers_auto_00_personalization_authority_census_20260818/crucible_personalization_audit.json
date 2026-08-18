@@ -1,0 +1,10 @@
+{
+  "crucibleBlueprintModelPresent": true,
+  "crucibleBlueprintEnginePresent": true,
+  "crucibleItemSelectorPresent": true,
+  "selectorTestObservedPass": true,
+  "blueprintEngineTestObservedPass": false,
+  "blockingIssue": "Blueprint engine depends on StudentTreatmentDecision compile surface.",
+  "crucibleCanCreateAcademicTruth": false,
+  "currentStatus": "BLOCKED_BY_TREATMENT_COMPILE_AUTHORITY"
+}

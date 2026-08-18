@@ -1,0 +1,19 @@
+{
+  "allowedSignals": [
+    "retries",
+    "hint usage",
+    "completion consistency",
+    "confidence/evidence mismatch",
+    "time-on-task",
+    "missed schedules",
+    "revision overdue state"
+  ],
+  "prohibitedSignals": [
+    "psychological diagnosis",
+    "personality profiling",
+    "mental-health inference"
+  ],
+  "mentorSurfacePresentInTreatmentModel": false,
+  "coachingRuntimeImplementationFound": false,
+  "currentStatus": "TARGET_INVENTORY_ONLY_IMPLEMENTATION_PENDING"
+}

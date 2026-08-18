@@ -1,0 +1,22 @@
+{
+  "edges": [
+    "StudentEvidenceEvent -> StudentEvidencePolicy",
+    "StudentEvidencePolicy -> StudentMasteryEngine",
+    "StudentEvidencePolicy -> StudentRetentionEngine",
+    "StudentEvidencePolicy -> StudentFluencyEngine",
+    "StudentMasteryEngine + StudentRetentionEngine + StudentFluencyEngine + StudentPrerequisiteStateEngine -> StudentLearningStateEngine",
+    "StudentLearningState -> StudentTreatmentDecisionEngine",
+    "StudentTreatmentDecision -> DigiBookPersonalizationRouteEngine",
+    "StudentTreatmentDecision -> SyllabusPersonalizationRouteEngine",
+    "StudentTreatmentDecision -> CruciblePersonalizationBlueprintEngine",
+    "StudentLearningState -> StudentRevisionQueueEngine",
+    "AAF public projection/current version -> Personalization route validity"
+  ],
+  "criticalBrokenEdges": [
+    "StudentTreatmentDecision import/compile surface blocked during targeted test",
+    "StudentPrerequisiteStateEngine compile surface blocked during targeted test",
+    "Downstream DigiBook/Crucible/Treatment tests blocked by treatment/prerequisite compile authority"
+  ],
+  "academicTruthAuthority": "AAF_ONLY",
+  "personalizationTruthMutation": false
+}

@@ -1,0 +1,12 @@
+{
+  "masteryEnginePresent": true,
+  "retentionEnginePresent": true,
+  "fluencyEnginePresent": true,
+  "prerequisiteEnginePresent": true,
+  "masteryTestsObservedPassing": true,
+  "retentionTestsObservedPassing": true,
+  "fluencyTestsObservedPassing": true,
+  "prerequisiteTestsObservedPassing": false,
+  "blockingIssue": "student_prerequisite_state_engine compile/load failures observed during targeted suite",
+  "parameterAuthorityVerdict": "PARTIAL_PASS_WITH_PREREQUISITE_COMPILE_BLOCKER"
+}
