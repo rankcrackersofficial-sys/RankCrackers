@@ -1,0 +1,5 @@
+[
+    "lib/features/personalization/domain/models/student_coaching_support.dart",
+    "lib/features/personalization/domain/engines/student_coaching_support_engine.dart",
+    "test/features/personalization/recovery/student_coaching_support_engine_test.dart"
+]

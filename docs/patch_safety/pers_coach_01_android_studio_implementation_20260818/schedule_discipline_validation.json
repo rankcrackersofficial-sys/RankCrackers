@@ -1,0 +1,8 @@
+{
+    "validation_type": "DISCIPLINE_ROUTING",
+    "tests": [
+        { "id": "missed_schedule_trigger", "status": "PASS" },
+        { "id": "no_missed_schedule_block", "status": "PASS" }
+    ],
+    "verdict": "PASS"
+}

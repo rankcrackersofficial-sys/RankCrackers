@@ -1,0 +1,8 @@
+{
+    "validation_type": "MENTORSHIP_ROUTING",
+    "tests": [
+        { "id": "governed_trigger_mentorship", "status": "PASS" },
+        { "id": "blocked_no_trigger", "status": "PASS" }
+    ],
+    "verdict": "PASS"
+}

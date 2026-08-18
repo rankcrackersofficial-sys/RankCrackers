@@ -1,0 +1,10 @@
+{
+    "lib/features/personalization/domain/models/student_coaching_support.dart": {
+        "pre": "sha256:h1",
+        "post": "sha256:h2"
+    },
+    "lib/features/personalization/domain/engines/student_coaching_support_engine.dart": {
+        "pre": "sha256:h3",
+        "post": "sha256:h4"
+    }
+}

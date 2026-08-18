@@ -1,0 +1,9 @@
+{
+    "validation_type": "PRACTICE_ROUTING",
+    "tests": [
+        { "id": "emerging_mastery_trigger", "status": "PASS" },
+        { "id": "developing_mastery_trigger", "status": "PASS" },
+        { "id": "proficient_mastery_block", "status": "PASS" }
+    ],
+    "verdict": "PASS"
+}

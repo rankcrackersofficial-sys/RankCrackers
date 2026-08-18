@@ -145,6 +145,119 @@ final class StudentCoachingSupportEngine {
     );
   }
 
+  StudentCoachingSupportDecision personalizedPractice({
+    required AafPersonalizationBridgeAuthority bridge,
+    required StudentLearningState state,
+    required DateTime nowUtc,
+  }) {
+    final bridgeFailure = _bridgeFailure(bridge);
+    if (bridgeFailure != null) {
+      return _blocked(
+        bridge: bridge,
+        nowUtc: nowUtc,
+        type: StudentCoachingSupportType.personalizedPractice,
+        reasons: <StudentCoachingSupportReason>{bridgeFailure},
+      );
+    }
+
+    state.validate();
+    _requireSameStudentAndTarget(bridge, state, null);
+
+    final needsPractice = state.masteryBand == StudentMasteryBand.emerging ||
+        state.masteryBand == StudentMasteryBand.developing;
+
+    if (!needsPractice) {
+      return _blocked(
+        bridge: bridge,
+        nowUtc: nowUtc,
+        type: StudentCoachingSupportType.personalizedPractice,
+        reasons: const <StudentCoachingSupportReason>{
+          StudentCoachingSupportReason.noGovernedTrigger,
+        },
+      );
+    }
+
+    return _ready(
+      bridge: bridge,
+      nowUtc: nowUtc,
+      type: StudentCoachingSupportType.personalizedPractice,
+      supportRouteId: 'practice:${bridge.publicProjectionId}',
+      reasons: const <StudentCoachingSupportReason>{
+        StudentCoachingSupportReason.governedTrigger,
+      },
+    );
+  }
+
+  StudentCoachingSupportDecision analyticsTracking({
+    required AafPersonalizationBridgeAuthority bridge,
+    required StudentLearningState state,
+    required DateTime nowUtc,
+  }) {
+    final bridgeFailure = _bridgeFailure(bridge);
+    if (bridgeFailure != null) {
+      return _blocked(
+        bridge: bridge,
+        nowUtc: nowUtc,
+        type: StudentCoachingSupportType.analyticsTracking,
+        reasons: <StudentCoachingSupportReason>{bridgeFailure},
+      );
+    }
+
+    state.validate();
+    _requireSameStudentAndTarget(bridge, state, null);
+
+    return _ready(
+      bridge: bridge,
+      nowUtc: nowUtc,
+      type: StudentCoachingSupportType.analyticsTracking,
+      supportRouteId: 'analytics:${bridge.publicProjectionId}',
+      reasons: const <StudentCoachingSupportReason>{
+        StudentCoachingSupportReason.governedTrigger,
+      },
+    );
+  }
+
+  StudentCoachingSupportDecision scheduleDiscipline({
+    required AafPersonalizationBridgeAuthority bridge,
+    required StudentLearningState state,
+    required DateTime nowUtc,
+    required bool hasMissedSchedules,
+  }) {
+    final bridgeFailure = _bridgeFailure(bridge);
+    if (bridgeFailure != null) {
+      return _blocked(
+        bridge: bridge,
+        nowUtc: nowUtc,
+        type: StudentCoachingSupportType.scheduleDiscipline,
+        reasons: <StudentCoachingSupportReason>{bridgeFailure},
+      );
+    }
+
+    state.validate();
+    _requireSameStudentAndTarget(bridge, state, null);
+
+    if (!hasMissedSchedules) {
+      return _blocked(
+        bridge: bridge,
+        nowUtc: nowUtc,
+        type: StudentCoachingSupportType.scheduleDiscipline,
+        reasons: const <StudentCoachingSupportReason>{
+          StudentCoachingSupportReason.noGovernedTrigger,
+        },
+      );
+    }
+
+    return _ready(
+      bridge: bridge,
+      nowUtc: nowUtc,
+      type: StudentCoachingSupportType.scheduleDiscipline,
+      supportRouteId: 'discipline:${bridge.publicProjectionId}',
+      reasons: const <StudentCoachingSupportReason>{
+        StudentCoachingSupportReason.engagementSignalObserved,
+      },
+    );
+  }
+
   StudentCoachingSupportReason? _bridgeFailure(
     AafPersonalizationBridgeAuthority bridge,
   ) {

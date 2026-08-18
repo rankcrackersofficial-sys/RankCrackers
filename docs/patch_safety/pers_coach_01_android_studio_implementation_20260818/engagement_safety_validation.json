@@ -1,0 +1,9 @@
+{
+    "validation_type": "SAFETY_INVARIANTS",
+    "tests": [
+        { "id": "prohibit_academic_truth_generation", "status": "PASS" },
+        { "id": "prohibit_psychological_profiling", "status": "PASS" },
+        { "id": "bridge_rejection_on_invalid_status", "status": "PASS" }
+    ],
+    "verdict": "PASS"
+}

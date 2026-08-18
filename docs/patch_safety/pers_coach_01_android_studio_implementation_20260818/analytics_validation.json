@@ -1,0 +1,7 @@
+{
+    "validation_type": "ANALYTICS_ROUTING",
+    "tests": [
+        { "id": "governed_trigger_analytics", "status": "PASS" }
+    ],
+    "verdict": "PASS"
+}

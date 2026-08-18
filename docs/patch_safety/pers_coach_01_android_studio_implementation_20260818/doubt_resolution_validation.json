@@ -1,0 +1,7 @@
+{
+    "validation_type": "DOUBT_RESOLUTION_ROUTING",
+    "tests": [
+        { "id": "grounded_support_routing", "status": "PASS" }
+    ],
+    "verdict": "PASS"
+}
