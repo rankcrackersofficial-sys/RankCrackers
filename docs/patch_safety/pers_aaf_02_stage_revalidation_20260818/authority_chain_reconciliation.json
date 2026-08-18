@@ -1,0 +1,32 @@
+{
+    "verdict":  "AUTHORITY_CHAIN_RECONCILED",
+    "masterCode":  "RANKCRACKERS_AUTONOMOUS_PERSONALIZED_COACHING_OS_V1",
+    "currentHead":  "071cb0909dc4e78e748697078dcf34f3ff6e08df",
+    "branch":  "safety/rc-g2-pre-notification-schema",
+    "generatedAtUtc":  "2026-08-18T06:47:25.4899064Z",
+    "aafCurrentAuthority":  "1dcdf06cb9c7357c70638916a471fb77735a1f0e",
+    "aafBackendPublicationStudentDelivery":  "100_PERCENT_LOCKED_BY_PRIOR_AUTHORITIES",
+    "aafRemainingGate":  "AAF-008B",
+    "persAuto00Authority":  "00bdab86641eef654ee9319e16e47a4295072c62",
+    "persAaf01Authority":  "e8e060dbe7560965797523dbd3aab707df05a7c8",
+    "persAaf02Authority":  "THIS_COMMIT_PENDING",
+    "androidStudioOwner":  "DISABLED_DO_NOT_ASSIGN_WORK",
+    "chatgptOwner":  [
+                         "architecture",
+                         "code_authority",
+                         "audit",
+                         "control_tower",
+                         "next_commands"
+                     ],
+    "antiGravityOwner":  [
+                             "implementation",
+                             "runtime",
+                             "device",
+                             "emulator",
+                             "cli_execution"
+                         ],
+    "unknownAafResidual":  0,
+    "unknownPersonalizationResidual":  0,
+    "unownedAafGates":  0,
+    "unownedPersonalizationGates":  0
+}

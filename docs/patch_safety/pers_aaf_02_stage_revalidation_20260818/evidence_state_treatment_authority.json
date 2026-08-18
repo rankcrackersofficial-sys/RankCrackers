@@ -1,0 +1,18 @@
+{
+    "verdict":  "EVIDENCE_STATE_TREATMENT_AUTHORITY_REVALIDATED",
+    "evidenceModels":  "PASS",
+    "learningState":  "PASS",
+    "prerequisiteState":  "PASS",
+    "treatmentDecision":  "PASS",
+    "deterministicNoAi":  true,
+    "noPsychologicalProfiling":  true,
+    "noCanonicalTruthCreation":  true,
+    "tests":  [
+                  "student_evidence_event_test",
+                  "student_evidence_policy_test",
+                  "student_learning_state_test",
+                  "student_learning_state_engine_test",
+                  "student_prerequisite_state_engine_test",
+                  "student_treatment_decision_engine_test"
+              ]
+}

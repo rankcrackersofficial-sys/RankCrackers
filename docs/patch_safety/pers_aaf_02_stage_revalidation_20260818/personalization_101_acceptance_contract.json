@@ -1,0 +1,10 @@
+{
+    "verdict":  "PERSONALIZATION_101_ACCEPTANCE_CONTRACT_DEFINED",
+    "aafAutomation101Governed":  "PENDING_AAF_008B",
+    "studentPersonalization101Governed":  "FALSE",
+    "finalSystemVerdict":  "BLOCKED_UNTIL_AAF_AND_PERSONALIZATION_BOTH_PASS",
+    "unknownAafResidual":  0,
+    "unknownPersonalizationResidual":  0,
+    "unownedAafGates":  0,
+    "unownedPersonalizationGates":  0
+}

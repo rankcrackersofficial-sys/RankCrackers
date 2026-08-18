@@ -1,0 +1,17 @@
+{
+    "verdict":  "PERSONALIZATION_EXACT_DENOMINATOR_LOCKED",
+    "totalGates":  12,
+    "fullyAcceptedNow":  4,
+    "codeTestAcceptedNow":  4,
+    "partial":  1,
+    "open":  2,
+    "blockedPendingAaf008b":  1,
+    "unknownResidual":  0,
+    "requiredForStudentPersonalization101Governed":  [
+                                                         "all 12 gates independently accepted",
+                                                         "AAF-008B final runtime recovery authority available",
+                                                         "revision closed loop runtime accepted",
+                                                         "coaching target runtime accepted",
+                                                         "full autonomous personalized loop accepted"
+                                                     ]
+}

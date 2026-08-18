@@ -1,0 +1,84 @@
+{
+    "verdict":  "PERSONALIZATION_STAGE_MATRIX_REVALIDATED",
+    "totalPersonalizationGates":  12,
+    "passGates":  4,
+    "passCodeTestLevelGates":  4,
+    "partialOpenGates":  1,
+    "openGates":  2,
+    "blockedPendingAaf008bGates":  1,
+    "unknownResidual":  0,
+    "rows":  [
+                 {
+                     "gate":  "PERS_SOURCE_AUTHORITY",
+                     "status":  "PASS",
+                     "evidence":  "PERS-AAF-01 tracked active source/test authority",
+                     "remaining":  "NONE"
+                 },
+                 {
+                     "gate":  "EVIDENCE_STATE_POLICY",
+                     "status":  "PASS",
+                     "evidence":  "student_evidence_event/policy tests pass",
+                     "remaining":  "runtime ingestion proof later"
+                 },
+                 {
+                     "gate":  "MASTERY_RETENTION_FLUENCY_PREREQUISITE",
+                     "status":  "PASS",
+                     "evidence":  "mastery, retention, fluency, prerequisite tests pass",
+                     "remaining":  "runtime feed proof later"
+                 },
+                 {
+                     "gate":  "TREATMENT_DECISION_AUTHORITY",
+                     "status":  "PASS",
+                     "evidence":  "treatment engine test pass",
+                     "remaining":  "NONE"
+                 },
+                 {
+                     "gate":  "AAF_VERSION_BRIDGE",
+                     "status":  "PASS_CODE_TEST_LEVEL",
+                     "evidence":  "AafPersonalizationBridgeAuthority + withdrawn projection fail-closed test",
+                     "remaining":  "bind final AAF-008B recovery runtime authority when available"
+                 },
+                 {
+                     "gate":  "DIGIBOOK_PERSONALIZATION",
+                     "status":  "PASS_CODE_TEST_LEVEL",
+                     "evidence":  "AAF-bound DigiBook route integration tests pass",
+                     "remaining":  "runtime published-content journey later"
+                 },
+                 {
+                     "gate":  "SYLLABUS_PERSONALIZATION",
+                     "status":  "PASS_CODE_TEST_LEVEL",
+                     "evidence":  "syllabus route test pass",
+                     "remaining":  "runtime published-content journey later"
+                 },
+                 {
+                     "gate":  "CRUCIBLE_PERSONALIZATION",
+                     "status":  "PASS_CODE_TEST_LEVEL",
+                     "evidence":  "blueprint and item selector tests pass",
+                     "remaining":  "runtime governed test journey later"
+                 },
+                 {
+                     "gate":  "REVISION_CLOSED_LOOP",
+                     "status":  "PARTIAL_OPEN",
+                     "evidence":  "revision queue due-date primitive passes",
+                     "remaining":  "closed-loop revision scheduling, recovery, and student journey proof"
+                 },
+                 {
+                     "gate":  "COACHING_SUPPORT_TARGETS",
+                     "status":  "OPEN",
+                     "evidence":  "target inventory only",
+                     "remaining":  "mentor/doubt/practice/test/analytics/schedule/motivation runtime contracts"
+                 },
+                 {
+                     "gate":  "VERSION_RECOVERY_RUNTIME_BINDING",
+                     "status":  "BLOCKED_PENDING_AAF_008B",
+                     "evidence":  "bridge contract exists",
+                     "remaining":  "post-publication correction/withdrawal/supersession/cache drill authority"
+                 },
+                 {
+                     "gate":  "FULL_AUTONOMOUS_PERSONALIZED_LOOP",
+                     "status":  "OPEN",
+                     "evidence":  "control-plane routing ready",
+                     "remaining":  "end-to-end adaptive loop + independent audit"
+                 }
+             ]
+}

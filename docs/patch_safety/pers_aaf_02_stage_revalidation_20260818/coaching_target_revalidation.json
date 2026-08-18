@@ -1,0 +1,13 @@
+{
+    "verdict":  "COACHING_TARGETS_INVENTORIED_OPEN",
+    "targets":  [
+                    "mentor",
+                    "doubt",
+                    "tests_practice",
+                    "analytics",
+                    "schedule_discipline",
+                    "motivation_engagement_support"
+                ],
+    "runtimeImplemented":  "NO",
+    "ownerRouting":  "CHATGPT_CONTRACT_THEN_ANTI_GRAVITY_IMPLEMENTATION"
+}

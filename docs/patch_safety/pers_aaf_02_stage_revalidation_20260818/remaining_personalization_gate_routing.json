@@ -1,0 +1,26 @@
+{
+    "verdict":  "REMAINING_PERSONALIZATION_GATES_ROUTED",
+    "gates":  [
+                  {
+                      "gate":  "AAF-008B dependency",
+                      "owner":  "ANTI_GRAVITY",
+                      "status":  "ACTIVE_EXTERNAL"
+                  },
+                  {
+                      "gate":  "Revision closed loop",
+                      "owner":  "CHATGPT_THEN_ANTI_GRAVITY",
+                      "status":  "NEXT_PERSONALIZATION_CODE_AUTHORITY"
+                  },
+                  {
+                      "gate":  "Coaching targets",
+                      "owner":  "CHATGPT_THEN_ANTI_GRAVITY",
+                      "status":  "OPEN"
+                  },
+                  {
+                      "gate":  "Full autonomous loop",
+                      "owner":  "CHATGPT_AUDIT_AFTER_RUNTIME",
+                      "status":  "OPEN"
+                  }
+              ],
+    "unownedGates":  0
+}

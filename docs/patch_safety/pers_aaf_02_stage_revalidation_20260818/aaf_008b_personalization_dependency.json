@@ -1,0 +1,15 @@
+{
+    "verdict":  "AAF_008B_PERSONALIZATION_DEPENDENCY_CLASSIFIED",
+    "aaf008bReportFoundInCurrentWorktree":  false,
+    "dependency":  "FINAL_RUNTIME_RECOVERY_AUTHORITY_REQUIRED_FOR_PERSONALIZATION_VERSION_RECOVERY_GATE",
+    "personalizationCanProceedBeforeAaf008b":  [
+                                                   "stage revalidation",
+                                                   "coaching contract preparation",
+                                                   "revision contract preparation"
+                                               ],
+    "personalizationMustWaitForAaf008b":  [
+                                              "final stale-route/cache recovery acceptance",
+                                              "final 101 percent closeout"
+                                          ],
+    "antiGravityActiveCommand":  "AAF-008B-R1_POST_PUBLICATION_CORRECTION_WITHDRAWAL_SUPERSESSION_AND_RUNTIME_CACHE_VERSION_RECOVERY_DRILL"
+}

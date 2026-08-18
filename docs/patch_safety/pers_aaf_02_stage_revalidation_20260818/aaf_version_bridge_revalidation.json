@@ -1,0 +1,22 @@
+{
+    "verdict":  "AAF_VERSION_BRIDGE_REVALIDATED_CODE_TEST_LEVEL",
+    "bridgeFile":  "lib/features/personalization/domain/models/aaf_personalization_bridge.dart",
+    "routeBound":  true,
+    "requiredIdentityFields":  [
+                                   "studentId",
+                                   "targetAmtnId",
+                                   "canonicalSemanticTopicId",
+                                   "canonicalKnowledgeVersion",
+                                   "publicProjectionId",
+                                   "studentStateVersion",
+                                   "treatmentDecisionVersion",
+                                   "routeVersion",
+                                   "createdAtUtc"
+                               ],
+    "persCanCreateAcademicTruth":  false,
+    "persCanReferenceUnverifiedContent":  false,
+    "persCanReferenceWithdrawnContent":  false,
+    "persCanReferenceSupersededContent":  false,
+    "withdrawnProjectionFailClosedTest":  "PASS",
+    "finalRuntimeVersionRecoveryAuthority":  "PENDING_AAF_008B"
+}
