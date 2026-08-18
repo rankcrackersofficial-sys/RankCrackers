@@ -1,0 +1,13 @@
+{
+  "rootReports": [
+    "FUNCTIONS_RUNTIME_AUDIT.md",
+    "PIPELINE_AUDIT_REPORT.md",
+    "PIPELINE_BLOCKAGE_REPORT.md",
+    "PIPELINE_RECOVERY_GUIDE.md",
+    "RANKCRACKERS_FIREBASE_MIGRATION_AUDIT.md",
+    "WORKER_STATUS_REPORT.md"
+  ],
+  "patchSafetyFilesCount": 2287,
+  "docsSyllabusFilesCount": 30,
+  "internalAcademicFilesCount": 8
+}

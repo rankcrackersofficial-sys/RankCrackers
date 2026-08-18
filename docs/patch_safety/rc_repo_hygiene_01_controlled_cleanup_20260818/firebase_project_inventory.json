@@ -1,0 +1,58 @@
+{
+  "expectedProject": "rankcrackers-55",
+  "repoConfigEvidence": {
+    "firebaserc": true,
+    "googleServices": true,
+    "firebaseOptions": true
+  },
+  "unexplainedProjectReferences": [
+    {
+      "file": "functions/audit_rankcrackers_path_and_rules.js",
+      "project": "RankCrackers-55"
+    },
+    {
+      "file": "functions/verification/write_authorization/verify5_p15_auth_candidate.json",
+      "project": "RankCrackers-55"
+    },
+    {
+      "file": "test/helpers/firebase_test_setup.dart",
+      "project": "rankcrackers-test"
+    },
+    {
+      "file": "test/helpers/firebase_test_setup.dart",
+      "project": "rankcrackers-test"
+    },
+    {
+      "file": "test/helpers/firebase_test_setup.dart",
+      "project": "rankcrackers-test"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_evidence_integrity_02_verification.js",
+      "project": "rankcrackers-prod-founder"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_evidence_integrity_02_verification.js",
+      "project": "rankcrackers-prod-student"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_evidence_integrity_02_verification.js",
+      "project": "rankcrackers-prod-founder"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_mission_link_01_verification.js",
+      "project": "rankcrackers-prod-founder"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_mission_link_01_verification.js",
+      "project": "rankcrackers-prod-student"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_mission_link_01_verification.js",
+      "project": "rankcrackers-prod-founder"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_mission_link_01_verification.js",
+      "project": "rankcrackers-prod-student"
+    }
+  ]
+}

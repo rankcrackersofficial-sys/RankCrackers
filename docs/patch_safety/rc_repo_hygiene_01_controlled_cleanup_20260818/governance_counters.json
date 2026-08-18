@@ -1,0 +1,16 @@
+{
+  "totalFilesScanned": 3724,
+  "filesDeleted": 0,
+  "filesArchived": 0,
+  "filesRenamed": 0,
+  "filesModified": 3,
+  "missionAuthorityCount": 1,
+  "syntheticReportGeneratorCount": 131,
+  "syntheticReportGeneratorUsedAsAuthority": 0,
+  "legacyMissionAuthorityRuntimeReachable": 1,
+  "productionReachableFixture": 2,
+  "productionReachableDemoData": 29,
+  "multipleActiveEngineAuthorities": true,
+  "unexplainedFirebaseProjectReference": 12,
+  "unknownRepositoryHygieneResidual": "NON_ZERO_CLEANUP_CANDIDATES_REQUIRE_OWNER_REVIEW_OR_SEPARATE_ARCHIVE_COMMIT"
+}

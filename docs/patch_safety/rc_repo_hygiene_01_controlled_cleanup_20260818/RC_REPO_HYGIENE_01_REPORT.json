@@ -1,0 +1,23 @@
+{
+  "verdict": "RC_REPO_HYGIENE_01_NOT_ACCEPTED_WITH_EXACT_REMAINING_RESIDUALS",
+  "headBefore": "47679d62f09813aee906d9f2262003e6639a5a2f",
+  "headAfter": "47679d62f09813aee906d9f2262003e6639a5a2f",
+  "totalFilesScanned": 3724,
+  "filesDeleted": 0,
+  "filesArchived": 0,
+  "filesRenamed": 0,
+  "filesModified": 3,
+  "missionAuthorityCount": 1,
+  "syntheticReportGeneratorCount": 131,
+  "syntheticReportGeneratorUsedAsAuthority": 0,
+  "legacyMissionAuthorityRuntimeReachable": 1,
+  "productionReachableFixture": 2,
+  "productionReachableDemoData": 29,
+  "multipleActiveEngineAuthorities": true,
+  "unexplainedFirebaseProjectReference": 12,
+  "postCleanupAnalyzeStatus": "TARGETED_CLEAN",
+  "postCleanupTestStatus": "TARGETED_1_OF_1_PASS",
+  "postCleanupRuntimeSmoke": "NOT_RUN_BY_REPO_HYGIENE_SCOPE",
+  "unknownRepositoryHygieneResidual": "EXACT_CANDIDATES_IDENTIFIED; MASS_DELETE_NOT_SAFE_IN_DIRTY_WORKTREE",
+  "finalVerdict": "RC_REPO_HYGIENE_01_NOT_ACCEPTED_WITH_EXACT_REMAINING_RESIDUALS"
+}

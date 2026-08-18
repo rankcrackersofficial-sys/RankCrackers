@@ -1,0 +1,90 @@
+{
+  "generatedAt": "2026-08-18T13:25:00.619Z",
+  "headBefore": "47679d62f09813aee906d9f2262003e6639a5a2f",
+  "currentAuthority": {
+    "firebaseProject": "rankcrackers-55",
+    "missionAuthorityPath": "mission_realms/{missionId}",
+    "studentProjectionPath": "student_mission_catalog/{sameMissionId}",
+    "missionProjectionLineageFields": [
+      "sourceMissionId",
+      "sourceMissionVersion",
+      "sourcePath",
+      "sourceType",
+      "studentPublicationState"
+    ],
+    "legacyMissionIdsAreProductionAuthority": false,
+    "syntheticReportsAreEvidence": false,
+    "liveProductionRecountStatus": "PENDING_SEPARATE_AUTHORIZATION"
+  },
+  "productionAuthority": {
+    "firebaseConfig": [
+      ".firebaserc",
+      "android/app/google-services.json",
+      "lib/firebase_options.dart"
+    ],
+    "missionRegistry": [
+      "functions/canonical_mission_registry.js"
+    ],
+    "founderMissionWriter": [
+      "functions/callable/handle_sentinel_action.js"
+    ],
+    "studentMissionReader": [
+      "lib/core/firebase/firestore_service.dart",
+      "lib/core/backend/recruitment_repository.dart"
+    ],
+    "studentModel": [
+      "lib/core/models/recruitment.dart"
+    ],
+    "academicFactoryDomain": [
+      "lib/features/academic_factory/domain/engines/academic_fact_verification_core.dart",
+      "lib/features/academic_factory/domain/engines/academic_factory_dependency_graph_validator.dart",
+      "lib/features/academic_factory/domain/engines/academic_factory_dependency_unlock_engine.dart",
+      "lib/features/academic_factory/domain/engines/academic_factory_failure_policy.dart",
+      "lib/features/academic_factory/domain/engines/academic_factory_initial_activation_engine.dart",
+      "lib/features/academic_factory/domain/engines/academic_factory_job_lifecycle_engine.dart",
+      "lib/features/academic_factory/domain/engines/academic_factory_retry_backoff_policy.dart",
+      "lib/features/academic_factory/domain/engines/academic_factory_run_progress_evaluator.dart",
+      "lib/features/academic_factory/domain/engines/academic_factory_transition_policy.dart",
+      "lib/features/academic_factory/domain/models/academic_factory_dependency_graph.dart",
+      "lib/features/academic_factory/domain/models/academic_factory_failure_decision.dart",
+      "lib/features/academic_factory/domain/models/academic_factory_job.dart",
+      "lib/features/academic_factory/domain/models/academic_factory_run.dart",
+      "lib/features/academic_factory/domain/models/academic_factory_run_progress.dart",
+      "lib/features/academic_factory/domain/models/academic_factory_types.dart",
+      "lib/features/academic_factory/domain/models/academic_factory_unlock_decision.dart",
+      "lib/features/academic_factory/domain/models/academic_factory_work_order.dart"
+    ],
+    "functionsAcademicFactory": [
+      "functions/src/academicFactory/core/aafDispatcher.ts",
+      "functions/src/academicFactory/core/aafJobRegistry.ts",
+      "functions/src/academicFactory/models/aafJob.ts",
+      "functions/src/academicFactory/repositories/aafQueueRepository.ts",
+      "functions/src/academicFactory/services/aafLifecycleService.ts",
+      "functions/src/academicFactory/services/aafProgressMonitor.ts",
+      "functions/src/academicFactory/services/aafVerifierBackend.ts",
+      "functions/src/academicFactory/services/independentFactVerifierBackend.ts",
+      "functions/src/academicFactory/workers/aafWorkerResult.ts",
+      "functions/src/academicFactory/workers/aafWorkerTypes.ts",
+      "functions/src/academicFactory/workers/crucibleDraftAafWorker.ts",
+      "functions/src/academicFactory/workers/crucibleMaterializationAafWorker.ts",
+      "functions/src/academicFactory/workers/crucibleProReviewAafWorker.ts",
+      "functions/src/academicFactory/workers/crucibleRepairAafWorker.ts",
+      "functions/src/academicFactory/workers/crucibleValidationAafWorker.ts",
+      "functions/src/academicFactory/workers/digibookAssemblyAafWorker.ts",
+      "functions/src/academicFactory/workers/digibookDraftAafWorker.ts",
+      "functions/src/academicFactory/workers/digibookMaterializationAafWorker.ts",
+      "functions/src/academicFactory/workers/digibookProReviewAafWorker.ts",
+      "functions/src/academicFactory/workers/digibookRepairAafWorker.ts",
+      "functions/src/academicFactory/workers/digibookValidationAafWorker.ts",
+      "functions/src/academicFactory/workers/sourceAcquisitionAafWorker.ts",
+      "functions/src/academicFactory/workers/sourceValidationAafWorker.ts"
+    ]
+  },
+  "nonAuthorityZones": {
+    "patchSafety": "Historical evidence only; never current runtime/factory authority unless a latest accepted report explicitly says so.",
+    "docsSyllabus": "Historical syllabus process notes; not live production mission authority.",
+    "rootReports": "Superseded root reports; archive candidates.",
+    "functionOneOffScripts": "One-off operational scripts; not deployable authority.",
+    "previewAssets": "Founder/internal preview/test assets only; not Student production data."
+  }
+}

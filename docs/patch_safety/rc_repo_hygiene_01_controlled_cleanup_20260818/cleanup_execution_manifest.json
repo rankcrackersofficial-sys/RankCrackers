@@ -1,0 +1,12 @@
+{
+  "filesDeleted": 0,
+  "filesArchived": 0,
+  "filesRenamed": 0,
+  "filesModified": 3,
+  "modifiedFiles": [
+    "docs/AUTHORITY_INDEX.md",
+    "docs/authority/CURRENT_AUTHORITY_INDEX.json",
+    "test/features/repo_hygiene/rc_repo_hygiene_01_test.dart"
+  ],
+  "reasonNoMassDelete": "Worktree contains many unrelated dirty files and many historical artifacts are evidence. This run establishes authority routing and exact cleanup candidates, not unsafe broad deletion."
+}
