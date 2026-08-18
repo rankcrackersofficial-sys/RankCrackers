@@ -14,24 +14,28 @@ class StartModeScreen extends StatelessWidget {
         padding: const EdgeInsets.all(20),
 
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, "/home");
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text("Practice Mode is currently updating.")),
+                );
               },
 
-              child: const Text("Practice Mode"),
+              child: const Text("Practice Mode (Unavailable)"),
             ),
 
             const SizedBox(height: 20),
 
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, "/quiz");
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text("Mock Test is currently updating.")),
+                );
               },
 
-              child: const Text("Mock Test"),
+              child: const Text("Mock Test (Unavailable)"),
             ),
           ],
         ),

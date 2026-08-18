@@ -1,0 +1,45 @@
+{
+  "verdict": "RC_STUDENT_ZERO_FAKE_FIX1_ALL_ADDITIONAL_PRODUCTION_REACHABLE_STUDENT_FAKE_SURFACES_REMOVED_WITH_ORIGINAL_8_FIXES_PRESERVED",
+  "baseline_authority_resolution": "abd046186df2f8e441c9cbc4395bb6da69bacd66",
+  "implementation_commit_sha": "ad6a8790fd1cd966b1d1061e2ee66f941d17fcbc",
+  "parent_sha": "ad6a8790fd1cd966b1d1061e2ee66f941d17fcbc",
+  "production_changed_paths": [
+    "lib/features/notifications/presentation/screens/notifications_screen.dart",
+    "lib/features/performance/presentation/screens/performance_dashboard_screen.dart",
+    "lib/features/planner/presentation/screens/battle_planner_screen.dart",
+    "lib/features/onboarding/presentation/screens/start_mode_screen.dart"
+  ],
+  "zero_fake_counters": {
+    "PRODUCTION_REACHABLE_FAKE_ACADEMIC_DATA": 0,
+    "FAKE_NOTIFICATION_ITEMS": 0,
+    "FAKE_PERFORMANCE_METRICS": 0,
+    "FAKE_BATTLE_PLAN_ITEMS": 0,
+    "FAKE_TEST_AVAILABILITY": 0
+  },
+  "test_denominators": {
+    "original_8_tests": "PASS",
+    "new_4_tests": "PASS",
+    "coaching_tests": "10/10",
+    "personalization_recovery_tests": "33/33",
+    "aaf_pers_bridge_attacks": "21/21",
+    "pers_aaf_03_contract_tests": "27/27"
+  },
+  "unknown_student_residual": 0,
+  "unowned_student_fixes": 0,
+  "sha256Matrix": {
+    "baseline_authority_resolution.json": "25CC5296B7917CDFBAAE72124791198FF4BB23E9C7C2C4495B6F77CA31910BD6",
+    "notifications_fix.json": "27DEA4E6664B77CB31C6801C8F655DAAA4C565B03E0D3B3B1BF677D5872E0F80",
+    "performance_dashboard_fix.json": "8EA07DF50D4ADA4796C8C8C906485B73FCBF6E7E274362D1E42BA91092CBA280",
+    "battle_planner_fix.json": "51E1EBF09056D514CBC2238D978B7501A6CCD5D7A063A41603D11ABAF8BC789A",
+    "start_mode_fix.json": "C7041ABE13DABF86582DACB825DB43D762C0D3284C94557709B4B751AD3EA401",
+    "original_8_regression.json": "4CCDFE84EE870E5DB34138D8F853B446BEF848E2A813A20CCD5A308A21085871",
+    "full_student_forensic_rescan.json": "146F481481BE7806071C7B95FE99CB1740CFC8112630BBF88B08483827BCB221",
+    "test_denominators.json": "654A8903F16D4BD45F40A093C1639CCF5605E1C92ABFD6E3EDE24946A163F5AE",
+    "release_reachability.json": "AF2EA0226F0B602585BD3513688663D12A7E35202E281A4ACACAA14D78A6E0F0",
+    "analyze_result.json": "AEB240316C92D755AFA4C8A4011565220D9E9BDE0C17C0944FFA398046DC4145",
+    "runtime_validation.json": "95535D217F84367C38ABB65A108D3A49FA168D10F0F56BBC381ADD2F9A289B33",
+    "responsive_validation.json": "6B434C5351F7AB7ABAEF593A3BB2E86071807A3FFA58812A8DE470B442BF7884",
+    "governance_counters.json": "AB65CA79FB55A67E3A14A72F44244C2C5B79102DD551CCD7DB8AD7581E875511",
+    "changed_paths.json": "2CF72F9A792418E6A123F8100A2539F3FF1E314D43289F4B9F2BAC60E2FD441B"
+  }
+}

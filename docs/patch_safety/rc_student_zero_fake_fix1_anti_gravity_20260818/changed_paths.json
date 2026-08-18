@@ -1,0 +1,8 @@
+{
+  "production_changed_paths": [
+    "lib/features/notifications/presentation/screens/notifications_screen.dart",
+    "lib/features/performance/presentation/screens/performance_dashboard_screen.dart",
+    "lib/features/planner/presentation/screens/battle_planner_screen.dart",
+    "lib/features/onboarding/presentation/screens/start_mode_screen.dart"
+  ]
+}

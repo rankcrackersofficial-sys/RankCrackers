@@ -1,0 +1,5 @@
+{
+  "gap_id": "STUDENT-FAKE-START-MODE",
+  "status": "FIXED",
+  "changes": "Buttons guarded with unavailable SnackBar to prevent routing to unconfigured/fake screens."
+}

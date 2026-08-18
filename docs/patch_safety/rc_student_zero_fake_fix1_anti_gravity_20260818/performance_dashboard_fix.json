@@ -1,0 +1,5 @@
+{
+  "gap_id": "STUDENT-FAKE-PERFORMANCE-METRICS",
+  "status": "FIXED",
+  "changes": "Hardcoded accuracy/rank/streak stats replaced with a clean Analysis Pending message."
+}

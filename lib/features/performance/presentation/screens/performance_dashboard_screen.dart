@@ -37,268 +37,31 @@ class PerformanceDashboardScreen extends StatelessWidget {
         ),
       ),
 
-      body: SingleChildScrollView(
-
-        physics:
-        const BouncingScrollPhysics(),
-
-        padding:
-        const EdgeInsets.all(20),
-
+      body: Center(
         child: Column(
-
-          crossAxisAlignment:
-          CrossAxisAlignment.start,
-
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
-            // HERO CARD
-
-            Container(
-
-              width: double.infinity,
-
-              padding:
-              const EdgeInsets.all(24),
-
-              decoration: BoxDecoration(
-
-                gradient:
-                AppColors.primaryGradient,
-
-                borderRadius:
-                BorderRadius.circular(
-                  30,
-                ),
-              ),
-
-              child: Column(
-
-                crossAxisAlignment:
-                CrossAxisAlignment.start,
-
-                children: [
-
-                  Row(
-
-                    children: [
-
-                      const Icon(
-
-                        Icons.analytics_rounded,
-
-                        color: Colors.white,
-
-                        size: 30,
-                      ),
-
-                      const SizedBox(width: 12),
-
-                      Expanded(
-
-                        child: Text(
-
-                          "Your Growth Analytics",
-
-                          style:
-                          GoogleFonts.poppins(
-
-                            fontSize: 21,
-
-                            fontWeight:
-                            FontWeight.w800,
-
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-
-                  const SizedBox(height: 16),
-
-                  Text(
-
-                    "Track accuracy, rank, study consistency and overall exam growth.",
-
-                    style:
-                    GoogleFonts.poppins(
-
-                      fontSize: 13,
-
-                      height: 1.6,
-
-                      fontWeight:
-                      FontWeight.w500,
-
-                      color:
-                      Colors.white.withValues(
-                        alpha: 0.84,
-                      ),
-                    ),
-                  ),
-
-                  const SizedBox(height: 24),
-
-                  Row(
-
-                    children: [
-
-                      Expanded(
-
-                        child: _buildTopCard(
-                          "Accuracy",
-                          "78%",
-                        ),
-                      ),
-
-                      const SizedBox(width: 14),
-
-                      Expanded(
-
-                        child: _buildTopCard(
-                          "Rank",
-                          "#82",
-                        ),
-                      ),
-
-                      const SizedBox(width: 14),
-
-                      Expanded(
-
-                        child: _buildTopCard(
-                          "Growth",
-                          "+14%",
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 28),
-
+            const Icon(Icons.analytics_rounded, size: 64, color: Colors.grey),
+            const SizedBox(height: 16),
             Text(
-
-              "Performance Overview",
-
-              style:
-              GoogleFonts.poppins(
-
-                fontSize: 18,
-
-                fontWeight:
-                FontWeight.w800,
-
-                color:
-                AppColors.textPrimary,
+              "Analysis Pending",
+              style: GoogleFonts.poppins(
+                fontSize: 20,
+                fontWeight: FontWeight.w700,
+                color: AppColors.textPrimary,
               ),
             ),
-
-            const SizedBox(height: 18),
-
-            _buildPerformanceCard(
-              "Mock Test Performance",
-              "142 / 200 Average Score",
-              "Excellent Improvement",
-              Icons.quiz_rounded,
-            ),
-
-            _buildPerformanceCard(
-              "Revision Consistency",
-              "18 Day Active Streak",
-              "Strong Retention",
-              Icons.refresh_rounded,
-            ),
-
-            _buildPerformanceCard(
-              "Question Practice",
-              "4,280 Questions Solved",
-              "Daily Growth",
-              Icons.bolt_rounded,
-            ),
-
-            _buildPerformanceCard(
-              "Time Management",
-              "1.2 Min / Question",
-              "Above Average",
-              Icons.speed_rounded,
-            ),
-
-            const SizedBox(height: 28),
-
-            Text(
-
-              "Insights",
-
-              style:
-              GoogleFonts.poppins(
-
-                fontSize: 18,
-
-                fontWeight:
-                FontWeight.w800,
-
-                color:
-                AppColors.textPrimary,
+            const SizedBox(height: 8),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32),
+              child: Text(
+                "Your performance metrics will be calculated once verified academic activity logs are populated.",
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  fontSize: 14,
+                  color: AppColors.textSecondary,
+                ),
               ),
-            ),
-
-            const SizedBox(height: 18),
-
-            Row(
-
-              children: [
-
-                Expanded(
-
-                  child: _buildMiniCard(
-                    "Weak Topics",
-                    "07",
-                    Icons.warning_rounded,
-                  ),
-                ),
-
-                const SizedBox(width: 14),
-
-                Expanded(
-
-                  child: _buildMiniCard(
-                    "Strong Areas",
-                    "18",
-                    Icons.workspace_premium_rounded,
-                  ),
-                ),
-              ],
-            ),
-
-            const SizedBox(height: 14),
-
-            Row(
-
-              children: [
-
-                Expanded(
-
-                  child: _buildMiniCard(
-                    "Study Hours",
-                    "42h",
-                    Icons.timer_rounded,
-                  ),
-                ),
-
-                const SizedBox(width: 14),
-
-                Expanded(
-
-                  child: _buildMiniCard(
-                    "Focus Score",
-                    "92%",
-                    Icons.center_focus_strong_rounded,
-                  ),
-                ),
-              ],
             ),
           ],
         ),
