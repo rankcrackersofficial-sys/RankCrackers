@@ -1,0 +1,17 @@
+﻿{
+    "verdict":  "RC_STUDENT_ZERO_FAKE_01_PAR01_BLOCKED_BY_ADDITIONAL_PRODUCTION_REACHABLE_STUDENT_FAKE_SURFACES",
+    "current_head":  "885584ec4d8abd2f4c872252b724e53de61aed2a",
+    "candidate_commit":  "abd046186df2f8e441c9cbc4395bb6da69bacd66",
+    "original_8_candidate_status":  "ACCEPTABLE_AT_FOCUSED_SCOPE",
+    "focused_tests":  "4/4 PASS",
+    "full_student_panel_zero_fake_data_accepted":  false,
+    "student_gaps_closed_final":  "NOT_FINAL",
+    "additional_blockers":  5,
+    "unknown_student_ui_residual":  0,
+    "unowned_fixes":  0,
+    "production_source_modified":  "NO",
+    "firebase_write":  "NO",
+    "queue_write":  "NO",
+    "publication":  "NO",
+    "final_line":  "RC_STUDENT_ZERO_FAKE_01_REQUIRES_FIX1_BROADER_STUDENT_SURFACE_CLOSEOUT_BEFORE_FINAL_ACCEPTANCE"
+}

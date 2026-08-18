@@ -1,0 +1,41 @@
+﻿{
+    "scan_result":  "ADDITIONAL_PRODUCTION_REACHABLE_STUDENT_FAKE_RISKS_FOUND",
+    "blocking_findings":  [
+                              {
+                                  "id":  "STUDENT-PAR01-BLOCK-001",
+                                  "path":  "lib/features/notifications/presentation/screens/notifications_screen.dart",
+                                  "evidence":  "Static local notifications include New Physics Test Available, Daily Study Reminder, Roadmap Updated, Mock Test Result and AIR improvement.",
+                                  "rule":  "Student notifications must come from governed notification projection or Not Ready/empty state.",
+                                  "severity":  "P0"
+                              },
+                              {
+                                  "id":  "STUDENT-PAR01-BLOCK-002",
+                                  "path":  "lib/features/performance/presentation/screens/performance_dashboard_screen.dart",
+                                  "evidence":  "Static performance data: 142/200 average score, 18 day streak, 4,280 questions solved, 1.2 min/question, weak/strong topic counts, focus score 92%.",
+                                  "rule":  "Performance and personalization metrics must come from governed evidence/progress projections or unavailable state.",
+                                  "severity":  "P0"
+                              },
+                              {
+                                  "id":  "STUDENT-PAR01-BLOCK-003",
+                                  "path":  "lib/features/planner/presentation/screens/battle_planner_screen.dart",
+                                  "evidence":  "Static task cards include Modern History Revision, Polity MCQ Practice, Science Weak Topics, Mock Test Analysis.",
+                                  "rule":  "Planner tasks must be generated from governed schedule/personalization evidence or Not Ready.",
+                                  "severity":  "P1"
+                              },
+                              {
+                                  "id":  "STUDENT-PAR01-BLOCK-004",
+                                  "path":  "lib/features/onboarding/presentation/screens/start_mode_screen.dart",
+                                  "evidence":  "Mock Test route label exists; not necessarily fake by itself, but route requires governed test availability proof before showing as real test mode.",
+                                  "rule":  "Mode labels/actions must not route to fake/mock academic experience.",
+                                  "severity":  "P1"
+                              },
+                              {
+                                  "id":  "STUDENT-PAR01-BLOCK-005",
+                                  "path":  "lib/features/performance, notifications, planner, opportunities/career-like surfaces",
+                                  "evidence":  "Broader Student Panel surfaces were outside the original 8-gap focused test denominator.",
+                                  "rule":  "Student Panel zero-fake final acceptance requires all production-reachable student surfaces, not only original 8 paths.",
+                                  "severity":  "P0"
+                              }
+                          ],
+    "full_student_panel_zero_fake_accepted":  false
+}

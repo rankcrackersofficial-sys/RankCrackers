@@ -1,0 +1,23 @@
+﻿COMMAND_CODE: RC-STUDENT-ZERO-FAKE-01-FIX1-BROADER-STUDENT-SURFACE-CLOSEOUT
+OWNER: ANTI_GRAVITY
+MODE: EXECUTE_NOW
+
+OBJECTIVE:
+Close additional production-reachable Student fake-data surfaces found by ChatGPT PAR01.
+
+TARGETS:
+- lib/features/notifications/presentation/screens/notifications_screen.dart
+- lib/features/performance/presentation/screens/performance_dashboard_screen.dart
+- lib/features/planner/presentation/screens/battle_planner_screen.dart
+- lib/features/onboarding/presentation/screens/start_mode_screen.dart
+- all Student bottom-nav/dashboard tool surfaces including Career Signals readiness
+
+RULE:
+Show real governed backend/personalization/progress/signal data or safe Not Ready/Unavailable. Never show fake scores, fake rank, fake streak, fake question counts, fake notifications, fake planner tasks, or fake Career Signals.
+
+RETURN:
+STUDENT_BROADER_SURFACES_CLOSED
+TEST_DENOMINATORS
+RUNTIME_VALIDATION
+GOVERNANCE_COUNTERS
+FINAL_VERDICT

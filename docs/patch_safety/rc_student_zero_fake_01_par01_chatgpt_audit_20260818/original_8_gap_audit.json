@@ -1,0 +1,20 @@
+﻿{
+    "original_gap_count":  8,
+    "candidate_reports_8_closed":  true,
+    "focused_test_result":  {
+                                "command":  "flutter test test/features/personalization/zero_fake_ui_test.dart",
+                                "result":  "PASS",
+                                "tests":  "4/4"
+                            },
+    "audit_decision":  "ORIGINAL_8_IMPLEMENTATION_CANDIDATE_ACCEPTABLE_BUT_NOT_FULL_STUDENT_PANEL_FINAL",
+    "gaps":  [
+                 "STUDENT-FAKE-001",
+                 "STUDENT-FAKE-002",
+                 "STUDENT-FAKE-003",
+                 "STUDENT-FAKE-004",
+                 "STUDENT-FAKE-005",
+                 "STUDENT-FAKE-006",
+                 "STUDENT-FAKE-007",
+                 "STUDENT-FAKE-008"
+             ]
+}

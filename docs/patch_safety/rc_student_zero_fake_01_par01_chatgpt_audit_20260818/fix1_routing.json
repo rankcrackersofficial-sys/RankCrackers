@@ -1,0 +1,16 @@
+﻿{
+    "required_next_command":  "RC-STUDENT-ZERO-FAKE-01-FIX1-BROADER-STUDENT-SURFACE-CLOSEOUT",
+    "owner":  "Anti-Gravity normalized executor; Android Studio remains disabled unless explicitly re-enabled",
+    "must_fix":  [
+                     "NotificationsScreen static notifications",
+                     "PerformanceDashboard static metrics",
+                     "BattlePlanner static tasks",
+                     "StartMode mock route proof/safe state",
+                     "Any remaining Dashboard/Career/Student bottom-nav fake data"
+                 ],
+    "pass_requires":  [
+                          "All production-reachable Student surfaces real governed data or Not Ready",
+                          "No fake score/rank/streak/question count/focus score/notification/task",
+                          "Focused and broad zero-fake tests cover every routed surface"
+                      ]
+}
