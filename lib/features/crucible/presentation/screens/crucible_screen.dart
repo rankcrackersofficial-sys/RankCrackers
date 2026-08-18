@@ -22,6 +22,8 @@ import '../../../dashboard/presentation/providers/dashboard_provider.dart';
 import '../../core/crucible_clock_engine.dart';
 import '../../core/battle_engine.dart';
 import '../../core/crucible_master_engine.dart';
+import '../providers/crucible_state_provider.dart';
+import '../../models/crucible_protocol_state.dart';
 
 /// 🔱 CRUCIBLE SCREEN
 /// The tactical heart of the RankCrackers ecosystem.
@@ -33,13 +35,6 @@ class CrucibleScreen extends ConsumerStatefulWidget {
 }
 
 class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
-  // 🔱 enrollmentDate now relative for stabilization
-  final DateTime enrollmentDate =
-      DateTime.now().subtract(const Duration(days: 16));
-  late int currentDay;
-  late int currentPhase;
-  late double progress;
-
   String selectedExamId = 'ras';
   String selectedVariantId = '';
 
@@ -47,15 +42,6 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   void initState() {
     super.initState();
     loadMission();
-
-    final days = DateTime.now().difference(enrollmentDate).inDays;
-    currentDay = days + 1;
-    currentPhase = (days ~/ 15) + 1;
-    progress = currentDay / 99;
-
-    if (progress > 1) {
-      progress = 1;
-    }
   }
 
   Future<void> loadMission() async {
@@ -77,6 +63,26 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     final readiness = ref.watch(missionReadinessProvider);
     final momentum = knowledge.momentumState;
 
+    final protocolStateAsync = ref.watch(crucibleProtocolStateProvider);
+    final protocolState = protocolStateAsync.valueOrNull ??
+        CrucibleProtocolState(
+          recruitmentId: selectedExamId,
+          phaseIndex: 2,
+          scheduleIndex: 1,
+          currentScheduleId: 'sch_${selectedExamId}_1',
+          status: 'study',
+          scheduleStartTime: DateTime.now().subtract(const Duration(days: 16)),
+          protocolStartTime: DateTime.now().subtract(const Duration(days: 16)),
+          currentBoundaryTime: DateTime.now().add(const Duration(hours: 48)),
+          isVIP: false,
+          isStalled: false,
+          lastProgressAt: DateTime.now(),
+        );
+
+    final currentDay = CrucibleClockEngine.getProtocolDay(state: protocolState, now: DateTime.now());
+    final currentPhase = protocolState.phaseIndex;
+    final progress = (currentDay / 99).clamp(0.0, 1.0);
+
     final nodes = knowledge.allNodes
         .where((e) => e.examId.toLowerCase() == selectedExamId.toLowerCase())
         .toList();
@@ -84,12 +90,6 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     final currentCycleDay = currentDay;
     final phase = currentPhase;
     final remainingHours = CrucibleClockEngine.getHoursRemaining();
-    final plan =
-        CrucibleMasterEngine.generatePlan(nodes: nodes, states: states);
-
-    final missions = plan.isEmpty
-        ? ['No Active Mission']
-        : plan.take(3).map((e) => e['topicName'].toString()).toList();
 
     final coverage = CoverageEngine.calculate(
       examId: selectedExamId,
@@ -100,6 +100,15 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     );
 
     final hasCrucibleEvidence = nodes.isNotEmpty && coverage.totalNodes > 0;
+
+    final plan =
+        CrucibleMasterEngine.generatePlan(nodes: nodes, states: states);
+
+    final missions = hasCrucibleEvidence
+        ? (plan.isEmpty
+            ? ['Awaiting tactical generation...']
+            : plan.take(3).map((e) => e['topicName'].toString()).toList())
+        : ['EVIDENCE PENDING'];
     final missionComplete =
         hasCrucibleEvidence ? coverage.coveragePercent : 0.0;
     final pending = hasCrucibleEvidence ? 1.0 - coverage.coveragePercent : 0.0;
@@ -114,9 +123,9 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     );
 
     final macroTestActive =
-        CrucibleClockEngine.isMacroTestWindow(enrollmentTime: enrollmentDate);
+        CrucibleClockEngine.isMacroTestWindow(enrollmentTime: protocolState.protocolStartTime);
     final rebuildMode =
-        CrucibleClockEngine.isRebuildPhase(enrollmentTime: enrollmentDate);
+        CrucibleClockEngine.isRebuildPhase(enrollmentTime: protocolState.protocolStartTime);
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -165,6 +174,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       ),
                       const SizedBox(height: 24),
                       MissionBlueprintCard(
+                        hasEvidence: hasCrucibleEvidence,
                         missions: plan.map((e) {
                           final nodeId = e['topicId'].toString();
                           final node = knowledge.getNode(nodeId);
@@ -215,21 +225,33 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                         roadmap: [
                           {
                             'day': 'DAY $currentDay',
-                            'firstTask':
-                                missions.isNotEmpty ? missions[0] : 'Rest',
-                            'secondTask': missions.length > 1
-                                ? missions[1]
-                                : 'MCQ Practice',
-                            'thirdTask': 'Revision Cycle',
+                            'firstTask': hasCrucibleEvidence &&
+                                    missions.isNotEmpty &&
+                                    missions[0] !=
+                                        'Awaiting tactical generation...'
+                                ? missions[0]
+                                : 'EVIDENCE PENDING',
+                            'secondTask':
+                                hasCrucibleEvidence && missions.length > 1
+                                    ? missions[1]
+                                    : 'EVIDENCE PENDING',
+                            'thirdTask': hasCrucibleEvidence
+                                ? 'Revision Cycle'
+                                : 'EVIDENCE PENDING',
                             'locked': false,
                           },
                           {
                             'day': 'DAY ${currentDay + 1}',
-                            'firstTask': missions.length > 2
-                                ? missions[2]
-                                : 'Next Subject',
-                            'secondTask': 'Subject Drill',
-                            'thirdTask': 'Daily Battle',
+                            'firstTask':
+                                hasCrucibleEvidence && missions.length > 2
+                                    ? missions[2]
+                                    : 'EVIDENCE PENDING',
+                            'secondTask': hasCrucibleEvidence
+                                ? 'Subject Drill'
+                                : 'EVIDENCE PENDING',
+                            'thirdTask': hasCrucibleEvidence
+                                ? 'Daily Battle'
+                                : 'EVIDENCE PENDING',
                             'locked': false,
                           },
                           {

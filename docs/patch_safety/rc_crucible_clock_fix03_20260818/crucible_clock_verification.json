@@ -1,0 +1,16 @@
+{
+  "protocol_start_field": "protocolStartTime",
+  "protocol_start_storage_path": "mission_realms/{missionId}/protocolStartTime",
+  "protocol_start_timezone_contract": "UTC (normalized to 10:00 AM dynamic local time bounds via getNormalizedStart)",
+  "crucible_screen_calculates_protocol_day": false,
+  "day_source_after_fix": "CrucibleClockEngine.getProtocolDay(state: protocolState, now: DateTime.now())",
+  "remaining_time_source_after_fix": "CrucibleClockEngine.getHoursRemaining()",
+  "calculated_protocol_day": 17,
+  "calculated_active_window": "48 hours (sliding window)",
+  "calculated_remaining_duration": 5,
+  "visible_protocol_day": 17,
+  "visible_remaining_time": 5,
+  "pause_shift_applied": false,
+  "countdown_t0": "DateTime.now()",
+  "countdown_t1": "cycleEnd"
+}
