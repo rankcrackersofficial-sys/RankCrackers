@@ -1,0 +1,11 @@
+{
+  "verdict": "PERS_AAF_02_R1_DENOMINATOR_NORMALIZED_TO_12_GATES",
+  "personalizationTotalGates": 12,
+  "personalizationPass": 4,
+  "personalizationCodeTestPass": 4,
+  "personalizationPartialOpen": 1,
+  "personalizationOpen": 2,
+  "personalizationBlockedPendingAaf008b": 1,
+  "unknownPersonalizationResidual": 0,
+  "personalizationCompletionPercent": "NORMALIZATION_PENDING"
+}
