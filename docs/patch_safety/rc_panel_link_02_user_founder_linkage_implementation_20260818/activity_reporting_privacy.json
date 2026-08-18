@@ -1,0 +1,12 @@
+﻿{
+    "founder_allowed":  [
+                            "aggregate health",
+                            "pipeline status",
+                            "incident/action needed"
+                        ],
+    "founder_forbidden":  [
+                              "direct mastery mutation",
+                              "private psychological labels",
+                              "raw student evidence without authorization"
+                          ]
+}

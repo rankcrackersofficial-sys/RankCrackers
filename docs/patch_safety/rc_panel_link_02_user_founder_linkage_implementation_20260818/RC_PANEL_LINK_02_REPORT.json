@@ -1,0 +1,17 @@
+﻿{
+    "verdict":  "RC_PANEL_LINK_02_NOT_ACCEPTED",
+    "head":  "c575ea30feb17082badf94376c8c0739cfcc32ee",
+    "reason":  "Full User Panel and Founder Web linkage implementation is still pending; audit found P0 missing controls and P1 partial links.",
+    "user_surfaces":  13,
+    "founder_surfaces":  10,
+    "p0_missing_founder_controls_remaining":  4,
+    "p1_partial_links_remaining":  7,
+    "confirmed_founder_waste_options":  0,
+    "unknown_linking_residual":  0,
+    "unowned_linking_fixes":  0,
+    "production_source_modified":  "NO",
+    "firebase_write":  "NO",
+    "queue_write":  "NO",
+    "publication":  "NO",
+    "final_line":  "RC_PANEL_LINK_02_BLOCKED_PENDING_PRODUCTION_LINKAGE_FIXES_AND_RUNTIME_VALIDATION"
+}

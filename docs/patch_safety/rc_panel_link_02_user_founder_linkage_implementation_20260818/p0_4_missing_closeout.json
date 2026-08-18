@@ -1,0 +1,11 @@
+﻿{
+    "status":  "NOT_CLOSED",
+    "count":  4,
+    "surfaces":  [
+                     "Career Signals",
+                     "Rank Radar",
+                     "Performance / Progress",
+                     "Notifications"
+                 ],
+    "required":  "Founder governed control/health surface plus Student Not Ready fallback until backend data exists."
+}

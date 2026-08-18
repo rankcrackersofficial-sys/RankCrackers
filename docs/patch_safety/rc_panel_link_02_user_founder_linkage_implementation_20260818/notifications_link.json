@@ -1,0 +1,7 @@
+﻿{
+    "surface":  "Notifications",
+    "implementation_status":  "WEAK_NOT_CLOSED",
+    "founder_control":  "Required: governed notification publisher/control",
+    "student_state":  "No static notifications; empty/Not Ready until real notifications exist",
+    "fake_data_allowed":  false
+}

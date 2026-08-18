@@ -1,0 +1,12 @@
+﻿{
+    "allowed":  [
+                    "open governed review",
+                    "trigger authorized recovery",
+                    "view health/status"
+                ],
+    "forbidden":  [
+                      "edit student score",
+                      "edit mastery",
+                      "force publish unverified data"
+                  ]
+}

@@ -1,0 +1,6 @@
+﻿{
+    "tests_run":  "SOURCE_AUDIT_ONLY",
+    "web_build":  "NOT_RUN",
+    "app_validation":  "NOT_RUN",
+    "reason":  "No production implementation performed; RC_PANEL_LINK_02_NOT_ACCEPTED."
+}

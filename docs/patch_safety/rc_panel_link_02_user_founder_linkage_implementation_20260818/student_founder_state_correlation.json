@@ -1,0 +1,8 @@
+﻿{
+    "status":  "CONTRACT_READY_IMPLEMENTATION_PENDING",
+    "rules":  [
+                  "Founder may see HEALTHY/NOT_READY/BLOCKED/RECOVERY/VERSION_ISSUE",
+                  "Student sees real data/updating/not-ready, not internal details",
+                  "States must not contradict"
+              ]
+}

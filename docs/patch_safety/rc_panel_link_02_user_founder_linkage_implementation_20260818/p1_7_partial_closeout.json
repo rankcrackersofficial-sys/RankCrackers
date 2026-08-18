@@ -1,0 +1,16 @@
+﻿{
+    "status":  "NOT_CLOSED",
+    "reported_count_from_prior_audit":  7,
+    "exact_surfaces_from_matrix":  [
+                                       "Dashboard",
+                                       "Crucible",
+                                       "DigiBook",
+                                       "Syllabus / Knowledge Map",
+                                       "PYQ Vault",
+                                       "Test Arena",
+                                       "Revision Desk",
+                                       "Sentinel Intel / Opportunities",
+                                       "Planner / Schedule"
+                                   ],
+    "note":  "Strict audit found more than five named partial/needs-proof rows; implementation must use evidence matrix, not guessed names."
+}

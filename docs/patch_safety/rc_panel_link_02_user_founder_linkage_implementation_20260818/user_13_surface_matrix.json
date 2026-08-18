@@ -1,0 +1,109 @@
+﻿{
+    "total":  13,
+    "surfaces":  [
+                     {
+                         "id":  "USER-001",
+                         "surface":  "Dashboard",
+                         "route":  "/dashboard",
+                         "founder":  "PARTIAL",
+                         "status":  "PARTIAL_LINK",
+                         "issue":  "Dashboard aggregates many domains but no single Founder dashboard-health/control surface maps to all states."
+                     },
+                     {
+                         "id":  "USER-002",
+                         "surface":  "Crucible",
+                         "route":  "/crucible",
+                         "founder":  "Factory Hub / Crucible Planner",
+                         "status":  "LINKED_NEEDS_RUNTIME_PROOF",
+                         "issue":  "Planner exists; Student readiness/health proof pending."
+                     },
+                     {
+                         "id":  "USER-003",
+                         "surface":  "DigiBook",
+                         "route":  "/digibook",
+                         "founder":  "Factory Hub / DigiBook Builder + Study Master",
+                         "status":  "LINKED_NEEDS_RUNTIME_PROOF",
+                         "issue":  "Builder exists; Student reader/cache/Not Ready proof pending."
+                     },
+                     {
+                         "id":  "USER-004",
+                         "surface":  "Syllabus / Knowledge Map",
+                         "route":  "/syllabus",
+                         "founder":  "Verification Center / Syllabus Atom Review",
+                         "status":  "LINKED_NEEDS_RUNTIME_PROOF",
+                         "issue":  "Review exists; Student version/readiness proof pending."
+                     },
+                     {
+                         "id":  "USER-005",
+                         "surface":  "Career Signals",
+                         "route":  "/recruitment/opportunities",
+                         "founder":  "MISSING",
+                         "status":  "UNLINKED_USER_OPTION",
+                         "issue":  "No explicit Founder Career Signals/eligibility signal control found."
+                     },
+                     {
+                         "id":  "USER-006",
+                         "surface":  "PYQ Vault",
+                         "route":  "/pyq-vault",
+                         "founder":  "Verification Center / PYQ Review",
+                         "status":  "PARTIAL_LINK_WITH_FAKE_COUNT_RISK",
+                         "issue":  "Student card hardcodes question count; runtime projection link not proven."
+                     },
+                     {
+                         "id":  "USER-007",
+                         "surface":  "Test Arena",
+                         "route":  "/test-arena",
+                         "founder":  "PARTIAL via Crucible/Factory",
+                         "status":  "PARTIAL_LINK",
+                         "issue":  "No exact Founder published test/attempt analytics control found."
+                     },
+                     {
+                         "id":  "USER-008",
+                         "surface":  "Revision Desk",
+                         "route":  "/revision-desk",
+                         "founder":  "PARTIAL via PERS Revision authority",
+                         "status":  "PARTIAL_LINK",
+                         "issue":  "No clear Founder Web revision health/intervention surface found."
+                     },
+                     {
+                         "id":  "USER-009",
+                         "surface":  "Rank Radar",
+                         "route":  "/progress-tracker",
+                         "founder":  "MISSING",
+                         "status":  "UNLINKED_USER_OPTION",
+                         "issue":  "No governed live competition/rank source and Founder control mapped."
+                     },
+                     {
+                         "id":  "USER-010",
+                         "surface":  "Sentinel Intel / Opportunities",
+                         "route":  "/sentinel-center",
+                         "founder":  "PARTIAL via Intelligence Room",
+                         "status":  "PARTIAL_LINK",
+                         "issue":  "Projection/privacy/health link needs proof."
+                     },
+                     {
+                         "id":  "USER-011",
+                         "surface":  "Notifications",
+                         "route":  "/notification-center",
+                         "founder":  "WEAK_OR_MISSING",
+                         "status":  "UNLINKED_OR_WEAK_LINK",
+                         "issue":  "Student notifications static; governed Founder publisher/control not mapped."
+                     },
+                     {
+                         "id":  "USER-012",
+                         "surface":  "Performance / Progress",
+                         "route":  "/progress-tracker/performance",
+                         "founder":  "MISSING",
+                         "status":  "UNLINKED_USER_OPTION",
+                         "issue":  "Student performance metrics fake/static; Founder control/health missing."
+                     },
+                     {
+                         "id":  "USER-013",
+                         "surface":  "Planner / Schedule",
+                         "route":  "planner screens",
+                         "founder":  "PARTIAL",
+                         "status":  "PARTIAL_LINK",
+                         "issue":  "Static tasks; Founder schedule/discipline controls not clearly linked."
+                     }
+                 ]
+}

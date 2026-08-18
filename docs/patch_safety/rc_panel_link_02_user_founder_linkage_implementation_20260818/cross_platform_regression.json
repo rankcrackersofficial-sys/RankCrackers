@@ -1,0 +1,9 @@
+﻿{
+    "status":  "NOT_RUN",
+    "required_after_fix":  [
+                               "User-Founder state correlation",
+                               "zero fake data",
+                               "privacy boundary",
+                               "route/control actions"
+                           ]
+}
