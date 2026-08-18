@@ -1,0 +1,13 @@
+{
+  "focusedOwnedAnalyze": {
+    "command": "dart analyze <12 owned PERS-COACH-01 source/test files>",
+    "result": "PASS",
+    "issues": 0
+  },
+  "requiredPersonalizationAnalyze": {
+    "command": "dart analyze lib/features/personalization test/features/personalization",
+    "result": "FAIL",
+    "blockingSource": "pre-existing PERS-REV-01 revision closed-loop compile errors",
+    "ownedCoachingIssues": 0
+  }
+}
