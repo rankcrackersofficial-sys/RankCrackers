@@ -1,0 +1,31 @@
+{
+  "commandCode": "PERS-COACH-01-IMPLEMENT-COACHING-SUPPORT-CONTRACTS",
+  "scope": "IMPLEMENTATION_ONLY",
+  "authorityFolder": "docs/patch_safety/pers_aaf_03_revision_coaching_authority_20260818",
+  "implementedContracts": [
+    "mentorship_intervention",
+    "doubt_resolution",
+    "personalized_practice",
+    "analytics_tracking",
+    "schedule_discipline",
+    "engagement_support"
+  ],
+  "ownedProductionPaths": [
+    "lib/features/personalization/domain/models/student_coaching_support.dart",
+    "lib/features/personalization/domain/engines/student_coaching_support_engine.dart",
+    "lib/features/personalization/domain/models/personalized_practice_route.dart",
+    "lib/features/personalization/domain/engines/personalized_practice_route_engine.dart",
+    "lib/features/personalization/domain/models/student_personalization_analytics.dart",
+    "lib/features/personalization/domain/engines/student_personalization_analytics_engine.dart",
+    "lib/features/personalization/domain/models/student_schedule_support.dart",
+    "lib/features/personalization/domain/engines/student_schedule_support_engine.dart"
+  ],
+  "ownedTestPaths": [
+    "test/features/personalization/recovery/student_coaching_support_engine_test.dart",
+    "test/features/personalization/recovery/personalized_practice_route_engine_test.dart",
+    "test/features/personalization/recovery/student_personalization_analytics_engine_test.dart",
+    "test/features/personalization/recovery/student_schedule_support_engine_test.dart"
+  ],
+  "revisionClosedLoopFilesTouched": false,
+  "aafBackendFunctionsFirebaseRulesAndroidWebProviderTouched": false
+}

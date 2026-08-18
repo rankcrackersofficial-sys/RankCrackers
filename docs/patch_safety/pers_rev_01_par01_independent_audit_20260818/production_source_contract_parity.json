@@ -1,0 +1,12 @@
+{
+  "contract_file": "docs/patch_safety/pers_aaf_03_revision_and_coaching_contracts_20260818/contracts/revision_closed_loop.dart",
+  "production_file": "lib/features/personalization/domain/engines/student_revision_closed_loop_engine.dart",
+  "parity_audit": {
+    "filterAndDeduplicate": "MATCH_ENHANCED",
+    "computePriority": "MATCH_ENHANCED",
+    "isDue": "MATCH",
+    "shouldInvalidate": "MATCH",
+    "processCompletionEvidence": "MATCH"
+  },
+  "verdict": "PARITY_PASSED_WITH_ENHANCEMENTS"
+}

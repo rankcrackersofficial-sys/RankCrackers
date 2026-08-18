@@ -1,0 +1,6 @@
+{
+  "attack_vector": "Passive learning block view (fake completion)",
+  "defense_mechanism": "_isCompletionEvidence requires revisionCompleted or mentorVerified action",
+  "test_evidence": "test/features/personalization/recovery/student_revision_closed_loop_engine_test.dart -> 'passive view cannot complete revision'",
+  "verdict": "ATTACK_DEFLECTED"
+}

@@ -1,0 +1,9 @@
+{
+  "attack_vector": "Stale canonical knowledge version or mismatched projection ID",
+  "defense_mechanism": "evaluateRouteEligibility checks canonicalKnowledgeVersion and publicProjectionId against AAF Authority",
+  "test_evidence": [
+    "test/features/personalization/recovery/student_revision_closed_loop_engine_test.dart -> 'stale canonical version blocks revision route before scheduling'",
+    "test/features/personalization/pers_rev_01_closed_loop_test.dart -> '16. Invalidation: version mismatch - PASS'"
+  ],
+  "verdict": "ATTACK_DEFLECTED"
+}

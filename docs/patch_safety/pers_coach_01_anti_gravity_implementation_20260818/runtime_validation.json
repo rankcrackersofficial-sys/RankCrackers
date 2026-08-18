@@ -1,0 +1,13 @@
+{
+  "runtimeExecutionPerformed": false,
+  "domainRuntimeValidation": {
+    "mentorshipRequiresGovernedTrigger": true,
+    "doubtResolutionRequiresGroundedSupportRoute": true,
+    "practiceSelectsExistingVerifiedItemsOnly": true,
+    "analyticsUseGovernedStudentStateOnly": true,
+    "scheduleSupportRequiresUtcTime": true,
+    "engagementSupportDoesNotInferMentalHealthOrPersonality": true,
+    "withdrawnSupersededUnverifiedProjectionBlocksRoutes": true
+  },
+  "externalRuntimeOwner": "ANTI_GRAVITY"
+}
