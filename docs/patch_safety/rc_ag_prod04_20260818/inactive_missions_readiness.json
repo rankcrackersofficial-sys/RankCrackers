@@ -1,0 +1,17 @@
+{
+  "JEE_ADV_2026": {
+    "status": "AUTHORIZED_NOT_ACTIVE",
+    "readiness": "READY_TO_ASSEMBLE",
+    "reusable_amtns_estimated": 2800
+  },
+  "NEET_2026": {
+    "status": "DRAFT",
+    "readiness": "SOURCE_WORK_REQUIRED",
+    "reusable_amtns_estimated": 1000
+  },
+  "BITSAT_2026": {
+    "status": "PAUSED",
+    "readiness": "PAUSED",
+    "reusable_amtns_estimated": 1800
+  }
+}
