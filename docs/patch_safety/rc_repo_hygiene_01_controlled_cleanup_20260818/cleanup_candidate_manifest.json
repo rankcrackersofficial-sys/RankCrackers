@@ -9460,6 +9460,36 @@
     "reason": "patch safety evidence must not be production authority"
   },
   {
+    "file": "docs/patch_safety/rc_evidence_integrity_02_r1_20260818/RC_EVIDENCE_INTEGRITY_02_R1_REPORT.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_evidence_integrity_02_r1_20260818/RC_EVIDENCE_INTEGRITY_02_R1_REPORT.md",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_evidence_integrity_02_r1_20260818/git_lineage_contradiction.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_evidence_integrity_02_r1_20260818/governance_counters.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_evidence_integrity_02_r1_20260818/test_denominators.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_evidence_integrity_02_r1_20260818/unreconciled_path_audit.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
     "file": "docs/patch_safety/rc_final_convergence_pre01_20260818/ANTI_GRAVITY_PERS_RUNTIME_01B_COMMAND.txt",
     "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
     "reason": "patch safety evidence must not be production authority"
@@ -9501,6 +9531,26 @@
   },
   {
     "file": "docs/patch_safety/rc_final_convergence_pre01_20260818/shared_pipeline_exact_patch_manifest.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_lineage_repair_01_20260818/RC_LINEAGE_REPAIR_01_REPORT.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_lineage_repair_01_20260818/RC_LINEAGE_REPAIR_01_REPORT.md",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_lineage_repair_01_20260818/governance_counters.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_lineage_repair_01_20260818/test_denominators.json",
     "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
     "reason": "patch safety evidence must not be production authority"
   },
@@ -10256,6 +10306,86 @@
   },
   {
     "file": "docs/patch_safety/rc_release_01_par01_independent_20260818/whole_student_zero_fake_current_head.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/RC_REPO_HYGIENE_01_REPORT.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/RC_REPO_HYGIENE_01_REPORT.md",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/backend_trigger_inventory.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/cleanup_candidate_manifest.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/cleanup_execution_manifest.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/current_authority_index_validation.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/dead_route_inventory.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/engine_authority_inventory.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/firebase_project_inventory.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/fixture_demo_seed_inventory.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/governance_counters.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/mission_authority_inventory.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/post_cleanup_runtime.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/post_cleanup_test_denominators.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/superseded_report_manifest.json",
+    "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
+    "reason": "patch safety evidence must not be production authority"
+  },
+  {
+    "file": "docs/patch_safety/rc_repo_hygiene_01_controlled_cleanup_20260818/synthetic_report_forensics.json",
     "action": "KEEP_AS_HISTORICAL_EVIDENCE_ZONE",
     "reason": "patch safety evidence must not be production authority"
   },

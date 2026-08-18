@@ -100,10 +100,12 @@
     "tools/academic_factory/run_prod02_verification.js",
     "tools/academic_factory/run_prod03_verification.js",
     "tools/academic_factory/run_prod04_verification.js",
+    "tools/academic_factory/run_rc_evidence_integrity_02_r1_verification.js",
     "tools/academic_factory/run_rc_live_mission_academic_01_verification.js",
     "tools/academic_factory/run_rc_mission_link_01_verification.js",
     "tools/academic_factory/run_rc_release_01_par01_independent_audit.js",
     "tools/academic_factory/run_rc_release_01_verification.js",
+    "tools/repo_hygiene/run_rc_repo_hygiene_01.js",
     "tools/student_pillars_r2_fasttrack/run_crucible_macro1_pro_review.js",
     "tools/student_pillars_r2_fasttrack/run_wave2_parallel_factory.js",
     "tools/student_pillars_r2_fasttrack/validate_provenance_regression_test.js"

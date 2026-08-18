@@ -1,0 +1,641 @@
+{
+  "deployableRuntimeNonCurrentProjectRefs": [],
+  "allProjectRefsClassified": [
+    {
+      "file": "functions/.env.example",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/.env.example",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/apply_fup2c_verify5_live_sandbox_write.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/apply_fup2c_verify5_sandbox_rollback_delete.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/apply_notification_page_count_queue.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/apply_official_document_metadata_repair.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/apply_rc_x4e_p15_authorized_pagewise_native.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/apply_repaired_docs_page_count_queue.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/apply_student_catalog_readiness.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/apply_syllabus_atom_pro_queue_write.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/apply_universal_page_count_queue.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/apply_universal_pagewise_extraction_queue.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_atomic_linkage_integrity.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_final_page_count_results.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_first_pagewise_extraction_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_first_successful_pagewise_extraction.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_fup2c_rx2_review_atoms.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_fup2c_verify5_final_closeout.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_fup2c_verify5_live_authorization_state.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_fup2c_verify5_live_sandbox_write_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_fup2c_verify5_sandbox_closeout.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_fup2c_verify5_sandbox_rollback_delete_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_fup2c_verify5_sandbox_rollback_token.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_fup2c_verify5_second_gate_token_preflight.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_notification_source_readiness.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_p15_candidates.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_page_count_queue_state.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_page_count_worker_capability.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_candidate_selector_policy.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_current_baseline_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_extraction_apply_capability.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_hardened_limit3_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_ir4_detailed_provenance.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_limit3_apply_readiness.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_limit3_result_and_candidate_policy.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_p11_reconciliation.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_post_ir3_rollforward_acceptance.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_post_p12_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_post_p13_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_post_p14_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_post_p15_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_pre_p11_undocumented_incident.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_queue_state.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_r11_undocumented_incident.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_second_hardened_limit3_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_third_hardened_limit3_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_two_batch_continuity.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_undocumented_apply_incident.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pagewise_worker_runtime_safety.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_pyq_sample_atomic_cell_mapping_architecture.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_qcell3_canonical_key_controlled_write_preflight.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_question_bank_atomic_mapping_reconciliation.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_rankcrackers_path_and_rules.js",
+      "project": "RankCrackers-55"
+    },
+    {
+      "file": "functions/audit_rc_x4e_p15_apply3_rollback_readiness.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_rc_x4e_p15_apply3_rollback_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_rc_x4e_p15_apply3_rollback_token.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_rc_x4e_p15_auth_apply3_simulated_records.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_rc_x4e_p15_authorized_apply_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_rc_x4e_p15_second_gate_token.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_rc_x4e_p15_token2_candidate_eligibility.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_rollback_2.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_s1_rpsc_syllabus_extraction_pipeline.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_student_catalog_readiness.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_canonical_key_hold_resolution.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_canonical_key_reconciliation.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_canonical_key_write_preflight.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_expansion_blueprint.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_expansion_prewrite_authorization.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_expansion_rebalance_dry_run.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_expansion_write_dry_run.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_granularity_crucible_readiness.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_pro_processor_contract_dry_run.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_pro_queue_manifest_dry_run.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_pro_queue_write_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_syllabus_atom_pro_review_readiness.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_universal_extraction_completeness.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_universal_official_document_page_completeness.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_worker_training_autonomous_readiness.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_worker_training_current_pagewise_baseline.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_worker_training_post_p14_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_worker_training_post_wt4_result.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_worker_training_pro_verification_dry_run.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/audit_worker_training_safe_auto_dry_run.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/backfill_student_mission_catalog.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/callable/handle_mission_action.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/callable/handle_sentinel_action.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/cleanup_test_mission_catalog_bridge.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/exec_rollback_2.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/exec_rollback_2.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/execute_rc_x4e_p15_apply3_authorized_rollback.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/execute_rc_x4e_p15_apply3_authorized_rollback.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/find_3_global_p15_tasks.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/find_3_jee_p15_tasks.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/find_next_p15_tasks.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/find_p15_ba8b_tasks.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/generate_fup2c_verify5_sandbox_rollback_token.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/generate_fup2c_verify5_second_gate_token.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/generate_fup2c_verify5_second_gate_token.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/generate_ir4_baselines_v2.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/generate_rc_x4e_p15_apply3_rollback_token.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/generate_rc_x4e_p15_second_gate_token.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/get_all_latest_timestamps.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/grant_admin.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/investigate_incident_d.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/lib/test/aafLifecycle.test.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/lib/test/aafQueue.test.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/plan_notification_pagewise_batch_queue.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/plan_official_document_metadata_repair.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/plan_universal_pagewise_extraction_queue.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/process_page_count_detection_tasks.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/process_page_count_detection_tasks.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/process_pagewise_extraction_batches.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/refinery_benchmark.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/revoke_old_founder.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/rollback_syllabus_atom_pro_queue_rx6g.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/src/test/aafLifecycle.test.ts",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/src/test/aafQueue.test.ts",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/test_c3_evidence_integrity.js",
+      "project": "rankcrackers-c3-integrity-v3"
+    },
+    {
+      "file": "functions/test_c4_rebuild_integrity.js",
+      "project": "rankcrackers-c4-rebuild-policy-r1"
+    },
+    {
+      "file": "functions/test_firestore_rules.js",
+      "project": "rankcrackers-test-c2-fix5"
+    },
+    {
+      "file": "functions/tmp_nebula_vs0_founder_preview_bundle.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/tmp_one_time_read_only_production_mission_export.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/tmp_seed_r4e_r3_student_mission_catalog_emulator.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/trigger_test_ingestion.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/trigger_test_ingestion.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/trigger_test_ingestion.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/verification/write_authorization/verify5_p15_auth_candidate.json",
+      "project": "RankCrackers-55"
+    },
+    {
+      "file": "functions/verification/write_authorization/verify5_p15_auth_candidate.json",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "functions/verify_claims.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "lib/features/admin/presentation/widgets/review_queue/outcome_verification_center.dart",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "lib/firebase_options.dart",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "lib/firebase_options.dart",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "lib/firebase_options.dart",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "lib/firebase_options.dart",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "lib/firebase_options.dart",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "test/features/mission_link/rc_mission_link_01_test.dart",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "test/features/mission_link/rc_mission_link_01_test.dart",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "test/features/mission_link/rc_mission_link_01_test.dart",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "test/features/mission_link/rc_mission_link_01_test.dart",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "test/features/repo_hygiene/rc_repo_hygiene_01_test.dart",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "test/helpers/firebase_test_setup.dart",
+      "project": "rankcrackers-test"
+    },
+    {
+      "file": "test/helpers/firebase_test_setup.dart",
+      "project": "rankcrackers-test"
+    },
+    {
+      "file": "test/helpers/firebase_test_setup.dart",
+      "project": "rankcrackers-test"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_evidence_integrity_02_verification.js",
+      "project": "rankcrackers-prod-founder"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_evidence_integrity_02_verification.js",
+      "project": "rankcrackers-prod-student"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_evidence_integrity_02_verification.js",
+      "project": "rankcrackers-prod-founder"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_mission_link_01_verification.js",
+      "project": "rankcrackers-prod-founder"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_mission_link_01_verification.js",
+      "project": "rankcrackers-prod-student"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_mission_link_01_verification.js",
+      "project": "rankcrackers-prod-founder"
+    },
+    {
+      "file": "tools/academic_factory/run_rc_mission_link_01_verification.js",
+      "project": "rankcrackers-prod-student"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_01.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_01.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_01.js",
+      "project": "rankcrackers-test-c2-fix5"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_01.js",
+      "project": "rankcrackers-c4-rebuild-policy-r1"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_01.js",
+      "project": "rankcrackers-c3-integrity-v3"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_01.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_01.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_01.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_01.js",
+      "project": "rankcrackers-55"
+    }
+  ]
+}

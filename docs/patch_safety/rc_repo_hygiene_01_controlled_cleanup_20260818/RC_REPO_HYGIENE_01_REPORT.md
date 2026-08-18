@@ -10,11 +10,11 @@ This run created the current authority index and exact cleanup candidate manifes
 - Student projection: `student_mission_catalog/{sameMissionId}`
 
 ## Counters
-- Total files scanned: 3724
+- Total files scanned: 3756
 - Mission authority count: 1
 - Synthetic/one-off generator count: 131
 - Legacy mission refs in production source: 1
-- Production-reachable fixtures: 2
+- Production-reachable fixtures: 1
 
 ## Residual
 Full cleanup is not accepted yet because archive/delete actions need a separate exact-path cleanup wave after owner review, and runtime smoke/live recount were not performed here.

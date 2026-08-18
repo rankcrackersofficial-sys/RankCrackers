@@ -1,12 +1,10 @@
 {
   "productionReachableFixtureRefs": [
-    "lib/core/backend/recruitment_repository.dart",
-    "lib/features/preview/presentation/screens/nebula_founder_preview_screen.dart"
+    "lib/core/backend/recruitment_repository.dart"
   ],
   "allFixtureRefsInSource": [
     "functions/tmp_nebula_vs0_founder_preview_bundle.js",
     "lib/core/backend/recruitment_repository.dart",
-    "lib/features/preview/presentation/screens/nebula_founder_preview_screen.dart",
     "test/nebula_vs0/nebula_vs0_preview_ui_completeness_test.dart",
     "test/nebula_vs0/nebula_vs0_r2_r1a_visual_harness_test.dart",
     "test/nebula_vs0/nebula_vs1_golden_visual_proof_test.dart",

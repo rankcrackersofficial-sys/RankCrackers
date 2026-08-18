@@ -1,0 +1,5 @@
+{
+  "multipleActiveEngineAuthorities": false,
+  "activeMissionAuthority": "mission_realms/{missionId}",
+  "note": "Domain engines are indexed as domain authorities, not competing mission authorities."
+}

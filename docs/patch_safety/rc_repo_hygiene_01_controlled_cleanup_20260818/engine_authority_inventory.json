@@ -1,5 +1,5 @@
 {
-  "engineAuthorityFileCount": 191,
+  "engineAuthorityFileCount": 192,
   "engineAuthorityRefs": [
     "functions/audit_page_count_queue_state.js",
     "functions/create_worker.js",
@@ -191,7 +191,8 @@
     "test/features/academic_factory/domain/academic_factory_domain_closed_loop_test.dart",
     "test/features/academic_factory/domain/academic_factory_initial_activation_engine_test.dart",
     "test/features/academic_factory/domain/academic_factory_job_lifecycle_engine_test.dart",
-    "tools/academic_factory/crucible_worker.js"
+    "tools/academic_factory/crucible_worker.js",
+    "tools/repo_hygiene/run_rc_repo_hygiene_01.js"
   ],
   "multipleActiveEngineAuthorities": "REQUIRES_DOMAIN_BY_DOMAIN_OWNER_REVIEW"
 }

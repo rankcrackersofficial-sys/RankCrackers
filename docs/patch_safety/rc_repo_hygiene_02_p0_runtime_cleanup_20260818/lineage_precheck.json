@@ -1,0 +1,11 @@
+{
+  "headBefore": "b784a02cace72567ed3c22c04c63d5f174bfb4fe",
+  "missionRepairChecks": {
+    "recruitmentModelLineage": true,
+    "firestoreLineageGuard": true,
+    "jee2027NoLegacyAlias": true,
+    "missionMirrorTestPresent": true,
+    "flutterMissionLinkTestPresent": true
+  },
+  "missionRepairSemanticsPresentOnHead": true
+}

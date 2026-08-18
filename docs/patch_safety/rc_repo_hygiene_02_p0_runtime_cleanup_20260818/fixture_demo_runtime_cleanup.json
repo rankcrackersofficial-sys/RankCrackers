@@ -1,0 +1,6 @@
+{
+  "previewAssetAutoLoadRemoved": true,
+  "emulatorFixtureGated": true,
+  "previewScreen": "lib/features/preview/presentation/screens/nebula_founder_preview_screen.dart",
+  "emulatorFixtureFile": "lib/core/backend/recruitment_repository.dart"
+}

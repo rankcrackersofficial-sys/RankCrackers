@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-18T13:25:00.619Z",
-  "headBefore": "47679d62f09813aee906d9f2262003e6639a5a2f",
+  "generatedAt": "2026-08-18T13:45:33.693Z",
+  "headBefore": "b784a02cace72567ed3c22c04c63d5f174bfb4fe",
   "currentAuthority": {
     "firebaseProject": "rankcrackers-55",
     "missionAuthorityPath": "mission_realms/{missionId}",
@@ -86,5 +86,21 @@
     "rootReports": "Superseded root reports; archive candidates.",
     "functionOneOffScripts": "One-off operational scripts; not deployable authority.",
     "previewAssets": "Founder/internal preview/test assets only; not Student production data."
+  },
+  "repoHygiene02": {
+    "generatedAt": "2026-08-18T13:46:36.212Z",
+    "p0RuntimeReachabilityRules": {
+      "legacyMissionAuthorityRuntimeReachable": "Only deployable runtime/callable source counts. Tests and historical tools are non-authority.",
+      "productionReachableFixture": "Preview assets are forbidden in runtime. Emulator fixture is allowed only behind RC_USE_FIREBASE_EMULATOR.",
+      "productionReachableDemoData": "Text mentions in admin/test/non-authority contexts do not create production authority.",
+      "unexplainedFirebaseProjectReference": "Only deployable runtime source references count as P0. Test/historical tools are classified separately."
+    },
+    "syntheticGeneratorTaxonomy": {
+      "finalVerdictSyntheticGenerators": 5,
+      "reportFormatters": 3,
+      "staticAuditWriters": 106,
+      "testOnlyGenerators": 0,
+      "legacySimulations": 22
+    }
   }
 }
