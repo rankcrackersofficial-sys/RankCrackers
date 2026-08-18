@@ -1,0 +1,14 @@
+{
+  "batch_01": {
+    "total_blocks": 1760,
+    "forced_template_blocks": 320,
+    "genuine_pedagogical_blocks": 1440,
+    "boilerplate_percentage": 18.18
+  },
+  "batch_02": {
+    "total_blocks_attempted": 3300,
+    "forced_template_blocks_prevented": 780,
+    "blocks_generated": 2520,
+    "boilerplate_percentage": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "batch": 2,
+  "total_held_items": 20,
+  "held_items": [
+    {
+      "atomId": "JEE_2026_CHEM_U20_CH02_TOP01_005",
+      "reason": "STALE_VERSION_REUSE_BLOCKED",
+      "held_by": "CanonicalReuseGate"
+    },
+    {
+      "atomId": "JEE_2026_CHEM_U20_CH02_TOP03_012",
+      "reason": "UNSUPPORTED_CLAIMS_FOUND",
+      "held_by": "AcademicTruthGate"
+    },
+    {
+      "atomId": "JEE_2026_CHEM_U20_CH02_TOP04_008",
+      "reason": "FORCED_BOILERPLATE_TEMPLATE_DETECTED",
+      "held_by": "EditorialQualityGate"
+    }
+  ]
+}

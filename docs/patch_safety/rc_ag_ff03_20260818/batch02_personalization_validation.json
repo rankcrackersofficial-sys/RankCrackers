@@ -1,0 +1,18 @@
+{
+  "batch": 2,
+  "personalization_safety_pass_atoms": 280,
+  "safety_verdict": "PASS",
+  "prohibited_elements_found": 0,
+  "allowed_features_used": [
+    "mastery",
+    "prerequisite_weakness",
+    "retention_decay",
+    "error_patterns",
+    "practice_outcomes",
+    "pace",
+    "available_study_time",
+    "explicit_student_preferences",
+    "explicit_confidence_input",
+    "revision_need"
+  ]
+}

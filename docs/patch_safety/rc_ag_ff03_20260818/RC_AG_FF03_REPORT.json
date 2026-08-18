@@ -1,0 +1,20 @@
+{
+  "verdict": "RC_AG_FF03_DIGIBOOK_FACTORY_SCALED_WITH_ZERO_UNKNOWN_RESIDUALS_PENDING_ONLY_EXTERNAL_AAF_INDEPENDENT_ACCEPTANCE_FOR_PERS_FINAL_PROMOTION",
+  "baseline_authority_resolution": "fe5575346240e0bdfcf914654d570c4c0939a688",
+  "aaf_008b_final_authority_status": "PENDING_INDEPENDENT_AUDIT",
+  "pers_status": "PENDING_AAF_008B_AUDIT",
+  "batch_01_amtns": 160,
+  "batch_01_blocks": 1760,
+  "batch_01_forced_template_blocks": 320,
+  "batch_01_editorial_pass": "1440/1440",
+  "batch_02_target": 300,
+  "batch_02_eligible": 300,
+  "batch_02_assembled": 280,
+  "batch_02_academic_pass": 280,
+  "batch_02_editorial_pass": 280,
+  "batch_02_held": 20,
+  "next_batch_status": "SCALED_TO_BATCH_03_READY",
+  "unknown_aaf_residual": 0,
+  "unknown_pers_residual": 0,
+  "unknown_digibook_residual": 0
+}
