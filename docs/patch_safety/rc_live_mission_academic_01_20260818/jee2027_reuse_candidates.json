@@ -1,0 +1,11 @@
+{
+  "missionId": "JEE_MAIN_2027",
+  "source_corpora": [
+    {
+      "source_mission_id": "JEE_MAIN_2026",
+      "eligible_amtns": 5000,
+      "reused_amtns": 5000,
+      "reuse_status": "FULLY_REUSED"
+    }
+  ]
+}

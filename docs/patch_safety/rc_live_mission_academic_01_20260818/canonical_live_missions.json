@@ -1,0 +1,22 @@
+{
+  "live_missions": [
+    {
+      "missionId": "RPSC_1ST_GRADE",
+      "displayName": "RPSC 1st Grade Teacher",
+      "category": "Recruitment",
+      "status": "ACTIVE"
+    },
+    {
+      "missionId": "JEE_MAIN_2027",
+      "displayName": "JEE Main 2027",
+      "category": "Engineering",
+      "status": "ACTIVE"
+    },
+    {
+      "missionId": "NEET_UG_2027",
+      "displayName": "NEET UG 2027",
+      "category": "Medical",
+      "status": "ACTIVE"
+    }
+  ]
+}

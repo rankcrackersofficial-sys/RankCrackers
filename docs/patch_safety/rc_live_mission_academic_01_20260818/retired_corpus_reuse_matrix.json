@@ -1,0 +1,19 @@
+{
+  "retired_corpora": [
+    {
+      "retired_mission_id": "JEE_MAIN_2026",
+      "total_amtns": 5000,
+      "reused_count_across_all_current": 5800,
+      "destinations": [
+        "JEE_MAIN_2027",
+        "RPSC_1ST_GRADE"
+      ]
+    },
+    {
+      "retired_mission_id": "CBSE_12_2026",
+      "total_amtns": 3000,
+      "reused_count_across_all_current": 0,
+      "destinations": []
+    }
+  ]
+}

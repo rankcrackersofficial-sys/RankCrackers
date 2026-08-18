@@ -1,0 +1,28 @@
+{
+  "missions": [
+    {
+      "missionId": "RPSC_1ST_GRADE",
+      "subject_count": 2,
+      "total_amtns": 1200,
+      "reusable_amtns": 800,
+      "new_content_required": 400,
+      "academic_status": "READY_TO_ASSEMBLE"
+    },
+    {
+      "missionId": "JEE_MAIN_2027",
+      "subject_count": 3,
+      "total_amtns": 5000,
+      "reusable_amtns": 5000,
+      "new_content_required": 0,
+      "academic_status": "PRODUCTION_READY"
+    },
+    {
+      "missionId": "NEET_UG_2027",
+      "subject_count": 3,
+      "total_amtns": 6000,
+      "reusable_amtns": 0,
+      "new_content_required": 6000,
+      "academic_status": "READY_TO_ASSEMBLE"
+    }
+  ]
+}

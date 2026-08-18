@@ -1,0 +1,16 @@
+{
+  "missionId": "RPSC_1ST_GRADE",
+  "subjects": [
+    {
+      "subjectId": "RPSC_GK_PAPER1",
+      "displayName": "Paper I: General Awareness and General Studies",
+      "syllabus_nodes_count": 45
+    },
+    {
+      "subjectId": "RPSC_PHYSICS_PAPER2",
+      "displayName": "Paper II: Physics",
+      "syllabus_nodes_count": 80
+    }
+  ],
+  "subject_count": 2
+}

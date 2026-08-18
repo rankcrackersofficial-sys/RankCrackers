@@ -1,0 +1,20 @@
+{
+  "rpsc_canonical_mission_id": "RPSC_1ST_GRADE",
+  "rpsc_subject_count": 2,
+  "rpsc_total_amtns": 1200,
+  "rpsc_reusable_amtns": 800,
+  "rpsc_new_content_required": 400,
+  "rpsc_academic_status": "READY_TO_ASSEMBLE",
+  "jee_main_2027_canonical_mission_id": "JEE_MAIN_2027",
+  "jee_main_2027_subject_count": 3,
+  "jee_main_2027_academic_status": "PRODUCTION_READY",
+  "jee_main_2027_reuse_candidates": 5000,
+  "neet_ug_2027_canonical_mission_id": "NEET_UG_2027",
+  "neet_ug_2027_subject_count": 3,
+  "neet_ug_2027_academic_status": "READY_TO_ASSEMBLE",
+  "neet_ug_2027_reuse_candidates": 0,
+  "retired_mission_id_reused_as_current_id": 0,
+  "mission_identity_forks": 0,
+  "unknown_live_mission_academic_residual": 0,
+  "final_verdict": "RC_LIVE_MISSION_ACADEMIC_01_R2_LIVE_FOUNDER_STUDENT_SINGLE_CANONICAL_MISSION_AUTHORITY_FULLY_ACCEPTED"
+}
