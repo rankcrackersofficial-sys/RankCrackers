@@ -1,0 +1,33 @@
+{
+  "total_authorized_missions": 1,
+  "total_authorized_subjects": 3,
+  "total_authorized_amtns": 5000,
+  "total_remaining_amtns": 0,
+  "status": "CURRICULUM_COMPLETED",
+  "subjects": {
+    "Physics": {
+      "target": 1500,
+      "assembled": 1500,
+      "academic_pass": 1500,
+      "editorial_pass": 1500,
+      "personalization_safe": 1500,
+      "status": "COMPLETE"
+    },
+    "Chemistry": {
+      "target": 2000,
+      "assembled": 2000,
+      "academic_pass": 2000,
+      "editorial_pass": 2000,
+      "personalization_safe": 2000,
+      "status": "COMPLETE"
+    },
+    "Mathematics": {
+      "target": 1500,
+      "assembled": 1500,
+      "academic_pass": 1500,
+      "editorial_pass": 1500,
+      "personalization_safe": 1500,
+      "status": "COMPLETE"
+    }
+  }
+}
