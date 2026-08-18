@@ -9,14 +9,15 @@ class PYQLinkageEngine {
   static Future<Map<String, dynamic>> mapTopic(String atomicTopicId) async {
     debugPrint("🔱 PYQ ENGINE: Mapping historical evidence for $atomicTopicId...");
 
-    // 🔱 Physical Evidence Query (Mocked for Sprint G Hardening)
-    final List<String> mockPyqIds = ["pyq_2024_001", "pyq_2022_056"];
+    // 🔱 Physical Evidence Query (Mocked for Sprint G Hardening): DISABLED
+    // Returning empty to ensure zero fake academic truth in production.
+    final List<String> emptyPyqIds = [];
     
     return {
-      'pyqIds': mockPyqIds,
-      'pyqCount': mockPyqIds.length,
-      'pyqWeightage': 7.5, // High relevance for detected PYQs
-      'examRelevance': 'high',
+      'pyqIds': emptyPyqIds,
+      'pyqCount': 0,
+      'pyqWeightage': 0.0,
+      'examRelevance': 'unknown',
     };
   }
 }

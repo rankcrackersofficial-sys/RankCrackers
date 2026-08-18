@@ -12,17 +12,12 @@ class PYQLinkageEngine {
 
     // 🔱 PRODUCTION PROTOCOL:
     // This would query the Global PYQ Knowledge Base using semantic search.
-    // For now, we simulate discovery of relevant PYQs.
+    // For now, returning empty to ensure zero fake academic truth.
     
-    final List<String> mockPyqIds = [
-      "pyq_${realmId}_2023_012",
-      "pyq_${realmId}_2021_045",
-    ];
-
     return {
-      'pyqIds': mockPyqIds,
-      'pyqCount': mockPyqIds.length,
-      'pyqWeightage': mockPyqIds.length * 2.4, // Difficulty-weighted importance
+      'pyqIds': [],
+      'pyqCount': 0,
+      'pyqWeightage': 0.0,
     };
   }
 }

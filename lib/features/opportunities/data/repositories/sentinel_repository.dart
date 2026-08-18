@@ -139,17 +139,8 @@ class LocalSentinelRepository implements SentinelRepository {
   List<NotificationItem> _mockNotifs = [];
 
   LocalSentinelRepository() {
-    _mockNotifs = [
-      NotificationItem(
-        id: 'mock_1',
-        title: 'UPCOMING MISSION: RPSC School Lecturer',
-        body: 'Your profile matches 92% of the requirements. Prepare for mobilization.',
-        priority: NotificationPriority.high,
-        source: 'Sentinel',
-        createdAt: DateTime.now().subtract(const Duration(hours: 2)),
-        read: false,
-      ),
-    ];
+    // 🔱 MOCK NOTIFICATIONS DISABLED: Returning empty to ensure zero fake alerts.
+    _mockNotifs = [];
     _notifController.add(_mockNotifs);
   }
 

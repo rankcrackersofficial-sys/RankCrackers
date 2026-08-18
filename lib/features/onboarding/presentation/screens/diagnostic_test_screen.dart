@@ -94,24 +94,8 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
 
   void _loadUniversalDiagnostic() {
     setState(() {
-      questions = [
-        DiagnosticQuestion(
-          id: 'universal_1',
-          questionText:
-              "Which of the following is essential for high-velocity learning?",
-          options: [
-            "Passive Reading",
-            "Active Recall",
-            "Massive Highlighting",
-            "Rote Memorization"
-          ],
-          correctOptionIndex: 1,
-          explanation:
-              "Active Recall forces the brain to retrieve information, strengthening neural pathways.",
-          conceptInsight:
-              "RankCrackers utilizes active recall to ensure 100% retention.",
-        ),
-      ];
+      // 🔱 FAKE UNIVERSAL CONTENT DISABLED
+      questions = [];
       isLoading = false;
     });
   }
@@ -139,6 +123,37 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
       return const Scaffold(
         backgroundColor: AppColors.background,
         body: Center(child: CircularProgressIndicator(color: AppColors.gold)),
+      );
+    }
+
+    if (questions.isEmpty) {
+      return Scaffold(
+        backgroundColor: AppColors.background,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.lock_clock_rounded,
+                  color: AppColors.gold, size: 64),
+              const SizedBox(height: 24),
+              Text('Diagnostic Not Ready', style: AppTypography.hero),
+              const SizedBox(height: 14),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: Text(
+                  'The diagnostic chamber is being calibrated for your mission realm. Please check back later.',
+                  textAlign: MainAxisAlignment.center,
+                  style: AppTypography.body,
+                ),
+              ),
+              const SizedBox(height: 32),
+              PremiumButton(
+                text: "Back to Realms",
+                onTap: () => context.go(AppRoutes.missionRealm),
+              ),
+            ],
+          ),
+        ),
       );
     }
 

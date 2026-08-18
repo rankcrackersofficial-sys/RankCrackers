@@ -11,9 +11,16 @@ import '../../../core/engines/stress_test_engine.dart';
 import '../../../core/engines/digibook_publication_engine.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 
 class AdminUploadEngine {
-  
+
+  static void _requireDebug() {
+    if (!kDebugMode) {
+      throw Exception('🔱 COMMAND DENIED: Physical seeding prohibited in release student paths.');
+    }
+  }
+
   // ===================================================
   // PRODUCTION SEEDING 🔱
   // ===================================================
@@ -21,6 +28,7 @@ class AdminUploadEngine {
   /// Injects canonical "Golden Path" datasets directly into production.
   /// Used for Phase 4C Physical Verification.
   static Future<void> seedProductionData() async {
+    _requireDebug();
     final punjab = MissionSeedEngine.generatePunjabMathematics();
     final ugc = MissionSeedEngine.generateUgcNetPaper1();
 
@@ -52,6 +60,7 @@ class AdminUploadEngine {
 
   /// 🔱 Phase 6.2: Dataset Stress Test Injection
   static Future<void> runStressTest() async {
+    _requireDebug();
     final stressData = StressTestEngine.generateStressDataset();
     
     final List<MicroTopicNode> nodes = stressData['nodes'];

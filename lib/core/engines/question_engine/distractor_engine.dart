@@ -39,8 +39,9 @@ class DistractorEngine {
       return combined.take(count).toList();
     }
 
-    // 🔱 Rule 3: Hardcoded Fallbacks
-    return _generateHardcodedFallbacks(count);
+    // 🔱 Rule 3: Hardcoded Fallbacks: DISABLED
+    // Return empty list to ensure zero fake academic content in production.
+    return [];
   }
 
   List<String> _generateHardcodedFallbacks(int count) {

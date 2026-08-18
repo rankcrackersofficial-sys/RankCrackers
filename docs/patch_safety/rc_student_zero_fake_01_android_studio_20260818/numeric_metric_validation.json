@@ -1,0 +1,6 @@
+{
+    "target": "Numeric Metrics",
+    "check": "No hardcoded percentages or counts in production",
+    "status": "CLEAN",
+    "verdict": "PASS"
+}

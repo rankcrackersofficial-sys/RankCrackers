@@ -21,21 +21,20 @@ class SentinelCenterScreen extends ConsumerWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
                 sliver: SliverList(
                   delegate: SliverChildListDelegate([
-                    _sectionLabel("Critical Alerts"),
-                    const SizedBox(height: 16),
-                    _alertPlaceholder("Application Window Closing Soon: RPSC School Lecturer"),
+                    _sectionLabel("Career Intelligence"),
                     const SizedBox(height: 24),
-                    
-                    _sectionLabel("Strong Matches"),
-                    const SizedBox(height: 16),
-                    _alertPlaceholder("92% Match Found: UGC NET History"),
-                    const SizedBox(height: 24),
-
-                    _sectionLabel("Opportunity Gaps"),
-                    const SizedBox(height: 16),
-                    _gapIntelligence("Need B.Ed to unlock 47 potential opportunities."),
-                    const SizedBox(height: 12),
-                    _gapIntelligence("Need NET to unlock 16 potential opportunities."),
+                    _alertPlaceholder("No active intelligence reports for your current profile."),
+                    const SizedBox(height: 48),
+                    Center(
+                      child: Column(
+                        children: [
+                          Icon(Icons.radar_rounded, color: AppColors.gold.withValues(alpha: 0.2), size: 64),
+                          const SizedBox(height: 16),
+                          Text("Scanning for opportunities...",
+                            style: AppTypography.label.copyWith(color: Colors.white12)),
+                        ],
+                      ),
+                    ),
                   ]),
                 ),
               ),

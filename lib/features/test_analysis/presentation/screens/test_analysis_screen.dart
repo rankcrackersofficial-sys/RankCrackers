@@ -150,7 +150,7 @@ class TestAnalysisScreen extends StatelessWidget {
                     child:
                     LinearProgressIndicator(
 
-                      value: 0.78,
+                      value: 0.0,
 
                       minHeight: 14,
 
@@ -167,7 +167,7 @@ class TestAnalysisScreen extends StatelessWidget {
 
                   Text(
 
-                    "78% Overall Accuracy",
+                    "Insufficient Data for Accuracy",
 
                     style:
                     GoogleFonts.poppins(
@@ -203,33 +203,20 @@ class TestAnalysisScreen extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 18),
+            const SizedBox(height: 32),
 
-            _buildTestCard(
-              "Full Mock Test #12",
-              "Score: 142 / 200",
-              "Accuracy 78%",
+            Center(
+              child: Column(
+                children: [
+                  Icon(Icons.query_stats_rounded, color: AppColors.primary.withValues(alpha: 0.1), size: 64),
+                  const SizedBox(height: 16),
+                  Text("No recent tests completed.",
+                    style: GoogleFonts.poppins(color: AppColors.textSecondary, fontSize: 13)),
+                ],
+              ),
             ),
 
-            _buildTestCard(
-              "History Subject Test",
-              "Score: 84 / 100",
-              "Accuracy 82%",
-            ),
-
-            _buildTestCard(
-              "Polity Speed Test",
-              "Score: 72 / 100",
-              "Accuracy 69%",
-            ),
-
-            _buildTestCard(
-              "Science Revision Test",
-              "Score: 91 / 120",
-              "Accuracy 76%",
-            ),
-
-            const SizedBox(height: 28),
+            const SizedBox(height: 48),
 
             Text(
 
@@ -258,7 +245,7 @@ class TestAnalysisScreen extends StatelessWidget {
 
                   child: _buildMiniCard(
                     "Weak Topics",
-                    "07",
+                    "---",
                     Icons.warning_rounded,
                   ),
                 ),
@@ -269,7 +256,7 @@ class TestAnalysisScreen extends StatelessWidget {
 
                   child: _buildMiniCard(
                     "Strong Areas",
-                    "18",
+                    "---",
                     Icons.workspace_premium_rounded,
                   ),
                 ),
@@ -286,7 +273,7 @@ class TestAnalysisScreen extends StatelessWidget {
 
                   child: _buildMiniCard(
                     "Speed",
-                    "1.2m",
+                    "---",
                     Icons.speed_rounded,
                   ),
                 ),
@@ -297,7 +284,7 @@ class TestAnalysisScreen extends StatelessWidget {
 
                   child: _buildMiniCard(
                     "National Rank",
-                    "#82",
+                    "---",
                     Icons.emoji_events_rounded,
                   ),
                 ),

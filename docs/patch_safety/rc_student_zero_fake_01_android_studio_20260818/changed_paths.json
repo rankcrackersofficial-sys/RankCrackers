@@ -1,0 +1,16 @@
+[
+    "lib/database/local/dashboard_local_datasource.dart",
+    "lib/features/dashboard/data/repositories/dashboard_repository.dart",
+    "lib/data/exam_seed_data.dart",
+    "lib/core/engines/mission_seed_engine.dart",
+    "lib/features/admin/data/admin_upload_engine.dart",
+    "lib/core/engines/pyq_linkage_engine.dart",
+    "lib/core/ai/workers/pyq_linkage_engine.dart",
+    "lib/core/engines/question_engine/distractor_engine.dart",
+    "lib/features/onboarding/presentation/screens/diagnostic_test_screen.dart",
+    "lib/features/opportunities/data/repositories/sentinel_repository.dart",
+    "lib/features/opportunities/presentation/screens/sentinel_center_screen.dart",
+    "lib/features/test_analysis/presentation/screens/test_analysis_screen.dart",
+    "lib/features/dashboard/presentation/widgets/battle_tools/test_arena_card.dart",
+    "test/features/personalization/zero_fake_ui_test.dart"
+]

@@ -1,5 +1,15 @@
+import 'package:flutter/foundation.dart';
+
 class ExamSeedData {
-  static const Map<String, List<Map<String, dynamic>>> exams = {
+  static Map<String, List<Map<String, dynamic>>> get exams {
+    if (!kDebugMode) {
+      // 🔱 FENCED: Seed data prohibited in release student truth.
+      return {};
+    }
+    return _exams;
+  }
+
+  static const Map<String, List<Map<String, dynamic>>> _exams = {
     'Rajasthan': [
       {
         'id': 'ras',

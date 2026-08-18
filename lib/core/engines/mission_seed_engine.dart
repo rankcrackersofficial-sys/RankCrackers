@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import '../models/recruitment.dart';
 import '../models/exam_blueprint.dart';
 import '../models/micro_topic_node.dart';
@@ -5,12 +6,19 @@ import '../models/micro_topic_node.dart';
 /// 🔱 MISSION SEED ENGINE
 /// Generates the "Golden Path" dataset for Phase 4C End-to-End Testing.
 class MissionSeedEngine {
-  
+
+  static void _requireDebug() {
+    if (!kDebugMode) {
+      throw Exception('🔱 COMMAND DENIED: Seeding prohibited in release student paths.');
+    }
+  }
+
   // ===================================================
   // PUNJAB SCHOOL LECTURER (Competitive) 🔱
   // ===================================================
   
   static Map<String, dynamic> generatePunjabMathematics() {
+    _requireDebug();
     final recruitmentId = 'punjab_sl_math_24';
     final blueprintId = 'bp_punjab_sl_150';
     
@@ -72,6 +80,7 @@ class MissionSeedEngine {
   // ===================================================
 
   static Map<String, dynamic> generateUgcNetPaper1() {
+    _requireDebug();
     final recruitmentId = 'ugc_net_june_24';
     final blueprintId = 'bp_ugc_net_p1';
 
