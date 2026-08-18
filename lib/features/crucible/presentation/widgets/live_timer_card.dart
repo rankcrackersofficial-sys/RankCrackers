@@ -76,28 +76,55 @@ class _LiveTimerCardState extends State<LiveTimerCard> {
             style: AppTypography.hero.copyWith(fontSize: 22),
           ),
           const SizedBox(height: 18),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('DAY ${widget.day}', style: AppTypography.section),
-                  const SizedBox(height: 4),
-                  Text('PHASE ${widget.phase} • $_windowType', style: AppTypography.label),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Text(
-                    _formatDuration(_remaining),
-                    style: AppTypography.metric.copyWith(fontSize: 28),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              final compact = constraints.maxWidth < 360;
+
+              final left = Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('DAY ${widget.day}', style: AppTypography.section),
+                    const SizedBox(height: 4),
+                    Text(
+                      'PHASE ${widget.phase} • $_windowType',
+                      style: AppTypography.label,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
+                  ],
+                ),
+              );
+
+              final right = Flexible(
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerRight,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          _formatDuration(_remaining),
+                          style: AppTypography.metric.copyWith(
+                            fontSize: compact ? 22 : 28,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        Text('REMAINING', style: AppTypography.label),
+                      ],
+                    ),
                   ),
-                  Text('REMAINING', style: AppTypography.label),
-                ],
-              ),
-            ],
+                ),
+              );
+
+              return Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [left, const SizedBox(width: 12), right],
+              );
+            },
           ),
         ],
       ),
