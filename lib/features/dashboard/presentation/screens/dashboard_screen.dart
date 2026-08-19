@@ -445,9 +445,10 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
   }
 
   Widget _statusItem(String label, String value, Color color, {bool showBorder = true}) {
+    final isPending = value == "Pending";
     return Expanded(
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 4),
+        padding: const EdgeInsets.symmetric(vertical: 6),
         decoration: BoxDecoration(
           border: showBorder
               ? const Border(right: BorderSide(color: Colors.white10, width: 1.0))
@@ -463,8 +464,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
               textAlign: TextAlign.center,
               style: AppTypography.label.copyWith(
                 fontSize: 9,
-                letterSpacing: 0.5,
-                color: Colors.white30,
+                letterSpacing: 0.8,
+                fontWeight: FontWeight.w600,
+                color: Colors.white54,
               ),
             ),
             const SizedBox(height: 4),
@@ -474,7 +476,16 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                 value,
                 maxLines: 1,
                 textAlign: TextAlign.center,
-                style: AppTypography.hero.copyWith(fontSize: 16, color: color),
+                style: isPending
+                    ? AppTypography.body.copyWith(
+                        fontSize: 10,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.white24,
+                      )
+                    : AppTypography.hero.copyWith(
+                        fontSize: 16,
+                        color: color,
+                      ),
               ),
             ),
           ],
