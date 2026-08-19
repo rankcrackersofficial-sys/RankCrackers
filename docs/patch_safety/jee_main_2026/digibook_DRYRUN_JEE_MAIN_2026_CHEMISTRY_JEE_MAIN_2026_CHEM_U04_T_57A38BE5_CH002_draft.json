@@ -1,0 +1,177 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_57A38BE5_CH002",
+    "overview": "This unit introduces core thermodynamic concepts including systems, surroundings, boundary classifications, intensive and extensive properties, state functions versus path functions, thermodynamic processes (isothermal, adiabatic, isobaric, isochoric, reversible, irreversible), and entropy as a measure of disorder.",
+    "concepts": [
+      {
+        "title": "System, Surroundings, and Boundaries",
+        "explanation": "A system is the specific region or part of the universe selected for thermodynamic study. Surroundings comprise everything outside the system. Boundaries separate the system from surroundings and can be open (exchanges matter and energy), closed (exchanges energy only), or isolated (exchanges neither matter nor energy)."
+      },
+      {
+        "title": "Extensive and Intensive Properties",
+        "explanation": "Extensive properties depend on the amount of matter in the system (e.g., mass, volume, internal energy, enthalpy, entropy). Intensive properties are independent of the amount of matter (e.g., temperature, pressure, density, molar volume, specific heat capacity). The ratio of two extensive properties is an intensive property."
+      },
+      {
+        "title": "State Functions and Path Functions",
+        "explanation": "State functions depend solely on the current state of the system, independent of the path taken to reach that state (e.g., U, H, S, G, P, V, T). Path functions depend on the specific path or process followed between states (e.g., heat 'q' and work 'w')."
+      },
+      {
+        "title": "Types of Thermodynamic Processes",
+        "explanation": "Processes describe state changes: Isothermal (dT = 0), Isobaric (dP = 0), Isochoric (dV = 0, work = 0), Adiabatic (q = 0), and Cyclic (dU = 0, dH = 0). Processes can also be reversible (quasi-static, infinitesimal changes, maximum work) or irreversible (spontaneous, finite time, non-equilibrium states)."
+      },
+      {
+        "title": "Entropy (S)",
+        "explanation": "Entropy is a state function that measures the degree of randomness or thermal disorder of a system. For a reversible process, dS = dq_rev / T. For an isolated system or spontaneous process, the total entropy change (dS_total = dS_system + dS_surroundings) is always greater than zero."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Entropy Change for Reversible Process",
+        "formula": "dS = dq_rev / T",
+        "applicability": "Reversible heat exchange at absolute temperature T",
+        "variables": [
+          {
+            "symbol": "dS",
+            "meaning": "Change in entropy",
+            "unit": "J K^-1"
+          },
+          {
+            "symbol": "dq_rev",
+            "meaning": "Reversible heat exchange",
+            "unit": "J"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Absolute temperature",
+            "unit": "K"
+          }
+        ]
+      },
+      {
+        "label": "Entropy Change of Ideal Gas",
+        "formula": "Delta S = n C_v ln(T2/T1) + n R ln(V2/V1)",
+        "applicability": "Ideal gas changing state from (T1, V1) to (T2, V2)",
+        "variables": [
+          {
+            "symbol": "Delta S",
+            "meaning": "Entropy change of gas",
+            "unit": "J K^-1"
+          },
+          {
+            "symbol": "n",
+            "meaning": "Number of moles",
+            "unit": "mol"
+          },
+          {
+            "symbol": "C_v",
+            "meaning": "Molar heat capacity at constant volume",
+            "unit": "J mol^-1 K^-1"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant",
+            "unit": "J mol^-1 K^-1"
+          },
+          {
+            "symbol": "T1, T2",
+            "meaning": "Initial and final temperatures",
+            "unit": "K"
+          },
+          {
+            "symbol": "V1, V2",
+            "meaning": "Initial and final volumes",
+            "unit": "m^3"
+          }
+        ]
+      },
+      {
+        "label": "Entropy Change during Phase Transition",
+        "formula": "Delta S_trans = Delta H_trans / T_trans",
+        "applicability": "Phase transition (e.g., fusion, vaporization) at constant pressure and equilibrium temperature",
+        "variables": [
+          {
+            "symbol": "Delta S_trans",
+            "meaning": "Entropy of phase transition",
+            "unit": "J mol^-1 K^-1"
+          },
+          {
+            "symbol": "Delta H_trans",
+            "meaning": "Enthalpy of phase transition",
+            "unit": "J mol^-1"
+          },
+          {
+            "symbol": "T_trans",
+            "meaning": "Transition temperature",
+            "unit": "K"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Heat (q) and Work (w) are state functions.",
+        "correction": "Heat and work are path functions because their values depend on the pathway taken during a state change, whereas internal energy change (Delta U = q + w) is a state function."
+      },
+      {
+        "misconception": "All intensive properties are independent of temperature and pressure.",
+        "correction": "Intensive properties do not depend on system size or matter quantity, but they can and often do depend on temperature and pressure (e.g., density and refractive index vary with temperature)."
+      },
+      {
+        "misconception": "Entropy of a system can never decrease.",
+        "correction": "The entropy of a system CAN decrease (e.g., freezing of water), provided the entropy of the surroundings increases by a greater amount, keeping Delta S_total >= 0."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the entropy change when 1 mole of liquid water is vaporized at 100 degrees Celsius (373 K). The molar heat of vaporization of water is 40.7 kJ/mol.",
+        "steps": [
+          "Step 1: Identify the formula for phase transition entropy change: Delta S_vap = Delta H_vap / T_vap.",
+          "Step 2: Convert Delta H_vap to Joules: 40.7 kJ/mol = 40700 J/mol.",
+          "Step 3: Substitute given values: Delta S_vap = 40700 J/mol / 373 K = 109.11 J mol^-1 K^-1."
+        ],
+        "answer": "Delta S_vap = 109.11 J mol^-1 K^-1"
+      },
+      {
+        "problem": "Determine which of the following properties are intensive: (a) Volume, (b) Density, (c) Temperature, (d) Molar Heat Capacity, (e) Enthalpy.",
+        "steps": [
+          "Step 1: Check dependence on amount of substance.",
+          "Step 2: Volume and Enthalpy double when system size doubles, so they are extensive.",
+          "Step 3: Density (mass/volume), Temperature, and Molar Heat Capacity (heat capacity per mole) do not depend on system quantity.",
+          "Step 4: Intensive properties are Density, Temperature, and Molar Heat Capacity."
+        ],
+        "answer": "Intensive properties: Density, Temperature, Molar Heat Capacity"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following is a state function? Options: A) Heat (q), B) Work (w), C) Enthalpy (H), D) Heat exchanged at variable pressure.",
+        "answer": "Option C. Enthalpy (H) depends only on the current thermodynamic state (H = U + PV) and is independent of path, making it a state function."
+      },
+      {
+        "question": "For an isothermal expansion of an ideal gas, what is the value of Delta U (change in internal energy)? Options: A) Positive, B) Zero, C) Negative, D) Depends on external pressure.",
+        "answer": "Option B. For an ideal gas, internal energy U depends solely on temperature. In an isothermal process, Delta T = 0, so Delta U = 0."
+      },
+      {
+        "question": "What is the total entropy change (Delta S_total) for a reversible process in an isolated universe? Options: A) Greater than zero, B) Less than zero, C) Equal to zero, D) Infinite.",
+        "answer": "Option C. For any reversible process, the total entropy change of the universe (system + surroundings) is zero (Delta S_total = 0)."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 6: Chemical Thermodynamics",
+      "Physical Chemistry by P. Bahadur - Fundamentals of Thermodynamics"
+    ]
+  }
+}

@@ -22,9 +22,10 @@ export async function executeProvider(
 }
 
 async function executeGemini(prompt: string) {
-  // 🔱 MOCK GEMINI CALL (Replace with real SDK call)
-  return {
-    text: "Generated content from Gemini Flash",
-    tokensUsed: 800,
-  };
+  void prompt;
+  throw new Error(
+    'Gemini provider transport is not configured in this executor. No synthetic provider response is allowed.',
+  );
 }
+
+

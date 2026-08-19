@@ -1,0 +1,121 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_3BEA9EA4_CH001",
+    "overview": "Electronic displacements in covalent bonds dictate the reactivity, stability, and physical properties of organic molecules. These displacements are broadly classified into permanent effects (Inductive Effect, Resonance/Mesomeric Effect, and Hyperconjugation) and temporary effects (Electromeric Effect). Understanding these fundamental electronic effects allows prediction of acid-base strengths, reaction intermediates stability (carbocations, carbanions, free radicals), and regioselectivity in organic reactions.",
+    "concepts": [
+      {
+        "title": "Inductive Effect (-I / +I)",
+        "explanation": "Permanent displacement of sigma-electrons along a carbon chain due to electronegativity difference between bonded atoms. It diminishes rapidly with distance and is virtually zero beyond three carbon atoms. Electron-withdrawing groups (-I) pull electron density (e.g., -NO2, -F, -Cl, -COOH), while electron-donating groups (+I) push electron density (e.g., alkyl groups, -O-)."
+      },
+      {
+        "title": "Electromeric Effect (+E / -E)",
+        "explanation": "A temporary effect observed in organic compounds containing multiple bonds (C=C, C=O, C≡N) in the presence of an attacking reagent. It involves complete transfer of a shared pair of pi-electrons to one of the bonded atoms. In +E effect, pi-electrons transfer to the atom to which the attacking electrophile attaches. In -E effect, pi-electrons transfer away from the atom to which the nucleophile attaches."
+      },
+      {
+        "title": "Resonance / Mesomeric Effect (+R / -R)",
+        "explanation": "Polarity produced in a molecule by interaction of two pi-bonds or between a pi-bond and a lone pair of electrons present on an adjacent atom. It involves delocalization of pi-electrons over conjugated systems, creating canonical structures. Groups like -OH, -NH2, -Cl exhibit +R by donating lone pairs into the pi-system, while -NO2, -CHO, -CN show -R by pulling pi-electrons."
+      },
+      {
+        "title": "Hyperconjugation (Baker-Nathan Effect)",
+        "explanation": "Delocalization of sigma-electrons of a C-H bond of an alkyl group directly attached to an unsaturated system or an atom with an unshared p-orbital (carbocation or free radical). Also known as no-bond resonance. The stability of carbocations, free radicals, and alkenes increases with the number of alpha-hydrogen atoms."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Hyperconjugative Structures Count",
+        "formula": "N_hyper = N_alpha_H + 1",
+        "applicability": "Estimation of canonical forms contributing to stability in alkenes and carbocations.",
+        "variables": [
+          {
+            "symbol": "N_alpha_H",
+            "meaning": "Number of alpha-hydrogens attached to the sp2 carbon",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "N_hyper",
+            "meaning": "Total hyperconjugative resonance forms including the main structure",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Stability Ranking Rule",
+        "formula": "Stability proportional to (+I, +R, Hyperconjugation) / (-I, -R)",
+        "applicability": "Comparative evaluation of carbocation and radical stability.",
+        "variables": [
+          {
+            "symbol": "+I, +R, alpha-H",
+            "meaning": "Electron-donating effects and number of alpha hydrogens",
+            "unit": "qualitative rank"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Inductive effect involves delocalization of pi-electrons over long distances.",
+        "correction": "Inductive effect strictly involves sigma-electrons and operates through bond polarization; it decays significantly after three carbon bonds. Delocalization of pi-electrons is called resonance."
+      },
+      {
+        "misconception": "Hyperconjugation involves the movement of lone pair electrons.",
+        "correction": "Hyperconjugation involves sigma-electrons of C-H (or C-C) bonds adjacent to an unsaturated sp2 center or carbocation/radical center, not lone pairs."
+      },
+      {
+        "misconception": "Resonating structures (canonical forms) exist as real equilibrating chemical species in solution.",
+        "correction": "Canonical forms are imaginary hypothetical representations; the real molecule is a single resonance hybrid possessing lower energy than any individual canonical form."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Arrange the following carbocations in increasing order of stability: (CH3)3C+, (CH3)2CH+, CH3CH2+, CH3+.",
+        "steps": [
+          "Identify the electronic effect stabilizing the carbocations, which is hyperconjugation (+I also contributes).",
+          "Count the number of alpha-hydrogens for each carbocation: (CH3)3C+ has 9 alpha-Hs, (CH3)2CH+ has 6 alpha-Hs, CH3CH2+ has 3 alpha-Hs, CH3+ has 0 alpha-Hs.",
+          "Higher number of alpha-hydrogens leads to more hyperconjugative structures and greater stability."
+        ],
+        "answer": "CH3+ < CH3CH2+ < (CH3)2CH+ < (CH3)3C+"
+      },
+      {
+        "problem": "Compare the acidic strength of CH3COOH, ClCH2COOH, Cl2CHCOOH, and Cl3CCOOH.",
+        "steps": [
+          "Acidic strength depends on the stability of the conjugate base anion formed after releasing H+.",
+          "Chlorine is an electronegative element that exerts a strong -I (electron-withdrawing) effect.",
+          "More chlorine atoms attached to the alpha-carbon increase the -I effect, dispersing the negative charge on carboxylate ion more effectively.",
+          "Order of -I effect and anion stability: Cl3C- > Cl2CH- > ClCH2- > CH3-."
+        ],
+        "answer": "CH3COOH < ClCH2COOH < Cl2CHCOOH < Cl3CCOOH"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following effects is a temporary electronic effect operating only in the presence of an attacking reagent? (A) Inductive effect (B) Hyperconjugation (C) Electromeric effect (D) Resonance effect",
+        "answer": "(C) Electromeric effect. Electromeric effect (+E/-E) is a temporary effect involving complete pi-electron transfer in multiple bonds upon arrival of an attacking reagent."
+      },
+      {
+        "question": "How many alpha-hydrogens are present in 2-methylbut-2-ene, and what is its hyperconjugation stability relative to propene?",
+        "answer": "2-methylbut-2-ene structure is (CH3)2C=CH-CH3. The sp2 carbons are bonded to two methyl groups on one end (6 alpha-H) and one methyl group on the other end (3 alpha-H), totaling 9 alpha-hydrogens. Propene (CH3-CH=CH2) has only 3 alpha-hydrogens. Hence 2-methylbut-2-ene has 9 alpha-hydrogens and is significantly more stable than propene."
+      },
+      {
+        "question": "Which substituent group exhibits a +R (positive resonance) effect when attached to a benzene ring? (A) -NO2 (B) -CHO (C) -OH (D) -CN",
+        "answer": "(C) -OH. Oxygen in the -OH group has lone pairs that can be donated into the conjugated pi-system of the benzene ring, exhibiting a +R (+M) effect. The groups -NO2, -CHO, and -CN are electron-withdrawing by resonance (-R)."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Chapter 12: Organic Chemistry - Some Basic Principles and Techniques",
+      "JEE Main Official Syllabus - Organic Chemistry: Electronic Displacements"
+    ]
+  }
+}

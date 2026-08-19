@@ -1,0 +1,134 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_224D254F_CH002",
+    "overview": "Valence Bond Theory (VBT) offers a quantum mechanical approach to understanding covalent bonding through the overlap of atomic orbitals of valence electrons with opposite spins. It accounts for molecular shapes through orbital hybridization and explains localized bonding anomalies via resonance.",
+    "concepts": [
+      {
+        "title": "Valence Bond Theory (VBT) Fundamentals",
+        "explanation": "According to VBT, a covalent bond forms when two half-filled valence atomic orbitals belonging to different atoms overlap, resulting in electron pairing with opposite spins. The strength of the bond is directly proportional to the extent of orbital overlap. Axial overlap along the internuclear axis forms strong sigma (σ) bonds, whereas lateral or sideways overlap forms weaker pi (π) bonds."
+      },
+      {
+        "title": "Concept of Hybridization",
+        "explanation": "Hybridization is the mathematical mixing of atomic orbitals of slightly different energies on the central atom to produce a new set of degenerate orbitals called hybrid orbitals. The number of hybrid orbitals produced equals the number of atomic orbitals mixed. Typical hybridization types include sp (linear, 180°), sp² (trigonal planar, 120°), sp³ (tetrahedral, 109.5°), sp³d (trigonal bipyramidal, using dz² orbital), and sp³d² (octahedral, using dz² and dx²-y² orbitals)."
+      },
+      {
+        "title": "Resonance and Resonance Energy",
+        "explanation": "When a single Lewis structure cannot accurately explain all physical and chemical properties of a molecule or ion, two or more canonical (resonating) structures are drawn. The true molecule is a single resonance hybrid having lower energy than any individual canonical contributor. The energy difference between the lowest-energy canonical structure and the actual resonance hybrid is called the resonance energy."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Steric Number for Central Atom Hybridization",
+        "formula": "SN = 0.5 * (V + M - C + A)",
+        "applicability": "Determines the steric number and corresponding hybridization state of the central atom in covalent molecules or polyatomic ions.",
+        "variables": [
+          {
+            "symbol": "SN",
+            "meaning": "Steric Number (2 = sp, 3 = sp², 4 = sp³, 5 = sp³d, 6 = sp³d²)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "V",
+            "meaning": "Number of valence electrons on the central atom",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "M",
+            "meaning": "Number of monovalent surrounding atoms (H, F, Cl, Br, I)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "C",
+            "meaning": "Positive charge on the cation",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "A",
+            "meaning": "Negative charge on the anion",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Resonance Bond Order",
+        "formula": "Bond Order = (Total number of covalent bonds between two specific atoms across all canonical structures) / (Total number of canonical structures)",
+        "applicability": "Calculates fractional bond orders in species exhibiting equivalent resonance.",
+        "variables": [
+          {
+            "symbol": "Bond Order",
+            "meaning": "Effective number of chemical bonds between a pair of atoms",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Resonating structures exist in physical equilibrium with each other, rapidly oscillating back and forth.",
+        "correction": "Canonical structures do not exist in reality; they are theoretical Lewis representations. The molecule exists purely as a stationary, single resonance hybrid."
+      },
+      {
+        "misconception": "Hybridization is an actual physical process involving physical mixing of moving electrons.",
+        "correction": "Hybridization is a mathematical concept involving the linear combination of atomic orbital wavefunctions prior to bond formation to minimize electron repulsion."
+      },
+      {
+        "misconception": "Any d-orbital can participate in sp³d or sp³d² hybridization.",
+        "correction": "Specific d-orbitals participate based on spatial symmetry: the dz² orbital is involved in sp³d hybridization, whereas dz² and dx²-y² are involved in sp³d² hybridization."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Determine the hybridization, geometry, and number of lone pairs on the central Xe atom in XeF4.",
+        "steps": [
+          "Step 1: Calculate the steric number (SN) using SN = 0.5 * (V + M - C + A).",
+          "Step 2: For Xe (valence V = 8) with 4 F atoms (monovalent M = 4) and charge = 0: SN = 0.5 * (8 + 4 - 0 + 0) = 6.",
+          "Step 3: An SN of 6 corresponds to sp³d² hybridization.",
+          "Step 4: Xe forms 4 Xe-F sigma bonds, leaving (6 - 4) = 2 lone pairs.",
+          "Step 5: The electron geometry is octahedral, and with 2 lone pairs arranged trans to each other, the molecular shape is square planar."
+        ],
+        "answer": "Hybridization is sp³d², shape is square planar, with 2 lone pairs on the central Xe atom."
+      },
+      {
+        "problem": "Calculate the average C-O bond order in the carbonate ion (CO3²⁻).",
+        "steps": [
+          "Step 1: Draw the equivalent resonance structures for CO3²⁻.",
+          "Step 2: Carbon forms a double bond with one oxygen and single bonds with the other two oxygen atoms in each canonical structure, giving 3 equivalent canonical structures.",
+          "Step 3: Count the total number of C-O bonds across the three canonical structures for a specific C-O position: (2 + 1 + 1) = 4 bonds.",
+          "Step 4: Divide total bonds by total structures: Bond Order = 4 / 3 = 1.33."
+        ],
+        "answer": "The C-O bond order in CO3²⁻ is 1.33 (or 4/3)."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following orbitals are involved in sp³d² hybridization of the central atom in SF6? Option A: s, px, py, pz, dxy, dyz. Option B: s, px, py, pz, dz², dx²-y². Option C: s, px, py, pz, dxz, dyz. Option D: s, px, py, pz, dxy, dx²-y².",
+        "answer": "Option B. The d-orbitals involved in octahedral (sp³d²) geometry are the axial d-orbitals, namely dz² and dx²-y²."
+      },
+      {
+        "question": "In which of the following species is the central atom sp³d hybridized? Option A: PCl5. Option B: SF6. Option C: NH4+. Option D: BF3.",
+        "answer": "Option A. PCl5 has 5 bonding pairs and 0 lone pairs around phosphorus, giving a steric number of 5, which corresponds to sp³d hybridization."
+      },
+      {
+        "question": "What is the bond order of the C-O bond in carbon dioxide (CO2)? Option A: 1.0. Option B: 1.33. Option C: 1.5. Option D: 2.0.",
+        "answer": "Option D. In CO2, carbon forms two double bonds (O=C=O), so the bond order between carbon and each oxygen atom is 2.0."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 4: Chemical Bonding and Molecular Structure",
+      "JEE Main Chemistry Official Syllabus - Unit: Chemical Bonding and Molecular Structure"
+    ]
+  }
+}

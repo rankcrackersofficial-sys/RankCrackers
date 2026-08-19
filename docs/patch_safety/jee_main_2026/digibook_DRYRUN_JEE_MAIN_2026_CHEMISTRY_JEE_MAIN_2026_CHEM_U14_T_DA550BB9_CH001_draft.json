@@ -1,0 +1,120 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_DA550BB9_CH001",
+    "overview": "Organic nomenclature provides a systematic method to name organic compounds based on their molecular structure. This node covers both trivial (common) names and the standard IUPAC nomenclature system, focusing on parent chain selection, principal functional group priority, lowest locant rules, and substituent ordering.",
+    "concepts": [
+      {
+        "title": "IUPAC Name Structure Format",
+        "explanation": "A complete IUPAC name consists of five components arranged in order: Secondary Prefix (substituents/side chains) + Primary Prefix (cyclo/bicyclo/spiro) + Word Root (number of carbons in parent chain) + Primary Suffix (unsaturation: -ane, -ene, -yne) + Secondary Suffix (principal functional group)."
+      },
+      {
+        "title": "Selection of Parent Carbon Chain",
+        "explanation": "The parent chain must contain the maximum number of principal functional groups, followed by maximum number of multiple bonds (double/triple bonds), maximum carbon chain length, and maximum number of substituents."
+      },
+      {
+        "title": "Lowest Locant Rule and Numbering",
+        "explanation": "Numbering of the parent chain is done from the end that gives the lowest set of locants to principal functional groups first, then multiple bonds, and finally substituents. When comparing locant sets, compare term-by-term at the first point of difference."
+      },
+      {
+        "title": "Trivial vs IUPAC Nomenclature",
+        "explanation": "Trivial names are historical or common names based on source or property (e.g., formic acid from ants, acetic acid from vinegar). IUPAC names systematically identify the exact molecular architecture according to standardized recommendations."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "General Form of IUPAC Name",
+        "formula": "IUPAC Name = [Secondary Prefix] + [Primary Prefix] + [Word Root] + [Primary Suffix] + [Secondary Suffix]",
+        "applicability": "Applies to all systematic IUPAC names of acyclic and cyclic organic compounds.",
+        "variables": [
+          {
+            "symbol": "Word Root",
+            "meaning": "Denotes the total count of carbon atoms in the main continuous chain (Meth, Eth, Prop, etc.)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Locant",
+            "meaning": "Numerical position assigned to functional groups or substituents on the chain",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Functional Group Seniority Order",
+        "formula": "-COOH > -SO3H > -COOR > -COCl > -CONH2 > -CN > -CHO > >C=O > -OH > -NH2 > >C=C< >=C≡C-",
+        "applicability": "Determines which group is chosen as the principal functional group (secondary suffix).",
+        "variables": [
+          {
+            "symbol": "Seniority",
+            "meaning": "Higher priority group becomes the principal suffix; lower priority groups become prefix substituents.",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "The lowest locant rule means choosing the set with the lowest mathematical sum of locants.",
+        "correction": "The lowest locant rule evaluates sets term-by-term at the first point of difference, not by summing the numbers."
+      },
+      {
+        "misconception": "Double bonds always have absolute priority over triple bonds during numbering.",
+        "correction": "Multiple bonds as a group are given lowest locants overall. A double bond gets preference over a triple bond only when both are situated at equivalent positions from opposite ends."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Write the IUPAC name for the compound CH3-CH(OH)-CH2-CO-CH3.",
+        "steps": [
+          "1. Identify functional groups: Ketone (-CO-) and Alcohol (-OH).",
+          "2. Ketone has higher priority than Alcohol, so -CO- is the principal functional group (suffix '-one') and -OH is a prefix ('hydroxy').",
+          "3. Longest carbon chain containing both groups has 5 carbons: Word root = 'pent'.",
+          "4. Number the chain from right to left to give ketone the lowest possible locant: C1 (CH3), C2 (C=O), C3 (CH2), C4 (CH-OH), C5 (CH3). Locants: ketone at 2, hydroxy at 4.",
+          "5. Combine components: 4-hydroxypentan-2-one."
+        ],
+        "answer": "4-hydroxypentan-2-one"
+      },
+      {
+        "problem": "Write the IUPAC name for CH2=CH-CH2-C≡CH.",
+        "steps": [
+          "1. Functional groups: Double bond (alkene) at one end, triple bond (alkyne) at the other.",
+          "2. Carbon chain length = 5 carbons (pent).",
+          "3. Numbering from left gives locants (1 for double bond, 4 for triple bond): set (1, 4). Numbering from right gives locants (1 for triple bond, 4 for double bond): set (1, 4).",
+          "4. Since locant sets are identical from both sides, the double bond gets the lower locant '1' alphabetically ('ene' before 'yne').",
+          "5. IUPAC name: pent-1-en-4-yne."
+        ],
+        "answer": "pent-1-en-4-yne"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "What is the correct IUPAC name for CH3-CH(CH3)-CH=CH-COOH?",
+        "answer": "Option: 4-methylpent-2-enoic acid. Explanation: The principal functional group is -COOH which gets locant 1. The chain length is 5 carbons containing the double bond. Numbering starts from -COOH carbon (C1): C1(-COOH), C2(=CH-), C3(-CH=), C4(-CH(CH3)-), C5(CH3). Methyl group is at C4, double bond is at C2. Hence, 4-methylpent-2-enoic acid."
+      },
+      {
+        "question": "What is the IUPAC name of the compound HO-CH2-CH2-CH2-CN?",
+        "answer": "Option: 4-hydroxybutanenitrile. Explanation: Cyanide (-CN) has higher priority than hydroxyl (-OH). The principal suffix is '-nitrile' and prefix is 'hydroxy'. The chain length is 4 carbons (including the nitrile carbon as C1). Hydroxyl group is at C4. Hence, 4-hydroxybutanenitrile."
+      },
+      {
+        "question": "Which of the following is the trivial name for ethanoic acid?",
+        "answer": "Option: Acetic acid. Explanation: Ethanoic acid (CH3COOH) is systematically named by IUPAC, while its common or trivial name derived from vinegar (acetum) is acetic acid."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 12: Organic Chemistry - Some Basic Principles and Techniques",
+      "IUPAC Nomenclature of Organic Chemistry (Blue Book recommendations)"
+    ]
+  }
+}

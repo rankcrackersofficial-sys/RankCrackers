@@ -5,15 +5,15 @@
       "slotId": "macro_test_3",
       "phaseId": "phase_3",
       "selectedAtomCount": 18,
-      "questionPackReady": true,
-      "reviewed": true,
-      "answerKeyVerified": true,
-      "verifiedAcademicAnswerKey": true,
+      "questionPackReady": false,
+      "reviewed": false,
+      "answerKeyVerified": false,
+      "verifiedAcademicAnswerKey": false,
       "officialAnswerKey": false,
       "studentReady": false,
       "draftFile": "crucible_macro_test_3_flash_draft.json",
       "reviewFile": "crucible_macro_test_3_pro_review.json",
-      "blocker": null
+      "blocker": "PRO_REVIEW_DID_NOT_PASS"
     },
     "macro_test_4": {
       "slotId": "macro_test_4",
@@ -87,13 +87,13 @@
     }
   },
   "summary": {
-    "macroReviewed": 7,
+    "macroReviewed": 6,
     "macroTotal": 7,
     "majorReviewed": 1,
     "majorTotal": 1,
-    "questionPacksReady": 8,
+    "questionPacksReady": 7,
     "questionPacksTotal": 8,
-    "answerKeysVerified": 8,
+    "answerKeysVerified": 7,
     "answerKeysTotal": 8,
     "studentBinding": "PARTIAL",
     "studentReady": false

@@ -1,0 +1,33 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "FAIL",
+    "itemCountReviewed": 1,
+    "approvedAtomIds": [],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U11_T_B44A547D_CH001"
+    ],
+    "blockingIssues": [
+      "Conceptual Error in Formula Register and Worked Example 2: The draft teaches the 'spin-only' magnetic moment formula (μ = √(n(n+2))) for lanthanoids and applies it to Ce3+ to get 1.73 BM. In f-block elements, the orbital contribution to the magnetic moment is not quenched, so the spin-only formula is largely invalid (except for f7 configurations). The magnetic moment must be calculated using total angular momentum J (μ = g√(J(J+1))). The actual experimental magnetic moment of Ce3+ is ~2.54 BM. This contradicts standard chemistry curricula like NCERT.",
+      "Typo in Self Check 1: Option D contains a typo and is written as 'Gd3 launch' instead of 'Gd3+'.",
+      "Missing Option Key in Self Check 3 Answer: The answer explanation for Self Check 3 does not begin with the correct option letter (e.g., 'D) Lu(OH)3'), unlike the other self-checks which are properly formatted."
+    ],
+    "reviewNotes": "The content generally offers a good summary of lanthanoids, their electronic configurations, and lanthanoid contraction. However, applying the spin-only magnetic moment formula to lanthanoids is a major conceptual inaccuracy for f-block elements and must be revised or heavily contextualized. Please also fix the typographical errors in the self-check section.",
+    "conceptCorrectnessPass": false,
+    "formulaPass": false,
+    "selfCheckPass": false,
+    "workedExampleMathPass": true
+  }
+}

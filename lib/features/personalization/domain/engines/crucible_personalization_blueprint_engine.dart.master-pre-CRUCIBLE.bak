@@ -1,0 +1,99 @@
+/// RankCrackers deterministic Crucible Personalization Blueprint Engine.
+      case CruciblePersonalizationBucketType.masteryMaintenance:
+        return 6;
+    }
+  }
+
+
+  int _calculateDurationMinutes(
+    int totalQuestionCount,
+  ) {
+    var duration = totalQuestionCount * minutesPerQuestion;
+
+
+    if (duration < minimumDurationMinutes) {
+      duration = minimumDurationMinutes;
+    }
+
+
+    if (duration > maximumDurationMinutes) {
+      duration = maximumDurationMinutes;
+    }
+
+
+    return duration;
+  }
+}
+
+
+final class _AllocationDraft {
+  const _AllocationDraft({
+    required this.bucketType,
+    required this.targetAmtnIds,
+    required this.questionCount,
+    required this.difficultyBand,
+    required this.reasons,
+    required this.allowPyq,
+  });
+
+
+  final CruciblePersonalizationBucketType bucketType;
+
+
+  final List<String> targetAmtnIds;
+
+
+  final int questionCount;
+
+
+  final CruciblePersonalizationDifficultyBand difficultyBand;
+
+
+  final Set<CruciblePersonalizationReason> reasons;
+
+
+  final bool allowPyq;
+
+
+  void validate() {
+    if (targetAmtnIds.isEmpty) {
+      throw const FormatException(
+        'Crucible allocation draft targetAmtnIds must not be empty.',
+      );
+    }
+
+
+    if (questionCount <= 0) {
+      throw const FormatException(
+        'Crucible allocation draft questionCount must be positive.',
+      );
+    }
+
+
+    if (reasons.isEmpty) {
+      throw const FormatException(
+        'Crucible allocation draft reasons must not be empty.',
+      );
+    }
+
+
+    final normalizedIds = targetAmtnIds
+        .map((value) => value.trim())
+        .where((value) => value.isNotEmpty)
+        .toList(growable: false);
+
+
+    if (normalizedIds.length != targetAmtnIds.length) {
+      throw const FormatException(
+        'Crucible allocation draft AMTN IDs must not be empty.',
+      );
+    }
+
+
+    if (normalizedIds.toSet().length != normalizedIds.length) {
+      throw const FormatException(
+        'Crucible allocation draft AMTN IDs must be unique.',
+      );
+    }
+  }
+}

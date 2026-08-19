@@ -1,0 +1,29 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "PASS",
+    "itemCountReviewed": 5,
+    "approvedAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_224D254F_CH002"
+    ],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [],
+    "blockingIssues": [],
+    "reviewNotes": "The content accurately covers the concepts of Valence Bond Theory, hybridization, and resonance. The explanations are conceptually precise and correctly address common misconceptions. Formulas, worked examples, and self-check questions are mathematically accurate and hold correct answer keys.",
+    "conceptCorrectnessPass": true,
+    "formulaPass": true,
+    "selfCheckPass": true,
+    "workedExampleMathPass": true
+  }
+}

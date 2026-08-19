@@ -1,0 +1,135 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U13_T_DAEE150C_CH001",
+    "overview": "Qualitative analysis of organic compounds involves identifying extra elements such as nitrogen, sulphur, halogens, and phosphorus. Since these elements are covalently bonded in organic molecules, they are first converted into water-soluble inorganic sodium salts via Lassaigne's fusion test (or oxidative fusion for phosphorus) prior to characteristic chemical confirmation tests.",
+    "concepts": [
+      {
+        "title": "Preparation of Lassaigne's Extract (Sodium Fusion Extract)",
+        "explanation": "An organic compound is fused with molten sodium metal in a glass ignition tube. Sodium converts covalently bound elements into ionic sodium salts: Nitrogen forms NaCN, Sulphur forms Na2S, Halogens form NaX (X = Cl, Br, I), and combined N + S forms NaSCN. Boiling the fused mass with distilled water followed by filtration yields the Sodium Fusion Extract."
+      },
+      {
+        "title": "Detection of Nitrogen",
+        "explanation": "The extract containing NaCN is heated with freshly prepared ferrous sulphate (FeSO4) solution in alkaline medium, forming sodium ferrocyanide Na4[Fe(CN)6]. On adding ferric chloride (FeCl3) and acidifying with concentrated HCl to dissolve iron hydroxides, ferric ferrocyanide Fe4[Fe(CN)6]3 is formed as a Prussian blue precipitate or solution."
+      },
+      {
+        "title": "Detection of Sulphur",
+        "explanation": "Sulphur present as Na2S in the extract is tested using two methods: 1) Sodium Nitroprusside Test: Adding a fresh sodium nitroprusside solution yields a brilliant deep violet/purple coloration due to [Fe(CN)5NOS]4-. 2) Lead Acetate Test: Acidifying with acetic acid and adding lead acetate gives a black precipitate of PbS."
+      },
+      {
+        "title": "Simultaneous Detection of Nitrogen and Sulphur",
+        "explanation": "If both N and S are present and sodium metal is not used in excess, sodium thiocyanate (NaSCN) is formed instead of separate NaCN and Na2S. Treating the extract with FeCl3 yields a blood-red solution of ferric thiocyanate complex [Fe(SCN)]2+ without forming Prussian blue. If excess sodium is used, NaSCN decomposes into NaCN and Na2S."
+      },
+      {
+        "title": "Detection of Halogens",
+        "explanation": "The extract is first boiled with concentrated HNO3 to expel cyanide (HCN) and sulphide (H2S) gases which would otherwise interfere with AgNO3. Addition of AgNO3 gives: 1) White precipitate soluble in NH4OH (Chlorine as AgCl). 2) Pale yellow precipitate sparingly soluble in NH4OH (Bromine as AgBr). 3) Yellow precipitate insoluble in NH4OH (Iodine as AgI)."
+      },
+      {
+        "title": "Detection of Phosphorus",
+        "explanation": "Phosphorus cannot be detected via standard sodium fusion. The compound is heated with an oxidizing agent such as sodium peroxide (Na2O2) to convert phosphorus into phosphate (Na3PO4). The mixture is extracted with water, boiled with concentrated HNO3, and treated with ammonium molybdate solution to yield a canary-yellow precipitate of ammonium phosphomolybdate."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Prussian Blue Formation",
+        "formula": "3Na4[Fe(CN)6] + 4Fe3+ -> Fe4[Fe(CN)6]3 (Prussian Blue) + 12Na+",
+        "applicability": "Confirmation of Nitrogen in Sodium Fusion Extract",
+        "variables": [
+          {
+            "symbol": "Fe4[Fe(CN)6]3",
+            "meaning": "Ferric ferrocyanide (Prussian blue precipitate)",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Sodium Nitroprusside Reaction",
+        "formula": "S2- + [Fe(CN)5NO]2- -> [Fe(CN)5NOS]4- (Violet color)",
+        "applicability": "Confirmation of Sulphur in Sodium Fusion Extract",
+        "variables": [
+          {
+            "symbol": "[Fe(CN)5NOS]4-",
+            "meaning": "Sodium thionitroprusside complex",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Ammonium Phosphomolybdate Formation",
+        "formula": "PO43- + 3NH4+ + 12MoO42- + 24H+ -> (NH4)3[P(Mo12O40)] + 12H2O",
+        "applicability": "Detection of Phosphorus after oxidation",
+        "variables": [
+          {
+            "symbol": "(NH4)3[P(Mo12O40)]",
+            "meaning": "Ammonium phosphomolybdate (Canary yellow precipitate)",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Lassaigne's extract can be tested directly with AgNO3 without boiling with concentrated HNO3.",
+        "correction": "If N or S is present, NaCN and Na2S in the extract react with AgNO3 to form white AgCN or black Ag2S precipitates, interfering with halogen detection. Boiling with conc. HNO3 decomposes NaCN and Na2S to HCN and H2S gases."
+      },
+      {
+        "misconception": "A blood-red coloration with FeCl3 indicates the presence of Nitrogen only.",
+        "correction": "Blood-red color indicates the joint presence of BOTH Nitrogen and Sulphur forming NaSCN. Pure Nitrogen yields Prussian blue color."
+      },
+      {
+        "misconception": "Lassaigne's test can detect nitrogen in hydrazines and diazonium salts easily.",
+        "correction": "Compounds containing N-N bonds like hydrazine (NH2NH2) or diazonium salts lose nitrogen gas as N2 upon heating and do not readily form NaCN, often giving a false negative test unless specialized conditions are met."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "An organic compound containing N and S is fused with sodium metal (insufficient excess). The extract gives a blood-red color on addition of FeCl3. Write the chemical reactions involved and explain why Prussian blue is not formed.",
+        "steps": [
+          "Step 1: Write the fusion reaction with insufficient Na metal: Organic compound (containing C, N, S) + Na -> NaSCN (Sodium thiocyanate).",
+          "Step 2: Reaction with FeCl3: 3NaSCN + FeCl3 -> Fe(SCN)3 + 3NaCl or [Fe(SCN)]2+ complex (Blood-red coloration).",
+          "Step 3: Reason for absence of Prussian blue: Since free CN- ions are absent (they are tied up as SCN-), sodium ferrocyanide cannot form, preventing the formation of Prussian blue Fe4[Fe(CN)6]3."
+        ],
+        "answer": "NaSCN is formed instead of NaCN and Na2S due to simultaneous presence of N and S without excess Na. Addition of Fe3+ produces blood-red [Fe(SCN)]2+ complex rather than Prussian blue."
+      },
+      {
+        "problem": "During the halogen test on Lassaigne's extract, a student adds AgNO3 directly without boiling with conc. HNO3 and observes a white precipitate. Can the student definitively conclude Chlorine is present?",
+        "steps": [
+          "Step 1: Identify potential interfering ions in Lassaigne's extract: NaCN (if Nitrogen is present) and Na2S (if Sulphur is present).",
+          "Step 2: Reaction of interfering ions with AgNO3: NaCN + AgNO3 -> AgCN (White precipitate); Na2S + 2AgNO3 -> Ag2S (Black precipitate).",
+          "Step 3: Conclusion: The observed white precipitate could be AgCN rather than AgCl."
+        ],
+        "answer": "No. The white precipitate could be AgCN produced by cyanide ions from Nitrogen. Boiling with conc. HNO3 is mandatory to decompose NaCN to HCN gas before testing for halogens."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which compound is responsible for the Prussian blue color in Lassaigne's test for nitrogen?\n(A) Na4[Fe(CN)6]\n(B) Fe3[Fe(CN)6]2\n(C) Fe4[Fe(CN)6]3\n(D) Na3[Fe(CN)6]",
+        "answer": "(C) Fe4[Fe(CN)6]3 (Ferric ferrocyanide / Iron(III) hexacyanoferrate(II))."
+      },
+      {
+        "question": "In the test for phosphorus, the organic compound is oxidized with sodium peroxide and treated with ammonium molybdate in acidic medium. What is the color of the precipitate formed?\n(A) Blood red\n(B) Canary yellow\n(C) Deep violet\n(D) Gelatinous white",
+        "answer": "(B) Canary yellow, due to the formation of ammonium phosphomolybdate (NH4)3[P(Mo12O40)]."
+      },
+      {
+        "question": "Lassaigne's extract gives a violet color when treated with sodium nitroprusside. This indicates the presence of:\n(A) Nitrogen\n(B) Sulphur\n(C) Chlorine\n(D) Phosphorus",
+        "answer": "(B) Sulphur, due to the formation of the sodium thionitroprusside complex [Fe(CN)5NOS]4-."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Chapter 12: Organic Chemistry - Some Basic Principles and Techniques, Qualitative Analysis section.",
+      "JEE Main Official Chemistry Syllabus: Practical Chemistry - Detection of extra elements (N, S, Halogens, P) in organic compounds."
+    ]
+  }
+}

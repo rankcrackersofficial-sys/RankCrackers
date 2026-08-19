@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "missionDriven": true,
+  "manualBatchCommandsRequired": false,
+  "models": {
+    "factory": "gemini-3.6-flash",
+    "review": "gemini-3.1-pro-preview",
+    "normalizer": "gemini-3.5-flash-lite"
+  },
+  "workers": {
+    "sourceRecovery": {
+      "enabled": true,
+      "maxConcurrency": 8
+    },
+    "digibook": {
+      "enabled": true,
+      "batchSize": 1,
+      "maxConcurrentBatches": 8,
+      "structuredOutputRequired": true
+    },
+    "crucible": {
+      "enabled": true,
+      "maxConcurrentSlots": 8
+    },
+    "review": {
+      "enabled": true,
+      "maxConcurrency": 4,
+      "proRequiredForAcademicPromotion": true
+    }
+  },
+  "retry": {
+    "maxAutomaticAttempts": 2,
+    "continueIndependentWork": true
+  },
+  "promotion": {
+    "sourceEvidenceRequired": true,
+    "reviewRequired": true,
+    "modelOnlyPromotionAllowed": false,
+    "automaticStudentPublishAllowed": false
+  },
+  "safety": {
+    "productionRead": false,
+    "productionWrite": false,
+    "firestoreWrite": false,
+    "studentRuntimeAi": false,
+    "deploy": false,
+    "rulesChange": false
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "FAIL",
+    "itemCountReviewed": 1,
+    "approvedAtomIds": [],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_17981AE4_CH001"
+    ],
+    "blockingIssues": [
+      "In Worked Example 1, Step 1, the text incorrectly states '- U_lattice_formation (or + U where U is positive lattice dissociation enthalpy...'. To obtain the correct enthalpy of formation, one must ADD the lattice formation enthalpy (which is negative) or SUBTRACT the lattice dissociation enthalpy (which is positive). The current text has the signs exactly reversed in its algebraic explanation.",
+      "In Worked Example 1, Step 1, 'positive lattice dissociation enthalpy' is incorrectly defined as 'gaseous ions -> solid crystal release'. Dissociation is the process of breaking the solid into gaseous ions, which is endothermic (positive), while formation releases energy (negative).",
+      "In the Formula Register, the Born-Haber cycle equation uses '+ U' with U defined as 'Lattice enthalpy'. According to IUPAC conventions, Lattice Enthalpy is positive (dissociation), meaning the equation should either subtract U ('- U') or U should be explicitly redefined as 'Lattice formation enthalpy'."
+    ],
+    "reviewNotes": "The content covers the theoretical aspects of ionic bonding quite well. However, the explanation of thermodynamic signs for lattice enthalpy and the Born-Haber cycle is mathematically and conceptually flawed. Correcting the signs in the formula register and overhauling the step-by-step logic in Worked Example 1 is necessary to align with standard thermodynamics and IUPAC guidelines.",
+    "conceptCorrectnessPass": false,
+    "formulaPass": false,
+    "selfCheckPass": true,
+    "workedExampleMathPass": false
+  }
+}

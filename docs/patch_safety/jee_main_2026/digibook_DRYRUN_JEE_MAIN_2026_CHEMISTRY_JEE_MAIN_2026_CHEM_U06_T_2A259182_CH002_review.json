@@ -1,0 +1,29 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "PASS",
+    "itemCountReviewed": 4,
+    "approvedAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_2A259182_CH002"
+    ],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [],
+    "blockingIssues": [],
+    "reviewNotes": "The drafted content is mathematically accurate and conceptually clear. The definitions of physical equilibria phases, Henry's Law, and associated characteristics are well-articulated. Both the worked example and the self-check questions feature precise mathematical execution and correct answer keys.",
+    "conceptCorrectnessPass": true,
+    "formulaPass": true,
+    "selfCheckPass": true,
+    "workedExampleMathPass": true
+  }
+}

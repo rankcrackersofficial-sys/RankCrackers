@@ -1,0 +1,130 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_8F891667_CH002",
+    "overview": "This content node covers the practical chemistry principles, mechanisms, stoichiometry, and experimental precautions involved in the preparation of standard inorganic double salts (Mohr's Salt and Potash Alum) and key organic compounds (Acetanilide, p-Nitroacetanilide, Aniline Yellow, and Iodoform).",
+    "concepts": [
+      {
+        "title": "Preparation of Double Salts: Mohr's Salt and Potash Alum",
+        "explanation": "Mohr's salt, FeSO4.(NH4)2SO4.6H2O, and Potash alum, K2SO4.Al2(SO4)3.24H2O, are double salts prepared by mixing equimolar aqueous solutions of their constituent simple salts followed by crystallization. A small amount of dilute H2SO4 is added during dissolution to prevent the hydrolytic precipitation of Fe2+ or Al3+ ions, respectively."
+      },
+      {
+        "title": "Acetylation: Synthesis of Acetanilide",
+        "explanation": "Aniline undergoes nucleophilic acyl substitution with acetic anhydride (or acetyl chloride) in the presence of glacial acetic acid or zinc dust to yield acetanilide. This reaction protects the -NH2 group by reducing its strongly activating and basic nature through resonance delocalization of the nitrogen lone pair into the carbonyl group."
+      },
+      {
+        "title": "Electrophilic Aromatic Substitution: Synthesis of p-Nitroacetanilide",
+        "explanation": "Direct nitration of aniline leads to substantial m-nitroaniline (47%) due to formation of the metadirecting anilinium ion in acidic media, along with oxidation. Protecting the amino group as acetanilide allows selective nitration at low temperatures (<288 K) using nitrating mixture (conc. HNO3 + conc. H2SO4), yielding p-nitroacetanilide as the major steric product."
+      },
+      {
+        "title": "Diazotization and Coupling: Synthesis of Aniline Yellow",
+        "explanation": "Aniline Yellow (p-aminoazobenzene) is an azo dye synthesized via diazotization of aniline with NaNO2 and HCl at 273-278 K to form benzene diazonium chloride, followed by electrophilic aromatic coupling with aniline in weakly acidic medium (pH 4-5) or rearrangement of diazoaminobenzene."
+      },
+      {
+        "title": "Haloform Reaction: Preparation of Iodoform",
+        "explanation": "Compounds containing the CH3C=O or CH3CH(OH) group (e.g., acetone, ethanol) react with iodine in the presence of sodium hydroxide or sodium carbonate. Triiodination of the methyl group followed by base-mediated cleavage produces a characteristic yellow precipitate of iodoform (CHI3)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Preparation of Mohr's Salt",
+        "formula": "FeSO4 + (NH4)2SO4 + 6 H2O -> FeSO4.(NH4)2SO4.6H2O",
+        "applicability": "Equimolar crystallization of ferrous sulphate and ammonium sulphate in acidic solution.",
+        "variables": [
+          {
+            "symbol": "FeSO4",
+            "meaning": "Ferrous sulphate heptahydrate / anhydrous equivalent",
+            "unit": "g"
+          },
+          {
+            "symbol": "(NH4)2SO4",
+            "meaning": "Ammonium sulphate",
+            "unit": "g"
+          }
+        ]
+      },
+      {
+        "label": "Iodoform Reaction Stoichiometry (from Acetone)",
+        "formula": "CH3COCH3 + 3 I2 + 4 NaOH -> CHI3 + CH3COONa + 3 NaI + 3 H2O",
+        "applicability": "Conversion of methyl ketones to iodoform precipitate.",
+        "variables": [
+          {
+            "symbol": "CHI3",
+            "meaning": "Triiodomethane (Iodoform)",
+            "unit": "g"
+          },
+          {
+            "symbol": "I2",
+            "meaning": "Iodine reactant",
+            "unit": "mol"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Mohr's salt and Potash alum are complex salts that retain complex ions in solution.",
+        "correction": "They are double salts. Unlike complex salts, double salts completely dissociate into their simple constituent ions (Fe2+, NH4+, SO4^2-, K+, Al3+) when dissolved in water."
+      },
+      {
+        "misconception": "Dilute H2SO4 added during Mohr's salt preparation acts as a dehydrating agent or reactant to increase yield.",
+        "correction": "Dilute H2SO4 is added specifically to prevent hydrolysis of Fe2+ to insoluble iron hydroxides."
+      },
+      {
+        "misconception": "Direct nitration of aniline produces purely p-nitroaniline as major product.",
+        "correction": "Direct nitration gives significant meta-nitroaniline (47%) due to protonation forming the meta-directing anilinium ion (-NH3+). Protection via acetylation is required for p-selectivity."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the theoretical yield of Mohr's salt (Molar Mass = 392 g/mol) obtained when 7.0 g of FeSO4.7H2O (Molar Mass = 278 g/mol) is mixed with an equimolar amount of ammonium sulphate.",
+        "steps": [
+          "Step 1: Determine moles of FeSO4.7H2O used = 7.0 / 278 = 0.02518 mol.",
+          "Step 2: Since stoichiometry with Mohr's salt is 1:1, theoretical moles of Mohr's salt = 0.02518 mol.",
+          "Step 3: Calculate theoretical yield = Moles * Molar Mass = 0.02518 * 392 = 9.87 g."
+        ],
+        "answer": "9.87 g"
+      },
+      {
+        "problem": "How many moles of NaOH and I2 are required to convert 1 mole of acetone completely into iodoform?",
+        "steps": [
+          "Step 1: Write balanced equation: CH3COCH3 + 3 I2 + 4 NaOH -> CHI3 + CH3COONa + 3 NaI + 3 H2O.",
+          "Step 2: Identify mole ratios per 1 mole of acetone.",
+          "Step 3: Moles of I2 required = 3 moles; Moles of NaOH required = 4 moles."
+        ],
+        "answer": "3 moles of I2 and 4 moles of NaOH"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Why is dilute H2SO4 added during the preparation of Potash Alum crystal solution? Options: (A) To increase solubility of potassium sulphate, (B) To prevent hydrolytic decomposition of Al3+ ions, (C) To act as a dehydrating agent, (D) To oxidize Al3+ ions.",
+        "answer": "Correct Answer: (B). Dilute sulphuric acid prevents hydrolysis of aluminium sulphate to insoluble aluminium hydroxide."
+      },
+      {
+        "question": "What is the primary reason for converting aniline to acetanilide before nitration to obtain p-nitroaniline? Options: (A) To increase the basicity of the amino group, (B) To prevent oxidation and avoid meta-substitution via anilinium ion formation, (C) To increase the reactivity towards electrophiles, (D) To solubility aniline in water.",
+        "answer": "Correct Answer: (B). Acetylation decreases lone pair availability on nitrogen, preventing anilinium ion formation in acidic medium and protecting against oxidation."
+      },
+      {
+        "question": "Which of the following compounds will NOT yield a yellow precipitate of iodoform upon reaction with I2 and NaOH? Options: (A) Ethanol, (B) Propan-2-ol, (C) Pentan-3-one, (D) Acetone.",
+        "answer": "Correct Answer: (C). Pentan-3-one lacks the CH3C=O group or CH3CH(OH) group necessary for the iodoform reaction."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 12 Chemistry, Unit 13: Amines - Laboratory Preparation Methods",
+      "NCERT Class 12 Chemistry Lab Manual: Preparation of Inorganic Double Salts and Organic Compounds",
+      "JEE Main Official Chemistry Syllabus: Section B Practical Chemistry"
+    ]
+  }
+}

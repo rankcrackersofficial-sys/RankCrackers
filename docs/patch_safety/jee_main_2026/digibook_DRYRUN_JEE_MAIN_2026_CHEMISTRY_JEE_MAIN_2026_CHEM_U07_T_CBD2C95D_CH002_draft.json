@@ -1,0 +1,128 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_CBD2C95D_CH002",
+    "overview": "Redox reactions involve simultaneous oxidation and reduction processes. According to electronic concepts, oxidation is defined as the loss of electrons (increase in oxidation number) and reduction as the gain of electrons (decrease in oxidation number). Oxidation state represents the hypothetical charge an atom would carry if all bonds were completely ionic. Mastering oxidation number rules and balancing redox reactions via oxidation number or ion-electron methods is fundamental to physical chemistry.",
+    "concepts": [
+      {
+        "title": "Electronic Concept of Redox Reactions",
+        "explanation": "In classical terms, oxidation meant addition of oxygen/electronegative element or removal of hydrogen/electropositive element, while reduction was the reverse. In modern electronic terms, oxidation is the loss of one or more electrons by a chemical species, leading to an increase in positive oxidation state. Reduction is the gain of one or more electrons, leading to a decrease in oxidation state. Oxidizing agents (oxidants) accept electrons and get reduced, whereas reducing agents (reductants) donate electrons and get oxidized."
+      },
+      {
+        "title": "Oxidation Number Rules",
+        "explanation": "Oxidation number (or state) is the formal charge an atom retains when all bonded electrons are assigned to the more electronegative atom. Rules: (1) Atoms in elemental form (e.g., O2, S8, P4) have oxidation state 0. (2) For monatomic ions, oxidation state equals charge. (3) Fluorine is always -1. (4) Oxygen is usually -2, except in peroxides (-1), superoxides (-1/2), and OF2 (+2). (5) Hydrogen is +1 with non-metals and -1 with metals in binary hydrides. (6) Alkali metals are +1, alkaline earth metals are +2. (7) Sum of oxidation numbers in a neutral molecule is 0, and in a polyatomic ion equals the ion charge."
+      },
+      {
+        "title": "Balancing Redox Reactions",
+        "explanation": "Redox equations can be balanced using either the Oxidation Number Method or the Ion-Electron (Half-Reaction) Method. The steps involve: (1) Identifying species undergoing oxidation and reduction. (2) Balancing elements other than H and O. (3) Balancing charge using electrons. (4) Balancing O using H2O molecules and H using H+ ions (in acidic medium). In basic medium, H+ ions are neutralized by adding equal number of OH- ions to both sides."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Net Charge Balance in Polyatomic Species",
+        "formula": "\\sum (N_i \\times ON_i) = Z",
+        "applicability": "Determines the unknown oxidation state of an atom in a molecule or ion.",
+        "variables": [
+          {
+            "symbol": "N_i",
+            "meaning": "Number of atoms of element i in the species",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "ON_i",
+            "meaning": "Oxidation number of element i",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Z",
+            "meaning": "Total net charge of the chemical species",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Electron Conservation Rule",
+        "formula": "n_{\\text{lost}} = n_{\\text{gained}}",
+        "applicability": "Used to balance electron transfer between half-reactions in redox processes.",
+        "variables": [
+          {
+            "symbol": "n_{\\text{lost}}",
+            "meaning": "Moles of electrons lost by reducing agent",
+            "unit": "mol"
+          },
+          {
+            "symbol": "n_{\\text{gained}}",
+            "meaning": "Moles of electrons gained by oxidizing agent",
+            "unit": "mol"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Oxidation state and valency are identical concepts.",
+        "correction": "Valency represents the combining capacity of an element and is always a non-zero positive integer without sign. Oxidation state can be zero, positive, negative, or fractional."
+      },
+      {
+        "misconception": "An oxidizing agent undergoes oxidation during a reaction.",
+        "correction": "An oxidizing agent causes another species to be oxidized by accepting electrons from it; therefore, the oxidizing agent itself undergoes reduction."
+      },
+      {
+        "misconception": "Average oxidation state always reflects the exact charge on every individual atom of that element in a molecule.",
+        "correction": "Average oxidation states (like +8/3 for Fe in Fe3O4 or +2.5 for S in Na2S4O6) represent the average of non-identical structural oxidation states of atoms in different chemical environments within the molecule."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Determine the oxidation state of sulfur in Marshall's acid (H2S2O8).",
+        "steps": [
+          "Step 1: Analyze the chemical structure of peroxydisulfuric acid (Marshall's acid). It contains two sulfate-like groups connected by a peroxide linkage (-O-O-).",
+          "Step 2: Identify oxygen types: 2 peroxide oxygens (oxidation state -1 each) and 6 oxide oxygens (oxidation state -2 each). Hydrogen has oxidation state +1.",
+          "Step 3: Apply charge balance equation: 2(+1) + 2(S) + 6(-2) + 2(-1) = 0.",
+          "Step 4: Solve for S: +2 + 2S - 12 - 2 = 0 => 2S - 12 = 0 => S = +6."
+        ],
+        "answer": "+6"
+      },
+      {
+        "problem": "Balance the following redox half-reaction in acidic medium: Cr2O7^2- -> Cr^3+.",
+        "steps": [
+          "Step 1: Balance chromium atoms: Cr2O7^2- -> 2 Cr^3+.",
+          "Step 2: Balance oxygen atoms by adding H2O: Cr2O7^2- -> 2 Cr^3+ + 7 H2O.",
+          "Step 3: Balance hydrogen atoms by adding H+ ions: Cr2O7^2- + 14 H+ -> 2 Cr^3+ + 7 H2O.",
+          "Step 4: Balance charge using electrons: Left side charge = -2 + 14 = +12. Right side charge = +6. Add 6 e- to left side: Cr2O7^2- + 14 H+ + 6 e- -> 2 Cr^3+ + 7 H2O."
+        ],
+        "answer": "Cr2O7^2- + 14 H+ + 6 e- -> 2 Cr^3+ + 7 H2O"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "What is the average oxidation state of sulfur in sodium thiosulfate (Na2S2O3)? (A) +2 (B) +4 (C) +6 (D) +2.5",
+        "answer": "(A) +2. Explanation: 2(+1) + 2(S) + 3(-2) = 0 => +2 + 2S - 6 = 0 => 2S = +4 => S = +2."
+      },
+      {
+        "question": "In the reaction 2 H2S + SO2 -> 3 S + 2 H2O, which substance acts as the reducing agent? (A) SO2 (B) H2S (C) S (D) H2O",
+        "answer": "(B) H2S. Explanation: Sulfur in H2S goes from oxidation state -2 to 0 (oxidation). Thus H2S is the reducing agent."
+      },
+      {
+        "question": "How many moles of electrons are transferred when 1 mole of MnO4- is completely reduced to Mn^2+? (A) 3 (B) 4 (C) 5 (D) 7",
+        "answer": "(C) 5. Explanation: Manganese changes its oxidation state from +7 in MnO4- to +2 in Mn^2+. The difference is 7 - 2 = 5 electrons per formula unit."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Chapter 8: Redox Reactions",
+      "JEE Main Official Chemistry Syllabus - Unit: Redox Reactions and Electrochemistry"
+    ]
+  }
+}

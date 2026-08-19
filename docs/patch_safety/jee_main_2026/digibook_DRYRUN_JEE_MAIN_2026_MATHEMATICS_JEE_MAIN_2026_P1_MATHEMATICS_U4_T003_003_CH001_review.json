@@ -1,0 +1,29 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "PASS",
+    "itemCountReviewed": 5,
+    "approvedAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U4_T003_003_CH001"
+    ],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [],
+    "blockingIssues": [],
+    "reviewNotes": "The content successfully covers the foundational concepts of Permutations and Combinations. Formulas, conceptual explanations, and common misconceptions are addressed accurately. All worked examples and self-check questions have correct keys and sound mathematical reasoning.",
+    "conceptCorrectnessPass": true,
+    "formulaPass": true,
+    "selfCheckPass": true,
+    "workedExampleMathPass": true
+  }
+}

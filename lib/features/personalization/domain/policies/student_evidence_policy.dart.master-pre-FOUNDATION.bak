@@ -1,0 +1,100 @@
+/// RankCrackers Student Evidence Admissibility Policy.
+
+
+        if ((event.answerChangeCount ?? 0) > 0) {
+          allowed.add(StudentEvidenceUse.answerChange);
+        }
+
+
+        if (event.wasRetry == true) {
+          allowed.add(StudentEvidenceUse.retry);
+        }
+
+
+        return;
+
+
+      case StudentEvidenceAction.diagnosticCompleted:
+      case StudentEvidenceAction.mentorVerified:
+        return;
+    }
+  }
+
+
+  void _applyInterventionRules({
+    required StudentEvidenceEvent event,
+    required Set<StudentEvidenceUse> allowed,
+  }) {
+    if (!trustedInterventionConfidenceLevels.contains(
+      event.sourceConfidence,
+    )) {
+      return;
+    }
+
+
+    switch (event.action) {
+      case StudentEvidenceAction.sessionAbandoned:
+      case StudentEvidenceAction.questionSkipped:
+      case StudentEvidenceAction.doubtRaised:
+      case StudentEvidenceAction.answerSubmitted:
+      case StudentEvidenceAction.retrySubmitted:
+        allowed.add(StudentEvidenceUse.intervention);
+        return;
+
+
+      case StudentEvidenceAction.nodeOpened:
+      case StudentEvidenceAction.nodeCompleted:
+      case StudentEvidenceAction.learningBlockViewed:
+      case StudentEvidenceAction.questionPresented:
+      case StudentEvidenceAction.answerChanged:
+      case StudentEvidenceAction.hintRequested:
+      case StudentEvidenceAction.explanationOpened:
+      case StudentEvidenceAction.retryStarted:
+      case StudentEvidenceAction.revisionStarted:
+      case StudentEvidenceAction.revisionCompleted:
+      case StudentEvidenceAction.diagnosticCompleted:
+      case StudentEvidenceAction.doubtResolved:
+      case StudentEvidenceAction.mentorVerified:
+        return;
+    }
+  }
+
+
+  bool _hasTrustedAcademicConfidence(
+    StudentEvidenceEvent event,
+  ) {
+    return trustedAcademicConfidenceLevels.contains(
+      event.sourceConfidence,
+    );
+  }
+
+
+  bool _hasAcademicCoordinate(
+    StudentEvidenceEvent event,
+  ) {
+    final amtnId = event.amtnId;
+
+
+    if (amtnId != null && amtnId.trim().isNotEmpty) {
+      return true;
+    }
+
+
+    final syllabusNodeId = event.syllabusNodeId;
+
+
+    return syllabusNodeId != null &&
+        syllabusNodeId.trim().isNotEmpty;
+  }
+
+
+  bool _hasQuestionIdentity(
+    StudentEvidenceEvent event,
+  ) {
+    final questionId = event.questionId;
+
+
+    return questionId != null &&
+        questionId.trim().isNotEmpty;
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_D5C327F6_CH001",
+    "overview": "This unit focuses on the general methods of preparation, physical and chemical properties, characteristic reactions, and practical uses of essential inorganic double salts (such as Mohr's salt and Potash alum) and functional organic compounds frequently examined in JEE Main. Understanding reaction stoichiometry, crystallization procedures, and qualitative distinction between double salts and coordination complexes forms the cornerstone of this module.",
+    "concepts": [
+      {
+        "title": "Preparation of Double Salts (Mohr's Salt and Potash Alum)",
+        "explanation": "Double salts are synthesized by mixing equimolar amounts of two simple stable salts in an aqueous medium followed by crystallization. Mohr's salt, FeSO4.(NH4)2SO4.6H2O, is prepared by mixing equimolar ferrous sulfate and ammonium sulfate in water containing dilute H2SO4 to prevent hydrolysis of Fe2+ ions. Potash alum, K2SO4.Al2(SO4)3.24H2O, is prepared similarly from potassium sulfate and aluminum sulfate."
+      },
+      {
+        "title": "Distinction Between Double Salts and Complex Compounds",
+        "explanation": "Double salts exist only in the solid state and completely dissociate into their constituent simple ions when dissolved in water. In contrast, complex compounds (coordination compounds) retain their identity in aqueous solution and do not completely dissociate into simple individual constituent ions."
+      },
+      {
+        "title": "General Chemical Properties and Reactivity Trends",
+        "explanation": "Inorganic double salts undergo characteristic reactions of their constituent cations and anions. Ferrous ion in Mohr's salt acts as a reducing agent in redox titrations against standard KMnO4 or K2Cr2O7 solution. The stability of Fe2+ in Mohr's salt against atmospheric oxidation makes it a reliable primary standard."
+      },
+      {
+        "title": "Industrial and Laboratory Uses",
+        "explanation": "Mohr's salt serves as a primary standard in volumetric analysis (permanganometry and dichromatometry). Potash alum is widely utilized in water purification (as a coagulant), tanning industry, sizing of paper, and as a mordant in dyeing."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Molar Mass of Mohr's Salt",
+        "formula": "M_{Mohr} = M_{FeSO4} + M_{(NH4)2SO4} + 6 \\times M_{H2O} = 392.14 \\text{ g/mol}",
+        "applicability": "Used in quantitative volumetric calculations and preparing standard solutions.",
+        "variables": [
+          {
+            "symbol": "M_{Mohr}",
+            "meaning": "Molar mass of Ferrous Ammonium Sulfate Hexahydrate",
+            "unit": "g/mol"
+          }
+        ]
+      },
+      {
+        "label": "Percentage Yield",
+        "formula": "\\text{Percentage Yield} = \\left( \\frac{\\text{Actual Mass Obtained}}{\\text{Theoretical Mass Calculated}} \\right) \\times 100",
+        "applicability": "Determining synthetic efficiency in laboratory salt preparations.",
+        "variables": [
+          {
+            "symbol": "\\text{Actual Mass}",
+            "meaning": "Mass of crystallized pure salt collected after drying",
+            "unit": "g"
+          },
+          {
+            "symbol": "\\text{Theoretical Mass}",
+            "meaning": "Stoichiometrically calculated mass of product based on limiting reagent",
+            "unit": "g"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Mohr's salt solution can be prepared in pure water without adding acid.",
+        "correction": "Pure water causes hydrolysis of Fe2+ ions resulting in a turbid solution of Fe(OH)2/Fe(OH)3. A small amount of dilute H2SO4 is necessary during dissolution to suppress hydrolysis."
+      },
+      {
+        "misconception": "Double salts contain coordination bonds between simple salts.",
+        "correction": "Double salts are ionic lattices containing individual simple ions held together by ionic electrostatic lattice forces in a fixed stoichiometric ratio, unlike coordination complexes which feature coordinate covalent bonds."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the mass of Mohr's salt (FeSO4.(NH4)2SO4.6H2O, molar mass = 392 g/mol) required to prepare 250 mL of a 0.05 M standard solution.",
+        "steps": [
+          "Step 1: Express concentration formula: Molarity (M) = (Mass / Molar Mass) * (1000 / Volume in mL)",
+          "Step 2: Substitute given values: 0.05 = (Mass / 392) * (1000 / 250)",
+          "Step 3: Simplify volume factor: 1000 / 250 = 4",
+          "Step 4: Solve for Mass: Mass = (0.05 * 392) / 4 = 19.6 / 4 = 4.90 g"
+        ],
+        "answer": "4.90 g"
+      },
+      {
+        "problem": "During the preparation of Potash alum, 8.70 g of K2SO4 (molar mass = 174 g/mol) is mixed with equimolar hydrated Al2(SO4)3. Calculate the maximum theoretical yield of Potash alum K2SO4.Al2(SO4)3.24H2O (molar mass = 948 g/mol).",
+        "steps": [
+          "Step 1: Calculate moles of K2SO4: n = 8.70 / 174 = 0.05 mol",
+          "Step 2: According to the stoichiometry: 1 mol K2SO4 produces 1 mol Potash alum.",
+          "Step 3: Theoretical moles of Potash alum produced = 0.05 mol",
+          "Step 4: Calculate theoretical mass: Mass = 0.05 * 948 = 47.4 g"
+        ],
+        "answer": "47.4 g"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Why is dilute sulfuric acid added during the preparation of standard ferrous ammonium sulfate solution? (A) To accelerate crystallization (B) To prevent hydrolytic decomposition of Fe2+ ions (C) To oxidize Fe2+ to Fe3+ (D) To act as an indicator",
+        "answer": "(B) Dilute H2SO4 prevents the hydrolysis of Fe2+ ions into Fe(OH)2, keeping the solution clear and preventing premature precipitation."
+      },
+      {
+        "question": "Which of the following ions will NOT give a characteristic test when Mohr's salt is dissolved in water? (A) Fe2+ (B) NH4+ (C) SO4 2- (D) Fe3+",
+        "answer": "(D) Mohr's salt is a double salt containing Fe2+, NH4+, and SO4 2- ions. Fe3+ is not a constituent ion of pure Mohr's salt."
+      },
+      {
+        "question": "What is the total number of water of crystallization molecules present in one formula unit of Potash alum? (A) 6 (B) 12 (C) 24 (D) 48",
+        "answer": "(C) The chemical formula of Potash alum is K2SO4.Al2(SO4)3.24H2O, which contains 24 water molecules per formula unit."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class XII Chemistry, Chapter 9: Coordination Compounds (Practical Aspects & Double Salts)",
+      "NCERT Laboratory Manual Chemistry Class XII: Preparation of Inorganic Compounds (Mohr's Salt & Potash Alum)",
+      "JEE Main Chemistry Official Syllabus - Practical Chemistry & Inorganic Preparations"
+    ]
+  }
+}

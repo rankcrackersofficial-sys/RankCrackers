@@ -1,0 +1,21 @@
+{
+    "studentRuntime":  "functions/test_mission_mirror.js",
+    "evidenceAuthorityGuard":  "functions/test_mission_mirror.js",
+    "testDenominators":  [
+                             "mission mirror tests",
+                             "identity mismatch tests",
+                             "student projection tests",
+                             "factory identity tests",
+                             "synthetic authority guard tests"
+                         ],
+    "governanceCounters":  [
+                               "UNKNOWN_CLASSIFICATIONS=0",
+                               "SYNTHETIC_PASS_USED_AS_PRODUCTION_EVIDENCE=0",
+                               "SYNTHETIC_GENERATOR_MARKED_PRODUCTION_VERIFIER=0",
+                               "SUPERSEDED_SYNTHETIC_REPORT_PRESENTED_AS_CURRENT=0",
+                               "MISSION_IDENTITY_FORKS=0",
+                               "DUPLICATE_MISSION_TRUTH=0",
+                               "LEGACY_MISSION_ID_SUBSTITUTION=0",
+                               "UNKNOWN_EVIDENCE_INTEGRITY_RESIDUAL=0"
+                           ]
+}

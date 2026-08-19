@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "executionMode": "offline_local_evidence_only",
+  "missionInput": {
+    "source": "explicit_local_manifest",
+    "productionFirestoreLookupAllowed": false,
+    "implicitMissionLookupAllowed": false
+  },
+  "state": {
+    "persistent": true,
+    "atomicWrites": true,
+    "resumeEnabled": true,
+    "skipApprovedArtifacts": true,
+    "contentHashRequired": true,
+    "reviewHashRequiredForApprovedArtifacts": true
+  },
+  "syllabusPromotion": {
+    "officialSourceLocatorRequired": true,
+    "officialSourceHashRequired": true,
+    "proReviewRequired": true,
+    "modelOnlyPromotionAllowed": false
+  },
+  "digibookPromotion": {
+    "structuredOutputRequired": true,
+    "sourceEvidenceRequired": true,
+    "proReviewRequired": true,
+    "modelOnlyApprovalAllowed": false
+  },
+  "cruciblePromotion": {
+    "canonicalSlotCoverageRequired": true,
+    "proReviewRequired": true,
+    "verifiedAcademicAnswerKeyRequired": true,
+    "officialAnswerKeyInferenceAllowed": false
+  },
+  "student": {
+    "runtimeAiAllowed": false,
+    "automaticPublishAllowed": false
+  },
+  "cloud": {
+    "vertexModelCallsAllowed": true,
+    "productionFirestoreReadAllowed": false,
+    "productionFirestoreWriteAllowed": false,
+    "rulesChangeAllowed": false,
+    "deployAllowed": false
+  }
+}

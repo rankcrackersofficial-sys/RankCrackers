@@ -1,0 +1,175 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U02_T_AD1F2FDA_CH001",
+    "overview": "This learning unit covers 2D kinematics, focusing on projectile motion under gravity and uniform circular motion. Key topics include orthogonal component resolution, projectile trajectory, time of flight, horizontal range, maximum height, as well as angular kinematics, centripetal acceleration, and uniform circular dynamics essential for JEE Main Physics.",
+    "concepts": [
+      {
+        "title": "Independence of Motion along Perpendicular Axes",
+        "explanation": "Motion in a plane can be analyzed by resolving velocity, acceleration, and displacement into two mutually perpendicular axes (usually X and Y). The motion along the X-axis is completely independent of the motion along the Y-axis."
+      },
+      {
+        "title": "Ground-to-Ground Projectile Motion",
+        "explanation": "When an object is thrown with an initial velocity u at an angle theta to the horizontal, it moves under the influence of gravity alone. The horizontal velocity u*cos(theta) remains constant, while the vertical velocity u*sin(theta) changes uniformly due to acceleration -g."
+      },
+      {
+        "title": "Uniform Circular Motion (UCM)",
+        "explanation": "In UCM, a particle moves along a circular path of radius r with constant speed v. Although the speed is constant, the velocity vector continuously changes direction. This gives rise to a centripetal acceleration directed towards the center of the circle with magnitude v^2/r."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Time of Flight (Projectile)",
+        "formula": "T = (2 * u * sin(theta)) / g",
+        "applicability": "Ground-to-ground projectile motion under constant downward gravitational acceleration g.",
+        "variables": [
+          {
+            "symbol": "u",
+            "meaning": "Initial projection speed",
+            "unit": "m/s"
+          },
+          {
+            "symbol": "theta",
+            "meaning": "Angle of projection with horizontal",
+            "unit": "radians or degrees"
+          },
+          {
+            "symbol": "g",
+            "meaning": "Acceleration due to gravity",
+            "unit": "m/s^2"
+          }
+        ]
+      },
+      {
+        "label": "Horizontal Range (Projectile)",
+        "formula": "R = (u^2 * sin(2 * theta)) / g",
+        "applicability": "Ground-to-ground projectile motion over a horizontal plane.",
+        "variables": [
+          {
+            "symbol": "u",
+            "meaning": "Initial projection speed",
+            "unit": "m/s"
+          },
+          {
+            "symbol": "theta",
+            "meaning": "Angle of projection with horizontal",
+            "unit": "radians or degrees"
+          },
+          {
+            "symbol": "g",
+            "meaning": "Acceleration due to gravity",
+            "unit": "m/s^2"
+          }
+        ]
+      },
+      {
+        "label": "Equation of Trajectory",
+        "formula": "y = x * tan(theta) - (g * x^2) / (2 * u^2 * cos^2(theta))",
+        "applicability": "Parabolic path of a projectile in Cartesian coordinates with origin at projection point.",
+        "variables": [
+          {
+            "symbol": "x",
+            "meaning": "Horizontal displacement",
+            "unit": "m"
+          },
+          {
+            "symbol": "y",
+            "meaning": "Vertical displacement",
+            "unit": "m"
+          },
+          {
+            "symbol": "u",
+            "meaning": "Initial velocity magnitude",
+            "unit": "m/s"
+          },
+          {
+            "symbol": "theta",
+            "meaning": "Angle of projection",
+            "unit": "radians or degrees"
+          }
+        ]
+      },
+      {
+        "label": "Centripetal Acceleration",
+        "formula": "a_c = v^2 / r = omega^2 * r",
+        "applicability": "Uniform circular motion on a circular track of radius r.",
+        "variables": [
+          {
+            "symbol": "v",
+            "meaning": "Tangential speed",
+            "unit": "m/s"
+          },
+          {
+            "symbol": "r",
+            "meaning": "Radius of circular path",
+            "unit": "m"
+          },
+          {
+            "symbol": "omega",
+            "meaning": "Angular velocity",
+            "unit": "rad/s"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "At the highest point of a projectile's flight, its total acceleration is zero.",
+        "correction": "Only the vertical component of velocity becomes zero at the highest point. The acceleration remains constantly equal to g downwards throughout the motion."
+      },
+      {
+        "misconception": "In uniform circular motion, acceleration is zero because the speed is constant.",
+        "correction": "Speed is constant, but velocity changes direction continuously. Hence, there is a non-zero centripetal acceleration pointing towards the center."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "A stone is projected from ground level with a speed of 20 m/s at an angle of 30 degrees with the horizontal. Calculate the maximum height reached and the horizontal range. (Take g = 10 m/s^2)",
+        "steps": [
+          "Step 1: Identify given values: u = 20 m/s, theta = 30 degrees, g = 10 m/s^2.",
+          "Step 2: Calculate Maximum Height using H = (u^2 * sin^2(theta)) / (2 * g). sin(30 deg) = 0.5. H = (20^2 * 0.5^2) / (2 * 10) = (400 * 0.25) / 20 = 5 m.",
+          "Step 3: Calculate Horizontal Range using R = (u^2 * sin(2 * theta)) / g. sin(60 deg) = sqrt(3)/2. R = (400 * sqrt(3) / 2) / 10 = 20 * sqrt(3) approx 34.64 m."
+        ],
+        "answer": "Maximum height = 5 m, Horizontal Range = 34.64 m."
+      },
+      {
+        "problem": "A particle moves in a circle of radius 4 m with a constant tangential speed of 8 m/s. Find its angular speed and centripetal acceleration.",
+        "steps": [
+          "Step 1: Use relation v = omega * r to find omega. omega = v / r = 8 / 4 = 2 rad/s.",
+          "Step 2: Use formula a_c = v^2 / r to find centripetal acceleration. a_c = 8^2 / 4 = 64 / 4 = 16 m/s^2."
+        ],
+        "answer": "Angular speed = 2 rad/s, Centripetal acceleration = 16 m/s^2."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Two projectiles are thrown with the same initial speed u at angles theta and (90 deg - theta) with the horizontal. What is the ratio of their horizontal ranges?",
+        "answer": "1:1. The horizontal range for projection angle theta is R = (u^2 * sin(2*theta))/g. For angle (90 deg - theta), range is R' = (u^2 * sin(2*(90 deg - theta)))/g = (u^2 * sin(180 deg - 2*theta))/g = (u^2 * sin(2*theta))/g = R. Hence the ratio is 1."
+      },
+      {
+        "question": "What is the angle between the velocity vector and acceleration vector at the highest point of a projectile trajectory?",
+        "answer": "90 degrees. At the peak of trajectory, velocity is purely horizontal (u*cos(theta)), while acceleration is purely vertical (g downward)."
+      },
+      {
+        "question": "If the speed of a particle in uniform circular motion is doubled while keeping the radius unchanged, by what factor does its centripetal acceleration change?",
+        "answer": "It increases by a factor of 4. Centripetal acceleration is proportional to v^2 (a_c = v^2 / r). Doubling v quadruples a_c."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Physics Class 11, Chapter 4: Motion in a Plane",
+      "JEE Main Official Syllabus - Physics Unit 2: Kinematics"
+    ]
+  }
+}

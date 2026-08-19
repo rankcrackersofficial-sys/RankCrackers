@@ -1,0 +1,31 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "FAIL",
+    "itemCountReviewed": 1,
+    "approvedAtomIds": [],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_8796FE37_CH001"
+    ],
+    "blockingIssues": [
+      "In Self-Check Question 3, there are two correct options. Option (A) features N2+ and O2+, which both have a bond order of 2.5. Option (D) features NO+ and CN-, which both are isoelectronic (14 valence electrons) and have a bond order of 3.0. Please modify Option (D) so that it is an incorrect pair (e.g., NO and CN-)."
+    ],
+    "reviewNotes": "The content comprehensively covers the concepts of Molecular Orbital Theory, including correct energy level orderings, worked examples, and relevant misconceptions. However, the last self-check question is flawed as it contains multiple correct answers. Fixing this will make the atom fully ready for student publishing.",
+    "conceptCorrectnessPass": true,
+    "formulaPass": true,
+    "selfCheckPass": false,
+    "workedExampleMathPass": true
+  }
+}

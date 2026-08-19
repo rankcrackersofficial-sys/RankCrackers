@@ -1,0 +1,29 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "PASS",
+    "itemCountReviewed": 1,
+    "approvedAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_F4B904D5_CH002"
+    ],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [],
+    "blockingIssues": [],
+    "reviewNotes": "The content accurately covers the required concepts for the First Law of Thermodynamics, enthalpy, heat capacities, and various enthalpies of reaction. The conceptual clarity is excellent. Mathematical calculations in the worked examples are precise and follow correct sign conventions. All keys and solutions for the self-check questions are entirely accurate.",
+    "conceptCorrectnessPass": true,
+    "formulaPass": true,
+    "selfCheckPass": true,
+    "workedExampleMathPass": true
+  }
+}

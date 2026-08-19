@@ -1,0 +1,2242 @@
+[
+    {
+        "path":  ".dart_tool\\flutter_build\\e6482de6f5f9372498f2d8d40b56203a\\main.dart.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "build\\web\\main.dart.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "comprehensive_audit.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_006m_par01_chatgpt_independent_qualification_cross_audit_20260817\\qualification_cross_audit_harness.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_006n_par01_chatgpt_wave1_552_cross_audit_harness_20260817\\wave1_552_cross_audit_harness.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_006n_par02_chatgpt_independent_real_552_result_cross_audit_20260817\\cross_audit_harness.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_006n_par02_chatgpt_independent_real_552_result_cross_audit_20260817\\par02_real_ledger_cross_audit.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_006n_par02_r1_reconciled_primary_authority_reaudit_20260817\\par02_r1_reaudit.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_006n_par03_chatgpt_independent_fresh_552_real_execution_audit_20260817\\par03_fresh_execution_audit.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_006o_par01_chatgpt_independent_221_secondary_crosscheck_audit_harness_20260817\\cross_audit_harness.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_007a_chatgpt_automation_control_plane_audit_20260817\\run_007a_audit.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_007b_chatgpt_factory_chaos_audit_20260817\\run_007b_chaos.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_007c_chatgpt_materialization_publication_gate_audit_20260817\\run_007c_materialization_gate.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_007d_chatgpt_canonical_reuse_integrity_audit_20260817\\run_007d_canonical_reuse.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_007e_chatgpt_automation_progress_truth_audit_20260817\\run_007e_progress_truth.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "docs\\patch_safety\\aaf_007f_chatgpt_end_to_end_factory_simulation_20260817\\run_007f_e2e_simulation.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "functions\\apply_fup2c_verify5_live_sandbox_write.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\apply_fup2c_verify5_sandbox_rollback_delete.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\apply_notification_page_count_queue.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\apply_official_document_metadata_repair.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\apply_rc_x4e_p15_authorized_pagewise_native.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\apply_repaired_docs_page_count_queue.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\apply_student_catalog_readiness.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\apply_syllabus_atom_pro_queue_write.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\apply_universal_page_count_queue.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\apply_universal_pagewise_extraction_queue.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_atomic_linkage_integrity.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_final_page_count_results.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_first_pagewise_extraction_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_first_successful_pagewise_extraction.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_fup2c_rx2_review_atoms.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_fup2c_verify5_final_closeout.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_fup2c_verify5_live_sandbox_write_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_fup2c_verify5_sandbox_closeout.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_fup2c_verify5_sandbox_rollback_delete_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_mission_catalog_shell_contract.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "functions\\audit_mission_mirror_current_flow.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "functions\\audit_notification_extraction_contract.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_notification_schema_system.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_notification_source_readiness.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_p15_candidates.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_page_count_queue_state.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_candidate_selector_policy.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_current_baseline_result.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_extraction_apply_capability.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_hardened_limit3_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_ir4_detailed_provenance.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_limit3_apply_readiness.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_limit3_result_and_candidate_policy.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_p11_reconciliation.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_post_ir3_rollforward_acceptance.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_post_p12_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_post_p13_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_post_p14_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_post_p15_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_pre_p11_undocumented_incident.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_queue_state.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_r11_undocumented_incident.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_second_hardened_limit3_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_third_hardened_limit3_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_two_batch_continuity.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_undocumented_apply_incident.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pagewise_worker_runtime_safety.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_pyq_sample_atomic_cell_mapping_architecture.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_qcell2_founder_hold_decision_policy.js",
+        "kind":  "static_audit",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_qcell3_canonical_key_controlled_write_preflight.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_qcell5_empty_atomic_question_cells_preflight.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_qcell5_fix2_missing_canonicalkey_classifier.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_qcell5_fix3_legacy_duplicate_pair_evidence.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_question_bank_atomic_mapping_reconciliation.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_rc_x4e_p15_apply3_rollback_readiness.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_rc_x4e_p15_apply3_rollback_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_rc_x4e_p15_auth_apply3_simulated_records.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_rc_x4e_p15_authorized_apply_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_rc_x4e_p15_token2_candidate_eligibility.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_repo_head_freeze_guard.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "functions\\audit_repo_staged_state_guard.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_rollback_2.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_s1_rpsc_syllabus_extraction_pipeline.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_student_catalog_readiness.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_canonical_key_hold_resolution.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_canonical_key_reconciliation.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_canonical_key_write_preflight.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_expansion_blueprint.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_expansion_prewrite_authorization.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_expansion_rebalance_dry_run.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_expansion_write_dry_run.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_granularity_crucible_readiness.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_pro_processor_contract_dry_run.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_pro_queue_manifest_dry_run.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_pro_queue_write_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_syllabus_atom_pro_review_readiness.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_universal_extraction_completeness.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_universal_official_document_page_completeness.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_worker_training_autonomous_readiness.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_worker_training_current_pagewise_baseline.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_worker_training_post_p14_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_worker_training_post_wt4_result.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_worker_training_pro_verification_dry_run.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\audit_worker_training_safe_auto_dry_run.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\backfill_student_mission_catalog.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\callable\\handle_mission_action.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\callable\\handle_sentinel_action.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\callable\\manage_access.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\callable\\secure_download.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\callable\\system_health.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\callable\\toggle_ai_system.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\cleanup_test_mission_catalog_bridge.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\create_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\exec_rollback_2.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\execute_rc_x4e_p15_apply3_authorized_rollback.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\find_3_global_p15_tasks.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\find_3_jee_p15_tasks.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\find_next_p15_tasks.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\find_p15_ba8b_tasks.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\generate_fup2c_verify5_sandbox_rollback_token.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "functions\\generate_fup2c_verify5_second_gate_token.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "functions\\generate_ir4_baselines_v2.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\generate_rc_x4e_p15_apply3_rollback_token.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "functions\\generate_rc_x4e_p15_second_gate_token.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "functions\\get_all_latest_timestamps.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\helpers\\token_estimator.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "functions\\investigate_incident_d.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\lib\\academicFactory\\core\\aafDispatcher.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\lib\\academicFactory\\repositories\\aafQueueRepository.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\lib\\academicFactory\\services\\aafLifecycleService.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\lib\\academicFactory\\services\\aafProgressMonitor.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\lib\\test\\aafLifecycle.test.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\lib\\test\\aafQueue.test.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\lib\\workers\\queueWorker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\plan_notification_pagewise_batch_queue.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\plan_official_document_metadata_repair.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\plan_universal_pagewise_extraction_queue.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\process_page_count_detection_tasks.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\process_pagewise_extraction_batches.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\refinery_benchmark.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\rollback_syllabus_atom_pro_queue_rx6g.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\services\\audit_service.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\services\\budget_service.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\services\\worker_service.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\src\\academicFactory\\core\\aafDispatcher.ts",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\src\\academicFactory\\repositories\\aafQueueRepository.ts",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\src\\academicFactory\\services\\aafLifecycleService.ts",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\src\\academicFactory\\services\\aafProgressMonitor.ts",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\src\\test\\aafLifecycle.test.ts",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\src\\test\\aafQueue.test.ts",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\src\\workers\\queueWorker.ts",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\structural_validation_suite.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\svo_validation_suite.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\test_c3_evidence_integrity.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\test_c4_rebuild_integrity.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\test_mission_mirror.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\tmp_nebula_vs0_founder_preview_bundle.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\tmp_one_time_read_only_production_mission_export.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\tmp_qcell5_fix4_corrected_empty_cell_preflight.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\tmp_qcell6_gate1_live_write_readiness.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\tmp_qcell6_live_failure_diag1.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\tmp_rankcrackers_vs1e_r2_fix1_targeted_re_review.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\tmp_seed_r4e_r3_student_mission_catalog_emulator.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\trigger_test_ingestion.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\alert_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\certificate_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\cleanup_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\encoding_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\evaluate_attempt_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\manifestation_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\materialize_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\physical_storage_cleanup_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\promotion_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\recruitment_engine_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\renderer_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\scout_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\sentinel_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\structural_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "functions\\workers\\svo_worker.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "init_budget.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "pipeline_diagnosis.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "recover_pipeline.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "scratch_dump_syllabus.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "scratch_generate_recovery.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "scratch_get_pages.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "scratch_inspect_crucible.js",
+        "kind":  "static_audit",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "scratch_list.js",
+        "kind":  "live_production_verifier",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  true,
+                           "hasWrite":  false,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "scratch_probe_failure.js",
+        "kind":  "static_audit",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "scratch_probe_failure2.js",
+        "kind":  "static_audit",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "scratch_probe_failure3.js",
+        "kind":  "static_audit",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "scratch_probe_macro5.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\artifact_identity.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\crucible_worker.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\digibook_worker.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\fix_disputes.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\mission_factory_orchestrator.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\mission_factory_state_store.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_aaf_008b_drill.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_aaf008b_independent_audit.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_factory.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_ff02_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_ff03_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_ff04_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_ff05_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_ff06_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_ff07_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_ff08_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_micro_factory.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_pers_01b_convergence.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_pers01b_independent_audit.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_prod01_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_prod02_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_prod03_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_prod04_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_rc_live_mission_academic_01_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_rc_mission_link_01_par01_independent_audit.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_rc_mission_link_01_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_rc_release_01_par01_independent_audit.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_rc_release_01_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\run_student_fix1_verification.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\seed_jee_state.js",
+        "kind":  "reporting_helper",
+        "heuristics":  {
+                           "hasVerdict":  false,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\syllabus_source_worker.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\academic_factory\\test_factory_isolation.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    },
+    {
+        "path":  "tools\\student_pillars_r2_fasttrack\\repair_crucible.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "tools\\student_pillars_r2_fasttrack\\run_crucible_macro1_pro_review.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "tools\\student_pillars_r2_fasttrack\\run_wave1_parallel_factory.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "tools\\student_pillars_r2_fasttrack\\run_wave2_parallel_factory.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  true
+                       }
+    },
+    {
+        "path":  "tools\\student_pillars_r2_fasttrack\\validate_provenance_regression_test.js",
+        "kind":  "synthetic_report_generator",
+        "heuristics":  {
+                           "hasVerdict":  true,
+                           "hasFirebase":  false,
+                           "hasWrite":  true,
+                           "hasFirestore":  false
+                       }
+    }
+]

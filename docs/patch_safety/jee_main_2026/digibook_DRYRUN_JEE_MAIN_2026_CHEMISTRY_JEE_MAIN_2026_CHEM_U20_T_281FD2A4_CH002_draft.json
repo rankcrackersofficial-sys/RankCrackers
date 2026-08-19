@@ -1,0 +1,117 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH002",
+    "overview": "Qualitative organic analysis involves detecting extra elements such as nitrogen, sulphur, and halogens via sodium fusion (Lassaigne's test) and identifying functional groups such as hydroxyl, carbonyl, carboxyl, and amino groups through specific chemical reactions and visual indicators like color changes, precipitate formation, or gas evolution.",
+    "concepts": [
+      {
+        "title": "Lassaigne's Test for Extra Elements (N, S, Halogens)",
+        "explanation": "Organic compounds are fused with metallic sodium to convert covalently bonded nitrogen, sulphur, and halogens into ionic sodium salts: NaCN, Na2S, and NaX. Nitrogen Detection: Sodium fusion extract is boiled with FeSO4, NaOH, acidified with HCl, and treated with FeCl3 to yield a Prussian blue precipitate of ferriferrocyanide Fe4[Fe(CN)6]3. Sulphur Detection: Treatment with sodium nitroprusside gives a purple/violet color [Fe(CN)5NOS]4-, or lead acetate gives a black PbS precipitate. Joint N and S Detection: Forms sodium thiocyanate (NaSCN), producing a blood-red color [Fe(SCN)]2+ with Fe3+. Halogens Detection: Extract is boiled with concentrated HNO3 to expel CN- and S2- gases, then AgNO3 is added to form AgCl (white ppt, soluble in NH4OH), AgBr (pale yellow ppt, sparingly soluble), or AgI (yellow ppt, insoluble)."
+      },
+      {
+        "title": "Detection of Hydroxyl Groups (Alcoholic and Phenolic)",
+        "explanation": "Alcoholic OH Group: Gives brisk effervescence of H2 gas with sodium metal, a red color with Ceric Ammonium Nitrate reagent, and turbidity with Lucas Reagent (conc. HCl + anhydrous ZnCl2) where 3° alcohols react immediately, 2° alcohols in 5 minutes, and 1° alcohols require heating. Phenolic OH Group: Forms characteristic violet/blue/green color with neutral FeCl3 solution, pink color in alkaline medium via phthalein test, and red color turning blue on adding NaOH in Liebermann's nitroso test."
+      },
+      {
+        "title": "Detection of Carbonyl Groups (Aldehydes and Ketones)",
+        "explanation": "General Carbonyl Test: Both aldehydes and ketones form yellow, orange, or red crystalline precipitates with 2,4-Dinitrophenylhydrazine (2,4-DNP / Brady's reagent). Differentiation: Aldehydes reduce Tollens' reagent (ammoniacal AgNO3) to form a shiny silver mirror. Aliphatic aldehydes reduce Fehling's and Benedict's solutions to form a brick-red precipitate of Cu2O. Ketones and aromatic aldehydes do not reduce Fehling's reagent."
+      },
+      {
+        "title": "Detection of Carboxyl and Amino Groups",
+        "explanation": "Carboxyl Group (-COOH): Produces brisk effervescence of CO2 gas with saturated aqueous NaHCO3 solution and forms sweet/fruity smelling esters when heated with alcohol and conc. H2SO4. Amino Group (-NH2): Primary aliphatic and aromatic amines produce extremely foul-smelling isocyanides when heated with chloroform and alcoholic KOH (Carbylamine test). Primary aromatic amines form bright red/orange azo dyes when diazotized with HNO2 at 0-5°C and coupled with beta-naphthol in alkaline medium."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Prussian Blue Complex Formation",
+        "formula": "3 Na4[Fe(CN)6] + 4 FeCl3 -> Fe4[Fe(CN)6]3 + 12 NaCl",
+        "applicability": "Confirmation of nitrogen in Lassaigne's sodium fusion extract",
+        "variables": [
+          {
+            "symbol": "Fe4[Fe(CN)6]3",
+            "meaning": "Iron(III) hexacyanoferrate(II) (Prussian Blue precipitate)",
+            "unit": "Chemical Formula"
+          }
+        ]
+      },
+      {
+        "label": "Sodium Nitroprusside Test for Sulphur",
+        "formula": "Na2S + Na2[Fe(CN)5NO] -> Na4[Fe(CN)5NOS]",
+        "applicability": "Confirmation of sulphur in Lassaigne's sodium fusion extract",
+        "variables": [
+          {
+            "symbol": "[Fe(CN)5NOS]4-",
+            "meaning": "Thionitroprusside complex ion (Purple/Violet color)",
+            "unit": "Chemical Formula"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Boiling Lassaigne extract with concentrated HNO3 before testing for halogens is optional.",
+        "correction": "If nitrogen or sulphur are present, NaCN and Na2S would react with AgNO3 to form AgCN (white) and Ag2S (black) precipitates, interfering with halogen detection. HNO3 decomposes NaCN and Na2S into volatile HCN and H2S gases."
+      },
+      {
+        "misconception": "All aldehydes give a positive test with Fehling's solution.",
+        "correction": "Only aliphatic aldehydes give a positive Fehling's test. Aromatic aldehydes like benzaldehyde fail to reduce Fehling's solution because the carbonyl group is resonance-stabilized by the benzene ring."
+      },
+      {
+        "misconception": "Phenols evolve CO2 gas with aqueous NaHCO3 just like carboxylic acids.",
+        "correction": "Ordinary phenols are weaker acids than carbonic acid (H2CO3) and cannot decompose NaHCO3 to liberate CO2 gas. Only highly acidic phenols (e.g., 2,4,6-trinitrophenol) evolve CO2."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "An organic compound containing C, H, N, and S yields a blood-red color when its sodium fusion extract is treated with FeCl3 solution. Explain the chemistry behind this observation and write the formula of the complex responsible.",
+        "steps": [
+          "Step 1: During sodium fusion of a compound containing both N and S, sodium thiocyanate (NaSCN) is formed instead of separate NaCN and Na2S.",
+          "Step 2: Reaction: Na + C + N + S -> NaSCN.",
+          "Step 3: When FeCl3 is added, Fe3+ ions react with thiocyanate ions (SCN-) to form the blood-red ferric thiocyanate complex.",
+          "Step 4: Chemical Reaction: Fe3+ + SCN- -> [Fe(SCN)]2+."
+        ],
+        "answer": "The blood-red color is due to the formation of the thiocyanatoiron(III) complex, [Fe(SCN)]2+."
+      },
+      {
+        "problem": "A compound 'X' with molecular formula C7H6O gives a positive test with 2,4-DNP and Tollens' reagent, but gives a negative test with Fehling's reagent. Identify 'X' and state the reason for the negative Fehling's test.",
+        "steps": [
+          "Step 1: Positive 2,4-DNP test indicates the presence of a carbonyl group (aldehyde or ketone).",
+          "Step 2: Positive Tollens' test confirms that the compound is an aldehyde.",
+          "Step 3: Negative Fehling's test indicates that the compound is an aromatic aldehyde.",
+          "Step 4: Formula C7H6O corresponds to Benzaldehyde (C6H5CHO)."
+        ],
+        "answer": "Compound 'X' is Benzaldehyde (C6H5CHO). It gives a negative Fehling's test because aromatic aldehydes are weaker reducing agents than aliphatic aldehydes."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following primary compounds will give a positive carbylamine test?\n(A) N-Methylaniline\n(B) Aniline\n(C) N,N-Dimethylaniline\n(D) Triethylamine",
+        "answer": "Option (B) Aniline. The carbylamine test is specific to primary aliphatic and aromatic amines. Aniline (C6H5NH2) is a primary amine and reacts with CHCl3 and alcoholic KOH to produce foul-smelling phenyl isocyanide. Secondary and tertiary amines do not respond."
+      },
+      {
+        "question": "In Lassaigne's test for halogens, the sodium fusion extract is acidified with concentrated HNO3 and boiled before adding AgNO3 to:\n(A) Convert NaX into X2 gas\n(B) Decompose NaCN and Na2S if present\n(C) Increase the solubility of silver halides\n(D) Neutralize sodium metal excess",
+        "answer": "Option (B) Decompose NaCN and Na2S if present. If present, cyanide and sulfide ions form AgCN (white) and Ag2S (black) precipitates with AgNO3, interfering with the halogen test. Acidification with conc. HNO3 and heating expels CN- and S2- as HCN and H2S gases."
+      },
+      {
+        "question": "Which reagent can be used to cleanly distinguish between Ethanol and Phenol?\n(A) Sodium metal\n(B) 2,4-DNP reagent\n(C) Neutral FeCl3 solution\n(D) Fehling's solution",
+        "answer": "Option (C) Neutral FeCl3 solution. Phenol contains a phenolic hydroxyl group and reacts with neutral FeCl3 to yield a characteristic violet-colored complex. Ethanol does not react with neutral FeCl3."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11 - Chapter 12: Organic Chemistry - Some Basic Principles and Techniques (Qualitative Analysis)",
+      "NCERT Chemistry Class 12 - Chapters on Alcohols, Phenols and Ethers; Aldehydes, Ketones and Carboxylic Acids; Amines"
+    ]
+  }
+}

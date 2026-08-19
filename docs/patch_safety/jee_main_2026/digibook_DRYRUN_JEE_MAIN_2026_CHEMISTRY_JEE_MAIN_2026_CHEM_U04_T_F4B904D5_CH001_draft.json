@@ -1,0 +1,192 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_F4B904D5_CH001",
+    "overview": "The First Law of Thermodynamics establishes the fundamental law of energy conservation for physical and chemical processes, stating that energy can neither be created nor destroyed. It relates the change in internal energy (ΔU) of a system to heat added (q) and work done (w). Thermodynamics also defines enthalpy (H = U + PV) as a state function particularly convenient for constant-pressure processes, along with heat capacities (Cp, Cv). Thermochemistry extends these concepts to chemical reactions using Hess's Law of Constant Heat Summation and standard enthalpies of reaction including formation, combustion, atomization, bond dissociation, phase transitions, hydration, ionization, and solution.",
+    "concepts": [
+      {
+        "title": "First Law of Thermodynamics and State Functions",
+        "explanation": "Internal energy (U) represents the total intrinsic energy of a system, encompassing microscopic kinetic and potential energies. Heat (q) and work (w) are path functions that describe mode of energy transfer across system boundaries, while U is a state function depending solely on system state. According to IUPAC convention, the first law is expressed as ΔU = q + w, where w is work done ON the system and q is heat absorbed BY the system."
+      },
+      {
+        "title": "Enthalpy and Heat Capacities",
+        "explanation": "Enthalpy (H) is defined as H = U + PV. For processes at constant pressure, ΔH equals the heat transferred (q_p). Heat capacity C is the heat required to raise the temperature of a system by 1 K. At constant volume, Cv = (dU/dT)_v; at constant pressure, Cp = (dH/dT)_p. For ideal gases, the molar heat capacities satisfy Mayer's relation: Cp,m - Cv,m = R."
+      },
+      {
+        "title": "Hess's Law of Constant Heat Summation",
+        "explanation": "Hess's law states that the total enthalpy change for a chemical reaction is independent of the pathway or intermediate steps involved, because enthalpy is a state function. Consequently, the net enthalpy change of a reaction equals the sum of the enthalpy changes of individual steps: ΔH_rxn = Σ ΔH_f(products) - Σ ΔH_f(reactants)."
+      },
+      {
+        "title": "Standard Enthalpies of Various Processes",
+        "explanation": "Standard enthalpy of formation (ΔH_f°) is the enthalpy change when 1 mole of a compound is formed from its constituent elements in their standard states. Enthalpy of combustion (ΔH_c°) is heat released when 1 mole of substance burns completely in oxygen. Bond dissociation enthalpy is the energy required to break 1 mole of a specific covalent bond in gaseous state. Atomization enthalpy converts 1 mole of substance completely into gaseous atoms."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "First Law of Thermodynamics",
+        "formula": "ΔU = q + w",
+        "applicability": "Universal energy conservation expression (IUPAC sign convention)",
+        "variables": [
+          {
+            "symbol": "ΔU",
+            "meaning": "Change in internal energy",
+            "unit": "J"
+          },
+          {
+            "symbol": "q",
+            "meaning": "Heat absorbed by the system",
+            "unit": "J"
+          },
+          {
+            "symbol": "w",
+            "meaning": "Work done on the system",
+            "unit": "J"
+          }
+        ]
+      },
+      {
+        "label": "Pressure-Volume Work",
+        "formula": "w = - integral(P_ext * dV)",
+        "applicability": "PV work during volume expansion or compression",
+        "variables": [
+          {
+            "symbol": "w",
+            "meaning": "Work done",
+            "unit": "J"
+          },
+          {
+            "symbol": "P_ext",
+            "meaning": "External pressure",
+            "unit": "Pa or N/m^2"
+          },
+          {
+            "symbol": "dV",
+            "meaning": "Differential volume change",
+            "unit": "m^3"
+          }
+        ]
+      },
+      {
+        "label": "Enthalpy-Internal Energy Relation",
+        "formula": "ΔH = ΔU + Δn_g * R * T",
+        "applicability": "Chemical reactions involving ideal gas species at constant T",
+        "variables": [
+          {
+            "symbol": "ΔH",
+            "meaning": "Enthalpy change of reaction",
+            "unit": "J"
+          },
+          {
+            "symbol": "ΔU",
+            "meaning": "Internal energy change of reaction",
+            "unit": "J"
+          },
+          {
+            "symbol": "Δn_g",
+            "meaning": "Moles of gaseous products minus moles of gaseous reactants",
+            "unit": "mol"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant (8.314)",
+            "unit": "J/(mol K)"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Absolute temperature",
+            "unit": "K"
+          }
+        ]
+      },
+      {
+        "label": "Relation Between Molar Heat Capacities",
+        "formula": "Cp,m - Cv,m = R",
+        "applicability": "Ideal gas molar heat capacities",
+        "variables": [
+          {
+            "symbol": "Cp,m",
+            "meaning": "Molar heat capacity at constant pressure",
+            "unit": "J/(mol K)"
+          },
+          {
+            "symbol": "Cv,m",
+            "meaning": "Molar heat capacity at constant volume",
+            "unit": "J/(mol K)"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant",
+            "unit": "J/(mol K)"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Heat (q) and work (w) are state functions just like internal energy (U).",
+        "correction": "Heat and work are path functions dependent on the specific path taken during a process, whereas internal energy (U) and enthalpy (H) depend solely on initial and final states."
+      },
+      {
+        "misconception": "The standard enthalpy of formation of all elemental substances is zero.",
+        "correction": "Standard enthalpy of formation is zero only for an element in its most stable standard reference state at 298 K and 1 bar (e.g., C(graphite) = 0, but C(diamond) != 0; O2(g) = 0, but O3(g) != 0)."
+      },
+      {
+        "misconception": "Bond dissociation enthalpy is equal to lattice energy for ionic solids.",
+        "correction": "Bond dissociation enthalpy specifically refers to covalent bond cleavage in gaseous molecules, whereas lattice energy refers to forming or breaking an ionic crystal lattice into gaseous ions."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate ΔU and q when 2 moles of an ideal gas expand reversibly and isothermally at 300 K from 10 L to 20 L.",
+        "steps": [
+          "For an isothermal expansion of an ideal gas, temperature is constant, so ΔU = 0.",
+          "Reversible isothermal work is calculated using w = -2.303 * n * R * T * log10(V2 / V1).",
+          "Substitute the given values: w = -2.303 * 2 * 8.314 * 300 * log10(20 / 10) = -3457 J.",
+          "By the First Law (ΔU = q + w = 0), q = -w = +3457 J."
+        ],
+        "answer": "ΔU = 0 J, q = +3457 J, w = -3457 J"
+      },
+      {
+        "problem": "Calculate the standard enthalpy of formation of CH4(g) given: (1) C(graphite) + O2(g) -> CO2(g), ΔH = -393.5 kJ/mol; (2) H2(g) + 0.5 O2(g) -> H2O(l), ΔH = -285.8 kJ/mol; (3) CH4(g) + 2 O2(g) -> CO2(g) + 2 H2O(l), ΔH = -890.3 kJ/mol.",
+        "steps": [
+          "Target equation for formation of CH4: C(graphite) + 2 H2(g) -> CH4(g).",
+          "Keep Reaction (1): ΔH1 = -393.5 kJ/mol.",
+          "Multiply Reaction (2) by 2: 2 H2(g) + O2(g) -> 2 H2O(l), ΔH2' = 2 * (-285.8) = -571.6 kJ/mol.",
+          "Reverse Reaction (3): CO2(g) + 2 H2O(l) -> CH4(g) + 2 O2(g), ΔH3' = +890.3 kJ/mol.",
+          "Sum the three modified equations: ΔH_f = ΔH1 + ΔH2' + ΔH3' = -393.5 - 571.6 + 890.3 = -74.8 kJ/mol."
+        ],
+        "answer": "ΔH_f°(CH4, g) = -74.8 kJ/mol"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "In an adiabatic process involving an ideal gas, which of the following expressions is correct? Option A: q = 0 and ΔU = w. Option B: w = 0 and ΔU = q. Option C: ΔT = 0 and q = w. Option D: ΔH = 0 and w = 0.",
+        "answer": "Option A. An adiabatic process features zero heat exchange across system boundaries (q = 0). Applying the First Law of Thermodynamics ΔU = q + w directly yields ΔU = w."
+      },
+      {
+        "question": "For the reaction N2(g) + 3 H2(g) -> 2 NH3(g) at 298 K, what is the value of ΔH - ΔU? (R = 8.314 J/(mol K)) Option A: -4.96 kJ. Option B: +4.96 kJ. Option C: -2.48 kJ. Option D: +2.48 kJ.",
+        "answer": "Option A. Using ΔH - ΔU = Δn_g * R * T, compute Δn_g = 2 - (1 + 3) = -2 mol. Thus ΔH - ΔU = (-2 mol) * (8.314 J/mol K) * (298 K) = -4955 J = -4.96 kJ."
+      },
+      {
+        "question": "If the bond enthalpies of H-H, Cl-Cl, and H-Cl are 436 kJ/mol, 242 kJ/mol, and 431 kJ/mol respectively, what is the standard enthalpy of formation of HCl(g)? Option A: -92 kJ/mol. Option B: -184 kJ/mol. Option C: +92 kJ/mol. Option D: +184 kJ/mol.",
+        "answer": "Option A. Formation reaction for 1 mole of HCl(g) is 0.5 H2(g) + 0.5 Cl2(g) -> HCl(g). ΔH_f° = [0.5 * BE(H-H) + 0.5 * BE(Cl-Cl)] - BE(H-Cl) = [0.5 * 436 + 0.5 * 242] - 431 = (218 + 121) - 431 = 339 - 431 = -92 kJ/mol."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Unit 6: Thermodynamics",
+      "JEE Main Official Syllabus - Physical Chemistry: Chemical Thermodynamics"
+    ]
+  }
+}

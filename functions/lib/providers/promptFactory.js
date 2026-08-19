@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.buildPrompt = void 0;
+exports.buildPrompt = buildPrompt;
 function buildPrompt(type, payload) {
     switch (type) {
         case 'mcq':
@@ -58,5 +58,4 @@ Output JSON:
             return 'Unknown Task';
     }
 }
-exports.buildPrompt = buildPrompt;
 //# sourceMappingURL=promptFactory.js.map

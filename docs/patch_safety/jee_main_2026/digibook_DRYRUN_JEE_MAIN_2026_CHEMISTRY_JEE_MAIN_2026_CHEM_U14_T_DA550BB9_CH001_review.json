@@ -1,0 +1,29 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "PASS",
+    "itemCountReviewed": 5,
+    "approvedAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_DA550BB9_CH001"
+    ],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [],
+    "blockingIssues": [],
+    "reviewNotes": "The content is conceptually accurate, mathematically sound, and aligns well with the JEE syllabus. One minor observation: In the 'Functional Group Seniority Order' formula, the notation `>C=C< >=C≡C-` contains a minor typo and can be slightly confusing. It would be clearer to write it as `>C=C<  >  -C≡C-` to distinguish the functional group symbols from the 'greater than' priority symbol. Overall, excellent work.",
+    "conceptCorrectnessPass": true,
+    "formulaPass": true,
+    "selfCheckPass": true,
+    "workedExampleMathPass": true
+  }
+}

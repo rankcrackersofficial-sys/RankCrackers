@@ -1,0 +1,705 @@
+/// RankCrackers deterministic DigiBook Personalization Route Engine.
+///
+/// CODE NO: PERS-12-R2
+///
+/// PURPOSE:
+/// Convert a governed StudentTreatmentDecision into a deterministic
+/// DigiBookPersonalizationRoute over approved semantic DigiBook blocks.
+///
+/// DEPENDS ON:
+/// - PERS-09 StudentTreatmentDecision
+/// - PERS-11 DigiBookPersonalizationRoute
+///
+/// IMPORTANT:
+/// 1. This engine does NOT generate academic content.
+/// 2. It does NOT rewrite canonical DigiBook truth.
+/// 3. It does NOT call AI/LLMs.
+/// 4. It does NOT select concrete repository block IDs.
+/// 5. It only requests governed semantic block types.
+/// 6. Missing required approved blocks must fail closed downstream.
+/// 7. Treatment authority remains PERS-10.
+/// 8. Route vocabulary authority remains PERS-11.
+/// 9. No psychological/personality profiling is permitted.
+/// 10. All timestamps are UTC.
+///
+/// Engine version: 2
+library;
+
+import '../models/digibook_personalization_route.dart';
+import '../models/student_treatment_decision.dart';
+
+final class DigiBookPersonalizationRouteEngine {
+  const DigiBookPersonalizationRouteEngine();
+
+  static const int engineVersion = 2;
+
+  DigiBookPersonalizationRoute build({
+    required StudentTreatmentDecision decision,
+    required DateTime createdAtUtc,
+  }) {
+    decision.validate();
+
+    if (!createdAtUtc.isUtc) {
+      throw const FormatException(
+        'DigiBookPersonalizationRouteEngine.createdAtUtc must be UTC.',
+      );
+    }
+
+    final orderedDirectives = List<StudentTreatmentDirective>.from(
+      decision.directives,
+    )..sort(
+        (a, b) => treatmentPriorityRank(a.type).compareTo(
+          treatmentPriorityRank(b.type),
+        ),
+      );
+
+    final sourceTreatmentTypes = <StudentTreatmentType>{};
+    final stepsByKey = <String, _RouteStepDraft>{};
+    var forceIndependentCheckpoint = false;
+
+    for (final directive in orderedDirectives) {
+      directive.validate();
+
+      if (directive.targetAmtnId != decision.targetAmtnId) {
+        throw const FormatException(
+          'DigiBookPersonalizationRouteEngine received directive '
+          'for another target AMTN.',
+        );
+      }
+
+      sourceTreatmentTypes.add(directive.type);
+
+      switch (directive.type) {
+        case StudentTreatmentType.prerequisiteRepair:
+          forceIndependentCheckpoint = true;
+          _addPrerequisiteRepairSteps(
+            directive: directive,
+            stepsByKey: stepsByKey,
+          );
+          break;
+
+        case StudentTreatmentType.conceptRepair:
+          forceIndependentCheckpoint = true;
+          _addConceptRepairSteps(
+            directive: directive,
+            stepsByKey: stepsByKey,
+          );
+          break;
+
+        case StudentTreatmentType.guidedExamples:
+          forceIndependentCheckpoint = true;
+          _addGuidedExampleSteps(
+            directive: directive,
+            stepsByKey: stepsByKey,
+          );
+          break;
+
+        case StudentTreatmentType.independentPractice:
+          forceIndependentCheckpoint = true;
+          _addIndependentPracticeSteps(
+            directive: directive,
+            stepsByKey: stepsByKey,
+          );
+          break;
+
+        case StudentTreatmentType.fluencyPractice:
+          _addFluencySupportSteps(
+            directive: directive,
+            stepsByKey: stepsByKey,
+          );
+          break;
+
+        case StudentTreatmentType.retrievalReview:
+          forceIndependentCheckpoint = true;
+          _addRetrievalReviewSteps(
+            directive: directive,
+            stepsByKey: stepsByKey,
+          );
+          break;
+
+        case StudentTreatmentType.assessmentProbe:
+          forceIndependentCheckpoint = true;
+          _addCheckpoint(
+            directive: directive,
+            stepsByKey: stepsByKey,
+          );
+          break;
+
+        case StudentTreatmentType.gatherEvidence:
+          forceIndependentCheckpoint = true;
+          _addCheckpoint(
+            directive: directive,
+            stepsByKey: stepsByKey,
+          );
+          break;
+
+        case StudentTreatmentType.maintain:
+          forceIndependentCheckpoint = true;
+          _addMaintenanceSteps(
+            directive: directive,
+            stepsByKey: stepsByKey,
+          );
+          break;
+
+        case StudentTreatmentType.mentorReview:
+          if (stepsByKey.isEmpty) {
+            forceIndependentCheckpoint = true;
+            _addStep(
+              stepsByKey: stepsByKey,
+              draft: _RouteStepDraft(
+                sourceAmtnId: decision.targetAmtnId,
+                blockType:
+                    DigiBookPersonalizationBlockType.independentCheckpoint,
+                reason: DigiBookPersonalizationStepReason.evidenceProbe,
+                depth: DigiBookPersonalizationDepth.light,
+                required: true,
+                requiresCompletionEvidence: true,
+                treatmentPriority: treatmentPriorityRank(directive.type),
+              ),
+            );
+          }
+          break;
+      }
+    }
+
+    if (sourceTreatmentTypes.isEmpty) {
+      throw const FormatException(
+        'DigiBookPersonalizationRouteEngine requires at least one '
+        'source treatment.',
+      );
+    }
+
+    if (stepsByKey.isEmpty) {
+      throw const FormatException(
+        'DigiBookPersonalizationRouteEngine produced no semantic route steps.',
+      );
+    }
+
+    if (forceIndependentCheckpoint &&
+        !_containsIndependentCheckpoint(stepsByKey)) {
+      _addStep(
+        stepsByKey: stepsByKey,
+        draft: _RouteStepDraft(
+          sourceAmtnId: decision.targetAmtnId,
+          blockType: DigiBookPersonalizationBlockType.independentCheckpoint,
+          reason: DigiBookPersonalizationStepReason.evidenceProbe,
+          depth: DigiBookPersonalizationDepth.standard,
+          required: true,
+          requiresCompletionEvidence: true,
+          treatmentPriority: _highestSourceTreatmentPriority(
+            sourceTreatmentTypes,
+          ),
+        ),
+      );
+    }
+
+    final orderedDrafts = stepsByKey.values.toList(growable: false)
+      ..sort(_compareDrafts);
+
+    final steps = <DigiBookPersonalizationStep>[];
+
+    for (var index = 0; index < orderedDrafts.length; index++) {
+      final draft = orderedDrafts[index];
+      steps.add(
+        DigiBookPersonalizationStep(
+          order: index + 1,
+          sourceAmtnId: draft.sourceAmtnId,
+          blockType: draft.blockType,
+          reason: draft.reason,
+          depth: draft.depth,
+          required: draft.required,
+          requiresCompletionEvidence: draft.requiresCompletionEvidence,
+        ),
+      );
+    }
+
+    final route = DigiBookPersonalizationRoute(
+      studentId: decision.studentId,
+      targetAmtnId: decision.targetAmtnId,
+      createdAtUtc: createdAtUtc,
+      sourceTreatmentTypes: Set<StudentTreatmentType>.unmodifiable(
+        sourceTreatmentTypes,
+      ),
+      steps: List<DigiBookPersonalizationStep>.unmodifiable(steps),
+      requiresIndependentCheckpoint: forceIndependentCheckpoint ||
+          _containsIndependentCheckpoint(stepsByKey),
+      schemaVersion: DigiBookPersonalizationRoute.currentSchemaVersion,
+    );
+
+    route.validate();
+    return route;
+  }
+
+  void _addPrerequisiteRepairSteps({
+    required StudentTreatmentDirective directive,
+    required Map<String, _RouteStepDraft> stepsByKey,
+  }) {
+    if (directive.prerequisiteAmtnIds.isEmpty) {
+      throw const FormatException(
+        'DigiBook prerequisite repair requires prerequisite AMTN IDs.',
+      );
+    }
+
+    final prerequisiteIds = directive.prerequisiteAmtnIds
+        .map((value) => value.trim())
+        .where((value) => value.isNotEmpty)
+        .toSet()
+        .toList(growable: false)
+      ..sort();
+
+    if (prerequisiteIds.isEmpty) {
+      throw const FormatException(
+        'DigiBook prerequisite repair has no valid prerequisite AMTN IDs.',
+      );
+    }
+
+    for (final prerequisiteAmtnId in prerequisiteIds) {
+      if (prerequisiteAmtnId == directive.targetAmtnId) {
+        throw const FormatException(
+          'DigiBook prerequisite AMTN cannot equal target AMTN.',
+        );
+      }
+
+      _addStep(
+        stepsByKey: stepsByKey,
+        draft: _RouteStepDraft(
+          sourceAmtnId: prerequisiteAmtnId,
+          blockType: DigiBookPersonalizationBlockType.prerequisiteRefresher,
+          reason: DigiBookPersonalizationStepReason.prerequisiteRepair,
+          depth: DigiBookPersonalizationDepth.standard,
+          required: true,
+          requiresCompletionEvidence: true,
+          treatmentPriority: treatmentPriorityRank(directive.type),
+        ),
+      );
+    }
+
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.intuition,
+      reason: DigiBookPersonalizationStepReason.prerequisiteRepair,
+      depth: DigiBookPersonalizationDepth.standard,
+      required: false,
+      requiresCompletionEvidence: false,
+    );
+
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.conceptCore,
+      reason: DigiBookPersonalizationStepReason.prerequisiteRepair,
+      depth: DigiBookPersonalizationDepth.standard,
+      required: true,
+      requiresCompletionEvidence: true,
+    );
+
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.workedExample,
+      reason: DigiBookPersonalizationStepReason.guidedSupport,
+      depth: DigiBookPersonalizationDepth.standard,
+      required: true,
+      requiresCompletionEvidence: true,
+    );
+  }
+
+  void _addConceptRepairSteps({
+    required StudentTreatmentDirective directive,
+    required Map<String, _RouteStepDraft> stepsByKey,
+  }) {
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.intuition,
+      reason: DigiBookPersonalizationStepReason.conceptRepair,
+      depth: DigiBookPersonalizationDepth.standard,
+      required: false,
+      requiresCompletionEvidence: false,
+    );
+
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.conceptCore,
+      reason: DigiBookPersonalizationStepReason.conceptRepair,
+      depth: DigiBookPersonalizationDepth.standard,
+      required: true,
+      requiresCompletionEvidence: true,
+    );
+
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.deepExplanation,
+      reason: DigiBookPersonalizationStepReason.conceptRepair,
+      depth: DigiBookPersonalizationDepth.deep,
+      required: false,
+      requiresCompletionEvidence: false,
+    );
+
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.diagram,
+      reason: DigiBookPersonalizationStepReason.conceptRepair,
+      depth: DigiBookPersonalizationDepth.standard,
+      required: false,
+      requiresCompletionEvidence: false,
+    );
+
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.workedExample,
+      reason: DigiBookPersonalizationStepReason.guidedSupport,
+      depth: DigiBookPersonalizationDepth.standard,
+      required: true,
+      requiresCompletionEvidence: true,
+    );
+  }
+
+  void _addGuidedExampleSteps({
+    required StudentTreatmentDirective directive,
+    required Map<String, _RouteStepDraft> stepsByKey,
+  }) {
+    final reason = directive.reasons.contains(
+      StudentTreatmentReason.repeatedHintDependency,
+    )
+        ? DigiBookPersonalizationStepReason.repeatedHintSupport
+        : directive.reasons.contains(
+            StudentTreatmentReason.repeatedExplanationDependency,
+          )
+            ? DigiBookPersonalizationStepReason.repeatedExplanationSupport
+            : DigiBookPersonalizationStepReason.guidedSupport;
+
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.workedExample,
+      reason: reason,
+      depth: DigiBookPersonalizationDepth.standard,
+      required: true,
+      requiresCompletionEvidence: true,
+    );
+  }
+
+  void _addIndependentPracticeSteps({
+    required StudentTreatmentDirective directive,
+    required Map<String, _RouteStepDraft> stepsByKey,
+  }) {
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.quickRevision,
+      reason: DigiBookPersonalizationStepReason.evidenceProbe,
+      depth: DigiBookPersonalizationDepth.light,
+      required: false,
+      requiresCompletionEvidence: false,
+    );
+
+    _addCheckpoint(
+      directive: directive,
+      stepsByKey: stepsByKey,
+    );
+  }
+
+  void _addFluencySupportSteps({
+    required StudentTreatmentDirective directive,
+    required Map<String, _RouteStepDraft> stepsByKey,
+  }) {
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.quickRevision,
+      reason: DigiBookPersonalizationStepReason.fluencySupport,
+      depth: DigiBookPersonalizationDepth.light,
+      required: false,
+      requiresCompletionEvidence: false,
+    );
+
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.workedExample,
+      reason: DigiBookPersonalizationStepReason.fluencySupport,
+      depth: DigiBookPersonalizationDepth.light,
+      required: false,
+      requiresCompletionEvidence: false,
+    );
+  }
+
+  void _addRetrievalReviewSteps({
+    required StudentTreatmentDirective directive,
+    required Map<String, _RouteStepDraft> stepsByKey,
+  }) {
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.formulaRecall,
+      reason: DigiBookPersonalizationStepReason.retentionReview,
+      depth: DigiBookPersonalizationDepth.light,
+      required: false,
+      requiresCompletionEvidence: false,
+    );
+
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.quickRevision,
+      reason: DigiBookPersonalizationStepReason.retentionReview,
+      depth: DigiBookPersonalizationDepth.light,
+      required: true,
+      requiresCompletionEvidence: true,
+    );
+
+    _addCheckpoint(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      reason: DigiBookPersonalizationStepReason.retentionReview,
+    );
+  }
+
+  void _addMaintenanceSteps({
+    required StudentTreatmentDirective directive,
+    required Map<String, _RouteStepDraft> stepsByKey,
+  }) {
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.quickRevision,
+      reason: DigiBookPersonalizationStepReason.maintenance,
+      depth: DigiBookPersonalizationDepth.light,
+      required: true,
+      requiresCompletionEvidence: false,
+    );
+
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.pyqConnection,
+      reason: DigiBookPersonalizationStepReason.maintenance,
+      depth: DigiBookPersonalizationDepth.light,
+      required: false,
+      requiresCompletionEvidence: false,
+    );
+
+    _addCheckpoint(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      reason: DigiBookPersonalizationStepReason.maintenance,
+      depth: DigiBookPersonalizationDepth.light,
+    );
+  }
+
+  void _addCheckpoint({
+    required StudentTreatmentDirective directive,
+    required Map<String, _RouteStepDraft> stepsByKey,
+    DigiBookPersonalizationStepReason reason =
+        DigiBookPersonalizationStepReason.evidenceProbe,
+    DigiBookPersonalizationDepth depth =
+        DigiBookPersonalizationDepth.standard,
+  }) {
+    _addTargetStep(
+      directive: directive,
+      stepsByKey: stepsByKey,
+      blockType: DigiBookPersonalizationBlockType.independentCheckpoint,
+      reason: reason,
+      depth: depth,
+      required: true,
+      requiresCompletionEvidence: true,
+    );
+  }
+
+  void _addTargetStep({
+    required StudentTreatmentDirective directive,
+    required Map<String, _RouteStepDraft> stepsByKey,
+    required DigiBookPersonalizationBlockType blockType,
+    required DigiBookPersonalizationStepReason reason,
+    required DigiBookPersonalizationDepth depth,
+    required bool required,
+    required bool requiresCompletionEvidence,
+  }) {
+    _addStep(
+      stepsByKey: stepsByKey,
+      draft: _RouteStepDraft(
+        sourceAmtnId: directive.targetAmtnId,
+        blockType: blockType,
+        reason: reason,
+        depth: depth,
+        required: required,
+        requiresCompletionEvidence: requiresCompletionEvidence,
+        treatmentPriority: treatmentPriorityRank(directive.type),
+      ),
+    );
+  }
+
+  void _addStep({
+    required Map<String, _RouteStepDraft> stepsByKey,
+    required _RouteStepDraft draft,
+  }) {
+    draft.validate();
+
+    final key = '${draft.sourceAmtnId.trim()}::${draft.blockType.wireName}';
+    final existing = stepsByKey[key];
+
+    if (existing == null) {
+      stepsByKey[key] = draft;
+      return;
+    }
+
+    stepsByKey[key] = _mergeDraft(
+      existing: existing,
+      incoming: draft,
+    );
+  }
+
+  _RouteStepDraft _mergeDraft({
+    required _RouteStepDraft existing,
+    required _RouteStepDraft incoming,
+  }) {
+    if (existing.sourceAmtnId != incoming.sourceAmtnId ||
+        existing.blockType != incoming.blockType) {
+      throw const FormatException(
+        'DigiBookPersonalizationRouteEngine may only merge identical '
+        'semantic step keys.',
+      );
+    }
+
+    final incomingHigherPriority =
+        incoming.treatmentPriority < existing.treatmentPriority;
+
+    return _RouteStepDraft(
+      sourceAmtnId: existing.sourceAmtnId,
+      blockType: existing.blockType,
+      reason: incomingHigherPriority ? incoming.reason : existing.reason,
+      depth: _deeperDepth(existing.depth, incoming.depth),
+      required: existing.required || incoming.required,
+      requiresCompletionEvidence: existing.requiresCompletionEvidence ||
+          incoming.requiresCompletionEvidence,
+      treatmentPriority:
+          existing.treatmentPriority <= incoming.treatmentPriority
+              ? existing.treatmentPriority
+              : incoming.treatmentPriority,
+    );
+  }
+
+  DigiBookPersonalizationDepth _deeperDepth(
+    DigiBookPersonalizationDepth a,
+    DigiBookPersonalizationDepth b,
+  ) {
+    return _depthRank(a) >= _depthRank(b) ? a : b;
+  }
+
+  int _depthRank(DigiBookPersonalizationDepth depth) {
+    switch (depth) {
+      case DigiBookPersonalizationDepth.light:
+        return 0;
+      case DigiBookPersonalizationDepth.standard:
+        return 1;
+      case DigiBookPersonalizationDepth.deep:
+        return 2;
+    }
+  }
+
+  int _compareDrafts(_RouteStepDraft a, _RouteStepDraft b) {
+    final phaseCompare =
+        _presentationPhase(a.blockType).compareTo(_presentationPhase(b.blockType));
+    if (phaseCompare != 0) {
+      return phaseCompare;
+    }
+
+    final priorityCompare =
+        a.treatmentPriority.compareTo(b.treatmentPriority);
+    if (priorityCompare != 0) {
+      return priorityCompare;
+    }
+
+    final amtnCompare = a.sourceAmtnId.compareTo(b.sourceAmtnId);
+    if (amtnCompare != 0) {
+      return amtnCompare;
+    }
+
+    return a.blockType.wireName.compareTo(b.blockType.wireName);
+  }
+
+  int _presentationPhase(DigiBookPersonalizationBlockType blockType) {
+    switch (blockType) {
+      case DigiBookPersonalizationBlockType.prerequisiteRefresher:
+        return 0;
+      case DigiBookPersonalizationBlockType.intuition:
+        return 1;
+      case DigiBookPersonalizationBlockType.conceptCore:
+        return 2;
+      case DigiBookPersonalizationBlockType.deepExplanation:
+      case DigiBookPersonalizationBlockType.diagram:
+      case DigiBookPersonalizationBlockType.misconceptionRepair:
+        return 3;
+      case DigiBookPersonalizationBlockType.workedExample:
+        return 4;
+      case DigiBookPersonalizationBlockType.formulaRecall:
+      case DigiBookPersonalizationBlockType.quickRevision:
+        return 5;
+      case DigiBookPersonalizationBlockType.pyqConnection:
+        return 6;
+      case DigiBookPersonalizationBlockType.independentCheckpoint:
+        return 7;
+    }
+  }
+
+  bool _containsIndependentCheckpoint(
+    Map<String, _RouteStepDraft> stepsByKey,
+  ) {
+    return stepsByKey.values.any(
+      (step) =>
+          step.blockType ==
+          DigiBookPersonalizationBlockType.independentCheckpoint,
+    );
+  }
+
+  int _highestSourceTreatmentPriority(Set<StudentTreatmentType> types) {
+    var best = 999;
+    for (final type in types) {
+      final rank = treatmentPriorityRank(type);
+      if (rank < best) {
+        best = rank;
+      }
+    }
+    return best;
+  }
+}
+
+final class _RouteStepDraft {
+  const _RouteStepDraft({
+    required this.sourceAmtnId,
+    required this.blockType,
+    required this.reason,
+    required this.depth,
+    required this.required,
+    required this.requiresCompletionEvidence,
+    required this.treatmentPriority,
+  });
+
+  final String sourceAmtnId;
+  final DigiBookPersonalizationBlockType blockType;
+  final DigiBookPersonalizationStepReason reason;
+  final DigiBookPersonalizationDepth depth;
+  final bool required;
+  final bool requiresCompletionEvidence;
+  final int treatmentPriority;
+
+  void validate() {
+    if (sourceAmtnId.trim().isEmpty) {
+      throw const FormatException(
+        'DigiBook route draft sourceAmtnId must not be empty.',
+      );
+    }
+
+    if (treatmentPriority < 0) {
+      throw const FormatException(
+        'DigiBook route draft treatmentPriority cannot be negative.',
+      );
+    }
+  }
+}

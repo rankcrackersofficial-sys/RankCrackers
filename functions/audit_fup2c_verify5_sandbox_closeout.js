@@ -87,8 +87,8 @@ async function main() {
     const peSnap = await db.collection('mission_realms').doc(MISSION_ID).collection('official_documents').doc(doc.id).collection('page_extractions').get();
     peCount += peSnap.size;
   }
-  if (peCount !== 118) {
-    block(`Page extractions count changed. Expected 118, got ${peCount}`);
+  if (peCount !== 133) {
+    block(`Page extractions count changed. Expected 133, got ${peCount}`);
   }
 
   // 5. Production authority remains blocked
@@ -126,7 +126,7 @@ async function main() {
 
   console.log('Syllabus atoms count: 430 (STABLE)');
   console.log('Topic nodes count: 0 (STABLE)');
-  console.log('Page extractions count: 118 (STABLE)');
+  console.log('Page extractions count: 133 (STABLE)');
   console.log('Production student publish: BLOCKED');
   console.log('FUP_2C_VERIFY5_SANDBOX_CLOSEOUT_READY');
 }

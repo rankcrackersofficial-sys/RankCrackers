@@ -1,0 +1,161 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_FA13CF13_CH001",
+    "overview": "This content node covers the Second Law of Thermodynamics, criteria for spontaneity using total entropy change of the universe and Gibbs energy of the system, and the quantitative relationship between standard Gibbs energy change and the chemical equilibrium constant.",
+    "concepts": [
+      {
+        "title": "Second Law of Thermodynamics and Universe Entropy",
+        "explanation": "The Second Law of Thermodynamics states that the total entropy of the universe increases in any spontaneous (irreversible) process. For a process to be spontaneous, ΔS_total = ΔS_system + ΔS_surroundings > 0. At equilibrium, ΔS_total = 0."
+      },
+      {
+        "title": "Gibbs Free Energy as a Spontaneity Criterion",
+        "explanation": "Gibbs free energy (G) allows evaluating spontaneity using only system properties at constant temperature and pressure. It is defined as G = H - TS. For a spontaneous process at constant T and P, ΔG_system = ΔH_system - T*ΔS_system < 0."
+      },
+      {
+        "title": "Standard Gibbs Energy Change and Equilibrium Constant",
+        "explanation": "Standard Gibbs energy change (ΔG°) corresponds to reactants and products in their standard states. It is related to the thermodynamic equilibrium constant K by ΔG° = -R*T*ln(K) = -2.303*R*T*log10(K). When K > 1, ΔG° < 0 (products favoured at equilibrium); when K < 1, ΔG° > 0 (reactants favoured)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Gibbs-Helmholtz Equation",
+        "formula": "ΔG = ΔH - T*ΔS",
+        "applicability": "Constant temperature and pressure processes",
+        "variables": [
+          {
+            "symbol": "ΔG",
+            "meaning": "Gibbs free energy change of the system",
+            "unit": "kJ/mol"
+          },
+          {
+            "symbol": "ΔH",
+            "meaning": "Enthalpy change of the system",
+            "unit": "kJ/mol"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Absolute temperature",
+            "unit": "K"
+          },
+          {
+            "symbol": "ΔS",
+            "meaning": "Entropy change of the system",
+            "unit": "J/(mol K)"
+          }
+        ]
+      },
+      {
+        "label": "Entropy Criterion for Spontaneity",
+        "formula": "ΔS_univ = ΔS_sys + ΔS_surr",
+        "applicability": "Any process in an isolated system or combined universe",
+        "variables": [
+          {
+            "symbol": "ΔS_univ",
+            "meaning": "Total entropy change of the universe",
+            "unit": "J/K"
+          },
+          {
+            "symbol": "ΔS_sys",
+            "meaning": "Entropy change of system",
+            "unit": "J/K"
+          },
+          {
+            "symbol": "ΔS_surr",
+            "meaning": "Entropy change of surroundings",
+            "unit": "J/K"
+          }
+        ]
+      },
+      {
+        "label": "Relation between Standard Gibbs Energy and Equilibrium Constant",
+        "formula": "ΔG° = -2.303 * R * T * log10(K)",
+        "applicability": "Reversible chemical reaction at equilibrium under standard conditions",
+        "variables": [
+          {
+            "symbol": "ΔG°",
+            "meaning": "Standard Gibbs energy change",
+            "unit": "J/mol"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant (8.314)",
+            "unit": "J/(mol K)"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Absolute temperature",
+            "unit": "K"
+          },
+          {
+            "symbol": "K",
+            "meaning": "Equilibrium constant",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "An endothermic reaction (ΔH > 0) can never be spontaneous.",
+        "correction": "An endothermic reaction can be spontaneous at high temperatures if ΔS > 0 and the magnitude of T*ΔS exceeds ΔH, making ΔG negative."
+      },
+      {
+        "misconception": "ΔG° = 0 indicates that the system is currently at equilibrium.",
+        "correction": "ΔG = 0 indicates dynamic equilibrium for actual conditions. ΔG° = 0 merely implies that the equilibrium constant K equals 1."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate standard Gibbs free energy change ΔG° in kJ/mol for a reaction at 300 K given its equilibrium constant K = 100. (Use R = 8.314 J/(mol K))",
+        "steps": [
+          "Step 1: Use the formula ΔG° = -2.303 * R * T * log10(K).",
+          "Step 2: Substitute given values: T = 300 K, R = 8.314 J/(mol K), log10(100) = 2.",
+          "Step 3: ΔG° = -2.303 * 8.314 * 300 * 2 = -11488.2 J/mol.",
+          "Step 4: Convert J/mol to kJ/mol: -11488.2 / 1000 = -11.49 kJ/mol."
+        ],
+        "answer": "-11.49 kJ/mol"
+      },
+      {
+        "problem": "A reaction has ΔH = +40 kJ/mol and ΔS = +100 J/(mol K). Determine the minimum temperature above which the reaction becomes spontaneous.",
+        "steps": [
+          "Step 1: Set ΔG = ΔH - T*ΔS < 0 for spontaneity.",
+          "Step 2: At threshold temperature T, ΔG = 0, so T = ΔH / ΔS.",
+          "Step 3: Convert ΔH to J/mol: ΔH = 40,000 J/mol.",
+          "Step 4: Calculate T = 40000 / 100 = 400 K."
+        ],
+        "answer": "400 K"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following conditions guarantees a spontaneous reaction at all temperatures? A) ΔH < 0 and ΔS > 0 B) ΔH > 0 and ΔS < 0 C) ΔH < 0 and ΔS < 0 D) ΔH > 0 and ΔS > 0",
+        "answer": "Option A: When ΔH < 0 (exothermic) and ΔS > 0 (increase in disorder), ΔG = ΔH - T*ΔS is always negative regardless of temperature."
+      },
+      {
+        "question": "If ΔG° for a reaction is positive, what can be concluded about its equilibrium constant K at that temperature? A) K > 1 B) K < 1 C) K = 1 D) K = 0",
+        "answer": "Option B: Since ΔG° = -RT ln(K), a positive ΔG° implies ln(K) < 0, which means K < 1."
+      },
+      {
+        "question": "For a process in an isolated system, what is the criterion for spontaneity? A) ΔS_sys < 0 B) ΔG_sys > 0 C) ΔS_sys > 0 D) ΔH_sys = 0",
+        "answer": "Option C: For an isolated system, no energy exchange occurs with surroundings (ΔS_surr = 0), so spontaneity depends solely on ΔS_sys > 0."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 6: Thermodynamics",
+      "JEE Main Official Syllabus - Physical Chemistry"
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U11_T_22990DD7_CH002",
+    "overview": "This learning unit covers the fundamental chemistry of transition elements (d-block elements) with primary focus on the 3d transition series. Key areas covered include electronic configurations, anomalous configurations of Cr and Cu, trends in atomic radii, ionization enthalpies, variable oxidation states, magnetic behavior, color origin, catalytic activity, interstitial compound formation, alloy formation, and detailed preparation, properties, and redox reactions of Potassium Dichromate (K2Cr2O7) and Potassium Permanganate (KMnO4).",
+    "concepts": [
+      {
+        "title": "Electronic Configuration and Transition Metal Definition",
+        "explanation": "Transition elements are defined as elements having partially filled d-orbitals in their ground state or in any one of their common oxidation states. Group 12 elements (Zn, Cd, Hg) have fully filled d10 configurations in ground and common oxidation states, so they are not transition metals. Chromium ([Ar] 3d5 4s1) and Copper ([Ar] 3d10 4s1) display anomalous electronic configurations due to the extra stability associated with half-filled and fully-filled d-subshells."
+      },
+      {
+        "title": "Trends in Atomic Radii, Ionization Enthalpy, and Oxidation States",
+        "explanation": "Atomic radii decrease initially across the 3d series due to increasing nuclear charge, flatten in the middle as d-electron shielding compensates nuclear charge, and slightly increase at the end owing to electron-electron repulsions. Ionization enthalpy generally increases across the series. Transition elements exhibit variable oxidation states due to small energy differences between (n-1)d and ns orbitals. Manganese shows the maximum number of oxidation states (+2 to +7) in the 3d series."
+      },
+      {
+        "title": "Magnetic Properties and Origin of Color",
+        "explanation": "Paramagnetism arises from unpaired d-electrons and is measured using the spin-only formula. Color in transition metal complexes mainly arises from d-d transitions resulting from crystal field splitting. In contrast, intense colors in d0 species such as Cr2O7^2- (orange) and MnO4^- (purple) originate from Ligand-to-Metal Charge Transfer (LMCT)."
+      },
+      {
+        "title": "Interstitial Compounds, Alloy Formation, and Catalytic Activity",
+        "explanation": "Transition metals form interstitial compounds when small non-metal atoms (H, C, N) get trapped in lattice voids, yielding high melting points, extreme hardness, and retained metallic conductivity. Alloy formation occurs readily due to similar atomic radii among transition metals. Catalytic activity stems from variable oxidation states and the ability to adsorb reactants onto their surfaces."
+      },
+      {
+        "title": "Chemistry of Potassium Dichromate (K2Cr2O7) and Potassium Permanganate (KMnO4)",
+        "explanation": "K2Cr2O7 is prepared by fusing chromite ore (FeCr2O4) with sodium carbonate in air followed by acidification; in acidic solution, Cr2O7^2- acts as a strong oxidant (E° = +1.33 V). KMnO4 is prepared by fusing pyrolusite ore (MnO2) with KOH in air followed by electrolytic oxidation. In acidic medium, MnO4^- reduces to Mn^2+ (5 e- transfer), in neutral/faintly alkaline medium to MnO2 (3 e- transfer), and in strongly alkaline medium to MnO4^2- (1 e- transfer)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Spin-only Magnetic Moment",
+        "formula": "mu = sqrt(n * (n + 2))",
+        "applicability": "Calculating the magnetic moment of transition metal ions based on the number of unpaired electrons.",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of unpaired d-electrons",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "mu",
+            "meaning": "Spin-only magnetic moment",
+            "unit": "Bohr Magnetons (BM)"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Zinc, Cadmium, and Mercury are transition metals because they belong to the d-block.",
+        "correction": "Though they are d-block elements, they are not transition elements because they have completely filled d-subshells (d10 configuration) in both their ground state and common oxidation states."
+      },
+      {
+        "misconception": "The intense purple color of KMnO4 is caused by d-d electron transitions.",
+        "correction": "Manganese in KMnO4 has a +7 oxidation state with a d0 configuration (no d-electrons). Its intense color is due to Ligand-to-Metal Charge Transfer (LMCT) from oxygen orbitals to empty metal d-orbitals."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the spin-only magnetic moment of an aqueous Fe2+ ion (Atomic number of Fe = 26).",
+        "steps": [
+          "1. Write the electronic configuration of neutral Fe: [Ar] 3d6 4s2.",
+          "2. Remove two 4s electrons for Fe2+: [Ar] 3d6 4s0.",
+          "3. Determine unpaired electrons in 3d6: 5 d-orbitals are filled as (2, 1, 1, 1, 1), giving n = 4 unpaired electrons.",
+          "4. Apply spin-only formula: mu = sqrt(4 * (4 + 2)) = sqrt(24) = 4.90 BM."
+        ],
+        "answer": "4.90 BM"
+      },
+      {
+        "problem": "How many moles of KMnO4 are required to completely oxidize 1 mole of ferrous oxalate (FeC2O4) in an acidic medium?",
+        "steps": [
+          "1. Analyze oxidation of FeC2O4: Fe2+ oxidizes to Fe3+ (1 electron lost) and C2O4^2- oxidizes to 2 CO2 (2 electrons lost). Total valence factor (n-factor) for FeC2O4 = 1 + 2 = 3.",
+          "2. Analyze reduction of KMnO4 in acidic medium: MnO4^- reduces to Mn2+ (5 electrons gained). n-factor for KMnO4 = 5.",
+          "3. Apply equivalence principle: Moles of KMnO4 * 5 = Moles of FeC2O4 * 3.",
+          "4. Calculate moles of KMnO4 = (3 / 5) * 1 = 0.6 moles."
+        ],
+        "answer": "0.6 moles"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which 3d-series element exhibits the maximum number of oxidation states? A) Scandium B) Manganese C) Iron D) Copper",
+        "answer": "B) Manganese. Explanation: Manganese ([Ar] 3d5 4s2) has 7 valence electrons and exhibits variable oxidation states ranging from +2 to +7."
+      },
+      {
+        "question": "An aqueous solution of a 3d transition metal ion has a spin-only magnetic moment of 3.87 BM. The ion is most likely: A) Cr3+ B) Fe2+ C) Cu2+ D) Mn2+",
+        "answer": "A) Cr3+. Explanation: A spin-only moment of 3.87 BM corresponds to n = 3 unpaired electrons (sqrt(3 * 5) = sqrt(15) = 3.87). Cr3+ has a [Ar] 3d3 configuration, which has exactly 3 unpaired electrons."
+      },
+      {
+        "question": "When acidic K2Cr2O7 solution reacts with KI, the green color of the resulting solution is due to the formation of: A) CrO4^2- B) Cr3+ C) I2 D) IO3^-",
+        "answer": "B) Cr3+. Explanation: In acidic medium, dichromate ions (Cr2O7^2-, orange) act as strong oxidants and reduce to hydrated Cr3+ ions, which impart a characteristic green color to the solution."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 8: The d- and f-Block Elements",
+      "JEE Main Official Chemistry Syllabus 2026 - Unit 11: Transition Elements"
+    ]
+  }
+}

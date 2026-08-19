@@ -1,0 +1,18 @@
+{
+    "syntheticAuthorityQuarantine":  [
+                                         "tools\\academic_factory\\run_rc_mission_link_01_verification.js",
+                                         "tools\\academic_factory\\run_rc_mission_link_01_par01_independent_audit.js",
+                                         "tools\\academic_factory\\run_rc_release_01_verification.js",
+                                         "tools\\academic_factory\\run_rc_live_mission_academic_01_verification.js"
+                                     ],
+    "productionVerifierAllowlist":  [
+                                        "functions\\test_mission_mirror.js",
+                                        "functions\\callable\\handle_sentinel_action.js",
+                                        "functions\\backfill_student_mission_catalog.js"
+                                    ],
+    "rules":  [
+                  "Report artifact evidence is not authoritative.",
+                  "Final PASS requires live runtime/test evidence.",
+                  "Synthetic report generators are quarantined from production authority."
+              ]
+}

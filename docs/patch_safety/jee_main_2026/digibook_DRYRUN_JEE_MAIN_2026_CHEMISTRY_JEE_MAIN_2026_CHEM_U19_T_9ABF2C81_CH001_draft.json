@@ -1,0 +1,112 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_9ABF2C81_CH001",
+    "overview": "Vitamins are essential organic micronutrients required in small amounts for normal metabolic functioning, growth, and health maintenance in humans. Since the human body cannot synthesize most of them in adequate amounts, they must be ingested through diet. This module covers the systematic classification of vitamins into fat-soluble and water-soluble categories, their chemical functions, dietary sources, and deficiency syndromes relevant for JEE Main Chemistry.",
+    "concepts": [
+      {
+        "title": "Definition and Importance of Vitamins",
+        "explanation": "Vitamins are specific organic compounds required in minor dietary quantities (micrograms to milligrams daily) to perform essential biological functions such as coenzyme activity, antioxidant protection, and gene regulation. Deficiency or absence of a vitamin leads to specific deficiency diseases termed hypovitaminosis, whereas excessive ingestion of certain stored vitamins leads to hypervitaminosis."
+      },
+      {
+        "title": "Classification Based on Solubility",
+        "explanation": "Vitamins are classified into two broad groups based on solubility: 1. Fat-soluble vitamins: Vitamins A, D, E, and K dissolve in fats/oils and organic solvents. They are stored in adipose tissues and the liver, so daily dietary intake is not strictly required, but toxicity can occur from overconsumption. 2. Water-soluble vitamins: Vitamin C and B-complex vitamins (B1, B2, B6, B12, Niacin, Pantothenic acid, Biotin, Folic acid) are soluble in water. Except for Vitamin B12, they are readily excreted in urine and cannot be stored in large quantities in the body, necessitating regular dietary intake."
+      },
+      {
+        "title": "Key Vitamins, Chemical Names, and Functions",
+        "explanation": "1. Vitamin A (Retinol): Essential for vision (component of rhodopsin), cell growth, and tissue differentiation. Deficiency causes night blindness and xerophthalmia. 2. Vitamin B1 (Thiamine): Functions as thiamine pyrophosphate (TPP) coenzyme in carbohydrate metabolism. Deficiency causes beriberi. 3. Vitamin B2 (Riboflavin): Precursor for FAD and FMN in redox reactions. Deficiency causes cheilosis and glossitis. 4. Vitamin B6 (Pyridoxine): Precursor for PLP in amino acid metabolism. Deficiency causes convulsions. 5. Vitamin B12 (Cobalamin): Complex cobalt-containing vitamin essential for RBC maturation and DNA synthesis. Deficiency leads to pernicious anemia. 6. Vitamin C (Ascorbic Acid): Antioxidant and cofactor for collagen synthesis. Deficiency causes scurvy. 7. Vitamin D (Calciferol): Regulates calcium and phosphate absorption for bone density. Deficiency causes rickets in children and osteomalacia in adults. 8. Vitamin E (Tocopherol): Lipid antioxidant protecting cell membranes. Deficiency increases RBC fragility and muscular weakness. 9. Vitamin K (Phylloquinone/Menaquinone): Essential for hepatic synthesis of blood clotting factors (prothrombin). Deficiency leads to increased blood clotting time and excessive bleeding."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Ascorbic Acid (Vitamin C)",
+        "formula": "C6H8O6",
+        "applicability": "Water-soluble antioxidant vitamin; lactone derivative of glucose.",
+        "variables": [
+          {
+            "symbol": "C6H8O6",
+            "meaning": "Molecular formula of L-ascorbic acid",
+            "unit": "dimensionless chemical formula"
+          }
+        ]
+      },
+      {
+        "label": "Retinol (Vitamin A1)",
+        "formula": "C20H30O",
+        "applicability": "Fat-soluble unsaturated primary alcohol with a beta-ionone ring.",
+        "variables": [
+          {
+            "symbol": "C20H30O",
+            "meaning": "Molecular formula of Retinol",
+            "unit": "dimensionless chemical formula"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "All water-soluble vitamins cannot be stored in the human body at all.",
+        "correction": "Vitamin B12 is a notable exception among water-soluble vitamins; significant reserves of Vitamin B12 are stored in the liver for several years."
+      },
+      {
+        "misconception": "Consuming excessive doses of all vitamins is harmless because excess is excreted in urine.",
+        "correction": "Only water-soluble vitamins (except B12) are rapidly excreted in urine. Fat-soluble vitamins (A, D, E, K) accumulate in adipose tissue and the liver, leading to hypervitaminosis toxicity."
+      },
+      {
+        "misconception": "Vitamin K directly forms blood clots.",
+        "correction": "Vitamin K does not form the clot itself; it serves as a co-factor required for the enzymatic gamma-carboxylation of glutamate residues in blood clotting factors like prothrombin."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Match the vitamin in Column I with its corresponding deficiency disease in Column II. Column I: (A) Vitamin B1, (B) Vitamin B12, (C) Vitamin C, (D) Vitamin K. Column II: (1) Scurvy, (2) Increased blood clotting time, (3) Beriberi, (4) Pernicious Anaemia.",
+        "steps": [
+          "Step 1: Identify the function and deficiency of Vitamin B1 (Thiamine). Deficiency leads to Beriberi. Thus, A matches with 3.",
+          "Step 2: Identify Vitamin B12 (Cobalamin). Deficiency causes Pernicious Anaemia due to lack of mature RBCs. Thus, B matches with 4.",
+          "Step 3: Identify Vitamin C (Ascorbic acid). Deficiency causes bleeding gums and weakness known as Scurvy. Thus, C matches with 1.",
+          "Step 4: Identify Vitamin K. Essential for prothrombin synthesis; deficiency increases blood clotting time. Thus, D matches with 2."
+        ],
+        "answer": "(A) -> (3), (B) -> (4), (C) -> (1), (D) -> (2)"
+      },
+      {
+        "problem": "Which of the following vitamins is water-soluble but can be stored in the human body for a long duration? (A) Vitamin B1 (B) Vitamin B2 (C) Vitamin B12 (D) Vitamin C",
+        "steps": [
+          "Step 1: Recall the classification by solubility. Water-soluble vitamins include B-complex vitamins and Vitamin C.",
+          "Step 2: Analyze storage behavior. Most water-soluble vitamins are readily excreted in urine.",
+          "Step 3: Note the biological exception: Vitamin B12 (Cyanocobalamin) is water-soluble but stored in substantial quantities in the liver."
+        ],
+        "answer": "(C) Vitamin B12"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which vitamin deficiency is responsible for Xerophthalmia (hardening of the cornea of the eye)? (A) Vitamin A (B) Vitamin B6 (C) Vitamin C (D) Vitamin D",
+        "answer": "Option (A) is correct. Xerophthalmia and night blindness are directly caused by deficiency of Vitamin A (Retinol)."
+      },
+      {
+        "question": "Cheilosis, characterized by inflammation and cracking at the corners of the mouth, is caused by deficiency of: (A) Thiamine (B) Riboflavin (C) Pyridoxine (D) Ascorbic acid",
+        "answer": "Option (B) is correct. Riboflavin (Vitamin B2) deficiency causes cheilosis, glossitis, and digestive disorders."
+      },
+      {
+        "question": "Which group contains ONLY fat-soluble vitamins? (A) Vitamin A, B6, C, D (B) Vitamin A, D, E, K (C) Vitamin B1, B2, B6, B12 (D) Vitamin A, C, D, K",
+        "answer": "Option (B) is correct. Vitamins A, D, E, and K are fat-soluble vitamins stored in body tissue and liver."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 14: Biomolecules - Section on Vitamins",
+      "JEE Main Official Syllabus 2026: Chemistry - Biomolecules and Natural Products"
+    ]
+  }
+}

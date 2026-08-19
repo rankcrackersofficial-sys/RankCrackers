@@ -1,0 +1,10 @@
+{
+    "invalidFinalReports":  [
+                                "RC_MISSION_LINK_01",
+                                "RC_MISSION_LINK_01_PAR01",
+                                "RC_RELEASE_01",
+                                "RC_LIVE_MISSION_ACADEMIC_01"
+                            ],
+    "status":  "REOPENED_AS_SYNTHETIC_ONLY",
+    "note":  "These reports remain as historical artifacts but are not accepted as final production evidence."
+}

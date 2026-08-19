@@ -1,0 +1,130 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U10_T_944DD26F_CH001",
+    "overview": "The p-block of the periodic table comprises elements belonging to Groups 13 through 18, where the last electron enters the outermost p-subshell. Their general valence shell electronic configuration is ns^2 np^(1-6) (except Helium, which is 1s^2). This topic covers general periodic trends across periods and down groups, including atomic size, ionization enthalpy, electron gain enthalpy, electronegativity, inert pair effect, variable oxidation states, and the distinct anomalous behavior exhibited by second-period head elements due to small atomic radius, high electronegativity, and the absence of d-orbitals.",
+    "concepts": [
+      {
+        "title": "General Electronic Configuration and Group Characteristics",
+        "explanation": "p-Block elements span Groups 13 to 18. Outer electronic configurations range from ns^2 np^1 (Group 13, Boron family) to ns^2 np^6 (Group 18, Noble gases). These groups include metals, metalloids, and non-metals. The maximum group oxidation state equals the total number of valence electrons (ns plus np electrons)."
+      },
+      {
+        "title": "Inert Pair Effect and Oxidation State Trends",
+        "explanation": "Moving down heavy p-block groups (especially groups 13, 14, and 15), the reluctance of the valence s-electrons to participate in bond formation increases. This phenomenon, known as the inert pair effect, arises from poor shielding of inner d and f subshells, resulting in stronger attraction of ns^2 electrons by the nucleus. Consequently, lower oxidation states (Group oxidation state minus 2) become increasingly stable down the group (e.g., Tl+ > Tl3+, Pb2+ > Pb4+, Bi3+ > Bi5+)."
+      },
+      {
+        "title": "Anomalous Behavior of First Element in Each Group",
+        "explanation": "The head element of each p-block group (B, C, N, O, F) differs significantly from subsequent heavier congeners. Key causes include: 1) Exceptionally small atomic size and high electronegativity; 2) Non-availability of d-orbitals in the valence shell (n = 2 level), limiting maximum covalency to 4; 3) Strong propensity to form p(pi)-p(pi) multiple bonds with itself or other small second-period elements."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Effective Nuclear Charge (Slater's Relation)",
+        "formula": "Z* = Z - S",
+        "applicability": "Estimates the net positive nuclear charge felt by valence electrons after accounting for core electron shielding across periods and down groups.",
+        "variables": [
+          {
+            "symbol": "Z*",
+            "meaning": "Effective nuclear charge",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Z",
+            "meaning": "Atomic number (actual nuclear charge)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "S",
+            "meaning": "Screening or shielding constant",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Maximum Group Oxidation State",
+        "formula": "OS_max = N_s + N_p",
+        "applicability": "Determines the highest possible formal oxidation state for p-block elements of Groups 13 to 18.",
+        "variables": [
+          {
+            "symbol": "OS_max",
+            "meaning": "Maximum group oxidation state",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "N_s",
+            "meaning": "Number of valence s-electrons",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "N_p",
+            "meaning": "Number of valence p-electrons",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Ionization enthalpy decreases monotonically down Group 13 from Boron to Thallium.",
+        "correction": "Ionization enthalpy does not decrease uniformly in Group 13. Gallium has a higher first ionization enthalpy than Aluminum due to poor shielding by 3d electrons (d-block contraction), and Thallium has a higher IE than Indium due to poor shielding by 4f electrons (lanthanide contraction)."
+      },
+      {
+        "misconception": "Nitrogen can expand its valence shell to form pentahalides like NCl5 similar to Phosphorus forming PCl5.",
+        "correction": "Nitrogen resides in the second period (n = 2) and lacks vacant d-orbitals in its valence shell. Therefore, its maximum covalency is restricted to 4, making pentahalides like NCl5 impossible."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Explain why PbCl4 acts as a powerful oxidizing agent whereas PbCl2 is a stable salt.",
+        "steps": [
+          "Step 1: Identify the oxidation state of lead in both compounds: +4 in PbCl4 and +2 in PbCl2.",
+          "Step 2: Apply the inert pair effect: Heavy p-block elements like Lead (Group 14) experience poor shielding from filled 4f and 5d subshells, causing the 6s^2 electron pair to remain non-bonding (inert).",
+          "Step 3: Consequently, the +2 oxidation state of Lead is far more stable than the +4 state.",
+          "Step 4: Pb(IV) readily gains two electrons to convert to the stable Pb(II) state, rendering PbCl4 a strong oxidizing agent."
+        ],
+        "answer": "Pb(IV) in PbCl4 is unstable relative to Pb(II) due to the inert pair effect, so it easily accepts electrons to reduce to Pb(II), acting as a strong oxidizing agent."
+      },
+      {
+        "problem": "Compare the maximum covalency of Boron in [BF4]- with Aluminum in [AlF6]3- and explain the underlying electronic reason.",
+        "steps": [
+          "Step 1: Determine valence shells: Boron belongs to period 2 (n=2), while Aluminum belongs to period 3 (n=3).",
+          "Step 2: Check orbital availability: Boron has only four valence orbitals (one 2s and three 2p), restricting its maximum covalency to 4 in [BF4]-.",
+          "Step 3: Aluminum has vacant 3d orbitals in addition to 3s and 3p orbitals.",
+          "Step 4: Aluminum expands its octet by using 3s, 3p, and 3d orbitals to accommodate 6 fluoride ligands, achieving a maximum covalency of 6 in [AlF6]3-."
+        ],
+        "answer": "Boron is limited to a maximum covalency of 4 due to the absence of vacant d-orbitals in n=2, whereas Aluminum can expand its octet using vacant 3d orbitals to reach a covalency of 6."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following elements exhibits the highest stability in the +1 oxidation state due to the inert pair effect? Options: (A) Boron (B) Aluminum (C) Gallium (D) Thallium",
+        "answer": "(D) Thallium. Down Group 13, the stability of the +1 oxidation state relative to the +3 state increases due to the inert pair effect, making Thallium(I) the most stable +1 species."
+      },
+      {
+        "question": "Which property is NOT anomalous for the first element of a p-block group compared to its heavier congeners? Options: (A) Absence of vacant d-orbitals (B) Ability to form p(pi)-p(pi) multiple bonds (C) Lower electronegativity than heavier elements in the group (D) Maximum covalency restricted to four",
+        "answer": "(C) Lower electronegativity than heavier elements in the group. The first element in each p-block group actually possesses higher electronegativity, smaller atomic size, and higher ionization enthalpy compared to its group members."
+      },
+      {
+        "question": "What is the correct decreasing order of first ionization enthalpy for Group 13 elements? Options: (A) B > Al > Ga > In > Tl (B) B > Tl > Ga > Al > In (C) B > Ga > Al > Tl > In (D) B > Al > Tl > Ga > In",
+        "answer": "(B) B > Tl > Ga > Al > In. The non-monotonic trend is caused by transition contraction (d-block contraction making Ga > Al) and lanthanide contraction (making Tl > In)."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Unit 11: The p-Block Elements",
+      "NCERT Class 12 Chemistry, Unit 7: The p-Block Elements",
+      "JEE Main Official Chemistry Syllabus: General Trends and Properties of p-Block Elements"
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "f00c_is_actual_ancestor": false,
+  "hygiene_baseline_semantics_present": true,
+  "ten_paths_reconciled": "10/10",
+  "reconciled_paths_detail": [
+    {
+      "path": "lib/core/backend/recruitment_repository.dart",
+      "disposition": "Gated behind RC_USE_FIREBASE_EMULATOR"
+    },
+    {
+      "path": "lib/features/preview/presentation/screens/nebula_founder_preview_screen.dart",
+      "disposition": "Removed preview asset auto-load in presentation"
+    },
+    {
+      "path": "lib/core/router/app_router.dart",
+      "disposition": "Allowed preview route declaration (non-reachable in student panels)"
+    },
+    {
+      "path": "lib/core/router/app_routes.dart",
+      "disposition": "Allowed preview route path mapping (non-reachable in student panels)"
+    },
+    {
+      "path": "functions/src/providers/providerExecutor.ts",
+      "disposition": "Gated with explicit prohibition: no synthetic provider response allowed"
+    },
+    {
+      "path": "lib/features/crucible/core/micro_test_engine.dart",
+      "disposition": "Allowed internal check for unsafe placeholder/preview content"
+    },
+    {
+      "path": "lib/main_web.dart",
+      "disposition": "Allowed Mission Delivery Preview text"
+    },
+    {
+      "path": "lib/web/founder/mission_control/mission_documents_tab.dart",
+      "disposition": "Allowed Student Document Preview text"
+    },
+    {
+      "path": "lib/features/opportunities/presentation/screens/sentinel_center_screen.dart",
+      "disposition": "Classified as admin/operations context"
+    },
+    {
+      "path": "test/features/repo_hygiene/rc_repo_hygiene_01_test.dart",
+      "disposition": "Classified as test context (non-reachable in student runtime)"
+    }
+  ]
+}

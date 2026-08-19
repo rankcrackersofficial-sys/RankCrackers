@@ -636,6 +636,18 @@
     {
       "file": "tools/repo_hygiene/run_rc_repo_hygiene_01.js",
       "project": "rankcrackers-55"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_02.js",
+      "project": "rankcrackers-55"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_02.js",
+      "project": "rankcrackers-test"
+    },
+    {
+      "file": "tools/repo_hygiene/run_rc_repo_hygiene_02.js",
+      "project": "rankcrackers-test-"
     }
   ]
 }

@@ -1,0 +1,371 @@
+/// RankCrackers governed DigiBook Personalization Route Contract.
+///
+/// CODE NO: PERS-11-R2
+///
+/// PURPOSE:
+/// Define the governed DigiBook presentation-route vocabulary for one
+/// student + target AMTN.
+///
+/// DEPENDS ON:
+/// - PERS-09 StudentTreatmentDecision contract
+///
+/// IMPORTANT:
+/// - This file defines route contracts only.
+/// - It does not generate or rewrite academic content.
+/// - It does not call AI/LLMs.
+/// - It does not select concrete repository block IDs.
+/// - Missing governed content must fail closed downstream.
+/// - Personalization changes sequence/depth/support, never academic truth.
+///
+/// Schema version: 1
+library;
+
+import 'student_treatment_decision.dart';
+
+enum DigiBookPersonalizationBlockType {
+  prerequisiteRefresher,
+  intuition,
+  conceptCore,
+  deepExplanation,
+  diagram,
+  workedExample,
+  misconceptionRepair,
+  formulaRecall,
+  quickRevision,
+  pyqConnection,
+  independentCheckpoint,
+}
+
+enum DigiBookPersonalizationStepReason {
+  prerequisiteRepair,
+  conceptRepair,
+  guidedSupport,
+  repeatedHintSupport,
+  repeatedExplanationSupport,
+  retentionReview,
+  fluencySupport,
+  evidenceProbe,
+  maintenance,
+}
+
+enum DigiBookPersonalizationDepth {
+  light,
+  standard,
+  deep,
+}
+
+final class DigiBookPersonalizationStep {
+  const DigiBookPersonalizationStep({
+    required this.order,
+    required this.sourceAmtnId,
+    required this.blockType,
+    required this.reason,
+    required this.depth,
+    required this.required,
+    required this.requiresCompletionEvidence,
+  })  : assert(order > 0),
+        assert(sourceAmtnId != '');
+
+  final int order;
+  final String sourceAmtnId;
+  final DigiBookPersonalizationBlockType blockType;
+  final DigiBookPersonalizationStepReason reason;
+  final DigiBookPersonalizationDepth depth;
+  final bool required;
+  final bool requiresCompletionEvidence;
+
+  void validate() {
+    if (order <= 0) {
+      throw const FormatException(
+        'DigiBookPersonalizationStep.order must be positive.',
+      );
+    }
+    if (sourceAmtnId.trim().isEmpty) {
+      throw const FormatException(
+        'DigiBookPersonalizationStep.sourceAmtnId must not be empty.',
+      );
+    }
+  }
+
+  Map<String, Object?> toJson() {
+    validate();
+    return <String, Object?>{
+      'order': order,
+      'sourceAmtnId': sourceAmtnId,
+      'blockType': blockType.wireName,
+      'reason': reason.wireName,
+      'depth': depth.wireName,
+      'required': required,
+      'requiresCompletionEvidence': requiresCompletionEvidence,
+    };
+  }
+}
+
+final class DigiBookPersonalizationRoute {
+  static const int currentSchemaVersion = 1;
+
+  const DigiBookPersonalizationRoute({
+    required this.studentId,
+    required this.targetAmtnId,
+    required this.createdAtUtc,
+    required this.sourceTreatmentTypes,
+    required this.steps,
+    required this.requiresIndependentCheckpoint,
+    required this.schemaVersion,
+  })  : assert(studentId != ''),
+        assert(targetAmtnId != ''),
+        assert(schemaVersion > 0);
+
+  final String studentId;
+  final String targetAmtnId;
+  final DateTime createdAtUtc;
+  final Set<StudentTreatmentType> sourceTreatmentTypes;
+  final List<DigiBookPersonalizationStep> steps;
+  final bool requiresIndependentCheckpoint;
+  final int schemaVersion;
+
+  bool get hasSteps => steps.isNotEmpty;
+
+  void validate() {
+    if (studentId.trim().isEmpty) {
+      throw const FormatException(
+        'DigiBookPersonalizationRoute.studentId must not be empty.',
+      );
+    }
+    if (targetAmtnId.trim().isEmpty) {
+      throw const FormatException(
+        'DigiBookPersonalizationRoute.targetAmtnId must not be empty.',
+      );
+    }
+    if (!createdAtUtc.isUtc) {
+      throw const FormatException(
+        'DigiBookPersonalizationRoute.createdAtUtc must be UTC.',
+      );
+    }
+    if (schemaVersion <= 0) {
+      throw const FormatException(
+        'DigiBookPersonalizationRoute.schemaVersion must be positive.',
+      );
+    }
+    if (sourceTreatmentTypes.isEmpty) {
+      throw const FormatException(
+        'DigiBookPersonalizationRoute.sourceTreatmentTypes must not be empty.',
+      );
+    }
+    if (steps.isEmpty) {
+      throw const FormatException(
+        'DigiBookPersonalizationRoute.steps must not be empty.',
+      );
+    }
+
+    final seenOrders = <int>{};
+    for (final step in steps) {
+      step.validate();
+      if (!seenOrders.add(step.order)) {
+        throw const FormatException(
+          'DigiBookPersonalizationRoute step order values must be unique.',
+        );
+      }
+    }
+
+    final ordered = List<DigiBookPersonalizationStep>.from(steps)
+      ..sort((a, b) => a.order.compareTo(b.order));
+    for (var index = 0; index < ordered.length; index++) {
+      if (ordered[index].order != index + 1) {
+        throw const FormatException(
+          'DigiBookPersonalizationRoute step order must be contiguous '
+          'starting at 1.',
+        );
+      }
+    }
+
+    final hasIndependentCheckpoint = steps.any(
+      (step) =>
+          step.blockType ==
+          DigiBookPersonalizationBlockType.independentCheckpoint,
+    );
+    if (requiresIndependentCheckpoint && !hasIndependentCheckpoint) {
+      throw const FormatException(
+        'Route requiring independent checkpoint must contain one.',
+      );
+    }
+
+    _validateTreatmentCompatibility();
+  }
+
+  void _validateTreatmentCompatibility() {
+    if (sourceTreatmentTypes.contains(
+      StudentTreatmentType.prerequisiteRepair,
+    )) {
+      final ok = steps.any(
+        (step) =>
+            step.reason ==
+                DigiBookPersonalizationStepReason.prerequisiteRepair &&
+            step.blockType ==
+                DigiBookPersonalizationBlockType.prerequisiteRefresher &&
+            step.sourceAmtnId != targetAmtnId,
+      );
+      if (!ok) {
+        throw const FormatException(
+          'prerequisiteRepair requires prerequisiteRefresher from '
+          'a prerequisite AMTN.',
+        );
+      }
+    }
+
+    if (sourceTreatmentTypes.contains(
+      StudentTreatmentType.conceptRepair,
+    )) {
+      final ok = steps.any(
+        (step) =>
+            step.sourceAmtnId == targetAmtnId &&
+            step.blockType ==
+                DigiBookPersonalizationBlockType.conceptCore,
+      );
+      if (!ok) {
+        throw const FormatException(
+          'conceptRepair requires target conceptCore.',
+        );
+      }
+    }
+
+    if (sourceTreatmentTypes.contains(
+      StudentTreatmentType.guidedExamples,
+    )) {
+      final ok = steps.any(
+        (step) =>
+            step.sourceAmtnId == targetAmtnId &&
+            step.blockType ==
+                DigiBookPersonalizationBlockType.workedExample,
+      );
+      if (!ok) {
+        throw const FormatException(
+          'guidedExamples requires target workedExample.',
+        );
+      }
+    }
+
+    if (sourceTreatmentTypes.contains(
+      StudentTreatmentType.retrievalReview,
+    )) {
+      final ok = steps.any(
+        (step) =>
+            step.sourceAmtnId == targetAmtnId &&
+            (step.blockType ==
+                    DigiBookPersonalizationBlockType.quickRevision ||
+                step.blockType ==
+                    DigiBookPersonalizationBlockType.formulaRecall),
+      );
+      if (!ok) {
+        throw const FormatException(
+          'retrievalReview requires quickRevision or formulaRecall.',
+        );
+      }
+    }
+
+    if (sourceTreatmentTypes.contains(
+      StudentTreatmentType.maintain,
+    )) {
+      final hasHeavyRepair = steps.any(
+        (step) =>
+            step.depth == DigiBookPersonalizationDepth.deep ||
+            step.reason ==
+                DigiBookPersonalizationStepReason.conceptRepair ||
+            step.reason ==
+                DigiBookPersonalizationStepReason.prerequisiteRepair,
+      );
+      if (hasHeavyRepair) {
+        throw const FormatException(
+          'maintain route cannot contain heavy repair steps.',
+        );
+      }
+    }
+  }
+
+  Map<String, Object?> toJson() {
+    validate();
+    return <String, Object?>{
+      'schemaVersion': schemaVersion,
+      'studentId': studentId,
+      'targetAmtnId': targetAmtnId,
+      'createdAtUtc': createdAtUtc.toIso8601String(),
+      'sourceTreatmentTypes': sourceTreatmentTypes
+          .map((value) => value.wireName)
+          .toList(growable: false),
+      'requiresIndependentCheckpoint': requiresIndependentCheckpoint,
+      'steps': steps
+          .map((step) => step.toJson())
+          .toList(growable: false),
+    };
+  }
+}
+
+extension DigiBookPersonalizationBlockTypeWire
+    on DigiBookPersonalizationBlockType {
+  String get wireName {
+    switch (this) {
+      case DigiBookPersonalizationBlockType.prerequisiteRefresher:
+        return 'prerequisite_refresher';
+      case DigiBookPersonalizationBlockType.intuition:
+        return 'intuition';
+      case DigiBookPersonalizationBlockType.conceptCore:
+        return 'concept_core';
+      case DigiBookPersonalizationBlockType.deepExplanation:
+        return 'deep_explanation';
+      case DigiBookPersonalizationBlockType.diagram:
+        return 'diagram';
+      case DigiBookPersonalizationBlockType.workedExample:
+        return 'worked_example';
+      case DigiBookPersonalizationBlockType.misconceptionRepair:
+        return 'misconception_repair';
+      case DigiBookPersonalizationBlockType.formulaRecall:
+        return 'formula_recall';
+      case DigiBookPersonalizationBlockType.quickRevision:
+        return 'quick_revision';
+      case DigiBookPersonalizationBlockType.pyqConnection:
+        return 'pyq_connection';
+      case DigiBookPersonalizationBlockType.independentCheckpoint:
+        return 'independent_checkpoint';
+    }
+  }
+}
+
+extension DigiBookPersonalizationStepReasonWire
+    on DigiBookPersonalizationStepReason {
+  String get wireName {
+    switch (this) {
+      case DigiBookPersonalizationStepReason.prerequisiteRepair:
+        return 'prerequisite_repair';
+      case DigiBookPersonalizationStepReason.conceptRepair:
+        return 'concept_repair';
+      case DigiBookPersonalizationStepReason.guidedSupport:
+        return 'guided_support';
+      case DigiBookPersonalizationStepReason.repeatedHintSupport:
+        return 'repeated_hint_support';
+      case DigiBookPersonalizationStepReason.repeatedExplanationSupport:
+        return 'repeated_explanation_support';
+      case DigiBookPersonalizationStepReason.retentionReview:
+        return 'retention_review';
+      case DigiBookPersonalizationStepReason.fluencySupport:
+        return 'fluency_support';
+      case DigiBookPersonalizationStepReason.evidenceProbe:
+        return 'evidence_probe';
+      case DigiBookPersonalizationStepReason.maintenance:
+        return 'maintenance';
+    }
+  }
+}
+
+extension DigiBookPersonalizationDepthWire
+    on DigiBookPersonalizationDepth {
+  String get wireName {
+    switch (this) {
+      case DigiBookPersonalizationDepth.light:
+        return 'light';
+      case DigiBookPersonalizationDepth.standard:
+        return 'standard';
+      case DigiBookPersonalizationDepth.deep:
+        return 'deep';
+    }
+  }
+}

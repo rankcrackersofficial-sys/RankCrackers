@@ -1,0 +1,99 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_2A259182_CH001",
+    "overview": "Physical equilibrium represents a state of dynamic balance between opposing physical processes occurring at equal rates within a closed system. Key forms of physical equilibrium include phase transformations (solid-liquid, liquid-gas, and solid-gas) and dissolution phenomena, such as gas solubility described by Henry's Law.",
+    "concepts": [
+      {
+        "title": "Phase Equilibria (Solid-Liquid, Liquid-Gas, Solid-Gas)",
+        "explanation": "In phase equilibria, matter transitions between states reversibly in a closed system. Solid-liquid equilibrium occurs at the melting point, where the rate of melting equals the rate of freezing. Liquid-gas equilibrium occurs when liquid evaporation equals vapor condensation at a constant vapor pressure for a given temperature. Solid-gas equilibrium involves direct sublimation, such as with iodine or camphor crystals in a sealed vessel."
+      },
+      {
+        "title": "Dissolution Equilibria and Henry's Law",
+        "explanation": "Dissolution of solids or gases in liquids can achieve equilibrium. For gas-liquid systems, Henry's Law states that at constant temperature, the solubility of a gas in a liquid is directly proportional to the partial pressure of the gas above the liquid surface (p = K_H * x). A higher Henry's law constant (K_H) indicates lower solubility of the gas in the liquid at a given pressure."
+      },
+      {
+        "title": "General Characteristics of Physical Equilibrium",
+        "explanation": "1. Equilibrium can only be established in closed systems at constant temperature. 2. It is dynamic in nature; forward and reverse processes occur at equal speeds. 3. Macroscopic properties such as concentration, pressure, and density remain constant over time. 4. The equilibrium state can be reached from either direction."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Henry's Law (Mole Fraction Form)",
+        "formula": "p = K_H * x",
+        "applicability": "Solubility of gases in liquids at moderate pressure and constant temperature.",
+        "variables": [
+          {
+            "symbol": "p",
+            "meaning": "Partial pressure of the gas in the gas phase above the solution",
+            "unit": "bar or atm"
+          },
+          {
+            "symbol": "K_H",
+            "meaning": "Henry's Law constant",
+            "unit": "bar or atm"
+          },
+          {
+            "symbol": "x",
+            "meaning": "Mole fraction of the gas in the liquid solution",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "At equilibrium, all physical processes stop completely.",
+        "correction": "Physical equilibrium is dynamic. Molecules continue to change phase or state, but the rate of the forward process equals the rate of the reverse process."
+      },
+      {
+        "misconception": "A higher Henry's constant (K_H) means a gas is more soluble in a liquid.",
+        "correction": "A higher K_H value at a given pressure implies a lower mole fraction x in solution (x = p / K_H), meaning lower gas solubility."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "If N2 gas is bubbled through water at 293 K, calculate the millimoles of N2 gas dissolved in 1 L of water. Assume N2 exerts a partial pressure of 0.987 bar. Given K_H for N2 at 293 K is 76.48 kbar.",
+        "steps": [
+          "1. Apply Henry's Law formula: x = p / K_H.",
+          "2. Convert K_H to bar: K_H = 76.48 * 10^3 bar.",
+          "3. Compute mole fraction: x = 0.987 / (76.48 * 10^3) = 1.29 * 10^-5.",
+          "4. Number of moles of H2O in 1 L (1000 g) = 1000 / 18 = 55.55 mol.",
+          "5. Since n(N2) << n(H2O), x ≈ n(N2) / 55.55.",
+          "6. Calculate n(N2): n(N2) = 1.29 * 10^-5 * 55.55 = 7.16 * 10^-4 mol = 0.716 mmol."
+        ],
+        "answer": "0.716 mmol"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which statement regarding Henry's Law constant K_H is correct? (A) It increases with temperature, causing gas solubility to decrease. (B) It is independent of the nature of the gas. (C) Higher K_H indicates higher solubility at constant pressure. (D) It is constant for a given gas across all solvents.",
+        "answer": "Option (A). K_H depends on the gas, solvent, and temperature. As temperature increases, K_H increases, which decreases the solubility of the gas."
+      },
+      {
+        "question": "In a closed container having water and vapor in equilibrium at 100 °C, if the container volume is doubled at constant temperature, what is the final vapor pressure once equilibrium is re-established? (A) Doubles (B) Halves (C) Remains unchanged (D) Drops to zero",
+        "answer": "Option (C). Vapor pressure depends solely on temperature for a given liquid. Re-establishing equilibrium restores the vapor pressure to its characteristic value at 100 °C."
+      },
+      {
+        "question": "Which of the following physical systems exemplifies a solid-gas equilibrium? (A) H2O(s) <=> H2O(l) (B) I2(s) <=> I2(g) (C) CO2(g) <=> CO2(aq) (D) H2O(l) <=> H2O(g)",
+        "answer": "Option (B). Iodine sublimes directly from solid phase to gaseous phase, forming a solid-gas phase equilibrium in a closed vessel."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Chapter 6: Equilibrium",
+      "NCERT Class 12 Chemistry, Chapter 2: Solutions"
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_4FB800BA_CH001",
+    "overview": "Electrochemical cells interface chemical energy and electrical energy. This topic covers Galvanic (voltaic) cells that generate electrical energy from spontaneous redox reactions, electrolytic cells that consume electrical energy to drive non-spontaneous reactions, electrode potentials, Nernst equation applications, thermodynamic relationships, and practical batteries including dry cells, lead accumulators, and fuel cells.",
+    "concepts": [
+      {
+        "title": "Galvanic vs. Electrolytic Cells",
+        "explanation": "Galvanic cells convert chemical energy of a spontaneous redox reaction into electrical energy (Anode is negative, Cathode is positive). Electrolytic cells use an external electrical energy source to carry out a non-spontaneous chemical reaction (Anode is positive, Cathode is negative). In both cell types, oxidation always occurs at the anode and reduction at the cathode."
+      },
+      {
+        "title": "Electrode Potential and Standard Hydrogen Electrode (SHE)",
+        "explanation": "Electrode potential is the potential difference between the metal electrode and its ion solution at equilibrium. Standard Electrode Potential (E°) is measured at 298 K, 1 atm pressure, and 1 M concentration relative to the Standard Hydrogen Electrode (SHE), which is assigned an arbitrary potential of 0.00 V."
+      },
+      {
+        "title": "Electromotive Force (EMF) and Nernst Equation",
+        "explanation": "The EMF of a cell (Ecell) is the potential difference between two electrodes when no current is drawn. The Nernst equation describes the dependence of cell potential on ion concentration and temperature: Ecell = E°cell - (2.303 RT / nF) log Q. At 298 K, this simplifies to Ecell = E°cell - (0.059 / n) log Q."
+      },
+      {
+        "title": "Thermodynamics of Electrochemical Cells",
+        "explanation": "The maximum electrical work done by a galvanic cell equals the decrease in Gibbs free energy: ΔG = -n F Ecell. Under standard conditions, ΔG° = -n F E°cell. Also, ΔG° = -RT ln Keq, linking E°cell directly to the equilibrium constant Keq."
+      },
+      {
+        "title": "Commercial Batteries and Fuel Cells",
+        "explanation": "Primary cells (e.g., Leclanché dry cell) cannot be recharged as cell reactions are irreversible. Secondary cells (e.g., Lead-acid accumulator) can be recharged by passing current in the reverse direction. Fuel cells (e.g., H2-O2 fuel cell) continuously convert chemical energy of fuel combustion directly into electrical energy with high efficiency."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Standard Cell Potential",
+        "formula": "E°cell = E°cathode - E°anode",
+        "applicability": "Applies to galvanic cells under standard state conditions using standard reduction potentials.",
+        "variables": [
+          {
+            "symbol": "E°cell",
+            "meaning": "Standard electromotive force of the cell",
+            "unit": "Volt (V)"
+          },
+          {
+            "symbol": "E°cathode",
+            "meaning": "Standard reduction potential of cathode",
+            "unit": "Volt (V)"
+          },
+          {
+            "symbol": "E°anode",
+            "meaning": "Standard reduction potential of anode",
+            "unit": "Volt (V)"
+          }
+        ]
+      },
+      {
+        "label": "Nernst Equation at 298 K",
+        "formula": "Ecell = E°cell - (0.059 / n) * log10(Q)",
+        "applicability": "Calculates cell potential under non-standard ion concentrations and gas partial pressures at 298 K.",
+        "variables": [
+          {
+            "symbol": "Ecell",
+            "meaning": "Cell potential under non-standard conditions",
+            "unit": "Volt (V)"
+          },
+          {
+            "symbol": "E°cell",
+            "meaning": "Standard cell potential",
+            "unit": "Volt (V)"
+          },
+          {
+            "symbol": "n",
+            "meaning": "Number of moles of electrons transferred in the balanced redox equation",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Q",
+            "meaning": "Reaction quotient",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Gibbs Energy Change and Cell EMF",
+        "formula": "ΔG° = -n * F * E°cell",
+        "applicability": "Relates standard Gibbs free energy change to standard cell potential.",
+        "variables": [
+          {
+            "symbol": "ΔG°",
+            "meaning": "Standard Gibbs energy change",
+            "unit": "Joule per mole (J/mol)"
+          },
+          {
+            "symbol": "n",
+            "meaning": "Moles of electrons transferred",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "F",
+            "meaning": "Faraday constant (~96500 C/mol)",
+            "unit": "Coulomb per mole (C/mol)"
+          },
+          {
+            "symbol": "E°cell",
+            "meaning": "Standard cell potential",
+            "unit": "Volt (V)"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Anode is always negatively charged in all electrochemical cells.",
+        "correction": "Anode is negatively charged in galvanic cells, but positively charged in electrolytic cells. The universal definition is that oxidation always occurs at the anode."
+      },
+      {
+        "misconception": "Multiplying a stoichiometric equation by a constant multiplies its standard electrode potential E°.",
+        "correction": "Standard electrode potential E° is an intensive property and does not depend on the amount of substance or stoichiometric coefficients. Gibbs energy ΔG° is extensive and multiplies accordingly."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the cell potential Ecell at 25 °C for the cell: Zn(s) | Zn2+(0.01 M) || Cu2+(0.1 M) | Cu(s). Given E°(Zn2+/Zn) = -0.76 V and E°(Cu2+/Cu) = +0.34 V.",
+        "steps": [
+          "Step 1: Determine E°cell = E°cathode - E°anode = 0.34 V - (-0.76 V) = +1.10 V.",
+          "Step 2: Write overall cell reaction: Zn(s) + Cu2+(aq) -> Zn2+(aq) + Cu(s), so n = 2.",
+          "Step 3: Calculate reaction quotient Q = [Zn2+] / [Cu2+] = 0.01 / 0.1 = 0.1.",
+          "Step 4: Apply Nernst equation: Ecell = 1.10 - (0.059 / 2) * log10(0.1) = 1.10 - (0.0295) * (-1) = 1.10 + 0.0295 = 1.1295 V."
+        ],
+        "answer": "Ecell = 1.13 V"
+      },
+      {
+        "problem": "Calculate the standard Gibbs energy change ΔG° for the cell reaction: 2 Fe3+(aq) + 2 I-(aq) -> 2 Fe2+(aq) + I2(s), given E°cell = +0.236 V. (F = 96500 C/mol)",
+        "steps": [
+          "Step 1: Identify n from reaction equation. Two electrons are transferred (n = 2).",
+          "Step 2: Use ΔG° = -n * F * E°cell.",
+          "Step 3: Substitute values: ΔG° = -2 * 96500 C/mol * 0.236 V = -45548 J/mol = -45.55 kJ/mol."
+        ],
+        "answer": "ΔG° = -45.55 kJ/mol"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which electrode reaction occurs at the anode during charging of a lead storage battery?",
+        "answer": "Option A: PbSO4(s) + 2H2O(l) -> PbO2(s) + SO4 2-(aq) + 4H+(aq) + 2e-. Explanation: During charging, the lead accumulator acts as an electrolytic cell. Oxidation occurs at the anode where PbSO4 is converted back to PbO2."
+      },
+      {
+        "question": "If the standard electrode potentials of Cu2+/Cu and Ag+/Ag are +0.34 V and +0.80 V respectively, what is the equilibrium constant Keq for the reaction Cu(s) + 2Ag+(aq) <-> Cu2+(aq) + 2Ag(s) at 298 K?",
+        "answer": "Option: Keq ≈ 3.9 x 10^15. Solution: E°cell = 0.80 - 0.34 = 0.46 V. n = 2. log Keq = (n * E°cell) / 0.059 = (2 * 0.46) / 0.059 = 15.593. Keq = 10^15.593 ≈ 3.9 x 10^15."
+      },
+      {
+        "question": "In a hydrogen-oxygen fuel cell, what reaction occurs at the cathode?",
+        "answer": "Option: O2(g) + 2H2O(l) + 4e- -> 4OH-(aq). Explanation: Oxygen gas is reduced at the cathode in alkaline electrolyte fuel cells to produce hydroxide ions."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 3: Electrochemistry",
+      "JEE Main Official Syllabus Chemistry: Physical Chemistry - Electrochemistry"
+    ]
+  }
+}

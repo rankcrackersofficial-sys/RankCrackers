@@ -1,0 +1,109 @@
+/// RankCrackers deterministic Student Treatment Decision Engine.
+        'StudentTreatmentDecisionEngine can only merge identical '
+        'treatment types.',
+      );
+    }
+
+
+    if (existing.targetAmtnId != incoming.targetAmtnId) {
+      throw const FormatException(
+        'StudentTreatmentDecisionEngine cannot merge directives '
+        'for different AMTNs.',
+      );
+    }
+
+
+    final reasons = <StudentTreatmentReason>{
+      ...existing.reasons,
+      ...incoming.reasons,
+    };
+
+
+    final surfaces = <StudentTreatmentSurface>{
+      ...existing.allowedSurfaces,
+      ...incoming.allowedSurfaces,
+    };
+
+
+    final prerequisiteIds = <String>{
+      ...existing.prerequisiteAmtnIds,
+      ...incoming.prerequisiteAmtnIds,
+    }.toList(growable: false)
+      ..sort();
+
+
+    final merged = StudentTreatmentDirective(
+      type: existing.type,
+      urgency: _higherUrgency(
+        existing.urgency,
+        incoming.urgency,
+      ),
+      reasons: Set<StudentTreatmentReason>.unmodifiable(reasons),
+      allowedSurfaces:
+          Set<StudentTreatmentSurface>.unmodifiable(surfaces),
+      targetAmtnId: existing.targetAmtnId,
+      prerequisiteAmtnIds:
+          List<String>.unmodifiable(prerequisiteIds),
+      maxQuestionCount: _lowerPositiveNullable(
+        existing.maxQuestionCount,
+        incoming.maxQuestionCount,
+      ),
+      maxDurationMinutes: _lowerPositiveNullable(
+        existing.maxDurationMinutes,
+        incoming.maxDurationMinutes,
+      ),
+      requiresIndependentAttempt:
+          existing.requiresIndependentAttempt ||
+              incoming.requiresIndependentAttempt,
+      requiresHumanReview:
+          existing.requiresHumanReview ||
+              incoming.requiresHumanReview,
+    );
+
+
+    merged.validate();
+    return merged;
+  }
+
+
+  StudentTreatmentUrgency _higherUrgency(
+    StudentTreatmentUrgency a,
+    StudentTreatmentUrgency b,
+  ) {
+    return _urgencyRank(a) >= _urgencyRank(b) ? a : b;
+  }
+
+
+  int _urgencyRank(StudentTreatmentUrgency urgency) {
+    switch (urgency) {
+      case StudentTreatmentUrgency.unknown:
+        return 0;
+      case StudentTreatmentUrgency.low:
+        return 1;
+      case StudentTreatmentUrgency.medium:
+        return 2;
+      case StudentTreatmentUrgency.high:
+        return 3;
+      case StudentTreatmentUrgency.immediate:
+        return 4;
+    }
+  }
+
+
+  int? _lowerPositiveNullable(
+    int? a,
+    int? b,
+  ) {
+    if (a == null) {
+      return b;
+    }
+
+
+    if (b == null) {
+      return a;
+    }
+
+
+    return a <= b ? a : b;
+  }
+}

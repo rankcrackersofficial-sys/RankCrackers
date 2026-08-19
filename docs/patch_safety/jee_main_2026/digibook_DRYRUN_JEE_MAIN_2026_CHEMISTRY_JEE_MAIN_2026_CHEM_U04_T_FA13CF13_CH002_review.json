@@ -1,0 +1,32 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "FAIL",
+    "itemCountReviewed": 1,
+    "approvedAtomIds": [],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_FA13CF13_CH002"
+    ],
+    "blockingIssues": [
+      "In Concept 2, the statement 'Multiplying by -T shows that -TΔG_sys = ΔS_univ' is mathematically incorrect. It should be 'Multiplying by -T shows that -TΔS_univ = ΔG_sys'.",
+      "In Worked Example 2, there is a calculation error. The expression '-2.303 * 8.314 J K^-1 mol^-1 * 298 K * 2' evaluates to approximately -11411.7 J mol^-1, not -11414.2 J mol^-1."
+    ],
+    "reviewNotes": "The atom has a critical error in the fundamental derivation relating Gibbs free energy to the entropy of the universe in Concept 2. Additionally, there is a minor arithmetic error in Worked Example 2 that needs to be corrected. Self-check questions and keys are accurate.",
+    "conceptCorrectnessPass": false,
+    "formulaPass": false,
+    "selfCheckPass": true,
+    "workedExampleMathPass": false
+  }
+}

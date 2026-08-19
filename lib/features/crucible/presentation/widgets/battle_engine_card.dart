@@ -97,7 +97,7 @@ class BattleEngineCard extends StatelessWidget {
             ProgressRow(label: "Weak Areas", value: weakAreas),
           ] else ...[
             _evidencePendingRow("Mission Complete"),
-            _evidencePendingRow("Pending"),
+            _evidencePendingRow("Remaining Protocol"),
             _evidencePendingRow("Weak Areas"),
           ],
 
@@ -175,18 +175,31 @@ class BattleEngineCard extends StatelessWidget {
 
   Widget _evidencePendingRow(String label) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.only(bottom: 12),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(label,
-              style: AppTypography.body.copyWith(color: Colors.white54)),
-          Text(
-            'EVIDENCE PENDING',
-            style: AppTypography.label.copyWith(
-              color: Colors.white38,
-              fontSize: 8,
-              letterSpacing: 0.8,
+          Expanded(
+            child: Text(
+              label,
+              style: AppTypography.body.copyWith(
+                color: Colors.white.withValues(alpha: 0.5),
+                fontSize: 13,
+              ),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.05),
+              borderRadius: BorderRadius.circular(4),
+            ),
+            child: Text(
+              'EVIDENCE PENDING',
+              style: AppTypography.label.copyWith(
+                color: Colors.white.withValues(alpha: 0.3),
+                fontSize: 8,
+                letterSpacing: 1.2,
+              ),
             ),
           ),
         ],

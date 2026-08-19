@@ -12,12 +12,27 @@ class PayloadAssemblyResult {
   PayloadAssemblyResult({required this.payload, required this.audit});
 }
 
-/// 🔱 DIGIBOOK PUBLICATION ENGINE (v2.1 - Hardened Audit G4)
+/// 🔱 DIGIBOOK PUBLICATION ENGINE (v2.2 - Human-Centered Factory)
 /// Sovereign authority for aggregating and auditing heavy truth payloads.
 class DigiBookPublicationEngine {
   
+  /// 🔱 PEDAGOGICAL SEQUENCE CONTRACT
+  static const List<String> pedagogicalOrder = [
+    'refresher',
+    'intuition',
+    'core_concept',
+    'explanation',
+    'diagram',
+    'formula',
+    'example',
+    'misconception',
+    'pyq',
+    'checkpoint',
+    'quick_revision',
+  ];
+
   /// 🔱 ASSEMBLE & AUDIT
-  /// Aggregates only VERIFIED blocks and generates a traceable audit record.
+  /// Aggregates only VERIFIED blocks in strict pedagogical order.
   static PayloadAssemblyResult assemble({
     required MicroTopicNode node,
     required List<DigiBookBlock> blocks,
@@ -42,12 +57,23 @@ class DigiBookPublicationEngine {
       throw Exception("PUBLICATION BLOCKED: No verified atoms found for Node ${node.id}. Truth cannot be empty.");
     }
 
+    // 🔱 HUMAN-CENTERED SORTING
+    verifiedBlocks.sort((a, b) {
+      int indexA = pedagogicalOrder.indexOf(a.type);
+      int indexB = pedagogicalOrder.indexOf(b.type);
+      if (indexA == -1) indexA = 99; // Unknown types at end
+      if (indexB == -1) indexB = 99;
+      return indexA.compareTo(indexB);
+    });
+
     String beginner = "";
     String intermediate = "";
     String pro = "";
+    String academic = "";
     List<String> oneLiners = [];
     List<String> revisionPoints = [];
-    
+    List<String> pyqStrings = [];
+
     // 🔱 G4: Source Aggregation
     final Set<String> sourceFactIds = {};
     final Set<String> sourceDocumentIds = {};
@@ -56,26 +82,53 @@ class DigiBookPublicationEngine {
       sourceFactIds.addAll(block.sourceFactIds);
       if (block.sourceDocumentId != null) sourceDocumentIds.add(block.sourceDocumentId!);
 
+      // Legacy & New Type Mapping
       switch (block.type) {
+        case 'refresher':
         case 'brief_note':
-          beginner += "${block.content}\n\n";
+          beginner += "### Refresher\n${block.content}\n\n";
           break;
+        case 'intuition':
+          beginner += "### Intuition\n${block.content}\n\n";
+          break;
+        case 'core_concept':
         case 'concept_note':
-          pro += "${block.content}\n\n";
+          pro += "### Core Concept\n${block.content}\n\n";
           break;
-        case 'one_liner':
-          oneLiners.add(block.content);
+        case 'explanation':
+          intermediate += "### Explanation\n${block.content}\n\n";
           break;
+        case 'diagram':
+          academic += "### Diagram Context\n${block.content}\n\n";
+          break;
+        case 'formula':
+          pro += "### Formula\n${block.content}\n\n";
+          break;
+        case 'example':
+          intermediate += "### Example\n${block.content}\n\n";
+          break;
+        case 'misconception':
+          pro += "### Common Misconception\n${block.content}\n\n";
+          break;
+        case 'pyq':
+          pyqStrings.add(block.content);
+          break;
+        case 'checkpoint':
+          intermediate += "### Checkpoint\n${block.content}\n\n";
+          break;
+        case 'quick_revision':
         case 'memory_aid':
           revisionPoints.add(block.content);
           break;
-        case 'example':
-          intermediate += "Example: ${block.content}\n\n";
+        case 'one_liner':
+          oneLiners.add(block.content);
           break;
       }
     }
 
     if (intermediate.isEmpty) intermediate = beginner;
+    if (pro.isEmpty) pro = intermediate;
+    if (academic.isEmpty) academic = pro;
 
     // 🔱 HARDENED AUDIT (G4 Alignment)
     final audit = {
@@ -96,14 +149,14 @@ class DigiBookPublicationEngine {
       beginnerContent: beginner.trim(),
       intermediateContent: intermediate.trim(),
       proContent: pro.trim(),
-      academicContent: "",
+      academicContent: academic.trim(),
       facts: const [], // 🔱 Note: facts list in content is legacy; we use sourceAtomicFactIds in audit now
       oneLiners: oneLiners,
       revisionPoints: revisionPoints,
       easyMcqs: easyMcqs,
       mediumMcqs: mediumMcqs,
       hardMcqs: hardMcqs,
-      pyqs: const [],
+      pyqs: pyqStrings,
       publicationAudit: audit,
     );
 

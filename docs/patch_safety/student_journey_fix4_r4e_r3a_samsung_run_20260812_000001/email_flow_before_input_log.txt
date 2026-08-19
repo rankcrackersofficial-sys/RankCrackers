@@ -1,0 +1,120 @@
+08-12 10:54:56.903 W/DocumentsProviderAuthEr(17867): Received auth error
+08-12 10:54:56.904 E/Cello   (17867): [18049:NonCelloThread] authenticated_transport.cc:188:DumpToLog Request 0xb40000795b861e00: 0 transport: UNKNOWN: From legacy status [type.googleapis.com/drive.ds.Status='CANCELLED']
+08-12 10:54:56.904 E/Cello   (17867): [18049:NonCelloThread] authenticated_transport.cc:188:DumpToLog req.hdr 0xb40000795b861e00: Accept-Language=en-IN
+08-12 10:54:56.904 E/Cello   (17867): [18049:NonCelloThread] authenticated_transport.cc:188:DumpToLog req.hdr 0xb40000795b861e00: Content-Type=application/x-protobuf
+08-12 10:54:56.904 E/Cello   (17867): [18049:NonCelloThread] authenticated_transport.cc:188:DumpToLog req.hdr 0xb40000795b861e00: X-Goog-FieldMask=account.metadata.root_folder_id
+08-12 10:54:56.904 E/Cello   (17867): [18049:NonCelloThread] authenticated_transport.cc:188:DumpToLog req.hdr 0xb40000795b861e00: x-goog-ext-472780938-bin=CghCAEgBYgIIAw==
+08-12 10:54:56.904 E/Cello   (17867): [18049:NonCelloThread] authenticated_transport.cc:188:DumpToLog Response body 0xb40000795b861e00: (no response body)
+08-12 10:54:56.928 E/Cello   (17867): [18079:MetricsTransportThread-CELLO] metrics_transport.cc:237:SendRequest Request failed: drive::ds::Status::UNAVAILABLE_WHILE_OFFLINE
+08-12 10:54:56.960 E/Cello   (17867): [18070:MetricsTransportThread-CELLO] metrics_transport.cc:237:SendRequest Request failed: drive::ds::Status::UNAVAILABLE_WHILE_OFFLINE
+08-12 10:54:57.121 I/AdrenoGLES-0(18157): OpenGL ES Shader Compiler Version: E031.41.03.64
+08-12 10:54:57.168 W/System  ( 3558): A resource failed to call HardwareBuffer.close. 
+08-12 10:54:57.209 D/CoreBackPreview( 3558): Window{c7467b6 u0 android}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.WindowOnBackInvokedDispatcher$OnBackInvokedCallbackWrapper@37e02c1, mPriority=-1, mIsAnimationCallback=false, mOverrideBehavior=0}
+08-12 10:54:57.315 D/SurfaceFlinger( 2252):        DEVICE |           22213571080975 | 00002100 | RGBA_8888    |    0.0    0.0 1080.0 2340.0 |    0    0 1080 2340 | Splash Screen com.rankcrackers.app$_5172#85061 (1)
+08-12 10:54:57.337 D/SurfaceFlinger( 2252):        CLIENT |           22213571080975 | 00002100 | RGBA_8888    |    0.0    0.0 1080.0 2340.0 |    0    0 1080 2340 | Splash Screen com.rankcrackers.app$_5172#85061 (1)
+08-12 10:54:57.341 D/SurfaceFlinger( 2252):        CLIENT |           22213571080975 | 00002100 | RGBA_8888    |    0.0    0.0 1080.0 2340.0 |    0    0 1080 2340 | Splash Screen com.rankcrackers.app$_5172#85061 (1)
+08-12 10:54:57.351 I/SearchEngine( 6076): isComponentInApps() packageName : com.jio.myjio / className : com.jio.myjio.dashboard.activities.SplashActivity / userId : 0 / enable true / enabledSetting 0
+08-12 10:54:57.351 I/SearchEngine( 6076): isComponentInApps() packageName : cx.indianoil.in / className : cx.indianoil.in.SplashActivity / userId : 0 / enable true / enabledSetting 0
+08-12 10:54:57.353 I/SearchEngine( 6076): isComponentInApps() packageName : com.digilocker.android / className : in.gov.digilocker.views.mainactivity.SplashScreenActivity / userId : 0 / enable true / enabledSetting 4
+08-12 10:54:57.355 I/SearchEngine( 6076): isComponentInApps() packageName : com.myairtelapp / className : com.myairtelapp.home.views.activities.SplashScreenActivity / userId : 0 / enable true / enabledSetting 4
+08-12 10:54:57.486 W/HttpCallTransport(17867): Auth error getting auth token for CelloHttpCall{method=GET, url=https://drivefrontend-pa.googleapis.com/v1/account, tags=Suppliers.memoize(mtx@b0cad82), hasRequestBody=false, acceptHttpResponseGzipEncoding=true, failOnNonHttpsUrl=false, failOnCleartextPermitted=false, contextRequestHeaders=Accept-Language : en-IN,Content-Type : application/x-protobuf,X-Goog-FieldMask : account.metadata.quota.quota_bytes_total,account.metadata.quota.individual_bytes_limit,account.metadata.quota.quota_bytes_used,account.metadata.quota.quota_bytes_used_aggregate,account.metadata.quota.service_usage.bytes_used,account.metadata.quota.service_usage.service_key,account.metadata.quota.bytes_used_by_user,account.metadata.quota.bytes_used_by_team,account.metadata.quota.bytes_used_by_all_services,account.metadata.quota.quota_type,account.metadata.quota.quota_status,account.metadata.quota.grace_period_info.active,account.metadata.quota.grace_period_info.end_timestamp_millis,account.metadata.export_format,account.metadata.import_format,account.metadata.max_upload_size,account.user.customer_id,account.user.domain,account.enterprise_settings.is_dasher_admin,account.enterprise_settings.is_dasher_user,account.search_settings.can_display_zero_state_search,account.security_settings.is_cse_create_enabled,account.security_settings.is_cse_on_by_default,account.shared_drives_settings.can_create_shared_drives,account.shared_drives_settings.has_shared_drives,account.shared_drives_settings.can_interact_with_shared_drives,account.storage_settings.can_buy_storage,account.workspace_settings.active_workspace_limit,account.workspace_settings.can_create_workspaces,account.workspace_settings.total_workspace_limit,account.workspace_settings.workspace_item_limit,account.view_settings.can_display_suggestions_in_shared_with_me,account.view_settings.can_view_priority,account.view_settings.show_machine_root_view,account.view_settings.show_spam_view,account.metadata.backend_diagnostics.backend,account.external_warnings_policy_settings.enable_file_level_external_warnings,x-goog-ext-472780938-bin : CghCAEgBYgIIAw==,Host : drivefrontend-pa.googleapis.com,User-Agent : Cakemix/2.26.317.00.90 (dm1q BP4A.251205.006) Google.Drive/2.26.317.00.90 (OS=Android;OSVer=16;Manufacturer=samsung;Model=SM-S911B;SyncEngine=Cello) Mozilla/5.0 (Linux; U; Android 16; en-in; SM-S911B Build/BP4A.251205.006) AppleWebKit/525.10+ (KHTML, like Gecko) Version/3.0.4 Mobile Safari/523.12.2,Accept-Encoding : gzip, additionalHeaders=}
+08-12 10:54:57.486 W/DocumentsProviderAuthEr(17867): Received auth error
+08-12 10:54:57.488 W/FutureCallback(17867): Exception set on future for 'getAccountAndUserSettings_266635255(Proto=# com.google.apps.drive.dataservice.AccountAndUserSettingsRequest@f4be7008,)'. Cello error 8. Error. Failed task: getAccountAndUserSettings_266635255(Proto=# com.google.apps.drive.dataservice.AccountAndUserSettingsRequest@f4be7008,)
+08-12 10:54:57.489 E/CelloAccountMetadataLoa(17867): Failed to get account capability.
+08-12 10:54:57.489 E/CelloAccountMetadataLoa(17867): sns: Cello error 8. Error. Failed task: getAccountAndUserSettings_266635255(Proto=# com.google.apps.drive.dataservice.AccountAndUserSettingsRequest@f4be7008,)
+08-12 10:54:57.489 E/CelloAccountMetadataLoa(17867): 	at com.google.android.libraries.drive.core.impl.cello.jni.SlimJni__HttpRequestContext.native_onError(Native Method)
+08-12 10:54:57.489 E/CelloAccountMetadataLoa(17867): 	at com.google.android.libraries.drive.core.impl.cello.jni.SlimJni__HttpRequestContext.onError(PG:10)
+08-12 10:54:57.570 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:54:57.570 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:54:57.819 W/FreecessController( 3558): getAllRunningPackagePids: Failed to read pid from /sys/fs/cgroup/apps/uid_10124/pid_3866/cgroup.procs
+08-12 10:54:57.840 W/FreecessController( 3558): getAllRunningPackagePids: Failed to read pid from /sys/fs/cgroup/apps/uid_10285/pid_19977/cgroup.procs
+08-12 10:54:57.851 W/FreecessController( 3558): getAllRunningPackagePids: Failed to read pid from /sys/fs/cgroup/apps/uid_10116/pid_16425/cgroup.procs
+08-12 10:54:57.851 W/FreecessController( 3558): getAllRunningPackagePids: Failed to read pid from /sys/fs/cgroup/apps/uid_10116/pid_19185/cgroup.procs
+08-12 10:54:58.058 I/AdrenoVK-0(18157): Shader Compiler Version : E031.41.03.64
+08-12 10:54:58.083 I/flutter (18157): [IMPORTANT:flutter/shell/platform/android/android_context_vk_impeller.cc(62)] Using the Impeller rendering backend (Vulkan).
+08-12 10:54:58.131 I/flutter (18157): The Dart VM service is listening on http://127.0.0.1:37991/pCRBNjLUnTM=/
+08-12 10:54:58.360 E/BufferQueueProducer(18157): Unable to open libpenguin.so: dlopen failed: library "libpenguin.so" not found.
+08-12 10:54:58.360 E/ankcrackers.app(18157): Unable to open libpenguin.so: dlopen failed: library "libpenguin.so" not found.
+08-12 10:54:58.361 I/VRI[MainActivity]@75dcbbd(18157): Relayout returned: old=(0,0,1080,2340) new=(0,0,1080,2340) relayoutAsync=false req=(1080,2340)0 dur=3 res=0x3 s={true 0xb400007aa507ae00} ch=true seqId=0
+08-12 10:54:58.362 D/VRI[MainActivity]@75dcbbd(18157): mThreadedRenderer.initialize() mSurface={isValid=true 0xb400007aa507ae00} hwInitialized=true
+08-12 10:54:58.373 W/qdgralloc(18157): gralloc failed to allocate buffer for size 0 format 59 AWxAH 1x1 usage 2816
+08-12 10:54:58.373 E/Gralloc4(18157): isSupported(1, 1, 59, 1, ...) failed with 7
+08-12 10:54:58.373 W/qdgralloc( 2208): gralloc failed to allocate buffer for size 0 format 59 AWxAH 4x4 usage 2816
+08-12 10:54:58.373 E/GraphicBufferAllocator(18157): Failed to allocate (4 x 4) layerCount 1 format 59 usage b00: 7
+08-12 10:54:58.373 E/AHardwareBuffer(18157): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -7), handle=0x0
+08-12 10:54:58.373 W/qdgralloc(18157): gralloc failed to allocate buffer for size 0 format 59 AWxAH 1x1 usage 2816
+08-12 10:54:58.373 E/Gralloc4(18157): isSupported(1, 1, 59, 1, ...) failed with 7
+08-12 10:54:58.373 W/qdgralloc( 2208): gralloc failed to allocate buffer for size 0 format 59 AWxAH 4x4 usage 2816
+08-12 10:54:58.373 E/GraphicBufferAllocator(18157): Failed to allocate (4 x 4) layerCount 1 format 59 usage b00: 7
+08-12 10:54:58.373 E/AHardwareBuffer(18157): GraphicBuffer(w=4, h=4, lc=1) failed (Unknown error -7), handle=0x0
+08-12 10:54:58.464 I/flutter (18157): RC_FIREBASE_EMULATOR_TRACE INPUT_HOST=127.0.0.1
+08-12 10:54:58.465 I/flutter (18157): RC_FIREBASE_EMULATOR_TRACE RESOLVED_AUTH_HOST=127.0.0.1
+08-12 10:54:58.465 I/flutter (18157): RC_FIREBASE_EMULATOR_TRACE RESOLVED_FIRESTORE_HOST=127.0.0.1
+08-12 10:54:58.465 I/flutter (18157): RC_FIREBASE_EMULATOR_TRACE DEVICE_KIND=android_physical
+08-12 10:54:58.465 I/flutter (18157): RC_FIREBASE_EMULATOR_TRACE SOURCE_FILE=lib/core/firebase/firebase_emulator_config.dart SOURCE_FUNCTION=configureFirebaseEmulatorsFromDartDefines
+08-12 10:54:58.466 W/ActivityManager( 3558): pid 3558 system sent binder code 37 with flags 1 and got error -32
+08-12 10:54:58.482 I/flutter (18157): RC_FIREBASE_BACKEND=EMULATOR auth=127.0.0.1:9099 firestore=127.0.0.1:8080
+08-12 10:54:58.498 I/flutter (18157): ?? SESSION: Core initialized and cached.
+08-12 10:54:58.503 D/com.google.firebase.appcheck.debug.internal.DebugAppCheckProvider(18157): Enter this debug secret into the allow list in the Firebase Console for your project: 55607820-4b21-4709-805e-278bfb8e07f7
+08-12 10:54:58.751 I/flutter (18157): ?? ROUTER REDIRECT: /
+08-12 10:54:58.833 I/flutter (18157): ?? SPLASH START
+08-12 10:54:58.836 I/flutter (18157): ?? STEP-1: Splash Initialization Started
+08-12 10:54:59.348 V/WindowManager( 3558): Schedule remove starting ActivityRecord{194037509 u0 com.rankcrackers.app/.MainActivity t14588} startingWindow=Window{23ea161 u0 Splash Screen com.rankcrackers.app} animate=true Callers=com.android.server.wm.ActivityRecord.removeStartingWindow:178 com.android.server.wm.WindowState.performShowLocked:146 com.android.server.wm.WindowStateAnimator.commitFinishDrawingLocked:73 com.android.server.wm.DisplayContent$$ExternalSyntheticLambda1.accept:350 com.android.server.wm.WindowContainer$ForAllWindowsConsumerWrapper.apply:5 
+08-12 10:54:59.362 I/VRI[app]@c6e00c0( 5172): mWNT: t=0xb4000079fa707e00 mBlastBufferQueue=0xb400007a885aa800 fn= 2 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:102 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:75 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0 
+08-12 10:54:59.362 I/VRI[app]@c6e00c0( 5172): mWNT: t=0xb4000079fa708000 mBlastBufferQueue=0xb400007a885aa800 fn= 2 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:102 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:75 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0 
+08-12 10:54:59.374 I/VRI[app]@c6e00c0( 5172): mWNT: t=0xb4000079fa708200 mBlastBufferQueue=0xb400007a885aa800 fn= 3 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:102 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:75 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0 
+08-12 10:54:59.374 I/SurfaceFlinger( 2252): Splash Screen com.rankcrackers.app$_5172#85061 voted ExplicitCategory with category: High
+08-12 10:54:59.378 D/SurfaceFlinger( 2252):        CLIENT |           22213571080978 | 00002100 | RGBA_8888    |    0.0    0.0 1080.0 2340.0 |    0    0 1080 2340 | Splash Screen com.rankcrackers.app$_5172#85061 (2)
+08-12 10:54:59.379 W/FreecessController( 3558): getAllRunningPackagePids: Failed to read pid from /sys/fs/cgroup/apps/uid_10071/pid_21561/cgroup.procs
+08-12 10:54:59.380 W/FreecessController( 3558): getAllRunningPackagePids: Failed to read pid from /sys/fs/cgroup/apps/uid_10094/pid_30356/cgroup.procs
+08-12 10:54:59.402 I/VRI[app]@c6e00c0( 5172): mWNT: t=0xb4000079fa750000 mBlastBufferQueue=0xb400007a885aa800 fn= 4 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:102 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:75 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0 
+08-12 10:54:59.407 E/TaskPersister( 3558): File error accessing recents directory (directory doesn't exist?).
+08-12 10:54:59.407 E/TaskPersister( 3558): File error accessing recents directory (directory doesn't exist?).
+08-12 10:54:59.407 I/VRI[app]@c6e00c0( 5172): mWNT: t=0xb4000079fa750200 mBlastBufferQueue=0xb400007a885aa800 fn= 5 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.SyncRtSurfaceTransactionApplier.applyTransaction:102 android.view.SyncRtSurfaceTransactionApplier.lambda$scheduleApply$0:75 android.view.SyncRtSurfaceTransactionApplier.$r8$lambda$afI4fXg3U3-nBZQEDQMiNy-B06s:0 
+08-12 10:54:59.410 W/FreecessController( 3558): getAllRunningPackagePids: Failed to read pid from /sys/fs/cgroup/apps/uid_10340/pid_21603/cgroup.procs
+08-12 10:54:59.420 I/WindowManager( 3558): Relayout Window{23ea161 u0 Splash Screen com.rankcrackers.app}: viewVisibility=8 req=1080x2340 ty=3 d0
+08-12 10:54:59.424 I/VRI[app]@c6e00c0( 5172): Relayout returned: old=(0,0,1080,2340) new=(0,0,1080,2340) relayoutAsync=false req=(1080,2340)8 dur=3 res=0x2 s={false 0x0} ch=true seqId=0
+08-12 10:54:59.425 D/VRI[app]@c6e00c0( 5172): Not drawing due to not visible. Reason=View.GONE
+08-12 10:54:59.426 I/VRI[app]@c6e00c0( 5172): dispatchDetachedFromWindow
+08-12 10:54:59.426 D/WindowManager( 3558): Starting window removed Window{23ea161 u0 Splash Screen com.rankcrackers.app}
+08-12 10:54:59.427 V/WindowManager( 3558): Remove Window{23ea161 u0 Splash Screen com.rankcrackers.app}: mSurfaceControl=Surface(name=Splash Screen com.rankcrackers.app$_5172#85061)/@0x84d32ea mAnimatingExit=false mRemoveOnExit=false mHasSurface=true surfaceShowing=false animating=false app-animation=false callers=com.android.server.wm.Session.remove:15 android.view.IWindowSession$Stub.onTransact:813 com.android.server.wm.Session.onTransact:1 android.os.Binder.execTransactInternal:1509 android.os.Binder.execTransact:1454 <bottom of call stack> 
+08-12 10:54:59.431 I/SurfaceFlinger( 2252): RequestedLayer [Splash Screen com.rankcrackers.app$_5172#85061] hidden!! flag  from(0) --> to(1)
+08-12 10:54:59.440 I/SurfaceFlinger( 2252): [LayerHierarchy{RequestedLayerState{23ea161 Splash Screen com.rankcrackers.app#85059 z=2147483647} 1 children}] reparent to OffscreenRoot
+08-12 10:54:59.440 I/SurfaceFlinger( 2252): [LayerHierarchy{RequestedLayerState{23ea161 Splash Screen com.rankcrackers.app#85059 z=2147483647} 1 children}] RelativeParent to null
+08-12 10:54:59.440 I/SurfaceFlinger( 2252): [LayerHierarchy{RequestedLayerState{Splash Screen com.rankcrackers.app$_5172#85061} no children}] reparent to OffscreenRoot
+08-12 10:54:59.440 I/SurfaceFlinger( 2252): [LayerHierarchy{RequestedLayerState{Splash Screen com.rankcrackers.app$_5172#85061} no children}] RelativeParent to null
+08-12 10:54:59.441 I/SurfaceFlinger( 2252): id=85061 Removed Splash Screen com.rankcrackers.app$_5172#85061 (187)
+08-12 10:54:59.441 I/SurfaceFlinger( 2252): id=85059 Removed 23ea161 Splash Screen com.rankcrackers.app#85059 (187)
+08-12 10:54:59.444 I/SurfaceFlinger( 2252): destroyed 23ea161 Splash Screen com.rankcrackers.app#85059 form LifecycleManager
+08-12 10:54:59.444 I/SurfaceFlinger( 2252): destroyed Splash Screen com.rankcrackers.app$_5172#85061 form LifecycleManager
+08-12 10:54:59.444 I/SurfaceFlinger( 2252): id=85059 onLayerDestroyed from LayerHierarchyBuilder(RequestedLayerState{23ea161 Splash Screen com.rankcrackers.app#85059 !handle z=2147483647})
+08-12 10:54:59.444 I/SurfaceFlinger( 2252): id=85061 onLayerDestroyed from LayerHierarchyBuilder(RequestedLayerState{Splash Screen com.rankcrackers.app$_5172#85061 !handle})
+08-12 10:54:59.444 I/SurfaceFlinger( 2252): id=85059 Destroyed 23ea161 Splash Screen com.rankcrackers.app#85059
+08-12 10:54:59.444 I/SurfaceFlinger( 2252): id=85061 Destroyed Splash Screen com.rankcrackers.app$_5172#85061
+08-12 10:54:59.474 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:54:59.615 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:00.014 D/QSClock ( 5172): StatusBar clock=10:55 notifyTimeChanged(QSClockBellSound - TimeText:10:55, TimeContentDescription:10:55?am, DateText:Wed, 12 August, ShortDateText:Wed, 12 Aug, Demo:false) clockVisibleByPolicy=true, clockVisibleByUser=true, visible=true, parent=android.widget.LinearLayout{3934c75 V.E...... ......ID 0,0-102,72 #7e0a06b0 com.android.systemui:id/left_clock_container} caller=com.android.systemui.statusbar.phone.fragment.CollapsedStatusBarFragment.animateShow:66 com.android.systemui.statusbar.phone.fragment.CollapsedStatusBarFragment.updateStatusBarVisibilitiesInner:236 com.android.systemui.statusbar.phone.fragment.CollapsedStatusBarFragment$$ExternalSyntheticLambda5.run:86 com.android.systemui.statusbar.phone.fragment.CollapsedStatusBarFragment.updateStatusBarVisibilities:116 com.android.systemui.statusbar.phone.ongoingactivity.OngoingActivityController.updateParentViewVisibility:84  
+08-12 10:55:01.839 I/flutter (18157): ?? STEP-2: Handing over authority to Sovereign Router.
+08-12 10:55:01.844 I/flutter (18157): ?? ROUTER REDIRECT: /login
+08-12 10:55:01.844 I/flutter (18157): ?? ROUTER: User NULL, routing to Login
+08-12 10:55:04.779 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:04.781 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:05.950 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:06.851 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:11.988 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:11.991 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:13.912 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:14.208 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:14.655 W/DevicePolicyManager( 3558): Failed to get account feature for user 150
+08-12 10:55:19.204 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:19.209 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:20.295 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:21.031 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:23.958 E/WifiProfileShare.Caster( 3558): failed to generate qos array, need to check network score data
+08-12 10:55:25.153 I/Finsky  (11855): [767] Stats for Executor: GrpcBackgroundExecutor xnk@e0997ff[Running, pool size = 1, active threads = 0, queued tasks = 0, completed tasks = 1]
+08-12 10:55:25.302 D/SLocation( 3558): ARDistanceLibManager - command callback received - CURRENT_LOCATION_REQUEST_DISTANCE ERROR CODE : ERROR_NONE
+08-12 10:55:25.302 D/SLocation( 3558): CommonCoreManager - handleCommandCallback - FUNC_TYPE : SET_LOCATION  ERROR_CODE : ERROR_NONE
+08-12 10:55:26.418 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:26.421 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:28.150 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname
+08-12 10:55:28.739 E/msys    ( 8618): E[N mns:DGWClient]_LogError(328)=>Failed to resolve using system DNS resolver, getaddrinfo(): No address associated with hostname

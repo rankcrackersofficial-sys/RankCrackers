@@ -1,0 +1,128 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_626F9D1B_CH002",
+    "overview": "This content node covers fundamental concepts of organic chemistry including carbon's tetravalency, hybridization states (sp3, sp2, sp), shapes of molecules, structural classification based on functional groups (containing halogens, oxygen, nitrogen, and sulphur), characteristics of homologous series, and types of isomerism (structural and stereoisomerism).",
+    "concepts": [
+      {
+        "title": "Tetravalency of Carbon and Hybridization",
+        "explanation": "Carbon has an atomic number of 6 with ground-state electron configuration 1s2 2s2 2px1 2py1. Upon excitation, an electron promotes from 2s to 2pz, yielding four unpaired electrons (2s1 2px1 2py1 2pz1) capable of forming four covalent bonds. Atomic orbitals mix to form hybrid orbitals: sp3 hybridization produces a tetrahedral geometry with bond angles of 109.5° (4 sigma bonds); sp2 produces trigonal planar geometry with 120° bond angles (3 sigma bonds, 1 pi bond); and sp produces linear geometry with 180° bond angles (2 sigma bonds, 2 pi bonds)."
+      },
+      {
+        "title": "Classification of Organic Compounds by Functional Groups",
+        "explanation": "Organic compounds are systematically categorized by reactive structural units called functional groups. Halogenated compounds contain -X (haloalkanes/haloarenes). Oxygen-containing compounds include alcohols (-OH), ethers (-O-), aldehydes (-CHO), ketones (>C=O), carboxylic acids (-COOH), and esters (-COOR). Nitrogen-containing compounds include amines (-NH2), amides (-CONH2), nitro (-NO2), and nitriles (-CN). Sulphur-containing compounds include thiols (-SH), thioethers (-S-), and sulphonic acids (-SO3H)."
+      },
+      {
+        "title": "Homologous Series",
+        "explanation": "A homologous series is a family of organic compounds sharing the same functional group and general molecular formula. Successive members differ by a -CH2- unit (14 u in molecular mass). Members exhibit similar chemical properties due to the same functional group and undergo a gradual, predictable trend in physical properties (such as boiling point and solubility) with increasing carbon chain length."
+      },
+      {
+        "title": "Isomerism: Structural and Stereoisomerism",
+        "explanation": "Isomers are molecules sharing identical molecular formulas but exhibiting different chemical or physical properties. Structural isomerism arises from different connectivity of atoms, divided into chain, position, functional group, metamerism, and tautomerism. Stereoisomerism arises from identical connectivity but different spatial orientation of atoms, divided into geometrical isomerism (cis/trans or E/Z) and optical isomerism (enantiomers/diastereomers)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Degree of Unsaturation / Double Bond Equivalent (DBE)",
+        "formula": "DBE = C + 1 - (H / 2) + (N / 2) - (X / 2)",
+        "applicability": "Used to determine total number of pi bonds and/or rings present in a molecule given its molecular formula.",
+        "variables": [
+          {
+            "symbol": "C",
+            "meaning": "Number of Carbon atoms",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "H",
+            "meaning": "Number of Hydrogen atoms",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "N",
+            "meaning": "Number of Nitrogen atoms",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "X",
+            "meaning": "Number of Halogen atoms (F, Cl, Br, I)",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Steric Number for Hybridization Determination",
+        "formula": "SN = (Number of sigma bonds) + (Number of lone pairs)",
+        "applicability": "Determines the hybridization state of a central atom in organic molecules (SN=4 -> sp3, SN=3 -> sp2, SN=2 -> sp).",
+        "variables": [
+          {
+            "symbol": "SN",
+            "meaning": "Steric Number",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Double bonds consist of two identical covalent bonds.",
+        "correction": "A double bond consists of one strong sigma (σ) bond formed by head-on orbital overlap and one weaker pi (π) bond formed by lateral (sideways) overlapping of unhybridized p-orbitals."
+      },
+      {
+        "misconception": "Metamers and position isomers are the exact same concept.",
+        "correction": "Position isomerism involves changing the position of a functional group or substituent on a fixed carbon chain. Metamerism specifically involves different alkyl chain distributions attached to a polyvalent heteroatom (such as -O-, -S-, or -NH-)."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Determine the hybridization of each carbon atom and the total number of sigma (σ) and pi (π) bonds in acetonitrile (CH3-C≡N).",
+        "steps": [
+          "Step 1: Draw the structural formula: H3C-C≡N.",
+          "Step 2: Examine the methyl carbon (-CH3): It forms 3 C-H sigma bonds and 1 C-C sigma bond (4 sigma bonds, 0 lone pairs). Steric Number = 4, so it is sp3 hybridized.",
+          "Step 3: Examine the nitrile carbon (-C≡N): It forms 1 C-C sigma bond and 1 C-N sigma bond, plus 2 C-N pi bonds (2 sigma bonds, 0 lone pairs). Steric Number = 2, so it is sp hybridized.",
+          "Step 4: Count total bonds: 3 C-H sigma + 1 C-C sigma + 1 C-N sigma = 5 sigma bonds; 2 C-N pi = 2 pi bonds."
+        ],
+        "answer": "Methyl carbon is sp3 hybridized, Nitrile carbon is sp hybridized. Total sigma (σ) bonds = 5, Total pi (π) bonds = 2."
+      },
+      {
+        "problem": "Calculate the Double Bond Equivalent (DBE) for a neutral compound with formula C4H7NO and identify two possible functional isomers.",
+        "steps": [
+          "Step 1: Apply the DBE formula: DBE = C + 1 - (H/2) + (N/2) - (X/2).",
+          "Step 2: Substitute values: DBE = 4 + 1 - (7/2) + (1/2) - 0 = 5 - 3.5 + 0.5 = 2.",
+          "Step 3: A DBE of 2 indicates a total of 2 pi bonds, 2 rings, or 1 ring + 1 pi bond.",
+          "Step 4: Formulate two functional isomers: (i) CH2=CH-CH2-CONH2 (unsaturated amide containing 1 C=C pi bond and 1 C=O pi bond), (ii) CH3-CH2-CH2-N=C=O (1-isocyanatopropane containing 2 pi bonds)."
+        ],
+        "answer": "DBE = 2. Example functional isomers are CH2=CH-CH2-CONH2 (but-3-enamide) and CH3-CH2-CH2-NCO (1-isocyanatopropane)."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following molecules has a central carbon atom with sp2 hybridization and approximately 120-degree bond angles? A) Ethyne (C2H2) B) Ethene (C2H4) C) Methane (CH4) D) Ethane (C2H6)",
+        "answer": "B) Ethene (C2H4). Each carbon in ethene forms 3 sigma bonds (2 C-H and 1 C-C) and 1 C-C pi bond, giving a steric number of 3, sp2 hybridization, and 120° bond angles."
+      },
+      {
+        "question": "Which pair of organic compounds represents functional group isomers? A) Pentan-2-one and Pentan-3-one B) Propan-1-ol and Methoxyethane C) But-1-ene and But-2-ene D) Ethanoic acid and Propanoic acid",
+        "answer": "B) Propan-1-ol and Methoxyethane. Both share the molecular formula C3H8O but belong to different functional group classes (alcohol vs ether)."
+      },
+      {
+        "question": "What is the total count of sigma (σ) and pi (π) bonds in pent-1-en-4-yne (HC≡C-CH2-CH=CH2)? A) 10 σ, 3 π B) 10 σ, 2 π C) 9 σ, 3 π D) 11 σ, 3 π",
+        "answer": "A) 10 σ, 3 π. The molecule has 6 C-H sigma bonds, 2 C-C single sigma bonds, 1 C=C double bond (1 σ + 1 π), and 1 C≡C triple bond (1 σ + 2 π). Total σ = 6 + 2 + 1 + 1 = 10, Total π = 1 + 2 = 3."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 12: Organic Chemistry - Some Basic Principles and Techniques",
+      "JEE Main Official Syllabus - Organic Chemistry Fundamentals"
+    ]
+  }
+}

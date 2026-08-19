@@ -1,0 +1,93 @@
+/// RankCrackers canonical Student Learning State Aggregation Engine.
+  }) {
+    if (numerator < 0 || denominator < 0) {
+      throw const FormatException(
+        'StudentLearningStateEngine rate counters cannot be negative.',
+      );
+    }
+
+
+    if (numerator > denominator) {
+      throw const FormatException(
+        'StudentLearningStateEngine rate numerator cannot exceed denominator.',
+      );
+    }
+
+
+    if (denominator == 0) {
+      return null;
+    }
+
+
+    final value = numerator / denominator;
+
+
+    if (value < 0.0 || value > 1.0) {
+      throw const FormatException(
+        'StudentLearningStateEngine calculated rate must be within [0, 1].',
+      );
+    }
+
+
+    return value;
+  }
+
+
+  String? _singleCanonicalValue({
+    required String fieldName,
+    required Iterable<String?> values,
+  }) {
+    final normalizedValues = values
+        .whereType<String>()
+        .map((value) => value.trim())
+        .where((value) => value.isNotEmpty)
+        .toSet();
+
+
+    if (normalizedValues.isEmpty) {
+      return null;
+    }
+
+
+    if (normalizedValues.length > 1) {
+      throw FormatException(
+        'StudentLearningStateEngine found conflicting canonical '
+        '$fieldName values for the same student + AMTN.',
+      );
+    }
+
+
+    return normalizedValues.single;
+  }
+
+
+  void _incrementExclusion(
+    Map<StudentLearningStateExclusionReason, int> counts,
+    StudentLearningStateExclusionReason reason,
+  ) {
+    counts.update(
+      reason,
+      (value) => value + 1,
+      ifAbsent: () => 1,
+    );
+  }
+}
+
+
+extension StudentLearningStateExclusionReasonWire
+    on StudentLearningStateExclusionReason {
+  String get wireName {
+    switch (this) {
+      case StudentLearningStateExclusionReason.duplicateEventId:
+        return 'duplicate_event_id';
+      case StudentLearningStateExclusionReason.invalidEvent:
+        return 'invalid_event';
+      case StudentLearningStateExclusionReason.wrongStudent:
+        return 'wrong_student';
+      case StudentLearningStateExclusionReason.wrongAmtn:
+        return 'wrong_amtn';
+      case StudentLearningStateExclusionReason.futureDatedEvidence:
+        return 'future_dated_evidence';
+    }
+  }
+}

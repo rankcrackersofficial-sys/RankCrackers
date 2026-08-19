@@ -1,0 +1,125 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_E96BD490_CH001",
+    "overview": "This unit covers Friedel-Crafts alkylation and acylation reactions, electrophilic aromatic substitution mechanisms, carbocation rearrangement tendencies, polyalkylation phenomena, and the directive influence (ortho/para vs meta directing) and activating/deactivating effects of substituents on benzene rings.",
+    "concepts": [
+      {
+        "title": "Friedel-Crafts Alkylation and Carbocation Rearrangements",
+        "explanation": "Benzene reacts with alkyl halides in the presence of a Lewis acid catalyst such as anhydrous AlCl3 to form alkylbenzenes. The reaction proceeds via electrophilic aromatic substitution (EAS) with an alkyl carbocation or activated complex as the electrophile. Primary alkyl halides often undergo 1,2-hydride or 1,2-alkyl shifts to form more stable secondary or tertiary carbocations, resulting in rearranged alkylated products. Additionally, since alkyl groups are activating, the mono-alkylated product is more reactive than benzene, leading to polyalkylation."
+      },
+      {
+        "title": "Friedel-Crafts Acylation",
+        "explanation": "Benzene reacts with acyl halides or acid anhydrides in the presence of a Lewis acid (AlCl3) to yield aryl ketones. The electrophile is a resonance-stabilized acylium ion (R-C≡O+). Unlike alkylation, acylium ions do not undergo carbocation rearrangement, and polyalkylation does not occur because the introduced acyl group is strongly electron-withdrawing and deactivates the aromatic ring toward further substitution."
+      },
+      {
+        "title": "Directive Influence and Ring Activation/Deactivation",
+        "explanation": "Substituents already present on a benzene ring influence both the reactivity and the site of further electrophilic substitution. Activating groups (e.g., -OH, -NH2, -OCH3, -R) donate electron density into the ring via resonance (+R) or inductive (+I) effects, directing incoming electrophiles to ortho and para positions. Deactivating groups (e.g., -NO2, -CN, -CHO, -COOH) withdraw electron density (-R/-I) and direct incoming electrophiles to meta positions. Halogens are unique: they deactivate the ring due to a strong -I effect, but direct ortho/para due to weak +R electron donation."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Friedel-Crafts Alkylation",
+        "formula": "Ar-H + R-X --(Anhydrous AlCl3)--> Ar-R + HX",
+        "applicability": "Electrophilic aromatic substitution of benzene with primary, secondary, or tertiary alkyl halides",
+        "variables": [
+          {
+            "symbol": "Ar-H",
+            "meaning": "Benzene or activated aromatic substrate",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "R-X",
+            "meaning": "Alkyl halide substrate",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "AlCl3",
+            "meaning": "Lewis acid catalyst required to generate carbocation electrophile",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Friedel-Crafts Acylation",
+        "formula": "Ar-H + RCOCl --(1.1 eq. Anhydrous AlCl3)--> Ar-COR + HCl",
+        "applicability": "Electrophilic aromatic substitution of benzene with acyl chlorides or anhydrides",
+        "variables": [
+          {
+            "symbol": "RCOCl",
+            "meaning": "Acyl chloride reagent generating acylium ion electrophile",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Ar-COR",
+            "meaning": "Aryl ketone product",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Nitrobenzene or strongly deactivated benzene derivatives readily undergo Friedel-Crafts alkylation.",
+        "correction": "Strongly deactivated benzene rings (containing -NO2, -COOH, -SO3H, -CN) do not undergo Friedel-Crafts alkylation or acylation due to insufficient electron density on the aromatic ring. Aniline also fails because its nitrogen basic site forms a Lewis acid-base complex with AlCl3, converting -NH2 into a strongly deactivating -NH2+-AlCl3- group."
+      },
+      {
+        "misconception": "Reaction of benzene with 1-chloropropane produces n-propylbenzene as the major product.",
+        "correction": "The primary 1-propyl cation undergoes a 1,2-hydride shift to form the more stable secondary isopropyl cation, making isopropylbenzene (cumene) the major product."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Predict the major organic product obtained when benzene is treated with 1-chloropropane in the presence of anhydrous AlCl3.",
+        "steps": [
+          "1. Chloropropane reacts with anhydrous AlCl3 to generate a primary carbocation complex: [CH3-CH2-CH2]+.",
+          "2. A 1,2-hydride shift occurs rapidly to convert the unstable primary carbocation into a more stable secondary carbocation: CH3-CH(+)-CH3.",
+          "3. The secondary isopropyl carbocation acts as the electrophile and attacks the benzene ring.",
+          "4. Loss of a proton restores aromaticity, yielding isopropylbenzene (cumene) as the major product."
+        ],
+        "answer": "Isopropylbenzene (cumene)"
+      },
+      {
+        "problem": "Explain why Friedel-Crafts acylation followed by Clemmensen reduction is preferred over direct Friedel-Crafts alkylation for the synthesis of n-butylbenzene from benzene.",
+        "steps": [
+          "1. Direct alkylation with 1-chlorobutane leads to carbocation rearrangement (1,2-hydride shift), producing sec-butylbenzene as the major product instead of n-butylbenzene.",
+          "2. Direct alkylation also leads to polyalkylation because the mono-alkylated product is more reactive than benzene.",
+          "3. Acylation with butanoyl chloride and AlCl3 yields butyrophenone via a stable acylium ion without any structural rearrangement or polyalkylation.",
+          "4. Reduction of butyrophenone with Zn-Hg/HCl (Clemmensen reduction) converts the carbonyl group to a methylene group, yielding pure n-butylbenzene."
+        ],
+        "answer": "Acylation avoids carbocation rearrangement and polyalkylation, yielding pure linear n-butylbenzene after carbonyl reduction."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following aromatic compounds will NOT undergo Friedel-Crafts alkylation with methyl chloride and AlCl3? A) Toluene B) Anisole C) Nitrobenzene D) Chlorobenzene",
+        "answer": "C) Nitrobenzene. The strongly electron-withdrawing nitro group (-NO2) deactivates the benzene ring to such an extent that electrophilic attack by carbocations does not occur."
+      },
+      {
+        "question": "Chlorobenzene is deactivated towards electrophilic aromatic substitution, yet it directs incoming electrophiles to ortho and para positions. What is the reason for this behavior? A) -I effect dominates +R effect B) +R effect dominates -I effect C) +I effect dominates -R effect D) Resonance effect deactivates the ring",
+        "answer": "A) -I effect dominates +R effect. Halogens withdraw electron density overall due to strong electronegativity (-I effect), deactivating the ring; however, lone pair resonance (+R) selectively stabilizes the carbocation intermediate at ortho and para positions."
+      },
+      {
+        "question": "What is the primary organic product when benzene is treated with acetyl chloride in the presence of anhydrous AlCl3? A) Acetophenone B) Ethylbenzene C) Toluene D) Benzophenone",
+        "answer": "A) Acetophenone. The acylium ion CH3-C=O+ attacks benzene via Friedel-Crafts acylation to yield acetophenone (Ph-CO-CH3)."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Chapter 13: Hydrocarbons - Aromatic Hydrocarbons",
+      "NCERT Class 12 Chemistry, Chapter 10: Haloalkanes and Haloarenes - Directive Influence",
+      "JEE Main Chemistry Official Syllabus - Unit 15: Organic Compounds Containing Oxygen & Hydrocarbons"
+    ]
+  }
+}

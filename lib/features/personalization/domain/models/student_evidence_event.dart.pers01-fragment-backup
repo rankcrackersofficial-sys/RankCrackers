@@ -1,0 +1,85 @@
+/// Canonical student-learning evidence contract for RankCrackers.
+String? _nullableString(Map<String, Object?> json, String key) {
+  final value = json[key];
+
+  if (value == null) {
+    return null;
+  }
+
+  if (value is! String) {
+    throw FormatException(
+      'StudentEvidenceEvent.$key must be a String or null.',
+    );
+  }
+
+  final normalized = value.trim();
+
+  return normalized.isEmpty ? null : normalized;
+}
+
+int _requiredInt(Map<String, Object?> json, String key) {
+  final value = json[key];
+
+  if (value is! int) {
+    throw FormatException(
+      'StudentEvidenceEvent.$key must be an int.',
+    );
+  }
+
+  return value;
+}
+
+int? _nullableInt(Map<String, Object?> json, String key) {
+  final value = json[key];
+
+  if (value == null) {
+    return null;
+  }
+
+  if (value is! int) {
+    throw FormatException(
+      'StudentEvidenceEvent.$key must be an int or null.',
+    );
+  }
+
+  return value;
+}
+
+bool? _nullableBool(Map<String, Object?> json, String key) {
+  final value = json[key];
+
+  if (value == null) {
+    return null;
+  }
+
+  if (value is! bool) {
+    throw FormatException(
+      'StudentEvidenceEvent.$key must be a bool or null.',
+    );
+  }
+
+  return value;
+}
+
+DateTime _requiredUtcDateTime(
+  Map<String, Object?> json,
+  String key,
+) {
+  final raw = _requiredString(json, key);
+
+  final parsed = DateTime.tryParse(raw);
+
+  if (parsed == null) {
+    throw FormatException(
+      'StudentEvidenceEvent.$key is not a valid ISO-8601 timestamp.',
+    );
+  }
+
+  if (!parsed.isUtc) {
+    throw FormatException(
+      'StudentEvidenceEvent.$key must contain a UTC timestamp.',
+    );
+  }
+
+  return parsed;
+}

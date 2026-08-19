@@ -1,0 +1,116 @@
+/// RankCrackers deterministic Student Revision Queue Engine.
+
+
+      case StudentRevisionQueueState.dueToday:
+        return 2;
+
+
+      case StudentRevisionQueueState.evidenceNeeded:
+        return 3;
+
+
+      case StudentRevisionQueueState.maintenance:
+        return 4;
+
+
+      case StudentRevisionQueueState.upcoming:
+        return 5;
+
+
+      case StudentRevisionQueueState.completed:
+        return 6;
+    }
+  }
+
+
+  int _urgencyRank(
+    StudentRevisionUrgency urgency,
+  ) {
+    switch (urgency) {
+      case StudentRevisionUrgency.low:
+        return 0;
+
+
+      case StudentRevisionUrgency.medium:
+        return 1;
+
+
+      case StudentRevisionUrgency.high:
+        return 2;
+
+
+      case StudentRevisionUrgency.critical:
+        return 3;
+    }
+  }
+
+
+  DateTime _utcDateOnly(DateTime value) {
+    if (!value.isUtc) {
+      throw const FormatException(
+        'StudentRevisionQueueEngine date comparison requires UTC.',
+      );
+    }
+
+
+    return DateTime.utc(
+      value.year,
+      value.month,
+      value.day,
+    );
+  }
+
+
+  String _revisionItemId({
+    required String studentId,
+    required String amtnId,
+  }) {
+    return 'revision::$studentId::$amtnId';
+  }
+}
+
+
+final class _RevisionQueueDraft {
+  const _RevisionQueueDraft({
+    required this.revisionItemId,
+    required this.amtnId,
+    required this.state,
+    required this.urgency,
+    required this.reasons,
+    required this.createdAtUtc,
+    required this.updatedAtUtc,
+    required this.requiresIndependentRetrieval,
+    required this.reviewDueAtUtc,
+    required this.blockedByAmtnIds,
+  });
+
+
+  final String revisionItemId;
+
+
+  final String amtnId;
+
+
+  final StudentRevisionQueueState state;
+
+
+  final StudentRevisionUrgency urgency;
+
+
+  final Set<StudentRevisionQueueReason> reasons;
+
+
+  final DateTime createdAtUtc;
+
+
+  final DateTime updatedAtUtc;
+
+
+  final bool requiresIndependentRetrieval;
+
+
+  final DateTime? reviewDueAtUtc;
+
+
+  final List<String> blockedByAmtnIds;
+}

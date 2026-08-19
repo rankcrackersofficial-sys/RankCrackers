@@ -1,0 +1,150 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_36668546_CH001",
+    "overview": "This unit covers core concepts in covalent bonding, including electronegativity, Fajan's rules for partial covalent character in ionic bonds, dipole moment as a quantitative measure of molecular polarity, and VSEPR theory for predicting 3D molecular geometries and shapes.",
+    "concepts": [
+      {
+        "title": "Electronegativity and Bond Polarity",
+        "explanation": "Electronegativity is the tendency of an atom in a molecule to attract shared pairs of electrons towards itself. When two atoms with different electronegativities form a covalent bond, the electron cloud shifts toward the more electronegative atom, creating a polar covalent bond with partial fractional charges (delta+ and delta-)."
+      },
+      {
+        "title": "Fajan's Rules",
+        "explanation": "Fajan's rules predict the relative covalent character in predominantly ionic bonds. Polarizing power of a cation increases with smaller cation size and higher positive charge. Polarisability of an anion increases with larger anion size and higher negative charge. Cations with pseudo-noble gas electron configurations (18 electrons in outermost shell) have greater polarizing power than those with noble gas configurations (8 electrons)."
+      },
+      {
+        "title": "Dipole Moment (mu)",
+        "explanation": "Dipole moment measures the net polarity of a molecule. It is a vector quantity defined as the product of magnitude of charge and distance between charges. For polyatomic molecules, the net dipole moment is the vector sum of individual bond moments and lone pair moments. Symmetrical molecules like CCl4 or SF6 have zero net dipole moment despite polar bonds."
+      },
+      {
+        "title": "VSEPR Theory and Molecular Geometry",
+        "explanation": "Valence Shell Electron Pair Repulsion (VSEPR) theory posits that electron pairs (both bonding and lone pairs) around a central atom repel each other and orient as far apart as possible to minimize electrostatic repulsion. Lone pair - lone pair repulsions are stronger than lone pair - bond pair repulsions, which are stronger than bond pair - bond pair repulsions, causing systematic deviations in ideal bond angles."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Dipole Moment",
+        "formula": "mu = q * d",
+        "applicability": "Calculates dipole moment of a diatomic polar molecule",
+        "variables": [
+          {
+            "symbol": "mu",
+            "meaning": "Dipole moment",
+            "unit": "Debye (D) or C m"
+          },
+          {
+            "symbol": "q",
+            "meaning": "Magnitude of fractional charge",
+            "unit": "Coulombs (C) or esu"
+          },
+          {
+            "symbol": "d",
+            "meaning": "Internuclear distance / bond length",
+            "unit": "Meters (m) or Angstroms (A)"
+          }
+        ]
+      },
+      {
+        "label": "Resultant Dipole Moment",
+        "formula": "mu_res = sqrt(mu_1^2 + mu_2^2 + 2 * mu_1 * mu_2 * cos(theta))",
+        "applicability": "Vector addition of two bond dipole moments at an angle theta",
+        "variables": [
+          {
+            "symbol": "mu_res",
+            "meaning": "Net result dipole moment",
+            "unit": "Debye (D)"
+          },
+          {
+            "symbol": "mu_1, mu_2",
+            "meaning": "Individual bond dipole moments",
+            "unit": "Debye (D)"
+          },
+          {
+            "symbol": "theta",
+            "meaning": "Angle between the two bond dipole vectors",
+            "unit": "Degrees"
+          }
+        ]
+      },
+      {
+        "label": "Percentage Ionic Character (Hannay-Smyth Equation)",
+        "formula": "% Ionic Character = 16 * |chi_A - chi_B| + 3.5 * (chi_A - chi_B)^2",
+        "applicability": "Estimation of ionic percentage from electronegativity difference",
+        "variables": [
+          {
+            "symbol": "chi_A, chi_B",
+            "meaning": "Electronegativities of constituent atoms A and B",
+            "unit": "Dimensionless (Pauling scale)"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Molecules with polar covalent bonds always possess a non-zero net dipole moment.",
+        "correction": "If the molecular geometry is symmetric (e.g., CO2, BF3, CCl4), individual bond dipole moments cancel out vectorially, resulting in a net zero dipole moment."
+      },
+      {
+        "misconception": "Lone pairs do not affect the bond angles in VSEPR theory.",
+        "correction": "Lone pairs exert stronger repulsion than bond pairs because they are localized solely on the central atom, squeezing adjacent bonding pairs and reducing bond angles (e.g., H2O angle is 104.5 degrees instead of 109.5 degrees)."
+      },
+      {
+        "misconception": "Higher cationic size increases the covalent character of a compound.",
+        "correction": "According to Fajan's rules, smaller cationic size increases charge density and polarizing power, thereby increasing covalent character."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Compare the dipole moments of NH3 and NF3 and explain which molecule has a larger dipole moment.",
+        "steps": [
+          "Step 1: Identify the central atom and geometry. Both NH3 and NF3 have trigonal pyramidal geometry with one lone pair on the N atom.",
+          "Step 2: Determine bond dipole directions. In NH3, nitrogen is more electronegative than hydrogen, so N-H bond dipoles point towards N. The lone pair moment also points upward away from N. All vectors reinforce each other.",
+          "Step 3: In NF3, fluorine is more electronegative than nitrogen, so N-F bond dipoles point away from N towards F atoms. The lone pair moment points upward, opposing the sum of N-F bond moments.",
+          "Step 4: Conclude that net dipole moment of NH3 (1.47 D) is significantly greater than that of NF3 (0.24 D)."
+        ],
+        "answer": "NH3 has a greater dipole moment than NF3 because in NH3 the lone pair moment reinforces the bond moments, whereas in NF3 the lone pair moment opposes the bond moments."
+      },
+      {
+        "problem": "Arrange LiCl, NaCl, KCl, and RbCl in increasing order of covalent character using Fajan's rules.",
+        "steps": [
+          "Step 1: Identify common ion and changing ion. All compounds share the same anion (Cl-), but cations vary: Li+, Na+, K+, Rb+.",
+          "Step 2: Check periodic trend of cation size. Size increases down Group 1: Li+ < Na+ < K+ < Rb+.",
+          "Step 3: Apply Fajan's rule. Smaller cation has higher charge density and stronger polarizing power, leading to higher distortion of anion electron cloud and greater covalent character.",
+          "Step 4: Order of polarizing power: Li+ > Na+ > K+ > Rb+.",
+          "Step 5: Order of covalent character: RbCl < KCl < NaCl < LiCl."
+        ],
+        "answer": "RbCl < KCl < NaCl < LiCl"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following species has a see-saw shape according to VSEPR theory? Options: (A) SF4, (B) XeF4, (C) CCl4, (D) NH4+",
+        "answer": "(A) SF4. Sulfur has 6 valence electrons; 4 form single bonds with fluorine and 1 pair remains as a lone pair (steric number = 5, trigonal bipyramidal electron geometry). The lone pair occupies an equatorial position, giving a see-saw molecular shape."
+      },
+      {
+        "question": "Which molecule has zero dipole moment despite having polar bonds? Options: (A) H2O, (B) SO2, (C) BF3, (D) NH3",
+        "answer": "(C) BF3. BF3 has a trigonal planar geometry (120 degree bond angles). The three B-F bond dipoles cancel each other vectorially, yielding a net dipole moment of zero."
+      },
+      {
+        "question": "According to Fajan's rules, which compound among the following is expected to be most covalent? Options: (A) CaCl2, (B) BeCl2, (C) MgCl2, (D) SrCl2",
+        "answer": "(B) BeCl2. Be2+ is the smallest cation in Group 2, giving it the highest charge density and polarizing power, resulting in maximum covalent character."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 4: Chemical Bonding and Molecular Structure",
+      "JEE Main Official Syllabus - Physical & Inorganic Chemistry: Covalent Bonding and VSEPR Theory"
+    ]
+  }
+}

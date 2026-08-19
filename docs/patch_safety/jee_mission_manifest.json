@@ -1,0 +1,13 @@
+{
+  "missionId": "jee_main_2026",
+  "displayName": "JEE Main 2026",
+  "missionVariables": {
+    "targetExam": "JEE Main",
+    "primarySubject": "Chemistry"
+  },
+  "syllabusDenominator": 417,
+  "digibookDenominator": 417,
+  "atoms": "assets/data/preview/jee_main_2027/syllabus_preview_tree.json",
+  "officialSourceIndex": "docs/patch_safety/syllabus_source_recovery.json",
+  "cruciblePlan": "assets/data/preview/jee_main_2027/crucible_preview_plan.json"
+}

@@ -1,0 +1,9 @@
+{
+    "canonicalMissionRead":  "functions/test_mission_mirror.js",
+    "studentProjectionRead":  "functions/backfill_student_mission_catalog.js",
+    "missionLineage":  "sourceMissionId, sourceMissionVersion, sourcePath, sourceType, studentPublicationState",
+    "propagationRuntime":  "mirrorMissionShellToStudentCatalog",
+    "factoryIdentityRuntime":  "canonical mission ID preserved; legacy alias rejected",
+    "liveAcademicReadiness":  "shell-only until actual controlled content ready",
+    "evidenceAuthorityGuard":  "No report-only PASS accepted."
+}

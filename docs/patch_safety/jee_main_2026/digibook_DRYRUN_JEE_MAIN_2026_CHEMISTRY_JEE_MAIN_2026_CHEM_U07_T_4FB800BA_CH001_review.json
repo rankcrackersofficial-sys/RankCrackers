@@ -1,0 +1,31 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "FAIL",
+    "itemCountReviewed": 1,
+    "approvedAtomIds": [],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_4FB800BA_CH001"
+    ],
+    "blockingIssues": [
+      "In Self Check 2, there is an inconsistency between the provided Option ('Keq ≈ 3.9 x 10^15') and the calculated value in the Solution ('Keq ≈ 3.7 x 10^15'). This discrepancy arises depending on whether 0.059 or 0.0591 is used. Please ensure the option matches the step-by-step solution."
+    ],
+    "reviewNotes": "The content is well-structured, mathematically rigorous in the worked examples, and addresses key conceptual nuances. However, an arithmetic consistency error in the Self Checks section needs to be corrected before approval.",
+    "conceptCorrectnessPass": true,
+    "formulaPass": true,
+    "selfCheckPass": false,
+    "workedExampleMathPass": true
+  }
+}

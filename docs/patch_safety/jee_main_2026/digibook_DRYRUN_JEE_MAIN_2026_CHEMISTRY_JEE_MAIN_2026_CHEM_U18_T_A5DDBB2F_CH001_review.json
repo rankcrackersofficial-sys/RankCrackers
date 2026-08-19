@@ -1,0 +1,31 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "FAIL",
+    "itemCountReviewed": 1,
+    "approvedAtomIds": [],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U18_T_A5DDBB2F_CH001"
+    ],
+    "blockingIssues": [
+      "Worked Example 2 is highly incoherent and chemically flawed. The problem asks to synthesize 4-nitrotoluene from toluene, but the steps inexplicably jump between using aniline, p-nitroaniline, and p-toluidine. Furthermore, it incorrectly suggests that treating p-methylbenzenediazonium chloride with H3PO2 yields 4-nitrotoluene (it would actually yield toluene). To replace a diazonium group with a nitro group, the correct procedure is treating the arenediazonium fluoroborate with aqueous NaNO2 and Cu. The example should be entirely rewritten, perhaps focusing on a classic diazonium synthesis like m-bromotoluene from p-toluidine."
+    ],
+    "reviewNotes": "The overview, concept explanations, and formula register are well-written and precise. The self-check questions are correct with accurate rationales. However, the second worked example is deeply confused and contains incorrect chemical pathways, necessitating a revision of that specific example before approval.",
+    "conceptCorrectnessPass": false,
+    "formulaPass": true,
+    "selfCheckPass": true,
+    "workedExampleMathPass": false
+  }
+}

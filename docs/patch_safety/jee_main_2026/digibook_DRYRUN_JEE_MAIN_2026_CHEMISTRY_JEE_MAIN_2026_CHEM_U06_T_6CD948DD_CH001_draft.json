@@ -1,0 +1,190 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_6CD948DD_CH001",
+    "overview": "Ionic Equilibrium deals with dynamic equilibrium involving ions in aqueous solution. It covers strong and weak electrolytes, theories of acids and bases, pH scale, acid-base equilibria, common ion effect, salt hydrolysis, buffer solutions, and solubility product of sparingly soluble salts.",
+    "concepts": [
+      {
+        "title": "Electrolytes and Ostwald's Dilution Law",
+        "explanation": "Electrolytes dissociate into ions in aqueous solution. Strong electrolytes dissociate completely (degree of dissociation alpha approx 1), while weak electrolytes dissociate partially (alpha << 1). Ostwald's Dilution Law states that for a weak binary electrolyte HA dissociating as HA <-> H+ + A-, Ka = (C * alpha^2) / (1 - alpha). For weak electrolytes where alpha << 1, alpha = sqrt(Ka / C)."
+      },
+      {
+        "title": "Acid-Base Concepts and Equilibria",
+        "explanation": "Arrhenius theory defines acids as H+ producers and bases as OH- producers in water. Bronsted-Lowry theory defines acids as proton donors and bases as proton acceptors, introducing conjugate acid-base pairs. Lewis theory defines acids as electron pair acceptors and bases as electron pair donors. Polyprotic acids dissociate in multiple stages, where Ka1 > Ka2 > Ka3."
+      },
+      {
+        "title": "Ionization of Water and pH Scale",
+        "explanation": "Water undergoes auto-ionization: H2O <-> H+ + OH-. The ionic product of water Kw = [H+][OH-] = 1.0 x 10^-14 at 25 degrees Celsius. pH is defined as -log10[H+]. In pure water at 25 degrees C, pH = pOH = 7, and pH + pOH = pKw = 14."
+      },
+      {
+        "title": "Common Ion Effect and Buffer Solutions",
+        "explanation": "The suppressive effect on the degree of dissociation of a weak electrolyte by adding a strong electrolyte containing a common ion is called the common ion effect. Buffer solutions resist changes in pH upon addition of small amounts of strong acid or base. Acidic buffers consist of a weak acid and its salt with a strong base, governed by the Henderson-Hasselbalch equation: pH = pKa + log([Salt]/[Acid])."
+      },
+      {
+        "title": "Salt Hydrolysis and Solubility Product",
+        "explanation": "Salt hydrolysis is the interaction of salt cations or anions with water to form acidic, basic, or neutral solutions. Salts of weak acid and strong base yield basic solutions (pH = 7 + 0.5*(pKa + log C)). Sparingly soluble salts set up equilibrium between undissolved salt and dissolved ions, characterized by the solubility product Ksp. For a salt AxBy, Ksp = [A^(y+)]^x * [B^(x-)]^y = x^x * y^y * S^(x+y)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Ostwald's Dilution Law",
+        "formula": "alpha = sqrt(Ka / C)",
+        "applicability": "Applicable for weak electrolytes when alpha << 1 (typically alpha < 0.05)",
+        "variables": [
+          {
+            "symbol": "alpha",
+            "meaning": "Degree of dissociation",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Ka",
+            "meaning": "Acid dissociation constant",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "C",
+            "meaning": "Molar concentration",
+            "unit": "mol/L"
+          }
+        ]
+      },
+      {
+        "label": "Henderson-Hasselbalch Equation for Acidic Buffer",
+        "formula": "pH = pKa + log10([Salt] / [Acid])",
+        "applicability": "Applicable for mixture of a weak acid and its conjugate base salt",
+        "variables": [
+          {
+            "symbol": "pKa",
+            "meaning": "-log10(Ka) of weak acid",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "[Salt]",
+            "meaning": "Molar concentration of salt (conjugate base)",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "[Acid]",
+            "meaning": "Molar concentration of weak acid",
+            "unit": "mol/L"
+          }
+        ]
+      },
+      {
+        "label": "pH of Salt of Weak Acid and Strong Base",
+        "formula": "pH = 7 + 0.5 * (pKa + log10(C))",
+        "applicability": "Aqueous solution of salt formed from weak acid and strong base at 25 degrees Celsius",
+        "variables": [
+          {
+            "symbol": "pKa",
+            "meaning": "-log10(Ka) of weak acid component",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "C",
+            "meaning": "Concentration of salt in solution",
+            "unit": "mol/L"
+          }
+        ]
+      },
+      {
+        "label": "Solubility Product Relation",
+        "formula": "Ksp = x^x * y^y * S^(x+y)",
+        "applicability": "Saturated solution of sparingly soluble salt AxBy",
+        "variables": [
+          {
+            "symbol": "Ksp",
+            "meaning": "Solubility product constant",
+            "unit": "(mol/L)^(x+y)"
+          },
+          {
+            "symbol": "S",
+            "meaning": "Molar solubility of salt",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "x, y",
+            "meaning": "Stoichiometric coefficients of cations and anions",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "pH of a highly dilute acid (like 10^-8 M HCl) is 8.",
+        "correction": "An acidic solution cannot have pH > 7 at 25 degrees C. For extremely dilute acids, auto-ionization of water must be accounted for ([H+]_total = [H+]_acid + [H+]_water = 10^-8 + 10^-7 = 1.1 x 10^-7 M, giving pH approx 6.96)."
+      },
+      {
+        "misconception": "The degree of dissociation alpha increases when concentration increases.",
+        "correction": "According to Ostwald's dilution law, alpha increases with dilution (decrease in concentration C), approaching 1 at infinite dilution."
+      },
+      {
+        "misconception": "Salts of weak acid and weak base have pH completely independent of concentration.",
+        "correction": "For salt of WA-WB, pH = 7 + 0.5*(pKa - pKb), which is independent of concentration C, but degree of hydrolysis h depends on C only if x and y stoichiometric values differ; for 1:1 WA-WB salt, pH is strictly concentration-independent."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the pH of a 0.1 M CH3COOH solution given Ka = 1.8 x 10^-5.",
+        "steps": [
+          "Check if approximation alpha << 1 holds: alpha = sqrt(Ka / C) = sqrt(1.8 x 10^-5 / 0.1) = sqrt(1.8 x 10^-4) = 0.0134 (1.34%, which is < 5%, so approximation is valid).",
+          "Calculate [H+]: [H+] = C * alpha = sqrt(Ka * C) = sqrt(1.8 x 10^-5 * 0.1) = sqrt(1.8 x 10^-6) = 1.34 x 10^-3 M.",
+          "Calculate pH: pH = -log10(1.34 x 10^-3) = 3 - log10(1.34) = 3 - 0.127 = 2.87."
+        ],
+        "answer": "pH = 2.87"
+      },
+      {
+        "problem": "Determine the pH of a buffer solution containing 0.1 M CH3COOH and 0.2 M CH3COONa. (pKa of CH3COOH = 4.74)",
+        "steps": [
+          "Identify system as an acidic buffer consisting of weak acid (CH3COOH) and its salt (CH3COONa).",
+          "Apply Henderson-Hasselbalch equation: pH = pKa + log10([Salt] / [Acid]).",
+          "Substitute values: pH = 4.74 + log10(0.2 / 0.1) = 4.74 + log10(2).",
+          "Since log10(2) = 0.301, pH = 4.74 + 0.301 = 5.041."
+        ],
+        "answer": "pH = 5.04"
+      },
+      {
+        "problem": "Find the molar solubility S of Ag2CrO4 in pure water if its Ksp = 1.1 x 10^-12.",
+        "steps": [
+          "Write the dissociation reaction: Ag2CrO4 (s) <-> 2 Ag+ (aq) + CrO4^2- (aq).",
+          "Express ionic concentrations in terms of solubility S: [Ag+] = 2S, [CrO4^2-] = S.",
+          "Set up Ksp expression: Ksp = [Ag+]^2 * [CrO4^2-] = (2S)^2 * (S) = 4S^3.",
+          "Solve for S: 4S^3 = 1.1 x 10^-12 => S^3 = 2.75 x 10^-13 = 275 x 10^-15.",
+          "Take cube root: S = (275)^(1/3) x 10^-5 approx 6.5 x 10^-5 M."
+        ],
+        "answer": "Solubility S = 6.5 x 10^-5 M"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which conjugate acid-base pair is correct according to Bronsted-Lowry theory? Options: (A) H2O and OH-, (B) H3O+ and OH-, (C) HCl and ClO4-, (D) NH4+ and NH2-.",
+        "answer": "Correct Option: (A). Explanation: Conjugate acid-base pairs differ by exactly one proton (H+). H2O loses H+ to form OH-, so H2O/OH- is a conjugate pair."
+      },
+      {
+        "question": "What is the pH of a 0.01 M CH3COONa solution if pKa of CH3COOH is 4.74? Options: (A) 8.37, (B) 5.63, (C) 7.00, (D) 9.26.",
+        "answer": "Correct Option: (A). Explanation: CH3COONa is a salt of weak acid and strong base. Formula: pH = 7 + 0.5*(pKa + log C) = 7 + 0.5*(4.74 + log(0.01)) = 7 + 0.5*(4.74 - 2) = 7 + 0.5*(2.74) = 8.37."
+      },
+      {
+        "question": "Precipitation of a sparingly soluble salt occurs when ionic product Qsp and solubility product Ksp satisfy: Options: (A) Qsp < Ksp, (B) Qsp = Ksp, (C) Qsp > Ksp, (D) Qsp = 0.",
+        "answer": "Correct Option: (C). Explanation: When the ionic product Qsp exceeds the solubility product Ksp, the solution becomes supersaturated and precipitation takes place until equilibrium is restored."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry Chapter 7: Equilibrium",
+      "JEE Main Official Syllabus - Physical Chemistry: Ionic Equilibrium"
+    ]
+  }
+}

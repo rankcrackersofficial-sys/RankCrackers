@@ -6,10 +6,12 @@ class SyllabusRepository {
   // ===================================================
 
   static List<MicroTopicNode> getNodesForExam(String examId) {
-    return nodes.where((e) => e.examId.toLowerCase() == examId.toLowerCase()).toList();
+    return nodes
+        .where((e) => e.examId.toLowerCase() == examId.toLowerCase())
+        .toList();
   }
 
-  // 🔱 Audit Fix: Removed hardcoded demo content (Article 3)
+  // 🔱 Audit Fix: Removed hardcoded local content (Article 3)
   // These nodes now represent the Sovereign Index.
   static final List<MicroTopicNode> nodes = [
     MicroTopicNode(

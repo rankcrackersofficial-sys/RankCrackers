@@ -1,0 +1,188 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_6CD948DD_CH002",
+    "overview": "Ionic equilibrium involves dynamic chemical equilibria established in aqueous solutions containing ions. This topic covers the classification of electrolytes, classical and modern acid-base theories, water auto-ionization, pH calculations across diverse acid-base systems, salt hydrolysis, buffer solution dynamics, common ion effect, and sparingly soluble salt solubility equilibria.",
+    "concepts": [
+      {
+        "title": "Electrolytes and Degree of Ionization",
+        "explanation": "Electrolytes dissociate into ions in aqueous solution. Strong electrolytes (e.g., HCl, NaOH, NaCl) dissociate completely (degree of dissociation α ≈ 1), whereas weak electrolytes (e.g., CH3COOH, NH4OH) dissociate partially (α << 1). Ostwald's Dilution Law governs weak binary electrolytes: Ka = (C * α^2) / (1 - α), simplifying to α = sqrt(Ka / C) at high dilution."
+      },
+      {
+        "title": "Acid-Base Theories",
+        "explanation": "Arrhenius Theory defines acids as H+ producers and bases as OH- producers in water. Brønsted-Lowry Theory defines acids as proton (H+) donors and bases as proton acceptors, introducing conjugate acid-base pairs differing by a single proton. Lewis Theory defines acids as electron-pair acceptors (e.g., BF3, AlCl3) and bases as electron-pair donors (e.g., NH3, H2O)."
+      },
+      {
+        "title": "Ionization of Water and pH Scale",
+        "explanation": "Water self-ionizes via H2O(l) <=> H+(aq) + OH-(aq). The ionic product Kw = [H+][OH-] equals 1.0 x 10^-14 at 25°C (298 K). pH is defined as -log10[H+]. Neutrality implies [H+] = [OH-] = sqrt(Kw). Because auto-ionization is endothermic, Kw increases with temperature, decreasing neutral pH below 7 at T > 25°C."
+      },
+      {
+        "title": "Common Ion Effect and Salt Hydrolysis",
+        "explanation": "The suppression of dissociation of a weak electrolyte by adding a strong electrolyte sharing a common ion is the Common Ion Effect. Salt Hydrolysis is the reaction of cations or anions of a salt with water to alter pH: Weak Acid-Strong Base salts form basic solutions (pH = 7 + 0.5*pKa + 0.5*log C), Strong Acid-Weak Base salts form acidic solutions (pH = 7 - 0.5*pKb - 0.5*log C), and Weak Acid-Weak Base salts have pH = 7 + 0.5*pKa - 0.5*pKb."
+      },
+      {
+        "title": "Buffer Solutions and Buffer Capacity",
+        "explanation": "Buffer solutions resist drastic pH changes upon addition of small amounts of strong acid or base. Acidic buffers consist of a weak acid and its salt with a strong base (pH = pKa + log([Salt]/[Acid])). Basic buffers consist of a weak base and its salt with a strong acid (pOH = pKb + log([Salt]/[Base])). Maximum buffer capacity occurs when [Salt] = [Acid] or [Salt] = [Base]."
+      },
+      {
+        "title": "Solubility Product (Ksp) and Precipitation",
+        "explanation": "For a sparingly soluble salt AxBy(s) <=> x A^y+(aq) + y B^x-(aq), Ksp = [A^y+]^x * [B^x-]^y. The Ionic Product (Qsp) determines saturation: if Qsp < Ksp, the solution is unsaturated; if Qsp = Ksp, it is saturated; if Qsp > Ksp, precipitation occurs."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Ostwald Dilution Law",
+        "formula": "K_a = \\frac{C \\alpha^2}{1 - \\alpha} \\approx C \\alpha^2",
+        "applicability": "Weak electrolytes with low degree of dissociation (α < 0.05)",
+        "variables": [
+          {
+            "symbol": "K_a",
+            "meaning": "Acid dissociation constant",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "C",
+            "meaning": "Molar concentration of solution",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "\\alpha",
+            "meaning": "Degree of dissociation",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "pH of Acidic Buffer Solution (Henderson-Hasselbalch Equation)",
+        "formula": "pH = pK_a + \\log_{10}\\left(\\frac{[\\text{Salt}]}{[\\text{Acid}]}\\right)",
+        "applicability": "Acidic buffer mixtures comprising a weak acid and its conjugate base salt",
+        "variables": [
+          {
+            "symbol": "pK_a",
+            "meaning": "Negative logarithm of acid dissociation constant",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "[\\text{Salt}]",
+            "meaning": "Concentration of salt/conjugate base",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "[\\text{Acid}]",
+            "meaning": "Concentration of weak acid",
+            "unit": "mol/L"
+          }
+        ]
+      },
+      {
+        "label": "pH of Salt of Weak Acid and Strong Base",
+        "formula": "pH = 7 + \\frac{1}{2} pK_a + \\frac{1}{2} \\log_{10} C",
+        "applicability": "Aqueous solution of a salt derived from weak acid and strong base at 25°C",
+        "variables": [
+          {
+            "symbol": "pK_a",
+            "meaning": "Negative logarithm of weak acid ionization constant",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "C",
+            "meaning": "Molar concentration of salt",
+            "unit": "mol/L"
+          }
+        ]
+      },
+      {
+        "label": "Solubility Product Relation for AxBy Salt",
+        "formula": "K_{sp} = x^x \\cdot y^y \\cdot S^{x+y}",
+        "applicability": "Saturated solution of sparingly soluble salt AxBy",
+        "variables": [
+          {
+            "symbol": "K_{sp}",
+            "meaning": "Solubility product constant",
+            "unit": "(mol/L)^(x+y)"
+          },
+          {
+            "symbol": "S",
+            "meaning": "Molar solubility of salt",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "x, y",
+            "meaning": "Stoichiometric coefficients of ions in formula unit",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Neutral water always has a pH of exactly 7.0 at any temperature.",
+        "correction": "pH = 7 represents neutrality only at 25°C where Kw = 10^-14. Since water auto-ionization is endothermic, raising temperature increases Kw (e.g., Kw = 10^-13 at 60°C), making neutral pH = 6.5."
+      },
+      {
+        "misconception": "The pH of 10^-8 M HCl solution is 8.",
+        "correction": "HCl is an acid, so pH must be less than 7. In extremely dilute acids ([H+] < 10^-6 M), auto-ionization of water contributes significantly to total [H+], giving [H+] = 10^-8 + 10^-7 = 1.1 x 10^-7 M and pH ≈ 6.96."
+      },
+      {
+        "misconception": "Salt hydrolysis always yields a non-neutral solution.",
+        "correction": "Salts of strong acids and strong bases (e.g., NaCl) do not undergo hydrolysis and form neutral solutions (pH = 7 at 25°C). Salts of weak acids and weak bases (e.g., CH3COONH4) can also yield neutral solutions if pKa = pKb."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the pH of a 10^-8 M aqueous HCl solution at 25°C.",
+        "steps": [
+          "Step 1: Identify all sources of H+ ions: dissociation of HCl and auto-ionization of water.",
+          "Step 2: Let [H+] from water auto-ionization be x. Total [H+] = 10^-8 + x and [OH-] = x.",
+          "Step 3: Apply ionic product of water: Kw = [H+][OH-] => (10^-8 + x)(x) = 10^-14.",
+          "Step 4: Solve quadratic equation: x^2 + 10^-8 x - 10^-14 = 0 => x = (-10^-8 + sqrt(10^-16 + 4*10^-14)) / 2 ≈ 9.5 x 10^-8 M.",
+          "Step 5: Total [H+] = 10^-8 + 9.5 x 10^-8 = 1.05 x 10^-7 M.",
+          "Step 6: Compute pH = -log10(1.05 x 10^-7) = 7 - log10(1.05) = 6.98."
+        ],
+        "answer": "6.98"
+      },
+      {
+        "problem": "Find the solubility of Ag2CrO4 in 0.1 M AgNO3 solution at 25°C, given Ksp(Ag2CrO4) = 1.1 x 10^-12.",
+        "steps": [
+          "Step 1: Write solubility equilibrium: Ag2CrO4(s) <=> 2 Ag+(aq) + CrO4^2-(aq).",
+          "Step 2: Let molar solubility of Ag2CrO4 in presence of common ion be S.",
+          "Step 3: AgNO3 is a strong electrolyte providing [Ag+] = 0.1 M. Total [Ag+] = 0.1 + 2S, and [CrO4^2-] = S.",
+          "Step 4: Since S is very small, 0.1 + 2S ≈ 0.1 M.",
+          "Step 5: Substitute into Ksp expression: Ksp = [Ag+]^2 * [CrO4^2-] => 1.1 x 10^-12 = (0.1)^2 * S.",
+          "Step 6: Solve for S: S = 1.1 x 10^-12 / 10^-2 = 1.1 x 10^-10 mol/L."
+        ],
+        "answer": "1.1 x 10^-10 M"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following salt solutions will turn red litmus blue?\n(A) NaCl\n(B) NH4Cl\n(C) CH3COONa\n(D) Na2SO4",
+        "answer": "(C) CH3COONa. It is a salt of a weak acid (CH3COOH) and a strong base (NaOH). Its anion undergoes hydrolysis forming OH- ions, making the solution basic (pH > 7), which turns red litmus blue."
+      },
+      {
+        "question": "What is the pH of a buffer solution prepared by mixing equal volumes of 0.2 M CH3COOH and 0.2 M CH3COONa? (Given pKa of CH3COOH = 4.74)\n(A) 4.74\n(B) 5.04\n(C) 4.44\n(D) 7.00",
+        "answer": "(A) 4.74. Upon mixing equal volumes, concentrations are halved but [Salt]/[Acid] ratio remains (0.1/0.1) = 1. By Henderson-Hasselbalch equation: pH = pKa + log(1) = 4.74 + 0 = 4.74."
+      },
+      {
+        "question": "The solubility product Ksp of a sparingly soluble salt AB2 is 3.2 x 10^-11. What is its molar solubility (S) in pure water?\n(A) 2.0 x 10^-4 M\n(B) 1.0 x 10^-4 M\n(C) 4.0 x 10^-4 M\n(D) 2.0 x 10^-3 M",
+        "answer": "(A) 2.0 x 10^-4 M. For AB2 salt, Ksp = 4 S^3. Thus 4 S^3 = 3.2 x 10^-11 => S^3 = 8.0 x 10^-12 => S = (8.0 x 10^-12)^(1/3) = 2.0 x 10^-4 M."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 7: Equilibrium",
+      "JEE Main Official Syllabus - Physical Chemistry: Ionic Equilibrium"
+    ]
+  }
+}

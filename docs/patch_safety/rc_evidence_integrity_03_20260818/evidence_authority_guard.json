@@ -1,0 +1,15 @@
+{
+    "evidenceIdentifier":  "RC_EVIDENCE_INTEGRITY_03",
+    "rule":  "Report artifact is not evidence. It is only a summary of evidence.",
+    "acceptedEvidenceClasses":  [
+                                    "LIVE_PRODUCTION_READ",
+                                    "PHYSICAL_DEVICE_RUNTIME",
+                                    "REAL_EXECUTED_TEST",
+                                    "EMULATOR_RUNTIME",
+                                    "STATIC_CODE_INSPECTION"
+                                ],
+    "forbiddenEvidenceClasses":  [
+                                     "SYNTHETIC_REPORT_ONLY"
+                                 ],
+    "status":  "LIVE_ONLY_PROOF_REQUIRED"
+}

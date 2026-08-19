@@ -1,0 +1,153 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_7E474892_CH002",
+    "overview": "Titrimetric or volumetric analysis involves determining the concentration of an unknown solution by reacting it quantitatively with a standard solution of known concentration. This module covers acid-base titrations with indicators, as well as redox titrations featuring potassium permanganate (KMnO4) as a self-indicator reacting with primary standards like oxalic acid and Mohr's salt.",
+    "concepts": [
+      {
+        "title": "Acid-Base Titrations and Indicator Selection",
+        "explanation": "In acid-base titrations, the point at which chemically equivalent amounts of acid and base have reacted is the equivalence point. Indicators are weak organic acids or bases whose ionized and un-ionized forms exhibit distinct colors. Phenolphthalein (pH range 8.3-10.0) changes from colorless to pink and is ideal for strong acid-strong base and weak acid-strong base titrations. Methyl orange (pH range 3.1-4.4) changes from red to yellow and is suitable for strong acid-weak base titrations."
+      },
+      {
+        "title": "Potassium Permanganate as a Self-Indicator",
+        "explanation": "In acidic medium, KMnO4 acts as a powerful oxidizing agent where MnO4- (intense purple) is reduced to Mn2+ (nearly colorless). Once all the reducing agent (e.g., oxalate or Fe2+) is consumed, a single drop of excess KMnO4 imparts a persistent faint pink color to the solution, making KMnO4 serve as its own indicator (self-indicator)."
+      },
+      {
+        "title": "Titration of Oxalic Acid vs KMnO4",
+        "explanation": "Oxalic acid dihydrate (H2C2O4.2H2O) is a primary standard. Acidic KMnO4 oxidizes oxalate ions (C2O4^2-) to CO2 gas while Mn7+ is reduced to Mn2+. The initial reaction rate is extremely slow due to high activation energy, requiring the solution to be heated to 60-70 °C. As Mn2+ is generated during the reaction, it acts as an autocatalyst, drastically accelerating the process."
+      },
+      {
+        "title": "Titration of Mohr's Salt vs KMnO4",
+        "explanation": "Mohr's salt, ferrous ammonium sulfate [(NH4)2SO4.FeSO4.6H2O], supplies Fe2+ ions which are oxidized to Fe3+ by acidic KMnO4. This titration is performed at room temperature without heating, because heating would cause dissolved oxygen in air to oxidize Fe2+ to Fe3+, yielding erroneous titrimetric results."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Law of Equivalence in Titrations",
+        "formula": "N1 * V1 = N2 * V2 or n1 * M1 * V1 = n2 * M2 * V2",
+        "applicability": "Applies at the equivalence point of all volumetric neutralization and redox reactions.",
+        "variables": [
+          {
+            "symbol": "N",
+            "meaning": "Normality of the solution",
+            "unit": "eq/L"
+          },
+          {
+            "symbol": "M",
+            "meaning": "Molarity of the solution",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "V",
+            "meaning": "Volume of solution",
+            "unit": "mL"
+          },
+          {
+            "symbol": "n",
+            "meaning": "n-factor (valence factor / electrons transferred)",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "n-Factors in KMnO4 Redox Reactions",
+        "formula": "n(KMnO4) = 5 (acidic medium), n(Oxalic Acid) = 2, n(Mohr's Salt) = 1",
+        "applicability": "Used to convert molarity to normality and calculate equivalent weight in acidic permanganate titrations.",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of electrons gained or lost per molecule/formula unit",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Equivalent Weight Relation",
+        "formula": "Equivalent Weight = Molar Mass / n-factor",
+        "applicability": "Used to calculate mass required to prepare standard solutions.",
+        "variables": [
+          {
+            "symbol": "E",
+            "meaning": "Equivalent weight",
+            "unit": "g/eq"
+          },
+          {
+            "symbol": "M",
+            "meaning": "Molar mass",
+            "unit": "g/mol"
+          },
+          {
+            "symbol": "n",
+            "meaning": "n-factor",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Dilute HCl or HNO3 can be used instead of dilute H2SO4 to acidify KMnO4 solutions.",
+        "correction": "HCl reacts with KMnO4 to form Cl2 gas (consuming permanganate), and HNO3 is itself a strong oxidizing agent that competes with KMnO4. Dilute H2SO4 is the only suitable acid as it does not participate in redox reaction."
+      },
+      {
+        "misconception": "Mohr's salt titration with KMnO4 requires pre-heating just like oxalic acid titration.",
+        "correction": "Mohr's salt must be titrated at room temperature; heating causes atmospheric oxygen to oxidize Fe2+ to Fe3+, leading to inaccurate titer values."
+      },
+      {
+        "misconception": "Water of crystallization can be neglected when computing the molar mass of primary standards.",
+        "correction": "Primary standards retain stoichiometric water molecules: oxalic acid dihydrate has molar mass 126 g/mol (including 2H2O) and Mohr's salt has molar mass 392 g/mol (including 6H2O)."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the mass of Mohr's salt [(NH4)2SO4.FeSO4.6H2O] required to prepare 250 mL of a M/20 standard solution.",
+        "steps": [
+          "Step 1: Calculate the molar mass of Mohr's salt [(NH4)2SO4.FeSO4.6H2O] = 2*(14+4) + 32 + 4*16 + 56 + 32 + 4*16 + 6*18 = 392 g/mol.",
+          "Step 2: Molarity (M) = 1/20 = 0.05 M. Volume (V) = 250 mL = 0.25 L.",
+          "Step 3: Mass = Molarity * Molar Mass * Volume = 0.05 mol/L * 392 g/mol * 0.25 L = 4.90 g."
+        ],
+        "answer": "4.90 g of Mohr's salt is required."
+      },
+      {
+        "problem": "In acidic medium, 20 mL of a KMnO4 solution completely reacts with 25 mL of 0.04 M oxalic acid solution. Determine the molarity of the KMnO4 solution.",
+        "steps": [
+          "Step 1: Write equivalence relation: n(KMnO4) * M(KMnO4) * V(KMnO4) = n(Oxalic) * M(Oxalic) * V(Oxalic).",
+          "Step 2: Substitute n-factors: n(KMnO4) = 5 and n(Oxalic acid) = 2.",
+          "Step 3: 5 * M(KMnO4) * 20 = 2 * 0.04 * 25.",
+          "Step 4: 100 * M(KMnO4) = 2.0 => M(KMnO4) = 2.0 / 100 = 0.02 M."
+        ],
+        "answer": "0.02 M"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following acids is used to acidify the solution during KMnO4 redox titrations? A) Dilute HCl B) Dilute HNO3 C) Dilute H2SO4 D) Concentrated HNO3",
+        "answer": "Option C: Dilute H2SO4 is used because sulfate ions are stable against oxidation by KMnO4. HCl gets oxidized to chlorine gas and HNO3 is an oxidizing acid."
+      },
+      {
+        "question": "What is the equivalent weight of oxalic acid dihydrate (H2C2O4.2H2O) when oxidized by KMnO4 in acidic medium? A) 126 g/eq B) 63 g/eq C) 45 g/eq D) 90 g/eq",
+        "answer": "Option B: Molar mass of oxalic acid dihydrate = 126 g/mol. In the reaction, C2O4^2- releases 2 electrons (n-factor = 2). Equivalent weight = 126 / 2 = 63 g/eq."
+      },
+      {
+        "question": "Why is oxalic acid solution warmed to ~60-70 °C before titrating against KMnO4? A) To decompose excess acid B) To increase reaction rate as the reaction has high activation energy C) To prevent atmospheric oxidation D) To strip dissolved oxygen",
+        "answer": "Option B: The redox reaction between permanganate ion and oxalate ion is kinetically slow at room temperature due to high activation energy. Heating increases kinetic energy, and the formed Mn2+ acts as an autocatalyst."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class XI Chemistry Practical Manual - Volumetric Analysis",
+      "NCERT Class XII Chemistry Practical Manual - Titrimetric Exercises (Redox Titrations)"
+    ]
+  }
+}

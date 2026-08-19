@@ -1,0 +1,167 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_A337813A_CH002",
+    "overview": "Chemical equilibrium represents a dynamic state in reversible reactions where the rate of the forward reaction equals the rate of the reverse reaction, leading to constant concentrations of reactants and products over time. This module covers the quantitative laws governing equilibrium (Law of Mass Action, equilibrium constants K_c and K_p), the thermodynamic driving forces (Gibbs free energy change ΔG and standard Gibbs energy change ΔG°), and qualitative predictions of equilibrium shifts using Le Chatelier's Principle.",
+    "concepts": [
+      {
+        "title": "Law of Chemical Equilibrium and Equilibrium Constants (Kc and Kp)",
+        "explanation": "At a constant temperature, the ratio of the product of equilibrium concentrations (or partial pressures) of products to reactants, each raised to the power equal to its stoichiometric coefficient, is constant. Kc is expressed using molar concentrations, while Kp uses partial pressures for gaseous systems. The relationship between them is Kp = Kc(RT)^(Δn_g), where Δn_g is the change in the number of moles of gaseous species."
+      },
+      {
+        "title": "Thermodynamics of Chemical Equilibrium (ΔG and ΔG°)",
+        "explanation": "The change in Gibbs free energy (ΔG) indicates reaction spontaneity under given conditions: ΔG = ΔG° + RT ln Q. At equilibrium, ΔG = 0 and Q = K, yielding the relationship ΔG° = -RT ln K. A negative ΔG° implies K > 1 (product-favored equilibrium), whereas a positive ΔG° implies K < 1 (reactant-favored equilibrium)."
+      },
+      {
+        "title": "Le Chatelier's Principle and Factors Affecting Equilibrium",
+        "explanation": "When a system at equilibrium is subjected to a stress (change in concentration, pressure, volume, or temperature), the system shifts in a direction that minimizes or counters that stress. Increasing reactant concentration shifts equilibrium forward; increasing total pressure shifts it toward fewer gaseous moles; increasing temperature favors endothermic reactions. A catalyst increases forward and reverse reaction rates equally, speeding up attainment of equilibrium without altering equilibrium composition or equilibrium constants."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Relationship between Kp and Kc",
+        "formula": "K_p = K_c (R T)^{\\Delta n_g}",
+        "applicability": "Reversible gaseous reactions at constant temperature T",
+        "variables": [
+          {
+            "symbol": "K_p",
+            "meaning": "Equilibrium constant in terms of partial pressures",
+            "unit": "atm^(Δn_g) or bar^(Δn_g)"
+          },
+          {
+            "symbol": "K_c",
+            "meaning": "Equilibrium constant in terms of molar concentration",
+            "unit": "(mol/L)^(Δn_g)"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant",
+            "unit": "0.0821 L atm mol^-1 K^-1 or 8.314 J mol^-1 K^-1"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Absolute temperature",
+            "unit": "K"
+          },
+          {
+            "symbol": "\\Delta n_g",
+            "meaning": "Moles of gaseous products minus moles of gaseous reactants",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Standard Gibbs Free Energy and Equilibrium Constant Relationship",
+        "formula": "\\Delta G^\\circ = -R T \\ln K = -2.303 R T \\log_{10} K",
+        "applicability": "Chemical systems at dynamic equilibrium under standard state conditions",
+        "variables": [
+          {
+            "symbol": "\\Delta G^\\circ",
+            "meaning": "Standard Gibbs free energy change",
+            "unit": "J mol^-1"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant",
+            "unit": "8.314 J mol^-1 K^-1"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Absolute temperature",
+            "unit": "K"
+          },
+          {
+            "symbol": "K",
+            "meaning": "Thermodynamic equilibrium constant",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Van 't Hoff Equation",
+        "formula": "\\ln\\left(\\frac{K_2}{K_1}\\right) = \\frac{\\Delta H^\\circ}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)",
+        "applicability": "Variation of equilibrium constant with temperature",
+        "variables": [
+          {
+            "symbol": "K_1, K_2",
+            "meaning": "Equilibrium constants at temperatures T1 and T2",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "\\Delta H^\\circ",
+            "meaning": "Standard enthalpy change of the reaction",
+            "unit": "J mol^-1"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "At chemical equilibrium, the concentrations of reactants and products must be equal.",
+        "correction": "At equilibrium, the rates of forward and backward reactions are equal, causing concentrations to remain constant, but the reactant and product concentrations are rarely equal."
+      },
+      {
+        "misconception": "Adding a catalyst shifts the equilibrium position toward the formation of more products.",
+        "correction": "A catalyst increases the speed of both forward and backward reactions equally by lowering activation energy. It helps reach equilibrium faster without changing the equilibrium constant K or the composition."
+      },
+      {
+        "misconception": "Adding an inert gas at constant volume shifts the equilibrium toward the side with more gaseous moles.",
+        "correction": "At constant volume, adding an inert gas increases total pressure, but does not alter the partial pressures or molar concentrations of reacting species; thus, equilibrium does not shift."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "For the reaction N2(g) + 3H2(g) <=> 2NH3(g), Kc is 0.50 at 400 K. Calculate Kp for this reaction at 400 K. (R = 0.0821 L atm mol^-1 K^-1)",
+        "steps": [
+          "Step 1: Determine Δn_g for the reaction: Δn_g = moles of gaseous products - moles of gaseous reactants = 2 - (1 + 3) = -2.",
+          "Step 2: Use the formula Kp = Kc * (R * T)^(Δn_g).",
+          "Step 3: Calculate (R * T) = 0.0821 * 400 = 32.84.",
+          "Step 4: Compute Kp = 0.50 * (32.84)^(-2) = 0.50 / (32.84)^2 = 0.50 / 1078.46 = 4.64 x 10^-4 atm^-2."
+        ],
+        "answer": "Kp = 4.64 x 10^-4 atm^-2"
+      },
+      {
+        "problem": "The standard Gibbs free energy change ΔG° for a reaction at 300 K is -5.74 kJ mol^-1. Calculate the thermodynamic equilibrium constant K for the reaction. (R = 8.314 J mol^-1 K^-1)",
+        "steps": [
+          "Step 1: Convert ΔG° to Joules: ΔG° = -5.74 * 1000 J mol^-1 = -5740 J mol^-1.",
+          "Step 2: Apply the relationship ΔG° = -2.303 * R * T * log10(K).",
+          "Step 3: Rearrange to solve for log10(K): log10(K) = -ΔG° / (2.303 * R * T) = 5740 / (2.303 * 8.314 * 300).",
+          "Step 4: Compute denominator: 2.303 * 8.314 * 300 = 5744.36.",
+          "Step 5: Calculate log10(K) = 5740 / 5744.36 ≈ 0.999 ≈ 1.0.",
+          "Step 6: Compute K = 10^1.0 = 10."
+        ],
+        "answer": "K = 10"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "For the gaseous reaction PCl5(g) <=> PCl3(g) + Cl2(g), what is the effect of increasing total pressure at constant temperature? Option A: Equilibrium shifts right. Option B: Equilibrium shifts left. Option C: Equilibrium constant increases. Option D: No shift occurs.",
+        "answer": "Option B: Equilibrium shifts left. Increasing total pressure shifts the equilibrium toward the side with fewer moles of gas. The left side has 1 mole of gas while the right side has 2 moles of gas."
+      },
+      {
+        "question": "If ΔG° for a chemical reaction is equal to zero at a temperature T, what is the value of the equilibrium constant K at that temperature? Option A: K = 0. Option B: K = 1. Option C: K = infinity. Option D: K = 0.5.",
+        "answer": "Option B: K = 1. Using ΔG° = -RT ln K, if ΔG° = 0, then ln K = 0, which gives K = e^0 = 1."
+      },
+      {
+        "question": "An inert gas is added to the reaction N2(g) + 3H2(g) <=> 2NH3(g) at constant pressure. What happens to the equilibrium position? Option A: Shifts forward (towards products). Option B: Shifts backward (towards reactants). Option C: No change in equilibrium position. Option D: Reaction stops.",
+        "answer": "Option B: Shifts backward (towards reactants). Addition of an inert gas at constant pressure increases total volume, decreasing partial pressures of reacting species. To counter this, equilibrium shifts toward the side with a greater number of moles of gas (reactants side, 4 moles vs 2 moles)."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Chapter 7: Equilibrium",
+      "JEE Main Official Chemistry Syllabus: Physical Chemistry - Chemical Equilibrium"
+    ]
+  }
+}

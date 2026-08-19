@@ -1,0 +1,145 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_4E0DC7CE_CH001",
+    "overview": "The Kossel-Lewis approach provides the foundational framework for understanding chemical bonding. It posits that atoms gain, lose, or share electrons to achieve a stable octet configuration analogous to noble gases. Chemical bonds are broadly classified into ionic (electrovalent) bonds formed by complete electron transfer and covalent bonds formed by electron sharing.",
+    "concepts": [
+      {
+        "title": "Kossel-Lewis Approach and the Octet Rule",
+        "explanation": "Lewis visualized the atom in terms of a positively charged 'Kernel' (nucleus plus inner electrons) and the outer shell that can accommodate up to eight electrons. Kossel noted that highly electronegative halogens and highly electropositive alkali metals are separated by noble gases, and the formation of a stable octet (ns^2 np^6) drives chemical combination through electron transfer or sharing."
+      },
+      {
+        "title": "Ionic (Electrovalent) Bonding",
+        "explanation": "An ionic bond is formed by the complete transfer of one or more valence electrons from an electropositive atom (forming a cation) to an electronegative atom (forming an anion). The electrostatic attraction between these oppositely charged ions holds the crystal lattice together. Key factors favoring ionic bond formation include low ionization enthalpy of the metal, high negative electron gain enthalpy of the non-metal, and high lattice energy."
+      },
+      {
+        "title": "Covalent Bonding and Lewis Structures",
+        "explanation": "When two atoms share one or more pairs of electrons to attain a noble gas configuration, a covalent bond is formed. A single bond involves one shared pair, a double bond involves two, and a triple bond involves three. Lewis dot structures represent valence electrons as dots around atomic symbols to illustrate bonding and non-bonding electron pairs."
+      },
+      {
+        "title": "Formal Charge and Octet Rule Limitations",
+        "explanation": "Formal charge helps select the most stable resonance structure among plausible Lewis structures. The octet rule has notable exceptions: incomplete octet species (e.g., LiCl, BeH2, BF3), odd-electron molecules (e.g., NO, NO2), and expanded octet species where d-orbitals participate (e.g., PF5, SF6, H2SO4)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Formal Charge Calculation",
+        "formula": "FC = V - L - (1/2) * S",
+        "applicability": "Calculates the hypothetical charge assigned to an atom in a Lewis dot structure.",
+        "variables": [
+          {
+            "symbol": "FC",
+            "meaning": "Formal Charge on a specific atom in a Lewis structure",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "V",
+            "meaning": "Total number of valence electrons in the free isolated atom",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "L",
+            "meaning": "Total number of non-bonding electrons (lone pair electrons)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "S",
+            "meaning": "Total number of bonding (shared) electrons on that atom",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Lattice Energy Proportionality (Kapustinskii approximation trend)",
+        "formula": "U proportional to (|z_+ * z_-|) / (r_+ + r_-)",
+        "applicability": "Estimating relative electrostatic attraction and stability of ionic crystals.",
+        "variables": [
+          {
+            "symbol": "U",
+            "meaning": "Lattice Energy",
+            "unit": "kJ/mol"
+          },
+          {
+            "symbol": "z_+, z_-",
+            "meaning": "Charges on cation and anion respectively",
+            "unit": "dimensionless elementary charges"
+          },
+          {
+            "symbol": "r_+, r_-",
+            "meaning": "Radii of cation and anion respectively",
+            "unit": "pm or pm-equivalent length"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Ionic bonds have a specific spatial direction like covalent bonds.",
+        "correction": "Ionic bonds are non-directional electrostatic forces that act equally in all directions around an ion."
+      },
+      {
+        "misconception": "Formal charge represents the real physical partial charge on an atom in a molecule.",
+        "correction": "Formal charge is a strict bookkeeping convention assuming equal sharing of bonding electrons; actual partial charges depend on electronegativity differences."
+      },
+      {
+        "misconception": "All stable molecules strictly satisfy the Octet Rule.",
+        "correction": "Many stable molecules exist with incomplete octets (BF3), odd electrons (NO), or expanded octets (SF6, PCl5)."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the formal charge on each oxygen atom in the Ozone molecule (O3).",
+        "steps": [
+          "Step 1: Write the Lewis dot structure for O3. Central oxygen atom (labelled O1) forms a double bond with one terminal oxygen (O2) and a single (coordinate) bond with the other terminal oxygen (O3).",
+          "Step 2: Count valence, lone-pair, and bonding electrons for each atom. Valence electrons V = 6 for oxygen.",
+          "Step 3: For central oxygen (O1): Lone pair electrons L = 2, shared electrons S = 6 (one double bond + one single bond = 3 pairs). FC(O1) = 6 - 2 - (1/2)*6 = +1.",
+          "Step 4: For double-bonded terminal oxygen (O2): Lone pair electrons L = 4, shared electrons S = 4. FC(O2) = 6 - 4 - (1/2)*4 = 0.",
+          "Step 5: For single-bonded terminal oxygen (O3): Lone pair electrons L = 6, shared electrons S = 2. FC(O3) = 6 - 6 - (1/2)*2 = -1."
+        ],
+        "answer": "The formal charges on central O1, double-bonded O2, and single-bonded O3 are +1, 0, and -1, respectively."
+      },
+      {
+        "problem": "Which of the following compounds exhibits an expanded octet: BF3, AlCl3, SF6, or CH4?",
+        "steps": [
+          "Step 1: Determine valence electrons contributed by the central atom and bonded atoms.",
+          "Step 2: In BF3, Boron has 3 valence electrons, forming 3 single bonds with Fluorine -> 6 valence electrons around B (incomplete octet).",
+          "Step 3: In CH4, Carbon forms 4 single bonds -> 8 valence electrons around C (complete octet).",
+          "Step 4: In SF6, Sulfur has 6 valence electrons and forms 6 single bonds with Fluorine -> 12 valence electrons around S.",
+          "Step 5: Since 12 electrons > 8 electrons, SF6 contains an expanded octet."
+        ],
+        "answer": "SF6 exhibits an expanded octet."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "In the Lewis structure of NO2 (Nitrogen dioxide), what is the primary exception to the octet rule observed?",
+        "answer": "Nitrogen dioxide (NO2) is an odd-electron molecule containing a total of 17 valence electrons. The central nitrogen atom has an unpaired electron and holds only 7 valence electrons, violating the octet rule."
+      },
+      {
+        "question": "Which set of factors most strongly favors the formation of an ionic bond between two elements A and B?",
+        "answer": "Low ionization enthalpy of electropositive element A, high negative electron gain enthalpy of electronegative element B, and high lattice energy of the resulting ionic crystal lattice."
+      },
+      {
+        "question": "Calculate the formal charge on the central sulfur atom in the sulfate ion (SO4^2-) when represented with two S=O double bonds and two S-O^- single bonds.",
+        "answer": "For central S: Valence electrons V = 6. Non-bonding electrons L = 0. Shared bonding electrons S = 12 (two double bonds + two single bonds = 6 pairs). Formal Charge FC = 6 - 0 - (1/2)*(12) = 0."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Chapter 4: Chemical Bonding and Molecular Structure",
+      "Lee, J.D., Concise Inorganic Chemistry, 5th Edition, Wiley",
+      "JEE Main Syllabus 2026: Chemical Bonding and Molecular Structure - Kossel-Lewis Approach"
+    ]
+  }
+}

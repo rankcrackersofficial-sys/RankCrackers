@@ -1,0 +1,135 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U12_T_6F2E41D5_CH002",
+    "overview": "Coordination compounds consist of a central metal ion bonded to surrounding molecules or ions (ligands) via coordinate covalent bonds. This comprehensive content node covers Werner's coordination theory, ligand classifications, denticity, chelation, IUPAC nomenclature, structural and stereoisomerism, Valence Bond Theory (VBT), Crystal Field Theory (CFT), magnetic properties, origins of color, and applications in qualitative analysis, metallurgy, and biology.",
+    "concepts": [
+      {
+        "title": "Werner's Theory, Ligands, Denticity, and Chelation",
+        "explanation": "Alfred Werner postulated that central metal atoms exhibit two types of valency: Primary Valency (satisfied by anions, ionisable, non-directional, corresponds to oxidation state) and Secondary Valency (satisfied by neutral molecules or anions, non-ionisable, directional, corresponds to coordination number). Ligands act as Lewis bases donating electron pairs. Ligands are classified by denticity (monodentate, bidentate, polydentate, ambidentate). Multidentate ligands that bind through two or more donor atoms to the same metal ion form ring structures called chelates, imparting enhanced stability (chelate effect)."
+      },
+      {
+        "title": "IUPAC Nomenclature and Isomerism",
+        "explanation": "Coordination compounds are named by specifying cations first, followed by anions. Within complex ions, ligands are named alphabetically (with prefixes like di-, tri-, or bis-, tris- for complex names), followed by the metal name with its oxidation state in Roman numerals in parentheses. If the complex anion is negative, the metal name ends in '-ate'. Isomerism is split into Structural Isomerism (ionization, linkage, coordination, solvate) and Stereoisomerism (geometrical cis/trans and fac/mer; optical isomerism in non-superimposable chiral molecules)."
+      },
+      {
+        "title": "Bonding Theories (VBT and CFT), Color, and Magnetism",
+        "explanation": "Valence Bond Theory (VBT) explains complex formation via hybridization of metal d, s, and p orbitals (sp3, dsp2, d2sp3, sp3d2) producing specific geometries (tetrahedral, square planar, octahedral). Crystal Field Theory (CFT) treats metal-ligand interactions as purely electrostatic, causing degeneracy removal of d-orbitals into t2g and eg levels. The splitting energy (Delta_o) depends on ligand field strength (Spectrochemical Series). Strong field ligands (e.g., CN-) cause large splitting (Delta_o > P) yielding low-spin complexes, whereas weak field ligands (e.g., F-) lead to high-spin complexes. Color arises from d-d transitions absorbing specific visible light frequencies."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Spin-only Magnetic Moment",
+        "formula": "\\mu_{eff} = \\sqrt{n(n + 2)} \\text{ BM}",
+        "applicability": "Calculates the effective magnetic moment of transition metal complexes based on unpaired d-electrons.",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of unpaired electrons",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "\\mu_{eff}",
+            "meaning": "Effective magnetic moment",
+            "unit": "Bohr Magnetons (BM)"
+          }
+        ]
+      },
+      {
+        "label": "Crystal Field Splitting Energy (CFSE) for Octahedral Complex",
+        "formula": "\\text{CFSE} = (-0.4 n_{t2g} + 0.6 n_{eg}) \\Delta_o + m P",
+        "applicability": "Determines crystal field stabilization energy gained by electron distribution in split octahedral d-orbitals.",
+        "variables": [
+          {
+            "symbol": "n_{t2g}",
+            "meaning": "Number of electrons in t2g set",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "n_{eg}",
+            "meaning": "Number of electrons in eg set",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "\\Delta_o",
+            "meaning": "Octahedral splitting energy",
+            "unit": "cm^-1 or kJ/mol"
+          },
+          {
+            "symbol": "P",
+            "meaning": "Electron pairing energy",
+            "unit": "cm^-1 or kJ/mol"
+          },
+          {
+            "symbol": "m",
+            "meaning": "Number of extra paired electron sets relative to free ion",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Tetrahedral complexes of the form [MA2B2] exhibit geometrical cis/trans isomerism.",
+        "correction": "All four positions in a tetrahedral complex are adjacent and equivalent (bond angles ~109.5 degrees), so cis/trans distinction is impossible in tetrahedral geometries."
+      },
+      {
+        "misconception": "Primary valency determines the spatial geometry of a coordination complex.",
+        "correction": "Secondary valency corresponds to the coordination number and directs bonds in specific spatial orientations to define complex geometry; primary valency is non-directional."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Determine the IUPAC name, hybridization, geometry, and magnetic moment of [Co(NH3)6]3+.",
+        "steps": [
+          "1. Identify oxidation state of Co: x + 6(0) = +3, so Co is in +3 state ([Ar] 3d6).",
+          "2. NH3 acts as a strong field ligand with Co(III), causing pairing of 3d electrons.",
+          "3. Electron configuration becomes t2g^6 eg^0 with 0 unpaired electrons.",
+          "4. Two 3d, one 4s, and three 4p orbitals hybridize into six equivalent d2sp3 hybrid orbitals (inner orbital octahedral complex).",
+          "5. Since n = 0, \\mu = \\sqrt{0(0+2)} = 0 BM (diamagnetic)."
+        ],
+        "answer": "IUPAC Name: Hexaamminecobalt(III) ion; Hybridization: d2sp3; Geometry: Octahedral; Magnetic Moment: 0 BM (Diamagnetic)."
+      },
+      {
+        "problem": "Calculate the CFSE for a high-spin d6 octahedral metal complex.",
+        "steps": [
+          "1. For high-spin d6, Delta_o < P, so electrons fill orbitals singly before pairing.",
+          "2. Electron distribution in t2g and eg: t2g^4 eg^2.",
+          "3. Apply CFSE formula: CFSE = (-0.4 * n_{t2g} + 0.6 * n_{eg}) * Delta_o.",
+          "4. Substitute values: CFSE = (-0.4 * 4 + 0.6 * 2) * Delta_o = (-1.6 + 1.2) * Delta_o = -0.4 Delta_o."
+        ],
+        "answer": "CFSE = -0.4 Delta_o"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following coordination entities is optically active? A) trans-[Co(en)2Cl2]+ B) cis-[Co(en)2Cl2]+ C) [Co(NH3)4Cl2]+ D) trans-[Pt(NH3)2Cl2]",
+        "answer": "B) cis-[Co(en)2Cl2]+ lacks symmetry elements (plane/center of inversion), making it non-superimposable on its mirror image and optically active."
+      },
+      {
+        "question": "According to Crystal Field Theory, what is the d-electron configuration and spin state of [Fe(CN)6]4-? (Fe, Z = 26) A) t2g^4 eg^2, high spin B) t2g^6 eg^0, low spin C) t2g^3 eg^3, high spin D) t2g^5 eg^1, low spin",
+        "answer": "B) t2g^6 eg^0, low spin. Fe is in the +2 state (d6 configuration). CN- is a strong field ligand (Delta_o > P), driving complete electron pairing into the t2g set."
+      },
+      {
+        "question": "What are the coordination number and oxidation state of Fe in [Fe(EDTA)]-? A) CN = 4, OS = +2 B) CN = 6, OS = +3 C) CN = 6, OS = +2 D) CN = 4, OS = +3",
+        "answer": "B) CN = 6, OS = +3. EDTA4- is a hexadentate ligand donating 6 electron pairs (CN = 6). Oxidation state x + (-4) = -1 implies x = +3."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 9: Coordination Compounds",
+      "JEE Main Official Syllabus - Chemistry Unit 12: Coordination Compounds"
+    ]
+  }
+}

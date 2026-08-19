@@ -1,0 +1,31 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "FAIL",
+    "itemCountReviewed": 1,
+    "approvedAtomIds": [],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_0D2707C4_CH002"
+    ],
+    "blockingIssues": [
+      "In the 'Stability Trends of Intermediates' concept, the stability order for carbocations is given as 'Allyl/Benzyl > 3° > 2° > 1° > Methyl'. This is incorrect for carbocations, as the tertiary (3°) carbocation is more stable than the benzyl carbocation due to extensive hyperconjugation (9 alpha-hydrogens). Grouping free radicals and carbocations into a single stability sequence is misleading because their relative stability orders differ slightly (e.g., Benzyl radical > 3° radical, but 3° carbocation > Benzyl carbocation)."
+    ],
+    "reviewNotes": "The content accurately covers most reaction mechanisms and intermediate properties. However, the conceptual explanation for intermediate stability contains a significant inaccuracy for JEE level chemistry regarding the relative stability of tertiary and benzyl carbocations. Please separate the stability orders of carbocations and free radicals and correct the sequence. The formulas, worked examples, and self-checks are highly accurate and well-explained.",
+    "conceptCorrectnessPass": false,
+    "formulaPass": true,
+    "selfCheckPass": true,
+    "workedExampleMathPass": true
+  }
+}

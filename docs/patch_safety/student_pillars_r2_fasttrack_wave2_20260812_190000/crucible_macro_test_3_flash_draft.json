@@ -16,158 +16,158 @@
     "phaseId": "phase_3",
     "items": [
       {
-        "itemId": "item_macro_3_01",
+        "itemId": "item_1",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U05_T_AB220534_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "A particle of mass 2 kg is moving along the line y = 3 m with a constant speed of 4 m/s in the positive x-direction. What is the magnitude of its angular momentum about the origin?",
-        "answer": "24 kg m^2/s",
-        "shortSolution": "Angular momentum L = m * v * r_perp = 2 kg * 4 m/s * 3 m = 24 kg m^2/s.",
+        "stem": "A particle of mass 2 kg moves with a velocity v = 3i + 4j m/s. Its position vector relative to the origin is r = 4i - 3j m. What is the magnitude of the angular momentum of the particle about the origin in kg m^2/s?",
+        "answer": "50",
+        "shortSolution": "Angular momentum L = r x p = m (r x v). r x v = (4i - 3j) x (3i + 4j) = 16k - (-9k) = 25k. L = 2 * 25k = 50k kg m^2/s. Magnitude is 50.",
         "difficulty": "EASY",
         "options": [
-          "24 kg m^2/s",
-          "12 kg m^2/s",
-          "8 kg m^2/s",
-          "6 kg m^2/s"
+          "0",
+          "25",
+          "50",
+          "100"
         ]
       },
       {
-        "itemId": "item_macro_3_02",
+        "itemId": "item_2",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U12_T_3F967B4D_CH001",
         "type": "NUMERIC_RESPONSE",
-        "stem": "A wire of resistance 10 ohms is stretched to double its original length keeping its volume constant. What is its new resistance in ohms?",
-        "answer": "40",
-        "shortSolution": "Resistance R = rho * L / A. With constant volume V = A * L, R = rho * L^2 / V. Doubling length quadruples resistance. New resistance = 40 ohms.",
+        "stem": "A wire of resistance 12 ohms is stretched uniformly to double its initial length. Calculate its new resistance in ohms.",
+        "answer": "48",
+        "shortSolution": "Resistance R = rho * L / A. When stretched to length 2L, area becomes A/2 (volume remains constant). New resistance R' = rho * (2L) / (A/2) = 4 R = 4 * 12 = 48 ohms.",
         "difficulty": "EASY",
         "options": null
       },
       {
-        "itemId": "item_macro_3_03",
+        "itemId": "item_3",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U19_T_78C6321C_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "Which of the following semiconductor devices operates in reverse bias breakdown region as a voltage regulator?",
-        "answer": "Zener diode",
-        "shortSolution": "A Zener diode is specially designed to operate in reverse breakdown region to provide a constant breakdown voltage.",
+        "stem": "In a Zener diode voltage regulator circuit, the Zener breakdown voltage is 10 V. If the input unregulated DC voltage is 15 V and the series resistance is 100 ohms, what is the current flowing through the series resistor in mA?",
+        "answer": "50",
+        "shortSolution": "Voltage across the series resistor V_R = V_in - V_Z = 15 V - 10 V = 5 V. Current I = V_R / R = 5 / 100 A = 0.05 A = 50 mA.",
         "difficulty": "EASY",
         "options": [
-          "Zener diode",
-          "Light Emitting Diode (LED)",
-          "Forward biased p-n junction diode",
-          "Solar cell"
+          "20",
+          "50",
+          "100",
+          "150"
         ]
       },
       {
-        "itemId": "item_macro_3_04",
+        "itemId": "item_4",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U16_T_22599887_CH001",
-        "type": "NUMERIC_RESPONSE",
-        "stem": "Two thin lenses of focal lengths +20 cm and -40 cm are kept in contact. What is the focal length of the combination in cm?",
-        "answer": "40",
-        "shortSolution": "Combined power P = 1/f1 + 1/f2 = 1/20 - 1/40 = 1/40 cm^-1. Therefore, equivalent focal length f = +40 cm.",
-        "difficulty": "MEDIUM",
-        "options": null
-      },
-      {
-        "itemId": "item_macro_3_05",
-        "atomId": "JEE_2026_PHY_U01_CH04_TOP01_002",
         "type": "SINGLE_SELECT",
-        "stem": "A block of mass 5 kg lies on a rough horizontal surface with coefficient of static friction 0.4. If a horizontal force of 10 N is applied on the block (g = 10 m/s^2), what is the magnitude of the friction force acting on the block?",
-        "answer": "10 N",
-        "shortSolution": "Maximum static friction = mu_s * m * g = 0.4 * 5 * 10 = 20 N. Since applied force (10 N) is less than 20 N, friction equals applied force = 10 N.",
-        "difficulty": "EASY",
+        "stem": "A convex lens of focal length 20 cm is placed in contact with a concave lens of focal length 30 cm. What is the power of the combination in Dioptres?",
+        "answer": "+1.67",
+        "shortSolution": "Power P1 = 100/20 = +5 D, P2 = -100/30 = -3.33 D. Net power P = P1 + P2 = 5 - 3.33 = +1.67 D.",
+        "difficulty": "MEDIUM",
         "options": [
-          "10 N",
-          "20 N",
-          "50 N",
-          "0 N"
+          "+1.67",
+          "+5.00 philosophy",
+          " -1.67 philosophy",
+          " -5.00 philosophy"
         ]
       },
       {
-        "itemId": "item_macro_3_06",
-        "atomId": "JEE_MAIN_2026_PHY_U18_T_370f0b7f",
+        "itemId": "item_5",
+        "atomId": "JEE_MAIN_2026_PHY_U12_T_230585a1",
         "type": "NUMERIC_RESPONSE",
-        "stem": "If the mass defect in a nuclear reaction is 0.02 u, calculate the energy released in MeV. (Take 1 u = 931.5 MeV)",
-        "answer": "18.63",
-        "shortSolution": "Energy released E = 0.02 * 931.5 MeV = 18.63 MeV.",
+        "stem": "In a balanced Wheatstone bridge, the four arms have resistances R1 = 10 ohms, R2 = 20 ohms, R3 = 30 ohms, and R4 = X ohms. Find the value of X in ohms.",
+        "answer": "60",
+        "shortSolution": "For a balanced Wheatstone bridge, R1 / R2 = R3 / R4 => 10 / 20 = 30 / X => X = 60 ohms.",
         "difficulty": "EASY",
         "options": null
       },
       {
-        "itemId": "item_macro_3_07",
+        "itemId": "item_6",
         "atomId": "JEE_MAIN_2026_PHY_U05_T_2218270c",
         "type": "SINGLE_SELECT",
-        "stem": "What is the moment of inertia of a uniform solid sphere of mass M and radius R about a axis tangent to its surface?",
-        "answer": "7/5 M R^2",
-        "shortSolution": "Using the parallel axis theorem: I = I_cm + M * R^2 = (2/5) M R^2 + M R^2 = (7/5) M R^2.",
-        "difficulty": "EASY",
+        "stem": "The moment of inertia of a uniform circular disc of mass M and radius R about an axis perpendicular to its plane passing through its center is I0. What is its moment of inertia about a tangent parallel to its diameter?",
+        "answer": "(5/4) M R^2",
+        "shortSolution": "Moment of inertia about diameter I_d = (1/4) M R^2. By parallel axis theorem, I_tangent = I_d + M R^2 = (1/4) M R^2 + M R^2 = (5/4) M R^2.",
+        "difficulty": "MEDIUM",
         "options": [
-          "7/5 M R^2",
-          "2/5 M R^2",
-          "3/5 M R^2",
-          "5/3 M R^2"
+          "(5/4) M R^2",
+          "(3/2) M R^2",
+          "(1/2) M R^2",
+          "(3/4) M R^2"
         ]
       },
       {
-        "itemId": "item_macro_3_08",
+        "itemId": "item_7",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U15_T_BCA9920C_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "In Newman projections of ethane, which conformation has the lowest potential energy and maximum stability?",
+        "stem": "Which of the following conformers of ethane has the minimum torsional strain and maximum stability?",
         "answer": "Staggered",
-        "shortSolution": "The staggered conformation minimizes torsional strain and electron pair repulsion between C-H bonds.",
+        "shortSolution": "In the staggered conformation of ethane, C-H bonds are as far apart as possible, minimizing torsional strain and maximizing stability.",
         "difficulty": "EASY",
         "options": [
-          "Staggered",
           "Eclipsed",
+          "Staggered",
           "Skew",
-          "Fully eclipsed"
+          "Gauche"
         ]
       },
       {
-        "itemId": "item_macro_3_09",
+        "itemId": "item_8",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_70C6FE5A_CH001",
         "type": "NUMERIC_RESPONSE",
-        "stem": "The molar conductivity of 0.01 M CH3COOH solution is 40 S cm^2 mol^-1. If its limiting molar conductivity is 400 S cm^2 mol^-1, calculate its degree of dissociation as a percentage.",
-        "answer": "10",
-        "shortSolution": "Degree of dissociation alpha = Lambda_m / Lambda_m^0 = 40 / 400 = 0.10, which corresponds to 10%.",
+        "stem": "Molar conductivities at infinite dilution for NaCl, HCl, and CH3COONa are 126, 426, and 91 S cm^2 mol^-1 respectively. Calculate the molar conductivity of CH3COOH at infinite dilution in S cm^2 mol^-1.",
+        "answer": "391",
+        "shortSolution": "By Kohlrausch's law, Lambda_m^0(CH3COOH) = Lambda_m^0(CH3COONa) + Lambda_m^0(HCl) - Lambda_m^0(NaCl) = 91 + 426 - 126 = 391 S cm^2 mol^-1.",
         "difficulty": "EASY",
         "options": null
       },
       {
-        "itemId": "item_macro_3_10",
+        "itemId": "item_9",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U01_T_8B08B474_CH001",
         "type": "NUMERIC_RESPONSE",
-        "stem": "What is the number of moles of CO2 produced when 30 g of ethane (C2H6, molar mass = 30 g/mol) undergoes complete combustion in excess oxygen?",
-        "answer": "2",
-        "shortSolution": "1 mole (30 g) of ethane combustion yields 2 moles of CO2 according to C2H6 + 3.5 O2 -> 2 CO2 + 3 H2O.",
+        "stem": "How many moles of CO2 are produced by complete combustion of 1.5 moles of C3H8 (propane)?",
+        "answer": "4.5",
+        "shortSolution": "Reaction: C3H8 + 5 O2 -> 3 CO2 + 4 H2O. 1 mole of C3H8 gives 3 moles of CO2. Thus, 1.5 moles of C3H8 produces 1.5 * 3 = 4.5 moles of CO2.",
         "difficulty": "EASY",
         "options": null
       },
       {
-        "itemId": "item_macro_3_11",
+        "itemId": "item_10",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_A78DC902_CH002",
         "type": "SINGLE_SELECT",
-        "stem": "Which chemical bond links consecutive amino acid units together in a polypeptide chain?",
-        "answer": "Peptide bond",
-        "shortSolution": "Amino acid residues in proteins are joined by peptide bonds (-CO-NH- linkages).",
+        "stem": "Denaturation of a protein leads to loss of its biological activity due to destruction of which of the following structures while keeping primary structure intact?",
+        "answer": "Secondary and Tertiary structures",
+        "shortSolution": "During denaturation, secondary and tertiary structures of proteins are destroyed while primary structure (peptide linkage) remains intact.",
         "difficulty": "EASY",
         "options": [
-          "Peptide bond",
-          "Ester bond",
-          "Glycosidic bond",
-          "Phosphodiester bond"
+          "Secondary and Tertiary structures",
+          "Primary and Secondary structures only",
+          "Only Primary structure",
+          "Only peptide bonds"
         ]
       },
       {
-        "itemId": "item_macro_3_12",
+        "itemId": "item_11",
+        "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_7E474892_CH002",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "In acidic medium, how many moles of KMnO4 are required to completely react with 5 moles of oxalic acid (H2C2O4)?",
+        "answer": "2",
+        "shortSolution": "Balanced ionic equation: 2 MnO4- + 5 C2O4(2-) + 16 H+ -> 2 Mn(2+) + 10 CO2 + 8 H2O. Therefore, 2 moles of KMnO4 react with 5 moles of oxalic acid.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_12",
         "atomId": "JEE_MAIN_2026_CHEM_U14_T_0d2707c4",
         "type": "SINGLE_SELECT",
         "stem": "Which of the following carbocations is the most stable?",
-        "answer": "(CH3)3C+",
-        "shortSolution": "The tertiary carbocation (CH3)3C+ has 9 hyperconjugative alpha-hydrogens and strong +I effects, giving maximum stability.",
+        "answer": "(CH3)3C presentation",
+        "shortSolution": "Tertiary carbocation (CH3)3C+ is the most stable due to maximum hyperconjugation (9 alpha-hydrogens) and inductive effect of three methyl groups.",
         "difficulty": "EASY",
         "options": [
-          "(CH3)3C+",
-          "(CH3)2CH+",
-          "CH3CH2+",
-          "CH3+"
+          "(CH3)3C presentation",
+          "(CH3)2CH presentation",
+          "CH3CH2 presentation",
+          "CH3 presentation"
         ]
       }
     ]

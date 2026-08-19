@@ -1,0 +1,143 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_224D254F_CH001",
+    "overview": "Valence Bond Theory (VBT) provides a quantum mechanical explanation of covalent bonding based on atomic orbital overlaps. Hybridization explains molecular geometry and bond equivalence by mixing atomic orbitals on a central atom. Resonance accounts for electron delocalization in molecules that cannot be described by a single Lewis structure.",
+    "concepts": [
+      {
+        "title": "Valence Bond Theory and Orbital Overlap",
+        "explanation": "Valence Bond Theory states that a covalent bond forms when half-filled atomic orbitals of two atoms overlap, pairing their electrons with opposite spins. Stronger overlap produces stronger bonds. Coaxial overlap along the internuclear axis forms sigma (σ) bonds, while lateral (sideways) overlap of parallel p or d orbitals forms weaker pi (π) bonds."
+      },
+      {
+        "title": "Concept of Hybridization",
+        "explanation": "Hybridization is the mathematical intermixing of atomic orbitals of slightly different energies on the central atom to form an equal number of new degenerate hybrid orbitals with specific spatial arrangements. The type of hybridization determines geometry: sp (linear), sp2 (trigonal planar), sp3 (tetrahedral), sp3d (trigonal bipyramidal using dz2), and sp3d2 (octahedral using dx2-y2 and dz2)."
+      },
+      {
+        "title": "Resonance and Resonance Energy",
+        "explanation": "When a single conventional Lewis structure fails to accurately represent experimental properties such as bond lengths and stability, the molecule is represented as a resonance hybrid of multiple canonical contributing structures. Resonance energy is the stabilization energy gained through electron delocalization."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Steric Number for Central Atom Hybridization",
+        "formula": "Z = 0.5 * (V + M - C + A)",
+        "applicability": "Used to determine steric number and hybridization state of central atoms in molecules and polyatomic ions.",
+        "variables": [
+          {
+            "symbol": "Z",
+            "meaning": "Steric Number (Number of hybrid orbitals)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "V",
+            "meaning": "Number of valence electrons on the central atom",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "M",
+            "meaning": "Number of monovalent atoms attached",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "C",
+            "meaning": "Positive charge on the cation",
+            "unit": "elementary charge"
+          },
+          {
+            "symbol": "A",
+            "meaning": "Negative charge on the anion",
+            "unit": "elementary charge"
+          }
+        ]
+      },
+      {
+        "label": "Resonance Energy",
+        "formula": "E_res = E_exp - E_calc",
+        "applicability": "Determines the extra thermodynamic stability provided by electron delocalization.",
+        "variables": [
+          {
+            "symbol": "E_res",
+            "meaning": "Resonance Energy",
+            "unit": "kJ/mol"
+          },
+          {
+            "symbol": "E_exp",
+            "meaning": "Experimental heat of formation or combustion",
+            "unit": "kJ/mol"
+          },
+          {
+            "symbol": "E_calc",
+            "meaning": "Calculated heat of formation or combustion of the most stable canonical contributor",
+            "unit": "kJ/mol"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Hybridization is a real physical process occurring prior to chemical reaction.",
+        "correction": "Hybridization is a theoretical quantum mechanical concept and mathematical tool used to rationalize observed molecular geometries and bond equivalence."
+      },
+      {
+        "misconception": "Molecules constantly oscillate back and forth between different canonical resonance forms.",
+        "correction": "Canonical structures do not exist in dynamic equilibrium; the molecule exists at all times as a single static resonance hybrid."
+      },
+      {
+        "misconception": "All d-orbitals are equally involved in sp3d hybridization.",
+        "correction": "In sp3d hybridization, specifically the d_z2 orbital is involved due to symmetry matching along the axial direction."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Determine the hybridization, electronic geometry, and specific d-orbital involved in XeF4.",
+        "steps": [
+          "Step 1: Calculate steric number Z using formula Z = 0.5 * (V + M - C + A).",
+          "Step 2: For XeF4, Xe has V = 8 valence electrons, M = 4 monovalent fluorine atoms, C = 0, A = 0. Z = 0.5 * (8 + 4) = 6.",
+          "Step 3: A steric number of 6 corresponds to sp3d2 hybridization with octahedral electronic geometry and square planar molecular shape due to 2 lone pairs.",
+          "Step 4: The d-orbitals involved in sp3d2 hybridization are d_z2 and d_(x2-y2)."
+        ],
+        "answer": "Hybridization: sp3d2; Electronic Geometry: Octahedral; Molecular Shape: Square Planar; d-orbitals involved: d_z2 and d_(x2-y2)."
+      },
+      {
+        "problem": "Explain why the axial P-Cl bond lengths (219 pm) in PCl5 are longer than the equatorial P-Cl bond lengths (204 pm).",
+        "steps": [
+          "Step 1: Identify hybridization of phosphorus in PCl5. Z = 0.5 * (5 + 5) = 5, corresponding to sp3d hybridization.",
+          "Step 2: Analyze axial and equatorial positions. Axial bonds experience repulsion from three equatorial bond pairs at 90 degrees.",
+          "Step 3: Equatorial bond pairs experience repulsion from only two axial bond pairs at 90 degrees.",
+          "Step 4: Greater axial repulsion leads to axial P-Cl bonds lengthening to minimize potential energy."
+        ],
+        "answer": "Axial bonds experience three 90-degree repulsive interactions compared to two for equatorial bonds, causing axial P-Cl bonds to stretch and become longer."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which specific d-orbital is involved in the formation of sp3d hybrid orbitals in PCl5?",
+        "answer": "The d_z2 orbital is involved because its electron density lies along the z-axis, which matches the axial symmetry of trigonal bipyramidal geometry."
+      },
+      {
+        "question": "What is the hybridization and molecular shape of SF4?",
+        "answer": "SF4 has a steric number Z = 0.5*(6+4) = 5, giving sp3d hybridization. With 4 bond pairs and 1 lone pair, its shape is See-saw."
+      },
+      {
+        "question": "How does the percent s-character in a hybrid orbital affect the electronegativity and bond angle of the central atom?",
+        "answer": "Higher percent s-character brings electron density closer to the nucleus, increasing electronegativity and widening the bond angle."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry - Chapter 4: Chemical Bonding and Molecular Structure",
+      "JEE Main Official Syllabus 2026 - Unit 3: Chemical Bonding"
+    ]
+  }
+}

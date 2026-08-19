@@ -23,6 +23,9 @@ async function crucibleRepairAafWorker(job) {
         // 🛡️ PARITY: STALE REVIEW INVALIDATION
         // Repairing an item must invalidate previous ProReview hashes
         const invalidatePrevious = true;
+        if (!invalidatePrevious) {
+            throw new Error('INTERNAL_CONSISTENCY_ERROR');
+        }
         // 🛡️ PARITY: UNRESTRICTED REWRITE = FALSE
         // Repair is surgical; unrestricted AI rewrite is forbidden.
         const isSurgical = true;

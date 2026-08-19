@@ -1,0 +1,133 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_E1C482B9_CH001",
+    "overview": "Phenols are aromatic hydroxy compounds that exhibit unique chemical reactivity due to the resonance stabilization of the phenoxide ion and the activating nature of the hydroxyl group on the aromatic ring. This unit covers the acidic nature of phenols, substituent effects on acidity, electrophilic aromatic substitution reactions (halogenation, nitration, sulphonation), and key named organic transformations such as the Reimer-Tiemann reaction.",
+    "concepts": [
+      {
+        "title": "Acidic Nature of Phenols",
+        "explanation": "Phenols are noticeably more acidic than aliphatic alcohols (pKa ~ 10 vs pKa ~ 16-18) because loss of a proton yields a phenoxide ion. In the phenoxide ion, the negative charge on oxygen is delocalized over the ortho and para positions of the benzene ring through resonance. Substituents affect acidity: electron-withdrawing groups (-NO2, -CN, halogens) increase acidity by dispersing negative charge, whereas electron-donating groups (-CH3, -OCH3) decrease acidity."
+      },
+      {
+        "title": "Electrophilic Aromatic Substitution (EAS) in Phenols",
+        "explanation": "The hydroxyl group (-OH) is strongly activating and ortho/para-directing due to its +M (mesomeric) effect. The lone pair on oxygen increases electron density on the aromatic ring, making phenols undergo electrophilic substitution much faster and under milder conditions than benzene."
+      },
+      {
+        "title": "Halogenation of Phenol",
+        "explanation": "Halogenation outcome depends strongly on solvent polarity. Treatment with aqueous bromine (bromine water) causes complete activation via phenoxide ion formation, yielding a white precipitate of 2,4,6-tribromophenol. In low-polarity solvents like CS2 or CCl4 at low temperatures (273 K), monobromination occurs, yielding 4-bromophenol as the major product."
+      },
+      {
+        "title": "Nitration and Sulphonation",
+        "explanation": "Reaction with dilute HNO3 at room temperature gives a mixture of ortho- and para-nitrophenols, separable by steam distillation due to intramolecular H-bonding in the ortho isomer. Concentrated HNO3 with conc. H2SO4 yields 2,4,6-trinitrophenol (picric acid). Sulphonation is temperature-dependent (thermodynamic vs kinetic control): 298 K yields ortho-hydroxybenzenesulphonic acid, while 373 K yields para-hydroxybenzenesulphonic acid."
+      },
+      {
+        "title": "Reimer-Tiemann Reaction",
+        "explanation": "Treatment of phenol with chloroform (CHCl3) and aqueous sodium hydroxide followed by acid hydrolysis introduces a formyl group (-CHO) ortho to the -OH group, forming salicylaldehyde (2-hydroxybenzaldehyde). The active electrophile generated in situ is neutral dichlorocarbene (:CCl2)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Acid Dissociation Constant for Phenol",
+        "formula": "K_a = ([PhO^-][H^+]) / [PhOH]",
+        "applicability": "Quantitative evaluation of phenolic acidity in aqueous media",
+        "variables": [
+          {
+            "symbol": "K_a",
+            "meaning": "Acid dissociation constant",
+            "unit": "mol L^-1"
+          },
+          {
+            "symbol": "[PhO^-]",
+            "meaning": "Equilibrium concentration of phenoxide ion",
+            "unit": "mol L^-1"
+          },
+          {
+            "symbol": "[PhOH]",
+            "meaning": "Equilibrium concentration of undissociated phenol",
+            "unit": "mol L^-1"
+          }
+        ]
+      },
+      {
+        "label": "pKa Relation",
+        "formula": "p K_a = -\\log_{10}(K_a)",
+        "applicability": "Comparison of relative acidities of substituted phenols",
+        "variables": [
+          {
+            "symbol": "p K_a",
+            "meaning": "Logarithmic acid dissociation constant",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Phenol is less acidic than ethanol because of the non-polar aromatic hydrocarbon ring.",
+        "correction": "Phenol is about 10^6 times more acidic than ethanol because the phenoxide ion formed is resonance-stabilized over the aromatic ring, whereas the ethoxide ion lacks resonance stabilization."
+      },
+      {
+        "misconception": "The active electrophile in the Reimer-Tiemann reaction is carbocation +CHCl2 or +CCl3.",
+        "correction": "The active electrophile is dichlorocarbene (:CCl2), an electron-deficient neutral singlet species produced by alpha-elimination of HCl from chloroform by base."
+      },
+      {
+        "misconception": "Ortho-nitrophenol has a higher boiling point than para-nitrophenol due to proximity of groups.",
+        "correction": "Ortho-nitrophenol forms intramolecular hydrogen bonds (chelation), reducing intermolecular association and resulting in a lower boiling point, making it steam-volatile. Para-nitrophenol forms intermolecular hydrogen bonds, leading to a higher boiling point."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Arrange the following compounds in increasing order of their acidic strength: Phenol, 4-Nitrophenol, 4-Methylphenol, 4-Methoxyphenol.",
+        "steps": [
+          "Step 1: Identify the nature of substituents at the para position relative to the -OH group.",
+          "Step 2: 4-Nitrophenol has -NO2, which exerts strong -M and -I electron-withdrawing effects, stabilizing the phenoxide ion and making it the most acidic.",
+          "Step 3: Phenol has no substituent.",
+          "Step 4: 4-Methylphenol (-CH3) has an electron-donating hyperconjugative/+I effect, destabilizing phenoxide ion.",
+          "Step 5: 4-Methoxyphenol (-OCH3) has a strong +M electron-donating effect, making it the least acidic.",
+          "Step 6: Combine into increasing order of acidity: 4-Methoxyphenol < 4-Methylphenol < Phenol < 4-Nitrophenol."
+        ],
+        "answer": "4-Methoxyphenol < 4-Methylphenol < Phenol < 4-Nitrophenol"
+      },
+      {
+        "problem": "Explain the difference in products obtained when phenol reacts with (i) Bromine water and (ii) Bromine in CS2 at 273 K.",
+        "steps": [
+          "Step 1: In water (polar solvent), phenol ionizes significantly to phenoxide ion (PhO-). The negatively charged oxygen activates the ring immensely towards electrophilic attack at all ortho and para positions.",
+          "Step 2: Polybromination occurs readily with bromine water to give 2,4,6-tribromophenol as a white precipitate.",
+          "Step 3: In CS2 (non-polar solvent), phenol remains mostly un-ionized. Ring activation is weaker, allowing controlled monobromination.",
+          "Step 4: Monobromination gives a mixture of 2-bromophenol and 4-bromophenol, with 4-bromophenol as the major product due to minimal steric hindrance."
+        ],
+        "answer": "(i) Bromine water yields 2,4,6-tribromophenol (white ppt). (ii) Br2/CS2 at 273 K yields 4-bromophenol as the major product."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which electrophile is generated during the Reimer-Tiemann reaction of phenol with CHCl3 and KOH? A) :CCl2 B) +CCl3 C) +CHO D) :CH2",
+        "answer": "Correct Choice: A. Explanation: Reaction of chloroform (CHCl3) with base (OH-) yields the trichloromethyl anion (:CCl3-), which undergoes alpha-elimination of Cl- to form dichlorocarbene (:CCl2), a neutral electron-deficient electrophile."
+      },
+      {
+        "question": "A mixture of ortho-nitrophenol and para-nitrophenol can be separated by steam distillation because: A) Para-nitrophenol is steam volatile due to intramolecular H-bonding B) Ortho-nitrophenol is steam volatile due to intramolecular H-bonding C) Ortho-nitrophenol has a higher boiling point than para-nitrophenol D) Both compounds form identical hydrogen bonds",
+        "answer": "Correct Choice: B. Explanation: Ortho-nitrophenol exhibits intramolecular H-bonding (chelation) within the single molecule, preventing association with other molecules. This lowers its boiling point and makes it steam volatile, unlike para-nitrophenol which forms intermolecular H-bonds."
+      },
+      {
+        "question": "Sulphonation of phenol with concentrated H2SO4 at 373 K gives predominantly: A) 2-hydroxybenzenesulphonic acid B) 4-hydroxybenzenesulphonic acid C) 2,4-dihydroxybenzenesulphonic acid D) Benzenesulphonic acid",
+        "answer": "Correct Choice: B. Explanation: Sulphonation of phenol is a reversible, temperature-controlled reaction. At 298 K (low temperature), kinetically controlled ortho-hydroxybenzenesulphonic acid predominates. At 373 K (high temperature), thermodynamically controlled 4-hydroxybenzenesulphonic acid (para isomer) is the major product."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 11: Alcohols, Phenols and Ethers",
+      "JEE Main Chemistry Syllabus - Unit 17: Organic Compounds Containing Oxygen"
+    ]
+  }
+}

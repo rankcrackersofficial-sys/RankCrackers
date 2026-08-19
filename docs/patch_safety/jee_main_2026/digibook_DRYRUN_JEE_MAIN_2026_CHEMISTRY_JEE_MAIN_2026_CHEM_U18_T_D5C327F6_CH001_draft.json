@@ -1,0 +1,113 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U18_T_D5C327F6_CH001",
+    "overview": "This learning unit covers fundamental methods of preparation, physical properties, chemical reactivity trends, and practical uses of organic nitrogen-containing compounds, specifically primary, secondary, and tertiary amines, as well as diazonium salts.",
+    "concepts": [
+      {
+        "title": "Gabriel Phthalimide Synthesis",
+        "explanation": "Gabriel phthalimide synthesis is a reliable method for preparing pure primary aliphatic amines. Phthalimide on treatment with ethanolic KOH forms potassium phthalimide, which reacts with an alkyl halide followed by alkaline hydrolysis to yield primary aliphatic amine. Primary aromatic amines cannot be prepared by this method because aryl halides do not undergo nucleophilic substitution with the anion formed by phthalimide under normal conditions."
+      },
+      {
+        "title": "Hofmann Bromamide Degradation Reaction",
+        "explanation": "Primary amides react with bromine in the presence of an aqueous or ethanolic solution of sodium hydroxide to yield primary amines containing one carbon atom less than the parent amide. The reaction involves the migration of an alkyl or aryl group from carbonyl carbon to nitrogen via an isocyanate intermediate."
+      },
+      {
+        "title": "Basicity of Amines in Aqueous Solution",
+        "explanation": "The basic strength of aliphatic amines in aqueous medium depends on three combined factors: inductive effect, steric hindrance, and solvation of conjugate acid ions. For methyl-substituted amines, the basicity order in water is 2° > 1° > 3° > NH3 (Me2NH > MeNH2 > Me3N > NH3). For ethyl-substituted amines, the basicity order in water is 2° > 3° > 1° > NH3 (Et2NH > Et3N > EtNH2 > NH3)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Base Dissociation Constant and pKb",
+        "formula": "pK_b = -\\log_{10} K_b",
+        "applicability": "Determining relative basic strength of nitrogen bases in aqueous solution.",
+        "variables": [
+          {
+            "symbol": "K_b",
+            "meaning": "Base dissociation constant",
+            "unit": "dimensionless / mol L^-1"
+          },
+          {
+            "symbol": "pK_b",
+            "meaning": "Negative logarithm of Kb (lower pKb indicates stronger base)",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Equilibrium Constant for Amine Dissociation",
+        "formula": "K_b = \\frac{[RNH_3^+][OH^-]}{[RNH_2]}",
+        "applicability": "Aqueous equilibrium of primary amines.",
+        "variables": [
+          {
+            "symbol": "[RNH_2]",
+            "meaning": "Equilibrium concentration of amine",
+            "unit": "mol L^-1"
+          },
+          {
+            "symbol": "[RNH_3^+]",
+            "meaning": "Equilibrium concentration of substituted ammonium ion",
+            "unit": "mol L^-1"
+          },
+          {
+            "symbol": "[OH^-]",
+            "meaning": "Equilibrium concentration of hydroxide ion",
+            "unit": "mol L^-1"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Aniline and aryl amines can be synthesized efficiently via Gabriel Phthalimide Synthesis.",
+        "correction": "Aryl halides do not easily undergo nucleophilic substitution (S_N2) with the potassium phthalimide anion due to partial double bond character of the C-X bond and electronic repulsion from the aromatic ring."
+      },
+      {
+        "misconception": "Tertiary amines are always more basic than primary and secondary amines due to the +I effect of three alkyl groups.",
+        "correction": "While the +I effect increases electron density, bulky alkyl groups in tertiary amines cause steric hindrance to protonation and reduce hydration stabilization of the conjugate acid in aqueous solution."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "An organic compound A with molecular formula C3H7NO reacts with Br2 and KOH to form compound B. Compound B reacts with chloroform and alcoholic KOH to give an foul-smelling compound C. Identify A, B, and C.",
+        "steps": [
+          "Step 1: Compound A (C3H7NO) reacts with Br2/KOH (Hofmann bromamide degradation condition). This implies A is an amide with 3 carbon atoms, Propanamide (CH3CH2CONH2).",
+          "Step 2: Hofmann degradation removes the carbonyl carbon, producing primary amine B with 2 carbons: Ethylamine (CH3CH2NH2).",
+          "Step 3: Ethylamine (B) reacts with CHCl3 and alc. KOH (Carbylamine reaction test) to give ethyl isocyanide (CH3CH2NC), which has an extremely unpleasant odor."
+        ],
+        "answer": "A = Propanamide (CH3CH2CONH2), B = Ethylamine (CH3CH2NH2), C = Ethyl isocyanide (CH3CH2NC)"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following amines gives a positive Carbylamine test? (A) N-Methylmethanamine (B) N,N-Dimethylmethanamine (C) Ethanamine (D) N-Ethylethanamine",
+        "answer": "Correct Option: (C) Ethanamine. Explanation: The carbylamine test is specific only to aliphatic and aromatic primary amines. Ethanamine (CH3CH2NH2) is a 1° amine and forms ethyl isocyanide with an offensive odor."
+      },
+      {
+        "question": "What is the correct decreasing order of basic strength of methyl-substituted amines in aqueous solution? (A) (CH3)2NH > CH3NH2 > (CH3)3N > NH3 (B) (CH3)3N > (CH3)2NH > CH3NH2 > NH3 (C) (CH3)2NH > (CH3)3N > CH3NH2 > NH3 (D) CH3NH2 > (CH3)2NH > (CH3)3N > NH3",
+        "answer": "Correct Option: (A) (CH3)2NH > CH3NH2 > (CH3)3N > NH3. Explanation: In aqueous solution, the combined effect of inductive effect, solvation effect, and steric factors leads to 2° (dimethylamine) > 1° (methylamine) > 3° (trimethylamine) > NH3."
+      },
+      {
+        "question": "Benzenediazonium chloride reacts with hypophosphorous acid (H3PO2) in the presence of Cu+ ions to yield: (A) Chlorobenzene (B) Phenol (C) Benzene (D) Nitrobenzene",
+        "answer": "Correct Option: (C) Benzene. Explanation: Mild reducing agents such as H3PO2 or ethanol reduce diazonium salts to parent hydrocarbons (benzene), releasing nitrogen gas and being oxidized to H3PO3 or acetaldehyde respectively."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 12 Chemistry, Chapter 13: Amines",
+      "JEE Main Official Syllabus - Organic Compounds Containing Nitrogen"
+    ]
+  }
+}

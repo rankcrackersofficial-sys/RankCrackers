@@ -5,7 +5,7 @@ import 'package:equatable/equatable.dart';
 class DigiBookBlock extends Equatable {
   final String id;
   final String atomicTopicId;
-  final String type; // brief_note, one_liner, concept_note, example, memory_aid, pyq
+  final String type; // refresher, intuition, core_concept, explanation, diagram, formula, example, misconception, pyq, checkpoint, quick_revision
   final String content;
   final String? contentHindi;
   

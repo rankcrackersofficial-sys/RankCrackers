@@ -8,7 +8,8 @@
     "workload": "deepReasoningPro",
     "modelSource": "policy_default",
     "fallbackUsed": false,
-    "fallbackReason": null
+    "fallbackReason": null,
+    "structuredOutput": true
   },
   "review": {
     "verdict": "PASS",
@@ -18,8 +19,8 @@
     "noMultipleCorrectRisk": true,
     "noScopeLeakage": true,
     "answerKeysVerified": true,
-    "reviewedMacroSlot": "macro_test_2",
+    "reviewedSlot": "macro_test_2",
     "blockingIssues": [],
-    "reviewNotes": "All 12 items are well-constructed, technically accurate, and strictly aligned with their respective atomic topics. The numeric values, formulas, and concepts are properly tested. Minor formatting suggestion: consider wrapping chemical formulas in the options (e.g., Q12) and units in options (e.g., Q3) with LaTeX delimiters for better rendering, though the current text-based representations are unambiguous and acceptable."
+    "reviewNotes": "All questions have been reviewed and are technically correct. Solutions align accurately with the problem statements. No scope leakage was detected as all questions strictly fall within the provided source atoms. Unit choices and formula applications are sound. The item keys are accurate and unambiguous."
   }
 }

@@ -1,0 +1,91 @@
+{
+  "artifactType": "AAF_DIGIBOOK_ASSEMBLY_PAYLOAD_WAVE0",
+  "assembledAt": "2026-08-16T13:06:15.150530Z",
+  "eligibleCandidateId": "db_draft_DRYRUN_JEE_MAIN_2026_CHEMISTRY",
+  "eligiblePillar": "digibook",
+  "eligibilityVerdict": "PASS",
+  "claimsValidatedCount": 1,
+  "sourceVerified": true,
+  "sourceSufficient": true,
+  "unsupportedClaims": 0,
+  "assembledDraft": {
+    "id": "db_draft_DRYRUN_JEE_MAIN_2026_CHEMISTRY",
+    "sourceId": null,
+    "type": "digibook",
+    "rawData": {
+      "realmId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY",
+      "chapters": [
+        {
+          "id": "ch_DRYRUN_JEE_MAIN_2026_CHEMISTRY_chemistry",
+          "realm_id": "DRYRUN_JEE_MAIN_2026_CHEMISTRY",
+          "title": "Chemistry Core Knowledge",
+          "subject": "Chemistry",
+          "unit_ids": [
+            "unit_DRYRUN_JEE_MAIN_2026_CHEMISTRY_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001"
+          ],
+          "order": 0
+        }
+      ],
+      "units": [
+        {
+          "id": "unit_DRYRUN_JEE_MAIN_2026_CHEMISTRY_DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001",
+          "atomic_topic_id": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH001",
+          "chapter_id": "ch_DRYRUN_JEE_MAIN_2026_CHEMISTRY_chemistry",
+          "realm_id": "DRYRUN_JEE_MAIN_2026_CHEMISTRY",
+          "concept": "Principles Related to Practical Chemistry (Qualitative Organic Analysis)",
+          "definition": "Formal pedagogical definition for Principles Related to Practical Chemistry (Qualitative Organic Analysis) based on standard reference materials.",
+          "explanation": "Comprehensive conceptual breakdown including underlying principles of Lassaigne's Test, Detection of functional groups.",
+          "examples": [
+            "Practical application of Principles Related to Practical Chemistry (Qualitative Organic Analysis) in real-world scenarios.",
+            "Historical context example."
+          ],
+          "keywords": [
+            "principles related to practical chemistry (qualitative organic analysis)",
+            "lassaigne's test",
+            "detection of functional groups"
+          ],
+          "pyq_ids": [
+            "pyq_2024_001",
+            "pyq_2022_056"
+          ],
+          "pyq_count": 2,
+          "pyq_weightage": 7.5,
+          "crucible_mapped": false,
+          "crucible_node_ids": [],
+          "difficulty": 3,
+          "status": "draft",
+          "version": 1
+        }
+      ],
+      "coverage_report": {
+        "total_atomic_topics": 1,
+        "total_digibook_units": 1,
+        "matched_count": 1,
+        "coverage_percentage": 100.0,
+        "missing_topic_ids": [],
+        "isValid": true
+      }
+    },
+    "audit": {
+      "sourceUrl": "internal_generation",
+      "sourceHash": "gen_1786885575149",
+      "documentHash": "db_DRYRUN_JEE_MAIN_2026_CHEMISTRY",
+      "createdAt": 1786885575149,
+      "discoveredAt": 1786885575149,
+      "lastSeenAt": 1786885575149,
+      "processedAt": null,
+      "discoveryCount": 1,
+      "contentVersion": 1,
+      "impactLevel": "LOW",
+      "confidenceScore": 1.0,
+      "workerVersion": "1.2.0",
+      "provider": "digibook_assembly_worker",
+      "validationStatus": "pending",
+      "publishedBy": null,
+      "promotionBatchId": null,
+      "validatedAt": null,
+      "publishedAt": null
+    },
+    "status": "under_review"
+  }
+}

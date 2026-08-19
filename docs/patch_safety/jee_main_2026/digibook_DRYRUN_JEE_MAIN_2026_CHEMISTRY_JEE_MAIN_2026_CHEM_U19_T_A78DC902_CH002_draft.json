@@ -1,0 +1,117 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_A78DC902_CH002",
+    "overview": "Proteins are high-molecular-weight nitrogenous organic polymers essential for biological structure and function. They are composed of alpha-amino acids linked together by peptide bonds. This module details the chemical nature of alpha-amino acids, zwitterion formation, isoelectric points, peptide bond synthesis, structural hierarchy (primary, secondary, tertiary, and quaternary), protein denaturation, and the action of enzymes as biological catalysts.",
+    "concepts": [
+      {
+        "title": "Alpha-Amino Acids and Zwitterion Formation",
+        "explanation": "Alpha-amino acids contain both an amino group (-NH2) and a carboxyl group (-COOH) attached to the same alpha-carbon atom. In aqueous solution, the acidic carboxyl group donates a proton to the basic amino group, forming a dipolar dipolar ion called a zwitterion. Zwitterions are amphoteric, displaying both acidic and basic properties."
+      },
+      {
+        "title": "Isoelectric Point and Classification",
+        "explanation": "The isoelectric point (pI) is the specific pH at which an amino acid exists predominantly as a neutral zwitterion with zero net charge and shows no migration in an electric field. Amino acids are classified based on essentiality (essential vs non-essential) and side-chain polarity (acidic, basic, or neutral)."
+      },
+      {
+        "title": "Peptide Bond and Polypeptides",
+        "explanation": "A peptide bond (-CO-NH-) is an amide linkage formed between the carboxyl group of one alpha-amino acid and the alpha-amino group of another with the elimination of a water molecule. Condensation of multiple amino acids forms oligopeptides and long-chain polypeptides."
+      },
+      {
+        "title": "Levels of Protein Structure",
+        "explanation": "Protein structure is organized into four levels: Primary (linear sequence of amino acids linked by peptide bonds), Secondary (local spatial arrangement such as alpha-helix and beta-pleated sheets stabilized by hydrogen bonds), Tertiary (overall 3D folding stabilized by hydrophobic interactions, ionic bonds, hydrogen bonds, and disulfide bridges), and Quaternary (spatial arrangement of two or more polypeptide subunits)."
+      },
+      {
+        "title": "Denaturation of Proteins and Enzyme Catalysis",
+        "explanation": "Denaturation is the loss of native biological activity and 3D tertiary/secondary conformation caused by physical changes (heat) or chemical changes (pH, heavy metal ions), leaving the primary structure intact. Enzymes are biological catalysts, highly specific globular proteins that increase reaction rates by lowering activation energy."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Isoelectric Point (pI) for Neutral Amino Acids",
+        "formula": "pI = (pK_a1 + pK_a2) / 2",
+        "applicability": "Used to calculate the isoelectric pH of neutral alpha-amino acids with two ionizable groups.",
+        "variables": [
+          {
+            "symbol": "pK_a1",
+            "meaning": "Negative logarithm of acid dissociation constant of the carboxyl group (-COOH)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "pK_a2",
+            "meaning": "Negative logarithm of acid dissociation constant of the ammonium group (-NH3+)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "pI",
+            "meaning": "Isoelectric point pH",
+            "unit": "pH units"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Denaturation breaks the peptide bonds in proteins, converting them back into individual free amino acids.",
+        "correction": "Denaturation only disrupts higher-order structures (secondary, tertiary, quaternary) by breaking non-covalent forces and hydrogen bonds; covalent peptide bonds remain completely intact, keeping the primary sequence unchanged."
+      },
+      {
+        "misconception": "All natural alpha-amino acids are optically active.",
+        "correction": "Glycine (H2N-CH2-COOH) is achiral and optically inactive because its alpha-carbon is attached to two identical hydrogen atoms."
+      },
+      {
+        "misconception": "Enzymes alter the equilibrium position of a biochemical reaction.",
+        "correction": "Enzymes only accelerate the rate at which equilibrium is reached by lowering activation energy; they do not shift the chemical equilibrium position or change delta G."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the number of peptide bonds present in a linear polypeptide constructed from 10 alpha-amino acid residues.",
+        "steps": [
+          "Step 1: Understand that a peptide bond forms between two adjacent amino acid residues with the elimination of one water molecule.",
+          "Step 2: For a linear polymer made of N monomer units, the number of linkages formed is given by (N - 1).",
+          "Step 3: Here N = 10, so the number of peptide bonds = 10 - 1 = 9."
+        ],
+        "answer": "9 peptide bonds"
+      },
+      {
+        "problem": "Given that the pKa of the -COOH group of Alanine is 2.34 and the pKa of its -NH3+ group is 9.69, determine its isoelectric point (pI).",
+        "steps": [
+          "Step 1: Identify that Alanine is a neutral amino acid with two ionizable groups.",
+          "Step 2: Apply the formula pI = (pK_a1 + pK_a2) / 2.",
+          "Step 3: Substitute values: pI = (2.34 + 9.69) / 2 = 12.03 / 2 = 6.015."
+        ],
+        "answer": "pI = 6.015"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following alpha-amino acids lacks a chiral center and is optically inactive? A) Alanine B) Glycine C) Leucine D) Lysine",
+        "answer": "Correct Option: B. Glycine has two hydrogen atoms attached to the alpha-carbon atom (H2N-CH2-COOH), making it achiral and optically inactive."
+      },
+      {
+        "question": "The secondary structure of proteins, such as the alpha-helix, is primarily stabilized by which type of interaction? A) Disulfide bridges B) Peptide linkages C) Hydrogen bonds D) Covalent bonds",
+        "answer": "Correct Option: C. The alpha-helix secondary structure is stabilized by intramolecular hydrogen bonds between the carbonyl oxygen (-CO) of one amino acid residue and the amino hydrogen (-NH) of a fourth residue further down the chain."
+      },
+      {
+        "question": "When an egg is boiled, albumin coagulates due to denaturation. Which structural level of albumin remains unaltered during this process? A) Primary structure B) Secondary structure C) Tertiary structure D) Quaternary structure",
+        "answer": "Correct Option: A. Denaturation disrupts hydrogen bonds and tertiary folding but does not break covalent peptide bonds; therefore, the primary amino acid sequence remains intact."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 12 Chemistry, Chapter 14: Biomolecules",
+      "JEE Main Chemistry Official Syllabus - Biomolecules (Proteins and Amino Acids)"
+    ]
+  }
+}

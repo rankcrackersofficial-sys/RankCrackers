@@ -1,0 +1,127 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_626F9D1B_CH001",
+    "overview": "This comprehensive unit covers fundamental principles of organic chemistry including the tetravalency of carbon, hybridization (sp3, sp2, sp), molecular shapes, functional group classification (containing O, N, S, and halogens), homologous series, and structural and stereoisomerism.",
+    "concepts": [
+      {
+        "title": "Tetravalency of Carbon and Hybridization",
+        "explanation": "Carbon has an electronic configuration of 1s2 2s2 2p2. In its excited state, one electron from 2s shifts to 2pz, providing four unpaired electrons. Depending on whether carbon forms single, double, or triple bonds, it undergoes sp3 (tetrahedral, 109.5°), sp2 (trigonal planar, 120°), or sp (linear, 180°) hybridization."
+      },
+      {
+        "title": "Classification of Organic Compounds & Functional Groups",
+        "explanation": "Organic compounds are classified into acyclic (open chain) and cyclic (alicyclic and aromatic) compounds. Functional groups determine chemical reactivity and include haloalkanes (-X), alcohols (-OH), ethers (-O-), aldehydes (-CHO), ketones (-CO-), carboxylic acids (-COOH), amines (-NH2), thiols (-SH), and sulfonic acids (-SO3H)."
+      },
+      {
+        "title": "Homologous Series",
+        "explanation": "A series of organic compounds sharing the same functional group, similar chemical properties, and a general chemical formula, where successive members differ by a -CH2- unit (14 u molar mass)."
+      },
+      {
+        "title": "Isomerism: Structural and Stereoisomerism",
+        "explanation": "Isomers are compounds with the same molecular formula but different structures or spatial arrangements. Structural isomerism includes chain, position, functional, metamerism, tautomerism, and ring-chain isomerism. Stereoisomerism includes geometrical (cis/trans, E/Z) and optical isomerism (enantiomers, diastereomers)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Degree of Unsaturation / Double Bond Equivalent (DBE)",
+        "formula": "DBE = C + 1 - (H / 2) + (N / 2) - (X / 2)",
+        "applicability": "Calculates the total number of rings and pi-bonds in a molecule of formula C_c H_h N_n X_x O_o",
+        "variables": [
+          {
+            "symbol": "C",
+            "meaning": "Number of Carbon atoms",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "H",
+            "meaning": "Number of Hydrogen atoms",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "N",
+            "meaning": "Number of Nitrogen atoms",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "X",
+            "meaning": "Number of Halogen atoms (F, Cl, Br, I)",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "General Formula of Alkanes, Alkenes, and Alkynes",
+        "formula": "Alkanes: C_n H_(2n+2), Alkenes: C_n H_(2n), Alkynes: C_n H_(2n-2)",
+        "applicability": "Determines homologous series molecular formulas for open-chain hydrocarbons",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of carbon atoms",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Hybridization involves actual physical mixing of atomic orbitals after bond formation.",
+        "correction": "Hybridization is a theoretical concept occurring prior to bond formation to lower steric repulsion and maximize orbital overlap during bonding."
+      },
+      {
+        "misconception": "Conformational isomers are structural isomers.",
+        "correction": "Conformers arise due to free rotation around sigma bonds without breaking any chemical bonds, classifying them under stereoisomerism, not structural isomerism."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the total number of sigma (σ) and pi (π) bonds in CH2=CH-C≡CH (but-1-en-3-yne), and state the hybridization of each carbon atom from C1 to C4.",
+        "steps": [
+          "Step 1: Write the expanded structural formula: H2C1=C2H-C3≡C4H.",
+          "Step 2: Count sigma bonds: 3 C-H single bonds, 1 C1=C2 sigma, 1 C2-C3 sigma, 1 C3≡C4 sigma, 2 remaining C-H bonds. Total σ bonds = 7.",
+          "Step 3: Count pi bonds: 1 in C1=C2 double bond, 2 in C3≡C4 triple bond. Total π bonds = 3.",
+          "Step 4: Determine hybridization: C1 forms 3 σ bonds -> sp2; C2 forms 3 σ bonds -> sp2; C3 forms 2 σ bonds -> sp; C4 forms 2 σ bonds -> sp."
+        ],
+        "answer": "Total σ bonds = 7, Total π bonds = 3. Hybridizations: C1=sp2, C2=sp2, C3=sp, C4=sp."
+      },
+      {
+        "problem": "Find the Double Bond Equivalent (DBE) for C4H6O and list two structural functional isomers matching this formula.",
+        "steps": [
+          "Step 1: Apply DBE formula: DBE = C + 1 - H/2 = 4 + 1 - 6/2 = 5 - 3 = 2.",
+          "Step 2: A DBE of 2 indicates either 2 pi bonds, 1 ring + 1 pi bond, or 2 rings.",
+          "Step 3: Functional isomers with oxygen can be unsaturated aldehydes/ketones or cyclic ethers/alcohols. Example 1: CH2=CH-CH2-CHO (but-3-enal). Example 2: CH3-CH=CH-CHO (but-2-enal) or CH3-CO-CH=CH2 (but-3-en-2-one)."
+        ],
+        "answer": "DBE = 2. Two structural functional isomers are But-3-enal (aldehyde) and But-3-en-2-one (ketone)."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "What is the hybridization state of the central carbon atom in propadiene (CH2=C=CH2)? Options: A) sp3, B) sp2, C) sp, D) dsp2.",
+        "answer": "Correct Answer: C) sp. The central carbon forms two double bonds (two sigma bonds and two pi bonds), requiring linear sp hybridization."
+      },
+      {
+        "question": "Which of the following pair represents metamers? Options: A) CH3CH2OCH2CH3 and CH3OCH2CH2CH3, B) CH3CH2CH2OH and CH3CH(OH)CH3, C) CH3COOH and HCOOCH3, D) CH3CH2CH2CHO and CH3COCH2CH3.",
+        "answer": "Correct Answer: A) CH3CH2OCH2CH3 and CH3OCH2CH3. Metamers are isomers having different alkyl chains attached to the same polyvalent functional group (-O-)."
+      },
+      {
+        "question": "How many structural isomers are possible for an alkane with molecular formula C5H12? Options: A) 2, B) 3, C) 4, D) 5.",
+        "answer": "Correct Answer: B) 3. The structural isomers are pentane (n-pentane), 2-methylbutane (isopentane), and 2,2-dimethylpropane (neopentane)."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry - Chapter 12: Organic Chemistry - Some Basic Principles and Techniques",
+      "JEE Main Syllabus 2026 Chemistry Section - Unit 14: Basic Principles of Organic Chemistry"
+    ]
+  }
+}

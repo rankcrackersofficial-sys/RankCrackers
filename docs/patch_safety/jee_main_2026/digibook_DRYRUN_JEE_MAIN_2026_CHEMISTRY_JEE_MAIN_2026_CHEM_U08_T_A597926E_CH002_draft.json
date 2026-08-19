@@ -1,0 +1,196 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U08_T_A597926E_CH002",
+    "overview": "Chemical Kinetics deals with the rates of chemical reactions, the factors influencing these rates, and the microscopic mechanisms by which reactions occur. This node covers reaction rates, factors affecting reaction rates (concentration, pressure, temperature, catalyst), rate laws, order and molecularity, integrated rate equations for zero and first-order reactions, Arrhenius equation, activation energy, and collision theory.",
+    "concepts": [
+      {
+        "title": "Rate of Reaction and Factors Affecting It",
+        "explanation": "The rate of a reaction is defined as the change in concentration of a reactant or product per unit time. It can be expressed as an average rate over an interval or an instantaneous rate at a specific moment. Factors influencing reaction rate include reactant concentration (or partial pressure in gases), temperature, presence of a catalyst, surface area of reactants, and exposure to radiation."
+      },
+      {
+        "title": "Elementary vs Complex Reactions, Order, and Molecularity",
+        "explanation": "An elementary reaction occurs in a single collision step, whereas a complex reaction proceeds through a sequence of elementary steps (a mechanism). Order of reaction is an experimentally determined power to which reactant concentration is raised in the rate law expression; it can be zero, fractional, negative, or integer. Molecularity is the theoretical total number of reacting species colliding simultaneously in an elementary step and must be a positive integer (1, 2, or 3)."
+      },
+      {
+        "title": "Zero and First-Order Reaction Kinetics",
+        "explanation": "For a zero-order reaction, rate is independent of reactant concentration: -d[A]/dt = k, leading to integrated form [A] = [A]_0 - kt and half-life t_1/2 = [A]_0 / (2k). For a first-order reaction, rate is directly proportional to concentration: -d[A]/dt = k[A], giving integrated form k = (2.303/t) * log10([A]_0 / [A]) and half-life t_1/2 = 0.693 / k, which is independent of the initial concentration."
+      },
+      {
+        "title": "Temperature Dependence and Arrhenius Theory",
+        "explanation": "Reaction rates generally increase exponentially with temperature. Arrhenius proposed that rate constant k = A * exp(-Ea / (R*T)), where A is the frequency factor and Ea is the activation energy (minimum energy required for reactants to form the activated complex). In logarithmic form, log10(k2/k1) = (Ea / (2.303 * R)) * (T2 - T1) / (T1 * T2)."
+      },
+      {
+        "title": "Collision Theory of Bimolecular Gaseous Reactions",
+        "explanation": "According to collision theory, molecules must collide to react. However, only effective collisions lead to product formation. Effective collisions require both sufficient kinetic energy (greater than or equal to activation energy Ea) and proper steric orientation of colliding molecules. The rate is expressed as Rate = P * Z_AB * exp(-Ea / (R*T)), where Z_AB is collision frequency and P is steric/probability factor."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Integrated Rate Law (Zero Order)",
+        "formula": "[A] = [A]_0 - k * t",
+        "applicability": "Zero-order reactions where rate is independent of concentration",
+        "variables": [
+          {
+            "symbol": "[A]",
+            "meaning": "Concentration of reactant at time t",
+            "unit": "mol L^-1"
+          },
+          {
+            "symbol": "[A]_0",
+            "meaning": "Initial concentration of reactant",
+            "unit": "mol L^-1"
+          },
+          {
+            "symbol": "k",
+            "meaning": "Zero-order rate constant",
+            "unit": "mol L^-1 s^-1"
+          },
+          {
+            "symbol": "t",
+            "meaning": "Elapsed time",
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "label": "Integrated Rate Law (First Order)",
+        "formula": "k = (2.303 / t) * log10([A]_0 / [A])",
+        "applicability": "First-order reactions where rate depends linearly on reactant concentration",
+        "variables": [
+          {
+            "symbol": "k",
+            "meaning": "First-order rate constant",
+            "unit": "s^-1"
+          },
+          {
+            "symbol": "[A]_0",
+            "meaning": "Initial concentration of reactant",
+            "unit": "mol L^-1"
+          },
+          {
+            "symbol": "[A]",
+            "meaning": "Concentration of reactant at time t",
+            "unit": "mol L^-1"
+          },
+          {
+            "symbol": "t",
+            "meaning": "Elapsed time",
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "label": "Half-life of First-Order Reaction",
+        "formula": "t_1/2 = 0.693 / k",
+        "applicability": "First-order reactions (independent of initial concentration)",
+        "variables": [
+          {
+            "symbol": "t_1/2",
+            "meaning": "Half-life period",
+            "unit": "s"
+          },
+          {
+            "symbol": "k",
+            "meaning": "First-order rate constant",
+            "unit": "s^-1"
+          }
+        ]
+      },
+      {
+        "label": "Arrhenius Equation (Two-Temperature Form)",
+        "formula": "log10(k2 / k1) = (Ea / (2.303 * R)) * ((T2 - T1) / (T1 * T2))",
+        "applicability": "Calculating activation energy or rate constants at two different temperatures",
+        "variables": [
+          {
+            "symbol": "k1, k2",
+            "meaning": "Rate constants at temperatures T1 and T2",
+            "unit": "Same rate constant units"
+          },
+          {
+            "symbol": "Ea",
+            "meaning": "Activation energy",
+            "unit": "J mol^-1"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant (8.314 J K^-1 mol^-1)",
+            "unit": "J K^-1 mol^-1"
+          },
+          {
+            "symbol": "T1, T2",
+            "meaning": "Absolute temperatures",
+            "unit": "K"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Order and molecularity of a reaction are always equal and interchangeable.",
+        "correction": "Order is an experimental quantity applicable to elementary and complex reactions (can be zero or fractional), while molecularity is theoretical, defined only for elementary steps, and must be a positive integer."
+      },
+      {
+        "misconception": "Half-life of a first-order reaction increases with increasing initial concentration.",
+        "correction": "The half-life of a first-order reaction (t_1/2 = 0.693/k) is completely independent of initial reactant concentration."
+      },
+      {
+        "misconception": "A catalyst changes the overall reaction enthalpy change (delta H).",
+        "correction": "A catalyst provides an alternative path with lower activation energy, increasing forward and backward reaction rates equally without altering the thermodynamic enthalpy change (delta H) or equilibrium constant."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "A first-order reaction is 20% complete in 10 minutes. Calculate the time required for the reaction to be 75% complete.",
+        "steps": [
+          "Use the first-order integrated rate law: k = (2.303 / t) * log10([A]_0 / [A]).",
+          "For 20% completion, remaining fraction [A]/[A]_0 = 0.8. Thus: k = (2.303 / 10) * log10(1 / 0.8) = (2.303 / 10) * 0.0969 = 0.0223 min^-1.",
+          "For 75% completion, remaining fraction [A]/[A]_0 = 0.25. Set up equation for time t: t = (2.303 / 0.0223) * log10(1 / 0.25) = (2.303 / 0.0223) * log10(4).",
+          "Calculate log10(4) = 0.6021. Therefore: t = (2.303 / 0.0223) * 0.6021 = 62.18 minutes."
+        ],
+        "answer": "62.18 minutes"
+      },
+      {
+        "problem": "The rate constant of a reaction doubles when the temperature increases from 300 K to 310 K. Calculate the activation energy (Ea) of the reaction. (Given R = 8.314 J K^-1 mol^-1, log10(2) = 0.3010)",
+        "steps": [
+          "Use Arrhenius equation: log10(k2 / k1) = (Ea / (2.303 * R)) * ((T2 - T1) / (T1 * T2)).",
+          "Given k2 / k1 = 2, T1 = 300 K, T2 = 310 K, R = 8.314 J K^-1 mol^-1.",
+          "Substitute values: 0.3010 = (Ea / (2.303 * 8.314)) * (10 / (300 * 310)).",
+          "Simplify denominator: 2.303 * 8.314 = 19.147, and T1 * T2 = 93000.",
+          "Solve for Ea: Ea = (0.3010 * 19.147 * 93000) / 10 = 53598.6 J mol^-1 = 53.6 kJ mol^-1."
+        ],
+        "answer": "53.6 kJ mol^-1"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "For a zero-order reaction A -> Products, if the initial concentration of A is doubled, what happens to the half-life of the reaction? A) It remains unchanged. B) It is halved. C) It is doubled. D) It quadruples.",
+        "answer": "C) It is doubled. For a zero-order reaction, t_1/2 = [A]_0 / (2k), which is directly proportional to initial concentration [A]_0."
+      },
+      {
+        "question": "Which of the following statements regarding the molecularity of a reaction is correct? A) Molecularity can be zero or a fraction. B) Molecularity is defined for complex overall reactions as well. C) Molecularity represents the number of reacting species taking part in an elementary step. D) Molecularity varies with temperature and pressure.",
+        "answer": "C) Molecularity represents the number of reacting species taking part in an elementary step. Molecularity is always a positive integer and applies only to elementary steps."
+      },
+      {
+        "question": "A plot of ln(k) vs 1/T for a chemical reaction yields a straight line with a slope equal to -6000 K. What is the activation energy Ea of the reaction? (R = 8.314 J K^-1 mol^-1) A) 49.88 kJ mol^-1 B) 721.5 J mol^-1 C) 6.00 kJ mol^-1 D) 24.94 kJ mol^-1",
+        "answer": "A) 49.88 kJ mol^-1. According to Arrhenius equation ln(k) = ln(A) - Ea/(R*T), the slope of ln(k) vs 1/T is -Ea/R. Thus -Ea/R = -6000 K => Ea = 6000 * 8.314 = 49884 J mol^-1 = 49.88 kJ mol^-1."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12 - Chapter 4: Chemical Kinetics",
+      "JEE Main Official Syllabus 2026 - Section Physical Chemistry: Chemical Kinetics"
+    ]
+  }
+}

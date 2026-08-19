@@ -1,0 +1,131 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U01_T_8B08B474_CH001",
+    "overview": "This content node covers fundamental concepts of chemistry including the classification of matter, Dalton's atomic theory, basic laws of chemical combination, atomic and molecular masses, mole concept, empirical and molecular formulas, and quantitative stoichiometric calculations.",
+    "concepts": [
+      {
+        "title": "Matter and Its Nature",
+        "explanation": "Matter is anything that has mass and occupies space. It exists in physical states (solid, liquid, gas) and can be classified chemically into pure substances (elements and compounds) and mixtures (homogeneous and heterogeneous)."
+      },
+      {
+        "title": "Dalton's Atomic Theory",
+        "explanation": "Dalton proposed that matter consists of indivisible atoms. Atoms of a given element are identical in mass and properties. Chemical reactions involve reorganization of atoms, which are neither created nor destroyed."
+      },
+      {
+        "title": "Laws of Chemical Combination",
+        "explanation": "Includes Law of Conservation of Mass (Lavoisier), Law of Definite Proportions (Proust), Law of Multiple Proportions (Dalton), and Gay-Lussac's Law of Gaseous Volumes, which govern mass and volume relationships in chemical reactions."
+      },
+      {
+        "title": "Mole Concept and Stoichiometry",
+        "explanation": "One mole represents 6.022 x 10^23 entities (Avogadro's number). Molar mass is the mass of one mole of a substance in grams. Stoichiometry uses balanced chemical equations to determine mass-volume relationships and limiting reagents."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Mole Calculation from Mass",
+        "formula": "n = m / M",
+        "applicability": "Applicable for calculating moles when given sample mass and molar mass.",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of moles",
+            "unit": "mol"
+          },
+          {
+            "symbol": "m",
+            "meaning": "Mass of the substance",
+            "unit": "g"
+          },
+          {
+            "symbol": "M",
+            "meaning": "Molar mass",
+            "unit": "g/mol"
+          }
+        ]
+      },
+      {
+        "label": "Mole Calculation for Ideal Gas at STP",
+        "formula": "n = V / 22.4",
+        "applicability": "Applicable to ideal gases at standard temperature and pressure (STP, 0 deg C and 1 atm).",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of moles",
+            "unit": "mol"
+          },
+          {
+            "symbol": "V",
+            "meaning": "Volume of gas at STP",
+            "unit": "L"
+          }
+        ]
+      },
+      {
+        "label": "Molecular Formula Relation",
+        "formula": "Molecular Formula = n x (Empirical Formula)",
+        "applicability": "Relates empirical formula to molecular formula using integer multiple n = Molecular Weight / Empirical Weight.",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Integer multiplier",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "One mole of any gas always occupies 22.4 L regardless of temperature and pressure.",
+        "correction": "The volume of 22.4 L per mole applies only to an ideal gas at standard temperature and pressure (273.15 K, 1 atm)."
+      },
+      {
+        "misconception": "The empirical formula and molecular formula must always be different.",
+        "correction": "They are identical when the molecular formula cannot be reduced further (i.e., multiplier n = 1, such as for water H2O or carbon dioxide CO2)."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "A compound contains 40.0% Carbon, 6.7% Hydrogen, and 53.3% Oxygen by mass. If its molar mass is 180 g/mol, determine its empirical and molecular formulas.",
+        "steps": [
+          "Step 1: Divide percentages by respective atomic masses: C = 40.0/12 = 3.33, H = 6.7/1 = 6.70, O = 53.3/16 = 3.33.",
+          "Step 2: Divide by the smallest mole value (3.33) to find simplest atomic ratio: C = 1, H = 2, O = 1. Empirical formula = CH2O.",
+          "Step 3: Calculate empirical mass = 12 + 2 + 16 = 30 g/mol.",
+          "Step 4: Find integer ratio n = Molar mass / Empirical mass = 180 / 30 = 6.",
+          "Step 5: Multiply empirical formula indices by 6: Molecular formula = C6H12O6."
+        ],
+        "answer": "Empirical Formula = CH2O, Molecular Formula = C6H12O6"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which law explains why hydrogen and oxygen form H2O and H2O2 in a mass ratio of 1:8 and 1:16 for oxygen combined with a fixed mass of hydrogen? Options: (A) Law of Definite Proportions (B) Law of Multiple Proportions (C) Law of Conservation of Mass (D) Gay-Lussac's Law",
+        "answer": "(B) Law of Multiple Proportions"
+      },
+      {
+        "question": "How many total atoms are present in 4.25 g of ammonia gas (NH3)? Options: (A) 6.022 x 10^23 (B) 1.505 x 10^23 (C) 3.011 x 10^23 (D) 1.204 x 10^24",
+        "answer": "(A) 6.022 x 10^23 atoms (0.25 mol NH3 contains 0.25 x 4 = 1.0 mol atoms)"
+      },
+      {
+        "question": "When 0.5 moles of BaCl2 react with excess Na2SO4 according to BaCl2 + Na2SO4 -> BaSO4 + 2NaCl, how many moles of BaSO4 precipitate are formed? Options: (A) 1.0 mol (B) 0.5 mol (C) 0.25 mol (D) 2.0 mol",
+        "answer": "(B) 0.5 mol"
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 1: Some Basic Concepts of Chemistry",
+      "JEE Main Official Chemistry Syllabus 2026"
+    ]
+  }
+}

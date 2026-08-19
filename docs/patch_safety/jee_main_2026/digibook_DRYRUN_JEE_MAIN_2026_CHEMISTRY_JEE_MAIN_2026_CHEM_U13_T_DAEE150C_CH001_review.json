@@ -1,0 +1,31 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "FAIL",
+    "itemCountReviewed": 1,
+    "approvedAtomIds": [],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U13_T_DAEE150C_CH001"
+    ],
+    "blockingIssues": [
+      "The chemical equation for Ammonium Phosphomolybdate Formation in the formula register is unbalanced. The reactant side contains '12(NH4)2MoO4' along with '3NH4+', resulting in 27 ammonium ions, but the product side only has 3 ammonium ions in '(NH4)3[P(Mo12O40)]'. Replacing '12(NH4)2MoO4' with '12MoO4^2-' will fix the mass and charge balance for the net ionic equation."
+    ],
+    "reviewNotes": "The content thoroughly and accurately covers the qualitative analysis tests for Nitrogen, Sulphur, Halogens, and Phosphorus. The explanations of Lassaigne's extract, typical interferences, and misconception corrections are excellent. However, the formula register contains a stoichiometrically unbalanced equation for the detection of Phosphorus, which needs to be corrected to maintain mathematical/chemical rigor.",
+    "conceptCorrectnessPass": true,
+    "formulaPass": false,
+    "selfCheckPass": true,
+    "workedExampleMathPass": true
+  }
+}

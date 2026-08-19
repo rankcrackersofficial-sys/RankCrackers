@@ -1,0 +1,108 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_6D173CFD_CH001",
+    "overview": "Ethers are organic compounds characterized by an oxygen atom bonded to two alkyl or aryl groups (R-O-R'). Understanding the structural features of ethers—including oxygen hybridization, C-O-C bond angle, bond lengths, and net dipole moment—is essential for predicting their physical properties, solubility, and chemical reactivity.",
+    "concepts": [
+      {
+        "title": "Hybridization and Geometry of the Oxygen Atom",
+        "explanation": "In ethers, the central oxygen atom undergoes sp3 hybridization. Oxygen forms two sigma bonds with the carbon atoms of the attached organic groups using two sp3 hybrid orbitals. The remaining two sp3 hybrid orbitals contain unshared lone pairs of electrons. Consequently, the molecular geometry around oxygen is bent or V-shaped."
+      },
+      {
+        "title": "C-O-C Bond Angle and Steric Effects",
+        "explanation": "Though oxygen has two lone pairs (which typically compress bond angles below the ideal tetrahedral angle of 109.5 degrees, as in water's 104.5 degrees), the C-O-C bond angle in simple ethers like dimethyl ether is widened to approximately 111.7 degrees. This expansion beyond the tetrahedral angle occurs because steric repulsion between bulky alkyl groups overcomes lone pair-lone pair repulsion."
+      },
+      {
+        "title": "Polarity and Dipole Moment",
+        "explanation": "The C-O bond is polar owing to the electronegativity difference between oxygen (3.5) and carbon (2.5). Because the C-O-C framework is non-linear (bent geometry), the two C-O bond dipole vectors add up constructively rather than cancelling out, giving ethers a net permanent dipole moment (typically 1.1 to 1.3 Debye)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Net Dipole Moment of Symmetrical Ether",
+        "formula": "mu_net = 2 * mu_CO * cos(theta / 2)",
+        "applicability": "Calculates the resultant dipole moment for symmetrical ethers (R-O-R) based on individual C-O bond dipole moments and the bond angle.",
+        "variables": [
+          {
+            "symbol": "mu_net",
+            "meaning": "Net dipole moment of the ether molecule",
+            "unit": "Debye (D)"
+          },
+          {
+            "symbol": "mu_CO",
+            "meaning": "Dipole moment of a single C-O bond",
+            "unit": "Debye (D)"
+          },
+          {
+            "symbol": "theta",
+            "meaning": "C-O-C bond angle",
+            "unit": "degrees"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "The C-O-C bond angle in ethers is smaller than 109.5 degrees because oxygen possesses two lone pairs like water.",
+        "correction": "While water has an H-O-H angle of 104.5 degrees due to lone pair-lone pair repulsion, in ethers the steric repulsion between bulky alkyl groups predominates, pushing the C-O-C angle open to around 111.7 degrees."
+      },
+      {
+        "misconception": "Ethers are non-polar because the central oxygen is flanked symmetrically by alkyl groups.",
+        "correction": "Ethers possess a bent (V-shaped) geometry, so the two polar C-O bond dipoles do not point in opposite directions (180 degrees) and do not cancel out, resulting in a net dipole moment."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Compare the bond angles of water (H2O), dimethyl ether (CH3-O-CH3), and di-tert-butyl ether [(CH3)3C-O-C(CH3)3], and explain the observed trend.",
+        "steps": [
+          "Step 1: Identify the hybridization of central oxygen in all three species: sp3 hybridization with 2 bond pairs and 2 lone pairs.",
+          "Step 2: Evaluate the balance between lone pair-lone pair repulsion and substituent steric repulsion.",
+          "Step 3: In H2O, small hydrogen atoms cause minimal steric repulsion, allowing lone-pair repulsion to compress the H-O-H angle to 104.5 degrees.",
+          "Step 4: In CH3-O-CH3, methyl groups introduce significant steric hindrance, widening the C-O-C angle to 111.7 degrees.",
+          "Step 5: In di-tert-butyl ether, extremely bulky tert-butyl groups create strong steric repulsions, increasing the C-O-C angle further to over 112 degrees."
+        ],
+        "answer": "Order of bond angle: H2O (104.5 deg) < CH3-O-CH3 (111.7 deg) < (CH3)3C-O-C(CH3)3 (> 112 deg). The angle increases with increasing steric size of substituents."
+      },
+      {
+        "problem": "Determine the hybridization, electron-pair geometry, and molecular geometry of oxygen in diethyl ether (C2H5-O-C2H5).",
+        "steps": [
+          "Step 1: Oxygen forms 2 single sigma bonds with C2H5 groups and retains 2 unshared electron lone pairs.",
+          "Step 2: Total electron pairs around oxygen = 2 sigma bonds + 2 lone pairs = 4.",
+          "Step 3: Hybridization corresponding to 4 electron pairs is sp3.",
+          "Step 4: Electron-pair geometry is tetrahedral; molecular geometry considering atom positions only is bent (V-shaped)."
+        ],
+        "answer": "Hybridization: sp3; Electron-pair geometry: Tetrahedral; Molecular geometry: Bent / V-shaped."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which statement correctly accounts for the C-O-C bond angle in dimethyl ether being approximately 111.7 degrees? Option A: Oxygen is sp2 hybridized. Option B: Steric repulsion between bulky methyl groups overcomes lone-pair repulsion. Option C: Lone pair-lone pair repulsion compresses the angle beyond 109.5 degrees. Option D: The molecule is linear with 180 degree bond angle.",
+        "answer": "Option B. The C-O-C bond angle in dimethyl ether (111.7 degrees) is larger than the normal tetrahedral angle (109.5 degrees) because steric repulsion between the two methyl groups outweighs lone pair-lone pair repulsion."
+      },
+      {
+        "question": "What is the hybridization state and molecular geometry of the central oxygen atom in ethers? Option A: sp, Linear. Option B: sp2, Trigonal planar. Option C: sp3, Bent (V-shaped). Option D: sp3d, Trigonal bipyramidal.",
+        "answer": "Option C. Oxygen in ethers uses sp3 hybrid orbitals (2 bond pairs + 2 lone pairs), resulting in a tetrahedral electron arrangement and a bent molecular geometry."
+      },
+      {
+        "question": "Why do symmetrical ethers like diethyl ether exhibit a net dipole moment? Option A: C-O bonds are non-polar. Option B: The molecule has a non-linear (bent) geometry, so individual bond dipoles do not cancel out. Option C: Oxygen forms a double bond with carbon. Option D: The C-O-C bond angle is 180 degrees.",
+        "answer": "Option B. Because ethers possess a bent molecular structure, the dipole vectors of the two polar C-O bonds add up vectorially to yield a non-zero net dipole moment."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 11: Alcohols, Phenols and Ethers, Section 11.3 - Structure of Functional Groups.",
+      "Morrison & Boyd Organic Chemistry, Chapter on Ethers and Epoxides."
+    ]
+  }
+}

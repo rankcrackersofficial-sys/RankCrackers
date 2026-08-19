@@ -1,0 +1,230 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U02_T_C2AFC301_CH001",
+    "overview": "This comprehensive module covers Atomic Structure for JEE Main 2026. It traces the development from classical electromagnetic theory, Planck's quantum hypothesis, and the photoelectric effect to the Bohr model of single-electron systems and hydrogen emission spectrum. It further explores quantum mechanics, de Broglie's wave-particle duality, Heisenberg's uncertainty principle, wavefunctions, quantum numbers, orbital shapes, and electronic configuration rules (Aufbau, Pauli, Hund).",
+    "concepts": [
+      {
+        "title": "Electromagnetic Radiation and Photoelectric Effect",
+        "explanation": "Electromagnetic radiation exhibits dual nature. Light consists of energy packets called photons of energy E = h * nu. In the photoelectric effect, electrons are emitted from a metal surface when light of frequency nu exceeding the threshold frequency nu_0 strikes it. The kinetic energy of emitted photoelectrons is KE_max = h * nu - h * nu_0 = h * (nu - nu_0)."
+      },
+      {
+        "title": "Bohr's Atomic Model and Hydrogen Spectrum",
+        "explanation": "Bohr proposed quantized stationary orbits for single-electron species (H, He+, Li2+). Angular momentum is quantized as m * v * r = n * h / (2 * pi). Electronic energy levels are given by E_n = -13.6 * Z^2 / n^2 eV. Transitions between energy levels absorb or emit light with wavelength given by the Rydberg formula."
+      },
+      {
+        "title": "Dual Nature of Matter and Heisenberg Uncertainty Principle",
+        "explanation": "De Broglie proposed that microscopic particles in motion possess wave characteristics with wavelength lambda = h / p = h / (m * v). Heisenberg's uncertainty principle states that it is impossible to simultaneously measure the exact position and momentum of a microscopic particle with absolute precision: delta_x * delta_p >= h / (4 * pi)."
+      },
+      {
+        "title": "Quantum Numbers and Atomic Orbitals",
+        "explanation": "The quantum mechanical model describes electron behavior using wavefunctions psi. Four quantum numbers specify an electron: Principal quantum number (n) defines shell size and energy; Azimuthal quantum number (l) defines orbital shape (s, p, d, f); Magnetic quantum number (m_l) defines orbital orientation; Spin quantum number (m_s) defines electron spin direction (+1/2 or -1/2)."
+      },
+      {
+        "title": "Electronic Configuration Rules and Extra Stability",
+        "explanation": "Electrons fill atomic orbitals following three primary principles: the Aufbau principle (orbitals filled in order of increasing n+l value), Pauli's exclusion principle (no two electrons in an atom can have the same four quantum numbers), and Hund's rule of maximum multiplicity (degenerate orbitals are filled singly before pairing). Half-filled and completely filled subshells offer extra stability due to symmetry and high exchange energy."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Photoelectric Equation",
+        "formula": "E = h * nu = W_0 + KE_max",
+        "applicability": "Photoelectric emission from metallic surfaces exposed to light",
+        "variables": [
+          {
+            "symbol": "h",
+            "meaning": "Planck's constant",
+            "unit": "J s"
+          },
+          {
+            "symbol": "nu",
+            "meaning": "Frequency of incident photon",
+            "unit": "Hz"
+          },
+          {
+            "symbol": "W_0",
+            "meaning": "Work function of metal (h * nu_0)",
+            "unit": "J or eV"
+          },
+          {
+            "symbol": "KE_max",
+            "meaning": "Maximum kinetic energy of ejected photoelectron",
+            "unit": "J or eV"
+          }
+        ]
+      },
+      {
+        "label": "Bohr Radius Formula",
+        "formula": "r_n = 0.529 * (n^2 / Z) Angstrom",
+        "applicability": "Single-electron species (H, He+, Li2+)",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Principal quantum number / orbit number",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Z",
+            "meaning": "Atomic number of the single-electron ion",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Bohr Energy Formula",
+        "formula": "E_n = -13.6 * (Z^2 / n^2) eV",
+        "applicability": "Single-electron species stationary state energy",
+        "variables": [
+          {
+            "symbol": "E_n",
+            "meaning": "Total energy of electron in n-th orbit",
+            "unit": "eV"
+          },
+          {
+            "symbol": "Z",
+            "meaning": "Atomic number",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "n",
+            "meaning": "Principal quantum number",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Rydberg Equation",
+        "formula": "1 / lambda = R_H * Z^2 * (1 / n_1^2 - 1 / n_2^2)",
+        "applicability": "Wavelength calculation for atomic hydrogen spectrum lines",
+        "variables": [
+          {
+            "symbol": "lambda",
+            "meaning": "Wavelength of emitted/absorbed photon",
+            "unit": "m"
+          },
+          {
+            "symbol": "R_H",
+            "meaning": "Rydberg constant (~ 1.097 x 10^7 m^-1)",
+            "unit": "m^-1"
+          },
+          {
+            "symbol": "n_1, n_2",
+            "meaning": "Lower and upper energy level orbit integers (n_2 > n_1)",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "de Broglie Wavelength",
+        "formula": "lambda = h / (m * v) = h / sqrt(2 * m * KE)",
+        "applicability": "Matter waves for particles in motion",
+        "variables": [
+          {
+            "symbol": "lambda",
+            "meaning": "de Broglie wavelength",
+            "unit": "m"
+          },
+          {
+            "symbol": "m",
+            "meaning": "Mass of particle",
+            "unit": "kg"
+          },
+          {
+            "symbol": "v",
+            "meaning": "Velocity of particle",
+            "unit": "m / s"
+          },
+          {
+            "symbol": "KE",
+            "meaning": "Kinetic energy of particle",
+            "unit": "J"
+          }
+        ]
+      },
+      {
+        "label": "Heisenberg Uncertainty Principle",
+        "formula": "delta_x * delta_p >= h / (4 * pi)",
+        "applicability": "Simultaneous measurement of position and momentum of subatomic particles",
+        "variables": [
+          {
+            "symbol": "delta_x",
+            "meaning": "Uncertainty in position",
+            "unit": "m"
+          },
+          {
+            "symbol": "delta_p",
+            "meaning": "Uncertainty in momentum (m * delta_v)",
+            "unit": "kg m / s"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Increasing the intensity of light in photoelectric effect increases the maximum kinetic energy of emitted photoelectrons.",
+        "correction": "Intensity increases the number of emitted photoelectrons per second (photocurrent), but maximum kinetic energy depends solely on the frequency of the incident light."
+      },
+      {
+        "misconception": "Bohr's atomic model applies to all neutral multi-electron atoms like Helium and Carbon.",
+        "correction": "Bohr's model is strictly applicable only to single-electron species like H, He+, Li2+, Be3+ because it does not account for electron-electron repulsions."
+      },
+      {
+        "misconception": "An orbital is a well-defined circular path along which an electron orbits the nucleus.",
+        "correction": "An orbit is a circular path (Bohr model), whereas an atomic orbital (Quantum model) is a three-dimensional region of space around the nucleus where the probability of finding an electron is maximum (psi^2)."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the wavelength of radiation emitted when an electron in a hydrogen atom drops from the n = 3 state to the n = 2 state (Balmer series line). Express the answer in nm.",
+        "steps": [
+          "Step 1: Identify the formula: 1 / lambda = R_H * Z^2 * (1 / n_1^2 - 1 / n_2^2). For Hydrogen, Z = 1.",
+          "Step 2: Substitute n_1 = 2 and n_2 = 3: 1 / lambda = 1.097 x 10^7 * (1 / 2^2 - 1 / 3^2) = 1.097 x 10^7 * (1/4 - 1/9).",
+          "Step 3: Simplify the fraction: 1/4 - 1/9 = 5/36.",
+          "Step 4: Compute 1 / lambda = 1.097 x 10^7 * (5 / 36) = 1.5236 x 10^6 m^-1.",
+          "Step 5: Calculate lambda = 1 / (1.5236 x 10^6) = 6.563 x 10^-7 m = 656.3 nm."
+        ],
+        "answer": "656.3 nm"
+      },
+      {
+        "problem": "An electron is moving with a velocity of 3 x 10^6 m/s. Calculate its de Broglie wavelength in meters. (Mass of electron m = 9.1 x 10^-31 kg, h = 6.626 x 10^-34 J s).",
+        "steps": [
+          "Step 1: Identify the de Broglie relation: lambda = h / (m * v).",
+          "Step 2: Substitute values: lambda = (6.626 x 10^-34) / (9.1 x 10^-31 * 3 x 10^6).",
+          "Step 3: Calculate the denominator: 9.1 x 10^-31 * 3 x 10^6 = 2.73 x 10^-24.",
+          "Step 4: Divide numerator by denominator: lambda = 6.626 x 10^-34 / 2.73 x 10^-24 = 2.427 x 10^-10 m."
+        ],
+        "answer": "2.427 x 10^-10 m (or 0.2427 nm)"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "What is the total number of orbitals associated with the principal quantum number n = 3?",
+        "answer": "The total number of orbitals for a shell with principal quantum number n is equal to n^2. For n = 3, total orbitals = 3^2 = 9 (one 3s, three 3p, and five 3d orbitals)."
+      },
+      {
+        "question": "Which transition in a hydrogen atom emits a photon of the shortest wavelength: A) n=2 to n=1, B) n=3 to n=2, C) n=4 to n=3, D) n=5 to n=4?",
+        "answer": "Option A (n=2 to n=1). Shortest wavelength corresponds to the highest energy change delta_E. Energy difference delta_E = 13.6 * (1/n_1^2 - 1/n_2^2) eV. For 2 -> 1, delta_E = 13.6 * (1 - 1/4) = 10.2 eV, which is the largest among all given options."
+      },
+      {
+        "question": "What are the quantum numbers (n, l, m_l) for the valence electron in a ground state Sodium (Na, Z = 11) atom?",
+        "answer": "Ground state configuration of Na (Z=11) is 1s2 2s2 2p6 3s1. The valence electron is in the 3s orbital. Therefore, n = 3, l = 0 (for s orbital), and m_l = 0."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Chapter 2: Structure of Atom",
+      "JEE Main Official Syllabus - Unit 2: Atomic Structure"
+    ]
+  }
+}

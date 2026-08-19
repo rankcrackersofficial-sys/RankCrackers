@@ -1,0 +1,122 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_B5566C33_CH001",
+    "overview": "Chemical equilibrium is dynamic in nature. At dynamic equilibrium, the rate of the forward reaction equals the rate of the reverse reaction in a closed system. Although observable macroscopic properties such as concentration, pressure, density, and color remain constant over time, microscopic molecular transformations continue ceaselessly in both directions.",
+    "concepts": [
+      {
+        "title": "Concept of Dynamic Equilibrium",
+        "explanation": "Unlike static equilibrium where all motion ceases, dynamic equilibrium involves continuous forward and backward processes occurring at identical rates. In a reversible chemical reaction, reactants convert to products and products revert to reactants simultaneously. At equilibrium, the forward reaction rate equals the reverse reaction rate (r_f = r_b), resulting in zero net change in concentrations of all participating species."
+      },
+      {
+        "title": "Characteristics of Chemical Equilibrium",
+        "explanation": "Chemical equilibrium can only be achieved in a closed system at constant temperature. It can be approached from either direction starting with reactants or products. A catalyst accelerates both forward and backward reactions equally, shortening the time required to reach equilibrium without altering the final equilibrium composition or equilibrium constant."
+      },
+      {
+        "title": "Dynamic Nature in Physical Processes",
+        "explanation": "Dynamic equilibrium also manifests in physical phase changes. For example, in a liquid-vapor equilibrium inside a closed vessel, the rate of evaporation equals the rate of condensation. Similarly, in a saturated solution, the rate of dissolution of solute equals the rate of crystallization."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Dynamic Equilibrium Rate Condition",
+        "formula": "r_f = r_b",
+        "applicability": "Applicable to any reversible chemical or physical process at equilibrium.",
+        "variables": [
+          {
+            "symbol": "r_f",
+            "meaning": "Rate of forward reaction or process",
+            "unit": "mol L^-1 s^-1"
+          },
+          {
+            "symbol": "r_b",
+            "meaning": "Rate of backward (reverse) reaction or process",
+            "unit": "mol L^-1 s^-1"
+          }
+        ]
+      },
+      {
+        "label": "Equilibrium Constant from Rate Constants",
+        "formula": "K_c = k_f / k_b",
+        "applicability": "Applicable to elementary reversible reactions at constant temperature.",
+        "variables": [
+          {
+            "symbol": "K_c",
+            "meaning": "Equilibrium constant in terms of molar concentrations",
+            "unit": "Dimensionless or (mol L^-1)^delta_n"
+          },
+          {
+            "symbol": "k_f",
+            "meaning": "Rate constant for the forward reaction",
+            "unit": "Depends on reaction order"
+          },
+          {
+            "symbol": "k_b",
+            "meaning": "Rate constant for the backward reaction",
+            "unit": "Depends on reaction order"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "At chemical equilibrium, the chemical reaction completely stops.",
+        "correction": "The reaction never stops; microscopic forward and reverse processes occur continuously at equal rates, maintaining constant macroscopic concentrations."
+      },
+      {
+        "misconception": "At dynamic equilibrium, the concentrations of reactants and products must be equal.",
+        "correction": "Concentrations of reactants and products remain constant over time at equilibrium, but they are rarely equal to each other. Their exact ratio depends on the equilibrium constant K_c."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "For a reversible reaction A + B <=> C + D, the rate constant for the forward reaction is k_f = 2.0 x 10^-2 L mol^-1 s^-1 and for the backward reaction is k_b = 5.0 x 10^-3 L mol^-1 s^-1. Calculate the equilibrium constant K_c.",
+        "steps": [
+          "Step 1: Express K_c in terms of rate constants: K_c = k_f / k_b.",
+          "Step 2: Substitute given values: K_c = (2.0 x 10^-2) / (5.0 x 10^-3).",
+          "Step 3: Evaluate the expression: K_c = 4.0."
+        ],
+        "answer": "K_c = 4.0"
+      },
+      {
+        "problem": "In a closed vessel, N2O4(g) decomposes according to N2O4(g) <=> 2 NO2(g). At dynamic equilibrium, [N2O4] = 0.2 M and [NO2] = 0.4 M. Calculate K_c for this reaction.",
+        "steps": [
+          "Step 1: Write the equilibrium expression: K_c = [NO2]^2 / [N2O4].",
+          "Step 2: Substitute equilibrium concentrations: K_c = (0.4)^2 / 0.2.",
+          "Step 3: Calculate: K_c = 0.16 / 0.2 = 0.8 M."
+        ],
+        "answer": "K_c = 0.8 M"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following statements best describes dynamic chemical equilibrium? Options: (A) The reaction has stopped completely. (B) Forward and reverse reactions proceed at identical rates, keeping concentrations constant. (C) Concentration of reactants is always zero. (D) The reaction takes place in an open system.",
+        "answer": "Correct Option: (B). In dynamic chemical equilibrium, microscopic forward and backward reactions take place continuously at equal rates (r_f = r_b), ensuring that macroscopic properties like concentration remain unchanged."
+      },
+      {
+        "question": "What happens to the equilibrium constant K_c when a suitable catalyst is added to the system? Options: (A) K_c increases significantly. (B) K_c decreases. (C) K_c remains unchanged because the catalyst speeds up both forward and backward reactions equally. (D) K_c becomes zero.",
+        "answer": "Correct Option: (C). A catalyst lowers activation energy for both forward and reverse paths equally. It increases k_f and k_b by the same factor, leaving their ratio K_c = k_f / k_b unchanged."
+      },
+      {
+        "question": "For a liquid-vapor dynamic equilibrium inside a sealed container, which condition is true? Options: (A) Rate of evaporation equals rate of condensation. (B) Evaporation stops entirely once vapor pressure is reached. (C) Rate of condensation exceeds rate of evaporation. (D) The system must be heated continuously to maintain equilibrium.",
+        "answer": "Correct Option: (A). Phase equilibrium is dynamic in nature; liquid molecules vaporize and vapor molecules condense at equal rates, keeping vapor pressure constant."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 7: Equilibrium",
+      "JEE Main Official Syllabus - Physical Chemistry: Chemical Equilibrium"
+    ]
+  }
+}

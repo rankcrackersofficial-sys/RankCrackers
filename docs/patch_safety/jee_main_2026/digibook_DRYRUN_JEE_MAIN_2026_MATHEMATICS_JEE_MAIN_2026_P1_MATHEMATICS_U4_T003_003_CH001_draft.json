@@ -1,0 +1,139 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U4_T003_003_CH001",
+    "overview": "This topic covers the fundamental definitions, algebraic properties, and combinatorial interpretations of Permutations P(n, r) and Combinations C(n, r), forming the foundational core of counting techniques required for JEE Main Mathematics.",
+    "concepts": [
+      {
+        "title": "Permutations P(n, r) - Arranging Objects",
+        "explanation": "P(n, r) denotes the total number of ordered arrangements of r distinct objects chosen from a set of n distinct objects. Here, the order of arrangement is crucial."
+      },
+      {
+        "title": "Combinations C(n, r) - Selecting Objects",
+        "explanation": "C(n, r) or nCr denotes the total number of ways to select a subset of r distinct objects from a given set of n distinct objects without regard to the order of selection."
+      },
+      {
+        "title": "Relationship Between Permutations and Combinations",
+        "explanation": "Every selection of r distinct objects can be arranged in r! ways. Thus, P(n, r) = r! * C(n, r). Selection precedes arrangement."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Permutation Formula P(n, r)",
+        "formula": "P(n, r) = n! / (n - r)!",
+        "applicability": "0 <= r <= n, where n and r are non-negative integers and all items are distinct.",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Total number of available distinct objects",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "r",
+            "meaning": "Number of objects to be selected and ordered",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Combination Formula C(n, r)",
+        "formula": "C(n, r) = n! / (r! * (n - r)!)",
+        "applicability": "0 <= r <= n, where n and r are non-negative integers and all items are distinct.",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Total number of available distinct objects",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "r",
+            "meaning": "Number of objects to be selected",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Symmetry Property of Combinations",
+        "formula": "C(n, r) = C(n, n - r)",
+        "applicability": "0 <= r <= n, selecting r objects is mathematically equivalent to choosing n - r objects to leave behind.",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Total number of distinct items",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "r",
+            "meaning": "Number of items selected",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Confusing when to apply P(n, r) versus C(n, r) in word problems.",
+        "correction": "Use P(n, r) when order matters (e.g., forming words, digit positions, ranked prizes). Use C(n, r) when order does not matter (e.g., choosing committees, selecting sub-teams, drawing cards)."
+      },
+      {
+        "misconception": "Assuming P(n, r) and C(n, r) formulas work directly when objects are identical.",
+        "correction": "Standard P(n, r) and C(n, r) assume all n objects are distinct. When repeated or identical objects exist, multinomial permutations or modified combination methods must be used."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Find the value of n if P(n, 4) = 20 * P(n, 2).",
+        "steps": [
+          "Apply the definition of permutations: n! / (n - 4)! = 20 * (n! / (n - 2)!).",
+          "Divide both sides by n!: 1 / (n - 4)! = 20 / (n - 2)!.",
+          "Rewrite (n - 2)! as (n - 2)(n - 3)(n - 4)!.",
+          "Cancel (n - 4)! from both sides to get (n - 2)(n - 3) = 20.",
+          "Solve the quadratic equation: n^2 - 5n + 6 = 20 => n^2 - 5n - 14 = 0.",
+          "Factorize: (n - 7)(n + 2) = 0.",
+          "Since n >= 4 and must be a positive integer, n = 7."
+        ],
+        "answer": "n = 7"
+      },
+      {
+        "problem": "If C(n, 8) = C(n, 6), find C(n, 2).",
+        "steps": [
+          "Use the combination identity: C(n, x) = C(n, y) implies x = y or x + y = n.",
+          "Since 8 != 6, we have 8 + 6 = n => n = 14.",
+          "Now compute C(14, 2) = 14! / (2! * 12!).",
+          "C(14, 2) = (14 * 13) / 2 = 91."
+        ],
+        "answer": "91"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "What is the value of C(10, 3) + C(10, 4)? Options: (A) C(10, 7) (B) C(11, 4) (C) C(11, 3) (D) C(12, 4)",
+        "answer": "Correct Option: (B). Explanation: By Pascal's identity, C(n, r) + C(n, r + 1) = C(n + 1, r + 1). Setting n = 10 and r = 3 yields C(10, 3) + C(10, 4) = C(11, 4)."
+      },
+      {
+        "question": "In how many ways can a committee of 3 members be selected from 7 candidates? Options: (A) 210 (B) 35 (C) 42 (D) 70",
+        "answer": "Correct Option: (B). Explanation: Order of selection does not matter, so we compute C(7, 3) = 7! / (3! * 4!) = (7 * 6 * 5) / 6 = 35."
+      },
+      {
+        "question": "What is the ratio P(5, 3) / C(5, 3)? Options: (A) 1 (B) 3 (C) 6 (D) 12",
+        "answer": "Correct Option: (C). Explanation: Since P(n, r) = r! * C(n, r), the ratio P(5, 3) / C(5, 3) equals 3! = 6."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Mathematics Class 11, Chapter 7: Permutations and Combinations",
+      "JEE Main Mathematics Syllabus - Algebra: Counting Principles"
+    ]
+  }
+}

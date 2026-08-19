@@ -1,0 +1,164 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U12_T_6F2E41D5_CH001",
+    "overview": "Coordination compounds consist of a central metal ion surrounded by neutral molecules or anions known as ligands via coordinate covalent bonds. Werner's theory established the foundational concepts of primary (ionizable) and secondary (non-ionizable) valences. Bonding and electronic structure are described through Valence Bond Theory (VBT) and Crystal Field Theory (CFT), explaining geometry, magnetic behaviour, and d-d transition absorption colors.",
+    "concepts": [
+      {
+        "title": "Werner's Theory and Basic Definitions",
+        "explanation": "Werner proposed that transition metals exhibit primary valence (oxidation state, ionizable, non-directional) and secondary valence (coordination number, non-ionizable, directional in space defining geometry). Ligands donate electron pairs; denticity refers to the number of donor atoms bound to the metal. Multidentate ligands forming ring structures exhibit the chelate effect, significantly enhancing complex stability."
+      },
+      {
+        "title": "IUPAC Nomenclature and Isomerism",
+        "explanation": "Naming follows set rules: cations are named before anions, ligands are listed alphabetically before the metal ion with Greek prefixes indicating multiplicity, and the metal's oxidation state is in Roman numerals. Isomerism is divided into structural (linkage, ionization, coordination, hydrate) and stereoisomerism (geometrical cis/trans or fac/mer, and optical enantiomerism)."
+      },
+      {
+        "title": "Valence Bond Theory (VBT) and Crystal Field Theory (CFT)",
+        "explanation": "VBT uses hybrid orbitals (e.g., d2sp3 or sp3d2) to explain geometry and magnetic properties based on inner vs outer orbital complexes. CFT considers electrostatic interactions splitting degenerate d-orbitals into t2g and eg sets in octahedral fields (or e and t2 in tetrahedral fields). The crystal field splitting energy (Delta) relative to pairing energy (P) determines high-spin or low-spin configurations."
+      },
+      {
+        "title": "Colour, Magnetic Properties, and Applications",
+        "explanation": "Absorption of visible light drives d-d transitions between split d-orbital levels, producing the complementary color observed. Magnetic properties depend on unpaired electrons (paramagnetic vs diamagnetic). Coordination compounds play crucial roles in qualitative analysis (e.g., Ni-DMG complex), metallurgy (MacArthur-Forrest process for Au/Ag), and biology (hemoglobin, chlorophyll, vitamin B12)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Spin-Only Magnetic Moment",
+        "formula": "\\mu_{s} = \\sqrt{n(n + 2)} \\text{ BM}",
+        "applicability": "Calculates magnetic moment for complexes based on the count of unpaired electrons.",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of unpaired d-electrons",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "\\mu_{s}",
+            "meaning": "Spin-only magnetic moment",
+            "unit": "Bohr Magnetons (BM)"
+          }
+        ]
+      },
+      {
+        "label": "Crystal Field Stabilization Energy (Octahedral)",
+        "formula": "CFSE = (-0.4 n_{t2g} + 0.6 n_{eg}) \\Delta_{o} + m P",
+        "applicability": "Determines the net electronic stabilization energy of an octahedral complex.",
+        "variables": [
+          {
+            "symbol": "n_{t2g}",
+            "meaning": "Number of electrons in t2g set",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "n_{eg}",
+            "meaning": "Number of electrons in eg set",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "\\Delta_{o}",
+            "meaning": "Octahedral crystal field splitting energy",
+            "unit": "kJ/mol or cm^-1"
+          },
+          {
+            "symbol": "m",
+            "meaning": "Number of extra electron pairs formed relative to free ion",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "P",
+            "meaning": "Electron pairing energy",
+            "unit": "kJ/mol or cm^-1"
+          }
+        ]
+      },
+      {
+        "label": "Effective Atomic Number (EAN)",
+        "formula": "EAN = Z - X + 2(CN)",
+        "applicability": "Estimates electron counts in metal complexes to predict stability relative to noble gas configurations.",
+        "variables": [
+          {
+            "symbol": "Z",
+            "meaning": "Atomic number of the central metal",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "X",
+            "meaning": "Oxidation state of the central metal",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "CN",
+            "meaning": "Coordination number of the central metal",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Primary valence corresponds to coordination number and secondary valence corresponds to oxidation state.",
+        "correction": "According to Werner's theory, primary valence represents oxidation state (ionizable), whereas secondary valence represents coordination number (non-ionizable, directional)."
+      },
+      {
+        "misconception": "Strong field ligands always force low-spin configurations regardless of d-electron count.",
+        "correction": "Low-spin or high-spin distinctions only apply to d4 through d7 octahedral configurations. Configurations d1, d2, d3, d8, d9, and d10 have fixed electron distributions regardless of ligand strength."
+      },
+      {
+        "misconception": "Ambidentate ligands like NO2- or SCN- are didentate ligands.",
+        "correction": "Ambidentate ligands possess two different donor atoms, but they can attach to the metal ion through only ONE donor atom at a time, making them monodentate."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the spin-only magnetic moment and CFSE (in terms of \\Delta_o) for a high-spin d6 octahedral complex.",
+        "steps": [
+          "Step 1: Identify electron configuration in octahedral field for high-spin d6. Since it is high-spin, \\Delta_o < P. Electrons fill: t2g^4 eg^2.",
+          "Step 2: Determine number of unpaired electrons (n). t2g has 1 paired orbital and 2 singly occupied; eg has 2 singly occupied orbitals. Total unpaired electrons n = 4.",
+          "Step 3: Calculate magnetic moment \\mu = \\sqrt{4(4+2)} = \\sqrt{24} \\approx 4.90 \\text{ BM}.",
+          "Step 4: Calculate CFSE = (-0.4 * n_{t2g} + 0.6 * n_{eg}) \\Delta_o = (-0.4 * 4 + 0.6 * 2) \\Delta_o = (-1.6 + 1.2) \\Delta_o = -0.4 \\Delta_o."
+        ],
+        "answer": "Magnetic moment = 4.90 BM; CFSE = -0.4 \\Delta_o."
+      },
+      {
+        "problem": "Determine the IUPAC name and hybridization of [Co(NH3)6]3+ using VBT.",
+        "steps": [
+          "Step 1: Determine oxidation state of Co. Neutral ligand NH3 gives Co valence +3. Co (Z=27) is [Ar] 3d7 4s2; Co3+ is 3d6.",
+          "Step 2: NH3 acts as a strong field ligand for Co3+, causing pairing of 3d electrons, leaving two 3d orbitals vacant.",
+          "Step 3: Vacant 3d, 4s, and three 4p orbitals hybridize to yield d2sp3 (inner orbital octahedral complex).",
+          "Step 4: Construct IUPAC name: hexaamminecobalt(III) ion."
+        ],
+        "answer": "IUPAC Name: Hexaamminecobalt(III) ion; Hybridization: d2sp3 (Octahedral, diamagnetic)."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following coordination compounds exhibits linkage isomerism? (A) [Co(NH3)5Cl]SO4 (B) [Co(NH3)5(NO2)]Cl2 (C) [Cr(H2O)6]Cl3 (D) [Pt(NH3)2Cl2]",
+        "answer": "Option (B). Linkage isomerism occurs when an ambidentate ligand like NO2- (nitro vs nitrito-N / nitrito-O) is present."
+      },
+      {
+        "question": "What is the expected hybridization and shape of [Ni(CN)4]2-? (A) sp3, Tetrahedral (B) dsp2, Square planar (C) d2sp3, Octahedral (D) sp3d, Trigonal bipyramidal",
+        "answer": "Option (B). Ni2+ is 3d8. CN- is a strong field ligand that forces pairing of the 3d electrons into 4 orbitals, leaving one 3d orbital vacant for dsp2 square planar hybridization."
+      },
+      {
+        "question": "The ratio of crystal field splitting energy in tetrahedral field (\\Delta_t) to octahedral field (\\Delta_o) for the same metal and ligands is: (A) 4/9 (B) 9/4 (C) 3/5 (D) 2/3",
+        "answer": "Option (A). For identical metal-ligand distances and ligands, \\Delta_t = (4/9) \\Delta_o due to fewer ligands (4 vs 6) and non-direct orientation of tetrahedral orbitals."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 9: Coordination Compounds",
+      "JEE Main Official Chemistry Syllabus 2026 - Unit 12: Coordination Compounds"
+    ]
+  }
+}

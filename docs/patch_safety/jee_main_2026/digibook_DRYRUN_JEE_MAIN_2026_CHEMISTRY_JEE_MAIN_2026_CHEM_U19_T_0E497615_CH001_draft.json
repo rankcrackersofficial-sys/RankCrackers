@@ -1,0 +1,104 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_0E497615_CH001",
+    "overview": "Nucleic acids are biopolymers responsible for storing, transmitting, and expressing genetic information in biological systems. They consist of repeating nucleotide units made up of a pentose sugar, a nitrogenous base, and a phosphate group. The two primary types of nucleic acids are Deoxyribonucleic Acid (DNA) and Ribonucleic Acid (RNA), which differ in their sugar composition, nitrogenous base content, and biological roles.",
+    "concepts": [
+      {
+        "title": "Chemical Components of Nucleic Acids",
+        "explanation": "Nucleic acids are composed of three basic structural parts: a pentose sugar, a nitrogenous heterocyclic base, and a phosphate group. DNA contains beta-D-2-deoxyribose, whereas RNA contains beta-D-ribose. The nitrogenous bases belong to two categories: Purines (Adenine [A] and Guanine [G]) and Pyrimidines (Cytosine [C], Thymine [T], and Uracil [U]). DNA contains A, G, C, and T, while RNA contains A, G, C, and U."
+      },
+      {
+        "title": "Nucleosides vs. Nucleotides",
+        "explanation": "A nucleoside is formed when a nitrogenous base attaches to the C-1' position of a pentose sugar through an N-glycosidic linkage. When the hydroxyl group at the C-5' position of the pentose sugar in a nucleoside is esterified with phosphoric acid, a nucleotide is formed. Nucleotides serve as the building block monomers of nucleic acid polymers."
+      },
+      {
+        "title": "Structure of Nucleic Acids",
+        "explanation": "Nucleotides are joined together in a linear chain by phosphodiester linkages connecting the C-3' hydroxyl group of one nucleotide's sugar to the C-5' hydroxyl group of the adjacent sugar. DNA exists as a double helix of two antiparallel strands held together by hydrogen bonds between complementary base pairs (Adenine pairs with Thymine via 2 H-bonds; Guanine pairs with Cytosine via 3 H-bonds). RNA is typically single-stranded."
+      },
+      {
+        "title": "Biological Functions of Nucleic Acids",
+        "explanation": "DNA serves as the chemical repository of genetic information, directing heredity and cell replication. RNA plays a vital role in protein biosynthesis; its main functional forms are messenger RNA (mRNA) which transfers genetic instructions, ribosomal RNA (rRNA) which forms the structural and catalytic core of ribosomes, and transfer RNA (tRNA) which acts as an adaptor molecule bringing amino acids during translation."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Chargaff's Equimolar Base Ratio Rule",
+        "formula": "%A = %T and %G = %C, implying %Purines = %Pyrimidines ([A] + [G] = [T] + [C])",
+        "applicability": "Applies exclusively to double-stranded DNA molecules",
+        "variables": [
+          {
+            "symbol": "[A], [T], [G], [C]",
+            "meaning": "Molar concentration or mole percentage of Adenine, Thymine, Guanine, and Cytosine",
+            "unit": "Percentage (%) or mol/L"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Phosphodiester bonds link nitrogenous bases to the pentose sugar.",
+        "correction": "The nitrogenous base is attached to the C-1' position of pentose sugar via an N-glycosidic linkage. Phosphodiester linkages connect the C-3' and C-5' carbons of adjacent sugars along the nucleic acid backbone."
+      },
+      {
+        "misconception": "Chargaff's rule applies to single-stranded RNA molecules.",
+        "correction": "Chargaff's rule relies on double-stranded helical complementary base pairing and is not generally applicable to single-stranded RNA."
+      },
+      {
+        "misconception": "Thymine and Uracil are structural isomers.",
+        "correction": "Thymine is 5-methyluracil; it has a methyl group at position 5 of the pyrimidine ring that uracil lacks."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "A double-stranded DNA sample is found to contain 28 mole percent Adenine. Calculate the mole percentages of Thymine, Guanine, and Cytosine in this sample.",
+        "steps": [
+          "Step 1: Apply Chargaff's rule (%A = %T). Since %A = 28%, %T must also be 28%.",
+          "Step 2: Calculate the combined percentage of Adenine and Thymine: %A + %T = 28% + 28% = 56%.",
+          "Step 3: Subtract from 100% to find the remaining percentage for Guanine and Cytosine: %G + %C = 100% - 56% = 44%.",
+          "Step 4: Apply Chargaff's rule (%G = %C). Divide equally: %G = %C = 44% / 2 = 22%."
+        ],
+        "answer": "Thymine = 28%, Guanine = 22%, Cytosine = 22%"
+      },
+      {
+        "problem": "Identify the chemical difference at the C-2' position between the pentose sugar of RNA and that of DNA.",
+        "steps": [
+          "Step 1: Identify the pentose sugar in RNA as beta-D-ribose, which possesses a hydroxyl group (-OH) attached to C-2'.",
+          "Step 2: Identify the pentose sugar in DNA as beta-D-2-deoxyribose, which lacks oxygen at C-2' and has a hydrogen atom (-H) instead.",
+          "Step 3: Conclude that the presence of an -OH group at C-2' in ribose makes RNA more reactive and hydrolytically unstable compared to DNA."
+        ],
+        "answer": "The sugar in RNA (beta-D-ribose) has a C-2' hydroxyl group (-OH), whereas the sugar in DNA (beta-D-2-deoxyribose) has a C-2' hydrogen atom (-H)."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which nitrogenous base is unique to RNA and replaces Thymine found in DNA? (A) Adenine (B) Cytosine (C) Uracil (D) Guanine",
+        "answer": "(C) Uracil. Uracil is present in RNA instead of Thymine. Adenine, Guanine, and Cytosine are common to both DNA and RNA."
+      },
+      {
+        "question": "The linkage between the sugar unit and the nitrogenous base in a nucleoside is called: (A) Phosphodiester bond (B) N-Glycosidic linkage (C) Peptide bond (D) Hydrogen bond",
+        "answer": "(B) N-Glycosidic linkage. The nitrogenous base is joined to the C-1' carbon of the pentose sugar via an N-glycosidic linkage."
+      },
+      {
+        "question": "If a sample of double-stranded DNA contains 18% Guanine, what is the percentage of Adenine in this sample? (A) 18% (B) 32% (C) 36% (D) 64%",
+        "answer": "(B) 32%. By Chargaff's rule, %C = %G = 18%. Total %G + %C = 36%. Therefore, %A + %T = 100% - 36% = 64%. Since %A = %T, %A = 64% / 2 = 32%."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 14: Biomolecules",
+      "JEE Main Official Syllabus - Biomolecules: Nucleic Acids"
+    ]
+  }
+}

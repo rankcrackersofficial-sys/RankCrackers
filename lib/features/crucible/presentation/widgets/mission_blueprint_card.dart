@@ -6,10 +6,12 @@ import 'blueprint_node.dart';
 
 class MissionBlueprintCard extends StatelessWidget {
   final List<Map<String, dynamic>> missions;
+  final bool hasEvidence;
 
   const MissionBlueprintCard({
     super.key,
     required this.missions,
+    this.hasEvidence = true,
   });
 
   @override
@@ -28,7 +30,9 @@ class MissionBlueprintCard extends StatelessWidget {
 
           // 🔱 PREMIUM CARD DNA: Subtitle
           Text(
-            'Today\'s tactical objectives generated from your weakest and highest priority learning nodes.',
+            hasEvidence
+                ? 'Today\'s tactical objectives generated from your weakest and highest priority learning nodes.'
+                : 'Tactical priorities will appear after enough learning evidence is available.',
             style: AppTypography.subtitle,
           ),
 

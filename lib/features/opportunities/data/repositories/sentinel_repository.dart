@@ -11,7 +11,7 @@ abstract class SentinelRepository {
   Stream<SentinelMetrics> streamMetrics(String uid);
   Stream<List<NotificationItem>> streamNotifications(String uid);
   Future<void> markAsRead(String uid, String notificationId);
-  Future<void> updateMetrics(String uid, SentinelMetrics metrics); 
+  Future<void> updateMetrics(String uid, SentinelMetrics metrics);
   void dispose();
 }
 
@@ -30,9 +30,8 @@ class FirestoreSentinelRepository implements SentinelRepository {
         .collection('sentinel')
         .doc('metrics')
         .snapshots()
-        .map((snap) => snap.exists 
-            ? _mapMetrics(snap.data()!) 
-            : SentinelMetrics());
+        .map((snap) =>
+            snap.exists ? _mapMetrics(snap.data()!) : SentinelMetrics());
   }
 
   @override
@@ -45,24 +44,26 @@ class FirestoreSentinelRepository implements SentinelRepository {
         .collection('sentinel')
         .doc('metrics')
         .set({
-          'newAlerts': metrics.newAlerts,
-          'expiringForms': metrics.expiringForms,
-          'highPriorityExams': metrics.highPriorityExams,
-          'updatedAt': FieldValue.serverTimestamp(),
-        }, SetOptions(merge: true));
+      'newAlerts': metrics.newAlerts,
+      'expiringForms': metrics.expiringForms,
+      'highPriorityExams': metrics.highPriorityExams,
+      'updatedAt': FieldValue.serverTimestamp(),
+    }, SetOptions(merge: true));
   }
 
   @override
   Stream<List<NotificationItem>> streamNotifications(String uid) {
-    if (uid == 'guest') return Stream.value([]); 
+    if (uid == 'guest') return Stream.value([]);
 
     return _firestore
         .collection('users')
         .doc(uid)
         .collection('notifications')
-        .orderBy('timestamp', descending: true) 
+        .orderBy('timestamp', descending: true)
         .snapshots()
-        .map((snap) => snap.docs.map((doc) => _mapNotification(doc.id, doc.data())).toList());
+        .map((snap) => snap.docs
+            .map((doc) => _mapNotification(doc.id, doc.data()))
+            .toList());
   }
 
   @override
@@ -77,7 +78,8 @@ class FirestoreSentinelRepository implements SentinelRepository {
           .doc(notificationId)
           .update({'isRead': true, 'read': true});
     } catch (e) {
-      debugPrint("🔱 SENTINEL REPO ERROR: Failed update, falling back to merge set - $e");
+      debugPrint(
+          "🔱 SENTINEL REPO ERROR: Failed update, falling back to merge set - $e");
       await _firestore
           .collection('users')
           .doc(uid)
@@ -96,15 +98,15 @@ class FirestoreSentinelRepository implements SentinelRepository {
     return NotificationItem(
       id: id,
       title: data['title'] ?? '',
-      body: data['body'] ?? (data['message'] ?? ''), 
+      body: data['body'] ?? (data['message'] ?? ''),
       source: data['source'] ?? 'Sentinel',
-      priority: _mapPriority(data['priority'] ?? data['priorityState']), 
-      createdAt: data['timestamp'] != null 
-          ? (data['timestamp'] is Timestamp 
-              ? (data['timestamp'] as Timestamp).toDate() 
+      priority: _mapPriority(data['priority'] ?? data['priorityState']),
+      createdAt: data['timestamp'] != null
+          ? (data['timestamp'] is Timestamp
+              ? (data['timestamp'] as Timestamp).toDate()
               : DateTime.parse(data['timestamp'].toString()))
           : DateTime.now(),
-      read: data['isRead'] ?? (data['read'] ?? false), 
+      read: data['isRead'] ?? (data['read'] ?? false),
     );
   }
 
@@ -123,12 +125,16 @@ class FirestoreSentinelRepository implements SentinelRepository {
       }
       return NotificationPriority.low;
     }
-    
+
     switch (p?.toString().toLowerCase()) {
-      case 'critical': return NotificationPriority.critical;
-      case 'high': return NotificationPriority.high;
-      case 'medium': return NotificationPriority.medium;
-      default: return NotificationPriority.low;
+      case 'critical':
+        return NotificationPriority.critical;
+      case 'high':
+        return NotificationPriority.high;
+      case 'medium':
+        return NotificationPriority.medium;
+      default:
+        return NotificationPriority.low;
     }
   }
 }
@@ -136,20 +142,20 @@ class FirestoreSentinelRepository implements SentinelRepository {
 /// 🔱 LOCAL SENTINEL REPOSITORY
 class LocalSentinelRepository implements SentinelRepository {
   final _notifController = StreamController<List<NotificationItem>>.broadcast();
-  List<NotificationItem> _mockNotifs = [];
+  List<NotificationItem> _localNotifications = [];
 
   LocalSentinelRepository() {
-    // 🔱 MOCK NOTIFICATIONS DISABLED: Returning empty to ensure zero fake alerts.
-    _mockNotifs = [];
-    _notifController.add(_mockNotifs);
+    // Local fallback is intentionally empty to ensure zero invented alerts.
+    _localNotifications = [];
+    _notifController.add(_localNotifications);
   }
 
   @override
   Stream<SentinelMetrics> streamMetrics(String uid) {
     return Stream.value(SentinelMetrics(
-      newAlerts: _mockNotifs.where((n) => !n.read).length,
-      expiringForms: 1,
-      highPriorityExams: 2,
+      newAlerts: _localNotifications.where((n) => !n.read).length,
+      expiringForms: 0,
+      highPriorityExams: 0,
     ));
   }
 
@@ -165,10 +171,11 @@ class LocalSentinelRepository implements SentinelRepository {
 
   @override
   Future<void> markAsRead(String uid, String notificationId) async {
-    final index = _mockNotifs.indexWhere((n) => n.id == notificationId);
+    final index = _localNotifications.indexWhere((n) => n.id == notificationId);
     if (index != -1) {
-      _mockNotifs[index] = _mockNotifs[index].copyWith(read: true);
-      _notifController.add(List.from(_mockNotifs));
+      _localNotifications[index] =
+          _localNotifications[index].copyWith(read: true);
+      _notifController.add(List.from(_localNotifications));
     }
   }
 

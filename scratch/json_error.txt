@@ -1,0 +1,72 @@
+{
+  "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U11_T_0DB42BEA_CH001",
+  "title": "Actinoids - Electronic Configuration And Oxidation States",
+  "studentPublishReady": false,
+  "sections": {
+    "concepts": [
+      {
+        "conceptTitle": "Electronic Configuration of Actinoids",
+        "explanation": "Actinoids involve the progressive filling of the 5f subshell following Radon core (Z = 86). The general electronic configuration is represented as [Rn] 5f^(1-14) 6d^(0-1) 7s^2. Irregularities in electron filling arise because the energy levels of 5f, 6d, and 7s orbitals are extremely close to one another.",
+        "keyPoints": [
+          "Radon core accounts for the first 86 electrons: [Rn].",
+          "Thorium (Th, Z = 90) is a notable exception with the configuration [Rn] 5f^0 6d^2 7s^2.",
+          "Half-filled (5f^7) and fully-filled (5f^14) subshell stability is observed in Curium (Cm, Z = 96: [Rn] 5f^7 6d^1 7s^2) and Lawrencium (Lr, Z = 103: [Rn] 5f^14 6d^1 7s^2)."
+        ]
+      },
+      {
+        "conceptTitle": "Oxidation States of Actinoids",
+        "explanation": "Actinoids display a greater range of oxidation states compared to lanthanoids. While +3 is the baseline oxidation state across the series, early actinoids exhibit higher oxidation states up to +7 because 5f, 6d, and 7s electrons are all available for bonding due to small energy differences.",
+        "keyPoints": [
+          "The +3 oxidation state becomes progressively more stable towards the end of the actinoid series.",
+          "Maximum oxidation state increases linearly from Th (+4), Pa (+5), U (+6), up to Np (+7) and Pu (+7), and then drops for heavier actinoids.",
+          "Higher oxidation states often exist as oxo-cations, such as UO2^2+ and NpO2^+."
+        ]
+      }
+    ],
+    "formulaRegister": [
+      {
+        "name": "General Electronic Configuration of Actinoids",
+        "formula": "[Rn] 5f^(1-14) 6d^(0-1) 7s^2",
+        "notes": "Rn core atomic number Z = 86; variations occur due to comparable energies of 5f, 6d, and 7s subshells."
+      },
+      {
+        "name": "Peak Oxidation State Progression",
+        "formula": "Th (+4) -> Pa (+5) -> U (+6) -> Np (+7) / Pu (+7)",
+        "notes": "Maximum oxidation state of +7 is achieved at Neptunium and Plutonium."
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Actinoids exhibit only a +3 oxidation state similar to Lanthanoids.",
+        "reality": "Unlike lanthanoids, early actinoids exhibit multiple oxidation states ranging from +3 to +7 because the energy difference between 5f, 6d, and 7s orbitals is very small."
+      },
+      {
+        "misconception": "5f electrons are more strongly shielded than 4f electrons.",
+        "reality": "5f orbitals extend further in space than 4f orbitals and are less effectively shielded, making 5f electrons more accessible for bonding."
+      }
+    ],
+    "workedExamples": [
+      {
+        "exampleId": "WE_01",
+        "question": "Write the ground-state electronic configuration of Curium (Cm, Z = 96) and justify the distribution of electrons.",
+        "solution": "1. The nearest preceding noble gas core is Radon (Rn, Z = 86).\n2. Remaining electrons to allocate = 96 - 86 = 10 electrons.\n3. The 7s subshell takes 2 electrons: 7s^2.\n4. To maximize stability through a half-filled subshell, 7 electrons enter the 5f subshell (5f^7) and 1 electron enters the 6d subshell (6d^1).\n5. Ground-state configuration: [Rn] 5f^7 6d^1 7s^2."
+      },
+      {
+        "exampleId": "WE_02",
+        "question": "Which actinoid elements exhibit the maximum oxidation state of +7?",
+        "solution": "1. Examine oxidation states across early actinoids: Thorium (+4), Protactinium (+5), Uranium (+6), Neptunium (+7), Plutonium (+7), Americium (+6).\n2. The elements reaching the highest oxidation state of +7 are Neptunium (Np, Z = 93) and Plutonium (Pu, Z = 94)."
+      }
+    ],
+    "selfChecks": [
+      {
+        "questionId": "SC_01",
+        "question": "What is the ground-state electronic configuration of Thorium (Th, Z = 90)?",
+        "options": [
+          "[Rn] 5f^2 7s^2",
+          "[Rn] 5f^1 6d^1 7s^2",
+          "[Rn] 6d^2 7s^2",
+          "[Rn] 5f^4"
+        ],
+        "correctAnswer": "[Rn] 6d^2 7s^2",
+        "explanation": "Thorium is an exception in the actinoid series where the ground state has zero 5f electrons, giving [Rn] 6d^2 7s^2."
+      }

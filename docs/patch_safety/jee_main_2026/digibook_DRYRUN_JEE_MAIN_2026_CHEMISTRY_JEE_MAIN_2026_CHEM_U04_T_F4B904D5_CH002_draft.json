@@ -1,0 +1,198 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_F4B904D5_CH002",
+    "overview": "This comprehensive learning unit covers the First Law of Thermodynamics, work, heat, internal energy, enthalpy, heat capacities, Hess's law of constant heat summation, and various types of standard enthalpies of reaction essential for JEE Main Chemistry.",
+    "concepts": [
+      {
+        "title": "First Law of Thermodynamics and Energy Conservation",
+        "explanation": "The First Law of Thermodynamics states that energy can neither be created nor destroyed; it can only transform from one form to another. Mathematically, the change in internal energy (delta U) of a system equals the heat absorbed by the system (q) plus the work done on the system (w): delta U = q + w. According to IUPAC conventions, heat absorbed by the system is positive, heat released is negative, work done on the system is positive, and work done by the system is negative."
+      },
+      {
+        "title": "Internal Energy and Enthalpy",
+        "explanation": "Internal energy (U) is a state function representing the total energy contained within a system. Enthalpy (H) is defined as H = U + PV. For a chemical reaction involving gases at constant temperature and pressure, the relation between enthalpy change and internal energy change is given by delta H = delta U + (delta n_g) R T, where delta n_g is the change in the number of moles of gaseous products minus gaseous reactants."
+      },
+      {
+        "title": "Heat Capacities",
+        "explanation": "Heat capacity (C) is the amount of heat required to raise the temperature of a system by one degree Celsius or Kelvin. Molar heat capacity at constant volume is C_v, and at constant pressure is C_p. For one mole of an ideal gas, C_p - C_v = R. Heat absorbed at constant volume equals delta U (q_v = n C_v delta T), while heat absorbed at constant pressure equals delta H (q_p = n C_p delta T)."
+      },
+      {
+        "title": "Hess's Law of Constant Heat Summation",
+        "explanation": "Hess's Law states that the total enthalpy change for a chemical reaction is constant regardless of whether the reaction takes place in one step or in several steps. This is a direct consequence of enthalpy being a state function."
+      },
+      {
+        "title": "Types of Enthalpy Changes",
+        "explanation": "Thermochemistry characterizes various process enthalpies: Standard Enthalpy of Formation (delta_f H deg) is the enthalpy change when one mole of a compound is formed from its constituent elements in their standard states. Enthalpy of Combustion (delta_c H deg) is the heat evolved when one mole of a substance is completely burned in oxygen. Enthalpy of Atomization (delta_a H deg) is the energy required to break a molecule completely into gaseous atoms. Bond Dissociation Enthalpy is the energy needed to break one mole of a specific covalent bond in the gaseous state. Phase Transition Enthalpies include enthalpies of fusion, vaporization, and sublimation (delta_sub H = delta_fus H + delta_vap H). Hydration and Solution Enthalpies pertain to dissolving one mole of solute in solvent."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "First Law of Thermodynamics",
+        "formula": "delta U = q + w",
+        "applicability": "Universal equation for any thermodynamic process in a closed system",
+        "variables": [
+          {
+            "symbol": "delta U",
+            "meaning": "Change in internal energy",
+            "unit": "J or kJ"
+          },
+          {
+            "symbol": "q",
+            "meaning": "Heat absorbed by system",
+            "unit": "J or kJ"
+          },
+          {
+            "symbol": "w",
+            "meaning": "Work done on system",
+            "unit": "J or kJ"
+          }
+        ]
+      },
+      {
+        "label": "Isothermal Reversible Expansion Work",
+        "formula": "w = -2.303 * n * R * T * log10(V2 / V1)",
+        "applicability": "Ideal gas undergoing reversible isothermal expansion/compression",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of moles",
+            "unit": "mol"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Gas constant",
+            "unit": "J/(mol K)"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Absolute temperature",
+            "unit": "K"
+          },
+          {
+            "symbol": "V1, V2",
+            "meaning": "Initial and final volumes",
+            "unit": "m^3 or L"
+          }
+        ]
+      },
+      {
+        "label": "Enthalpy and Internal Energy Relation",
+        "formula": "delta H = delta U + delta n_g * R * T",
+        "applicability": "Chemical reactions involving gaseous components at constant T",
+        "variables": [
+          {
+            "symbol": "delta H",
+            "meaning": "Enthalpy change",
+            "unit": "J or kJ"
+          },
+          {
+            "symbol": "delta U",
+            "meaning": "Internal energy change",
+            "unit": "J or kJ"
+          },
+          {
+            "symbol": "delta n_g",
+            "meaning": "Moles of gaseous products minus moles of gaseous reactants",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Gas constant",
+            "unit": "J/(mol K)"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Temperature",
+            "unit": "K"
+          }
+        ]
+      },
+      {
+        "label": "Molar Heat Capacity Relation",
+        "formula": "C_p - C_v = R",
+        "applicability": "Ideal gases (per mole)",
+        "variables": [
+          {
+            "symbol": "C_p",
+            "meaning": "Molar heat capacity at constant pressure",
+            "unit": "J/(mol K)"
+          },
+          {
+            "symbol": "C_v",
+            "meaning": "Molar heat capacity at constant volume",
+            "unit": "J/(mol K)"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant",
+            "unit": "J/(mol K)"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Heat (q) and work (w) are state functions like internal energy (U) and enthalpy (H).",
+        "correction": "Heat and work are path functions because their values depend on the pathway taken during the process. Internal energy and enthalpy are state functions as their values depend only on the state of the system."
+      },
+      {
+        "misconception": "Standard enthalpy of formation of an element in any allotropic form is zero.",
+        "correction": "Standard enthalpy of formation is defined as zero only for the most stable allotropic form (reference state) of an element at 298.15 K and 1 bar pressure (e.g., C(graphite) = 0, but C(diamond) != 0)."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Two moles of an ideal gas expand isothermally and reversibly from 2 L to 20 L at 300 K. Calculate the work done in Joules (Take R = 8.314 J/mol K).",
+        "steps": [
+          "Identify the formula for reversible isothermal work: w = -2.303 * n * R * T * log10(V2 / V1).",
+          "Substitute given values: n = 2, R = 8.314, T = 300, V1 = 2, V2 = 20.",
+          "log10(20 / 2) = log10(10) = 1.",
+          "Calculate w = -2.303 * 2 * 8.314 * 300 * 1 = -11488.28 J."
+        ],
+        "answer": "-11488.3 J (or -11.49 kJ)"
+      },
+      {
+        "problem": "Calculate delta H for the reaction: C2H4(g) + H2(g) -> C2H6(g) given bond enthalpies: C=C is 614 kJ/mol, C-C is 348 kJ/mol, C-H is 413 kJ/mol, and H-H is 436 kJ/mol.",
+        "steps": [
+          "Write down the formula using bond dissociation enthalpies: delta_r H = sum(Bond Enthalpies of broken bonds) - sum(Bond Enthalpies of formed bonds).",
+          "Bonds broken: 1 C=C bond + 4 C-H bonds + 1 H-H bond.",
+          "Bonds formed: 1 C-C bond + 6 C-H bonds.",
+          "Net change: delta_r H = [BE(C=C) + BE(H-H)] - [BE(C-C) + 2 * BE(C-H)].",
+          "Substitute values: delta_r H = [614 + 436] - [348 + 2 * 413].",
+          "delta_r H = 1050 - [348 + 826] = 1050 - 1174 = -124 kJ/mol."
+        ],
+        "answer": "-124 kJ/mol"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "In a process, 701 J of heat is absorbed by a system and 394 J of work is done by the system. What is the change in internal energy (delta U) for the process? A) +1095 J B) +307 J C) -307 J D) -1095 J",
+        "answer": "B) +307 J. Heat absorbed q = +701 J. Work done by system w = -394 J. delta U = q + w = 701 - 394 = +307 J."
+      },
+      {
+        "question": "For the reaction N2(g) + 3H2(g) -> 2NH3(g) at 298 K, what is the value of delta H - delta U in terms of R? A) -2 R * 298 B) +2 R * 298 C) -4 R * 298 D) 0",
+        "answer": "A) -2 R * 298. delta n_g = 2 - (1 + 3) = -2. Since delta H - delta U = delta n_g * R * T, the difference is -2 * R * 298."
+      },
+      {
+        "question": "Which of the following processes always has a negative enthalpy change? A) Atomization B) Sublimation C) Combustion D) Ionization",
+        "answer": "C) Combustion. Combustion reactions are exothermic, releasing heat energy, making delta_c H always negative."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry - Chapter 6: Chemical Thermodynamics",
+      "JEE Main Official Syllabus Chemistry - Unit 4: Chemical Thermodynamics"
+    ]
+  }
+}

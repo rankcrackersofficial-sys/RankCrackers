@@ -1,0 +1,123 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_8796FE37_CH001",
+    "overview": "Molecular Orbital Theory (MOT), proposed by Hund and Mulliken, describes chemical bonding by constructing molecular orbitals (MOs) through the Linear Combination of Atomic Orbitals (LCAO). The valence electrons belong to the entire molecule rather than individual atoms. MOT successfully explains the magnetic properties, bond order, bond length, and relative stabilities of homonuclear diatomic molecules such as B2, C2, N2, O2, and F2.",
+    "concepts": [
+      {
+        "title": "Linear Combination of Atomic Orbitals (LCAO) and Types of MOs",
+        "explanation": "Atomic orbitals combine constructively (additive combination: psi_B = psi_A + psi_B) to form Bonding Molecular Orbitals (BMO) with lower energy and high electron density between nuclei, and destructively (subtractive combination: psi_A* = psi_A - psi_B) to form Antibonding Molecular Orbitals (ABMO) with higher energy and a nodal plane. Head-on overlap along the internuclear axis produces sigma MOs, while lateral/sideways overlap yields pi MOs."
+      },
+      {
+        "title": "Molecular Orbital Electronic Configuration Energy Ordering",
+        "explanation": "For homonuclear diatomic molecules with total electrons <= 14 (Li2 to N2), s-p mixing occurs, shifting sigma 2pz above pi 2px/pi 2py: sigma 1s < sigma* 1s < sigma 2s < sigma* 2s < (pi 2px = pi 2py) < sigma 2pz < (pi* 2px = pi* 2py) < sigma* 2pz. For molecules with total electrons > 14 (O2 and F2), s-p mixing is negligible: sigma 1s < sigma* 1s < sigma 2s < sigma* 2s < sigma 2pz < (pi 2px = pi 2py) < (pi* 2px = pi* 2py) < sigma* 2pz."
+      },
+      {
+        "title": "Bond Order, Magnetic Behaviour, and Stability",
+        "explanation": "Bond Order (BO) is defined as BO = 0.5 * (Nb - Na), where Nb is the number of bonding electrons and Na is the number of antibonding electrons. Higher BO corresponds to stronger bond energy and shorter bond length. A molecule is stable if BO > 0 and unstable if BO <= 0. If all electrons are paired, the molecule is diamagnetic; if one or more unpaired electrons exist, it is paramagnetic."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Bond Order",
+        "formula": "BO = 0.5 * (N_b - N_a)",
+        "applicability": "Applicable to diatomic molecules and ions within MOT",
+        "variables": [
+          {
+            "symbol": "N_b",
+            "meaning": "Number of electrons in bonding molecular orbitals",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "N_a",
+            "meaning": "Number of electrons in antibonding molecular orbitals",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Spin-Only Magnetic Moment",
+        "formula": "mu = sqrt(n * (n + 2))",
+        "applicability": "Quantifies paramagnetic character of species with unpaired electrons",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of unpaired electrons",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "mu",
+            "meaning": "Magnetic moment",
+            "unit": "Bohr Magnetons (BM)"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Antibonding orbitals are destabilized by the exact same amount that bonding orbitals are stabilized.",
+        "correction": "Antibonding molecular orbitals are destabilized slightly more than bonding molecular orbitals are stabilized due to interelectronic repulsions between the positively charged nuclei."
+      },
+      {
+        "misconception": "O2 is diamagnetic because its valence shell has 12 electrons that can all be paired up.",
+        "correction": "MOT reveals that O2 has 16 total electrons with two degenerate pi* 2p orbitals (pi* 2px and pi* 2py), each containing one unpaired electron according to Hund's rule, rendering O2 paramagnetic."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Determine the bond order, magnetic character, and relative stability of O2, O2+, and O2-.",
+        "steps": [
+          "1. Write total electron count: O2 (16e-), O2+ (15e-), O2- (17e-).",
+          "2. Use MO configuration for total electrons > 14: sigma 1s^2 sigma* 1s^2 sigma 2s^2 sigma* 2s^2 sigma 2pz^2 (pi 2px^2 = pi 2py^2) (pi* 2px^1 = pi* 2py^1).",
+          "3. Calculate Nb and Na for O2: Nb = 10, Na = 6 => BO = (10 - 6)/2 = 2.0 (2 unpaired e-, paramagnetic).",
+          "4. Calculate Nb and Na for O2+: Nb = 10, Na = 5 => BO = (10 - 5)/2 = 2.5 (1 unpaired e-, paramagnetic).",
+          "5. Calculate Nb and Na for O2-: Nb = 10, Na = 7 => BO = (10 - 7)/2 = 1.5 (1 unpaired e-, paramagnetic).",
+          "6. Stability order correlates with Bond Order: O2+ (2.5) > O2 (2.0) > O2- (1.5)."
+        ],
+        "answer": "Bond orders are O2+ (2.5), O2 (2.0), O2- (1.5). All three are paramagnetic. Stability order: O2+ > O2 > O2-."
+      },
+      {
+        "problem": "Compare the bond lengths of N2, N2+, and N2-.",
+        "steps": [
+          "1. Total electrons: N2 (14e-), N2+ (13e-), N2- (15e-).",
+          "2. For N2 (14e-): Nb = 10, Na = 4 => BO = (10 - 4)/2 = 3.0.",
+          "3. For N2+ (13e-): An electron is removed from a bonding orbital (sigma 2pz) => Nb = 9, Na = 4 => BO = (9 - 4)/2 = 2.5.",
+          "4. For N2- (15e-): An electron is added to an antibonding orbital (pi* 2px) => Nb = 10, Na = 5 => BO = (10 - 5)/2 = 2.5.",
+          "5. Since Bond Length is inversely proportional to Bond Order, N2 has the shortest bond length. Between N2+ and N2-, N2- has more antibonding electrons (5 vs 4), making it slightly less stable and longer in bond length than N2+."
+        ],
+        "answer": "Bond length order: N2 < N2+ < N2-."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following homonuclear diatomic species is diamagnetic and has a bond order of 2? Options: (A) B2 (B) C2 (C) O2 (D) N2",
+        "answer": "Option (B) is correct. C2 has 12 electrons. Electronic configuration: sigma 1s^2 sigma* 1s^2 sigma 2s^2 sigma* 2s^2 (pi 2px^2 = pi 2py^2). Nb = 8, Na = 4. Bond order = (8 - 4)/2 = 2. All electrons are paired, so C2 is diamagnetic."
+      },
+      {
+        "question": "In which of the following species does s-p mixing cause the sigma 2pz orbital to lie higher in energy than the pi 2px and pi 2py orbitals? Options: (A) O2 (B) F2 (C) N2 (D) Ne2",
+        "answer": "Option (C) is correct. s-p orbital mixing is significant for diatomic species with total electrons <= 14 (such as Li2, Be2, B2, C2, N2), causing sigma 2pz to shift above pi 2px and pi 2py orbitals. For O2 and F2 (electrons > 14), s-p mixing is negligible."
+      },
+      {
+        "question": "Which pair of species has the exact same bond order? Options: (A) N2+ and O2+ (B) O2 and N2- (C) B2 and C2 (D) NO and CN-",
+        "answer": "Option (A) is correct. N2+ has 13 electrons, BO = (9 - 4)/2 = 2.5. O2+ has 15 electrons, BO = (10 - 5)/2 = 2.5. Both have a bond order of 2.5."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 4: Chemical Bonding and Molecular Structure",
+      "Lee, J.D., Concise Inorganic Chemistry, 5th Edition",
+      "Atkins, P., Physical Chemistry, 11th Edition"
+    ]
+  }
+}

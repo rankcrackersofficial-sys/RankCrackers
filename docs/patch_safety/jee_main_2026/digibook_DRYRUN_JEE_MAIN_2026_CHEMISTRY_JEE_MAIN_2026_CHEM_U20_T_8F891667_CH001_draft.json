@@ -1,0 +1,151 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_8F891667_CH001",
+    "overview": "This unit covers the laboratory preparation, chemical principles, reaction conditions, and purification techniques for key inorganic double salts (Mohr's salt and Potash alum) and functionalized organic compounds (Acetanilide, p-Nitroacetanilide, Aniline Yellow, and Iodoform).",
+    "concepts": [
+      {
+        "title": "Preparation of Mohr's Salt",
+        "explanation": "Mohr's salt, or ferrous ammonium sulphate [FeSO4·(NH4)2SO4·6H2O], is prepared by dissolving equimolar quantities of hydrated ferrous sulphate and ammonium sulphate in water containing a small amount of dilute sulphuric acid. Dilute H2SO4 prevents the hydrolysis of Fe2+ ions into ferrous hydroxide. The clear solution is concentrated to the crystallization point and cooled to obtain light green monoclinic crystals."
+      },
+      {
+        "title": "Preparation of Potash Alum",
+        "explanation": "Potash alum [K2SO4·Al2(SO4)3·24H2O] is a double salt prepared by mixing equimolar solutions of potassium sulphate and aluminium sulphate in water containing dilute sulphuric acid. Dilute H2SO4 prevents the hydrolysis of Al3+ ions. The solution is heated, concentrated, and allowed to cool slowly to form octahedral crystals."
+      },
+      {
+        "title": "Acetylation of Aniline to Acetanilide",
+        "explanation": "Aniline reacts with acetic anhydride (or acetyl chloride) in the presence of glacial acetic acid or pyridine to form acetanilide through nucleophilic acyl substitution. Zinc dust is often added during acetylation to prevent oxidation of aniline by converting any colored impurities back to aniline."
+      },
+      {
+        "title": "Nitration of Acetanilide to p-Nitroacetanilide",
+        "explanation": "Direct nitration of aniline yields a mixture of ortho, meta, and para isomers alongside oxidation products because the free -NH2 group gets protonated to -NH3+ (a meta-directing group) in acidic medium. Protecting the amino group by acetylation reduces electron density on the ring. Nitration of acetanilide with a mixture of conc. HNO3 and conc. H2SO4 at low temperature (<15 °C) selectively yields p-nitroacetanilide as the major product."
+      },
+      {
+        "title": "Preparation of Aniline Yellow",
+        "explanation": "Aniline Yellow (p-aminoazobenzene) is an azo dye synthesized in two steps: first, diazotization of aniline with NaNO2 and HCl at 0-5 °C produces benzene diazonium chloride. Subsequently, diazonium salt couples with aniline in weakly acidic medium to yield diazoaminobenzene, which rearranges upon warming with aniline hydrochloride at 40-50 °C to form p-aminoazobenzene (Aniline Yellow)."
+      },
+      {
+        "title": "Haloform Reaction: Preparation of Iodoform",
+        "explanation": "Compounds containing a CH3C=O group (like acetone or acetaldehyde) or a CH3CH(OH) group (like ethanol or secondary methyl alcohols) react with iodine in the presence of aqueous sodium hydroxide or sodium carbonate to yield a yellow precipitate of iodoform (CHI3). The reaction proceeds via triiodination of the methyl group followed by alkaline cleavage."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Molecular Formula of Mohr's Salt",
+        "formula": "FeSO4 · (NH4)2SO4 · 6H2O",
+        "applicability": "Crystallization of ferrous and ammonium sulphates",
+        "variables": [
+          {
+            "symbol": "Fe2+",
+            "meaning": "Ferrous ion",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "NH4+",
+            "meaning": "Ammonium ion",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Molecular Formula of Potash Alum",
+        "formula": "K2SO4 · Al2(SO4)3 · 24H2O",
+        "applicability": "Double salt crystallization",
+        "variables": [
+          {
+            "symbol": "K+",
+            "meaning": "Potassium ion",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Al3+",
+            "meaning": "Aluminium ion",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Percentage Yield",
+        "formula": "Yield (%) = (Actual Mass Obtained / Theoretical Mass Calculated) * 100",
+        "applicability": "Organic and inorganic preparative chemistry calculations",
+        "variables": [
+          {
+            "symbol": "Actual Mass",
+            "meaning": "Mass of dried product isolated",
+            "unit": "g"
+          },
+          {
+            "symbol": "Theoretical Mass",
+            "meaning": "Stoichiometrically predicted mass of product",
+            "unit": "g"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Dilute H2SO4 is added during Mohr's salt preparation to act as an oxidizing agent.",
+        "correction": "Dilute H2SO4 is added strictly to prevent the hydrolysis of Fe2+ ions into Fe(OH)2 or Fe(OH)3, ensuring a clear solution for double salt crystallization."
+      },
+      {
+        "misconception": "Aniline can be directly nitrated to obtain p-nitroaniline in high yield.",
+        "correction": "Direct nitration of aniline in strongly acidic medium protonates -NH2 to -NH3+, which is meta-directing and strongly deactivating, producing significant amounts of m-nitroaniline (47%) along with oxidation products. Acetylation is mandatory to protect the amino group."
+      },
+      {
+        "misconception": "Diazotization of aniline can be performed at room temperature.",
+        "correction": "Benzene diazonium chloride decomposes rapidly above 5 °C to form phenol and nitrogen gas. Diazotization must strictly be maintained between 0 °C and 5 °C."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the theoretical yield of Mohr's salt [FeSO4·(NH4)2SO4·6H2O, Molar mass = 392 g/mol] obtainable from 7.0 g of hydrated ferrous sulphate [FeSO4·7H2O, Molar mass = 278 g/mol] and excess ammonium sulphate.",
+        "steps": [
+          "Step 1: Write the stoichiometric relation. 1 mole of FeSO4·7H2O yields 1 mole of FeSO4·(NH4)2SO4·6H2O.",
+          "Step 2: Calculate moles of FeSO4·7H2O used: Moles = 7.0 g / 278 g/mol = 0.02518 mol.",
+          "Step 3: Determine theoretical moles of Mohr's salt = 0.02518 mol.",
+          "Step 4: Convert moles to mass: Mass = 0.02518 mol * 392 g/mol = 9.87 g."
+        ],
+        "answer": "The theoretical yield of Mohr's salt is 9.87 g."
+      },
+      {
+        "problem": "If 9.3 g of aniline (Molar mass = 93 g/mol) reacts with excess acetic anhydride to yield 10.8 g of dried acetanilide (Molar mass = 135 g/mol), calculate the percentage yield.",
+        "steps": [
+          "Step 1: Calculate moles of aniline used: Moles = 9.3 g / 93 g/mol = 0.1 mol.",
+          "Step 2: Determine theoretical yield of acetanilide: Mass = 0.1 mol * 135 g/mol = 13.5 g.",
+          "Step 3: Calculate percentage yield: Yield (%) = (10.8 g / 13.5 g) * 100 = 80%."
+        ],
+        "answer": "The percentage yield of acetanilide is 80%."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Why is zinc dust added during the preparation of acetanilide from aniline? A) To act as a catalyst B) To prevent oxidation of aniline C) To dehydrate the reaction mixture D) To increase solubility of acetanilide",
+        "answer": "Option B. Zinc dust acts as a reducing agent that prevents oxidation of aniline during heating, thereby keeping the reaction mixture free from colored oxidation products."
+      },
+      {
+        "question": "Which reagent system and temperature range are required for the haloform preparation of iodoform from acetone? A) I2 + NaOH at room temperature B) HI + NaHCO3 at 100 °C C) I2 + conc. HNO3 at 0 °C D) KI + Dilute H2SO4 at 60 °C",
+        "answer": "Option A. Iodoform is prepared by reacting acetone with iodine (I2) in the presence of sodium hydroxide (NaOH) or sodium carbonate solution at moderate temperature."
+      },
+      {
+        "question": "What is the primary role of dilute sulphuric acid in the preparation of potash alum? A) To catalyze the salt formation B) To oxidize Al3+ ions C) To prevent hydrolysis of Al3+ ions D) To neutralize potassium sulphate",
+        "answer": "Option C. Dilute H2SO4 prevents the hydrolysis of Al3+ ions to aluminium hydroxide, ensuring the solution remains clear prior to crystallization."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 12 Chemistry, Comprehensive Laboratory Manual - Preparations of Inorganic and Organic Compounds",
+      "JEE Main Chemistry Syllabus - Practical Chemistry and Preparations (Unit 24)"
+    ]
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_FBF10486_CH001",
+    "overview": "Hormones are intercellular chemical messengers synthesized in trace amounts by endocrine (ductless) glands. They are discharged directly into the bloodstream and transported to specific target sites to regulate physiological processes including metabolism, growth, development, cellular differentiation, and body homeostasis.",
+    "concepts": [
+      {
+        "title": "Chemical Nature and Classification of Hormones",
+        "explanation": "Hormones are broadly classified into three major chemical groups: (1) Steroid hormones, which possess a cyclopentanoperhydrophenanthrene ring system derived from cholesterol (e.g., estrogens, progesterone, testosterone, cortisol); (2) Peptide and Protein hormones, composed of amino acid chains linked by peptide bonds (e.g., insulin, glucagon, oxytocin, vasopressin); and (3) Amino acid derivatives, which are modified single amino acids such as L-tyrosine (e.g., epinephrine, norepinephrine, thyroxine)."
+      },
+      {
+        "title": "Biological Roles and Physiological Functions",
+        "explanation": "Hormones control cellular activities by binding to specific receptors. Water-soluble hormones (peptides and amines) interact with cell-surface membrane receptors to initiate secondary messenger signaling cascades. Lipid-soluble hormones (steroids and thyroid hormones) cross the plasma membrane to bind nuclear receptors and directly alter gene expression. Key functions include blood glucose regulation by insulin and glucagon, basal metabolic rate control by thyroxine, and stress response control by epinephrine."
+      },
+      {
+        "title": "Endocrine Disorders and Clinical Correlations",
+        "explanation": "Imbalances in hormone secretion lead to distinct pathophysiological disorders. Hypo-secretion of insulin results in Diabetes Mellitus, marked by elevated blood glucose (hyperglycemia) and glucose excretion in urine (glycosuria). Deficiency of iodine or thyroxine causes hypothyroidism and enlargement of the thyroid gland (goitre). Insufficiency of adrenal cortex hormones leads to Addison's disease."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Chemical Composition of Epinephrine (Adrenaline)",
+        "formula": "C9H13NO3",
+        "applicability": "Represents the catecholamine hormone derived from tyrosine, secreted by the adrenal medulla during stress responses.",
+        "variables": [
+          {
+            "symbol": "C",
+            "meaning": "Carbon atom count in epinephrine ring and side chain",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "H",
+            "meaning": "Hydrogen atom count",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "N",
+            "meaning": "Nitrogen atom count in amine group",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "O",
+            "meaning": "Oxygen atom count in hydroxyl groups",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Chemical Composition of Thyroxine (T4)",
+        "formula": "C15H11I4NO4",
+        "applicability": "Represents the tetraiodinated amino acid derivative produced by the thyroid gland to control metabolic rate.",
+        "variables": [
+          {
+            "symbol": "I",
+            "meaning": "Iodine atoms required for biological hormone activity",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "All hormones are proteins or polypeptide chains.",
+        "correction": "Hormones exhibit chemical diversity; besides peptide hormones like insulin, many essential hormones are lipophilic steroids (e.g., testosterone, estrogen) or low-molecular-weight amino acid derivatives (e.g., epinephrine, thyroxine)."
+      },
+      {
+        "misconception": "Hormones act as energetic substrates or biological fuels during metabolic reactions.",
+        "correction": "Hormones do not yield energy or act as structural components. They act purely as chemical signals that catalyze or regulate rates of biochemical pathways by modifying enzyme actions and gene expression."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Classify the following hormones into their respective chemical categories: (a) Insulin, (b) Cortisol, (c) Epinephrine, and (d) Thyroxine.",
+        "steps": [
+          "Step 1: Identify the molecular structure of Insulin. Insulin consists of 51 amino acids across two polypeptide chains, so it is a peptide/protein hormone.",
+          "Step 2: Identify Cortisol. Cortisol contains a steroid nucleus derived from cholesterol, classifying it as a steroid hormone.",
+          "Step 3: Identify Epinephrine and Thyroxine. Both molecules are biosynthesized from the amino acid tyrosine, placing them in the amino acid derivative category."
+        ],
+        "answer": "Insulin: Peptide/Protein hormone; Cortisol: Steroid hormone; Epinephrine: Amino acid derivative; Thyroxine: Amino acid derivative."
+      },
+      {
+        "problem": "Explain how insulin and glucagon coordinate blood glucose regulation in a healthy organism.",
+        "steps": [
+          "Step 1: When blood glucose levels rise above normal (e.g., post-meal), beta cells in the pancreas release insulin.",
+          "Step 2: Insulin enhances cellular uptake of glucose and stimulates glycogenesis (storage of glucose as glycogen in liver and muscles), thereby lowering blood glucose levels.",
+          "Step 3: When blood glucose drops below normal (e.g., fasting), alpha cells in the pancreas secrete glucagon.",
+          "Step 4: Glucagon stimulates glycogenolysis (breakdown of stored glycogen into glucose) in the liver, raising blood glucose back to homeostatic levels."
+        ],
+        "answer": "Insulin lowers blood glucose by accelerating glucose uptake and glycogenesis, while glucagon raises blood glucose by stimulating glycogenolysis; together they maintain glucose homeostasis."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following compounds is classified as a steroid hormone? (A) Insulin (B) Thyroxine (C) Testosterone (D) Oxytocin",
+        "answer": "Correct Answer: (C) Testosterone. Testosterone is synthesized from cholesterol and contains the steroid ring framework. Insulin and oxytocin are peptides, and thyroxine is an amino acid derivative."
+      },
+      {
+        "question": "Deficiency of insulin in the human body leads to which physiological disorder? (A) Addison's Disease (B) Diabetes Mellitus (C) Goitre (D) Cushing's Syndrome",
+        "answer": "Correct Answer: (B) Diabetes Mellitus. Insulin deficiency prevents proper cellular uptake and utilization of glucose, leading to hyperglycemia and glycosuria."
+      },
+      {
+        "question": "Which halogen element is an essential structural component of the hormone thyroxine? (A) Chlorine (B) Fluorine (C) Bromine (D) Iodine",
+        "answer": "Correct Answer: (D) Iodine. Thyroxine contains four iodine atoms per molecule (T4). Dietary deficiency of iodine impairs thyroxine synthesis, causing goitre."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 14: Biomolecules - Section on Hormones",
+      "JEE Main Official Syllabus - Organic Chemistry and Biomolecules"
+    ]
+  }
+}

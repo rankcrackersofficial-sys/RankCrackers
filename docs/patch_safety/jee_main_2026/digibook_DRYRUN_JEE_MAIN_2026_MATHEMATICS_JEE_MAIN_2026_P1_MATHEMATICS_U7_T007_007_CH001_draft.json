@@ -1,0 +1,115 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U7_T007_007_CH001",
+    "overview": "This learning unit focuses on finding extrema (maxima and minima) of single-variable continuous and differentiable functions. It covers identifying critical points, applying the First and Second Derivative Tests, and calculating absolute extrema on closed intervals, which are key problem types in JEE Main.",
+    "concepts": [
+      {
+        "title": "Critical Points and Local Extrema",
+        "explanation": "A point x = c in the domain of a function f(x) is called a critical point if either f'(c) = 0 or f'(c) does not exist. Local extrema (local maxima or minima) occur only at critical points or boundary points. A local maximum occurs at x = c if f(c) >= f(x) for all x in a small neighborhood around c."
+      },
+      {
+        "title": "First and Second Derivative Tests",
+        "explanation": "The First Derivative Test identifies extrema by observing sign changes of f'(x) across a critical point x = c: if f'(x) changes from positive to negative, c is a local maximum; if negative to positive, c is a local minimum. The Second Derivative Test uses f''(c): if f'(c) = 0 and f''(c) < 0, c is a local maximum; if f''(c) > 0, c is a local minimum. If f''(c) = 0, the second derivative test is inconclusive."
+      },
+      {
+        "title": "Absolute Maxima and Minima on Closed Intervals",
+        "explanation": "By the Extreme Value Theorem, a continuous function f(x) on a closed interval [a, b] always attains an absolute maximum and an absolute minimum. To find them, calculate f(x) at all critical points in (a, b) and at the boundary points x = a and x = b, then compare the functional values."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "First Derivative Condition for Local Extrema",
+        "formula": "f'(c) = 0 \\text{ or } f'(c) \\text{ is undefined}",
+        "applicability": "Necessary condition for local extrema of a continuous function at interior domain points",
+        "variables": [
+          {
+            "symbol": "c",
+            "meaning": "Critical point candidate in domain",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "f'(c)",
+            "meaning": "First derivative at point c",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Second Derivative Test",
+        "formula": "f''(c) < 0 \\implies \\text{Local Max}; \\quad f''(c) > 0 \\implies \\text{Local Min}",
+        "applicability": "Determining nature of critical point x = c where f'(c) = 0",
+        "variables": [
+          {
+            "symbol": "f''(c)",
+            "meaning": "Second derivative at critical point c",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "If f'(c) = 0, x = c must be a local maximum or minimum.",
+        "correction": "f'(c) = 0 is a necessary condition for differentiable functions but not sufficient. For example, for f(x) = x^3 at x = 0, f'(0) = 0, but x = 0 is a point of inflection, neither a maximum nor a minimum."
+      },
+      {
+        "misconception": "A local maximum value of a function is always greater than any local minimum value.",
+        "correction": "A local maximum is only greater than values in its immediate local neighborhood. A function can have a local minimum at one location that is higher in numerical value than a local maximum at another location."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Find all local local extremum points of the function f(x) = 2x^3 - 9x^2 + 12x + 5.",
+        "steps": [
+          "Step 1: Compute the first derivative f'(x) = 6x^2 - 18x + 12.",
+          "Step 2: Set f'(x) = 0 to find critical points: 6(x^2 - 3x + 2) = 0 => 6(x - 1)(x - 2) = 0. So critical points are x = 1 and x = 2.",
+          "Step 3: Compute the second derivative f''(x) = 12x - 18.",
+          "Step 4: Evaluate f''(x) at critical points: f''(1) = 12(1) - 18 = -6 < 0 (Local Maximum at x = 1). f''(2) = 12(2) - 18 = +6 > 0 (Local Minimum at x = 2).",
+          "Step 5: Calculate values: f(1) = 2(1) - 9(1) + 12(1) + 5 = 10; f(2) = 2(8) - 9(4) + 12(2) + 5 = 9."
+        ],
+        "answer": "Local maximum value is 10 at x = 1, and local minimum value is 9 at x = 2."
+      },
+      {
+        "problem": "Find the absolute maximum and absolute minimum values of f(x) = x^3 - 3x + 2 on the interval [-2, 5/2].",
+        "steps": [
+          "Step 1: Find derivative: f'(x) = 3x^2 - 3 = 3(x - 1)(x + 1).",
+          "Step 2: Find critical points in (-2, 5/2): x = 1 and x = -1.",
+          "Step 3: Evaluate f(x) at critical points and endpoints: f(-2) = (-2)^3 - 3(-2) + 2 = -8 + 6 + 2 = 0; f(-1) = (-1)^3 - 3(-1) + 2 = -1 + 3 + 2 = 4; f(1) = 1 - 3 + 2 = 0; f(5/2) = (125/8) - (15/2) + 2 = (125 - 60 + 16)/8 = 81/8 = 10.125.",
+          "Step 4: Compare values: Minimum value is 0 (at x = -2 and x = 1); Maximum value is 81/8 (at x = 5/2)."
+        ],
+        "answer": "Absolute Maximum value = 81/8 (or 10.125) at x = 5/2; Absolute Minimum value = 0 at x = -2 and x = 1."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "For the function f(x) = x^4 - 4x^3, which of the following is true? A) Local minimum at x = 0, B) Local minimum at x = 3, C) Point of inflection at x = 3, D) Local maximum at x = 3",
+        "answer": "Correct Answer: B. Explanation: f'(x) = 4x^3 - 12x^2 = 4x^2(x - 3). Critical points are x = 0 and x = 3. Sign of f'(x): negative for x < 0, negative for 0 < x < 3, positive for x > 3. Since f'(x) changes sign from negative to positive at x = 3, x = 3 is a local minimum. At x = 0, sign does not change, so it is neither a max nor min."
+      },
+      {
+        "question": "If f(x) = x + 1/x for x > 0, what is the minimum value of f(x)? A) 0, B) 1, C) 2, D) 4",
+        "answer": "Correct Answer: C. Explanation: f'(x) = 1 - 1/x^2. Setting f'(x) = 0 gives x = 1 (since x > 0). f''(x) = 2/x^3, so f''(1) = 2 > 0 (Local minimum). The minimum value is f(1) = 1 + 1/1 = 2."
+      },
+      {
+        "question": "What is the absolute maximum value of f(x) = sin(x) + cos(x) on [0, pi/2]? A) 1, B) sqrt(2), C) 2, D) 1/sqrt(2)",
+        "answer": "Correct Answer: B. Explanation: f'(x) = cos(x) - sin(x) = 0 => tan(x) = 1 => x = pi/4 in [0, pi/2]. Evaluate endpoints and critical point: f(0) = 1, f(pi/2) = 1, f(pi/4) = sin(pi/4) + cos(pi/4) = 1/sqrt(2) + 1/sqrt(2) = sqrt(2). Maximum value is sqrt(2)."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 12 Mathematics - Chapter 6: Application of Derivatives",
+      "JEE Main Official Syllabus - Mathematics: Applications of Derivatives (Maxima and Minima)"
+    ]
+  }
+}

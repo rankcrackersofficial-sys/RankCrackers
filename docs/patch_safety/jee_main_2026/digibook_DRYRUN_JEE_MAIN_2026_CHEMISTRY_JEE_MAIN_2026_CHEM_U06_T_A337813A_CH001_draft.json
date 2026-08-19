@@ -1,0 +1,174 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_A337813A_CH001",
+    "overview": "Chemical equilibrium represents a dynamic state in reversible reactions where the rates of forward and reverse reactions become equal, causing concentrations of reactants and products to remain constant over time. The equilibrium constants Kc and Kp quantify the position of equilibrium in terms of molar concentrations and partial pressures, related by Kp = Kc(RT)^(delta n_g). Thermodynamically, equilibrium corresponds to minimum Gibbs energy (delta G = 0), yielding delta G degree = -RT ln K. Le Chatelier's principle predicts how equilibrium responds to external perturbations such as changes in concentration, pressure, temperature, and addition of inert gas or catalysts.",
+    "concepts": [
+      {
+        "title": "Law of Mass Action and Equilibrium Constants (Kc and Kp)",
+        "explanation": "At a constant temperature, the rate of a chemical reaction is proportional to the product of active masses of reactants. For a general reversible reaction aA + bB <=> cC + dD, the equilibrium constant Kc = ([C]^c [D]^d) / ([A]^a [B]^b). For gaseous reactions, partial pressures are used to define Kp = (P_C^c * P_D^d) / (P_A^a * P_B^b). Pure solids and liquids have an active mass taken as unity."
+      },
+      {
+        "title": "Thermodynamic Significance of Delta G and Delta G degree",
+        "explanation": "The reaction quotient Q relates to Gibbs free energy via delta G = delta G degree + RT ln Q. At equilibrium, delta G = 0 and Q = K, giving delta G degree = -RT ln K. A negative delta G degree implies K > 1 (product favored), while a positive delta G degree implies K < 1 (reactant favored). Spontaneity at any state depends on delta G, not delta G degree."
+      },
+      {
+        "title": "Le Chatelier's Principle and External Factors",
+        "explanation": "When a system at equilibrium is subjected to a change in concentration, pressure, or temperature, it shifts in a direction that counteracts the change. Increasing reactant concentration shifts equilibrium forward. Increasing pressure shifts equilibrium toward fewer moles of gas. Increasing temperature shifts equilibrium in the endothermic direction. A catalyst speeds up forward and backward reactions equally without changing K or equilibrium composition."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Relation between Kp and Kc",
+        "formula": "K_p = K_c (R T)^{\\Delta n_g}",
+        "applicability": "Reversible gaseous reactions at constant temperature",
+        "variables": [
+          {
+            "symbol": "K_p",
+            "meaning": "Equilibrium constant in terms of partial pressures",
+            "unit": "atm^(delta n_g) or bar^(delta n_g)"
+          },
+          {
+            "symbol": "K_c",
+            "meaning": "Equilibrium constant in terms of molar concentration",
+            "unit": "(mol/L)^(delta n_g)"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant",
+            "unit": "0.0821 L atm mol^-1 K^-1 or 8.314 J mol^-1 K^-1"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Absolute temperature",
+            "unit": "K"
+          },
+          {
+            "symbol": "delta n_g",
+            "meaning": "Change in moles of gaseous species (Products - Reactants)",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Standard Gibbs Free Energy Change and Equilibrium Constant",
+        "formula": "\\Delta G^\\circ = -R T \\ln K = -2.303 R T \\log_{10} K",
+        "applicability": "Systems at chemical equilibrium under standard state conditions",
+        "variables": [
+          {
+            "symbol": "\\Delta G^\\circ",
+            "meaning": "Standard Gibbs free energy change",
+            "unit": "J/mol or kJ/mol"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant",
+            "unit": "8.314 J mol^-1 K^-1"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Absolute temperature",
+            "unit": "K"
+          },
+          {
+            "symbol": "K",
+            "meaning": "Equilibrium constant",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Van 't Hoff Isochore Equation",
+        "formula": "\\ln\\left(\\frac{K_2}{K_1}\\right) = \\frac{\\Delta H^\\circ}{R}\\left(\\frac{1}{T_1} - \\frac{1}{T_2}\\right)",
+        "applicability": "Variation of equilibrium constant with temperature",
+        "variables": [
+          {
+            "symbol": "K_1, K_2",
+            "meaning": "Equilibrium constants at temperatures T1 and T2",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "\\Delta H^\\circ",
+            "meaning": "Standard enthalpy change of reaction",
+            "unit": "J/mol"
+          },
+          {
+            "symbol": "T_1, T_2",
+            "meaning": "Initial and final absolute temperatures",
+            "unit": "K"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant",
+            "unit": "8.314 J mol^-1 K^-1"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Adding a catalyst changes the value of the equilibrium constant K.",
+        "correction": "A catalyst lowers the activation energy equally for both forward and reverse reactions, helping the system reach equilibrium faster without altering the equilibrium position or constant K."
+      },
+      {
+        "misconception": "Adding an inert gas at constant volume shifts the equilibrium position.",
+        "correction": "Adding an inert gas at constant volume increases total pressure but leaves the partial pressures and molar concentrations of reacting species unchanged, so equilibrium does not shift."
+      },
+      {
+        "misconception": "A negative Delta G degree means the reaction always proceeds rapidly to completion.",
+        "correction": "Delta G degree determines thermodynamic feasibility and position of equilibrium (value of K), not the rate or kinetics of the reaction."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "For the reaction N2(g) + 3H2(g) <=> 2NH3(g) at 500 K, Kc is 0.5 mol^-2 L^2. Calculate Kp for the reaction at this temperature. (Take R = 0.0821 L atm mol^-1 K^-1)",
+        "steps": [
+          "Identify delta n_g = moles of gaseous products - moles of gaseous reactants = 2 - (1 + 3) = -2.",
+          "Use the formula Kp = Kc * (R * T)^(delta n_g).",
+          "Substitute values: R = 0.0821, T = 500 K, R*T = 41.05.",
+          "Calculate Kp = 0.5 * (41.05)^(-2) = 0.5 / (41.05)^2 = 0.5 / 1685.1 = 2.97 x 10^-4 atm^-2."
+        ],
+        "answer": "Kp = 2.97 x 10^-4 atm^-2"
+      },
+      {
+        "problem": "Calculate the standard Gibbs energy change (Delta G degree) at 298 K for a reaction with equilibrium constant K = 100. (Use R = 8.314 J mol^-1 K^-1)",
+        "steps": [
+          "Use the thermodynamic equation Delta G degree = -2.303 * R * T * log10(K).",
+          "Substitute T = 298 K, R = 8.314 J mol^-1 K^-1, K = 100 so log10(100) = 2.",
+          "Calculate Delta G degree = -2.303 * 8.314 * 298 * 2 = -11411.6 J/mol = -11.41 kJ/mol."
+        ],
+        "answer": "Delta G degree = -11.41 kJ/mol"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "In the reaction PCl5(g) <=> PCl3(g) + Cl2(g), what is the effect of increasing pressure on the equilibrium state? Options: (A) Equilibrium shifts forward, (B) Equilibrium shifts backward, (C) No shift occurs, (D) Kp increases.",
+        "answer": "Option (B) is correct. Increasing total pressure causes the equilibrium to shift in the direction that produces fewer moles of gas. Since the forward reaction increases gaseous moles (1 to 2), the reverse reaction (2 to 1) is favored to counteract the pressure increase."
+      },
+      {
+        "question": "For an endothermic reaction (Delta H degree > 0), how does an increase in temperature affect the equilibrium constant K? Options: (A) K decreases, (B) K remains unchanged, (C) K increases, (D) K becomes zero.",
+        "answer": "Option (C) is correct. According to the Van 't Hoff equation, when Delta H degree > 0, an increase in temperature causes ln(K2/K1) to be positive, meaning K increases with temperature. Heat acts as a reactant in endothermic processes."
+      },
+      {
+        "question": "Which of the following conditions guarantees that a chemical system is at dynamic equilibrium? Options: (A) Forward reaction rate equals reverse reaction rate, (B) Concentration of reactants equals concentration of products, (C) Delta G degree = 0, (D) Reaction quotient Q = 0.",
+        "answer": "Option (A) is correct. Dynamic equilibrium is defined by the equality of forward and reverse reaction rates. Delta G (not Delta G degree) equals 0 at equilibrium, and concentrations remain constant but not necessarily equal."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 7: Equilibrium",
+      "JEE Main Official Syllabus - Physical Chemistry: Chemical Equilibrium"
+    ]
+  }
+}

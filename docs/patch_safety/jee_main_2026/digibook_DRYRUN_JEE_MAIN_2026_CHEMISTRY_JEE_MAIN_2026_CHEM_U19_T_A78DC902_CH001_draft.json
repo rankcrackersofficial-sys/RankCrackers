@@ -1,0 +1,140 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_A78DC902_CH001",
+    "overview": "This node provides a foundational understanding of proteins for JEE Main Chemistry. It covers alpha-amino acids, zwitterion properties, the peptide bond, classification of amino acids (essential and non-essential), four structural levels of proteins (primary, secondary, tertiary, quaternary), protein denaturation, and the qualitative mechanism of enzyme catalysis.",
+    "concepts": [
+      {
+        "title": "Alpha-Amino Acids and Zwitterion Structure",
+        "explanation": "Alpha-amino acids contain both an amino group (-NH2) and a carboxyl group (-COOH) attached to the same alpha-carbon atom. In aqueous solution, the carboxyl group loses a proton and the amino group gains a proton, forming a dipolar ion known as a zwitterion. Except for glycine, all natural alpha-amino acids are optically active and possess L-configuration at the alpha-carbon."
+      },
+      {
+        "title": "Peptide Bond and Polypeptides",
+        "explanation": "A peptide bond is an amide linkage (-CO-NH-) formed by the condensation reaction between the alpha-carboxyl group of one amino acid and the alpha-amino group of another, with the elimination of a water molecule. Chains containing up to 10 amino acids are called oligopeptides, while those with more are polypeptides. Proteins are polypeptides containing usually more than 100 amino acid residues or having a molecular mass greater than 10,000 u."
+      },
+      {
+        "title": "Levels of Protein Structure",
+        "explanation": "Proteins have four structural levels: (1) Primary structure: The specific linear sequence of amino acids linked by peptide bonds. (2) Secondary structure: Spatial arrangement of polypeptide chains due to hydrogen bonding, giving rise to alpha-helix and beta-pleated sheet structures. (3) Tertiary structure: Overall 3D folding of the secondary structure stabilized by H-bonds, disulfide linkages, van der Waals forces, and electrostatic interactions (yielding fibrous or globular shapes). (4) Quaternary structure: Spatial arrangement of two or more polypeptide subunits relative to each other."
+      },
+      {
+        "title": "Denaturation of Proteins",
+        "explanation": "Denaturation refers to the process where a protein loses its biological activity due to physical changes (like heating) or chemical changes (like pH alterations). During denaturation, secondary, tertiary, and quaternary structures are destroyed as H-bonds and hydrophobic interactions unfold, but the primary structure (covalent peptide bonds) remains intact. Examples include coagulation of egg white on boiling and curdling of milk."
+      },
+      {
+        "title": "Enzymes as Biological Catalysts",
+        "explanation": "Enzymes are highly specific globular proteins that act as biocatalysts. They increase the rate of biochemical reactions by providing an alternative pathway with lower activation energy. Enzymes operate optimally at specific physiological temperatures (~37 deg C) and pH values (~7.4). Their activity involves active sites that fit specific substrate molecules via lock-and-key or induced-fit mechanisms."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Isoelectric Point (pI) of Neutral Amino Acids",
+        "formula": "pI = (pK_a1 + pK_a2) / 2",
+        "applicability": "Used to calculate the pH at which an amino acid exists predominantly in its neutral zwitterionic form with zero net electric charge.",
+        "variables": [
+          {
+            "symbol": "pI",
+            "meaning": "Isoelectric point",
+            "unit": "dimensionless (pH unit)"
+          },
+          {
+            "symbol": "pK_a1",
+            "meaning": "Negative logarithm of acid dissociation constant for the carboxyl group",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "pK_a2",
+            "meaning": "Negative logarithm of acid dissociation constant for the ammonium group",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Number of Unique Tripeptides",
+        "formula": "N = n^k",
+        "applicability": "Calculates the total possible sequence combinations of peptides formed using n different amino acids across k positions when repetition is allowed.",
+        "variables": [
+          {
+            "symbol": "N",
+            "meaning": "Total number of unique peptide sequences",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "n",
+            "meaning": "Number of distinct amino acid types available",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "k",
+            "meaning": "Length of the peptide chain (e.g., k=3 for tripeptides)",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Denaturation breaks the peptide bonds in proteins, converting them back into free amino acids.",
+        "correction": "Denaturation only disrupts weak non-covalent interactions (hydrogen bonds, ionic bonds, van der Waals forces) responsible for secondary, tertiary, and quaternary structures. Primary structure (covalent peptide bonds) remains completely intact."
+      },
+      {
+        "misconception": "All natural alpha-amino acids are optically active.",
+        "correction": "Glycine (H2N-CH2-COOH) has two hydrogen atoms on its alpha-carbon, making it achiral and optically inactive. All other standard alpha-amino acids are optically active."
+      },
+      {
+        "misconception": "Enzymes alter the equilibrium constant of a biochemical reaction.",
+        "correction": "Enzymes only lower the activation energy barrier, speeding up both forward and backward reactions equally. They do not alter the position of chemical equilibrium or equilibrium constant."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Glycine has pK_a1 (carboxyl) = 2.34 and pK_a2 (amino) = 9.60. Calculate its isoelectric point (pI) and determine the net charge on glycine at pH = 1.0, pH = 6.0, and pH = 11.0.",
+        "steps": [
+          "Step 1: Calculate the isoelectric point using pI = (pK_a1 + pK_a2) / 2 = (2.34 + 9.60) / 2 = 5.97.",
+          "Step 2: At pH = 1.0 (strongly acidic, pH < pI), both functional groups are fully protonated (-COOH and -NH3+). Net charge is +1 (cationic form).",
+          "Step 3: At pH = 6.0 (pH approx equal to pI = 5.97), glycine predominantly exists as a zwitterion (-COO- and -NH3+). Net charge is 0.",
+          "Step 4: At pH = 11.0 (strongly basic, pH > pI), the carboxylic group is deprotonated (-COO-) and amino group loses a proton (-NH2). Net charge is -1 (anionic form)."
+        ],
+        "answer": "pI = 5.97. Net charges: +1 at pH = 1.0, 0 at pH = 6.0, -1 at pH = 11.0."
+      },
+      {
+        "problem": "How many distinct tripeptides can be formed using three different amino acids (Alanine, Glycine, Valine) if each amino acid must be used exactly once in each tripeptide?",
+        "steps": [
+          "Step 1: Identify the length of the peptide (k = 3).",
+          "Step 2: Since each of the 3 amino acids must be used exactly once, this is a permutation of 3 distinct items: 3! = 3 x 2 x 1 = 6.",
+          "Step 3: The sequences are Ala-Gly-Val, Ala-Val-Gly, Gly-Ala-Val, Gly-Val-Ala, Val-Ala-Gly, Val-Gly-Ala."
+        ],
+        "answer": "6 distinct tripeptides can be formed."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following statements about denaturation of proteins is correct?\n(A) Primary structure is affected while secondary structure remains intact.\n(B) Secondary and tertiary structures are destroyed, but primary structure remains intact.\n(C) All peptide bonds are hydrolytically cleaved.\n(D) Denaturation increases the biological activity of enzymes.",
+        "answer": "Option (B) is correct. Denaturation leads to unfolding of secondary, tertiary, and quaternary structures due to disruption of hydrogen bonds and non-covalent forces, leaving the primary peptide-bonded chain untouched."
+      },
+      {
+        "question": "Which of the following alpha-amino acids is optically inactive?\n(A) Alanine\n(B) Valine\n(C) Lysine\n(D) Glycine",
+        "answer": "Option (D) is correct. Glycine (H2N-CH2-COOH) lacks a chiral carbon center because its alpha-carbon is attached to two identical hydrogen atoms."
+      },
+      {
+        "question": "The primary force responsible for stabilizing the alpha-helix secondary structure of proteins is:\n(A) Disulfide bonds\n(B) Ionic bonds\n(C) Intramolecular hydrogen bonding between -NH and -CO groups of peptide bonds\n(D) Hydrophobic interactions between side R groups",
+        "answer": "Option (C) is correct. The alpha-helix is stabilized by intramolecular hydrogen bonds between the -NH group of one amino acid residue and the -CO group of the fourth residue ahead in the polypeptide chain."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 14: Biomolecules - Section 14.2 (Proteins)",
+      "JEE Main Official Chemistry Syllabus 2026 - Unit 19: Biomolecules"
+    ]
+  }
+}

@@ -8,32 +8,24 @@
     "stillPending": 0,
     "heldForSource": 26,
     "totalVerified": 211,
-    "modelOnlyPromotions": 0,
-    "remainingPending": 206,
-    "studentReady": false
+    "modelOnlyPromotions": 0
   },
   "crucible": {
     "questionPacksReady": 2,
     "macroReviewed": 2,
     "majorReviewed": 0,
     "answerKeysVerified": 2,
-    "studentReady": false,
-    "macroTotal": 7,
-    "majorTotal": 1,
-    "questionPacksTotal": 8,
-    "answerKeysTotal": 8
+    "studentReady": false
   },
   "digibook": {
     "baselineApprovedAtoms": 2,
     "denominator": 417,
     "attempted": 20,
-    "newlyApproved": 0,
+    "newlyApproved": 19,
     "pendingReview": 0,
-    "rejectedOrHeld": 20,
-    "approvedAtoms": 2,
-    "modelOnlyPromotions": 0,
-    "newlyApprovedAtoms": 0,
-    "studentReady": false
+    "rejectedOrHeld": 1,
+    "approvedAtoms": 21,
+    "modelOnlyPromotions": 0
   },
   "models": {
     "flashActual": "gemini-3.6-flash",
@@ -43,16 +35,5 @@
   },
   "modelOnlyCanonicalPromotions": 0,
   "productionReady": false,
-  "failures": [
-    {
-      "track": "DIGIBOOK",
-      "reason": "MODEL_RETURNED_MALFORMED_JSON_HELD_NO_APPROVAL"
-    }
-  ],
-  "adaptiveUi": {
-    "testedWidths": [],
-    "physicalSamsungTested": false,
-    "overflowCount": 0,
-    "redScreenCount": 0
-  }
+  "failures": []
 }

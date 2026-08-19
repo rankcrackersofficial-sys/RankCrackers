@@ -1,0 +1,94 @@
+/// Canonical AMTN-level student learning-state contract for RankCrackers.
+
+
+  if (value == null) {
+    return null;
+  }
+
+
+  if (value is! String || value.trim().isEmpty) {
+    throw FormatException(
+      'StudentLearningState.$key must be a UTC ISO-8601 String or null.',
+    );
+  }
+
+
+  final parsed = DateTime.tryParse(value);
+
+
+  if (parsed == null || !parsed.isUtc) {
+    throw FormatException(
+      'StudentLearningState.$key must contain a UTC timestamp.',
+    );
+  }
+
+
+  return parsed;
+}
+
+
+void _validateProbability({
+  required String fieldName,
+  required double value,
+}) {
+  if (value.isNaN ||
+      value.isInfinite ||
+      value < 0.0 ||
+      value > 1.0) {
+    throw FormatException(
+      'StudentLearningState.$fieldName must be within [0, 1].',
+    );
+  }
+}
+
+
+void _validateNullableProbability({
+  required String fieldName,
+  required double? value,
+}) {
+  if (value == null) {
+    return;
+  }
+
+
+  _validateProbability(
+    fieldName: fieldName,
+    value: value,
+  );
+}
+
+
+void _validateNonNegativeInt({
+  required String fieldName,
+  required int value,
+}) {
+  if (value < 0) {
+    throw FormatException(
+      'StudentLearningState.$fieldName must not be negative.',
+    );
+  }
+}
+
+
+void _validateNullableNonNegativeInt({
+  required String fieldName,
+  required int? value,
+}) {
+  if (value != null && value < 0) {
+    throw FormatException(
+      'StudentLearningState.$fieldName must not be negative.',
+    );
+  }
+}
+
+
+void _validateNullableUtc({
+  required String fieldName,
+  required DateTime? value,
+}) {
+  if (value != null && !value.isUtc) {
+    throw FormatException(
+      'StudentLearningState.$fieldName must be UTC.',
+    );
+  }
+}

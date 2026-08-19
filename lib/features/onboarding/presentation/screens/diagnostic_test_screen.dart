@@ -142,7 +142,7 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: Text(
                   'The diagnostic chamber is being calibrated for your mission realm. Please check back later.',
-                  textAlign: MainAxisAlignment.center,
+                  textAlign: TextAlign.center,
                   style: AppTypography.body,
                 ),
               ),

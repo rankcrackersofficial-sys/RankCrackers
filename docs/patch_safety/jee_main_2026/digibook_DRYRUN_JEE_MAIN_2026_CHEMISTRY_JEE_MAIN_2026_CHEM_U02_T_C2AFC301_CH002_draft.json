@@ -1,0 +1,221 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U02_T_C2AFC301_CH002",
+    "overview": "This node provides a comprehensive treatment of atomic structure for JEE Main, covering classical electromagnetic radiation, Planck's quantum theory, the photoelectric effect, Bohr's model of one-electron species, hydrogen line spectra, de Broglie's dual nature hypothesis, Heisenberg's uncertainty principle, quantum mechanics, quantum numbers, orbital shapes, radial wave functions, and ground-state electronic configurations.",
+    "concepts": [
+      {
+        "title": "Electromagnetic Radiation and Photoelectric Effect",
+        "explanation": "Electromagnetic radiation exhibits wave-particle duality. Light travels as photons with energy E = h*nu. In the photoelectric effect, electrons are ejected from a metal surface instantly when irradiated by light of frequency greater than a characteristic threshold frequency nu_0. Kinetic energy of ejected photoelectrons depends linearly on light frequency and is independent of intensity, whereas photon flux (intensity) determines the rate of electron emission."
+      },
+      {
+        "title": "Bohr Model of Hydrogen-like Atoms",
+        "explanation": "Bohr postulated that electrons revolve around a positive nucleus only in specific non-radiating circular orbits where orbital angular momentum is quantized as L = m*v*r = n*h / (2*pi). Transitions between stationary states absorb or emit light of frequency nu = (E2 - E1) / h. The model successfully explains hydrogen emission line series (Lyman, Balmer, Paschen, Brackett, Pfund) but fails for multi-electron atoms, fine spectrum splitting, and Zeeman/Stark effects."
+      },
+      {
+        "title": "Dual Nature of Matter and Uncertainty Principle",
+        "explanation": "de Broglie proposed that moving particles possess wave properties with wavelength lambda = h / p = h / (m*v). Heisenberg established that it is impossible to simultaneously measure the exact position and momentum of a subatomic particle with absolute precision, given by Delta_x * Delta_p >= h / (4*pi). This renders the concept of fixed Bohr trajectories invalid."
+      },
+      {
+        "title": "Quantum Mechanical Model and Quantum Numbers",
+        "explanation": "The atomic state is defined by Schrödinger's wave equation H_hat * Psi = E * Psi. The square of the wave function |Psi|^2 gives the spatial probability density of finding an electron. An electron's state is completely specified by four quantum numbers: principal (n), azimuthal/orbital angular momentum (l), magnetic (m_l), and spin (m_s)."
+      },
+      {
+        "title": "Orbital Filling Rules and Electronic Configuration",
+        "explanation": "Electrons fill atomic orbitals in order of increasing energy governed by the Aufbau principle (n + l rule). Pauli's exclusion principle mandates that no two electrons in an atom can have the same set of four quantum numbers. Hund's rule of maximum multiplicity requires degenerate orbitals to be singly occupied with parallel spins before pairing occurs. Extra stability belongs to half-filled and fully-filled subshells due to high exchange energy and spherical symmetry."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Photoelectric Equation",
+        "formula": "E = h * nu = W_0 + K_max = h * nu_0 + 0.5 * m * v_max^2",
+        "applicability": "Photoelectric effect experiments on metal surfaces",
+        "variables": [
+          {
+            "symbol": "h",
+            "meaning": "Planck's constant (6.626 x 10^-34 J s)",
+            "unit": "J s"
+          },
+          {
+            "symbol": "nu",
+            "meaning": "Frequency of incident radiation",
+            "unit": "Hz or s^-1"
+          },
+          {
+            "symbol": "W_0",
+            "meaning": "Work function of metal",
+            "unit": "J or eV"
+          },
+          {
+            "symbol": "K_max",
+            "meaning": "Maximum kinetic energy of emitted electron",
+            "unit": "J or eV"
+          }
+        ]
+      },
+      {
+        "label": "Bohr Orbit Radius and Energy",
+        "formula": "r_n = 0.529 * (n^2 / Z) Angstrom; E_n = -13.6 * (Z^2 / n^2) eV",
+        "applicability": "Single-electron species (H, He+, Li2+, etc.)",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Principal quantum number (orbit number)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Z",
+            "meaning": "Atomic number of the species",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "r_n",
+            "meaning": "Radius of nth orbit",
+            "unit": "Angstrom"
+          },
+          {
+            "symbol": "E_n",
+            "meaning": "Total energy of electron in nth orbit",
+            "unit": "eV"
+          }
+        ]
+      },
+      {
+        "label": "Rydberg Formula for Spectral Lines",
+        "formula": "1 / lambda = R_H * Z^2 * (1 / n1^2 - 1 / n2^2)",
+        "applicability": "Atomic transition spectra for hydrogenic ions",
+        "variables": [
+          {
+            "symbol": "lambda",
+            "meaning": "Wavelength of emitted or absorbed light",
+            "unit": "m"
+          },
+          {
+            "symbol": "R_H",
+            "meaning": "Rydberg constant (~1.097 x 10^7 m^-1)",
+            "unit": "m^-1"
+          },
+          {
+            "symbol": "n1, n2",
+            "meaning": "Lower and upper energy level principal quantum numbers",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "de Broglie Wavelength",
+        "formula": "lambda = h / p = h / (m * v) = h / sqrt(2 * m * K) = h / sqrt(2 * m * q * V)",
+        "applicability": "Matter waves for micro and macro particles",
+        "variables": [
+          {
+            "symbol": "lambda",
+            "meaning": "de Broglie wavelength",
+            "unit": "m"
+          },
+          {
+            "symbol": "V",
+            "meaning": "Accelerating potential difference",
+            "unit": "V"
+          },
+          {
+            "symbol": "q",
+            "meaning": "Charge of the particle",
+            "unit": "C"
+          }
+        ]
+      },
+      {
+        "label": "Heisenberg Uncertainty Principle",
+        "formula": "Delta_x * Delta_p >= h / (4 * pi)",
+        "applicability": "Simultaneous measurement of position and momentum",
+        "variables": [
+          {
+            "symbol": "Delta_x",
+            "meaning": "Uncertainty in position",
+            "unit": "m"
+          },
+          {
+            "symbol": "Delta_p",
+            "meaning": "Uncertainty in momentum",
+            "unit": "kg m s^-1"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Bohr model equations can be directly applied to multi-electron atoms such as Neutral Helium or Lithium.",
+        "correction": "Bohr's model neglects inter-electronic electrostatic repulsions and is mathematically applicable only to single-electron hydrogenic species (H, He+, Li2+, Be3+)."
+      },
+      {
+        "misconception": "An orbital radial wave function Psi(r) always remains strictly positive.",
+        "correction": "Psi(r) can take both positive and negative values depending on radial nodes; however, the probability density Psi^2(r) and radial probability distribution 4*pi*r^2*Psi^2(r) are always non-negative."
+      },
+      {
+        "misconception": "Orbital angular momentum is determined by the principal quantum number n.",
+        "correction": "Orbital angular momentum depends purely on the azimuthal quantum number l and is calculated as L = sqrt(l * (l + 1)) * h / (2 * pi), independent of n."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the wavelength of light emitted when an electron in a hydrogen atom drops from the n = 3 state to the ground state n = 1. (Take Rydberg constant R_H = 1.097 x 10^7 m^-1)",
+        "steps": [
+          "Step 1: Identify given parameters for hydrogen atom: Z = 1, n1 = 1, n2 = 3.",
+          "Step 2: Apply Rydberg formula: 1 / lambda = R_H * Z^2 * (1 / n1^2 - 1 / n2^2).",
+          "Step 3: Substitute values: 1 / lambda = 1.097 x 10^7 * 1^2 * (1 / 1^2 - 1 / 3^2) = 1.097 x 10^7 * (8 / 9) = 9.751 x 10^6 m^-1.",
+          "Step 4: Calculate lambda = 1 / (9.751 x 10^6) = 1.025 x 10^-7 m = 102.5 nm."
+        ],
+        "answer": "102.5 nm"
+      },
+      {
+        "problem": "Calculate the kinetic energy of photoelectrons emitted from a sodium metal surface (work function W_0 = 2.3 eV) when irradiated by light of wavelength 300 nm. (Use h * c = 1240 eV nm)",
+        "steps": [
+          "Step 1: Calculate energy of incident photon E = h * c / lambda = 1240 eV nm / 300 nm = 4.133 eV.",
+          "Step 2: Use Einstein photoelectric equation: K_max = E - W_0.",
+          "Step 3: Substitute values: K_max = 4.133 eV - 2.300 eV = 1.833 eV."
+        ],
+        "answer": "1.833 eV"
+      },
+      {
+        "problem": "Find the maximum number of electrons in an atom that can share the quantum numbers n = 4 and m_s = -1/2.",
+        "steps": [
+          "Step 1: Determine total orbitals available in shell n = 4. Total orbitals = n^2 = 4^2 = 16 orbitals.",
+          "Step 2: Each orbital can hold a maximum of 2 electrons with opposite spins (m_s = +1/2 and m_s = -1/2).",
+          "Step 3: Therefore, exactly 1 electron per orbital can have m_s = -1/2.",
+          "Step 4: Total electrons with n = 4 and m_s = -1/2 equals the total number of orbitals in the 4th shell, which is 16."
+        ],
+        "answer": "16"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which set of quantum numbers (n, l, m_l, m_s) is NOT permissible for an electron in an atom?\nOption A: (3, 2, -2, +1/2)\nOption B: (2, 2, 0, -1/2)\nOption C: (4, 0, 0, +1/2)\nOption D: (3, 1, -1, -1/2)",
+        "answer": "Option B. For n = 2, allowable values of l range from 0 to (n - 1), meaning l can only be 0 or 1. A value of l = 2 is invalid for n = 2."
+      },
+      {
+        "question": "What are the total number of radial nodes and angular nodes respectively for a 4p orbital?\nOption A: 2 radial nodes and 1 angular node\nOption B: 1 radial node and 2 angular nodes\nOption C: 3 radial nodes and 0 angular nodes\nOption D: 2 radial nodes and 2 angular nodes",
+        "answer": "Option A. For a 4p orbital: n = 4 and l = 1. Number of angular nodes = l = 1. Number of radial nodes = n - l - 1 = 4 - 1 - 1 = 2."
+      },
+      {
+        "question": "The ground state electronic configuration of Chromium (Z = 24) is [Ar] 3d^5 4s^1 instead of [Ar] 3d^4 4s^2 because:\nOption A: 4s orbital has lower energy than 3d orbital.\nOption B: Half-filled d-subshell offers extra stability due to higher exchange energy and symmetry.\nOption C: Chromium loses electrons easily from 4s.\nOption D: Pauli exclusion principle prohibits 4s^2 in Chromium.",
+        "answer": "Option B. Half-filled (d^5) and fully-filled (d^10) configurations possess enhanced stability arising from maximum exchange energy among parallel spin electrons and symmetrical charge distribution."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry Chapter 2: Structure of Atom",
+      "JEE Main Official Syllabus - Physical Chemistry: Atomic Structure"
+    ]
+  }
+}

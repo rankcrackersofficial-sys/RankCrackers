@@ -1,0 +1,15 @@
+{
+    "environment":  "EMULATOR_ONLY",
+    "source":  "ONE_TIME_PRODUCTION_EXPORT_DERIVED",
+    "emulatorHost":  "127.0.0.1:8080",
+    "productionWrite":  false,
+    "documentNames":  [
+
+                      ],
+    "readBackCount":  0,
+    "written":  [
+                    "jee_main_2026",
+                    "neet_(ug)-2027",
+                    "RPSC_FIRST_GRADE2026_2026_1782713222215"
+                ]
+}

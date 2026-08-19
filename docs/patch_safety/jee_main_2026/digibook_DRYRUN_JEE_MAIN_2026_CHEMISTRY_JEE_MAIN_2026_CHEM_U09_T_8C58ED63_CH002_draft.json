@@ -1,0 +1,141 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U09_T_8C58ED63_CH002",
+    "overview": "Modern Periodic Law states that the physical and chemical properties of elements are periodic functions of their atomic numbers. The long form periodic table categorizes elements into s, p, d, and f blocks based on subshell filling. Key periodic trends such as atomic/ionic radii, ionization enthalpy, electron gain enthalpy, electronegativity, and oxidation states exhibit predictable patterns governed by effective nuclear charge (Z_eff) and screening effects.",
+    "concepts": [
+      {
+        "title": "Modern Periodic Law and Table Organization",
+        "explanation": "Moseley showed that atomic number (Z) is a fundamental property of elements. Elements are arranged in order of increasing Z into 7 horizontal periods and 18 vertical groups. The table is partitioned into s-block (Groups 1-2), p-block (Groups 13-18), d-block (Groups 3-12), and f-block (Lanthanoids and Actinoids)."
+      },
+      {
+        "title": "Atomic and Ionic Radii",
+        "explanation": "Atomic radius decreases across a period due to increasing Z_eff pulling valence electrons closer. Down a group, atomic radius increases as new shells (n) are added. Isoelectronic species (atoms/ions with identical electron count) decrease in size with increasing nuclear charge Z."
+      },
+      {
+        "title": "Ionization Enthalpy (IE)",
+        "explanation": "IE is the minimum energy required to remove the most loosely bound electron from an isolated neutral gaseous atom. IE increases across a period and decreases down a group. Notable anomalies occur due to stable configurations: IE_1(Be) > IE_1(B) due to 2s penetration and filled subshell, and IE_1(N) > IE_1(O) due to half-filled 2p3 stability."
+      },
+      {
+        "title": "Electron Gain Enthalpy and Electronegativity",
+        "explanation": "Electron gain enthalpy (Delta_eg H) measures the energy change when an electron is added to a neutral gaseous atom. Chlorine has a more negative Delta_eg H than Fluorine because Fluorine's small 2p orbital creates strong inter-electronic repulsion. Electronegativity represents the relative ability of an atom to attract shared bonding electrons."
+      },
+      {
+        "title": "Valence, Oxidation States, and Anomalous Properties",
+        "explanation": "Valence generally increases from 1 to 4 across a period and then decreases to 0 for noble gases. Second-period elements (Li, Be, B) show anomalous behavior and diagonal relationships with third-period elements (Mg, Al, Si) due to small ionic radii and high polarising power."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Effective Nuclear Charge (Slater's Rule)",
+        "formula": "Z_eff = Z - sigma",
+        "applicability": "Calculating net positive charge experienced by an electron in a multi-electron atom",
+        "variables": [
+          {
+            "symbol": "Z_eff",
+            "meaning": "Effective nuclear charge",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Z",
+            "meaning": "Atomic number",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "sigma",
+            "meaning": "Shielding or screening constant",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Mulliken Electronegativity",
+        "formula": "chi_M = (IE + EA) / 2",
+        "applicability": "Estimating electronegativity using ionization energy and electron affinity expressed in eV",
+        "variables": [
+          {
+            "symbol": "chi_M",
+            "meaning": "Mulliken electronegativity scale value",
+            "unit": "eV"
+          },
+          {
+            "symbol": "IE",
+            "meaning": "Ionization Energy",
+            "unit": "eV"
+          },
+          {
+            "symbol": "EA",
+            "meaning": "Electron Affinity",
+            "unit": "eV"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Fluorine has the highest negative electron gain enthalpy among all elements.",
+        "correction": "Chlorine has the most negative electron gain enthalpy. Fluorine's compact 2p subshell causes strong electron-electron repulsion, making incoming electron addition less exothermic."
+      },
+      {
+        "misconception": "First ionization enthalpy increases strictly without exception across a period from left to right.",
+        "correction": "Exceptions occur due to electronic stability; for instance, Group 2 elements (e.g., Be) have higher IE_1 than Group 13 elements (e.g., B), and Group 15 elements (e.g., N) have higher IE_1 than Group 16 elements (e.g., O)."
+      },
+      {
+        "misconception": "Cations are larger than their corresponding neutral parent atoms.",
+        "correction": "Cations are always smaller than parent atoms because electron loss increases effective nuclear charge per remaining electron."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Arrange the following isoelectronic species in order of increasing ionic radius: N3-, O2-, F-, Na+, Mg2+, Al3+.",
+        "steps": [
+          "Identify that all species are isoelectronic with 10 electrons.",
+          "Determine atomic numbers (Z): Al (13), Mg (12), Na (11), F (9), O (8), N (7).",
+          "Higher Z yields a larger pull on electrons, decreasing radius.",
+          "Order from smallest Z_eff effect (largest Z) to largest size (smallest Z): Al3+ < Mg2+ < Na+ < F- < O2- < N3-."
+        ],
+        "answer": "Al3+ < Mg2+ < Na+ < F- < O2- < N3-"
+      },
+      {
+        "problem": "Explain why Nitrogen (Z=7) has a higher first ionization enthalpy than Oxygen (Z=8).",
+        "steps": [
+          "Write configurations: N is 1s2 2s2 2p3; O is 1s2 2s2 2p4.",
+          "Nitrogen possesses a stable half-filled 2p3 subshell with high exchange energy.",
+          "Oxygen has one paired electron in 2p4; removing one electron yields extra stability (2p3).",
+          "Consequently, more energy is required to remove an electron from Nitrogen than Oxygen."
+        ],
+        "answer": "Nitrogen has higher first ionization enthalpy due to its stable half-filled 2p subshell configuration."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which element has the highest negative electron gain enthalpy? (A) F (B) Cl (C) Br (D) I",
+        "answer": "(B) Cl. Chlorine has a higher negative electron gain enthalpy than Fluorine due to lower inter-electronic repulsion in its larger 3p orbital."
+      },
+      {
+        "question": "The correct order of first ionization enthalpy for B, C, N, O is: (A) B < C < O < N (B) B < C < N < O (C) C < B < O < N (D) B < O < C < N",
+        "answer": "(A) B < C < O < N. Nitrogen has a higher first ionization enthalpy than Oxygen due to its half-filled 2p subshell."
+      },
+      {
+        "question": "Which pair of elements demonstrates a diagonal relationship? (A) Li and Mg (B) Be and Na (C) B and Mg (D) Na and K",
+        "answer": "(A) Li and Mg. Lithium and Magnesium exhibit similar ionic radius and charge-to-radius ratio, causing diagonal similarities."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11 Chapter 3: Classification of Elements and Periodicity in Properties",
+      "JEE Main Official Syllabus - Inorganic Chemistry Periodic Trends"
+    ]
+  }
+}

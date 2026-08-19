@@ -1,0 +1,127 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U01_T_54665F87_CH001",
+    "overview": "Dimensional analysis is a fundamental mathematical technique in physics used to study the relationships between physical quantities by identifying their base dimensions. This module covers the dimensions of physical quantities, the principle of homogeneity, unit conversion techniques, formula derivation, and the inherent limitations of dimensional methods.",
+    "concepts": [
+      {
+        "title": "Dimensions and Dimensional Formulae",
+        "explanation": "The dimensions of a physical quantity are the powers to which the fundamental base units (Mass [M], Length [L], Time [T], Electric Current [I] or [A], Thermodynamic Temperature [K] or [\\Theta], Amount of Substance [mol], and Luminous Intensity [cd]) must be raised to represent that quantity. A dimensional formula expresses a derived physical quantity in terms of these fundamental quantities."
+      },
+      {
+        "title": "Principle of Homogeneity of Dimensions",
+        "explanation": "The Principle of Homogeneity states that a physical relation is dimensionally correct only if the dimensions of all terms on both sides of the equation are identical. Furthermore, physical quantities with identical dimensions can only be added or subtracted."
+      },
+      {
+        "title": "Applications of Dimensional Analysis",
+        "explanation": "Dimensional analysis is used for: (1) Checking the dimensional consistency of equations, (2) Converting numerical values from one system of units to another using n1[U1] = n2[U2], and (3) Deriving relationships among physical variables by assuming power-law dependencies."
+      },
+      {
+        "title": "Limitations of Dimensional Analysis",
+        "explanation": "Dimensional analysis cannot determine dimensionless proportionality constants, fails to derive equations involving exponential, trigonometric, or logarithmic functions, and cannot uniquely deduce equations where a quantity depends on more independent variables than the number of available fundamental dimensions."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Dimensional Representation",
+        "formula": "[Q] = M^a L^b T^c I^d K^e mol^f cd^g",
+        "applicability": "General expression for any physical quantity Q in terms of SI base dimensions.",
+        "variables": [
+          {
+            "symbol": "[Q]",
+            "meaning": "Dimensional formula of quantity Q",
+            "unit": "Dimensionless"
+          },
+          {
+            "symbol": "a, b, c, d, e, f, g",
+            "meaning": "Dimensional exponents corresponding to base dimensions",
+            "unit": "Dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Unit Conversion Equation",
+        "formula": "n2 = n1 * (M1/M2)^a * (L1/L2)^b * (T1/T2)^c",
+        "applicability": "Converting the numerical value of a physical quantity from system 1 to system 2.",
+        "variables": [
+          {
+            "symbol": "n1, n2",
+            "meaning": "Numerical values in System 1 and System 2 respectively",
+            "unit": "Dimensionless"
+          },
+          {
+            "symbol": "M1, L1, T1",
+            "meaning": "Base units of mass, length, and time in System 1",
+            "unit": "Varies by system"
+          },
+          {
+            "symbol": "M2, L2, T2",
+            "meaning": "Base units of mass, length, and time in System 2",
+            "unit": "Varies by system"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "All dimensionless quantities are unitless.",
+        "correction": "Plane angle (measured in radians) and solid angle (measured in steradians) are dimensionless quantities that possess units."
+      },
+      {
+        "misconception": "If an equation is dimensionally correct, it must be physically correct.",
+        "correction": "Dimensional correctness is a necessary but insufficient condition for physical validity. For instance, E = 5 m c^2 is dimensionally correct but physically wrong due to an incorrect dimensionless constant."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "In the Van der Waals equation (P + a/V^2)(V - b) = RT, find the dimensions of the constants 'a' and 'b', where P is pressure, V is volume, T is temperature, and R is the universal gas constant.",
+        "steps": [
+          "Step 1: Apply the Principle of Homogeneity to the term (P + a/V^2). Terms added together must have the same dimensions. Thus, [a/V^2] = [P].",
+          "Step 2: Substitute the dimensional formulas for pressure [P] = M L^-1 T^-2 and volume [V] = L^3.",
+          "Step 3: Calculate [a] = [P] * [V^2] = (M L^-1 T^-2) * (L^3)^2 = M L^5 T^-2.",
+          "Step 4: Apply the Principle of Homogeneity to the term (V - b). Terms subtracted must have identical dimensions. Thus, [b] = [V] = L^3."
+        ],
+        "answer": "[a] = M L^5 T^-2, [b] = L^3"
+      },
+      {
+        "problem": "Find the dimensional formula of the universal gravitational constant G using Newton's law of gravitation F = G * m1 * m2 / r^2.",
+        "steps": [
+          "Step 1: Rearrange the gravitational force equation for G: G = F * r^2 / (m1 * m2).",
+          "Step 2: Substitute the dimensions of Force [F] = M L T^-2, distance [r] = L, and masses [m1] = [m2] = M.",
+          "Step 3: Simplify the dimensional expression: [G] = (M L T^-2) * L^2 / (M * M) = M^-1 L^3 T^-2."
+        ],
+        "answer": "[G] = M^-1 L^3 T^-2"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following physical quantities has the dimensional formula M L^-1 T^-2?\n(A) Force\n(B) Stress\n(C) Energy\n(D) Power",
+        "answer": "Correct Option: (B)\nExplanation: Stress = Force / Area = [M L T^-2] / [L^2] = M L^-1 T^-2. Force has [M L T^-2], Energy has [M L^2 T^-2], and Power has [M L^2 T^-3]."
+      },
+      {
+        "question": "The velocity v of a particle depends on time t according to the equation v = a + b t + c / (d + t). The dimensions of c and d are respectively:\n(A) L and T\n(B) L T^-1 and T\n(C) L and L\n(D) L T^-2 and T",
+        "answer": "Correct Option: (A)\nExplanation: By homogeneity, in (d + t), [d] = [t] = T. In the term c / (d + t), its dimension must match velocity [v] = L T^-1. Thus, [c] / T = L T^-1 => [c] = L. Therefore, [c] = L and [d] = T."
+      },
+      {
+        "question": "If Force (F), Length (L), and Time (T) are taken as fundamental quantities, what is the dimensional formula of Density?\n(A) F L^-4 T^2\n(B) F L^-3 T^2\n(C) F L^-2 T^2\n(D) F L^-4 T^1",
+        "answer": "Correct Option: (A)\nExplanation: Density = Mass / Volume = [M] L^-3. From F = M L T^-2, we get [M] = F L^-1 T^2. Substituting [M] into the density equation gives Density = (F L^-1 T^2) * L^-3 = F L^-4 T^2."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Physics Class 11, Chapter 2: Units and Measurements",
+      "JEE Main Official Physics Syllabus: Units and Dimensions"
+    ]
+  }
+}

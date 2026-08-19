@@ -1,0 +1,154 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_7E474892_CH001",
+    "overview": "Titrimetric analysis (volumetric analysis) is a quantitative chemical analysis method used to determine the concentration of an identified analyte. This content node covers acid-base titrations, the action of indicators, and key permanganometric redox titrations involving potassium permanganate (KMnO4) with primary standards like oxalic acid and Mohr's salt [FeSO4.(NH4)2SO4.6H2O].",
+    "concepts": [
+      {
+        "title": "Acid-Base Titrations and Indicators",
+        "explanation": "Acid-base titrations involve neutralization between an acid and a base. The equivalence point occurs when chemically equivalent amounts of acid and base react. Indicators are weak organic acids or bases whose ionized and unionized forms exhibit distinct colors. Phenolphthalein changes color in the pH range 8.3–10.0 (colorless to pink), suitable for strong acid-strong base and weak acid-strong base titrations. Methyl orange changes in the pH range 3.1–4.4 (red to yellow-orange), suitable for strong acid-weak base titrations."
+      },
+      {
+        "title": "Potassium Permanganate as a Self-Indicator",
+        "explanation": "In redox titrations involving KMnO4 in an acidic medium, KMnO4 acts as its own indicator (self-indicator). Deep purple MnO4- ions are reduced to faint pink/colorless Mn2+ ions. At the equivalence point, the slight unreacted excess of MnO4- turns the solution permanently light pink, marking the endpoint without requiring an external indicator."
+      },
+      {
+        "title": "Oxalic Acid vs KMnO4 Titration",
+        "explanation": "Oxalic acid (H2C2O4.2H2O) is a primary standard. The oxidation of oxalate ions (C2O4^2-) by permanganate ions (MnO4-) occurs in warm acidic medium (dilute H2SO4, 60–70°C). Heating accelerates the reaction rate initially, after which Mn2+ produced acts as an auto-catalyst to speed up subsequent steps. Overall reaction: 2 MnO4- + 5 C2O4^2- + 16 H+ -> 2 Mn2+ + 10 CO2 + 8 H2O."
+      },
+      {
+        "title": "Mohr's Salt vs KMnO4 Titration",
+        "explanation": "Mohr's salt, Ferrous Ammonium Sulphate [FeSO4.(NH4)2SO4.6H2O], is a stable primary standard for Fe2+ ions. KMnO4 oxidizes Fe2+ to Fe3+ in acidic medium (dilute H2SO4). Unlike oxalic acid, this titration is performed at room temperature because Fe2+ reacts rapidly with MnO4-, and heating would cause atmospheric oxidation of Fe2+ to Fe3+. Overall reaction: MnO4- + 5 Fe2+ + 8 H+ -> Mn2+ + 5 Fe3+ + 4 H2O."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Law of Equivalence in Volumetric Analysis",
+        "formula": "N1 * V1 = N2 * V2",
+        "applicability": "General volumetric titrations at the equivalence point",
+        "variables": [
+          {
+            "symbol": "N1, N2",
+            "meaning": "Normality of solution 1 and solution 2",
+            "unit": "eq/L or N"
+          },
+          {
+            "symbol": "V1, V2",
+            "meaning": "Volume of solution 1 and solution 2",
+            "unit": "mL or L"
+          }
+        ]
+      },
+      {
+        "label": "Molarity and Normality Relation via n-factor",
+        "formula": "Normality (N) = Molarity (M) * n-factor",
+        "applicability": "Converting molarity to normality based on electron transfer or acidity/basicity",
+        "variables": [
+          {
+            "symbol": "N",
+            "meaning": "Normality of the reagent solution",
+            "unit": "N"
+          },
+          {
+            "symbol": "M",
+            "meaning": "Molarity of the reagent solution",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "n-factor",
+            "meaning": "Number of electrons gained/lost per molecule or standard valency factor",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Molar Equivalence Relation in Redox Titrations",
+        "formula": "M1 * V1 * n1 = M2 * V2 * n2",
+        "applicability": "Redox titrations involving species with known n-factors",
+        "variables": [
+          {
+            "symbol": "n(KMnO4)",
+            "meaning": "n-factor of KMnO4 in acidic medium",
+            "unit": "5"
+          },
+          {
+            "symbol": "n(Oxalic acid)",
+            "meaning": "n-factor of Oxalic acid (C2O4^2- to 2 CO2)",
+            "unit": "2"
+          },
+          {
+            "symbol": "n(Mohr salt)",
+            "meaning": "n-factor of Mohr's salt (Fe2+ to Fe3+)",
+            "unit": "1"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Hydrochloric acid (HCl) or Nitric acid (HNO3) can replace Dilute H2SO4 in KMnO4 titrations.",
+        "correction": "HCl cannot be used because KMnO4 oxidizes Cl- ions to Cl2 gas, consuming excess KMnO4. HNO3 cannot be used because it is itself a strong oxidizing agent and competes with KMnO4."
+      },
+      {
+        "misconception": "Mohr's salt solution should be heated before titrating against KMnO4, similar to oxalic acid.",
+        "correction": "Mohr's salt titration is carried out at room temperature. Heating causes dissolved oxygen to oxidize Fe2+ to Fe3+, leading to inaccurate experimental titration results."
+      },
+      {
+        "misconception": "Indicator selection does not depend on the strength of the acid and base being titrated.",
+        "correction": "Indicators must be chosen based on the pH jump at the equivalence point matching the pH transition range of the indicator."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "What volume of 0.02 M KMnO4 solution is required to completely oxidize 25.0 mL of 0.05 M oxalic acid solution in an acidic medium?",
+        "steps": [
+          "Step 1: Determine the n-factors for the redox species. For KMnO4 in acidic medium, MnO4- + 5e- -> Mn2+, so n1 = 5. For oxalic acid, C2O4^2- -> 2 CO2 + 2e-, so n2 = 2.",
+          "Step 2: Apply the molar equivalence formula: M1 * V1 * n1 = M2 * V2 * n2.",
+          "Step 3: Substitute the known values: (0.02 M) * V1 * 5 = (0.05 M) * (25.0 mL) * 2.",
+          "Step 4: Solve for V1: 0.10 * V1 = 2.50 => V1 = 25.0 mL."
+        ],
+        "answer": "25.0 mL of 0.02 M KMnO4 solution"
+      },
+      {
+        "problem": "Calculate the mass of Mohr's salt [FeSO4.(NH4)2SO4.6H2O, Molar Mass = 392 g/mol] required to prepare 250 mL of a 0.1 N solution for use in standardizing a KMnO4 solution.",
+        "steps": [
+          "Step 1: Identify the n-factor of Mohr's salt in redox reaction. Fe2+ -> Fe3+ + e-, so n-factor = 1.",
+          "Step 2: Calculate molarity from normality: Molarity = Normality / n-factor = 0.1 N / 1 = 0.1 M.",
+          "Step 3: Calculate the number of moles needed for 250 mL (0.25 L): Moles = Molarity * Volume in L = 0.1 mol/L * 0.25 L = 0.025 mol.",
+          "Step 4: Calculate mass required: Mass = Moles * Molar Mass = 0.025 mol * 392 g/mol = 9.8 g."
+        ],
+        "answer": "9.8 g"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Why is dilute H2SO4 added while preparing a standard solution of Mohr's salt? Options: (A) To increase the oxidation rate of Fe2+, (B) To prevent hydrolytic turbidity of ferrous ions, (C) To act as a reducing agent, (D) To act as an internal indicator.",
+        "answer": "Correct Answer: (B). Dilute H2SO4 is added during the preparation of Mohr's salt solution to prevent hydrolysis of Fe2+ ions into insoluble ferrous hydroxide [Fe(OH)2]."
+      },
+      {
+        "question": "In the auto-catalytic titration of oxalic acid against KMnO4, which ion acts as the auto-catalyst? Options: (A) MnO4-, (B) C2O4^2-, (C) Mn2+, (D) SO4^2-.",
+        "answer": "Correct Answer: (C). Mn2+ ions produced during the reduction of MnO4- act as an auto-catalyst, speeding up the reaction rate after the first few drops."
+      },
+      {
+        "question": "Which of the following indicators is most suitable for titrating a weak acid (e.g., CH3COOH) against a strong base (e.g., NaOH)? Options: (A) Methyl orange (pH 3.1-4.4), (B) Phenolphthalein (pH 8.3-10.0), (C) Methyl red (pH 4.2-6.3), (D) Starch indicator.",
+        "answer": "Correct Answer: (B). The equivalence point pH for weak acid-strong base titration lies in the basic region (pH > 7) due to salt hydrolysis, which matches the transition range of Phenolphthalein (8.3-10.0)."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 12 Chemistry, Practical Chemistry Section: Titrimetric Analysis.",
+      "JEE Main Official Chemistry Syllabus: Unit 20 - Practical Chemistry Principles."
+    ]
+  }
+}

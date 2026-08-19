@@ -1,0 +1,128 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U10_T_944DD26F_CH002",
+    "overview": "This learning unit provides a foundational overview of p-block elements encompassing Groups 13 to 18 of the Periodic Table. It details valence shell electronic configurations, periodic trends in physical and chemical properties (atomic radii, ionization enthalpy, electronegativity, oxidation states), the inert pair effect in heavier elements, and the anomalous behavior exhibited by the first element of each group due to small atomic size, high electronegativity, and lack of valence d-orbitals.",
+    "concepts": [
+      {
+        "title": "Electronic Configuration and Oxidation States",
+        "explanation": "Elements in p-block have a general valence electronic configuration of ns^2 np^(1-6) (except helium, which is 1s^2). The group oxidation state corresponds to the total number of valence electrons (ns + np). Heavier elements in Groups 13 to 16 additionally show a stable lower oxidation state that is two units less than the group oxidation state due to the inert pair effect."
+      },
+      {
+        "title": "Periodic Trends in Physical Properties",
+        "explanation": "Across a period from Group 13 to 18, effective nuclear charge increases, leading to a general decrease in atomic radii and an increase in ionization enthalpy and electronegativity. Down a group, atomic size increases while ionization enthalpy and electronegativity generally decrease. However, irregularities occur due to poor shielding by d and f electrons (e.g., transition contraction in Ga and lanthanide contraction in Tl)."
+      },
+      {
+        "title": "Inert Pair Effect",
+        "explanation": "The reluctance of the innermost s-electrons (ns^2) of the valence shell to participate in chemical bonding in heavier p-block elements (such as Tl, Pb, Bi) is called the inert pair effect. This occurs because the ns^2 electrons are strongly attracted by the nucleus due to poor shielding by intervening inner d and f subshells."
+      },
+      {
+        "title": "Anomalous Properties of the First Element",
+        "explanation": "The first element of each group (B, C, N, O, F, Ne) differs significantly from subsequent members due to four main factors: extremely small atomic/ionic size, high electronegativity, high ionization enthalpy, and the absolute non-availability of d-orbitals in its valence shell. Consequently, their maximum covalency is restricted to 4, and they exhibit a strong propensity to form p(pi)-p(pi) multiple bonds."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Valence Shell Electronic Configuration",
+        "formula": "ns^2 np^x (where x = 1 to 6)",
+        "applicability": "General ground state electronic configuration for main group p-block elements (Group 13 to 18)",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Principal quantum number of outermost shell",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "x",
+            "meaning": "Number of electrons in the p-subshell",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Relativistic Stability Trend (Group vs Lower Oxidation State)",
+        "formula": "Stability: M^(N-2)+ > M^N+ (for heavier p-block metals)",
+        "applicability": "Predicting stability of oxidation states in heavier elements of Groups 13-15 due to inert pair effect",
+        "variables": [
+          {
+            "symbol": "N",
+            "meaning": "Maximum group oxidation state",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "M",
+            "meaning": "Heavier p-block central metal atom (e.g., Tl, Pb, Bi)",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Nitrogen can form NF5 or NCl5 because it belongs to Group 15 with 5 valence electrons.",
+        "correction": "Nitrogen belongs to the 2nd period and lacks d-orbitals in its valence shell (n=2). Hence, its maximum covalency is strictly 4 (as in NH4+), and it cannot expand its octet to form pentahalides."
+      },
+      {
+        "misconception": "Ionization enthalpy decreases uniformly down Group 13 from Boron to Thallium.",
+        "correction": "Ionization enthalpy does not decrease smoothly in Group 13. Gallium has a slightly higher IE1 than Aluminum due to poor shielding of 10 d-electrons (transition contraction), and Thallium has a higher IE1 than Indium due to lanthanide contraction."
+      },
+      {
+        "misconception": "Tl3+ compounds are more stable than Tl+ compounds because +3 is the group oxidation state.",
+        "correction": "Due to the inert pair effect, the +1 oxidation state becomes increasingly stable down Group 13. Tl+ is vastly more stable than Tl3+, making Tl3+ a strong oxidizing agent."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Why does BCl3 exist as a monomer while AlCl3 forms a dimer (Al2Cl6) in the vapor phase?",
+        "steps": [
+          "Step 1: Examine the central atom sizes and orbital availability. Boron is extremely small in size compared to Aluminum.",
+          "Step 2: Boron cannot accommodate four large Chlorine atoms around it comfortably due to steric hindrance.",
+          "Step 3: Instead, BCl3 achieves partial stability through back-bonding, where an unshared electron pair from chlorine's 3p orbital overlaps with the vacant 2p orbital of boron (p(pi)-p(pi) back-bonding).",
+          "Step 4: Aluminum, being larger and having vacant 3d orbitals, forms coordinate bonds with chlorine atoms of another AlCl3 unit to complete its octet, forming an Al2Cl6 dimer."
+        ],
+        "answer": "BCl3 forms a monomer stabilized by p(pi)-p(pi) back-bonding owing to small size of Boron, whereas AlCl3 dimerizes to Al2Cl6 via coordinate covalent chlorine bridges to complete its octet."
+      },
+      {
+        "problem": "Arrange the following in increasing order of stability of +1 oxidation state: Ga+, In+, Tl+, B+, Al+.",
+        "steps": [
+          "Step 1: Identify the group: Boron family (Group 13).",
+          "Step 2: Recall the effect responsible for stability of lower oxidation state: Inert pair effect.",
+          "Step 3: The inert pair effect increases down the group as nuclear charge increases and inner d/f subshell shielding remains poor.",
+          "Step 4: Therefore, the stability of +1 oxidation state increases in the order: B+ < Al+ < Ga+ < In+ < Tl+."
+        ],
+        "answer": "B+ < Al+ < Ga+ < In+ < Tl+"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following elements has the maximum tendency to form p(pi)-p(pi) multiple bonds with itself and other second-row elements?\n(A) Silicon\n(B) Carbon\n(C) Germanium\n(D) Lead",
+        "answer": "(B) Carbon. Carbon is small in size and has high electronegativity, enabling effective lateral p(pi)-p(pi) orbital overlap, unlike heavier group 14 elements whose atomic orbitals are too diffuse."
+      },
+      {
+        "question": "Which statement regarding group 13 elements is INCORRECT?\n(A) Covalency of boron is restricted to 4.\n(B) Tl3+ acts as a strong reducing agent in aqueous solution.\n(C) Ga has smaller atomic radius than Al.\n(D) B2O3 is acidic in nature.",
+        "answer": "(B) Tl3+ acts as a strong reducing agent in aqueous solution. Incorrect, because Tl+ is much more stable than Tl3+ due to the inert pair effect; hence Tl3+ readily gains electrons and acts as a strong oxidizing agent, not a reducing agent."
+      },
+      {
+        "question": "An element 'X' belongs to group 15 and period 3. What is its maximum covalency and maximum oxidation state respectively?\n(A) 4, +5\n(B) 6, +5\n(C) 5, +3\n(D) 3, +5",
+        "answer": "(B) 6, +5. Phosphorus (period 3, group 15) has vacant 3d orbitals available, allowing it to expand its covalency up to 6 (e.g., PF6-), while its maximum oxidation state corresponds to its group number, which is +5."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class XI - Unit 11: The p-Block Elements",
+      "NCERT Chemistry Class XII - Unit 7: The p-Block Elements",
+      "Lee, J. D., Concise Inorganic Chemistry, 5th Edition, Wiley India"
+    ]
+  }
+}

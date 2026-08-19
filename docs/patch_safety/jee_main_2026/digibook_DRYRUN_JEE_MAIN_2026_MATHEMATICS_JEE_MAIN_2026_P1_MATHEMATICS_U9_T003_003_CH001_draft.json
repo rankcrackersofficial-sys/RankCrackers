@@ -1,0 +1,149 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U9_T003_003_CH001",
+    "overview": "This learning unit covers first-order linear differential equations of the standard form dy/dx + P(x)y = Q(x) and homogeneous differential equations. You will master the integration factor method, suitable variable substitutions, and systematic solving techniques required for JEE Main Mathematics.",
+    "concepts": [
+      {
+        "title": "First-Order Linear Differential Equations",
+        "explanation": "A differential equation is first-order linear if the dependent variable y and its first derivative dy/dx appear only in the first degree and are not multiplied together. The standard form is dy/dx + P(x)y = Q(x), where P(x) and Q(x) are functions of x alone or constants."
+      },
+      {
+        "title": "Integrating Factor Method",
+        "explanation": "To solve dy/dx + P(x)y = Q(x), multiply the entire equation by the Integrating Factor I.F. = exp(integral of P(x) dx). This transforms the left-hand side into the derivative d/dx [y * I.F.], allowing direct integration to yield y * I.F. = integral of [Q(x) * I.F.] dx + C."
+      },
+      {
+        "title": "Homogeneous Differential Equations",
+        "explanation": "A differential equation dy/dx = F(x, y) is homogeneous of degree zero if F(tx, ty) = F(x, y). Such equations can be written as dy/dx = g(y/x). Substituting y = v*x transforms the equation into a separable variable form in terms of v and x."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Integrating Factor for Linear DE in y",
+        "formula": "I.F. = e^{\\int P(x) dx}",
+        "applicability": "First-order linear differential equations of the form dy/dx + P(x)y = Q(x)",
+        "variables": [
+          {
+            "symbol": "P(x)",
+            "meaning": "Coefficient function of y",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "I.F.",
+            "meaning": "Integrating factor required to make LHS an exact derivative",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "General Solution of Linear DE in y",
+        "formula": "y \\cdot (I.F.) = \\int Q(x) \\cdot (I.F.) dx + C",
+        "applicability": "Standard linear differential equation dy/dx + P(x)y = Q(x)",
+        "variables": [
+          {
+            "symbol": "y",
+            "meaning": "Dependent variable",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Q(x)",
+            "meaning": "Forcing function dependent on x alone",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "C",
+            "meaning": "Arbitrary constant of integration",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Homogeneous Substitution",
+        "formula": "y = vx \\implies \\frac{dy}{dx} = v + x \\frac{dv}{dx}",
+        "applicability": "Homogeneous differential equations of the form dy/dx = F(y/x)",
+        "variables": [
+          {
+            "symbol": "v",
+            "meaning": "Substituted variable representing the ratio y/x",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "x",
+            "meaning": "Independent variable",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Identifying P(x) and Q(x) before ensuring the coefficient of dy/dx is equal to 1.",
+        "correction": "Always convert the differential equation into standard form dy/dx + P(x)y = Q(x) by dividing through by any coefficient multiplying dy/dx before calculating the Integrating Factor."
+      },
+      {
+        "misconception": "Adding an arbitrary constant of integration when computing the Integrating Factor.",
+        "correction": "The integration constant is omitted when finding the Integrating Factor because any non-zero multiplicative constant cancels out on both sides of the differential equation."
+      },
+      {
+        "misconception": "Confusing linear in y (dy/dx + Py = Q) with linear in x (dx/dy + Px = Q).",
+        "correction": "Check the dependent and independent variables. If the equation is dx/dy + P(y)x = Q(y), the integrating factor is e^{\\int P(y) dy} and the solution is x * I.F. = \\int Q(y) * I.F. dy + C."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Solve the linear differential equation: dy/dx + (2/x)y = x^3 for x > 0.",
+        "steps": [
+          "Step 1: Identify standard form dy/dx + P(x)y = Q(x). Here P(x) = 2/x and Q(x) = x^3.",
+          "Step 2: Calculate the Integrating Factor: I.F. = e^{\\int (2/x) dx} = e^{2 \\ln x} = e^{\\ln(x^2)} = x^2.",
+          "Step 3: Apply the general solution formula: y * (I.F.) = \\int Q(x) * (I.F.) dx + C.",
+          "Step 4: Substitute functions: y * x^2 = \\int x^3 * x^2 dx + C = \\int x^5 dx + C.",
+          "Step 5: Integrate to obtain: y * x^2 = (x^6 / 6) + C.",
+          "Step 6: Divide by x^2 to solve for y: y = (x^4 / 6) + C / x^2."
+        ],
+        "answer": "y = (x^4 / 6) + (C / x^2)"
+      },
+      {
+        "problem": "Solve the homogeneous differential equation: x^2 * (dy/dx) = x^2 + xy.",
+        "steps": [
+          "Step 1: Divide by x^2 to express as dy/dx = 1 + y/x, confirming homogeneity of degree 0.",
+          "Step 2: Substitute y = vx, which implies dy/dx = v + x(dv/dx).",
+          "Step 3: Substitute into the differential equation: v + x(dv/dx) = 1 + v.",
+          "Step 4: Simplify to x(dv/dx) = 1 and separate variables: dv = dx / x.",
+          "Step 5: Integrate both sides: \\int dv = \\int (1/x) dx \\implies v = \\ln|x| + C.",
+          "Step 6: Substitute back v = y/x to get y/x = \\ln|x| + C, which gives y = x \\ln|x| + Cx."
+        ],
+        "answer": "y = x \\ln|x| + Cx"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "What is the integrating factor for the differential equation x*(dy/dx) - y = x^2?",
+        "answer": "Dividing by x yields dy/dx - (1/x)y = x. Thus P(x) = -1/x. The integrating factor is I.F. = e^{\\int (-1/x) dx} = e^{-\\ln x} = 1/x."
+      },
+      {
+        "question": "Solve the linear differential equation dy/dx + y*tan(x) = sec(x).",
+        "answer": "Here P(x) = tan(x) and Q(x) = sec(x). I.F. = e^{\\int tan(x) dx} = e^{\\ln|sec(x)|} = sec(x). Solution formula yields y * sec(x) = \\int sec^2(x) dx + C = tan(x) + C, so y = sin(x) + C*cos(x)."
+      },
+      {
+        "question": "Which variable transformation converts the homogeneous equation dy/dx = (x^2 + y^2)/(2xy) into a separable form?",
+        "answer": "The substitution y = vx (so dy/dx = v + x*dv/dx) transforms the equation into v + x(dv/dx) = (1 + v^2)/(2v), which simplifies to x(dv/dx) = (1 - v^2)/(2v), a separable equation."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 12 Mathematics - Chapter 9: Differential Equations",
+      "JEE Main Official Mathematics Syllabus - Differential Equations"
+    ]
+  }
+}

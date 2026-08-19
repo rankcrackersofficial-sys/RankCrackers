@@ -1,0 +1,116 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_6545C6AD_CH001",
+    "overview": "This unit covers the foundational concepts of Metallic Bonding and Hydrogen Bonding, along with their key chemical and physical applications. Metallic bonding is explained through the electron sea model, detailing properties such as electrical conductivity, malleability, and metallic luster. Hydrogen bonding is explored in detail, distinguishing between intermolecular and intramolecular hydrogen bonds, their strength, and their dramatic effects on physical properties including boiling points, solubility, viscosity, and the anomalous expansion of water.",
+    "concepts": [
+      {
+        "title": "Metallic Bonding and the Electron Sea Model",
+        "explanation": "Metallic bonding arises from the electrostatic attraction between positively charged metal ions (kernels) and a delocalized 'sea' of mobile valence electrons. This non-directional bond accounts for high electrical and thermal conductivity, malleability, ductility, and metallic luster."
+      },
+      {
+        "title": "Nature and Conditions for Hydrogen Bonding",
+        "explanation": "A hydrogen bond is a weak electrostatic dipole-dipole attraction formed when a hydrogen atom is covalently bonded to a highly electronegative element (F, O, or N) with a small atomic radius. The hydrogen atom acquires a partial positive charge, attracting the lone pair of an electronegative atom in an adjacent or the same molecule."
+      },
+      {
+        "title": "Types of Hydrogen Bonding",
+        "explanation": "1. Intermolecular H-bonding occurs between different molecules of the same or different substances (e.g., H2O, HF, ethanol in water), leading to association, higher boiling points, and increased viscosity. 2. Intramolecular H-bonding occurs within a single molecule between a hydrogen atom and a nearby electronegative atom (e.g., o-nitrophenol, salicylaldehyde), forming a chelate ring and preventing intermolecular association."
+      },
+      {
+        "title": "Applications and Physical Consequences of Hydrogen Bonding",
+        "explanation": "Hydrogen bonding explains abnormally high boiling points of H2O, HF, and NH3 compared to their group hydrides, the solubility of alcohols and carboxylic acids in water, the open cage-like structure of ice causing lower density than liquid water, and the secondary structure of proteins and DNA double helix stability."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Strength Comparison of Chemical Interactions",
+        "formula": "Covalent/Ionic Bond (~200-800 kJ/mol) > Hydrogen Bond (~10-40 kJ/mol) > Van der Waals Forces (~2-10 kJ/mol)",
+        "applicability": "Comparing interaction energies across different bonding types.",
+        "variables": []
+      },
+      {
+        "label": "Metallic Bond Strength Proportionality",
+        "formula": "Metallic Bond Strength proportional to (Number of Valence Electrons) / (Atomic Radius of Metal Kernel)",
+        "applicability": "Predicting relative melting points and hardness of metals.",
+        "variables": [
+          {
+            "symbol": "Valence Electrons",
+            "meaning": "Number of delocalized electrons per atom contributing to the electron sea",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Atomic Radius",
+            "meaning": "Radius of the metal cation/kernel",
+            "unit": "pm or Angstrom"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Hydrogen bonding is a true covalent bond.",
+        "correction": "Hydrogen bonding is predominantly an electrostatic dipole-dipole attraction, significantly weaker (~10-40 kJ/mol) than a covalent bond (~200-400 kJ/mol)."
+      },
+      {
+        "misconception": "Intramolecular hydrogen bonding increases the boiling point of a compound.",
+        "correction": "Intramolecular hydrogen bonding decreases the boiling point because it restricts intermolecular association, making the molecule more volatile compared to isomers with intermolecular H-bonding."
+      },
+      {
+        "misconception": "Any compound containing hydrogen can form hydrogen bonds.",
+        "correction": "Hydrogen bonding occurs only when hydrogen is covalently bonded to highly electronegative and small atoms, specifically F, O, and N (and occasionally Cl in specific chelated structures)."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Explain why o-nitrophenol is steam volatile, whereas p-nitrophenol is non-steam volatile and has a higher boiling point.",
+        "steps": [
+          "Step 1: Analyze the structure of o-nitrophenol. The -OH and -NO2 groups are in close proximity, allowing the formation of intramolecular hydrogen bonding (chelation).",
+          "Step 2: Recognize that intramolecular H-bonding prevents o-nitrophenol molecules from associating with each other, resulting in higher volatility and a lower boiling point.",
+          "Step 3: Analyze p-nitrophenol. The functional groups are far apart, preventing internal H-bonding and favoring intermolecular hydrogen bonding with neighboring molecules.",
+          "Step 4: Intermolecular H-bonding forms molecular aggregates, requiring more thermal energy to break, leading to a higher boiling point and lower volatility."
+        ],
+        "answer": "o-nitrophenol forms intramolecular H-bonds (lower BP, steam volatile), while p-nitrophenol forms intermolecular H-bonds (higher BP, non-steam volatile)."
+      },
+      {
+        "problem": "Why does ice float on water, and at what temperature does liquid water attain its maximum density?",
+        "steps": [
+          "Step 1: In ice, each water molecule is tetrahedrally bonded to four other water molecules via hydrogen bonds, creating a rigid open cage-like crystal lattice with large vacant spaces.",
+          "Step 2: Due to these vacant spaces, the volume of ice is greater than that of liquid water for the same mass, making ice less dense than water; hence, ice floats.",
+          "Step 3: When ice melts, the open structure partially collapses as hydrogen bonds break, decreasing volume and increasing density up to 4 degrees Celsius.",
+          "Step 4: Above 4 degrees Celsius, thermal expansion dominates, causing density to decrease."
+        ],
+        "answer": "Ice floats because its open hydrogen-bonded cage structure gives it a lower density than liquid water. Liquid water attains its maximum density at 4 degrees Celsius."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following compounds exhibits intramolecular hydrogen bonding? (A) p-Nitrophenol (B) Salicylaldehyde (C) Ethanol (D) Water",
+        "answer": "Option (B) is correct. Salicylaldehyde contains adjacent -OH and -CHO groups on the benzene ring, enabling the formation of a stable six-membered ring via intramolecular hydrogen bonding."
+      },
+      {
+        "question": "Which of the following hydrides has the highest boiling point? (A) HF (B) HCl (C) HBr (D) HI",
+        "answer": "Option (A) is correct. HF forms extremely strong intermolecular hydrogen bonds due to the high electronegativity and small size of fluorine, resulting in an abnormally high boiling point compared to HCl, HBr, and HI."
+      },
+      {
+        "question": "Why does metallic sodium have a lower melting point than metallic aluminum? (A) Sodium has more valence electrons than aluminum (B) Aluminum has a smaller atomic radius and more valence electrons per atom contributing to metallic bonding (C) Sodium forms ionic bonds while aluminum forms metallic bonds (D) Sodium undergoes hydrogen bonding",
+        "answer": "Option (B) is correct. Metallic bond strength increases with the number of valence electrons and decreasing kernel size. Aluminum provides 3 valence electrons per atom and has a smaller radius than sodium (1 valence electron), leading to stronger metallic bonding and a higher melting point."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 4: Chemical Bonding and Molecular Structure",
+      "JEE Main Official Syllabus 2026: Section on Metallic Bonding, Hydrogen Bonding and Applications"
+    ]
+  }
+}

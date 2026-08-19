@@ -1,0 +1,226 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_70C6FE5A_CH002",
+    "overview": "Electrolytic conduction involves the movement of ions through an aqueous solution or molten salt under an applied potential, whereas metallic conduction occurs via free electrons in a lattice. Key quantities in electrolytic conduction include resistance (R), conductance (G), conductivity or specific conductance (kappa), cell constant (G*), molar conductivity (Lambda_m), and equivalent conductivity (Lambda_eq). Conductance depends on concentration, temperature, and electrolyte strength. Kohlrausch's Law of independent migration of ions allows determination of limiting molar conductivities (Lambda_m_0) for weak electrolytes, degree of dissociation, and solubility of sparingly soluble salts.",
+    "concepts": [
+      {
+        "title": "Metallic vs Electrolytic Conduction",
+        "explanation": "Metallic conduction relies on the movement of electrons through a metallic lattice without matter transport or chemical change, and resistance increases with temperature due to vibrational scattering of kernels. Electrolytic conduction relies on ion migration, involves matter transport and chemical changes at electrodes, and conductance increases with temperature as solvent viscosity drops and ionic mobility increases."
+      },
+      {
+        "title": "Resistance, Conductance, Conductivity, and Cell Constant",
+        "explanation": "Resistance R = rho * (l / A). Conductance G = 1 / R (measured in Siemens or ohm^-1). Specific conductivity kappa = 1 / rho = G * (l / A) = G * G*, where G* = l / A is the cell constant. Conductivity represents the conductance of a 1 cm^3 volume of solution."
+      },
+      {
+        "title": "Molar Conductivity and Equivalent Conductivity",
+        "explanation": "Molar conductivity (Lambda_m) is the conducting power of all ions produced by dissolving one mole of electrolyte in a given volume V of solution: Lambda_m = (kappa * 1000) / M, with units S cm^2 mol^-1. Equivalent conductivity (Lambda_eq) is defined per gram-equivalent of electrolyte: Lambda_eq = (kappa * 1000) / N."
+      },
+      {
+        "title": "Variation of Conductance with Concentration",
+        "explanation": "On dilution, specific conductivity (kappa) decreases because the number of current-carrying ions per unit volume decreases. However, molar conductivity (Lambda_m) increases on dilution for both strong and weak electrolytes. For strong electrolytes, Lambda_m follows the Debye-Huckel-Onsager equation: Lambda_m = Lambda_m_0 - A * sqrt(c). For weak electrolytes, Lambda_m increases sharply at high dilution due to increased dissociation."
+      },
+      {
+        "title": "Kohlrausch's Law and Applications",
+        "explanation": "Kohlrausch's Law states that at infinite dilution, each ion migrates independently and contributes a definite value to the total molar conductivity regardless of the co-ion: Lambda_m_0 = v_+ * lambda_+_0 + v_- * lambda_-_0. Applications include determining Lambda_m_0 for weak electrolytes, calculating degree of dissociation alpha = Lambda_m / Lambda_m_0, finding ionization constant K_a = c * alpha^2 / (1 - alpha), and determining solubility of sparingly soluble salts."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Conductivity and Cell Constant",
+        "formula": "kappa = G * G* = (1 / R) * (l / A)",
+        "applicability": "Calculating specific conductance from measured resistance and cell geometry",
+        "variables": [
+          {
+            "symbol": "kappa",
+            "meaning": "Specific conductivity",
+            "unit": "S cm^-1"
+          },
+          {
+            "symbol": "G",
+            "meaning": "Conductance",
+            "unit": "S"
+          },
+          {
+            "symbol": "G*",
+            "meaning": "Cell constant (l / A)",
+            "unit": "cm^-1"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Resistance",
+            "unit": "ohm"
+          }
+        ]
+      },
+      {
+        "label": "Molar Conductivity",
+        "formula": "Lambda_m = (kappa * 1000) / M",
+        "applicability": "Calculating molar conductivity in CGS units",
+        "variables": [
+          {
+            "symbol": "Lambda_m",
+            "meaning": "Molar conductivity",
+            "unit": "S cm^2 mol^-1"
+          },
+          {
+            "symbol": "kappa",
+            "meaning": "Specific conductivity",
+            "unit": "S cm^-1"
+          },
+          {
+            "symbol": "M",
+            "meaning": "Molar concentration",
+            "unit": "mol L^-1"
+          }
+        ]
+      },
+      {
+        "label": "Debye-Huckel-Onsager Equation",
+        "formula": "Lambda_m = Lambda_m_0 - A * sqrt(c)",
+        "applicability": "Concentration variation of molar conductivity for strong electrolytes",
+        "variables": [
+          {
+            "symbol": "Lambda_m",
+            "meaning": "Molar conductivity at concentration c",
+            "unit": "S cm^2 mol^-1"
+          },
+          {
+            "symbol": "Lambda_m_0",
+            "meaning": "Limiting molar conductivity at infinite dilution",
+            "unit": "S cm^2 mol^-1"
+          },
+          {
+            "symbol": "A",
+            "meaning": "Debye-Huckel-Onsager constant",
+            "unit": "S cm^2 mol^-1 (mol L^-1)^-1/2"
+          },
+          {
+            "symbol": "c",
+            "meaning": "Molar concentration",
+            "unit": "mol L^-1"
+          }
+        ]
+      },
+      {
+        "label": "Kohlrausch's Law",
+        "formula": "Lambda_m_0 = v_+ * lambda_+_0 + v_- * lambda_-_0",
+        "applicability": "Limiting molar conductivity calculation from ionic conductivities",
+        "variables": [
+          {
+            "symbol": "Lambda_m_0",
+            "meaning": "Limiting molar conductivity of electrolyte",
+            "unit": "S cm^2 mol^-1"
+          },
+          {
+            "symbol": "v_+, v_-",
+            "meaning": "Stoichiometric numbers of cation and anion",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "lambda_+_0, lambda_-_0",
+            "meaning": "Limiting ionic molar conductivities",
+            "unit": "S cm^2 mol^-1"
+          }
+        ]
+      },
+      {
+        "label": "Degree of Dissociation and Dissociation Constant",
+        "formula": "alpha = Lambda_m / Lambda_m_0 ; K_a = (c * alpha^2) / (1 - alpha)",
+        "applicability": "Weak electrolyte dissociation calculations in dilute solutions",
+        "variables": [
+          {
+            "symbol": "alpha",
+            "meaning": "Degree of dissociation",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Lambda_m",
+            "meaning": "Molar conductivity at concentration c",
+            "unit": "S cm^2 mol^-1"
+          },
+          {
+            "symbol": "Lambda_m_0",
+            "meaning": "Limiting molar conductivity",
+            "unit": "S cm^2 mol^-1"
+          },
+          {
+            "symbol": "K_a",
+            "meaning": "Dissociation constant",
+            "unit": "mol L^-1"
+          },
+          {
+            "symbol": "c",
+            "meaning": "Molarity",
+            "unit": "mol L^-1"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Conductivity (kappa) increases upon dilution because molar conductivity (Lambda_m) increases.",
+        "correction": "Specific conductivity (kappa) decreases on dilution because the number of ions per unit volume (cm^3) decreases. Molar conductivity increases because the volume V containing 1 mole of electrolyte increases dramatically, overcompensating for the decrease in kappa."
+      },
+      {
+        "misconception": "Kohlrausch's Law is only applicable to weak electrolytes.",
+        "correction": "Kohlrausch's Law applies to all electrolytes (both strong and weak) at infinite dilution. Its special utility lies in determining Lambda_m_0 for weak electrolytes where direct linear extrapolation to zero concentration is impossible."
+      },
+      {
+        "misconception": "Temperature rise decreases the conductance of electrolytic solutions.",
+        "correction": "Unlike metallic conductors, temperature rise decreases solvent viscosity and breaks interionic attractions, thereby increasing ionic mobility and electrolytic conductance."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "A conductivity cell containing 0.05 M NaOH solution gives a resistance of 5550 ohms. The column of solution has a length of 50 cm and diameter of 1 cm. Calculate the specific conductivity (kappa) and molar conductivity (Lambda_m).",
+        "steps": [
+          "Calculate cross-sectional area A = pi * r^2 = pi * (0.5 cm)^2 = 0.7854 cm^2.",
+          "Calculate cell constant G* = l / A = 50 cm / 0.7854 cm^2 = 63.66 cm^-1.",
+          "Calculate conductivity kappa = G* / R = 63.66 / 5550 = 0.01147 S cm^-1.",
+          "Calculate molar conductivity Lambda_m = (kappa * 1000) / M = (0.01147 * 1000) / 0.05 = 229.4 S cm^2 mol^-1."
+        ],
+        "answer": "kappa = 0.01147 S cm^-1, Lambda_m = 229.4 S cm^2 mol^-1"
+      },
+      {
+        "problem": "The limiting molar conductivities for NaCl, HCl, and CH3COONa are 126.4, 425.9, and 91.0 S cm^2 mol^-1 respectively. If the molar conductivity of 0.01 M CH3COOH is 48.0 S cm^2 mol^-1, find its limiting molar conductivity, degree of dissociation, and K_a.",
+        "steps": [
+          "Apply Kohlrausch's law: Lambda_m_0(CH3COOH) = Lambda_m_0(CH3COONa) + Lambda_m_0(HCl) - Lambda_m_0(NaCl) = 91.0 + 425.9 - 126.4 = 390.5 S cm^2 mol^-1.",
+          "Calculate degree of dissociation alpha = Lambda_m / Lambda_m_0 = 48.0 / 390.5 = 0.1229.",
+          "Calculate dissociation constant K_a = (c * alpha^2) / (1 - alpha) = (0.01 * (0.1229)^2) / (1 - 0.1229) = 1.72 x 10^-5 mol L^-1."
+        ],
+        "answer": "Lambda_m_0 = 390.5 S cm^2 mol^-1, alpha = 0.1229, K_a = 1.72 x 10^-5 mol L^-1"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "The resistance of a 0.01 M electrolyte solution in a conductivity cell with cell constant 0.8 cm^-1 is 200 ohms. What is its molar conductivity? A) 400 S cm^2 mol^-1 B) 40 S cm^2 mol^-1 C) 4000 S cm^2 mol^-1 D) 200 S cm^2 mol^-1",
+        "answer": "Correct Option: A. Solution: kappa = G* / R = 0.8 / 200 = 0.004 S cm^-1. Lambda_m = (kappa * 1000) / M = (0.004 * 1000) / 0.01 = 400 S cm^2 mol^-1."
+      },
+      {
+        "question": "How do specific conductivity (kappa) and molar conductivity (Lambda_m) change upon dilution? A) Both increase B) Both decrease C) kappa decreases and Lambda_m increases D) kappa increases and Lambda_m decreases",
+        "answer": "Correct Option: C. Solution: Dilution decreases the number of ions per cm^3, so kappa decreases. Dilution increases the volume containing 1 mole of electrolyte, causing Lambda_m to increase."
+      },
+      {
+        "question": "Given limiting molar ionic conductivities lambda_0(Ba^2+) = 127.2 S cm^2 mol^-1 and lambda_0(Cl^-) = 76.3 S cm^2 mol^-1, what is Lambda_m_0 for BaCl2? A) 203.5 S cm^2 mol^-1 B) 279.8 S cm^2 mol^-1 C) 139.9 S cm^2 mol^-1 D) 356.1 S cm^2 mol^-1",
+        "answer": "Correct Option: B. Solution: Lambda_m_0(BaCl2) = lambda_0(Ba^2+) + 2 * lambda_0(Cl^-) = 127.2 + 2 * 76.3 = 279.8 S cm^2 mol^-1."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 12 Chemistry, Chapter 3: Electrochemistry",
+      "JEE Main Official Chemistry Syllabus - Electrochemistry"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateGemini = void 0;
+exports.generateGemini = generateGemini;
 const generative_ai_1 = require("@google/generative-ai");
 const genAI = new generative_ai_1.GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 function cleanEnv(name) {
@@ -25,5 +25,4 @@ async function generateGemini(prompt) {
         model: modelName,
     };
 }
-exports.generateGemini = generateGemini;
 //# sourceMappingURL=geminiProvider.js.map

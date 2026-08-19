@@ -1,0 +1,169 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_4FB800BA_CH002",
+    "overview": "This learning unit covers the fundamentals of electrochemical cells, distinguishing between galvanic and electrolytic cells. It details electrode potentials, standard hydrogen electrode reference, calculation of standard cell EMF, Nernst equation for non-standard states, thermodynamic relationships between cell potential and Gibbs free energy, and commercial batteries including dry cells, lead storage accumulators, and hydrogen-oxygen fuel cells.",
+    "concepts": [
+      {
+        "title": "Galvanic vs. Electrolytic Cells",
+        "explanation": "Galvanic cells convert chemical energy from spontaneous redox reactions into electrical energy (e.g., Daniell cell). Electrolytic cells use external electrical energy to drive non-spontaneous chemical reactions. In both cells, oxidation occurs at the anode and reduction occurs at the cathode."
+      },
+      {
+        "title": "Electrode Potential and Standard Hydrogen Electrode (SHE)",
+        "explanation": "Electrode potential is the potential difference between a metal electrode and its ions in solution. Under standard conditions (1 M concentration, 298 K, 1 bar pressure), it is called the Standard Electrode Potential (E°). Standard Hydrogen Electrode (SHE) is assigned an arbitrary potential of 0.00 V and acts as a primary reference electrode to measure reduction potentials."
+      },
+      {
+        "title": "EMF and Nernst Equation",
+        "explanation": "The Electromotive Force (EMF) of a cell is the potential difference between two electrodes when no current is drawn. The Nernst equation relates the cell potential E_cell under non-standard conditions to standard cell potential E°_cell, temperature, and reaction quotient Q: E_cell = E°_cell - (RT/nF) * ln(Q). At 298 K, E_cell = E°_cell - (0.0591/n) * log10(Q)."
+      },
+      {
+        "title": "Thermodynamics of Electrochemical Cells",
+        "explanation": "The maximum electrical work done by a cell equals the decrease in Gibbs free energy: Delta G = -n * F * E_cell. For standard conditions, Delta G° = -n * F * E°_cell. Furthermore, Delta G° = -R * T * ln(K_c), relating E°_cell directly to the equilibrium constant K_c via E°_cell = (0.0591/n) * log10(K_c) at 298 K."
+      },
+      {
+        "title": "Commercial Cells and Fuel Cells",
+        "explanation": "Primary cells like the Leclanché dry cell cannot be recharged. Secondary cells like the lead storage accumulator are rechargeable; during discharge, Pb and PbO2 react with H2SO4 to form PbSO4, while charging reverses this process. Fuel cells, such as the H2-O2 fuel cell, continuously convert combustion energy directly into electrical energy with high efficiency and minimal pollution."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Standard Cell Potential",
+        "formula": "E°_cell = E°_cathode - E°_anode",
+        "applicability": "Galvanic cells under standard conditions (1 M concentration, 298 K, 1 bar pressure)",
+        "variables": [
+          {
+            "symbol": "E°_cell",
+            "meaning": "Standard electromotive force of the cell",
+            "unit": "V"
+          },
+          {
+            "symbol": "E°_cathode",
+            "meaning": "Standard reduction potential of cathode",
+            "unit": "V"
+          },
+          {
+            "symbol": "E°_anode",
+            "meaning": "Standard reduction potential of anode",
+            "unit": "V"
+          }
+        ]
+      },
+      {
+        "label": "Nernst Equation at 298 K",
+        "formula": "E_cell = E°_cell - (0.0591 / n) * log10(Q)",
+        "applicability": "Electrochemical cells at T = 298 K under non-standard ion concentrations",
+        "variables": [
+          {
+            "symbol": "E_cell",
+            "meaning": "Cell electromotive force at non-standard state",
+            "unit": "V"
+          },
+          {
+            "symbol": "E°_cell",
+            "meaning": "Standard cell electromotive force",
+            "unit": "V"
+          },
+          {
+            "symbol": "n",
+            "meaning": "Number of moles of electrons transferred in balanced cell reaction",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Q",
+            "meaning": "Reaction quotient of cell reaction",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Gibbs Free Energy Change and Cell Potential",
+        "formula": "Delta G° = -n * F * E°_cell",
+        "applicability": "Thermodynamic evaluation of spontaneity for electrochemical reactions",
+        "variables": [
+          {
+            "symbol": "Delta G°",
+            "meaning": "Standard Gibbs free energy change",
+            "unit": "J/mol"
+          },
+          {
+            "symbol": "n",
+            "meaning": "Number of moles of electrons transferred",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "F",
+            "meaning": "Faraday constant (96485 C/mol)",
+            "unit": "C/mol"
+          },
+          {
+            "symbol": "E°_cell",
+            "meaning": "Standard cell electromotive force",
+            "unit": "V"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Anode is always positively charged and Cathode is always negatively charged.",
+        "correction": "Anode is defined by oxidation and cathode by reduction. In galvanic cells, anode is negative and cathode is positive. In electrolytic cells, anode is positive and cathode is negative."
+      },
+      {
+        "misconception": "Multiplying a half-cell reaction equation by a stoichiometric factor multiplies its standard reduction potential E°.",
+        "correction": "Electrode potential E° is an intensive property and does not depend on the stoichiometric coefficients or amount of substance."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the cell potential E_cell at 25 °C for the cell: Mg(s) | Mg2+(0.001 M) || Cu2+(0.01 M) | Cu(s). Given E°(Mg2+/Mg) = -2.37 V and E°(Cu2+/Cu) = +0.34 V.",
+        "steps": [
+          "Step 1: Identify cathode and anode. Cu2+/Cu has higher reduction potential, so it acts as cathode. E°_cell = E°_cathode - E°_anode = +0.34 V - (-2.37 V) = 2.71 V.",
+          "Step 2: Write overall cell reaction: Mg(s) + Cu2+(aq) -> Mg2+(aq) + Cu(s). Number of electrons transferred, n = 2.",
+          "Step 3: Determine reaction quotient Q = [Mg2+] / [Cu2+] = 0.001 / 0.01 = 0.1 = 10^-1.",
+          "Step 4: Apply Nernst equation: E_cell = E°_cell - (0.0591 / 2) * log10(Q) = 2.71 - (0.02955) * log10(10^-1) = 2.71 - (0.02955 * -1) = 2.71 + 0.02955 = 2.73955 V."
+        ],
+        "answer": "E_cell = 2.74 V"
+      },
+      {
+        "problem": "Calculate the standard Gibbs free energy change (Delta G°) and equilibrium constant K_c at 298 K for the reaction: 2 Fe3+(aq) + 2 I-(aq) -> 2 Fe2+(aq) + I2(s). Given E°_cell = +0.236 V.",
+        "steps": [
+          "Step 1: Identify n. In the reaction 2 Fe3+ + 2 e- -> 2 Fe2+, 2 moles of electrons are transferred, so n = 2.",
+          "Step 2: Calculate Delta G° using Delta G° = -n * F * E°_cell. Delta G° = -2 * 96485 C/mol * 0.236 V = -45540.92 J/mol = -45.54 kJ/mol.",
+          "Step 3: Calculate K_c using log10(K_c) = (n * E°_cell) / 0.0591 = (2 * 0.236) / 0.0591 = 0.472 / 0.0591 = 7.986.",
+          "Step 4: Calculate K_c = 10^7.986 ≈ 9.68 x 10^7."
+        ],
+        "answer": "Delta G° = -45.54 kJ/mol, K_c = 9.68 x 10^7"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "For a cell reaction Zn(s) + Cu2+(0.1 M) -> Zn2+(1.0 M) + Cu(s), if E°_cell is 1.10 V at 298 K, what is the EMF of the cell? Options: (A) 1.10 V, (B) 1.07 V, (C) 1.13 V, (D) 0.98 V.",
+        "answer": "(B) 1.07 V. Explanation: n = 2, Q = [Zn2+]/[Cu2+] = 1.0 / 0.1 = 10. E_cell = 1.10 - (0.0591/2) * log10(10) = 1.10 - 0.02955 = 1.07045 V ≈ 1.07 V."
+      },
+      {
+        "question": "What chemical species undergoes reduction at the cathode during the discharge of a lead storage battery? Options: (A) Pb, (B) PbO2, (C) H2SO4, (D) PbSO4.",
+        "answer": "(B) PbO2. Explanation: During discharging, lead dioxide (PbO2) at the cathode undergoes reduction from +4 oxidation state to +2 state forming PbSO4."
+      },
+      {
+        "question": "If the standard reduction potentials of electrode A is +0.80 V and electrode B is -0.76 V, what is the standard EMF of the galvanic cell formed by combining them? Options: (A) 0.04 V, (B) -1.56 V, (C) 1.56 V, (D) -0.04 V.",
+        "answer": "(C) 1.56 V. Explanation: Electrode A has higher reduction potential (+0.80 V) so it acts as cathode. Electrode B acts as anode. E°_cell = E°_cathode - E°_anode = +0.80 V - (-0.76 V) = +1.56 V."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 3: Electrochemistry",
+      "JEE Main Official Syllabus - Chemistry Unit 7: Electrochemistry"
+    ]
+  }
+}

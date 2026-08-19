@@ -1,0 +1,156 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U10_T003_003_CH001",
+    "overview": "This unit covers fundamental representations of circles and conic sections in standard geometric forms. Key topics include standard, general, and diameter forms of circle equations, line-circle intersections, and standard algebraic representations of parabolas, ellipses, and hyperbolas.",
+    "concepts": [
+      {
+        "title": "Standard and General Forms of a Circle",
+        "explanation": "A circle with center (h, k) and radius r is given by (x - h)^2 + (y - k)^2 = r^2. Expanding this gives the general second-degree equation x^2 + y^2 + 2gx + 2fy + c = 0, where the center is (-g, -f) and the radius is sqrt(g^2 + f^2 - c), provided g^2 + f^2 - c >= 0."
+      },
+      {
+        "title": "Diameter Form of a Circle Equation",
+        "explanation": "If the endpoints of a diameter are A(x1, y1) and B(x2, y2), any point P(x, y) on the circle forms a right triangle APB. Using orthogonal vectors or slopes, the equation is given by (x - x1)(x - x2) + (y - y1)(y - y2) = 0."
+      },
+      {
+        "title": "Intersection of a Line and Circle at Origin",
+        "explanation": "For a circle centered at the origin x^2 + y^2 = r^2 and a line y = mx + c, substituting y yields a quadratic in x. The line intersects in two distinct points if c^2 < r^2(1 + m^2), is tangent if c^2 = r^2(1 + m^2), and does not intersect if c^2 > r^2(1 + m^2)."
+      },
+      {
+        "title": "Standard Forms of Conic Sections",
+        "explanation": "Conic sections are loci of points whose distance from a focus is e times its perpendicular distance from a directrix. Standard equations: Parabola (y^2 = 4ax, e = 1), Ellipse (x^2/a^2 + y^2/b^2 = 1, e < 1), and Hyperbola (x^2/a^2 - y^2/b^2 = 1, e > 1)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "General Circle Equation",
+        "formula": "x^2 + y^2 + 2gx + 2fy + c = 0",
+        "applicability": "General 2D Cartesian plane circle equations",
+        "variables": [
+          {
+            "symbol": "g, f",
+            "meaning": "Half-coefficients of x and y linear terms",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "c",
+            "meaning": "Constant term",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Circle Center and Radius",
+        "formula": "Center = (-g, -f), r = sqrt(g^2 + f^2 - c)",
+        "applicability": "Calculating metric parameters from general form equation",
+        "variables": [
+          {
+            "symbol": "r",
+            "meaning": "Radius of the circle",
+            "unit": "length units"
+          }
+        ]
+      },
+      {
+        "label": "Diameter Form Circle Equation",
+        "formula": "(x - x1)(x - x2) + (y - y1)(y - y2) = 0",
+        "applicability": "Finding circle given two diametrically opposite points",
+        "variables": [
+          {
+            "symbol": "x1, y1, x2, y2",
+            "meaning": "Coordinates of diameter endpoints A and B",
+            "unit": "length units"
+          }
+        ]
+      },
+      {
+        "label": "Condition of Tangency for Circle x^2 + y^2 = r^2",
+        "formula": "c^2 = r^2(1 + m^2)",
+        "applicability": "Line y = mx + c touching circle centered at origin",
+        "variables": [
+          {
+            "symbol": "m",
+            "meaning": "Slope of line",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "c",
+            "meaning": "y-intercept of line",
+            "unit": "length units"
+          },
+          {
+            "symbol": "r",
+            "meaning": "Radius of circle",
+            "unit": "length units"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "The center of x^2 + y^2 + 2gx + 2fy + c = 0 is (g, f).",
+        "correction": "The center is (-g, -f). For example, x^2 + y^2 - 4x - 6y = 0 has g = -2, f = -3, so its center is (2, 3)."
+      },
+      {
+        "misconception": "The radius formula adds c inside the square root: sqrt(g^2 + f^2 + c).",
+        "correction": "The correct formula is sqrt(g^2 + f^2 - c). A positive constant c reduces the radius."
+      },
+      {
+        "misconception": "Any second-degree equation x^2 + y^2 + 2gx + 2fy + c = 0 represents a real circle.",
+        "correction": "It represents a real circle only if g^2 + f^2 - c > 0. If equal to zero, it represents a point circle; if negative, it represents an imaginary circle."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Find the center and radius of the circle x^2 + y^2 - 6x + 8y - 11 = 0.",
+        "steps": [
+          "Compare x^2 + y^2 - 6x + 8y - 11 = 0 with standard form x^2 + y^2 + 2gx + 2fy + c = 0.",
+          "Identify coefficients: 2g = -6 => g = -3; 2f = 8 => f = 4; c = -11.",
+          "Calculate Center: (-g, -f) = (3, -4).",
+          "Calculate Radius: r = sqrt(g^2 + f^2 - c) = sqrt((-3)^2 + 4^2 - (-11)) = sqrt(9 + 16 + 11) = sqrt(36) = 6."
+        ],
+        "answer": "Center = (3, -4), Radius = 6 units."
+      },
+      {
+        "problem": "Find the equation of the circle whose diameter endpoints are A(2, 3) and B(-4, 7).",
+        "steps": [
+          "Use the diameter form formula: (x - x1)(x - x2) + (y - y1)(y - y2) = 0.",
+          "Substitute (x1, y1) = (2, 3) and (x2, y2) = (-4, 7): (x - 2)(x - (-4)) + (y - 3)(y - 7) = 0.",
+          "Expand terms: (x - 2)(x + 4) + (y - 3)(y - 7) = (x^2 + 2x - 8) + (y^2 - 10y + 21) = 0.",
+          "Simplify equation: x^2 + y^2 + 2x - 10y + 13 = 0."
+        ],
+        "answer": "x^2 + y^2 + 2x - 10y + 13 = 0"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "What is the radius of the circle x^2 + y^2 + 4x - 2y - 20 = 0?",
+        "answer": "Option A) 5 units. Explanation: Here 2g = 4 => g = 2, 2f = -2 => f = -1, c = -20. Radius = sqrt(2^2 + (-1)^2 - (-20)) = sqrt(4 + 1 + 20) = sqrt(25) = 5."
+      },
+      {
+        "question": "If the line y = 2x + c is tangent to the circle x^2 + y^2 = 5, what are the possible values of c?",
+        "answer": "Option B) c = ±5. Explanation: For tangency, c^2 = r^2(1 + m^2). Here r^2 = 5 and m = 2. Thus c^2 = 5*(1 + 2^2) = 5*5 = 25 => c = ±5."
+      },
+      {
+        "question": "Which standard conic section has eccentricity e = 1/2?",
+        "answer": "Option C) Ellipse. Explanation: A conic section with eccentricity 0 < e < 1 represents an ellipse. Since e = 1/2 < 1, it is an ellipse."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Mathematics - Chapter 11: Conic Sections",
+      "JEE Main Official Mathematics Syllabus - Unit: Coordinate Geometry (Circles & Conics)"
+    ]
+  }
+}

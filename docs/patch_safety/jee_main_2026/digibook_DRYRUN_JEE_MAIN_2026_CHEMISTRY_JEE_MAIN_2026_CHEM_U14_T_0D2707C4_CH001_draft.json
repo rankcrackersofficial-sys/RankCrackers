@@ -1,0 +1,112 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_0D2707C4_CH001",
+    "overview": "This unit covers the foundational principles of organic reaction mechanisms: modes of covalent bond cleavage (homolytic and heterolytic), structure and stability of organic reaction intermediates (carbocations, carbanions, and free radicals), and classification of chemical reagents into electrophiles and nucleophiles.",
+    "concepts": [
+      {
+        "title": "Covalent Bond Cleavage",
+        "explanation": "Covalent bond fission occurs in two distinct ways. Homolytic fission involves symmetrical cleavage where each bonded atom retains one electron from the shared pair, resulting in highly reactive neutral species with unpaired electrons called free radicals. Heterolytic fission involves asymmetrical cleavage where both electrons of the shared pair shift to the more electronegative atom, producing a cation and an anion."
+      },
+      {
+        "title": "Reactive Intermediates: Carbocations, Free Radicals, and Carbanions",
+        "explanation": "Carbocations are sp2 hybridized, trigonal planar electron-deficient species containing six valence electrons on the positively charged carbon. Free radicals are neutral sp2 or pyramidal species with seven valence electrons and an unpaired electron. Carbanions are sp3 hybridized, pyramidal, electron-rich species containing eight valence electrons and a negative charge on carbon."
+      },
+      {
+        "title": "Relative Stability of Intermediates",
+        "explanation": "Carbocations and free radicals are electron-deficient, so they are stabilized by electron-donating groups (+I effect, +M/+R resonance effect, hyperconjugation via alpha-hydrogens). Their stability order is generally 3 deg > 2 deg > 1 deg > methyl. Carbanions are electron-rich and are stabilized by electron-withdrawing groups (-I effect, -M/-R effect) and s-character (sp > sp2 > sp3), leading to an inverted stability order: methyl > 1 deg > 2 deg > 3 deg."
+      },
+      {
+        "title": "Electrophiles and Nucleophiles",
+        "explanation": "Electrophiles (electron lovers) are electron-deficient species (positively charged like H+, NO2+ or neutral Lewis acids like BF3, AlCl3) that accept an electron pair. Nucleophiles (nucleus lovers) are electron-rich species (negatively charged like OH-, CN- or neutral Lewis bases like H2O, NH3) that possess at least one lone pair of electrons to donate."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Number of Hyperconjugative Structures",
+        "formula": "N_structures = N_alpha_H + 1",
+        "applicability": "Applies to carbocations and free radicals containing alpha-hydrogens adjacent to the sp2 carbon center.",
+        "variables": [
+          {
+            "symbol": "N_structures",
+            "meaning": "Total hyperconjugative canonical structures including the ground state",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "N_alpha_H",
+            "meaning": "Number of hydrogens attached to alpha-carbon atoms directly bonded to the carbocation/radical center",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Carbocations are sp3 hybridized because carbon forms bonds with three groups.",
+        "correction": "Carbocations form three sigma bonds using sp2 hybrid orbitals, leaving an unhybridized empty p-orbital perpendicular to the trigonal planar geometry."
+      },
+      {
+        "misconception": "Free radicals carry a negative or positive net charge because they have unpaired electrons.",
+        "correction": "Free radicals are neutral species with zero net electrical charge because the total number of protons equals the total number of electrons."
+      },
+      {
+        "misconception": "All nucleophiles must carry a formal negative charge.",
+        "correction": "Neutral molecules with lone pairs such as H2O, NH3, and ROH are effective neutral nucleophiles."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Arrange the following carbocations in order of increasing stability: (i) (CH3)3C+, (ii) CH3-CH2+, (iii) (CH3)2CH+, (iv) CH3+.",
+        "steps": [
+          "Step 1: Identify the degree of each carbocation and count the number of alpha-hydrogens bonded to adjacent carbons.",
+          "Step 2: (CH3)3C+ is tertiary (3 deg) with 9 alpha-hydrogens.",
+          "Step 3: (CH3)2CH+ is secondary (2 deg) with 6 alpha-hydrogens.",
+          "Step 4: CH3-CH2+ is primary (1 deg) with 3 alpha-hydrogens.",
+          "Step 5: CH3+ is a methyl cation with 0 alpha-hydrogens.",
+          "Step 6: More alpha-hydrogens increase hyperconjugation and stability."
+        ],
+        "answer": "CH3+ < CH3-CH2+ < (CH3)2CH+ < (CH3)3C+ (or iv < ii < iii < i)"
+      },
+      {
+        "problem": "Classify the following species into Electrophiles and Nucleophiles: BF3, H2O, NO2+, NH3, AlCl3, Cl-.",
+        "steps": [
+          "Step 1: Check for positive charge or incomplete octet (electron deficiency) -> Electrophiles.",
+          "Step 2: BF3 (incomplete octet, 6e-), NO2+ (positive charge), AlCl3 (incomplete octet, 6e-) are Electrophiles.",
+          "Step 3: Check for negative charge or lone pairs available for donation -> Nucleophiles.",
+          "Step 4: H2O (lone pairs on O), NH3 (lone pair on N), Cl- (negative charge with lone pairs) are Nucleophiles."
+        ],
+        "answer": "Electrophiles: BF3, NO2+, AlCl3; Nucleophiles: H2O, NH3, Cl-"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following carbocations is the most stable? A) Benzyl carbocation (C6H5-CH2+) B) Methyl carbocation (CH3+) C) Ethyl carbocation (CH3-CH2+) D) Isopropyl carbocation ((CH3)2CH+)",
+        "answer": "A) Benzyl carbocation (C6H5-CH2+). Explanation: Benzyl carbocation is resonance-stabilized by delocalization of the positive charge over the aromatic benzene ring, making it significantly more stable than simple aliphatic carbocations."
+      },
+      {
+        "question": "Homolytic bond cleavage of a C-C single bond leads to the formation of: A) Two carbanions B) Two carbocations C) Two free radicals D) One carbocation and one carbanion",
+        "answer": "C) Two free radicals. Explanation: Homolytic fission involves equal distribution of the bonding electron pair, giving one electron to each fragment and forming neutral free radicals."
+      },
+      {
+        "question": "What is the hybridization state and shape of a simple methyl carbanion (:CH3-)? A) sp2, Trigonal planar B) sp3, Pyramidal C) sp, Linear D) dsp2, Square planar",
+        "answer": "B) sp3, Pyramidal. Explanation: Methyl carbanion has 3 sigma bonds and 1 lone pair (total steric number = 4), resulting in sp3 hybridization and a trigonal pyramidal geometry."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 12: Organic Chemistry - Some Basic Principles and Techniques",
+      "JEE Main Official Syllabus - Organic Chemistry Fundamentals"
+    ]
+  }
+}

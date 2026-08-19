@@ -1,0 +1,11 @@
+{
+    "liveMissionSource":  "rankcrackers-prod-founder/founder_missions",
+    "studentProjection":  "rankcrackers-prod-student/student_missions",
+    "factoryConsumer":  "rankcrackers-55",
+    "allowlist":  [
+                      "functions\\test_mission_mirror.js",
+                      "functions\\callable\\handle_sentinel_action.js",
+                      "functions\\backfill_student_mission_catalog.js"
+                  ],
+    "status":  "LIVE_VERIFICATION_CHAIN_REESTABLISHED"
+}

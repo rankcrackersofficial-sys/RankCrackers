@@ -1,9 +1,72 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 const {
   generateFactoryContent,
+  generateStructuredFactoryContent,
   WORKLOADS,
 } = require('./vertex_factory_client');
+const { DIGIBOOK_DRAFT_SCHEMA } = require('./digibook_draft_schema');
+
+const CRUCIBLE_DRAFT_SCHEMA = {
+  type: "OBJECT",
+  properties: {
+    slotId: { type: "STRING" },
+    phaseId: { type: "STRING" },
+    items: {
+      type: "ARRAY",
+      items: {
+        type: "OBJECT",
+        properties: {
+          itemId: { type: "STRING" },
+          atomId: { type: "STRING" },
+          type: { type: "STRING", enum: ["SINGLE_SELECT", "NUMERIC_RESPONSE"] },
+          stem: { type: "STRING" },
+          options: {
+            type: "ARRAY",
+            items: { type: "STRING" },
+            nullable: true
+          },
+          answer: { type: "STRING" },
+          shortSolution: { type: "STRING" },
+          difficulty: { type: "STRING", enum: ["EASY", "MEDIUM", "HARD"] }
+        },
+        required: ["itemId", "atomId", "type", "stem", "answer", "shortSolution", "difficulty"]
+      }
+    }
+  },
+  required: ["slotId", "phaseId", "items"]
+};
+
+const CRUCIBLE_REVIEW_SCHEMA = {
+  type: "OBJECT",
+  properties: {
+    verdict: { type: "STRING", enum: ["PASS", "FAIL"] },
+    itemCountReviewed: { type: "INTEGER" },
+    allAnswersTechnicallyCorrect: { type: "BOOLEAN" },
+    allSolutionsTechnicallyCorrect: { type: "BOOLEAN" },
+    noMultipleCorrectRisk: { type: "BOOLEAN" },
+    noScopeLeakage: { type: "BOOLEAN" },
+    answerKeysVerified: { type: "BOOLEAN" },
+    reviewedSlot: { type: "STRING" },
+    blockingIssues: {
+      type: "ARRAY",
+      items: { type: "STRING" }
+    },
+    reviewNotes: { type: "STRING" }
+  },
+  required: [
+    "verdict",
+    "itemCountReviewed",
+    "allAnswersTechnicallyCorrect",
+    "allSolutionsTechnicallyCorrect",
+    "noMultipleCorrectRisk",
+    "noScopeLeakage",
+    "answerKeysVerified",
+    "reviewedSlot",
+    "blockingIssues",
+    "reviewNotes"
+  ]
+};
 
 const ROOT = process.cwd();
 const BASELINE = '36f00384cfe5a629e52cd1af54316d2453a39e2d';
@@ -51,15 +114,43 @@ function flattenAtoms(tree) {
 }
 
 function safeJsonParse(text) {
-  const trimmed = text.trim();
-  const sanitize = (value) => value.replace(/\\(?!["\\/bfnrtu])/g, "\\\\");
+  let cleaned = text.trim();
+  if (cleaned.startsWith("```")) {
+    cleaned = cleaned.replace(/^```[a-zA-Z]*\n/, "").replace(/\n```$/, "");
+  }
+  cleaned = cleaned.trim();
+
+  const start = cleaned.indexOf('{');
+  const end = cleaned.lastIndexOf('}');
+  if (start >= 0 && end > start) {
+    cleaned = cleaned.slice(start, end + 1);
+  }
+
+  cleaned = cleaned.replace(/,\s*([\]}])/g, "$1");
+  cleaned = cleaned.replace(/\\\\|\\(?!["\\/bfnrt])(?!u[0-9a-fA-F]{4})/g, m => m === '\\\\' ? '\\\\' : '\\\\');
+
   try {
-    return JSON.parse(sanitize(trimmed));
+    return JSON.parse(cleaned);
   } catch (error) {
-    const start = trimmed.indexOf('{');
-    const end = trimmed.lastIndexOf('}');
-    if (start >= 0 && end > start) {
-      return JSON.parse(sanitize(trimmed.slice(start, end + 1)));
+    console.error("[JSON Parse Failure] Error message:", error.message);
+    try {
+      fs.mkdirSync('scratch', { recursive: true });
+      fs.writeFileSync('scratch/json_error.txt', cleaned, 'utf8');
+      console.error("[JSON Parse Failure] Full raw text written to scratch/json_error.txt");
+    } catch (e) {
+      console.error("[JSON Parse Failure] Failed to write scratch/json_error.txt:", e.message);
+    }
+    const match = error.message.match(/at position (\d+)/);
+    if (match) {
+      const pos = parseInt(match[1], 10);
+      const startPos = Math.max(0, pos - 50);
+      const endPos = Math.min(cleaned.length, pos + 50);
+      console.error("[JSON Parse Failure] Snippet around error:");
+      console.error("--- SNIPPET START ---");
+      console.error(cleaned.slice(startPos, endPos));
+      console.error("--- SNIPPET END ---");
+    } else {
+      console.error("[JSON Parse Failure] First 500 chars of cleaned text:\n", cleaned.slice(0, 500));
     }
     throw error;
   }
@@ -79,6 +170,29 @@ async function callWithRetries({ workload, contents, config, label }) {
         message.toLowerCase().includes('timeout');
       if (!transient || attempt === 2) break;
       await new Promise((resolve) => setTimeout(resolve, 15000 * (attempt + 1)));
+    }
+  }
+  throw new Error(`${label} failed after bounded retries: ${lastError.message || lastError}`);
+}
+
+async function callStructuredWithRetries({ workload, contents, responseSchema, config, label }) {
+  let lastError;
+  const maxAttempts = 3;
+  for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
+    try {
+      return await generateStructuredFactoryContent({ workload, contents, responseSchema, config });
+    } catch (error) {
+      lastError = error;
+      const message = String(error && error.message ? error.message : error);
+      const transient =
+        message.includes('429') ||
+        message.includes('RESOURCE_EXHAUSTED') ||
+        message.toLowerCase().includes('timeout') ||
+        message.includes('STRUCTURED_RESPONSE_JSON_PARSE_FAILED');
+      if (!transient || attempt === maxAttempts - 1) break;
+      const waitTime = (message.includes('429') || message.includes('RESOURCE_EXHAUSTED')) ? 30000 : 15000;
+      console.warn(`[Retry Warning] ${label} attempt ${attempt + 1} failed: ${message}. Retrying in ${waitTime/1000}s...`);
+      await new Promise((resolve) => setTimeout(resolve, waitTime * (attempt + 1)));
     }
   }
   throw new Error(`${label} failed after bounded retries: ${lastError.message || lastError}`);
@@ -154,15 +268,16 @@ async function buildCrucibleTrack(plan, atoms) {
     'Do not claim official answer key. Use source-grounded internal draft only.',
     JSON.stringify({ slotId: 'macro_test_2', phaseId: 'phase_2', selectedAtoms }, null, 2),
   ].join('\n');
-  const draft = await callWithRetries({
+  const draftRes = await callStructuredWithRetries({
     workload: WORKLOADS.factoryFlash,
     contents: prompt,
-    config: { maxOutputTokens: 8192, responseMimeType: "application/json" },
+    responseSchema: CRUCIBLE_DRAFT_SCHEMA,
+    config: { maxOutputTokens: 8192 },
     label: 'crucible flash draft',
   });
-  const draftJson = safeJsonParse(draft.text);
+  const draftJson = draftRes.data;
   writeJson('crucible_macro_test_2_flash_draft.json', {
-    modelMetadata: draft.metadata,
+    modelMetadata: draftRes.metadata,
     draft: draftJson,
     selectedAtoms,
   });
@@ -170,20 +285,20 @@ async function buildCrucibleTrack(plan, atoms) {
   const reviewPrompt = [
     'You are the RankCrackers Pro academic reviewer.',
     'Review this macro_test_2 draft against the source atoms.',
-    'Return strict JSON only with verdict PASS or FAIL.',
+    'Return strict JSON only matching the schema.',
     'Check answer correctness, solution correctness, ambiguity, multiple-correct risk, no-correct risk, unit/sign/formula issues, atom scope, and duplicate risk.',
-    'Required fields: verdict, itemCountReviewed, allAnswersTechnicallyCorrect, allSolutionsTechnicallyCorrect, noMultipleCorrectRisk, noScopeLeakage, answerKeysVerified, reviewedMacroSlot, blockingIssues, reviewNotes.',
     JSON.stringify({ selectedAtoms, draft: draftJson }, null, 2),
   ].join('\n');
-  const review = await callWithRetries({
+  const reviewRes = await callStructuredWithRetries({
     workload: WORKLOADS.deepReasoningPro,
     contents: reviewPrompt,
-    config: { maxOutputTokens: 8192, responseMimeType: "application/json" },
+    responseSchema: CRUCIBLE_REVIEW_SCHEMA,
+    config: { maxOutputTokens: 8192 },
     label: 'crucible pro review',
   });
-  const reviewJson = safeJsonParse(review.text);
+  const reviewJson = reviewRes.data;
   writeJson('crucible_macro_test_2_pro_review.json', {
-    modelMetadata: review.metadata,
+    modelMetadata: reviewRes.metadata,
     review: reviewJson,
   });
   const pass =
@@ -194,7 +309,7 @@ async function buildCrucibleTrack(plan, atoms) {
     reviewJson.noMultipleCorrectRisk === true &&
     reviewJson.noScopeLeakage === true &&
     reviewJson.answerKeysVerified === true &&
-    (reviewJson.reviewedMacroSlot === true || reviewJson.reviewedMacroSlot === "macro_test_2");
+    (reviewJson.reviewedSlot === true || reviewJson.reviewedSlot === "macro_test_2");
   return {
     slotId: 'macro_test_2',
     phaseId: 'phase_2',
@@ -210,6 +325,32 @@ async function buildCrucibleTrack(plan, atoms) {
     blocker: pass ? null : 'PRO_REVIEW_DID_NOT_PASS',
   };
 }
+
+const DIGIBOOK_REVIEW_SCHEMA = {
+  type: "OBJECT",
+  properties: {
+    verdict: { type: "STRING", enum: ["PASS", "FAIL"] },
+    itemCountReviewed: { type: "INTEGER" },
+    approvedAtomIds: { type: "ARRAY", items: { type: "STRING" } },
+    pendingReviewAtomIds: { type: "ARRAY", items: { type: "STRING" } },
+    rejectedOrHeldAtomIds: { type: "ARRAY", items: { type: "STRING" } },
+    conceptCorrectnessPass: { type: "BOOLEAN" },
+    formulaPass: { type: "BOOLEAN" },
+    workedExampleMathPass: { type: "BOOLEAN" },
+    selfCheckPass: { type: "BOOLEAN" },
+    blockingIssues: { type: "ARRAY", items: { type: "STRING" } },
+    reviewNotes: { type: "STRING" }
+  },
+  required: [
+    "verdict",
+    "itemCountReviewed",
+    "approvedAtomIds",
+    "pendingReviewAtomIds",
+    "rejectedOrHeldAtomIds",
+    "blockingIssues",
+    "reviewNotes"
+  ]
+};
 
 async function buildDigiBookTrack(atoms) {
   const existing = new Set([
@@ -229,43 +370,62 @@ async function buildDigiBookTrack(atoms) {
     atomicTopicLabel: atom.atomicTopicLabel,
     sourceTraceStatus: atom.sourceTraceStatus,
   }));
-  const prompt = [
-    'Create RankCrackers DigiBook internal draft objects for exactly 20 JEE Main atoms.',
-    'Return strict JSON only with items array.',
-    'For each atom include atomId, title, sections: concepts, formulaRegister, commonMisconceptions, workedExamples, selfChecks.',
-    'If a section is not applicable, include NOT_APPLICABLE_WITH_REASON.',
-    'Do not fabricate PYQ claims. Do not mark studentPublishReady true.',
-    JSON.stringify({ selectedAtoms: selectedSlim }, null, 2),
-  ].join('\n');
-  const draft = await callWithRetries({
-    workload: WORKLOADS.factoryFlash,
-    contents: prompt,
-    config: { maxOutputTokens: 12000, responseMimeType: "application/json" },
-    label: 'digibook flash draft',
-  });
-  const draftJson = safeJsonParse(draft.text);
+
+  const draftItems = [];
+  const draftMetadataList = [];
+  
+  for (let i = 0; i < selectedSlim.length; i++) {
+    const atom = selectedSlim[i];
+    console.log(`[Fasttrack DigiBook] Processing atom ${i + 1}/${selectedSlim.length}: ${atom.atomId}`);
+    const prompt = [
+      `Create RankCrackers DigiBook internal draft object for the syllabus atom: ${atom.atomId}.`,
+      'Return strict JSON only matching the schema.',
+      'Fields required: atomId, title, sections: concepts, formulaRegister, commonMisconceptions, workedExamples, selfChecks.',
+      'If a section is not applicable, include NOT_APPLICABLE_WITH_REASON.',
+      'Do not fabricate PYQ claims. Do not mark studentPublishReady true.',
+      JSON.stringify({ atom }, null, 2),
+    ].join('\n');
+    
+    const draftRes = await callStructuredWithRetries({
+      workload: WORKLOADS.factoryFlash,
+      contents: prompt,
+      responseSchema: DIGIBOOK_DRAFT_SCHEMA,
+      config: { maxOutputTokens: 4096 },
+      label: `digibook flash draft for ${atom.atomId}`,
+    });
+    
+    draftItems.push(draftRes.data);
+    draftMetadataList.push(draftRes.metadata);
+    
+    // Tiny throttle to stay safe with rate limits
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
+
+  const combinedDraftJson = { items: draftItems };
+
   writeJson('digibook_wave1_flash_draft.json', {
-    modelMetadata: draft.metadata,
+    modelMetadata: draftMetadataList[0],
     selectedAtoms: selectedSlim,
-    draft: draftJson,
+    draft: combinedDraftJson,
   });
 
   const reviewPrompt = [
     'You are the RankCrackers Pro DigiBook reviewer.',
     'Review the 20 atom DigiBook draft for concept correctness, formula correctness, units, examples, misconceptions, self-check answer correctness, and source scope.',
-    'Return strict JSON only.',
-    'Required fields: verdict, itemCountReviewed, approvedAtomIds, pendingReviewAtomIds, rejectedOrHeldAtomIds, conceptCorrectnessPass, formulaPass, workedExampleMathPass, selfCheckPass, blockingIssues, reviewNotes.',
-    JSON.stringify({ selectedAtoms: selectedSlim, draft: draftJson }, null, 2),
+    'Return strict JSON only matching the schema.',
+    JSON.stringify({ selectedAtoms: selectedSlim, draft: combinedDraftJson }, null, 2),
   ].join('\n');
-  const review = await callWithRetries({
+  
+  const reviewRes = await callStructuredWithRetries({
     workload: WORKLOADS.deepReasoningPro,
     contents: reviewPrompt,
-    config: { maxOutputTokens: 8192, responseMimeType: "application/json" },
+    responseSchema: DIGIBOOK_REVIEW_SCHEMA,
+    config: { maxOutputTokens: 8192 },
     label: 'digibook pro review',
   });
-  const reviewJson = safeJsonParse(review.text);
+  const reviewJson = reviewRes.data;
   writeJson('digibook_wave1_pro_review.json', {
-    modelMetadata: review.metadata,
+    modelMetadata: reviewRes.metadata,
     review: reviewJson,
   });
   const approved = Array.isArray(reviewJson.approvedAtomIds) ? reviewJson.approvedAtomIds : [];
@@ -279,8 +439,8 @@ async function buildDigiBookTrack(atoms) {
     approvedCount: approved.length,
     pendingReviewCount: pending.length,
     rejectedOrHeldCount: held.length,
-    flashModel: draft.metadata.actualModel,
-    proModel: review.metadata.actualModel,
+    flashModel: 'gemini-3.6-flash',
+    proModel: reviewRes.metadata.actualModel,
   };
 }
 
@@ -312,6 +472,8 @@ async function main() {
   const failures = [];
 
   try {
+    console.log('Sleeping 10s before Crucible track to clear rate limits...');
+    await new Promise((resolve) => setTimeout(resolve, 10000));
     crucibleTrack = await buildCrucibleTrack(plan, atoms);
   } catch (error) {
     failures.push({ track: 'CRUCIBLE', reason: error.message });

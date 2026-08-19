@@ -1,0 +1,101 @@
+/// RankCrackers governed Crucible Personalization Blueprint Contract.
+        )) {
+      throw const FormatException(
+        'maintain treatment requires masteryMaintenance allocation.',
+      );
+    }
+  }
+
+
+  Map<String, Object?> toJson() {
+    validate();
+
+
+    return <String, Object?>{
+      'schemaVersion': schemaVersion,
+      'studentId': studentId,
+      'crucibleSessionId': crucibleSessionId,
+      'targetAmtnId': targetAmtnId,
+      'createdAtUtc': createdAtUtc.toIso8601String(),
+      'sourceTreatmentTypes': sourceTreatmentTypes
+          .map((type) => type.wireName)
+          .toList(growable: false),
+      'totalQuestionCount': totalQuestionCount,
+      'maximumDurationMinutes': maximumDurationMinutes,
+      'allocations': allocations
+          .map((allocation) => allocation.toJson())
+          .toList(growable: false),
+    };
+  }
+}
+
+
+extension CruciblePersonalizationBucketTypeWire
+    on CruciblePersonalizationBucketType {
+  String get wireName {
+    switch (this) {
+      case CruciblePersonalizationBucketType.diagnosticProbe:
+        return 'diagnostic_probe';
+      case CruciblePersonalizationBucketType.prerequisiteRepair:
+        return 'prerequisite_repair';
+      case CruciblePersonalizationBucketType.targetRemediation:
+        return 'target_remediation';
+      case CruciblePersonalizationBucketType.retentionRetrieval:
+        return 'retention_retrieval';
+      case CruciblePersonalizationBucketType.fluencyPractice:
+        return 'fluency_practice';
+      case CruciblePersonalizationBucketType.masteryMaintenance:
+        return 'mastery_maintenance';
+      case CruciblePersonalizationBucketType.transferCheck:
+        return 'transfer_check';
+    }
+  }
+}
+
+
+extension CruciblePersonalizationDifficultyBandWire
+    on CruciblePersonalizationDifficultyBand {
+  String get wireName {
+    switch (this) {
+      case CruciblePersonalizationDifficultyBand.foundational:
+        return 'foundational';
+      case CruciblePersonalizationDifficultyBand.standard:
+        return 'standard';
+      case CruciblePersonalizationDifficultyBand.stretch:
+        return 'stretch';
+    }
+  }
+}
+
+
+extension CruciblePersonalizationReasonWire
+    on CruciblePersonalizationReason {
+  String get wireName {
+    switch (this) {
+      case CruciblePersonalizationReason.insufficientEvidence:
+        return 'insufficient_evidence';
+      case CruciblePersonalizationReason.prerequisiteNotReady:
+        return 'prerequisite_not_ready';
+      case CruciblePersonalizationReason.targetMasteryEmerging:
+        return 'target_mastery_emerging';
+      case CruciblePersonalizationReason.targetMasteryDeveloping:
+        return 'target_mastery_developing';
+      case CruciblePersonalizationReason.retentionFragile:
+        return 'retention_fragile';
+      case CruciblePersonalizationReason.retentionUnstable:
+        return 'retention_unstable';
+      case CruciblePersonalizationReason.reviewDue:
+        return 'review_due';
+      case CruciblePersonalizationReason.fluencyBelowBaseline:
+        return 'fluency_below_baseline';
+      case CruciblePersonalizationReason.fluencySignificantlyBelowBaseline:
+        return 'fluency_significantly_below_baseline';
+      case CruciblePersonalizationReason.fastButInaccuratePattern:
+        return 'fast_but_inaccurate_pattern';
+      case CruciblePersonalizationReason.healthyMaintenance:
+        return 'healthy_maintenance';
+      case CruciblePersonalizationReason.transferVerification:
+        return 'transfer_verification';
+    }
+  }
+}

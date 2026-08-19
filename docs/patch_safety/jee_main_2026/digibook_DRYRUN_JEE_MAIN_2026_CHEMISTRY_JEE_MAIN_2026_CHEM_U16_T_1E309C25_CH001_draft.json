@@ -1,0 +1,142 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U16_T_1E309C25_CH001",
+    "overview": "Polyhalogen compounds are carbon compounds containing more than one halogen atom. Important examples include chloroform (trichloromethane), iodoform (triiodomethane), freons (chlorofluorocarbons), and DDT (p,p'-dichlorodiphenyltrichloroethane). While these compounds historically found widespread industrial, agricultural, and medical applications—such as solvents, anesthetics, antiseptics, refrigerants, and insecticides—their chemical persistence, toxicity, bioaccumulation, and environmental hazards like stratospheric ozone depletion have restricted or banned their usage.",
+    "concepts": [
+      {
+        "title": "Chloroform (CHCl3): Uses, Storage, and Toxicity",
+        "explanation": "Chloroform (trichloromethane) is a colorless, sweet-smelling liquid used primarily as a solvent for fats, alkaloids, and iodine, and in the production of Freon-22. Historically used as an inhalation anesthetic, its usage in medicine was discontinued due to liver and kidney toxicity. In the presence of light and oxygen, chloroform undergoes slow oxidation to form phosgene (COCl2), an extremely poisonous gas. To prevent this, chloroform is stored in dark, closed, light-resistant bottles filled completely to the brim, with 1% ethanol added to convert any formed phosgene into harmless diethyl carbonate."
+      },
+      {
+        "title": "Iodoform (CHI3): Antiseptic Action and Characterization",
+        "explanation": "Iodoform (triiodomethane) is a yellow crystalline solid with a distinct objectionable odor. It is widely known for its antiseptic properties, used for dressing wounds. Its antiseptic property is not due to iodoform itself, but rather due to the slow liberation of free iodine upon contact with organic matter and skin. Because of its intense smell and modern alternatives, it has largely been replaced by other iodine-releasing formulations (povidone-iodine)."
+      },
+      {
+        "title": "Freons (Chlorofluorocarbons - CFCs): Synthesis and Environmental Impact",
+        "explanation": "Freons are chlorofluorocarbon compounds derived from methane and ethane. Highly stable, non-toxic, non-corrosive, and easily liquefiable, Freon-12 (CCl2F2) is synthesized from carbon tetrachloride (CCl4) via the Swarts reaction using antimony trifluoride (SbF3). Freons were extensively used as refrigerants, air conditioning fluids, and aerosol propellants. However, their extreme stability allows them to diffuse unchanged into the stratosphere, where UV radiation breaks C-Cl bonds, releasing reactive chlorine free radicals. These radicals act as catalysts in a chain reaction that destroys stratospheric ozone (O3)."
+      },
+      {
+        "title": "DDT (p,p'-Dichlorodiphenyltrichloroethane): Structure and Bioaccumulation",
+        "explanation": "DDT is a synthetic organochlorine pesticide prepared by condensing chloral (trichloroacetaldehyde) with chlorobenzene in the presence of concentrated sulfuric acid. Its IUPAC name is 2,2-bis(4-chlorophenyl)-1,1,1-trichloroethane. DDT was widely used after World War II as an insecticide against mosquitoes (malaria vector) and lice. Due to its high stability, lipophilic nature (fat solubility), and non-biodegradability, DDT bioaccumulates in animal fatty tissues and magnifies up food chains (biomagnification), leading to thin eggshells in birds, reproductive failure, and ecological toxicity."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Oxidation of Chloroform to Phosgene",
+        "formula": "2 CHCl3 + O2 -> 2 COCl2 + 2 HCl",
+        "applicability": "Air oxidation of chloroform catalyzed by light",
+        "variables": [
+          {
+            "symbol": "CHCl3",
+            "meaning": "Chloroform (Trichloromethane)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "COCl2",
+            "meaning": "Phosgene (Carbonyl chloride)",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Swarts Reaction for Freon-12 Synthesis",
+        "formula": "3 CCl4 + 2 SbF3 -> 3 CCl2F2 + 2 SbCl3",
+        "applicability": "Fluorination of carbon tetrachloride using antimony trifluoride",
+        "variables": [
+          {
+            "symbol": "CCl4",
+            "meaning": "Carbon tetrachloride",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "CCl2F2",
+            "meaning": "Dichlorodifluoromethane (Freon-12)",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "DDT Synthesis Condensation",
+        "formula": "CCl3CHO + 2 C6H5Cl -> (ClC6H4)2CHCCl3 + H2O",
+        "applicability": "Acid-catalyzed condensation of chloral and chlorobenzene",
+        "variables": [
+          {
+            "symbol": "CCl3CHO",
+            "meaning": "Chloral (Trichloroacetaldehyde)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "C6H5Cl",
+            "meaning": "Chlorobenzene",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Iodoform acts as an antiseptic directly due to its whole molecular structure.",
+        "correction": "Iodoform itself has no inherent antiseptic capability; its antiseptic action is entirely due to the liberation of elemental iodine (I2) when it contacts tissue."
+      },
+      {
+        "misconception": "Ethanol is added to chloroform solely to act as a physical solvent.",
+        "correction": "Ethanol is added as a chemical stabilizer (1% v/v); it reacts with any poisonous phosgene gas formed via oxidation to convert it into non-toxic diethyl carbonate."
+      },
+      {
+        "misconception": "Freons destroy the ozone layer in the lower atmosphere (troposphere).",
+        "correction": "Freons are chemically unreactive in the troposphere. They slowly migrate to the stratosphere where photolysis by UV radiation generates active chlorine free radicals that decompose ozone."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Explain why chloroform is stored in dark amber-colored bottles filled to the brim and how the addition of 1% ethanol renders it safe for medical/industrial use.",
+        "steps": [
+          "1. Chloroform (CHCl3) reacts slowly with atmospheric oxygen in the presence of light to produce phosgene (COCl2), a deadly toxic gas: 2 CHCl3 + O2 --(light)--> 2 COCl2 + 2 HCl.",
+          "2. Dark amber bottles prevent UV/visible light from initiating photolysis. Filling the bottle to the brim excludes air (oxygen).",
+          "3. Ethanol (1% v/v) reacts chemically with any traces of formed phosgene to give harmless diethyl carbonate: COCl2 + 2 C2H5OH -> (C2H5O)2CO + 2 HCl."
+        ],
+        "answer": "Chloroform is stored in dark, airtight bottles filled to the top to exclude light and oxygen. 1% ethanol is added to convert toxic phosgene gas into harmless diethyl carbonate."
+      },
+      {
+        "problem": "Write the chemical equation for the synthesis of DDT and state its systematic IUPAC name.",
+        "steps": [
+          "1. Identify the starting materials: Chloral (CCl3CHO) and Chlorobenzene (C6H5Cl) in a 1:2 molar ratio.",
+          "2. Write the reaction under dehydrating conditions (conc. H2SO4): CCl3CHO + 2 C6H5Cl --(conc. H2SO4)--> (Cl-C6H4)2CH-CCl3 + H2O.",
+          "3. Determine the IUPAC name: The parent chain is ethane (2 carbons). Position 1 has three chlorines (1,1,1-trichloro). Position 2 has two 4-chlorophenyl groups. Thus, IUPAC name = 2,2-bis(4-chlorophenyl)-1,1,1-trichloroethane."
+        ],
+        "answer": "Equation: CCl3CHO + 2 C6H5Cl --(conc. H2SO4)--> (ClC6H4)2CHCCl3 + H2O. IUPAC Name: 2,2-bis(4-chlorophenyl)-1,1,1-trichloroethane."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following polyhalogen compounds exhibits antiseptic activity specifically due to the slow release of elemental iodine? (A) Chloroform (B) Carbon tetrachloride (C) Iodoform (D) Freon-113",
+        "answer": "(C) Iodoform. Triiodomethane (CHI3) liberates free iodine upon contact with skin/tissue, which imparts its antiseptic action."
+      },
+      {
+        "question": "What role do free chlorine radicals play in stratospheric ozone depletion initiated by Freon-12? (A) They act as terminal reactants (B) They act as catalysts in ozone destruction (C) They absorb UV light preventing oxygen cleavage (D) They convert ozone directly into chlorate ions",
+        "answer": "(B) They act as catalysts in ozone destruction. A single chlorine radical generated by photolysis of Freon can destroy thousands of ozone molecules in a cyclic catalytic process (Cl• + O3 -> ClO• + O2; ClO• + O -> Cl• + O2)."
+      },
+      {
+        "question": "Which compound is condensed with chlorobenzene in the presence of concentrated H2SO4 to manufacture DDT? (A) Chloroform (B) Chloral (C) Acetone (D) Formaldehyde",
+        "answer": "(B) Chloral. Chloral (trichloroacetaldehyde, CCl3CHO) reacts with two molecules of chlorobenzene in the presence of conc. H2SO4 to yield DDT."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 12 Chemistry, Chapter 10: Haloalkanes and Haloarenes, Section 10.9 Polyhalogen Compounds",
+      "JEE Main Official Syllabus - Organic Chemistry: Polyhalogen Compounds & Environmental Chemistry"
+    ]
+  }
+}

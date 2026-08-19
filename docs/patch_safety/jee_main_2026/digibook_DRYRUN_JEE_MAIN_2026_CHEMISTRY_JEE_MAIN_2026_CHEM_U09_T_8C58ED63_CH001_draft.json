@@ -1,0 +1,167 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U09_T_8C58ED63_CH001",
+    "overview": "This topic covers the foundational principles of modern periodic classification based on Moseley's periodic law, the architecture of the long form periodic table (s, p, d, f blocks), and the fundamental periodic trends in physical and chemical properties including atomic and ionic radii, ionization enthalpy, electron gain enthalpy, electronegativity, valence, oxidation states, and chemical reactivity trends across periods and down groups.",
+    "concepts": [
+      {
+        "title": "Modern Periodic Law and Periodic Table Layout",
+        "explanation": "Moseley demonstrated that atomic number (Z) is a more fundamental property of an element than its atomic mass. Modern Periodic Law states that the physical and chemical properties of elements are periodic functions of their atomic numbers. The long form of the periodic table consists of 7 horizontal rows (periods) and 18 vertical columns (groups)."
+      },
+      {
+        "title": "Classification of Elements into s, p, d, and f Blocks",
+        "explanation": "Elements are classified into four blocks based on the type of atomic orbital being filled by the valence electron: s-block (Groups 1-2, general outer configuration ns1-2), p-block (Groups 13-18, general outer configuration ns2 np1-6), d-block or transition elements (Groups 3-12, general outer configuration (n-1)d1-10 ns1-2), and f-block or inner-transition elements (Lanthanoids and Actinoids, general configuration (n-2)f1-14 (n-1)d0-1 ns2)."
+      },
+      {
+        "title": "Atomic and Ionic Radii Trends",
+        "explanation": "Atomic radius decreases across a period from left to right due to an increase in effective nuclear charge (Z*) without addition of new principal shells. Down a group, atomic radius increases due to the addition of successive principal shell energy levels overriding the nuclear pull. For ionic radii, cations are always smaller than their parent neutral atoms due to increased Z/e ratio, whereas anions are larger due to decreased Z/e ratio and increased electron-electron repulsion. For isoelectronic species (same number of electrons), radius decreases strictly as atomic number Z increases."
+      },
+      {
+        "title": "Ionization Enthalpy (IE)",
+        "explanation": "Ionization enthalpy is the energy required to remove the most loosely bound electron from an isolated gaseous atom in its ground state. IE increases across a period due to increasing Z* and decreasing atomic radius, and decreases down a group due to increasing atomic size and shielding effect. Anomalies occur at stable half-filled and fully-filled electronic configurations (e.g., IE1 of Be > B due to stable 2s2 orbital; IE1 of N > O due to stable half-filled 2p3 subshell)."
+      },
+      {
+        "title": "Electron Gain Enthalpy (EGE)",
+        "explanation": "Electron gain enthalpy is the enthalpy change accompanying the addition of an electron to a neutral isolated gaseous atom to form a negative ion. Across a period, EGE generally becomes more negative. Down a group, EGE generally becomes less negative. Notable exceptions: Fluorine has a less negative EGE than Chlorine (-328 kJ/mol vs -349 kJ/mol) and Oxygen has a less negative EGE than Sulfur because of strong inter-electronic repulsions in small 2p orbitals."
+      },
+      {
+        "title": "Valence, Oxidation States, and Chemical Reactivity",
+        "explanation": "Valence is determined by the number of valence electrons (equal to valence electrons for group 1-4, or 8 minus valence electrons for group 5-8). Oxidation state is the formal charge an atom adopts in a compound. Extreme left elements (alkali metals) exhibit strong reducing properties and basic oxides, while extreme right elements (halogens) exhibit strong oxidizing properties and acidic oxides. Reactivity of metals increases down a group, whereas reactivity of non-metals decreases down a group."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Effective Nuclear Charge (Slater's Formula)",
+        "formula": "Z* = Z - S",
+        "applicability": "Used to calculate effective nuclear charge experienced by an electron in an atom.",
+        "variables": [
+          {
+            "symbol": "Z*",
+            "meaning": "Effective nuclear charge",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Z",
+            "meaning": "Atomic number (actual nuclear charge)",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "S",
+            "meaning": "Shielding/Screening constant",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Pauling Electronegativity Scale",
+        "formula": "|chi_A - chi_B| = 0.102 * sqrt(E_AB - sqrt(E_AA * E_BB))",
+        "applicability": "Used to calculate the electronegativity difference between two bonded atoms using bond dissociation energies in kJ/mol.",
+        "variables": [
+          {
+            "symbol": "chi_A, chi_B",
+            "meaning": "Electronegativities of atoms A and B",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "E_AB",
+            "meaning": "Bond dissociation energy of A-B bond",
+            "unit": "kJ/mol"
+          },
+          {
+            "symbol": "E_AA, E_BB",
+            "meaning": "Bond dissociation energies of homonuclear A-A and B-B bonds",
+            "unit": "kJ/mol"
+          }
+        ]
+      },
+      {
+        "label": "Mulliken Electronegativity Formula",
+        "formula": "EN_Mulliken = (IE + EA) / 2",
+        "applicability": "Calculates electronegativity using numerical average of ionization enthalpy and electron affinity in electron-volts (eV).",
+        "variables": [
+          {
+            "symbol": "EN_Mulliken",
+            "meaning": "Mulliken Electronegativity",
+            "unit": "eV"
+          },
+          {
+            "symbol": "IE",
+            "meaning": "Ionization Enthalpy",
+            "unit": "eV"
+          },
+          {
+            "symbol": "EA",
+            "meaning": "Electron Affinity",
+            "unit": "eV"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Fluorine has the highest negative electron gain enthalpy among all elements because it is the most electronegative.",
+        "correction": "Chlorine has a more negative electron gain enthalpy (-349 kJ/mol) than Fluorine (-328 kJ/mol). Fluorine's small 2p subshell suffers high electron-electron repulsions when an extra electron enters, making electron addition less exothermic than in Chlorine's larger 3p subshell."
+      },
+      {
+        "misconception": "Ionization enthalpy always increases monotonically from left to right across any given period.",
+        "correction": "There are exceptions due to extra stability of subshells. For example, Beryllium (1s2 2s2) has higher 1st IE than Boron (1s2 2s2 2p1), and Nitrogen (1s2 2s2 2p3) has higher 1st IE than Oxygen (1s2 2s2 2p4)."
+      },
+      {
+        "misconception": "Electron affinity and electronegativity represent the same property.",
+        "correction": "Electron affinity (or electron gain enthalpy) measures the energy change when an isolated gaseous atom gains an electron, whereas electronegativity is the relative tendency of an atom in a covalent bond to attract the shared pair of electrons towards itself."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Arrange the following species in increasing order of their ionic/atomic radii: N3-, O2-, F-, Na+, Mg2+, Al3+.",
+        "steps": [
+          "Step 1: Count the number of electrons in each given chemical species. N3- (7+3=10), O2- (8+2=10), F- (9+1=10), Na+ (11-1=10), Mg2+ (12-2=10), Al3+ (13-3=10). All are isoelectronic species with 10 electrons.",
+          "Step 2: Compare the nuclear charge (Z, atomic number) for each species: Al (13), Mg (12), Na (11), F (9), O (8), N (7).",
+          "Step 3: Apply the rule for isoelectronic species: radius decreases as effective nuclear charge Z increases.",
+          "Step 4: Order from highest Z (smallest radius) to lowest Z (largest radius): Al3+ < Mg2+ < Na+ < F- < O2- < N3-."
+        ],
+        "answer": "Al3+ < Mg2+ < Na+ < F- < O2- < N3-"
+      },
+      {
+        "problem": "Explain why the first ionization enthalpy of Nitrogen is higher than that of Oxygen, but the second ionization enthalpy of Oxygen is higher than that of Nitrogen.",
+        "steps": [
+          "Step 1: Write electronic configurations for neutral ground state N (Z=7) and O (Z=8). N: 1s2 2s2 2p3 (half-filled p subshell, extra stable). O: 1s2 2s2 2p4.",
+          "Step 2: Compare 1st IE: Removing one electron from N requires breaking extra-stable half-filled 2p3 configuration, whereas removing one electron from O yields a stable half-filled 2p3 configuration (O+). Hence IE1(N) > IE1(O).",
+          "Step 3: Write configurations for N+ and O+: N+: 1s2 2s2 2p2; O+: 1s2 2s2 2p3.",
+          "Step 4: Compare 2nd IE: Removing second electron from O+ requires breaking stable half-filled 2p3 configuration, whereas for N+ it is removed from 2p2. Hence IE2(O) > IE2(N)."
+        ],
+        "answer": "IE1(N) > IE1(O) due to stable half-filled 2p3 configuration in ground state N; IE2(O) > IE2(N) because O+ possesses the stable half-filled 2p3 configuration."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following elements has the most negative electron gain enthalpy? Options: (A) Fluorine, (B) Chlorine, (C) Oxygen, (D) Sulfur.",
+        "answer": "Option (B) Chlorine. Due to strong inter-electronic repulsion in compact 2p orbitals of F and O, 3p elements Cl and S have more negative electron gain enthalpies than their 2p counterparts. Among all elements, Chlorine has the most negative electron gain enthalpy (-349 kJ/mol)."
+      },
+      {
+        "question": "Correct order of first ionization enthalpy for B, Be, C, N, O is: Options: (A) B < Be < C < O < N, (B) Be < B < C < N < O, (C) B < Be < C < N < O, (D) Be < B < C < O < N.",
+        "answer": "Option (A) B < Be < C < O < N. Be (1s2 2s2) has higher IE1 than B (1s2 2s2 2p1) due to stable filled 2s subshell and higher penetration power. N (1s2 2s2 2p3) has higher IE1 than O (1s2 2s2 2p4) due to half-filled subshell stability."
+      },
+      {
+        "question": "Which set represents amphoteric oxides? Options: (A) Na2O, Cl2O7, (B) Al2O3, ZnO, (C) CO, NO, (D) CaO, MgO.",
+        "answer": "Option (B) Al2O3, ZnO. Both Aluminium oxide and Zinc oxide react with both acids and bases to form salts and water, exhibiting amphoteric behavior."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Chapter 3: Classification of Elements and Periodicity in Properties",
+      "JEE Main Chemistry Syllabus - Unit: Periodic Table and Periodic Trends"
+    ]
+  }
+}

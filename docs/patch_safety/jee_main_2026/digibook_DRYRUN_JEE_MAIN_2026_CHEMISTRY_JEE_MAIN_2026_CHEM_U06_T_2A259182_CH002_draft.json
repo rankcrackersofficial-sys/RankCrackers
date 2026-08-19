@@ -1,0 +1,105 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_2A259182_CH002",
+    "overview": "Physical equilibrium represents a state of dynamic balance achieved between different phases of the same substance or during physical processes such as dissolution, without any change in chemical composition. Key physical equilibria include solid-liquid, liquid-gas, solid-gas, and dissolution of solids or gases in liquids. Henry's Law provides a quantitative relationship for gas dissolution in liquids under pressure. Understanding these equilibria highlights fundamental concepts such as vapor pressure, saturation, dynamic balance, and the effect of external conditions like pressure and temperature.",
+    "concepts": [
+      {
+        "title": "Solid-Liquid Equilibrium",
+        "explanation": "At the melting point of a pure substance under a constant pressure (e.g., ice and water at 273 K and 1 atm), the solid and liquid phases coexist in dynamic equilibrium. The rate of melting of the solid equals the rate of freezing of the liquid. The temperature remains constant as long as both phases are present."
+      },
+      {
+        "title": "Liquid-Gas Equilibrium",
+        "explanation": "When a liquid is kept in a closed vessel at a constant temperature, molecules evaporate from the liquid surface into the gas phase, while gas molecules condense back into the liquid. Equilibrium is reached when the rate of evaporation equals the rate of condensation. The pressure exerted by the vapor in equilibrium with its liquid at a given temperature is called the equilibrium vapor pressure."
+      },
+      {
+        "title": "Solid-Gas Equilibrium",
+        "explanation": "Substances that sublime (e.g., iodine, camphor, ammonium chloride) establish equilibrium between their solid and gaseous phases when placed in a closed system. At equilibrium, the rate of sublimation of solid to gas equals the rate of deposition of vapor to solid."
+      },
+      {
+        "title": "Dissolution of Gases in Liquids and Henry's Law",
+        "explanation": "The mass of a gas dissolved in a given volume of a liquid at a constant temperature is proportional to the pressure of the gas above the liquid. Quantitatively expressed by Henry's Law: $p = K_H \\cdot x$, where $p$ is the partial pressure of the gas, $x$ is the mole fraction of the gas in solution, and $K_H$ is Henry's law constant."
+      },
+      {
+        "title": "General Characteristics of Physical Equilibria",
+        "explanation": "1. Physical equilibrium is dynamic; processes occur in opposing directions at equal rates. 2. It can only be attained in a closed system. 3. Macroscopic properties (like temperature, pressure, concentration, phase volumes) remain constant over time. 4. There exists a constant expression/value at a given temperature (e.g., vapor pressure or solubility)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Henry's Law Formula",
+        "formula": "p = K_H \\cdot x",
+        "applicability": "Applies to dilute solutions of gases in liquids at moderate pressures and temperatures where the gas does not chemically react with or dissociate/associate in the solvent.",
+        "variables": [
+          {
+            "symbol": "p",
+            "meaning": "Partial pressure of the gas above the liquid",
+            "unit": "bar or atm"
+          },
+          {
+            "symbol": "K_H",
+            "meaning": "Henry's law constant for the gas-solvent system at a specific temperature",
+            "unit": "bar or atm"
+          },
+          {
+            "symbol": "x",
+            "meaning": "Mole fraction of the gas in the liquid solution",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "At physical equilibrium, all molecular movement and phase transitions completely stop.",
+        "correction": "Physical equilibrium is dynamic, not static. Phase transitions continue in both forward and reverse directions at equal rates, resulting in zero net macroscopic change."
+      },
+      {
+        "misconception": "A higher value of Henry's constant (K_H) indicates higher solubility of the gas.",
+        "correction": "According to $x = p / K_H$, at a given partial pressure $p$, a higher value of $K_H$ corresponds to a lower mole fraction $x$ (lower solubility) of the gas in the liquid."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the mole fraction of nitrogen gas in water at 298 K if the partial pressure of $N_2$ gas above the solution is 0.8 bar. Given $K_H$ for $N_2$ in water at 298 K is $8.0 \\times 10^4\\text{ bar}$.",
+        "steps": [
+          "Identify given variables: $p = 0.8\\text{ bar}$, $K_H = 8.0 \\times 10^4\\text{ bar}$.",
+          "Apply Henry's Law equation: $p = K_H \\cdot x$.",
+          "Rearrange for mole fraction: $x = \\frac{p}{K_H}$.",
+          "Substitute the values: $x = \\frac{0.8\\text{ bar}}{8.0 \\times 10^4\\text{ bar}} = 1.0 \\times 10^{-5}$."
+        ],
+        "answer": "The mole fraction of nitrogen gas in water is $1.0 \\times 10^{-5}$."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following conditions is mandatory for establishing a physical equilibrium between liquid water and water vapor at constant temperature? (A) Open container (B) Closed container (C) Addition of a catalyst (D) Variable temperature",
+        "answer": "Correct Answer: (B). Physical equilibrium involving gaseous phases or vapors can only be established in a closed container to prevent the loss of gas molecules to the surroundings."
+      },
+      {
+        "question": "How does the solubility of a gas in a liquid generally change when temperature is increased at constant pressure? (A) Increases because $K_H$ decreases (B) Decreases because $K_H$ increases (C) Remains unchanged (D) Increases linearly",
+        "answer": "Correct Answer: (B). Dissolution of a gas in a liquid is typically an exothermic process. As temperature increases, Henry's constant ($K_H$) increases, causing gas solubility ($x = p / K_H$) to decrease."
+      },
+      {
+        "question": "At the solid-liquid equilibrium point (melting point) of ice and water at 1 atm pressure: (A) Rate of melting > Rate of freezing (B) Rate of freezing > Rate of melting (C) Rate of melting = Rate of freezing (D) Ice completely converts to water instantaneously",
+        "answer": "Correct Answer: (C). At the normal melting point, solid and liquid phases coexist in dynamic equilibrium where the rate of melting equals the rate of freezing."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 7: Equilibrium, Section 7.1 - Equilibrium in Physical Processes",
+      "NCERT Chemistry Class 12, Chapter 2: Solutions, Section 2.3.2 - Solubility of a Gas in a Liquid (Henry's Law)"
+    ]
+  }
+}

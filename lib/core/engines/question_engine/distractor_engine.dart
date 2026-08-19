@@ -43,8 +43,4 @@ class DistractorEngine {
     // Return empty list to ensure zero fake academic content in production.
     return [];
   }
-
-  List<String> _generateHardcodedFallbacks(int count) {
-    return List.generate(count, (i) => "Incorrect Statement ${i + 1}");
-  }
 }

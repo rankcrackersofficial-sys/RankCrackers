@@ -1,0 +1,112 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_CBD2C95D_CH001",
+    "overview": "Redox reactions involve simultaneous oxidation and reduction processes. According to the electronic concept, oxidation is defined as the loss of electrons (increase in oxidation number), while reduction is defined as the gain of electrons (decrease in oxidation number). The oxidation number represents the hypothetical charge an atom would have if all bonds to atoms of different elements were 100% ionic. Balancing redox reactions can be systematically achieved using the ion-electron method or the oxidation number change method in acidic, basic, or neutral media.",
+    "concepts": [
+      {
+        "title": "Electronic Concept of Oxidation and Reduction",
+        "explanation": "Oxidation is the process involving loss of one or more electrons by an atom, molecule, or ion, leading to an increase in positive charge or decrease in negative charge. Reduction is the process involving gain of one or more electrons by an atom, molecule, or ion, leading to a decrease in positive charge or increase in negative charge. A redox reaction consists of two half-reactions: an oxidation half-reaction and a reduction half-reaction occurring simultaneously."
+      },
+      {
+        "title": "Oxidation Number and Rules for Assignment",
+        "explanation": "Oxidation number (ON) is the charge that an atom appears to have when electrons in a covalent bond are counted according to electronegativity rules. Key rules: 1. Free/elemental state atoms have ON = 0. 2. Fluorine always has ON = -1 in compounds. 3. Oxygen usually has ON = -2, except in peroxides (-1), superoxides (-1/2), and OF2 (+2). 4. Hydrogen has ON = +1 with non-metals and -1 in metal hydrides. 5. Alkali metals have ON = +1, alkaline earth metals have ON = +2. 6. The algebraic sum of ON of all atoms in a neutral molecule is 0, and in a polyatomic ion equals its charge."
+      },
+      {
+        "title": "Balancing Redox Reactions",
+        "explanation": "Redox equations are balanced using either the Oxidation Number Method or the Ion-Electron (Half-Reaction) Method. Steps for Ion-Electron Method in acidic medium: 1. Split into oxidation and reduction half-reactions. 2. Balance all atoms except H and O. 3. Balance O atoms by adding H2O molecules. 4. Balance H atoms by adding H+ ions. 5. Balance charge by adding electrons. 6. Multiply half-reactions to equalize electrons and add them. For basic medium, neutralize H+ ions with an equal number of OH- ions on both sides."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Average Oxidation Number",
+        "formula": "ON_avg = (Sum of ON of all individual atoms) / (Total number of atoms)",
+        "applicability": "Used for molecules containing non-equivalent atoms of the same element, such as Fe3O4 or Na2S4O6.",
+        "variables": [
+          {
+            "symbol": "ON_avg",
+            "meaning": "Average oxidation number",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "N-Factor for Oxidizing and Reducing Agents",
+        "formula": "n-factor = | Total change in oxidation number per mole of substance |",
+        "applicability": "Used to determine equivalent weight and balance redox titrations.",
+        "variables": [
+          {
+            "symbol": "n-factor",
+            "meaning": "Valency factor or equivalence factor",
+            "unit": "eq/mol"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Oxidation number is always a whole number integer equal to valency.",
+        "correction": "Oxidation number can be fractional (e.g., S in Na2S4O6 is +2.5 average) and can be negative or zero, whereas valency is always a non-zero positive integer representing combining capacity."
+      },
+      {
+        "misconception": "Oxygen always exhibits an oxidation state of -2 in all its compounds.",
+        "correction": "Oxygen exhibits -2 in most oxides, but exhibits -1 in peroxides (e.g., H2O2), -1/2 in superoxides (e.g., KO2), +2 in OF2, and +1 in O2F2."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the oxidation number of Chromium (Cr) in Potassium Dichromate (K2Cr2O7).",
+        "steps": [
+          "Let x be the oxidation state of Cr.",
+          "Assigned oxidation states: K = +1, O = -2.",
+          "Set up the sum equation: 2(+1) + 2(x) + 7(-2) = 0.",
+          "Simplify: 2 + 2x - 14 = 0 => 2x - 12 = 0 => 2x = 12 => x = +6."
+        ],
+        "answer": "The oxidation number of Cr in K2Cr2O7 is +6."
+      },
+      {
+        "problem": "Balance the redox reaction in acidic medium: MnO4- + Fe2+ -> Mn2+ + Fe3+.",
+        "steps": [
+          "Oxidation half-reaction: Fe2+ -> Fe3+ + e-.",
+          "Reduction half-reaction: MnO4- -> Mn2+.",
+          "Balance O atoms in reduction half by adding 4 H2O: MnO4- -> Mn2+ + 4 H2O.",
+          "Balance H atoms by adding 8 H+: MnO4- + 8 H+ -> Mn2+ + 4 H2O.",
+          "Balance charge by adding 5 e-: MnO4- + 8 H+ + 5 e- -> Mn2+ + 4 H2O.",
+          "Multiply oxidation half-reaction by 5: 5 Fe2+ -> 5 Fe3+ + 5 e-.",
+          "Add both half-reactions: MnO4- + 5 Fe2+ + 8 H+ -> Mn2+ + 5 Fe3+ + 4 H2O."
+        ],
+        "answer": "MnO4- + 5 Fe2+ + 8 H+ -> Mn2+ + 5 Fe3+ + 4 H2O"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "What is the oxidation number of Cr in CrO5 and the average oxidation number of S in Na2S4O6? Options: (A) +6 and +2.5 (B) +10 and +2.5 (C) +6 and +2 (D) +5 and +2.5",
+        "answer": "(A) +6 and +2.5. Explanation: CrO5 has a butterfly structure with four peroxide oxygen atoms (-1 each) and one oxide oxygen atom (-2), giving Cr +6. In Na2S4O6, the sum of oxidation numbers gives 4x = +10, so average x = +2.5."
+      },
+      {
+        "question": "In the reaction 3 Cl2 + 6 NaOH -> 5 NaCl + NaClO3 + 3 H2O, chlorine undergoes: Options: (A) Oxidation only (B) Reduction only (C) Disproportionation (D) Comproportionation",
+        "answer": "(C) Disproportionation. Explanation: Chlorine starts at 0 oxidation state and is simultaneously reduced to -1 in NaCl and oxidized to +5 in NaClO3."
+      },
+      {
+        "question": "How many moles of electrons are transferred when 1 mole of MnO4- is reduced to Mn2+? Options: (A) 2 (B) 3 (C) 5 (D) 7",
+        "answer": "(C) 5. Explanation: The oxidation state of Mn changes from +7 in MnO4- to +2 in Mn2+, which corresponds to a gain of 5 electrons per mole."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 8: Redox Reactions",
+      "JEE Main Official Syllabus - Physical Chemistry: Redox Reactions"
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_E3BD6323_CH001",
+    "overview": "Organic reactions are broadly classified based on the nature of structural transformations into four primary types: Substitution, Addition, Elimination, and Rearrangement reactions. Understanding these pathways, along with their driving forces, mechanisms (nucleophilic, electrophilic, free-radical), kinetics, and stereochemistry, forms the fundamental core of organic synthesis and reactivity in the JEE syllabus.",
+    "concepts": [
+      {
+        "title": "Substitution Reactions",
+        "explanation": "A reaction where an atom or group attached to a carbon atom is replaced by another atom or group without changing the overall degree of saturation of the molecule. Major sub-types include Nucleophilic Substitution (SN1, SN2), Electrophilic Substitution (e.g., aromatic substitution like nitration or halogenation), and Free Radical Substitution (e.g., halogenation of alkanes)."
+      },
+      {
+        "title": "Addition Reactions",
+        "explanation": "A reaction where two or more molecules combine to form a single larger molecule. This occurs in unsaturated substrates containing pi-bonds (alkenes, alkynes, carbonyls). Sub-types include Electrophilic Addition (e.g., addition of HX to alkenes following Markovnikov rule), Nucleophilic Addition (e.g., attack of CN- on carbonyl compounds), and Free Radical Addition (e.g., peroxide effect on HBr addition)."
+      },
+      {
+        "title": "Elimination Reactions",
+        "explanation": "A reaction in which two atoms or groups are removed from adjacent carbon atoms of a molecule, resulting in the formation of a pi-bond (unsaturation). Major mechanisms include E1 (unimolecular, via carbocation intermediate), E2 (bimolecular, concerted mechanism requiring anti-periplanar orientation), and E1cB (via carbanion intermediate). Regioselectivity is governed by Saytzeff rule (more substituted alkene) or Hofmann rule (less substituted alkene with bulky bases)."
+      },
+      {
+        "title": "Rearrangement Reactions",
+        "explanation": "A reaction involving the migration of an atom or a group from one atom to another within the same molecule, yielding a structural isomer. A classic example is carbocation rearrangement via 1,2-hydride or 1,2-alkyl shifts to form a more stable carbocation intermediate during substitution or elimination pathways."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "SN1 Reaction Rate Law",
+        "formula": "Rate = k * [R-X]",
+        "applicability": "Unimolecular nucleophilic substitution where rate depends only on substrate concentration.",
+        "variables": [
+          {
+            "symbol": "k",
+            "meaning": "First-order rate constant",
+            "unit": "s^-1"
+          },
+          {
+            "symbol": "[R-X]",
+            "meaning": "Molar concentration of alkyl halide substrate",
+            "unit": "mol L^-1"
+          }
+        ]
+      },
+      {
+        "label": "SN2 Reaction Rate Law",
+        "formula": "Rate = k * [R-X] * [Nu:-]",
+        "applicability": "Bimolecular nucleophilic substitution where rate depends on both substrate and nucleophile concentration.",
+        "variables": [
+          {
+            "symbol": "k",
+            "meaning": "Second-order rate constant",
+            "unit": "L mol^-1 s^-1"
+          },
+          {
+            "symbol": "[R-X]",
+            "meaning": "Molar concentration of alkyl halide substrate",
+            "unit": "mol L^-1"
+          },
+          {
+            "symbol": "[Nu:-]",
+            "meaning": "Molar concentration of nucleophile",
+            "unit": "mol L^-1"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "SN1 reactions always produce a perfectly 100% racemic (50:50) mixture of enantiomers.",
+        "correction": "In reality, SN1 reactions often result in partial racemization with a slight excess of inversion due to ion-pairing, where the leaving group partially shields the front side of the newly formed carbocation."
+      },
+      {
+        "misconception": "Bulky strong bases prefer SN2 substitution over E2 elimination because they are strong bases.",
+        "correction": "Bulky strong bases (e.g., Potassium tert-butoxide) favor E2 elimination over substitution due to severe steric hindrance that prevents back-side attack at the electrophilic carbon."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Identify the primary mechanism and major product when (R)-2-bromobutane is treated with sodium hydroxide (aqueous) under dilute conditions at room temperature.",
+        "steps": [
+          "Step 1: Analyze the substrate and reagent. 2-bromobutane is a secondary alkyl halide.",
+          "Step 2: Aqueous NaOH provides a strong nucleophile (OH-) in a polar protic medium, favoring SN2 displacement for secondary substrate at low/moderate temperatures.",
+          "Step 3: SN2 reaction proceeds with complete inversion of stereochemical configuration (Walden inversion).",
+          "Step 4: Transforming (R)-2-bromobutane under SN2 gives (S)-butan-2-ol as the primary inverted product."
+        ],
+        "answer": "Mechanism: SN2 mechanism. Major Product: (S)-butan-2-ol."
+      },
+      {
+        "problem": "Predict the major organic product obtained when 3-methylbutan-2-ol is treated with concentrated Hydrochloric Acid (HCl).",
+        "steps": [
+          "Step 1: Protonation of the alcohol hydroxyl group forms an oxonium ion: (CH3)2CH-CH(OH2+)-CH3.",
+          "Step 2: Loss of water generates a secondary carbocation: (CH3)2CH-CH(+)-CH3.",
+          "Step 3: The secondary carbocation undergoes a 1,2-hydride shift from the adjacent tertiary carbon to form a more stable tertiary carbocation: (CH3)2C(+)-CH2-CH3.",
+          "Step 4: Nucleophilic attack by chloride ion (Cl-) on the tertiary carbocation gives 2-chloro-2-methylbutane."
+        ],
+        "answer": "Major Product: 2-chloro-2-methylbutane (formed via carbocation rearrangement)."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following reaction conditions predominantly favors an E2 elimination mechanism over an SN2 substitution for 2-bromopropane? A) H2O at low temperature B) Alcoholic KOH under heating C) NaI in acetone D) Aqueous dilute NaOH",
+        "answer": "Option B. Alcoholic KOH contains alkoxide ions (RO-) which are strong bases; coupled with heating, elimination (E2) is strongly favored over substitution."
+      },
+      {
+        "question": "The addition of HBr to propene in the presence of benzoyl peroxide yields 1-bromopropane. This reaction proceeds through which pathway? A) Electrophilic addition B) Free radical addition C) Nucleophilic substitution D) Electrophilic substitution",
+        "answer": "Option B. Free radical addition. Benzoyl peroxide acts as a radical initiator causing anti-Markovnikov addition of HBr via a free radical mechanism."
+      },
+      {
+        "question": "Convert neopentyl alcohol ((CH3)3C-CH2-OH) to neopentyl chloride using HCL/ZnCl2. What type of mechanism key step causes the formation of 2-chloro-2-methylbutane instead? A) Concerted SN2 attack B) Rearrangement via 1,2-methyl shift C) E1cB elimination D) Free radical substitution",
+        "answer": "Option B. Neopentyl carbocation is formed initially as a primary carbocation, which immediately undergoes a 1,2-methyl shift to yield a tertiary carbocation prior to chloride attack."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Unit 12: Organic Chemistry - Some Basic Principles and Techniques",
+      "NCERT Class 12 Chemistry, Unit 10: Haloalkanes and Haloarenes",
+      "JEE Main Syllabus Content Guidelines - Reaction Mechanisms and Organic Types"
+    ]
+  }
+}

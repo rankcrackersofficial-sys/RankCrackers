@@ -1,0 +1,220 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U13_T_6E187404_CH001",
+    "overview": "Quantitative analysis of organic compounds involves determining the percentage composition of elements present in a compound. The standard estimation methods covered in the JEE Main syllabus include Liebig's combustion method for Carbon and Hydrogen, Dumas and Kjeldahl methods for Nitrogen, Carius method for Halogens and Sulphur, and the Ammonium Phosphomolybdate / Magnesium Pyrophosphate precipitation method for Phosphorus.",
+    "concepts": [
+      {
+        "title": "Estimation of Carbon and Hydrogen (Liebig's Method)",
+        "explanation": "A known mass of an organic compound is completely oxidized by heating with excess cupric oxide (CuO) in an atmosphere of oxygen. Carbon is converted to carbon dioxide (CO2) and Hydrogen is converted to water (H2O). Water is absorbed by weighed anhydrous calcium chloride (CaCl2) and CO2 is absorbed by weighed concentrated potassium hydroxide (KOH) solution. The increase in masses of these tubes gives the amounts of H2O and CO2 produced, allowing calculation of %C and %H."
+      },
+      {
+        "title": "Estimation of Nitrogen (Dumas Method)",
+        "explanation": "A known mass of organic compound is heated with copper oxide in an atmosphere of carbon dioxide. Carbon and hydrogen are converted to CO2 and H2O, while nitrogen is converted to nitrogen gas (N2) along with traces of nitrogen oxides (which are reduced back to N2 by passing over a red-hot copper gauze). The gaseous mixture is collected over aqueous KOH solution, which absorbs CO2. The volume of collected dry nitrogen gas is measured at room temperature and pressure, converted to STP, and used to calculate percentage nitrogen."
+      },
+      {
+        "title": "Estimation of Nitrogen (Kjeldahl Method)",
+        "explanation": "A known mass of nitrogen-containing organic compound is digested with concentrated H2SO4 in the presence of CuSO4 catalyst. Nitrogen in the compound is quantitatively converted into ammonium sulphate. The digested mixture is then boiled with excess aqueous NaOH to liberate ammonia gas (NH3). The evolved ammonia is absorbed in a known volume of excess standard acid (H2SO4 or HCl). The unreacted acid is determined by back-titration against standard alkali (NaOH). Note: Kjeldahl method fails for compounds containing nitrogen in nitro groups, azo groups, or ring systems like pyridine because such nitrogen is not converted to ammonium sulphate."
+      },
+      {
+        "title": "Estimation of Halogens and Sulphur (Carius Method)",
+        "explanation": "For Halogens, a known mass of organic compound is heated with fuming nitric acid in the presence of silver nitrate (AgNO3) in a sealed Carius tube. Halogens are converted into silver halides (AgCl, AgBr, or AgI), which are filtered, washed, dried, and weighed. For Sulphur, the compound is heated with fuming HNO3 or sodium peroxide in a Carius tube, converting sulphur to sulphuric acid, which is precipitated as barium sulphate (BaSO4) by adding excess BaCl2 solution."
+      },
+      {
+        "title": "Estimation of Phosphorus",
+        "explanation": "A known mass of organic compound is heated with fuming nitric acid, converting phosphorus to phosphoric acid (H3PO4). Phosphoric acid can be estimated by precipitating it as ammonium phosphomolybdate, (NH4)3 PO4 . 12 MoO3, by adding ammonia and ammonium molybdate. Alternatively, phosphorus can be precipitated as magnesium ammonium phosphate (MgNH4PO4) by adding magnesia mixture, which upon ignition yields magnesium pyrophosphate (Mg2P2O7)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Percentage of Carbon",
+        "formula": "%C = (12 / 44) * (m_CO2 / m_compound) * 100",
+        "applicability": "Liebig's combustion method",
+        "variables": [
+          {
+            "symbol": "m_CO2",
+            "meaning": "Mass of carbon dioxide formed",
+            "unit": "g"
+          },
+          {
+            "symbol": "m_compound",
+            "meaning": "Mass of organic compound taken",
+            "unit": "g"
+          }
+        ]
+      },
+      {
+        "label": "Percentage of Hydrogen",
+        "formula": "%H = (2 / 18) * (m_H2O / m_compound) * 100",
+        "applicability": "Liebig's combustion method",
+        "variables": [
+          {
+            "symbol": "m_H2O",
+            "meaning": "Mass of water formed",
+            "unit": "g"
+          },
+          {
+            "symbol": "m_compound",
+            "meaning": "Mass of organic compound taken",
+            "unit": "g"
+          }
+        ]
+      },
+      {
+        "label": "Percentage of Nitrogen (Dumas Method)",
+        "formula": "%N = (28 / 22400) * (V_STP / m_compound) * 100",
+        "applicability": "Dumas method for nitrogen estimation",
+        "variables": [
+          {
+            "symbol": "V_STP",
+            "meaning": "Volume of dry N2 gas at STP",
+            "unit": "mL"
+          },
+          {
+            "symbol": "m_compound",
+            "meaning": "Mass of organic compound taken",
+            "unit": "g"
+          }
+        ]
+      },
+      {
+        "label": "Percentage of Nitrogen (Kjeldahl Method)",
+        "formula": "%N = (1.4 * N * V) / m_compound",
+        "applicability": "Kjeldahl method using acid neutralization",
+        "variables": [
+          {
+            "symbol": "N",
+            "meaning": "Normality of acid neutralized by evolved ammonia",
+            "unit": "N"
+          },
+          {
+            "symbol": "V",
+            "meaning": "Volume of acid neutralized by evolved ammonia",
+            "unit": "mL"
+          },
+          {
+            "symbol": "m_compound",
+            "meaning": "Mass of organic compound taken",
+            "unit": "g"
+          }
+        ]
+      },
+      {
+        "label": "Percentage of Halogen (Carius Method)",
+        "formula": "%X = (Atomic Mass of X / Molar Mass of AgX) * (m_AgX / m_compound) * 100",
+        "applicability": "Carius method for halogens (Cl, Br, I)",
+        "variables": [
+          {
+            "symbol": "m_AgX",
+            "meaning": "Mass of silver halide precipitate",
+            "unit": "g"
+          },
+          {
+            "symbol": "m_compound",
+            "meaning": "Mass of organic compound taken",
+            "unit": "g"
+          }
+        ]
+      },
+      {
+        "label": "Percentage of Sulphur (Carius Method)",
+        "formula": "%S = (32 / 233) * (m_BaSO4 / m_compound) * 100",
+        "applicability": "Carius method for sulphur",
+        "variables": [
+          {
+            "symbol": "m_BaSO4",
+            "meaning": "Mass of barium sulphate precipitate",
+            "unit": "g"
+          },
+          {
+            "symbol": "m_compound",
+            "meaning": "Mass of organic compound taken",
+            "unit": "g"
+          }
+        ]
+      },
+      {
+        "label": "Percentage of Phosphorus (as Mg2P2O7)",
+        "formula": "%P = (62 / 222) * (m_Mg2P2O7 / m_compound) * 100",
+        "applicability": "Phosphorus estimation via magnesium pyrophosphate precipitation",
+        "variables": [
+          {
+            "symbol": "m_Mg2P2O7",
+            "meaning": "Mass of magnesium pyrophosphate precipitate",
+            "unit": "g"
+          },
+          {
+            "symbol": "m_compound",
+            "meaning": "Mass of organic compound taken",
+            "unit": "g"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Kjeldahl method can be applied to estimate nitrogen in nitrobenzene, azobenzene, or pyridine.",
+        "correction": "Kjeldahl method is NOT applicable to compounds containing nitrogen in nitro (-NO2) or azo (-N=N-) groups, or nitrogen present in ring structures like pyridine, because their nitrogen is not quantitatively converted into ammonium sulphate during digestion."
+      },
+      {
+        "misconception": "In Dumas method, the experimental volume of nitrogen measured over aqueous solution at room temperature can be directly plugged into the %N formula.",
+        "correction": "The volume measured over water must be corrected for aqueous tension (vapor pressure of water at experimental temperature) to obtain dry gas pressure, and then reduced to STP (273 K and 760 mmHg) before calculating the mass of nitrogen."
+      },
+      {
+        "misconception": "In Liebig's method, anhydrous CaCl2 absorbs CO2 while KOH absorbs H2O.",
+        "correction": "Anhydrous CaCl2 is a desiccant used specifically to absorb water (H2O), while concentrated KOH solution is alkaline and absorbs carbon dioxide (CO2)."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "In a Kjeldahl estimation of nitrogen, 0.5 g of an organic compound was digested and the evolved ammonia was absorbed in 50 mL of 0.1 M H2SO4. The unreacted acid required 60 mL of 0.1 M NaOH for complete neutralization. Calculate the percentage of nitrogen in the compound.",
+        "steps": [
+          "Step 1: Calculate total milliequivalents (meq) of acid taken. Normality of 0.1 M H2SO4 = 0.1 * 2 = 0.2 N. Total meq of H2SO4 = 50 mL * 0.2 N = 10 meq.",
+          "Step 2: Calculate meq of NaOH used for back-titration. Normality of 0.1 M NaOH = 0.1 N. meq of NaOH = 60 mL * 0.1 N = 6 meq.",
+          "Step 3: Calculate meq of acid neutralized by ammonia. meq of acid reacted with NH3 = Total meq of acid - meq of NaOH = 10 - 6 = 4 meq.",
+          "Step 4: Use Kjeldahl formula %N = (1.4 * meq of acid reacted) / mass of organic compound = (1.4 * 4) / 0.5 = 5.6 / 0.5 = 11.2%."
+        ],
+        "answer": "11.2%"
+      },
+      {
+        "problem": "In Carius method, 0.24 g of an organic compound containing chlorine gave 0.287 g of silver chloride (AgCl). Find the percentage of chlorine in the organic compound. (Molar mass of Ag = 108 g/mol, Cl = 35.5 g/mol)",
+        "steps": [
+          "Step 1: Molar mass of AgCl = 108 + 35.5 = 143.5 g/mol.",
+          "Step 2: Calculate mass of chlorine in 0.287 g of AgCl. Mass of Cl = (35.5 / 143.5) * 0.287 g = 0.071 g.",
+          "Step 3: Calculate percentage of chlorine in compound. %Cl = (0.071 / 0.24) * 100 = 29.58%."
+        ],
+        "answer": "29.58%"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following nitrogen-containing organic compounds CANNOT be estimated by Kjeldahl method? Options: (A) Aniline, (B) Acetamide, (C) Nitrobenzene, (D) Ethylamine.",
+        "answer": "(C) Nitrobenzene. Nitrogen in nitro groups (-NO2) cannot be converted to ammonium sulphate under standard Kjeldahl digestion conditions, making the method inapplicable."
+      },
+      {
+        "question": "In Carius method for sulphur estimation, 0.157 g of an organic compound gave 0.466 g of barium sulphate (BaSO4). What is the percentage of sulphur in the compound? (Molar mass of BaSO4 = 233 g/mol, Atomic mass of S = 32 g/mol). Options: (A) 20.38%, (B) 40.76%, (C) 15.28%, (D) 30.56%.",
+        "answer": "(B) 40.76%. Calculation: %S = (32 / 233) * (0.466 / 0.157) * 100 = (0.1373 * 0.466 / 0.157) * 100 = 40.76%."
+      },
+      {
+        "question": "In Dumas method, 0.3 g of an organic compound gave 50 mL of nitrogen gas collected at 300 K and 715 mm Hg pressure. If the aqueous tension at 300 K is 15 mm Hg, what is the volume of dry nitrogen at STP? Options: (A) 41.9 mL, (B) 45.8 mL, (C) 52.3 mL, (D) 38.2 mL.",
+        "answer": "(A) 41.9 mL. Calculation: Pressure of dry N2 gas P1 = 715 - 15 = 700 mm Hg. V1 = 50 mL, T1 = 300 K. At STP: P2 = 760 mm Hg, T2 = 273 K. Using combined gas law: (P1 * V1) / T1 = (P2 * V2) / T2 => V2 = (700 * 50 * 273) / (760 * 300) = 41.92 mL."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Class 11 Chemistry, Chapter 12: Organic Chemistry - Some Basic Principles and Techniques, Section on Quantitative Analysis.",
+      "JEE Main Official Chemistry Syllabus - Unit 13: Purification and Characterisation of Organic Compounds."
+    ]
+  }
+}

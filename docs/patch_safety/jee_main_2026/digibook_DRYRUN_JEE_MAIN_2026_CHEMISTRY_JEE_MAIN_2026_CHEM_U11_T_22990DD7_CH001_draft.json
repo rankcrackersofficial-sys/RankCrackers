@@ -1,0 +1,115 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U11_T_22990DD7_CH001",
+    "overview": "Transition elements (d-block) are defined as elements having partially filled d-orbitals in their ground state or in any one of their common oxidation states. This module covers the general characteristics, periodic trends of the 3d transition series, key properties such as variable oxidation states, magnetic behavior, catalytic activity, alloy and interstitial compound formation, as well as the detailed chemistry, preparation, and reactions of important oxo-salts like Potassium Dichromate (K2Cr2O7) and Potassium Permanganate (KMnO4).",
+    "concepts": [
+      {
+        "title": "Definition and Electronic Configuration",
+        "explanation": "d-block elements lie between s-block and p-block in groups 3 to 12. Transition elements must have incomplete d-subshells in ground state or oxidation states; hence, Zn, Cd, and Hg ([Ar]3d10 4s2 type) are d-block elements but not transition metals. The general electronic configuration is (n-1)d^{1-10} ns^{1-2}. Anomalous configurations occur in Cr ([Ar] 3d5 4s1) and Cu ([Ar] 3d10 4s1) due to extra stability of half-filled and fully-filled d-orbitals."
+      },
+      {
+        "title": "Atomic Radii and Physical Properties",
+        "explanation": "Across the 3d series (Sc to Zn), atomic radii decrease initially due to increasing nuclear charge, flatten out in the middle because poor shielding of d-electrons balances effective nuclear charge, and slightly increase at the end (Zn) due to electron-electron repulsions among paired d-electrons. Lanthanide contraction causes 4d and 5d series elements (e.g., Zr and Hf) to have nearly identical radii."
+      },
+      {
+        "title": "Oxidation States, Color, and Magnetic Properties",
+        "explanation": "Transition elements exhibit variable oxidation states due to small energy differences between (n-1)d and ns orbitals. Manganese shows maximum oxidation states (+2 to +7). Most transition metal compounds are colored owing to d-d electronic transitions in the presence of ligands, or charge-transfer transitions (e.g., KMnO4). Paramagnetism arises from unpaired electrons; magnetic moment is calculated using the spin-only formula."
+      },
+      {
+        "title": "Complex Formation, Interstitial Compounds, and Alloys",
+        "explanation": "Transition metals readily form complexes due to small cation size, high charge density, and availability of vacant d-orbitals. Interstitial compounds are formed when small non-metal atoms (H, C, N, B) occupy interstitial sites in the metal lattice, making them hard, chemically inert, with high melting points. Alloys are homogeneous solid solutions formed easily because transition metals have similar atomic radii."
+      },
+      {
+        "title": "Potassium Dichromate (K2Cr2O7)",
+        "explanation": "Prepared from chromite ore (FeCr2O4) by roasting with Na2CO3 in air, followed by acidification to convert chromate (yellow) to dichromate (orange): 2CrO4^{2-} + 2H+ <=> Cr2O7^{2-} + H2O. In acidic medium, K2Cr2O7 acts as a strong oxidizing agent (Cr2O7^{2-} + 14H+ + 6e- -> 2Cr^{3+} + 7H2O)."
+      },
+      {
+        "title": "Potassium Permanganate (KMnO4)",
+        "explanation": "Prepared from pyrolusite ore (MnO2) by fusing with KOH in the presence of air or KNO3 to give dark green potassium manganate (K2MnO4), which is then oxidized electrolytically or by chlorine to purple KMnO4. It acts as a powerful oxidant in acidic (n-factor=5), neutral/faintly alkaline (n-factor=3), and strongly alkaline (n-factor=1) media."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Spin-Only Magnetic Moment",
+        "formula": "\\mu = \\sqrt{n(n + 2)}",
+        "applicability": "Determining paramagnetic behavior and magnetic moment of transition metal ions based on unpaired electrons.",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of unpaired electrons",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "\\mu",
+            "meaning": "Spin-only magnetic moment",
+            "unit": "Bohr Magneton (BM)"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Zinc, Cadmium, and Mercury are transition elements.",
+        "correction": "They belong to the d-block, but they are NOT transition elements because they have completely filled d-subshells (d10) both in their ground state and in their common oxidation state (+2)."
+      },
+      {
+        "misconception": "The intense purple color of KMnO4 and orange color of K2Cr2O7 are caused by d-d transitions.",
+        "correction": "Mn in KMnO4 is +7 (d0) and Cr in K2Cr2O7 is +6 (d0). They have no d-electrons for d-d transitions. Their intense color arises from Ligand-to-Metal Charge Transfer (LMCT)."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the spin-only magnetic moment of a divalent metal ion with atomic number 25.",
+        "steps": [
+          "1. Identify the element: Atomic number Z = 25 is Manganese (Mn).",
+          "2. Write ground state configuration for Mn: [Ar] 3d5 4s2.",
+          "3. Divalent ion (Mn2+) configuration: Remove two 4s electrons -> [Ar] 3d5.",
+          "4. Determine unpaired electrons (n): 3d5 has 5 unpaired electrons, so n = 5.",
+          "5. Apply formula: mu = sqrt(5 * (5 + 2)) = sqrt(35) = 5.92 BM."
+        ],
+        "answer": "5.92 BM"
+      },
+      {
+        "problem": "How many moles of FeSO4 are oxidized by 1 mole of K2Cr2O7 in an acidic medium?",
+        "steps": [
+          "1. Write the reduction half-reaction for dichromate in acidic medium: Cr2O7^{2-} + 14H+ + 6e- -> 2Cr^{3+} + 7H2O (6 electrons accepted per mole).",
+          "2. Write the oxidation half-reaction for Fe^{2+}: Fe^{2+} -> Fe^{3+} + e- (1 electron lost per mole).",
+          "3. Multiply oxidation half-reaction by 6 to balance electrons: 6Fe^{2+} -> 6Fe^{3+} + 6e-.",
+          "4. Combine reactions: 1 mole of Cr2O7^{2-} oxidizes 6 moles of Fe^{2+}."
+        ],
+        "answer": "6 moles"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following 3d series metal ions exhibits the highest theoretical spin-only magnetic moment?",
+        "answer": "Fe3+ (or Mn2+). Both have 3d5 configuration with 5 unpaired electrons giving 5.92 BM."
+      },
+      {
+        "question": "What is the equivalent weight of KMnO4 in a neutral or weakly alkaline medium if its molecular weight is M?",
+        "answer": "M/3. In neutral/faintly alkaline medium, MnO4- is reduced to MnO2, where oxidation state changes from +7 to +4 (change of 3 units, so n-factor = 3)."
+      },
+      {
+        "question": "Why do Zr (4d series) and Hf (5d series) exhibit almost identical ionic radii (0.72 A and 0.71 A)?",
+        "answer": "Due to Lanthanide Contraction, where the intervention of 4f electrons before 5d series leads to poor shielding, pulling the valence shell closer and compensating for the expected shell expansion."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 8: The d- and f-Block Elements",
+      "JEE Main Official Chemistry Syllabus 2026 - Inorganic Chemistry Unit 11"
+    ]
+  }
+}

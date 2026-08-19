@@ -1,0 +1,109 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U11_T_B44A547D_CH001",
+    "overview": "Lanthanoids are f-block inner transition elements spanning from Cerium (Z=58) to Lutetium (Z=71). Lanthanum (Z=57) is closely studied alongside them due to strong chemical similarities. This learning module covers the ground state electronic configurations [Xe] 4f^{1-14} 5d^{0-1} 6s^2, oxidation states dominated by +3 along with anomalous +2 and +4 states, and the origin and chemical consequences of lanthanoid contraction.",
+    "concepts": [
+      {
+        "title": "Electronic Configurations of Lanthanoids",
+        "explanation": "The general valence electronic configuration of lanthanoids is [Xe] 4f^{1-14} 5d^{0-1} 6s^2. Extra stability associated with empty (f^0), half-filled (f^7), and fully-filled (f^14) 4f subshells causes anomalous electronic configurations in elements like Gadolinium (Gd: [Xe] 4f^7 5d^1 6s^2) and Lutetium (Lu: [Xe] 4f^14 5d^1 6s^2)."
+      },
+      {
+        "title": "Oxidation States and Chemical Stability",
+        "explanation": "The primary and most stable oxidation state for all lanthanoids is +3. Exceptional oxidation states +2 (e.g., Eu2+, Yb2+) and +4 (e.g., Ce4+, Tb4+) occur when they lead to f^0, f^7, or f^14 configurations. However, +3 remains the thermodynamically favored state in aqueous solution, making Ce4+ a strong oxidizing agent and Eu2+ a strong reducing agent."
+      },
+      {
+        "title": "Lanthanoid Contraction",
+        "explanation": "Lanthanoid contraction is the progressive decrease in atomic and ionic radii (M3+ ions) from Lanthanum to Lutetium with increasing atomic number. It occurs because 4f electrons have poor, diffuse shielding effects that fail to counteract the increasing effective nuclear charge (Z*) felt by outer electrons."
+      },
+      {
+        "title": "Consequences of Lanthanoid Contraction",
+        "explanation": "1) Similarity of 4d and 5d series atomic radii (e.g., Zr and Hf have almost identical radii of 160 pm and 159 pm). 2) Extremely similar chemical properties making separation of lanthanoids difficult. 3) Gradual decrease in basic character of hydroxides from La(OH)3 (most basic) to Lu(OH)3 (least basic) due to increasing covalent character of the M-O bond."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Spin-only Magnetic Moment",
+        "formula": "\\mu = \\sqrt{n(n+2)} \\text{ BM}",
+        "applicability": "Calculating magnetic moments of paramagnetic lanthanoid ions with n unpaired 4f electrons",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of unpaired electrons in 4f orbital",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "\\mu",
+            "meaning": "Magnetic moment",
+            "unit": "Bohr Magneton (BM)"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Lanthanum (Z=57) contains electrons in the 4f subshell in its ground state.",
+        "correction": "Lanthanum has the configuration [Xe] 5d^1 6s^2 with zero 4f electrons. The filling of the 4f subshell starts at Cerium (Z=58)."
+      },
+      {
+        "misconception": "Ce4+ is permanently stable in aqueous medium because it achieves an noble gas f^0 configuration.",
+        "correction": "Although Ce4+ has an f^0 configuration, +3 is the standard stable state for lanthanoids in aqueous media; hence Ce4+ acts as a strong oxidizing agent to reduce back to Ce3+."
+      },
+      {
+        "misconception": "4f electrons shield outer electrons effectively against nuclear charge.",
+        "correction": "4f orbitals are highly diffuse in space, providing poor shielding capability, which causes lanthanoid contraction."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Explain why Eu2+ acts as a strong reducing agent whereas Ce4+ acts as a strong oxidizing agent, even though both attain extra stable electronic configurations.",
+        "steps": [
+          "Step 1: Determine electronic configurations of ions. Eu2+ has configuration [Xe] 4f^7 (half-filled f-subshell) and Ce4+ has configuration [Xe] 4f^0 (empty f-subshell).",
+          "Step 2: Compare relative stabilities. Although f^7 and f^0 impart local stability, +3 is the overall most stable oxidation state for all lanthanoid elements in solution.",
+          "Step 3: Deduce redox character. Eu2+ loses an electron to form stable Eu3+, acting as a reducing agent. Ce4+ gains an electron to form stable Ce3+, acting as an oxidizing agent."
+        ],
+        "answer": "Eu2+ reduces other species to reach the +3 oxidation state, while Ce4+ oxidizes other species to reach the +3 oxidation state because +3 is the dominant stable state for lanthanoids."
+      },
+      {
+        "problem": "Calculate the theoretical spin-only magnetic moment of Ce3+ ion (Z = 58).",
+        "steps": [
+          "Step 1: Write the ground state configuration of Ce (Z = 58): [Xe] 4f^1 5d^1 6s^2.",
+          "Step 2: Deduce configuration of Ce3+: removal of two 6s electrons and one 5d electron yields [Xe] 4f^1.",
+          "Step 3: Count unpaired electrons: n = 1.",
+          "Step 4: Substitute n = 1 into formula \\mu = \\sqrt{n(n+2)}: \\mu = \\sqrt{1(1+2)} = \\sqrt{3} \\approx 1.73 \\text{ BM}."
+        ],
+        "answer": "1.73 BM"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following lanthanoid ions is diamagnetic? A) Ce3+ B) Eu2+ C) Yb2+ D) Gd3 launch",
+        "answer": "C) Yb2+. Explanation: Yb (Z=70) has configuration [Xe] 4f^14 6s^2. Yb2+ loses two 6s electrons giving [Xe] 4f^14. Since all 14 electrons are paired (n=0), Yb2+ is diamagnetic."
+      },
+      {
+        "question": "Which pair of transition metals exhibits nearly identical atomic radii due to lanthanoid contraction? A) Ti and Zr B) Zr and Hf C) Sc and Y D) Fe and Ru",
+        "answer": "B) Zr and Hf. Explanation: Zr (4d series) and Hf (5d series) have nearly identical atomic radii (~160 pm and ~159 pm) because the 14 lanthanoid elements filled prior to Hf increase effective nuclear charge and offset normal shell expansion."
+      },
+      {
+        "question": "Which hydroxide among the following is the LEAST basic? A) La(OH)3 B) Ce(OH)3 C) Gd(OH)3 D) Lu(OH)3",
+        "answer": "Covalent character increases from La(OH)3 to Lu(OH)3 as ionic radius decreases due to lanthanoid contraction. Higher covalent character lowers basicity; hence Lu(OH)3 is the least basic."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 8: The d- and f-Block Elements",
+      "JEE Main Official Chemistry Syllabus 2026 - Unit 11: Inner Transition Elements"
+    ]
+  }
+}

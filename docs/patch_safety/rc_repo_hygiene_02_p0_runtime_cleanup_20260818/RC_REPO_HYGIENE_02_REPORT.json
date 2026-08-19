@@ -1,7 +1,7 @@
 {
   "verdict": "RC_REPO_HYGIENE_02_P0_RUNTIME_REACHABILITY_CLEANUP_FULLY_ACCEPTED_WITH_SINGLE_ACTIVE_AUTHORITIES_AND_ZERO_PRODUCTION_DEMO_FIXTURE_RESIDUALS",
-  "headBefore": "b784a02cace72567ed3c22c04c63d5f174bfb4fe",
-  "headAfter": "b784a02cace72567ed3c22c04c63d5f174bfb4fe",
+  "headBefore": "13e4786eb278acd554f3d50e7a60fda7841f82f5",
+  "headAfter": "13e4786eb278acd554f3d50e7a60fda7841f82f5",
   "missionRepairSemanticsPresentOnHead": true,
   "legacyMissionAuthorityRuntimeReachable": 0,
   "productionReachableFixture": 0,

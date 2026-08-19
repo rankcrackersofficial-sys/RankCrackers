@@ -1,0 +1,103 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_4724FDF9_CH001",
+    "overview": "Biomolecules are complex organic molecules synthesized by living organisms that serve as structural components, dynamic catalysts, storage units, and genetic code carriers necessary for cellular life and metabolic functions.",
+    "concepts": [
+      {
+        "title": "Definition and Scope of Biomolecules",
+        "explanation": "Biomolecules encompass essential organic compounds found in biological systems, primarily categorized into carbohydrates, proteins, nucleic acids, and lipids. They range from small micro-molecules like glucose and amino acids to large polymers like starch, DNA, and enzymes."
+      },
+      {
+        "title": "Biological Functions and Significance",
+        "explanation": "Biomolecules perform diverse physiological roles: carbohydrates act as primary energy sources and structural units; proteins serve as biological catalysts (enzymes), structural scaffolds, and transport vehicles; lipids provide membrane architecture and long-term energy reserves; and nucleic acids store and transmit hereditary information."
+      },
+      {
+        "title": "Classification into Micro and Macromolecules",
+        "explanation": "Biomolecules are classified based on molecular mass into micro-molecules (< 1000 Da, e.g., monosaccharides, amino acids, nucleotides) and macromolecules (> 1000 Da, e.g., proteins, nucleic acids, polysaccharides). Lipids are small molecules that form large macromolecular lipid-bilayer assemblies."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "General Carbohydrate Hydrate Formula",
+        "formula": "C_x(H_2O)_y",
+        "applicability": "Applies to traditional simple sugars and polysaccharides, though exceptions exist.",
+        "variables": [
+          {
+            "symbol": "x",
+            "meaning": "Number of carbon atoms",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "y",
+            "meaning": "Number of water molecules associated conceptually",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "General Formula of alpha-Amino Acid",
+        "formula": "R-CH(NH_2)-COOH",
+        "applicability": "Applies to standard alpha-amino acids forming polypeptide chains in proteins.",
+        "variables": [
+          {
+            "symbol": "R",
+            "meaning": "Side-chain substituent characteristic of each amino acid",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "All compounds fitting the formula Cx(H2O)y are carbohydrates.",
+        "correction": "Formaldehyde (CH2O) and acetic acid (C2H4O2) fit Cx(H2O)y but are not carbohydrates, whereas rhamnose (C6H12O5) is a carbohydrate that does not fit this formula."
+      },
+      {
+        "misconception": "Lipids are biological polymers composed of repeating monomeric units.",
+        "correction": "Lipids are non-polymeric macromolecules formed by the association of fatty acids and glycerol via ester linkages, not long polymer chains of single repeating units."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Which of the following compounds satisfies the formula Cx(H2O)y but is NOT a carbohydrate? Options: (A) Glucose (B) Acetic acid (C) Rhamnose (D) Sucrose.",
+        "steps": [
+          "Step 1: Write chemical formulas: Glucose = C6H12O6 = C6(H2O)6; Acetic acid = C2H4O2 = C2(H2O)2; Rhamnose = C6H12O5; Sucrose = C12H22O11 = C12(H2O)11.",
+          "Step 2: Check which compounds fit Cx(H2O)y: Glucose, Acetic acid, and Sucrose fit.",
+          "Step 3: Evaluate chemical class: Acetic acid is a carboxylic acid, not a carbohydrate."
+        ],
+        "answer": "Acetic acid"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which class of biomolecules is primarily responsible for storing and transmitting genetic information in living systems? Options: (A) Carbohydrates (B) Proteins (C) Nucleic Acids (D) Lipids",
+        "answer": "(C) Nucleic Acids. DNA and RNA store and transfer genetic instructions within biological organisms."
+      },
+      {
+        "question": "Which of the following biomolecules has a molecular mass under 800 Da but is isolated in the acid-insoluble fraction due to cellular membrane association? Options: (A) Proteins (B) Polysaccharides (C) Lipids (D) Nucleic acids",
+        "answer": "(C) Lipids. Lipids are low molecular weight biomolecules that aggregate into structural membranes and separate into the insoluble fraction."
+      },
+      {
+        "question": "What primary carbohydrate serves as the main structural framework in plant cell walls? Options: (A) Starch (B) Cellulose (C) Glycogen (D) Maltose",
+        "answer": "(B) Cellulose. Cellulose is a linear beta-1,4-glycosidic polymer of glucose providing mechanical strength to plant cell walls."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 14: Biomolecules",
+      "JEE Main Official Chemistry Syllabus - Chemistry Syllabus Guidelines for Biomolecules"
+    ]
+  }
+}

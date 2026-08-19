@@ -1,0 +1,32 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "FAIL",
+    "itemCountReviewed": 1,
+    "approvedAtomIds": [],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_626F9D1B_CH001"
+    ],
+    "blockingIssues": [
+      "In Worked Example 1, Step 2 incorrectly lists '3 C-H single bonds' and '2 remaining C-H bonds' (totaling 5 C-H bonds), but the molecule but-1-en-3-yne (C4H4) only has 4 C-H bonds. The breakdown given (3+1+1+1+2) sums up to 8, yet the step incorrectly concludes with 7 sigma bonds. It should be explicitly listed as 4 C-H sigma bonds and 3 C-C sigma bonds, summing accurately to 7.",
+      "In Self-Check 2, the answer text contains a typo for the second molecule of Option A. It reads 'CH3OCH2CH3' (methoxyethane, C3H8O) instead of 'CH3OCH2CH2CH3' (1-methoxypropane, C4H10O). This typo creates a molecular formula mismatch, rendering the explanation technically incorrect."
+    ],
+    "reviewNotes": "The concepts and formula registers are accurate and align well with the JEE Main syllabus. However, Worked Example 1 has a severe counting breakdown error when calculating the number of sigma bonds. Additionally, Self-Check 2 has a typo in the answer explanation that alters the molecular formula of the metamer. Correcting these two issues will make the atom ready for publication.",
+    "conceptCorrectnessPass": true,
+    "formulaPass": true,
+    "selfCheckPass": false,
+    "workedExampleMathPass": false
+  }
+}

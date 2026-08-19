@@ -1,0 +1,108 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_8796FE37_CH002",
+    "overview": "Molecular Orbital Theory (MOT) describes the electronic structure of molecules by treating electrons as delocalized over the entire molecule in molecular orbitals formed by the linear combination of atomic orbitals (LCAO). This theory successfully explains chemical bonding, bond order, bond length, bond energy, and paramagnetic/diamagnetic behavior of homonuclear diatomic species.",
+    "concepts": [
+      {
+        "title": "Postulates of MOT and LCAO Principle",
+        "explanation": "Atomic orbitals combine linearly (addition or subtraction of wavefunctions) to form molecular orbitals. The number of molecular orbitals formed is equal to the number of combining atomic orbitals. Constructive interference leads to lower energy bonding molecular orbitals (BMO), while destructive interference leads to higher energy antibonding molecular orbitals (ABMO)."
+      },
+      {
+        "title": "Types of Molecular Orbitals (Sigma and Pi)",
+        "explanation": "Sigma (σ) molecular orbitals are symmetrical around the internuclear axis and are formed by head-on overlapping of atomic orbitals (e.g., s-s or pz-pz overlap). Pi (π) molecular orbitals are formed by lateral or sideways overlapping of p-orbitals (px or py) and have a nodal plane containing the internuclear axis. Antibonding orbitals are designated with an asterisk (*)."
+      },
+      {
+        "title": "Energy Ordering of Molecular Orbitals",
+        "explanation": "For species with up to 14 electrons (e.g., Li2, Be2, B2, C2, N2), sp-mixing alters orbital energies, leading to the sequence: σ1s < σ*1s < σ2s < σ*2s < (π2px = π2py) < σ2pz < (π*2px = π*2py) < σ*2pz. For species with more than 14 electrons (e.g., O2, F2, Ne2), there is no significant sp-mixing: σ1s < σ*1s < σ2s < σ*2s < σ2pz < (π2px = π2py) < (π*2px = π*2py) < σ*2pz."
+      },
+      {
+        "title": "Bond Order, Bond Length, Bond Energy, and Magnetism",
+        "explanation": "Bond order determines the strength and existence of a chemical bond. Bond order = 0.5 * (Nb - Na). A positive bond order means a stable molecule. Higher bond order corresponds to shorter bond length and higher bond dissociation energy. If all electrons in MOs are paired, the species is diamagnetic; if one or more unpaired electrons exist, it is paramagnetic."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Bond Order",
+        "formula": "Bond Order = 0.5 * (Nb - Na)",
+        "applicability": "Applicable to homonuclear and heteronuclear diatomic molecules/ions in MOT",
+        "variables": [
+          {
+            "symbol": "Nb",
+            "meaning": "Total number of electrons in bonding molecular orbitals",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "Na",
+            "meaning": "Total number of electrons in antibonding molecular orbitals",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "All molecules with an even total number of electrons are diamagnetic.",
+        "correction": "B2 (10 electrons) and O2 (16 electrons) have an even total electron count but are paramagnetic because their highest occupied molecular orbitals (HOMO) consist of degenerate orbitals populated by single unpaired electrons following Hund's rule."
+      },
+      {
+        "misconception": "The sequence of molecular orbital energies is identical for all homonuclear diatomic molecules.",
+        "correction": "For molecules with total electrons <= 14 (up to N2), sp-mixing raises the energy of σ2pz above the degenerate π2px and π2py orbitals. For total electrons > 14 (O2, F2), σ2pz remains lower in energy than π2px and π2py."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the bond order and determine the magnetic nature of the oxygen molecule (O2) using Molecular Orbital Theory.",
+        "steps": [
+          "Determine the total number of electrons in O2: 8 + 8 = 16 electrons.",
+          "Apply the MO electronic configuration sequence for > 14 electrons: σ1s² σ*1s² σ2s² σ*2s² σ2pz² (π2px² = π2py²) (π*2px¹ = π*2py¹).",
+          "Identify bonding electrons (Nb) = 2 (σ1s) + 2 (σ2s) + 2 (σ2pz) + 4 (π2px, π2py) = 10.",
+          "Identify antibonding electrons (Na) = 2 (σ*1s) + 2 (σ*2s) + 2 (π*2px, π*2py) = 6.",
+          "Calculate Bond Order = (10 - 6) / 2 = 2.",
+          "Since there are two unpaired electrons present in the degenerate π*2px and π*2py orbitals, O2 is paramagnetic."
+        ],
+        "answer": "Bond Order = 2, Magnetic Nature = Paramagnetic."
+      },
+      {
+        "problem": "Arrange the species O2, O2+, O2-, and O2(2-) in order of increasing bond length and stability.",
+        "steps": [
+          "Find electron counts: O2+ (15 e-), O2 (16 e-), O2- (17 e-), O2(2-) (18 e-).",
+          "Calculate Bond Orders: BO(O2+) = (10-5)/2 = 2.5; BO(O2) = (10-6)/2 = 2.0; BO(O2-) = (10-7)/2 = 1.5; BO(O2(2-)) = (10-8)/2 = 1.0.",
+          "Stability directly increases with Bond Order: O2(2-) < O2- < O2 < O2+.",
+          "Bond length is inversely proportional to Bond Order: O2+ < O2 < O2- < O2(2-)."
+        ],
+        "answer": "Stability order: O2(2-) < O2- < O2 < O2+; Bond length order: O2+ < O2 < O2- < O2(2-)."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following homonuclear diatomic species has a bond order of 2.5 and is paramagnetic? A) N2+ B) N2 C) O2 D) C2",
+        "answer": "A) N2+. N2+ has 13 electrons with configuration σ1s² σ*1s² σ2s² σ*2s² (π2px² = π2py²) σ2pz¹. Nb = 9, Na = 4, giving Bond Order = (9-4)/2 = 2.5. It contains 1 unpaired electron in σ2pz, making it paramagnetic."
+      },
+      {
+        "question": "In the C2 molecule, how many total pi bonds are present, and what is its magnetic property? A) 1 pi bond, paramagnetic B) 2 pi bonds, diamagnetic C) 1 pi bond, diamagnetic D) 2 pi bonds, paramagnetic",
+        "answer": "B) 2 pi bonds, diamagnetic. C2 has 12 electrons: σ1s² σ*1s² σ2s² σ*2s² (π2px² = π2py²). The last 4 bonding electrons reside entirely in π2px and π2py orbitals with no unpaired electrons, meaning C2 consists of two pi bonds and is diamagnetic."
+      },
+      {
+        "question": "Which of the following diatomic species cannot exist as a stable molecule under normal conditions according to MOT? A) B2 B) C2 C) Be2 D) Li2",
+        "answer": "C) Be2. Be2 has 8 electrons: σ1s² σ*1s² σ2s² σ*2s². Here Nb = 4 and Na = 4, resulting in Bond Order = (4 - 4) / 2 = 0. A bond order of zero indicates that no chemical bond is formed."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 4: Chemical Bonding and Molecular Structure",
+      "JEE Main Official Chemistry Syllabus - Molecular Orbital Theory"
+    ]
+  }
+}

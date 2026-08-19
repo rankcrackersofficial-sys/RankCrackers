@@ -8,171 +8,167 @@
     "workload": "factoryFlash",
     "modelSource": "policy_default",
     "fallbackUsed": false,
-    "fallbackReason": null
+    "fallbackReason": null,
+    "structuredOutput": true
   },
   "draft": {
-    "testId": "macro_test_2",
+    "slotId": "macro_test_2",
     "phaseId": "phase_2",
-    "questions": [
+    "items": [
       {
-        "itemId": "item_macro_2_01",
+        "itemId": "item_m2_01",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U14_T_B0A88EE2_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "In a series LCR circuit, the inductance $L = 10\\text{ mH}$, capacitance $C = 1\\ \\mu\\text{F}$, and resistance $R = 100\\ \\Omega$. What is the quality factor ($Q$-factor) of this resonant circuit?",
+        "stem": "An AC circuit contains a resistor of 30 ohms and an inductor of inductive reactance 40 ohms in series. What is the impedance of the circuit?",
+        "answer": "50 ohms",
+        "shortSolution": "Impedance Z = sqrt(R^2 + X_L^2) = sqrt(30^2 + 40^2) = 50 ohms.",
+        "difficulty": "EASY",
         "options": [
-          "1",
-          "10",
-          "100",
-          "0.1"
-        ],
-        "answer": "1",
-        "shortSolution": "Resonant angular frequency $\\omega_0 = \\frac{1}{\\sqrt{LC}} = \\frac{1}{\\sqrt{10^{-2} \\times 10^{-6}}} = 10^4\\text{ rad/s}$. The Q-factor is $Q = \\frac{\\omega_0 L}{R} = \\frac{10^4 \\times 10^{-2}}{100} = 1$.",
-        "difficulty": "EASY"
+          "10 ohms",
+          "50 ohms",
+          "70 ohms",
+          "1200 ohms"
+        ]
       },
       {
-        "itemId": "item_macro_2_02",
+        "itemId": "item_m2_02",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U07_T_9B7A2E2F_CH001",
         "type": "NUMERIC_RESPONSE",
-        "stem": "A wire of initial length $2\\text{ m}$ and cross-sectional area $1\\text{ mm}^2$ is stretched by a force of $100\\text{ N}$. If Young's modulus of the wire is $2 \\times 10^{11}\\text{ N/m}^2$, find the elastic potential energy stored in the wire in millijoules (mJ).",
-        "options": [],
-        "answer": "50",
-        "shortSolution": "Elastic potential energy $U = \\frac{1}{2} \\frac{F^2 L}{A Y} = \\frac{1}{2} \\frac{100^2 \\times 2}{10^{-6} \\times 2 \\times 10^{11}} = 0.05\\text{ J} = 50\\text{ mJ}$.",
-        "difficulty": "MEDIUM"
+        "stem": "A wire of length 2 m and cross-sectional area 1 mm^2 is stretched by a force of 100 N. If Young's modulus of the wire is 2 x 10^11 N/m^2, find the elongation in mm.",
+        "answer": "1",
+        "shortSolution": "Elongation delta L = (F * L) / (A * Y) = (100 * 2) / (10^-6 * 2 * 10^11) = 10^-3 m = 1 mm.",
+        "difficulty": "EASY",
+        "options": null
       },
       {
-        "itemId": "item_macro_2_03",
+        "itemId": "item_m2_03",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U13_T_135929B2_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "A moving coil galvanometer has a resistance of $50\\ \\Omega$ and yields full-scale deflection for a current of $2\\text{ mA}$. The series resistance required to convert it into a voltmeter reading up to $10\\text{ V}$ is:",
+        "stem": "A charge q moves with velocity v parallel to a uniform magnetic field B. What is the magnetic force experienced by the charge?",
+        "answer": "Zero",
+        "shortSolution": "F = q(v x B) = q v B sin(0 deg) = 0.",
+        "difficulty": "EASY",
         "options": [
-          "4950 \\Omega",
-          "5000 \\Omega",
-          "4900 \\Omega",
-          "5050 \\Omega"
-        ],
-        "answer": "4950 \\Omega",
-        "shortSolution": "Using $V = I_g(R_g + R) \\implies 10 = 2 \\times 10^{-3} (50 + R) \\implies 5000 = 50 + R \\implies R = 4950\\ \\Omega$.",
-        "difficulty": "EASY"
+          "q v B",
+          "q v B / 2",
+          "Zero",
+          "q v^2 B"
+        ]
       },
       {
-        "itemId": "item_macro_2_04",
+        "itemId": "item_m2_04",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U07_T_7C57F2F3_CH001",
-        "type": "SINGLE_SELECT",
-        "stem": "Two spherical raindrops with radii in the ratio $1 : 2$ fall vertically through air. Assuming laminar viscous drag, the ratio of their terminal velocities $v_1 / v_2$ is:",
-        "options": [
-          "1 : 4",
-          "1 : 2",
-          "1 : 8",
-          "1 : 16"
-        ],
-        "answer": "1 : 4",
-        "shortSolution": "Terminal velocity $v_t = \\frac{2 r^2 (\\rho - \\sigma) g}{9 \\eta} \\propto r^2$. Therefore, $v_1 / v_2 = (r_1 / r_2)^2 = (1 / 2)^2 = 1 / 4$.",
-        "difficulty": "EASY"
-      },
-      {
-        "itemId": "item_macro_2_05",
-        "atomId": "JEE_MAIN_2026_PHY_U05_T_ab220534",
         "type": "NUMERIC_RESPONSE",
-        "stem": "A uniform solid sphere of mass $2\\text{ kg}$ and radius $0.5\\text{ m}$ rotates about a fixed axis passing through its center of mass with an angular velocity of $10\\text{ rad/s}$. Calculate its angular momentum in $\\text{kg}\\cdot\\text{m}^2/\\text{s}$.",
-        "options": [],
-        "answer": "2",
-        "shortSolution": "Moment of inertia $I = \\frac{2}{5} M R^2 = \\frac{2}{5} \\times 2 \\times (0.5)^2 = 0.2\\text{ kg}\\cdot\\text{m}^2$. Angular momentum $L = I \\omega = 0.2 \\times 10 = 2\\text{ kg}\\cdot\\text{m}^2/\\text{s}$.",
-        "difficulty": "MEDIUM"
+        "stem": "Water flows through a horizontal pipe of non-uniform cross-section. At a point where the pressure is 20 kPa, the velocity is 2 m/s. If the pressure at another point is 17.5 kPa, find the velocity at this point in m/s. (Density of water = 1000 kg/m^3)",
+        "answer": "3",
+        "shortSolution": "By Bernoulli equation: P1 + 0.5*rho*v1^2 = P2 + 0.5*rho*v2^2. 20000 + 0.5*1000*4 = 17500 + 0.5*1000*v2^2 => 22000 = 17500 + 500*v2^2 => 4500 = 500*v2^2 => v2^2 = 9 => v2 = 3 m/s.",
+        "difficulty": "MEDIUM",
+        "options": null
       },
       {
-        "itemId": "item_macro_2_06",
+        "itemId": "item_m2_05",
         "atomId": "JEE_MAIN_2026_PHY_U12_T_3f967b4d",
         "type": "SINGLE_SELECT",
-        "stem": "As the temperature of a metallic conductor increases, its electrical resistance increases primarily because:",
+        "stem": "Three resistors of resistance 2 ohms, 3 ohms, and 6 ohms are connected in parallel. What is the equivalent resistance of the combination?",
+        "answer": "1 ohm",
+        "shortSolution": "1/Req = 1/2 + 1/3 + 1/6 = 6/6 = 1 ohm, so Req = 1 ohm.",
+        "difficulty": "EASY",
         "options": [
-          "the relaxation time of free electrons decreases",
-          "the electron drift velocity increases",
-          "the density of free electrons decreases",
-          "the relaxation time of free electrons increases"
-        ],
-        "answer": "the relaxation time of free electrons decreases",
-        "shortSolution": "Resistivity $\\rho = \\frac{m}{n e^2 \\tau}$. Higher temperature increases thermal vibrations, causing more frequent collisions, which decreases the average relaxation time $\\tau$ and increases resistance.",
-        "difficulty": "EASY"
+          "1 ohm",
+          "11 ohms",
+          "0.5 ohm",
+          "5 ohms"
+        ]
       },
       {
-        "itemId": "item_macro_2_07",
+        "itemId": "item_m2_06",
+        "atomId": "JEE_MAIN_2026_PHY_U17_T_b62ad18c",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "The work function of a metal is 2.0 eV. Light of frequency corresponding to photon energy 5.0 eV falls on it. Find the maximum kinetic energy of the emitted photoelectrons in eV.",
+        "answer": "3",
+        "shortSolution": "K_max = E - phi = 5.0 eV - 2.0 eV = 3.0 eV.",
+        "difficulty": "EASY",
+        "options": null
+      },
+      {
+        "itemId": "item_m2_07",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_1206BA8A_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "Which of the following organic compounds will NOT undergo a Cannizzaro reaction when treated with concentrated sodium hydroxide solution?",
+        "stem": "Which reagent can be used to distinguish between acetaldehyde and acetone?",
+        "answer": "Tollens reagent",
+        "shortSolution": "Tollens reagent oxidizes aldehydes (acetaldehyde) to form a silver mirror, but does not react with simple ketones like acetone.",
+        "difficulty": "EASY",
         "options": [
-          "Acetaldehyde",
-          "Benzaldehyde",
-          "Formaldehyde",
-          "2,2-Dimethylpropanal"
-        ],
-        "answer": "Acetaldehyde",
-        "shortSolution": "Cannizzaro reaction is given by aldehydes lacking $\\alpha$-hydrogens. Acetaldehyde ($\\text{CH}_3\\text{CHO}$) contains $\\alpha$-hydrogens and undergoes aldol condensation instead.",
-        "difficulty": "EASY"
+          "Tollens reagent",
+          "Grignard reagent",
+          "Sodium bisulfite",
+          "Hydrogen cyanide"
+        ]
       },
       {
-        "itemId": "item_macro_2_08",
+        "itemId": "item_m2_08",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U07_T_4FB800BA_CH001",
         "type": "NUMERIC_RESPONSE",
-        "stem": "For the galvanic cell reaction $\\text{Zn}(s) + \\text{Cu}^{2+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{Cu}(s)$, the standard cell potential $E^\\circ_{\\text{cell}} = 1.10\\text{ V}$. What is the magnitude of standard Gibbs energy change $\\Delta G^\\circ$ in $\\text{kJ/mol}$? (Use $F = 96500\\text{ C/mol}$ and round to the nearest integer).",
-        "options": [],
-        "answer": "212",
-        "shortSolution": "$\\Delta G^\\circ = -n F E^\\circ_{\\text{cell}} = -2 \\times 96500 \\times 1.10 = -212300\\text{ J/mol} = -212.3\\text{ kJ/mol}$. Magnitude is approximately $212\\text{ kJ/mol}$.",
-        "difficulty": "MEDIUM"
+        "stem": "For a cell reaction Zn(s) + Cu2+(aq) -> Zn2+(aq) + Cu(s), the standard cell potential E deg cell is 1.10 V. Calculate the standard Gibbs energy change delta G deg in kJ for this reaction. (Take Faraday constant F = 96500 C/mol, round off to the nearest integer)",
+        "answer": "-212",
+        "shortSolution": "delta G deg = -n * F * E deg = -2 * 96500 * 1.10 = -212300 J = -212.3 kJ, nearest integer -212.",
+        "difficulty": "MEDIUM",
+        "options": null
       },
       {
-        "itemId": "item_macro_2_09",
+        "itemId": "item_m2_09",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_57A38BE5_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "Which of the following thermodynamic parameters is classified as an extensive property?",
+        "stem": "Which of the following properties is an extensive property?",
+        "answer": "Volume",
+        "shortSolution": "Volume depends on the amount of matter in the system, making it an extensive property.",
+        "difficulty": "EASY",
         "options": [
-          "Enthalpy",
+          "Volume",
           "Temperature",
           "Pressure",
-          "Molar heat capacity"
-        ],
-        "answer": "Enthalpy",
-        "shortSolution": "Extensive properties depend on the mass/quantity of matter in the system. Enthalpy is extensive, whereas temperature, pressure, and molar heat capacity are intensive.",
-        "difficulty": "EASY"
+          "Density"
+        ]
       },
       {
-        "itemId": "item_macro_2_10",
+        "itemId": "item_m2_10",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_6CD948DD_CH002",
         "type": "NUMERIC_RESPONSE",
-        "stem": "Calculate the pH of a $10^{-3}\\text{ M}$ aqueous solution of a fully dissociated monobasic strong acid at $25^\\circ\\text{C}$.",
-        "options": [],
+        "stem": "Calculate the pH of a 0.001 M solution of a strong monobasic acid like HCl.",
         "answer": "3",
-        "shortSolution": "Since the acid is monobasic and fully dissociated, $[\\text{H}^+] = 10^{-3}\\text{ M}$. $\\text{pH} = -\\log_{10}[\\text{H}^+] = -\\log_{10}(10^{-3}) = 3$.",
-        "difficulty": "EASY"
+        "shortSolution": "[H+] = 10^-3 M, pH = -log10(10^-3) = 3.",
+        "difficulty": "EASY",
+        "options": null
       },
       {
-        "itemId": "item_macro_2_11",
+        "itemId": "item_m2_11",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_E1C482B9_CH002",
         "type": "SINGLE_SELECT",
-        "stem": "In the Reimer-Tiemann reaction of phenol with chloroform in the presence of aqueous $\\text{NaOH}$ to yield salicylaldehyde, the active electrophile is:",
+        "stem": "Phenol reacts with chloroform in the presence of sodium hydroxide to form salicylaldehyde. What is the name of this reaction?",
+        "answer": "Reimer-Tiemann reaction",
+        "shortSolution": "Formylation of phenol using CHCl3 and NaOH to give salicylaldehyde is known as Reimer-Tiemann reaction.",
+        "difficulty": "EASY",
         "options": [
-          "Dichlorocarbene (:CCl2)",
-          "Trichloromethyl cation (+CCl3)",
-          "Formyl cation (+CHO)",
-          "Chlorocarbene (:CHCl)"
-        ],
-        "answer": "Dichlorocarbene (:CCl2)",
-        "shortSolution": "Chloroform ($\\text{CHCl}_3$) reacts with hydroxide ion to generate dichlorocarbene ($:\\text{CCl}_2$), a neutral electron-deficient species acting as the electrophile.",
-        "difficulty": "MEDIUM"
+          "Reimer-Tiemann reaction",
+          "Kolbe reaction",
+          "Cannizzaro reaction",
+          "Friedel-Crafts reaction"
+        ]
       },
       {
-        "itemId": "item_macro_2_12",
+        "itemId": "item_m2_12",
         "atomId": "JEE_MAIN_2026_CHEM_U13_T_daee150c",
         "type": "SINGLE_SELECT",
-        "stem": "In Lassaigne's test for qualitative detection of nitrogen in an organic compound, the characteristic Prussian blue complex formed is:",
+        "stem": "In Lassaigne's test for detection of nitrogen, the Prussian blue color formed is due to the formation of which compound?",
+        "answer": "Ferri-ferrocyanide [Fe4[Fe(CN)6]3]",
+        "shortSolution": "The Prussian blue complex formed during Lassaigne's test for nitrogen is iron(III) hexacyanoferrate(II), Fe4[Fe(CN)6]3.",
+        "difficulty": "MEDIUM",
         "options": [
-          "Fe4[Fe(CN)6]3",
-          "Fe3[Fe(CN)6]2",
-          "Na4[Fe(CN)5NOS]",
-          "Fe(SCN)3"
-        ],
-        "answer": "Fe4[Fe(CN)6]3",
-        "shortSolution": "Sodium cyanide formed during fusion reacts with $\\text{FeSO}_4$ and ferric ions to form iron(III) hexacyanoferrate(II), $\\text{Fe}_4[\\text{Fe}(\\text{CN})_6]_3$, which gives the Prussian blue color.",
-        "difficulty": "EASY"
+          "Ferri-ferrocyanide [Fe4[Fe(CN)6]3]",
+          "Sodium nitroprusside",
+          "Ferric thiocyanate",
+          "Sodium cyanide"
+        ]
       }
     ]
   },

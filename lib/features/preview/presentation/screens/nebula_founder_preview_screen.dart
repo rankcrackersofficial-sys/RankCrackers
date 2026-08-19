@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:collection/collection.dart';
 
 import '../../../../core/theme/app_colors.dart';
@@ -33,7 +32,13 @@ class _NebulaFounderPreviewScreenState
   @override
   void initState() {
     super.initState();
-    _bundle = widget.previewBundleForTest ?? _loadBundle();
+    _bundle = widget.previewBundleForTest ??
+        Future<Map<String, dynamic>>.error(
+          StateError(
+            'Founder preview requires a governed backend bundle. Local preview '
+            'assets are not production authority.',
+          ),
+        );
   }
 
   TextStyle get _heroStyle => widget.previewBundleForTest == null
@@ -52,22 +57,6 @@ class _NebulaFounderPreviewScreenState
           fontWeight: FontWeight.w800,
           color: AppColors.gold,
         );
-  Future<Map<String, dynamic>> _loadBundle() async {
-    Future<Map<String, dynamic>> load(String name) async {
-      final raw = await rootBundle
-          .loadString('assets/data/preview/jee_main_2027/$name');
-      return Map<String, dynamic>.from(jsonDecode(raw) as Map);
-    }
-
-    return {
-      'manifest': await load('mission_preview_manifest.json'),
-      'syllabus': await load('syllabus_preview_tree.json'),
-      'crucible': await load('crucible_preview_plan.json'),
-      'digibook': await load('digibook_preview_catalog.json'),
-      'assessment': await load('assessment_preview_manifest.json'),
-    };
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

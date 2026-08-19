@@ -21,6 +21,6 @@
     "answerKeysVerified": true,
     "reviewedSlot": "major_test_final",
     "blockingIssues": [],
-    "reviewNotes": "All 30 items have been carefully reviewed. The questions are conceptually sound, mathematically accurate, and aligned well with their respective syllabus topics. There are no multiple-correct risks, and the units and formatting for numeric entries are appropriate. The draft passes QA without any needed corrections."
+    "reviewNotes": "All items are well-formulated, accurate, and map correctly to the given syllabus atoms. Answer keys and solutions are technically sound. Note: In ITEM_CHEM_011, there is a minor leading space in the correct option string (' [Rn]...') compared to the exact answer string, which should be trimmed by the testing platform."
   }
 }

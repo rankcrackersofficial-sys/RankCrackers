@@ -42,6 +42,6 @@
     "workedExampleMathPass": true,
     "selfCheckPass": true,
     "blockingIssues": [],
-    "reviewNotes": "All atoms demonstrate accurate and well-explained concepts. Reaction mechanisms, fundamental principles, named tests, stoichiometry computations in worked examples, and specific thermodynamic parameters (such as calorimetry measurements) are correctly implemented. No scientific, mathematical, or structural errors found."
+    "reviewNotes": "All atoms successfully pass the review. Concepts are accurate across topics, the formulas are precise and properly contextualized, and the step-by-step mathematical reasoning in worked examples aligns well with standard stoichiometric, thermochemical, and structural calculations (e.g., DBE calculations, neutralization enthalpies). No blocking issues were identified."
   }
 }

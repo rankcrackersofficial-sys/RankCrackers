@@ -16,162 +16,162 @@
     "phaseId": "phase_7",
     "items": [
       {
-        "itemId": "item_01",
+        "itemId": "ITEM_PHY_001",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U06_T_5F4143EE_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "What is the acceleration due to gravity at a depth equal to half the radius of the Earth, given surface gravity g?",
-        "answer": "g/2",
-        "shortSolution": "At depth d, g' = g(1 - d/R). For d = R/2, g' = g(1 - 1/2) = g/2.",
+        "stem": "The acceleration due to gravity at a depth d below the surface of Earth is equal to that at a height h above the surface. If d and h are both much smaller than the radius of Earth R, what is the ratio d/h?",
+        "answer": "2",
+        "shortSolution": "For h << R, g(h) = g(1 - 2h/R). For depth d, g(d) = g(1 - d/R). Equating both gives 1 - 2h/R = 1 - d/R, so d = 2h and d/h = 2.",
         "difficulty": "EASY",
         "options": [
-          "g/4",
-          "g/2",
-          "3g/4",
-          "g"
+          "1",
+          "2",
+          "0.5",
+          "4"
         ]
       },
       {
-        "itemId": "item_02",
+        "itemId": "ITEM_PHY_002",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U17_T_B62AD18C_CH001",
+        "type": "SINGLE_SELECT",
+        "stem": "Light of frequency 1.5 times the threshold frequency is incident on a photosensitive material. If the frequency is halved and intensity is doubled, the photoelectric current becomes:",
+        "answer": "Zero",
+        "shortSolution": "New frequency = 1.5/2 = 0.75 times threshold frequency. Since the new frequency is less than the threshold frequency, no photoelectric emission takes place, so current is zero.",
+        "difficulty": "EASY",
+        "options": [
+          "Zero",
+          "Doubled",
+          "Halved",
+          "Quadrupled"
+        ]
+      },
+      {
+        "itemId": "ITEM_PHY_003",
+        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_CH001",
         "type": "NUMERIC_RESPONSE",
-        "stem": "If the work function of a metal is 2.0 eV, find the threshold wavelength in nm. (Take hc = 1240 eV nm)",
-        "answer": "620",
-        "shortSolution": "Lambda_threshold = hc / W = 1240 / 2.0 = 620 nm.",
-        "difficulty": "MEDIUM",
+        "stem": "In a vernier callipers, 10 main scale divisions coincide with 10 mm on the main scale, and 10 vernier scale divisions coincide with 9 main scale divisions. Find the least count of the vernier callipers in mm.",
+        "answer": "0.1",
+        "shortSolution": "1 MSD = 1 mm. 1 VSD = 0.9 mm. Least Count = 1 MSD - 1 VSD = 1 mm - 0.9 mm = 0.1 mm.",
+        "difficulty": "EASY",
         "options": null
       },
       {
-        "itemId": "item_03",
-        "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_CH001",
-        "type": "SINGLE_SELECT",
-        "stem": "Which instrument is best suited for measuring the diameter of a thin wire with high precision?",
-        "answer": "Screw gauge",
-        "shortSolution": "A screw gauge provides higher precision (least count ~ 0.01 mm or 0.001 cm) for thin wire diameters compared to vernier calipers or meters.",
-        "difficulty": "EASY",
-        "options": [
-          "Meter scale",
-          "Vernier calipers",
-          "Screw gauge",
-          "Spherometer"
-        ]
-      },
-      {
-        "itemId": "item_04",
+        "itemId": "ITEM_PHY_004",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U10_T_3F7679C2_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "A simple harmonic motion is represented by x(t) = 5 cos(10 t + pi/4). What is its angular frequency in rad/s?",
-        "answer": "10",
-        "shortSolution": "Comparing with x(t) = A cos(omega t + phi), angular frequency omega = 10 rad/s.",
+        "stem": "A particle executes simple harmonic motion with time period T. The minimum time taken by the particle to move from x = 0 to x = A/2 (where A is amplitude) is:",
+        "answer": "T/12",
+        "shortSolution": "x = A sin(wt). For x = A/2, sin(wt) = 1/2 => wt = pi/6 => (2*pi/T)t = pi/6 => t = T/12.",
         "difficulty": "EASY",
         "options": [
-          "5",
-          "10",
-          "20",
-          "10 pi"
+          "T/6",
+          "T/8",
+          "T/12",
+          "T/4"
         ]
       },
       {
-        "itemId": "item_05",
+        "itemId": "ITEM_PHY_005",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U02_T_057CEE13_CH001",
         "type": "NUMERIC_RESPONSE",
-        "stem": "A body starts from rest with uniform acceleration 2 m/s^2. Find the distance traveled in meters in the 3rd second.",
-        "answer": "5",
-        "shortSolution": "S_nth = u + a/2(2n - 1) = 0 + (2/2)(2*3 - 1) = 5 m.",
-        "difficulty": "EASY",
+        "stem": "A car accelerates from rest at a constant rate of 2 m/s^2 for some time, after which it decelerates at 4 m/s^2 to come to rest. If the total time elapsed is 6 seconds, find the maximum velocity reached in m/s.",
+        "answer": "8",
+        "shortSolution": "v_max = (a1 * a2 / (a1 + a2)) * t = (2 * 4 / (2 + 4)) * 6 = (8/6) * 6 = 8 m/s.",
+        "difficulty": "MEDIUM",
         "options": null
       },
       {
-        "itemId": "item_06",
+        "itemId": "ITEM_PHY_006",
         "atomId": "JEE_2026_PHY_U01_CH03_TOP02_002",
         "type": "SINGLE_SELECT",
-        "stem": "A particle moves in a circle of radius 2 m with constant speed 4 m/s. What is its centripetal acceleration in m/s^2?",
-        "answer": "8",
-        "shortSolution": "Centripetal acceleration a_c = v^2 / r = 4^2 / 2 = 16 / 2 = 8 m/s^2.",
+        "stem": "A body moves in a circle of radius 10 m with a constant speed of 20 m/s. The magnitude of centripetal acceleration is:",
+        "answer": "40 m/s^2",
+        "shortSolution": "Centripetal acceleration a_c = v^2 / r = 20^2 / 10 = 400 / 10 = 40 m/s^2.",
         "difficulty": "EASY",
         "options": [
-          "2",
-          "4",
-          "8",
-          "16"
+          "20 m/s^2",
+          "40 m/s^2",
+          "10 m/s^2",
+          "80 m/s^2"
         ]
       },
       {
-        "itemId": "item_07",
+        "itemId": "ITEM_PHY_007",
         "atomId": "JEE_MAIN_2026_PHY_U11_T_d9bb723f",
         "type": "SINGLE_SELECT",
-        "stem": "What is the electric flux through a closed Gaussian surface enclosing a total charge Q in vacuum?",
-        "answer": "Q / epsilon_0",
-        "shortSolution": "According to Gauss Law, net electric flux through any closed surface is equal to Q_enclosed / epsilon_0.",
+        "stem": "A spherical shell of radius R carries a total charge Q uniformly distributed over its surface. The electric field inside the shell at distance r < R from the center is:",
+        "answer": "Zero",
+        "shortSolution": "By Gauss's Law, the enclosed charge within a Gaussian surface of radius r < R is zero. Hence, the electric field inside the shell is zero.",
         "difficulty": "EASY",
         "options": [
-          "Q * epsilon_0",
-          "Q / epsilon_0",
-          "Q / (2 * epsilon_0)",
-          "Zero"
+          "Zero",
+          "kQ/r^2",
+          "kQ/R^2",
+          "kQr/R^3"
         ]
       },
       {
-        "itemId": "item_08",
+        "itemId": "ITEM_PHY_008",
         "atomId": "JEE_MAIN_2026_PHY_U16_T_39a55f0d",
         "type": "NUMERIC_RESPONSE",
-        "stem": "An object is placed 20 cm in front of a concave mirror of focal length 10 cm. Find the magnitude of image distance in cm.",
-        "answer": "20",
-        "shortSolution": "Using 1/v + 1/u = 1/f: 1/v + 1/(-20) = 1/(-10) => 1/v = -1/10 + 1/20 = -1/20, so v = -20 cm.",
-        "difficulty": "EASY",
+        "stem": "An object is placed at a distance of 15 cm in front of a concave mirror of focal length 10 cm. Calculate the distance of the image from the mirror in cm.",
+        "answer": "30",
+        "shortSolution": "Using mirror formula 1/f = 1/v + 1/u. Here f = -10 cm, u = -15 cm. 1/(-10) = 1/v + 1/(-15) => 1/v = -1/10 + 1/15 = -1/30. So v = -30 cm.",
+        "difficulty": "MEDIUM",
         "options": null
       },
       {
-        "itemId": "item_09",
+        "itemId": "ITEM_PHY_009",
         "atomId": "JEE_MAIN_2026_PHY_U20_T_7b7aafa4_S_53c5ce3a",
         "type": "SINGLE_SELECT",
-        "stem": "In a terminal velocity experiment, if the radius of a spherical body is doubled, the terminal velocity becomes:",
-        "answer": "4 times",
-        "shortSolution": "Terminal velocity v_t is proportional to r^2. Doubling the radius increases v_t by a factor of 2^2 = 4.",
-        "difficulty": "MEDIUM",
+        "stem": "Two spherical rain drops of radii in the ratio 1:2 fall through air with terminal velocities. The ratio of their terminal velocities is:",
+        "answer": "1:4",
+        "shortSolution": "Terminal velocity v_t is proportional to r^2. Therefore, v1/v2 = (r1/r2)^2 = (1/2)^2 = 1/4.",
+        "difficulty": "EASY",
         "options": [
-          "2 times",
-          "4 times",
-          "8 times",
-          "16 times"
+          "1:2",
+          "1:4",
+          "1:8",
+          "1:1"
         ]
       },
       {
-        "itemId": "item_10",
+        "itemId": "ITEM_PHY_010",
         "atomId": "JEE_MAIN_2026_PHY_U04_T_87eb50db",
         "type": "SINGLE_SELECT",
-        "stem": "In a perfectly elastic one-dimensional collision between two equal masses where one is initially at rest, what happens to their velocities?",
-        "answer": "Velocities are exchanged",
-        "shortSolution": "For equal masses colliding elastically in 1D, v1 = u2 and v2 = u1. The moving mass stops and the target mass moves with initial speed.",
-        "difficulty": "EASY",
+        "stem": "A particle of mass m moving with speed v undergoes a head-on elastic collision with a stationary particle of mass 2m. The fraction of kinetic energy transferred to the stationary particle is:",
+        "answer": "8/9",
+        "shortSolution": "Fraction of KE transferred = 4*m1*m2 / (m1 + m2)^2 = 4*m*(2m) / (3m)^2 = 8/9.",
+        "difficulty": "MEDIUM",
         "options": [
-          "Both move together",
-          "Velocities are exchanged",
-          "First mass continues with double velocity",
-          "Both come to rest"
+          "4/9",
+          "8/9",
+          "1/2",
+          "2/3"
         ]
       },
       {
-        "itemId": "item_11",
+        "itemId": "ITEM_CHEM_011",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U11_T_0DB42BEA_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "Which oxidation state is common to all actinoids in general?",
-        "answer": "+3",
-        "shortSolution": "Although actinoids exhibit variable oxidation states, +3 is the most common and characteristic oxidation state across the series.",
+        "stem": "Which of the following is the general electronic configuration of actinoids?",
+        "answer": "[Rn] 5f^(1-14) 6d^(0-1) 7s^2",
+        "shortSolution": "The valence shell electronic configuration of actinoids is general represented as [Rn] 5f^(1-14) 6d^(0-1) 7s^2.",
         "difficulty": "EASY",
         "options": [
-          "+2",
-          "+3",
-          "+4",
-          "+6"
+          " [Rn] 5f^(1-14) 6d^(0-1) 7s^2",
+          "[Rn] 4f^(1-14) 5d^(0-1) 6s^2",
+          "[Xe] 4f^(1-14) 5d^(0-1) 6s^2",
+          "[Rn] 5f^(0-14) 6d^(2) 7s^1"
         ]
       },
       {
-        "itemId": "item_12",
+        "itemId": "ITEM_CHEM_012",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_3944DA40_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "Which of the following carboxylic acids is strongest?",
+        "stem": "Which of the following carboxylic acids has the highest acidic strength?",
         "answer": "Trichloroacetic acid",
-        "shortSolution": "Electron-withdrawing groups increase acidity by stabilizing the carboxylate anion. Trichloroacetic acid has three strong -I groups.",
+        "shortSolution": "Strong electron-withdrawing groups (-I effect) increase acidic strength. Trichloroacetic acid has three -Cl groups withdrawing electron density, making it the strongest acid among options.",
         "difficulty": "EASY",
         "options": [
           "Acetic acid",
@@ -181,132 +181,127 @@
         ]
       },
       {
-        "itemId": "item_13",
+        "itemId": "ITEM_CHEM_013",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U05_T_7ECB31D5_CH001",
         "type": "NUMERIC_RESPONSE",
-        "stem": "Calculate the molarity of a solution containing 10 g of NaOH in 250 mL of solution. (Molar mass of NaOH = 40 g/mol)",
-        "answer": "1",
-        "shortSolution": "Moles of NaOH = 10 / 40 = 0.25 mol. Molarity = 0.25 / 0.25 L = 1.0 M.",
+        "stem": "At 300 K, the vapour pressures of pure liquids A and B are 100 kPa and 200 kPa respectively. Calculate the total vapour pressure (in kPa) of an ideal solution containing equal moles of A and B.",
+        "answer": "150",
+        "shortSolution": "Mole fractions xA = 0.5, xB = 0.5. Total pressure P = xA*pA° + xB*pB° = 0.5*100 + 0.5*200 = 50 + 100 = 150 kPa.",
         "difficulty": "EASY",
         "options": null
       },
       {
-        "itemId": "item_14",
+        "itemId": "ITEM_CHEM_014",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U17_T_6D173CFD_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "What is the C-O-C bond angle in diethyl ether approximately?",
-        "answer": "111 degrees",
-        "shortSolution": "The C-O-C bond angle in ethers is slightly greater than the tetrahedral angle (~111.7 degrees) due to steric repulsion between alkyl groups.",
+        "stem": "The C-O-C bond angle in dimethyl ether is close to:",
+        "answer": "111.7 degrees",
+        "shortSolution": "The C-O-C bond angle in dimethyl ether is slightly greater than the tetrahedral angle (around 111.7 degrees) due to repulsive interactions between two bulky alkyl groups.",
         "difficulty": "MEDIUM",
         "options": [
-          "90 degrees",
-          "104.5 degrees",
           "109.5 degrees",
-          "111 degrees"
+          "104.5 degrees",
+          "111.7 degrees",
+          "180 degrees"
         ]
       },
       {
-        "itemId": "item_15",
+        "itemId": "ITEM_CHEM_015",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_17981AE4_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "Which factor favors the formation of an ionic bond?",
-        "answer": "Low ionization enthalpy of cation and high electron gain enthalpy of anion",
-        "shortSolution": "Low ionization enthalpy of metal allows easy cation formation, and high negative electron gain enthalpy favors anion formation.",
+        "stem": "Which factor favors the formation of an ionic bond between two atoms?",
+        "answer": "Low ionization enthalpy of metal and high negative electron gain enthalpy of non-metal",
+        "shortSolution": "Low ionization enthalpy facilitates cation formation, while high negative electron gain enthalpy facilitates anion formation, promoting ionic bonding.",
         "difficulty": "EASY",
         "options": [
-          "High ionization enthalpy of metal",
-          "Low electron gain enthalpy of non-metal",
-          "Low lattice energy",
-          "Low ionization enthalpy of cation and high electron gain enthalpy of anion"
+          "High ionization enthalpy of metal and low electron gain enthalpy of non-metal",
+          "Low ionization enthalpy of metal and high negative electron gain enthalpy of non-metal",
+          "High lattice energy only",
+          "High electronegativity of both atoms"
         ]
       },
       {
-        "itemId": "item_16",
+        "itemId": "ITEM_CHEM_016",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_0E497615_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "Which nitrogenous base is present in RNA but not in DNA?",
+        "stem": "Which nitrogenous base is present in RNA but absent in DNA?",
         "answer": "Uracil",
-        "shortSolution": "RNA contains Uracil (U) instead of Thymine (T) which is found in DNA.",
+        "shortSolution": "RNA contains Uracil instead of Thymine, which is present in DNA.",
         "difficulty": "EASY",
         "options": [
           "Adenine",
           "Guanine",
-          "Thymine",
-          "Uracil"
+          "Uracil",
+          "Thymine"
         ]
       },
       {
-        "itemId": "item_17",
+        "itemId": "ITEM_CHEM_017",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U14_T_626F9D1B_CH002",
+        "type": "SINGLE_SELECT",
+        "stem": "What is the hybridization of carbon atoms involved in a triple bond in ethyne?",
+        "answer": "sp",
+        "shortSolution": "Triply bonded carbon atoms in ethyne use sp hybrid orbitals forming a linear geometry.",
+        "difficulty": "EASY",
+        "options": [
+          "sp3",
+          "sp2",
+          "sp",
+          "dsp2"
+        ]
+      },
+      {
+        "itemId": "ITEM_CHEM_018",
+        "atomId": "JEE_MAIN_2026_CHEM_U12_T_6f2e41d5",
         "type": "NUMERIC_RESPONSE",
-        "stem": "How many sigma bonds are present in a molecule of ethyne (C2H2)?",
-        "answer": "3",
-        "shortSolution": "Ethyne (H-C#C-H) contains two C-H sigma bonds and one C-C sigma bond in the triple bond, giving a total of 3 sigma bonds.",
+        "stem": "What is the denticity of the ligand EDTA^4-?",
+        "answer": "6",
+        "shortSolution": "Ethylenediaminetetraacetate ion (EDTA^4-) has two nitrogen and four oxygen donor atoms, making it a hexadentate ligand (denticity = 6).",
         "difficulty": "EASY",
         "options": null
       },
       {
-        "itemId": "item_18",
-        "atomId": "JEE_MAIN_2026_CHEM_U12_T_6f2e41d5",
-        "type": "SINGLE_SELECT",
-        "stem": "What is the coordination number of Fe in [Fe(EDTA)]-?",
-        "answer": "6",
-        "shortSolution": "EDTA is a hexadentate ligand, so it forms 6 coordination bonds with the central metal ion.",
-        "difficulty": "EASY",
-        "options": [
-          "2",
-          "4",
-          "6",
-          "8"
-        ]
-      },
-      {
-        "itemId": "item_19",
+        "itemId": "ITEM_CHEM_019",
         "atomId": "JEE_MAIN_2026_CHEM_U17_T_6d173cfd",
         "type": "SINGLE_SELECT",
-        "stem": "Ethers are functional isomers of which class of organic compounds?",
-        "answer": "Alcohols",
-        "shortSolution": "Ethers (R-O-R') and monohydric alcohols (R-OH) share the general molecular formula C_n H_(2n+2) O and are functional isomers.",
+        "stem": "Williamson synthesis of anisole involves reaction of sodium phenoxide with:",
+        "answer": "Methyl bromide",
+        "shortSolution": "Sodium phenoxide (C6H5ONa) reacts with methyl bromide (CH3Br) via SN2 mechanism to yield anisole (C6H5OCH3) and NaBr.",
         "difficulty": "EASY",
         "options": [
-          "Aldehydes",
-          "Alcohols",
-          "Carboxylic acids",
-          "Ketones"
+          "Methyl bromide",
+          "Ethyl bromide",
+          "Bromobenzene",
+          "Chlorobenzene"
         ]
       },
       {
-        "itemId": "item_20",
+        "itemId": "ITEM_CHEM_020",
         "atomId": "JEE_MAIN_2026_CHEM_U03_T_4e0dc7ce",
         "type": "SINGLE_SELECT",
-        "stem": "According to Lewis structure, how many valence electrons surround the central atom in an octet compliant species?",
-        "answer": "8",
-        "shortSolution": "The octet rule states that atoms gain, lose or share electrons to achieve 8 valence electrons.",
+        "stem": "According to Lewis structure, how many valence electron pairs are shared in a nitrogen molecule (N2)?",
+        "answer": "3",
+        "shortSolution": "Nitrogen forms a triple bond (N≡N) consisting of 3 shared electron pairs between the two nitrogen atoms.",
         "difficulty": "EASY",
         "options": [
+          "1",
           "2",
-          "4",
-          "6",
-          "8"
+          "3",
+          "4"
         ]
       },
       {
-        "itemId": "item_21",
+        "itemId": "ITEM_MATH_021",
         "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U3_T004_004_ADD001",
-        "type": "SINGLE_SELECT",
-        "stem": "For a non-singular square matrix A of order 3, det(adj A) is equal to:",
-        "answer": "(det A)^2",
-        "shortSolution": "For a matrix A of order n, det(adj A) = (det A)^(n-1). For n = 3, det(adj A) = (det A)^2.",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "If A is a square matrix of order 3 such that det(A) = 4, find the value of det(adj(A)).",
+        "answer": "16",
+        "shortSolution": "For a matrix A of order n, det(adj(A)) = (det(A))^(n-1). Here n = 3, det(A) = 4, so det(adj(A)) = 4^(3-1) = 4^2 = 16.",
         "difficulty": "EASY",
-        "options": [
-          "det A",
-          "(det A)^2",
-          "(det A)^3",
-          "1 / det A"
-        ]
+        "options": null
       },
       {
-        "itemId": "item_22",
+        "itemId": "ITEM_MATH_022",
         "atomId": "JEE_MAIN_2026_P1_MATHEMATICS_U2_T003_003",
         "type": "NUMERIC_RESPONSE",
         "stem": "Find the modulus of the complex number z = 3 + 4i.",
@@ -316,12 +311,12 @@
         "options": null
       },
       {
-        "itemId": "item_23",
+        "itemId": "ITEM_MATH_023",
         "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U11_T002_002_ADD001",
         "type": "SINGLE_SELECT",
-        "stem": "If a line makes equal angles with the coordinate axes, what is the value of cos^2(alpha) + cos^2(beta) + cos^2(gamma)?",
+        "stem": "If l, m, n are the direction cosines of a straight line, then l^2 + m^2 + n^2 is equal to:",
         "answer": "1",
-        "shortSolution": "The sum of squares of direction cosines for any line is l^2 + m^2 + n^2 = 1.",
+        "shortSolution": "The sum of the squares of direction cosines of any line in 3D space is always 1.",
         "difficulty": "EASY",
         "options": [
           "0",
@@ -331,92 +326,87 @@
         ]
       },
       {
-        "itemId": "item_24",
+        "itemId": "ITEM_MATH_024",
         "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U8_T003_003_ADD001",
         "type": "SINGLE_SELECT",
-        "stem": "Evaluate integral of x * e^x dx.",
-        "answer": "(x - 1)e^x + C",
-        "shortSolution": "Using integration by parts: integral(x e^x dx) = x e^x - integral(e^x dx) = (x - 1)e^x + C.",
+        "stem": "The integral of (2x) / (1 + x^2) dx is equal to:",
+        "answer": "ln(1 + x^2) + C",
+        "shortSolution": "Let u = 1 + x^2, then du = 2x dx. The integral becomes int(1/u du) = ln|u| + C = ln(1 + x^2) + C.",
         "difficulty": "EASY",
         "options": [
-          "x e^x + C",
-          "(x - 1)e^x + C",
-          "(x + 1)e^x + C",
-          "e^x + C"
+          "ln(1 + x^2) + C",
+          "tan^(-1)(x) + C",
+          "(1 + x^2)^2 + C",
+          "2 ln(1 + x^2) + C"
         ]
       },
       {
-        "itemId": "item_25",
+        "itemId": "ITEM_MATH_025",
         "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U3_T001_001_ADD001",
-        "type": "NUMERIC_RESPONSE",
-        "stem": "If matrix A is of order 2x3 and matrix B is of order 3x4, find the number of entries in matrix AB.",
-        "answer": "8",
-        "shortSolution": "Matrix AB will have dimension 2x4, which has 2 * 4 = 8 entries.",
+        "type": "SINGLE_SELECT",
+        "stem": "If A is a 2x3 matrix and B is a 3x4 matrix, what is the order of the product matrix AB?",
+        "answer": "2x4",
+        "shortSolution": "The product of an (m x n) matrix and an (n x p) matrix is an (m x p) matrix. Here, (2x3) * (3x4) gives order 2x4.",
         "difficulty": "EASY",
-        "options": null
+        "options": [
+          "3x3",
+          "2x4",
+          "4x2",
+          "3x2"
+        ]
       },
       {
-        "itemId": "item_26",
+        "itemId": "ITEM_MATH_026",
         "atomId": "DRYRUN_RB1_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U1_T004_004_ADD001",
         "type": "SINGLE_SELECT",
-        "stem": "Let R be a relation on set A defined by x R y if x = y. What type of relation is R?",
-        "answer": "Equivalence relation",
-        "shortSolution": "Reflexive (x=x), symmetric (x=y => y=x), and transitive (x=y and y=z => x=z). Hence it is an equivalence relation.",
+        "stem": "A relation R on a set A is an equivalence relation if it is:",
+        "answer": "Reflexive, symmetric, and transitive",
+        "shortSolution": "By definition, an equivalence relation must satisfy reflexivity, symmetry, and transitivity.",
         "difficulty": "EASY",
         "options": [
-          "Reflexive only",
-          "Symmetric only",
-          "Transitive only",
-          "Equivalence relation"
+          "Reflexive and symmetric only",
+          "Symmetric and transitive only",
+          "Reflexive, symmetric, and transitive",
+          "Reflexive and transitive only"
         ]
       },
       {
-        "itemId": "item_27",
+        "itemId": "ITEM_MATH_027",
         "atomId": "JEE_MAIN_2026_P1_MATHEMATICS_U11_T001_001",
         "type": "NUMERIC_RESPONSE",
-        "stem": "Find the distance between points (1, 2, 3) and (4, 6, 3) in 3D space.",
+        "stem": "Find the distance between the points P(1, 2, 3) and Q(4, 6, 3).",
         "answer": "5",
-        "shortSolution": "d = sqrt((4-1)^2 + (6-2)^2 + (3-3)^2) = sqrt(9 + 16 + 0) = sqrt(25) = 5.",
+        "shortSolution": "Distance = sqrt((4-1)^2 + (6-2)^2 + (3-3)^2) = sqrt(3^2 + 4^2 + 0) = sqrt(9 + 16) = 5.",
         "difficulty": "EASY",
         "options": null
       },
       {
-        "itemId": "item_28",
+        "itemId": "ITEM_PHY_028",
         "atomId": "JEE_MAIN_2026_PHY_U16_T_22599887",
-        "type": "SINGLE_SELECT",
-        "stem": "What is the focal length of a thin convex lens of power +5 D?",
-        "answer": "20 cm",
-        "shortSolution": "Power P = 1 / f(m). f = 1 / 5 m = 0.2 m = 20 cm.",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "Two thin convex lenses of focal lengths 20 cm and 30 cm are placed in contact. Calculate the focal length of the combination in cm.",
+        "answer": "12",
+        "shortSolution": "1/F = 1/f1 + 1/f2 = 1/20 + 1/30 = (3 + 2)/60 = 5/60 = 1/12. So F = 12 cm.",
         "difficulty": "EASY",
-        "options": [
-          "10 cm",
-          "20 cm",
-          "50 cm",
-          "100 cm"
-        ]
+        "options": null
       },
       {
-        "itemId": "item_29",
+        "itemId": "ITEM_PHY_029",
         "atomId": "JEE_MAIN_2026_PHY_U20_T_7b7aafa4",
-        "type": "SINGLE_SELECT",
-        "stem": "In a Vernier Calliper, 10 vernier scale divisions equal 9 main scale divisions (1 MSD = 1 mm). What is the least count?",
-        "answer": "0.1 mm",
-        "shortSolution": "Least count = 1 MSD - 1 VSD = 1 mm - 0.9 mm = 0.1 mm.",
+        "type": "NUMERIC_RESPONSE",
+        "stem": "The length of a rod measured by a screw gauge is recorded as 2.50 cm. If the percentage error in measurement is 0.4%, find the absolute error in cm.",
+        "answer": "0.01",
+        "shortSolution": "Absolute error = (Percentage error / 100) * measured value = (0.4 / 100) * 2.50 = 0.01 cm.",
         "difficulty": "EASY",
-        "options": [
-          "0.01 mm",
-          "0.1 mm",
-          "1 mm",
-          "0.05 mm"
-        ]
+        "options": null
       },
       {
-        "itemId": "item_30",
+        "itemId": "ITEM_PHY_030",
         "atomId": "JEE_MAIN_2026_PHY_U04_T_017fc3ac",
         "type": "NUMERIC_RESPONSE",
-        "stem": "A spring with spring constant k = 200 N/m is stretched by 0.1 m. Calculate the potential energy stored in Joules.",
-        "answer": "1",
-        "shortSolution": "U = 1/2 k x^2 = 0.5 * 200 * (0.1)^2 = 100 * 0.01 = 1 J.",
+        "stem": "A spring with spring constant k = 100 N/m is stretched from x = 0 to x = 0.2 m. Calculate the work done on the spring in Joules.",
+        "answer": "2",
+        "shortSolution": "Work done W = (1/2) * k * x^2 = 0.5 * 100 * (0.2)^2 = 50 * 0.04 = 2 Joules.",
         "difficulty": "EASY",
         "options": null
       }

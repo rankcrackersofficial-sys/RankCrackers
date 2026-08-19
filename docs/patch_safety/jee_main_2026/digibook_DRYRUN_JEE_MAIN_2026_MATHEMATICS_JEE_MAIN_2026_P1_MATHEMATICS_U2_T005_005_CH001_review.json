@@ -1,0 +1,31 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.1-pro-preview",
+    "actualModel": "gemini-3.1-pro-preview",
+    "workload": "deepReasoningPro",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "review": {
+    "verdict": "FAIL",
+    "itemCountReviewed": 1,
+    "approvedAtomIds": [],
+    "pendingReviewAtomIds": [],
+    "rejectedOrHeldAtomIds": [
+      "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_P1_MATHEMATICS_U2_T005_005_CH001"
+    ],
+    "blockingIssues": [
+      "In Self-Check 2, there is a mathematical error in calculating the roots of the discriminant equation. The quadratic equation formed is `3m^2 - 2m - 2 = 0`, but the answer claims the roots are `m = 1` or `m = -2/9`. The actual roots for `3m^2 - 2m - 2 = 0` are `m = (1 ± √7)/3`. The question, options, and explanation must be modified so that the math is accurate and consistent."
+    ],
+    "reviewNotes": "The concepts, formulas, misconceptions, and worked examples are well-drafted and mathematically accurate. However, the atom fails due to an algebraic calculation error in Self-Check 2, making the key and explanation incorrect. Please rectify the equation or the given options in the self-check question.",
+    "conceptCorrectnessPass": true,
+    "formulaPass": true,
+    "selfCheckPass": false,
+    "workedExampleMathPass": true
+  }
+}

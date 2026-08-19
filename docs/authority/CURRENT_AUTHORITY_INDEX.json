@@ -88,7 +88,7 @@
     "previewAssets": "Founder/internal preview/test assets only; not Student production data."
   },
   "repoHygiene02": {
-    "generatedAt": "2026-08-18T13:46:36.212Z",
+    "generatedAt": "2026-08-18T13:53:16.391Z",
     "p0RuntimeReachabilityRules": {
       "legacyMissionAuthorityRuntimeReachable": "Only deployable runtime/callable source counts. Tests and historical tools are non-authority.",
       "productionReachableFixture": "Preview assets are forbidden in runtime. Emulator fixture is allowed only behind RC_USE_FIREBASE_EMULATOR.",

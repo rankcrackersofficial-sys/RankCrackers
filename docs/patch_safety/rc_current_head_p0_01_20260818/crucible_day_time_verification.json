@@ -1,0 +1,15 @@
+{
+  "day_value_source_file": "lib/features/crucible/presentation/screens/crucible_screen.dart",
+  "day_value_source_type": "DateTime.now().difference(enrollmentDate).inDays + 1",
+  "remaining_time_source_file": "lib/features/crucible/core/crucible_clock_engine.dart",
+  "remaining_time_source_type": "cycleEnd.difference(now).inHours",
+  "protocol_start_source": "enrollmentDate",
+  "current_time_source": "DateTime.now()",
+  "calculated_protocol_day": 17,
+  "visible_protocol_day": 17,
+  "calculated_remaining_duration": 5,
+  "visible_remaining_time": 5,
+  "countdown_uses_live_time": true,
+  "stale_crucible_time_cache_reused": 0,
+  "cross_mission_crucible_time_leakage": 0
+}

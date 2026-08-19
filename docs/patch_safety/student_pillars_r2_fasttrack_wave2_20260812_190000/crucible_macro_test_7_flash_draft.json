@@ -19,105 +19,105 @@
         "itemId": "item_1",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U01_T_54665F87_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "What is the dimensional formula for surface tension?",
-        "answer": "M L^0 T^-2",
-        "shortSolution": "Surface tension = Force / Length = [M L T^-2] / [L] = [M L^0 T^-2].",
+        "stem": "Which of the following physical quantities has the dimensional formula [M L^2 T^-3]?",
+        "answer": "Power",
+        "shortSolution": "Power = Work / Time = [M L^2 T^-2] / [T] = [M L^2 T^-3].",
         "difficulty": "EASY",
         "options": [
-          "M L^0 T^-2",
-          "M L T^-2",
-          "M L^2 T^-2",
-          "M L^-1 T^-1"
+          "Work",
+          "Power",
+          "Force",
+          "Energy"
         ]
       },
       {
         "itemId": "item_2",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U05_T_1367A8D3_CH001",
-        "type": "SINGLE_SELECT",
-        "stem": "A uniform rod of length 2 m and mass 4 kg is hinged at one end and held horizontally. The torque acting on the rod about the hinge due to gravity is (take g = 10 m/s^2):",
-        "answer": "40 N m",
-        "shortSolution": "Torque = Mg * (L/2) = 4 * 10 * (2/2) = 40 N m.",
-        "difficulty": "EASY",
-        "options": [
-          "40 N m",
-          "20 N m",
-          "80 N m",
-          "10 N m"
-        ]
+        "type": "NUMERIC_RESPONSE",
+        "stem": "A uniform disc of mass 2 kg and radius 0.5 m rotates about a fixed axis passing through its center and perpendicular to its plane. If its angular speed increases from 0 to 10 rad/s in 5 s, find the constant torque acting on it in N m.",
+        "answer": "0.5",
+        "shortSolution": "I = (1/2) m r^2 = 0.5 * 2 * 0.25 = 0.25 kg m^2. Angular acceleration alpha = (10 - 0)/5 = 2 rad/s^2. Torque = I * alpha = 0.25 * 2 = 0.5 N m.",
+        "difficulty": "MEDIUM",
+        "options": null
       },
       {
         "itemId": "item_3",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_7B7AAFA4_S_07515E6D_CH001",
-        "type": "NUMERIC_RESPONSE",
-        "stem": "A uniform metre scale is balanced at the 50 cm mark. When a body of unknown mass m is suspended from the 10 cm mark, it is balanced by hanging a 100 g mass at the 90 cm mark. Find the mass m in grams.",
-        "answer": "100",
-        "shortSolution": "By principle of moments about 50 cm mark: m * (50 - 10) = 100 * (90 - 50) => 40m = 4000 => m = 100 g.",
-        "difficulty": "EASY",
-        "options": null
+        "type": "SINGLE_SELECT",
+        "stem": "A meter scale is balanced on a knife edge at the 50 cm mark. When two coins, each of mass 5 g, are put one on top of the other at the 12 cm mark, the scale is found to be balanced at 45 cm. What is the mass of the meter scale?",
+        "answer": "66 g",
+        "shortSolution": "Let M be the mass of the meter scale. Total weight of coins = 10 g acting at 12 cm, knife edge at 45 cm. Distance from coins to knife edge = 45 - 12 = 33 cm. Mass M acts at 50 cm, distance to knife edge = 50 - 45 = 5 cm. By principle of moments: 10 * 33 = M * 5 => M = 66 g.",
+        "difficulty": "MEDIUM",
+        "options": [
+          "66 g",
+          "50 g",
+          "70 g",
+          "100 g"
+        ]
       },
       {
         "itemId": "item_4",
         "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U07_T_70841273_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "Excess pressure inside a spherical soap bubble of radius R and surface tension T is:",
-        "answer": "4T / R",
-        "shortSolution": "A soap bubble has two free surfaces, so excess pressure = 2 * (2T / R) = 4T / R.",
+        "stem": "The excess pressure inside a spherical soap bubble of radius R and surface tension T is given by:",
+        "answer": "4T/R",
+        "shortSolution": "A soap bubble has two liquid surfaces exposed to air, hence excess pressure delta P = 4T/R.",
         "difficulty": "EASY",
         "options": [
-          "4T / R",
-          "2T / R",
-          "T / R",
-          "8T / R"
+          "2T/R",
+          "4T/R",
+          "T/R",
+          "8T/R"
         ]
       },
       {
         "itemId": "item_5",
         "atomId": "JEE_MAIN_2026_PHY_U11_T_fa74cad3",
         "type": "NUMERIC_RESPONSE",
-        "stem": "Two point charges q1 = +2 uC and q2 = +8 uC are placed 30 cm apart in vacuum. At what distance in cm from q1 along the line joining them is the net electric field zero?",
-        "answer": "10",
-        "shortSolution": "E1 = E2 => k*2/x^2 = k*8/(30-x)^2 => 1/x = 2/(30-x) => 30-x = 2x => 3x = 30 => x = 10 cm.",
-        "difficulty": "MEDIUM",
+        "stem": "Two equal point charges of 2 microcoulombs each are separated by a distance of 3 m in vacuum. Find the magnitude of electrostatic force between them in millinewtons (mN).",
+        "answer": "4",
+        "shortSolution": "F = (9 x 10^9 * 2 x 10^-6 * 2 x 10^-6) / (3^2) = (36 x 10^-3) / 9 = 4 x 10^-3 N = 4 mN.",
+        "difficulty": "EASY",
         "options": null
       },
       {
         "itemId": "item_6",
         "atomId": "JEE_MAIN_2026_PHY_U16_T_18160817",
         "type": "SINGLE_SELECT",
-        "stem": "In a single slit diffraction experiment, light of wavelength 600 nm passes through a slit of width 0.2 mm. The angular width of the central maximum in radians is:",
-        "answer": "6 x 10^-3 rad",
-        "shortSolution": "Angular width = 2 * lambda / a = 2 * (600 x 10^-9) / (0.2 x 10^-3) = 6 x 10^-3 rad.",
-        "difficulty": "MEDIUM",
+        "stem": "In a single slit diffraction experiment, if the slit width is doubled, the angular width of the central maximum will:",
+        "answer": "Be halved",
+        "shortSolution": "Angular width of central maximum is 2 * theta = 2 * lambda / a. Doubling the slit width 'a' halves the angular width.",
+        "difficulty": "EASY",
         "options": [
-          "6 x 10^-3 rad",
-          "3 x 10^-3 rad",
-          "1.2 x 10^-2 rad",
-          "1.5 x 10^-3 rad"
+          "Be halved",
+          "Be doubled",
+          "Remain unchanged",
+          "Become four times"
         ]
       },
       {
         "itemId": "item_7",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U19_T_69EF29B0_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "Which of the following disaccharides consists of glucose and fructose units?",
-        "answer": "Sucrose",
-        "shortSolution": "Sucrose is composed of alpha-D-glucose and beta-D-fructose joined by a glycosidic linkage.",
+        "stem": "Hydrolysis of sucrose yields an equimolar mixture of which two monosaccharides?",
+        "answer": "D-glucose and D-fructose",
+        "shortSolution": "Sucrose is a disaccharide composed of alpha-D-glucose and beta-D-fructose, which are released upon hydrolysis.",
         "difficulty": "EASY",
         "options": [
-          "Sucrose",
-          "Maltose",
-          "Lactose",
-          "Cellobiose"
+          "D-glucose and D-fructose",
+          "D-glucose and D-galactose",
+          "Two molecules of D-glucose",
+          "Two molecules of D-fructose"
         ]
       },
       {
         "itemId": "item_8",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U20_T_281FD2A4_CH002",
         "type": "SINGLE_SELECT",
-        "stem": "Prussian blue color obtained in Lassaigne's test for nitrogen is due to the formation of:",
+        "stem": "In Lassaigne's test for nitrogen detection in an organic compound, the Prussian blue color formed is due to:",
         "answer": "Fe4[Fe(CN)6]3",
-        "shortSolution": "The blue complex formed is ferriferrocyanide, Fe4[Fe(CN)6]3.",
-        "difficulty": "EASY",
+        "shortSolution": "The Prussian blue precipitate is ferriferrocyanide, having the chemical formula Fe4[Fe(CN)6]3.",
+        "difficulty": "MEDIUM",
         "options": [
           "Fe4[Fe(CN)6]3",
           "Fe3[Fe(CN)6]2",
@@ -129,9 +129,9 @@
         "itemId": "item_9",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U06_T_A337813A_CH001",
         "type": "NUMERIC_RESPONSE",
-        "stem": "For a reaction A(g) + B(g) <=> 2C(g), the equilibrium constant Kc is 16 at 300 K. If 1 mole of A and 1 mole of B are placed in a 1 L container, find the equilibrium concentration of C in mol/L (rounded to two decimal places).",
-        "answer": "1.33",
-        "shortSolution": "Let x be moles of C formed. Kc = (2x)^2 / ((1-x)(1-x)) = 16 => 2x/(1-x) = 4 => 2x = 4 - 4x => 6x = 4 => x = 2/3. Concentration of C = 2x = 4/3 = 1.33.",
+        "stem": "For a gaseous reaction A(g) + B(g) <=> C(g) + D(g), the equilibrium constant Kc is 100 at 300 K. If initial concentrations of A and B are both 1 M, find the equilibrium concentration of C in M (round to 2 decimal places).",
+        "answer": "0.91",
+        "shortSolution": "Kc = x^2 / (1-x)^2 = 100 => x / (1-x) = 10 => 11x = 10 => x = 10/11 = 0.91 M.",
         "difficulty": "MEDIUM",
         "options": null
       },
@@ -139,39 +139,39 @@
         "itemId": "item_10",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U12_T_6F2E41D5_CH001",
         "type": "SINGLE_SELECT",
-        "stem": "What is the coordination number and oxidation state of Fe in [Fe(CN)6]^3-?",
-        "answer": "Coordination number = 6, Oxidation state = +3",
-        "shortSolution": "Six CN- ligands attach to Fe, so C.N. = 6. Oxidation state x + 6(-1) = -3 => x = +3.",
+        "stem": "What is the primary valency of iron in the coordination complex [Fe(H2O)6]Cl3?",
+        "answer": "+3",
+        "shortSolution": "Primary valency according to Werner's theory corresponds to the oxidation state of the central metal ion, which is +3 for Fe here.",
         "difficulty": "EASY",
         "options": [
-          "Coordination number = 6, Oxidation state = +3",
-          "Coordination number = 6, Oxidation state = +2",
-          "Coordination number = 4, Oxidation state = +3",
-          "Coordination number = 6, Oxidation state = 0"
+          "+3",
+          "+2",
+          "+6",
+          "0"
         ]
       },
       {
         "itemId": "item_11",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U02_T_C2AFC301_CH002",
         "type": "SINGLE_SELECT",
-        "stem": "What is the maximum number of electrons that can be accommodated in a subshell with l = 2?",
-        "answer": "10",
-        "shortSolution": "For l = 2 (d subshell), the number of orbitals is 2l + 1 = 5. Max electrons = 2 * 5 = 10.",
+        "stem": "The total number of atomic orbitals associated with the principal quantum number n = 3 is:",
+        "answer": "9",
+        "shortSolution": "The total number of orbitals for principal quantum number n is n^2. For n = 3, n^2 = 3^2 = 9.",
         "difficulty": "EASY",
         "options": [
-          "10",
-          "6",
-          "2",
-          "14"
+          "9",
+          "4",
+          "3",
+          "16"
         ]
       },
       {
         "itemId": "item_12",
         "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U08_T_A597926E_CH002",
         "type": "NUMERIC_RESPONSE",
-        "stem": "For a first order reaction, the half-life is 20 minutes. Calculate the rate constant of the reaction in min^-1. (Take ln 2 = 0.693, give answer rounded to 3 decimal places)",
-        "answer": "0.035",
-        "shortSolution": "k = ln(2) / t_1/2 = 0.693 / 20 = 0.03465 min^-1, which rounds to 0.035.",
+        "stem": "A first-order chemical reaction has a rate constant of 0.693 min^-1. What is its half-life period in minutes?",
+        "answer": "1",
+        "shortSolution": "t_1/2 = 0.693 / k = 0.693 / 0.693 = 1 minute.",
         "difficulty": "EASY",
         "options": null
       }

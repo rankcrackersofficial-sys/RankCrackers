@@ -1,0 +1,31 @@
+{
+  "missionId": "jee_main_2026",
+  "status": "PENDING",
+  "syllabus": {
+    "verified": 0,
+    "denominator": 0,
+    "pending": 0,
+    "held": 0,
+    "jobs": {}
+  },
+  "digibook": {
+    "approved": 0,
+    "denominator": 0,
+    "pending": 0,
+    "held": 0,
+    "jobs": {}
+  },
+  "crucible": {
+    "packsReady": 0,
+    "packsTotal": 0,
+    "reviewedMacro": 0,
+    "macroTotal": 0,
+    "reviewedMajor": 0,
+    "majorTotal": 0,
+    "keysVerified": 0,
+    "jobs": {}
+  },
+  "exceptionQueue": [],
+  "modelOnlyCanonicalPromotions": 0,
+  "studentPublishAuthorized": false
+}

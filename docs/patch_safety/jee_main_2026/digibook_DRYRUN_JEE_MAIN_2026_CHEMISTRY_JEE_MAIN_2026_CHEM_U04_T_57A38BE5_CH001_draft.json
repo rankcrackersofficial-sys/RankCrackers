@@ -1,0 +1,177 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U04_T_57A38BE5_CH001",
+    "overview": "Thermodynamics studies energy transformations in chemical and physical processes. This unit covers foundational thermodynamic concepts including systems, surroundings, boundary types, state versus path functions, intensive versus extensive properties, process classification (isothermal, adiabatic, isobaric, isochoric, reversible, irreversible), and entropy as a measure of energy dispersion.",
+    "concepts": [
+      {
+        "title": "System, Surroundings, and Boundaries",
+        "explanation": "A system is the specific part of the universe selected for thermodynamic investigation, while surroundings comprise everything outside the system boundary. Systems are categorized based on boundary permeability: open systems exchange both matter and energy, closed systems exchange energy but not matter, and isolated systems exchange neither matter nor energy with surroundings."
+      },
+      {
+        "title": "State Functions and Path Functions",
+        "explanation": "State functions (such as internal energy U, enthalpy H, entropy S, Gibbs free energy G, pressure P, volume V, and temperature T) depend solely on the present state of the system and are independent of the path taken. Path functions (such as heat q and work w) depend explicitly on the specific pathway followed during a transition."
+      },
+      {
+        "title": "Extensive and Intensive Properties",
+        "explanation": "Extensive properties (e.g., volume, mass, heat capacity, internal energy, entropy) depend directly on the mass or size of the system. Intensive properties (e.g., temperature, pressure, density, molar heat capacity, refractive index, surface tension) are independent of the quantity of matter present."
+      },
+      {
+        "title": "Types of Thermodynamic Processes",
+        "explanation": "Processes are classified according to constant parameters: Isothermal (dT = 0), Adiabatic (q = 0), Isobaric (dP = 0), Isochoric (dV = 0), and Cyclic (delta U = 0, delta H = 0). Processes are also divided into reversible (occurring infinitesimally slowly through quasi-static equilibrium states) and irreversible (spontaneous processes occurring in finite steps)."
+      },
+      {
+        "title": "Entropy and the Second Law",
+        "explanation": "Entropy (S) is a thermodynamic state function measuring the degree of randomness or thermal energy dispersion within a system. For a reversible change, dS = dq_rev / T. The Second Law of Thermodynamics dictates that for any spontaneous process, the total entropy change of the universe (system + surroundings) is greater than zero."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Entropy Change for Reversible Heat Transfer",
+        "formula": "dS = dq_rev / T",
+        "applicability": "Applies to reversible heat transfer occurring at constant absolute temperature T.",
+        "variables": [
+          {
+            "symbol": "dS",
+            "meaning": "Differential change in system entropy",
+            "unit": "J/K"
+          },
+          {
+            "symbol": "dq_rev",
+            "meaning": "Reversible heat transferred to the system",
+            "unit": "J"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Absolute temperature",
+            "unit": "K"
+          }
+        ]
+      },
+      {
+        "label": "Entropy Change of an Ideal Gas",
+        "formula": "delta S = n * C_v * ln(T2 / T1) + n * R * ln(V2 / V1)",
+        "applicability": "Applies to state changes of an ideal gas with constant heat capacity C_v.",
+        "variables": [
+          {
+            "symbol": "delta S",
+            "meaning": "Entropy change of the ideal gas",
+            "unit": "J/K"
+          },
+          {
+            "symbol": "n",
+            "meaning": "Amount of substance",
+            "unit": "mol"
+          },
+          {
+            "symbol": "C_v",
+            "meaning": "Molar heat capacity at constant volume",
+            "unit": "J/(mol K)"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant",
+            "unit": "J/(mol K)"
+          },
+          {
+            "symbol": "T1, T2",
+            "meaning": "Initial and final absolute temperatures",
+            "unit": "K"
+          },
+          {
+            "symbol": "V1, V2",
+            "meaning": "Initial and final volumes",
+            "unit": "m^3"
+          }
+        ]
+      },
+      {
+        "label": "Total Entropy Criterion for Spontaneity",
+        "formula": "delta S_total = delta S_system + delta S_surroundings >= 0",
+        "applicability": "General criterion for process spontaneity (>0 for spontaneous, =0 for equilibrium).",
+        "variables": [
+          {
+            "symbol": "delta S_total",
+            "meaning": "Total entropy change of the universe",
+            "unit": "J/K"
+          },
+          {
+            "symbol": "delta S_system",
+            "meaning": "Entropy change of the system",
+            "unit": "J/K"
+          },
+          {
+            "symbol": "delta S_surroundings",
+            "meaning": "Entropy change of the surroundings",
+            "unit": "J/K"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Heat capacity is an intensive property.",
+        "correction": "Heat capacity (C) is extensive because it depends on the amount of material. However, molar heat capacity (C_m) and specific heat capacity (c) are intensive properties."
+      },
+      {
+        "misconception": "Entropy of a system can never decrease.",
+        "correction": "The entropy of a system can decrease (delta S_system < 0) during a process provided the surroundings experience a larger entropy increase such that delta S_total > 0."
+      },
+      {
+        "misconception": "Heat and work are state functions.",
+        "correction": "Heat (q) and work (w) are path functions. However, their sum delta U = q + w represents internal energy change, which is a state function."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the entropy change when 2 moles of an ideal gas expand isothermally and reversibly from 10 L to 100 L at 300 K. (Given R = 8.314 J/(mol K), ln(10) = 2.303).",
+        "steps": [
+          "Identify process parameters: n = 2 mol, isothermal process implies T1 = T2 = 300 K, V1 = 10 L, V2 = 100 L.",
+          "Use the isothermal ideal gas entropy formula: delta S = n * R * ln(V2 / V1).",
+          "Substitute known values: delta S = 2 * 8.314 * ln(100 / 10) = 2 * 8.314 * ln(10).",
+          "Calculate numeric result: delta S = 2 * 8.314 * 2.303 = 38.29 J/K."
+        ],
+        "answer": "delta S = +38.29 J/K"
+      },
+      {
+        "problem": "Categorize the following properties into intensive or extensive: Volume, Temperature, Enthalpy, Molar Heat Capacity, Density.",
+        "steps": [
+          "Recall definition: Extensive properties depend on mass/size; intensive properties do not.",
+          "Volume and Enthalpy double when system quantity doubles, so they are extensive.",
+          "Temperature, Molar Heat Capacity, and Density remain unchanged upon scaling the system, so they are intensive."
+        ],
+        "answer": "Extensive properties: Volume, Enthalpy. Intensive properties: Temperature, Molar Heat Capacity, Density."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following is an intensive property? Options: (A) Internal Energy (B) Gibbs Free Energy (C) Refractive Index (D) Entropy",
+        "answer": "Correct Option: (C). Explanation: Refractive index is independent of the size or quantity of the system, making it an intensive property, whereas internal energy, Gibbs free energy, and entropy scale with matter amount."
+      },
+      {
+        "question": "In an isolated system undergoing a spontaneous process, what happens to the system entropy? Options: (A) Decreases (B) Remains constant (C) Increases (D) Becomes zero",
+        "answer": "Correct Option: (C). Explanation: An isolated system exchanges no matter or energy with surroundings (delta S_surroundings = 0). For spontaneous processes, delta S_total = delta S_system > 0, so system entropy increases."
+      },
+      {
+        "question": "Which condition always holds true for any cyclic process? Options: (A) q = 0 (B) w = 0 (C) delta U = 0 (D) delta S_surroundings = 0",
+        "answer": "Correct Option: (C). Explanation: In a cyclic process, the system returns to its initial state. Since internal energy U is a state function, its net change over a cycle is delta U = 0."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 6: Chemical Thermodynamics",
+      "JEE Main Official Syllabus - Physical Chemistry: Fundamentals of Thermodynamics"
+    ]
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U05_T_7ECB31D5_CH001",
+    "overview": "This comprehensive content node covers physical chemistry fundamentals regarding solutions. It includes methods for expressing concentration (molarity, molality, mole fraction, mass and volume percentages), vapor pressure of liquid solutions, Raoult's Law, ideal and non-ideal solutions with vapor pressure-composition phase diagrams, colligative properties (relative lowering of vapor pressure, elevation of boiling point, depression of freezing point, osmotic pressure), determination of molar mass, and abnormal molar masses using the van 't Hoff factor (i).",
+    "concepts": [
+      {
+        "title": "Concentration Terms of Solutions",
+        "explanation": "Concentration measures the amount of solute dissolved in a given amount of solvent or solution. Key terms include: Molarity (M, moles of solute per liter of solution, temperature dependent), Molality (m, moles of solute per kilogram of solvent, temperature independent), Mole Fraction (x, ratio of moles of a component to total moles, temperature independent), Mass Percentage (% w/w), and Volume Percentage (% v/v)."
+      },
+      {
+        "title": "Vapor Pressure and Raoult's Law",
+        "explanation": "Raoult's Law states that for a solution of volatile liquids, the partial vapor pressure of each component in the solution is directly proportional to its mole fraction. For a non-volatile solute, the vapor pressure of the solution is purely due to the solvent and is directly proportional to the mole fraction of the solvent."
+      },
+      {
+        "title": "Ideal vs. Non-Ideal Solutions",
+        "explanation": "Ideal solutions obey Raoult's law over the entire range of concentrations, where solute-solvent interactions equal solute-solute and solvent-solvent interactions (delta H_mix = 0, delta V_mix = 0). Non-ideal solutions show deviations: Positive deviation occurs when solute-solvent interactions are weaker than pure component interactions (delta H_mix > 0, delta V_mix > 0, e.g., ethanol + acetone), leading to minimum boiling azeotropes. Negative deviation occurs when solute-solvent interactions are stronger (delta H_mix < 0, delta V_mix < 0, e.g., acetone + chloroform), leading to maximum boiling azeotropes."
+      },
+      {
+        "title": "Colligative Properties",
+        "explanation": "Properties that depend solely on the number of solute particles relative to the total number of particles present, regardless of their chemical nature. These include: (1) Relative Lowering of Vapor Pressure, (2) Elevation of Boiling Point, (3) Depression of Freezing Point, and (4) Osmotic Pressure. They are used to determine experimental molar masses of non-volatile solutes."
+      },
+      {
+        "title": "Abnormal Molar Mass and van 't Hoff Factor (i)",
+        "explanation": "When solutes undergo dissociation or association in solution, the experimentally determined molar mass differs from the theoretical value. The van 't Hoff factor 'i' accounts for this extent: i = (Observed colligative property) / (Calculated colligative property) = (Normal molar mass) / (Abnormal molar mass) = (Total moles of particles after association/dissociation) / (Initial moles of solute)."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Molarity (M)",
+        "formula": "M = n_solute / V_solution_L",
+        "applicability": "Expressing solution concentration per unit volume.",
+        "variables": [
+          {
+            "symbol": "M",
+            "meaning": "Molarity",
+            "unit": "mol/L or M"
+          },
+          {
+            "symbol": "n_solute",
+            "meaning": "Number of moles of solute",
+            "unit": "mol"
+          },
+          {
+            "symbol": "V_solution_L",
+            "meaning": "Volume of solution",
+            "unit": "L"
+          }
+        ]
+      },
+      {
+        "label": "Molality (m)",
+        "formula": "m = n_solute / w_solvent_kg",
+        "applicability": "Expressing solution concentration independent of temperature.",
+        "variables": [
+          {
+            "symbol": "m",
+            "meaning": "Molality",
+            "unit": "mol/kg or m"
+          },
+          {
+            "symbol": "n_solute",
+            "meaning": "Number of moles of solute",
+            "unit": "mol"
+          },
+          {
+            "symbol": "w_solvent_kg",
+            "meaning": "Mass of solvent",
+            "unit": "kg"
+          }
+        ]
+      },
+      {
+        "label": "Raoult's Law (Relative Lowering of Vapor Pressure)",
+        "formula": "(P_A^0 - P_A) / P_A^0 = i * x_B",
+        "applicability": "Dilute solutions containing non-volatile solute.",
+        "variables": [
+          {
+            "symbol": "P_A^0",
+            "meaning": "Vapor pressure of pure solvent",
+            "unit": "atm or mmHg"
+          },
+          {
+            "symbol": "P_A",
+            "meaning": "Vapor pressure of solution",
+            "unit": "atm or mmHg"
+          },
+          {
+            "symbol": "x_B",
+            "meaning": "Mole fraction of solute",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "i",
+            "meaning": "van 't Hoff factor",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Elevation of Boiling Point",
+        "formula": "delta T_b = i * K_b * m",
+        "applicability": "Dilute solutions of non-volatile solute.",
+        "variables": [
+          {
+            "symbol": "delta T_b",
+            "meaning": "Boiling point elevation (T_b - T_b^0)",
+            "unit": "K or °C"
+          },
+          {
+            "symbol": "K_b",
+            "meaning": "Ebullioscopic constant (molal boiling point elevation constant)",
+            "unit": "K kg/mol"
+          },
+          {
+            "symbol": "m",
+            "meaning": "Molality of solute",
+            "unit": "mol/kg"
+          },
+          {
+            "symbol": "i",
+            "meaning": "van 't Hoff factor",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Depression of Freezing Point",
+        "formula": "delta T_f = i * K_f * m",
+        "applicability": "Dilute solutions of non-volatile solute.",
+        "variables": [
+          {
+            "symbol": "delta T_f",
+            "meaning": "Freezing point depression (T_f^0 - T_f)",
+            "unit": "K or °C"
+          },
+          {
+            "symbol": "K_f",
+            "meaning": "Cryoscopic constant (molal freezing point depression constant)",
+            "unit": "K kg/mol"
+          },
+          {
+            "symbol": "m",
+            "meaning": "Molality of solute",
+            "unit": "mol/kg"
+          },
+          {
+            "symbol": "i",
+            "meaning": "van 't Hoff factor",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "Osmotic Pressure",
+        "formula": "pi = i * C * R * T",
+        "applicability": "Dilute solutions, ideal solute behavior.",
+        "variables": [
+          {
+            "symbol": "pi",
+            "meaning": "Osmotic pressure",
+            "unit": "atm or Pa"
+          },
+          {
+            "symbol": "C",
+            "meaning": "Molar concentration (n/V)",
+            "unit": "mol/L or mol/m^3"
+          },
+          {
+            "symbol": "R",
+            "meaning": "Universal gas constant",
+            "unit": "L atm / (mol K) or J / (mol K)"
+          },
+          {
+            "symbol": "T",
+            "meaning": "Absolute temperature",
+            "unit": "K"
+          },
+          {
+            "symbol": "i",
+            "meaning": "van 't Hoff factor",
+            "unit": "dimensionless"
+          }
+        ]
+      },
+      {
+        "label": "van 't Hoff factor (Degree of Dissociation alpha)",
+        "formula": "alpha = (i - 1) / (n - 1)",
+        "applicability": "Solutes that dissociate into n ions.",
+        "variables": [
+          {
+            "symbol": "alpha",
+            "meaning": "Degree of dissociation",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "i",
+            "meaning": "van 't Hoff factor",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "n",
+            "meaning": "Number of ions produced per formula unit",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Molarity and molality are identical or interchangeable for any solution.",
+        "correction": "Molarity is based on the volume of the solution in liters and changes with temperature. Molality is based on the mass of solvent in kilograms and is temperature independent. They are nearly equal only in extremely dilute aqueous solutions where 1 L solution ~ 1 kg solvent."
+      },
+      {
+        "misconception": "The van 't Hoff factor i is always greater than 1.",
+        "correction": "The value of i is greater than 1 for solutes undergoing dissociation (e.g., NaCl), but less than 1 for solutes undergoing association (e.g., benzoic acid dimerizing in benzene where i ~ 0.5), and equal to 1 for non-electrolytes."
+      },
+      {
+        "misconception": "Boiling point elevation delta T_b means the new boiling point is delta T_b.",
+        "correction": "delta T_b is the increase in boiling point above pure solvent's boiling point. The new boiling point T_b = T_b^0 + delta T_b."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the molality and mole fraction of KI if the density of 20% (w/w) aqueous KI solution is 1.202 g/mL. (Molar mass of KI = 166 g/mol, Water = 18 g/mol)",
+        "steps": [
+          "Step 1: Assume 100 g of solution. Mass of KI = 20 g, Mass of water (solvent) = 80 g = 0.080 kg.",
+          "Step 2: Moles of KI = 20 g / 166 g/mol = 0.1205 mol.",
+          "Step 3: Calculate molality (m) = Moles of solute / Mass of solvent in kg = 0.1205 mol / 0.080 kg = 1.506 m.",
+          "Step 4: Moles of water = 80 g / 18 g/mol = 4.444 mol.",
+          "Step 5: Calculate mole fraction of KI (x_KI) = 0.1205 / (0.1205 + 4.444) = 0.1205 / 4.5645 = 0.0264."
+        ],
+        "answer": "Molality = 1.506 m, Mole fraction of KI = 0.0264"
+      },
+      {
+        "problem": "A 0.5% aqueous solution of KCl was found to freeze at -0.24 °C. Calculate the van 't Hoff factor and degree of dissociation of KCl. (K_f for water = 1.86 K kg/mol, Molar mass of KCl = 74.5 g/mol)",
+        "steps": [
+          "Step 1: 0.5% (w/w) solution means 0.5 g KCl in 99.5 g water = 0.0995 kg water.",
+          "Step 2: Theoretical molality m = (0.5 / 74.5) / 0.0995 = 0.00671 mol / 0.0995 kg = 0.0674 m.",
+          "Step 3: Observed delta T_f = 0 - (-0.24 °C) = 0.24 °C.",
+          "Step 4: Using delta T_f = i * K_f * m => 0.24 = i * 1.86 * 0.0674.",
+          "Step 5: Solve for i => i = 0.24 / (1.86 * 0.0674) = 0.24 / 0.1254 = 1.914.",
+          "Step 6: KCl dissociates into 2 ions (n = 2). Degree of dissociation alpha = (i - 1) / (n - 1) = (1.914 - 1) / (2 - 1) = 0.914 or 91.4%."
+        ],
+        "answer": "van 't Hoff factor i = 1.914, Degree of dissociation alpha = 0.914 (91.4%)"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which concentration term changes with temperature? Options: (A) Molality (B) Mole fraction (C) Mass percentage (D) Molarity",
+        "answer": "Correct Answer: (D) Molarity. Molarity is defined as moles of solute per liter of solution. Since volume expands or contracts with temperature changes, molarity varies with temperature. Molality, mole fraction, and mass percentage depend only on mass, which is temperature-independent."
+      },
+      {
+        "question": "A mixture of chloroform and acetone shows negative deviation from Raoult's law because: Options: (A) Chloroform and acetone form hydrogen bonds with each other (B) Intermolecular forces between acetone molecules increase (C) Volume increases upon mixing (D) Enthalpy of mixing is positive",
+        "answer": "Correct Answer: (A) Chloroform and acetone form hydrogen bonds with each other. The H-atom of chloroform forms a strong hydrogen bond with the carbonyl oxygen of acetone (solute-solvent interaction > solute-solute or solvent-solvent). This lowers escaping tendency, resulting in negative deviation (delta H_mix < 0, delta V_mix < 0)."
+      },
+      {
+        "question": "What is the theoretical van 't Hoff factor (i) for complete dissociation of K4[Fe(CN)6] in aqueous solution? Options: (A) 4 (B) 5 (C) 6 (D) 1",
+        "answer": "Correct Answer: (B) 5. Complete dissociation of K4[Fe(CN)6] produces 4 K+ ions and 1 [Fe(CN)6]4- complex anion. Total number of ions n = 4 + 1 = 5. For 100% dissociation (alpha = 1), i = n = 5."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 2: Solutions",
+      "JEE Main Official Syllabus - Physical Chemistry: Unit 5 Solutions"
+    ]
+  }
+}

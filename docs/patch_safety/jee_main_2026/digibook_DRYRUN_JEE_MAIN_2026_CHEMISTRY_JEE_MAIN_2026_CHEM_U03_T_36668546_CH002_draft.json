@@ -1,0 +1,129 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_36668546_CH002",
+    "overview": "This topic covers essential covalent bonding principles including electronegativity and bond polarity, Fajan's rules governing partial covalent character in ionic bonds, dipole moment calculations and structural implications, as well as VSEPR theory for predicting shapes and geometries of simple molecules.",
+    "concepts": [
+      {
+        "title": "Electronegativity and Bond Polarity",
+        "explanation": "Electronegativity is an atom's ability in a covalent bond to attract shared electron pairs. Difference in electronegativity between bonded atoms creates dipole moments, making bonds polar covalent."
+      },
+      {
+        "title": "Fajan's Rules for Ionic-Covalent Polarization",
+        "explanation": "Fajan's rules dictate that covalent character increases in ionic compounds when the cation is small, the anion is large, charges on ions are high, or the cation possesses a pseudo-noble gas configuration (ns2 np6 nd10)."
+      },
+      {
+        "title": "Dipole Moment and Molecular Geometry",
+        "explanation": "Dipole moment is a vector quantity representing charge separation. Net molecular dipole moment is the vector sum of individual bond moments, determined by overall molecular symmetry."
+      },
+      {
+        "title": "VSEPR Theory and Molecular Shapes",
+        "explanation": "Valence Shell Electron Pair Repulsion (VSEPR) theory predicts molecular geometry based on minimizing repulsion between bonding and lone electron pairs surrounding the central atom. The order of repulsion is: Lone Pair - Lone Pair > Lone Pair - Bond Pair > Bond Pair - Bond Pair."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Dipole Moment",
+        "formula": "\\mu = q \\times d",
+        "applicability": "Calculates dipole moment of polar bonds or molecules.",
+        "variables": [
+          {
+            "symbol": "\\mu",
+            "meaning": "Dipole moment",
+            "unit": "Debye (D) or C m"
+          },
+          {
+            "symbol": "q",
+            "meaning": "Magnitude of charge separation",
+            "unit": "Coulomb (C) or esu"
+          },
+          {
+            "symbol": "d",
+            "meaning": "Distance between charges (bond length)",
+            "unit": "Meter (m) or Angstrom (A)"
+          }
+        ]
+      },
+      {
+        "label": "Percentage Ionic Character",
+        "formula": "\\%\\text{ Ionic Character} = \\left(\\frac{\\mu_{\\text{observed}}}{\\mu_{\\text{theoretical}}}\\right) \\times 100",
+        "applicability": "Determines the fractional ionic character based on experimentally measured and theoretical 100% ionic dipole moments.",
+        "variables": [
+          {
+            "symbol": "\\mu_{\\text{observed}}",
+            "meaning": "Experimental dipole moment",
+            "unit": "Debye (D)"
+          },
+          {
+            "symbol": "\\mu_{\\text{theoretical}}",
+            "meaning": "Calculated dipole moment assuming full unit electron transfer",
+            "unit": "Debye (D)"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Any molecule containing polar covalent bonds is inherently a polar molecule.",
+        "correction": "Molecules containing polar bonds can be non-polar overall if symmetrical geometry causes individual bond dipole vectors to cancel out (e.g., CO2, BF3, CCl4)."
+      },
+      {
+        "misconception": "Higher cation charge results in greater ionic character.",
+        "correction": "Higher charge on a cation increases its polarizing power according to Fajan's rules, which distorts the electron cloud of the anion and increases covalent character."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Determine the molecular shape and electron geometry of SF4 using VSEPR theory.",
+        "steps": [
+          "Step 1: Identify central atom sulfur with 6 valence electrons.",
+          "Step 2: Sulfur forms 4 bond pairs with fluorine atoms and retains 1 lone pair (total 5 electron pairs).",
+          "Step 3: 5 electron pairs correspond to trigonal bipyramidal electron geometry.",
+          "Step 4: Place the lone pair in an equatorial position to minimize lp-bp repulsions.",
+          "Step 5: The resulting geometry of sulfur tetrafluoride is a seesaw shape."
+        ],
+        "answer": "Electron Geometry: Trigonal Bipyramidal; Molecular Shape: Seesaw"
+      },
+      {
+        "problem": "Arrange LiCl, NaCl, KCl, and RbCl in order of increasing covalent character.",
+        "steps": [
+          "Step 1: Note that the anion (Cl-) is identical across all compounds.",
+          "Step 2: Cations are alkali metals with +1 charge: Li+, Na+, K+, Rb+.",
+          "Step 3: Down group 1, ionic size increases: Li+ < Na+ < K+ < Rb+.",
+          "Step 4: According to Fajan's rules, smaller cation size increases polarizing power and covalent character."
+        ],
+        "answer": "RbCl < KCl < NaCl < LiCl"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following molecules has a non-zero net dipole moment? (A) CO2  (B) BF3  (C) NF3  (D) CCl4",
+        "answer": "Correct Option: (C). Explanation: NF3 has trigonal pyramidal molecular geometry with a central nitrogen atom containing a lone pair, making it asymmetric with a net non-zero dipole moment. CO2, BF3, and CCl4 are symmetrical, causing vector cancellation."
+      },
+      {
+        "question": "According to Fajan's rules, which of the following compounds exhibits maximum covalent character? (A) NaCl  (B) MgCl2  (C) AlCl3  (D) SiCl4",
+        "answer": "Correct Option: (D). Explanation: Si4+ has the highest oxidation state (+4) and smallest ionic radius among the central cations, giving it maximum polarizing power and highest covalent character."
+      },
+      {
+        "question": "What is the molecular geometry of XeF4 predicted by VSEPR theory? (A) Tetrahedral  (B) Square Planar  (C) Octahedral  (D) Trigonal Bipyramidal",
+        "answer": "Correct Option: (B). Explanation: Xe has 8 valence electrons. In XeF4, there are 4 bonding pairs and 2 lone pairs (total 6 electron pairs, octahedral electron geometry). Place lone pairs in trans axial positions to minimize repulsions, producing a square planar molecular shape."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 4: Chemical Bonding and Molecular Structure",
+      "JEE Main Official Syllabus 2026: Physical and Inorganic Chemistry"
+    ]
+  }
+}

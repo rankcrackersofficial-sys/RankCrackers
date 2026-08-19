@@ -1,0 +1,148 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U01_T_DEB95734_CH001",
+    "overview": "Measurement is the process of comparing an unknown physical quantity with a standard unit. Physical quantities are broadly categorized into fundamental (base) quantities and derived quantities. This module covers systems of units including FPS, CGS, MKS, and the International System of Units (SI), detailing the 7 base units, supplementary units, and rules for expressing derived units.",
+    "concepts": [
+      {
+        "title": "Physical Quantities and Units",
+        "explanation": "A physical quantity is any characteristic of a body or system that can be measured. The result of a measurement is expressed as Q = n * u, where Q is the physical quantity, n is the numerical magnitude, and u is the unit chosen. For a given physical quantity, the product n * u remains constant regardless of the unit system chosen."
+      },
+      {
+        "title": "System of Units",
+        "explanation": "A complete set of units containing both base and derived units used to measure all types of physical quantities is called a system of units. Historical systems include CGS (centimetre, gram, second), FPS (foot, pound, second), and MKS (metre, kilogram, second). The modern international standard is the SI system."
+      },
+      {
+        "title": "SI Fundamental and Supplementary Units",
+        "explanation": "The International System of Units (SI) defines 7 base physical quantities: Length (metre, m), Mass (kilogram, kg), Time (second, s), Electric Current (ampere, A), Thermodynamic Temperature (kelvin, K), Amount of Substance (mole, mol), and Luminous Intensity (candela, cd). It also defines 2 supplementary dimensionless units: Plane Angle (radian, rad) and Solid Angle (steradian, sr)."
+      },
+      {
+        "title": "Derived Units",
+        "explanation": "Derived units are units of measurement derived from mathematical combinations of the base units. Examples include velocity (m/s), force (N or kg*m/s^2), and pressure (Pa or N/m^2). Derived units allow representation of complex physical quantities using base units."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Magnitude-Unit Invariance",
+        "formula": "Q = n1 * u1 = n2 * u2",
+        "applicability": "Conversion of a physical quantity from one system of units to another",
+        "variables": [
+          {
+            "symbol": "n1, n2",
+            "meaning": "Numerical values in system 1 and system 2 respectively",
+            "unit": "Dimensionless"
+          },
+          {
+            "symbol": "u1, u2",
+            "meaning": "Units of measurement in system 1 and system 2 respectively",
+            "unit": "Varies depending on physical quantity"
+          }
+        ]
+      },
+      {
+        "label": "Plane Angle Definition",
+        "formula": "theta = s / r",
+        "applicability": "Calculating plane angle in radians",
+        "variables": [
+          {
+            "symbol": "theta",
+            "meaning": "Plane angle",
+            "unit": "radian (rad)"
+          },
+          {
+            "symbol": "s",
+            "meaning": "Arc length",
+            "unit": "metre (m)"
+          },
+          {
+            "symbol": "r",
+            "meaning": "Radius",
+            "unit": "metre (m)"
+          }
+        ]
+      },
+      {
+        "label": "Solid Angle Definition",
+        "formula": "Omega = A / r^2",
+        "applicability": "Calculating solid angle subtended by a spherical surface region at the centre",
+        "variables": [
+          {
+            "symbol": "Omega",
+            "meaning": "Solid angle",
+            "unit": "steradian (sr)"
+          },
+          {
+            "symbol": "A",
+            "meaning": "Area on the spherical surface",
+            "unit": "square metre (m^2)"
+          },
+          {
+            "symbol": "r",
+            "meaning": "Radius of the sphere",
+            "unit": "metre (m)"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Radian and Steradian are base quantities with physical dimensions.",
+        "correction": "Plane angle and solid angle are dimensionless derived units (formerly termed supplementary units)."
+      },
+      {
+        "misconception": "Changing the unit system changes the magnitude of the physical quantity.",
+        "correction": "The physical quantity remains invariant under unit conversion; its numerical magnitude changes inversely with the unit size (n * u = constant)."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Convert a force of 10 N into CGS units (dynes). Given 1 N = 1 kg*m/s^2 and 1 dyne = 1 g*cm/s^2.",
+        "steps": [
+          "Step 1: Write down the relation between SI and CGS base units. 1 kg = 1000 g, 1 m = 100 cm.",
+          "Step 2: Express 1 N in terms of CGS units: 1 N = 1 kg * 1 m / 1 s^2 = 1000 g * 100 cm / 1 s^2 = 10^5 g*cm/s^2 = 10^5 dynes.",
+          "Step 3: Multiply the given value in N by the conversion factor: 10 N = 10 * 10^5 dynes = 10^6 dynes."
+        ],
+        "answer": "10^6 dynes"
+      },
+      {
+        "problem": "The density of a material in CGS units is 8 g/cm^3. What is its density in SI units?",
+        "steps": [
+          "Step 1: Identify conversion factors: 1 g = 10^-3 kg, 1 cm = 10^-2 m.",
+          "Step 2: Convert 1 g/cm^3 to kg/m^3: 1 g/cm^3 = (10^-3 kg) / (10^-2 m)^3 = 10^-3 / 10^-6 kg/m^3 = 10^3 kg/m^3.",
+          "Step 3: Multiply by 8: 8 * 10^3 kg/m^3 = 8000 kg/m^3."
+        ],
+        "answer": "8000 kg/m^3"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which of the following is NOT a fundamental base unit in the SI system? (A) Kelvin (B) Candela (C) Joule (D) Ampere",
+        "answer": "Option (C) is correct. Joule is a derived SI unit for energy (kg*m^2/s^2), whereas Kelvin, Candela, and Ampere are fundamental base units."
+      },
+      {
+        "question": "If the unit of length is doubled and the unit of time is halved, by what factor does the unit of velocity change?",
+        "answer": "Velocity unit is (length / time). If length unit is multiplied by 2 and time unit is multiplied by 1/2, the unit of velocity becomes 2 / (1/2) = 4 times the original unit."
+      },
+      {
+        "question": "What is the SI unit of solid angle, and what type of unit is it?",
+        "answer": "The SI unit of solid angle is steradian (sr). It is classified as a dimensionless derived unit."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Physics Class 11, Chapter 2: Units and Measurements",
+      "Concepts of Physics Vol 1 by H.C. Verma, Chapter 1: Introduction to Physics"
+    ]
+  }
+}

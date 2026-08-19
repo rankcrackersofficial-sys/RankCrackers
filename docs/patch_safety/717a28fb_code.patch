@@ -1,0 +1,453 @@
+﻿commit 717a28fb4c3f00784cd36fd3101cbd12706ebd0d
+Author: Founder <founder@rankcrackers.in>
+Date:   Tue Aug 18 18:37:30 2026 +0530
+
+    fix(mission-link): bind Founder missions to student projections
+
+diff --git a/functions/backfill_student_mission_catalog.js b/functions/backfill_student_mission_catalog.js
+index b9b4e2ca..44c388d2 100644
+--- a/functions/backfill_student_mission_catalog.js
++++ b/functions/backfill_student_mission_catalog.js
+@@ -154,6 +154,13 @@ function buildCatalogPayload(id, data, now) {
+ 
+     return {
+         id: id,
++        missionId: id,
++        realmId: id,
++        sourceMissionId: id,
++        sourceMissionVersion: String(data.version || data.canonicalVersion || '1'),
++        sourcePath: `mission_realms/${id}`,
++        sourceType: 'mission_realms',
++        studentPublicationState: isArchived ? 'ARCHIVED' : 'COMING_SOON',
+         title: title,
+         name: title,
+         subtitle: title,
+diff --git a/functions/callable/handle_sentinel_action.js b/functions/callable/handle_sentinel_action.js
+index 7c7d855b..786720f8 100644
+--- a/functions/callable/handle_sentinel_action.js
++++ b/functions/callable/handle_sentinel_action.js
+@@ -774,6 +774,13 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
+ 
+   return {
+     id: realmId,
++    missionId: realmId,
++    realmId: realmId,
++    sourceMissionId: realmId,
++    sourceMissionVersion: String(realmData.version || realmData.canonicalVersion || recruitmentData.version || '1'),
++    sourcePath: `mission_realms/${realmId}`,
++    sourceType: 'mission_realms',
++    studentPublicationState: isArchived ? 'ARCHIVED' : 'COMING_SOON',
+     title: name,
+     name: name,
+     subtitle: name,
+diff --git a/functions/canonical_mission_registry.js b/functions/canonical_mission_registry.js
+index 58fe488d..d23d188b 100644
+--- a/functions/canonical_mission_registry.js
++++ b/functions/canonical_mission_registry.js
+@@ -5,7 +5,7 @@
+ 
+ // Approved pilot alias registry
+ const PILOT_ALIASES = {
+-  'jee_main_2026': ['jee main', 'jee main 2026', 'jee main 2027'],
++  'jee_main_2026': ['jee main 2026'],
+   'neet_(ug)-2027': ['neet', 'neet ug', 'neet (ug) 2027'],
+   'RPSC_FIRST_GRADE2026_2026_1782713222215': ['rpsc 1st grade', 'rpsc first grade', 'rpsc first grade 2026']
+ };
+@@ -20,6 +20,12 @@ function resolveCanonicalMissionId(examName, organization, year, cycle = '') {
+   const normName = String(examName || '').trim().toLowerCase();
+   const targetYear = parseInt(year || 2026, 10);
+ 
++  // Preserve the 2026 pilot only for explicit 2026-era JEE Main input.
++  // Later Founder-created missions such as JEE Main 2027 must keep their own identity.
++  if (normName === 'jee main' && targetYear === 2026) {
++    return 'jee_main_2026';
++  }
++
+   // 1. Check pilot aliases with exact matching to prevent partial matches
+   for (const [canonicalId, aliases] of Object.entries(PILOT_ALIASES)) {
+     for (const alias of aliases) {
+diff --git a/functions/test_mission_mirror.js b/functions/test_mission_mirror.js
+index 379edc87..643f5b35 100644
+--- a/functions/test_mission_mirror.js
++++ b/functions/test_mission_mirror.js
+@@ -302,7 +302,7 @@ async function runSuite() {
+     
+     await handleSentinelAction(data, founderContext);
+ 
+-    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
++    const shell = mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'];
+     assert.ok(shell);
+     assert.strictEqual(shell.status, 'PRIVATE_REVIEW_LOCKED');
+     assert.strictEqual(shell.userPanelVisible, false);
+@@ -501,10 +501,10 @@ async function runSuite() {
+     };
+ 
+     await handleSentinelAction(data, founderContext);
+-    const doc1 = mockDatabaseState.student_mission_catalog['jee_main_2026'];
++    const doc1 = mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'];
+     
+     await handleSentinelAction(data, founderContext);
+-    const doc2 = mockDatabaseState.student_mission_catalog['jee_main_2026'];
++    const doc2 = mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'];
+ 
+     assert.deepStrictEqual(doc1.id, doc2.id);
+   });
+@@ -638,14 +638,14 @@ async function runSuite() {
+     }, /PROHIBITED_WRITE_VIOLATION/);
+   });
+ 
+-  // 19. Canonical mapping of JEE Main 2027 to jee_main_2026
+-  await testCase("Canonical mapping of JEE Main 2027 to jee_main_2026", async () => {
++  // 19. Canonical JEE Main 2027 must not collapse into the 2026 legacy mission
++  await testCase("Canonical JEE Main 2027 does not map to jee_main_2026", async () => {
+     const mapped = resolveCanonicalMissionId('JEE Main', 'NTA', 2027);
+-    assert.strictEqual(mapped, 'jee_main_2026');
++    assert.strictEqual(mapped, 'rec_nta_jee_main_2027');
+   });
+ 
+-  // 20. Duplicate-Mission Migration Risk (prevent rec_nta_jee_main_2027 creation)
+-  await testCase("Duplicate-Mission Migration Risk (prevent rec_nta_jee_main_2027)", async () => {
++  // 20. Live Founder identity must be explicit, not silently downgraded to the 2026 pilot
++  await testCase("Live Founder JEE Main 2027 creates its own canonical identity", async () => {
+     resetMockDb();
+     const data = {
+       action: 'launch_exam_mission',
+@@ -659,9 +659,9 @@ async function runSuite() {
+     
+     await handleSentinelAction(data, founderContext);
+ 
+-    // Verify it resolved to jee_main_2026 and NOT rec_nta_jee_main_2027
+-    assert.ok(mockDatabaseState.student_mission_catalog['jee_main_2026']);
+-    assert.strictEqual(mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'], undefined);
++    // Verify it resolved to the 2027 canonical identity and did not reuse the legacy 2026 pilot.
++    assert.ok(mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027']);
++    assert.strictEqual(mockDatabaseState.student_mission_catalog['jee_main_2026'], undefined);
+   });
+ 
+   // 21. Declare Result write inventory limits writes
+@@ -1110,10 +1110,10 @@ async function runSuite() {
+     }, /ACCESS DENIED/);
+   });
+ 
+-  // 42. Canonical: Pilot alias mapping resolution
+-  await testCase("Canonical: Pilot alias mapping resolution", async () => {
++  // 42. Canonical: new live mission identity is not collapsed into a legacy pilot alias
++  await testCase("Canonical: new live mission identity is not collapsed into legacy alias", async () => {
+     const resolved = validateOrResolveId('launch_exam_mission', { examCategory: 'competitive', examName: 'JEE Main 2027', year: 2027 });
+-    assert.strictEqual(resolved, 'jee_main_2026');
++    assert.strictEqual(resolved, 'rec_central_jee_main_2027_2027');
+   });
+ 
+   // 43. Canonical: Legacy non-pilot ID resolution
+@@ -1237,7 +1237,7 @@ async function runSuite() {
+     };
+     
+     await handleSentinelAction(data, founderContext);
+-    const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
++    const shell = mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'];
+ 
+     const expectedActualFields = [
+       'id', 'title', 'name', 'subtitle', 'displayTitle', 'examName', 'examYear',
+@@ -1268,7 +1268,7 @@ async function runSuite() {
+     };
+     
+     await handleSentinelAction(data, founderContext);
+-    assert.ok(mockDatabaseState.student_mission_catalog['jee_main_2026']);
++    assert.ok(mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027']);
+   });
+ 
+   // 50. Recovery state machine: PENDING status recovery
+diff --git a/lib/core/firebase/firestore_service.dart b/lib/core/firebase/firestore_service.dart
+index 9ea8393f..a3f93895 100644
+--- a/lib/core/firebase/firestore_service.dart
++++ b/lib/core/firebase/firestore_service.dart
+@@ -351,18 +351,79 @@ class FirestoreService {
+     return variables;
+   }
+ 
++  static String _catalogString(Map<String, dynamic> data, String key) {
++    final value = data[key];
++    return value == null ? '' : value.toString().trim();
++  }
++
++  static String _catalogSourcePath(String docId, Map<String, dynamic> data) {
++    final direct = _catalogString(data, 'sourcePath');
++    if (direct.isNotEmpty) return direct;
++    final source = data['source'];
++    if (source is Map) {
++      final missionRealmPath = source['missionRealmPath'];
++      if (missionRealmPath != null &&
++          missionRealmPath.toString().trim().isNotEmpty) {
++        return missionRealmPath.toString().trim();
++      }
++    }
++    return 'mission_realms/$docId';
++  }
++
++  static bool _hasCanonicalMissionLineage(
++      String docId, Map<String, dynamic> data) {
++    final sourcePath = _catalogSourcePath(docId, data);
++    final directSourceMissionId = _catalogString(data, 'sourceMissionId');
++    final sourceMissionId = directSourceMissionId.isNotEmpty
++        ? directSourceMissionId
++        : sourcePath.startsWith('mission_realms/')
++            ? sourcePath.substring('mission_realms/'.length).split('/').first
++            : '';
++    final sourceType = _catalogString(data, 'sourceType').isNotEmpty
++        ? _catalogString(data, 'sourceType')
++        : sourcePath.startsWith('mission_realms/')
++            ? 'mission_realms'
++            : '';
++
++    return sourceType == 'mission_realms' &&
++        sourcePath == 'mission_realms/$sourceMissionId' &&
++        sourceMissionId.isNotEmpty &&
++        sourceMissionId == docId;
++  }
++
+   static Recruitment _studentCatalogDocToRecruitment(
+       String docId, Map<String, dynamic> data) {
+     final title =
+         (data['displayName'] ?? data['title'] ?? data['name'] ?? docId)
+             .toString();
+-    final missionId =
+-        (data['missionId'] ?? data['realmId'] ?? docId).toString();
++    final sourcePath = _catalogSourcePath(docId, data);
++    final directSourceMissionId = _catalogString(data, 'sourceMissionId');
++    final sourceMissionId = directSourceMissionId.isNotEmpty
++        ? directSourceMissionId
++        : sourcePath.startsWith('mission_realms/')
++            ? sourcePath.substring('mission_realms/'.length).split('/').first
++            : docId;
++    final sourceType = _catalogString(data, 'sourceType').isNotEmpty
++        ? _catalogString(data, 'sourceType')
++        : 'mission_realms';
++    final sourceMissionVersion =
++        _catalogString(data, 'sourceMissionVersion').isNotEmpty
++            ? _catalogString(data, 'sourceMissionVersion')
++            : _catalogString(data, 'canonicalKnowledgeVersion').isNotEmpty
++                ? _catalogString(data, 'canonicalKnowledgeVersion')
++                : _catalogString(data, 'version');
++    final missionId = sourceMissionId;
+     final yearValue = data['year'] ?? data['examYear'];
+     final year = yearValue is int
+         ? yearValue
+         : int.tryParse(yearValue?.toString() ?? '') ?? 0;
+     final blueprintValue = (data['examBlueprintId'] ?? '').toString();
++    final publicationState =
++        _catalogString(data, 'studentPublicationState').isNotEmpty
++            ? _catalogString(data, 'studentPublicationState')
++            : _catalogString(data, 'catalogStatus').isNotEmpty
++                ? _catalogString(data, 'catalogStatus')
++                : _catalogString(data, 'status');
+ 
+     return Recruitment(
+       id: docId,
+@@ -387,6 +448,11 @@ class FirestoreService {
+       variantCode: (data['variantCode'] ?? missionId).toString(),
+       missionVariables: _extractMissionVariables(data),
+       version: 'student_mission_catalog',
++      sourceMissionId: sourceMissionId,
++      sourceMissionVersion: sourceMissionVersion,
++      sourcePath: sourcePath,
++      sourceType: sourceType,
++      studentPublicationState: publicationState,
+     );
+   }
+ 
+@@ -399,6 +465,7 @@ class FirestoreService {
+         .snapshots()
+         .map((snapshot) {
+       return snapshot.docs
++          .where((doc) => _hasCanonicalMissionLineage(doc.id, doc.data()))
+           .map((doc) => _studentCatalogDocToRecruitment(doc.id, doc.data()))
+           .toList();
+     });
+diff --git a/lib/core/models/recruitment.dart b/lib/core/models/recruitment.dart
+index aec6502f..9c29c3f0 100644
+--- a/lib/core/models/recruitment.dart
++++ b/lib/core/models/recruitment.dart
+@@ -23,6 +23,11 @@ class Recruitment extends Equatable {
+   final String variantCode;
+   final Map<String, dynamic> missionVariables;
+   final String version;
++  final String sourceMissionId;
++  final String sourceMissionVersion;
++  final String sourcePath;
++  final String sourceType;
++  final String studentPublicationState;
+   final DateTime? examDate;
+ 
+   const Recruitment({
+@@ -41,6 +46,11 @@ class Recruitment extends Equatable {
+     this.variantCode = '',
+     this.missionVariables = const {},
+     this.version = '1.0.0',
++    this.sourceMissionId = '',
++    this.sourceMissionVersion = '',
++    this.sourcePath = '',
++    this.sourceType = '',
++    this.studentPublicationState = '',
+     this.examDate,
+   });
+ 
+@@ -61,6 +71,11 @@ class Recruitment extends Equatable {
+       'variantCode': variantCode,
+       'missionVariables': missionVariables,
+       'version': version,
++      'sourceMissionId': sourceMissionId,
++      'sourceMissionVersion': sourceMissionVersion,
++      'sourcePath': sourcePath,
++      'sourceType': sourceType,
++      'studentPublicationState': studentPublicationState,
+       'examDate': examDate?.toIso8601String(),
+     };
+   }
+@@ -82,6 +97,11 @@ class Recruitment extends Equatable {
+       variantCode: map['variantCode'] ?? '',
+       missionVariables: _asStringDynamicMap(map['missionVariables']),
+       version: map['version'] ?? '1.0.0',
++      sourceMissionId: map['sourceMissionId'] ?? '',
++      sourceMissionVersion: map['sourceMissionVersion'] ?? '',
++      sourcePath: map['sourcePath'] ?? '',
++      sourceType: map['sourceType'] ?? '',
++      studentPublicationState: map['studentPublicationState'] ?? '',
+       examDate:
+           map['examDate'] != null ? DateTime.parse(map['examDate']) : null,
+     );
+@@ -103,6 +123,11 @@ class Recruitment extends Equatable {
+     String? variantCode,
+     Map<String, dynamic>? missionVariables,
+     String? version,
++    String? sourceMissionId,
++    String? sourceMissionVersion,
++    String? sourcePath,
++    String? sourceType,
++    String? studentPublicationState,
+     DateTime? examDate,
+   }) {
+     return Recruitment(
+@@ -121,11 +146,28 @@ class Recruitment extends Equatable {
+       variantCode: variantCode ?? this.variantCode,
+       missionVariables: missionVariables ?? this.missionVariables,
+       version: version ?? this.version,
++      sourceMissionId: sourceMissionId ?? this.sourceMissionId,
++      sourceMissionVersion: sourceMissionVersion ?? this.sourceMissionVersion,
++      sourcePath: sourcePath ?? this.sourcePath,
++      sourceType: sourceType ?? this.sourceType,
++      studentPublicationState:
++          studentPublicationState ?? this.studentPublicationState,
+       examDate: examDate ?? this.examDate,
+     );
+   }
+ 
+   @override
+-  List<Object?> get props =>
+-      [id, examId, title, year, status, missionVariables];
++  List<Object?> get props => [
++        id,
++        examId,
++        title,
++        year,
++        status,
++        missionVariables,
++        sourceMissionId,
++        sourceMissionVersion,
++        sourcePath,
++        sourceType,
++        studentPublicationState
++      ];
+ }
+diff --git a/test/features/mission_link/rc_mission_link_01_test.dart b/test/features/mission_link/rc_mission_link_01_test.dart
+new file mode 100644
+index 00000000..a1a452f9
+--- /dev/null
++++ b/test/features/mission_link/rc_mission_link_01_test.dart
+@@ -0,0 +1,87 @@
++import 'dart:io';
++
++import 'package:flutter_test/flutter_test.dart';
++import 'package:rank_crackers/core/models/recruitment.dart';
++
++void main() {
++  group('RC_MISSION_LINK_01 canonical mission authority', () {
++    test('Founder, Student, and audit configs use the same Firebase project',
++        () {
++      final firebaseRc = File('.firebaserc').readAsStringSync();
++      final googleServices =
++          File('android/app/google-services.json').readAsStringSync();
++      final firebaseOptions =
++          File('lib/firebase_options.dart').readAsStringSync();
++      final backfill = File('functions/backfill_student_mission_catalog.js')
++          .readAsStringSync();
++
++      expect(firebaseRc, contains('rankcrackers-55'));
++      expect(googleServices, contains('"project_id": "rankcrackers-55"'));
++      expect(firebaseOptions, contains("projectId: 'rankcrackers-55'"));
++      expect(backfill, contains("projectId: 'rankcrackers-55'"));
++    });
++
++    test('Student mission projection is lineage-bound to mission_realms', () {
++      final firestore =
++          File('lib/core/firebase/firestore_service.dart').readAsStringSync();
++      final mirror = File('functions/callable/handle_sentinel_action.js')
++          .readAsStringSync();
++      final backfill = File('functions/backfill_student_mission_catalog.js')
++          .readAsStringSync();
++
++      expect(firestore, contains("studentMissionCatalogCollection"));
++      expect(firestore, contains('_hasCanonicalMissionLineage'));
++      expect(firestore, contains("sourceType == 'mission_realms'"));
++      expect(firestore, contains("sourceMissionId == docId"));
++      expect(mirror, contains('sourceMissionId: realmId'));
++      expect(mirror, contains("sourceType: 'mission_realms'"));
++      expect(backfill, contains('sourceMissionId: id'));
++      expect(backfill, contains("sourceType: 'mission_realms'"));
++    });
++
++    test('Recruitment carries Student projection lineage to the UI layer', () {
++      const recruitment = Recruitment(
++        id: 'rec_nta_jee_main_2027',
++        recruitmentGroupId: 'student_mission_catalog',
++        boardId: 'NTA',
++        examId: 'rec_nta_jee_main_2027',
++        examBlueprintId: 'rec_nta_jee_main_2027_blueprint',
++        title: 'JEE Main 2027',
++        titleHindi: 'JEE Main 2027',
++        year: 2027,
++        state: 'Central',
++        examCategory: 'competitive',
++        sourceMissionId: 'rec_nta_jee_main_2027',
++        sourceMissionVersion: '7',
++        sourcePath: 'mission_realms/rec_nta_jee_main_2027',
++        sourceType: 'mission_realms',
++        studentPublicationState: 'LIVE',
++      );
++
++      final encoded = recruitment.toMap();
++      expect(encoded['sourceMissionId'], 'rec_nta_jee_main_2027');
++      expect(encoded['sourcePath'], 'mission_realms/rec_nta_jee_main_2027');
++      expect(encoded['sourceType'], 'mission_realms');
++
++      final decoded = Recruitment.fromMap(encoded);
++      expect(decoded.sourceMissionId, recruitment.sourceMissionId);
++      expect(decoded.sourceMissionVersion, recruitment.sourceMissionVersion);
++      expect(
++          decoded.studentPublicationState, recruitment.studentPublicationState);
++    });
++
++    test('JEE Main 2027 no longer collapses into the 2026 legacy pilot id', () {
++      final registry =
++          File('functions/canonical_mission_registry.js').readAsStringSync();
++      final missionMirrorTest =
++          File('functions/test_mission_mirror.js').readAsStringSync();
++
++      expect(registry, isNot(contains("'jee main 2027'")));
++      expect(missionMirrorTest, contains('rec_nta_jee_main_2027'));
++      expect(
++        missionMirrorTest,
++        contains('does not map to jee_main_2026'),
++      );
++    });
++  });
++}

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.parseJSON = void 0;
+exports.parseJSON = parseJSON;
 function parseJSON(text) {
     try {
         return JSON.parse(text);
@@ -10,5 +10,4 @@ function parseJSON(text) {
         return null;
     }
 }
-exports.parseJSON = parseJSON;
 //# sourceMappingURL=jsonParser.js.map

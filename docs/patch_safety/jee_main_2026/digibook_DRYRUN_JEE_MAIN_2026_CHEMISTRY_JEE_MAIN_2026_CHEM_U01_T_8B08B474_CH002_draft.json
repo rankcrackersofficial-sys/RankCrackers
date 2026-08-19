@@ -1,0 +1,154 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U01_T_8B08B474_CH002",
+    "overview": "This comprehensive unit covers the fundamental principles of chemistry: matter classification, Dalton's atomic theory, laws of chemical combination, mole concept, atomic and molecular masses, determination of empirical and molecular formulas, and stoichiometric calculations involving limiting reagents.",
+    "concepts": [
+      {
+        "title": "Laws of Chemical Combination",
+        "explanation": "Chemical reactions obey foundational quantitative laws: 1. Law of Conservation of Mass (mass is neither created nor destroyed). 2. Law of Definite Proportions (a compound always contains elements in fixed mass ratio). 3. Law of Multiple Proportions (when two elements form multiple compounds, the masses of one element combining with a fixed mass of the other are in simple whole-number ratios). 4. Gay-Lussac's Law of Gaseous Volumes (gases react in simple volume ratios at constant T and P). 5. Avogadro's Law (equal volumes of all gases at identical T and P contain equal numbers of molecules)."
+      },
+      {
+        "title": "Mole Concept and Atomic/Molecular Masses",
+        "explanation": "One mole represents 6.022 x 10^23 elementary entities (Avogadro's number, N_A). Atomic mass unit (amu or u) is defined as 1/12th the mass of one carbon-12 atom. Molar mass is the mass of one mole of a substance in grams, numerically equal to its atomic or molecular mass in u."
+      },
+      {
+        "title": "Empirical and Molecular Formulae",
+        "explanation": "An empirical formula gives the simplest whole-number ratio of atoms of each element in a compound. A molecular formula gives the exact number of atoms of each element present in a molecule. The relationship is given by Molecular Formula = (Empirical Formula)_n, where n is a positive integer equal to Molar Mass divided by Empirical Formula Mass."
+      },
+      {
+        "title": "Stoichiometry and Limiting Reagent",
+        "explanation": "Stoichiometry uses balanced chemical equations to calculate quantitative relationships between reactants and products. The limiting reagent is the reactant that is completely consumed first in a reaction, thereby limiting the maximum yield of products. To find it, divide the moles of each reactant by its stoichiometric coefficient; the reactant with the lowest ratio is limiting."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Number of Moles from Mass",
+        "formula": "n = m / M",
+        "applicability": "General calculation of moles for any pure chemical substance.",
+        "variables": [
+          {
+            "symbol": "n",
+            "meaning": "Number of moles",
+            "unit": "mol"
+          },
+          {
+            "symbol": "m",
+            "meaning": "Given mass of the substance",
+            "unit": "g"
+          },
+          {
+            "symbol": "M",
+            "meaning": "Molar mass of the substance",
+            "unit": "g/mol"
+          }
+        ]
+      },
+      {
+        "label": "Number of Moles from Particle Count",
+        "formula": "n = N / N_A",
+        "applicability": "Relating discrete count of particles (atoms, molecules, ions) to moles.",
+        "variables": [
+          {
+            "symbol": "N",
+            "meaning": "Total number of particles",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "N_A",
+            "meaning": "Avogadro's constant (6.022 x 10^23)",
+            "unit": "mol^-1"
+          }
+        ]
+      },
+      {
+        "label": "Molar Volume of Gas at STP",
+        "formula": "n = V / 22.4",
+        "applicability": "Ideal gases at standard temperature and pressure (0 °C, 1 atm).",
+        "variables": [
+          {
+            "symbol": "V",
+            "meaning": "Volume of gas at STP",
+            "unit": "L"
+          }
+        ]
+      },
+      {
+        "label": "Molecular Formula Ratio Integer",
+        "formula": "n_factor = Molar Mass / Empirical Formula Mass",
+        "applicability": "Determining molecular formula from empirical formula.",
+        "variables": [
+          {
+            "symbol": "n_factor",
+            "meaning": "Multiplication integer",
+            "unit": "dimensionless"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "The limiting reagent is always the reactant present in the smallest mass or smallest molar amount.",
+        "correction": "The limiting reagent depends on the mole-to-coefficient ratio (n / coefficient), not merely the mass or raw number of moles available."
+      },
+      {
+        "misconception": "One mole of any gas always occupies 22.4 L under any conditions.",
+        "correction": "The molar volume of 22.4 L is specifically applicable to ideal gases at STP (273.15 K and 1 atm). At other conditions, the ideal gas equation PV = nRT must be used."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "A compound contains 40.0% Carbon, 6.7% Hydrogen, and 53.3% Oxygen by mass. If its molar mass is 180 g/mol, determine its empirical formula and molecular formula. (Atomic masses: C = 12, H = 1, O = 16)",
+        "steps": [
+          "Step 1: Calculate relative moles of each element in 100 g sample: Moles of C = 40.0 / 12 = 3.33; Moles of H = 6.7 / 1 = 6.70; Moles of O = 53.3 / 16 = 3.33.",
+          "Step 2: Divide by the smallest mole value (3.33): C = 3.33 / 3.33 = 1; H = 6.70 / 3.33 = 2; O = 3.33 / 3.33 = 1. The empirical formula is CH2O.",
+          "Step 3: Calculate Empirical Formula Mass = 12 + (2 * 1) + 16 = 30 g/mol.",
+          "Step 4: Find integer n = Molar Mass / Empirical Formula Mass = 180 / 30 = 6.",
+          "Step 5: Multiply empirical formula by n: Molecular Formula = (CH2O)6 = C6H12O6."
+        ],
+        "answer": "Empirical Formula = CH2O, Molecular Formula = C6H12O6"
+      },
+      {
+        "problem": "50.0 g of N2(g) and 10.0 g of H2(g) are mixed to produce NH3(g) via N2 + 3H2 -> 2NH3. Identify the limiting reagent and calculate the theoretical yield of NH3 in grams.",
+        "steps": [
+          "Step 1: Convert masses to moles: Moles of N2 = 50.0 / 28 = 1.786 mol; Moles of H2 = 10.0 / 2.016 = 4.960 mol.",
+          "Step 2: Determine stoichiometric ratios (Moles / Coefficient): For N2: 1.786 / 1 = 1.786; For H2: 4.960 / 3 = 1.653.",
+          "Step 3: Compare ratios: 1.653 (H2) < 1.786 (N2), so H2 is the limiting reagent.",
+          "Step 4: Calculate moles of NH3 produced from limiting reagent: Moles of NH3 = 4.960 * (2 / 3) = 3.307 mol.",
+          "Step 5: Convert moles of NH3 to mass: Mass of NH3 = 3.307 mol * 17.03 g/mol = 56.3 g."
+        ],
+        "answer": "Limiting Reagent = H2, Theoretical Yield of NH3 = 56.3 g"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "What is the total number of atoms present in 4.25 g of NH3 gas? (Atomic masses: N = 14, H = 1; N_A = 6.022 x 10^23)",
+        "answer": "Moles of NH3 = 4.25 g / 17 g/mol = 0.25 mol. Number of NH3 molecules = 0.25 * 6.022 x 10^23 = 1.5055 x 10^23. Each NH3 molecule contains 4 atoms (1 N + 3 H). Total atoms = 4 * 1.5055 x 10^23 = 6.022 x 10^23 atoms."
+      },
+      {
+        "question": "Two elements X (atomic mass = 75) and Y (atomic mass = 16) combine to form a compound containing 75.8% X by mass. What is the empirical formula of the compound?",
+        "answer": "Mass % of X = 75.8%, so Mass % of Y = 100 - 75.8 = 24.2%. Moles of X = 75.8 / 75 = 1.01. Moles of Y = 24.2 / 16 = 1.5125. Ratio X:Y = 1.01 / 1.01 : 1.5125 / 1.01 = 1 : 1.5. Multiplying by 2 yields whole number ratio 2 : 3. The empirical formula is X2O3 (or X2Y3)."
+      },
+      {
+        "question": "Equal masses of O2, H2, and CH4 are taken in a closed container at identical temperature and pressure. What is the ratio of their volumes?",
+        "answer": "By Avogadro's law, volume ratio equals mole ratio. Let mass of each gas be m. Moles of O2 = m/32, Moles of H2 = m/2, Moles of CH4 = m/16. Ratio n(O2) : n(H2) : n(CH4) = (m/32) : (m/2) : (m/16) = 1/32 : 1/2 : 1/16. Multiplying through by 32 gives 1 : 16 : 2."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 1: Some Basic Concepts of Chemistry",
+      "JEE Main Official Syllabus 2026: General Topics - Mole Concept & Stoichiometry"
+    ]
+  }
+}

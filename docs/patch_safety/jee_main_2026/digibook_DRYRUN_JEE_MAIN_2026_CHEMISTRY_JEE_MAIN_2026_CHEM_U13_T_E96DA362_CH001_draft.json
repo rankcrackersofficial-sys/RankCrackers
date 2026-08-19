@@ -1,0 +1,158 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U13_T_E96DA362_CH001",
+    "overview": "Comprehensive theory guide covering physical and chemical principles of organic compound purification including crystallization, sublimation, simple, fractional, steam, and reduced pressure distillation, differential extraction, and chromatographic techniques (column, thin layer, paper chromatography).",
+    "concepts": [
+      {
+        "title": "Crystallization and Sublimation",
+        "explanation": "Crystallization relies on solubility differences of the compound and impurities in a chosen solvent at room vs elevated temperatures. Sublimation separates sublimable solids (like camphor, naphthalene, benzoic acid, ammonium chloride) from non-sublimable impurities directly from solid to vapor state upon heating."
+      },
+      {
+        "title": "Distillation Techniques",
+        "explanation": "Distillation separates volatile liquids based on boiling point differences. Simple distillation is used when boiling points differ by >25 K. Fractional distillation uses a fractionating column for liquids with boiling points within 25 K. Vacuum distillation (under reduced pressure) purifies liquids that decompose at or near their normal boiling points (e.g., glycerol). Steam distillation purifies steam-volatile compounds that are immiscible with water (e.g., aniline)."
+      },
+      {
+        "title": "Differential Extraction",
+        "explanation": "Differential extraction isolates an organic compound from an aqueous solution by shaking it with an immiscible organic solvent in which the compound is significantly more soluble. Repeated extractions using smaller solvent portions extract significantly more compound than a single extraction using the entire volume."
+      },
+      {
+        "title": "Chromatography Principles",
+        "explanation": "Chromatography separates components based on differential distribution between a stationary phase and a mobile phase. Adsorption chromatography (Column, TLC) relies on differential surface adsorption on adsorbents like silica gel or alumina. Partition chromatography (Paper) involves continuous partition between mobile solvent and water trapped in the paper paper matrix."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Retardation Factor (Rf)",
+        "formula": "Rf = (Distance traveled by compound from baseline) / (Distance traveled by solvent front from baseline)",
+        "applicability": "Thin Layer Chromatography (TLC) and Paper Chromatography",
+        "variables": [
+          {
+            "symbol": "Rf",
+            "meaning": "Retardation Factor",
+            "unit": "Dimensionless"
+          },
+          {
+            "symbol": "d_substance",
+            "meaning": "Distance traveled by the substance",
+            "unit": "cm"
+          },
+          {
+            "symbol": "d_solvent",
+            "meaning": "Distance traveled by solvent front",
+            "unit": "cm"
+          }
+        ]
+      },
+      {
+        "label": "Distribution Coefficient (K)",
+        "formula": "K = C_organic / C_aqueous",
+        "applicability": "Differential extraction liquid-liquid partition",
+        "variables": [
+          {
+            "symbol": "K",
+            "meaning": "Partition Coefficient / Distribution Coefficient",
+            "unit": "Dimensionless"
+          },
+          {
+            "symbol": "C_organic",
+            "meaning": "Concentration of solute in organic phase",
+            "unit": "g/mL"
+          },
+          {
+            "symbol": "C_aqueous",
+            "meaning": "Concentration of solute in aqueous phase",
+            "unit": "g/mL"
+          }
+        ]
+      },
+      {
+        "label": "Steam Distillation Mass Ratio",
+        "formula": "w1 / w2 = (P1 * M1) / (P2 * M2)",
+        "applicability": "Steam distillation of immiscible binary liquid mixtures",
+        "variables": [
+          {
+            "symbol": "w1, w2",
+            "meaning": "Masses of organic substance and water in distillate",
+            "unit": "g"
+          },
+          {
+            "symbol": "P1, P2",
+            "meaning": "Vapor pressures of organic compound and water at distillation temperature",
+            "unit": "mm Hg or Pa"
+          },
+          {
+            "symbol": "M1, M2",
+            "meaning": "Molar masses of organic compound and water",
+            "unit": "g/mol"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Fractional distillation is required for liquids with boiling point differences greater than 50 K.",
+        "correction": "Fractional distillation is used specifically when boiling point differences are small (less than 25 K). For large boiling point differences (>25-30 K), simple distillation is sufficient and more practical."
+      },
+      {
+        "misconception": "Extracting an organic solute once with 100 mL of solvent is as efficient as four consecutive extractions using 25 mL each.",
+        "correction": "Multiple extractions with smaller solvent fractions yield higher cumulative solute recovery than a single extraction with the combined volume due to the logarithmic partition relationship."
+      },
+      {
+        "misconception": "A higher Rf value in TLC implies stronger adsorption to the stationary phase.",
+        "correction": "A higher Rf value means the substance moved farther with the solvent, indicating weaker adsorption to the stationary phase and stronger affinity for the mobile solvent."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "In a TLC experiment, the solvent front travels 10.0 cm. Spot A travels 3.5 cm and Spot B travels 7.0 cm. Calculate the Rf values for A and B, and determine which compound is more strongly adsorbed.",
+        "steps": [
+          "Step 1: Calculate Rf(A) = Distance traveled by A / Distance traveled by solvent = 3.5 cm / 10.0 cm = 0.35.",
+          "Step 2: Calculate Rf(B) = Distance traveled by B / Distance traveled by solvent = 7.0 cm / 10.0 cm = 0.70.",
+          "Step 3: Compare Rf values. Lower Rf corresponds to stronger adsorption to the stationary phase. Since Rf(A) < Rf(B), Spot A is more strongly adsorbed."
+        ],
+        "answer": "Rf(A) = 0.35, Rf(B) = 0.70. Compound A is more strongly adsorbed."
+      },
+      {
+        "problem": "A mixture of an organic liquid (molar mass = 123 g/mol) and water undergoes steam distillation at 99 deg C under total pressure of 760 mm Hg. At this temperature, the vapor pressure of water is 730 mm Hg. Find the ratio of mass of organic liquid to mass of water in the distillate.",
+        "steps": [
+          "Step 1: Calculate partial vapor pressure of organic compound P1 = P_total - P_water = 760 - 730 = 30 mm Hg.",
+          "Step 2: Molar mass of organic compound M1 = 123 g/mol, Molar mass of water M2 = 18 g/mol.",
+          "Step 3: Apply steam distillation formula w1 / w2 = (P1 * M1) / (P2 * M2).",
+          "Step 4: Substitute values: w1 / w2 = (30 * 123) / (730 * 18) = 3690 / 13140 = 0.281."
+        ],
+        "answer": "The mass ratio of organic liquid to water in the distillate is 0.281 : 1."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which distillation method is best suited for purifying glycerol, which decomposes at its normal boiling point (290 deg C)?",
+        "answer": "Distillation under reduced pressure (vacuum distillation). By reducing external pressure, glycerol boils below 290 deg C without decomposition."
+      },
+      {
+        "question": "What two essential conditions must an organic substance meet to be purified by steam distillation?",
+        "answer": "1. It must be steam-volatile (have appreciable vapor pressure near 100 deg C). 2. It must be immiscible with water."
+      },
+      {
+        "question": "In paper chromatography, what serves as the stationary phase?",
+        "answer": "Water droplets held or trapped within the cellulose fibers of the chromatography paper act as the stationary liquid phase."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11 - Chapter 12: Organic Chemistry - Some Basic Principles and Techniques",
+      "JEE Main Official Syllabus - Organic Chemistry Unit 13: Purification and Characterisation of Organic Compounds"
+    ]
+  }
+}

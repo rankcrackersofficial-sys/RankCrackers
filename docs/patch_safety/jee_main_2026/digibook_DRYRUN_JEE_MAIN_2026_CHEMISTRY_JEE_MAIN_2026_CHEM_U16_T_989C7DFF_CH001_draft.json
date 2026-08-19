@@ -1,0 +1,134 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U16_T_989C7DFF_CH001",
+    "overview": "Haloalkanes (alkyl halides) are organic compounds containing at least one halogen atom bound to an sp3 hybridized carbon atom. The electronegativity difference between carbon and halogen renders the C-X bond polar, giving rise to electrophilic character at carbon and enabling nucleophilic substitution and elimination reactions. Understanding preparation methods, C-X bond polarity, and SN1/SN2 substitution mechanisms is essential for mastering organic synthesis in JEE Main Chemistry.",
+    "concepts": [
+      {
+        "title": "Nature of the C-X Bond",
+        "explanation": "Halogens are more electronegative than carbon, imparting a partial positive charge (delta+) on carbon and a partial negative charge (delta-) on halogen. C-X bond length increases down the halogen group (C-F < C-Cl < C-Br < C-I), leading to a decrease in bond dissociation enthalpy. Consequently, reactivity of alkyl halides in substitution reactions generally follows the order: R-I > R-Br > R-Cl > R-F."
+      },
+      {
+        "title": "SN2 Mechanism (Bimolecular Nucleophilic Substitution)",
+        "explanation": "SN2 is a concerted, single-step reaction involving backside attack of a nucleophile on the electrophilic carbon. It proceeds via a pentacoordinate transition state leading to complete inversion of stereochemical configuration (Walden inversion). The rate depends on both substrate and nucleophile concentration. Reactivity decreases with steric hindrance: Methyl > Primary > Secondary > Tertiary."
+      },
+      {
+        "title": "SN1 Mechanism (Unimolecular Nucleophilic Substitution)",
+        "explanation": "SN1 is a two-step mechanism where the slow rate-determining step involves heterolytic cleavage of the C-X bond to yield a planar carbocation intermediate. Nucleophilic attack then occurs rapidly from either face, leading to racemization (or partial inversion). Substrate reactivity depends on carbocation stability: Allylic/Benzylic >= Tertiary > Secondary > Primary > Methyl."
+      },
+      {
+        "title": "Methods of Preparation",
+        "explanation": "Alkyl halides can be prepared from alcohols using phosphorus halides (PCl3, PCl5), thionyl chloride (SOCl2 in pyridine, preferred due to gaseous by-products HCl and SO2), or halogen acids (HX/ZnCl2). Other important routes include free-radical halogenation of alkanes, electrophilic addition of HX to alkenes, and halogen exchange reactions like Finkelstein (NaI/acetone) and Swarts (AgF/SbF3) reactions."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "SN2 Reaction Rate Law",
+        "formula": "Rate = k * [RX] * [Nu:-]",
+        "applicability": "Determines kinetics of bimolecular nucleophilic substitution reactions.",
+        "variables": [
+          {
+            "symbol": "k",
+            "meaning": "SN2 rate constant",
+            "unit": "L mol^-1 s^-1"
+          },
+          {
+            "symbol": "[RX]",
+            "meaning": "Molar concentration of alkyl halide",
+            "unit": "mol L^-1"
+          },
+          {
+            "symbol": "[Nu:-]",
+            "meaning": "Molar concentration of nucleophile",
+            "unit": "mol L^-1"
+          }
+        ]
+      },
+      {
+        "label": "SN1 Reaction Rate Law",
+        "formula": "Rate = k * [RX]",
+        "applicability": "Determines kinetics of unimolecular nucleophilic substitution reactions.",
+        "variables": [
+          {
+            "symbol": "k",
+            "meaning": "SN1 rate constant",
+            "unit": "s^-1"
+          },
+          {
+            "symbol": "[RX]",
+            "meaning": "Molar concentration of alkyl halide",
+            "unit": "mol L^-1"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "SN1 reactions always yield complete 100% racemization.",
+        "correction": "In practice, SN1 reactions often produce slight inversion over retention because the leaving group shields the front side momentarily as an ion pair before full solvation."
+      },
+      {
+        "misconception": "Primary alkyl halides never undergo SN1 substitution under any condition.",
+        "correction": "Primary allylic and primary benzylic halides undergo rapid SN1 substitution because the resulting carbocations are strongly resonance-stabilized."
+      },
+      {
+        "misconception": "Dipole moment strictly decreases down the group from C-F to C-I.",
+        "correction": "C-Cl has a slightly higher dipole moment than C-F (CH3Cl > CH3F > CH3Br > CH3I) because the significantly larger C-Cl bond distance outweighs the higher electronegativity of fluorine."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Arrange the following compounds in increasing order of reactivity towards SN1 reaction: (I) 2-bromobutane, (II) 1-bromobutane, (III) 2-bromo-2-methylpropane.",
+        "steps": [
+          "Step 1: Identify the carbocation intermediate formed after C-Br bond cleavage for each substrate.",
+          "Step 2: (I) 2-bromobutane forms a 2nd degree carbocation (CH3-CH(+)-CH2-CH3).",
+          "Step 3: (II) 1-bromobutane forms a 1st degree carbocation (CH3-CH2-CH2-CH2(+)).",
+          "Step 4: (III) 2-bromo-2-methylpropane forms a 3rd degree carbocation (C+(CH3)3).",
+          "Step 5: Order of carbocation stability is 3rd degree > 2nd degree > 1st degree.",
+          "Step 6: Therefore, SN1 reactivity increases in the order: (II) < (I) < (III)."
+        ],
+        "answer": "1-bromobutane < 2-bromobutane < 2-bromo-2-methylpropane (II < I < III)"
+      },
+      {
+        "problem": "Predict the major organic product formed when (R)-2-bromobutane reacts with aqueous KOH via SN2 pathway.",
+        "steps": [
+          "Step 1: Identify the mechanism: SN2 mechanism proceeds via backside attack by hydroxide ion.",
+          "Step 2: SN2 reaction leads to complete inversion of configuration (Walden inversion).",
+          "Step 3: Inversion of (R)-2-bromobutane converts the absolute configuration from R to S.",
+          "Step 4: The nucleophile -OH replaces -Br with inverted stereochemistry."
+        ],
+        "answer": "(S)-butan-2-ol"
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which reagent is most preferred for preparing alkyl chlorides from alcohols because the by-products are gaseous?\nA) PCl5\nB) SOCl2\nC) HCl / ZnCl2\nD) PCl3",
+        "answer": "B) SOCl2. Thionyl chloride (SOCl2) is preferred because the by-products (SO2 and HCl) are gases and escape easily, leaving behind pure alkyl chloride."
+      },
+      {
+        "question": "Which of the following compounds reacts fastest via SN2 mechanism?\nA) (CH3)3C-Br\nB) (CH3)2CH-Br\nC) CH3-CH2-Br\nD) CH3-Br",
+        "answer": "D) CH3-Br. Methyl bromide has minimal steric hindrance, allowing the nucleophile to perform backside attack most rapidly in an SN2 reaction."
+      },
+      {
+        "question": "Finkelstein reaction is best utilized for synthesis of which haloalkane class?\nA) Alkyl fluorides\nB) Alkyl iodides\nC) Alkyl chlorides\nD) Aryl bromides",
+        "answer": "B) Alkyl iodides. Finkelstein reaction involves reacting alkyl chlorides or bromides with NaI in dry acetone to prepare alkyl iodides."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 12, Chapter 10: Haloalkanes and Haloarenes",
+      "JEE Main Official Syllabus - Organic Chemistry: Organic Compounds Containing Halogens"
+    ]
+  }
+}

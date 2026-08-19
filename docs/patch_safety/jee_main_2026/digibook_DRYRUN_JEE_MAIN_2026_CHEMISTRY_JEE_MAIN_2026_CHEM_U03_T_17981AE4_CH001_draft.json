@@ -1,0 +1,154 @@
+{
+  "modelMetadata": {
+    "backend": "vertex_ai",
+    "project": "rankcrackers-55",
+    "location": "global",
+    "requestedModel": "gemini-3.6-flash",
+    "actualModel": "gemini-3.6-flash",
+    "workload": "factoryFlash",
+    "modelSource": "policy_default",
+    "fallbackUsed": false,
+    "fallbackReason": null,
+    "structuredOutput": true
+  },
+  "draft": {
+    "artifactVersion": "1.0.0",
+    "atomId": "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHEM_U03_T_17981AE4_CH001",
+    "overview": "Ionic bonding is formed by the complete transfer of one or more valence electrons from an electropositive element (metal) to an electronegative element (non-metal), resulting in oppositely charged ions held together by strong electrostatic forces of attraction. The formation and stability of ionic compounds depend on three major energy factors: low ionization enthalpy of the cation-forming element, high negative electron gain enthalpy of the anion-forming element, and high magnitude of lattice enthalpy holding the ionic crystal lattice together. Calculation of lattice enthalpy is typically performed indirectly using the Born-Haber cycle based on Hess's Law of Constant Heat Summation.",
+    "concepts": [
+      {
+        "title": "Mechanism of Ionic Bond Formation",
+        "explanation": "An ionic bond forms when a metal atom loses valence electrons to achieve a noble gas electronic configuration, forming a cation, while a non-metal atom gains those electrons to achieve an octet, forming an anion. The attractive electrostatic force operating between the cations and anions in 3D space binds them into a rigid, non-directional crystalline structure."
+      },
+      {
+        "title": "Factors Favoring Ionic Bond Formation",
+        "explanation": "Three principal thermodynamic factors govern ionic bond formation: 1. Low Ionization Enthalpy (IE) of the metal atom, making cation formation easier. 2. High negative Electron Gain Enthalpy (EGE) of the non-metal atom, releasing more energy upon anion formation. 3. High Lattice Enthalpy (U), which provides overall thermodynamic stabilization to the crystalline solid."
+      },
+      {
+        "title": "Lattice Enthalpy and Born-Haber Cycle",
+        "explanation": "Lattice enthalpy is defined as the energy required to completely separate one mole of a solid ionic compound into its gaseous constituent ions. Because direct experimental measurement of lattice enthalpy is difficult, the Born-Haber cycle applies Hess's Law to relate standard enthalpy of formation to sublimation enthalpy, dissociation enthalpy, ionization enthalpy, electron gain enthalpy, and lattice enthalpy."
+      }
+    ],
+    "formulaRegister": [
+      {
+        "label": "Born-Haber Cycle Enthalpy Balance for MX(s)",
+        "formula": "Delta_f H = Delta_sub H + IE + (1/2) Delta_bond H + Delta_eg H - U",
+        "applicability": "Used to calculate lattice enthalpy (U) or enthalpy of formation for 1:1 ionic solids like NaCl.",
+        "variables": [
+          {
+            "symbol": "Delta_f H",
+            "meaning": "Standard enthalpy of formation of the ionic solid",
+            "unit": "kJ/mol"
+          },
+          {
+            "symbol": "Delta_sub H",
+            "meaning": "Enthalpy of sublimation of the metal",
+            "unit": "kJ/mol"
+          },
+          {
+            "symbol": "IE",
+            "meaning": "Ionization enthalpy of the metal atom",
+            "unit": "kJ/mol"
+          },
+          {
+            "symbol": "Delta_bond H",
+            "meaning": "Bond dissociation enthalpy of the non-metal molecule",
+            "unit": "kJ/mol"
+          },
+          {
+            "symbol": "Delta_eg H",
+            "meaning": "Electron gain enthalpy of the non-metal atom",
+            "unit": "kJ/mol"
+          },
+          {
+            "symbol": "U",
+            "meaning": "Lattice enthalpy of the ionic solid (dissociation)",
+            "unit": "kJ/mol"
+          }
+        ]
+      },
+      {
+        "label": "Electrostatic Estimation of Lattice Energy",
+        "formula": "U proportional to (|z_+ * z_-|) / (r_+ + r_-)",
+        "applicability": "Qualitative comparison of lattice enthalpies between different ionic compounds.",
+        "variables": [
+          {
+            "symbol": "z_+",
+            "meaning": "Charge magnitude on the cation",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "z_-",
+            "meaning": "Charge magnitude on the anion",
+            "unit": "dimensionless"
+          },
+          {
+            "symbol": "r_+",
+            "meaning": "Ionic radius of cation",
+            "unit": "pm"
+          },
+          {
+            "symbol": "r_-",
+            "meaning": "Ionic radius of anion",
+            "unit": "pm"
+          }
+        ]
+      }
+    ],
+    "commonMisconceptions": [
+      {
+        "misconception": "Ionic bonds are directional forces directed specifically between individual cation-anion pairs.",
+        "correction": "Ionic forces are non-directional electrostatic fields that extend equally in all spatial directions around an ion within a lattice."
+      },
+      {
+        "misconception": "An ionic compound with higher ionization energy forms an ionic bond more readily.",
+        "correction": "A lower ionization energy of the metal atom makes cation formation easier, thereby favoring ionic bond formation."
+      },
+      {
+        "misconception": "Lattice enthalpy is always a negative quantity in Born-Haber cycle expressions.",
+        "correction": "By IUPAC definition, lattice enthalpy is positive when defined as the energy required to break 1 mole of solid crystal into gaseous ions. However, lattice formation energy (energy released when crystal forms) is negative."
+      }
+    ],
+    "workedExamples": [
+      {
+        "problem": "Calculate the lattice enthalpy of NaCl(s) using the following standard data: Enthalpy of sublimation of Na(s) = +108.7 kJ/mol, Ionization enthalpy of Na(g) = +495.8 kJ/mol, Bond dissociation enthalpy of Cl2(g) = +242.0 kJ/mol, Electron gain enthalpy of Cl(g) = -348.7 kJ/mol, Standard enthalpy of formation of NaCl(s) = -411.2 kJ/mol.",
+        "steps": [
+          "Step 1: Write down the Hess's Law equation for Born-Haber cycle: Delta_f H = Delta_sub H + IE + (1/2) Delta_bond H + Delta_eg H - U, where U is the positive lattice dissociation enthalpy (energy required to break the solid into gaseous ions).",
+          "Step 2: Substitute the known values into the equation: -411.2 = 108.7 + 495.8 + (0.5 * 242.0) + (-348.7) - U.",
+          "Step 3: Simplify the right side: -411.2 = 108.7 + 495.8 + 121.0 - 348.7 - U.",
+          "Step 4: Sum the terms: 108.7 + 495.8 + 121.0 - 348.7 = 376.8 kJ/mol.",
+          "Step 5: Solve for U: -411.2 = 376.8 - U => U = 376.8 + 411.2 = 788.0 kJ/mol."
+        ],
+        "answer": "The magnitude of the lattice enthalpy of NaCl is +788.0 kJ/mol."
+      },
+      {
+        "problem": "Which among MgO and NaCl has a higher lattice enthalpy and why?",
+        "steps": [
+          "Step 1: Identify the charges on cations and anions: For NaCl, cations are Na+ (+1) and anions are Cl- (-1), product of charges = 1 * 1 = 1. For MgO, cations are Mg2+ (+2) and anions are O2- (-2), product of charges = 2 * 2 = 4.",
+          "Step 2: Compare interionic distances: Mg2+ and O2- have smaller ionic radii compared to Na+ and Cl- respectively.",
+          "Step 3: Apply relation U proportional to (|z_+ * z_-|) / (r_+ + r_-). MgO has 4 times the charge product and smaller interionic distance.",
+          "Step 4: Conclude that MgO has significantly higher lattice enthalpy."
+        ],
+        "answer": "MgO has a significantly higher lattice enthalpy than NaCl due to higher ionic charges (+2/-2 vs +1/-1) and smaller ionic radii."
+      }
+    ],
+    "selfChecks": [
+      {
+        "question": "Which set of properties most strongly favors the formation of a stable ionic compound MX?",
+        "answer": "Low ionization enthalpy of M, high negative electron gain enthalpy of X, and high lattice enthalpy of MX. Option A: Low IE(M), high negative EGE(X), high Lattice Enthalpy. Option B: High IE(M), low EGE(X), high Lattice Enthalpy. Option C: Low IE(M), positive EGE(X), low Lattice Enthalpy. Option D: High IE(M), high negative EGE(X), low Lattice Enthalpy. Correct Choice: Option A."
+      },
+      {
+        "question": "Arrange the following compounds in order of increasing lattice enthalpy: NaCl, NaF, NaBr, NaI.",
+        "answer": "Since cation Na+ is common, lattice enthalpy depends inversely on anion radius (r_-). Anion size order: F- < Cl- < Br- < I-. Therefore, lattice enthalpy increases as size decreases: NaI < NaBr < NaCl < NaF."
+      },
+      {
+        "question": "In a Born-Haber cycle for CaF2, what is the stoichiometric coefficient applied to the bond dissociation energy of F2(g)?",
+        "answer": "The reaction for formation of 1 mole of CaF2(s) requires 1 mole of F2(g) to yield 2 moles of F(g). Thus, 1 full mole of F2 bond dissociation enthalpy is used (coefficient = 1), unlike 1/2 for MX compounds."
+      }
+    ],
+    "sourceReferences": [
+      "NCERT Chemistry Class 11, Chapter 4: Chemical Bonding and Molecular Structure",
+      "JEE Main Official Syllabus 2026 - Unit 3: Chemical Bonding and Molecular Structure"
+    ]
+  }
+}
