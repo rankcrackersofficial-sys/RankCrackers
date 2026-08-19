@@ -250,8 +250,6 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _sectionLabel('PREPARATION'),
-            _controlTile(Icons.language_rounded, 'Language', 'Hindi Medium'),
-            const SizedBox(height: 8),
             _controlTile(Icons.shield_rounded, 'Current Mission',
                 currentExam ?? 'Select Mission',
                 onTap: () => context.go(AppRoutes.missionRealm)),
