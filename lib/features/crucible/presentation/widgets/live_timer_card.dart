@@ -78,51 +78,60 @@ class _LiveTimerCardState extends State<LiveTimerCard> {
           const SizedBox(height: 18),
           LayoutBuilder(
             builder: (context, constraints) {
-              final compact = constraints.maxWidth < 360;
+              // Stack vertically on narrow widths so countdown never gets truncated.
+              final shouldStack = constraints.maxWidth <= 400;
 
-              final left = Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('DAY ${widget.day}', style: AppTypography.section),
-                    const SizedBox(height: 4),
-                    Text(
-                      'PHASE ${widget.phase} • $_windowType',
-                      style: AppTypography.label,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
-                    ),
-                  ],
-                ),
+              final leftBlock = Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('DAY ${widget.day}', style: AppTypography.section),
+                  const SizedBox(height: 4),
+                  Text(
+                    'PHASE ${widget.phase} • $_windowType',
+                    style: AppTypography.label,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
+                ],
               );
 
-              final right = Flexible(
-                child: Align(
+              final rightBlock = Align(
+                alignment: Alignment.centerRight,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
                   alignment: Alignment.centerRight,
-                  child: FittedBox(
-                    fit: BoxFit.scaleDown,
-                    alignment: Alignment.centerRight,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          _formatDuration(_remaining),
-                          style: AppTypography.metric.copyWith(
-                            fontSize: compact ? 22 : 28,
-                          ),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        Text('REMAINING', style: AppTypography.label),
-                      ],
-                    ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      // Do NOT ellipsize the countdown; allow FittedBox to scale it down.
+                      Text(
+                        _formatDuration(_remaining),
+                        style: AppTypography.metric.copyWith(fontSize: 28),
+                      ),
+                      Text('REMAINING', style: AppTypography.label),
+                    ],
                   ),
                 ),
               );
 
+              if (shouldStack) {
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    leftBlock,
+                    const SizedBox(height: 12),
+                    SizedBox(width: double.infinity, child: rightBlock),
+                  ],
+                );
+              }
+
               return Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [left, const SizedBox(width: 12), right],
+                children: [
+                  Expanded(child: leftBlock),
+                  const SizedBox(width: 12),
+                  Flexible(child: rightBlock),
+                ],
               );
             },
           ),
