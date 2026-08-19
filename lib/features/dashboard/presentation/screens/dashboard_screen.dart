@@ -415,12 +415,13 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                     ? risk.highRisk
                         ? "HIGH"
                         : "LOW"
-                    : "EVIDENCE",
+                    : "PENDING",
                 hasRiskEvidence
                     ? risk.highRisk
                         ? Colors.redAccent
                         : Colors.greenAccent
                     : Colors.white38,
+                showBorder: false,
               ),
             ],
           ),
@@ -429,24 +430,41 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     );
   }
 
-  Widget _statusItem(String label, String value, Color color) {
+  Widget _statusItem(String label, String value, Color color, {bool showBorder = true}) {
     return Expanded(
-      child: Column(
-        children: [
-          FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Text(value,
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 4),
+        decoration: BoxDecoration(
+          border: showBorder
+              ? const Border(right: BorderSide(color: Colors.white10, width: 1.0))
+              : null,
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                value,
                 maxLines: 1,
                 textAlign: TextAlign.center,
-                style: AppTypography.hero.copyWith(fontSize: 16, color: color)),
-          ),
-          Text(label,
+                style: AppTypography.hero.copyWith(fontSize: 16, color: color),
+              ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              label,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
-              style: AppTypography.label
-                  .copyWith(fontSize: 6, color: Colors.white10)),
-        ],
+              style: AppTypography.label.copyWith(
+                fontSize: 9,
+                letterSpacing: 0.5,
+                color: Colors.white38,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

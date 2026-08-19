@@ -23,7 +23,7 @@ class SentinelCenterScreen extends ConsumerWidget {
                   delegate: SliverChildListDelegate([
                     _sectionLabel("Career Intelligence"),
                     const SizedBox(height: 24),
-                    _alertPlaceholder("No active intelligence reports for your current profile."),
+                    _alertPlaceholder("Sentinel is active. Scanning for career intelligence matching your current profile."),
                     const SizedBox(height: 48),
                     Center(
                       child: Column(
@@ -74,24 +74,6 @@ class SentinelCenterScreen extends ConsumerWidget {
         border: Border.all(color: AppColors.borderSoft),
       ),
       child: Text(text, style: AppTypography.body.copyWith(fontSize: 13, color: Colors.white70)),
-    );
-  }
-
-  Widget _gapIntelligence(String text) {
-    return Container(
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: AppColors.gold.withValues(alpha: 0.05),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppColors.gold.withValues(alpha: 0.1)),
-      ),
-      child: Row(
-        children: [
-          const Icon(Icons.lightbulb_outline_rounded, color: AppColors.gold, size: 18),
-          const SizedBox(width: 14),
-          Expanded(child: Text(text, style: AppTypography.body.copyWith(fontSize: 12, color: AppColors.gold))),
-        ],
-      ),
     );
   }
 }

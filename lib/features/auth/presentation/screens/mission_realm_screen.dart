@@ -15,6 +15,7 @@ import '../../../../core/utils/responsive_helper.dart';
 import '../../../profile/presentation/widgets/smart_search_field.dart';
 import '../providers/auth_provider.dart';
 import '../providers/mission_realm_provider.dart';
+import '../../../../shared/providers/session_provider.dart';
 
 class MissionRealmScreen extends ConsumerStatefulWidget {
   const MissionRealmScreen({super.key});
@@ -118,6 +119,10 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
 
     try {
       await _saveMissionSelection(recruitment);
+
+      // 🔱 Atomic reactivity: invalidate sessionUserProvider & await re-hydration
+      ref.invalidate(sessionUserProvider);
+      await ref.read(sessionUserProvider.future);
 
       await KnowledgeEngine.instance
           .initialize(recruitment: recruitment, force: true)
@@ -630,7 +635,9 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                   label: 'SMART START',
                   icon: Icons.auto_awesome_rounded,
                   filled: true,
-                  onPressed: () => _startMission(recruitment, true),
+                  onPressed: _areRequiredVariablesPresent(recruitment)
+                      ? () => _startMission(recruitment, true)
+                      : null,
                 ),
               ),
               SizedBox(
@@ -752,11 +759,19 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     return _variablePackCount(value) > 0;
   }
 
+  bool _areRequiredVariablesPresent(Recruitment recruitment) {
+    final vars = recruitment.missionVariables;
+    final hasMedium = _studentVariableValue(vars['mediumPolicy']) || _studentVariableValue(vars['supportedMediums']);
+    final hasPapers = _studentVariableValue(vars['paper_variables']);
+    final hasSubjects = _studentVariableValue(vars['subject_variables']);
+    return hasMedium && hasPapers && hasSubjects;
+  }
+
   Widget _missionActionButton({
     required String label,
     required IconData icon,
     required bool filled,
-    required VoidCallback onPressed,
+    required VoidCallback? onPressed,
   }) {
     final child = FittedBox(
       fit: BoxFit.scaleDown,

@@ -19,6 +19,7 @@ import '../../../../features/auth/presentation/providers/auth_provider.dart';
 import '../../../../core/services/knowledge_content_service.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import '../../../digibook/models/digibook_content.dart';
+import '../../../../core/knowledge/knowledge_engine_provider.dart';
 
 /// DIGIBOOK SCREEN
 /// The primary immersive reading interface. State-aware and adaptive.
@@ -43,12 +44,14 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
   
   // Content Summoning State
   Future<DigiBookContent?>? _contentFuture;
+  late MicroTopicNode _currentNode;
 
   @override
   void initState() {
     super.initState();
+    _currentNode = widget.node;
     _tabController = TabController(length: 5, vsync: this); 
-    _contentFuture = KnowledgeContentService.fetchContent(widget.node.contentRegistryId);
+    _contentFuture = KnowledgeContentService.fetchContent(_currentNode.contentRegistryId);
     
     _scrollController.addListener(() {
       if (_scrollController.hasClients) {
@@ -63,6 +66,17 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
   }
 
   @override
+  void didUpdateWidget(covariant DigiBookScreen oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.node.id != widget.node.id) {
+      setState(() {
+        _currentNode = widget.node;
+        _contentFuture = KnowledgeContentService.fetchContent(_currentNode.contentRegistryId);
+      });
+    }
+  }
+
+  @override
   void dispose() {
     _tabController.dispose();
     _scrollController.dispose();
@@ -72,8 +86,17 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
   @override
   Widget build(BuildContext context) {
     final knowledge = KnowledgeEngine.instance;
-    final state = knowledge.getState(widget.node.id) ?? NodeRuntimeState(nodeId: widget.node.id);
+    final state = knowledge.getState(_currentNode.id) ?? NodeRuntimeState(nodeId: _currentNode.id);
     final authState = ref.watch(authNotifierProvider);
+
+    ref.listen<List<MicroTopicNode>>(allNodesProvider, (previous, next) {
+      if (next.isNotEmpty && !next.any((n) => n.id == _currentNode.id)) {
+        setState(() {
+          _currentNode = next.first;
+          _contentFuture = KnowledgeContentService.fetchContent(_currentNode.contentRegistryId);
+        });
+      }
+    });
     
     final user = UserProfile(
       uid: authState.user?.uid ?? 'unknown',
@@ -288,12 +311,12 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "${widget.node.subjectId} • ${widget.node.chapterId}".toUpperCase(), 
+                  "${_currentNode.subjectId} • ${_currentNode.chapterId}".toUpperCase(), 
                   style: AppTypography.label.copyWith(fontSize: ResponsiveHelper.sp(context, 9), letterSpacing: 1.2)
                 ),
                 SizedBox(height: ResponsiveHelper.hp(context, 0.005)),
                 Text(
-                  widget.node.title, 
+                  _currentNode.title, 
                   maxLines: 1, 
                   overflow: TextOverflow.ellipsis, 
                   style: AppTypography.cardTitle.copyWith(fontSize: ResponsiveHelper.sp(context, 14))
@@ -464,7 +487,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(widget.node.title, style: AppTypography.hero.copyWith(height: 1.3, fontSize: ResponsiveHelper.sp(context, 28))),
+          Text(_currentNode.title, style: AppTypography.hero.copyWith(height: 1.3, fontSize: ResponsiveHelper.sp(context, 28))),
           SizedBox(height: ResponsiveHelper.hp(context, 0.035)),
           DarkCard(
             padding: EdgeInsets.symmetric(horizontal: ResponsiveHelper.wp(context, 0.06), vertical: ResponsiveHelper.hp(context, 0.03)),
@@ -476,7 +499,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
             onTap: () async {
               final dwellTime = DateTime.now().difference(_startTime).inSeconds / 60.0;
               await KnowledgeEngine.instance.recordReadingCompletion(
-                nodeId: widget.node.id,
+                nodeId: _currentNode.id,
                 dwellTimeMinutes: dwellTime,
                 scrollDepthPercent: _maxScrollPercent,
               );
@@ -528,7 +551,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       itemCount: mcqs.length,
       itemBuilder: (context, index) => Padding(
         padding: const EdgeInsets.only(bottom: 18),
-        child: McqCard(nodeId: widget.node.id, mcq: mcqs[index], currentMastery: state.mastery),
+        child: McqCard(nodeId: _currentNode.id, mcq: mcqs[index], currentMastery: state.mastery),
       ),
     );
   }

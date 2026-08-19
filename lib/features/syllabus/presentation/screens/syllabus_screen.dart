@@ -13,6 +13,7 @@ import '../../../../core/utils/app_routes.dart';
 import '../../../../shared/widgets/command_header.dart';
 import '../../../../shared/providers/session_provider.dart';
 import '../../../dashboard/presentation/providers/dashboard_provider.dart';
+import '../../../../core/knowledge/knowledge_engine_provider.dart';
 
 /// 🔱 SYLLABUS SCREEN
 /// Displays the knowledge map with real-time runtime state tracking.
@@ -31,17 +32,10 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
   @override
   void initState() {
     super.initState();
-    nodes = KnowledgeEngine.instance.allNodes;
-    filteredNodes = nodes;
   }
 
   void _onSearchChanged(String value) {
-    setState(() {
-      filteredNodes = nodes.where((node) {
-        return node.topicHindi.toLowerCase().contains(value.toLowerCase()) ||
-            node.topic.toLowerCase().contains(value.toLowerCase());
-      }).toList();
-    });
+    setState(() {});
   }
 
   @override
@@ -50,6 +44,15 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
     final sessionUser = ref.watch(sessionUserProvider).valueOrNull;
     final readiness = ref.watch(missionReadinessProvider);
     final momentum = knowledge.momentumState;
+
+    nodes = ref.watch(allNodesProvider);
+    final query = _searchController.text.toLowerCase();
+    filteredNodes = query.isEmpty
+        ? nodes
+        : nodes.where((node) {
+            return node.topicHindi.toLowerCase().contains(query) ||
+                node.topic.toLowerCase().contains(query);
+          }).toList();
 
     return Scaffold(
       backgroundColor: AppColors.background,

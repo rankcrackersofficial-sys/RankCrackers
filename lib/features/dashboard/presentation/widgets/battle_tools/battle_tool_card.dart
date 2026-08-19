@@ -26,18 +26,34 @@ class BattleToolCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isReady = subtitle != "Not Ready";
+
     return GestureDetector(
-      onTap: () => context.push(route),
+      onTap: isReady
+          ? () => context.push(route)
+          : () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  backgroundColor: const Color(0xFF111625),
+                  content: Text(
+                    '$title is not ready for this mission.',
+                    style: AppTypography.body.copyWith(color: Colors.white70),
+                  ),
+                ),
+              );
+            },
       child: DarkCard(
         padding: const EdgeInsets.all(18),
-        border: featured ? Border.all(color: AppColors.gold.withValues(alpha: 0.3), width: 1.2) : null,
+        border: featured && isReady
+            ? Border.all(color: AppColors.gold.withValues(alpha: 0.3), width: 1.2)
+            : null,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // 🔱 PREMIUM CARD DNA: Icon/Metric
             Icon(
               icon,
-              color: AppColors.gold,
+              color: isReady ? AppColors.gold : Colors.white24,
               size: 20,
             ),
 
@@ -48,7 +64,10 @@ class BattleToolCard extends StatelessWidget {
               title,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: AppTypography.cardTitle.copyWith(fontSize: 14),
+              style: AppTypography.cardTitle.copyWith(
+                fontSize: 14,
+                color: isReady ? Colors.white : Colors.white38,
+              ),
             ),
 
             const SizedBox(height: 6),
@@ -58,7 +77,10 @@ class BattleToolCard extends StatelessWidget {
               subtitle,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
-              style: AppTypography.subtitle.copyWith(fontSize: 10),
+              style: AppTypography.subtitle.copyWith(
+                fontSize: 10,
+                color: isReady ? AppColors.gold.withValues(alpha: 0.7) : Colors.white24,
+              ),
             ),
             
             const SizedBox(height: 12),
@@ -66,14 +88,17 @@ class BattleToolCard extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  "LAUNCH",
-                  style: AppTypography.label.copyWith(fontSize: 8, color: AppColors.gold),
+                  isReady ? "LAUNCH" : "LOCKED",
+                  style: AppTypography.label.copyWith(
+                    fontSize: 8,
+                    color: isReady ? AppColors.gold : Colors.white24,
+                  ),
                 ),
                 const Spacer(),
-                const Icon(
-                  Icons.arrow_forward_ios_rounded,
+                Icon(
+                  isReady ? Icons.arrow_forward_ios_rounded : Icons.lock_outline_rounded,
                   size: 10,
-                  color: AppColors.gold,
+                  color: isReady ? AppColors.gold : Colors.white24,
                 ),
               ],
             ),

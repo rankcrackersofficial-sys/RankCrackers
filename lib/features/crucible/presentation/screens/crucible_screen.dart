@@ -63,6 +63,12 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     final readiness = ref.watch(missionReadinessProvider);
     final momentum = knowledge.momentumState;
 
+    ref.listen<AsyncValue<SessionUser>>(sessionUserProvider, (previous, next) {
+      if (next.hasValue) {
+        loadMission();
+      }
+    });
+
     final protocolStateAsync = ref.watch(crucibleProtocolStateProvider);
     final protocolState = protocolStateAsync.valueOrNull ??
         CrucibleProtocolState(

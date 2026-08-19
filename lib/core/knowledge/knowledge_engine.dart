@@ -162,6 +162,12 @@ class KnowledgeEngine extends ChangeNotifier {
           },
         )
         .listen((nodesData) {
+        // 🔱 Guard against stale async updates
+        if (recruitment?.id != _activeRecruitment?.id) {
+          debugPrint("🔱 KNOWLEDGE: Ignoring stale node stream response.");
+          return;
+        }
+
         // 🔱 Type-Safety Debugging
         debugPrint('🔱 NODE STREAM RECEIVED: Type = ${nodesData.runtimeType}');
         if (nodesData.isNotEmpty) {
@@ -215,6 +221,12 @@ class KnowledgeEngine extends ChangeNotifier {
           },
         )
         .listen((progressData) {
+        // 🔱 Guard against stale async updates
+        if (recruitment?.id != _activeRecruitment?.id) {
+          debugPrint("🔱 KNOWLEDGE: Ignoring stale progress stream response.");
+          return;
+        }
+
         // 🔱 Type-Safety Debugging
         debugPrint('🔱 PROGRESS STREAM RECEIVED: Type = ${progressData.runtimeType}');
 
