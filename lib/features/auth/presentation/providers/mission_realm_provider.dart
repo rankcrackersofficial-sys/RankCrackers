@@ -33,8 +33,12 @@ final filteredRecruitmentsByCategoryProvider =
         (ref, arg) {
   final stateMissions = ref.watch(filteredRecruitmentsProvider(arg.state));
   return stateMissions
-      .where((r) =>
-          r.examCategory == arg.category ||
-          r.examCategory == 'category_pending')
+      .where((r) {
+        final rCat = r.examCategory.trim().toLowerCase();
+        final filterCat = arg.category.trim().toLowerCase();
+        return rCat == filterCat ||
+            rCat == 'category_pending' ||
+            rCat == 'pending';
+      })
       .toList();
 });

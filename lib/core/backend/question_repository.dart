@@ -5,7 +5,7 @@ import '../models/question_model.dart';
 /// Sovereign storage authority for assessment evidence.
 class QuestionRepository {
   static final _firestore = FirebaseFirestore.instance;
-  static const String _collection = 'question_bank';
+  static const String _collection = 'published_questions';
 
   static Future<void> save(QuestionModel question) async {
     await _firestore.collection(_collection).doc(question.id).set(question.toMap());

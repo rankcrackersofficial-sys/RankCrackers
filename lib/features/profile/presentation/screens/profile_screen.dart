@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
@@ -207,6 +209,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       _buildPreparationControls(sessionUser?.examName),
                       _buildAccountSettings(),
                       _buildSupportSection(),
+                      _buildLegalSection(),
                       _buildAdaptiveInsights(engine),
 
                       const SliverToBoxAdapter(child: SizedBox(height: 100)),
@@ -290,10 +293,99 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                         onTap: () {})),
               ],
             ),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                Expanded(
+                  child: _miniControlTile(
+                    Icons.block_rounded,
+                    'Deactivate',
+                    onTap: _deactivateAccount,
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: _miniControlTile(
+                    Icons.delete_forever_rounded,
+                    'Delete',
+                    onTap: _deleteAccount,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
     );
+  }
+
+  Future<void> _deactivateAccount() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return;
+
+    final confirm = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppColors.background,
+        title: const Text('Deactivate Account', style: TextStyle(color: Colors.white)),
+        content: const Text('Are you sure you want to deactivate your account? You can reactivate it anytime by logging back in.', style: TextStyle(color: Colors.white70)),
+        actions: [
+          TextButton(
+            child: const Text('Cancel', style: TextStyle(color: Colors.white24)),
+            onPressed: () => Navigator.of(ctx).pop(false),
+          ),
+          TextButton(
+            child: const Text('Deactivate', style: TextStyle(color: AppColors.gold)),
+            onPressed: () => Navigator.of(ctx).pop(true),
+          ),
+        ],
+      ),
+    );
+
+    if (confirm == true) {
+      await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
+        'status': 'deactivated',
+        'updatedAt': FieldValue.serverTimestamp(),
+      });
+      await ref.read(authNotifierProvider.notifier).signOut();
+      await SessionManager.logout();
+      if (mounted) context.go(AppRoutes.login);
+    }
+  }
+
+  Future<void> _deleteAccount() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return;
+
+    final confirm = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppColors.background,
+        title: const Text('Delete Account', style: TextStyle(color: Colors.white)),
+        content: const Text('This will request permanent deletion of all your academic and personal profile data. This action is irreversible. Proceed?', style: TextStyle(color: Colors.white70)),
+        actions: [
+          TextButton(
+            child: const Text('Cancel', style: TextStyle(color: Colors.white24)),
+            onPressed: () => Navigator.of(ctx).pop(false),
+          ),
+          TextButton(
+            child: const Text('Request Deletion', style: TextStyle(color: Colors.red)),
+            onPressed: () => Navigator.of(ctx).pop(true),
+          ),
+        ],
+      ),
+    );
+
+    if (confirm == true) {
+      await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
+        'deleteRequested': true,
+        'status': 'deletion_pending',
+        'updatedAt': FieldValue.serverTimestamp(),
+      });
+      await ref.read(authNotifierProvider.notifier).signOut();
+      await SessionManager.logout();
+      if (mounted) context.go(AppRoutes.login);
+    }
   }
 
   Widget _buildSupportSection() {
@@ -326,6 +418,59 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildLegalSection() {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
+            ResponsiveHelper.wp(context, 0.05), 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _sectionLabel('LEGAL'),
+            Row(
+              children: [
+                Expanded(
+                  child: _miniControlTile(
+                    Icons.privacy_tip_rounded,
+                    'Privacy',
+                    onTap: () => _showLegalDialog('Privacy Policy', 'The canonical Privacy Policy text is currently pending legal review from the Founder.'),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: _miniControlTile(
+                    Icons.description_rounded,
+                    'Terms',
+                    onTap: () => _showLegalDialog('Terms of Service', 'The canonical Terms of Service text is currently pending legal review from the Founder.'),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _showLegalDialog(String title, String content) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppColors.background,
+        title: Text(title, style: const TextStyle(color: Colors.white)),
+        content: SingleChildScrollView(
+          child: Text(content, style: const TextStyle(color: Colors.white70)),
+        ),
+        actions: [
+          TextButton(
+            child: const Text('Close', style: TextStyle(color: AppColors.gold)),
+            onPressed: () => Navigator.of(ctx).pop(),
+          ),
+        ],
       ),
     );
   }

@@ -771,6 +771,7 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
   const lifecycleStatus = realmData.status || recruitmentData.nature || 'PASSIVE';
   const isArchived = lifecycleStatus === 'ARCHIVED' || realmData.completion_status === 'ARCHIVED';
   const orgCode = realmData.organizationCode || recruitmentData.organizationCode || recruitmentData.org || '';
+  const normalizedState = String(realmData.state || recruitmentData.state || 'Central').trim();
 
   return {
     id: realmId,
@@ -780,7 +781,7 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
     sourceMissionVersion: String(realmData.version || realmData.canonicalVersion || recruitmentData.version || '1'),
     sourcePath: `mission_realms/${realmId}`,
     sourceType: 'mission_realms',
-    studentPublicationState: isArchived ? 'ARCHIVED' : 'COMING_SOON',
+    studentPublicationState: isArchived ? 'ARCHIVED' : 'PREPARING',
     title: name,
     name: name,
     subtitle: name,
@@ -789,25 +790,25 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
     examYear: year,
     missionType: category,
     missionStructureType: realmData.missionStructureType || recruitmentData.missionStructureType || 'SINGLE_TRACK',
-    examScope: realmData.examScope || recruitmentData.examScope || 'PRIVATE_REVIEW',
+    examScope: realmData.examScope || recruitmentData.examScope || 'PUBLIC_STUDENT_ELIGIBLE',
     mediumPolicy: realmData.mediumPolicy || recruitmentData.mediumPolicy || 'ENGLISH_ONLY',
     supportedMediums: Array.isArray(realmData.supportedMediums) ? realmData.supportedMediums : ['ENGLISH'],
     defaultMedium: realmData.defaultMedium || recruitmentData.defaultMedium || 'ENGLISH',
-    status: isArchived ? 'ARCHIVED' : 'PRIVATE_REVIEW_LOCKED',
-    catalogStatus: isArchived ? 'ARCHIVED' : 'COMING_SOON',
-    studentMessage: isArchived ? 'Mission archived.' : 'Mission shell is created. Content will unlock after Founder approval.',
-    userPanelVisible: false,
-    cardVisible: false,
+    status: isArchived ? 'ARCHIVED' : 'PREPARING',
+    catalogStatus: isArchived ? 'ARCHIVED' : 'PREPARING',
+    studentMessage: isArchived ? 'Mission archived.' : 'Mission is visible to eligible students and awaiting final Founder verification.',
+    userPanelVisible: true,
+    cardVisible: true,
     visibility: {
-      studentVisible: false,
-      catalogVisible: false,
-      userPanelVisible: false,
-      quickEntryEnabled: false,
-      smartEntryEnabled: false
+      studentVisible: true,
+      catalogVisible: true,
+      userPanelVisible: true,
+      quickEntryEnabled: true,
+      smartEntryEnabled: true
     },
     archived: isArchived,
     titleHindi: realmData.titleHindi || recruitmentData.titleHindi || '',
-    state: realmData.state || recruitmentData.state || '',
+    state: normalizedState || 'Central',
     examCategory: category,
     exam_category: category,
     target_year: year,

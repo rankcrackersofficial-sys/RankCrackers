@@ -266,11 +266,13 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('Mission Realm',
-                  style: AppTypography.hero
-                      .copyWith(fontSize: ResponsiveHelper.sp(context, 20))),
+                  style: AppTypography.hero.copyWith(
+                    fontSize: ResponsiveHelper.sp(context, 20),
+                    color: AppColors.primaryText,
+                  )),
               Text('Select the mission you are preparing to dominate.',
                   style: AppTypography.body.copyWith(
-                      color: Colors.white30,
+                      color: AppColors.secondaryText,
                       fontSize: ResponsiveHelper.sp(context, 12))),
             ],
           ),
@@ -322,7 +324,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
             child: Text(
               'Founder missions verified. Category mapping is pending source proof.',
               style: AppTypography.body.copyWith(
-                color: Colors.white54,
+                color: AppColors.primaryText,
                 fontSize: 10,
               ),
             ),
@@ -394,7 +396,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
           maxLines: 1,
           overflow: TextOverflow.visible,
           style: AppTypography.label.copyWith(
-            color: selected ? AppColors.gold : Colors.white54,
+            color: selected ? AppColors.gold : AppColors.primaryText,
             fontSize: 8,
             letterSpacing: 0.9,
           ),
@@ -597,15 +599,15 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
               title: Text(recruitment.title,
                   style: AppTypography.cardTitle.copyWith(
                       fontSize: 13,
-                      color: isExpanded ? AppColors.gold : Colors.white70)),
+                      color: isExpanded ? AppColors.gold : AppColors.primaryText)),
               subtitle: Text(_missionMeta(recruitment),
                   style: AppTypography.body
-                      .copyWith(fontSize: 9, color: Colors.white24)),
+                      .copyWith(fontSize: 9, color: AppColors.secondaryText)),
               trailing: Icon(
                   isExpanded
                       ? Icons.keyboard_arrow_up_rounded
                       : Icons.keyboard_arrow_down_rounded,
-                  color: Colors.white10,
+                  color: isExpanded ? AppColors.gold : AppColors.secondaryText,
                   size: 16),
             ),
           ),

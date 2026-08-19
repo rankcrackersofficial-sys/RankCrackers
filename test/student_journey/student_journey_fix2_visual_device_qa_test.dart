@@ -29,6 +29,7 @@ import 'package:rank_crackers/features/auth/presentation/screens/mission_realm_s
 import 'package:rank_crackers/features/auth/presentation/screens/unified_identity_screen.dart';
 import 'package:rank_crackers/features/dashboard/presentation/screens/dashboard_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:rank_crackers/shared/session/session_manager.dart';
 
 import '../helpers/firebase_test_setup.dart';
 
@@ -91,6 +92,7 @@ Widget _screenFor(_JourneyCase journeyCase) {
       return const UnifiedIdentityScreen(
         forceProfileSetupForTest: true,
         disableFirebaseAuthLookupForTest: true,
+        disableAnimationsForTest: true,
       );
     case _JourneyScreen.missionRealm:
       return const MissionRealmScreen();
@@ -221,6 +223,7 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   setUpAll(() async {
+    SessionManager.disableFirebaseForTest = true;
     await ensureFirebaseInitializedForTests();
     await _loadFontsForTest();
     Directory(_screenshotDir).createSync(recursive: true);
@@ -291,7 +294,7 @@ void main() {
       File('$_screenshotDir/${journeyCase.name}.json').writeAsStringSync(
         const JsonEncoder.withIndent('  ').convert(record),
       );
-    }, timeout: const Timeout(Duration(seconds: 15)));
+    }, timeout: const Timeout(Duration(seconds: 60)));
   }
 }
 

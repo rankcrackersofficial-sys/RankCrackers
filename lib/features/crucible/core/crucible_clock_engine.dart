@@ -174,9 +174,10 @@ class CrucibleClockEngine {
   }
 
   // ===================================================
-  // GET HOURS REMAINING
+  // GET HOURS REMAINING (Legacy - DO NOT USE FOR PROTOCOL)
   // ===================================================
 
+  @Deprecated('Use getWindowRemainingDuration instead for protocol-accurate time.')
   static int getHoursRemaining() {
     return getRemainingDuration(now: DateTime.now()).inHours;
   }

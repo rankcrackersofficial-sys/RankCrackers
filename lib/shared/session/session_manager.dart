@@ -7,6 +7,7 @@ class SessionManager {
   static SharedPreferences? _prefs;
   static bool _profileSyncRunning = false;
   static bool _examSyncRunning = false;
+  static bool disableFirebaseForTest = false;
 
   /// 🔱 BOOTSTRAP INITIALIZATION
   /// Called in main.dart to ensure SharedPreferences is ready for sync routing.
@@ -80,6 +81,7 @@ class SessionManager {
   }
 
   static void _syncProfileStatusInBackground(SharedPreferences prefs) async {
+    if (disableFirebaseForTest) return;
     if (_profileSyncRunning) return;
     _profileSyncRunning = true;
 

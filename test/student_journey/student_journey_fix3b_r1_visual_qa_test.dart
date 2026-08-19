@@ -17,6 +17,7 @@ import 'package:rank_crackers/features/auth/domain/repositories/auth_repository.
 import 'package:rank_crackers/features/auth/presentation/providers/auth_provider.dart';
 import 'package:rank_crackers/features/auth/presentation/providers/mission_realm_provider.dart';
 import 'package:rank_crackers/features/auth/presentation/screens/unified_identity_screen.dart';
+import 'package:rank_crackers/shared/session/session_manager.dart';
 
 import '../helpers/firebase_test_setup.dart';
 
@@ -44,6 +45,7 @@ Future<void> main() async {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   setUpAll(() async {
+    SessionManager.disableFirebaseForTest = true;
     await ensureFirebaseInitializedForTests();
     await _loadFontsForTest();
     Directory(_outDir).createSync(recursive: true);
@@ -67,7 +69,7 @@ Future<void> main() async {
       name: '02_enabled_cta_393',
       size: const Size(393, 873),
       mode: _VisualMode.enabled,
-      markers: const ['Profile Photo', 'ESTABLISH IDENTITY', 'JEE Main 2027'],
+      markers: const ['Profile Photo', 'ESTABLISH IDENTITY'],
     ),
     _VisualCase(
       name: '03_compact_360',
@@ -213,9 +215,8 @@ Future<void> _completeIdentityFields(WidgetTester tester) async {
   final dynamic state = tester.state(find.byType(UnifiedIdentityScreen));
   state.stateController.text = 'Rajasthan';
   state.districtController.text = 'Jaipur';
-  state.missionController.text = 'JEE Main 2027';
   state.setState(() {
-    state.selectedMission = _missions.first;
+    state.consentAccepted = true;
   });
   await tester.pump(const Duration(milliseconds: 160));
   await tester.ensureVisible(find.text('ESTABLISH IDENTITY'));

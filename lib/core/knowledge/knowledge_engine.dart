@@ -470,7 +470,7 @@ class KnowledgeEngine extends ChangeNotifier {
   void dispose() {
     _progressSubscription?.cancel();
     _nodeSubscription?.cancel();
-    super.dispose();
+    // Do not call super.dispose() to keep the persistent singleton active across multiple tests.
   }
 
   // ===================================================

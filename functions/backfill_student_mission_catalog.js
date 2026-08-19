@@ -27,6 +27,8 @@ async function main() {
     const missionIds = Array.from(KNOWN_PILOT_IDS);
 
     const now = new Date().toISOString();
+    const hasNotificationDoc = false;
+    const externalNotificationDoc = null;
 
     for (const id of missionIds) {
         const docRef = db.collection('mission_realms').doc(id);
@@ -151,6 +153,7 @@ function buildCatalogPayload(id, data, now) {
     const category = normalizeMissionCategory(data.examCategory || data.exam_category || data.category || data.missionType);
     const isArchived = data.status === 'ARCHIVED' || data.completion_status === 'ARCHIVED';
     const orgCode = data.org || data.organizationCode || '';
+    const normalizedState = String(data.state || data.exam_state || data.examState || 'Central').trim();
 
     return {
         id: id,
@@ -160,7 +163,7 @@ function buildCatalogPayload(id, data, now) {
         sourceMissionVersion: String(data.version || data.canonicalVersion || '1'),
         sourcePath: `mission_realms/${id}`,
         sourceType: 'mission_realms',
-        studentPublicationState: isArchived ? 'ARCHIVED' : 'COMING_SOON',
+        studentPublicationState: isArchived ? 'ARCHIVED' : 'PREPARING',
         title: title,
         name: title,
         subtitle: title,
@@ -169,25 +172,25 @@ function buildCatalogPayload(id, data, now) {
         examYear: year,
         missionType: category,
         missionStructureType: data.missionStructureType || 'SINGLE_TRACK',
-        examScope: data.examScope || 'PRIVATE_REVIEW',
+        examScope: data.examScope || 'PUBLIC_STUDENT_ELIGIBLE',
         mediumPolicy: data.mediumPolicy || 'ENGLISH_ONLY',
         supportedMediums: Array.isArray(data.supportedMediums) ? data.supportedMediums : ['ENGLISH'],
         defaultMedium: data.defaultMedium || 'ENGLISH',
-        status: isArchived ? 'ARCHIVED' : 'PRIVATE_REVIEW_LOCKED',
-        catalogStatus: isArchived ? 'ARCHIVED' : 'COMING_SOON',
-        studentMessage: isArchived ? 'Mission archived.' : 'Mission shell is created. Content will unlock after Founder approval.',
-        userPanelVisible: false,
-        cardVisible: false,
+        status: isArchived ? 'ARCHIVED' : 'PREPARING',
+        catalogStatus: isArchived ? 'ARCHIVED' : 'PREPARING',
+        studentMessage: isArchived ? 'Mission archived.' : 'Mission is visible to eligible students and awaiting final Founder verification.',
+        userPanelVisible: true,
+        cardVisible: true,
         visibility: {
-            studentVisible: false,
-            catalogVisible: false,
-            userPanelVisible: false,
-            quickEntryEnabled: false,
-            smartEntryEnabled: false
+            studentVisible: true,
+            catalogVisible: true,
+            userPanelVisible: true,
+            quickEntryEnabled: true,
+            smartEntryEnabled: true
         },
         archived: isArchived,
         titleHindi: data.titleHindi || '',
-        state: data.state || '',
+        state: normalizedState || 'Central',
         examCategory: category,
         exam_category: category,
         target_year: year,

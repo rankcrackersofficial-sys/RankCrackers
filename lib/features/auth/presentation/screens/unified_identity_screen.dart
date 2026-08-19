@@ -56,12 +56,14 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   bool _isSaving = false;
   bool _identityEstablished = false;
   bool _passwordVisible = false;
+  bool consentAccepted = false;
 
   bool get _canSubmitIdentity =>
       nameController.text.trim().isNotEmpty &&
       mobileController.text.trim().length == 10 &&
       stateController.text.trim().isNotEmpty &&
-      districtController.text.trim().isNotEmpty;
+      districtController.text.trim().isNotEmpty &&
+      consentAccepted;
 
   late AnimationController _animationController;
   late Animation<double> glowAnimation;
@@ -116,6 +118,41 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       final data = doc.data();
       final exists = doc.exists && (data?['name']?.toString().isNotEmpty ?? false);
       if (exists && data != null && mounted) {
+        final status = data['status']?.toString() ?? 'active';
+        if (status == 'deactivated') {
+          if (!mounted) return;
+          final reinstate = await showDialog<bool>(
+            context: context,
+            barrierDismissible: false,
+            builder: (ctx) => AlertDialog(
+              backgroundColor: AppColors.background,
+              title: const Text('Reactivate Account', style: TextStyle(color: Colors.white)),
+              content: const Text('Your profile is currently deactivated. Would you like to reinstate it and restore all your data?', style: TextStyle(color: Colors.white70)),
+              actions: [
+                TextButton(
+                  child: const Text('Cancel', style: TextStyle(color: Colors.white24)),
+                  onPressed: () => Navigator.of(ctx).pop(false),
+                ),
+                TextButton(
+                  child: const Text('Reinstate', style: TextStyle(color: AppColors.gold)),
+                  onPressed: () => Navigator.of(ctx).pop(true),
+                ),
+              ],
+            ),
+          );
+
+          if (reinstate == true) {
+            await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
+              'status': 'active',
+              'updatedAt': FieldValue.serverTimestamp(),
+            });
+          } else {
+            await ref.read(authNotifierProvider.notifier).signOut();
+            await SessionManager.logout();
+            return;
+          }
+        }
+
         final name = data['name']?.toString() ?? '';
         final city = data['city']?.toString() ?? '';
         final mobile = data['mobile']?.toString() ?? '';
@@ -315,6 +352,12 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         'updatedAt': FieldValue.serverTimestamp(),
         'email': user.email,
         'photoUrl': user.photoURL,
+        'status': 'active',
+        'consent': {
+          'termsAccepted': true,
+          'termsVersion': '1.0.0',
+          'acceptedAt': FieldValue.serverTimestamp(),
+        },
       }).then((_) => debugPrint("CLOUD SYNC COMPLETE")));
 
       // LEVEL-12.4
@@ -417,8 +460,9 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('🔱 UnifiedIdentityScreen: build called');
     final authState = ref.watch(authNotifierProvider);
-    final user = authState.user ?? FirebaseAuth.instance.currentUser;
+    final user = authState.user ?? (widget.disableFirebaseAuthLookupForTest ? null : FirebaseAuth.instance.currentUser);
     final showProfileSetup = widget.forceProfileSetupForTest || user != null;
 
     return Scaffold(
@@ -805,7 +849,37 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
               );
             },
           ),
-          const SizedBox(height: 24),
+          Row(
+            children: [
+              GestureDetector(
+                key: const ValueKey('consent_checkbox'),
+                onTap: () {
+                  setState(() {
+                    consentAccepted = !consentAccepted;
+                  });
+                },
+                child: Container(
+                  width: 18,
+                  height: 18,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: AppColors.gold, width: 1.5),
+                    borderRadius: BorderRadius.circular(4),
+                    color: consentAccepted ? AppColors.gold : Colors.transparent,
+                  ),
+                  child: consentAccepted
+                      ? const Icon(Icons.check, size: 12, color: Colors.black)
+                      : null,
+                ),
+              ),
+              Expanded(
+                child: Text(
+                  "I accept the Privacy Policy and Terms of Service (pending Founder legal content confirmation).",
+                  style: AppTypography.body.copyWith(fontSize: 10, color: Colors.white70),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
           if (_identityEstablished)
             _buildIdentityEstablishedBadge()
           else

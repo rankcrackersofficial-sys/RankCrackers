@@ -56,11 +56,12 @@ class _TacticalAutocompleteFieldState extends State<TacticalAutocompleteField> {
           widget.title,
           style: AppTypography.label.copyWith(
             fontSize: ResponsiveHelper.sp(context, 8),
-            color: Colors.white24,
+            color: AppColors.primaryText,
+            letterSpacing: 1.1,
           ),
         ),
         SizedBox(height: ResponsiveHelper.compactGap(context) * 0.4),
-        
+
         // 🔱 Forensic Fix: Removed LayoutBuilder wrapper to stabilize semantics tree.
         // We use a GlobalKey to get the width of the field for the dropdown.
         RawAutocomplete<String>(
@@ -79,7 +80,7 @@ class _TacticalAutocompleteFieldState extends State<TacticalAutocompleteField> {
             _internalFocusNode.unfocus();
           },
           fieldViewBuilder: (context, textEditingController, focusNode, onFieldSubmitted) {
-            return Container(
+            return SizedBox(
               height: ResponsiveHelper.fieldHeight(context),
               child: TextField(
                 controller: textEditingController,
@@ -87,13 +88,15 @@ class _TacticalAutocompleteFieldState extends State<TacticalAutocompleteField> {
                 enabled: widget.enabled,
                 onChanged: widget.onChanged,
                 style: AppTypography.body.copyWith(
-                  color: widget.enabled ? Colors.white : Colors.white24,
+                  color: widget.enabled
+                      ? AppColors.primaryText
+                      : AppColors.secondaryText,
                   fontSize: ResponsiveHelper.sp(context, 14),
                 ),
                 decoration: InputDecoration(
                   hintText: widget.enabled ? widget.hint : 'Disabled',
                   hintStyle: AppTypography.body.copyWith(
-                    color: Colors.white10,
+                    color: AppColors.secondaryText,
                     fontSize: ResponsiveHelper.sp(context, 13),
                   ),
                   filled: true,

@@ -412,6 +412,9 @@ class FirestoreService {
             : _catalogString(data, 'canonicalKnowledgeVersion').isNotEmpty
                 ? _catalogString(data, 'canonicalKnowledgeVersion')
                 : _catalogString(data, 'version');
+    final normalizedState = (data['state'] ?? data['examState'] ?? 'Central')
+        .toString()
+        .trim();
     final missionId = sourceMissionId;
     final yearValue = data['year'] ?? data['examYear'];
     final year = yearValue is int
@@ -435,7 +438,7 @@ class FirestoreService {
       title: title,
       titleHindi: (data['titleHindi'] ?? title).toString(),
       year: year,
-      state: (data['state'] ?? 'Central').toString(),
+      state: normalizedState.isEmpty ? 'Central' : normalizedState,
       examCategory: (data['examCategory'] ??
               data['exam_category'] ??
               data['missionType'] ??

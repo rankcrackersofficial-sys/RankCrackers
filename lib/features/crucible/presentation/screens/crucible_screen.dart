@@ -8,6 +8,9 @@ import '../../../../core/theme/app_typography.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_spacing.dart';
 import '../../../../core/utils/app_routes.dart'; // 🔱 Route import
+import '../../../../core/models/readiness_state.dart';
+import '../../../../core/models/momentum_state.dart';
+import '../../../../core/widgets/dark_card.dart';
 import '../widgets/battle_engine_card.dart';
 import '../widgets/mission_blueprint_card.dart';
 import '../widgets/rebuild_zone_card.dart';
@@ -70,74 +73,234 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     });
 
     final protocolStateAsync = ref.watch(crucibleProtocolStateProvider);
-    final protocolState = protocolStateAsync.valueOrNull ??
-        CrucibleProtocolState(
-          recruitmentId: selectedExamId,
-          phaseIndex: 2,
-          scheduleIndex: 1,
-          currentScheduleId: 'sch_${selectedExamId}_1',
-          status: 'study',
-          scheduleStartTime: DateTime.now().subtract(const Duration(days: 16)),
-          protocolStartTime: DateTime.now().subtract(const Duration(days: 16)),
-          currentBoundaryTime: DateTime.now().add(const Duration(hours: 48)),
-          isVIP: false,
-          isStalled: false,
-          lastProgressAt: DateTime.now(),
+
+    return protocolStateAsync.when(
+      data: (protocolState) {
+        if (protocolState == null) {
+          return _buildPendingAuthorityState(sessionUser, readiness, momentum);
+        }
+
+        final currentDay = CrucibleClockEngine.getProtocolDay(
+            state: protocolState, now: DateTime.now());
+        final currentPhase = protocolState.phaseIndex;
+        final progress = (currentDay / 99).clamp(0.0, 1.0);
+
+        final nodes = knowledge.allNodes
+            .where((e) => e.examId.toLowerCase() == selectedExamId.toLowerCase())
+            .toList();
+
+        final currentCycleDay = currentDay;
+        final phase = currentPhase;
+
+        final coverage = CoverageEngine.calculate(
+          examId: selectedExamId,
+          variantId: selectedVariantId,
+          nodes: nodes,
+          states: states,
+          atomicStates: knowledge.atomicCoverageStates,
         );
 
-    final currentDay = CrucibleClockEngine.getProtocolDay(state: protocolState, now: DateTime.now());
-    final currentPhase = protocolState.phaseIndex;
-    final progress = (currentDay / 99).clamp(0.0, 1.0);
+        final hasCrucibleEvidence = nodes.isNotEmpty && coverage.totalNodes > 0;
 
-    final nodes = knowledge.allNodes
-        .where((e) => e.examId.toLowerCase() == selectedExamId.toLowerCase())
-        .toList();
+        final plan =
+            CrucibleMasterEngine.generatePlan(nodes: nodes, states: states);
 
-    final currentCycleDay = currentDay;
-    final phase = currentPhase;
+        final missions = hasCrucibleEvidence
+            ? (plan.isEmpty
+                ? ['Awaiting tactical generation...']
+                : plan.take(3).map((e) => e['topicName'].toString()).toList())
+            : ['EVIDENCE PENDING'];
+        final missionComplete =
+            hasCrucibleEvidence ? coverage.coveragePercent : 0.0;
+        final pending =
+            hasCrucibleEvidence ? 1.0 - coverage.coveragePercent : 0.0;
+        final weakCount = hasCrucibleEvidence ? coverage.weakNodes : 0;
+        final weakAreas =
+            hasCrucibleEvidence ? weakCount / coverage.totalNodes : 0.0;
 
-    final coverage = CoverageEngine.calculate(
-      examId: selectedExamId,
-      variantId: selectedVariantId,
-      nodes: nodes,
-      states: states,
-      atomicStates: knowledge.atomicCoverageStates,
+        final priorityNode = BattleEngine.getPriorityNode(
+          nodes,
+          states,
+          riskFactor: knowledge.riskState?.overallRisk ?? 0.0,
+        );
+
+        final macroTestActive = CrucibleClockEngine.isMacroTestWindow(
+            enrollmentTime: protocolState.protocolStartTime);
+        final rebuildMode = CrucibleClockEngine.isRebuildPhase(
+            enrollmentTime: protocolState.protocolStartTime);
+
+        return Scaffold(
+          backgroundColor: AppColors.background,
+          body: TacticalNoirBackground(
+            child: SafeArea(
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CommandHeader(
+                      userName: sessionUser?.name ?? 'Warrior',
+                      userPhoto: sessionUser?.photo,
+                      examName: sessionUser?.examName ?? selectedExamId,
+                      readiness: readiness,
+                      momentum: momentum,
+                      missionEvidenceVerified: hasCrucibleEvidence,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: AppSpacing.screenPadding),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 16),
+                          Text('THE CRUCIBLE',
+                              style: AppTypography.hero.copyWith(fontSize: 22)),
+                          const SizedBox(height: 6),
+                          Text(
+                              '100 Day Tactical Ascension Protocol • Day $currentDay',
+                              style: AppTypography.label),
+                          const SizedBox(height: 28),
+                          LiveTimerCard(
+                              day: currentCycleDay,
+                              phase: phase,
+                              protocolState: protocolState),
+                          const SizedBox(height: 24),
+                          BattleEngineCard(
+                            dayCount: currentDay,
+                            progress: progress,
+                            missionComplete: missionComplete,
+                            pending: pending,
+                            weakAreas: weakAreas,
+                            activeTopics: missions,
+                            hasEvidence: hasCrucibleEvidence,
+                          ),
+                          const SizedBox(height: 24),
+                          MissionBlueprintCard(
+                            hasEvidence: hasCrucibleEvidence,
+                            missions: plan.map((e) {
+                              final nodeId = e['topicId'].toString();
+                              final node = knowledge.getNode(nodeId);
+
+                              return {
+                                'subject': e['topicName'],
+                                'topics': 'Study Hours: ${e['hours']}',
+                                'completed': 'In Progress',
+                                'running':
+                                    e['priority'].toString().toUpperCase(),
+                                'locked': 'Next Session',
+                                'onTap': node != null
+                                    ? () => context.go(AppRoutes.digibook,
+                                        extra: node)
+                                    : null,
+                              };
+                            }).toList(),
+                          ),
+                          const SizedBox(height: 24),
+                          if (macroTestActive)
+                            Container(
+                              margin: const EdgeInsets.only(bottom: 20),
+                              padding: const EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                color: Colors.red.withValues(alpha: 0.08),
+                                borderRadius: BorderRadius.circular(14),
+                                border: Border.all(
+                                    color: Colors.red.withValues(alpha: 0.2)),
+                              ),
+                              child: const Row(
+                                children: [
+                                  Icon(Icons.warning_amber, color: Colors.red),
+                                  SizedBox(width: 12),
+                                  Expanded(
+                                      child: Text('Macro Test Window Active',
+                                          style: TextStyle(
+                                              color: Colors.red,
+                                              fontWeight: FontWeight.bold))),
+                                ],
+                              ),
+                            ),
+                          if (rebuildMode) ...[
+                            RebuildZoneCard(
+                                weakZones: weakCount,
+                                priorityTopic:
+                                    priorityNode?.title ?? 'No Risk'),
+                            const SizedBox(height: 24),
+                          ],
+                          TacticalRoadmapCard(
+                            roadmap: [
+                              {
+                                'day': 'DAY $currentDay',
+                                'firstTask': hasCrucibleEvidence &&
+                                        missions.isNotEmpty &&
+                                        missions[0] !=
+                                            'Awaiting tactical generation...'
+                                    ? missions[0]
+                                    : 'EVIDENCE PENDING',
+                                'secondTask':
+                                    hasCrucibleEvidence && missions.length > 1
+                                        ? missions[1]
+                                        : 'EVIDENCE PENDING',
+                                'thirdTask': hasCrucibleEvidence
+                                    ? 'Revision Cycle'
+                                    : 'EVIDENCE PENDING',
+                                'locked': false,
+                              },
+                              {
+                                'day': 'DAY ${currentDay + 1}',
+                                'firstTask':
+                                    hasCrucibleEvidence && missions.length > 2
+                                        ? missions[2]
+                                        : 'EVIDENCE PENDING',
+                                'secondTask': hasCrucibleEvidence
+                                    ? 'Subject Drill'
+                                    : 'EVIDENCE PENDING',
+                                'thirdTask': hasCrucibleEvidence
+                                    ? 'Daily Battle'
+                                    : 'EVIDENCE PENDING',
+                                'locked': false,
+                              },
+                              {
+                                'day': 'DAY ${currentDay + 2}',
+                                'firstTask': '',
+                                'secondTask': '',
+                                'thirdTask': '',
+                                'locked': true,
+                              },
+                            ],
+                          ),
+                          const SizedBox(height: 100),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+      loading: () => const Scaffold(
+        backgroundColor: AppColors.background,
+        body: Center(
+          child: CircularProgressIndicator(color: AppColors.gold),
+        ),
+      ),
+      error: (err, stack) => Scaffold(
+        backgroundColor: AppColors.background,
+        body: Center(
+          child: Text('Error loading protocol: $err',
+              style: AppTypography.body.copyWith(color: AppColors.error)),
+        ),
+      ),
     );
+  }
 
-    final hasCrucibleEvidence = nodes.isNotEmpty && coverage.totalNodes > 0;
-
-    final plan =
-        CrucibleMasterEngine.generatePlan(nodes: nodes, states: states);
-
-    final missions = hasCrucibleEvidence
-        ? (plan.isEmpty
-            ? ['Awaiting tactical generation...']
-            : plan.take(3).map((e) => e['topicName'].toString()).toList())
-        : ['EVIDENCE PENDING'];
-    final missionComplete =
-        hasCrucibleEvidence ? coverage.coveragePercent : 0.0;
-    final pending = hasCrucibleEvidence ? 1.0 - coverage.coveragePercent : 0.0;
-    final weakCount = hasCrucibleEvidence ? coverage.weakNodes : 0;
-    final weakAreas =
-        hasCrucibleEvidence ? weakCount / coverage.totalNodes : 0.0;
-
-    final priorityNode = BattleEngine.getPriorityNode(
-      nodes,
-      states,
-      riskFactor: knowledge.riskState?.overallRisk ?? 0.0,
-    );
-
-    final macroTestActive =
-        CrucibleClockEngine.isMacroTestWindow(enrollmentTime: protocolState.protocolStartTime);
-    final rebuildMode =
-        CrucibleClockEngine.isRebuildPhase(enrollmentTime: protocolState.protocolStartTime);
-
+  Widget _buildPendingAuthorityState(SessionUser? sessionUser,
+      ReadinessState? readiness, MomentumState? momentum) {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -147,11 +310,10 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                   examName: sessionUser?.examName ?? selectedExamId,
                   readiness: readiness,
                   momentum: momentum,
-                  missionEvidenceVerified: hasCrucibleEvidence,
+                  missionEvidenceVerified: false,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: AppSpacing.screenPadding),
+                  padding: const EdgeInsets.all(AppSpacing.screenPadding),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -159,116 +321,31 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       Text('THE CRUCIBLE',
                           style: AppTypography.hero.copyWith(fontSize: 22)),
                       const SizedBox(height: 6),
-                      Text(
-                          '100 Day Tactical Ascension Protocol • Day $currentDay',
+                      Text('MISSION AUTHORITY PENDING',
                           style: AppTypography.label),
-                      const SizedBox(height: 28),
-                      LiveTimerCard(
-                          day: currentCycleDay,
-                          phase: phase,
-                          protocolState: protocolState),
-                      const SizedBox(height: 24),
-                      BattleEngineCard(
-                        dayCount: currentDay,
-                        progress: progress,
-                        missionComplete: missionComplete,
-                        pending: pending,
-                        weakAreas: weakAreas,
-                        activeTopics: missions,
-                        hasEvidence: hasCrucibleEvidence,
-                      ),
-                      const SizedBox(height: 24),
-                      MissionBlueprintCard(
-                        hasEvidence: hasCrucibleEvidence,
-                        missions: plan.map((e) {
-                          final nodeId = e['topicId'].toString();
-                          final node = knowledge.getNode(nodeId);
-
-                          return {
-                            'subject': e['topicName'],
-                            'topics': 'Study Hours: ${e['hours']}',
-                            'completed': 'In Progress',
-                            'running': e['priority'].toString().toUpperCase(),
-                            'locked': 'Next Session',
-                            'onTap': node != null
-                                ? () =>
-                                    context.go(AppRoutes.digibook, extra: node)
-                                : null,
-                          };
-                        }).toList(),
-                      ),
-                      const SizedBox(height: 24),
-                      if (macroTestActive)
-                        Container(
-                          margin: const EdgeInsets.only(bottom: 20),
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(
-                            color: Colors.red.withValues(alpha: 0.08),
-                            borderRadius: BorderRadius.circular(14),
-                            border: Border.all(
-                                color: Colors.red.withValues(alpha: 0.2)),
-                          ),
-                          child: const Row(
-                            children: [
-                              Icon(Icons.warning_amber, color: Colors.red),
-                              SizedBox(width: 12),
-                              Expanded(
-                                  child: Text('Macro Test Window Active',
-                                      style: TextStyle(
-                                          color: Colors.red,
-                                          fontWeight: FontWeight.bold))),
-                            ],
-                          ),
+                      const SizedBox(height: 40),
+                      DarkCard(
+                        padding: const EdgeInsets.all(24),
+                        child: Column(
+                          children: [
+                            const Icon(Icons.security_rounded,
+                                color: AppColors.gold, size: 48),
+                            const SizedBox(height: 24),
+                            Text(
+                              'Protocol Synchronization Required',
+                              textAlign: TextAlign.center,
+                              style: AppTypography.section
+                                  .copyWith(color: AppColors.gold),
+                            ),
+                            const SizedBox(height: 12),
+                            Text(
+                              'The tactical Ascension Protocol is not yet initialized for this mission. Please ensure your mission is active and try again.',
+                              textAlign: TextAlign.center,
+                              style: AppTypography.body,
+                            ),
+                          ],
                         ),
-                      if (rebuildMode) ...[
-                        RebuildZoneCard(
-                            weakZones: weakCount,
-                            priorityTopic: priorityNode?.title ?? 'No Risk'),
-                        const SizedBox(height: 24),
-                      ],
-                      TacticalRoadmapCard(
-                        roadmap: [
-                          {
-                            'day': 'DAY $currentDay',
-                            'firstTask': hasCrucibleEvidence &&
-                                    missions.isNotEmpty &&
-                                    missions[0] !=
-                                        'Awaiting tactical generation...'
-                                ? missions[0]
-                                : 'EVIDENCE PENDING',
-                            'secondTask':
-                                hasCrucibleEvidence && missions.length > 1
-                                    ? missions[1]
-                                    : 'EVIDENCE PENDING',
-                            'thirdTask': hasCrucibleEvidence
-                                ? 'Revision Cycle'
-                                : 'EVIDENCE PENDING',
-                            'locked': false,
-                          },
-                          {
-                            'day': 'DAY ${currentDay + 1}',
-                            'firstTask':
-                                hasCrucibleEvidence && missions.length > 2
-                                    ? missions[2]
-                                    : 'EVIDENCE PENDING',
-                            'secondTask': hasCrucibleEvidence
-                                ? 'Subject Drill'
-                                : 'EVIDENCE PENDING',
-                            'thirdTask': hasCrucibleEvidence
-                                ? 'Daily Battle'
-                                : 'EVIDENCE PENDING',
-                            'locked': false,
-                          },
-                          {
-                            'day': 'DAY ${currentDay + 2}',
-                            'firstTask': '',
-                            'secondTask': '',
-                            'thirdTask': '',
-                            'locked': true,
-                          },
-                        ],
                       ),
-                      const SizedBox(height: 100),
                     ],
                   ),
                 ),
