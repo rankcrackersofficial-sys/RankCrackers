@@ -61,7 +61,7 @@ class StudyPlanEngine extends StatelessWidget {
               // 📚 पार्थ का दिव्य सुझाव: पुस्तक मॉड्यूल का शेड्यूल के भीतर भव्य सुसज्जीकरण
               // =======================================================
               GestureDetector(
-                onTap: () => context.push(AppRoutes.digiBook),
+                onTap: () => context.go(AppRoutes.digiBook),
                 child: Container(
                   margin: const EdgeInsets.only(bottom: 20),
                   padding: const EdgeInsets.all(14),

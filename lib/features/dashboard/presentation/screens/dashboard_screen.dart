@@ -162,7 +162,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                             child: _compactPillarCard(
                               Icons.local_fire_department,
                               'THE CRUCIBLE',
-                              () => context.push(AppRoutes.crucible),
+                              () => context.go(AppRoutes.crucible),
                               color: Colors.orangeAccent,
                             ),
                           ),
@@ -171,7 +171,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                             child: _compactPillarCard(
                               Icons.menu_book_rounded,
                               'DIGIBOOK',
-                              () => context.push(
+                              () => context.go(
                                 AppRoutes.digibook,
                                 extra: priorityNode,
                               ),
@@ -187,7 +187,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                             child: _compactPillarCard(
                               Icons.account_tree_rounded,
                               'SYLLABUS',
-                              () => context.push(AppRoutes.syllabus),
+                              () => context.go(AppRoutes.syllabus),
                               color: Colors.purpleAccent,
                             ),
                           ),
@@ -196,7 +196,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                             child: _compactPillarCard(
                               Icons.travel_explore_rounded,
                               'CAREER SIGNALS',
-                              () => context.push(AppRoutes.recruitment),
+                              () => context.go(AppRoutes.recruitment),
                               color: AppColors.gold,
                               secondary: true,
                             ),

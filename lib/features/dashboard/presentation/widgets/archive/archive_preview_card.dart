@@ -12,7 +12,7 @@ class ArchivePreviewCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => context.push(AppRoutes.digibook),
+      onTap: () => context.go(AppRoutes.digibook),
       child: DarkCard(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
