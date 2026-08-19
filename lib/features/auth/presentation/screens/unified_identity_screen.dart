@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
@@ -101,7 +102,44 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
         nameController.text = user.displayName ?? '';
+        _checkAndRehydrateProfile(user);
       }
+    }
+  }
+
+  Future<void> _checkAndRehydrateProfile(User user) async {
+    try {
+      final doc = await FirebaseFirestore.instance.collection('users').doc(user.uid).get(
+        const GetOptions(source: Source.server)
+      ).timeout(const Duration(seconds: 3));
+      
+      final data = doc.data();
+      final exists = doc.exists && (data?['name']?.toString().isNotEmpty ?? false);
+      if (exists && data != null && mounted) {
+        final name = data['name']?.toString() ?? '';
+        final city = data['city']?.toString() ?? '';
+        final mobile = data['mobile']?.toString() ?? '';
+        final stateStr = data['state']?.toString() ?? '';
+
+        await SessionManager.completeLogin();
+        await SessionManager.completeProfile(studentName: name, studentCity: city);
+        await SessionManager.saveFirebaseIdentity(uid: user.uid, email: user.email ?? '');
+        await SessionManager.saveStudentMobile(mobile);
+        
+        final prefs = await SharedPreferences.getInstance();
+        if (stateStr.isNotEmpty) {
+          await prefs.setString('user_state', stateStr);
+        }
+
+        if (mounted) {
+          setState(() {
+            _identityEstablished = true;
+          });
+          context.go(AppRoutes.missionRealm);
+        }
+      }
+    } catch (e) {
+      debugPrint('🔱 PROFILE AUTO REHYDRATE FAIL: $e');
     }
   }
 

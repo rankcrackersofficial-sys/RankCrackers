@@ -90,9 +90,25 @@ class SessionManager {
           const GetOptions(source: Source.server)
         ).timeout(const Duration(seconds: 2));
         
-        final exists = doc.exists && (doc.data()?['name']?.toString().isNotEmpty ?? false);
-        if (exists) {
+        final data = doc.data();
+        final exists = doc.exists && (data?['name']?.toString().isNotEmpty ?? false);
+        if (exists && data != null) {
           await prefs.setBool('profile_completed', true);
+          
+          final name = data['name']?.toString() ?? '';
+          final city = data['city']?.toString() ?? '';
+          final mobile = data['mobile']?.toString() ?? '';
+          final state = data['state']?.toString() ?? '';
+          final email = data['email']?.toString() ?? currentUser.email ?? '';
+          final photoUrl = data['photoUrl']?.toString() ?? currentUser.photoURL ?? '';
+
+          if (name.isNotEmpty) await prefs.setString('student_name', name);
+          if (city.isNotEmpty) await prefs.setString('student_city', city);
+          if (mobile.isNotEmpty) await prefs.setString('student_mobile', mobile);
+          if (state.isNotEmpty) await prefs.setString('user_state', state);
+          await prefs.setString('student_email', email);
+          await prefs.setString('student_photo', photoUrl);
+          await prefs.setString('firebase_uid', currentUser.uid);
         }
       }
     } catch (e) {
