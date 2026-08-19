@@ -102,7 +102,7 @@ class SentinelIntelligenceCard extends ConsumerWidget {
             style: AppTypography.hero.copyWith(fontSize: 16, color: color)),
         Text(label.toUpperCase(),
             style: AppTypography.label
-                .copyWith(fontSize: 6, color: Colors.white12)),
+                .copyWith(fontSize: 8, color: Colors.white30)),
       ],
     );
   }

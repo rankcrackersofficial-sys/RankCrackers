@@ -146,7 +146,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                       style: AppTypography.label.copyWith(
                           fontSize: 8,
                           letterSpacing: 1.2,
-                          color: Colors.white12)),
+                          color: Colors.white38)),
                 ),
               ),
 
@@ -221,7 +221,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                     children: [
                       Text("BATTLE TOOLS",
                           style: AppTypography.label
-                              .copyWith(fontSize: 8, color: Colors.white12)),
+                              .copyWith(fontSize: 8, color: Colors.white38)),
                       const SizedBox(height: 12),
                       const BattleToolsGrid(),
                     ],
@@ -293,22 +293,22 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     return GestureDetector(
       onTap: onTap,
       child: DarkCard(
-        padding: EdgeInsets.zero,
+        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
               icon,
-              color: color.withValues(alpha: secondary ? 0.48 : 0.68),
-              size: secondary ? 16 : 18,
+              color: color.withValues(alpha: secondary ? 0.68 : 0.88),
+              size: secondary ? 20 : 22,
             ),
-            const SizedBox(height: 2),
+            const SizedBox(height: 6),
             Text(label,
                 textAlign: TextAlign.center,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: AppTypography.label.copyWith(
-                    fontSize: secondary ? 6.4 : 7,
+                    fontSize: secondary ? 7.5 : 8.5,
                     fontWeight: FontWeight.bold,
                     color: secondary ? Colors.white54 : Colors.white70)),
           ],
@@ -327,10 +327,10 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
       children: [
         Text("TODAY'S PRIORITY",
             style: AppTypography.label.copyWith(
-                fontSize: 8, letterSpacing: 1.0, color: Colors.white30)),
+                fontSize: 8, letterSpacing: 1.0, color: Colors.white38)),
         const SizedBox(height: 8),
         DarkCard(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
           child: Row(
             children: [
               Expanded(
@@ -381,47 +381,61 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
       children: [
         Text("MISSION STATUS",
             style: AppTypography.label.copyWith(
-                fontSize: 8, letterSpacing: 1.0, color: Colors.white30)),
+                fontSize: 8, letterSpacing: 1.0, color: Colors.white38)),
         const SizedBox(height: 8),
         DarkCard(
           padding: const EdgeInsets.all(12),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: [
-              _statusItem(
-                "READINESS",
-                hasReadinessEvidence
-                    ? "${readiness.score.toInt()}%"
-                    : "PENDING",
-                hasReadinessEvidence ? AppColors.gold : Colors.white38,
+              Row(
+                children: [
+                  _statusItem(
+                    "READINESS",
+                    hasReadinessEvidence
+                        ? "${readiness.score.toInt()}%"
+                        : "Pending",
+                    hasReadinessEvidence ? AppColors.gold : Colors.white38,
+                    showBorder: true,
+                  ),
+                  _statusItem(
+                    "COVERAGE",
+                    hasCoverageEvidence
+                        ? "${(coverage.coveragePercent * 100).toInt()}%"
+                        : "Pending",
+                    hasCoverageEvidence ? Colors.blueAccent : Colors.white38,
+                    showBorder: false,
+                  ),
+                ],
               ),
-              _statusItem(
-                "COVERAGE",
-                hasCoverageEvidence
-                    ? "${(coverage.coveragePercent * 100).toInt()}%"
-                    : "PENDING",
-                hasCoverageEvidence ? Colors.blueAccent : Colors.white38,
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 8.0),
+                child: Divider(color: Colors.white10, height: 1),
               ),
-              _statusItem(
-                "STREAK",
-                hasMomentumEvidence
-                    ? "${momentum.studyStreakDays}d"
-                    : "PENDING",
-                hasMomentumEvidence ? Colors.orangeAccent : Colors.white38,
-              ),
-              _statusItem(
-                "RISK",
-                hasRiskEvidence
-                    ? risk.highRisk
-                        ? "HIGH"
-                        : "LOW"
-                    : "PENDING",
-                hasRiskEvidence
-                    ? risk.highRisk
-                        ? Colors.redAccent
-                        : Colors.greenAccent
-                    : Colors.white38,
-                showBorder: false,
+              Row(
+                children: [
+                  _statusItem(
+                    "STREAK",
+                    hasMomentumEvidence
+                        ? "${momentum.studyStreakDays}d"
+                        : "Pending",
+                    hasMomentumEvidence ? Colors.orangeAccent : Colors.white38,
+                    showBorder: true,
+                  ),
+                  _statusItem(
+                    "RISK",
+                    hasRiskEvidence
+                        ? risk.highRisk
+                            ? "HIGH"
+                            : "LOW"
+                        : "Pending",
+                    hasRiskEvidence
+                        ? risk.highRisk
+                            ? Colors.redAccent
+                            : Colors.greenAccent
+                        : Colors.white38,
+                    showBorder: false,
+                  ),
+                ],
               ),
             ],
           ),
@@ -442,16 +456,6 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                value,
-                maxLines: 1,
-                textAlign: TextAlign.center,
-                style: AppTypography.hero.copyWith(fontSize: 16, color: color),
-              ),
-            ),
-            const SizedBox(height: 4),
             Text(
               label,
               maxLines: 1,
@@ -460,7 +464,17 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
               style: AppTypography.label.copyWith(
                 fontSize: 9,
                 letterSpacing: 0.5,
-                color: Colors.white38,
+                color: Colors.white30,
+              ),
+            ),
+            const SizedBox(height: 4),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                value,
+                maxLines: 1,
+                textAlign: TextAlign.center,
+                style: AppTypography.hero.copyWith(fontSize: 16, color: color),
               ),
             ),
           ],
