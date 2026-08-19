@@ -12,6 +12,7 @@ import '../../../../shared/widgets/command_header.dart';
 import '../../../../shared/providers/session_provider.dart';
 import '../../../../core/services/support_service.dart';
 import '../../../../core/knowledge/knowledge_engine.dart';
+import '../../../../core/knowledge/knowledge_engine_provider.dart';
 import '../../../dashboard/presentation/providers/dashboard_provider.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import 'package:rank_crackers/features/auth/presentation/providers/auth_provider.dart';
@@ -131,7 +132,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     final readiness = ref.watch(missionReadinessProvider);
     final stats = ref.watch(userProfileStatsProvider);
 
-    final engine = KnowledgeEngine.instance;
+    final engine = ref.watch(knowledgeEngineProvider);
     final momentum = engine.momentumState;
     final coverage = engine.coverageState;
 
@@ -167,17 +168,29 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                             vertical: 8),
                         sliver: SliverGrid(
                           delegate: SliverChildListDelegate([
-                            _performanceCard(Icons.flash_on_rounded,
-                                stats['totalBattles'].toString(), 'Battles'),
+                            _performanceCard(
+                                Icons.flash_on_rounded,
+                                engine.isInitialized
+                                    ? stats['totalBattles'].toString()
+                                    : 'Pending',
+                                'Battles'),
                             _performanceCard(
                                 Icons.auto_graph_rounded,
-                                '${(readiness?.score ?? 0).toInt()}%',
+                                engine.isInitialized
+                                    ? '${(readiness?.score ?? 0).toInt()}%'
+                                    : 'Pending',
                                 'Readiness'),
-                            _performanceCard(Icons.local_fire_department,
-                                '${momentum?.studyStreakDays ?? 0}d', 'Streak'),
+                            _performanceCard(
+                                Icons.local_fire_department,
+                                engine.isInitialized
+                                    ? '${momentum?.studyStreakDays ?? 0}d'
+                                    : 'Pending',
+                                'Streak'),
                             _performanceCard(
                                 Icons.workspace_premium,
-                                '${((coverage?.coveragePercent ?? 0) * 100).toInt()}%',
+                                engine.isInitialized
+                                    ? '${((coverage?.coveragePercent ?? 0) * 100).toInt()}%'
+                                    : 'Pending',
                                 'Coverage'),
                           ]),
                           gridDelegate:

@@ -1,0 +1,10 @@
+{
+  "head_sha": "83d3d9a44674aa1243ab9e1a3359c3910b88be97",
+  "fix_sha": "83d3d9a44674aa1243ab9e1a3359c3910b88be97",
+  "verification": {
+    "day_source": "CrucibleClockEngine.getProtocolDay(state: protocolState, now: DateTime.now())",
+    "time_source": "CrucibleClockEngine.getWindowRemainingDuration(state: protocolState, now: now)",
+    "loading_state": "Mission Authority Pending view added to suppress fake data during hydration",
+    "legacy_cleanup": "getHoursRemaining() deprecated and removed from production UI binding"
+  }
+}
