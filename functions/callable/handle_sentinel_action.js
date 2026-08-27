@@ -4,6 +4,15 @@ const crypto = require("crypto");
 const { logFounderActivity } = require("../services/audit_service");
 const { getLifecycleBlueprint } = require("../helpers/blueprints");
 const { validateOrResolveId } = require("../canonical_mission_registry");
+const {
+  assertFounderVariableAuthority,
+  assertMissionIdentity,
+  assertPostPublicationSafety,
+  assertSourceDocumentBinding,
+  canonicalDigest,
+  normalizeMissionVariables,
+  referencedDocumentIds,
+} = require("../services/mission_variable_authority");
 const MISSION_VARIABLE_PACK_KEYS = [
   'vacancy_variables',
   'eligibility_variables',
@@ -62,6 +71,83 @@ function normalizeMissionCategory(value) {
   return 'category_pending';
 }
 
+async function updateMissionVariables({ db, auth, missionId, payload = {} }) {
+  const reason = String(payload.reason || '').trim();
+  const requestId = String(payload.requestId || '').trim();
+  if (!missionId) throw new Error('MISSION_ID_REQUIRED');
+  if (reason.length < 12) throw new Error('CHANGE_REASON_REQUIRED');
+  if (!/^[A-Za-z0-9._:-]{8,128}$/.test(requestId)) throw new Error('INVALID_REQUEST_ID');
+  if (!Number.isInteger(payload.expectedVersion) || payload.expectedVersion < 0) throw new Error('EXPECTED_VERSION_REQUIRED');
+
+  const variables = normalizeMissionVariables(payload.missionVariables);
+  const digest = canonicalDigest(variables);
+  const realmRef = db.collection('mission_realms').doc(missionId);
+  const recruitmentRef = db.collection('recruitments').doc(missionId);
+  const catalogRef = db.collection('student_mission_catalog').doc(missionId);
+  const userRef = db.collection('users').doc(auth.uid);
+  const auditId = `mission_variable_${crypto.createHash('sha256').update(`${missionId}:${requestId}`).digest('hex')}`;
+  const auditRef = db.collection('founder_activity_log').doc(auditId);
+
+  return db.runTransaction(async transaction => {
+    const [userSnap, realmSnap, recruitmentSnap, catalogSnap] = await Promise.all([
+      transaction.get(userRef), transaction.get(realmRef), transaction.get(recruitmentRef), transaction.get(catalogRef),
+    ]);
+    assertFounderVariableAuthority(auth, userSnap.exists ? userSnap.data() : {});
+    if (!realmSnap.exists || !recruitmentSnap.exists || !catalogSnap.exists) throw new Error('MISSION_CONTRACT_INCOMPLETE');
+
+    const realm = realmSnap.data() || {};
+    const recruitment = recruitmentSnap.data() || {};
+    const catalog = catalogSnap.data() || {};
+    const currentVersion = Number(realm.missionVariableVersion || 0);
+    const lastMutation = realm.missionVariableMutation || {};
+    if (lastMutation.requestId === requestId) {
+      if (lastMutation.digest !== digest) throw new Error('IDEMPOTENCY_KEY_REUSED_WITH_DIFFERENT_PAYLOAD');
+      return { success: true, idempotent: true, version: currentVersion, digest };
+    }
+    if (currentVersion !== payload.expectedVersion) throw new Error('STALE_VARIABLE_VERSION');
+
+    const identity = assertMissionIdentity({
+      missionId, mission: realm, recruitment,
+      expectedExamYear: payload.expectedExamYear,
+      expectedExamCategory: payload.expectedExamCategory,
+    });
+    assertPostPublicationSafety(catalog, collectMissionVariables(realm, recruitment), variables);
+
+    const documentIds = referencedDocumentIds(variables);
+    const documentSnaps = await Promise.all(documentIds.map(id => transaction.get(realmRef.collection('official_documents').doc(id))));
+    const documentsById = {};
+    for (let index = 0; index < documentIds.length; index += 1) {
+      if (documentSnaps[index].exists) documentsById[documentIds[index]] = documentSnaps[index].data();
+    }
+    assertSourceDocumentBinding({ missionId, missionYear: identity.missionYear, variables, documentsById });
+
+    const nextVersion = currentVersion + 1;
+    const now = admin.firestore.FieldValue.serverTimestamp();
+    const compatibility = {
+      missionVariables: variables,
+      mediumPolicy: variables.mediumPolicy,
+      supportedMediums: variables.supportedMediums,
+      defaultMedium: variables.defaultMedium,
+      missionVariableVersion: nextVersion,
+      missionVariableUpdatedAt: now,
+      missionVariableUpdatedBy: auth.uid,
+      missionVariableMutation: { requestId, digest, reason },
+    };
+    transaction.update(realmRef, compatibility);
+    transaction.update(recruitmentRef, compatibility);
+    transaction.update(catalogRef, {
+      ...compatibility,
+      missionVariableValidation: { status: 'VALIDATED', sourceDocumentIds: documentIds, requiresContentRevalidation: true },
+    });
+    transaction.create(auditRef, {
+      type: 'MISSION_VARIABLE_UPDATE', missionId, actorId: auth.uid,
+      actorEmail: auth.token.email || null, requestId, reason,
+      previousVersion: currentVersion, version: nextVersion, digest,
+      sourceDocumentIds: documentIds, timestamp: now,
+    });
+    return { success: true, idempotent: false, version: nextVersion, digest };
+  });
+}
 /**
  * SENTINEL ACTION CENTER (Hardened v6.0 - Fully Secure Command Connectivity)
  */
@@ -103,6 +189,10 @@ exports.handleSentinelAction = functions
             metadata: payload.metadata || {}
         });
         return { success: true };
+    }
+
+    if (action === 'update_mission_variables') {
+      return updateMissionVariables({ db, auth, missionId: reqRecruitmentId, payload: payload || {} });
     }
 
     // ACTION: PURGE HISTORICAL TEST DATA
@@ -895,7 +985,7 @@ function assertMissionActionAuthorized(auth, action) {
   const adminLevel = auth.token.adminLevel || 0;
   const permissions = auth.token.permissions || [];
 
-  const sensitiveActions = ['launch_exam_mission', 'archive_realm', 'restore_realm', 'declare_result'];
+  const sensitiveActions = ['launch_exam_mission', 'archive_realm', 'restore_realm', 'declare_result', 'update_mission_variables'];
   const lifecycleActions = ['manifest_realm', 'launch_realm', 'pause_realm'];
 
   if (sensitiveActions.includes(action)) {
@@ -923,4 +1013,3 @@ function assertMissionActionAuthorized(auth, action) {
     }
   }
 }
-

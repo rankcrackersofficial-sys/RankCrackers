@@ -13,6 +13,7 @@ import 'package:rank_crackers/web/shared/rc_file_helpers.dart';
 
 import 'package:rank_crackers/core/admin/admin_permission_resolver.dart';
 import '../founder/mission_control/mission_control_room.dart';
+import '../founder/mission_control/mission_variable_authority_panel.dart';
 import '../founder/study_master/study_master_library_web.dart';
 import '../founder/ingestion/ingestion_review_web.dart';
 import '../founder/intelligence/intelligence_room_web.dart';
@@ -224,6 +225,9 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           label: 'Mission Control',
           builder: (_) =>
               const MissionControlRoom(roleMode: ConsoleRoleMode.founder)));
+      list.add(_ConsoleModule(
+          label: 'Mission Variables',
+          builder: (_) => const MissionVariableAuthorityPanel()));
       list.add(_ConsoleModule(
           label: 'Document Command Center',
           builder: (_) => const DocumentCommandCenter()));
