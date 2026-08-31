@@ -13,7 +13,6 @@ import 'package:rank_crackers/web/shared/rc_file_helpers.dart';
 
 import 'package:rank_crackers/core/admin/admin_permission_resolver.dart';
 import '../founder/mission_control/mission_control_room.dart';
-import '../founder/mission_control/mission_variable_authority_panel.dart';
 import '../founder/study_master/study_master_library_web.dart';
 import '../founder/ingestion/ingestion_review_web.dart';
 import '../founder/intelligence/intelligence_room_web.dart';
@@ -226,9 +225,6 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           builder: (_) =>
               const MissionControlRoom(roleMode: ConsoleRoleMode.founder)));
       list.add(_ConsoleModule(
-          label: 'Mission Variables',
-          builder: (_) => const MissionVariableAuthorityPanel()));
-      list.add(_ConsoleModule(
           label: 'Document Command Center',
           builder: (_) => const DocumentCommandCenter()));
       list.add(_ConsoleModule(
@@ -243,13 +239,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           label: 'Publish Gate', builder: (_) => _buildPublishGateLanding()));
       list.add(_ConsoleModule(
           label: 'System Ops / Dev Mode',
-          builder: (_) => const FounderSystemOperationsWeb()));
-      list.add(_ConsoleModule(
-          label: 'Student Health / Panel Linkage',
-          builder: (_) => const FounderStudentHealthWeb()));
-
-      // Move Study Master to Secondary or Mission specific? User didn't specify.
-      // I'll keep it as a secondary essential for now or put it in Factory.
+          builder: (_) => const _SystemOpsWithDeliveryHealth()));
       list.add(_ConsoleModule(
           label: 'Study Master Library',
           builder: (_) =>
@@ -591,6 +581,35 @@ class _ConsoleModule {
   final String label;
   final WidgetBuilder builder;
   _ConsoleModule({required this.label, required this.builder});
+}
+
+class _SystemOpsWithDeliveryHealth extends StatelessWidget {
+  const _SystemOpsWithDeliveryHealth();
+
+  @override
+  Widget build(BuildContext context) {
+    return const DefaultTabController(
+      length: 2,
+      child: Column(
+        children: [
+          TabBar(
+            tabs: [
+              Tab(text: 'SYSTEM OPERATIONS'),
+              Tab(text: 'STUDENT DELIVERY HEALTH'),
+            ],
+          ),
+          Expanded(
+            child: TabBarView(
+              children: [
+                FounderSystemOperationsWeb(),
+                FounderStudentHealthWeb(),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class _PremiumLandingPage extends StatelessWidget {

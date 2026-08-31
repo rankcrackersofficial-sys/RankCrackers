@@ -74,6 +74,17 @@ service cloud.firestore {
         allow read: if isFounder() || request.auth != null;
         allow write: if isFounder();
       }
+
+      match /official_documents/{docId} {
+        allow read, write: if isFounder();
+        match /page_extractions/{pageId} {
+          allow read, write: if isFounder();
+        }
+      }
+
+      match /variables/{varId} {
+        allow read, write: if isFounder();
+      }
     }
 
     match /mission_variants/{variantId} {
@@ -86,9 +97,19 @@ service cloud.firestore {
       allow write: if isFounder();
     }
 
+    match /schedules/{scheduleId} {
+      allow read: if request.auth != null;
+      allow write: if isFounder();
+    }
+
     // 🔱 CONTENT MATRIX RULES
     match /micro_nodes/{nodeId} {
       allow read: if request.auth != null;
+      allow write: if isFounder();
+    }
+
+    match /content_payloads/{payloadId} {
+      allow read: if isFounder() || (request.auth != null && resource != null && resource.data.status == 'published');
       allow write: if isFounder();
     }
 
@@ -185,7 +206,12 @@ service cloud.firestore {
     match /telemetry_nexus/{telemetryId} {
       // 🔱 AUDIT LOCK: Authenticated users can write performance events.
       // Founder/Admin can read for strategic optimization.
-      allow create: if request.auth != null;
+      allow create: if request.auth != null
+                    && request.resource.data.userId == request.auth.uid
+                    && request.resource.data.eventName is string
+                    && request.resource.data.sessionId is string
+                    && request.resource.data.timestamp is int
+                    && request.resource.data.recruitmentId is string;
       allow read: if isFounder();
       allow update, delete: if false;
     }
@@ -220,6 +246,23 @@ service cloud.firestore {
     }
 
     // 🔱 USER PERSONAL TRUTH RULES
+    match /study_library_subjects/{subjectId} {
+      allow read, write: if isFounder();
+
+      match /materials/{materialId} {
+        allow read, write: if isFounder();
+      }
+    }
+
+    match /warrior_profiles/{userId} {
+      allow read, write: if request.auth != null && (request.auth.uid == userId || isFounder());
+    }
+
+    match /opportunity_matches/{matchId} {
+      allow read: if request.auth != null && (resource == null || resource.data.uid == request.auth.uid || isFounder());
+      allow write: if request.auth != null && (request.resource.data.uid == request.auth.uid || isFounder());
+    }
+
     match /users/{userId} {
       // 🔱 Audit Fix: Users cannot write to their own role or sensitive fields
       allow read: if isFounder() || (request.auth != null && request.auth.uid == userId);
@@ -254,6 +297,9 @@ service cloud.firestore {
         allow read, write: if request.auth != null && request.auth.uid == userId;
       }
       match /mission_stats/{realmId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      match /protocols/{recruitmentId} {
         allow read, write: if request.auth != null && request.auth.uid == userId;
       }
     }

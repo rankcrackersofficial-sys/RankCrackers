@@ -8,7 +8,8 @@ const allowedCollections = new Set([
   'recruitments',
   'student_mission_catalog',
   'sentinel_drafts',
-  'certificates'
+  'certificates',
+  'founder_activity_log'
 ]);
 
 class MockDocumentSnapshot {
@@ -54,6 +55,18 @@ class MockTransaction {
     }
   }
 
+  create(ref, data) {
+    this.hasWritten = true;
+    this.writesCount++;
+    this.log.push({ type: 'create', path: ref.path, data });
+    if (!allowedCollections.has(ref.parentPath)) {
+      throw new Error(`PROHIBITED_WRITE_VIOLATION: Create in prohibited collection '${ref.parentPath}'`);
+    }
+    const colState = mockDatabaseState[ref.parentPath] || {};
+    if (colState[ref.id]) throw new Error(`ALREADY_EXISTS: '${ref.path}'`);
+    colState[ref.id] = data;
+    mockDatabaseState[ref.parentPath] = colState;
+  }
   update(ref, data) {
     this.hasWritten = true;
     this.writesCount++;
@@ -242,6 +255,7 @@ function resetMockDb() {
   mockDatabaseState.recruitments = {};
   mockDatabaseState.student_mission_catalog = {};
   mockDatabaseState.sentinel_drafts = {};
+  mockDatabaseState.users = { founder_uid: { status: 'ACTIVE' } };
   mockDatabaseState.certificates = {};
   mockDatabaseState.simulateCertificateBatchFailure = false;
   mockDatabaseState.simulateAnalyticsBatchFailure = false;
@@ -304,8 +318,8 @@ async function runSuite() {
 
     const shell = mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'];
     assert.ok(shell);
-    assert.strictEqual(shell.status, 'PRIVATE_REVIEW_LOCKED');
-    assert.strictEqual(shell.userPanelVisible, false);
+    assert.strictEqual(shell.status, 'PREPARING');
+    assert.strictEqual(shell.userPanelVisible, true);
   });
 
   // 2. Admin launch behavior follows permission policy (allow launch -> now blocked by governance lock)
@@ -379,9 +393,9 @@ async function runSuite() {
 
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.ok(shell);
-    assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
-    assert.strictEqual(shell.userPanelVisible, false);
-    assert.strictEqual(shell.cardVisible, false);
+    assert.strictEqual(shell.catalogStatus, 'PREPARING');
+    assert.strictEqual(shell.userPanelVisible, true);
+    assert.strictEqual(shell.cardVisible, true);
   });
 
   // 6. Launch updates shell to LIVE
@@ -395,14 +409,15 @@ async function runSuite() {
 
     const data = {
       action: 'launch_realm',
-      recruitmentId: 'jee_main_2026'
+      recruitmentId: 'jee_main_2026',
+      payload: { reason: 'Founder lifecycle test launch', requestId: 'test-launch-001' }
     };
 
     await handleSentinelAction(data, founderContext);
 
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
-    assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
-    assert.strictEqual(shell.userPanelVisible, false);
+    assert.strictEqual(shell.catalogStatus, 'ACTIVE');
+    assert.strictEqual(shell.userPanelVisible, true);
   });
 
   // 7. Pause maps deterministically to hidden coming-soon
@@ -414,13 +429,14 @@ async function runSuite() {
 
     const data = {
       action: 'pause_realm',
-      recruitmentId: 'jee_main_2026'
+      recruitmentId: 'jee_main_2026',
+      payload: { reason: 'Founder lifecycle test pause', requestId: 'test-pause-001' }
     };
 
     await handleSentinelAction(data, founderContext);
 
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
-    assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
+    assert.strictEqual(shell.catalogStatus, 'PASSIVE');
     assert.strictEqual(shell.userPanelVisible, false);
   });
 
@@ -433,7 +449,8 @@ async function runSuite() {
 
     const data = {
       action: 'archive_realm',
-      recruitmentId: 'jee_main_2026'
+      recruitmentId: 'jee_main_2026',
+      payload: { reason: 'Founder lifecycle test archive', requestId: 'test-archive-001' }
     };
 
     await handleSentinelAction(data, founderContext);
@@ -454,13 +471,14 @@ async function runSuite() {
 
     const data = {
       action: 'restore_realm',
-      recruitmentId: 'jee_main_2026'
+      recruitmentId: 'jee_main_2026',
+      payload: { reason: 'Founder lifecycle test restore', requestId: 'test-restore-001' }
     };
 
     await handleSentinelAction(data, founderContext);
 
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
-    assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
+    assert.strictEqual(shell.catalogStatus, 'PASSIVE');
     assert.strictEqual(shell.userPanelVisible, false); // Option A: always hidden on restore/passive
     assert.strictEqual(shell.cardVisible, false);
     assert.strictEqual(shell.archived, false);
@@ -482,9 +500,9 @@ async function runSuite() {
     await handleSentinelAction(data, founderContext);
 
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
-    assert.strictEqual(shell.catalogStatus, 'COMING_SOON');
-    assert.strictEqual(shell.userPanelVisible, false);
-    assert.strictEqual(shell.studentMessage, 'Mission shell is created. Content will unlock after Founder approval.');
+    assert.strictEqual(shell.catalogStatus, 'PREPARING');
+    assert.strictEqual(shell.userPanelVisible, true);
+    assert.strictEqual(shell.studentMessage, 'Mission is visible to eligible students and awaiting final Founder verification.');
   });
 
   // 11. Same action retry is idempotent
@@ -547,7 +565,8 @@ async function runSuite() {
 
     const data = {
       action: 'launch_realm',
-      recruitmentId: realmId
+      recruitmentId: realmId,
+      payload: { reason: 'Founder identity mismatch test', requestId: 'test-identity-001' }
     };
 
     await assert.rejects(async () => {
@@ -861,7 +880,8 @@ async function runSuite() {
 
     const data = {
       action: 'archive_realm',
-      recruitmentId: 'jee_main_2026'
+      recruitmentId: 'jee_main_2026',
+      payload: { reason: 'Founder permission archive test', requestId: 'test-permission-001' }
     };
 
     await handleSentinelAction(data, founderContext);
@@ -1051,7 +1071,7 @@ async function runSuite() {
           token: { admin: true, adminLevel: 5, permissions: ['mission.manifest'] }
         }
       });
-    }, /Upper Admin permission required/);
+    }, /Founder clearance required/);
   });
 
   // 38. Security: Lower Admin (adminLevel < 5) denied on lifecycle actions
@@ -1065,7 +1085,7 @@ async function runSuite() {
           token: { admin: true, adminLevel: 3, permissions: ['mission.launch'] }
         }
       });
-    }, /Upper Admin permission required/);
+    }, /Founder clearance required/);
   });
 
   // 39. Security: Generic Admin denied where scoped permission missing

@@ -18,6 +18,7 @@ class _MissionVariableAuthorityPanelState
   final _reason = TextEditingController();
   String? _missionId;
   Map<String, dynamic>? _mission;
+  bool _realmPresent = false;
   bool _saving = false;
   String? _message;
   bool _error = false;
@@ -29,14 +30,19 @@ class _MissionVariableAuthorityPanelState
     super.dispose();
   }
 
-  void _selectMission(String id, Map<String, dynamic> data) {
+  Future<void> _selectMission(String id, Map<String, dynamic> catalogData) async {
+    final realmDoc = await FirebaseFirestore.instance.collection('mission_realms').doc(id).get();
+    final data = realmDoc.data() ?? catalogData;
     final variables = Map<String, dynamic>.from(data['missionVariables'] ?? {});
     setState(() {
       _missionId = id;
       _mission = data;
+      _realmPresent = realmDoc.exists;
       _editor.text = const JsonEncoder.withIndent('  ').convert(variables);
-      _message = null;
-      _error = false;
+      _message = realmDoc.exists
+          ? null
+          : 'REALM_MISSING / REPAIR_REQUIRED: inspection is available, but mutation is blocked.';
+      _error = !realmDoc.exists;
     });
   }
 
@@ -44,6 +50,13 @@ class _MissionVariableAuthorityPanelState
     final id = _missionId;
     final mission = _mission;
     if (id == null || mission == null || _saving) return;
+    if (!_realmPresent) {
+      setState(() {
+        _error = true;
+        _message = 'Mutation blocked: canonical mission realm is missing.';
+      });
+      return;
+    }
     if (_reason.text.trim().length < 12) {
       setState(() {
         _error = true;
@@ -81,8 +94,8 @@ class _MissionVariableAuthorityPanelState
         'payload': {
           'missionVariables': variables,
           'expectedVersion': mission['missionVariableVersion'] ?? 0,
-          'expectedExamYear': mission['exam_year'],
-          'expectedExamCategory': mission['exam_category'],
+          'expectedExamYear': mission['exam_year'] ?? mission['examYear'] ?? mission['year'],
+          'expectedExamCategory': mission['exam_category'] ?? mission['examCategory'],
           'reason': _reason.text.trim(),
           'requestId': requestId,
         },
@@ -117,8 +130,7 @@ class _MissionVariableAuthorityPanelState
           width: 340,
           child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
             stream: FirebaseFirestore.instance
-                .collection('mission_realms')
-                .orderBy('exam_name')
+                .collection('student_mission_catalog')
                 .snapshots(),
             builder: (context, snapshot) {
               if (snapshot.hasError)
@@ -130,9 +142,9 @@ class _MissionVariableAuthorityPanelState
                   final data = doc.data();
                   return ListTile(
                     selected: doc.id == _missionId,
-                    title: Text((data['exam_name'] ?? doc.id).toString()),
+                    title: Text((data['displayName'] ?? data['title'] ?? data['name'] ?? data['exam_name'] ?? doc.id).toString()),
                     subtitle: Text(
-                        '${data['exam_category'] ?? 'category pending'} • ${data['exam_year'] ?? 'year pending'}'),
+                        '${data['examCategory'] ?? data['exam_category'] ?? 'category pending'} • ${data['examYear'] ?? data['exam_year'] ?? data['year'] ?? 'year pending'}'),
                     trailing: Text('v${data['missionVariableVersion'] ?? 0}'),
                     onTap: () => _selectMission(doc.id, data),
                   );
@@ -192,7 +204,7 @@ class _MissionVariableAuthorityPanelState
                       ],
                       const SizedBox(height: 12),
                       FilledButton.icon(
-                        onPressed: _saving ? null : _save,
+                        onPressed: (_saving || !_realmPresent) ? null : _save,
                         icon: _saving
                             ? const SizedBox(
                                 width: 16,
