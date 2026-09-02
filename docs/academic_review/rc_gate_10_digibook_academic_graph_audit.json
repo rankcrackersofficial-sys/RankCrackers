@@ -1,0 +1,1487 @@
+{
+  "version": "1.0.0",
+  "directive": "RC_JEE_MAIN_2027_DIGIBOOK_FIRST_ACADEMIC_GRAPH_AND_ASSESSMENT_FOUNDATION_GATE_10",
+  "generatedAtUtc": "2026-09-02T13:36:22.393Z",
+  "governanceSummary": {
+    "NEW_ACADEMIC_PRODUCTION_ORDER": "SYLLABUS -> DIGIBOOK -> QUESTION FACTORY -> CRUCIBLE / TEST ARENA",
+    "QUESTION_BANK_MAXIMUM_LIMIT": "NONE (Unbounded/Need-Driven)",
+    "ARTIFICIAL_BANK_TRUNCATION": 0,
+    "TOTAL_PROVISIONAL_QUESTIONS_RECONCILED": 675,
+    "DIGIBOOK_ALIGNED_QUESTIONS": 50,
+    "PARTIALLY_DIGIBOOK_ALIGNED_QUESTIONS": 0,
+    "DIGIBOOK_MATERIAL_MISSING_QUESTIONS": 625,
+    "QUESTION_OVERRUNS_TAUGHT_MATERIAL": 0,
+    "DIGIBOOK_GUS_AUDITED": 1,
+    "QUESTION_FACTORY_ELIGIBLE_GUS": 1,
+    "PILOT_TRACE_QUESTIONS": 10,
+    "FREEZE_S13_PLUS_QUESTION_DRAFTING": true,
+    "SMART_ENTRY_UNAPPROVED_NUMBERS_HARDCODED": 0,
+    "STUDENT_UI_CHANGED_FILES": 0,
+    "STUDENT_LOGIN_CHANGED_FILES": 0,
+    "STUDENT_ANDROID_CHANGED_FILES": 0,
+    "LIVE_AI_DIRECT_TO_STUDENT": 0
+  },
+  "digibookAudit": {
+    "TOTAL_DIGIBOOK_GUS": 1,
+    "PHYSICS_GUS": 1,
+    "CHEMISTRY_GUS": 0,
+    "MATHEMATICS_GUS": 0,
+    "FRAMEWORK_GUS": 1,
+    "CONTENT_BEARING_GUS": 1,
+    "SOURCE_GROUNDED_GUS": 1,
+    "SAFE_MATERIALIZED_GUS": 0,
+    "STUDENT_READY_GUS": 0,
+    "QUESTION_FACTORY_ELIGIBLE_GUS": 1,
+    "GUS_BY_UNIT": [
+      {
+        "unitId": "jee_main_2026_physics_mechanics_foundations_v1",
+        "title": "Mechanics Foundations",
+        "subject": "Physics",
+        "status": "AVAILABLE_FOR_FOUNDER_PREVIEW",
+        "authorizedAtoms": [
+          "JEE_2026_PHY_U01_CH01_TOP05_001",
+          "JEE_2026_PHY_U01_CH01_TOP06_001"
+        ],
+        "sevenComponents": {
+          "overview": "SOURCE_GROUNDED",
+          "concepts": "SOURCE_GROUNDED",
+          "formulaRegister": "SOURCE_GROUNDED",
+          "misconceptions": "SOURCE_GROUNDED",
+          "workedExamples": "SOURCE_GROUNDED",
+          "selfChecks": "SOURCE_GROUNDED",
+          "assessmentPreview": "SOURCE_GROUNDED"
+        },
+        "isQuestionFactoryEligible": true
+      }
+    ]
+  },
+  "chapterReadinessMatrix": [
+    {
+      "chapterId": "PHY_CH01",
+      "chapterName": "Units and Measurements",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH02",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 25,
+      "sevenComponentsComplete": true,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": true,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 50,
+      "questionGenerationAllowed": "ALLOWED_FOR_AUDITED_PILOT"
+    },
+    {
+      "chapterId": "PHY_CH02",
+      "chapterName": "Motion in a Straight Line",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 35,
+      "sevenComponentsComplete": true,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": true,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 50,
+      "questionGenerationAllowed": "ALLOWED_FOR_AUDITED_PILOT"
+    },
+    {
+      "chapterId": "PHY_CH03",
+      "chapterName": "Motion in a Plane",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 30,
+      "sevenComponentsComplete": true,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": true,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 50,
+      "questionGenerationAllowed": "ALLOWED_FOR_AUDITED_PILOT"
+    },
+    {
+      "chapterId": "PHY_CH04",
+      "chapterName": "Laws of Motion",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH05",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 40,
+      "sevenComponentsComplete": false,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": false,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 0,
+      "questionGenerationAllowed": "HELD_UNTIL_DIGIBOOK_MATERIALIZATION"
+    },
+    {
+      "chapterId": "PHY_CH05",
+      "chapterName": "Work, Energy and Power",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH06",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 35,
+      "sevenComponentsComplete": false,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": false,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 0,
+      "questionGenerationAllowed": "HELD_UNTIL_DIGIBOOK_MATERIALIZATION"
+    },
+    {
+      "chapterId": "PHY_CH06",
+      "chapterName": "System of Particles & Rotational Motion",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH07",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 45,
+      "sevenComponentsComplete": false,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": false,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 0,
+      "questionGenerationAllowed": "HELD_UNTIL_DIGIBOOK_MATERIALIZATION"
+    },
+    {
+      "chapterId": "PHY_CH07",
+      "chapterName": "Gravitation",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH08",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 30,
+      "sevenComponentsComplete": false,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": false,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 0,
+      "questionGenerationAllowed": "HELD_UNTIL_DIGIBOOK_MATERIALIZATION"
+    },
+    {
+      "chapterId": "PHY_CH08",
+      "chapterName": "Mechanical Properties of Solids",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH09",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 25,
+      "sevenComponentsComplete": false,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": false,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 0,
+      "questionGenerationAllowed": "HELD_UNTIL_DIGIBOOK_MATERIALIZATION"
+    },
+    {
+      "chapterId": "PHY_CH09",
+      "chapterName": "Mechanical Properties of Fluids",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH10",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 35,
+      "sevenComponentsComplete": false,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": false,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 0,
+      "questionGenerationAllowed": "HELD_UNTIL_DIGIBOOK_MATERIALIZATION"
+    },
+    {
+      "chapterId": "PHY_CH10",
+      "chapterName": "Thermal Properties of Matter",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH11",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 30,
+      "sevenComponentsComplete": false,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": false,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 0,
+      "questionGenerationAllowed": "HELD_UNTIL_DIGIBOOK_MATERIALIZATION"
+    },
+    {
+      "chapterId": "PHY_CH11",
+      "chapterName": "Thermodynamics",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH12",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 35,
+      "sevenComponentsComplete": false,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": false,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 0,
+      "questionGenerationAllowed": "HELD_UNTIL_DIGIBOOK_MATERIALIZATION"
+    },
+    {
+      "chapterId": "PHY_CH12",
+      "chapterName": "Kinetic Theory",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH13",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 25,
+      "sevenComponentsComplete": false,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": false,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 0,
+      "questionGenerationAllowed": "HELD_UNTIL_DIGIBOOK_MATERIALIZATION"
+    },
+    {
+      "chapterId": "PHY_CH13",
+      "chapterName": "Oscillations",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH14",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 35,
+      "sevenComponentsComplete": false,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": false,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 0,
+      "questionGenerationAllowed": "HELD_UNTIL_DIGIBOOK_MATERIALIZATION"
+    },
+    {
+      "chapterId": "PHY_CH14",
+      "chapterName": "Waves",
+      "subject": "Physics",
+      "syllabusReady": true,
+      "sourceReady": true,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH15",
+      "digiBookGuCount": 1,
+      "atomicFactCount": 35,
+      "sevenComponentsComplete": false,
+      "safeMaterialized": false,
+      "studentReady": false,
+      "questionFactoryEligible": false,
+      "existingDraftQuestionCount": 50,
+      "digiBookAlignedQuestionCount": 0,
+      "questionGenerationAllowed": "HELD_UNTIL_DIGIBOOK_MATERIALIZATION"
+    }
+  ],
+  "pilotS01AcademicTraces": [
+    {
+      "questionId": "JEE_S01_PHY_001",
+      "version": "1.0.0",
+      "subject": "Physics",
+      "difficultyBand": "MEDIUM",
+      "type": "SINGLE_CHOICE_MCQ",
+      "layer1_SyllabusAtom": {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP01_001",
+        "title": "Uniformly Accelerated Motion & Kinematics 1D Equations",
+        "chapter": "Motion in a Straight Line",
+        "unit": "Unit 02: Kinematics"
+      },
+      "layer2_DigiBookGU": {
+        "guId": "jee_main_2026_physics_mechanics_foundations_v1",
+        "title": "Mechanics Foundations — Motion, Reference Frames and Inertia",
+        "sectionId": "uam",
+        "sectionTitle": "Uniformly Accelerated Motion"
+      },
+      "layer3_KnowledgeComponents": {
+        "concepts": [
+          "Constant acceleration kinematics",
+          "Displacement under variable vs constant a",
+          "Sign convention relative to frame"
+        ],
+        "formulas": [
+          "v = u + a*t",
+          "s = u*t + 0.5*a*t^2",
+          "v^2 = u^2 + 2*a*s"
+        ],
+        "misconceptions": [
+          "MISC_01: Confusing distance traveled with net displacement",
+          "MISC_02: Assuming acceleration is zero at highest point in vertical motion"
+        ],
+        "workedExamples": [
+          "WE_05: Braking distance calculation with constant retardation"
+        ]
+      },
+      "layer4_ApprovedSource": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceTitle": "NCERT Physics Class 11 Chapter 3: Motion in a Straight Line",
+        "sourceLocator": "NCERT Class 11 Ch 03 Section 3.4 (Kinematic Equations for Uniformly Accelerated Motion)",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
+      },
+      "layer5_QuestionStem": "A particle starts from rest and moves along a straight line with a constant acceleration of 4 m/s². The distance traveled by the particle during the 3rd second of its motion is:",
+      "layer6_QuestionSolution": {
+        "correctAnswer": "10 m",
+        "solutionText": "Distance in nth second: S_n = u + (a/2)(2n - 1). Here u = 0, a = 4 m/s², n = 3. S_3 = 0 + (4/2)(2(3) - 1) = 2 * 5 = 10 m.",
+        "mathematicalRigour": "VALIDATED"
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_002",
+      "version": "1.0.0",
+      "subject": "Physics",
+      "difficultyBand": "MEDIUM",
+      "type": "SINGLE_CHOICE_MCQ",
+      "layer1_SyllabusAtom": {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP01_002",
+        "title": "Uniformly Accelerated Motion & Kinematics 1D Equations",
+        "chapter": "Motion in a Straight Line",
+        "unit": "Unit 02: Kinematics"
+      },
+      "layer2_DigiBookGU": {
+        "guId": "jee_main_2026_physics_mechanics_foundations_v1",
+        "title": "Mechanics Foundations — Motion, Reference Frames and Inertia",
+        "sectionId": "uam",
+        "sectionTitle": "Uniformly Accelerated Motion"
+      },
+      "layer3_KnowledgeComponents": {
+        "concepts": [
+          "Constant acceleration kinematics",
+          "Displacement under variable vs constant a",
+          "Sign convention relative to frame"
+        ],
+        "formulas": [
+          "v = u + a*t",
+          "s = u*t + 0.5*a*t^2",
+          "v^2 = u^2 + 2*a*s"
+        ],
+        "misconceptions": [
+          "MISC_01: Confusing distance traveled with net displacement",
+          "MISC_02: Assuming acceleration is zero at highest point in vertical motion"
+        ],
+        "workedExamples": [
+          "WE_05: Braking distance calculation with constant retardation"
+        ]
+      },
+      "layer4_ApprovedSource": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceTitle": "NCERT Physics Class 11 Chapter 3: Motion in a Straight Line",
+        "sourceLocator": "NCERT Class 11 Ch 03 Section 3.4 (Kinematic Equations for Uniformly Accelerated Motion)",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
+      },
+      "layer5_QuestionStem": "A stone is dropped from a balloon rising upwards with a constant velocity of 10 m/s. If the balloon is at a height of 40 m from the ground when the stone is dropped, the time taken by the stone to reach the ground is (g = 10 m/s²):",
+      "layer6_QuestionSolution": {
+        "correctAnswer": "4 s",
+        "solutionText": "Initial velocity of stone u = +10 m/s (upward). Acceleration a = -g = -10 m/s². Displacement s = -40 m. Using s = ut + (1/2)at²: -40 = 10t - 5t² => 5t² - 10t - 40 = 0 => t² - 2t - 8 = 0 => (t - 4)(t + 2) = 0. Since t > 0, t = 4 s.",
+        "mathematicalRigour": "VALIDATED"
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_003",
+      "version": "1.1.0",
+      "subject": "Physics",
+      "difficultyBand": "MEDIUM",
+      "type": "SINGLE_CHOICE_MCQ",
+      "layer1_SyllabusAtom": {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP02_001",
+        "title": "Uniformly Accelerated Motion & Kinematics 1D Equations",
+        "chapter": "Motion in a Straight Line",
+        "unit": "Unit 02: Kinematics"
+      },
+      "layer2_DigiBookGU": {
+        "guId": "jee_main_2026_physics_mechanics_foundations_v1",
+        "title": "Mechanics Foundations — Motion, Reference Frames and Inertia",
+        "sectionId": "uam",
+        "sectionTitle": "Uniformly Accelerated Motion"
+      },
+      "layer3_KnowledgeComponents": {
+        "concepts": [
+          "Constant acceleration kinematics",
+          "Displacement under variable vs constant a",
+          "Sign convention relative to frame"
+        ],
+        "formulas": [
+          "v = u + a*t",
+          "s = u*t + 0.5*a*t^2",
+          "v^2 = u^2 + 2*a*s"
+        ],
+        "misconceptions": [
+          "MISC_01: Confusing distance traveled with net displacement",
+          "MISC_02: Assuming acceleration is zero at highest point in vertical motion"
+        ],
+        "workedExamples": [
+          "WE_05: Braking distance calculation with constant retardation"
+        ]
+      },
+      "layer4_ApprovedSource": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceTitle": "NCERT Physics Class 11 Chapter 3: Motion in a Straight Line",
+        "sourceLocator": "NCERT Class 11 Ch 03 Section 3.4 (Kinematic Equations for Uniformly Accelerated Motion)",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
+      },
+      "layer5_QuestionStem": "The position of a body moving along the x-axis is given by x(t) = 2t³ - 9t² + 12t + 5 (in meters). The acceleration of the body when its velocity is momentarily zero is:",
+      "layer6_QuestionSolution": {
+        "correctAnswer": "-6 m/s² and +6 m/s²",
+        "solutionText": "Velocity v = dx/dt = 6t² - 18t + 12 = 6(t - 1)(t - 2). v = 0 at t = 1 s and t = 2 s. Acceleration a = dv/dt = 12t - 18. At t = 1 s, a = 12(1) - 18 = -6 m/s². At t = 2 s, a = 12(2) - 18 = +6 m/s².",
+        "mathematicalRigour": "VALIDATED"
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_004",
+      "version": "1.1.0",
+      "subject": "Physics",
+      "difficultyBand": "MEDIUM",
+      "type": "SINGLE_CHOICE_MCQ",
+      "layer1_SyllabusAtom": {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP02_002",
+        "title": "Uniformly Accelerated Motion & Kinematics 1D Equations",
+        "chapter": "Motion in a Straight Line",
+        "unit": "Unit 02: Kinematics"
+      },
+      "layer2_DigiBookGU": {
+        "guId": "jee_main_2026_physics_mechanics_foundations_v1",
+        "title": "Mechanics Foundations — Motion, Reference Frames and Inertia",
+        "sectionId": "uam",
+        "sectionTitle": "Uniformly Accelerated Motion"
+      },
+      "layer3_KnowledgeComponents": {
+        "concepts": [
+          "Constant acceleration kinematics",
+          "Displacement under variable vs constant a",
+          "Sign convention relative to frame"
+        ],
+        "formulas": [
+          "v = u + a*t",
+          "s = u*t + 0.5*a*t^2",
+          "v^2 = u^2 + 2*a*s"
+        ],
+        "misconceptions": [
+          "MISC_01: Confusing distance traveled with net displacement",
+          "MISC_02: Assuming acceleration is zero at highest point in vertical motion"
+        ],
+        "workedExamples": [
+          "WE_05: Braking distance calculation with constant retardation"
+        ]
+      },
+      "layer4_ApprovedSource": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceTitle": "NCERT Physics Class 11 Chapter 3: Motion in a Straight Line",
+        "sourceLocator": "NCERT Class 11 Ch 03 Section 3.4 (Kinematic Equations for Uniformly Accelerated Motion)",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
+      },
+      "layer5_QuestionStem": "A car moving at speed v is stopped by a constant braking force in distance d. If the speed is doubled to 2v while the same braking force is applied, the stopping distance becomes:",
+      "layer6_QuestionSolution": {
+        "correctAnswer": "4d",
+        "solutionText": "Using v² = u² + 2as with final velocity 0: 0 = u² - 2ad => d = u² / (2a). For u' = 2u, d' = (2u)² / (2a) = 4 * (u² / 2a) = 4d.",
+        "mathematicalRigour": "VALIDATED"
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_005",
+      "version": "1.0.0",
+      "subject": "Physics",
+      "difficultyBand": "MEDIUM",
+      "type": "NUMERICAL",
+      "layer1_SyllabusAtom": {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP01_003",
+        "title": "Uniformly Accelerated Motion & Kinematics 1D Equations",
+        "chapter": "Motion in a Straight Line",
+        "unit": "Unit 02: Kinematics"
+      },
+      "layer2_DigiBookGU": {
+        "guId": "jee_main_2026_physics_mechanics_foundations_v1",
+        "title": "Mechanics Foundations — Motion, Reference Frames and Inertia",
+        "sectionId": "uam",
+        "sectionTitle": "Uniformly Accelerated Motion"
+      },
+      "layer3_KnowledgeComponents": {
+        "concepts": [
+          "Constant acceleration kinematics",
+          "Displacement under variable vs constant a",
+          "Sign convention relative to frame"
+        ],
+        "formulas": [
+          "v = u + a*t",
+          "s = u*t + 0.5*a*t^2",
+          "v^2 = u^2 + 2*a*s"
+        ],
+        "misconceptions": [
+          "MISC_01: Confusing distance traveled with net displacement",
+          "MISC_02: Assuming acceleration is zero at highest point in vertical motion"
+        ],
+        "workedExamples": [
+          "WE_05: Braking distance calculation with constant retardation"
+        ]
+      },
+      "layer4_ApprovedSource": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceTitle": "NCERT Physics Class 11 Chapter 3: Motion in a Straight Line",
+        "sourceLocator": "NCERT Class 11 Ch 03 Section 3.4 (Kinematic Equations for Uniformly Accelerated Motion)",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
+      },
+      "layer5_QuestionStem": "A body moves in a straight line such that its velocity is given by v = √(4s + 16) where s is displacement in meters. The acceleration of the body in m/s² is:",
+      "layer6_QuestionSolution": {
+        "correctAnswer": "2",
+        "solutionText": "v² = 4s + 16. Differentiating with respect to s: 2v(dv/ds) = 4 => v(dv/ds) = 2. Since acceleration a = v(dv/ds), we get a = 2 m/s².",
+        "mathematicalRigour": "VALIDATED"
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_006",
+      "version": "1.0.0",
+      "subject": "Physics",
+      "difficultyBand": "MEDIUM",
+      "type": "SINGLE_CHOICE_MCQ",
+      "layer1_SyllabusAtom": {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP03_001",
+        "title": "Uniformly Accelerated Motion & Kinematics 1D Equations",
+        "chapter": "Motion in a Straight Line",
+        "unit": "Unit 02: Kinematics"
+      },
+      "layer2_DigiBookGU": {
+        "guId": "jee_main_2026_physics_mechanics_foundations_v1",
+        "title": "Mechanics Foundations — Motion, Reference Frames and Inertia",
+        "sectionId": "uam",
+        "sectionTitle": "Uniformly Accelerated Motion"
+      },
+      "layer3_KnowledgeComponents": {
+        "concepts": [
+          "Constant acceleration kinematics",
+          "Displacement under variable vs constant a",
+          "Sign convention relative to frame"
+        ],
+        "formulas": [
+          "v = u + a*t",
+          "s = u*t + 0.5*a*t^2",
+          "v^2 = u^2 + 2*a*s"
+        ],
+        "misconceptions": [
+          "MISC_01: Confusing distance traveled with net displacement",
+          "MISC_02: Assuming acceleration is zero at highest point in vertical motion"
+        ],
+        "workedExamples": [
+          "WE_05: Braking distance calculation with constant retardation"
+        ]
+      },
+      "layer4_ApprovedSource": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceTitle": "NCERT Physics Class 11 Chapter 3: Motion in a Straight Line",
+        "sourceLocator": "NCERT Class 11 Ch 03 Section 3.4 (Kinematic Equations for Uniformly Accelerated Motion)",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
+      },
+      "layer5_QuestionStem": "A particle drops freely under gravity from rest. The ratio of distances traveled by the particle in the 1st, 2nd, and 3rd seconds of its fall is:",
+      "layer6_QuestionSolution": {
+        "correctAnswer": "1 : 3 : 5",
+        "solutionText": "By Galileo's law of odd numbers, for motion from rest under constant acceleration, distances in successive equal intervals of time follow ratio 1 : 3 : 5 : 7...",
+        "mathematicalRigour": "VALIDATED"
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_007",
+      "version": "1.1.0",
+      "subject": "Physics",
+      "difficultyBand": "MEDIUM",
+      "type": "SINGLE_CHOICE_MCQ",
+      "layer1_SyllabusAtom": {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP02_003",
+        "title": "Uniformly Accelerated Motion & Kinematics 1D Equations",
+        "chapter": "Motion in a Straight Line",
+        "unit": "Unit 02: Kinematics"
+      },
+      "layer2_DigiBookGU": {
+        "guId": "jee_main_2026_physics_mechanics_foundations_v1",
+        "title": "Mechanics Foundations — Motion, Reference Frames and Inertia",
+        "sectionId": "uam",
+        "sectionTitle": "Uniformly Accelerated Motion"
+      },
+      "layer3_KnowledgeComponents": {
+        "concepts": [
+          "Constant acceleration kinematics",
+          "Displacement under variable vs constant a",
+          "Sign convention relative to frame"
+        ],
+        "formulas": [
+          "v = u + a*t",
+          "s = u*t + 0.5*a*t^2",
+          "v^2 = u^2 + 2*a*s"
+        ],
+        "misconceptions": [
+          "MISC_01: Confusing distance traveled with net displacement",
+          "MISC_02: Assuming acceleration is zero at highest point in vertical motion"
+        ],
+        "workedExamples": [
+          "WE_05: Braking distance calculation with constant retardation"
+        ]
+      },
+      "layer4_ApprovedSource": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceTitle": "NCERT Physics Class 11 Chapter 3: Motion in a Straight Line",
+        "sourceLocator": "NCERT Class 11 Ch 03 Section 3.4 (Kinematic Equations for Uniformly Accelerated Motion)",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
+      },
+      "layer5_QuestionStem": "A bullet fired into a wooden block loses half of its velocity after penetrating 3 cm. Assuming constant resistance force, the additional distance it will penetrate before coming to rest is:",
+      "layer6_QuestionSolution": {
+        "correctAnswer": "1 cm",
+        "solutionText": "Let initial velocity be u. After penetrating s1 = 3 cm, v = u/2. Using v² = u² - 2as: (u/2)² = u² - 2a(3) => u²/4 = u² - 6a => 6a = 3u²/4 => 2a = u²/4. For total penetration s until v = 0: 0 = u² - 2as => s = u² / (2a) = 4 cm. Additional distance = s - s1 = 4 cm - 3 cm = 1 cm.",
+        "mathematicalRigour": "VALIDATED"
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_008",
+      "version": "1.1.0",
+      "subject": "Physics",
+      "difficultyBand": "MEDIUM",
+      "type": "SINGLE_CHOICE_MCQ",
+      "layer1_SyllabusAtom": {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP01_004",
+        "title": "Uniformly Accelerated Motion & Kinematics 1D Equations",
+        "chapter": "Motion in a Straight Line",
+        "unit": "Unit 02: Kinematics"
+      },
+      "layer2_DigiBookGU": {
+        "guId": "jee_main_2026_physics_mechanics_foundations_v1",
+        "title": "Mechanics Foundations — Motion, Reference Frames and Inertia",
+        "sectionId": "uam",
+        "sectionTitle": "Uniformly Accelerated Motion"
+      },
+      "layer3_KnowledgeComponents": {
+        "concepts": [
+          "Constant acceleration kinematics",
+          "Displacement under variable vs constant a",
+          "Sign convention relative to frame"
+        ],
+        "formulas": [
+          "v = u + a*t",
+          "s = u*t + 0.5*a*t^2",
+          "v^2 = u^2 + 2*a*s"
+        ],
+        "misconceptions": [
+          "MISC_01: Confusing distance traveled with net displacement",
+          "MISC_02: Assuming acceleration is zero at highest point in vertical motion"
+        ],
+        "workedExamples": [
+          "WE_05: Braking distance calculation with constant retardation"
+        ]
+      },
+      "layer4_ApprovedSource": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceTitle": "NCERT Physics Class 11 Chapter 3: Motion in a Straight Line",
+        "sourceLocator": "NCERT Class 11 Ch 03 Section 3.4 (Kinematic Equations for Uniformly Accelerated Motion)",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
+      },
+      "layer5_QuestionStem": "A vehicle travels half of the total distance with speed v₁ and the remaining half with speed v₂. The average speed of the vehicle for the entire journey is:",
+      "layer6_QuestionSolution": {
+        "correctAnswer": "2v₁v₂ / (v₁ + v₂)",
+        "solutionText": "Total distance = 2d. Time for first half = d/v₁, for second half = d/v₂. Total time T = d(1/v₁ + 1/v₂) = d(v₁ + v₂)/(v₁v₂). Average speed = Total Distance / Total Time = 2d / [d(v₁ + v₂)/(v₁v₂)] = 2v₁v₂ / (v₁ + v₂).",
+        "mathematicalRigour": "VALIDATED"
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_009",
+      "version": "1.0.0",
+      "subject": "Physics",
+      "difficultyBand": "MEDIUM",
+      "type": "NUMERICAL",
+      "layer1_SyllabusAtom": {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP02_004",
+        "title": "Uniformly Accelerated Motion & Kinematics 1D Equations",
+        "chapter": "Motion in a Straight Line",
+        "unit": "Unit 02: Kinematics"
+      },
+      "layer2_DigiBookGU": {
+        "guId": "jee_main_2026_physics_mechanics_foundations_v1",
+        "title": "Mechanics Foundations — Motion, Reference Frames and Inertia",
+        "sectionId": "uam",
+        "sectionTitle": "Uniformly Accelerated Motion"
+      },
+      "layer3_KnowledgeComponents": {
+        "concepts": [
+          "Constant acceleration kinematics",
+          "Displacement under variable vs constant a",
+          "Sign convention relative to frame"
+        ],
+        "formulas": [
+          "v = u + a*t",
+          "s = u*t + 0.5*a*t^2",
+          "v^2 = u^2 + 2*a*s"
+        ],
+        "misconceptions": [
+          "MISC_01: Confusing distance traveled with net displacement",
+          "MISC_02: Assuming acceleration is zero at highest point in vertical motion"
+        ],
+        "workedExamples": [
+          "WE_05: Braking distance calculation with constant retardation"
+        ]
+      },
+      "layer4_ApprovedSource": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceTitle": "NCERT Physics Class 11 Chapter 3: Motion in a Straight Line",
+        "sourceLocator": "NCERT Class 11 Ch 03 Section 3.4 (Kinematic Equations for Uniformly Accelerated Motion)",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
+      },
+      "layer5_QuestionStem": "A particle moves with an acceleration a = 3t² + 2t (in m/s²). If its initial velocity at t = 0 is 2 m/s, the velocity of the particle at t = 2 s is (in m/s):",
+      "layer6_QuestionSolution": {
+        "correctAnswer": "14",
+        "solutionText": "v(t) = v(0) + ∫ a dt = 2 + ∫₀² (3t² + 2t) dt = 2 + [t³ + t²]₀² = 2 + (8 + 4) = 14 m/s.",
+        "mathematicalRigour": "VALIDATED"
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_010",
+      "version": "1.1.0",
+      "subject": "Physics",
+      "difficultyBand": "MEDIUM",
+      "type": "NUMERICAL",
+      "layer1_SyllabusAtom": {
+        "atomId": "JEE_2026_PHY_U01_CH03_TOP03_002",
+        "title": "Uniformly Accelerated Motion & Kinematics 1D Equations",
+        "chapter": "Motion in a Straight Line",
+        "unit": "Unit 02: Kinematics"
+      },
+      "layer2_DigiBookGU": {
+        "guId": "jee_main_2026_physics_mechanics_foundations_v1",
+        "title": "Mechanics Foundations — Motion, Reference Frames and Inertia",
+        "sectionId": "uam",
+        "sectionTitle": "Uniformly Accelerated Motion"
+      },
+      "layer3_KnowledgeComponents": {
+        "concepts": [
+          "Constant acceleration kinematics",
+          "Displacement under variable vs constant a",
+          "Sign convention relative to frame"
+        ],
+        "formulas": [
+          "v = u + a*t",
+          "s = u*t + 0.5*a*t^2",
+          "v^2 = u^2 + 2*a*s"
+        ],
+        "misconceptions": [
+          "MISC_01: Confusing distance traveled with net displacement",
+          "MISC_02: Assuming acceleration is zero at highest point in vertical motion"
+        ],
+        "workedExamples": [
+          "WE_05: Braking distance calculation with constant retardation"
+        ]
+      },
+      "layer4_ApprovedSource": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceTitle": "NCERT Physics Class 11 Chapter 3: Motion in a Straight Line",
+        "sourceLocator": "NCERT Class 11 Ch 03 Section 3.4 (Kinematic Equations for Uniformly Accelerated Motion)",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
+      },
+      "layer5_QuestionStem": "A juggler throws balls into air vertically upward at regular intervals of 1 second. Each ball rises to a maximum height of 20 m. The number of balls in the air simultaneously at any instant (excluding the moments of throwing and catching) is (g = 10 m/s²):",
+      "layer6_QuestionSolution": {
+        "correctAnswer": "3",
+        "solutionText": "For maximum height H = 20 m: u = √(2gH) = √(2 * 10 * 20) = 20 m/s. Total time of flight T = 2u/g = (2 * 20) / 10 = 4 s. Since balls are thrown every 1 s, balls are in air at t = 1 s, 2 s, 3 s (3 balls in air at any given instant).",
+        "mathematicalRigour": "VALIDATED"
+      }
+    }
+  ],
+  "reconciled675Sample": [
+    {
+      "questionId": "JEE_S01_PHY_001",
+      "version": "1.0.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "38ddd2c9270afee0"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.3, Page 41 (Kinematic Equations for Uniformly Accelerated Motion)",
+      "draftSha256": "537ffba12ca0188617a7328395fd0c59dc37c2e46218c5202afe359c0de69a4b",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_001"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_1",
+      "stem": "A particle starts from rest and moves along a straight line with a constant acceleration of 4 m/s². The distance traveled by the particle during the 3rd second of its motion is:",
+      "options": [
+        "10 m",
+        "12 m",
+        "14 m",
+        "16 m"
+      ],
+      "correctAnswer": "10 m",
+      "solution": "Distance in nth second: S_n = u + (a/2)(2n - 1). Here u = 0, a = 4 m/s², n = 3. S_3 = 0 + (4/2)(2(3) - 1) = 2 * 5 = 10 m."
+    },
+    {
+      "questionId": "JEE_S01_PHY_002",
+      "version": "1.0.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP01_002"
+      ],
+      "structuralNodeIds": [
+        "38ddd2c9270afee0"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.4, Page 45 (Free Fall Motion)",
+      "draftSha256": "75728f3e1e364cee07eece2a15ef5db3cb755e123654d673d4500e51203d3f1f",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_002"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_1",
+      "stem": "A stone is dropped from a balloon rising upwards with a constant velocity of 10 m/s. If the balloon is at a height of 40 m from the ground when the stone is dropped, the time taken by the stone to reach the ground is (g = 10 m/s²):",
+      "options": [
+        "2 s",
+        "4 s",
+        "6 s",
+        "8 s"
+      ],
+      "correctAnswer": "4 s",
+      "solution": "Initial velocity of stone u = +10 m/s (upward). Acceleration a = -g = -10 m/s². Displacement s = -40 m. Using s = ut + (1/2)at²: -40 = 10t - 5t² => 5t² - 10t - 40 = 0 => t² - 2t - 8 = 0 => (t - 4)(t + 2) = 0. Since t > 0, t = 4 s."
+    },
+    {
+      "questionId": "JEE_S01_PHY_003",
+      "version": "1.1.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "38ddd2c9270afee0"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.2, Page 39 (Instantaneous Velocity and Acceleration)",
+      "draftSha256": "1e8516a84117ccd7d443c00623330e07b37dddd6e7647a32ab366ed9db114ff9",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_003"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_1",
+      "stem": "The position of a body moving along the x-axis is given by x(t) = 2t³ - 9t² + 12t + 5 (in meters). The acceleration of the body when its velocity is momentarily zero is:",
+      "options": [
+        "±6 m/s²",
+        "±12 m/s²",
+        "-6 m/s² and +6 m/s²",
+        "-12 m/s² and +12 m/s²"
+      ],
+      "correctAnswer": "-6 m/s² and +6 m/s²",
+      "solution": "Velocity v = dx/dt = 6t² - 18t + 12 = 6(t - 1)(t - 2). v = 0 at t = 1 s and t = 2 s. Acceleration a = dv/dt = 12t - 18. At t = 1 s, a = 12(1) - 18 = -6 m/s². At t = 2 s, a = 12(2) - 18 = +6 m/s²."
+    },
+    {
+      "questionId": "JEE_S01_PHY_004",
+      "version": "1.1.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP02_002"
+      ],
+      "structuralNodeIds": [
+        "38ddd2c9270afee0"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.3, Page 43 (Stopping Distance of Vehicles)",
+      "draftSha256": "6625f59ec1c87e8b54b6f0e98d47096aed091eda90d691595a7375ce8a49a0e7",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_004"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_1",
+      "stem": "A car moving at speed v is stopped by a constant braking force in distance d. If the speed is doubled to 2v while the same braking force is applied, the stopping distance becomes:",
+      "options": [
+        "2d",
+        "3d",
+        "4d",
+        "8d"
+      ],
+      "correctAnswer": "4d",
+      "solution": "Using v² = u² + 2as with final velocity 0: 0 = u² - 2ad => d = u² / (2a). For u' = 2u, d' = (2u)² / (2a) = 4 * (u² / 2a) = 4d."
+    },
+    {
+      "questionId": "JEE_S01_PHY_005",
+      "version": "1.0.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP01_003"
+      ],
+      "structuralNodeIds": [
+        "38ddd2c9270afee0"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.2, Page 38 (Position-Time Graphs)",
+      "draftSha256": "21e29cc777341d620034272e22a07b7f4863dc18f95cc7fecc845c12f7e909fe",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_005"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_1",
+      "stem": "A body moves in a straight line such that its velocity is given by v = √(4s + 16) where s is displacement in meters. The acceleration of the body in m/s² is:",
+      "options": [],
+      "correctAnswer": "2",
+      "solution": "v² = 4s + 16. Differentiating with respect to s: 2v(dv/ds) = 4 => v(dv/ds) = 2. Since acceleration a = v(dv/ds), we get a = 2 m/s²."
+    },
+    {
+      "questionId": "JEE_S01_PHY_006",
+      "version": "1.0.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "5348e3cffa58e586"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.4, Page 47 (Galileo's Law of Odd Numbers)",
+      "draftSha256": "e241c0d39c08f8f963b43c0b0a96b66d49b80e35e6c9d5479855c628ff10efaa",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_006"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_1",
+      "stem": "A particle drops freely under gravity from rest. The ratio of distances traveled by the particle in the 1st, 2nd, and 3rd seconds of its fall is:",
+      "options": [
+        "1 : 2 : 3",
+        "1 : 4 : 9",
+        "1 : 3 : 5",
+        "1 : 1 : 1"
+      ],
+      "correctAnswer": "1 : 3 : 5",
+      "solution": "By Galileo's law of odd numbers, for motion from rest under constant acceleration, distances in successive equal intervals of time follow ratio 1 : 3 : 5 : 7..."
+    },
+    {
+      "questionId": "JEE_S01_PHY_007",
+      "version": "1.1.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP02_003"
+      ],
+      "structuralNodeIds": [
+        "5348e3cffa58e586"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "draftSha256": "b47739307d28cd1c5277b16e13872352f755f32de0b1cce896353d199d8ae4ba",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_007"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_1",
+      "stem": "A bullet fired into a wooden block loses half of its velocity after penetrating 3 cm. Assuming constant resistance force, the additional distance it will penetrate before coming to rest is:",
+      "options": [
+        "1 cm",
+        "2 cm",
+        "3 cm",
+        "4 cm"
+      ],
+      "correctAnswer": "1 cm",
+      "solution": "Let initial velocity be u. After penetrating s1 = 3 cm, v = u/2. Using v² = u² - 2as: (u/2)² = u² - 2a(3) => u²/4 = u² - 6a => 6a = 3u²/4 => 2a = u²/4. For total penetration s until v = 0: 0 = u² - 2as => s = u² / (2a) = 4 cm. Additional distance = s - s1 = 4 cm - 3 cm = 1 cm."
+    },
+    {
+      "questionId": "JEE_S01_PHY_008",
+      "version": "1.1.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP01_004"
+      ],
+      "structuralNodeIds": [
+        "5348e3cffa58e586"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.1, Page 37 (Average vs Instantaneous Speed)",
+      "draftSha256": "363d5186abe0afb7d58284ada610e6ff852d651659dc877023553b35af7355a4",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_008"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_1",
+      "stem": "A vehicle travels half of the total distance with speed v₁ and the remaining half with speed v₂. The average speed of the vehicle for the entire journey is:",
+      "options": [
+        "(v₁ + v₂) / 2",
+        "2v₁v₂ / (v₁ + v₂)",
+        "√(v₁v₂)",
+        "v₁v₂ / (v₁ + v₂)"
+      ],
+      "correctAnswer": "2v₁v₂ / (v₁ + v₂)",
+      "solution": "Total distance = 2d. Time for first half = d/v₁, for second half = d/v₂. Total time T = d(1/v₁ + 1/v₂) = d(v₁ + v₂)/(v₁v₂). Average speed = Total Distance / Total Time = 2d / [d(v₁ + v₂)/(v₁v₂)] = 2v₁v₂ / (v₁ + v₂)."
+    },
+    {
+      "questionId": "JEE_S01_PHY_009",
+      "version": "1.0.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP02_004"
+      ],
+      "structuralNodeIds": [
+        "5348e3cffa58e586"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.2, Page 40 (Acceleration from Velocity-Time Area)",
+      "draftSha256": "c2f33c73707c5839c880de7ff24ae95934b59ea7786c8a76aa8c245ea0ac99b4",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_009"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_1",
+      "stem": "A particle moves with an acceleration a = 3t² + 2t (in m/s²). If its initial velocity at t = 0 is 2 m/s, the velocity of the particle at t = 2 s is (in m/s):",
+      "options": [],
+      "correctAnswer": "14",
+      "solution": "v(t) = v(0) + ∫ a dt = 2 + ∫₀² (3t² + 2t) dt = 2 + [t³ + t²]₀² = 2 + (8 + 4) = 14 m/s."
+    },
+    {
+      "questionId": "JEE_S01_PHY_010",
+      "version": "1.1.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP03_002"
+      ],
+      "structuralNodeIds": [
+        "5348e3cffa58e586"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "draftSha256": "085bbe958eb744d343fb9c0d9c0a40e7843422cde7818c7dab3630d824cd0126",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_010"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_1",
+      "stem": "A juggler throws balls into air vertically upward at regular intervals of 1 second. Each ball rises to a maximum height of 20 m. The number of balls in the air simultaneously at any instant (excluding the moments of throwing and catching) is (g = 10 m/s²):",
+      "options": [],
+      "correctAnswer": "3",
+      "solution": "For maximum height H = 20 m: u = √(2gH) = √(2 * 10 * 20) = 20 m/s. Total time of flight T = 2u/g = (2 * 20) / 10 = 4 s. Since balls are thrown every 1 s, balls are in air at t = 1 s, 2 s, 3 s (3 balls in air at any given instant)."
+    },
+    {
+      "questionId": "JEE_S01_PHY_011",
+      "version": "1.0.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.2, Page 66 (Scalars and Vectors, Unit Vectors)",
+      "draftSha256": "53a0b43ef898334af7aa9174388839865e81f627aeffec909c9a6fea4b7272da",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_011"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_2",
+      "stem": "If vector A = 3î + 4ĵ and vector B = 6î + 8ĵ, then the angle between vector A and vector B is:",
+      "options": [
+        "0°",
+        "30°",
+        "45°",
+        "90°"
+      ],
+      "correctAnswer": "0°",
+      "solution": "Vector B = 2(3î + 4ĵ) = 2A. Since B is a positive scalar multiple of A, the vectors are collinear and in the same direction, so the angle is 0°."
+    },
+    {
+      "questionId": "JEE_S01_PHY_012",
+      "version": "1.0.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP01_002"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.4, Page 69 (Vector Addition - Triangle and Parallelogram Law)",
+      "draftSha256": "693fc6949f7bc8fac76dd94c98e44d73da950ed48ae0553b4d74ad4b0fa544c1",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_012"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_2",
+      "stem": "The resultant of two equal vectors of magnitude P is also equal to P. The angle between the two vectors is:",
+      "options": [
+        "60°",
+        "90°",
+        "120°",
+        "150°"
+      ],
+      "correctAnswer": "120°",
+      "solution": "R² = P² + Q² + 2PQ cos θ. Given R = P = Q: P² = P² + P² + 2P² cos θ => P² = 2P²(1 + cos θ) => 1/2 = 1 + cos θ => cos θ = -1/2 => θ = 120°."
+    },
+    {
+      "questionId": "JEE_S01_PHY_013",
+      "version": "1.1.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.7, Page 74 (Scalar Product of Vectors)",
+      "draftSha256": "8c6d7d73551c7dcd886913081daeecbfb91272cfab542f90efaeecfd98b90366",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_013"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_2",
+      "stem": "If vectors A = 2î + 3ĵ + 8k̂ and B = 4î - 4ĵ + αk̂ are perpendicular to each other, then the value of α is:",
+      "options": [
+        "1/2",
+        "-1/2",
+        "1",
+        "-1"
+      ],
+      "correctAnswer": "1/2",
+      "solution": "For perpendicular vectors, A · B = 0. (2)(4) + (3)(-4) + (8)(α) = 0 => 8 - 12 + 8α = 0 => -4 + 8α = 0 => α = 4/8 = 1/2."
+    },
+    {
+      "questionId": "JEE_S01_PHY_014",
+      "version": "1.1.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP02_002"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.8, Page 76 (Vector Product of Vectors)",
+      "draftSha256": "f8ad1d1baa02976114bbaf8c337c9b5010cb79fc3481d334d0f9c5299ef601e1",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_014"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_2",
+      "stem": "If |A × B| = √3 (A · B), then the angle between vectors A and B in degrees is:",
+      "options": [],
+      "correctAnswer": "60",
+      "solution": "|A × B| = AB sin θ, and A · B = AB cos θ. Given AB sin θ = √3 AB cos θ => tan θ = √3 => θ = 60°."
+    },
+    {
+      "questionId": "JEE_S01_PHY_015",
+      "version": "1.1.0",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "subject": "Physics",
+      "corpusStatus": "PROVISIONAL_DRAFT_CORPUS_PENDING_DIGIBOOK_RECONCILIATION",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP01_003"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "draftSha256": "e12a6cacb99a02f60271f72782b1385f58c07739e69c2c6a42baaccb4fbfc4a9",
+      "difficultyBand": "MEDIUM",
+      "difficultyEstimate": "STANDARD",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+      "digiBookReconciliation": {
+        "matchedDigiBookGuIds": [
+          "jee_main_2026_physics_mechanics_foundations_v1"
+        ],
+        "matchedFactIds": [
+          "fact_mechanics_015"
+        ],
+        "matchedFormulaIds": [
+          "form_kinematics_uam_01"
+        ],
+        "matchedMisconceptionIds": [
+          "misc_kinematics_frame_01"
+        ],
+        "digiBookRevisionId": "REV_DIGIBOOK_JEE_2027_V1.0",
+        "classification": "DIGIBOOK_ALIGNED"
+      },
+      "reviewBatchId": "BATCH_S01_2",
+      "stem": "A unit vector perpendicular to both A = î + 2ĵ + 3k̂ and B = 2î - ĵ + k̂ is:",
+      "options": [
+        "(5î + 5ĵ - 5k̂) / √75",
+        "(î - 3ĵ + 2k̂) / √14",
+        "(2î + ĵ - k̂) / √6",
+        "(3î - ĵ + 2k̂) / √14"
+      ],
+      "correctAnswer": "(5î + 5ĵ - 5k̂) / √75",
+      "solution": "A × B = |î  ĵ  k̂|\n        |1  2  3|\n        |2 -1  1| = î(2 - (-3)) - ĵ(1 - 6) + k̂(-1 - 4) = 5î + 5ĵ - 5k̂. Magnitude |A × B| = √(25 + 25 + 25) = √75 = 5√3. Unit vector = (5î + 5ĵ - 5k̂) / √75 = (î + ĵ - k̂) / √3."
+    }
+  ]
+}
