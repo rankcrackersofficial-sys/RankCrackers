@@ -24,6 +24,7 @@ import 'syllabus_personalization_route_engine.dart';
 import 'digibook_personalization_route_engine.dart';
 import 'crucible_personalization_blueprint_engine.dart';
 import 'student_revision_queue_engine.dart';
+import 'student_revision_closed_loop_engine.dart';
 import 'student_coaching_support_engine.dart';
 
 final class StudentAutonomousLoopResult {
@@ -91,16 +92,27 @@ final class StudentAutonomousLoopEngine {
     // 1. Validate Bridge Authority
     bridge.validate();
 
-    // 2. Filter events for target identity
-    final targetEvents = rawEvents
-        .where((e) =>
-            e.studentId == bridge.studentId && e.amtnId == bridge.targetAmtnId)
-        .toList();
+    // 2. Filter events for target identity and deduplicate by eventId
+    final seenEventIds = <String>{};
+    final uniqueEvents = <StudentEvidenceEvent>[];
+    for (final e in rawEvents) {
+      if (e.studentId == bridge.studentId &&
+          e.missionId == bridge.missionId &&
+          e.amtnId == bridge.targetAmtnId) {
+        if (seenEventIds.add(e.eventId)) {
+          uniqueEvents.add(e);
+        }
+      }
+    }
+    final targetEvents = uniqueEvents;
+
+    // 3. Calculate Core Learning State Dimensions
 
     // 3. Calculate Core Learning State Dimensions
     final mastery = masteryEngine.calculate(
       studentId: bridge.studentId,
       amtnId: bridge.targetAmtnId,
+      missionId: bridge.missionId,
       calculatedAtUtc: nowUtc,
       events: targetEvents,
     );
@@ -108,6 +120,7 @@ final class StudentAutonomousLoopEngine {
     final retention = retentionEngine.calculate(
       studentId: bridge.studentId,
       amtnId: bridge.targetAmtnId,
+      missionId: bridge.missionId,
       calculatedAtUtc: nowUtc,
       events: targetEvents,
     );
@@ -115,6 +128,7 @@ final class StudentAutonomousLoopEngine {
     final fluency = fluencyEngine.calculate(
       studentId: bridge.studentId,
       amtnId: bridge.targetAmtnId,
+      missionId: bridge.missionId,
       calculatedAtUtc: nowUtc,
       events: targetEvents,
     );
@@ -122,6 +136,7 @@ final class StudentAutonomousLoopEngine {
     final prerequisiteDiagnosis = prerequisiteEngine.diagnose(
       studentId: bridge.studentId,
       targetAmtnId: bridge.targetAmtnId,
+      missionId: bridge.missionId,
       calculatedAtUtc: nowUtc,
       prerequisiteStates: prerequisiteStates,
     );
@@ -130,6 +145,7 @@ final class StudentAutonomousLoopEngine {
     final learningState = learningStateEngine.assemble(
       studentId: bridge.studentId,
       amtnId: bridge.targetAmtnId,
+      missionId: bridge.missionId,
       calculatedAtUtc: nowUtc,
       mastery: mastery,
       retention: retention,
@@ -170,7 +186,8 @@ final class StudentAutonomousLoopEngine {
     final revisionQueue = revisionEngine.build(
       studentId: bridge.studentId,
       nowUtc: nowUtc,
-      candidates: revisionCandidates,
+      candidates: revisionCandidates
+          .where((c) => c.state.missionId == bridge.missionId),
     );
 
     // 8. Generate Coaching Support Decisions

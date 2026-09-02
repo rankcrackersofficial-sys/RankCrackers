@@ -3,6 +3,7 @@ import 'package:rank_crackers/features/personalization/domain/models/student_lea
 import 'package:rank_crackers/features/personalization/domain/models/student_evidence_event.dart';
 import 'package:rank_crackers/features/personalization/domain/models/aaf_personalization_bridge.dart';
 import 'package:rank_crackers/features/personalization/domain/engines/student_revision_queue_engine.dart';
+import 'package:rank_crackers/features/personalization/domain/engines/student_revision_closed_loop_engine.dart';
 
 void main() {
   group('PERS-REV-01 Revision Closed Loop Implementation Tests', () {
@@ -11,11 +12,13 @@ void main() {
     StudentLearningState dummyState({
       String studentId = 's1',
       String amtnId = 'amtn1',
+      String missionId = 'jee_main_2026',
       StudentRetentionState retentionState = StudentRetentionState.unstable,
     }) {
       return StudentLearningState(
         studentId: studentId,
         amtnId: amtnId,
+        missionId: missionId,
         calculatedAtUtc: t,
         masteryProbability: 0.7,
         masteryBand: StudentMasteryBand.developing,
@@ -33,13 +36,14 @@ void main() {
         retryRate: 0.15,
         answerChangeRate: 0.08,
         totalEligibleEvidenceCount: 10,
-        schemaVersion: 2,
+        schemaVersion: 3,
       );
     }
 
     StudentRevisionClosedLoopCandidate validCandidate({
       String studentId = 's1',
       String amtnId = 'amtn1',
+      String missionId = 'jee_main_2026',
       RevisionTriggerType trigger = RevisionTriggerType.retentionDecay,
       double decay = 0.5,
       int version = 1,
@@ -49,18 +53,20 @@ void main() {
       return StudentRevisionClosedLoopCandidate(
         studentId: studentId,
         amtnId: amtnId,
+        missionId: missionId,
         triggerType: trigger,
         decayFactor: decay,
         knowledgeVersion: version,
         projectionId: projection,
         currentLearningState:
-            state ?? dummyState(studentId: studentId, amtnId: amtnId),
+            state ?? dummyState(studentId: studentId, amtnId: amtnId, missionId: missionId),
       );
     }
 
     AafPersonalizationBridgeAuthority validBridge({
       String studentId = 's1',
       String targetAmtnId = 'amtn1',
+      String missionId = 'jee_main_2026',
       AafPublicProjectionStatus status = AafPublicProjectionStatus.current,
       int version = 1,
       String projection = 'pub1',
@@ -68,6 +74,7 @@ void main() {
       return AafPersonalizationBridgeAuthority(
         studentId: studentId,
         targetAmtnId: targetAmtnId,
+        missionId: missionId,
         canonicalSemanticTopicId: 'topic1',
         canonicalKnowledgeVersion: version,
         publicProjectionId: projection,
@@ -76,7 +83,7 @@ void main() {
         treatmentDecisionVersion: 1,
         routeVersion: 1,
         createdAtUtc: t,
-        schemaVersion: 1,
+        schemaVersion: 2,
       );
     }
 
@@ -101,12 +108,13 @@ void main() {
       final c = StudentRevisionClosedLoopCandidate(
         studentId: 'student_a',
         amtnId: 'amtn1',
+        missionId: 'jee_main_2026',
         triggerType: RevisionTriggerType.retentionDecay,
         decayFactor: 0.5,
         knowledgeVersion: 1,
         projectionId: 'pub1',
         currentLearningState:
-            dummyState(studentId: 'student_b', amtnId: 'amtn1'),
+            dummyState(studentId: 'student_b', amtnId: 'amtn1', missionId: 'jee_main_2026'),
       );
       expect(() => c.validate(), throwsFormatException);
     });
@@ -226,6 +234,7 @@ void main() {
       final event = StudentEvidenceEvent(
         eventId: 'event1',
         studentId: 's1',
+        missionId: 'jee_main_2026',
         amtnId: 'amtn1',
         source: StudentEvidenceSource.mentorVerification,
         action: StudentEvidenceAction.mentorVerified,
@@ -233,7 +242,7 @@ void main() {
         sourceConfidence: StudentEvidenceConfidence.medium,
         difficulty: StudentEvidenceDifficulty.medium,
         answerOutcome: StudentAnswerOutcome.correct,
-        schemaVersion: 2,
+        schemaVersion: 3,
       );
       expect(
           const StudentRevisionClosedLoopEngine()
@@ -247,6 +256,7 @@ void main() {
       final event = StudentEvidenceEvent(
         eventId: 'event2',
         studentId: 's1',
+        missionId: 'jee_main_2026',
         amtnId: 'amtn1',
         source: StudentEvidenceSource.diagnostic,
         action: StudentEvidenceAction.diagnosticCompleted,
@@ -254,7 +264,7 @@ void main() {
         sourceConfidence: StudentEvidenceConfidence.medium,
         difficulty: StudentEvidenceDifficulty.medium,
         answerOutcome: StudentAnswerOutcome.correct,
-        schemaVersion: 2,
+        schemaVersion: 3,
       );
       expect(
           const StudentRevisionClosedLoopEngine()
@@ -268,6 +278,7 @@ void main() {
       final event = StudentEvidenceEvent(
         eventId: 'event3',
         studentId: 's1',
+        missionId: 'jee_main_2026',
         amtnId: 'amtn1',
         source: StudentEvidenceSource.practice,
         action: StudentEvidenceAction.nodeCompleted,
@@ -275,7 +286,7 @@ void main() {
         sourceConfidence: StudentEvidenceConfidence.medium,
         difficulty: StudentEvidenceDifficulty.medium,
         answerOutcome: StudentAnswerOutcome.correct,
-        schemaVersion: 2,
+        schemaVersion: 3,
       );
       expect(
           const StudentRevisionClosedLoopEngine()

@@ -10,6 +10,7 @@ import 'package:rank_crackers/features/personalization/domain/engines/syllabus_p
 import 'package:rank_crackers/features/personalization/domain/engines/digibook_personalization_route_engine.dart';
 import 'package:rank_crackers/features/personalization/domain/engines/crucible_personalization_blueprint_engine.dart';
 import 'package:rank_crackers/features/personalization/domain/engines/student_revision_queue_engine.dart';
+import 'package:rank_crackers/features/personalization/domain/engines/student_revision_closed_loop_engine.dart';
 import 'package:rank_crackers/features/personalization/domain/engines/student_coaching_support_engine.dart';
 import 'package:rank_crackers/features/personalization/domain/models/aaf_personalization_bridge.dart';
 import 'package:rank_crackers/features/personalization/domain/models/student_learning_state.dart';
@@ -41,6 +42,7 @@ void main() {
       final bridge = AafPersonalizationBridgeAuthority(
         studentId: 's1',
         targetAmtnId: 'amtn1',
+        missionId: 'jee_main_2026',
         canonicalSemanticTopicId: 'topic1',
         canonicalKnowledgeVersion: 1,
         publicProjectionId: 'pub1',
@@ -49,7 +51,7 @@ void main() {
         treatmentDecisionVersion: 1,
         routeVersion: 1,
         createdAtUtc: now,
-        schemaVersion: 1,
+        schemaVersion: 2,
       );
 
       // Execute Loop with real engines
@@ -78,6 +80,7 @@ void main() {
       final bridge = AafPersonalizationBridgeAuthority(
         studentId: 's1',
         targetAmtnId: 'amtn1',
+        missionId: 'jee_main_2026',
         canonicalSemanticTopicId: 'topic1',
         canonicalKnowledgeVersion: 1,
         publicProjectionId: 'pub1',
@@ -86,7 +89,7 @@ void main() {
         treatmentDecisionVersion: 1,
         routeVersion: 1,
         createdAtUtc: now,
-        schemaVersion: 1,
+        schemaVersion: 2,
       );
 
       expect(
