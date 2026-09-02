@@ -1,17 +1,31 @@
 import '../models/crucible_protocol_state.dart';
+import '../models/mission_crucible_blueprint.dart';
 
-/// 🔱 CRUCIBLE CLOCK ENGINE
-/// Sovereign authority for time arithmetic and boundary logic.
+/// CRUCIBLE CLOCK ENGINE (Generic Mission-Agnostic Core)
+/// Sovereign authority for time arithmetic and continuous rotating mission orbits.
+/// Consumes MissionCrucibleBlueprint for mission-specific cycle lengths, phases, and schedule boundaries.
 class CrucibleClockEngine {
-  // ===================================================
-  // FIXED TIMES
-  // ===================================================
-
   static const int courseStartHour = 10;
   static const int testStartHour = 9;
 
-  /// Day 101 is used as an internal terminal sentinel day signifying completion of the 100-day timeline.
-  static const int terminalDaySentinel = 101;
+  // ===================================================
+  // BLUEPRINT RESOLVER UTILITY
+  // ===================================================
+
+  static MissionCrucibleBlueprint _resolveBlueprint({
+    String? missionId,
+    MissionCrucibleBlueprint? explicitBlueprint,
+  }) {
+    if (explicitBlueprint != null) {
+      return explicitBlueprint;
+    }
+    if (missionId != null && missionId.isNotEmpty) {
+      final bp = MissionCrucibleBlueprintRegistry.getBlueprint(missionId);
+      if (bp != null) return bp;
+    }
+    // Default to registered baseline profile for backward compatibility
+    return MissionCrucibleBlueprint.jeeMain2027Blueprint;
+  }
 
   // ===================================================
   // GET SOVEREIGN NORMALIZED START
@@ -24,7 +38,7 @@ class CrucibleClockEngine {
         enrollmentTime.year,
         enrollmentTime.month,
         enrollmentTime.day,
-        10, 0, 0
+        10, 0, 0,
       );
     } else {
       final targetDate = hour >= 22
@@ -34,7 +48,7 @@ class CrucibleClockEngine {
         targetDate.year,
         targetDate.month,
         targetDate.day,
-        10, 0, 0
+        10, 0, 0,
       );
     }
   }
@@ -66,120 +80,119 @@ class CrucibleClockEngine {
       return Duration.zero;
     }
     // SOVEREIGN_PROTOCOL_CLOCK_DOES_NOT_PAUSE
-    // Time continues ticking forward even while paused.
+    // Global mission clock ticks continuously forward.
     return now.difference(start);
   }
 
   // ===================================================
-  // CALCULATE CURRENT PROTOCOL DAY (1-101)
+  // CALCULATE ORBIT NUMBER (1, 2, 3...)
   // ===================================================
 
-  static int getProtocolDay({
-    required dynamic state, // Supports CrucibleProtocolState
+  static int getOrbitNumber({
+    required DateTime protocolStartTime,
     required DateTime now,
+    MissionCrucibleBlueprint? blueprint,
+    int? cycleLengthDays,
   }) {
-    final elapsed = calculateActiveElapsed(state: state, now: now);
-    final day = (elapsed.inSeconds ~/ (24 * 3600)) + 1;
-    return day.clamp(1, terminalDaySentinel);
+    if (now.isBefore(protocolStartTime)) return 1;
+    final cycleDays = cycleLengthDays ?? blueprint?.cycleLengthDays ?? MissionCrucibleBlueprint.jeeMain2027Blueprint.cycleLengthDays;
+    final elapsed = now.difference(protocolStartTime);
+    return (elapsed.inSeconds ~/ (cycleDays * 24 * 3600)) + 1;
   }
 
   // ===================================================
-  // GET ACTIVE SCHEDULE INDEX (Legacy Compatibility)
+  // CALCULATE CURRENT CYCLE DAY (1 to N Continuous Ring)
+  // ===================================================
+
+  static int getCycleDay({
+    required dynamic state,
+    required DateTime now,
+    MissionCrucibleBlueprint? blueprint,
+  }) {
+    final bp = _resolveBlueprint(
+      missionId: (state is CrucibleProtocolState) ? state.recruitmentId : null,
+      explicitBlueprint: blueprint,
+    );
+    final elapsed = calculateActiveElapsed(state: state, now: now);
+    final day = ((elapsed.inSeconds ~/ (24 * 3600)) % bp.cycleLengthDays) + 1;
+    return day;
+  }
+
+  /// Alias for backward compatibility with existing callers.
+  static int getProtocolDay({
+    required dynamic state,
+    required DateTime now,
+    MissionCrucibleBlueprint? blueprint,
+  }) {
+    return getCycleDay(state: state, now: now, blueprint: blueprint);
+  }
+
+  // ===================================================
+  // GET ACTIVE SCHEDULE INDEX (0 to totalSchedules - 1)
   // ===================================================
 
   static int getScheduleIndex({
     required DateTime enrollmentTime,
+    MissionCrucibleBlueprint? blueprint,
+    String? missionId,
   }) {
+    final bp = _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
     final now = DateTime.now();
     final normalizedStart = getNormalizedStart(enrollmentTime);
     final difference = now.difference(normalizedStart);
-    final days = difference.inDays;
-    final phaseDay = days % 14;
+    final totalDays = difference.inDays;
+    final cycleDays = totalDays % bp.cycleLengthDays;
+    final daysPerPhase = bp.cycleLengthDays ~/ bp.phaseCount;
+    final phaseDay = cycleDays % daysPerPhase;
 
-    final phaseIndex = (days ~/ 14).clamp(0, 6);
+    final phaseIndex = (cycleDays ~/ daysPerPhase).clamp(0, bp.phaseCount - 1);
+    final studyDaysLimit = bp.schedulesPerPhase * (bp.hoursPerSchedule ~/ 24);
     int studyDayOffset = phaseDay;
-    if (phaseDay >= 12) {
-      studyDayOffset = 11; // Caps index during rebuild/macro
+    if (phaseDay >= studyDaysLimit) {
+      studyDayOffset = studyDaysLimit - 1; // Caps index during rebuild/macro
     }
 
-    final scheduleIdx = (phaseIndex * 6) + (studyDayOffset ~/ 2);
-    return scheduleIdx.clamp(0, 41);
+    final scheduleIdx = (phaseIndex * bp.schedulesPerPhase) + (studyDayOffset ~/ (bp.hoursPerSchedule ~/ 24));
+    return scheduleIdx.clamp(0, bp.totalSchedules - 1);
   }
 
   // ===================================================
-  // GET NEXT MICRO TEST (Legacy Compatibility)
-  // ===================================================
-
-  static DateTime getNextMicroTest({
-    required DateTime enrollmentTime,
-  }) {
-    final schedule = getScheduleIndex(
-      enrollmentTime: enrollmentTime,
-    );
-    final testDay = schedule * 2 + 2;
-    return DateTime(
-      enrollmentTime.year,
-      enrollmentTime.month,
-      enrollmentTime.day + testDay,
-      testStartHour,
-    );
-  }
-
-  // ===================================================
-  // IS REBUILD PHASE (Legacy Compatibility)
+  // IS REBUILD PHASE
   // ===================================================
 
   static bool isRebuildPhase({
     required DateTime enrollmentTime,
+    MissionCrucibleBlueprint? blueprint,
+    String? missionId,
   }) {
+    final bp = _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
     final normalizedStart = getNormalizedStart(enrollmentTime);
     final difference = DateTime.now().difference(normalizedStart);
-    final days = difference.inDays;
-    final phaseDay = days % 14;
-    return phaseDay == 12 || phaseDay == 13;
+    final cycleDays = difference.inDays % bp.cycleLengthDays;
+    final daysPerPhase = bp.cycleLengthDays ~/ bp.phaseCount;
+    final phaseDay = cycleDays % daysPerPhase;
+    final rebuildDayStart = (bp.schedulesPerPhase * bp.hoursPerSchedule) ~/ 24;
+    return phaseDay >= rebuildDayStart;
   }
 
   // ===================================================
-  // IS MACRO TEST ACTIVE (Legacy Compatibility)
+  // IS MACRO TEST ACTIVE
   // ===================================================
 
   static bool isMacroTestWindow({
     required DateTime enrollmentTime,
+    MissionCrucibleBlueprint? blueprint,
+    String? missionId,
   }) {
+    final bp = _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
     final now = DateTime.now();
     final normalizedStart = getNormalizedStart(enrollmentTime);
     final difference = now.difference(normalizedStart);
-    final days = difference.inDays;
-    final phaseDay = days % 14;
-    return phaseDay == 13 && now.hour >= 9 && now.hour <= 11;
-  }
-
-  // ===================================================
-  // GET REMAINING DURATION
-  // ===================================================
-
-  static Duration getRemainingDuration({required DateTime now}) {
-    final cycleEnd = DateTime(
-      now.year,
-      now.month,
-      now.day,
-      23,
-      59,
-      59,
-    );
-    if (cycleEnd.isBefore(now)) {
-      return Duration.zero;
-    }
-    return cycleEnd.difference(now);
-  }
-
-  // ===================================================
-  // GET HOURS REMAINING (Legacy - DO NOT USE FOR PROTOCOL)
-  // ===================================================
-
-  @Deprecated('Use getWindowRemainingDuration instead for protocol-accurate time.')
-  static int getHoursRemaining() {
-    return getRemainingDuration(now: DateTime.now()).inHours;
+    final cycleDays = difference.inDays % bp.cycleLengthDays;
+    final daysPerPhase = bp.cycleLengthDays ~/ bp.phaseCount;
+    final phaseDay = cycleDays % daysPerPhase;
+    final macroDay = daysPerPhase - 1;
+    return phaseDay == macroDay && now.hour >= testStartHour && now.hour <= (testStartHour + bp.macroDurationHours);
   }
 
   // ===================================================
@@ -189,31 +202,32 @@ class CrucibleClockEngine {
   static String getWindowType({
     required CrucibleProtocolState state,
     required DateTime now,
+    MissionCrucibleBlueprint? blueprint,
   }) {
     if (now.isBefore(state.protocolStartTime)) {
       return 'LEARNING';
     }
-    final elapsed = now.difference(state.protocolStartTime);
-    if (elapsed.inSeconds >= 100 * 24 * 3600) {
-      return 'TERMINAL';
-    }
-    if (elapsed.inSeconds >= 99 * 24 * 3600) {
-      return 'MAJOR';
-    }
-    if (elapsed.inSeconds >= 98 * 24 * 3600) {
-      return 'GRAND_SIMULATION';
-    }
-    final phaseIndex = (elapsed.inSeconds ~/ (14 * 24 * 3600)) + 1;
-    final phaseStart = state.protocolStartTime.add(Duration(days: (phaseIndex - 1) * 14));
-    final elapsedWithinPhase = now.difference(phaseStart);
+    final bp = _resolveBlueprint(
+      missionId: state.recruitmentId,
+      explicitBlueprint: blueprint,
+    );
 
-    final rebuildStart = const Duration(days: 12);
-    final macroStart = const Duration(days: 12, hours: 23);
-    final macroEnd = const Duration(days: 13, hours: 1);
+    final elapsed = now.difference(state.protocolStartTime);
+    final elapsedWithinCycle = Duration(seconds: elapsed.inSeconds % (bp.cycleLengthDays * 24 * 3600));
+
+    final daysPerPhase = bp.cycleLengthDays ~/ bp.phaseCount;
+    final phaseIndex = (elapsedWithinCycle.inSeconds ~/ (daysPerPhase * 24 * 3600)) + 1;
+    final phaseStartDuration = Duration(days: (phaseIndex - 1) * daysPerPhase);
+    final elapsedWithinPhase = elapsedWithinCycle - phaseStartDuration;
+
+    final studyDuration = Duration(hours: bp.schedulesPerPhase * bp.hoursPerSchedule);
+    final rebuildStart = studyDuration;
+    final macroStart = rebuildStart + Duration(hours: bp.rebuildDurationHours);
+    final macroEnd = macroStart + Duration(hours: bp.macroDurationHours);
 
     if (elapsedWithinPhase < rebuildStart) {
-      final elapsedWithinSchedule = elapsedWithinPhase.inHours % 48;
-      if (elapsedWithinSchedule >= 47) {
+      final elapsedWithinSchedule = elapsedWithinPhase.inHours % bp.hoursPerSchedule;
+      if (elapsedWithinSchedule >= bp.learningHoursPerSchedule) {
         return 'MICRO';
       }
       return 'LEARNING';
@@ -233,53 +247,45 @@ class CrucibleClockEngine {
   static Map<String, dynamic> getCurrentWindowBounds({
     required CrucibleProtocolState state,
     required DateTime now,
+    MissionCrucibleBlueprint? blueprint,
   }) {
-    final type = getWindowType(state: state, now: now);
-    final elapsed = now.difference(state.protocolStartTime);
-    if (elapsed.inSeconds >= 100 * 24 * 3600) {
-      return {
-        'type': 'TERMINAL',
-        'start': state.protocolStartTime.add(const Duration(days: 100)),
-        'end': state.protocolStartTime.add(const Duration(days: 101)),
-      };
-    }
-    if (elapsed.inSeconds >= 99 * 24 * 3600) {
-      return {
-        'type': 'MAJOR',
-        'start': state.protocolStartTime.add(const Duration(days: 99)),
-        'end': state.protocolStartTime.add(const Duration(days: 100)),
-      };
-    }
-    if (elapsed.inSeconds >= 98 * 24 * 3600) {
-      return {
-        'type': 'GRAND_SIMULATION',
-        'start': state.protocolStartTime.add(const Duration(days: 98)),
-        'end': state.protocolStartTime.add(const Duration(days: 99)),
-      };
-    }
-    final phaseIndex = (elapsed.inSeconds ~/ (14 * 24 * 3600)) + 1;
-    final phaseStart = state.protocolStartTime.add(Duration(days: (phaseIndex - 1) * 14));
-    final elapsedWithinPhase = now.difference(phaseStart);
+    final type = getWindowType(state: state, now: now, blueprint: blueprint);
+    final bp = _resolveBlueprint(
+      missionId: state.recruitmentId,
+      explicitBlueprint: blueprint,
+    );
 
-    final rebuildStart = const Duration(days: 12);
-    final macroStart = const Duration(days: 12, hours: 23);
-    final macroEnd = const Duration(days: 13, hours: 1);
-    final phaseEnd = const Duration(days: 14);
+    final elapsed = now.difference(state.protocolStartTime);
+    final currentOrbit = (elapsed.inSeconds ~/ (bp.cycleLengthDays * 24 * 3600));
+    final orbitStart = state.protocolStartTime.add(Duration(days: currentOrbit * bp.cycleLengthDays));
+    final elapsedWithinCycle = Duration(seconds: elapsed.inSeconds % (bp.cycleLengthDays * 24 * 3600));
+
+    final daysPerPhase = bp.cycleLengthDays ~/ bp.phaseCount;
+    final phaseIndex = (elapsedWithinCycle.inSeconds ~/ (daysPerPhase * 24 * 3600)) + 1;
+    final phaseStart = orbitStart.add(Duration(days: (phaseIndex - 1) * daysPerPhase));
+    final elapsedWithinPhase = elapsedWithinCycle - Duration(days: (phaseIndex - 1) * daysPerPhase);
+
+    final studyDuration = Duration(hours: bp.schedulesPerPhase * bp.hoursPerSchedule);
+    final rebuildStart = studyDuration;
+    final macroStart = rebuildStart + Duration(hours: bp.rebuildDurationHours);
+    final macroEnd = macroStart + Duration(hours: bp.macroDurationHours);
+    final phaseEnd = Duration(days: daysPerPhase);
 
     if (elapsedWithinPhase < rebuildStart) {
-      final scheduleOffset = elapsedWithinPhase.inHours ~/ 48;
-      final learningStart = phaseStart.add(Duration(days: scheduleOffset * 2));
+      final scheduleOffset = elapsedWithinPhase.inHours ~/ bp.hoursPerSchedule;
+      final scheduleHoursOffset = scheduleOffset * bp.hoursPerSchedule;
+      final learningStart = phaseStart.add(Duration(hours: scheduleHoursOffset));
       if (type == 'MICRO') {
         return {
           'type': 'MICRO',
-          'start': learningStart.add(const Duration(hours: 47)),
-          'end': learningStart.add(const Duration(hours: 48)),
+          'start': learningStart.add(Duration(hours: bp.learningHoursPerSchedule)),
+          'end': learningStart.add(Duration(hours: bp.hoursPerSchedule)),
         };
       }
       return {
         'type': 'LEARNING',
         'start': learningStart,
-        'end': learningStart.add(const Duration(hours: 47)),
+        'end': learningStart.add(Duration(hours: bp.learningHoursPerSchedule)),
       };
     } else if (elapsedWithinPhase < macroStart) {
       return {
@@ -309,12 +315,51 @@ class CrucibleClockEngine {
   static Duration getWindowRemainingDuration({
     required CrucibleProtocolState state,
     required DateTime now,
+    MissionCrucibleBlueprint? blueprint,
   }) {
-    final bounds = getCurrentWindowBounds(state: state, now: now);
+    final bounds = getCurrentWindowBounds(state: state, now: now, blueprint: blueprint);
     final end = bounds['end'] as DateTime;
     if (end.isBefore(now)) {
       return Duration.zero;
     }
     return end.difference(now);
+  }
+
+  // ===================================================
+  // GET NEXT MICRO TEST (Helper for UI Countdown)
+  // ===================================================
+
+  static DateTime getNextMicroTest({
+    required DateTime enrollmentTime,
+    MissionCrucibleBlueprint? blueprint,
+    String? missionId,
+  }) {
+    final bp = _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
+    final now = DateTime.now();
+    final normalizedStart = getNormalizedStart(enrollmentTime);
+    if (now.isBefore(normalizedStart)) {
+      return normalizedStart.add(Duration(hours: bp.learningHoursPerSchedule));
+    }
+    final difference = now.difference(normalizedStart);
+    final totalHours = difference.inHours;
+    final cycleHours = bp.cycleLengthDays * 24;
+    final currentCycleHours = totalHours % cycleHours;
+    final phaseHours = (bp.cycleLengthDays ~/ bp.phaseCount) * 24;
+    final phaseElapsed = currentCycleHours % phaseHours;
+    final studyDuration = bp.schedulesPerPhase * bp.hoursPerSchedule;
+
+    if (phaseElapsed < studyDuration) {
+      final scheduleElapsed = phaseElapsed % bp.hoursPerSchedule;
+      final scheduleStartOffset = currentCycleHours - scheduleElapsed;
+      return normalizedStart.add(Duration(
+        hours: (totalHours - currentCycleHours) + scheduleStartOffset + bp.learningHoursPerSchedule,
+      ));
+    } else {
+      final currentPhase = currentCycleHours ~/ phaseHours;
+      final nextPhaseStart = (currentPhase + 1) * phaseHours;
+      return normalizedStart.add(Duration(
+        hours: (totalHours - currentCycleHours) + nextPhaseStart + bp.learningHoursPerSchedule,
+      ));
+    }
   }
 }

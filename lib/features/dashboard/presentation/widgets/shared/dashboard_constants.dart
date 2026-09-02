@@ -37,6 +37,9 @@ class DashboardConstants {
 
   // RADIUS
 
+
+  // RADIUS
+
   static const double cardRadius = 28;
 
   // PADDING
@@ -55,5 +58,7 @@ class DashboardConstants {
       Color(0xFF0E1524),
     ],
   );
+
+  static const bool DASHBOARD_START_SMART_START_VISIBLE = false;
 
 }

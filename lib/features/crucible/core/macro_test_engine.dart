@@ -3,7 +3,7 @@ import '../../../core/models/question_model.dart';
 import '../models/crucible_schedule.dart';
 import 'micro_test_engine.dart';
 
-/// 🔱 MACRO TEST ENGINE (C5-R1 Compliant)
+/// MACRO TEST ENGINE (C5-R1 Compliant)
 /// Deterministic assembly and manifest verification for Macro assessments.
 class MacroTestEngine {
   static const int macroTargetQuestionCount = 100;
@@ -34,14 +34,20 @@ class MacroTestEngine {
   // 2. DETERMINISTIC MACRO ASSEMBLY
   // ===================================================
 
-  /// Deterministically assembles exactly 100 eligible questions using a derived seed.
+  /// Deterministically assembles Macro test questions for a student attempt from a verified phase question bank.
+  /// Enforces:
+  /// 1. Minimum verified phase bank requirement (bank < minimumPhaseBankDepth => returns [])
+  /// 2. Phase integration student attempt selection (e.g. 50 questions for JEE Main 2027)
   static List<QuestionModel> assembleMacroTest({
     required String macroTestId,
     required String scheduleId,
     required List<String> allowedAtomIds,
     required List<QuestionModel> pool,
     required String recruitmentId,
-    int requiredCount = 100,
+    dynamic policy, // Supports MacroPolicy
+    int? requiredCount, // Legacy parameter compatibility
+    int? requiredBankCount,
+    int? attemptCount,
     QuestionTrustSnapshot? trustSnapshot,
     int? manualSeed,
   }) {
@@ -73,8 +79,9 @@ class MacroTestEngine {
       }
     }
 
-    if (eligible.length < requiredCount) {
-      return []; // Deficit exists: NOT_READY
+    final minBank = requiredBankCount ?? (requiredCount ?? 100);
+    if (eligible.length < minBank) {
+      return []; // Phase Bank Deficit exists: NOT_READY
     }
 
     eligible.sort((a, b) => a.id.compareTo(b.id));
@@ -87,11 +94,14 @@ class MacroTestEngine {
       attemptOrdinal: 1,
     );
 
+    final targetAttemptCount = attemptCount ?? (requiredCount ?? eligible.length);
+    final countToSelect = min(targetAttemptCount, eligible.length);
+
     final random = Random(seed);
     final List<QuestionModel> selected = [];
     final tempPool = List<QuestionModel>.from(eligible);
 
-    for (int i = 0; i < requiredCount; i++) {
+    for (int i = 0; i < countToSelect; i++) {
       final index = random.nextInt(tempPool.length);
       selected.add(tempPool.removeAt(index));
     }

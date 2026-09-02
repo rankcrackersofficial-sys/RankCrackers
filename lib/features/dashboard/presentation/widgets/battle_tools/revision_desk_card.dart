@@ -10,11 +10,11 @@ class RevisionDeskCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return const BattleToolCard(
       title: "Revision Desk",
-      subtitle: "Not Ready",
       icon: Icons.refresh_rounded,
       glowIcon: Icons.auto_fix_high_rounded,
       glowColor: Colors.blue,
       route: AppRoutes.revisionDesk,
+      toolKey: "revision_desk",
     );
   }
 }

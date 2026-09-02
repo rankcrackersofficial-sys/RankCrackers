@@ -3,9 +3,10 @@ import 'dart:math';
 import 'package:crypto/crypto.dart';
 import 'package:meta/meta.dart';
 import '../../../core/models/question_model.dart';
+import '../../../core/models/question_difficulty.dart';
 import '../models/crucible_schedule.dart';
 
-/// 🔱 SOLUTION VERIFICATION RECORD
+/// SOLUTION VERIFICATION RECORD
 /// Binds solution verification status, version, text signature, and answer consistency.
 class SolutionVerificationRecord {
   final String questionId;
@@ -29,7 +30,7 @@ class SolutionVerificationRecord {
   });
 }
 
-/// 🔱 QUESTION TRUST SNAPSHOT
+/// QUESTION TRUST SNAPSHOT
 /// An immutable, read-only container of authoritative academic evidence.
 class QuestionTrustSnapshot {
   final Set<String> verifiedFactIds;
@@ -71,7 +72,7 @@ class QuestionTrustSnapshot {
         verifiedSolutions = const {};
 }
 
-/// 🔱 QUESTION TRUST REPOSITORY
+/// QUESTION TRUST REPOSITORY
 /// Authoritative trust store for resolving read-only academic evidence snapshots.
 class QuestionTrustRepository {
   static QuestionTrustSnapshot _productionSnapshot = const QuestionTrustSnapshot.empty();
@@ -104,7 +105,7 @@ class QuestionTrustRepository {
   }
 }
 
-/// 🔱 MICRO TEST ENGINE (C2-FIX4 Compliant)
+/// MICRO TEST ENGINE (C2-FIX4 Compliant)
 /// Authoritative gatekeeper for Crucible Micro factory assembly.
 class MicroTestEngine {
 
@@ -341,12 +342,21 @@ class MicroTestEngine {
   // 3. DETERMINISTIC MICRO ASSEMBLY
   // ===================================================
 
-  /// Deterministically assembles exactly 50 eligible questions using a derived seed.
+  /// Deterministically assembles Micro test questions for a student attempt from a verified question bank.
+  /// Enforces:
+  /// 1. Minimum verified bank requirement (bank < minimumBankDepth => returns [])
+  /// 2. Personalized student attempt selection (e.g. 25 questions for JEE Main 2027)
+  /// 3. Zero future atom leakage (only allowedAtomIds + eligible previouslyLearnedAtomIds)
   static List<QuestionModel> assembleMicroTest({
     required String scheduleId,
     required List<String> allowedAtomIds,
     required List<QuestionModel> pool,
-    int requiredCount = 50,
+    List<String> previouslyLearnedAtomIds = const [],
+    dynamic studentLevel, // Supports LearningLevel or defaults to middle
+    dynamic policy, // Supports MicroPolicy
+    int? requiredCount, // Legacy parameter compatibility
+    int? requiredBankCount,
+    int? attemptCount,
     QuestionTrustSnapshot? trustSnapshot,
     int? manualSeed,
   }) {
@@ -354,13 +364,15 @@ class MicroTestEngine {
     final Set<String> seenIds = {};
     final Set<String> seenLineages = {};
 
+    final combinedAllowedAtoms = {...allowedAtomIds, ...previouslyLearnedAtomIds}.toList();
+
     for (final q in pool) {
       if (seenIds.contains(q.id)) continue;
       
       final eligibilityError = checkQuestionEligibility(
         q,
         scheduleId,
-        allowedAtomIds,
+        combinedAllowedAtoms,
         trustSnapshot: trustSnapshot,
       );
       if (eligibilityError == null) {
@@ -374,8 +386,9 @@ class MicroTestEngine {
       }
     }
 
-    if (eligible.length < requiredCount) {
-      return []; // Deficit exists: NOT_READY
+    final minBank = requiredBankCount ?? (requiredCount ?? 50);
+    if (eligible.length < minBank) {
+      return []; // Bank Deficit exists: NOT_READY
     }
 
     eligible.sort((a, b) => a.id.compareTo(b.id));
@@ -388,11 +401,58 @@ class MicroTestEngine {
       attemptOrdinal: 1,
     );
 
+    final targetAttemptCount = attemptCount ?? (requiredCount ?? eligible.length);
+    final countToSelect = min(targetAttemptCount, eligible.length);
+
+    if (studentLevel != null && countToSelect == 25) {
+      final easyPool = eligible.where((q) => q.difficulty == QuestionDifficulty.easy).toList();
+      final medPool = eligible.where((q) => q.difficulty == QuestionDifficulty.medium).toList();
+      final hardPool = eligible.where((q) => q.difficulty == QuestionDifficulty.hard).toList();
+
+      int targetEasy = 5;
+      int targetMed = 15;
+      int targetHard = 5;
+
+      final levelStr = studentLevel.toString().toLowerCase();
+      if (levelStr.contains('novice')) {
+        targetEasy = 12;
+        targetMed = 10;
+        targetHard = 3;
+      } else if (levelStr.contains('pro')) {
+        targetEasy = 3;
+        targetMed = 10;
+        targetHard = 12;
+      }
+
+      final List<QuestionModel> selected = [];
+      final random = Random(seed);
+
+      void sampleFrom(List<QuestionModel> source, int count) {
+        final temp = List<QuestionModel>.from(source);
+        for (int i = 0; i < count && temp.isNotEmpty; i++) {
+          final idx = random.nextInt(temp.length);
+          selected.add(temp.removeAt(idx));
+        }
+      }
+
+      sampleFrom(easyPool, targetEasy);
+      sampleFrom(medPool, targetMed);
+      sampleFrom(hardPool, targetHard);
+
+      if (selected.length < countToSelect) {
+        final remaining = eligible.where((q) => !selected.contains(q)).toList();
+        final needed = countToSelect - selected.length;
+        sampleFrom(remaining, needed);
+      }
+
+      return selected;
+    }
+
     final random = Random(seed);
     final List<QuestionModel> selected = [];
     final tempPool = List<QuestionModel>.from(eligible);
 
-    for (int i = 0; i < requiredCount; i++) {
+    for (int i = 0; i < countToSelect; i++) {
       final index = random.nextInt(tempPool.length);
       selected.add(tempPool.removeAt(index));
     }

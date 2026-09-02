@@ -10,7 +10,6 @@ import '../../../../core/theme/tactical_noir_background.dart';
 import '../../../../core/widgets/dark_card.dart';
 import '../../../../core/utils/app_routes.dart';
 import '../../../../shared/session/session_manager.dart';
-import '../../../../shared/widgets/command_header.dart';
 import '../../../../shared/providers/session_provider.dart';
 import '../../../../core/services/support_service.dart';
 import '../../../../core/knowledge/knowledge_engine.dart';
@@ -18,10 +17,12 @@ import '../../../../core/knowledge/knowledge_engine_provider.dart';
 import '../../../dashboard/presentation/providers/dashboard_provider.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import 'package:rank_crackers/features/auth/presentation/providers/auth_provider.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:rank_crackers/features/deep_profile/models/warrior_profile.dart';
+import 'package:rank_crackers/features/deep_profile/providers/warrior_profile_provider.dart';
+import 'package:rank_crackers/features/deep_profile/screens/career_profile_screen.dart';
 
 class ProfileScreen extends ConsumerStatefulWidget {
   const ProfileScreen({super.key});
@@ -64,7 +65,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
       if (user == null) return;
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('🔱 UPLOADING AVATAR...')));
+          const SnackBar(content: Text('UPLOADING AVATAR...')));
 
       try {
         final storageRef = FirebaseStorage.instance
@@ -78,7 +79,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
         if (!mounted) return;
         ref.invalidate(sessionUserProvider);
         ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('🔱 PROFILE PHOTO UPDATED')));
+            const SnackBar(content: Text('PROFILE PHOTO UPDATED')));
       } catch (e) {
         if (!mounted) return;
         ScaffoldMessenger.of(context)
@@ -87,13 +88,110 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     }
   }
 
+  Future<void> _updateIdentityDialog() async {
+    final sessionUser = ref.read(sessionUserProvider).valueOrNull;
+    final controller = TextEditingController(text: sessionUser?.name);
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: AppColors.surface,
+        title: const Text("EDIT IDENTITY", style: TextStyle(color: Colors.white)),
+        content: TextField(
+          controller: controller,
+          style: const TextStyle(color: Colors.white),
+          decoration: const InputDecoration(
+            labelText: "Display Name",
+            labelStyle: TextStyle(color: Colors.white38),
+            border: OutlineInputBorder(
+                borderSide: BorderSide(color: AppColors.borderSoft)),
+          ),
+        ),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text("CANCEL", style: TextStyle(color: Colors.white24))),
+          TextButton(
+            onPressed: () async {
+              if (controller.text.isEmpty) return;
+              final user = FirebaseAuth.instance.currentUser;
+              if (user != null) {
+                await user.updateDisplayName(controller.text);
+                await SessionManager.saveStudentName(controller.text);
+                await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
+                  'name': controller.text,
+                });
+                ref.invalidate(sessionUserProvider);
+              }
+              if (context.mounted) Navigator.pop(context);
+            },
+            child: const Text("SAVE", style: TextStyle(color: AppColors.gold)),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _showMobileVerificationDialog() async {
+    final sessionUser = ref.read(sessionUserProvider).valueOrNull;
+    final controller = TextEditingController(text: sessionUser?.phone);
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        backgroundColor: AppColors.surface,
+        title: const Text("MOBILE & VERIFICATION", style: TextStyle(color: Colors.white)),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Ensure your contact number is verified to receive priority mission communications.",
+              style: TextStyle(color: Colors.white70, fontSize: 12),
+            ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: controller,
+              keyboardType: TextInputType.phone,
+              style: const TextStyle(color: Colors.white),
+              decoration: const InputDecoration(
+                labelText: "Mobile Number",
+                labelStyle: TextStyle(color: Colors.white38),
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(color: AppColors.borderSoft)),
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text("CANCEL", style: TextStyle(color: Colors.white24))),
+          TextButton(
+            onPressed: () async {
+              if (controller.text.isEmpty) return;
+              final user = FirebaseAuth.instance.currentUser;
+              if (user != null) {
+                await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
+                  'phone': controller.text,
+                });
+                await SessionManager.saveStudentMobile(controller.text);
+                ref.invalidate(sessionUserProvider);
+              }
+              if (context.mounted) Navigator.pop(context);
+            },
+            child: const Text("VERIFY & SAVE", style: TextStyle(color: AppColors.gold)),
+          ),
+        ],
+      ),
+    );
+  }
+
   Future<void> _showSupportDialog(String type) async {
     final controller = TextEditingController();
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: AppColors.surface,
-        title: Text(type.toUpperCase(), style: AppTypography.cardTitle),
+        title: Text(type == 'issue_report' ? 'REPORT AN ISSUE' : 'SUBMIT GENERAL INQUIRY', style: AppTypography.cardTitle),
         content: TextField(
           controller: controller,
           maxLines: 4,
@@ -117,7 +215,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               if (context.mounted) {
                 Navigator.pop(context);
                 ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('🔱 TICKET SUBMITTED')));
+                    const SnackBar(content: Text('TICKET SUBMITTED')));
               }
             },
             child:
@@ -131,12 +229,16 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     final sessionUser = ref.watch(sessionUserProvider).valueOrNull;
-    final readiness = ref.watch(missionReadinessProvider);
-    final stats = ref.watch(userProfileStatsProvider);
 
     final engine = ref.watch(knowledgeEngineProvider);
-    final momentum = engine.momentumState;
-    final coverage = engine.coverageState;
+
+    final warriorProfile = ref.watch(warriorProfileProvider);
+    final firebaseUid = FirebaseAuth.instance.currentUser?.uid;
+    if (warriorProfile == null && firebaseUid != null) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        ref.read(warriorProfileProvider.notifier).loadProfile(firebaseUid);
+      });
+    }
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -153,63 +255,14 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                   child: CustomScrollView(
                     physics: const BouncingScrollPhysics(),
                     slivers: [
-                      SliverToBoxAdapter(
-                        child: CommandHeader(
-                          userName: sessionUser?.name ?? 'Warrior',
-                          userPhoto: sessionUser?.photo,
-                          examName: sessionUser?.examName ?? 'Mission',
-                          readiness: readiness,
-                          momentum: momentum,
-                        ),
-                      ),
-
-                      // 🔱 Performance Fold (Optimized v4.0)
-                      SliverPadding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: ResponsiveHelper.wp(context, 0.05),
-                            vertical: 8),
-                        sliver: SliverGrid(
-                          delegate: SliverChildListDelegate([
-                            _performanceCard(
-                                Icons.flash_on_rounded,
-                                engine.isInitialized
-                                    ? stats['totalBattles'].toString()
-                                    : 'Pending',
-                                'Battles'),
-                            _performanceCard(
-                                Icons.auto_graph_rounded,
-                                engine.isInitialized
-                                    ? '${(readiness?.score ?? 0).toInt()}%'
-                                    : 'Pending',
-                                'Readiness'),
-                            _performanceCard(
-                                Icons.local_fire_department,
-                                engine.isInitialized
-                                    ? '${momentum?.studyStreakDays ?? 0}d'
-                                    : 'Pending',
-                                'Streak'),
-                            _performanceCard(
-                                Icons.workspace_premium,
-                                engine.isInitialized
-                                    ? '${((coverage?.coveragePercent ?? 0) * 100).toInt()}%'
-                                    : 'Pending',
-                                'Coverage'),
-                          ]),
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount:
-                                ResponsiveHelper.isTablet(context) ? 4 : 2,
-                            crossAxisSpacing: 10,
-                            mainAxisSpacing: 10,
-                            childAspectRatio: 2.2,
-                          ),
-                        ),
-                      ),
-
-                      _buildPreparationControls(sessionUser?.examName),
-                      _buildAccountSettings(),
-                      _buildSupportSection(),
+                      _buildProfileSection(sessionUser),
+                      _buildCareerProfileSliver(warriorProfile),
+                      _buildMissionSection(sessionUser?.examName),
+                      _buildAccountPrivacySection(sessionUser),
+                      _buildHelpSupportSection(),
                       _buildLegalSection(),
+                      _buildSessionSection(),
+                      _buildDangerZoneSection(),
                       _buildAdaptiveInsights(engine),
 
                       const SliverToBoxAdapter(child: SizedBox(height: 100)),
@@ -224,27 +277,67 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     );
   }
 
-  Widget _performanceCard(IconData icon, String value, String label) {
-    return DarkCard(
-      padding: EdgeInsets.zero,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, color: AppColors.gold, size: 16),
-          FittedBox(
-            fit: BoxFit.scaleDown,
-            child:
-                Text(value, style: AppTypography.hero.copyWith(fontSize: 20)),
-          ),
-          Text(label.toUpperCase(),
-              style: AppTypography.label
-                  .copyWith(fontSize: 6, color: Colors.white24)),
-        ],
+
+
+  Widget _sectionLabel(String text) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8, left: 4),
+      child: Text(text,
+          style: AppTypography.label.copyWith(
+              fontSize: 9, color: Colors.white30, letterSpacing: 1.0, fontWeight: FontWeight.bold)),
+    );
+  }
+
+  Widget _settingsListTile({
+    required IconData icon,
+    required String title,
+    required String subtitle,
+    required VoidCallback onTap,
+    Color iconColor = AppColors.gold,
+    Color titleColor = Colors.white,
+    bool isDestructive = false,
+  }) {
+    return GestureDetector(
+      onTap: onTap,
+      child: DarkCard(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        border: Border.all(
+          color: isDestructive ? Colors.red.withValues(alpha: 0.3) : AppColors.borderSoft,
+          width: 1.0,
+        ),
+        child: Row(
+          children: [
+            Icon(icon, color: isDestructive ? Colors.redAccent : iconColor, size: 18),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: AppTypography.cardTitle.copyWith(
+                      fontSize: 13, 
+                      color: isDestructive ? Colors.redAccent : titleColor,
+                      fontWeight: isDestructive ? FontWeight.bold : null,
+                    ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    subtitle,
+                    style: AppTypography.subtitle.copyWith(fontSize: 10, color: isDestructive ? Colors.red.withValues(alpha: 0.5) : Colors.white30),
+                  ),
+                ],
+              ),
+            ),
+            if (!isDestructive)
+              const Icon(Icons.arrow_forward_ios_rounded, size: 12, color: Colors.white12),
+          ],
+        ),
       ),
     );
   }
 
-  Widget _buildPreparationControls(String? currentExam) {
+  Widget _buildProfileSection(dynamic sessionUser) {
     return SliverToBoxAdapter(
       child: Padding(
         padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 16,
@@ -252,23 +345,79 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _sectionLabel('PREPARATION'),
-            _controlTile(Icons.shield_rounded, 'Current Mission',
-                currentExam ?? 'Select Mission',
-                onTap: () => context.go(AppRoutes.missionRealm)),
-            if (_isAdmin) ...[
-              const SizedBox(height: 8),
-              _controlTile(Icons.admin_panel_settings_rounded, 'Command Center',
-                  'Sovereign Control',
-                  onTap: () => context.push(AppRoutes.admin)),
-            ],
+            _sectionLabel('PROFILE'),
+            DarkCard(
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                children: [
+                  GestureDetector(
+                    onTap: _updatePhoto,
+                    child: Stack(
+                      children: [
+                        CircleAvatar(
+                          radius: 28,
+                          backgroundColor: AppColors.surface,
+                          backgroundImage: sessionUser?.photo != null
+                              ? NetworkImage(sessionUser!.photo!)
+                              : null,
+                          child: sessionUser?.photo == null
+                              ? const Icon(Icons.person_rounded, size: 28, color: Colors.white24)
+                              : null,
+                        ),
+                        Positioned(
+                          bottom: 0,
+                          right: 0,
+                          child: Container(
+                            padding: const EdgeInsets.all(4),
+                            decoration: const BoxDecoration(
+                              color: AppColors.gold,
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Icon(
+                              Icons.camera_alt_rounded,
+                              size: 10,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          sessionUser?.name ?? 'Warrior',
+                          style: AppTypography.cardTitle.copyWith(fontSize: 15, color: Colors.white),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          sessionUser?.email ?? 'Identity Verified',
+                          style: AppTypography.subtitle.copyWith(fontSize: 11, color: Colors.white70),
+                        ),
+                      ],
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: _updateIdentityDialog,
+                    child: const Text(
+                      'Edit Profile',
+                      style: TextStyle(color: AppColors.gold, fontSize: 12, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildAccountSettings() {
+  Widget _buildCareerProfileSliver(WarriorProfile? profile) {
+    final addedCount = profile?.careerProfileAddedCount ?? 0;
     return SliverToBoxAdapter(
       child: Padding(
         padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
@@ -276,42 +425,313 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _sectionLabel('ACCOUNT'),
-            Row(
-              children: [
-                Expanded(
-                    child: _miniControlTile(Icons.edit_rounded, 'Identity',
-                        onTap: () {})),
-                const SizedBox(width: 8),
-                Expanded(
-                    child: _miniControlTile(Icons.camera_alt_rounded, 'Avatar',
-                        onTap: _updatePhoto)),
-                const SizedBox(width: 8),
-                Expanded(
-                    child: _miniControlTile(
-                        Icons.phone_android_rounded, 'Mobile',
-                        onTap: () {})),
-              ],
+            _sectionLabel('CAREER'),
+            DarkCard(
+              padding: const EdgeInsets.all(16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Career Profile',
+                        style: AppTypography.cardTitle.copyWith(color: AppColors.gold),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: AppColors.gold.withValues(alpha: 0.1),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+                        ),
+                        child: Text(
+                          '$addedCount of 7 key details added',
+                          style: AppTypography.subtitle.copyWith(color: AppColors.gold, fontWeight: FontWeight.bold, fontSize: 10),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'Build a more accurate picture of your education, goals and career preferences.',
+                    style: AppTypography.body.copyWith(color: AppColors.secondaryText, fontSize: 12),
+                  ),
+                  const SizedBox(height: 16),
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const CareerProfileScreen(),
+                          ),
+                        ).then((_) {
+                          final user = FirebaseAuth.instance.currentUser;
+                          if (user != null) {
+                            ref.read(warriorProfileProvider.notifier).loadProfile(user.uid);
+                          }
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: AppColors.surface2,
+                        foregroundColor: Colors.white,
+                        side: const BorderSide(color: AppColors.border),
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      child: Text(
+                        'Update Career Profile',
+                        style: AppTypography.button.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMissionSection(String? currentExam) {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
+            ResponsiveHelper.wp(context, 0.05), 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _sectionLabel('MISSION'),
+            DarkCard(
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          currentExam ?? 'Select Mission',
+                          style: AppTypography.cardTitle.copyWith(fontSize: 16, color: Colors.white),
+                        ),
+                        const SizedBox(height: 4),
+                        const Text(
+                          'Active Preparation Stream',
+                          style: TextStyle(color: Colors.white70, fontSize: 11),
+                        ),
+                      ],
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () => context.push(AppRoutes.missionRealm),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.surface2,
+                      foregroundColor: Colors.white,
+                      side: const BorderSide(color: AppColors.border),
+                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          'Change Mission',
+                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.gold),
+                        ),
+                        SizedBox(width: 4),
+                        Icon(Icons.arrow_forward_ios_rounded, size: 10, color: AppColors.gold),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildAccountPrivacySection(dynamic sessionUser) {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
+            ResponsiveHelper.wp(context, 0.05), 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _sectionLabel('ACCOUNT & PRIVACY'),
+            _settingsListTile(
+              icon: Icons.person_outline_rounded,
+              title: 'Personal Details',
+              subtitle: 'Name, Email & Enrollment Credentials',
+              onTap: _updateIdentityDialog,
             ),
             const SizedBox(height: 8),
-            Row(
-              children: [
-                Expanded(
-                  child: _miniControlTile(
-                    Icons.block_rounded,
-                    'Deactivate',
+            _settingsListTile(
+              icon: Icons.phone_android_rounded,
+              title: 'Mobile & Verification',
+              subtitle: sessionUser?.phone ?? 'Not Verified',
+              onTap: _showMobileVerificationDialog,
+            ),
+            const SizedBox(height: 8),
+            _settingsListTile(
+              icon: Icons.privacy_tip_outlined,
+              title: 'Privacy',
+              subtitle: 'Manage data preferences and privacy settings',
+              onTap: () => _showLegalDialog('Privacy Policy', 'Your academic progress and career matches are 100% private and protected. Only you can view your performance insights.'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildHelpSupportSection() {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
+            ResponsiveHelper.wp(context, 0.05), 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _sectionLabel('HELP & SUPPORT'),
+            _settingsListTile(
+              icon: Icons.bug_report_outlined,
+              title: 'Report an Issue',
+              subtitle: 'Report software bugs, layout glitches or syllabus errors',
+              onTap: () => _showSupportDialog('issue_report'),
+            ),
+            const SizedBox(height: 8),
+            _settingsListTile(
+              icon: Icons.help_outline_rounded,
+              title: 'Help Center',
+              subtitle: 'Submit general queries to academic mentors',
+              onTap: () => _showSupportDialog('help'),
+            ),
+            if (_isAdmin) ...[
+              const SizedBox(height: 8),
+              _settingsListTile(
+                icon: Icons.admin_panel_settings_rounded,
+                title: 'Command Center',
+                subtitle: 'Sovereign Administrator Dashboard',
+                onTap: () => context.push(AppRoutes.admin),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildLegalSection() {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
+            ResponsiveHelper.wp(context, 0.05), 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _sectionLabel('LEGAL'),
+            _settingsListTile(
+              icon: Icons.gavel_rounded,
+              title: 'Terms of Service',
+              subtitle: 'Terms, conditions and governed platform guidelines',
+              onTap: () => _showLegalDialog('Terms of Service', 'By utilizing this sovereign preparation platform, you agree to comply with academic honesty and verification guidelines.'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSessionSection() {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
+            ResponsiveHelper.wp(context, 0.05), 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _sectionLabel('SESSION'),
+            GestureDetector(
+              onTap: () async {
+                await ref.read(authNotifierProvider.notifier).signOut();
+                if (mounted) context.go(AppRoutes.login);
+              },
+              child: DarkCard(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                child: Row(
+                  children: [
+                    const Icon(Icons.logout_rounded, color: Colors.white70, size: 18),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        'Log Out',
+                        style: AppTypography.cardTitle.copyWith(fontSize: 14, color: Colors.white),
+                      ),
+                    ),
+                    const Icon(Icons.arrow_forward_ios_rounded, size: 12, color: Colors.white12),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDangerZoneSection() {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
+            ResponsiveHelper.wp(context, 0.05), 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'DANGER ZONE',
+              style: AppTypography.label.copyWith(
+                fontSize: 9,
+                color: Colors.red.withValues(alpha: 0.8),
+                letterSpacing: 1.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 6),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Colors.red.withValues(alpha: 0.3)),
+              ),
+              child: Column(
+                children: [
+                  _settingsListTile(
+                    icon: Icons.block_rounded,
+                    title: 'Deactivate Account',
+                    subtitle: 'Temporarily disable your active session',
                     onTap: _deactivateAccount,
+                    isDestructive: true,
                   ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: _miniControlTile(
-                    Icons.delete_forever_rounded,
-                    'Delete',
+                  Divider(color: Colors.red.withValues(alpha: 0.1), height: 1),
+                  _settingsListTile(
+                    icon: Icons.delete_forever_rounded,
+                    title: 'Delete Account',
+                    subtitle: 'Permanently erase all academic history',
                     onTap: _deleteAccount,
+                    isDestructive: true,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
@@ -388,74 +808,6 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     }
   }
 
-  Widget _buildSupportSection() {
-    return SliverToBoxAdapter(
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
-            ResponsiveHelper.wp(context, 0.05), 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _sectionLabel('SUPPORT'),
-            Row(
-              children: [
-                Expanded(
-                    child: _miniControlTile(Icons.help_outline_rounded, 'Help',
-                        onTap: () => _showSupportDialog('help'))),
-                const SizedBox(width: 8),
-                Expanded(
-                    child: _miniControlTile(
-                        Icons.report_problem_outlined, 'Issue',
-                        onTap: () => _showSupportDialog('issue_report'))),
-                const SizedBox(width: 8),
-                Expanded(
-                    child: _miniControlTile(Icons.logout_rounded, 'Exit',
-                        onTap: () async {
-                  await ref.read(authNotifierProvider.notifier).signOut();
-                  if (mounted) context.go(AppRoutes.login);
-                })),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildLegalSection() {
-    return SliverToBoxAdapter(
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
-            ResponsiveHelper.wp(context, 0.05), 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _sectionLabel('LEGAL'),
-            Row(
-              children: [
-                Expanded(
-                  child: _miniControlTile(
-                    Icons.privacy_tip_rounded,
-                    'Privacy',
-                    onTap: () => _showLegalDialog('Privacy Policy', 'The canonical Privacy Policy text is currently pending legal review from the Founder.'),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: _miniControlTile(
-                    Icons.description_rounded,
-                    'Terms',
-                    onTap: () => _showLegalDialog('Terms of Service', 'The canonical Terms of Service text is currently pending legal review from the Founder.'),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   void _showLegalDialog(String title, String content) {
     showDialog(
       context: context,
@@ -475,67 +827,21 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     );
   }
 
-  Widget _sectionLabel(String text) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 6, left: 4),
-      child: Text(text,
-          style: AppTypography.label.copyWith(
-              fontSize: 7, color: Colors.white30, letterSpacing: 1.0)),
-    );
-  }
-
-  Widget _controlTile(IconData icon, String title, String value,
-      {VoidCallback? onTap}) {
-    return GestureDetector(
-      onTap: onTap,
-      child: DarkCard(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-        child: Row(
-          children: [
-            Icon(icon, color: AppColors.gold, size: 16),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(title,
-                      style: AppTypography.label
-                          .copyWith(fontSize: 7, color: Colors.white24)),
-                  Text(value,
-                      style: AppTypography.cardTitle.copyWith(fontSize: 11)),
-                ],
-              ),
-            ),
-            const Icon(Icons.arrow_forward_ios_rounded,
-                size: 10, color: Colors.white10),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _miniControlTile(IconData icon, String label, {VoidCallback? onTap}) {
-    return GestureDetector(
-      onTap: onTap,
-      child: DarkCard(
-        padding: const EdgeInsets.symmetric(vertical: 12),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, color: AppColors.gold, size: 14),
-            const SizedBox(height: 4),
-            Text(label, style: AppTypography.cardTitle.copyWith(fontSize: 9)),
-          ],
-        ),
-      ),
-    );
-  }
-
   Widget _buildAdaptiveInsights(KnowledgeEngine engine) {
+    final stats = ref.watch(userProfileStatsProvider);
+    final totalBattles = stats['totalBattles'] ?? 0;
+    final momentum = engine.momentumState;
+    final streak = momentum?.studyStreakDays ?? 0;
+
     final recommendations = engine.getRecommendations(limit: 1);
-    final String insight = recommendations.isNotEmpty
-        ? "Priority Focus: ${recommendations.first.title}. Strengthening this will boost overall mission readiness."
-        : "Mission metrics nominal. Maintain current streak for maximum retention.";
+    
+    final bool hasEvidence = engine.isInitialized && (totalBattles > 0 || streak > 0 || recommendations.isNotEmpty);
+
+    final String insight = hasEvidence
+        ? (recommendations.isNotEmpty
+            ? "Priority Focus: ${recommendations.first.title}. Strengthening this will boost overall mission readiness."
+            : "Mission metrics nominal. Maintain current streak of ${streak}d for maximum retention.")
+        : "No learning evidence found yet. Complete a topic diagnostic or practice session to unlock personalized insights.";
 
     return SliverToBoxAdapter(
       child: Padding(
@@ -547,8 +853,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             children: [
               Text('ADAPTIVE INSIGHT',
                   style: AppTypography.label.copyWith(
-                      fontSize: 7,
-                      color: AppColors.gold.withValues(alpha: 0.82))),
+                      fontSize: 8,
+                      color: AppColors.gold)),
               const SizedBox(height: 4),
               Text(
                 insight,

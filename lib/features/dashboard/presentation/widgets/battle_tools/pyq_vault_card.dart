@@ -10,11 +10,11 @@ class PyqVaultCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return const BattleToolCard(
       title: "PYQ Vault",
-      subtitle: "Not Ready",
       icon: Icons.menu_book_rounded,
       glowIcon: Icons.history_edu_rounded,
       glowColor: Color(0xFFD4AF37),
       route: AppRoutes.pyqVault,
+      toolKey: "pyq_vault",
     );
   }
 }
