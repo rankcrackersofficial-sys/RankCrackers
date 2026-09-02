@@ -48,7 +48,8 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "2d3c80e50dd3424ca00383e5b4585f14cec70f111240b830d8cbe47ac40b76dd"
     },
     {
       "questionId": "JEE_S01_PHY_012",
@@ -90,11 +91,12 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "0ba45f7af11d406403b4ae5eb81b78c48928a9a2e75aacc29255b562132cb8e7"
     },
     {
       "questionId": "JEE_S01_PHY_013",
-      "questionVersion": "1.0.0",
+      "questionVersion": "1.1.0",
       "structuralCoverageNodeId": "e32ccfc649ab25fd",
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_001",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
@@ -132,11 +134,26 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "b9836b0d26d2a5bce0bb0f454dd205c07e685529401fd26efbdb3f97f7640696",
+      "provenanceHistory": [
+        {
+          "version": "1.0.0",
+          "sourceAuthority": "STANDARD_HCV_CONCEPTUAL_REFERENCE",
+          "status": "SOURCE_REFERENCE_ONLY"
+        },
+        {
+          "version": "1.1.0",
+          "sourceAuthority": "NCERT_CLASS_11_PHYSICS_CH04",
+          "sourceLocator": "Section 4.7, Page 74 (Scalar Product of Vectors)",
+          "regroundedAtUtc": "2026-09-02T17:35:00Z",
+          "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
+        }
+      ]
     },
     {
       "questionId": "JEE_S01_PHY_014",
-      "questionVersion": "1.0.0",
+      "questionVersion": "1.1.0",
       "structuralCoverageNodeId": "e32ccfc649ab25fd",
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_002",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
@@ -168,11 +185,26 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "62a88289d3848dd19319861573035d527de4cf81a3f90958131e25a200f93853",
+      "provenanceHistory": [
+        {
+          "version": "1.0.0",
+          "sourceAuthority": "STANDARD_HCV_CONCEPTUAL_REFERENCE",
+          "status": "SOURCE_REFERENCE_ONLY"
+        },
+        {
+          "version": "1.1.0",
+          "sourceAuthority": "NCERT_CLASS_11_PHYSICS_CH04",
+          "sourceLocator": "Section 4.8, Page 76 (Vector Product of Vectors)",
+          "regroundedAtUtc": "2026-09-02T17:35:00Z",
+          "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
+        }
+      ]
     },
     {
       "questionId": "JEE_S01_PHY_015",
-      "questionVersion": "1.0.0",
+      "questionVersion": "1.1.0",
       "structuralCoverageNodeId": "e32ccfc649ab25fd",
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_003",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
@@ -210,7 +242,22 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "6401ad2e633211091d7fd03fccd92f6f41e6e19b1a42dbfcf2348f3300cb0223",
+      "provenanceHistory": [
+        {
+          "version": "1.0.0",
+          "sourceAuthority": "STANDARD_HCV_CONCEPTUAL_REFERENCE",
+          "status": "SOURCE_REFERENCE_ONLY"
+        },
+        {
+          "version": "1.1.0",
+          "sourceAuthority": "NCERT_CLASS_11_PHYSICS_CH04",
+          "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+          "regroundedAtUtc": "2026-09-02T17:35:00Z",
+          "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
+        }
+      ]
     },
     {
       "questionId": "JEE_S01_PHY_016",
@@ -252,7 +299,8 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "2082e92cf43bf1cd46100caec48ccb4f23744e1a2ef4404f80dfb8f5ac4ea97a"
     },
     {
       "questionId": "JEE_S01_PHY_017",
@@ -294,11 +342,12 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "50b55c68a79f5908054a8d6d5a88f4633149d32b0062db0c3539c5fc7260ea7d"
     },
     {
       "questionId": "JEE_S01_PHY_018",
-      "questionVersion": "1.0.0",
+      "questionVersion": "1.1.0",
       "structuralCoverageNodeId": "e32ccfc649ab25fd",
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_004",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
@@ -330,11 +379,26 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "8d3828e655de0c29ca3c156392d446fda4521de65625458401a5fd9f4f39b4bc",
+      "provenanceHistory": [
+        {
+          "version": "1.0.0",
+          "sourceAuthority": "STANDARD_HCV_CONCEPTUAL_REFERENCE",
+          "status": "SOURCE_REFERENCE_ONLY"
+        },
+        {
+          "version": "1.1.0",
+          "sourceAuthority": "NCERT_CLASS_11_PHYSICS_CH04",
+          "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+          "regroundedAtUtc": "2026-09-02T17:35:00Z",
+          "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
+        }
+      ]
     },
     {
       "questionId": "JEE_S01_PHY_019",
-      "questionVersion": "1.0.0",
+      "questionVersion": "1.1.0",
       "structuralCoverageNodeId": "e32ccfc649ab25fd",
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_005",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
@@ -372,7 +436,22 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "9e511d647cc5b900567857ee7e524b376862bcfa572e42426771e27b0ccaaed0",
+      "provenanceHistory": [
+        {
+          "version": "1.0.0",
+          "sourceAuthority": "STANDARD_HCV_CONCEPTUAL_REFERENCE",
+          "status": "SOURCE_REFERENCE_ONLY"
+        },
+        {
+          "version": "1.1.0",
+          "sourceAuthority": "NCERT_CLASS_11_PHYSICS_CH04",
+          "sourceLocator": "Section 4.4, Page 70 (Sum and Difference of Two Vectors)",
+          "regroundedAtUtc": "2026-09-02T17:35:00Z",
+          "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
+        }
+      ]
     },
     {
       "questionId": "JEE_S01_PHY_020",
@@ -408,7 +487,8 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "6287138031d97d1481f5a10415d55c20639d463ba6be6f63942c541aa27ac827"
     }
   ]
 }

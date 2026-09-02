@@ -48,7 +48,8 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "aa686b441f719eaab7fb906724848c8684ad9ec40420eab0c6025b33a3193c5e"
     },
     {
       "questionId": "JEE_S01_PHY_042",
@@ -90,11 +91,12 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "c02f8c097cf01a12d2f9042d7d8923879f8e4572645b7933a7d25c2e71beba2b"
     },
     {
       "questionId": "JEE_S01_PHY_043",
-      "questionVersion": "1.0.0",
+      "questionVersion": "1.1.0",
       "structuralCoverageNodeId": "ea62477caf7d78db",
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP05_003",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
@@ -132,7 +134,22 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "c83c4885c6b11b9d0f25b63a13c46f3f86abb187c604cc01786d8f5642f02d98",
+      "provenanceHistory": [
+        {
+          "version": "1.0.0",
+          "sourceAuthority": "STANDARD_HCV_CONCEPTUAL_REFERENCE",
+          "status": "SOURCE_REFERENCE_ONLY"
+        },
+        {
+          "version": "1.1.0",
+          "sourceAuthority": "NCERT_CLASS_11_PHYSICS_CH03",
+          "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+          "regroundedAtUtc": "2026-09-02T17:35:00Z",
+          "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
+        }
+      ]
     },
     {
       "questionId": "JEE_S01_PHY_044",
@@ -168,7 +185,8 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "e82db42e3f86220aa50d0fe7d49398afed3f7d119ab82eee0ec6fe0fdf4f6af4"
     },
     {
       "questionId": "JEE_S01_PHY_045",
@@ -204,11 +222,12 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "520dcc7aa617f5eeffb728f85ad5431ce10a6ebf27952ac75674b0fdd9b422ba"
     },
     {
       "questionId": "JEE_S01_PHY_046",
-      "questionVersion": "1.0.0",
+      "questionVersion": "1.1.0",
       "structuralCoverageNodeId": "ea62477caf7d78db",
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP05_006",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
@@ -246,11 +265,26 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "78d76b9bf9faf89c017ff3bf6ab9fb78527c4cd87834763aef16268138403cb6",
+      "provenanceHistory": [
+        {
+          "version": "1.0.0",
+          "sourceAuthority": "STANDARD_HCV_CONCEPTUAL_REFERENCE",
+          "status": "SOURCE_REFERENCE_ONLY"
+        },
+        {
+          "version": "1.1.0",
+          "sourceAuthority": "NCERT_CLASS_11_PHYSICS_CH03",
+          "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+          "regroundedAtUtc": "2026-09-02T17:35:00Z",
+          "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
+        }
+      ]
     },
     {
       "questionId": "JEE_S01_PHY_047",
-      "questionVersion": "1.0.0",
+      "questionVersion": "1.1.0",
       "structuralCoverageNodeId": "ea62477caf7d78db",
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP05_007",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
@@ -288,7 +322,22 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "e80e4e612616bcd0b317ce898bb2a7fd045abb1619a18ba2dda74c1307a33e44",
+      "provenanceHistory": [
+        {
+          "version": "1.0.0",
+          "sourceAuthority": "STANDARD_HCV_CONCEPTUAL_REFERENCE",
+          "status": "SOURCE_REFERENCE_ONLY"
+        },
+        {
+          "version": "1.1.0",
+          "sourceAuthority": "NCERT_CLASS_11_PHYSICS_CH03",
+          "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+          "regroundedAtUtc": "2026-09-02T17:35:00Z",
+          "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
+        }
+      ]
     },
     {
       "questionId": "JEE_S01_PHY_048",
@@ -330,11 +379,12 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "33a62cd0f45b72e8facb74702443684a757b62a46027ac26cbca34a9786359b7"
     },
     {
       "questionId": "JEE_S01_PHY_049",
-      "questionVersion": "1.0.0",
+      "questionVersion": "1.1.0",
       "structuralCoverageNodeId": "ea62477caf7d78db",
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP05_009",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
@@ -366,11 +416,26 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "81f17028a3b2c94f8859a8f853a475afdd98a80b8a4293b6823eb758e221ea6c",
+      "provenanceHistory": [
+        {
+          "version": "1.0.0",
+          "sourceAuthority": "STANDARD_HCV_CONCEPTUAL_REFERENCE",
+          "status": "SOURCE_REFERENCE_ONLY"
+        },
+        {
+          "version": "1.1.0",
+          "sourceAuthority": "NCERT_CLASS_11_PHYSICS_CH03",
+          "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+          "regroundedAtUtc": "2026-09-02T17:35:00Z",
+          "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
+        }
+      ]
     },
     {
       "questionId": "JEE_S01_PHY_050",
-      "questionVersion": "1.0.0",
+      "questionVersion": "1.1.0",
       "structuralCoverageNodeId": "ea62477caf7d78db",
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP05_010",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
@@ -402,7 +467,22 @@
           "scope"
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
-      }
+      },
+      "draftSha256": "f5a3cdb042dfcc166d01f8766cbd7044527808cd59f7b7c2392e9ef2c7492b38",
+      "provenanceHistory": [
+        {
+          "version": "1.0.0",
+          "sourceAuthority": "STANDARD_HCV_CONCEPTUAL_REFERENCE",
+          "status": "SOURCE_REFERENCE_ONLY"
+        },
+        {
+          "version": "1.1.0",
+          "sourceAuthority": "NCERT_CLASS_11_PHYSICS_CH03",
+          "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+          "regroundedAtUtc": "2026-09-02T17:35:00Z",
+          "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
+        }
+      ]
     }
   ]
 }

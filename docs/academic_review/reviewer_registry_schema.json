@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RankCrackers Governed Academic Reviewer Registry Schema",
+  "version": "1.0.0",
+  "description": "Constitutional authority contract for registering human subject matter experts (SMEs). Synthetic or model-only identities are strictly forbidden.",
+  "type": "object",
+  "required": [
+    "authorityId",
+    "displayRole",
+    "subjectScopes",
+    "missionScopes",
+    "active",
+    "createdAt",
+    "createdBy",
+    "credentialEvidenceRef",
+    "reviewDecisionSigningMethod"
+  ],
+  "properties": {
+    "authorityId": {
+      "type": "string",
+      "pattern": "^prof_[a-z0-9_]+$",
+      "description": "Unique cryptographic or pseudonymized authority handle assigned by Founder."
+    },
+    "displayRole": {
+      "type": "string",
+      "enum": [
+        "SENIOR_PHYSICS_SME",
+        "SENIOR_CHEMISTRY_SME",
+        "SENIOR_MATHEMATICS_SME",
+        "CHIEF_ACADEMIC_AUDITOR"
+      ]
+    },
+    "subjectScopes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["Physics", "Chemistry", "Mathematics"]
+      },
+      "minItems": 1
+    },
+    "missionScopes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": ["jee_main_2026", "jee_main_2027"]
+    },
+    "active": {
+      "type": "boolean",
+      "default": true
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "createdBy": {
+      "type": "string",
+      "description": "UID of Founder admin executing registration."
+    },
+    "credentialEvidenceRef": {
+      "type": "string",
+      "description": "Secure reference to offline academic credentials / CV / institutional affiliation record."
+    },
+    "reviewDecisionSigningMethod": {
+      "type": "string",
+      "enum": [
+        "FOUNDER_SEALED_HASH_SIGNATURE",
+        "PGP_SME_KEY_SIGNATURE",
+        "SECURE_JWT_AUDITED_SESSION"
+      ]
+    }
+  },
+  "invariants": {
+    "SYNTHETIC_HUMAN_REVIEW_AUTHORITIES": 0,
+    "MODEL_ONLY_CANONICAL_PROMOTIONS": 0,
+    "AUTOMATIC_PRO_TO_KEY_PROMOTION": 0,
+    "AUTOMATIC_PRO_TO_SOLUTION_PROMOTION": 0,
+    "AUTOMATIC_PRO_TO_PUBLICATION_PROMOTION": 0
+  }
+}
