@@ -1,0 +1,484 @@
+{
+  "version": "1.0.0",
+  "directive": "RC_JEE_MAIN_2027_CANONICAL_SCHEDULE_AND_DIGIBOOK_COMPLETENESS_RECONCILIATION_GATE_12",
+  "generatedAtUtc": "2026-09-02T14:16:41.930Z",
+  "pinnedAuthorities": {
+    "assessmentWorkspace": {
+      "path": "c:\\RankCrackers\\RankCrackers-55",
+      "branch": "safety/rc-g2-pre-notification-schema",
+      "headSha": "5fbf812f293922f36d4f9bfdcae5f29910e54ff5"
+    },
+    "digibookWorkspace": {
+      "path": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base",
+      "branch": "safety/rc-digibook-real-factory-base",
+      "headSha": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "mode": "READ_ONLY_INSPECTION_ONLY",
+      "DIGIBOOK_WORKTREE_MUTATED_BY_THIS_MISSION": "NO"
+    }
+  },
+  "digibookSourceFactCompletenessStatus": {
+    "PRIVATE_LESSON_ASSEMBLED": "51 / 51 [PASS]",
+    "VERIFIED_ATOMIC_FACTS": "353 [PASS]",
+    "SOURCE_FACT_COMPLETE": "PENDING_DIGIBOOK_SOURCE_COMPLETENESS_AUTHORITY",
+    "SOURCE_FACT_PARTIAL": "UNKNOWN_PENDING_AUDIT",
+    "SOURCE_BOUNDARY_UNPROVEN": "UNKNOWN_PENDING_AUDIT",
+    "factCountDistribution": {
+      "FACT_COUNT_1": 0,
+      "FACT_COUNT_2": 7,
+      "FACT_COUNT_3": 10,
+      "FACT_COUNT_4": 5,
+      "FACT_COUNT_GT4": 29
+    },
+    "thinGUsWithLe4Facts": [
+      {
+        "index": 28,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_8ADB0D17",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000002",
+        "topicTitle": "Nature of Matter, States and Classification of Matter",
+        "factCount": 4,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 29,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_B6EA7762",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000003",
+        "topicTitle": "Properties of Matter, Physical Quantities and SI Base Units",
+        "factCount": 3,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 30,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_2679365D",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000004",
+        "topicTitle": "Uncertainty in Measurement and Scientific Notation",
+        "factCount": 2,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 31,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_024AF105",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000005",
+        "topicTitle": "Empirical Formula and Molecular Formula Determination",
+        "factCount": 2,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      },
+      {
+        "index": 32,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_1DF8039E",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U02_T_00000001",
+        "topicTitle": "Photoelectric Effect and Hydrogen Emission Line Spectrum",
+        "factCount": 3,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      },
+      {
+        "index": 33,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_2AE52211",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000006",
+        "topicTitle": "Chemical Equations, Balancing of Reactions and Stoichiometric Coefficients",
+        "factCount": 2,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      },
+      {
+        "index": 34,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_2AF5BFC3",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000007",
+        "topicTitle": "Molecular Mass and Formula Mass in Ionic Compounds",
+        "factCount": 4,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      },
+      {
+        "index": 35,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_32DA7803",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000008",
+        "topicTitle": "Dalton's Atomic Theory Postulates and Modern Atomic Concept",
+        "factCount": 4,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      },
+      {
+        "index": 37,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_4DF35115",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U02_T_00000003",
+        "topicTitle": "Dual Nature of Electromagnetic Radiation and Planck's Quantum Theory",
+        "factCount": 2,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      },
+      {
+        "index": 38,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_AFF61328",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000005",
+        "topicTitle": "Significant Figures and Rounding Rules",
+        "factCount": 3,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 39,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_A92E33EC",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000006",
+        "topicTitle": "Dimensional Analysis and Unit Factor Method",
+        "factCount": 3,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 40,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_6C5A7754",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000007",
+        "topicTitle": "Laws of Chemical Combination (Conservation of Mass, Definite & Multiple Proportions)",
+        "factCount": 3,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 41,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_ECB3B44F",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000008",
+        "topicTitle": "Gay-Lussac's Law and Avogadro Hypothesis",
+        "factCount": 3,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 42,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_F19671DA",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_0000000A",
+        "topicTitle": "Atomic Mass, Unified Mass and Average Atomic Mass Calculations",
+        "factCount": 2,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 43,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_F7D196DB",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_0000000C",
+        "topicTitle": "Mole Concept and Avogadro Constant Calculations",
+        "factCount": 3,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 44,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_EE3AD3D8",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_0000000D",
+        "topicTitle": "Molar Mass, Gram Atomic Mass and Molar Volume at STP",
+        "factCount": 2,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 45,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_E5AFA359",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_0000000E",
+        "topicTitle": "Percentage Composition and Mass Percent Calculations",
+        "factCount": 2,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 46,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_D9AD4557",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000011",
+        "topicTitle": "Stoichiometric Calculations: Mole-Mole and Volume-Volume Relations",
+        "factCount": 3,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 47,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_B2DE828B",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000012",
+        "topicTitle": "Limiting Reagent Calculations and Excess Reactants",
+        "factCount": 3,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 48,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_9737F355",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000013",
+        "topicTitle": "Solution Concentrations: Mass Percent and Mole Fraction",
+        "factCount": 4,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 49,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_AC8B192F",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000014",
+        "topicTitle": "Solution Concentrations: Molarity, Molality and Dilution Law",
+        "factCount": 3,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      },
+      {
+        "index": 50,
+        "subject": "Chemistry",
+        "guId": "GU_JEEMAIN2027_CHE_A6A45FCE",
+        "canonicalNodeId": "JEE_MAIN_2026_CHE_U02_T_00000016",
+        "topicTitle": "Thomson and Rutherford Atomic Models and Nuclear Concept",
+        "factCount": 4,
+        "sourceAuthority": "NCERT_CHEMISTRY_CLASS_11_PART1_CH02_OFFICIAL"
+      }
+    ],
+    "thinGUsCount": 22
+  },
+  "canonicalScheduleAuthority": {
+    "SCHEDULE_IDENTITY_DRIFT_FOUND": "YES (Gate-11 inadvertent shift invalidated; canonical blueprint restored)",
+    "CANONICAL_SCHEDULE_IDS_REWRITTEN_WITHOUT_AUTHORITY": 0,
+    "QUESTION_SCHEDULE_BINDING_MISMATCH_COUNT": 0,
+    "schedules": [
+      {
+        "scheduleId": "sch_jee_main_2026_1",
+        "scheduleNumber": 1,
+        "canonicalTitle": "Kinematics 1D (Motion in a Straight Line)",
+        "chapter": "Motion in a Straight Line",
+        "canonicalDoc": "NCERT_CLASS_11_PHYSICS_CH03",
+        "draftCount": 50,
+        "assembledLessonAligned": 50,
+        "materialMissing": 0,
+        "linkStatus": "FULL_DIGIBOOK_LINK"
+      },
+      {
+        "scheduleId": "sch_jee_main_2026_2",
+        "scheduleNumber": 2,
+        "canonicalTitle": "Laws of Motion & Friction",
+        "chapter": "Laws of Motion",
+        "canonicalDoc": "NCERT_CLASS_11_PHYSICS_CH05",
+        "draftCount": 50,
+        "assembledLessonAligned": 50,
+        "materialMissing": 0,
+        "linkStatus": "FULL_DIGIBOOK_LINK"
+      },
+      {
+        "scheduleId": "sch_jee_main_2026_3",
+        "scheduleNumber": 3,
+        "canonicalTitle": "Work, Energy & Power",
+        "chapter": "Work, Energy and Power",
+        "canonicalDoc": "NCERT_CLASS_11_PHYSICS_CH06",
+        "draftCount": 50,
+        "assembledLessonAligned": 50,
+        "materialMissing": 0,
+        "linkStatus": "FULL_DIGIBOOK_LINK"
+      },
+      {
+        "scheduleId": "sch_jee_main_2026_4",
+        "scheduleNumber": 4,
+        "canonicalTitle": "Centre of Mass & Rotational Motion",
+        "chapter": "System of Particles and Rotational Motion",
+        "canonicalDoc": "NCERT_CLASS_11_PHYSICS_CH07",
+        "draftCount": 50,
+        "assembledLessonAligned": 50,
+        "materialMissing": 0,
+        "linkStatus": "FULL_DIGIBOOK_LINK"
+      },
+      {
+        "scheduleId": "sch_jee_main_2026_5",
+        "scheduleNumber": 5,
+        "canonicalTitle": "Gravitation & Satellite Motion",
+        "chapter": "Gravitation",
+        "canonicalDoc": "NCERT_CLASS_11_PHYSICS_CH08",
+        "draftCount": 50,
+        "assembledLessonAligned": 50,
+        "materialMissing": 0,
+        "linkStatus": "FULL_DIGIBOOK_LINK"
+      },
+      {
+        "scheduleId": "sch_jee_main_2026_6",
+        "scheduleNumber": 6,
+        "canonicalTitle": "Properties of Matter & Fluids",
+        "chapter": "Mechanical Properties of Solids & Fluids",
+        "canonicalDoc": "NCERT_CLASS_11_PHYSICS_CH09",
+        "draftCount": 50,
+        "assembledLessonAligned": 0,
+        "materialMissing": 50,
+        "linkStatus": "NO_DIGIBOOK_LINK"
+      },
+      {
+        "scheduleId": "sch_jee_main_2026_7",
+        "scheduleNumber": 7,
+        "canonicalTitle": "Thermodynamics",
+        "chapter": "Thermodynamics",
+        "canonicalDoc": "NCERT_CLASS_11_PHYSICS_CH11",
+        "draftCount": 50,
+        "assembledLessonAligned": 0,
+        "materialMissing": 50,
+        "linkStatus": "NO_DIGIBOOK_LINK"
+      },
+      {
+        "scheduleId": "sch_jee_main_2026_8",
+        "scheduleNumber": 8,
+        "canonicalTitle": "Kinetic Theory of Gases",
+        "chapter": "Kinetic Theory",
+        "canonicalDoc": "NCERT_CLASS_11_PHYSICS_CH12",
+        "draftCount": 50,
+        "assembledLessonAligned": 0,
+        "materialMissing": 50,
+        "linkStatus": "NO_DIGIBOOK_LINK"
+      },
+      {
+        "scheduleId": "sch_jee_main_2026_9",
+        "scheduleNumber": 9,
+        "canonicalTitle": "Oscillations & SHM",
+        "chapter": "Oscillations",
+        "canonicalDoc": "NCERT_CLASS_11_PHYSICS_CH13",
+        "draftCount": 50,
+        "assembledLessonAligned": 0,
+        "materialMissing": 50,
+        "linkStatus": "NO_DIGIBOOK_LINK"
+      },
+      {
+        "scheduleId": "sch_jee_main_2026_10",
+        "scheduleNumber": 10,
+        "canonicalTitle": "Waves & Acoustics",
+        "chapter": "Waves",
+        "canonicalDoc": "NCERT_CLASS_11_PHYSICS_CH14",
+        "draftCount": 50,
+        "assembledLessonAligned": 0,
+        "materialMissing": 50,
+        "linkStatus": "NO_DIGIBOOK_LINK"
+      },
+      {
+        "scheduleId": "sch_jee_main_2026_11",
+        "scheduleNumber": 11,
+        "canonicalTitle": "Electrostatics",
+        "chapter": "Electric Charges and Fields",
+        "canonicalDoc": "NCERT_CLASS_12_PHYSICS_CH01",
+        "draftCount": 50,
+        "assembledLessonAligned": 0,
+        "materialMissing": 50,
+        "linkStatus": "NO_DIGIBOOK_LINK"
+      },
+      {
+        "scheduleId": "sch_jee_main_2026_12",
+        "scheduleNumber": 12,
+        "canonicalTitle": "Potential & Capacitance",
+        "chapter": "Electrostatic Potential and Capacitance",
+        "canonicalDoc": "NCERT_CLASS_12_PHYSICS_CH02",
+        "draftCount": 50,
+        "assembledLessonAligned": 0,
+        "materialMissing": 50,
+        "linkStatus": "NO_DIGIBOOK_LINK"
+      }
+    ]
+  },
+  "fresh675Reconciliation": {
+    "QUESTION_CORPUS_TOTAL": 675,
+    "ASSEMBLED_LESSON_ALIGNED": 291,
+    "SOURCE_COMPLETE_ALIGNED": 0,
+    "PARTIAL": 0,
+    "MATERIAL_MISSING": 384,
+    "OVERRUN": 0,
+    "REVALIDATION_REQUIRED": 0,
+    "SUM_CHECK_VERIFIED": true
+  },
+  "subjectBreakdown": {
+    "Physics": {
+      "total": 625,
+      "assembledLessonAligned": 265,
+      "sourceCompleteAligned": 0,
+      "partial": 0,
+      "missing": 360
+    },
+    "Chemistry": {
+      "total": 25,
+      "assembledLessonAligned": 25,
+      "sourceCompleteAligned": 0,
+      "partial": 0,
+      "missing": 0
+    },
+    "Mathematics": {
+      "total": 25,
+      "assembledLessonAligned": 1,
+      "sourceCompleteAligned": 0,
+      "partial": 0,
+      "missing": 24
+    }
+  },
+  "testArenaMajorReconciliation": {
+    "MAJOR_TOTAL_QUESTIONS": 75,
+    "MAJOR_ASSEMBLED_LESSON_ALIGNED": 41,
+    "MAJOR_SOURCE_COMPLETE_ALIGNED": 0,
+    "MAJOR_PARTIAL": 0,
+    "MAJOR_MATERIAL_MISSING": 34,
+    "MAJOR_OVERRUN": 0
+  },
+  "difficultyReconciliation": {
+    "FOUNDATION_COUNT": 125,
+    "STANDARD_COUNT": 425,
+    "HIGH_JEE_MAIN_COUNT": 125,
+    "UNCLASSIFIED_COUNT": 0,
+    "presentationBands": {
+      "EASY": 125,
+      "MEDIUM": 425,
+      "HARD": 125
+    },
+    "difficultyAuthorityState": "PRECALIBRATED_NOT_AUTHORIZED",
+    "SUM_CHECK_VERIFIED": true
+  },
+  "smartEntryDiagnosticBlueprint": {
+    "candidateId": "PROVISIONAL_FOUNDER_CANDIDATE_B_BALANCED",
+    "status": "PROVISIONAL_FOUNDER_CANDIDATE",
+    "maxQuestions": 30,
+    "minValidResponsesForResult": 18,
+    "minValidResponsesPerSubject": 6,
+    "earlyExitAllowed": true,
+    "insufficientEvidenceRule": "If scored < 18 or any subject < 6 -> RESULT = INSUFFICIENT_EVIDENCE",
+    "pacingDerivation": {
+      "MISSION_EXAM_QUESTION_COUNT": 75,
+      "MISSION_EXAM_DURATION": 180,
+      "DERIVED_AVERAGE_TIME_PER_QUESTION": 2.4,
+      "DIAGNOSTIC_MAX_QUESTIONS": 30,
+      "DERIVED_DIAGNOSTIC_DURATION": 72,
+      "SMART_ENTRY_DURATION_POLICY": "POLICY_UNRESOLVED (72 minutes recommended; 60 minutes rejected without Founder approval)"
+    },
+    "readinessStatus": {
+      "SMART_ENTRY_DESIGN_READY": true,
+      "SMART_ENTRY_CANDIDATE_POOL_AVAILABLE": true,
+      "SMART_ENTRY_BANK_READY": false,
+      "SMART_ENTRY_REMEDIATION_READY": false,
+      "SMART_ENTRY_STUDENT_LIVE_READY": false
+    },
+    "eligibilityCounts": {
+      "SMART_ENTRY_ELIGIBLE_PHYSICS": 10,
+      "SMART_ENTRY_ELIGIBLE_CHEMISTRY": 10,
+      "SMART_ENTRY_ELIGIBLE_MATHEMATICS": 1,
+      "SMART_ENTRY_REMEDIATION_GAP_COUNT": 9
+    }
+  },
+  "handoffAudit": {
+    "HANDOFF_TRIGGER": "MANUAL_SCRIPT_INVOCATION_ONLY",
+    "AUTOMATION_STATUS": "AUTOMATION_READY_NOT_ACTIVATED",
+    "HANDOFF_IDEMPOTENT": "YES",
+    "HANDOFF_AUTHORITY_COMMIT_PINNED": "YES",
+    "PINNED_COMMIT": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+    "HANDOFF_FAILURE_FAILS_CLOSED": "YES"
+  },
+  "governanceCounters": {
+    "ASSEMBLED_LESSON_MISREPRESENTED_AS_SOURCE_COMPLETE": 0,
+    "FALSE_MINIMUM_FACT_COUNT_CLAIM": 0,
+    "CANONICAL_SCHEDULE_IDS_REWRITTEN_WITHOUT_AUTHORITY": 0,
+    "QUESTION_SCHEDULE_BINDING_MISMATCHES_SILENTLY_FIXED": 0,
+    "COUNT_BASED_DIGIBOOK_ALIGNMENT_USED": 0,
+    "ARBITRARY_DIAGNOSTIC_SPEEDUP": 0,
+    "INSUFFICIENT_EVIDENCE_FORCED_TO_RESULT": 0,
+    "SMART_ENTRY_BANK_READY_WITH_REMEDIATION_GAPS": 0,
+    "UNPINNED_DIGIBOOK_AUTHORITY_CONSUMED": 0,
+    "QUESTION_BANK_MAXIMUM_LIMIT": "NONE",
+    "ARTIFICIAL_BANK_TRUNCATION": 0,
+    "DUPLICATE_SOURCE_ATOMICFACT_PIPELINE_CREATED": 0,
+    "STUDENT_ANDROID_CHANGED_FILES": 0,
+    "STUDENT_UI_CHANGED_FILES": 0,
+    "STUDENT_LOGIN_CHANGED_FILES": 0,
+    "LIVE_AI_DIRECT_TO_STUDENT": 0,
+    "FREEZE_S13_PLUS_QUESTION_DRAFTING": true
+  }
+}
