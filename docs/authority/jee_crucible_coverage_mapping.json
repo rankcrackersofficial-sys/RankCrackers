@@ -1,0 +1,28 @@
+{
+  "authorityName": "JEE_MAIN_PAPER_1_CRUCIBLE_STRUCTURAL_COVERAGE_MAPPING",
+  "version": "1.0.0",
+  "canonicalMissionId": "jee_main_2026",
+  "recruitmentId": "jee_main_2027",
+  "scope": "PAPER_1",
+  "summary": {
+    "canonicalPaper1Atoms": 1108,
+    "mappedToCrucible": 1108,
+    "unmappedFromCrucible": 0,
+    "structuralCoverageNodes": 417,
+    "structuralNodesAssigned": 417,
+    "structuralNodesUnassigned": 0,
+    "totalCrucibleSchedules": 42,
+    "cycleLengthDays": 98,
+    "phaseCount": 7,
+    "schedulesPerPhase": 6,
+    "canonicalAtomsWithoutSchedulePath": 0,
+    "losslessCoverageVerified": true,
+    "terminology": "CRUCIBLE_STRUCTURAL_COVERAGE_NODES"
+  },
+  "invariants": {
+    "UNAUTHORIZED_MISSION_ID_DRIFT": 0,
+    "SYLLABUS_OMISSION_COUNT": 0,
+    "PARTIAL_ENTRY_PUNISHMENT": 0,
+    "STRUCTURAL_NODES_UNASSIGNED": 0
+  }
+}
