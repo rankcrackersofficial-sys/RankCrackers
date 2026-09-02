@@ -1,0 +1,90 @@
+{
+  "suite": "RC_JEE_MAIN_2027_REVIEW_TRANSACTION_AND_VERIFIER_EMULATOR_SUITE",
+  "startedAtUtc": "2026-09-02T12:59:23.201Z",
+  "tests": [
+    {
+      "name": "Founder registers test reviewer authority",
+      "passed": true,
+      "details": {
+        "reviewerId": "REV_PHYSICS_EXPERT_01",
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "name": "Founder cannot impersonate reviewer decision (Rejected)",
+      "passed": true,
+      "details": {
+        "founderAttemptRejected": true,
+        "reason": "CALLER_UID_MISMATCH_WITH_REVIEWER_AUTHORITY"
+      }
+    },
+    {
+      "name": "Reviewer rejected for out-of-scope subject (Chemistry vs Physics)",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "reason": "SUBJECT_SCOPE_VIOLATION"
+      }
+    },
+    {
+      "name": "Valid Review Transaction Approved and Sealed",
+      "passed": true,
+      "details": {
+        "decisionId": "REV_DEC_001",
+        "digest": "bff9c13737c904d4942a7aec2568506bda3adfcd316a03de7143311b8fbc1533"
+      }
+    },
+    {
+      "name": "Review Record Immutability (Overwrite Blocked)",
+      "passed": true,
+      "details": {
+        "immutable": true
+      }
+    },
+    {
+      "name": "Independent Key Verification Transaction Executed",
+      "passed": true,
+      "details": {
+        "keyVerificationId": "KEY_VER_001",
+        "verifiedResult": "VERIFIED_CORRECT"
+      }
+    },
+    {
+      "name": "Independent Solution Verification Transaction Executed",
+      "passed": true,
+      "details": {
+        "solutionVerificationId": "SOL_VER_001",
+        "verifiedResult": "VERIFIED_CORRECT"
+      }
+    },
+    {
+      "name": "Publication Approval Transaction Executed",
+      "passed": true,
+      "details": {
+        "publicationId": "PUB_APP_001",
+        "status": "PUBLICATION_APPROVED"
+      }
+    },
+    {
+      "name": "End-to-End Governed Materialization Test (Fixture Only)",
+      "passed": true,
+      "details": {
+        "materializedInFixtureSpace": true,
+        "productionDatabaseContaminated": false
+      }
+    }
+  ],
+  "invariants": {
+    "REVIEW_TRANSACTION_TEST": "PASS",
+    "KEY_VERIFICATION_TRANSACTION_TEST": "PASS",
+    "SOLUTION_VERIFICATION_TRANSACTION_TEST": "PASS",
+    "PUBLICATION_APPROVAL_TRANSACTION_TEST": "PASS",
+    "END_TO_END_GOVERNED_FIXTURE": "PASS",
+    "MUTABLE_REVIEW_HISTORY": 0,
+    "FIXTURE_REVIEW_COUNTED_AS_PRODUCTION": 0,
+    "FOUNDER_CAN_IMPERSONATE_REVIEWER_DECISION": 0,
+    "AUTOMATIC_PRO_TO_KEY_PROMOTION": 0,
+    "AUTOMATIC_PRO_TO_SOLUTION_PROMOTION": 0,
+    "AUTOMATIC_PRO_TO_PUBLICATION_PROMOTION": 0
+  }
+}
