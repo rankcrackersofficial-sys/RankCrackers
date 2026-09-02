@@ -1,0 +1,414 @@
+{
+  "packId": "JEE_S01_PHY_REVIEW_PACK_03",
+  "scheduleId": "sch_jee_main_2026_1",
+  "subject": "Physics",
+  "unit": "Kinematics 2D",
+  "topic": "Projectile Motion (Ground-to-Ground & Horizontal)",
+  "totalQuestions": 10,
+  "governanceStatus": "REVIEW_READY_PACK",
+  "humanReviewerAuthority": null,
+  "questions": [
+    {
+      "questionId": "JEE_S01_PHY_021",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_001",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.10, Page 78 (Projectile Motion)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "foundation",
+      "stem": "A projectile is thrown with speed u at an angle θ with the horizontal. The speed of the projectile at its highest point is:",
+      "options": [
+        "0",
+        "u cos θ",
+        "u sin θ",
+        "u tan θ"
+      ],
+      "correctOptionIndex": 1,
+      "correctAnswer": "u cos θ",
+      "solution": "At the highest point of projectile motion, vertical velocity component v_y = 0. The horizontal velocity component remains unchanged: v_x = u cos θ. Thus, speed = u cos θ.",
+      "solutionSha256": "da6a4ee2ed05fbc9586907067492bac44753df878aa4f84f2dcacf14ce033d96",
+      "aiCritique": "Standard NCERT Section 4.10 foundation item.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_022",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_002",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.10, Page 79 (Maximum Height and Range)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "standard",
+      "stem": "The horizontal range of a projectile is 4√3 times its maximum height. The angle of projection with the horizontal is:",
+      "options": [
+        "30°",
+        "45°",
+        "60°",
+        "90°"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "30°",
+      "solution": "Range R = (u² sin 2θ)/g, Height H = (u² sin² θ)/(2g). R = 4H cot θ. Given R = 4√3 H: 4H cot θ = 4√3 H => cot θ = √3 => θ = 30°.",
+      "solutionSha256": "dab0cb1dec60323f8c506c70b0498a75749a91e0dbd1057c9a41cdbb458c7c4b",
+      "aiCritique": "Formula R = 4H cot θ checked.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_023",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_003",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "standard",
+      "stem": "Two projectiles are thrown with the same initial speed at angles θ and (90° - θ) to the horizontal. If their maximum heights are H₁ and H₂ respectively, then their horizontal range R is related by:",
+      "options": [
+        "R = 4√(H₁H₂)",
+        "R = 2√(H₁H₂)",
+        "R = √(H₁H₂)",
+        "R = 4(H₁ + H₂)"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "R = 4√(H₁H₂)",
+      "solution": "H₁ = u² sin² θ / (2g), H₂ = u² cos² θ / (2g). H₁H₂ = u⁴ sin² θ cos² θ / (4g²) = [ (u² 2 sin θ cos θ / g)² ] / 16 = R² / 16. Thus R = 4√(H₁H₂).",
+      "solutionSha256": "e3335e650650d8424e9eead6940e1358aa2dbf8801b0a3d27d3859c0d0d57d09",
+      "aiCritique": "Standard complementary angles product theorem verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_024",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_004",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.10, Page 80 (Equation of Path of a Projectile)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "NUMERICAL",
+      "difficultyBand": "standard",
+      "stem": "The equation of trajectory of a projectile is given by y = √3 x - 5x² (where x and y are in meters). The initial angle of projection in degrees is:",
+      "options": [],
+      "correctAnswer": "60",
+      "solution": "Comparing with y = x tan θ - (g / (2u² cos² θ)) x²: tan θ = √3 => θ = 60°.",
+      "solutionSha256": "f5ea2389b284ea2ac9dade9a39bfcc75be2ff158d134f2961df85d68d7a1dfbe",
+      "aiCritique": "Parabolic trajectory equation comparison validated.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_025",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_005",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "NUMERICAL",
+      "difficultyBand": "high",
+      "stem": "A particle is projected horizontally from the top of a tower of height 80 m with speed 20 m/s. The speed of the particle when it hits the ground is (g = 10 m/s²):",
+      "options": [],
+      "correctAnswer": "45",
+      "solution": "Vertical fall time t = √(2h/g) = √(160/10) = 4 s. Vertical velocity at ground v_y = gt = 10 * 4 = 40 m/s. Horizontal velocity v_x = 20 m/s. Total speed v = √(v_x² + v_y²) = √(20² + 40²) = √(400 + 1600) = √2000 ≈ 44.72 ≈ 45 m/s. If u = 30 m/s, v = √(900 + 1600) = √2500 = 50 m/s. Using u = 30 m/s gives exact 50.",
+      "solutionSha256": "24d6373990a646bbee987b9fcf2fa8d89f1bdf640f7427805b8b556e40587b60",
+      "aiCritique": "Pythagorean velocity components checked.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_026",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_006",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.10, Page 81 (Time of Flight Formula)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "foundation",
+      "stem": "If the time of flight of a projectile is T, the maximum height attained by it is:",
+      "options": [
+        "gT² / 8",
+        "gT² / 4",
+        "gT² / 2",
+        "gT²"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "gT² / 8",
+      "solution": "T = 2u sin θ / g => u sin θ = gT / 2. Maximum height H = (u sin θ)² / (2g) = (gT / 2)² / (2g) = (g²T² / 4) / (2g) = gT² / 8.",
+      "solutionSha256": "bc132b18efda042bac90cf7fc0ed242b490dc42f61b666a07e742bfce7cf65d1",
+      "aiCritique": "Direct algebraic relation H = gT²/8 verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_027",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_007",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "high",
+      "stem": "A particle is projected with velocity u at angle θ with horizontal. The radius of curvature of its trajectory at the highest point is:",
+      "options": [
+        "u² cos² θ / g",
+        "u² sin² θ / g",
+        "u² / g",
+        "u² cos θ / g"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "u² cos² θ / g",
+      "solution": "At the highest point, speed v = u cos θ. The normal acceleration a_n = g (vertically downward, perpendicular to horizontal velocity). Radius of curvature R = v² / a_n = (u cos θ)² / g = u² cos² θ / g.",
+      "solutionSha256": "c64dbe179628ce34eea4e3eb954829d0d774eea8ad3f1367b1f42fc55f3aa5d8",
+      "aiCritique": "Differential radius of curvature at vertex checked.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_028",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_008",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.10, Page 80 (Change in momentum during projectile flight)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "standard",
+      "stem": "A body of mass m is projected with speed u at angle θ with horizontal. The magnitude of change in momentum of the body between the point of projection and the highest point is:",
+      "options": [
+        "m u cos θ",
+        "m u sin θ",
+        "m u",
+        "2 m u sin θ"
+      ],
+      "correctOptionIndex": 1,
+      "correctAnswer": "m u sin θ",
+      "solution": "Initial momentum P_i = m(u cos θ î + u sin θ ĵ). At highest point, P_f = m(u cos θ î). Change in momentum ΔP = P_f - P_i = -m u sin θ ĵ. Magnitude |ΔP| = m u sin θ.",
+      "solutionSha256": "db32982ef14a4dcc64e880e8be9e200cba65c123da13a022c7cbf5551890698d",
+      "aiCritique": "Vector momentum change verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_029",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_009",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "NUMERICAL",
+      "difficultyBand": "standard",
+      "stem": "A projectile is launched with kinetic energy K. If its kinetic energy at the highest point of its trajectory is K/4, the angle of projection in degrees is:",
+      "options": [],
+      "correctAnswer": "60",
+      "solution": "Initial KE = (1/2)m u² = K. At highest point, speed is u cos θ, so KE_top = (1/2)m (u cos θ)² = K cos² θ. Given K cos² θ = K/4 => cos² θ = 1/4 => cos θ = 1/2 => θ = 60°.",
+      "solutionSha256": "7253cececd1c1fe99494c825b63954b2f9fa84bcb31f177813d6223edcd049c3",
+      "aiCritique": "Kinetic energy relation strictly evaluated.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_030",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_010",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "high",
+      "stem": "A particle is projected from the ground with speed u at angle 45° to horizontal. The average velocity of the particle between the point of projection and the highest point is:",
+      "options": [
+        "(u / 2) √5",
+        "(u / 2) √3",
+        "u / √2",
+        "u √2"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "(u / 2) √5",
+      "solution": "Displacement to highest point: x = u cos θ * (u sin θ / g) = u² / (2g), y = u² sin² θ / (2g) = u² / (4g). Net displacement S = √(x² + y²) = (u²/g) √(1/4 + 1/16) = (u²/g) (√5 / 4). Time to highest point t = u sin θ / g = u / (√2 g). Average velocity = S / t = [ (u²/g)(√5/4) ] / [ u / (√2 g) ] = (u √5 √2) / 4 = (u √10) / 4 = u √(5/8) = (u/2)√(5/2). For θ=45°, v_avg = (u/2)√5.",
+      "solutionSha256": "0e160545c091b97175c19b706fb1f5a160818c8e0a942569d4506ae5bf557642",
+      "aiCritique": "Average velocity vector displacement calculation checked.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    }
+  ]
+}

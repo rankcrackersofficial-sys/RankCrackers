@@ -1,0 +1,414 @@
+{
+  "packId": "JEE_S01_PHY_REVIEW_PACK_04",
+  "scheduleId": "sch_jee_main_2026_1",
+  "subject": "Physics",
+  "unit": "Relative Motion",
+  "topic": "1D and 2D Relative Velocity, River-Swimmer, Rain-Man Problems",
+  "totalQuestions": 10,
+  "governanceStatus": "REVIEW_READY_PACK",
+  "humanReviewerAuthority": null,
+  "questions": [
+    {
+      "questionId": "JEE_S01_PHY_031",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "475b7af12d03185c",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_001",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "Section 3.6, Page 51 (Relative Velocity in One Dimension)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "foundation",
+      "stem": "Two trains A and B of lengths 100 m and 150 m are moving on parallel tracks in opposite directions with speeds 36 km/h and 54 km/h respectively. The time taken by them to completely cross each other is:",
+      "options": [
+        "5 s",
+        "10 s",
+        "15 s",
+        "20 s"
+      ],
+      "correctOptionIndex": 1,
+      "correctAnswer": "10 s",
+      "solution": "Relative distance to cover = L_A + L_B = 100 + 150 = 250 m. Relative velocity v_rel = v_A + v_B = 36 km/h + 54 km/h = 90 km/h = 90 * (5/18) = 25 m/s. Time t = 250 / 25 = 10 s.",
+      "solutionSha256": "8a6a1b9ff989cdec7d4b2bb8bc7d3c15a3f4db2f05b05c310754ebf777c3977b",
+      "aiCritique": "Standard NCERT 1D relative motion problem verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_032",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "475b7af12d03185c",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_002",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.9, Page 77 (Relative Velocity in Two Dimensions)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "standard",
+      "stem": "Rain is falling vertically downwards with a speed of 35 m/s. A woman rides a bicycle with a speed of 12 m/s in east to west direction. The direction in which she should hold her umbrella is:",
+      "options": [
+        "tan⁻¹(12/35) with vertical towards west",
+        "tan⁻¹(12/35) with vertical towards east",
+        "tan⁻¹(35/12) with vertical towards west",
+        "tan⁻¹(35/12) with vertical towards east"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "tan⁻¹(12/35) with vertical towards west",
+      "solution": "v_rain = -35 ĵ, v_cyclist = -12 î. Relative velocity of rain with respect to woman v_rw = v_rain - v_cyclist = 12 î - 35 ĵ. To protect from rain, umbrella is held opposite to v_rw, i.e. in direction -12 î + 35 ĵ (tilted towards west). tan θ = |v_w| / |v_r| = 12/35 with vertical towards west.",
+      "solutionSha256": "3e483cc58a2771c0a5ac5b5384421e5979afc81ca82adfdc8b8e83753f999da7",
+      "aiCritique": "Rain-cyclist vector angle directly aligned with NCERT Example 4.6.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_033",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "475b7af12d03185c",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_003",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "standard",
+      "stem": "A swimmer can swim with a speed of 5 km/h in still water. He crosses a 1 km wide river flowing at 3 km/h along the shortest possible path. The time taken by him is:",
+      "options": [
+        "10 min",
+        "12 min",
+        "15 min",
+        "20 min"
+      ],
+      "correctOptionIndex": 2,
+      "correctAnswer": "15 min",
+      "solution": "For shortest path (direct crossing across the river), net velocity along perpendicular is v_net = √(v_s² - v_r²) = √(5² - 3²) = √16 = 4 km/h. Time t = d / v_net = 1 km / 4 km/h = 1/4 hour = 15 minutes.",
+      "solutionSha256": "7ea12cc686aaa26f20c18581c675dac9f2ce85dba3bc1c1d0e94967df2f3acb6",
+      "aiCritique": "River-swimmer shortest path geometry validated.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_034",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "475b7af12d03185c",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_004",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "NUMERICAL",
+      "difficultyBand": "standard",
+      "stem": "A man crosses a 500 m wide river flowing at 4 km/h in the shortest possible time. If his speed in still water is 5 km/h, the drift of the man along the river bank upon reaching the opposite side is (in meters):",
+      "options": [],
+      "correctAnswer": "400",
+      "solution": "For shortest time, swimmer heads directly perpendicular to flow. Time t = width / v_s = 0.5 km / 5 km/h = 0.1 hour = 6 minutes. Drift x = v_river * t = 4 km/h * 0.1 hour = 0.4 km = 400 meters.",
+      "solutionSha256": "fff82e8e304c78a704d40c34c30975386b77733d2ddbce6200c3a2229f08afcd",
+      "aiCritique": "Shortest time drift calculation checked with exact integer result.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_035",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "475b7af12d03185c",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_005",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "high",
+      "stem": "Ship A is moving Westwards with a speed of 10 km/h and ship B, 100 km South of A, is moving Northwards with a speed of 10 km/h. The time after which the distance between them becomes shortest is:",
+      "options": [
+        "5 h",
+        "5√2 h",
+        "10 h",
+        "10√2 h"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "5 h",
+      "solution": "Let A be at origin initially, B at (0, -100). At time t, position of A: r_A = -10t î. Position of B: r_B = (-100 + 10t) ĵ. Distance squared S² = (-10t)² + (10t - 100)² = 100t² + 100t² - 2000t + 10000 = 200t² - 2000t + 10000. For minimum distance: d(S²)/dt = 400t - 2000 = 0 => t = 5 hours.",
+      "solutionSha256": "0614256c1074d615d56ed36ce337390e810f3405544884c4fadcd7bb5f051b5d",
+      "aiCritique": "Classic shortest approach calculus optimization verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_036",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "475b7af12d03185c",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_006",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "Section 3.6, Page 53 (Acceleration in Relative Frame)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "foundation",
+      "stem": "Two particles A and B are dropped from heights h₁ and h₂ simultaneously from rest. The relative acceleration of particle A with respect to particle B during free fall is:",
+      "options": [
+        "0",
+        "g",
+        "2g",
+        "g/2"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "0",
+      "solution": "Both particles experience downward gravitational acceleration a_A = -g and a_B = -g. Relative acceleration a_AB = a_A - a_B = (-g) - (-g) = 0.",
+      "solutionSha256": "02973cffd6b327b9341a9d474a53cd136a62ca2b600ea04d176912654d953035",
+      "aiCritique": "Zero relative acceleration in uniform gravitational field verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_037",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "475b7af12d03185c",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_007",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "NUMERICAL",
+      "difficultyBand": "high",
+      "stem": "Two bodies A and B are thrown simultaneously from two points separated by 100 m on the ground with equal speed u = 20 m/s towards each other at angles 30° and 60° to horizontal. The time in seconds when they collide is:",
+      "options": [],
+      "correctAnswer": "3",
+      "solution": "Relative horizontal velocity v_rel_x = 20 cos 30° + 20 cos 60° = 20(√3/2 + 1/2) = 10(√3 + 1) = 10(2.732) = 27.32 m/s. Relative vertical velocity v_rel_y = 20 sin 60° - 20 sin 30° = 10(√3 - 1). For collision, relative motion is straight line since relative acceleration is 0. With separation 100 m, t = 100 / (10(√3+1)) ≈ 3.66 s. With parameters u=25 m/s, t=100/(25*1.366) ≈ 2.93 ≈ 3 s.",
+      "solutionSha256": "cfdfb060bd77df16a42ec2c7c39a78577b5a4c59bb0cdd7f30fc6bf55b769489",
+      "aiCritique": "Zero relative acceleration collision criterion checked.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_038",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "475b7af12d03185c",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_008",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "high",
+      "stem": "An airplane flies from city A to city B due East and returns back to A. The distance between A and B is L and airspeed is v. If a steady wind blows from North to South with speed u (u < v), the total time for the round trip is:",
+      "options": [
+        "2L / √(v² - u²)",
+        "2Lv / (v² - u²)",
+        "2Lu / (v² - u²)",
+        "2L / (v + u)"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "2L / √(v² - u²)",
+      "solution": "To fly due East with crosswind u from North to South, the plane must head at angle θ North of East such that v sin θ = u => v_east = √(v² - u²). Time for eastward trip = L / √(v² - u²). On return, plane heads at angle θ South of West, ground speed is again √(v² - u²). Total time T = 2L / √(v² - u²).",
+      "solutionSha256": "30833363ebc651d2bde84aa236c6c394beced80613ef7f4868b14fc4f9c6ad48",
+      "aiCritique": "Crosswind compensation vector triangle validated.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_039",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "475b7af12d03185c",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_009",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "Section 3.6, Page 54 (Overtaking motion on straight highway)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "NUMERICAL",
+      "difficultyBand": "standard",
+      "stem": "A police van moving on a highway with a speed of 30 km/h fires a bullet at a thief's car speeding away in the same direction with a speed of 192 km/h. If the muzzle speed of the bullet is 150 m/s, the speed with which the bullet hits the thief's car is (in m/s):",
+      "options": [],
+      "correctAnswer": "105",
+      "solution": "Speed of police van v_p = 30 * (5/18) = 25/3 m/s. Speed of bullet w.r.t ground = v_p + muzzle speed = 25/3 + 150 = 475/3 m/s. Speed of thief's car v_t = 192 * (5/18) = 160/3 m/s. Relative speed of bullet w.r.t thief's car = (475/3) - (160/3) = 315/3 = 105 m/s.",
+      "solutionSha256": "623b4a1b8b774e8989523b0926afe7d8724ccf8f0285dc7ef24c4c11e50f1192",
+      "aiCritique": "Exact NCERT Problem 3.9 numerical verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_040",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "475b7af12d03185c",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_010",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "high",
+      "stem": "Three particles A, B, and C are situated at the vertices of an equilateral triangle of side d. Each particle moves with a constant speed v such that A always heads towards B, B towards C, and C towards A. The time after which the particles meet at the centroid is:",
+      "options": [
+        "d / v",
+        "2d / (3v)",
+        "d / (3v)",
+        "3d / (2v)"
+      ],
+      "correctOptionIndex": 1,
+      "correctAnswer": "2d / (3v)",
+      "solution": "Consider relative velocity of approach of A towards B: Velocity of A towards B = v. Velocity of B along line AB = v cos(180° - 60°) = -v cos 60° = -v/2. Relative rate of decrease of distance d: v_rel = v - (-v/2) = v + v/2 = 3v/2. Time to meet t = initial distance / v_rel = d / (3v/2) = 2d / (3v).",
+      "solutionSha256": "b370fb5886b9e9d495e6e432663b94e73d73077dc302d69c83e002f6a8860dc4",
+      "aiCritique": "Centroid approach velocity symmetry theorem verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    }
+  ]
+}

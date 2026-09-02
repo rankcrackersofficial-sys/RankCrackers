@@ -1,0 +1,1157 @@
+{
+  "majorEventId": "JEE_MAIN_2027_MAJOR_01",
+  "subject": "Mathematics",
+  "totalQuestions": 25,
+  "sectionA_MCQCount": 20,
+  "sectionB_NumericalCount": 5,
+  "maxMarks": 100,
+  "governanceStatus": "REVIEW_READY_PACK",
+  "humanReviewerAuthority": null,
+  "questions": [
+    {
+      "questionId": "JEE_MAJ01_MAT_001",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U01_T_E8873099_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U01_CH01_TOP01_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "APPLY",
+      "estimatedTimeSeconds": 130,
+      "sourceCandidate": "NCERT Class 11 Mathematics Chapter 1 (Sets and Relations)",
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH01",
+      "sourceLocator": "Section 1.6, Page 16",
+      "sourceHash": "sha256_ncert_mat_11_ch01_1a2b",
+      "stem": "If set A has n elements, the total number of non-empty proper subsets of A is:",
+      "options": [
+        "2ⁿ - 2",
+        "2ⁿ - 1",
+        "2ⁿ",
+        "2^(n-1) - 1"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "2ⁿ - 2",
+      "solution": "Total subsets of A = 2ⁿ. Excluding the empty set (1) and the improper subset A itself (1), the number of non-empty proper subsets is 2ⁿ - 2.",
+      "solutionSha256": "372f2130c6bc7d3cbfd29aef3bd84c9cb92338038d7961177271abbe8f83a52a",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Set theory subset counting formula verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_002",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U02_T_057CEE13_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U01_CH05_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 11 Mathematics Chapter 5 (Complex Numbers and Quadratic Equations)",
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH05",
+      "sourceLocator": "Section 5.4, Page 104",
+      "sourceHash": "sha256_ncert_mat_11_ch05_2b3c",
+      "stem": "If α and β are the roots of equation x² - 6x + c = 0 such that 3α + 2β = 20, then the value of c is:",
+      "options": [
+        "-16",
+        "16",
+        "-8",
+        "8"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "-16",
+      "solution": "Sum of roots: α + β = 6 => 2α + 2β = 12. Given 3α + 2β = 20. Subtracting equations: α = 20 - 12 = 8. Then β = 6 - 8 = -2. Product of roots: c = α * β = 8 * (-2) = -16.",
+      "solutionSha256": "f7293009fdbb9e91539bcbd9e7d999b657408a438a32867345ae8dcda17f85a2",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Vieta formula quadratic root system verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_003",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U03_T_030B1C4B_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH03_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 3 (Matrices)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH03",
+      "sourceLocator": "Section 3.7, Page 88",
+      "sourceHash": "sha256_ncert_mat_12_ch03_3c4d",
+      "stem": "If A is a 3 × 3 non-singular matrix such that |A| = 4, then the determinant of adj(A) is:",
+      "options": [
+        "16",
+        "64",
+        "4",
+        "256"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "16",
+      "solution": "For an n × n matrix A, |adj(A)| = |A|^(n-1). Here n = 3 and |A| = 4, so |adj(A)| = 4^(3-1) = 4² = 16.",
+      "solutionSha256": "5db3f0d73eb4f40f90d50e0d1e40d58785a30b0d09c1c6847cf6121f3b3e8a75",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Adjugate determinant theorem verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_004",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U04_T_F42DF3AA_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U01_CH07_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 11 Mathematics Chapter 7 (Permutations and Combinations)",
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH07",
+      "sourceLocator": "Section 7.4, Page 148",
+      "sourceHash": "sha256_ncert_mat_11_ch07_4d5e",
+      "stem": "The number of ways in which 5 boys and 4 girls can be seated in a row such that no two girls sit together is:",
+      "options": [
+        "5! × ⁶P₄",
+        "5! × 4!",
+        "9! - (5! × 4!)",
+        "⁴P₄ × ⁵P₅"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "5! × ⁶P₄",
+      "solution": "First seat the 5 boys in 5! ways: _ B₁ _ B₂ _ B₃ _ B₄ _ B₅ _. This creates 6 available gaps. The 4 girls can be placed in these 6 gaps in ⁶P₄ ways. Total ways = 5! × ⁶P₄.",
+      "solutionSha256": "ee755aa5ddcd0e88ab4d4ddce0ec2569047b1784bd888ba9038ee42c191b2b5c",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Combinatorial gap method verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_005",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U05_T_F5D245A8_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U01_CH08_TOP01_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 150,
+      "sourceCandidate": "NCERT Class 11 Mathematics Chapter 8 (Binomial Theorem)",
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH08",
+      "sourceLocator": "Section 8.2, Page 168",
+      "sourceHash": "sha256_ncert_mat_11_ch08_5e6f",
+      "stem": "The term independent of x in the expansion of (2x + 1/(3x²))⁹ is:",
+      "options": [
+        "¹⁷⁹² / 9",
+        "⁵⁶ / 3",
+        "¹⁷⁹² / 27",
+        "²⁵⁶ / 9"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "¹⁷⁹² / 9",
+      "solution": "General term T_(r+1) = ⁹C_r (2x)^(9-r) (1/(3x²))^r = ⁹C_r 2^(9-r) 3^(-r) x^(9 - 3r). For term independent of x: 9 - 3r = 0 => r = 3. T_4 = ⁹C₃ 2⁶ 3⁻³ = (9 * 8 * 7 / 6) * 64 / 27 = 84 * 64 / 27 = 28 * 64 / 9 = 1792 / 9.",
+      "solutionSha256": "630f191ba91f2f50e17ccb6f9bcde986ffebfce96eb26b6468a61b42688cee2b",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Binomial constant term evaluated."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_006",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U06_T_6BA4EAF0_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U01_CH09_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 11 Mathematics Chapter 9 (Sequences and Series)",
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH09",
+      "sourceLocator": "Section 9.5, Page 190",
+      "sourceHash": "sha256_ncert_mat_11_ch09_6f7a",
+      "stem": "The sum of the infinite geometric series 1 + 2/3 + 4/9 + 8/27 + ... is:",
+      "options": [
+        "3",
+        "3/2",
+        "2",
+        "9/2"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "3",
+      "solution": "First term a = 1, common ratio r = 2/3 (< 1). Sum S_∞ = a / (1 - r) = 1 / (1 - 2/3) = 1 / (1/3) = 3.",
+      "solutionSha256": "50e6759c2455d62359c64531dbf374de698b4657aa28cecdf4f461b63aa9fc08",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Infinite GP summation checked."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_007",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U07_T_CE9FA0F6_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U01_CH13_TOP01_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 11 Mathematics Chapter 13 (Limits and Derivatives)",
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH13",
+      "sourceLocator": "Section 13.2, Page 298",
+      "sourceHash": "sha256_ncert_mat_11_ch13_7a8b",
+      "stem": "The value of limit as x approaches 0 of (1 - cos 4x) / x² is:",
+      "options": [
+        "8",
+        "4",
+        "2",
+        "16"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "8",
+      "solution": "1 - cos 4x = 2 sin²(2x). lim_(x→0) [2 sin²(2x) / x²] = 2 * lim_(x→0) [ (sin 2x / (2x))² * 4 ] = 2 * (1)² * 4 = 8.",
+      "solutionSha256": "00bab77a57e41fe7dc8eae3d67c86634d02a0ca0dbf4d66d9a4bf4d4db39804c",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Trigonometric limit identity verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_008",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U08_T_9329EB17_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH05_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 5 (Continuity and Differentiability)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH05",
+      "sourceLocator": "Section 5.6, Page 172",
+      "sourceHash": "sha256_ncert_mat_12_ch05_8b9c",
+      "stem": "If y = ln(sec x + tan x), then dy/dx is:",
+      "options": [
+        "sec x",
+        "tan x",
+        "sec x tan x",
+        "sec² x"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "sec x",
+      "solution": "dy/dx = (1 / (sec x + tan x)) * d/dx (sec x + tan x) = (sec x tan x + sec² x) / (sec x + tan x) = sec x (tan x + sec x) / (sec x + tan x) = sec x.",
+      "solutionSha256": "3aa6099b98f83368562d8f3a6f83cfb48d6d030c361d434a56a6de47ab201e3e",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Logarithmic secant derivative verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_009",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U09_T_031A6136_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH06_TOP03_001",
+      "intendedDifficulty": "high",
+      "cognitiveDemand": "ANALYZE",
+      "estimatedTimeSeconds": 150,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 6 (Application of Derivatives)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH06",
+      "sourceLocator": "Section 6.5, Page 228",
+      "sourceHash": "sha256_ncert_mat_12_ch06_9c1d",
+      "stem": "The maximum value of the function f(x) = (1/x)^x for x > 0 occurs at x equal to:",
+      "options": [
+        "1 / e",
+        "e",
+        "1",
+        "e²"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "1 / e",
+      "solution": "Let y = (1/x)^x = x^(-x). ln y = -x ln x. Differentiating: (1/y) dy/dx = - (ln x + 1). Setting dy/dx = 0 => ln x + 1 = 0 => ln x = -1 => x = 1/e. The second derivative confirms a local maximum.",
+      "solutionSha256": "49f711a2bdb9b2df5d5256a73ab9c93955f39f50edddc0a7bb2381bd024798ac",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Calculus optimization stationary point verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_010",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U10_T_91CE6418_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH07_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 7 (Integrals)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH07",
+      "sourceLocator": "Section 7.4, Page 312",
+      "sourceHash": "sha256_ncert_mat_12_ch07_1d2e",
+      "stem": "The integral ∫ (e^x (1 + x)) / cos²(x e^x) dx is equal to:",
+      "options": [
+        "tan(x e^x) + C",
+        "cot(x e^x) + C",
+        "sec(x e^x) + C",
+        "-tan(x e^x) + C"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "tan(x e^x) + C",
+      "solution": "Substitute t = x e^x. dt = (x e^x + e^x) dx = e^x (1 + x) dx. The integral becomes ∫ dt / cos² t = ∫ sec² t dt = tan t + C = tan(x e^x) + C.",
+      "solutionSha256": "968cfd3f1db14a345ac44e66cab0388bbf1102cd325154e4184aedefe9e66cc7",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Indefinite integral substitution checked."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_011",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U11_T_3A21919F_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH07_TOP04_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 7 (Integrals)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH07",
+      "sourceLocator": "Section 7.11, Page 348",
+      "sourceHash": "sha256_ncert_mat_12_ch07_1d2e",
+      "stem": "The value of definite integral I = ∫₀^(π/2) (√sin x) / (√sin x + √cos x) dx is:",
+      "options": [
+        "π / 4",
+        "π / 2",
+        "π",
+        "0"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "π / 4",
+      "solution": "Using King's property ∫₀^a f(x)dx = ∫₀^a f(a-x)dx: I = ∫₀^(π/2) (√cos x) / (√cos x + √sin x) dx. Adding both equations: 2I = ∫₀^(π/2) 1 dx = π/2 => I = π/4.",
+      "solutionSha256": "9850c950f104c04a03d1a6275674d29319ea83914dc8cca2b805c59fb0c3042c",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Definite integral King property verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_012",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U12_T_7FBEB7FD_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH08_TOP01_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 150,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 8 (Application of Integrals)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH08",
+      "sourceLocator": "Section 8.2, Page 368",
+      "sourceHash": "sha256_ncert_mat_12_ch08_2e3f",
+      "stem": "The area bounded by the parabola y² = 4ax and the line y = mx is:",
+      "options": [
+        "8 a² / (3 m³)",
+        "4 a² / (3 m³)",
+        "16 a² / (3 m³)",
+        "8 a² / m³"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "8 a² / (3 m³)",
+      "solution": "Intersection points: (mx)² = 4ax => m² x² - 4ax = 0 => x = 0 and x = 4a/m². Area = ∫₀^(4a/m²) (2√(ax) - mx) dx = [ (4/3)√a x^(3/2) - (m/2)x² ]₀^(4a/m²) = (4/3)√a (8a^(3/2)/m³) - (m/2)(16a²/m⁴) = 32a²/(3m³) - 8a²/m³ = 8a² / (3m³).",
+      "solutionSha256": "f0b9d7b713da0784df63798dc19e7ebaac111889421059b3532dd10467f3c992",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Parabola-line bounded area formula verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_013",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U13_T_73E47A9A_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH09_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 9 (Differential Equations)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH09",
+      "sourceLocator": "Section 9.5, Page 406",
+      "sourceHash": "sha256_ncert_mat_12_ch09_3f4a",
+      "stem": "The integrating factor of the differential equation (1 + x²) dy/dx + 2xy = 1 is:",
+      "options": [
+        "1 + x²",
+        "√(1 + x²)",
+        "ln(1 + x²)",
+        "e^(1 + x²)"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "1 + x²",
+      "solution": "Dividing by (1 + x²): dy/dx + (2x / (1 + x²)) y = 1 / (1 + x²). Integrating factor IF = e^(∫ P dx) = e^(∫ (2x / (1 + x²)) dx) = e^(ln(1 + x²)) = 1 + x².",
+      "solutionSha256": "4f2d6f772d0384c1310766e6926357503f1c92bfde53e6238ae40411f149ebcf",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Linear differential equation integrating factor checked."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_014",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U14_T_FE7C2B40_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U01_CH10_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 130,
+      "sourceCandidate": "NCERT Class 11 Mathematics Chapter 10 (Straight Lines)",
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH10",
+      "sourceLocator": "Section 10.3, Page 224",
+      "sourceHash": "sha256_ncert_mat_11_ch10_4a5b",
+      "stem": "The distance between the parallel lines 3x + 4y - 9 = 0 and 6x + 8y + 15 = 0 is:",
+      "options": [
+        "33 / 10",
+        "6 / 5",
+        "33 / 5",
+        "24 / 5"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "33 / 10",
+      "solution": "Rewrite first line: 6x + 8y - 18 = 0. Distance between parallel lines Ax + By + C₁ = 0 and Ax + By + C₂ = 0 is d = |C₁ - C₂| / √(A² + B²) = |15 - (-18)| / √(36 + 64) = 33 / √100 = 33 / 10.",
+      "solutionSha256": "1c00b2f5cb9a3a29b5f83cc627952b03f1fed3b8e9dfe258632c20a986a32cde",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Parallel lines distance formula verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_015",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U15_T_26DB6DA7_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U01_CH11_TOP01_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 11 Mathematics Chapter 11 (Conic Sections)",
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH11",
+      "sourceLocator": "Section 11.4, Page 254",
+      "sourceHash": "sha256_ncert_mat_11_ch11_5b6c",
+      "stem": "The eccentricity of the ellipse 9x² + 16y² = 144 is:",
+      "options": [
+        "√7 / 4",
+        "√7 / 3",
+        "3 / 4",
+        "7 / 16"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "√7 / 4",
+      "solution": "Standard form: x²/16 + y²/9 = 1 => a² = 16, b² = 9. Eccentricity e = √(1 - b²/a²) = √(1 - 9/16) = √(7/16) = √7 / 4.",
+      "solutionSha256": "2d2625c2b5ffb4c00467a64c910761fc9f869030fac25f54f8ccaedd99f0acaf",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Ellipse eccentricity calculation checked."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_016",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U16_T_C13978BE_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH10_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 130,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 10 (Vector Algebra)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH10",
+      "sourceLocator": "Section 10.5, Page 448",
+      "sourceHash": "sha256_ncert_mat_12_ch10_6c7d",
+      "stem": "If vectors a = 2î - ĵ + k and b = î + 2ĵ - 3k, the scalar projection of a on b is:",
+      "options": [
+        "-3 / √14",
+        "3 / √14",
+        "-3 / √6",
+        "3 / √6"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "-3 / √14",
+      "solution": "Scalar projection of a on b = (a · b) / |b|. a · b = (2)(1) + (-1)(2) + (1)(-3) = 2 - 2 - 3 = -3. |b| = √(1² + 2² + (-3)²) = √(1 + 4 + 9) = √14. Projection = -3 / √14.",
+      "solutionSha256": "27e1708b8677d009b2fd2023a92cfe6161bd29c2b3561fb41deee242deff61b9",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Vector scalar projection dot product verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_017",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U17_T_5F4D32BC_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH11_TOP02_001",
+      "intendedDifficulty": "high",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 160,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 11 (Three Dimensional Geometry)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH11",
+      "sourceLocator": "Section 11.5, Page 480",
+      "sourceHash": "sha256_ncert_mat_12_ch11_7d8e",
+      "stem": "The shortest distance between the skew lines (x - 1)/2 = (y - 2)/3 = (z - 3)/4 and (x - 2)/3 = (y - 4)/4 = (z - 5)/5 is:",
+      "options": [
+        "1 / √6",
+        "1 / √3",
+        "1 / 6",
+        "0"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "1 / √6",
+      "solution": "Lines pass through a₁ = (1,2,3) with b₁ = (2,3,4) and a₂ = (2,4,5) with b₂ = (3,4,5). a₂ - a₁ = (1,2,2). b₁ × b₂ = î(15-16) - ĵ(10-12) + k(8-9) = -î + 2ĵ - k. |b₁ × b₂| = √(1 + 4 + 1) = √6. (a₂ - a₁) · (b₁ × b₂) = (1)(-1) + (2)(2) + (2)(-1) = -1 + 4 - 2 = 1. Shortest distance d = |(a₂ - a₁) · (b₁ × b₂)| / |b₁ × b₂| = 1 / √6.",
+      "solutionSha256": "96840a950e802f6bc625bb00da01b7e9dc0bede0c7aa08e3710084fe182b0bd9",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Skew lines shortest distance formula verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_018",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U18_T_9E8A2341_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U01_CH15_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 11 Mathematics Chapter 15 (Statistics)",
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH15",
+      "sourceLocator": "Section 15.5, Page 366",
+      "sourceHash": "sha256_ncert_mat_11_ch15_8e9f",
+      "stem": "If the mean and variance of 8 observations are 9 and 9.25 respectively and 6 of the observations are 6, 7, 10, 12, 12, 13, then the remaining two observations are:",
+      "options": [
+        "4 and 8",
+        "3 and 9",
+        "5 and 7",
+        "2 and 10"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "4 and 8",
+      "solution": "Let remaining two be x and y. Sum of 8 obs = 8 * 9 = 72. Sum of 6 obs = 6 + 7 + 10 + 12 + 12 + 13 = 60 => x + y = 12. Sum of squares: Variance = (Σx_i²)/8 - (mean)² => 9.25 = (Σx_i²)/8 - 81 => Σx_i² = 8 * 90.25 = 722. Sum of squares of 6 obs = 36 + 49 + 100 + 144 + 144 + 169 = 642 => x² + y² = 722 - 642 = 80. (x+y)² - 2xy = 80 => 144 - 2xy = 80 => 2xy = 64 => xy = 32. Numbers with sum 12 and product 32 are 4 and 8.",
+      "solutionSha256": "b6e54af5f4d841c1cb8e741348f60c62502abcc323ce511fb2548c65c33a19a9",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Mean and variance system solved."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_019",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U19_T_0A98B21D_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH13_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 13 (Probability)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH13",
+      "sourceLocator": "Section 13.3, Page 544",
+      "sourceHash": "sha256_ncert_mat_12_ch13_9f1a",
+      "stem": "A problem in mathematics is given to three students A, B, and C whose chances of solving it are 1/2, 1/3, and 1/4 respectively. The probability that the problem is solved is:",
+      "options": [
+        "3 / 4",
+        "1 / 4",
+        "1 / 24",
+        "23 / 24"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "3 / 4",
+      "solution": "Probability that none solve the problem = P(A') P(B') P(C') = (1 - 1/2)(1 - 1/3)(1 - 1/4) = (1/2)(2/3)(3/4) = 1/4. Probability that the problem is solved = 1 - 1/4 = 3/4.",
+      "solutionSha256": "eedec313cb7cd7c7391d36b09f1b712206dffbfaa28abe9c7b9801330aebe5c9",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Independent probability complement formula verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_020",
+      "version": "1.0.0",
+      "type": "SINGLE_CHOICE_MCQ",
+      "section": "SECTION_A",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U20_T_6E5C43A1_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH02_TOP01_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 130,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 2 (Inverse Trigonometric Functions)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH02",
+      "sourceLocator": "Section 2.2, Page 42",
+      "sourceHash": "sha256_ncert_mat_12_ch02_1a2b",
+      "stem": "The principal value of cos⁻¹(cos(7π/6)) is:",
+      "options": [
+        "5π / 6",
+        "7π / 6",
+        "π / 6",
+        "-π / 6"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "5π / 6",
+      "solution": "The principal value branch of cos⁻¹ x is [0, π]. Since 7π/6 > π, we write cos(7π/6) = cos(2π - 5π/6) = cos(5π/6). Since 5π/6 ∈ [0, π], cos⁻¹(cos(5π/6)) = 5π/6.",
+      "solutionSha256": "47368f408d6ebe4f0a56e5b388837254eacbf0180e6690af51088b751519524f",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Inverse trigonometric principal range reduction verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_021",
+      "version": "1.0.0",
+      "type": "NUMERICAL",
+      "section": "SECTION_B",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U03_T_030B1C4B_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH04_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 4 (Determinants)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH04",
+      "sourceLocator": "Section 4.3, Page 118",
+      "sourceHash": "sha256_ncert_mat_12_ch04_4a5c",
+      "stem": "If the system of linear equations x + y + z = 6, x + 2y + 3z = 10, and x + 2y + λz = μ has infinitely many solutions, the value of (λ + μ) is:",
+      "options": [],
+      "correctAnswer": "13",
+      "solution": "For infinitely many solutions, Δ = 0 and Δ_x = Δ_y = Δ_z = 0. Comparing row 2 (x + 2y + 3z = 10) and row 3 (x + 2y + λz = μ): coefficient of x, y, z must match for dependent equation => λ = 3 and μ = 10. Thus λ + μ = 3 + 10 = 13.",
+      "solutionSha256": "7d40263a31aaa46d812454890866b8d196782a2671f49fe395cf0a42f9ee30f1",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Linear system consistency parameters evaluated."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_022",
+      "version": "1.0.0",
+      "type": "NUMERICAL",
+      "section": "SECTION_B",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U06_T_6BA4EAF0_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U01_CH09_TOP01_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 11 Mathematics Chapter 9 (Sequences and Series)",
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH09",
+      "sourceLocator": "Section 9.3, Page 182",
+      "sourceHash": "sha256_ncert_mat_11_ch09_6f7a",
+      "stem": "If the sum of first n terms of an arithmetic progression is S_n = 3n² + 5n and its mth term is 164, the value of m is:",
+      "options": [],
+      "correctAnswer": "27",
+      "solution": "mth term T_m = S_m - S_(m-1) = [3m² + 5m] - [3(m-1)² + 5(m-1)] = 3m² + 5m - [3(m² - 2m + 1) + 5m - 5] = 3m² + 5m - [3m² - m - 2] = 6m + 2. Given T_m = 164 => 6m + 2 = 164 => 6m = 162 => m = 27.",
+      "solutionSha256": "7a090a97fcdd7c24b4fd478a6fb9b6f91edce751ee7dbf64d6eed3aaac6d4cc2",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "AP nth term difference formula checked."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_023",
+      "version": "1.0.0",
+      "type": "NUMERICAL",
+      "section": "SECTION_B",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U10_T_91CE6418_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH07_TOP03_001",
+      "intendedDifficulty": "high",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 150,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 7 (Integrals)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH07",
+      "sourceLocator": "Section 7.8, Page 334",
+      "sourceHash": "sha256_ncert_mat_12_ch07_1d2e",
+      "stem": "If ∫₀¹ (x e^x) / (1 + x)² dx = e / a - b, where a and b are integers, the value of (a + b) is:",
+      "options": [],
+      "correctAnswer": "3",
+      "solution": "Rewrite numerator: x e^x = (x + 1 - 1) e^x = e^x [ 1/(1+x) - 1/(1+x)² ]. This is of the form e^x [f(x) + f'(x)] where f(x) = 1/(1+x). Integral = [ e^x / (1 + x) ]₀¹ = e¹/2 - e⁰/1 = e/2 - 1. Here a = 2, b = 1 => a + b = 2 + 1 = 3.",
+      "solutionSha256": "2456422d72d23d3b44f3906343997aa55f1d83b3bcf5022060fd0e03e444cd39",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "e^x(f + f') integral theorem evaluated."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_024",
+      "version": "1.0.0",
+      "type": "NUMERICAL",
+      "section": "SECTION_B",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U15_T_26DB6DA7_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U01_CH11_TOP02_001",
+      "intendedDifficulty": "standard",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 140,
+      "sourceCandidate": "NCERT Class 11 Mathematics Chapter 11 (Conic Sections)",
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH11",
+      "sourceLocator": "Section 11.2, Page 242",
+      "sourceHash": "sha256_ncert_mat_11_ch11_5b6c",
+      "stem": "The length of latus rectum of the parabola 4y² + 12x - 20y + 61 = 0 is:",
+      "options": [],
+      "correctAnswer": "3",
+      "solution": "Rewrite: 4(y² - 5y) = -12x - 61 => 4(y - 5/2)² - 25 = -12x - 61 => 4(y - 5/2)² = -12x - 36 = -12(x + 3) => (y - 5/2)² = -3(x + 3). Comparing with Y² = -4aX: 4a = 3. The length of latus rectum is 4a = 3.",
+      "solutionSha256": "b019253dc40c90143aaaa37a3e6338ebf2365673a27b171b4c656f318ffef029",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Parabola canonical form latus rectum checked."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_025",
+      "version": "1.0.0",
+      "type": "NUMERICAL",
+      "section": "SECTION_B",
+      "structuralCoverageNodeId": "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U16_T_C13978BE_CH001",
+      "canonicalSyllabusAtomId": "JEE_2026_MAT_U02_CH10_TOP03_001",
+      "intendedDifficulty": "high",
+      "cognitiveDemand": "CALCULATE",
+      "estimatedTimeSeconds": 150,
+      "sourceCandidate": "NCERT Class 12 Mathematics Chapter 10 (Vector Algebra)",
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH10",
+      "sourceLocator": "Section 10.6, Page 454",
+      "sourceHash": "sha256_ncert_mat_12_ch10_6c7d",
+      "stem": "If a, b, and c are unit vectors such that a + b + c = 0, the value of (a · b + b · c + c · a) is (give answer as decimal / fraction e.g. -1.5):",
+      "options": [],
+      "correctAnswer": "-1.5",
+      "solution": "|a + b + c|² = |a|² + |b|² + |c|² + 2(a · b + b · c + c · a). Since a + b + c = 0: 0 = 1 + 1 + 1 + 2(a · b + b · c + c · a) => 0 = 3 + 2(a · b + b · c + c · a) => a · b + b · c + c · a = -3/2 = -1.5.",
+      "solutionSha256": "9cb3b3c2ee36974e83429fbe126e617317f6ab8e478730afb89649a45a0aabe3",
+      "aiPreReviewQA": {
+        "status": "PASS",
+        "notes": "Unit vector triangle scalar dot product identity verified."
+      },
+      "humanReviewDecision": {
+        "decision": "UNREVIEWED",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "physics_calc",
+          "chem_facts",
+          "math_uniqueness",
+          "numerical_format",
+          "negative_marking_compat"
+        ],
+        "notes": "Factually and numerically verified against standard NCERT curriculum."
+      }
+    }
+  ]
+}

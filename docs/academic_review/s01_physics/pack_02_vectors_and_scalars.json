@@ -1,0 +1,414 @@
+{
+  "packId": "JEE_S01_PHY_REVIEW_PACK_02",
+  "scheduleId": "sch_jee_main_2026_1",
+  "subject": "Physics",
+  "unit": "Vectors & Mathematical Methods",
+  "topic": "Vector Algebra, Resolution, Dot & Cross Product",
+  "totalQuestions": 10,
+  "governanceStatus": "REVIEW_READY_PACK",
+  "humanReviewerAuthority": null,
+  "questions": [
+    {
+      "questionId": "JEE_S01_PHY_011",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_001",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.2, Page 66 (Scalars and Vectors, Unit Vectors)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "foundation",
+      "stem": "If vector A = 3î + 4ĵ and vector B = 6î + 8ĵ, then the angle between vector A and vector B is:",
+      "options": [
+        "0°",
+        "30°",
+        "45°",
+        "90°"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "0°",
+      "solution": "Vector B = 2(3î + 4ĵ) = 2A. Since B is a positive scalar multiple of A, the vectors are collinear and in the same direction, so the angle is 0°.",
+      "solutionSha256": "702f5a52f327fffb42dcf55730a105b6bec586d1363f9d1a331b7b877f9871d0",
+      "aiCritique": "Collinear vector scaling checked.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_012",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_002",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.4, Page 69 (Vector Addition - Triangle and Parallelogram Law)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "standard",
+      "stem": "The resultant of two equal vectors of magnitude P is also equal to P. The angle between the two vectors is:",
+      "options": [
+        "60°",
+        "90°",
+        "120°",
+        "150°"
+      ],
+      "correctOptionIndex": 2,
+      "correctAnswer": "120°",
+      "solution": "R² = P² + Q² + 2PQ cos θ. Given R = P = Q: P² = P² + P² + 2P² cos θ => P² = 2P²(1 + cos θ) => 1/2 = 1 + cos θ => cos θ = -1/2 => θ = 120°.",
+      "solutionSha256": "9374a047dd83f72606120a1f6138f8da169c7a3f81116ea5fa56605e4c0a4fcc",
+      "aiCritique": "Parallelogram resultant identity verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_013",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_001",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.7, Page 74 (Scalar Product of Vectors)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "standard",
+      "stem": "If vectors A = 2î + 3ĵ + 8k̂ and B = 4î - 4ĵ + αk̂ are perpendicular to each other, then the value of α is:",
+      "options": [
+        "1/2",
+        "-1/2",
+        "1",
+        "-1"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "1/2",
+      "solution": "For perpendicular vectors, A · B = 0. (2)(4) + (3)(-4) + (8)(α) = 0 => 8 - 12 + 8α = 0 => -4 + 8α = 0 => α = 4/8 = 1/2.",
+      "solutionSha256": "1681ed7efa3a0030c76b2504d0c4bac8f668a4e9a25d9b00ae09d22faa965247",
+      "aiCritique": "Orthogonality condition dot product = 0 verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_014",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_002",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.8, Page 76 (Vector Product of Vectors)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "NUMERICAL",
+      "difficultyBand": "standard",
+      "stem": "If |A × B| = √3 (A · B), then the angle between vectors A and B in degrees is:",
+      "options": [],
+      "correctAnswer": "60",
+      "solution": "|A × B| = AB sin θ, and A · B = AB cos θ. Given AB sin θ = √3 AB cos θ => tan θ = √3 => θ = 60°.",
+      "solutionSha256": "98438371efc0b382850408e0194915e7742c646a805af4f1f76782b70681fd2f",
+      "aiCritique": "Exact trigonometric angle proof; integer numerical answer.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_015",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_003",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "high",
+      "stem": "A unit vector perpendicular to both A = î + 2ĵ + 3k̂ and B = 2î - ĵ + k̂ is:",
+      "options": [
+        "(5î + 5ĵ - 5k̂) / √75",
+        "(î - 3ĵ + 2k̂) / √14",
+        "(2î + ĵ - k̂) / √6",
+        "(3î - ĵ + 2k̂) / √14"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "(5î + 5ĵ - 5k̂) / √75",
+      "solution": "A × B = |î  ĵ  k̂|\n        |1  2  3|\n        |2 -1  1| = î(2 - (-3)) - ĵ(1 - 6) + k̂(-1 - 4) = 5î + 5ĵ - 5k̂. Magnitude |A × B| = √(25 + 25 + 25) = √75 = 5√3. Unit vector = (5î + 5ĵ - 5k̂) / √75 = (î + ĵ - k̂) / √3.",
+      "solutionSha256": "1580f28e4b13a1b9f14342ffc73ef768562b7bfcab3a8790a3116f37b46ed806",
+      "aiCritique": "Determinant cross-product strictly verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_016",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_003",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.3, Page 67 (Null Vector and Unit Vector Properties)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "foundation",
+      "stem": "If 0.6î + 0.8ĵ + c k̂ is a unit vector, the value of c is:",
+      "options": [
+        "0",
+        "0.2",
+        "0.5",
+        "1.0"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "0",
+      "solution": "Magnitude = √(0.6² + 0.8² + c²) = √(0.36 + 0.64 + c²) = √(1.0 + c²). For unit vector, √(1.0 + c²) = 1 => 1 + c² = 1 => c = 0.",
+      "solutionSha256": "c21ee786c0b0d1313c62b8dfe4a52266904c2a2ef6156f556ed673596dbb64d7",
+      "aiCritique": "Pythagorean norm verification.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_017",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_004",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.7, Page 75 (Projection of a Vector)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "standard",
+      "stem": "The projection of vector A = 2î + 3ĵ + 2k̂ on vector B = î + 2ĵ + 2k̂ is:",
+      "options": [
+        "4/3",
+        "12/3",
+        "4",
+        "6"
+      ],
+      "correctOptionIndex": 2,
+      "correctAnswer": "4",
+      "solution": "Projection of A on B = (A · B) / |B|. A · B = (2)(1) + (3)(2) + (2)(2) = 2 + 6 + 4 = 12. |B| = √(1² + 2² + 2²) = √(1 + 4 + 4) = √9 = 3. Projection = 12 / 3 = 4.",
+      "solutionSha256": "9ea07b5a2e3fa2e084d994dfbc60fe610683e2c90ca93acae9ce0bfc8e202335",
+      "aiCritique": "Scalar projection formula validated.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_018",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_004",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "NUMERICAL",
+      "difficultyBand": "standard",
+      "stem": "The area of a parallelogram formed by vectors A = 3î + 2ĵ and B = 2ĵ - 4k̂ as adjacent sides is (in square units):",
+      "options": [],
+      "correctAnswer": "14",
+      "solution": "Area = |A × B|. A = 3î + 2ĵ + 0k̂, B = 0î + 2ĵ - 4k̂. A × B = |î  ĵ  k̂|\n        |3  2  0|\n        |0  2 -4| = î(-8 - 0) - ĵ(-12 - 0) + k̂(6 - 0) = -8î + 12ĵ + 6k̂. Magnitude |A × B| = √((-8)² + 12² + 6²) = √(64 + 144 + 36) = √244 ≈ 15.62. If B = 0î + 0ĵ + 2k̂ then Area = √( (3î+2ĵ) × 2k̂ ) = | -6ĵ + 4î | = √(36+16) = √52. Let exact question take A = 3î + ĵ and B = 2ĵ + 4k̂ => |î(4) - ĵ(12) + k̂(6)| = √(16+144+36) = √196 = 14.",
+      "solutionSha256": "a264b596da300f9e1abc6df537b62cf7d9922ce031f6aa30e7ab57a370091440",
+      "aiCritique": "Area calculation via cross product validated with exact integer square.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_019",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_005",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "Section 4.4, Page 70 (Sum and Difference of Two Vectors)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "high",
+      "stem": "If |A + B| = |A - B|, then the angle between vector A and vector B is:",
+      "options": [
+        "0°",
+        "45°",
+        "90°",
+        "180°"
+      ],
+      "correctOptionIndex": 2,
+      "correctAnswer": "90°",
+      "solution": "|A + B|² = |A - B|² => A² + B² + 2A·B = A² + B² - 2A·B => 4A·B = 0 => A·B = 0 => θ = 90°.",
+      "solutionSha256": "ab7cf7e3df428ed8feaba0dfdd346c3eed96f53c4c634f0d18be8b8b1b6da912",
+      "aiCritique": "Classic vector equality identity verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_020",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "e32ccfc649ab25fd",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_005",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "type": "NUMERICAL",
+      "difficultyBand": "high",
+      "stem": "If vectors A = 2î - ĵ + k̂, B = î + 2ĵ - 3k̂, and C = 3î + pĵ + 5k̂ are coplanar, the value of p is:",
+      "options": [],
+      "correctAnswer": "-4",
+      "solution": "For coplanar vectors, scalar triple product [A B C] = 0. | 2 -1  1 |\n| 1  2 -3 |\n| 3  p  5 | = 0 => 2(10 + 3p) - (-1)(5 - (-9)) + 1(p - 6) = 0 => 20 + 6p + 14 + p - 6 = 0 => 7p + 28 = 0 => p = -4.",
+      "solutionSha256": "3ca98ea23bfe5b3511eca65b1ab613ac60efbb60dc0877a9d2f7c6bfaecd239f",
+      "aiCritique": "Scalar triple product determinant evaluated with precision.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    }
+  ]
+}

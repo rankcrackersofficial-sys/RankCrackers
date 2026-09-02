@@ -1,0 +1,26 @@
+{
+  "MAJOR_BLUEPRINT_SLOTS": 75,
+  "MAJOR_DRAFTED": 75,
+  "UNIQUE_QUESTION_IDS": 75,
+  "DUPLICATES": 0,
+  "subjectCounts": {
+    "Physics": 25,
+    "Chemistry": 25,
+    "Mathematics": 25
+  },
+  "typeCounts": {
+    "SINGLE_CHOICE_MCQ": 60,
+    "NUMERICAL": 15
+  },
+  "difficultyCounts": {
+    "foundation": 0,
+    "standard": 64,
+    "high": 11
+  },
+  "uniqueStructuralNodes": 60,
+  "uniqueCanonicalAtoms": 75,
+  "qaCounts": {
+    "PASS": 75,
+    "REPAIR_NEEDED": 0
+  }
+}

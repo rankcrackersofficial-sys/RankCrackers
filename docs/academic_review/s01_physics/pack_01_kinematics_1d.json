@@ -1,0 +1,414 @@
+{
+  "packId": "JEE_S01_PHY_REVIEW_PACK_01",
+  "scheduleId": "sch_jee_main_2026_1",
+  "subject": "Physics",
+  "unit": "Kinematics",
+  "topic": "Motion in a Straight Line (1D Motion & Uniform Acceleration)",
+  "totalQuestions": 10,
+  "governanceStatus": "REVIEW_READY_PACK",
+  "humanReviewerAuthority": null,
+  "questions": [
+    {
+      "questionId": "JEE_S01_PHY_001",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "38ddd2c9270afee0",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP01_001",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "Section 3.3, Page 41 (Kinematic Equations for Uniformly Accelerated Motion)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "foundation",
+      "stem": "A particle starts from rest and moves along a straight line with a constant acceleration of 4 m/s². The distance traveled by the particle during the 3rd second of its motion is:",
+      "options": [
+        "10 m",
+        "12 m",
+        "14 m",
+        "16 m"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "10 m",
+      "solution": "Distance in nth second: S_n = u + (a/2)(2n - 1). Here u = 0, a = 4 m/s², n = 3. S_3 = 0 + (4/2)(2(3) - 1) = 2 * 5 = 10 m.",
+      "solutionSha256": "b9913a9302b8d179ca749814a67d66f1b6320c8c171018873cfb104351394cac",
+      "aiCritique": "Dimensions verified. Standard kinematic formula strictly grounded in NCERT Ch 3.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_002",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "38ddd2c9270afee0",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP01_002",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "Section 3.4, Page 45 (Free Fall Motion)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "foundation",
+      "stem": "A stone is dropped from a balloon rising upwards with a constant velocity of 10 m/s. If the balloon is at a height of 40 m from the ground when the stone is dropped, the time taken by the stone to reach the ground is (g = 10 m/s²):",
+      "options": [
+        "2 s",
+        "4 s",
+        "6 s",
+        "8 s"
+      ],
+      "correctOptionIndex": 1,
+      "correctAnswer": "4 s",
+      "solution": "Initial velocity of stone u = +10 m/s (upward). Acceleration a = -g = -10 m/s². Displacement s = -40 m. Using s = ut + (1/2)at²: -40 = 10t - 5t² => 5t² - 10t - 40 = 0 => t² - 2t - 8 = 0 => (t - 4)(t + 2) = 0. Since t > 0, t = 4 s.",
+      "solutionSha256": "fd63f9f26a1c3d198d0554ddfa9fdaa0b397c4ae78edefeb77c26af6358f9f99",
+      "aiCritique": "Standard sign convention verified. Roots cleanly checked.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_003",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "38ddd2c9270afee0",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP02_001",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "Section 3.2, Page 39 (Instantaneous Velocity and Acceleration)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "standard",
+      "stem": "The position of a body moving along the x-axis is given by x(t) = 2t³ - 9t² + 12t + 5 (in meters). The acceleration of the body when its velocity is momentarily zero is:",
+      "options": [
+        "±6 m/s²",
+        "±12 m/s²",
+        "-6 m/s² and +6 m/s²",
+        "-12 m/s² and +12 m/s²"
+      ],
+      "correctOptionIndex": 2,
+      "correctAnswer": "-6 m/s² and +6 m/s²",
+      "solution": "Velocity v = dx/dt = 6t² - 18t + 12 = 6(t - 1)(t - 2). v = 0 at t = 1 s and t = 2 s. Acceleration a = dv/dt = 12t - 18. At t = 1 s, a = 12(1) - 18 = -6 m/s². At t = 2 s, a = 12(2) - 18 = +6 m/s².",
+      "solutionSha256": "bd49f7b66cbe1c95e8979369a780a3eb0aa80d9fcbb5e026279c94491002c349",
+      "aiCritique": "Calculus derivatives strictly verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_004",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "38ddd2c9270afee0",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP02_002",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "Section 3.3, Page 43 (Stopping Distance of Vehicles)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "standard",
+      "stem": "A car moving at speed v is stopped by a constant braking force in distance d. If the speed is doubled to 2v while the same braking force is applied, the stopping distance becomes:",
+      "options": [
+        "2d",
+        "3d",
+        "4d",
+        "8d"
+      ],
+      "correctOptionIndex": 2,
+      "correctAnswer": "4d",
+      "solution": "Using v² = u² + 2as with final velocity 0: 0 = u² - 2ad => d = u² / (2a). For u' = 2u, d' = (2u)² / (2a) = 4 * (u² / 2a) = 4d.",
+      "solutionSha256": "672f38e93b63f66081908954edb438aca003c3510f7d431d12bdca7ea7e528f8",
+      "aiCritique": "Standard proportional scaling item directly testing kinetic energy / work relation.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_005",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "38ddd2c9270afee0",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP01_003",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "Section 3.2, Page 38 (Position-Time Graphs)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "NUMERICAL",
+      "difficultyBand": "standard",
+      "stem": "A body moves in a straight line such that its velocity is given by v = √(4s + 16) where s is displacement in meters. The acceleration of the body in m/s² is:",
+      "options": [],
+      "correctAnswer": "2",
+      "solution": "v² = 4s + 16. Differentiating with respect to s: 2v(dv/ds) = 4 => v(dv/ds) = 2. Since acceleration a = v(dv/ds), we get a = 2 m/s².",
+      "solutionSha256": "4a819a23c108be4daa74eb71e1f3cc4c80b0d463e7b0bf6dd498053cd6a7e5b1",
+      "aiCritique": "Direct differential chain rule proof; integer numerical answer.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_006",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "38ddd2c9270afee0",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP03_001",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "Section 3.4, Page 47 (Galileo's Law of Odd Numbers)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "foundation",
+      "stem": "A particle drops freely under gravity from rest. The ratio of distances traveled by the particle in the 1st, 2nd, and 3rd seconds of its fall is:",
+      "options": [
+        "1 : 2 : 3",
+        "1 : 4 : 9",
+        "1 : 3 : 5",
+        "1 : 1 : 1"
+      ],
+      "correctOptionIndex": 2,
+      "correctAnswer": "1 : 3 : 5",
+      "solution": "By Galileo's law of odd numbers, for motion from rest under constant acceleration, distances in successive equal intervals of time follow ratio 1 : 3 : 5 : 7...",
+      "solutionSha256": "0ef5f763d3426685f4bfea3e56cc68d787be92211fb46970d0cfc3fd49d04044",
+      "aiCritique": "Galileo odd number theorem standard conceptual item.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_007",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "38ddd2c9270afee0",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP02_003",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "high",
+      "stem": "A bullet fired into a wooden block loses half of its velocity after penetrating 3 cm. Assuming constant resistance force, the additional distance it will penetrate before coming to rest is:",
+      "options": [
+        "1 cm",
+        "2 cm",
+        "3 cm",
+        "4 cm"
+      ],
+      "correctOptionIndex": 0,
+      "correctAnswer": "1 cm",
+      "solution": "Let initial velocity be u. After penetrating s1 = 3 cm, v = u/2. Using v² = u² - 2as: (u/2)² = u² - 2a(3) => u²/4 = u² - 6a => 6a = 3u²/4 => 2a = u²/4. For total penetration s until v = 0: 0 = u² - 2as => s = u² / (2a) = 4 cm. Additional distance = s - s1 = 4 cm - 3 cm = 1 cm.",
+      "solutionSha256": "38b0cda6920980c5127f9cd7125a56bb263781f2613ff0a86a3cf22cab39cc4b",
+      "aiCritique": "Standard JEE Main high-yield model item verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_008",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "38ddd2c9270afee0",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP01_004",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "Section 3.1, Page 37 (Average vs Instantaneous Speed)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "SINGLE_CHOICE_MCQ",
+      "difficultyBand": "foundation",
+      "stem": "A vehicle travels half of the total distance with speed v₁ and the remaining half with speed v₂. The average speed of the vehicle for the entire journey is:",
+      "options": [
+        "(v₁ + v₂) / 2",
+        "2v₁v₂ / (v₁ + v₂)",
+        "√(v₁v₂)",
+        "v₁v₂ / (v₁ + v₂)"
+      ],
+      "correctOptionIndex": 1,
+      "correctAnswer": "2v₁v₂ / (v₁ + v₂)",
+      "solution": "Total distance = 2d. Time for first half = d/v₁, for second half = d/v₂. Total time T = d(1/v₁ + 1/v₂) = d(v₁ + v₂)/(v₁v₂). Average speed = Total Distance / Total Time = 2d / [d(v₁ + v₂)/(v₁v₂)] = 2v₁v₂ / (v₁ + v₂).",
+      "solutionSha256": "cf9344820a3a3392068be4bd988bef49d1b67c396ce1afb20a54562afdb1fbba",
+      "aiCritique": "Harmonic mean distance formula verified.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_009",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "38ddd2c9270afee0",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP02_004",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "Section 3.2, Page 40 (Acceleration from Velocity-Time Area)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "NUMERICAL",
+      "difficultyBand": "standard",
+      "stem": "A particle moves with an acceleration a = 3t² + 2t (in m/s²). If its initial velocity at t = 0 is 2 m/s, the velocity of the particle at t = 2 s is (in m/s):",
+      "options": [],
+      "correctAnswer": "14",
+      "solution": "v(t) = v(0) + ∫ a dt = 2 + ∫₀² (3t² + 2t) dt = 2 + [t³ + t²]₀² = 2 + (8 + 4) = 14 m/s.",
+      "solutionSha256": "9589052720144a1b39f569d3c476342f6471d812c784117aee66878e60f4b7d7",
+      "aiCritique": "Exact polynomial integration checked.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    },
+    {
+      "questionId": "JEE_S01_PHY_010",
+      "questionVersion": "1.0.0",
+      "structuralCoverageNodeId": "38ddd2c9270afee0",
+      "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP03_002",
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "type": "NUMERICAL",
+      "difficultyBand": "high",
+      "stem": "A juggler throws balls into air vertically upward at regular intervals of 1 second. Each ball rises to a maximum height of 20 m. The number of balls in the air simultaneously at any instant (excluding the moments of throwing and catching) is (g = 10 m/s²):",
+      "options": [],
+      "correctAnswer": "3",
+      "solution": "For maximum height H = 20 m: u = √(2gH) = √(2 * 10 * 20) = 20 m/s. Total time of flight T = 2u/g = (2 * 20) / 10 = 4 s. Since balls are thrown every 1 s, balls are in air at t = 1 s, 2 s, 3 s (3 balls in air at any given instant).",
+      "solutionSha256": "845425b96f96aab9c041709680f9c2c571019349095dc3fc4745546974526218",
+      "aiCritique": "Boundary condition at release/catch strictly evaluated.",
+      "conflictFlags": [],
+      "humanReviewDecision": {
+        "status": "PENDING_HUMAN_SIGN_OFF",
+        "reviewerAuthorityId": null,
+        "signedAtUtc": null,
+        "decision": "UNREVIEWED"
+      },
+      "secondPassQA": {
+        "status": "PASS",
+        "adversarialCheckedAt": "2026-09-02T17:35:00Z",
+        "verifiedDimensions": [
+          "units",
+          "signs",
+          "precision",
+          "unambiguity",
+          "scope"
+        ],
+        "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "eventAuthorityName": "JEE_MAIN_2027_ALL_INDIA_MAJOR_01_REVIEW_MANIFEST",
+  "version": "1.0.0",
+  "examContractAuthority": "NTA_JEE_MAIN_2026_PROVISIONAL_BASELINE",
+  "targetExamYear": 2027,
+  "canonicalMissionId": "jee_main_2026",
+  "recruitmentId": "jee_main_2027",
+  "eventDurationMinutes": 180,
+  "totalMarks": 300,
+  "totalBlueprintSlots": 75,
+  "actualDraftedQuestions": 75,
+  "scoringScheme": {
+    "correctMarks": 4,
+    "incorrectMarks": -1,
+    "unansweredMarks": 0,
+    "numericalNegativeActive": true
+  },
+  "sections": [
+    {
+      "subject": "Physics",
+      "sectionA_MCQCount": 20,
+      "sectionB_NumericalCount": 5,
+      "totalQuestions": 25,
+      "maxMarks": 100,
+      "draftFile": "major_01_physics.json",
+      "draftedCount": 25,
+      "aiPreReviewPassedCount": 25,
+      "reviewStatus": "REVIEW_READY"
+    },
+    {
+      "subject": "Chemistry",
+      "sectionA_MCQCount": 20,
+      "sectionB_NumericalCount": 5,
+      "totalQuestions": 25,
+      "maxMarks": 100,
+      "draftFile": "major_01_chemistry.json",
+      "draftedCount": 25,
+      "aiPreReviewPassedCount": 25,
+      "reviewStatus": "REVIEW_READY"
+    },
+    {
+      "subject": "Mathematics",
+      "sectionA_MCQCount": 20,
+      "sectionB_NumericalCount": 5,
+      "totalQuestions": 25,
+      "maxMarks": 100,
+      "draftFile": "major_01_mathematics.json",
+      "draftedCount": 25,
+      "aiPreReviewPassedCount": 25,
+      "reviewStatus": "REVIEW_READY"
+    }
+  ],
+  "governanceStatus": "REVIEW_READY_PACK",
+  "humanReviewerAuthority": null,
+  "proReviewedCount": 0,
+  "keyVerifiedCount": 0,
+  "solutionVerifiedCount": 0,
+  "publicationApprovedCount": 0,
+  "safeMaterializedCount": 0,
+  "productionEligibleCount": 0,
+  "majorBankReady": false
+}
