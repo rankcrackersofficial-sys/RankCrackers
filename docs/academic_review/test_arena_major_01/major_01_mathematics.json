@@ -57,7 +57,8 @@
       "draftSha256": "c4e963fdb8ec4a02c1467954bf2645a2a03ecf88c24e7b83278984182c2e4fd1",
       "sourceSha256": "e9caef27a643c1fed7545e11dcb6de19dfe7f58909e93c5c56b736182aefe43b",
       "difficulty": "FOUNDATION",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_002",
@@ -108,7 +109,8 @@
       "draftSha256": "31d5a2efa4f99d8915408b14c9b698f44062142798bed195af51ab9b1c985b42",
       "sourceSha256": "a66cd54a5edeed0597da6eaa342adb8d24ee675ebece93b163a7fb23ad3215fe",
       "difficulty": "FOUNDATION",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_003",
@@ -159,7 +161,8 @@
       "draftSha256": "9b10b4597f66b0a36795473ace0e84bcaf3a2955b9fdfb4e385aff2b85e0dad2",
       "sourceSha256": "74350b32a743a9eb89be426061695afe2fc2d0555cf83f42c7024b6359ac60ff",
       "difficulty": "FOUNDATION",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_004",
@@ -210,7 +213,8 @@
       "draftSha256": "cb6e0a25b21cbc066a2e44a19930db5f556246d8c457dfe4f1602d88cb332bf9",
       "sourceSha256": "56fb3a5e13187c32a9fcf56d767791c4bc5c950c5156aebf82223e7ac1c2d93b",
       "difficulty": "FOUNDATION",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_005",
@@ -261,7 +265,8 @@
       "draftSha256": "c3705b2fb4dd0f2607a0dd7941391d6bd44edc3c4b7f2a27595624f359834c42",
       "sourceSha256": "e1b0a08c55d42bee6dda8cb80fe3b31094193e3c1d6e47ac0b1385b228dd761e",
       "difficulty": "FOUNDATION",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_006",
@@ -312,7 +317,8 @@
       "draftSha256": "6b067d0062a1ffdddcaca242e7dc416382ae30b57c3fa82303cd9a818866675c",
       "sourceSha256": "6aeafb4c3ec21d68ebe9c578c24d09611cd605101ce6fa1fe0e8d63d59311dee",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_007",
@@ -363,7 +369,8 @@
       "draftSha256": "6f2ef1ecfd4910295b321b44b4936299f9856aa32406a3c600a4a768310eb302",
       "sourceSha256": "b206801280419d8e0d340940940962e93683581010b92feafc952336cdba1e44",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_008",
@@ -414,7 +421,8 @@
       "draftSha256": "6d0a3c97a04dcab120fa2cd758a3ac442176c7b76a8951fc5486bf19ced3a1c6",
       "sourceSha256": "5727e95217dedb89c9a29c13f254a2cc3ac2ecdf7fe721865ff1d18b1d314cca",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_009",
@@ -465,7 +473,8 @@
       "draftSha256": "77d95a84345a97358b194c47ec14a63a8c5b48c2952c6ca38aa10b018f136c76",
       "sourceSha256": "ab1c5037b91514485a1809cd4adabab57605c3ad6ada1241ebbe8188cf61d0ff",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_010",
@@ -516,7 +525,8 @@
       "draftSha256": "34b7990f1823d3db378a76b5f8052f66a61074df847da6dc873796d149229230",
       "sourceSha256": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_011",
@@ -567,7 +577,8 @@
       "draftSha256": "c812c0f06c12ebbfa3cc64ca353c4086dfc6e537e9c4dba9ae8d92bb1b87ad95",
       "sourceSha256": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_012",
@@ -618,7 +629,8 @@
       "draftSha256": "f1db355f2decf5457c165bf82d983047143b683ba763059b4767a1aee92a6ded",
       "sourceSha256": "e1f3495d3af5979938bace0f2e6f4d353d614a795a93ed7da933b4b75941064a",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_013",
@@ -669,7 +681,8 @@
       "draftSha256": "8d9ceee9b14897d4f51a6032d66c526e008ec2ccd3901dbc178a2b50cd7aafe4",
       "sourceSha256": "24ff710fdf5ceaa6f4145e1db54475d760e499fcb072bd8ea867bae425707076",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_014",
@@ -720,7 +733,8 @@
       "draftSha256": "6e1dbcdbf74fd84d497f8c02c263ddd81ed5fe74289d36a43417aa3157bd62ae",
       "sourceSha256": "69e1b1cb74424986367e9de99b817118548d10941f321462ab5ccfbd01f01699",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_015",
@@ -771,7 +785,8 @@
       "draftSha256": "838254a18ca14c655da79c4732919f2625307628b23b50b466055fa82300aee3",
       "sourceSha256": "0f1acb2a502224c1c6b3bde22ab36f79eefcee0a19b2503098eb0716cb486607",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_016",
@@ -822,7 +837,8 @@
       "draftSha256": "166493c8ef15775728b78d2dcb868228c1246ecd6aba9c0c068adf52a56f03f3",
       "sourceSha256": "9682d28114ce12ad50cc830e56e5de61160fd2f973c1aa185ade8deaf95172dc",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_017",
@@ -873,7 +889,8 @@
       "draftSha256": "bde39664cc161707d4ea52bd17d5a95568afc474fee62053cf27c22fa46c586f",
       "sourceSha256": "4f3badf41cc6a0903ff4354e4db893691c039ffeba087d4bbe806187febc9a86",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_018",
@@ -924,7 +941,8 @@
       "draftSha256": "6bc2123309514e7f6a538e7f0461581ea307836ced3428ea07ea5c2e8a38adee",
       "sourceSha256": "b17ea6b0dd67d26ccd15d2f63772806b6b960275bf0b8209a0dba28cc4e4afe1",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_019",
@@ -975,7 +993,8 @@
       "draftSha256": "25fc5cd132f2f21c0d15bc01a1873ee56a07cea555bc5fbd7b39f012b796dee9",
       "sourceSha256": "0e8f2c7ccee85a84cd3b408b29c9edd94ef140b30faa4b781a834cf07ff0c60e",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_020",
@@ -1026,7 +1045,8 @@
       "draftSha256": "73a3576857bd395b24abd0675a6b8d1f6ffda095b95d3aa00c238593ff332b94",
       "sourceSha256": "6b60091eaef524f70b4afe3eec1a1b258f47dabe4796b6aa5cf3b47bc90e16bf",
       "difficulty": "STANDARD",
-      "difficultyEvidenceType": "PYQ_ANALOGUE"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_021",
@@ -1071,7 +1091,8 @@
       "draftSha256": "078ab3b8e57f69bb4218854fa2f09f635d743ac2779114c0be41dc53bf43ea8b",
       "sourceSha256": "b61e99b8ae6c4028ef3ece5229062de90772a2788716fe73eabc9df4c6ff4fe4",
       "difficulty": "HIGH_JEE_MAIN",
-      "difficultyEvidenceType": "SME_JUDGMENT"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_022",
@@ -1116,7 +1137,8 @@
       "draftSha256": "5f1a3cc8e262b95ad75039585ca5eb6141cf5e21481db024edf579f22093917e",
       "sourceSha256": "6aeafb4c3ec21d68ebe9c578c24d09611cd605101ce6fa1fe0e8d63d59311dee",
       "difficulty": "HIGH_JEE_MAIN",
-      "difficultyEvidenceType": "SME_JUDGMENT"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_023",
@@ -1161,7 +1183,8 @@
       "draftSha256": "8b09dda9faf460b5e4de976348b34cc4c3b1975ad0e16e941dcd0a81ec87c78a",
       "sourceSha256": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
       "difficulty": "HIGH_JEE_MAIN",
-      "difficultyEvidenceType": "SME_JUDGMENT"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_024",
@@ -1206,7 +1229,8 @@
       "draftSha256": "1c12fa1b73b515307abb22594393a48e2c9c830adc0bd10663399003f5d5aff3",
       "sourceSha256": "0f1acb2a502224c1c6b3bde22ab36f79eefcee0a19b2503098eb0716cb486607",
       "difficulty": "HIGH_JEE_MAIN",
-      "difficultyEvidenceType": "SME_JUDGMENT"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_025",
@@ -1251,7 +1275,8 @@
       "draftSha256": "f68d12250b929d26bfb4d08f76c72a09e22018bb7abc03b8404119c45603f8ba",
       "sourceSha256": "9682d28114ce12ad50cc830e56e5de61160fd2f973c1aa185ade8deaf95172dc",
       "difficulty": "HIGH_JEE_MAIN",
-      "difficultyEvidenceType": "SME_JUDGMENT"
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_TAXONOMY_ESTIMATE"
     }
   ]
 }

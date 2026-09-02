@@ -50,7 +50,9 @@
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
       "draftSha256": "53a0b43ef898334af7aa9174388839865e81f627aeffec909c9a6fea4b7272da",
-      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_STANDARD_TAXONOMY"
     },
     {
       "questionId": "JEE_S01_PHY_012",
@@ -94,7 +96,9 @@
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
       "draftSha256": "693fc6949f7bc8fac76dd94c98e44d73da950ed48ae0553b4d74ad4b0fa544c1",
-      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_STANDARD_TAXONOMY"
     },
     {
       "questionId": "JEE_S01_PHY_013",
@@ -152,7 +156,9 @@
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
       ],
-      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_STANDARD_TAXONOMY"
     },
     {
       "questionId": "JEE_S01_PHY_014",
@@ -204,7 +210,9 @@
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
       ],
-      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_STANDARD_TAXONOMY"
     },
     {
       "questionId": "JEE_S01_PHY_015",
@@ -262,7 +270,9 @@
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
       ],
-      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_STANDARD_TAXONOMY"
     },
     {
       "questionId": "JEE_S01_PHY_016",
@@ -306,7 +316,9 @@
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
       "draftSha256": "cd78f09085524e9fa3354377f9e27742be0647235f576fcb72b709d49266f124",
-      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_STANDARD_TAXONOMY"
     },
     {
       "questionId": "JEE_S01_PHY_017",
@@ -350,7 +362,9 @@
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
       "draftSha256": "a27718d91dbb24eb5c7b69062eae0e04167634556f243fd231cfef833c80848b",
-      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_STANDARD_TAXONOMY"
     },
     {
       "questionId": "JEE_S01_PHY_018",
@@ -402,7 +416,9 @@
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
       ],
-      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_STANDARD_TAXONOMY"
     },
     {
       "questionId": "JEE_S01_PHY_019",
@@ -460,7 +476,9 @@
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
       ],
-      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_STANDARD_TAXONOMY"
     },
     {
       "questionId": "JEE_S01_PHY_020",
@@ -498,7 +516,9 @@
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
       "draftSha256": "7e9868a3549ade65a8d54131a3851b836ec2fa2e87a7de0b2b3572da70f5cd12",
-      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "difficultyEvidenceType": "AI_PRECALIBRATION",
+      "difficultyAuthorityRef": "AI_PRECALIBRATION_STANDARD_TAXONOMY"
     }
   ]
 }

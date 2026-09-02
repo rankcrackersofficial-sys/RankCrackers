@@ -1,0 +1,89 @@
+{
+  "version": "1.0.0",
+  "title": "JEE Main 2026/2027 Assessment Factory S07-S12 Pipeline Manifest",
+  "createdAtUtc": "2026-09-02T12:48:35.959Z",
+  "governanceStatus": "PARALLEL_DRAFTS_REVIEW_READY",
+  "invariants": {
+    "SYNTHETIC_HUMAN_REVIEW_AUTHORITIES": 0,
+    "AUTOMATIC_PRO_TO_KEY_PROMOTION": 0,
+    "AUTOMATIC_PRO_TO_SOLUTION_PROMOTION": 0,
+    "AUTOMATIC_PRO_TO_PUBLICATION_PROMOTION": 0,
+    "LIVE_AI_DIRECT_TO_STUDENT": 0
+  },
+  "schedules": [
+    {
+      "scheduleId": "sch_jee_main_2026_7",
+      "scheduleName": "Schedule 07 (Thermodynamics)",
+      "draftCount": 50,
+      "sourceResolved": 50,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH11",
+      "sourceSha256": "3b86ad151c62f2eca08d3d4c1430a0c60f4c6159eecaa9eb8caa1dc6aff57521",
+      "reviewPackFile": "s07_physics_50q_review_pack.json",
+      "proReviewedCount": 0,
+      "productionEligibleCount": 0,
+      "academicStatus": "REVIEW_READY_PENDING_HUMAN_SME"
+    },
+    {
+      "scheduleId": "sch_jee_main_2026_8",
+      "scheduleName": "Schedule 08 (Kinetic Theory of Gases)",
+      "draftCount": 50,
+      "sourceResolved": 50,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH12",
+      "sourceSha256": "36fb1f58e0c1a6e736b772d7014f796c5a082d962c6a44253eaedd77dc597bab",
+      "reviewPackFile": "s08_physics_50q_review_pack.json",
+      "proReviewedCount": 0,
+      "productionEligibleCount": 0,
+      "academicStatus": "REVIEW_READY_PENDING_HUMAN_SME"
+    },
+    {
+      "scheduleId": "sch_jee_main_2026_9",
+      "scheduleName": "Schedule 09 (Oscillations & SHM)",
+      "draftCount": 50,
+      "sourceResolved": 50,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH13",
+      "sourceSha256": "35a9c5fa1c43ab2996b526faefeb421ba0e3eccd56bc9c6175e0e59d5905eff0",
+      "reviewPackFile": "s09_physics_50q_review_pack.json",
+      "proReviewedCount": 0,
+      "productionEligibleCount": 0,
+      "academicStatus": "REVIEW_READY_PENDING_HUMAN_SME"
+    },
+    {
+      "scheduleId": "sch_jee_main_2026_10",
+      "scheduleName": "Schedule 10 (Waves & Acoustics)",
+      "draftCount": 50,
+      "sourceResolved": 50,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH14",
+      "sourceSha256": "d5e735fe35bc80814e3d386cf319862436373d9b2f507a6de2353086df377330",
+      "reviewPackFile": "s10_physics_50q_review_pack.json",
+      "proReviewedCount": 0,
+      "productionEligibleCount": 0,
+      "academicStatus": "REVIEW_READY_PENDING_HUMAN_SME"
+    },
+    {
+      "scheduleId": "sch_jee_main_2026_11",
+      "scheduleName": "Schedule 11 (Electrostatics)",
+      "draftCount": 50,
+      "sourceResolved": 50,
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH01",
+      "sourceSha256": "da175f580d0b6349608fbcc674e7110d2acf37f283fc9519e497799f600aede0",
+      "reviewPackFile": "s11_physics_50q_review_pack.json",
+      "proReviewedCount": 0,
+      "productionEligibleCount": 0,
+      "academicStatus": "REVIEW_READY_PENDING_HUMAN_SME"
+    },
+    {
+      "scheduleId": "sch_jee_main_2026_12",
+      "scheduleName": "Schedule 12 (Potential & Capacitance)",
+      "draftCount": 50,
+      "sourceResolved": 50,
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH02",
+      "sourceSha256": "5c70315cfd0cb8f63e486745c26534086c3f53ebfa1d19a8192ab9bdbb0d45e0",
+      "reviewPackFile": "s12_physics_50q_review_pack.json",
+      "proReviewedCount": 0,
+      "productionEligibleCount": 0,
+      "academicStatus": "REVIEW_READY_PENDING_HUMAN_SME"
+    }
+  ],
+  "totalSchedulesDrafted": 6,
+  "totalQuestionsDrafted": 300
+}
