@@ -1,0 +1,97 @@
+{
+  "version": "1.0.0",
+  "directive": "RC_JEE_MAIN_2027_CANONICAL_REVIEWER_ONBOARDING_AND_REAL_PILOT_GATE_08",
+  "timestampUtc": "2026-09-02T13:10:00.000Z",
+  "canonicalSurface": {
+    "productDomain": "rankcrackers.in",
+    "entryPointFile": "lib/main_web.dart",
+    "webShellComponent": "WebShell",
+    "consoleComponent": "UnifiedCommandConsole",
+    "reusedCanonicalReviewOptions": [
+      {
+        "optionName": "Verification Center",
+        "route": "subTab: Verification Center -> MissionControlRoom (tab 1)",
+        "purpose": "Academic review, item verification, syllabus & PYQ audit",
+        "status": "REUSED_CANONICAL"
+      },
+      {
+        "optionName": "Admin Governance",
+        "route": "subTab: Admin Governance (AccessSecurityWeb)",
+        "purpose": "Founder registration of reviewer authority, credential attachment, scope binding",
+        "status": "REUSED_CANONICAL"
+      },
+      {
+        "optionName": "My Work Queue",
+        "route": "roleMode: admin / reviewer (AdminTasksList)",
+        "purpose": "Authenticated reviewer queue, review batch opening, signed decision submission",
+        "status": "REUSED_CANONICAL"
+      },
+      {
+        "optionName": "Publish Gate",
+        "route": "subTab: Publish Gate (MissionPublishReadinessPanel)",
+        "purpose": "Governed publication gate, prerequisite checks (review, key, solution verifications)",
+        "status": "REUSED_CANONICAL"
+      }
+    ]
+  },
+  "reviewerAuthReality": {
+    "REVIEWER_AUTH_PROVIDER": "FIREBASE_AUTH_WEB",
+    "REVIEWER_LOGIN_FLOW_EXISTS": "IMPLEMENTED",
+    "REVIEWER_UID_RESOLUTION_EXISTS": "IMPLEMENTED",
+    "REVIEWER_REGISTRY_BINDING_EXISTS": "IMPLEMENTED",
+    "SUBJECT_SCOPE_ENFORCEMENT_EXISTS": "IMPLEMENTED",
+    "MISSION_SCOPE_ENFORCEMENT_EXISTS": "IMPLEMENTED",
+    "REVOKED_REVIEWER_BLOCKING_EXISTS": "IMPLEMENTED",
+    "FOUNDER_CAN_IMPERSONATE_REVIEWER_DECISION": 0,
+    "SCHEMA_EXAMPLE_COUNTED_AS_REAL_REVIEWER": 0
+  },
+  "pilotBatch": {
+    "batchId": "BATCH_S01_1",
+    "scope": "Schedule 01 (Kinematics 1D) 10-Question Pilot Pack",
+    "subject": "Physics",
+    "mission": "jee_main_2027",
+    "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+    "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+    "itemCount": 10,
+    "currentStatus": "READY_FOR_REAL_SME",
+    "pilotExecutionState": "WAITING_FOR_REAL_REVIEWER"
+  },
+  "realProductionCounters": {
+    "REAL_AUTHORIZED_REVIEWERS": 0,
+    "REAL_ASSIGNED_REVIEW_BATCHES": 0,
+    "REAL_PRO_REVIEWED": 0,
+    "REAL_PRO_RETURNED": 0,
+    "REAL_PRO_REJECTED": 0,
+    "REAL_KEY_VERIFIED": 0,
+    "REAL_SOLUTION_VERIFIED": 0,
+    "REAL_PUBLICATION_APPROVED": 0,
+    "REAL_SAFE_MATERIALIZED": 0,
+    "REAL_PRODUCTION_ELIGIBLE": 0
+  },
+  "factoryState": {
+    "TOTAL_BACKLOG_DRAFTS": 675,
+    "MICRO_DRAFTS_S01_TO_S12": 600,
+    "MAJOR_01_DRAFTS": 75,
+    "TOTAL_REVIEW_BATCHES": 63,
+    "FREEZE_S13_PLUS_QUESTION_DRAFTING": true,
+    "STUDENT_RUNTIME_READY": false
+  },
+  "governanceInvariants": {
+    "ALTERNATE_FOUNDER_SHELL_PROMOTED": 0,
+    "NEW_DUPLICATE_REVIEW_UI_CREATED": 0,
+    "STUDENT_UI_CHANGED_FILES": 0,
+    "STUDENT_LOGIN_CHANGED_FILES": 0,
+    "STUDENT_ANDROID_CHANGED_FILES": 0,
+    "SCHEMA_EXAMPLE_COUNTED_AS_REAL_REVIEWER": 0,
+    "SYNTHETIC_HUMAN_REVIEW_AUTHORITIES": 0,
+    "FOUNDER_CAN_IMPERSONATE_REVIEWER_DECISION": 0,
+    "MUTABLE_REVIEW_HISTORY": 0,
+    "MODEL_ONLY_CANONICAL_PROMOTIONS": 0,
+    "FIXTURE_REVIEW_COUNTED_AS_PRODUCTION": 0,
+    "FIXTURE_CONTENT_COUNTED_AS_PRODUCTION": 0,
+    "AUTOMATIC_PRO_TO_KEY_PROMOTION": 0,
+    "AUTOMATIC_PRO_TO_SOLUTION_PROMOTION": 0,
+    "AUTOMATIC_PRO_TO_PUBLICATION_PROMOTION": 0,
+    "LIVE_AI_DIRECT_TO_STUDENT": 0
+  }
+}
