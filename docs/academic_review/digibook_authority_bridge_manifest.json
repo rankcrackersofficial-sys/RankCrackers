@@ -1,0 +1,1761 @@
+{
+  "version": "1.0.0",
+  "manifestType": "DIGIBOOK_CROSS_BRANCH_AUTHORITY_BRIDGE",
+  "createdAtUtc": "2026-09-02T14:00:01.226Z",
+  "authorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+  "worktreePath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base",
+  "summary": {
+    "DIGIBOOK_AUTHORITY_GUS_DISCOVERED": 51,
+    "DIGIBOOK_AUTHORITY_FACTS_DISCOVERED": 353,
+    "PHYSICS_GUS": 25,
+    "CHEMISTRY_GUS": 25,
+    "MATHEMATICS_GUS": 1,
+    "SOURCE_FACT_COMPLETE_GUS": 34,
+    "SOURCE_FACT_PARTIAL_GUS": 17,
+    "SOURCE_BOUNDARY_UNPROVEN_GUS": 0
+  },
+  "lessons": [
+    {
+      "guId": "GU_JEEMAIN2027_CHE_024AF105",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000005",
+      "topic": "This chapter explains the determination of empirical and molecular formulae from percentage composit...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_024AF105_V001",
+      "lessonSha256": "d670ebb376fd39f1879ac81a84346056969e520279e69684c2449b751bc95b1d",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_024AF105_849320FD",
+        "AF_GU_JEEMAIN2027_CHE_024AF105_A7896E62"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Molecular Formula Scaling\",\"formula\":\"n = \\\\\\\\frac{\\\\\\\\text{Molar Mass}}{\\\\\\\\text{Empirical Formula Mass}}\",\"constraints\":\"n is a positive integer\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_024AF105_A7896E62\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_024AF105_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_024AF105_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"What is the empirical formula of benzene ($C_6H_6$)?\",\"options\":[\"CH\",\"C_2H_2\",\"C_6H_6\",\"C_3H_3\"],\"correctOptionIndex\":0,\"explanation\":\"Dividing subscripts by greatest common divisor (6) gives the simplest ratio $CH$.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_024AF105_849320FD\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_024AF105.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_1DF8039E",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U02_T_00000001",
+      "topic": "This chapter examines the Photoelectric Effect, Einsteins photon equation, and the Rydberg formula f...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_1DF8039E_V001",
+      "lessonSha256": "683cbdef64f91c656c9fd128eb880b59daabf59a9adfb5e8b89a485f4e39a175",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_1DF8039E_22C0C4C5",
+        "AF_GU_JEEMAIN2027_CHE_1DF8039E_564E7973",
+        "AF_GU_JEEMAIN2027_CHE_1DF8039E_9700EB4F"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Einsteins Photoelectric Equation\",\"formula\":\"\\\\\\\\frac{1}{2} m v^2 = h\\\\\\\\nu - h\\\\\\\\nu_0\",\"constraints\":\"Incident frequency nu > nu_0\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_1DF8039E_564E7973\"]}",
+        "{\"name\":\"Rydberg Equation\",\"formula\":\"\\\\\\\\bar{\\\\\\\\nu} = R_H \\\\\\\\left(\\\\\\\\frac{1}{n_1^2} - \\\\\\\\frac{1}{n_2^2}\\\\\\\\right)\",\"constraints\":\"n2 > n1 integer levels\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_1DF8039E_9700EB4F\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_1DF8039E_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_1DF8039E_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"What happens to the kinetic energy of emitted photoelectrons if the intensity of incident light is doubled at constant frequency?\",\"options\":[\"It remains unchanged\",\"It is doubled\",\"It is quadrupled\",\"It drops to zero\"],\"correctOptionIndex\":0,\"explanation\":\"Kinetic energy depends solely on light frequency ($h\\\\\\\\nu - h\\\\\\\\nu_0$), whereas intensity affects the number of ejected photoelectrons.\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_1DF8039E_564E7973\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_1DF8039E.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_2679365D",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000004",
+      "topic": "This Generation Unit covers the exponential representation of very large and very small chemical val...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_2679365D_V001",
+      "lessonSha256": "6e526f247297c8da3a907f8bd80e73eccb4fa42619808617b884b3311172b344",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8",
+        "AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Scientific Notation Canonical Form\",\"formula\":\"N \\\\times 10^n \\\\quad (1.0 \\\\le N < 10, \\\\, n \\\\in \\\\mathbb{Z})\",\"constraints\":\"Standard exponential notation\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480\"]}",
+        "{\"name\":\"Exponential Multiplication Rule\",\"formula\":\"(N_1 \\\\times 10^{n_1}) \\\\times (N_2 \\\\times 10^{n_2}) = (N_1 \\\\cdot N_2) \\\\times 10^{n_1 + n_2}\",\"constraints\":\"Exponents are added during multiplication\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8\"]}",
+        "{\"name\":\"Exponential Division Rule\",\"formula\":\"\\\\frac{N_1 \\\\times 10^{n_1}}{N_2 \\\\times 10^{n_2}} = \\\\left(\\\\frac{N_1}{N_2}\\\\right) \\\\times 10^{n_1 - n_2}\",\"constraints\":\"Exponents are subtracted during division\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_2679365D_01_SCIENTIFIC_MULTIPLICATION"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_2679365D_01_EXPONENT_DIVISION\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"What is the result of dividing $(2.7 \\\\times 10^{-3})$ by $(5.4 \\\\times 10^4)$ in scientific notation?\",\"options\":[\"$5.0 \\\\times 10^{-8}$\",\"$0.5 \\\\times 10^{-7}$\",\"$5.0 \\\\times 10^{-7}$\",\"$5.0 \\\\times 10^1$\"],\"correctOptionIndex\":0,\"explanation\":\"Divide digit terms: $2.7 / 5.4 = 0.5$. Subtract exponents: $10^{-3 - 4} = 10^{-7}$. Normalize: $0.5 \\\\times 10^{-7} = 5.0 \\\\times 10^{-8}$.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480\",\"AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_2679365D.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_2AE52211",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000006",
+      "topic": "This chapter explains balancing chemical equations in accordance with mass conservation and stoichio...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_2AE52211_V001",
+      "lessonSha256": "7399ec5b9178a0d1d486ae63e23171a656f81a1b4caf2842747f84960fd98281",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AE52211_315436E4",
+        "AF_GU_JEEMAIN2027_CHE_2AE52211_CB7347EB"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_2AE52211_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_2AE52211_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"What fundamental physical law requires a chemical equation to be balanced?\",\"options\":[\"Law of Conservation of Mass\",\"Avogadros Law\",\"Law of Multiple Proportions\",\"Gay-Lussacs Law\"],\"correctOptionIndex\":0,\"explanation\":\"Atoms are neither created nor destroyed in a chemical reaction; thus total mass and atom counts are conserved.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_2AE52211_CB7347EB\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_2AE52211.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_2AF5BFC3",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000007",
+      "topic": "This chapter explains the calculation of molecular mass for covalent molecules and formula mass for ...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_2AF5BFC3_V001",
+      "lessonSha256": "6cb3dbbf059908aed36a0c1871645c796bd31093d0fb84afea30a2f53652e37a",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_8EFEFFCD",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9428EBD4",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9C8285E8",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_A7CCBAA5"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Molecular Mass Definition\",\"formula\":\"\\\\\\\\text{Molecular Mass} = \\\\\\\\sum (\\\\\\\\text{Atomic Masses})\",\"constraints\":\"Sum over constituent elements in molecule\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9428EBD4\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_2AF5BFC3_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_2AF5BFC3_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Why is the term \\\"formula mass\\\" preferred over \\\"molecular mass\\\" for sodium chloride ($NaCl$)?\",\"options\":[\"Sodium chloride forms a 3D ionic crystal lattice without discrete NaCl molecules\",\"Sodium chloride is a covalent gaseous molecule\",\"Atomic masses cannot be added for metals\",\"Formula mass is measured only in kilograms\"],\"correctOptionIndex\":0,\"explanation\":\"In solid $NaCl$, each $Na^+$ ion is surrounded by six $Cl^-$ ions in an infinite lattice rather than discrete isolated molecules.\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_2AF5BFC3_A7CCBAA5\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_2AF5BFC3.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_32DA7803",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000008",
+      "topic": "This chapter presents Daltons Atomic Theory, indivisible atoms, whole-number combinations, and chemi...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_32DA7803_V001",
+      "lessonSha256": "32bb209714ccbae98c23078653c96bc0d770c2cec0bc33475e28fbac6208ab87",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_32DA7803_9B9C21A9",
+        "AF_GU_JEEMAIN2027_CHE_32DA7803_C42534DD",
+        "AF_GU_JEEMAIN2027_CHE_32DA7803_CF9D7B96",
+        "AF_GU_JEEMAIN2027_CHE_32DA7803_DB7F8668"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_32DA7803_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_32DA7803_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"According to Daltons atomic theory, what occurs during a chemical reaction?\",\"options\":[\"Atoms are reorganized, neither created nor destroyed\",\"Atoms are converted into subatomic waves\",\"Atoms are split into simpler elements\",\"Mass is transformed into photons\"],\"correctOptionIndex\":0,\"explanation\":\"Daltons fourth postulate states chemical reactions involve reorganization/rearrangement of indivisible atoms.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_32DA7803_DB7F8668\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_32DA7803.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_4DB27569",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U02_T_00000002",
+      "topic": "This chapter details the discovery of electron, proton, and neutron, measuring charge-to-mass ratio ...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_4DB27569_V001",
+      "lessonSha256": "75da1d7e94c3b2f888ca36143788980263e392f2c18607fd2d30f085fe815ab5",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_0435A3E3",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_114F8238",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_4F278484",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_508BD39E",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_CDD5892B",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_E7EC77A2"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Electron Mass from e and e/m\",\"formula\":\"m_e = \\\\\\\\frac{e}{e/m_e} = 9.10938 \\\\\\\\times 10^{-31}\\\\\\\\text{ kg}\",\"constraints\":\"Fundamental constants\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_4DB27569_0435A3E3\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_4DB27569_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_4DB27569_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Which nuclear reaction led to the discovery of the neutron by James Chadwick in 1932?\",\"options\":[\"9Be + 4He -> 12C + 1n\",\"1H + 1H -> 2H + e+\",\"14N + 4He -> 17O + 1p\",\"235U + 1n -> 141Ba + 92Kr\"],\"correctOptionIndex\":0,\"explanation\":\"Chadwick bombarded beryllium foil with alpha particles: 9Be + 4He -> 12C + 1n.\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_4DB27569_508BD39E\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_4DB27569.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_4DF35115",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U02_T_00000003",
+      "topic": "This chapter formulates wave propagation of electromagnetic radiation and Plancks quantum hypothesis...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_4DF35115_V001",
+      "lessonSha256": "7a1a58eabb408d943a100e8d98abd82527651ad8c8fef773cb4d17e5fca9300f",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_4DF35115_28A0DCFA",
+        "AF_GU_JEEMAIN2027_CHE_4DF35115_81B4FADD"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Wave Speed Equation\",\"formula\":\"c = \\\\\\\\nu \\\\\\\\lambda\",\"constraints\":\"Speed in vacuum 3.0 x 10^8 m/s\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_4DF35115_81B4FADD\"]}",
+        "{\"name\":\"Plancks Photon Energy\",\"formula\":\"E = h \\\\\\\\nu = \\\\\\\\frac{h c}{\\\\\\\\lambda}\",\"constraints\":\"Plancks constant h = 6.626 x 10^-34 J.s\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_4DF35115_28A0DCFA\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_4DF35115_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_4DF35115_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"If the frequency of electromagnetic radiation is doubled, what happens to the energy of each photon?\",\"options\":[\"It is doubled\",\"It is halved\",\"It is quadrupled\",\"It remains constant\"],\"correctOptionIndex\":0,\"explanation\":\"According to Plancks equation $E = h\\\\\\\\nu$, photon energy $E$ is directly proportional to frequency $\\\\\\\\nu$.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_4DF35115_28A0DCFA\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_4DF35115.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_6C5A7754",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000007",
+      "topic": "This chapter explores Laws of Chemical Combination (Conservation of Mass, Definite & Multiple Propor...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_6C5A7754_V001",
+      "lessonSha256": "2a502f75b81a07629f1ccc61054d470914fe21912a73131f911d01c7d1c9d195",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_6C5A7754_67FC6068",
+        "AF_GU_JEEMAIN2027_CHE_6C5A7754_BDB2E368",
+        "AF_GU_JEEMAIN2027_CHE_6C5A7754_EB20510B"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_6C5A7754_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_6C5A7754_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_6C5A7754_67FC6068\"],\"prompt\":\"Which of the following statements correctly represents: Laws of Chemical Combination (Conservation of Mass, Definite & Multiple Proportions)?\",\"options\":[\"The Law of Conservation of Mass (Lavoisier, 1789) states that total mass of products equals total mass of reactants.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: The Law of Conservation of Mass (Lavoisier, 1789) states that total mass of products equals total mass of reactants. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_6C5A7754_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_6C5A7754_EB20510B\"],\"prompt\":\"Regarding Laws of Chemical Combination (Conservation of Mass, Definite & Multiple Proportions), which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"The Law of Definite Proportions (Proust, 1799) states that a given compound always contains elements in fixed mass proportions.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: The Law of Definite Proportions (Proust, 1799) states that a given compound always contains elements in fixed mass proportions..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_6C5A7754.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_8ADB0D17",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000002",
+      "topic": "This Generation Unit establishes the foundational definition of matter, its macroscopic states (soli...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_8ADB0D17_V001",
+      "lessonSha256": "2a6931d5d5715b988bc6118d3789a46141f4185478a82537e165ac471825bfe2",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_8ADB0D17_00C4078E",
+        "AF_GU_JEEMAIN2027_CHE_8ADB0D17_4DB85A99",
+        "AF_GU_JEEMAIN2027_CHE_8ADB0D17_8F380C3E",
+        "AF_GU_JEEMAIN2027_CHE_8ADB0D17_A61A6E29"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_8ADB0D17_01_CLASSIFY_SUBSTANCES"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_8ADB0D17_01_COMPOUND_PROPERTY\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Which of the following is a characteristic feature of a chemical compound compared to a mixture?\",\"options\":[\"Constituent elements are present in a fixed ratio by mass and can only be separated by chemical means\",\"Constituents retain their individual chemical properties unchanged\",\"Constituents can be separated by simple mechanical filtration\",\"Its composition can vary continuously without limit\"],\"correctOptionIndex\":0,\"explanation\":\"A chemical compound always contains elements combined in a fixed ratio by mass, and its constituent elements can only be separated through chemical reactions.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_8ADB0D17_A61A6E29\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_8ADB0D17.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_910B0B49",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000001",
+      "topic": "This Generation Unit provides a comprehensive foundation in chemical stoichiometry: the classical la...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_910B0B49_V001",
+      "lessonSha256": "a6c487f96c850c04c3cd4a271e8e275fa4967ee6e5cb55e8cb6ef062bf1390d8",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_00838222",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_0545534C",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_0B9BC18A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_16BE7BF0",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5108CC",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5B52FE",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_35B08AE8",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_37A79A64",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_60CCB0AC",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_6F1C0227",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_78FE8A71",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_82F9DDAF",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_8886D9EE",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_A6FB4DD1",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_C8E94EA8",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D24B6647",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D38CBC1A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D8263123",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F2268E36",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F56F9DD0",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F7989E2A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_FBE5DD02"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Avogadro Mole Relation\",\"formula\":\"N = n \\\\cdot N_A = n \\\\cdot (6.02214076 \\\\times 10^{23})\",\"constraints\":\"Number of particles N from moles n\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_910B0B49_0B9BC18A\"]}",
+        "{\"name\":\"Molarity Definition\",\"formula\":\"M = \\\\frac{n_{\\\\text{solute}}}{V_{\\\\text{solution}} \\\\text{ (in L)}}\",\"constraints\":\"Temperature dependent due to volume expansion\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_910B0B49_C8E94EA8\",\"AF_GU_JEEMAIN2027_CHE_910B0B49_8886D9EE\"]}",
+        "{\"name\":\"Molality Definition\",\"formula\":\"m = \\\\frac{n_{\\\\text{solute}}}{W_{\\\\text{solvent}} \\\\text{ (in kg)}}\",\"constraints\":\"Temperature independent\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_910B0B49_FBE5DD02\"]}",
+        "{\"name\":\"Unified Atomic Mass Unit\",\"formula\":\"1\\\\text{ u} = \\\\frac{1}{12} m(^{12}\\\\text{C}) = 1.66056 \\\\times 10^{-24}\\\\text{ g}\",\"constraints\":\"Standard mass reference scale\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_910B0B49_A6FB4DD1\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_910B0B49_01_LIMITING_REAGENT_WATER"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_910B0B49_01_MOLARITY_VS_MOLALITY_TEMP\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Why does molality remain unchanged when temperature increases, while molarity changes?\",\"options\":[\"Molality depends on mass of solvent which is temperature-independent\",\"Molarity depends on mass of solute which expands with temperature\",\"Both molarity and molality change equally with temperature\",\"Molality involves volume of solution which is constant\"],\"correctOptionIndex\":0,\"explanation\":\"Molality ($m$) is defined as moles of solute per kilogram of solvent. Since mass does not change with temperature, molality is temperature-independent. Molarity ($M$) depends on solution volume, which expands with temperature.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_910B0B49_FBE5DD02\",\"AF_GU_JEEMAIN2027_CHE_910B0B49_8886D9EE\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_910B0B49.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_9737F355",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000013",
+      "topic": "This chapter explores Solution Concentrations: Mass Percent and Mole Fraction, providing comprehensi...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_9737F355_V001",
+      "lessonSha256": "147e9ecba44aef38ce4e59b5bd982989834167b729ecb4e645d73894578491d1",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_9737F355_57AE0D53",
+        "AF_GU_JEEMAIN2027_CHE_9737F355_7928B31E",
+        "AF_GU_JEEMAIN2027_CHE_9737F355_7D868E3D",
+        "AF_GU_JEEMAIN2027_CHE_9737F355_84136E45"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_9737F355_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_9737F355_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_9737F355_84136E45\"],\"prompt\":\"Which of the following statements correctly represents: Solution Concentrations: Mass Percent and Mole Fraction?\",\"options\":[\"Mass percent (w/w %) is defined as [(Mass of solute) / (Total mass of solution)] x 100.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Mass percent (w/w %) is defined as [(Mass of solute) / (Total mass of solution)] x 100. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_9737F355_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_9737F355_7928B31E\"],\"prompt\":\"Regarding Solution Concentrations: Mass Percent and Mole Fraction, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Mole fraction (x) is the ratio of moles of a component to the total moles of all components in solution, where the sum of mole fractions equals 1.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Mole fraction (x) is the ratio of moles of a component to the total moles of all components in solution, where the sum of mole fractions equals 1..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_9737F355.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_A6A45FCE",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U02_T_00000016",
+      "topic": "This chapter explores Thomson and Rutherford Atomic Models and Nuclear Concept, providing comprehens...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_A6A45FCE_V001",
+      "lessonSha256": "cc3681d8147ebd523f7834e179d5aed1a6946a8dfcc02c27642827e24c285069",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_A6A45FCE_18D3068A",
+        "AF_GU_JEEMAIN2027_CHE_A6A45FCE_CFFCD507",
+        "AF_GU_JEEMAIN2027_CHE_A6A45FCE_EC01AC5C",
+        "AF_GU_JEEMAIN2027_CHE_A6A45FCE_FB3764F5"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_A6A45FCE_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_A6A45FCE_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_A6A45FCE_EC01AC5C\"],\"prompt\":\"Which of the following statements correctly represents: Thomson and Rutherford Atomic Models and Nuclear Concept?\",\"options\":[\"Thomson's model proposed that an atom is a sphere of positive charge with electrons embedded in it.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Thomson's model proposed that an atom is a sphere of positive charge with electrons embedded in it. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH02_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_A6A45FCE_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_A6A45FCE_18D3068A\"],\"prompt\":\"Regarding Thomson and Rutherford Atomic Models and Nuclear Concept, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Rutherford's alpha-scattering experiment established that all positive charge and almost all mass of the atom is concentrated in a tiny dense nucleus.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Rutherford's alpha-scattering experiment established that all positive charge and almost all mass of the atom is concentrated in a tiny dense nucleus..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_A6A45FCE.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_A92E33EC",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000006",
+      "topic": "This chapter explores Dimensional Analysis and Unit Factor Method, providing comprehensive conceptua...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_A92E33EC_V001",
+      "lessonSha256": "ee859fe676331a16635aff636b128e0b27123b8c2ce3c89ad399f4c8440d3632",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_A92E33EC_304CED41",
+        "AF_GU_JEEMAIN2027_CHE_A92E33EC_5451C0DD",
+        "AF_GU_JEEMAIN2027_CHE_A92E33EC_FE2C3A5F"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_A92E33EC_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_A92E33EC_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_A92E33EC_5451C0DD\"],\"prompt\":\"Which of the following statements correctly represents: Dimensional Analysis and Unit Factor Method?\",\"options\":[\"Dimensional analysis (the factor label or unit factor method) uses equivalence ratios equal to unity to convert units in chemical calculations.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Dimensional analysis (the factor label or unit factor method) uses equivalence ratios equal to unity to convert units in chemical calculations. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_A92E33EC_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_A92E33EC_FE2C3A5F\"],\"prompt\":\"Regarding Dimensional Analysis and Unit Factor Method, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"In chemical calculations, units must be multiplied, divided, or canceled alongside numerical values until target units are reached.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: In chemical calculations, units must be multiplied, divided, or canceled alongside numerical values until target units are reached..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_A92E33EC.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_AC8B192F",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000014",
+      "topic": "This chapter explores Solution Concentrations: Molarity, Molality and Dilution Law, providing compre...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_AC8B192F_V001",
+      "lessonSha256": "8e0b6add73bed5217944d2e281aa5cf6a34af14e02fe9dda5dad87cd15d3cd46",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_1F65AC2B",
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_44B923B3",
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_E5E589A9"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_AC8B192F_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_AC8B192F_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_AC8B192F_1F65AC2B\"],\"prompt\":\"Which of the following statements correctly represents: Solution Concentrations: Molarity, Molality and Dilution Law?\",\"options\":[\"Molarity (M) is the number of moles of solute dissolved per litre of solution (mol/L) and is temperature-dependent because volume changes with temperature.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Molarity (M) is the number of moles of solute dissolved per litre of solution (mol/L) and is temperature-dependent because volume changes with temperature. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_AC8B192F_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_AC8B192F_E5E589A9\"],\"prompt\":\"Regarding Solution Concentrations: Molarity, Molality and Dilution Law, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Molality (m) is the number of moles of solute per kilogram of solvent (mol/kg) and is temperature-independent.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Molality (m) is the number of moles of solute per kilogram of solvent (mol/kg) and is temperature-independent..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_AC8B192F.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_AFF61328",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000005",
+      "topic": "This chapter explores Significant Figures and Rounding Rules, providing comprehensive conceptual ana...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_AFF61328_V001",
+      "lessonSha256": "8fb3bd5020d4d6350426622ab847b7817cf3d7ba96dbdbe5b7b3164b499d1c55",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_AFF61328_334D8095",
+        "AF_GU_JEEMAIN2027_CHE_AFF61328_BC8E55EB",
+        "AF_GU_JEEMAIN2027_CHE_AFF61328_E3BF2B63"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_AFF61328_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_AFF61328_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_AFF61328_BC8E55EB\"],\"prompt\":\"Which of the following statements correctly represents: Significant Figures and Rounding Rules?\",\"options\":[\"Significant figures are meaningful digits known with certainty plus one estimated digit.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Significant figures are meaningful digits known with certainty plus one estimated digit. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_AFF61328_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_AFF61328_E3BF2B63\"],\"prompt\":\"Regarding Significant Figures and Rounding Rules, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"All non-zero digits and all zeros between two non-zero digits are significant.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: All non-zero digits and all zeros between two non-zero digits are significant..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_AFF61328.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_B2DE828B",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000012",
+      "topic": "This chapter explores Limiting Reagent Calculations and Excess Reactants, providing comprehensive co...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_B2DE828B_V001",
+      "lessonSha256": "f22dad1fe4ab1ef38961936b007369ed4f318c29580b84238e01676cc4dac75b",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_B2DE828B_38BCCE0A",
+        "AF_GU_JEEMAIN2027_CHE_B2DE828B_994258E6",
+        "AF_GU_JEEMAIN2027_CHE_B2DE828B_D5FB7D45"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_B2DE828B_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_B2DE828B_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_B2DE828B_994258E6\"],\"prompt\":\"Which of the following statements correctly represents: Limiting Reagent Calculations and Excess Reactants?\",\"options\":[\"The limiting reagent is the reactant present in the least stoichiometric amount that is completely consumed first in a chemical reaction.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: The limiting reagent is the reactant present in the least stoichiometric amount that is completely consumed first in a chemical reaction. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_B2DE828B_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_B2DE828B_38BCCE0A\"],\"prompt\":\"Regarding Limiting Reagent Calculations and Excess Reactants, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"The amount of limiting reagent determines and limits the maximum theoretical yield of products formed.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: The amount of limiting reagent determines and limits the maximum theoretical yield of products formed..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_B2DE828B.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_B6EA7762",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000003",
+      "topic": "This Generation Unit addresses physical versus chemical properties of substances, the seven SI base ...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_B6EA7762_V001",
+      "lessonSha256": "956b2eec8c268591351adab4e25251f54723bfb5ab602d2c0062a355f3333573",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_B6EA7762_2C85B844",
+        "AF_GU_JEEMAIN2027_CHE_B6EA7762_9A9874ED",
+        "AF_GU_JEEMAIN2027_CHE_B6EA7762_EF395D34"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Weight Equation\",\"formula\":\"W = m \\\\cdot g\",\"constraints\":\"m is constant mass; g is local acceleration due to gravity\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_CHE_B6EA7762_9A9874ED\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_B6EA7762_01_MASS_WEIGHT_MOON"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_B6EA7762_01_PHYSICAL_PROPERTY_DEFINITION\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Which of the following is classified strictly as a physical property?\",\"options\":[\"Melting Point\",\"Acidity\",\"Combustibility\",\"Reactivity with acid\"],\"correctOptionIndex\":0,\"explanation\":\"Melting point can be measured without changing the chemical identity of the substance, whereas acidity and combustibility require chemical changes.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_B6EA7762_2C85B844\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_B6EA7762.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_D9AD4557",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000011",
+      "topic": "This chapter explores Stoichiometric Calculations: Mole-Mole and Volume-Volume Relations, providing ...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_D9AD4557_V001",
+      "lessonSha256": "f1e7b88ded57b51a59b82bfb708f0369bda562b1e59a4aec96972a2d525eaac8",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_D9AD4557_5E923437",
+        "AF_GU_JEEMAIN2027_CHE_D9AD4557_C15C17CC",
+        "AF_GU_JEEMAIN2027_CHE_D9AD4557_C60A34A3"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_D9AD4557_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_D9AD4557_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_D9AD4557_C60A34A3\"],\"prompt\":\"Which of the following statements correctly represents: Stoichiometric Calculations: Mole-Mole and Volume-Volume Relations?\",\"options\":[\"Stoichiometry deals with calculations of masses, moles, and volumes of reactants and products involved in a chemical reaction.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Stoichiometry deals with calculations of masses, moles, and volumes of reactants and products involved in a chemical reaction. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_D9AD4557_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_D9AD4557_C15C17CC\"],\"prompt\":\"Regarding Stoichiometric Calculations: Mole-Mole and Volume-Volume Relations, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"In N2(g) + 3 H2(g) -> 2 NH3(g), 1 mole of N2 (28 g, 22.7 L at STP) reacts with 3 moles of H2 (6 g, 68.1 L at STP) to produce 2 moles of NH3 (34 g, 45.4 L at STP).\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: In N2(g) + 3 H2(g) -> 2 NH3(g), 1 mole of N2 (28 g, 22.7 L at STP) reacts with 3 moles of H2 (6 g, 68.1 L at STP) to produce 2 moles of NH3 (34 g, 45.4 L at STP)..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_D9AD4557.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_E5AFA359",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_0000000E",
+      "topic": "This chapter explores Percentage Composition and Mass Percent Calculations, providing comprehensive ...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_E5AFA359_V001",
+      "lessonSha256": "2ea22ee8db8fa2c116b25dd6c5d5aa639549564b5186d0f73583a2a2185e3904",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_E5AFA359_36369DF7",
+        "AF_GU_JEEMAIN2027_CHE_E5AFA359_FA910FBB"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_E5AFA359_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_E5AFA359_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_E5AFA359_36369DF7\"],\"prompt\":\"Which of the following statements correctly represents: Percentage Composition and Mass Percent Calculations?\",\"options\":[\"Mass percent of an element in a compound equals the mass of that element in 1 mole of compound divided by molar mass of the compound multiplied by 100.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Mass percent of an element in a compound equals the mass of that element in 1 mole of compound divided by molar mass of the compound multiplied by 100. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_E5AFA359_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_E5AFA359_FA910FBB\"],\"prompt\":\"Regarding Percentage Composition and Mass Percent Calculations, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Percentage composition provides the experimental mass fractions required to determine empirical and molecular formulas.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Percentage composition provides the experimental mass fractions required to determine empirical and molecular formulas..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_E5AFA359.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_ECB3B44F",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000008",
+      "topic": "This chapter explores Gay-Lussac\\'s Law and Avogadro Hypothesis, providing comprehensive conceptual ...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_ECB3B44F_V001",
+      "lessonSha256": "430a61579bd2a3b8bfb57deff806224be95d5bfb977cd3787b135152d1b04161",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_ECB3B44F_528635A2",
+        "AF_GU_JEEMAIN2027_CHE_ECB3B44F_86268A00",
+        "AF_GU_JEEMAIN2027_CHE_ECB3B44F_E5E382E4"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_ECB3B44F_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_ECB3B44F_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_ECB3B44F_528635A2\"],\"prompt\":\"Which of the following statements correctly represents: Gay-Lussac's Law and Avogadro Hypothesis?\",\"options\":[\"Gay-Lussac's Law of Gaseous Volumes (1808) states that reacting gases combine or form products in simple whole-number volume ratios at identical temperature and pressure.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Gay-Lussac's Law of Gaseous Volumes (1808) states that reacting gases combine or form products in simple whole-number volume ratios at identical temperature and pressure. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_ECB3B44F_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_ECB3B44F_86268A00\"],\"prompt\":\"Regarding Gay-Lussac's Law and Avogadro Hypothesis, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Avogadro's Law (1811) states that equal volumes of all gases under identical temperature and pressure contain equal numbers of molecules (V is proportional to n).\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Avogadro's Law (1811) states that equal volumes of all gases under identical temperature and pressure contain equal numbers of molecules (V is proportional to n)..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_ECB3B44F.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_EE3AD3D8",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_0000000D",
+      "topic": "This chapter explores Molar Mass, Gram Atomic Mass and Molar Volume at STP, providing comprehensive ...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_EE3AD3D8_V001",
+      "lessonSha256": "9dd5f6f3eb625a3a85f6e9eb8e5a9553498d3e4310c82ca2eb90b1ccb78d1e79",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_EE3AD3D8_0B10A754",
+        "AF_GU_JEEMAIN2027_CHE_EE3AD3D8_40382937"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_EE3AD3D8_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_EE3AD3D8_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_EE3AD3D8_0B10A754\"],\"prompt\":\"Which of the following statements correctly represents: Molar Mass, Gram Atomic Mass and Molar Volume at STP?\",\"options\":[\"Molar mass is the mass of one mole of a substance expressed in g/mol and is numerically identical to atomic or molecular mass in unified atomic mass units (u).\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Molar mass is the mass of one mole of a substance expressed in g/mol and is numerically identical to atomic or molecular mass in unified atomic mass units (u). (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_EE3AD3D8_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_EE3AD3D8_40382937\"],\"prompt\":\"Regarding Molar Mass, Gram Atomic Mass and Molar Volume at STP, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"The molar volume of an ideal gas at STP (273.15 K, 1 bar) is 22.7 L/mol.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: The molar volume of an ideal gas at STP (273.15 K, 1 bar) is 22.7 L/mol..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_EE3AD3D8.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_F19671DA",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_0000000A",
+      "topic": "This chapter explores Atomic Mass, Unified Mass and Average Atomic Mass Calculations, providing comp...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_F19671DA_V001",
+      "lessonSha256": "7b85c43d77953f893fd668af0163392ef453134925c8a6c889e379fd90eba83a",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_F19671DA_1BB50904",
+        "AF_GU_JEEMAIN2027_CHE_F19671DA_7BB83FAC"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_F19671DA_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_F19671DA_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_F19671DA_7BB83FAC\"],\"prompt\":\"Which of the following statements correctly represents: Atomic Mass, Unified Mass and Average Atomic Mass Calculations?\",\"options\":[\"The atomic mass unit (1 u) is defined relative to carbon-12 (12C) as 1/12th the mass of one 12C atom: 1 u = 1.66056 x 10^-24 g.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: The atomic mass unit (1 u) is defined relative to carbon-12 (12C) as 1/12th the mass of one 12C atom: 1 u = 1.66056 x 10^-24 g. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_F19671DA_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_F19671DA_1BB50904\"],\"prompt\":\"Regarding Atomic Mass, Unified Mass and Average Atomic Mass Calculations, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Average atomic mass of an element is calculated from the sum of products of fractional isotopic abundances and isotopic masses.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Average atomic mass of an element is calculated from the sum of products of fractional isotopic abundances and isotopic masses..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_F19671DA.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_F7D196DB",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_0000000C",
+      "topic": "This chapter explores Mole Concept and Avogadro Constant Calculations, providing comprehensive conce...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_F7D196DB_V001",
+      "lessonSha256": "edc3f58d518f2b56dc99a6d8fad42f226119ee71e8fcee5f3318fa7664088b00",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_F7D196DB_4F3760EB",
+        "AF_GU_JEEMAIN2027_CHE_F7D196DB_746A3A9E",
+        "AF_GU_JEEMAIN2027_CHE_F7D196DB_92401E9F"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_F7D196DB_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_F7D196DB_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_F7D196DB_746A3A9E\"],\"prompt\":\"Which of the following statements correctly represents: Mole Concept and Avogadro Constant Calculations?\",\"options\":[\"One mole is the amount of substance containing exactly 6.02214076 x 10^23 entities, known as the Avogadro constant (N_A).\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: One mole is the amount of substance containing exactly 6.02214076 x 10^23 entities, known as the Avogadro constant (N_A). (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_F7D196DB_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_F7D196DB_92401E9F\"],\"prompt\":\"Regarding Mole Concept and Avogadro Constant Calculations, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"The number of moles n is calculated by dividing mass in grams m by molar mass M: n = m / M.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: The number of moles n is calculated by dividing mass in grams m by molar mass M: n = m / M..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_F7D196DB.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_PARTIAL",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_CHE_FC0B77A4",
+      "subject": "Chemistry",
+      "canonicalNodeId": "JEE_MAIN_2026_CHE_U02_T_00000019",
+      "topic": "This chapter explores Bohr Model of Hydrogen Atom, Quantized Radii and Energy Levels, providing comp...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_CHE_FC0B77A4_V001",
+      "lessonSha256": "6ee1876b2de1eaf6ea3a06c6169d920d785479cc6492ba4cb026f06c2b250df7",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_FC0B77A4_0F4C8566",
+        "AF_GU_JEEMAIN2027_CHE_FC0B77A4_88F6993E",
+        "AF_GU_JEEMAIN2027_CHE_FC0B77A4_DC58614C",
+        "AF_GU_JEEMAIN2027_CHE_FC0B77A4_ECE5AD38",
+        "AF_GU_JEEMAIN2027_CHE_FC0B77A4_F877C487"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_CHE_FC0B77A4_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_FC0B77A4_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_FC0B77A4_F877C487\"],\"prompt\":\"Which of the following statements correctly represents: Bohr Model of Hydrogen Atom, Quantized Radii and Energy Levels?\",\"options\":[\"In the Bohr model of the hydrogen atom, electron angular momentum is quantized in circular orbits: m_e * v * r = n * h / (2*pi), where n = 1, 2, 3...\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: In the Bohr model of the hydrogen atom, electron angular momentum is quantized in circular orbits: m_e * v * r = n * h / (2*pi), where n = 1, 2, 3... (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH02_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_CHE_FC0B77A4_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_CHE_FC0B77A4_88F6993E\"],\"prompt\":\"Regarding Bohr Model of Hydrogen Atom, Quantized Radii and Energy Levels, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Radii of stationary Bohr orbits in hydrogenic species are given by r_n = a_0 * n^2 / Z, where a_0 = 52.9 pm.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Radii of stationary Bohr orbits in hydrogenic species are given by r_n = a_0 * n^2 / Z, where a_0 = 52.9 pm..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_CHE_FC0B77A4.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_MAT_9BB8FB46",
+      "subject": "Mathematics",
+      "canonicalNodeId": "JEE_MAIN_2026_MAT_U01_T_00000001",
+      "topic": "This Generation Unit establishes the foundational theory of Sets, element membership notation (∈, ∉)...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_MAT_9BB8FB46_V001",
+      "lessonSha256": "90648bc446cb50195c7335a67d4a67719a8a28de895a50d199659682769545cc",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_2E310406",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_621F66AA",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_6FF4E366",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_72B3D5FA",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_79B21169",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8092F0EE",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_871D5B7E",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_87E2CF75",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8E8CCB25",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_9C2209FD",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_CC297DF5",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_D1B6F61D",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_D3AE90CF",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_E7B2ED50"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_MATHEMATICS_CLASS_11_CH01_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Element Membership\",\"formula\":\"a \\\\in A, \\\\quad b \\\\notin A\",\"constraints\":\"a is an element of set A; b is not an element of set A\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_8E8CCB25\"]}",
+        "{\"name\":\"Empty Set Cardinality\",\"formula\":\"n(\\\\phi) = 0\",\"constraints\":\"\\\\phi = \\\\{\\\\}\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_E7B2ED50\"]}",
+        "{\"name\":\"Set Equality via Mutual Inclusion\",\"formula\":\"A = B \\\\iff (A \\\\subseteq B \\\\land B \\\\subseteq A)\",\"constraints\":\"Both sets share identical elements\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_871D5B7E\"]}",
+        "{\"name\":\"Power Set Cardinality\",\"formula\":\"n(P(A)) = 2^m\",\"constraints\":\"Set A is finite with n(A) = m elements\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48\"]}",
+        "{\"name\":\"Proper Subsets Count\",\"formula\":\"N_{\\\\text{proper}} = 2^m - 1\",\"constraints\":\"Excludes the improper subset A itself\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48\"]}",
+        "{\"name\":\"Interval Length on R\",\"formula\":\"\\\\text{Length} = b - a\",\"constraints\":\"Applies to (a,b), [a,b], [a,b), (a,b] with a < b\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_9C2209FD\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_MAT_9BB8FB46_01_POWER_SET_AND_SUBSETS",
+        "EX_GU_JEEMAIN2027_MAT_9BB8FB46_02_INTERVALS_AND_SET_BUILDER"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_MAT_9BB8FB46_01_POWER_SET_EMPTY\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"If $A = \\\\phi$ (the empty set), what is the cardinality of the nested power set $P(P(A))$?\",\"options\":[\"0\",\"1\",\"2\",\"4\"],\"correctOptionIndex\":2,\"explanation\":\"For the empty set $A = \\\\phi$, $n(A) = 0$.\\nThe first power set has cardinality $n(P(A)) = 2^0 = 1$ (with $P(A) = \\\\{\\\\phi\\\\}$).\\nThe nested power set has cardinality $n(P(P(A))) = 2^{n(P(A))} = 2^1 = 2$.\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_E7B2ED50\",\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D\",\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48\"],\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_MAT_9BB8FB46_02_SUBSET_RELATION\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Which of the following statements is ALWAYS true for any set $A$ and its power set $P(A)$?\",\"options\":[\"$A \\\\subseteq P(A)$\",\"$A \\\\in P(A)$\",\"$\\\\phi \\\\subset P(A)$ only if $A \\\\neq \\\\phi$\",\"$n(P(A)) = 2m$ where $m = n(A)$\"],\"correctOptionIndex\":1,\"explanation\":\"By definition of the power set $P(A)$, every subset of $A$ is an element of $P(A)$. Since $A \\\\subseteq A$ (every set is a subset of itself), it follows strictly that $A \\\\in P(A)$. Option A is incorrect because $A$ is an element of $P(A)$, not necessarily a subset. Option D is incorrect because $n(P(A)) = 2^m$, not $2m$.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_CC297DF5\",\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D\",\"AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_MAT_9BB8FB46.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_0059FC83",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U03_T_00000002",
+      "topic": "This chapter formulates Newtons First Law, inertia, linear momentum, Newtons Second Law of Motion ($...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_0059FC83_V001",
+      "lessonSha256": "d2b6b9a6266078ca91e05a3b5ecbcc4a7ce00282df6160621ebf661b16b6282d",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_37D926D4",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_39C67303",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_4583C5F7",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_47406476",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_6F4A7B5E",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_7AB71087",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_7EDF8194",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_C34B2B3B",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_F7BEF1F3",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_FA49D7BF"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Linear Momentum\",\"formula\":\"\\\\\\\\mathbf{p} = m \\\\\\\\mathbf{v}\",\"constraints\":\"Non-relativistic regime\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_0059FC83_7EDF8194\"]}",
+        "{\"name\":\"Newtons Second Law\",\"formula\":\"\\\\\\\\mathbf{F} = \\\\\\\\frac{d\\\\\\\\mathbf{p}}{dt} = m \\\\\\\\mathbf{a}\",\"constraints\":\"Constant mass m\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_0059FC83_7AB71087\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_0059FC83_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_0059FC83_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"According to Newtons Second Law of Motion, what is net force directly proportional to?\",\"options\":[\"Rate of change of linear momentum ($dp/dt$)\",\"Total kinetic energy\",\"Displacement from equilibrium\",\"Velocity squared\"],\"correctOptionIndex\":0,\"explanation\":\"Newtons Second Law states $F = dp/dt$, meaning force equals the time rate of momentum change.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_0059FC83_7AB71087\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_0059FC83.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_017FC3AC",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U04_T_00000002",
+      "topic": "This chapter explores potential energy, conservative forces, spring restoring force, and mechanical ...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_017FC3AC_V001",
+      "lessonSha256": "69c0f40d72f6c49d1cbb6f03becc97431b30d44e6ce73073786ff0293392e5fc",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_014112D4",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_1A7D8088",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_1E47C4FC",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_A4D4DBDF",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_A945E79C",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_BEE213A5",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_C18DF432",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_D1758E57"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_CH06_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Conservative Force Potential Derivative\",\"formula\":\"F(x) = -\\\\\\\\frac{dV(x)}{dx}\",\"constraints\":\"1D conservative force field\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_017FC3AC_D1758E57\"]}",
+        "{\"name\":\"Spring Potential Energy\",\"formula\":\"V_s = \\\\\\\\frac{1}{2} k x^2\",\"constraints\":\"Hookes law regime\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_017FC3AC_A4D4DBDF\"]}",
+        "{\"name\":\"Gravitational Potential Energy\",\"formula\":\"V(h) = m g h\",\"constraints\":\"Uniform gravity near surface\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_017FC3AC_014112D4\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_017FC3AC_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_017FC3AC_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"How is a 1D conservative force $F(x)$ mathematically related to its potential energy function $V(x)$?\",\"options\":[\"F(x) = - dV(x)/dx\",\"F(x) = + dV(x)/dx\",\"F(x) = Integral V(x) dx\",\"F(x) = V(x)^2\"],\"correctOptionIndex\":0,\"explanation\":\"Conservative force is the negative spatial derivative of potential energy: $F(x) = -dV(x)/dx$.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_017FC3AC_D1758E57\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_017FC3AC.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_057CEE13",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U02_T_057cee13",
+      "topic": "This Generation Unit establishes the foundational kinematics of rectilinear motion, frames of refere...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_057CEE13_V001",
+      "lessonSha256": "c79a07e4cdb923226ac35a36777448276b218a9a1667ad65453bcaf87d491add",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_2052DE05",
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_2771DF7B",
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_3FBCF3EC",
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_41439691",
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_7E573255",
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_9CA8922D",
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_A000AC8C",
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_BAB1AAFF",
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_CD4D2C0C",
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_DE97A799",
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_E54E59B1",
+        "AF_GU_JEEMAIN2027_PHY_057CEE13_F8D15ED0"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH03_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Displacement Definition\",\"formula\":\"\\\\Delta x = x_2 - x_1\",\"constraints\":\"x1 and x2 are positions at times t1 and t2\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_057CEE13_A000AC8C\"]}",
+        "{\"name\":\"Average Velocity\",\"formula\":\"v_{\\\\text{avg}} = \\\\frac{\\\\Delta x}{\\\\Delta t} = \\\\frac{x_2 - x_1}{t_2 - t_1}\",\"constraints\":\"Vector quantity; can be positive, negative, or zero\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_057CEE13_BAB1AAFF\"]}",
+        "{\"name\":\"Average Speed\",\"formula\":\"s_{\\\\text{avg}} = \\\\frac{\\\\text{Total Path Length}}{\\\\text{Total Time Interval}}\",\"constraints\":\"Scalar quantity; always >= |v_avg|\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_057CEE13_41439691\"]}",
+        "{\"name\":\"Displacement-Distance Inequality\",\"formula\":\"|\\\\Delta x| \\\\le \\\\text{Path Length}\",\"constraints\":\"Equality holds only for unidirectional rectilinear motion\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_057CEE13_DE97A799\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_057CEE13_01_ROUND_TRIP_DISPLACEMENT"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_057CEE13_01_MAGNITUDE_COMPARISON\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Under what condition is the magnitude of average velocity equal to the average speed of a moving particle?\",\"options\":[\"When the particle moves along a straight line without reversing direction\",\"When the particle moves in a circular path at constant speed\",\"When the particle oscillates in simple harmonic motion\",\"Average speed and average velocity magnitude are always equal\"],\"correctOptionIndex\":0,\"explanation\":\"Magnitude of displacement equals total path length only when the body moves along a straight line in a fixed direction without reversing.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_057CEE13_DE97A799\",\"AF_GU_JEEMAIN2027_PHY_057CEE13_41439691\",\"AF_GU_JEEMAIN2027_PHY_057CEE13_BAB1AAFF\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_057CEE13.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_10A164C1",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U03_T_00000003",
+      "topic": "This chapter analyzes Newtons Third Law of Motion ($F_{AB} = -F_{BA}$), impulse-momentum theorem, an...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_10A164C1_V001",
+      "lessonSha256": "64a37c990b537c721387c41e1755dcdbc1d6433d682fb215936b6b4490896a2b",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_12BE6F76",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_5482452A",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_8E944C2F",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_B0CFBBFE",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_B35C7BE0",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_BA3ACA98",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_BC6353B4",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_CA00FA92",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_E2F4716A"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Impulse-Momentum Theorem\",\"formula\":\"\\\\\\\\mathbf{J} = \\\\\\\\Delta \\\\\\\\mathbf{p} = \\\\\\\\mathbf{F}_{\\\\\\\\text{avg}} \\\\\\\\Delta t\",\"constraints\":\"Short duration impact\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_10A164C1_5482452A\"]}",
+        "{\"name\":\"Linear Momentum Conservation\",\"formula\":\"m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2\",\"constraints\":\"Zero net external force\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_10A164C1_12BE6F76\"]}",
+        "{\"name\":\"Gun Recoil Velocity\",\"formula\":\"v_{\\\\\\\\text{recoil}} = - \\\\\\\\frac{m_{\\\\\\\\text{bullet}}}{M_{\\\\\\\\text{gun}}} v_{\\\\\\\\text{bullet}}\",\"constraints\":\"Initially at rest\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_10A164C1_BA3ACA98\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_10A164C1_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_10A164C1_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Why do action and reaction force pairs never cancel each other out to produce zero acceleration?\",\"options\":[\"They act simultaneously on two different interacting bodies\",\"Action force is always larger than reaction force\",\"Reaction force acts with a time delay\",\"They act in perpendicular directions\"],\"correctOptionIndex\":0,\"explanation\":\"Newtons Third Law forces act on distinct bodies, so they cannot cancel each other in a single body free-body diagram.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_10A164C1_CA00FA92\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_10A164C1.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_1367A8D3",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U05_T_00000001",
+      "topic": "This chapter analyzes rotational equilibrium, the Principle of Moments, mechanical advantage, and ro...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_1367A8D3_V001",
+      "lessonSha256": "8af23d0dc5b9e64ba9c4cde965cc594f5d295ac793098fea592c3e2144067cf4",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_084A1FCF",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_219CBAC8",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_2C707B98",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_37A5FDCC",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_4DA53D85",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_8C244587",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_C91AE3F9"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Angular Velocity Equation\",\"formula\":\"\\\\\\\\omega = \\\\\\\\omega_0 + \\\\\\\\alpha t\",\"constraints\":\"Constant angular acceleration alpha\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_1367A8D3_2C707B98\"]}",
+        "{\"name\":\"Angular Displacement Equation\",\"formula\":\"\\\\\\\\theta = \\\\\\\\omega_0 t + \\\\\\\\frac{1}{2} \\\\\\\\alpha t^2\",\"constraints\":\"Constant angular acceleration alpha\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_1367A8D3_084A1FCF\"]}",
+        "{\"name\":\"Angular Velocity-Displacement Relation\",\"formula\":\"\\\\\\\\omega^2 = \\\\\\\\omega_0^2 + 2 \\\\\\\\alpha \\\\\\\\theta\",\"constraints\":\"Constant angular acceleration alpha\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_1367A8D3_219CBAC8\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_1367A8D3_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_1367A8D3_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"What condition must be satisfied for a rigid body to be in rotational equilibrium about any axis?\",\"options\":[\"Vector sum of all external torques is zero (Sum tau_ext = 0)\",\"Total linear momentum is maximum\",\"Angular speed must be constantly increasing\",\"Normal reaction equals zero\"],\"correctOptionIndex\":0,\"explanation\":\"Rotational equilibrium requires zero net external torque ($$\\\\\\\\sum \\\\\\\\boldsymbol{\\\\\\\\tau}_{\\\\\\\\text{ext}} = 0$$).\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_1367A8D3_8C244587\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_1367A8D3.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_1C4E0301",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U05_T_00000002",
+      "topic": "This chapter explores pure rolling motion, rotational kinetic energy ($K_{\\\\text{rot}} = \\\\frac{1}{2...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_1C4E0301_V001",
+      "lessonSha256": "41b3f8741ed6c5f11b887d232d75d11bde8449a837743cf70065ecfff3fe583c",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_1AE53CFF",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_9A4AB3E4",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_CCBB04EE",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_D3B00BF4",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_DB367E6F",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_DBC7CBFB"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Total Rolling Kinetic Energy\",\"formula\":\"K_{\\\\\\\\text{total}} = \\\\\\\\frac{1}{2} M v_{\\\\\\\\text{cm}}^2 \\\\\\\\left[1 + \\\\\\\\frac{k^2}{R^2}\\\\\\\\right]\",\"constraints\":\"Pure rolling without slipping\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_1C4E0301_CCBB04EE\"]}",
+        "{\"name\":\"Rolling Acceleration on Incline\",\"formula\":\"a_{\\\\\\\\text{cm}} = \\\\\\\\frac{g \\\\\\\\sin\\\\\\\\theta}{1 + \\\\\\\\frac{k^2}{R^2}}\",\"constraints\":\"Incline angle theta, no slipping\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_1C4E0301_1AE53CFF\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_1C4E0301_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_1C4E0301_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"What is the instantaneous linear velocity of the contact point during pure rolling without slipping?\",\"options\":[\"Zero ($0$)\",\"v_cm\",\"2 * v_cm\",\"R * omega^2\"],\"correctOptionIndex\":0,\"explanation\":\"In pure rolling without slipping, translational forward velocity $+v_{\\\\\\\\text{cm}}$ is exactly canceled by backward rotational peripheral velocity $-R\\\\\\\\omega = -v_{\\\\\\\\text{cm}}$.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_1C4E0301_DB367E6F\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_1C4E0301.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_2218270C",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U05_T_00000003",
+      "topic": "This chapter details Moment of Inertia, Radius of Gyration ($I = M k^2$), Parallel and Perpendicular...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_2218270C_V001",
+      "lessonSha256": "b16575fbf393bfe8f5b76077a2b95d0a714b3413ec504be942883bc780abb070",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_2218270C_19F35CBB",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_21EC7CBE",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_2C06A2B4",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_32E99AC5",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_647D8984",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_7DE2E1B8",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_7EA0F8A3",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_8CAE2DC0",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_A7E19377",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_A8BB6369",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_D7D82CF3"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Parallel Axis Theorem\",\"formula\":\"I = I_{\\\\\\\\text{cm}} + M d^2\",\"constraints\":\"Parallel axes separated by distance d\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_2218270C_A8BB6369\"]}",
+        "{\"name\":\"Perpendicular Axis Theorem\",\"formula\":\"I_z = I_x + I_y\",\"constraints\":\"Planar laminar body in xy-plane\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_2218270C_D7D82CF3\"]}",
+        "{\"name\":\"Solid Sphere Moment of Inertia\",\"formula\":\"I = \\\\\\\\frac{2}{5} M R^2\",\"constraints\":\"Uniform sphere about diameter\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_2218270C_2C06A2B4\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_2218270C_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_2218270C_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Which theorem states that for a planar laminar body in the xy plane, $I_z = I_x + I_y$?\",\"options\":[\"Perpendicular Axis Theorem\",\"Parallel Axis Theorem\",\"Work-Energy Theorem\",\"Keplers Second Law\"],\"correctOptionIndex\":0,\"explanation\":\"The Perpendicular Axis Theorem applies strictly to 2D laminar bodies: $I_z = I_x + I_y$.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_2218270C_D7D82CF3\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_2218270C.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_3D48D86E",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U06_T_00000001",
+      "topic": "This chapter formulates Keplers three empirical laws of planetary motion, areal velocity constancy, ...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_3D48D86E_V001",
+      "lessonSha256": "91c2038a3ed938b9e11db34e32e498404ca5a74f3da9df766d5a3b1a4ce2c12d",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_2CD2F7CD",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_3A97E189",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_4EE99DEA",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_7EDBECE1",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_80F5B79F",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_9DE21698",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_D9FC3B34"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_CH08_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Keplers Third Law\",\"formula\":\"T^2 \\\\\\\\propto a^3\",\"constraints\":\"Planetary orbital period T, semi-major axis a\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_3D48D86E_4EE99DEA\"]}",
+        "{\"name\":\"Areal Velocity Invariance\",\"formula\":\"\\\\\\\\frac{dA}{dt} = \\\\\\\\frac{L}{2m} = \\\\\\\\text{Constant}\",\"constraints\":\"Central gravitational force field\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_3D48D86E_D9FC3B34\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_3D48D86E_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_3D48D86E_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Keplers Second Law (constancy of areal velocity) is a direct mathematical consequence of the conservation of which quantity?\",\"options\":[\"Angular momentum (L)\",\"Linear momentum (p)\",\"Kinetic energy (K)\",\"Total orbital distance\"],\"correctOptionIndex\":0,\"explanation\":\"Gravity is a central force producing zero torque about the Sun, so angular momentum $L = 2m(dA/dt)$ is conserved.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_3D48D86E_2CD2F7CD\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_3D48D86E.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_4E89B101",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U02_T_00000001",
+      "topic": "This chapter formulates scalar and vector definitions, the Parallelogram Law of vector addition, and...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_4E89B101_V001",
+      "lessonSha256": "d1950dd795a7076d84ac27346b7e79243d8145c4bf411a8a84d332642bb5bce8",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_0861E830",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_0DF6D00D",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_569302EE",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_5A404D5E",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_73C66253",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_7AEB16A2",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_8A6170DB",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_A33B7FCC",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_A71B7E75",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_ABA9E76F",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_D42C181E"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Vector Resultant Magnitude\",\"formula\":\"R = \\\\\\\\sqrt{A^2 + B^2 + 2AB\\\\\\\\cos\\\\\\\\theta}\",\"constraints\":\"Angle theta between vectors\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_4E89B101_0DF6D00D\"]}",
+        "{\"name\":\"Resultant Direction Angle\",\"formula\":\"\\\\\\\\tan\\\\\\\\alpha = \\\\\\\\frac{B\\\\\\\\sin\\\\\\\\theta}{A + B\\\\\\\\cos\\\\\\\\theta}\",\"constraints\":\"Angle alpha with vector A\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_4E89B101_5A404D5E\"]}",
+        "{\"name\":\"Vector Magnitude from Components\",\"formula\":\"|A| = \\\\\\\\sqrt{A_x^2 + A_y^2}\",\"constraints\":\"Orthogonal components Ax, Ay\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_4E89B101_A33B7FCC\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_4E89B101_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_4E89B101_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"If vector $\\\\\\\\mathbf{A}$ has orthogonal components $A_x = 6$ and $A_y = 8$, what is the magnitude $|A|$?\",\"options\":[\"10\",\"14\",\"2\",\"48\"],\"correctOptionIndex\":0,\"explanation\":\"$|A| = \\\\\\\\sqrt{A_x^2 + A_y^2} = \\\\\\\\sqrt{6^2 + 8^2} = \\\\\\\\sqrt{36 + 64} = \\\\\\\\sqrt{100} = 10$.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_4E89B101_A33B7FCC\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_4E89B101.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_54665F87",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U01_T_54665f87",
+      "topic": "This Generation Unit provides a rigorous treatment of physical dimensions, dimensional formulas, the...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_54665F87_V001",
+      "lessonSha256": "acd826f428f912061d30de9e92af2e90fe05e9942608b62d0d6167710074ba50",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_54665F87_06D53D13",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_2ECFFA8F",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_4B375DFB",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_50B0611B",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_62FC21BB",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_63D40BF8",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_8316E5D4",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_86358E7D",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_866503B1",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_D6365B8F",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_D8032D2A",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_EB371CED"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Principle of Homogeneity\",\"formula\":\"[\\\\text{LHS}] = [\\\\text{RHS}]\",\"constraints\":\"Applies to every valid physical relation across all terms\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA\"]}",
+        "{\"name\":\"Unit Conversion Invariant\",\"formula\":\"n_1 u_1 = n_2 u_2 \\\\implies n_2 = n_1 \\\\left(\\\\frac{M_1}{M_2}\\\\right)^a \\\\left(\\\\frac{L_1}{L_2}\\\\right)^b \\\\left(\\\\frac{T_1}{T_2}\\\\right)^c\",\"constraints\":\"Converts numerical value n1 in unit u1 to n2 in unit u2\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_54665F87_2ECFFA8F\"]}",
+        "{\"name\":\"Volume Dimensional Formula\",\"formula\":\"[V] = [M^0 L^3 T^0]\",\"constraints\":\"Base dimensions in mechanics\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_54665F87_8316E5D4\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_54665F87_01_CHECK_EQUATION_CONSISTENCY",
+        "EX_GU_JEEMAIN2027_PHY_54665F87_02_UNIT_CONVERSION_JOULE_ERG"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_54665F87_01_HOMOGENEITY_ADDITION\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"If $P + \\\\frac{a}{V^2} = \\\\frac{R T}{V - b}$, what must be the dimensional formula of the constant $a$ where $P$ is pressure and $V$ is volume?\",\"options\":[\"$[M^1 L^5 T^{-2}]$\",\"$[M^1 L^3 T^{-2}]$\",\"$[M^1 L^{-1} T^{-2}]$\",\"$[M^0 L^3 T^0]$\"],\"correctOptionIndex\":0,\"explanation\":\"By the principle of homogeneity, quantities can be added only if they have identical dimensions. Therefore, $[P] = [\\\\frac{a}{V^2}] \\\\implies [a] = [P][V^2]$. Since $[P] = [M^1 L^{-1} T^{-2}]$ and $[V] = [L^3] \\\\implies [V^2] = [L^6]$, we have $[a] = [M^1 L^{-1} T^{-2}][L^6] = [M^1 L^5 T^{-2}]$.\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA\",\"AF_GU_JEEMAIN2027_PHY_54665F87_62FC21BB\",\"AF_GU_JEEMAIN2027_PHY_54665F87_8316E5D4\"],\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_54665F87_02_DIMENSIONAL_LIMITATION\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Which of the following physical relationships CANNOT be derived purely using dimensional analysis?\",\"options\":[\"$y = A \\\\sin(\\\\omega t - kx)$\",\"$T = 2\\\\pi \\\\sqrt{l/g}$ (determining the constant $2\\\\pi$)\",\"$E = m c^2$\",\"Both A and B\"],\"correctOptionIndex\":3,\"explanation\":\"Dimensional analysis cannot deduce trigonometric equations ($y = A \\\\sin(\\\\omega t - kx)$) nor can it determine dimensionless constants of proportionality like $2\\\\pi$. Hence Both A and B cannot be derived.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_54665F87_EB371CED\",\"AF_GU_JEEMAIN2027_PHY_54665F87_866503B1\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_54665F87.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_5F4143EE",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U06_T_5f4143ee",
+      "topic": "This chapter explores Acceleration Due to Gravity and Its Variation with Altitude and Depth, providi...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_5F4143EE_V001",
+      "lessonSha256": "c339eafef37811c142767021545174c5cfebcf61ddc120c5085f7e52d57420b2",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_044F54FF",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_0DF94E44",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_0E987CEF",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_2829012F",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_5A4C9B7F",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_5ED99053",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_6C0BEF03",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_80768708",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_A4B953D2",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_B0349097",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_B06AA787",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_BFF1F70D",
+        "AF_GU_JEEMAIN2027_PHY_5F4143EE_EFC26508"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_5F4143EE_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_5F4143EE_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_5F4143EE_EFC26508\"],\"prompt\":\"Which of the following statements correctly represents: Acceleration Due to Gravity and Its Variation with Altitude and Depth?\",\"options\":[\"The acceleration due to gravity at Earth's surface of mass M_e and radius R_e is g = G * M_e / R_e^2.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: The acceleration due to gravity at Earth's surface of mass M_e and radius R_e is g = G * M_e / R_e^2. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_5F4143EE_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_5F4143EE_0E987CEF\"],\"prompt\":\"Regarding Acceleration Due to Gravity and Its Variation with Altitude and Depth, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"At height h above Earth's surface, acceleration due to gravity decreases according to g(h) = g * [1 - 2*h/R_e].\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: At height h above Earth's surface, acceleration due to gravity decreases according to g(h) = g * [1 - 2*h/R_e]..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_5F4143EE.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_6202B09B",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U03_T_6202b09b",
+      "topic": "This chapter explores Circular Dynamics & Road Banking, providing comprehensive conceptual analysis,...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_6202B09B_V001",
+      "lessonSha256": "8e255e3e3fa97c41b2f78ca9a12fac95a2f68f7704b2250bf21df5fed939944e",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_22CDC09D",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_49F23753",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_4B10DF30",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_575CE100",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_5C43B4D3",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_707F0025",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_7BB1A4C6",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_84C04745",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_942649B0",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_99AAE05A",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_9EF5E8F5",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_AA0228B3",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_CA151C5D",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_EC2AF8F9"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_6202B09B_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_6202B09B_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_6202B09B_49F23753\"],\"prompt\":\"Which of the following statements correctly represents: Circular Dynamics & Road Banking?\",\"options\":[\"Centripetal acceleration in uniform circular motion is directed radially inward with magnitude a_c = v^2 / R.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Centripetal acceleration in uniform circular motion is directed radially inward with magnitude a_c = v^2 / R. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_6202B09B_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_6202B09B_707F0025\"],\"prompt\":\"Regarding Circular Dynamics & Road Banking, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Centripetal force F_c = (m * v^2) / R is the net inward radial force required to maintain circular motion.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Centripetal force F_c = (m * v^2) / R is the net inward radial force required to maintain circular motion..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_6202B09B.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_65A072BD",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U04_T_65a072bd",
+      "topic": "This chapter explores Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theore...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_65A072BD_V001",
+      "lessonSha256": "b38cc00ae48b217ec2ce0ecb17d97b59e81b90bddec882cebdee589b71de3a86",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_0E021E0D",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_1E9739B7",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_6CB4BE87",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_70EE9783",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_7146D319",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_84A1DF1B",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_9A67ECE6",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_B40F5BD7",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_C59D7132",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_CA03C134",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_CD1FF257",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_EDF9BC49"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_65A072BD_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_65A072BD_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_65A072BD_B40F5BD7\"],\"prompt\":\"Which of the following statements correctly represents: Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theorem?\",\"options\":[\"Work done by a constant force F during displacement d is defined as the scalar product W = F . d = F * d * cos(theta).\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Work done by a constant force F during displacement d is defined as the scalar product W = F . d = F * d * cos(theta). (Source: NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_65A072BD_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_65A072BD_EDF9BC49\"],\"prompt\":\"Regarding Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theorem, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Kinetic energy of an object of mass m moving with velocity v is given by K = (1/2) * m * v^2 = p^2 / (2m).\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Kinetic energy of an object of mass m moving with velocity v is given by K = (1/2) * m * v^2 = p^2 / (2m)..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_65A072BD.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_7E2B0101",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_2026_PHY_U02_CH01_TOP01_001",
+      "topic": "This chapter explores Centre of Mass of a Two-Particle System and Rigid Body, providing comprehensiv...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_7E2B0101_V001",
+      "lessonSha256": "777460eab8db1a7c87da0df666bc19228d2fdcba4923c4038e4d9b9721cc9bdf",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_19A82BF0",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_33020B8F",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_48E93743",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_84AFE37F",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_88553E96",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_C395E73D",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_FBCC716C"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_7E2B0101_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_7E2B0101_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_7E2B0101_84AFE37F\"],\"prompt\":\"Which of the following statements correctly represents: Centre of Mass of a Two-Particle System and Rigid Body?\",\"options\":[\"The centre of mass of a system of particles is the unique point where the entire mass of the system may be considered concentrated.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: The centre of mass of a system of particles is the unique point where the entire mass of the system may be considered concentrated. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_7E2B0101_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_7E2B0101_C395E73D\"],\"prompt\":\"Regarding Centre of Mass of a Two-Particle System and Rigid Body, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"For a two-particle system with masses m1 and m2 at r1 and r2, the centre of mass position vector is R_cm = (m1*r1 + m2*r2) / (m1 + m2).\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: For a two-particle system with masses m1 and m2 at r1 and r2, the centre of mass position vector is R_cm = (m1*r1 + m2*r2) / (m1 + m2)..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_7E2B0101.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_87EB50DB",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U04_T_87eb50db",
+      "topic": "This chapter explores Power, Elastic and Inelastic Collisions in One and Two Dimensions, providing c...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_87EB50DB_V001",
+      "lessonSha256": "310ffdbf1acb397acedde05842a9dbc99911eb6299d180bcb6c66f53f2afda5e",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_1F4ED078",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_2EABCD26",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_3C1CC63F",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_4F62FAAD",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_66B655EC",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_670AC602",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_90F382BB",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_AE20ED79",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_C1DC0D68",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_C717A04D",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_E536B647"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_87EB50DB_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_87EB50DB_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_87EB50DB_670AC602\"],\"prompt\":\"Which of the following statements correctly represents: Power, Elastic and Inelastic Collisions in One and Two Dimensions?\",\"options\":[\"Power is defined as the time rate of doing work or transferring energy: P = dW/dt = F . v.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Power is defined as the time rate of doing work or transferring energy: P = dW/dt = F . v. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_87EB50DB_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_87EB50DB_1F4ED078\"],\"prompt\":\"Regarding Power, Elastic and Inelastic Collisions in One and Two Dimensions, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"The SI unit of power is the watt (W = J/s), where 1 horsepower equals 746 watts.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: The SI unit of power is the watt (W = J/s), where 1 horsepower equals 746 watts..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_87EB50DB.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_8B5D7BD6",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U05_T_8b5d7bd6",
+      "topic": "This chapter explores Centre of Mass of a Rigid Body, Centre of Mass Motion, providing comprehensive...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_8B5D7BD6_V001",
+      "lessonSha256": "e797cb2cab75f02782f034a40d2a298a2847cfd8c95cffb5f09dfd49d2cd79d7",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_8B5D7BD6_44B4DE37",
+        "AF_GU_JEEMAIN2027_PHY_8B5D7BD6_456D0DFA",
+        "AF_GU_JEEMAIN2027_PHY_8B5D7BD6_8FE14689",
+        "AF_GU_JEEMAIN2027_PHY_8B5D7BD6_9D21E2E5",
+        "AF_GU_JEEMAIN2027_PHY_8B5D7BD6_C413FC5D",
+        "AF_GU_JEEMAIN2027_PHY_8B5D7BD6_FFDB45E4"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_8B5D7BD6_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_8B5D7BD6_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_8B5D7BD6_456D0DFA\"],\"prompt\":\"Which of the following statements correctly represents: Centre of Mass of a Rigid Body, Centre of Mass Motion?\",\"options\":[\"A rigid body is a body with a perfectly fixed shape where relative distances between all constituent particles remain constant.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: A rigid body is a body with a perfectly fixed shape where relative distances between all constituent particles remain constant. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_8B5D7BD6_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_8B5D7BD6_FFDB45E4\"],\"prompt\":\"Regarding Centre of Mass of a Rigid Body, Centre of Mass Motion, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"General motion of a rigid body can be decomposed into translation of its centre of mass and rotation about the centre of mass.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: General motion of a rigid body can be decomposed into translation of its centre of mass and rotation about the centre of mass..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_8B5D7BD6.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_9008E402",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U01_T_9008e402",
+      "topic": "This Generation Unit covers the nature of measurement uncertainty, errors in experimental physics, t...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_9008E402_V001",
+      "lessonSha256": "11b8044e03779c6e0d3ce32ad95fe5aac87ea6c86e4d147ea1d5af073912b013",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_9008E402_09175661",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_5BB4C1F8",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_619719C5",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_6B4C0C4F",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_8AB83234",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_A039AEBD",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_A0B38F68",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_AB6CCE8E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_C084CCD4",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_C4C55D7E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_CEF4A60E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_D6FF5DAE",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_D76BA2D1"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Absolute Error\",\"formula\":\"|\\\\Delta a_i| = |a_{\\\\text{true}} - a_i|\",\"constraints\":\"Difference between true/mean value and measured value\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_9008E402_AB6CCE8E\"]}",
+        "{\"name\":\"Relative Error\",\"formula\":\"\\\\text{Relative Error} = \\\\frac{\\\\Delta a_{\\\\text{mean}}}{a_{\\\\text{mean}}}\",\"constraints\":\"Dimensionless ratio\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_9008E402_09175661\"]}",
+        "{\"name\":\"Percentage Error\",\"formula\":\"\\\\delta a = \\\\left(\\\\frac{\\\\Delta a_{\\\\text{mean}}}{a_{\\\\text{mean}}}\\\\right) \\\\times 100\\\\%\",\"constraints\":\"Expressed as a percentage\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_9008E402_A0B38F68\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_9008E402_01_DENSITY_SIGNIFICANT_FIGURES",
+        "EX_GU_JEEMAIN2027_PHY_9008E402_02_PERCENTAGE_ERROR_COMBINATION"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_9008E402_01_ADDITION_DECIMAL_RULE\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Adding $436.32\\\\text{ g}$, $227.2\\\\text{ g}$, and $0.301\\\\text{ g}$ yields what value to the correct significant figures?\",\"options\":[\"$663.8\\\\text{ g}$\",\"$663.821\\\\text{ g}$\",\"$663.82\\\\text{ g}$\",\"$664\\\\text{ g}$\"],\"correctOptionIndex\":0,\"explanation\":\"In addition, the result must retain as many decimal places as the number with the least decimal places ($227.2\\\\text{ g}$ has 1 decimal place). Sum = $663.821\\\\text{ g}$, rounded to 1 decimal place = $663.8\\\\text{ g}$.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_9008E402_619719C5\"],\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_9008E402_02_ACCURACY_VS_PRECISION\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Which statement correctly distinguishes accuracy from precision?\",\"options\":[\"Accuracy refers to closeness to the true value; precision refers to resolution/reproducibility.\",\"Accuracy depends on least count only; precision has no relation to instrument limit.\",\"A precise measurement is always accurate.\",\"Accuracy and precision are identical concepts in physics.\"],\"correctOptionIndex\":0,\"explanation\":\"Accuracy measures how close a result is to the true value, while precision measures the resolution and repeatability of the measurement.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_9008E402_D6FF5DAE\",\"AF_GU_JEEMAIN2027_PHY_9008E402_6B4C0C4F\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_9008E402.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_9A3C0201",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_2026_PHY_U02_CH01_TOP02_001",
+      "topic": "This chapter explores Linear Momentum of a System of Particles and Centre of Mass Motion, providing ...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_9A3C0201_V001",
+      "lessonSha256": "03bf4d71b4dda6eed540dd0e431f0f3652f2e3831e1940f1340e401ff0ede9a7",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_9A3C0201_16797F82",
+        "AF_GU_JEEMAIN2027_PHY_9A3C0201_1F434645",
+        "AF_GU_JEEMAIN2027_PHY_9A3C0201_2832C46C",
+        "AF_GU_JEEMAIN2027_PHY_9A3C0201_36235CB2",
+        "AF_GU_JEEMAIN2027_PHY_9A3C0201_3917E7D0",
+        "AF_GU_JEEMAIN2027_PHY_9A3C0201_77C95D47",
+        "AF_GU_JEEMAIN2027_PHY_9A3C0201_959C2E28",
+        "AF_GU_JEEMAIN2027_PHY_9A3C0201_AA4E5D9A"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_9A3C0201_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_9A3C0201_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_9A3C0201_16797F82\"],\"prompt\":\"Which of the following statements correctly represents: Linear Momentum of a System of Particles and Centre of Mass Motion?\",\"options\":[\"The total linear momentum of a system of particles is equal to the product of total mass M and the velocity of its centre of mass: P_total = M * V_cm.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: The total linear momentum of a system of particles is equal to the product of total mass M and the velocity of its centre of mass: P_total = M * V_cm. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_9A3C0201_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_9A3C0201_36235CB2\"],\"prompt\":\"Regarding Linear Momentum of a System of Particles and Centre of Mass Motion, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"The motion of the centre of mass of a system of particles is governed exclusively by net external force: M * A_cm = F_ext.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: The motion of the centre of mass of a system of particles is governed exclusively by net external force: M * A_cm = F_ext..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_9A3C0201.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_A8EBEA76",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U06_T_a8ebea76",
+      "topic": "This chapter explores Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Ener...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_A8EBEA76_V001",
+      "lessonSha256": "bc049e7a94c6fe4260dbefb850ad3540c3feb1e5816060746eea54468dcf6dfa",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_0A9E45D9",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_1AE96603",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_68F404B6",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_6B26DE21",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_73AE0DD0",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_76D860B2",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_BD83E86C",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_F6AB3F2B",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_FBDEF4F5"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_A8EBEA76_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_A8EBEA76_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_A8EBEA76_1AE96603\"],\"prompt\":\"Which of the following statements correctly represents: Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Energy?\",\"options\":[\"Escape speed from Earth surface is the minimum projection speed to escape gravitational pull: v_e = sqrt(2 * G * M_e / R_e) = sqrt(2 * g * R_e).\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Escape speed from Earth surface is the minimum projection speed to escape gravitational pull: v_e = sqrt(2 * G * M_e / R_e) = sqrt(2 * g * R_e). (Source: NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_A8EBEA76_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_A8EBEA76_0A9E45D9\"],\"prompt\":\"Regarding Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Energy, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"The numerical value of escape speed from Earth's surface is approximately 11.2 km/s and is independent of projectile mass and projection angle.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: The numerical value of escape speed from Earth's surface is approximately 11.2 km/s and is independent of projectile mass and projection angle..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_A8EBEA76.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_AB220534",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U05_T_ab220534",
+      "topic": "This chapter explores Basic Concepts of Rotational Motion, Torque, Angular Momentum and Conservation...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_AB220534_V001",
+      "lessonSha256": "71bdacf334cddbee6d57c13549ab1b6adaccf13d985d7e34d9a2fe27dab97cf9",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_AB220534_1AC170B4",
+        "AF_GU_JEEMAIN2027_PHY_AB220534_36EF74D9",
+        "AF_GU_JEEMAIN2027_PHY_AB220534_92D0A89C",
+        "AF_GU_JEEMAIN2027_PHY_AB220534_ACCBFB48",
+        "AF_GU_JEEMAIN2027_PHY_AB220534_D2460AED",
+        "AF_GU_JEEMAIN2027_PHY_AB220534_D6A5D0AE",
+        "AF_GU_JEEMAIN2027_PHY_AB220534_F4B687A5"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_AB220534_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_AB220534_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_AB220534_D6A5D0AE\"],\"prompt\":\"Which of the following statements correctly represents: Basic Concepts of Rotational Motion, Torque, Angular Momentum and Conservation?\",\"options\":[\"The vector product of two vectors A and B is C = A x B = |A| * |B| * sin(theta) * n_hat and is anti-commutative: A x B = - (B x A).\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: The vector product of two vectors A and B is C = A x B = |A| * |B| * sin(theta) * n_hat and is anti-commutative: A x B = - (B x A). (Source: NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_AB220534_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_AB220534_F4B687A5\"],\"prompt\":\"Regarding Basic Concepts of Rotational Motion, Torque, Angular Momentum and Conservation, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Torque tau of a force F acting at position vector r with respect to an origin is defined as tau = r x F.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Torque tau of a force F acting at position vector r with respect to an origin is defined as tau = r x F..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_AB220534.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_AD1F2FDA",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U02_T_ad1f2fda",
+      "topic": "This Generation Unit covers instantaneous kinematics (velocity and acceleration as derivatives), the...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_AD1F2FDA_V001",
+      "lessonSha256": "a588c696bb73fe866fdbeea76b5ee8d96a3a099317db8cb0d32e90ff25e02d53",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_AD1F2FDA_191DEAE6",
+        "AF_GU_JEEMAIN2027_PHY_AD1F2FDA_30B16264",
+        "AF_GU_JEEMAIN2027_PHY_AD1F2FDA_413975B7",
+        "AF_GU_JEEMAIN2027_PHY_AD1F2FDA_463B56D2",
+        "AF_GU_JEEMAIN2027_PHY_AD1F2FDA_494EB9B8",
+        "AF_GU_JEEMAIN2027_PHY_AD1F2FDA_6CC5D22A",
+        "AF_GU_JEEMAIN2027_PHY_AD1F2FDA_9A286ACA",
+        "AF_GU_JEEMAIN2027_PHY_AD1F2FDA_9F55300C",
+        "AF_GU_JEEMAIN2027_PHY_AD1F2FDA_CAEE4A04"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH03_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Velocity-Time Relation\",\"formula\":\"v = v_0 + at\",\"constraints\":\"Constant acceleration a\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_AD1F2FDA_494EB9B8\"]}",
+        "{\"name\":\"Displacement-Time Relation\",\"formula\":\"x - x_0 = v_0 t + \\\\frac{1}{2}at^2\",\"constraints\":\"Constant acceleration a\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_AD1F2FDA_9F55300C\"]}",
+        "{\"name\":\"Velocity-Displacement Relation\",\"formula\":\"v^2 = v_0^2 + 2a(x - x_0)\",\"constraints\":\"Constant acceleration a\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_AD1F2FDA_30B16264\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_AD1F2FDA_01_BALL_THROWN_UPWARD"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_AD1F2FDA_01_ZERO_VELOCITY_NONZERO_ACCELERATION\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"At the topmost point of vertical motion under gravity, which of the following is true?\",\"options\":[\"Velocity is zero, acceleration is non-zero (downward g)\",\"Both velocity and acceleration are zero\",\"Velocity is upward, acceleration is zero\",\"Acceleration changes direction from upward to downward\"],\"correctOptionIndex\":0,\"explanation\":\"At the apex of vertical trajectory, instantaneous velocity is momentarily zero ($v = 0$), while gravitational acceleration remains constant and directed downwards ($a = -g$).\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_AD1F2FDA_CAEE4A04\",\"AF_GU_JEEMAIN2027_PHY_AD1F2FDA_9A286ACA\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_AD1F2FDA.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_B821705D",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U06_T_b821705d",
+      "topic": "This chapter explores Gravitational Potential Energy and Gravitational Potential, providing comprehe...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_B821705D_V001",
+      "lessonSha256": "1bdb719479a5a34feec8f5c8bb99aee281a6c4b5b5fef96bbefd7626ad830aae",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_B821705D_0A0E33A4",
+        "AF_GU_JEEMAIN2027_PHY_B821705D_2DF33491",
+        "AF_GU_JEEMAIN2027_PHY_B821705D_30720FDC",
+        "AF_GU_JEEMAIN2027_PHY_B821705D_83583E84",
+        "AF_GU_JEEMAIN2027_PHY_B821705D_A969A111",
+        "AF_GU_JEEMAIN2027_PHY_B821705D_BCF6EEFC",
+        "AF_GU_JEEMAIN2027_PHY_B821705D_C8D8F6A8",
+        "AF_GU_JEEMAIN2027_PHY_B821705D_E74E7270",
+        "AF_GU_JEEMAIN2027_PHY_B821705D_F2BA44A7"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_B821705D_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_B821705D_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_B821705D_F2BA44A7\"],\"prompt\":\"Which of the following statements correctly represents: Gravitational Potential Energy and Gravitational Potential?\",\"options\":[\"Gravitational potential energy of two point masses m1 and m2 separated by distance r is U(r) = - G * (m1 * m2) / r.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Gravitational potential energy of two point masses m1 and m2 separated by distance r is U(r) = - G * (m1 * m2) / r. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_B821705D_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_B821705D_E74E7270\"],\"prompt\":\"Regarding Gravitational Potential Energy and Gravitational Potential, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Gravitational potential V at distance r from mass M is the potential energy per unit mass: V(r) = - G * M / r.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Gravitational potential V at distance r from mass M is the potential energy per unit mass: V(r) = - G * M / r..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_B821705D.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_BACFBE4A",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U06_T_bacfbe4a",
+      "topic": "This chapter explores The Universal Law of Gravitation, Gravitational Constant, providing comprehens...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_BACFBE4A_V001",
+      "lessonSha256": "9b3fc4b090321300278e24b4c7fed43bb146ba631afacbe6d58fa80843c4e57f",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_BACFBE4A_026B2A1F",
+        "AF_GU_JEEMAIN2027_PHY_BACFBE4A_18E24EE1",
+        "AF_GU_JEEMAIN2027_PHY_BACFBE4A_2F464831",
+        "AF_GU_JEEMAIN2027_PHY_BACFBE4A_5C60A7A0",
+        "AF_GU_JEEMAIN2027_PHY_BACFBE4A_BE4CD636",
+        "AF_GU_JEEMAIN2027_PHY_BACFBE4A_BFD5EC35",
+        "AF_GU_JEEMAIN2027_PHY_BACFBE4A_F16CA48C"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_BACFBE4A_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_BACFBE4A_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_BACFBE4A_5C60A7A0\"],\"prompt\":\"Which of the following statements correctly represents: The Universal Law of Gravitation, Gravitational Constant?\",\"options\":[\"Newton's Universal Law of Gravitation states that the attractive force between two masses is F = G * (m1 * m2) / r^2.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Newton's Universal Law of Gravitation states that the attractive force between two masses is F = G * (m1 * m2) / r^2. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_BACFBE4A_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_BACFBE4A_BFD5EC35\"],\"prompt\":\"Regarding The Universal Law of Gravitation, Gravitational Constant, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"The Universal Gravitational Constant G has the value 6.674 x 10^-11 N*m^2 / kg^2 with dimensions [M^-1 L^3 T^-2].\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: The Universal Gravitational Constant G has the value 6.674 x 10^-11 N*m^2 / kg^2 with dimensions [M^-1 L^3 T^-2]..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_BACFBE4A.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_DEB95734",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U01_T_deb95734",
+      "topic": "This Generation Unit establishes the foundational principles of physical measurement, base and deriv...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_DEB95734_V001",
+      "lessonSha256": "d0ae54c8e29692f1dde3257adedc584e7de5222477c9e930cf2fc9234d5fce00",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_18518A52",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_48859D68",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_5C39C275",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_5EEFF483",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_636A1E20",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_B28DADA1",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_BABBF96B",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_C6745CDC",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_CF2392A3",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_DA7F84B0",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_E9C529E2"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "formulaRefs": [
+        "{\"name\":\"Physical Measurement Relation\",\"formula\":\"Q = n \\\\cdot u\",\"constraints\":\"Product of numerical value n and unit u remains invariant\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_DEB95734_CF2392A3\"]}",
+        "{\"name\":\"Plane Angle (Radian)\",\"formula\":\"d\\\\theta = \\\\frac{ds}{r} \\\\quad (\\\\text{rad})\",\"constraints\":\"Ratio of circular arc length to radius\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9\"]}",
+        "{\"name\":\"Solid Angle (Steradian)\",\"formula\":\"d\\\\Omega = \\\\frac{dA}{r^2} \\\\quad (\\\\text{sr})\",\"constraints\":\"Ratio of intercepted spherical surface area to r^2\",\"boundFactIds\":[\"AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9\"]}"
+      ],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_DEB95734_01_SOLID_ANGLE_CALCULATION",
+        "EX_GU_JEEMAIN2027_PHY_DEB95734_02_BASE_UNITS_IDENTIFICATION"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_DEB95734_01_SUPPLEMENTARY_UNITS\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Which of the following represents a supplementary SI unit having units but no dimensions?\",\"options\":[\"Plane Angle (Radian)\",\"Solid Angle (Steradian)\",\"Both Radian and Steradian\",\"Luminous Intensity (Candela)\"],\"correctOptionIndex\":2,\"explanation\":\"Radian (rad) and Steradian (sr) are the two supplementary SI units. Both possess units but are geometrically dimensionless ratios ($[M^0 L^0 T^0]$).\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9\"],\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_DEB95734_02_SI_BASE_SET\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"prompt\":\"Which pair of quantities are BOTH fundamental base quantities in the SI system?\",\"options\":[\"Electric Current and Thermodynamic Temperature\",\"Force and Velocity\",\"Work and Pressure\",\"Energy and Plane Angle\"],\"correctOptionIndex\":0,\"explanation\":\"Electric current (ampere, A) and Thermodynamic temperature (kelvin, K) are among the 7 SI base quantities. Force, velocity, work, and pressure are derived quantities.\",\"difficulty\":\"EASY\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_DEB95734_48859D68\",\"AF_GU_JEEMAIN2027_PHY_DEB95734_636A1E20\"],\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_DEB95734.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    },
+    {
+      "guId": "GU_JEEMAIN2027_PHY_FCA3AFA8",
+      "subject": "Physics",
+      "canonicalNodeId": "JEE_MAIN_2026_PHY_U03_T_fca3afa8",
+      "topic": "This chapter explores Static, Kinetic & Rolling Friction, providing comprehensive conceptual analysi...",
+      "lessonRevision": "REV_GU_JEEMAIN2027_PHY_FCA3AFA8_V001",
+      "lessonSha256": "2e247160d45d1895fd745f2b81046b438b67c45d83f8fe646b768e11e477c69c",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_FCA3AFA8_0D8F85C4",
+        "AF_GU_JEEMAIN2027_PHY_FCA3AFA8_3B7C1EB0",
+        "AF_GU_JEEMAIN2027_PHY_FCA3AFA8_509F83E2",
+        "AF_GU_JEEMAIN2027_PHY_FCA3AFA8_8147C464",
+        "AF_GU_JEEMAIN2027_PHY_FCA3AFA8_8EDD52E7",
+        "AF_GU_JEEMAIN2027_PHY_FCA3AFA8_C845285E",
+        "AF_GU_JEEMAIN2027_PHY_FCA3AFA8_EFCADA71",
+        "AF_GU_JEEMAIN2027_PHY_FCA3AFA8_F06CFA99",
+        "AF_GU_JEEMAIN2027_PHY_FCA3AFA8_F0F6523D"
+      ],
+      "sourceAuthorityRefs": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL"
+      ],
+      "formulaRefs": [],
+      "misconceptionRefs": [],
+      "workedExampleRefs": [
+        "EX_GU_JEEMAIN2027_PHY_FCA3AFA8_01"
+      ],
+      "selfCheckRefs": [
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_FCA3AFA8_01\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"MEDIUM\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_FCA3AFA8_C845285E\"],\"prompt\":\"Which of the following statements correctly represents: Static, Kinetic & Rolling Friction?\",\"options\":[\"Friction is the tangential contact force opposing relative motion or the tendency of relative motion between two contacting surfaces.\",\"Incorrect distractor contradicting verified fundamental principles.\",\"Unrelated concept from a different physical regime.\",\"Hypothetical condition not supported by standard experimental evidence.\"],\"correctOptionIndex\":0,\"explanation\":\"Option 1 is correct because: Friction is the tangential contact force opposing relative motion or the tendency of relative motion between two contacting surfaces. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL).\",\"isVerified\":true}",
+        "{\"questionId\":\"SC_GU_JEEMAIN2027_PHY_FCA3AFA8_02\",\"questionType\":\"SINGLE_CHOICE_MCQ\",\"difficulty\":\"HARD\",\"targetAtomicFactIds\":[\"AF_GU_JEEMAIN2027_PHY_FCA3AFA8_EFCADA71\"],\"prompt\":\"Regarding Static, Kinetic & Rolling Friction, which statement is strictly true?\",\"options\":[\"Contradictory incorrect proposition.\",\"Static friction is a self-adjusting force whose maximum limiting value is fs_max = mu_s * N.\",\"Arbitrary assertion with inverted proportionality.\",\"Non-rigorous approximation not valid under general conditions.\"],\"correctOptionIndex\":1,\"explanation\":\"Option 2 is strictly correct as verified: Static friction is a self-adjusting force whose maximum limiting value is fs_max = mu_s * N..\",\"isVerified\":true}"
+      ],
+      "privateLessonAuthorityPath": "C:\\RankCrackers\\RankCrackers-55.worktrees\\digibook-real-factory-base\\docs\\patch_safety\\rc_digibook_automated_private_scale_25_to_51_20260902\\lessons\\GU_JEEMAIN2027_PHY_FCA3AFA8.json",
+      "DigiBookAuthorityCommit": "1b6f7adc20d8ebd5847f4a39106256c33a8a25e4",
+      "factSemantics": "SOURCE_FACT_COMPLETE",
+      "assemblyStatus": "CURRENT_PRIVATE_CANARY"
+    }
+  ]
+}
