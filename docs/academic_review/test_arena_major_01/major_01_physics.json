@@ -21,7 +21,7 @@
       "sourceCandidate": "NCERT Class 11 Physics Chapter 2 (Units and Measurements)",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH02",
       "sourceLocator": "Section 2.7, Page 24",
-      "sourceHash": "sha256_ncert_phy_11_ch02_6a2f",
+      "sourceHash": "a4a414d371592b0728b41fe6997f0c01520dfa9042a6cc13cf4aeb2d5af96781",
       "stem": "If energy (E), velocity (v), and time (T) are chosen as the fundamental quantities, the dimensional formula for surface tension is:",
       "options": [
         "[E v⁻² T⁻²]",
@@ -54,7 +54,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "18dcc485d71c378d8eba25a9262c3e5c4dc69cdf7f45ffe589ab92d8392d118d"
+      "draftSha256": "fbe4988b4d03c6b6908635a6a154c5968f55f5b9a8ddbcd305e7ac12b7bdad72",
+      "sourceSha256": "a4a414d371592b0728b41fe6997f0c01520dfa9042a6cc13cf4aeb2d5af96781",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_002",
@@ -69,7 +72,7 @@
       "sourceCandidate": "NCERT Class 11 Physics Chapter 3 (Kinematics)",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.4, Page 47",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "stem": "A ball is thrown vertically upwards from the ground. It crosses a point at height h at time t₁ while going up and at time t₂ while coming down. The speed of projection is (g is acceleration due to gravity):",
       "options": [
         "g(t₁ + t₂) / 2",
@@ -102,7 +105,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "f03f374674b176a18a066d8fb5e3f6a47beb4012de919311935df9a773df35ff"
+      "draftSha256": "b654330885dc511d361b672accbcff82580de373a010e480520ed377050b2123",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_003",
@@ -117,7 +123,7 @@
       "sourceCandidate": "NCERT Class 11 Physics Chapter 5 (Laws of Motion)",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH05",
       "sourceLocator": "Section 5.9, Page 102",
-      "sourceHash": "sha256_ncert_phy_11_ch05_3d8e",
+      "sourceHash": "10ba66130612327832ab9c902e61dda1890e4552c5fe741a06c8d5fd6c2cdde2",
       "stem": "A block of mass m is placed on a smooth inclined plane of inclination θ. The inclined plane is accelerated horizontally with an acceleration 'a' so that the block remains stationary relative to the incline. The value of 'a' is:",
       "options": [
         "g tan θ",
@@ -150,7 +156,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "cef472e9f5ad71d5c9b1a9582466eade6769a2e841c4f4900ce0ad90f1d9299f"
+      "draftSha256": "fb79675a899aa3e06ee712c199384bb4bc72c56a96902b65e646c7907fcf9387",
+      "sourceSha256": "10ba66130612327832ab9c902e61dda1890e4552c5fe741a06c8d5fd6c2cdde2",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_004",
@@ -165,7 +174,7 @@
       "sourceCandidate": "NCERT Class 11 Physics Chapter 6 (Work, Energy and Power)",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH06",
       "sourceLocator": "Section 6.8, Page 121",
-      "sourceHash": "sha256_ncert_phy_11_ch06_4f7c",
+      "sourceHash": "c72588d8dac3ce02fc10f0324afeed6304c22b2e0504134cc17d5b49311ec45e",
       "stem": "A particle of mass m moves in a potential field U(r) = A/r² - B/r where A and B are positive constants. The equilibrium separation r₀ is:",
       "options": [
         "2A / B",
@@ -198,7 +207,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "d67c391a32e0996868cc00b109ede8396f04198924ae7571a721f17e90cb6c1c"
+      "draftSha256": "1eddef5e3e6a55eb4a3b6cfddd30ec99f77954c367b0dcccd3392cbdc0038e8b",
+      "sourceSha256": "c72588d8dac3ce02fc10f0324afeed6304c22b2e0504134cc17d5b49311ec45e",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_005",
@@ -213,7 +225,7 @@
       "sourceCandidate": "NCERT Class 11 Physics Chapter 7 (Rotational Motion)",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH07",
       "sourceLocator": "Section 7.8, Page 164",
-      "sourceHash": "sha256_ncert_phy_11_ch07_5e9b",
+      "sourceHash": "03584220d19491007a4ed8daefd2ff7aee5430062c60c3bb5cdb21c33b601d66",
       "stem": "A solid cylinder of mass M and radius R rolls down an inclined plane of inclination θ without slipping. The linear acceleration of the cylinder is:",
       "options": [
         "(2/3) g sin θ",
@@ -246,7 +258,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "bdb05bed83fbc274a12d354e4d15f70ee2fbbf066c935f5ac26d9c901b1e01ef"
+      "draftSha256": "3e1982dd22379919844c89ccba6be9233f4ed5e2b0a4c66237006dcb476f61ef",
+      "sourceSha256": "03584220d19491007a4ed8daefd2ff7aee5430062c60c3bb5cdb21c33b601d66",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_006",
@@ -261,7 +276,7 @@
       "sourceCandidate": "NCERT Class 11 Physics Chapter 8 (Gravitation)",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH08",
       "sourceLocator": "Section 8.7, Page 192",
-      "sourceHash": "sha256_ncert_phy_11_ch08_8f1a",
+      "sourceHash": "24fa81287deceda3620bbee124cec6dcc2b1e295fce6c5e663ddf6896292a103",
       "stem": "If the radius of Earth shrinks by 1% while its mass remains constant, the acceleration due to gravity on Earth's surface will:",
       "options": [
         "Increase by 2%",
@@ -294,7 +309,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "4c4a7ab4b04c61ba9b9e782f406e03fe7c8349740ba2cff8b8bd95be15b862eb"
+      "draftSha256": "ab0e8ff0b5bdb1df9d361981f0e4ecadf35a3a614f714b38c77dab4f5df06af2",
+      "sourceSha256": "24fa81287deceda3620bbee124cec6dcc2b1e295fce6c5e663ddf6896292a103",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_007",
@@ -309,7 +327,7 @@
       "sourceCandidate": "NCERT Class 11 Physics Chapter 9 (Mechanical Properties of Solids)",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH09",
       "sourceLocator": "Section 9.6, Page 242",
-      "sourceHash": "sha256_ncert_phy_11_ch09_1a3b",
+      "sourceHash": "9c3a0cb8007a44fb171088cef6e0d742e5ffa0b5fb3f30eaafac954766ce8cba",
       "stem": "A steel wire of length L and cross-sectional area A is stretched by a force F. If Y is the Young's modulus of steel, the elastic energy stored per unit volume of the wire is:",
       "options": [
         "F² / (2 A² Y)",
@@ -342,7 +360,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "43625bbaf6d88664339e8df842d6e509da4d68b6a3499e225d58223998bbef94"
+      "draftSha256": "5a7615ac1c6f4408a4b886f8ca2245153dd2f61d5adbcd87ede3182a7aef7d2e",
+      "sourceSha256": "9c3a0cb8007a44fb171088cef6e0d742e5ffa0b5fb3f30eaafac954766ce8cba",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_008",
@@ -357,7 +378,7 @@
       "sourceCandidate": "NCERT Class 11 Physics Chapter 12 (Thermodynamics)",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH12",
       "sourceLocator": "Section 12.8, Page 312",
-      "sourceHash": "sha256_ncert_phy_11_ch12_9c4d",
+      "sourceHash": "36fb1f58e0c1a6e736b772d7014f796c5a082d962c6a44253eaedd77dc597bab",
       "stem": "An ideal monoatomic gas (γ = 5/3) is compressed adiabatically to 1/8th of its initial volume. If the initial temperature of the gas is T, its final temperature will be:",
       "options": [
         "4T",
@@ -390,7 +411,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "f0a01777f314582d8d1db2a34af0e3d7e6c132caf4abf4bf8f9dc80442acfa2b"
+      "draftSha256": "0c741a67a1396a6a4a339b41cfc3356f13a26f23e5e376f726d73c239ad62f57",
+      "sourceSha256": "36fb1f58e0c1a6e736b772d7014f796c5a082d962c6a44253eaedd77dc597bab",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_009",
@@ -405,7 +429,7 @@
       "sourceCandidate": "NCERT Class 11 Physics Chapter 13 (Kinetic Theory)",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH13",
       "sourceLocator": "Section 13.4, Page 330",
-      "sourceHash": "sha256_ncert_phy_11_ch13_7a2e",
+      "sourceHash": "35a9c5fa1c43ab2996b526faefeb421ba0e3eccd56bc9c6175e0e59d5905eff0",
       "stem": "The root-mean-square speed of molecules of an ideal gas at temperature T is v_rms. If the absolute temperature is doubled and gas molecules dissociate into individual atoms, the new rms speed is:",
       "options": [
         "2 v_rms",
@@ -438,7 +462,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "fcc652a2adb43abb1f204b1220d13205c3ac0037d46947f3218b05f95d473207"
+      "draftSha256": "070aa4a43da3d2aedd03a222c3fe14738acb4bc1c8eb62e13a6ea9e4b2739ad3",
+      "sourceSha256": "35a9c5fa1c43ab2996b526faefeb421ba0e3eccd56bc9c6175e0e59d5905eff0",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_010",
@@ -453,7 +480,7 @@
       "sourceCandidate": "NCERT Class 11 Physics Chapter 14 (Oscillations)",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH14",
       "sourceLocator": "Section 14.5, Page 350",
-      "sourceHash": "sha256_ncert_phy_11_ch14_6d5f",
+      "sourceHash": "d5e735fe35bc80814e3d386cf319862436373d9b2f507a6de2353086df377330",
       "stem": "A particle executes simple harmonic motion of amplitude A. At what displacement from the mean position is its kinetic energy equal to its potential energy?",
       "options": [
         "A / √2",
@@ -486,7 +513,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "df7c4d12496c66dcef19724d7d6bcfa4a7843d71cb8874a7c6d1d09fa6c9f779"
+      "draftSha256": "46fff3594b90dc848fd7aa3628f83164cff3d179b2124080ee1802e1d2bb7423",
+      "sourceSha256": "d5e735fe35bc80814e3d386cf319862436373d9b2f507a6de2353086df377330",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_011",
@@ -501,7 +531,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 1 (Electric Charges and Fields)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH01",
       "sourceLocator": "Section 1.15, Page 38",
-      "sourceHash": "sha256_ncert_phy_12_ch01_1e2d",
+      "sourceHash": "da175f580d0b6349608fbcc674e7110d2acf37f283fc9519e497799f600aede0",
       "stem": "An electric dipole of dipole moment p is placed in a uniform electric field E at an angle θ with the field. The work done in rotating the dipole from θ = 0° to θ = 180° is:",
       "options": [
         "2 p E",
@@ -534,7 +564,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "274d140b37cfa1b2740374ac30da75115deca69f2f47b1f1a55265a04f22be21"
+      "draftSha256": "90d451cf6d8dc11c67d8b4fce501002f73b4bb51acd89ea894b29577c61097ab",
+      "sourceSha256": "da175f580d0b6349608fbcc674e7110d2acf37f283fc9519e497799f600aede0",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_012",
@@ -549,7 +582,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 3 (Current Electricity)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH03",
       "sourceLocator": "Section 3.10, Page 108",
-      "sourceHash": "sha256_ncert_phy_12_ch03_4b8c",
+      "sourceHash": "410956893a731104d7469017567fc2cf2dfa3184726fa89a6bb2ecbf7e92e50e",
       "stem": "A uniform wire of resistance R is stretched such that its length increases by 2%. The percentage increase in its resistance is approximately:",
       "options": [
         "4%",
@@ -582,7 +615,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "c18baa2e0d3825322a3dc4c866e98e4f85cb7a3586e6d0a841c06fc2e84933f3"
+      "draftSha256": "30a220ec804bc41480bf06310de7bd922968c091ab83a7b28ff8ea9742ecabc4",
+      "sourceSha256": "410956893a731104d7469017567fc2cf2dfa3184726fa89a6bb2ecbf7e92e50e",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_013",
@@ -597,7 +633,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 4 (Magnetic Effects of Current)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH04",
       "sourceLocator": "Section 4.6, Page 145",
-      "sourceHash": "sha256_ncert_phy_12_ch04_2f9a",
+      "sourceHash": "713704efdd9655ed879d6a73447e7c68a9352714ccfd49ab02d814c5750c82f0",
       "stem": "A charged particle of charge q and mass m enters a uniform magnetic field B with velocity v perpendicular to B. The work done by the magnetic force on the particle after completing one half cycle is:",
       "options": [
         "0",
@@ -630,7 +666,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "8b6c5ce0da3e7bae0b9d3c853553dfc670a21fd0f0124dfcd981e38f62c34ebe"
+      "draftSha256": "230b4e10ce2fb28d0069c3cdd037f86a0a6880abd48bfb0bb12f2590fd845f30",
+      "sourceSha256": "713704efdd9655ed879d6a73447e7c68a9352714ccfd49ab02d814c5750c82f0",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_014",
@@ -645,7 +684,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 6 (Electromagnetic Induction)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH06",
       "sourceLocator": "Section 6.7, Page 216",
-      "sourceHash": "sha256_ncert_phy_12_ch06_5e1b",
+      "sourceHash": "02bad742c19f9f71991f32e3fd1b9569d29c543f497ca75e194dc4a3d214edcb",
       "stem": "A conducting rod of length L is rotated with constant angular speed ω about one of its ends in a plane perpendicular to a uniform magnetic field B. The induced emf across the ends of the rod is:",
       "options": [
         "(1/2) B ω L²",
@@ -678,7 +717,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "c43fb858ead2ab5c87f293ff05e5d2c90c422b1b56f1a94b5187204d97e765b1"
+      "draftSha256": "c0f6e24a69076a5f8db1cee1f91ce70fdfe0c10bc75b21e4025eeb539e77e14b",
+      "sourceSha256": "02bad742c19f9f71991f32e3fd1b9569d29c543f497ca75e194dc4a3d214edcb",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_015",
@@ -693,7 +735,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 8 (Electromagnetic Waves)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH08",
       "sourceLocator": "Section 8.3, Page 276",
-      "sourceHash": "sha256_ncert_phy_12_ch08_3c7f",
+      "sourceHash": "83b2f63ab6a2fec36b3dbaed7ee40255c14235c4215f4f706c908a4ac33eebfd",
       "stem": "In an electromagnetic wave propagating in free space, the ratio of electric field amplitude E₀ to magnetic field amplitude B₀ is equal to:",
       "options": [
         "c (speed of light)",
@@ -726,7 +768,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "4c8fc3250f0b9b7d94d1034556574c1c996a16847a340e564fa447af2d37c250"
+      "draftSha256": "4f50cf27335dbedef95cbe5a6c47ddb1786328985c499c7c75ddf7368515911a",
+      "sourceSha256": "83b2f63ab6a2fec36b3dbaed7ee40255c14235c4215f4f706c908a4ac33eebfd",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_016",
@@ -741,7 +786,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 9 (Ray Optics)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH09",
       "sourceLocator": "Section 9.5, Page 326",
-      "sourceHash": "sha256_ncert_phy_12_ch09_9b2e",
+      "sourceHash": "3da59c2d496718cc2c6f033f78db10f162c96f6216762f28954d530688099bed",
       "stem": "A convex lens of refractive index 1.5 has focal length 20 cm in air. When immersed completely in water of refractive index 4/3, its focal length becomes:",
       "options": [
         "80 cm",
@@ -774,7 +819,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "2d7d2916a5840c8fe7c34b887f338da5ccc53845bcb51641ef5e597e2a59ad36"
+      "draftSha256": "08722834828519e95d900fbd9fe37ec13f9b3881f686aa7c42ec47264027437d",
+      "sourceSha256": "3da59c2d496718cc2c6f033f78db10f162c96f6216762f28954d530688099bed",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_017",
@@ -789,7 +837,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 11 (Dual Nature of Radiation and Matter)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH11",
       "sourceLocator": "Section 11.6, Page 394",
-      "sourceHash": "sha256_ncert_phy_12_ch11_8a1c",
+      "sourceHash": "a8e9b4de7a1b83ea21d0995429f772c82881f6243a95622f8e45899eb6f25994",
       "stem": "When light of frequency 2ν₀ (where ν₀ is threshold frequency) is incident on a metal plate, maximum kinetic energy of emitted photoelectrons is K₁. When frequency is increased to 5ν₀, maximum kinetic energy becomes K₂. The ratio K₁ : K₂ is:",
       "options": [
         "1 : 4",
@@ -822,7 +870,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "d10e19ed4d9d37cca3c998be35383696c684168855bb4a46fbc7ed0d71d914b0"
+      "draftSha256": "675fba4f60c921924ab786835bae7a66a3b5121e424bf6372a4fcf16a54bb3ca",
+      "sourceSha256": "a8e9b4de7a1b83ea21d0995429f772c82881f6243a95622f8e45899eb6f25994",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_018",
@@ -837,7 +888,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 12 (Atoms)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH12",
       "sourceLocator": "Section 12.4, Page 424",
-      "sourceHash": "sha256_ncert_phy_12_ch12_3f7b",
+      "sourceHash": "9c4ce9a35fb92a0fd465c413c09aaa0cf5f770ec449fda1be45147bce9e348b0",
       "stem": "The ratio of de-Broglie wavelength of an electron in the first Bohr orbit to that in the second Bohr orbit of hydrogen atom is:",
       "options": [
         "1 : 2",
@@ -870,7 +921,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "d2deb54296add8a212966a3346006ca55245ba1f1b93f1f9243cf52d36131b52"
+      "draftSha256": "5319c397f110e063b054f45d097ee41eb70354d3c2c096dda897f318c93a1f49",
+      "sourceSha256": "9c4ce9a35fb92a0fd465c413c09aaa0cf5f770ec449fda1be45147bce9e348b0",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_019",
@@ -885,7 +939,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 13 (Nuclei)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH13",
       "sourceLocator": "Section 13.5, Page 446",
-      "sourceHash": "sha256_ncert_phy_12_ch13_5c2a",
+      "sourceHash": "80adbf496f092e05d77ffc66a1ebe7cdca87bc53228070d06fa332f8401de999",
       "stem": "The half-life of a radioactive sample is 20 minutes. The fraction of initial sample remaining undecayed after 80 minutes is:",
       "options": [
         "1 / 16",
@@ -918,7 +972,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "acb81125762781aa44560d32ff0fe9399ad4bf1f5f8f025051655050a9d87b8f"
+      "draftSha256": "a7e4a351a465311c57778f102820df3192341e9a549099eda4319d124f540888",
+      "sourceSha256": "80adbf496f092e05d77ffc66a1ebe7cdca87bc53228070d06fa332f8401de999",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_020",
@@ -933,7 +990,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 14 (Semiconductor Electronics)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH14",
       "sourceLocator": "Section 14.6, Page 482",
-      "sourceHash": "sha256_ncert_phy_12_ch14_7b1e",
+      "sourceHash": "650cc67342bbe50caa95bfb4e4f2150ade992af86754af448d402efc9101de2c",
       "stem": "In a forward biased p-n junction diode, the width of the depletion layer:",
       "options": [
         "Decreases",
@@ -966,7 +1023,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "6907a0c9a82cdd7f7552f6a833878ca3e28b1c8445df29d067e040fc47c1ddea"
+      "draftSha256": "7764f3eaa05e8b37d27c4a99b682b62c2904b77b469c3428c3a398cb41ab1219",
+      "sourceSha256": "650cc67342bbe50caa95bfb4e4f2150ade992af86754af448d402efc9101de2c",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_PHY_021",
@@ -981,7 +1041,7 @@
       "sourceCandidate": "NCERT Class 11 Physics Chapter 3 (Kinematics)",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.5, Page 50",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "stem": "A particle starts from rest with uniform acceleration and covers a distance of 100 m in first 10 seconds. The distance covered by it in the next 10 seconds is (in meters):",
       "options": [],
       "correctAnswer": "300",
@@ -1008,7 +1068,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "02e7efafdbc7995f9c4b726cb9985f3ee127b010542fce2a6a2f81b2ca1c92eb"
+      "draftSha256": "6016bd48f649edb4d2ad44b4187f04e8f4214b8b459fa4473e2e9a4e3a57c2c3",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_PHY_022",
@@ -1023,7 +1086,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 2 (Electrostatic Potential and Capacitance)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH02",
       "sourceLocator": "Section 2.15, Page 82",
-      "sourceHash": "sha256_ncert_phy_12_ch02_4e1a",
+      "sourceHash": "5c70315cfd0cb8f63e486745c26534086c3f53ebfa1d19a8192ab9bdbb0d45e0",
       "stem": "A parallel plate capacitor of capacitance 10 μF is charged to 100 V and disconnected from the battery. When a dielectric slab of dielectric constant K = 5 is inserted to fill the space between plates completely, the new potential difference across the capacitor in volts is:",
       "options": [],
       "correctAnswer": "20",
@@ -1050,7 +1113,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "061dc9c0077e45889fe0d2328c3d15e1cba6b6d803d3eeddfef26c362fed5928"
+      "draftSha256": "a70452b5f68d1709cef68f0e44d546366b60b3e08a1ae378b474137a6222a036",
+      "sourceSha256": "5c70315cfd0cb8f63e486745c26534086c3f53ebfa1d19a8192ab9bdbb0d45e0",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_PHY_023",
@@ -1065,7 +1131,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 3 (Current Electricity)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH03",
       "sourceLocator": "Section 3.14, Page 120",
-      "sourceHash": "sha256_ncert_phy_12_ch03_4b8c",
+      "sourceHash": "410956893a731104d7469017567fc2cf2dfa3184726fa89a6bb2ecbf7e92e50e",
       "stem": "In a meter bridge experiment, the balance point is obtained at 40 cm from the zero end when a known resistance of 6 Ω is connected in the right gap. The value of unknown resistance in the left gap in ohms is (give answer as integer / float):",
       "options": [],
       "correctAnswer": "4",
@@ -1092,7 +1158,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "7e8f3051efab1f8a2ac0db3cc247c85aba206ee26829985ca8fe1350e88fa47f"
+      "draftSha256": "386f1a7ac9521cc62a9bb405147650b0f3d35de0f107f3e1af11d0486982ea99",
+      "sourceSha256": "410956893a731104d7469017567fc2cf2dfa3184726fa89a6bb2ecbf7e92e50e",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_PHY_024",
@@ -1107,7 +1176,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 10 (Wave Optics)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH10",
       "sourceLocator": "Section 10.4, Page 364",
-      "sourceHash": "sha256_ncert_phy_12_ch10_6c1d",
+      "sourceHash": "44b3118fa9ac3ba8942116b4eeb6429fe7ba50dcd3b4e65a120611b3ac5da5d7",
       "stem": "In Young's double slit experiment, slits are separated by 0.5 mm and screen is at 1 m. When light of wavelength 500 nm is used, the distance in millimeters between 5th bright fringe and central maximum is:",
       "options": [],
       "correctAnswer": "5",
@@ -1134,7 +1203,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "479fe9e96ac738fb85ba5f0e8171c1c80f5840b93e01113e045abebadc18322c"
+      "draftSha256": "8810ca63f0d5987dff82b24640f18cd3f8d7400692189336666e9b2b9bd3dea4",
+      "sourceSha256": "44b3118fa9ac3ba8942116b4eeb6429fe7ba50dcd3b4e65a120611b3ac5da5d7",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_PHY_025",
@@ -1149,7 +1221,7 @@
       "sourceCandidate": "NCERT Class 12 Physics Chapter 12 (Atoms)",
       "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH12",
       "sourceLocator": "Section 12.3, Page 420",
-      "sourceHash": "sha256_ncert_phy_12_ch12_3f7b",
+      "sourceHash": "9c4ce9a35fb92a0fd465c413c09aaa0cf5f770ec449fda1be45147bce9e348b0",
       "stem": "The ionization potential of hydrogen atom in ground state is 13.6 V. The energy of the photon emitted in eV when an electron transitions from n = 3 state to n = 2 state in hydrogen atom is (give answer to two decimal places or standard value e.g. 1.89):",
       "options": [],
       "correctAnswer": "1.89",
@@ -1176,7 +1248,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "fdd64426e4254e6719299775cf67c6f4ef74f012e028e0999c25b2dabd474f0a"
+      "draftSha256": "2a420e07f54118dea2b01a7e2bc280c5373a675c90365788c08cb4b840aa89e2",
+      "sourceSha256": "9c4ce9a35fb92a0fd465c413c09aaa0cf5f770ec449fda1be45147bce9e348b0",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     }
   ]
 }

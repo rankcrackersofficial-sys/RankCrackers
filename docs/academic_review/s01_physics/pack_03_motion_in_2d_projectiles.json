@@ -15,7 +15,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_001",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.10, Page 78 (Projectile Motion)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "foundation",
       "stem": "A projectile is thrown with speed u at an angle θ with the horizontal. The speed of the projectile at its highest point is:",
@@ -49,7 +49,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "d17a50bebfd5caefb0dd3a76ba5a161b6a129aad9c5145b22de531c0900d90f7"
+      "draftSha256": "16aee96da3c1e09244970352154e08eda2f46b54f680167ae70defe79fb2238a",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_022",
@@ -58,7 +59,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_002",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.10, Page 79 (Maximum Height and Range)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "standard",
       "stem": "The horizontal range of a projectile is 4√3 times its maximum height. The angle of projection with the horizontal is:",
@@ -92,7 +93,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "f4c3bb1c7732f9f2c2155ff6325e84133587a35428447bec92680fdb1a9672b5"
+      "draftSha256": "5472bea0f12617cb6aaa7cb4f351bee332e54ec38ee0a6ef3d9698a2d1ac4255",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_023",
@@ -101,7 +103,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_003",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "standard",
       "stem": "Two projectiles are thrown with the same initial speed at angles θ and (90° - θ) to the horizontal. If their maximum heights are H₁ and H₂ respectively, then their horizontal range R is related by:",
@@ -135,7 +137,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "379d52e0952042b82939cb78cb6a41177641ad8b6e849c090cead7b2ba096bb7",
+      "draftSha256": "d7990940fff1e69b72ff5347e7bda2795cbb6c5d261a71bb92c615f2c68f1f35",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -149,7 +151,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_024",
@@ -158,7 +161,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_004",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.10, Page 80 (Equation of Path of a Projectile)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "NUMERICAL",
       "difficultyBand": "standard",
       "stem": "The equation of trajectory of a projectile is given by y = √3 x - 5x² (where x and y are in meters). The initial angle of projection in degrees is:",
@@ -186,7 +189,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "86ccf374bcb1294976bcc1ecbae909932e84a7e3e25d430d30a136631899b2fc"
+      "draftSha256": "7748fa32408052a0224b07511ed3b75ce2e6ce72884361e983b5e5ea44db8276",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_025",
@@ -195,7 +199,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_005",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "NUMERICAL",
       "difficultyBand": "high",
       "stem": "A particle is projected horizontally from the top of a tower of height 80 m with speed 20 m/s. The speed of the particle when it hits the ground is (g = 10 m/s²):",
@@ -223,7 +227,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "5508cb17c8b9db853e47ced43289f8a3039c70537c1bea059d2d90ec870266c0",
+      "draftSha256": "73a1b2c3a8a41d35a51a3ebb00a153436635ae0b91cc018e81b7817f201d3369",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -237,7 +241,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_026",
@@ -246,7 +251,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_006",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.10, Page 81 (Time of Flight Formula)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "foundation",
       "stem": "If the time of flight of a projectile is T, the maximum height attained by it is:",
@@ -280,7 +285,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "2c41e1b1d0e1f9da07e3e5091d889694162574df4cb8556d1b0b818c1cabf69d"
+      "draftSha256": "55abc6308b97e94534a600f52e1e77de9d41db1d3eddf83ddd74ba0eee303d79",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_027",
@@ -289,7 +295,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_007",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "high",
       "stem": "A particle is projected with velocity u at angle θ with horizontal. The radius of curvature of its trajectory at the highest point is:",
@@ -323,7 +329,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "8c8bde22e450649842667fd556d9ce668505ebb11819b718e12c8169697405e7",
+      "draftSha256": "d1744b3a3c45cff2b2e6217fe23b8bdab8ac96f6167713d7dcdc9f29b9d25969",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -337,7 +343,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_028",
@@ -346,7 +353,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_008",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.10, Page 80 (Change in momentum during projectile flight)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "standard",
       "stem": "A body of mass m is projected with speed u at angle θ with horizontal. The magnitude of change in momentum of the body between the point of projection and the highest point is:",
@@ -380,7 +387,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "bdf97eb24c667e3fd5bd65c46f1f41bcde0941272109a91ac5638a82c36d5889"
+      "draftSha256": "a63a15d2517dc4d74022890b0b041121f79d240312f4810eb678897d48fbf795",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_029",
@@ -389,7 +397,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_009",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "NUMERICAL",
       "difficultyBand": "standard",
       "stem": "A projectile is launched with kinetic energy K. If its kinetic energy at the highest point of its trajectory is K/4, the angle of projection in degrees is:",
@@ -417,7 +425,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "0d4f626bed35fb545ffba9543fa8d802f7e43c08b9e42639aae43360ba821a9b",
+      "draftSha256": "34878b99e7bd81aa000f48d6ad78db583a1b3bd23cddb7bbc87cbd30df944419",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -431,7 +439,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_030",
@@ -440,7 +449,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP03_010",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "high",
       "stem": "A particle is projected from the ground with speed u at angle 45° to horizontal. The average velocity of the particle between the point of projection and the highest point is:",
@@ -474,7 +483,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "7115705893e1383792c728a09a0100bd44e05fa11b12f5f2a369c1d58f887cc8",
+      "draftSha256": "0f51b5cbf239f27d9d038b27f413d6133cf954baa25c8335aa9358731a405d73",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -488,7 +497,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     }
   ]
 }

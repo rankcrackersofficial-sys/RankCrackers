@@ -1,0 +1,3446 @@
+{
+  "summary": {
+    "TOTAL_AUDITED": 125,
+    "S01_SOURCE_RESOLVED": 50,
+    "MAJOR_SOURCE_RESOLVED": 75,
+    "INVALID_LITERAL_SHA256_USED_AS_AUTHORITY": 0,
+    "SOURCE_DOCUMENT_HASH_MISMATCH": 0,
+    "canonicalRegistryManifest": {
+      "NCERT_CLASS_11_PHYSICS_CH03": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_PHYSICS_CH04": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_PHYSICS_CH02": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH02",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "a4a414d371592b0728b41fe6997f0c01520dfa9042a6cc13cf4aeb2d5af96781",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_PHYSICS_CH05": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH05",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "10ba66130612327832ab9c902e61dda1890e4552c5fe741a06c8d5fd6c2cdde2",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_PHYSICS_CH06": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH06",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "c72588d8dac3ce02fc10f0324afeed6304c22b2e0504134cc17d5b49311ec45e",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_PHYSICS_CH07": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH07",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "03584220d19491007a4ed8daefd2ff7aee5430062c60c3bb5cdb21c33b601d66",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_PHYSICS_CH08": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH08",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "24fa81287deceda3620bbee124cec6dcc2b1e295fce6c5e663ddf6896292a103",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_PHYSICS_CH09": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH09",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "9c3a0cb8007a44fb171088cef6e0d742e5ffa0b5fb3f30eaafac954766ce8cba",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_PHYSICS_CH12": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH12",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "36fb1f58e0c1a6e736b772d7014f796c5a082d962c6a44253eaedd77dc597bab",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_PHYSICS_CH13": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH13",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "35a9c5fa1c43ab2996b526faefeb421ba0e3eccd56bc9c6175e0e59d5905eff0",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_PHYSICS_CH14": {
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH14",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "d5e735fe35bc80814e3d386cf319862436373d9b2f507a6de2353086df377330",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH01": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH01",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "da175f580d0b6349608fbcc674e7110d2acf37f283fc9519e497799f600aede0",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH03": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH03",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "410956893a731104d7469017567fc2cf2dfa3184726fa89a6bb2ecbf7e92e50e",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH04": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH04",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "713704efdd9655ed879d6a73447e7c68a9352714ccfd49ab02d814c5750c82f0",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH06": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH06",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "02bad742c19f9f71991f32e3fd1b9569d29c543f497ca75e194dc4a3d214edcb",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH08": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH08",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "83b2f63ab6a2fec36b3dbaed7ee40255c14235c4215f4f706c908a4ac33eebfd",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH09": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH09",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "3da59c2d496718cc2c6f033f78db10f162c96f6216762f28954d530688099bed",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH11": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH11",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "a8e9b4de7a1b83ea21d0995429f772c82881f6243a95622f8e45899eb6f25994",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH12": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH12",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "9c4ce9a35fb92a0fd465c413c09aaa0cf5f770ec449fda1be45147bce9e348b0",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH13": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH13",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "80adbf496f092e05d77ffc66a1ebe7cdca87bc53228070d06fa332f8401de999",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH14": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH14",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "650cc67342bbe50caa95bfb4e4f2150ade992af86754af448d402efc9101de2c",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH02": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH02",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "5c70315cfd0cb8f63e486745c26534086c3f53ebfa1d19a8192ab9bdbb0d45e0",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_PHYSICS_CH10": {
+        "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH10",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "44b3118fa9ac3ba8942116b4eeb6429fe7ba50dcd3b4e65a120611b3ac5da5d7",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_CHEMISTRY_CH01": {
+        "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH01",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "2fdd9eed62db1338cf68f62b5c63c549d66baa63d5ebab20c01f8428d2f80846",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_CHEMISTRY_CH02": {
+        "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH02",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "6603ca23ab6171c6e26bd7989123ce95cc718bf256cda77a481cc66884b93e01",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_CHEMISTRY_CH03": {
+        "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH03",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "b82e6fc2a2996f5c12e0e69043d0ff57d0d53af3b48d25fc8958877cf5345e79",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_CHEMISTRY_CH04": {
+        "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH04",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "40de76352b9b3774cc3a238565e93c37dd1d34b71f868c66dee8654cc08d41a6",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_CHEMISTRY_CH06": {
+        "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH06",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "77035d7103fbd50e4013393662b7d29681fc47d2d92c736c0bcd2f2890df208d",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_CHEMISTRY_CH07": {
+        "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH07",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "91d017a0eeb8259c57c36ee81e0cb289782c55a8eea7c0328aa03e71ef7f6de1",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_CHEMISTRY_CH08": {
+        "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH08",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "f2d140002f670f7ee02f044c1fb22fb2467280944a4e6598d4dd4ca38ef4f6a4",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_CHEMISTRY_CH02": {
+        "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH02",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "c878363333b4f38404396240153493ce3331536e32a40dcca677b52a2d3a86f9",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_CHEMISTRY_CH03": {
+        "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH03",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "28cccf9cfb87ddadd94976b7798f82441c6970467e5e59b43f5d9ce0c046ad80",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_CHEMISTRY_CH04": {
+        "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH04",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "89b5698a34acbcbba1590268a56fd23578df54d1d25a9afe32d343880d7be503",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_CHEMISTRY_CH08": {
+        "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH08",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "1879b32b8ffc0f3e30440e12e567a5753cb6d6801164be3a32fd94b7bb184b20",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_CHEMISTRY_CH09": {
+        "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH09",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "c8417f03c788dcc042454c88eb4c998c387f5e7046c57188d06a68b626baa2a0",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_CHEMISTRY_CH12": {
+        "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH12",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "dfea8840fff343f270dfa26033fdd36ede54d83294905b52c517d2204cdd25ea",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_CHEMISTRY_CH13": {
+        "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH13",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "4296c9d4ba7ef54b225a1f042574369f721cca92fad5900c29a0f21f144ed1c2",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_CHEMISTRY_CH10": {
+        "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH10",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "a9d0ea8e7b220b0fe4f8a0acc8f0117a5480dc90c40a77136d2f19154c4584a4",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_CHEMISTRY_CH11": {
+        "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH11",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "e8ca35bf02da6e190bed078c284a5d51c97502c293276009dbd1f552fe2e3a8c",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_CHEMISTRY_CH12": {
+        "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH12",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "6d1b774b367f4469dfb1beabbc72a6a526271190ba19337ec07a95d2c932c8e9",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_CHEMISTRY_CH13": {
+        "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH13",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "915798ececab370f904031bd03ae6f17c96b1bd6bdbc1d1536d40958c042e0d6",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_CHEMISTRY_CH14": {
+        "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH14",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "36c1a0a2fb6fced8a4506cbfd45144d0ff90c5983ad6b9b736158710fb8eaad7",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_CHEMISTRY_CH07": {
+        "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH07",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "07c764b19a96609a11666544ec089135253fb59f52bbf1dda69964a019dad6a1",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_MATHEMATICS_CH01": {
+        "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH01",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "e9caef27a643c1fed7545e11dcb6de19dfe7f58909e93c5c56b736182aefe43b",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_MATHEMATICS_CH05": {
+        "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH05",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "a66cd54a5edeed0597da6eaa342adb8d24ee675ebece93b163a7fb23ad3215fe",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_MATHEMATICS_CH03": {
+        "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH03",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "74350b32a743a9eb89be426061695afe2fc2d0555cf83f42c7024b6359ac60ff",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_MATHEMATICS_CH07": {
+        "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH07",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "56fb3a5e13187c32a9fcf56d767791c4bc5c950c5156aebf82223e7ac1c2d93b",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_MATHEMATICS_CH08": {
+        "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH08",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "e1b0a08c55d42bee6dda8cb80fe3b31094193e3c1d6e47ac0b1385b228dd761e",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_MATHEMATICS_CH09": {
+        "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH09",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "6aeafb4c3ec21d68ebe9c578c24d09611cd605101ce6fa1fe0e8d63d59311dee",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_MATHEMATICS_CH13": {
+        "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH13",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "b206801280419d8e0d340940940962e93683581010b92feafc952336cdba1e44",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_MATHEMATICS_CH05": {
+        "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH05",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "5727e95217dedb89c9a29c13f254a2cc3ac2ecdf7fe721865ff1d18b1d314cca",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_MATHEMATICS_CH06": {
+        "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH06",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "ab1c5037b91514485a1809cd4adabab57605c3ad6ada1241ebbe8188cf61d0ff",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_MATHEMATICS_CH07": {
+        "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH07",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_MATHEMATICS_CH08": {
+        "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH08",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "e1f3495d3af5979938bace0f2e6f4d353d614a795a93ed7da933b4b75941064a",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_MATHEMATICS_CH09": {
+        "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH09",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "24ff710fdf5ceaa6f4145e1db54475d760e499fcb072bd8ea867bae425707076",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_MATHEMATICS_CH10": {
+        "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH10",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "69e1b1cb74424986367e9de99b817118548d10941f321462ab5ccfbd01f01699",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_MATHEMATICS_CH11": {
+        "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH11",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "0f1acb2a502224c1c6b3bde22ab36f79eefcee0a19b2503098eb0716cb486607",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_MATHEMATICS_CH10": {
+        "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH10",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "9682d28114ce12ad50cc830e56e5de61160fd2f973c1aa185ade8deaf95172dc",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_MATHEMATICS_CH11": {
+        "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH11",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "4f3badf41cc6a0903ff4354e4db893691c039ffeba087d4bbe806187febc9a86",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_11_MATHEMATICS_CH15": {
+        "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH15",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "b17ea6b0dd67d26ccd15d2f63772806b6b960275bf0b8209a0dba28cc4e4afe1",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_MATHEMATICS_CH13": {
+        "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH13",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "0e8f2c7ccee85a84cd3b408b29c9edd94ef140b30faa4b781a834cf07ff0c60e",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_MATHEMATICS_CH02": {
+        "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH02",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "6b60091eaef524f70b4afe3eec1a1b258f47dabe4796b6aa5cf3b47bc90e16bf",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      },
+      "NCERT_CLASS_12_MATHEMATICS_CH04": {
+        "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH04",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "b61e99b8ae6c4028ef3ece5229062de90772a2788716fe73eabc9df4c6ff4fe4",
+        "registryActive": true,
+        "missionScope": "jee_main_2026"
+      }
+    },
+    "auditRecordsSample": [
+      {
+        "questionId": "JEE_S01_PHY_001",
+        "version": "1.0.0",
+        "missionId": "jee_main_2026",
+        "scheduleOrEventId": "sch_jee_main_2026_1",
+        "canonicalAtomIds": [
+          "JEE_2026_PHY_U01_CH03_TOP01_001"
+        ],
+        "structuralNodeIds": [
+          "38ddd2c9270afee0"
+        ],
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+        "sourceLocator": "Section 3.3, Page 41 (Kinematic Equations for Uniformly Accelerated Motion)",
+        "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+        "registryActive": true,
+        "scopeMatch": true,
+        "draftSha256": "537ffba12ca0188617a7328395fd0c59dc37c2e46218c5202afe359c0de69a4b",
+        "sourceResolutionStatus": "SOURCE_RESOLVED",
+        "difficultyEvidenceType": "SME_JUDGMENT",
+        "difficultyState": "STANDARD"
+      },
+      {
+        "questionId": "JEE_S01_PHY_002",
+        "version": "1.0.0",
+        "missionId": "jee_main_2026",
+        "scheduleOrEventId": "sch_jee_main_2026_1",
+        "canonicalAtomIds": [
+          "JEE_2026_PHY_U01_CH03_TOP01_002"
+        ],
+        "structuralNodeIds": [
+          "38ddd2c9270afee0"
+        ],
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+        "sourceLocator": "Section 3.4, Page 45 (Free Fall Motion)",
+        "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+        "registryActive": true,
+        "scopeMatch": true,
+        "draftSha256": "75728f3e1e364cee07eece2a15ef5db3cb755e123654d673d4500e51203d3f1f",
+        "sourceResolutionStatus": "SOURCE_RESOLVED",
+        "difficultyEvidenceType": "SME_JUDGMENT",
+        "difficultyState": "STANDARD"
+      },
+      {
+        "questionId": "JEE_S01_PHY_003",
+        "version": "1.1.0",
+        "missionId": "jee_main_2026",
+        "scheduleOrEventId": "sch_jee_main_2026_1",
+        "canonicalAtomIds": [
+          "JEE_2026_PHY_U01_CH03_TOP02_001"
+        ],
+        "structuralNodeIds": [
+          "38ddd2c9270afee0"
+        ],
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+        "sourceLocator": "Section 3.2, Page 39 (Instantaneous Velocity and Acceleration)",
+        "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+        "registryActive": true,
+        "scopeMatch": true,
+        "draftSha256": "1e8516a84117ccd7d443c00623330e07b37dddd6e7647a32ab366ed9db114ff9",
+        "sourceResolutionStatus": "SOURCE_RESOLVED",
+        "difficultyEvidenceType": "SME_JUDGMENT",
+        "difficultyState": "STANDARD"
+      },
+      {
+        "questionId": "JEE_S01_PHY_004",
+        "version": "1.1.0",
+        "missionId": "jee_main_2026",
+        "scheduleOrEventId": "sch_jee_main_2026_1",
+        "canonicalAtomIds": [
+          "JEE_2026_PHY_U01_CH03_TOP02_002"
+        ],
+        "structuralNodeIds": [
+          "38ddd2c9270afee0"
+        ],
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+        "sourceLocator": "Section 3.3, Page 43 (Stopping Distance of Vehicles)",
+        "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+        "registryActive": true,
+        "scopeMatch": true,
+        "draftSha256": "6625f59ec1c87e8b54b6f0e98d47096aed091eda90d691595a7375ce8a49a0e7",
+        "sourceResolutionStatus": "SOURCE_RESOLVED",
+        "difficultyEvidenceType": "SME_JUDGMENT",
+        "difficultyState": "STANDARD"
+      },
+      {
+        "questionId": "JEE_S01_PHY_005",
+        "version": "1.0.0",
+        "missionId": "jee_main_2026",
+        "scheduleOrEventId": "sch_jee_main_2026_1",
+        "canonicalAtomIds": [
+          "JEE_2026_PHY_U01_CH03_TOP01_003"
+        ],
+        "structuralNodeIds": [
+          "38ddd2c9270afee0"
+        ],
+        "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+        "sourceVersion": "1.0.0",
+        "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+        "sourceLocator": "Section 3.2, Page 38 (Position-Time Graphs)",
+        "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+        "registryActive": true,
+        "scopeMatch": true,
+        "draftSha256": "21e29cc777341d620034272e22a07b7f4863dc18f95cc7fecc845c12f7e909fe",
+        "sourceResolutionStatus": "SOURCE_RESOLVED",
+        "difficultyEvidenceType": "SME_JUDGMENT",
+        "difficultyState": "STANDARD"
+      }
+    ]
+  },
+  "allDrafts": [
+    {
+      "questionId": "JEE_S01_PHY_001",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "38ddd2c9270afee0"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.3, Page 41 (Kinematic Equations for Uniformly Accelerated Motion)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "537ffba12ca0188617a7328395fd0c59dc37c2e46218c5202afe359c0de69a4b",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_002",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP01_002"
+      ],
+      "structuralNodeIds": [
+        "38ddd2c9270afee0"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.4, Page 45 (Free Fall Motion)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "75728f3e1e364cee07eece2a15ef5db3cb755e123654d673d4500e51203d3f1f",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_003",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "38ddd2c9270afee0"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.2, Page 39 (Instantaneous Velocity and Acceleration)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "1e8516a84117ccd7d443c00623330e07b37dddd6e7647a32ab366ed9db114ff9",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_004",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP02_002"
+      ],
+      "structuralNodeIds": [
+        "38ddd2c9270afee0"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.3, Page 43 (Stopping Distance of Vehicles)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "6625f59ec1c87e8b54b6f0e98d47096aed091eda90d691595a7375ce8a49a0e7",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_005",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP01_003"
+      ],
+      "structuralNodeIds": [
+        "38ddd2c9270afee0"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.2, Page 38 (Position-Time Graphs)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "21e29cc777341d620034272e22a07b7f4863dc18f95cc7fecc845c12f7e909fe",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_006",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "5348e3cffa58e586"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.4, Page 47 (Galileo's Law of Odd Numbers)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "e241c0d39c08f8f963b43c0b0a96b66d49b80e35e6c9d5479855c628ff10efaa",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_007",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP02_003"
+      ],
+      "structuralNodeIds": [
+        "5348e3cffa58e586"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "b47739307d28cd1c5277b16e13872352f755f32de0b1cce896353d199d8ae4ba",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_008",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP01_004"
+      ],
+      "structuralNodeIds": [
+        "5348e3cffa58e586"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.1, Page 37 (Average vs Instantaneous Speed)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "363d5186abe0afb7d58284ada610e6ff852d651659dc877023553b35af7355a4",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_009",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP02_004"
+      ],
+      "structuralNodeIds": [
+        "5348e3cffa58e586"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.2, Page 40 (Acceleration from Velocity-Time Area)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "c2f33c73707c5839c880de7ff24ae95934b59ea7786c8a76aa8c245ea0ac99b4",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_010",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP03_002"
+      ],
+      "structuralNodeIds": [
+        "5348e3cffa58e586"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "085bbe958eb744d343fb9c0d9c0a40e7843422cde7818c7dab3630d824cd0126",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_011",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.2, Page 66 (Scalars and Vectors, Unit Vectors)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "53a0b43ef898334af7aa9174388839865e81f627aeffec909c9a6fea4b7272da",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_012",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP01_002"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.4, Page 69 (Vector Addition - Triangle and Parallelogram Law)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "693fc6949f7bc8fac76dd94c98e44d73da950ed48ae0553b4d74ad4b0fa544c1",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_013",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.7, Page 74 (Scalar Product of Vectors)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "8c6d7d73551c7dcd886913081daeecbfb91272cfab542f90efaeecfd98b90366",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_014",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP02_002"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.8, Page 76 (Vector Product of Vectors)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "f8ad1d1baa02976114bbaf8c337c9b5010cb79fc3481d334d0f9c5299ef601e1",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_015",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP01_003"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "e12a6cacb99a02f60271f72782b1385f58c07739e69c2c6a42baaccb4fbfc4a9",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_016",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP02_003"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.3, Page 67 (Null Vector and Unit Vector Properties)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "cd78f09085524e9fa3354377f9e27742be0647235f576fcb72b709d49266f124",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_017",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP01_004"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.7, Page 75 (Projection of a Vector)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "a27718d91dbb24eb5c7b69062eae0e04167634556f243fd231cfef833c80848b",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_018",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP02_004"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "2e8844c943a94f27a6c2b69b8e819222917679d353a9cc845906a1f6a26d3dd7",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_019",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP01_005"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.4, Page 70 (Sum and Difference of Two Vectors)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "14acad4e892fd81f2c72979072d80894afd85e0098b4a265a395d4cc9d9c2d5a",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_020",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP02_005"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "7e9868a3549ade65a8d54131a3851b836ec2fa2e87a7de0b2b3572da70f5cd12",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_021",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.10, Page 78 (Projectile Motion)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "16aee96da3c1e09244970352154e08eda2f46b54f680167ae70defe79fb2238a",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_022",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP03_002"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.10, Page 79 (Maximum Height and Range)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "5472bea0f12617cb6aaa7cb4f351bee332e54ec38ee0a6ef3d9698a2d1ac4255",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_023",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP03_003"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "d7990940fff1e69b72ff5347e7bda2795cbb6c5d261a71bb92c615f2c68f1f35",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_024",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP03_004"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.10, Page 80 (Equation of Path of a Projectile)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "7748fa32408052a0224b07511ed3b75ce2e6ce72884361e983b5e5ea44db8276",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_025",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP03_005"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "73a1b2c3a8a41d35a51a3ebb00a153436635ae0b91cc018e81b7817f201d3369",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_026",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP03_006"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.10, Page 81 (Time of Flight Formula)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "55abc6308b97e94534a600f52e1e77de9d41db1d3eddf83ddd74ba0eee303d79",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_027",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP03_007"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "d1744b3a3c45cff2b2e6217fe23b8bdab8ac96f6167713d7dcdc9f29b9d25969",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_028",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP03_008"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.10, Page 80 (Change in momentum during projectile flight)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "a63a15d2517dc4d74022890b0b041121f79d240312f4810eb678897d48fbf795",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_029",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP03_009"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "34878b99e7bd81aa000f48d6ad78db583a1b3bd23cddb7bbc87cbd30df944419",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_030",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP03_010"
+      ],
+      "structuralNodeIds": [
+        "e32ccfc649ab25fd"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "0f51b5cbf239f27d9d038b27f413d6133cf954baa25c8335aa9358731a405d73",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_031",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP04_001"
+      ],
+      "structuralNodeIds": [
+        "475b7af12d03185c"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.6, Page 51 (Relative Velocity in One Dimension)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "8df1b49eb19193caee9d49276145c560cfa9e86f9de7fa27e5007e3e1815e59e",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_032",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP04_002"
+      ],
+      "structuralNodeIds": [
+        "475b7af12d03185c"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
+      "sourceLocator": "Section 4.9, Page 77 (Relative Velocity in Two Dimensions)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "1bd34e930f8bf9b5cd16680466abe61d20669a79d736c042b94c2fa0558afd27",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_033",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP04_003"
+      ],
+      "structuralNodeIds": [
+        "475b7af12d03185c"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "ff528935d09d0e8488e0b00d153a23d76abaf5aad26a646fdd2d9a76bc903a16",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_034",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP04_004"
+      ],
+      "structuralNodeIds": [
+        "475b7af12d03185c"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "011851ff0e5f8147a1e6f5caa6ea05982844fa4bfb5ecffa9d6297c340863e71",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_035",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP04_005"
+      ],
+      "structuralNodeIds": [
+        "475b7af12d03185c"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "7b81fbd59ec3a1a67284d1d45f06fbce62a5e14f15563d0d58ef4f029297d91d",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_036",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP04_006"
+      ],
+      "structuralNodeIds": [
+        "475b7af12d03185c"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.6, Page 53 (Acceleration in Relative Frame)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "b46bde4ed8542e0bc18d3dc2679ae2beac514bc342e17ea021931d41bf8741fa",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_037",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP04_007"
+      ],
+      "structuralNodeIds": [
+        "475b7af12d03185c"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "674a265dabea2e3bab22503ac48b348bec2eeecfb82a784ffd97401499caf1ca",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_038",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP04_008"
+      ],
+      "structuralNodeIds": [
+        "475b7af12d03185c"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "27d26695822cbb862a1ade107b2b31c8d2a4053ca330c0f7fa17c57ad4767c7d",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_039",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP04_009"
+      ],
+      "structuralNodeIds": [
+        "475b7af12d03185c"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.6, Page 54 (Overtaking motion on straight highway)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "5d06e72992439c41cf6949b95e435db4151895e9da2e1a2bc390b9a8654d0bb0",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_040",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH04_TOP04_010"
+      ],
+      "structuralNodeIds": [
+        "475b7af12d03185c"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "dbb3eb26ec0e63f47294291e5bea700317171b22e2bfe1f304fdee3c85cb9be5",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_041",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP05_001"
+      ],
+      "structuralNodeIds": [
+        "ea62477caf7d78db"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.3, Page 44 (Graphical Representation of Motion - v-t area)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "4310c4ae4e5d623a5c68b6cfec69f553e541cfc6abbd7d6cb06e2ee774d43ffd",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_042",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP05_002"
+      ],
+      "structuralNodeIds": [
+        "ea62477caf7d78db"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.3, Page 45 (Slope of v-t curve)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "d7c7030c10bed78a640d680bf310c2fa57a74e60439fbd82fefcf4f499749a21",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_043",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP05_003"
+      ],
+      "structuralNodeIds": [
+        "ea62477caf7d78db"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "36b71e0ba5f7bd5d9ba0019e352251d7ae03fef2320761cc4922097248bcfde6",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_044",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP05_004"
+      ],
+      "structuralNodeIds": [
+        "ea62477caf7d78db"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.2, Page 41 (Trapezoidal v-t graph area)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "1b43473ea347ba6267ada3c8a3bb0d7719e9efe3e0c1d5d4d764530cae4f66dd",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_045",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP05_005"
+      ],
+      "structuralNodeIds": [
+        "ea62477caf7d78db"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.2, Page 42 (Total distance in α-β motion)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "22cb6bbba9653f4f069bd212f62aee393f19a398237086798d7d449d2b91800e",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_046",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP05_006"
+      ],
+      "structuralNodeIds": [
+        "ea62477caf7d78db"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "3c88dd4b37d30b3c95ab336a44f091efc6f9f849b094114bb224a17043e73cce",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_047",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP05_007"
+      ],
+      "structuralNodeIds": [
+        "ea62477caf7d78db"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "4a33669d3cf1c9131ad07b81b1d61fe2820abe16260a4b8ccd2c31b9d4a6a197",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_048",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP05_008"
+      ],
+      "structuralNodeIds": [
+        "ea62477caf7d78db"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.2, Page 43 (Inflection point on position-time curve)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "32346a8c5e7622b0854395e10c0c46b87b27d572eca9bbee1bfeb20ca64e7816",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_049",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP05_009"
+      ],
+      "structuralNodeIds": [
+        "ea62477caf7d78db"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "ca41efc96730f985bdf58670b1a7a5037563db1132492247905e320f8301eb7f",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_S01_PHY_050",
+      "version": "1.1.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "sch_jee_main_2026_1",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP05_010"
+      ],
+      "structuralNodeIds": [
+        "ea62477caf7d78db"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "9d5f811993480641edf84f2eb8ffa63a35e68118fec0d7e8a583506e5006de0a",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_001",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH01_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U01_T_E8873099_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH02",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "a4a414d371592b0728b41fe6997f0c01520dfa9042a6cc13cf4aeb2d5af96781",
+      "sourceLocator": "Section 2.7, Page 24",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH02",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "fbe4988b4d03c6b6908635a6a154c5968f55f5b9a8ddbcd305e7ac12b7bdad72",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_002",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP01_002"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U02_T_057CEE13_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.4, Page 47",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "b654330885dc511d361b672accbcff82580de373a010e480520ed377050b2123",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_003",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH05_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U03_T_030B1C4B_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH05",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "10ba66130612327832ab9c902e61dda1890e4552c5fe741a06c8d5fd6c2cdde2",
+      "sourceLocator": "Section 5.9, Page 102",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH05",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "fb79675a899aa3e06ee712c199384bb4bc72c56a96902b65e646c7907fcf9387",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_004",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH06_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U04_T_F42DF3AA_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH06",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "c72588d8dac3ce02fc10f0324afeed6304c22b2e0504134cc17d5b49311ec45e",
+      "sourceLocator": "Section 6.8, Page 121",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH06",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "1eddef5e3e6a55eb4a3b6cfddd30ec99f77954c367b0dcccd3392cbdc0038e8b",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_005",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH07_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U05_T_F5D245A8_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH07",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "03584220d19491007a4ed8daefd2ff7aee5430062c60c3bb5cdb21c33b601d66",
+      "sourceLocator": "Section 7.8, Page 164",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH07",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "3e1982dd22379919844c89ccba6be9233f4ed5e2b0a4c66237006dcb476f61ef",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_006",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH08_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U06_T_6BA4EAF0_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH08",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "24fa81287deceda3620bbee124cec6dcc2b1e295fce6c5e663ddf6896292a103",
+      "sourceLocator": "Section 8.7, Page 192",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH08",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "ab0e8ff0b5bdb1df9d361981f0e4ecadf35a3a614f714b38c77dab4f5df06af2",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_007",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH09_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U07_T_CE9FA0F6_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH09",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "9c3a0cb8007a44fb171088cef6e0d742e5ffa0b5fb3f30eaafac954766ce8cba",
+      "sourceLocator": "Section 9.6, Page 242",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH09",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "5a7615ac1c6f4408a4b886f8ca2245153dd2f61d5adbcd87ede3182a7aef7d2e",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_008",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH12_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U08_T_9329EB17_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH12",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "36fb1f58e0c1a6e736b772d7014f796c5a082d962c6a44253eaedd77dc597bab",
+      "sourceLocator": "Section 12.8, Page 312",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH12",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "0c741a67a1396a6a4a339b41cfc3356f13a26f23e5e376f726d73c239ad62f57",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_009",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH13_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U09_T_031A6136_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH13",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "35a9c5fa1c43ab2996b526faefeb421ba0e3eccd56bc9c6175e0e59d5905eff0",
+      "sourceLocator": "Section 13.4, Page 330",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH13",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "070aa4a43da3d2aedd03a222c3fe14738acb4bc1c8eb62e13a6ea9e4b2739ad3",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_010",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH14_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U10_T_91CE6418_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH14",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "d5e735fe35bc80814e3d386cf319862436373d9b2f507a6de2353086df377330",
+      "sourceLocator": "Section 14.5, Page 350",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH14",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "46fff3594b90dc848fd7aa3628f83164cff3d179b2124080ee1802e1d2bb7423",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_011",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH01_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U11_T_3A21919F_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH01",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "da175f580d0b6349608fbcc674e7110d2acf37f283fc9519e497799f600aede0",
+      "sourceLocator": "Section 1.15, Page 38",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH01",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "90d451cf6d8dc11c67d8b4fce501002f73b4bb51acd89ea894b29577c61097ab",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_012",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH03_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U12_T_7FBEB7FD_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "410956893a731104d7469017567fc2cf2dfa3184726fa89a6bb2ecbf7e92e50e",
+      "sourceLocator": "Section 3.10, Page 108",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "30a220ec804bc41480bf06310de7bd922968c091ab83a7b28ff8ea9742ecabc4",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_013",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH04_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U13_T_73E47A9A_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "713704efdd9655ed879d6a73447e7c68a9352714ccfd49ab02d814c5750c82f0",
+      "sourceLocator": "Section 4.6, Page 145",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "230b4e10ce2fb28d0069c3cdd037f86a0a6880abd48bfb0bb12f2590fd845f30",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_014",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH06_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U14_T_FE7C2B40_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH06",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "02bad742c19f9f71991f32e3fd1b9569d29c543f497ca75e194dc4a3d214edcb",
+      "sourceLocator": "Section 6.7, Page 216",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH06",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "c0f6e24a69076a5f8db1cee1f91ce70fdfe0c10bc75b21e4025eeb539e77e14b",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_015",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH08_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U15_T_26DB6DA7_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH08",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "83b2f63ab6a2fec36b3dbaed7ee40255c14235c4215f4f706c908a4ac33eebfd",
+      "sourceLocator": "Section 8.3, Page 276",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH08",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "4f50cf27335dbedef95cbe5a6c47ddb1786328985c499c7c75ddf7368515911a",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_016",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH09_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U16_T_C13978BE_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH09",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "3da59c2d496718cc2c6f033f78db10f162c96f6216762f28954d530688099bed",
+      "sourceLocator": "Section 9.5, Page 326",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH09",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "08722834828519e95d900fbd9fe37ec13f9b3881f686aa7c42ec47264027437d",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_017",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH11_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U17_T_5F4D32BC_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH11",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "a8e9b4de7a1b83ea21d0995429f772c82881f6243a95622f8e45899eb6f25994",
+      "sourceLocator": "Section 11.6, Page 394",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH11",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "675fba4f60c921924ab786835bae7a66a3b5121e424bf6372a4fcf16a54bb3ca",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_018",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH12_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U18_T_9E8A2341_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH12",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "9c4ce9a35fb92a0fd465c413c09aaa0cf5f770ec449fda1be45147bce9e348b0",
+      "sourceLocator": "Section 12.4, Page 424",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH12",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "5319c397f110e063b054f45d097ee41eb70354d3c2c096dda897f318c93a1f49",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_019",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH13_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U19_T_0A98B21D_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH13",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "80adbf496f092e05d77ffc66a1ebe7cdca87bc53228070d06fa332f8401de999",
+      "sourceLocator": "Section 13.5, Page 446",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH13",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "a7e4a351a465311c57778f102820df3192341e9a549099eda4319d124f540888",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_020",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH14_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U20_T_6E5C43A1_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH14",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "650cc67342bbe50caa95bfb4e4f2150ade992af86754af448d402efc9101de2c",
+      "sourceLocator": "Section 14.6, Page 482",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH14",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "7764f3eaa05e8b37d27c4a99b682b62c2904b77b469c3428c3a398cb41ab1219",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_021",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U01_CH03_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U02_T_057CEE13_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
+      "sourceLocator": "Section 3.5, Page 50",
+      "registryPath": "official_documents/NCERT_CLASS_11_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "6016bd48f649edb4d2ad44b4187f04e8f4214b8b459fa4473e2e9a4e3a57c2c3",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_022",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH02_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U11_T_3A21919F_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH02",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "5c70315cfd0cb8f63e486745c26534086c3f53ebfa1d19a8192ab9bdbb0d45e0",
+      "sourceLocator": "Section 2.15, Page 82",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH02",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "a70452b5f68d1709cef68f0e44d546366b60b3e08a1ae378b474137a6222a036",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_023",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH03_TOP04_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U12_T_7FBEB7FD_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "410956893a731104d7469017567fc2cf2dfa3184726fa89a6bb2ecbf7e92e50e",
+      "sourceLocator": "Section 3.14, Page 120",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "386f1a7ac9521cc62a9bb405147650b0f3d35de0f107f3e1af11d0486982ea99",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_024",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH10_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U16_T_C13978BE_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH10",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "44b3118fa9ac3ba8942116b4eeb6429fe7ba50dcd3b4e65a120611b3ac5da5d7",
+      "sourceLocator": "Section 10.4, Page 364",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH10",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "8810ca63f0d5987dff82b24640f18cd3f8d7400692189336666e9b2b9bd3dea4",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_PHY_025",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_PHY_U02_CH12_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_PHYSICS_JEE_MAIN_2026_PHY_U18_T_9E8A2341_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_PHYSICS_CH12",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "9c4ce9a35fb92a0fd465c413c09aaa0cf5f770ec449fda1be45147bce9e348b0",
+      "sourceLocator": "Section 12.3, Page 420",
+      "registryPath": "official_documents/NCERT_CLASS_12_PHYSICS_CH12",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "2a420e07f54118dea2b01a7e2bc280c5373a675c90365788c08cb4b840aa89e2",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_001",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U01_CH01_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U01_T_E8873099_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH01",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "2fdd9eed62db1338cf68f62b5c63c549d66baa63d5ebab20c01f8428d2f80846",
+      "sourceLocator": "Section 1.10, Page 22",
+      "registryPath": "official_documents/NCERT_CLASS_11_CHEMISTRY_CH01",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "813494fc71e4ee74d147714fa245d70f19eec5a838576b9e03142ffd49f899c1",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_002",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U01_CH02_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U02_T_057CEE13_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH02",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6603ca23ab6171c6e26bd7989123ce95cc718bf256cda77a481cc66884b93e01",
+      "sourceLocator": "Section 2.6, Page 58",
+      "registryPath": "official_documents/NCERT_CLASS_11_CHEMISTRY_CH02",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "d0e0dc44641e1e0b789836460bb4e552bb39743e9706df4a987500d15214d774",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_003",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U01_CH03_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U03_T_030B1C4B_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "b82e6fc2a2996f5c12e0e69043d0ff57d0d53af3b48d25fc8958877cf5345e79",
+      "sourceLocator": "Section 3.7, Page 88",
+      "registryPath": "official_documents/NCERT_CLASS_11_CHEMISTRY_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "18e369c3298d2be29e4cd44b6884c73c18c54b266df19b05bc9e12b4a359abe5",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_004",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U01_CH04_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U04_T_F42DF3AA_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "40de76352b9b3774cc3a238565e93c37dd1d34b71f868c66dee8654cc08d41a6",
+      "sourceLocator": "Section 4.7, Page 128",
+      "registryPath": "official_documents/NCERT_CLASS_11_CHEMISTRY_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "92cb57c48ff7715dee8ab14ba86b94a0462e40ac4135932460cdd36be7a015a1",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_005",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U01_CH06_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U06_T_6BA4EAF0_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH06",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "77035d7103fbd50e4013393662b7d29681fc47d2d92c736c0bcd2f2890df208d",
+      "sourceLocator": "Section 6.6, Page 182",
+      "registryPath": "official_documents/NCERT_CLASS_11_CHEMISTRY_CH06",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "26bb2f510b80e1c9e9b91c12e5c04cb4a051da3dc9ade4b7f45baf3162fe0f46",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_006",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U01_CH07_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U07_T_CE9FA0F6_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH07",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "91d017a0eeb8259c57c36ee81e0cb289782c55a8eea7c0328aa03e71ef7f6de1",
+      "sourceLocator": "Section 7.12, Page 226",
+      "registryPath": "official_documents/NCERT_CLASS_11_CHEMISTRY_CH07",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "d37389adbdb8eb99e46b39492fa301f6ba3611b08d35fb951b0098577a0b8ad9",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_007",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U01_CH08_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U08_T_9329EB17_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH08",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "f2d140002f670f7ee02f044c1fb22fb2467280944a4e6598d4dd4ca38ef4f6a4",
+      "sourceLocator": "Section 8.3, Page 268",
+      "registryPath": "official_documents/NCERT_CLASS_11_CHEMISTRY_CH08",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "e0b4b43797a31dbfd9e58e32682242dae15f1f43e7cae0d649e8397cb3a92e74",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_008",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH02_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U11_T_3A21919F_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH02",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "c878363333b4f38404396240153493ce3331536e32a40dcca677b52a2d3a86f9",
+      "sourceLocator": "Section 2.6, Page 52",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH02",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "9142caa6971da6925484de60b0628a3829da230f66210737e2a966350532dc5f",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_009",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH03_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U12_T_7FBEB7FD_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "28cccf9cfb87ddadd94976b7798f82441c6970467e5e59b43f5d9ce0c046ad80",
+      "sourceLocator": "Section 3.3, Page 72",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "eba82c586f32658b9774ffce9d74989db0de3c3fd1b3102a9c62101a34c522c7",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_010",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH04_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U13_T_73E47A9A_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "89b5698a34acbcbba1590268a56fd23578df54d1d25a9afe32d343880d7be503",
+      "sourceLocator": "Section 4.3, Page 104",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "bf5af6cf60bcc24e7ff12dbf95b03846f9525fcb77016c2bad3fa7724bbfb2f3",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_011",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH08_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U15_T_26DB6DA7_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH08",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "1879b32b8ffc0f3e30440e12e567a5753cb6d6801164be3a32fd94b7bb184b20",
+      "sourceLocator": "Section 8.3, Page 222",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH08",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "91052efecbed8f182d54645a7bf9cf8df1a0f4b98ff358b485070d73fb51de5a",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_012",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH09_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U16_T_C13978BE_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH09",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "c8417f03c788dcc042454c88eb4c998c387f5e7046c57188d06a68b626baa2a0",
+      "sourceLocator": "Section 9.5, Page 254",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH09",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "6540d9059ed9e9cc8c99369e85e73591ee027af9265555d00e88a62664273eda",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_013",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U01_CH12_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U09_T_031A6136_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH12",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "dfea8840fff343f270dfa26033fdd36ede54d83294905b52c517d2204cdd25ea",
+      "sourceLocator": "Section 12.7, Page 346",
+      "registryPath": "official_documents/NCERT_CLASS_11_CHEMISTRY_CH12",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "2f5648852d1210a4bd763f4793fd8430317914ceb296f30acbd6f990c6d3f9b9",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_014",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U01_CH13_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U10_T_91CE6418_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH13",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "4296c9d4ba7ef54b225a1f042574369f721cca92fad5900c29a0f21f144ed1c2",
+      "sourceLocator": "Section 13.3, Page 386",
+      "registryPath": "official_documents/NCERT_CLASS_11_CHEMISTRY_CH13",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "0522be9724985a1d7804226761afb72f4db797f4c82781568748a275f9d1acae",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_015",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH10_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U17_T_5F4D32BC_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH10",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "a9d0ea8e7b220b0fe4f8a0acc8f0117a5480dc90c40a77136d2f19154c4584a4",
+      "sourceLocator": "Section 10.4, Page 300",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH10",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "0b71879a947c82a4e9b62dbee571a594917688e875a571445188170798bb0410",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_016",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH11_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U18_T_9E8A2341_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH11",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "e8ca35bf02da6e190bed078c284a5d51c97502c293276009dbd1f552fe2e3a8c",
+      "sourceLocator": "Section 11.4, Page 338",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH11",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "2765684b78219aa200305f864d9dfb23fa1257a29193864504b48c6ed2e0a7d7",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_017",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH12_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U19_T_0A98B21D_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH12",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6d1b774b367f4469dfb1beabbc72a6a526271190ba19337ec07a95d2c932c8e9",
+      "sourceLocator": "Section 12.4, Page 366",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH12",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "67c9c14ce0109fc42dbbc25db1d037032e52874995e4b3e9fd84a33ff188deb9",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_018",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH13_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U20_T_6E5C43A1_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH13",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "915798ececab370f904031bd03ae6f17c96b1bd6bdbc1d1536d40958c042e0d6",
+      "sourceLocator": "Section 13.6, Page 398",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH13",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "38a1e0a409f17e5db90eacbe1e88f4c3a315882598288d9aff510fa94046b5b2",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_019",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH14_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U21_T_3A21919F_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH14",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "36c1a0a2fb6fced8a4506cbfd45144d0ff90c5983ad6b9b736158710fb8eaad7",
+      "sourceLocator": "Section 14.1, Page 416",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH14",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "bb3df9bfceb026c2baeb60016655c515c1e83803a99005c937f7056c19b7c6ea",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_020",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH07_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U14_T_FE7C2B40_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH07",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "07c764b19a96609a11666544ec089135253fb59f52bbf1dda69964a019dad6a1",
+      "sourceLocator": "Section 7.18, Page 196",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH07",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "d728b0f51054f606d26af41253ae9443575218fca780017d6c23c75e3c629a52",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_021",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U01_CH01_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U01_T_E8873099_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH01",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "2fdd9eed62db1338cf68f62b5c63c549d66baa63d5ebab20c01f8428d2f80846",
+      "sourceLocator": "Section 1.9, Page 18",
+      "registryPath": "official_documents/NCERT_CLASS_11_CHEMISTRY_CH01",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "b92e86223b4e42c1f4cc225ac819d676deba2924931b0b2c3687efcf834a9ebf",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_022",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U01_CH07_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U07_T_CE9FA0F6_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH07",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "91d017a0eeb8259c57c36ee81e0cb289782c55a8eea7c0328aa03e71ef7f6de1",
+      "sourceLocator": "Section 7.11, Page 218",
+      "registryPath": "official_documents/NCERT_CLASS_11_CHEMISTRY_CH07",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "2df40e4683ad580a89ae797a6aa12f0a12baf3b3b8df5fe5d878906490808b12",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_023",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH03_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U12_T_7FBEB7FD_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "28cccf9cfb87ddadd94976b7798f82441c6970467e5e59b43f5d9ce0c046ad80",
+      "sourceLocator": "Section 3.5, Page 84",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "99d1410f29b45dee0ad30431c48bd7801d04274d67e6c39e17187af8ce1aa14c",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_024",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH04_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U13_T_73E47A9A_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "89b5698a34acbcbba1590268a56fd23578df54d1d25a9afe32d343880d7be503",
+      "sourceLocator": "Section 4.2, Page 98",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "ceb5d16906472060f384a0d784f438ddd22d851989f3b85ab5479bb832307609",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_CHE_025",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_CHE_U02_CH09_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_CHEMISTRY_JEE_MAIN_2026_CHE_U16_T_C13978BE_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH09",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "c8417f03c788dcc042454c88eb4c998c387f5e7046c57188d06a68b626baa2a0",
+      "sourceLocator": "Section 9.2, Page 246",
+      "registryPath": "official_documents/NCERT_CLASS_12_CHEMISTRY_CH09",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "780ddc857f502491acae13ab8767da5e187848bc67674011be4f45ecf2858ebc",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_001",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U01_CH01_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U01_T_E8873099_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH01",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "e9caef27a643c1fed7545e11dcb6de19dfe7f58909e93c5c56b736182aefe43b",
+      "sourceLocator": "Section 1.6, Page 16",
+      "registryPath": "official_documents/NCERT_CLASS_11_MATHEMATICS_CH01",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "c4e963fdb8ec4a02c1467954bf2645a2a03ecf88c24e7b83278984182c2e4fd1",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_002",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U01_CH05_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U02_T_057CEE13_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH05",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "a66cd54a5edeed0597da6eaa342adb8d24ee675ebece93b163a7fb23ad3215fe",
+      "sourceLocator": "Section 5.4, Page 104",
+      "registryPath": "official_documents/NCERT_CLASS_11_MATHEMATICS_CH05",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "31d5a2efa4f99d8915408b14c9b698f44062142798bed195af51ab9b1c985b42",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_003",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH03_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U03_T_030B1C4B_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH03",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "74350b32a743a9eb89be426061695afe2fc2d0555cf83f42c7024b6359ac60ff",
+      "sourceLocator": "Section 3.7, Page 88",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH03",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "9b10b4597f66b0a36795473ace0e84bcaf3a2955b9fdfb4e385aff2b85e0dad2",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_004",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U01_CH07_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U04_T_F42DF3AA_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH07",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "56fb3a5e13187c32a9fcf56d767791c4bc5c950c5156aebf82223e7ac1c2d93b",
+      "sourceLocator": "Section 7.4, Page 148",
+      "registryPath": "official_documents/NCERT_CLASS_11_MATHEMATICS_CH07",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "cb6e0a25b21cbc066a2e44a19930db5f556246d8c457dfe4f1602d88cb332bf9",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_005",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U01_CH08_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U05_T_F5D245A8_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH08",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "e1b0a08c55d42bee6dda8cb80fe3b31094193e3c1d6e47ac0b1385b228dd761e",
+      "sourceLocator": "Section 8.2, Page 168",
+      "registryPath": "official_documents/NCERT_CLASS_11_MATHEMATICS_CH08",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "c3705b2fb4dd0f2607a0dd7941391d6bd44edc3c4b7f2a27595624f359834c42",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "FOUNDATION"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_006",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U01_CH09_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U06_T_6BA4EAF0_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH09",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6aeafb4c3ec21d68ebe9c578c24d09611cd605101ce6fa1fe0e8d63d59311dee",
+      "sourceLocator": "Section 9.5, Page 190",
+      "registryPath": "official_documents/NCERT_CLASS_11_MATHEMATICS_CH09",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "6b067d0062a1ffdddcaca242e7dc416382ae30b57c3fa82303cd9a818866675c",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_007",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U01_CH13_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U07_T_CE9FA0F6_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH13",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "b206801280419d8e0d340940940962e93683581010b92feafc952336cdba1e44",
+      "sourceLocator": "Section 13.2, Page 298",
+      "registryPath": "official_documents/NCERT_CLASS_11_MATHEMATICS_CH13",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "6f2ef1ecfd4910295b321b44b4936299f9856aa32406a3c600a4a768310eb302",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_008",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH05_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U08_T_9329EB17_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH05",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "5727e95217dedb89c9a29c13f254a2cc3ac2ecdf7fe721865ff1d18b1d314cca",
+      "sourceLocator": "Section 5.6, Page 172",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH05",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "6d0a3c97a04dcab120fa2cd758a3ac442176c7b76a8951fc5486bf19ced3a1c6",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_009",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH06_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U09_T_031A6136_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH06",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "ab1c5037b91514485a1809cd4adabab57605c3ad6ada1241ebbe8188cf61d0ff",
+      "sourceLocator": "Section 6.5, Page 228",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH06",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "77d95a84345a97358b194c47ec14a63a8c5b48c2952c6ca38aa10b018f136c76",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_010",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH07_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U10_T_91CE6418_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH07",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
+      "sourceLocator": "Section 7.4, Page 312",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH07",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "34b7990f1823d3db378a76b5f8052f66a61074df847da6dc873796d149229230",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_011",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH07_TOP04_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U11_T_3A21919F_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH07",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
+      "sourceLocator": "Section 7.11, Page 348",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH07",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "c812c0f06c12ebbfa3cc64ca353c4086dfc6e537e9c4dba9ae8d92bb1b87ad95",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_012",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH08_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U12_T_7FBEB7FD_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH08",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "e1f3495d3af5979938bace0f2e6f4d353d614a795a93ed7da933b4b75941064a",
+      "sourceLocator": "Section 8.2, Page 368",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH08",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "f1db355f2decf5457c165bf82d983047143b683ba763059b4767a1aee92a6ded",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_013",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH09_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U13_T_73E47A9A_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH09",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "24ff710fdf5ceaa6f4145e1db54475d760e499fcb072bd8ea867bae425707076",
+      "sourceLocator": "Section 9.5, Page 406",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH09",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "8d9ceee9b14897d4f51a6032d66c526e008ec2ccd3901dbc178a2b50cd7aafe4",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_014",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U01_CH10_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U14_T_FE7C2B40_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH10",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "69e1b1cb74424986367e9de99b817118548d10941f321462ab5ccfbd01f01699",
+      "sourceLocator": "Section 10.3, Page 224",
+      "registryPath": "official_documents/NCERT_CLASS_11_MATHEMATICS_CH10",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "6e1dbcdbf74fd84d497f8c02c263ddd81ed5fe74289d36a43417aa3157bd62ae",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_015",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U01_CH11_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U15_T_26DB6DA7_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH11",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "0f1acb2a502224c1c6b3bde22ab36f79eefcee0a19b2503098eb0716cb486607",
+      "sourceLocator": "Section 11.4, Page 254",
+      "registryPath": "official_documents/NCERT_CLASS_11_MATHEMATICS_CH11",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "838254a18ca14c655da79c4732919f2625307628b23b50b466055fa82300aee3",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_016",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH10_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U16_T_C13978BE_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH10",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "9682d28114ce12ad50cc830e56e5de61160fd2f973c1aa185ade8deaf95172dc",
+      "sourceLocator": "Section 10.5, Page 448",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH10",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "166493c8ef15775728b78d2dcb868228c1246ecd6aba9c0c068adf52a56f03f3",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_017",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH11_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U17_T_5F4D32BC_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH11",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "4f3badf41cc6a0903ff4354e4db893691c039ffeba087d4bbe806187febc9a86",
+      "sourceLocator": "Section 11.5, Page 480",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH11",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "bde39664cc161707d4ea52bd17d5a95568afc474fee62053cf27c22fa46c586f",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_018",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U01_CH15_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U18_T_9E8A2341_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH15",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "b17ea6b0dd67d26ccd15d2f63772806b6b960275bf0b8209a0dba28cc4e4afe1",
+      "sourceLocator": "Section 15.5, Page 366",
+      "registryPath": "official_documents/NCERT_CLASS_11_MATHEMATICS_CH15",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "6bc2123309514e7f6a538e7f0461581ea307836ced3428ea07ea5c2e8a38adee",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_019",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH13_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U19_T_0A98B21D_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH13",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "0e8f2c7ccee85a84cd3b408b29c9edd94ef140b30faa4b781a834cf07ff0c60e",
+      "sourceLocator": "Section 13.3, Page 544",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH13",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "25fc5cd132f2f21c0d15bc01a1873ee56a07cea555bc5fbd7b39f012b796dee9",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_020",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH02_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U20_T_6E5C43A1_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH02",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6b60091eaef524f70b4afe3eec1a1b258f47dabe4796b6aa5cf3b47bc90e16bf",
+      "sourceLocator": "Section 2.2, Page 42",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH02",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "73a3576857bd395b24abd0675a6b8d1f6ffda095b95d3aa00c238593ff332b94",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "PYQ_ANALOGUE",
+      "difficultyState": "STANDARD"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_021",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH04_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U03_T_030B1C4B_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH04",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "b61e99b8ae6c4028ef3ece5229062de90772a2788716fe73eabc9df4c6ff4fe4",
+      "sourceLocator": "Section 4.3, Page 118",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH04",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "078ab3b8e57f69bb4218854fa2f09f635d743ac2779114c0be41dc53bf43ea8b",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_022",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U01_CH09_TOP01_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U06_T_6BA4EAF0_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH09",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "6aeafb4c3ec21d68ebe9c578c24d09611cd605101ce6fa1fe0e8d63d59311dee",
+      "sourceLocator": "Section 9.3, Page 182",
+      "registryPath": "official_documents/NCERT_CLASS_11_MATHEMATICS_CH09",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "5f1a3cc8e262b95ad75039585ca5eb6141cf5e21481db024edf579f22093917e",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_023",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH07_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U10_T_91CE6418_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH07",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
+      "sourceLocator": "Section 7.8, Page 334",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH07",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "8b09dda9faf460b5e4de976348b34cc4c3b1975ad0e16e941dcd0a81ec87c78a",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_024",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U01_CH11_TOP02_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U15_T_26DB6DA7_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH11",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "0f1acb2a502224c1c6b3bde22ab36f79eefcee0a19b2503098eb0716cb486607",
+      "sourceLocator": "Section 11.2, Page 242",
+      "registryPath": "official_documents/NCERT_CLASS_11_MATHEMATICS_CH11",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "1c12fa1b73b515307abb22594393a48e2c9c830adc0bd10663399003f5d5aff3",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    },
+    {
+      "questionId": "JEE_MAJ01_MAT_025",
+      "version": "1.0.0",
+      "missionId": "jee_main_2026",
+      "scheduleOrEventId": "test_arena_major_01",
+      "canonicalAtomIds": [
+        "JEE_2026_MAT_U02_CH10_TOP03_001"
+      ],
+      "structuralNodeIds": [
+        "DRYRUN_JEE_MAIN_2026_MATHEMATICS_JEE_MAIN_2026_MAT_U16_T_C13978BE_CH001"
+      ],
+      "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH10",
+      "sourceVersion": "1.0.0",
+      "sourceSha256": "9682d28114ce12ad50cc830e56e5de61160fd2f973c1aa185ade8deaf95172dc",
+      "sourceLocator": "Section 10.6, Page 454",
+      "registryPath": "official_documents/NCERT_CLASS_12_MATHEMATICS_CH10",
+      "registryActive": true,
+      "scopeMatch": true,
+      "draftSha256": "f68d12250b929d26bfb4d08f76c72a09e22018bb7abc03b8404119c45603f8ba",
+      "sourceResolutionStatus": "SOURCE_RESOLVED",
+      "difficultyEvidenceType": "SME_JUDGMENT",
+      "difficultyState": "HIGH_JEE_MAIN"
+    }
+  ]
+}

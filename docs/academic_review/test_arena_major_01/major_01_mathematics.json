@@ -21,7 +21,7 @@
       "sourceCandidate": "NCERT Class 11 Mathematics Chapter 1 (Sets and Relations)",
       "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH01",
       "sourceLocator": "Section 1.6, Page 16",
-      "sourceHash": "sha256_ncert_mat_11_ch01_1a2b",
+      "sourceHash": "e9caef27a643c1fed7545e11dcb6de19dfe7f58909e93c5c56b736182aefe43b",
       "stem": "If set A has n elements, the total number of non-empty proper subsets of A is:",
       "options": [
         "2ⁿ - 2",
@@ -54,7 +54,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "0851f4bad2150dd1939e4cdfc5ab730be3efecf80e7e5b9dc8b8cbb8b1885383"
+      "draftSha256": "c4e963fdb8ec4a02c1467954bf2645a2a03ecf88c24e7b83278984182c2e4fd1",
+      "sourceSha256": "e9caef27a643c1fed7545e11dcb6de19dfe7f58909e93c5c56b736182aefe43b",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_002",
@@ -69,7 +72,7 @@
       "sourceCandidate": "NCERT Class 11 Mathematics Chapter 5 (Complex Numbers and Quadratic Equations)",
       "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH05",
       "sourceLocator": "Section 5.4, Page 104",
-      "sourceHash": "sha256_ncert_mat_11_ch05_2b3c",
+      "sourceHash": "a66cd54a5edeed0597da6eaa342adb8d24ee675ebece93b163a7fb23ad3215fe",
       "stem": "If α and β are the roots of equation x² - 6x + c = 0 such that 3α + 2β = 20, then the value of c is:",
       "options": [
         "-16",
@@ -102,7 +105,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "c454fec306e566a71309729fb89692c29a3e67b6a39a94c562376a90e4a200f3"
+      "draftSha256": "31d5a2efa4f99d8915408b14c9b698f44062142798bed195af51ab9b1c985b42",
+      "sourceSha256": "a66cd54a5edeed0597da6eaa342adb8d24ee675ebece93b163a7fb23ad3215fe",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_003",
@@ -117,7 +123,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 3 (Matrices)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH03",
       "sourceLocator": "Section 3.7, Page 88",
-      "sourceHash": "sha256_ncert_mat_12_ch03_3c4d",
+      "sourceHash": "74350b32a743a9eb89be426061695afe2fc2d0555cf83f42c7024b6359ac60ff",
       "stem": "If A is a 3 × 3 non-singular matrix such that |A| = 4, then the determinant of adj(A) is:",
       "options": [
         "16",
@@ -150,7 +156,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "4c873e47e6a83ce7cbbf7d0f01963b3fd8196a7a9a7107b9507b2302ef4a7fcd"
+      "draftSha256": "9b10b4597f66b0a36795473ace0e84bcaf3a2955b9fdfb4e385aff2b85e0dad2",
+      "sourceSha256": "74350b32a743a9eb89be426061695afe2fc2d0555cf83f42c7024b6359ac60ff",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_004",
@@ -165,7 +174,7 @@
       "sourceCandidate": "NCERT Class 11 Mathematics Chapter 7 (Permutations and Combinations)",
       "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH07",
       "sourceLocator": "Section 7.4, Page 148",
-      "sourceHash": "sha256_ncert_mat_11_ch07_4d5e",
+      "sourceHash": "56fb3a5e13187c32a9fcf56d767791c4bc5c950c5156aebf82223e7ac1c2d93b",
       "stem": "The number of ways in which 5 boys and 4 girls can be seated in a row such that no two girls sit together is:",
       "options": [
         "5! × ⁶P₄",
@@ -198,7 +207,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "b873ef7dc68db29cf58053deb55706bc3042479203624b6529f08ac957524009"
+      "draftSha256": "cb6e0a25b21cbc066a2e44a19930db5f556246d8c457dfe4f1602d88cb332bf9",
+      "sourceSha256": "56fb3a5e13187c32a9fcf56d767791c4bc5c950c5156aebf82223e7ac1c2d93b",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_005",
@@ -213,7 +225,7 @@
       "sourceCandidate": "NCERT Class 11 Mathematics Chapter 8 (Binomial Theorem)",
       "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH08",
       "sourceLocator": "Section 8.2, Page 168",
-      "sourceHash": "sha256_ncert_mat_11_ch08_5e6f",
+      "sourceHash": "e1b0a08c55d42bee6dda8cb80fe3b31094193e3c1d6e47ac0b1385b228dd761e",
       "stem": "The term independent of x in the expansion of (2x + 1/(3x²))⁹ is:",
       "options": [
         "¹⁷⁹² / 9",
@@ -246,7 +258,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "4f5de9576b47edb783656e02e67fd4e60e08a33dc7a55c9b8f7b775a9874239b"
+      "draftSha256": "c3705b2fb4dd0f2607a0dd7941391d6bd44edc3c4b7f2a27595624f359834c42",
+      "sourceSha256": "e1b0a08c55d42bee6dda8cb80fe3b31094193e3c1d6e47ac0b1385b228dd761e",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_006",
@@ -261,7 +276,7 @@
       "sourceCandidate": "NCERT Class 11 Mathematics Chapter 9 (Sequences and Series)",
       "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH09",
       "sourceLocator": "Section 9.5, Page 190",
-      "sourceHash": "sha256_ncert_mat_11_ch09_6f7a",
+      "sourceHash": "6aeafb4c3ec21d68ebe9c578c24d09611cd605101ce6fa1fe0e8d63d59311dee",
       "stem": "The sum of the infinite geometric series 1 + 2/3 + 4/9 + 8/27 + ... is:",
       "options": [
         "3",
@@ -294,7 +309,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "aeca821e87aa35f9e46597c1f6da2213417881bad5bcd6b6d9d0fe6f054c24fe"
+      "draftSha256": "6b067d0062a1ffdddcaca242e7dc416382ae30b57c3fa82303cd9a818866675c",
+      "sourceSha256": "6aeafb4c3ec21d68ebe9c578c24d09611cd605101ce6fa1fe0e8d63d59311dee",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_007",
@@ -309,7 +327,7 @@
       "sourceCandidate": "NCERT Class 11 Mathematics Chapter 13 (Limits and Derivatives)",
       "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH13",
       "sourceLocator": "Section 13.2, Page 298",
-      "sourceHash": "sha256_ncert_mat_11_ch13_7a8b",
+      "sourceHash": "b206801280419d8e0d340940940962e93683581010b92feafc952336cdba1e44",
       "stem": "The value of limit as x approaches 0 of (1 - cos 4x) / x² is:",
       "options": [
         "8",
@@ -342,7 +360,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "4c2430024b62702ba3af364f2b47e28a410abc424daab06292c17b42f0b48498"
+      "draftSha256": "6f2ef1ecfd4910295b321b44b4936299f9856aa32406a3c600a4a768310eb302",
+      "sourceSha256": "b206801280419d8e0d340940940962e93683581010b92feafc952336cdba1e44",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_008",
@@ -357,7 +378,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 5 (Continuity and Differentiability)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH05",
       "sourceLocator": "Section 5.6, Page 172",
-      "sourceHash": "sha256_ncert_mat_12_ch05_8b9c",
+      "sourceHash": "5727e95217dedb89c9a29c13f254a2cc3ac2ecdf7fe721865ff1d18b1d314cca",
       "stem": "If y = ln(sec x + tan x), then dy/dx is:",
       "options": [
         "sec x",
@@ -390,7 +411,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "0537508d04311875f81cdfa26f6b50d47c5d05c8410096ff8330b9829bd6a9f9"
+      "draftSha256": "6d0a3c97a04dcab120fa2cd758a3ac442176c7b76a8951fc5486bf19ced3a1c6",
+      "sourceSha256": "5727e95217dedb89c9a29c13f254a2cc3ac2ecdf7fe721865ff1d18b1d314cca",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_009",
@@ -405,7 +429,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 6 (Application of Derivatives)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH06",
       "sourceLocator": "Section 6.5, Page 228",
-      "sourceHash": "sha256_ncert_mat_12_ch06_9c1d",
+      "sourceHash": "ab1c5037b91514485a1809cd4adabab57605c3ad6ada1241ebbe8188cf61d0ff",
       "stem": "The maximum value of the function f(x) = (1/x)^x for x > 0 occurs at x equal to:",
       "options": [
         "1 / e",
@@ -438,7 +462,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "b90972d3886e7c9f9c893452ba7f470ab7b582f8edc83ce985520051f101b88b"
+      "draftSha256": "77d95a84345a97358b194c47ec14a63a8c5b48c2952c6ca38aa10b018f136c76",
+      "sourceSha256": "ab1c5037b91514485a1809cd4adabab57605c3ad6ada1241ebbe8188cf61d0ff",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_010",
@@ -453,7 +480,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 7 (Integrals)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH07",
       "sourceLocator": "Section 7.4, Page 312",
-      "sourceHash": "sha256_ncert_mat_12_ch07_1d2e",
+      "sourceHash": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
       "stem": "The integral ∫ (e^x (1 + x)) / cos²(x e^x) dx is equal to:",
       "options": [
         "tan(x e^x) + C",
@@ -486,7 +513,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "51b2d1eec77d935d8fcbae017f0d074aca3432e2d1b503e9089d4a96ea134287"
+      "draftSha256": "34b7990f1823d3db378a76b5f8052f66a61074df847da6dc873796d149229230",
+      "sourceSha256": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_011",
@@ -501,7 +531,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 7 (Integrals)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH07",
       "sourceLocator": "Section 7.11, Page 348",
-      "sourceHash": "sha256_ncert_mat_12_ch07_1d2e",
+      "sourceHash": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
       "stem": "The value of definite integral I = ∫₀^(π/2) (√sin x) / (√sin x + √cos x) dx is:",
       "options": [
         "π / 4",
@@ -534,7 +564,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "82cf94bd0ad9abefeb1414eda91b9d8e0ad01964f34a0790839ec86c3a437cc7"
+      "draftSha256": "c812c0f06c12ebbfa3cc64ca353c4086dfc6e537e9c4dba9ae8d92bb1b87ad95",
+      "sourceSha256": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_012",
@@ -549,7 +582,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 8 (Application of Integrals)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH08",
       "sourceLocator": "Section 8.2, Page 368",
-      "sourceHash": "sha256_ncert_mat_12_ch08_2e3f",
+      "sourceHash": "e1f3495d3af5979938bace0f2e6f4d353d614a795a93ed7da933b4b75941064a",
       "stem": "The area bounded by the parabola y² = 4ax and the line y = mx is:",
       "options": [
         "8 a² / (3 m³)",
@@ -582,7 +615,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "005b4d781a776412965fd4e72d8476dcf46e2cf3b262f29e9f4abe1a782cf17b"
+      "draftSha256": "f1db355f2decf5457c165bf82d983047143b683ba763059b4767a1aee92a6ded",
+      "sourceSha256": "e1f3495d3af5979938bace0f2e6f4d353d614a795a93ed7da933b4b75941064a",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_013",
@@ -597,7 +633,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 9 (Differential Equations)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH09",
       "sourceLocator": "Section 9.5, Page 406",
-      "sourceHash": "sha256_ncert_mat_12_ch09_3f4a",
+      "sourceHash": "24ff710fdf5ceaa6f4145e1db54475d760e499fcb072bd8ea867bae425707076",
       "stem": "The integrating factor of the differential equation (1 + x²) dy/dx + 2xy = 1 is:",
       "options": [
         "1 + x²",
@@ -630,7 +666,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "b2f72894e6bea23e378dde5f2447703519689f7ae70e1f004a6e41ea5bda680f"
+      "draftSha256": "8d9ceee9b14897d4f51a6032d66c526e008ec2ccd3901dbc178a2b50cd7aafe4",
+      "sourceSha256": "24ff710fdf5ceaa6f4145e1db54475d760e499fcb072bd8ea867bae425707076",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_014",
@@ -645,7 +684,7 @@
       "sourceCandidate": "NCERT Class 11 Mathematics Chapter 10 (Straight Lines)",
       "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH10",
       "sourceLocator": "Section 10.3, Page 224",
-      "sourceHash": "sha256_ncert_mat_11_ch10_4a5b",
+      "sourceHash": "69e1b1cb74424986367e9de99b817118548d10941f321462ab5ccfbd01f01699",
       "stem": "The distance between the parallel lines 3x + 4y - 9 = 0 and 6x + 8y + 15 = 0 is:",
       "options": [
         "33 / 10",
@@ -678,7 +717,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "2677c8f16d0a58931942cb522059e8fb76746caf427de2bf21b4610a00bc7315"
+      "draftSha256": "6e1dbcdbf74fd84d497f8c02c263ddd81ed5fe74289d36a43417aa3157bd62ae",
+      "sourceSha256": "69e1b1cb74424986367e9de99b817118548d10941f321462ab5ccfbd01f01699",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_015",
@@ -693,7 +735,7 @@
       "sourceCandidate": "NCERT Class 11 Mathematics Chapter 11 (Conic Sections)",
       "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH11",
       "sourceLocator": "Section 11.4, Page 254",
-      "sourceHash": "sha256_ncert_mat_11_ch11_5b6c",
+      "sourceHash": "0f1acb2a502224c1c6b3bde22ab36f79eefcee0a19b2503098eb0716cb486607",
       "stem": "The eccentricity of the ellipse 9x² + 16y² = 144 is:",
       "options": [
         "√7 / 4",
@@ -726,7 +768,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "ecdbe72f5a49f84cfc2164edcbbcd8792f29a60076d9e3e0df787ccf4ad42b92"
+      "draftSha256": "838254a18ca14c655da79c4732919f2625307628b23b50b466055fa82300aee3",
+      "sourceSha256": "0f1acb2a502224c1c6b3bde22ab36f79eefcee0a19b2503098eb0716cb486607",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_016",
@@ -741,7 +786,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 10 (Vector Algebra)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH10",
       "sourceLocator": "Section 10.5, Page 448",
-      "sourceHash": "sha256_ncert_mat_12_ch10_6c7d",
+      "sourceHash": "9682d28114ce12ad50cc830e56e5de61160fd2f973c1aa185ade8deaf95172dc",
       "stem": "If vectors a = 2î - ĵ + k and b = î + 2ĵ - 3k, the scalar projection of a on b is:",
       "options": [
         "-3 / √14",
@@ -774,7 +819,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "2e2f4e3b177f354edda3f6eb702d1cfbaa7011eff50565f6d5064ab2393e5d84"
+      "draftSha256": "166493c8ef15775728b78d2dcb868228c1246ecd6aba9c0c068adf52a56f03f3",
+      "sourceSha256": "9682d28114ce12ad50cc830e56e5de61160fd2f973c1aa185ade8deaf95172dc",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_017",
@@ -789,7 +837,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 11 (Three Dimensional Geometry)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH11",
       "sourceLocator": "Section 11.5, Page 480",
-      "sourceHash": "sha256_ncert_mat_12_ch11_7d8e",
+      "sourceHash": "4f3badf41cc6a0903ff4354e4db893691c039ffeba087d4bbe806187febc9a86",
       "stem": "The shortest distance between the skew lines (x - 1)/2 = (y - 2)/3 = (z - 3)/4 and (x - 2)/3 = (y - 4)/4 = (z - 5)/5 is:",
       "options": [
         "1 / √6",
@@ -822,7 +870,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "50925d74c0d2d2a09b40b1a682cf4554cd282eae152d074feb3834b3dfe1a767"
+      "draftSha256": "bde39664cc161707d4ea52bd17d5a95568afc474fee62053cf27c22fa46c586f",
+      "sourceSha256": "4f3badf41cc6a0903ff4354e4db893691c039ffeba087d4bbe806187febc9a86",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_018",
@@ -837,7 +888,7 @@
       "sourceCandidate": "NCERT Class 11 Mathematics Chapter 15 (Statistics)",
       "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH15",
       "sourceLocator": "Section 15.5, Page 366",
-      "sourceHash": "sha256_ncert_mat_11_ch15_8e9f",
+      "sourceHash": "b17ea6b0dd67d26ccd15d2f63772806b6b960275bf0b8209a0dba28cc4e4afe1",
       "stem": "If the mean and variance of 8 observations are 9 and 9.25 respectively and 6 of the observations are 6, 7, 10, 12, 12, 13, then the remaining two observations are:",
       "options": [
         "4 and 8",
@@ -870,7 +921,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "3aa160e68847fef980bcc587a70aa95de6f92e9d26066fdca2994c088fc2a433"
+      "draftSha256": "6bc2123309514e7f6a538e7f0461581ea307836ced3428ea07ea5c2e8a38adee",
+      "sourceSha256": "b17ea6b0dd67d26ccd15d2f63772806b6b960275bf0b8209a0dba28cc4e4afe1",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_019",
@@ -885,7 +939,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 13 (Probability)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH13",
       "sourceLocator": "Section 13.3, Page 544",
-      "sourceHash": "sha256_ncert_mat_12_ch13_9f1a",
+      "sourceHash": "0e8f2c7ccee85a84cd3b408b29c9edd94ef140b30faa4b781a834cf07ff0c60e",
       "stem": "A problem in mathematics is given to three students A, B, and C whose chances of solving it are 1/2, 1/3, and 1/4 respectively. The probability that the problem is solved is:",
       "options": [
         "3 / 4",
@@ -918,7 +972,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "dc64ffa19e8e0880379b7ec5ef7bfe71973111c9e7f6e378d9d6ccd9830d72d1"
+      "draftSha256": "25fc5cd132f2f21c0d15bc01a1873ee56a07cea555bc5fbd7b39f012b796dee9",
+      "sourceSha256": "0e8f2c7ccee85a84cd3b408b29c9edd94ef140b30faa4b781a834cf07ff0c60e",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_020",
@@ -933,7 +990,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 2 (Inverse Trigonometric Functions)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH02",
       "sourceLocator": "Section 2.2, Page 42",
-      "sourceHash": "sha256_ncert_mat_12_ch02_1a2b",
+      "sourceHash": "6b60091eaef524f70b4afe3eec1a1b258f47dabe4796b6aa5cf3b47bc90e16bf",
       "stem": "The principal value of cos⁻¹(cos(7π/6)) is:",
       "options": [
         "5π / 6",
@@ -966,7 +1023,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "aff7191e929ae76d0a6f8d2d507476dfd84f0ccee492aa95aa2fab402d300699"
+      "draftSha256": "73a3576857bd395b24abd0675a6b8d1f6ffda095b95d3aa00c238593ff332b94",
+      "sourceSha256": "6b60091eaef524f70b4afe3eec1a1b258f47dabe4796b6aa5cf3b47bc90e16bf",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_MAT_021",
@@ -981,7 +1041,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 4 (Determinants)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH04",
       "sourceLocator": "Section 4.3, Page 118",
-      "sourceHash": "sha256_ncert_mat_12_ch04_4a5c",
+      "sourceHash": "b61e99b8ae6c4028ef3ece5229062de90772a2788716fe73eabc9df4c6ff4fe4",
       "stem": "If the system of linear equations x + y + z = 6, x + 2y + 3z = 10, and x + 2y + λz = μ has infinitely many solutions, the value of (λ + μ) is:",
       "options": [],
       "correctAnswer": "13",
@@ -1008,7 +1068,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "855fd1f8dd394c0ffacf1079e21c943ad7753820d2dfc9b2216a40484a1cc3d1"
+      "draftSha256": "078ab3b8e57f69bb4218854fa2f09f635d743ac2779114c0be41dc53bf43ea8b",
+      "sourceSha256": "b61e99b8ae6c4028ef3ece5229062de90772a2788716fe73eabc9df4c6ff4fe4",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_MAT_022",
@@ -1023,7 +1086,7 @@
       "sourceCandidate": "NCERT Class 11 Mathematics Chapter 9 (Sequences and Series)",
       "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH09",
       "sourceLocator": "Section 9.3, Page 182",
-      "sourceHash": "sha256_ncert_mat_11_ch09_6f7a",
+      "sourceHash": "6aeafb4c3ec21d68ebe9c578c24d09611cd605101ce6fa1fe0e8d63d59311dee",
       "stem": "If the sum of first n terms of an arithmetic progression is S_n = 3n² + 5n and its mth term is 164, the value of m is:",
       "options": [],
       "correctAnswer": "27",
@@ -1050,7 +1113,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "bac713e35181a10e491e3e716b2a854554f5fdc8544ee245b94c75c8cb8d40a0"
+      "draftSha256": "5f1a3cc8e262b95ad75039585ca5eb6141cf5e21481db024edf579f22093917e",
+      "sourceSha256": "6aeafb4c3ec21d68ebe9c578c24d09611cd605101ce6fa1fe0e8d63d59311dee",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_MAT_023",
@@ -1065,7 +1131,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 7 (Integrals)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH07",
       "sourceLocator": "Section 7.8, Page 334",
-      "sourceHash": "sha256_ncert_mat_12_ch07_1d2e",
+      "sourceHash": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
       "stem": "If ∫₀¹ (x e^x) / (1 + x)² dx = e / a - b, where a and b are integers, the value of (a + b) is:",
       "options": [],
       "correctAnswer": "3",
@@ -1092,7 +1158,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "107555b898ebff8d0d4d715d392779dc8eb60f60c7ba9ef38d0f931803365f4f"
+      "draftSha256": "8b09dda9faf460b5e4de976348b34cc4c3b1975ad0e16e941dcd0a81ec87c78a",
+      "sourceSha256": "7bbb348cfa09075f176ae251e27ce65215a1f19d4d3d4ecb57d00eccc3f17031",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_MAT_024",
@@ -1107,7 +1176,7 @@
       "sourceCandidate": "NCERT Class 11 Mathematics Chapter 11 (Conic Sections)",
       "sourceDocumentId": "NCERT_CLASS_11_MATHEMATICS_CH11",
       "sourceLocator": "Section 11.2, Page 242",
-      "sourceHash": "sha256_ncert_mat_11_ch11_5b6c",
+      "sourceHash": "0f1acb2a502224c1c6b3bde22ab36f79eefcee0a19b2503098eb0716cb486607",
       "stem": "The length of latus rectum of the parabola 4y² + 12x - 20y + 61 = 0 is:",
       "options": [],
       "correctAnswer": "3",
@@ -1134,7 +1203,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "914b67a93688c256d66217f245518b2a71b7f2aa74e457384a93dc52931f5e15"
+      "draftSha256": "1c12fa1b73b515307abb22594393a48e2c9c830adc0bd10663399003f5d5aff3",
+      "sourceSha256": "0f1acb2a502224c1c6b3bde22ab36f79eefcee0a19b2503098eb0716cb486607",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_MAT_025",
@@ -1149,7 +1221,7 @@
       "sourceCandidate": "NCERT Class 12 Mathematics Chapter 10 (Vector Algebra)",
       "sourceDocumentId": "NCERT_CLASS_12_MATHEMATICS_CH10",
       "sourceLocator": "Section 10.6, Page 454",
-      "sourceHash": "sha256_ncert_mat_12_ch10_6c7d",
+      "sourceHash": "9682d28114ce12ad50cc830e56e5de61160fd2f973c1aa185ade8deaf95172dc",
       "stem": "If a, b, and c are unit vectors such that a + b + c = 0, the value of (a · b + b · c + c · a) is (give answer as decimal / fraction e.g. -1.5):",
       "options": [],
       "correctAnswer": "-1.5",
@@ -1176,7 +1248,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "f05ece5edb2dd1d0cab7df3e3cae1f1877fabd1c05547fc9438d2c84cd57b115"
+      "draftSha256": "f68d12250b929d26bfb4d08f76c72a09e22018bb7abc03b8404119c45603f8ba",
+      "sourceSha256": "9682d28114ce12ad50cc830e56e5de61160fd2f973c1aa185ade8deaf95172dc",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     }
   ]
 }

@@ -15,7 +15,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_001",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.6, Page 51 (Relative Velocity in One Dimension)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "foundation",
       "stem": "Two trains A and B of lengths 100 m and 150 m are moving on parallel tracks in opposite directions with speeds 36 km/h and 54 km/h respectively. The time taken by them to completely cross each other is:",
@@ -49,7 +49,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "3b96a5a42d2ecceb69717375d22c9b9315577052313ccf15ca47859516befcf7"
+      "draftSha256": "8df1b49eb19193caee9d49276145c560cfa9e86f9de7fa27e5007e3e1815e59e",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_032",
@@ -58,7 +59,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_002",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.9, Page 77 (Relative Velocity in Two Dimensions)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "standard",
       "stem": "Rain is falling vertically downwards with a speed of 35 m/s. A woman rides a bicycle with a speed of 12 m/s in east to west direction. The direction in which she should hold her umbrella is:",
@@ -92,7 +93,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "ffb238c46009842f09b69ab6d148f384d6dca42c109b275286549a5940b2279e"
+      "draftSha256": "1bd34e930f8bf9b5cd16680466abe61d20669a79d736c042b94c2fa0558afd27",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_033",
@@ -101,7 +103,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_003",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "standard",
       "stem": "A swimmer can swim with a speed of 5 km/h in still water. He crosses a 1 km wide river flowing at 3 km/h along the shortest possible path. The time taken by him is:",
@@ -135,7 +137,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "65044fa41257c02d53d888b0a2483b4a4eb17b6f424c26f955d10221be9bcc37",
+      "draftSha256": "ff528935d09d0e8488e0b00d153a23d76abaf5aad26a646fdd2d9a76bc903a16",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -149,7 +151,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_034",
@@ -158,7 +161,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_004",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "NUMERICAL",
       "difficultyBand": "standard",
       "stem": "A man crosses a 500 m wide river flowing at 4 km/h in the shortest possible time. If his speed in still water is 5 km/h, the drift of the man along the river bank upon reaching the opposite side is (in meters):",
@@ -186,7 +189,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "a1fe6c454d7ad5c8b66e7103aff84c560b14a205d3656277f1bd92e49d7cbbb4",
+      "draftSha256": "011851ff0e5f8147a1e6f5caa6ea05982844fa4bfb5ecffa9d6297c340863e71",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -200,7 +203,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_035",
@@ -209,7 +213,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_005",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "high",
       "stem": "Ship A is moving Westwards with a speed of 10 km/h and ship B, 100 km South of A, is moving Northwards with a speed of 10 km/h. The time after which the distance between them becomes shortest is:",
@@ -243,7 +247,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "1c962d960ba851b7e756d3b7012966c638c46103d3e96b545bb22c9ffe64a9cd",
+      "draftSha256": "7b81fbd59ec3a1a67284d1d45f06fbce62a5e14f15563d0d58ef4f029297d91d",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -257,7 +261,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_036",
@@ -266,7 +271,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_006",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.6, Page 53 (Acceleration in Relative Frame)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "foundation",
       "stem": "Two particles A and B are dropped from heights h₁ and h₂ simultaneously from rest. The relative acceleration of particle A with respect to particle B during free fall is:",
@@ -300,7 +305,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "0d59221f1de44ea9b2fdf58d03474a43781488285b37c2df716ce1785b7e5842"
+      "draftSha256": "b46bde4ed8542e0bc18d3dc2679ae2beac514bc342e17ea021931d41bf8741fa",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_037",
@@ -309,7 +315,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_007",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "NUMERICAL",
       "difficultyBand": "high",
       "stem": "Two bodies A and B are thrown simultaneously from two points separated by 100 m on the ground with equal speed u = 20 m/s towards each other at angles 30° and 60° to horizontal. The time in seconds when they collide is:",
@@ -337,7 +343,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "74b07ec9631a436eb57d894f4bf297e1463f17649d450882ebe27a7e33e06093",
+      "draftSha256": "674a265dabea2e3bab22503ac48b348bec2eeecfb82a784ffd97401499caf1ca",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -351,7 +357,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_038",
@@ -360,7 +367,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_008",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "high",
       "stem": "An airplane flies from city A to city B due East and returns back to A. The distance between A and B is L and airspeed is v. If a steady wind blows from North to South with speed u (u < v), the total time for the round trip is:",
@@ -394,7 +401,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "9864d9fb41a09897d30c14368c9ea6da638f67a6c7ea6270cd9b064c241ade0a",
+      "draftSha256": "27d26695822cbb862a1ade107b2b31c8d2a4053ca330c0f7fa17c57ad4767c7d",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -408,7 +415,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_039",
@@ -417,7 +425,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_009",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.6, Page 54 (Overtaking motion on straight highway)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "NUMERICAL",
       "difficultyBand": "standard",
       "stem": "A police van moving on a highway with a speed of 30 km/h fires a bullet at a thief's car speeding away in the same direction with a speed of 192 km/h. If the muzzle speed of the bullet is 150 m/s, the speed with which the bullet hits the thief's car is (in m/s):",
@@ -445,7 +453,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "bf6cb21399cf6d8db825001cf219fff95739cafd8d65b237498c4222f71efa49"
+      "draftSha256": "5d06e72992439c41cf6949b95e435db4151895e9da2e1a2bc390b9a8654d0bb0",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_040",
@@ -454,7 +463,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP04_010",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "high",
       "stem": "Three particles A, B, and C are situated at the vertices of an equilateral triangle of side d. Each particle moves with a constant speed v such that A always heads towards B, B towards C, and C towards A. The time after which the particles meet at the centroid is:",
@@ -488,7 +497,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "bf7c152b568bf92c5205ef04fb48cfb93a3fdedba06896d6a142e99398a880ae",
+      "draftSha256": "dbb3eb26ec0e63f47294291e5bea700317171b22e2bfe1f304fdee3c85cb9be5",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -502,7 +511,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     }
   ]
 }

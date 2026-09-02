@@ -21,7 +21,7 @@
       "sourceCandidate": "NCERT Class 11 Chemistry Chapter 1 (Some Basic Concepts of Chemistry)",
       "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH01",
       "sourceLocator": "Section 1.10, Page 22",
-      "sourceHash": "sha256_ncert_che_11_ch01_1a2b",
+      "sourceHash": "2fdd9eed62db1338cf68f62b5c63c549d66baa63d5ebab20c01f8428d2f80846",
       "stem": "The molarity of a solution obtained by mixing 750 mL of 0.5 M HCl with 250 mL of 2 M HCl will be:",
       "options": [
         "0.875 M",
@@ -54,7 +54,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "5372aee1a7b98048e8e13cdfd457ada0f6557b2cc8a416c3b8fe207f694ee4e2"
+      "draftSha256": "813494fc71e4ee74d147714fa245d70f19eec5a838576b9e03142ffd49f899c1",
+      "sourceSha256": "2fdd9eed62db1338cf68f62b5c63c549d66baa63d5ebab20c01f8428d2f80846",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_002",
@@ -69,7 +72,7 @@
       "sourceCandidate": "NCERT Class 11 Chemistry Chapter 2 (Structure of Atom)",
       "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH02",
       "sourceLocator": "Section 2.6, Page 58",
-      "sourceHash": "sha256_ncert_che_11_ch02_2b3c",
+      "sourceHash": "6603ca23ab6171c6e26bd7989123ce95cc718bf256cda77a481cc66884b93e01",
       "stem": "The total number of radial nodes and angular nodes respectively for a 4d orbital are:",
       "options": [
         "1 and 2",
@@ -102,7 +105,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "61bf250defd7dc924350d89300b7239f94cb920a93e51b47b873d3552a94c68e"
+      "draftSha256": "d0e0dc44641e1e0b789836460bb4e552bb39743e9706df4a987500d15214d774",
+      "sourceSha256": "6603ca23ab6171c6e26bd7989123ce95cc718bf256cda77a481cc66884b93e01",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_003",
@@ -117,7 +123,7 @@
       "sourceCandidate": "NCERT Class 11 Chemistry Chapter 3 (Periodic Classification)",
       "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH03",
       "sourceLocator": "Section 3.7, Page 88",
-      "sourceHash": "sha256_ncert_che_11_ch03_3c4d",
+      "sourceHash": "b82e6fc2a2996f5c12e0e69043d0ff57d0d53af3b48d25fc8958877cf5345e79",
       "stem": "The correct order of first ionization enthalpy among the elements B, C, N, and O is:",
       "options": [
         "B < C < O < N",
@@ -150,7 +156,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "6c921fed650d78936dded0b5db1036499a07f8c536e3c619e10343e24d60e32d"
+      "draftSha256": "18e369c3298d2be29e4cd44b6884c73c18c54b266df19b05bc9e12b4a359abe5",
+      "sourceSha256": "b82e6fc2a2996f5c12e0e69043d0ff57d0d53af3b48d25fc8958877cf5345e79",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_004",
@@ -165,7 +174,7 @@
       "sourceCandidate": "NCERT Class 11 Chemistry Chapter 4 (Chemical Bonding)",
       "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH04",
       "sourceLocator": "Section 4.7, Page 128",
-      "sourceHash": "sha256_ncert_che_11_ch04_4d5e",
+      "sourceHash": "40de76352b9b3774cc3a238565e93c37dd1d34b71f868c66dee8654cc08d41a6",
       "stem": "According to Molecular Orbital Theory, which of the following species is paramagnetic and has a bond order of 2?",
       "options": [
         "O₂",
@@ -198,7 +207,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "756e2e3923da1fef0d3d319be10071a5793f96c17a21ade11540b07be689fb89"
+      "draftSha256": "92cb57c48ff7715dee8ab14ba86b94a0462e40ac4135932460cdd36be7a015a1",
+      "sourceSha256": "40de76352b9b3774cc3a238565e93c37dd1d34b71f868c66dee8654cc08d41a6",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_005",
@@ -213,7 +225,7 @@
       "sourceCandidate": "NCERT Class 11 Chemistry Chapter 6 (Chemical Thermodynamics)",
       "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH06",
       "sourceLocator": "Section 6.6, Page 182",
-      "sourceHash": "sha256_ncert_che_11_ch06_6f7a",
+      "sourceHash": "77035d7103fbd50e4013393662b7d29681fc47d2d92c736c0bcd2f2890df208d",
       "stem": "For a reaction to be spontaneous at all temperatures, the required thermodynamic conditions are:",
       "options": [
         "ΔH < 0 and ΔS > 0",
@@ -246,7 +258,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "29cda0582d68e953b800b8b8f5d40b8dcba7d89592ffaa12238203d406ff0a1f"
+      "draftSha256": "26bb2f510b80e1c9e9b91c12e5c04cb4a051da3dc9ade4b7f45baf3162fe0f46",
+      "sourceSha256": "77035d7103fbd50e4013393662b7d29681fc47d2d92c736c0bcd2f2890df208d",
+      "difficulty": "FOUNDATION",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_006",
@@ -261,7 +276,7 @@
       "sourceCandidate": "NCERT Class 11 Chemistry Chapter 7 (Equilibrium)",
       "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH07",
       "sourceLocator": "Section 7.12, Page 226",
-      "sourceHash": "sha256_ncert_che_11_ch07_7a8b",
+      "sourceHash": "91d017a0eeb8259c57c36ee81e0cb289782c55a8eea7c0328aa03e71ef7f6de1",
       "stem": "The solubility product (K_sp) of a sparingly soluble salt AB₂ is 3.2 × 10⁻¹¹. Its solubility in mol/L in pure water is:",
       "options": [
         "2.0 × 10⁻⁴",
@@ -294,7 +309,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "ed969e2b0b4c7ba1511f318b067ff58924c97db805ba1239180609490ebac028"
+      "draftSha256": "d37389adbdb8eb99e46b39492fa301f6ba3611b08d35fb951b0098577a0b8ad9",
+      "sourceSha256": "91d017a0eeb8259c57c36ee81e0cb289782c55a8eea7c0328aa03e71ef7f6de1",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_007",
@@ -309,7 +327,7 @@
       "sourceCandidate": "NCERT Class 11 Chemistry Chapter 8 (Redox Reactions)",
       "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH08",
       "sourceLocator": "Section 8.3, Page 268",
-      "sourceHash": "sha256_ncert_che_11_ch08_8b9c",
+      "sourceHash": "f2d140002f670f7ee02f044c1fb22fb2467280944a4e6598d4dd4ca38ef4f6a4",
       "stem": "The oxidation states of Cr in CrO₅ (peroxide butterfly structure) and Mn in KMnO₄ respectively are:",
       "options": [
         "+6 and +7",
@@ -342,7 +360,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "e0b5fafc6167d244ebcb56dbee94b4ae683125936b830fc2fa77facbd87064d4"
+      "draftSha256": "e0b4b43797a31dbfd9e58e32682242dae15f1f43e7cae0d649e8397cb3a92e74",
+      "sourceSha256": "f2d140002f670f7ee02f044c1fb22fb2467280944a4e6598d4dd4ca38ef4f6a4",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_008",
@@ -357,7 +378,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 2 (Solutions)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH02",
       "sourceLocator": "Section 2.6, Page 52",
-      "sourceHash": "sha256_ncert_che_12_ch02_2c3d",
+      "sourceHash": "c878363333b4f38404396240153493ce3331536e32a40dcca677b52a2d3a86f9",
       "stem": "An aqueous solution of a non-volatile solute freezes at -0.372 °C. If K_f for water is 1.86 K kg/mol and K_b is 0.512 K kg/mol, the elevation in boiling point of the solution is:",
       "options": [
         "0.1024 °C",
@@ -390,7 +411,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "2c5e56f450f8a3f14f5a2eb911b4398464c24ccf13fe6582824ab7e887a1825f"
+      "draftSha256": "9142caa6971da6925484de60b0628a3829da230f66210737e2a966350532dc5f",
+      "sourceSha256": "c878363333b4f38404396240153493ce3331536e32a40dcca677b52a2d3a86f9",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_009",
@@ -405,7 +429,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 3 (Electrochemistry)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH03",
       "sourceLocator": "Section 3.3, Page 72",
-      "sourceHash": "sha256_ncert_che_12_ch03_3d4e",
+      "sourceHash": "28cccf9cfb87ddadd94976b7798f82441c6970467e5e59b43f5d9ce0c046ad80",
       "stem": "The standard reduction potentials for Zn²⁺/Zn and Cu²⁺/Cu are -0.76 V and +0.34 V respectively. The standard emf of the cell Zn | Zn²⁺ || Cu²⁺ | Cu is:",
       "options": [
         "+1.10 V",
@@ -438,7 +462,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "d0f7c1cba796acb85d50002294971ade7f1aac5a463c725d08ee07e6a1f8684e"
+      "draftSha256": "eba82c586f32658b9774ffce9d74989db0de3c3fd1b3102a9c62101a34c522c7",
+      "sourceSha256": "28cccf9cfb87ddadd94976b7798f82441c6970467e5e59b43f5d9ce0c046ad80",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_010",
@@ -453,7 +480,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 4 (Chemical Kinetics)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH04",
       "sourceLocator": "Section 4.3, Page 104",
-      "sourceHash": "sha256_ncert_che_12_ch04_4e5f",
+      "sourceHash": "89b5698a34acbcbba1590268a56fd23578df54d1d25a9afe32d343880d7be503",
       "stem": "For a first-order reaction, the time required for 99% completion is related to half-life (t_1/2) by:",
       "options": [
         "t_99% ≈ 6.64 t_1/2",
@@ -486,7 +513,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "09ac9a44154447792d204b008c893de75da42c781e6f9c1bf95408ae9bca033f"
+      "draftSha256": "bf5af6cf60bcc24e7ff12dbf95b03846f9525fcb77016c2bad3fa7724bbfb2f3",
+      "sourceSha256": "89b5698a34acbcbba1590268a56fd23578df54d1d25a9afe32d343880d7be503",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_011",
@@ -501,7 +531,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 8 (d and f Block Elements)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH08",
       "sourceLocator": "Section 8.3, Page 222",
-      "sourceHash": "sha256_ncert_che_12_ch08_8f9a",
+      "sourceHash": "1879b32b8ffc0f3e30440e12e567a5753cb6d6801164be3a32fd94b7bb184b20",
       "stem": "Which of the following 3d series transition metal ions has the highest spin-only magnetic moment in BM?",
       "options": [
         "Mn²⁺",
@@ -534,7 +564,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "8b7ba5258bd0e65f56b78fdb49fb54470180190d7704b8f68343438b7a9ae40e"
+      "draftSha256": "91052efecbed8f182d54645a7bf9cf8df1a0f4b98ff358b485070d73fb51de5a",
+      "sourceSha256": "1879b32b8ffc0f3e30440e12e567a5753cb6d6801164be3a32fd94b7bb184b20",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_012",
@@ -549,7 +582,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 9 (Coordination Compounds)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH09",
       "sourceLocator": "Section 9.5, Page 254",
-      "sourceHash": "sha256_ncert_che_12_ch09_9a1b",
+      "sourceHash": "c8417f03c788dcc042454c88eb4c998c387f5e7046c57188d06a68b626baa2a0",
       "stem": "The hybridization and magnetic character of [Fe(CN)₆]³⁻ complex ion respectively are:",
       "options": [
         "d²sp³ and paramagnetic",
@@ -582,7 +615,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "5784507990536c87cd41468ce078d90054da6b7d69d35349798285504bd54c0c"
+      "draftSha256": "6540d9059ed9e9cc8c99369e85e73591ee027af9265555d00e88a62664273eda",
+      "sourceSha256": "c8417f03c788dcc042454c88eb4c998c387f5e7046c57188d06a68b626baa2a0",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_013",
@@ -597,7 +633,7 @@
       "sourceCandidate": "NCERT Class 11 Chemistry Chapter 12 (Organic Chemistry: Basic Principles)",
       "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH12",
       "sourceLocator": "Section 12.7, Page 346",
-      "sourceHash": "sha256_ncert_che_11_ch12_1b2c",
+      "sourceHash": "dfea8840fff343f270dfa26033fdd36ede54d83294905b52c517d2204cdd25ea",
       "stem": "The correct order of stability of the following carbocations is: (I) (CH₃)₃C⁺, (II) (CH₃)₂CH⁺, (III) CH₃CH₂⁺, (IV) CH₃⁺",
       "options": [
         "I > II > III > IV",
@@ -630,7 +666,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "ad0c8f0ca953fec34bdf7d84ffa8370e29438810952936aa2c13d3dd14be1160"
+      "draftSha256": "2f5648852d1210a4bd763f4793fd8430317914ceb296f30acbd6f990c6d3f9b9",
+      "sourceSha256": "dfea8840fff343f270dfa26033fdd36ede54d83294905b52c517d2204cdd25ea",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_014",
@@ -645,7 +684,7 @@
       "sourceCandidate": "NCERT Class 11 Chemistry Chapter 13 (Hydrocarbons)",
       "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH13",
       "sourceLocator": "Section 13.3, Page 386",
-      "sourceHash": "sha256_ncert_che_11_ch13_2c3d",
+      "sourceHash": "4296c9d4ba7ef54b225a1f042574369f721cca92fad5900c29a0f21f144ed1c2",
       "stem": "Addition of HBr to propene in the presence of benzoyl peroxide yields primarily:",
       "options": [
         "1-bromopropane",
@@ -678,7 +717,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "3f3f7fe981280161580ac8649d3dfb399584344ddbe4cbf3acb293087fdb36e9"
+      "draftSha256": "0522be9724985a1d7804226761afb72f4db797f4c82781568748a275f9d1acae",
+      "sourceSha256": "4296c9d4ba7ef54b225a1f042574369f721cca92fad5900c29a0f21f144ed1c2",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_015",
@@ -693,7 +735,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 10 (Haloalkanes and Haloarenes)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH10",
       "sourceLocator": "Section 10.4, Page 300",
-      "sourceHash": "sha256_ncert_che_12_ch10_3d4e",
+      "sourceHash": "a9d0ea8e7b220b0fe4f8a0acc8f0117a5480dc90c40a77136d2f19154c4584a4",
       "stem": "Which of the following alkyl halides undergoes nucleophilic substitution via SN1 mechanism at the fastest rate?",
       "options": [
         "(CH₃)₃C-Br",
@@ -726,7 +768,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "aa3e30412413b765dce5544d82f5f2b9cffa163eaa5cf551c9ab216055d9896d"
+      "draftSha256": "0b71879a947c82a4e9b62dbee571a594917688e875a571445188170798bb0410",
+      "sourceSha256": "a9d0ea8e7b220b0fe4f8a0acc8f0117a5480dc90c40a77136d2f19154c4584a4",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_016",
@@ -741,7 +786,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 11 (Alcohols, Phenols and Ethers)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH11",
       "sourceLocator": "Section 11.4, Page 338",
-      "sourceHash": "sha256_ncert_che_12_ch11_4e5f",
+      "sourceHash": "e8ca35bf02da6e190bed078c284a5d51c97502c293276009dbd1f552fe2e3a8c",
       "stem": "Phenol reacts with chloroform and aqueous NaOH followed by acidification (Reimer-Tiemann reaction) to give majorly:",
       "options": [
         "Salicylaldehyde",
@@ -774,7 +819,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "3c0877760d929977719d429badf9af6f6af5d7a8637d02d3543de2f754b752a6"
+      "draftSha256": "2765684b78219aa200305f864d9dfb23fa1257a29193864504b48c6ed2e0a7d7",
+      "sourceSha256": "e8ca35bf02da6e190bed078c284a5d51c97502c293276009dbd1f552fe2e3a8c",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_017",
@@ -789,7 +837,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 12 (Aldehydes, Ketones and Carboxylic Acids)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH12",
       "sourceLocator": "Section 12.4, Page 366",
-      "sourceHash": "sha256_ncert_che_12_ch12_5f6a",
+      "sourceHash": "6d1b774b367f4469dfb1beabbc72a6a526271190ba19337ec07a95d2c932c8e9",
       "stem": "Which of the following compounds gives a positive iodoform test upon treatment with I₂ and aqueous NaOH?",
       "options": [
         "Pentan-2-one",
@@ -822,7 +870,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "465d559302dec280d4460ce8af9ee9566227c7f3d5ac6e3b6aca44e98ead3e74"
+      "draftSha256": "67c9c14ce0109fc42dbbc25db1d037032e52874995e4b3e9fd84a33ff188deb9",
+      "sourceSha256": "6d1b774b367f4469dfb1beabbc72a6a526271190ba19337ec07a95d2c932c8e9",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_018",
@@ -837,7 +888,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 13 (Amines)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH13",
       "sourceLocator": "Section 13.6, Page 398",
-      "sourceHash": "sha256_ncert_che_12_ch13_6a7b",
+      "sourceHash": "915798ececab370f904031bd03ae6f17c96b1bd6bdbc1d1536d40958c042e0d6",
       "stem": "Aniline reacts with NaNO₂ and dilute HCl at 0-5 °C to form a compound X, which on heating with Cu₂Cl₂/HCl gives Y. Compound Y is:",
       "options": [
         "Chlorobenzene",
@@ -870,7 +921,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "ddaf789c785b20dbc00fd6bd74af1032c532669fb8abf0e615fc4d6715b7e2d9"
+      "draftSha256": "38a1e0a409f17e5db90eacbe1e88f4c3a315882598288d9aff510fa94046b5b2",
+      "sourceSha256": "915798ececab370f904031bd03ae6f17c96b1bd6bdbc1d1536d40958c042e0d6",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_019",
@@ -885,7 +939,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 14 (Biomolecules)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH14",
       "sourceLocator": "Section 14.1, Page 416",
-      "sourceHash": "sha256_ncert_che_12_ch14_7b8c",
+      "sourceHash": "36c1a0a2fb6fced8a4506cbfd45144d0ff90c5983ad6b9b736158710fb8eaad7",
       "stem": "Which of the following carbohydrates is a non-reducing sugar?",
       "options": [
         "Sucrose",
@@ -918,7 +972,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "041432700a4121603b5cba782071cb5f4ef4f71b0dba3a536f91b588772dfa6a"
+      "draftSha256": "bb3df9bfceb026c2baeb60016655c515c1e83803a99005c937f7056c19b7c6ea",
+      "sourceSha256": "36c1a0a2fb6fced8a4506cbfd45144d0ff90c5983ad6b9b736158710fb8eaad7",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_020",
@@ -933,7 +990,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 7 (p-Block Elements)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH07",
       "sourceLocator": "Section 7.18, Page 196",
-      "sourceHash": "sha256_ncert_che_12_ch07_7c8d",
+      "sourceHash": "07c764b19a96609a11666544ec089135253fb59f52bbf1dda69964a019dad6a1",
       "stem": "The shape and hybridization of XeF₄ molecule according to VSEPR theory are:",
       "options": [
         "Square planar and sp³d²",
@@ -966,7 +1023,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "6a5f5bd6c2144f40b13b0e0c2dc668ac9b4d05500db46cb82830072af4f9470e"
+      "draftSha256": "d728b0f51054f606d26af41253ae9443575218fca780017d6c23c75e3c629a52",
+      "sourceSha256": "07c764b19a96609a11666544ec089135253fb59f52bbf1dda69964a019dad6a1",
+      "difficulty": "STANDARD",
+      "difficultyEvidenceType": "PYQ_ANALOGUE"
     },
     {
       "questionId": "JEE_MAJ01_CHE_021",
@@ -981,7 +1041,7 @@
       "sourceCandidate": "NCERT Class 11 Chemistry Chapter 1 (Some Basic Concepts)",
       "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH01",
       "sourceLocator": "Section 1.9, Page 18",
-      "sourceHash": "sha256_ncert_che_11_ch01_1a2b",
+      "sourceHash": "2fdd9eed62db1338cf68f62b5c63c549d66baa63d5ebab20c01f8428d2f80846",
       "stem": "The number of moles of methane required to produce 22 g of CO₂ (g) after complete combustion is (give answer as decimal / fraction e.g. 0.5):",
       "options": [],
       "correctAnswer": "0.5",
@@ -1008,7 +1068,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "d8335b1510ddf81cde3420a5795f99d540905e707b06cc9012c32e0d078b6bdd"
+      "draftSha256": "b92e86223b4e42c1f4cc225ac819d676deba2924931b0b2c3687efcf834a9ebf",
+      "sourceSha256": "2fdd9eed62db1338cf68f62b5c63c549d66baa63d5ebab20c01f8428d2f80846",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_CHE_022",
@@ -1023,7 +1086,7 @@
       "sourceCandidate": "NCERT Class 11 Chemistry Chapter 7 (Equilibrium)",
       "sourceDocumentId": "NCERT_CLASS_11_CHEMISTRY_CH07",
       "sourceLocator": "Section 7.11, Page 218",
-      "sourceHash": "sha256_ncert_che_11_ch07_7a8b",
+      "sourceHash": "91d017a0eeb8259c57c36ee81e0cb289782c55a8eea7c0328aa03e71ef7f6de1",
       "stem": "The pH of a 10⁻³ M aqueous solution of NaOH at 25 °C is:",
       "options": [],
       "correctAnswer": "11",
@@ -1050,7 +1113,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "d10a0a8f11a7fb0c57b3032301c256e879704f05dc7a885af12d8c58ce3f583a"
+      "draftSha256": "2df40e4683ad580a89ae797a6aa12f0a12baf3b3b8df5fe5d878906490808b12",
+      "sourceSha256": "91d017a0eeb8259c57c36ee81e0cb289782c55a8eea7c0328aa03e71ef7f6de1",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_CHE_023",
@@ -1065,7 +1131,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 3 (Electrochemistry)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH03",
       "sourceLocator": "Section 3.5, Page 84",
-      "sourceHash": "sha256_ncert_che_12_ch03_3d4e",
+      "sourceHash": "28cccf9cfb87ddadd94976b7798f82441c6970467e5e59b43f5d9ce0c046ad80",
       "stem": "The quantity of charge in Faraday required to deposit 1 mole of aluminum from molten Al₂O₃ is:",
       "options": [],
       "correctAnswer": "3",
@@ -1092,7 +1158,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "513edec03da227a9ffc37bc15aa89423ef56af05451c6edf7c3536d96eeb30ad"
+      "draftSha256": "99d1410f29b45dee0ad30431c48bd7801d04274d67e6c39e17187af8ce1aa14c",
+      "sourceSha256": "28cccf9cfb87ddadd94976b7798f82441c6970467e5e59b43f5d9ce0c046ad80",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_CHE_024",
@@ -1107,7 +1176,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 4 (Chemical Kinetics)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH04",
       "sourceLocator": "Section 4.2, Page 98",
-      "sourceHash": "sha256_ncert_che_12_ch04_4e5f",
+      "sourceHash": "89b5698a34acbcbba1590268a56fd23578df54d1d25a9afe32d343880d7be503",
       "stem": "For the reaction 2A + B → C, the rate law is Rate = k [A]² [B]¹. The overall order of this reaction is:",
       "options": [],
       "correctAnswer": "3",
@@ -1134,7 +1203,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "d93153589de43509eaac7a4b45ad3d06ffbd22d1034b1f671998dcc444c5a3c4"
+      "draftSha256": "ceb5d16906472060f384a0d784f438ddd22d851989f3b85ab5479bb832307609",
+      "sourceSha256": "89b5698a34acbcbba1590268a56fd23578df54d1d25a9afe32d343880d7be503",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     },
     {
       "questionId": "JEE_MAJ01_CHE_025",
@@ -1149,7 +1221,7 @@
       "sourceCandidate": "NCERT Class 12 Chemistry Chapter 9 (Coordination Compounds)",
       "sourceDocumentId": "NCERT_CLASS_12_CHEMISTRY_CH09",
       "sourceLocator": "Section 9.2, Page 246",
-      "sourceHash": "sha256_ncert_che_12_ch09_9a1b",
+      "sourceHash": "c8417f03c788dcc042454c88eb4c998c387f5e7046c57188d06a68b626baa2a0",
       "stem": "When 1 mole of [Co(NH₃)₅Cl]Cl₂ is treated with excess AgNO₃ solution, the number of moles of AgCl precipitated is:",
       "options": [],
       "correctAnswer": "2",
@@ -1176,7 +1248,10 @@
         ],
         "notes": "Factually and numerically verified against standard NCERT curriculum."
       },
-      "draftSha256": "e783126194262cb3bacc33934993298cea19be83d6205800d95d30edfe361340"
+      "draftSha256": "780ddc857f502491acae13ab8767da5e187848bc67674011be4f45ecf2858ebc",
+      "sourceSha256": "c8417f03c788dcc042454c88eb4c998c387f5e7046c57188d06a68b626baa2a0",
+      "difficulty": "HIGH_JEE_MAIN",
+      "difficultyEvidenceType": "SME_JUDGMENT"
     }
   ]
 }

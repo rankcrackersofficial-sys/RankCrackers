@@ -15,7 +15,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP01_001",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.3, Page 41 (Kinematic Equations for Uniformly Accelerated Motion)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "foundation",
       "stem": "A particle starts from rest and moves along a straight line with a constant acceleration of 4 m/s². The distance traveled by the particle during the 3rd second of its motion is:",
@@ -49,7 +49,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "cc0909e00c1d08dc97339f90e10089b30fcd419aca83de5e82a4f178df6d9b31"
+      "draftSha256": "537ffba12ca0188617a7328395fd0c59dc37c2e46218c5202afe359c0de69a4b",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_002",
@@ -58,7 +59,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP01_002",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.4, Page 45 (Free Fall Motion)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "foundation",
       "stem": "A stone is dropped from a balloon rising upwards with a constant velocity of 10 m/s. If the balloon is at a height of 40 m from the ground when the stone is dropped, the time taken by the stone to reach the ground is (g = 10 m/s²):",
@@ -92,7 +93,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "c18f63ed1dd8479da5e97172d6aeabba1eadcbf54fc43271ff8b7dd22e60d27b"
+      "draftSha256": "75728f3e1e364cee07eece2a15ef5db3cb755e123654d673d4500e51203d3f1f",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_003",
@@ -101,7 +103,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP02_001",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.2, Page 39 (Instantaneous Velocity and Acceleration)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "standard",
       "stem": "The position of a body moving along the x-axis is given by x(t) = 2t³ - 9t² + 12t + 5 (in meters). The acceleration of the body when its velocity is momentarily zero is:",
@@ -135,7 +137,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "612adb9beff60f88891364f6bf85ea117c6def3baa83cbe63ac3b43c0f92ce73",
+      "draftSha256": "1e8516a84117ccd7d443c00623330e07b37dddd6e7647a32ab366ed9db114ff9",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -149,7 +151,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_004",
@@ -158,7 +161,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP02_002",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.3, Page 43 (Stopping Distance of Vehicles)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "standard",
       "stem": "A car moving at speed v is stopped by a constant braking force in distance d. If the speed is doubled to 2v while the same braking force is applied, the stopping distance becomes:",
@@ -192,7 +195,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "dcbaa96b5a4b6bb28c085a698a20dcb4efe8bb2cc5f558a116030497ed5e8368",
+      "draftSha256": "6625f59ec1c87e8b54b6f0e98d47096aed091eda90d691595a7375ce8a49a0e7",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -206,7 +209,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_005",
@@ -215,7 +219,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP01_003",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.2, Page 38 (Position-Time Graphs)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "NUMERICAL",
       "difficultyBand": "standard",
       "stem": "A body moves in a straight line such that its velocity is given by v = √(4s + 16) where s is displacement in meters. The acceleration of the body in m/s² is:",
@@ -243,7 +247,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "83d8b0c2156ecf83afcb08cb1ac23c30a74dc2c051b116821e805977db8eefa4"
+      "draftSha256": "21e29cc777341d620034272e22a07b7f4863dc18f95cc7fecc845c12f7e909fe",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_006",
@@ -252,7 +257,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP03_001",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.4, Page 47 (Galileo's Law of Odd Numbers)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "foundation",
       "stem": "A particle drops freely under gravity from rest. The ratio of distances traveled by the particle in the 1st, 2nd, and 3rd seconds of its fall is:",
@@ -286,7 +291,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "f2c8b4ac794385c53312e2c685e46a47cad04123a263bea65f29d7faa275e02b"
+      "draftSha256": "e241c0d39c08f8f963b43c0b0a96b66d49b80e35e6c9d5479855c628ff10efaa",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_007",
@@ -295,7 +301,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP02_003",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "high",
       "stem": "A bullet fired into a wooden block loses half of its velocity after penetrating 3 cm. Assuming constant resistance force, the additional distance it will penetrate before coming to rest is:",
@@ -329,7 +335,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "d2148749b66ae7c5d1566003b6aa9d875c93a93a3f3007ed641a953f5ccb89e8",
+      "draftSha256": "b47739307d28cd1c5277b16e13872352f755f32de0b1cce896353d199d8ae4ba",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -343,7 +349,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_008",
@@ -352,7 +359,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP01_004",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.1, Page 37 (Average vs Instantaneous Speed)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "foundation",
       "stem": "A vehicle travels half of the total distance with speed v₁ and the remaining half with speed v₂. The average speed of the vehicle for the entire journey is:",
@@ -386,7 +393,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "bfa4f8a8645a7d48b7b11312141a1115cfba6b0f66ed2bcaf2470714112a3cee",
+      "draftSha256": "363d5186abe0afb7d58284ada610e6ff852d651659dc877023553b35af7355a4",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -400,7 +407,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_009",
@@ -409,7 +417,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP02_004",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "Section 3.2, Page 40 (Acceleration from Velocity-Time Area)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "NUMERICAL",
       "difficultyBand": "standard",
       "stem": "A particle moves with an acceleration a = 3t² + 2t (in m/s²). If its initial velocity at t = 0 is 2 m/s, the velocity of the particle at t = 2 s is (in m/s):",
@@ -437,7 +445,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "d8b242a9eb1304b88e6ebdf93a331805f0acfa2bbd33607422e61ddaec3b04a2"
+      "draftSha256": "c2f33c73707c5839c880de7ff24ae95934b59ea7786c8a76aa8c245ea0ac99b4",
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     },
     {
       "questionId": "JEE_S01_PHY_010",
@@ -446,7 +455,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH03_TOP03_002",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH03",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 03)",
-      "sourceHash": "sha256_ncert_phy_11_ch03_7b9a",
+      "sourceHash": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882",
       "type": "NUMERICAL",
       "difficultyBand": "high",
       "stem": "A juggler throws balls into air vertically upward at regular intervals of 1 second. Each ball rises to a maximum height of 20 m. The number of balls in the air simultaneously at any instant (excluding the moments of throwing and catching) is (g = 10 m/s²):",
@@ -474,7 +483,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "f79fddff92adc5057ef2221a7a0e1a2ab28820ae474028a130de95bbaf1ebc87",
+      "draftSha256": "085bbe958eb744d343fb9c0d9c0a40e7843422cde7818c7dab3630d824cd0126",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -488,7 +497,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "6f10d3dabc274481d9874c79dd164c08ecb48f61ec8434fe6bb9005440fc4882"
     }
   ]
 }

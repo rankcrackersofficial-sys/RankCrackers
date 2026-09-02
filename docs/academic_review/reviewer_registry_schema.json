@@ -18,8 +18,8 @@
   "properties": {
     "authorityId": {
       "type": "string",
-      "pattern": "^prof_[a-z0-9_]+$",
-      "description": "Unique cryptographic or pseudonymized authority handle assigned by Founder."
+      "pattern": "^sme_[a-z0-9_]+$",
+      "description": "Unique cryptographic or pseudonymized authority handle assigned upon onboarding (e.g., example_physics_reviewer)."
     },
     "displayRole": {
       "type": "string",
@@ -55,11 +55,11 @@
     },
     "createdBy": {
       "type": "string",
-      "description": "UID of Founder admin executing registration."
+      "description": "UID of Founder admin executing registration (registry metadata only; cannot sign academic decisions)."
     },
     "credentialEvidenceRef": {
       "type": "string",
-      "description": "Secure reference to offline academic credentials / CV / institutional affiliation record."
+      "description": "Secure reference to offline academic credentials / CV / institutional affiliation record (e.g. offline_credentials/example_reviewer_cv.pdf)."
     },
     "reviewDecisionSigningMethod": {
       "type": "string",
@@ -75,6 +75,8 @@
     "MODEL_ONLY_CANONICAL_PROMOTIONS": 0,
     "AUTOMATIC_PRO_TO_KEY_PROMOTION": 0,
     "AUTOMATIC_PRO_TO_SOLUTION_PROMOTION": 0,
-    "AUTOMATIC_PRO_TO_PUBLICATION_PROMOTION": 0
+    "AUTOMATIC_PRO_TO_PUBLICATION_PROMOTION": 0,
+    "FOUNDER_CAN_IMPERSONATE_REVIEWER_DECISION": 0,
+    "SCHEMA_EXAMPLE_COUNTED_AS_REAL_REVIEWER": 0
   }
 }

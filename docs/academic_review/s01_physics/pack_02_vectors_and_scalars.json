@@ -15,7 +15,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_001",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.2, Page 66 (Scalars and Vectors, Unit Vectors)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "foundation",
       "stem": "If vector A = 3î + 4ĵ and vector B = 6î + 8ĵ, then the angle between vector A and vector B is:",
@@ -49,7 +49,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "2d3c80e50dd3424ca00383e5b4585f14cec70f111240b830d8cbe47ac40b76dd"
+      "draftSha256": "53a0b43ef898334af7aa9174388839865e81f627aeffec909c9a6fea4b7272da",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_012",
@@ -58,7 +59,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_002",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.4, Page 69 (Vector Addition - Triangle and Parallelogram Law)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "standard",
       "stem": "The resultant of two equal vectors of magnitude P is also equal to P. The angle between the two vectors is:",
@@ -92,7 +93,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "0ba45f7af11d406403b4ae5eb81b78c48928a9a2e75aacc29255b562132cb8e7"
+      "draftSha256": "693fc6949f7bc8fac76dd94c98e44d73da950ed48ae0553b4d74ad4b0fa544c1",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_013",
@@ -101,7 +103,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_001",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.7, Page 74 (Scalar Product of Vectors)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "standard",
       "stem": "If vectors A = 2î + 3ĵ + 8k̂ and B = 4î - 4ĵ + αk̂ are perpendicular to each other, then the value of α is:",
@@ -135,7 +137,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "b9836b0d26d2a5bce0bb0f454dd205c07e685529401fd26efbdb3f97f7640696",
+      "draftSha256": "8c6d7d73551c7dcd886913081daeecbfb91272cfab542f90efaeecfd98b90366",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -149,7 +151,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_014",
@@ -158,7 +161,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_002",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.8, Page 76 (Vector Product of Vectors)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "NUMERICAL",
       "difficultyBand": "standard",
       "stem": "If |A × B| = √3 (A · B), then the angle between vectors A and B in degrees is:",
@@ -186,7 +189,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "62a88289d3848dd19319861573035d527de4cf81a3f90958131e25a200f93853",
+      "draftSha256": "f8ad1d1baa02976114bbaf8c337c9b5010cb79fc3481d334d0f9c5299ef601e1",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -200,7 +203,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_015",
@@ -209,7 +213,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_003",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "high",
       "stem": "A unit vector perpendicular to both A = î + 2ĵ + 3k̂ and B = 2î - ĵ + k̂ is:",
@@ -243,7 +247,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "6401ad2e633211091d7fd03fccd92f6f41e6e19b1a42dbfcf2348f3300cb0223",
+      "draftSha256": "e12a6cacb99a02f60271f72782b1385f58c07739e69c2c6a42baaccb4fbfc4a9",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -257,7 +261,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_016",
@@ -266,7 +271,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_003",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.3, Page 67 (Null Vector and Unit Vector Properties)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "foundation",
       "stem": "If 0.6î + 0.8ĵ + c k̂ is a unit vector, the value of c is:",
@@ -300,7 +305,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "2082e92cf43bf1cd46100caec48ccb4f23744e1a2ef4404f80dfb8f5ac4ea97a"
+      "draftSha256": "cd78f09085524e9fa3354377f9e27742be0647235f576fcb72b709d49266f124",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_017",
@@ -309,7 +315,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_004",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.7, Page 75 (Projection of a Vector)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "standard",
       "stem": "The projection of vector A = 2î + 3ĵ + 2k̂ on vector B = î + 2ĵ + 2k̂ is:",
@@ -343,7 +349,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "50b55c68a79f5908054a8d6d5a88f4633149d32b0062db0c3539c5fc7260ea7d"
+      "draftSha256": "a27718d91dbb24eb5c7b69062eae0e04167634556f243fd231cfef833c80848b",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_018",
@@ -352,7 +359,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_004",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "NUMERICAL",
       "difficultyBand": "standard",
       "stem": "The area of a parallelogram formed by vectors A = 3î + 2ĵ and B = 2ĵ - 4k̂ as adjacent sides is (in square units):",
@@ -380,7 +387,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "8d3828e655de0c29ca3c156392d446fda4521de65625458401a5fd9f4f39b4bc",
+      "draftSha256": "2e8844c943a94f27a6c2b69b8e819222917679d353a9cc845906a1f6a26d3dd7",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -394,7 +401,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_019",
@@ -403,7 +411,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP01_005",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "Section 4.4, Page 70 (Sum and Difference of Two Vectors)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "SINGLE_CHOICE_MCQ",
       "difficultyBand": "high",
       "stem": "If |A + B| = |A - B|, then the angle between vector A and vector B is:",
@@ -437,7 +445,7 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "9e511d647cc5b900567857ee7e524b376862bcfa572e42426771e27b0ccaaed0",
+      "draftSha256": "14acad4e892fd81f2c72979072d80894afd85e0098b4a265a395d4cc9d9c2d5a",
       "provenanceHistory": [
         {
           "version": "1.0.0",
@@ -451,7 +459,8 @@
           "regroundedAtUtc": "2026-09-02T17:35:00Z",
           "status": "APPROVED_NCERT_REGISTRY_GROUNDED"
         }
-      ]
+      ],
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     },
     {
       "questionId": "JEE_S01_PHY_020",
@@ -460,7 +469,7 @@
       "canonicalSyllabusAtomId": "JEE_2026_PHY_U01_CH04_TOP02_005",
       "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH04",
       "sourceLocator": "NCERT Class 11 Exercise & Exemplar Concept Equivalent (Ch 04)",
-      "sourceHash": "sha256_ncert_phy_11_ch04_8c1b",
+      "sourceHash": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc",
       "type": "NUMERICAL",
       "difficultyBand": "high",
       "stem": "If vectors A = 2î - ĵ + k̂, B = î + 2ĵ - 3k̂, and C = 3î + pĵ + 5k̂ are coplanar, the value of p is:",
@@ -488,7 +497,8 @@
         ],
         "notes": "Conceptually rigorous, single-choice unambiguous, units verified."
       },
-      "draftSha256": "6287138031d97d1481f5a10415d55c20639d463ba6be6f63942c541aa27ac827"
+      "draftSha256": "7e9868a3549ade65a8d54131a3851b836ec2fa2e87a7de0b2b3572da70f5cd12",
+      "sourceSha256": "15bc9e38f50fd0243761560b54f578d05c38529e88346ec8c35af4041d8664cc"
     }
   ]
 }

@@ -1,0 +1,77 @@
+{
+  "version": "1.0.0",
+  "title": "JEE Main 2026/2027 Assessment Factory S02-S06 Pipeline Manifest",
+  "createdAtUtc": "2026-09-02T12:38:23.330Z",
+  "governanceStatus": "PARALLEL_DRAFTS_REVIEW_READY",
+  "invariants": {
+    "SYNTHETIC_HUMAN_REVIEW_AUTHORITIES": 0,
+    "AUTOMATIC_PRO_TO_KEY_PROMOTION": 0,
+    "AUTOMATIC_PRO_TO_SOLUTION_PROMOTION": 0,
+    "AUTOMATIC_PRO_TO_PUBLICATION_PROMOTION": 0,
+    "LIVE_AI_DIRECT_TO_STUDENT": 0
+  },
+  "schedules": [
+    {
+      "scheduleId": "sch_jee_main_2026_2",
+      "scheduleName": "Schedule 02 (Laws of Motion & Friction)",
+      "draftCount": 50,
+      "sourceResolved": 50,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH05",
+      "sourceSha256": "10ba66130612327832ab9c902e61dda1890e4552c5fe741a06c8d5fd6c2cdde2",
+      "reviewPackFile": "s02_physics_50q_review_pack.json",
+      "proReviewedCount": 0,
+      "productionEligibleCount": 0,
+      "academicStatus": "REVIEW_READY_PENDING_HUMAN_SME"
+    },
+    {
+      "scheduleId": "sch_jee_main_2026_3",
+      "scheduleName": "Schedule 03 (Work, Energy & Power)",
+      "draftCount": 50,
+      "sourceResolved": 50,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH06",
+      "sourceSha256": "c72588d8dac3ce02fc10f0324afeed6304c22b2e0504134cc17d5b49311ec45e",
+      "reviewPackFile": "s03_physics_50q_review_pack.json",
+      "proReviewedCount": 0,
+      "productionEligibleCount": 0,
+      "academicStatus": "REVIEW_READY_PENDING_HUMAN_SME"
+    },
+    {
+      "scheduleId": "sch_jee_main_2026_4",
+      "scheduleName": "Schedule 04 (Centre of Mass & Rotational Motion)",
+      "draftCount": 50,
+      "sourceResolved": 50,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH07",
+      "sourceSha256": "03584220d19491007a4ed8daefd2ff7aee5430062c60c3bb5cdb21c33b601d66",
+      "reviewPackFile": "s04_physics_50q_review_pack.json",
+      "proReviewedCount": 0,
+      "productionEligibleCount": 0,
+      "academicStatus": "REVIEW_READY_PENDING_HUMAN_SME"
+    },
+    {
+      "scheduleId": "sch_jee_main_2026_5",
+      "scheduleName": "Schedule 05 (Gravitation & Satellite Motion)",
+      "draftCount": 50,
+      "sourceResolved": 50,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH08",
+      "sourceSha256": "24fa81287deceda3620bbee124cec6dcc2b1e295fce6c5e663ddf6896292a103",
+      "reviewPackFile": "s05_physics_50q_review_pack.json",
+      "proReviewedCount": 0,
+      "productionEligibleCount": 0,
+      "academicStatus": "REVIEW_READY_PENDING_HUMAN_SME"
+    },
+    {
+      "scheduleId": "sch_jee_main_2026_6",
+      "scheduleName": "Schedule 06 (Properties of Matter & Fluids)",
+      "draftCount": 50,
+      "sourceResolved": 50,
+      "sourceDocumentId": "NCERT_CLASS_11_PHYSICS_CH09",
+      "sourceSha256": "9c3a0cb8007a44fb171088cef6e0d742e5ffa0b5fb3f30eaafac954766ce8cba",
+      "reviewPackFile": "s06_physics_50q_review_pack.json",
+      "proReviewedCount": 0,
+      "productionEligibleCount": 0,
+      "academicStatus": "REVIEW_READY_PENDING_HUMAN_SME"
+    }
+  ],
+  "totalSchedulesDrafted": 5,
+  "totalQuestionsDrafted": 250
+}
