@@ -1,0 +1,120 @@
+{
+  "suite": "RC_JEE_MAIN_2027_GATE_09_REVIEWER_IDENTITY_ASSIGNMENT_AND_SECURITY_SUITE",
+  "startedAtUtc": "2026-09-02T13:12:57.494Z",
+  "tests": [
+    {
+      "name": "Founder successfully registers active Reviewer authority",
+      "passed": true,
+      "details": {
+        "authorityId": "REV_AUTH_PHY_1001",
+        "authUid": "SME_PHYSICS_USER_UID_1001"
+      }
+    },
+    {
+      "name": "Reject duplicate authUid registration attempt",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "reason": "DUPLICATE_AUTH_UID_FORBIDDEN"
+      }
+    },
+    {
+      "name": "Reject non-founder self-escalation attempt",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "reason": "CALLER_NOT_FOUNDER"
+      }
+    },
+    {
+      "name": "Reviewer registration does NOT auto-assign batches or auto-approve items",
+      "passed": true,
+      "details": {
+        "assignments": 0,
+        "reviews": 0
+      }
+    },
+    {
+      "name": "Founder explicitly assigns BATCH_S01_1 to authorized Physics Reviewer",
+      "passed": true,
+      "details": {
+        "assignmentId": "ASSIGN_BATCH_S01_1_PHY_1001",
+        "batchId": "BATCH_S01_1"
+      }
+    },
+    {
+      "name": "Reject cross-scope assignment (Physics batch to Chemistry reviewer)",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "reason": "REVIEWER_SUBJECT_SCOPE_MISMATCH"
+      }
+    },
+    {
+      "name": "Reject assignment to revoked/inactive reviewer",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "reason": "REVIEWER_STATUS_INACTIVE"
+      }
+    },
+    {
+      "name": "Reject submission for unassigned batch",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "reason": "NO_ACTIVE_ASSIGNMENT_RECORD_FOUND"
+      }
+    },
+    {
+      "name": "Assigned Reviewer submits authenticated review decision with immutable digest",
+      "passed": true,
+      "details": {
+        "decisionId": "DEC_BATCH_S01_1_Q001",
+        "digest": "7d44e72154ba52b52a9b46b0e22a92a95aa06b81c2bb0fad01954a795aa5c136",
+        "cryptoMethod": "AUTHENTICATED_REVIEW_DECISION_DIGEST"
+      }
+    },
+    {
+      "name": "Assignment record history is immutable (overwrite blocked)",
+      "passed": true,
+      "details": {
+        "immutable": true
+      }
+    },
+    {
+      "name": "Review decision history is immutable (overwrite blocked)",
+      "passed": true,
+      "details": {
+        "immutable": true
+      }
+    },
+    {
+      "name": "Founder cannot submit review decision using reviewer authority ID",
+      "passed": true,
+      "details": {
+        "rejected": true,
+        "reason": "AUTH_UID_MISMATCH_WITH_REGISTERED_AUTHORITY"
+      }
+    }
+  ],
+  "invariants": {
+    "FALSE_CRYPTOGRAPHIC_SIGNATURE_CLAIM": 0,
+    "AUTH_UID_REVIEWER_AUTHORITY_MISMATCH_ACCEPTED": 0,
+    "DUPLICATE_AUTH_UID_ACCEPTED": 0,
+    "REVIEWER_SELF_ESCALATION_ACCEPTED": 0,
+    "REVOKED_REVIEWER_ACTION_ACCEPTED": 0,
+    "AUTO_ASSIGN_FIRST_REGISTERED_REVIEWER": 0,
+    "REGISTERING_REVIEWER_AUTO_APPROVES_CONTENT": 0,
+    "FOUNDER_CAN_IMPERSONATE_REVIEWER_DECISION": 0,
+    "CROSS_SCOPE_ASSIGNMENT_ACCEPTED": 0,
+    "UNASSIGNED_REVIEW_SUBMISSION_ACCEPTED": 0,
+    "BATCH_ASSIGNMENT_TRANSACTION_TEST": "PASS",
+    "REALISTIC_REVIEW_DECISION_TRANSACTION_TEST": "PASS",
+    "MUTABLE_ASSIGNMENT_HISTORY": 0,
+    "MUTABLE_REVIEW_HISTORY": 0,
+    "SCHEMA_EXAMPLE_COUNTED_AS_REAL_CREDENTIAL": 0,
+    "FIXTURE_REVIEWER_COUNTED_AS_REAL": 0,
+    "FIXTURE_CONTENT_COUNTED_AS_PRODUCTION": 0
+  }
+}
