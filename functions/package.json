@@ -8,10 +8,11 @@
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log",
-    "test": "jest lib/test",
+    "test": "jest",
     "audit:qcell5:empty-atomic-question-cells-preflight": "node audit_qcell5_empty_atomic_question_cells_preflight.js",
     "audit:qcell5:fix2-missing-canonicalkey-classifier": "node audit_qcell5_fix2_missing_canonicalkey_classifier.js",
-    "audit:qcell5:fix3-legacy-duplicate-pair-evidence": "node audit_qcell5_fix3_legacy_duplicate_pair_evidence.js"
+    "audit:qcell5:fix3-legacy-duplicate-pair-evidence": "node audit_qcell5_fix3_legacy_duplicate_pair_evidence.js",
+    "test:academic-handoff": "node --experimental-vm-modules node_modules/jest/bin/jest.js test/governed_academic_handoff/governed_academic_handoff.test.js"
   },
   "engines": {
     "node": "22"
@@ -29,11 +30,15 @@
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^2.4.5",
     "qrcode": "^1.5.4",
-    "xlsx": "^0.18.5"
+    "xlsx": "^0.18.5",
+    "@google/genai": "^0.24.1"
   },
   "devDependencies": {
     "firebase-functions-test": "^3.1.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "@types/jest": "^30.0.0",
+    "jest": "^30.5.1",
+    "ts-jest": "^29.4.12"
   },
   "private": true
 }
