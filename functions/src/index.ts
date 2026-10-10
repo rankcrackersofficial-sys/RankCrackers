@@ -1,6 +1,5 @@
 export { queueWorker } from './workers/queueWorker';
 export { storageTrigger } from './workers/storageTrigger';
-export { ensureEligibilityEvaluation } from './workers/careerEligibilityWorker';
 export { ingestionTrigger } from './workers/ingestionTrigger';
 export { aafQueueWorker, aafQueueScheduler } from './workers/aafQueueWorker';
 export { genericB3Worker } from './workers/genericB3Worker';
@@ -12,4 +11,9 @@ export { syllabusLifecycleWorker, syllabusIngestionOrchestrator, canonicalSource
 export { canonicalSourceReconciliationWorker } from './workers/canonicalSourceReconciliationWorker';
 export { finalizeTestArenaAttempt, TestArenaFinalScorerWorker } from './workers/testArenaFinalScorerWorker';
 export { ensureProfileSnapshot } from './workers/profileSnapshotWorker';
-
+export { ensureEligibilityEvaluation } from './workers/careerEligibilityWorker';
+export { buildCareerSignal } from './services/careerSignalAuthority';
+export { buildPersonalizedRecruitmentDossier, buildDeliveryDecision, buildDiscoverySignal } from './services/careerSignalsRuntime';
+export { deriveCanonicalLearningState, canWriteCanonicalLearningState } from './services/learningStateAuthority';
+export { resolveRevisionCandidate, compressRevisionCandidates, transitionRecovery } from './services/revisionDeskAuthority';
+export { createQualifiedEvidence, buildRankRadarProjection, compatibleTrajectory } from './services/qualifiedRankingAuthority';
