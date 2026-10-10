@@ -23,7 +23,7 @@ Founder Operations के मूलभूत संवैधानिक सि�
 
 #### Subsection 1.1 — Web vs Mobile Partitioning
 
-**File Path:** `lib/core/router/app_router.dart`  
+**File Path:** `lib/core/router/app_router.dart`
 **Lines:** 188–200
 
 RankCrackers की सुरक्षा रणनीति का पहला स्तंभ मोबाइल एप्लिकेशन और एडमिन कंसोल का सख्त विभाजन है। मोबाइल शैल के भीतर एडमिन कंसोल के निष्पादन को ब्लॉक किया गया है:
@@ -50,7 +50,7 @@ GoRoute(
 
 #### Subsection 1.2 — The Human Authority Law & Non-Interference with Private Mastery
 
-**File Path:** `lib/web/founder/health/founder_student_health_web.dart`  
+**File Path:** `lib/web/founder/health/founder_student_health_web.dart`
 **Lines:** 21–34
 
 संस्थापक और छात्रों के बीच के अधिकार क्षेत्र को स्पष्ट रूप से परिभाषित किया गया है:
@@ -104,7 +104,7 @@ class FounderIdentity {
 ```javascript
 function isFounder() {
   return request.auth != null &&
-         (('admin' in request.auth.token && request.auth.token.admin == true) || 
+         (('admin' in request.auth.token && request.auth.token.admin == true) ||
           ('founder' in request.auth.token && request.auth.token.founder == true));
 }
 ```
@@ -140,11 +140,11 @@ Chief Author Mandate के तहत Founder Web Operations & Mission Control �
 
 | # | कोर विशेषता (Core Attribute) | कैनोनिकल विनिर्देश (Canonical Specification) | प्रामाणिक स्रोत फ़ाइल व संदर्भ (Source Evidence) |
 | :--- | :--- | :--- | :--- |
-| **1** | **Feature Name** | Founder Operational Architecture & Sovereign Mission Control | `lib/features/admin/presentation/widgets/dashboard/founder_dashboard.dart` |
+| **1** | **Feature Name** | Authoritative Sovereign Command Surface & Mission Control | `lib/web/shared/unified_command_console.dart` एवं `lib/web/founder/mission_control/mission_control_room.dart` |
 | **2** | **Canonical Domain ID** | `founder_mission_control_v1` | `lib/web/founder/mission_control/founder_mission_inventory.dart:47–53` |
-| **3** | **Parent Hierarchy** | `App -> Web Shell -> Founder Sovereign Scaffold -> Navigation Grid -> Operational Panels` | `lib/web/founder/scaffold/founder_sovereign_scaffold.dart` |
-| **4** | **Presentation Entry Point**| `AppRoutes.founderHub` / `AppRoutes.admin` (Web exclusively) | `lib/core/router/app_router.dart:188–200` |
-| **5** | **State Management Engine**| Multi-Stream Firestore Snapshots + Riverpod Admin Providers | `lib/features/admin/data/repositories/health_repository.dart:27–31` |
+| **3** | **Parent Hierarchy** | `App -> Web Shell -> UnifiedCommandConsole -> 4 Sovereign Module Groups -> Operational Panels` | `lib/web/shared/unified_command_console.dart:200–289` |
+| **4** | **Presentation Entry Point**| `AppRoutes.admin` / `WebShell` (Web exclusively; Mobile router blocks admin access) | `lib/main_web.dart:386–392`, `lib/core/router/app_router.dart:188–200` |
+| **5** | **State Management Engine**| Multi-Stream Firestore Snapshots + Sovereign Unified Console Stateful Shell | `lib/web/shared/unified_command_console.dart:54–241` |
 | **6** | **Backend Topology & Storage** | Firestore Collections: `mission_realms`, `recruitments`, `student_mission_catalog`, `system_config` | `functions/callable/handle_sentinel_action.js:164–222` |
 | **7** | **Offline Strategy & Caching**| Web Online-First (No stale offline admin cache to prevent operational drift) | `lib/web/founder/mission_control/founder_mission_inventory.dart:153–182` |
 | **8** | **Authority Boundary** | Exclusive Founder UID (`6TdzjpBr6Zdx1ag3LbMmjJ0DY312`) & Custom Claims | `lib/core/constants/founder_identity.dart:88–98` |
@@ -158,128 +158,133 @@ Chief Author Mandate के तहत Founder Web Operations & Mission Control �
 
 ---
 
-### Section 2 — Founder Command Center Grid (`FounderDashboard`)
+### Section 2 — Authoritative Sovereign Command Surface: Unified Command Console & Modular Operations Hub
 
-#### Subsection 2.1 — Command Header & Navigation Topology
+#### Subsection 2.1 — Dual Role Engine & Unified Command Surface Architecture
 
-**File Path:** `lib/features/admin/presentation/widgets/dashboard/founder_dashboard.dart`  
-**Lines:** 8–35
+**File Path:** `lib/web/shared/unified_command_console.dart`
+**Lines:** 29–76, 200–355
 
-`FounderDashboard` परिचालन कंसोल का प्राथमिक विजुअल हब है। यह 5 मुख्य टैब्स में विभाजित नेविगेशन सिस्टम (`FounderBottomNavigation`) के साथ समन्वय करता है:
-- **Tab 0: UPLOADS (`MissionFactory` / `UploadFactoryCenter`):** रॉ डेटा और नए पाठ्यक्रम की इन्जेशन पाइपलाइन।
-- **Tab 1: INTEL (`IntelligenceCommandCenter`):** स्वायत्त स्काउटिंग और नई भर्ती सिग्नल्स।
-- **Tab 2: REVIEWS (`ReviewQueue`):** मानव सत्यापन और पब्लिशिंग वर्कस्पेस।
-- **Tab 3: MISSIONS (`FounderMissionInventory`):** पोर्टफोलियो सुलह और लाइव मिशन नियंत्रण।
-- **Tab 4: SETTINGS (`FounderSettingsCenter`):** सिस्टम स्वास्थ्य, वर्कर बजट, और भूमिका प्रबंधन।
+RankCrackers Web Operations का केंद्रीय लाइव परिचालन तंत्र `UnifiedCommandConsole` है। यह कंसोल दो विशिष्ट भूमिका श्रेणियों (`ConsoleRoleMode.founder` और `ConsoleRoleMode.admin`) के आधार पर गतिशील रूप से व्यवस्थित होता है:
 
-नीचे दिए गए आरेख में Founder Console का समग्र नेविगेशन और कंट्रोल फ्लो दर्शाया गया है:
+1. **Founder Sovereign Mode:** संस्थापक को संपूर्ण पारिस्थितिकी तंत्र (इन्फ्रास्ट्रक्चर, सामग्री पाइपलाइन, छात्र वितरण स्वास्थ्य, और सिस्टम गवर्नेंस) पर पूर्ण प्रभुसत्ता प्रदान करता है।
+2. **Admin Operational Mode:** प्रशासनिक प्रबंधकों और समीक्षकों के लिए कार्य-आधारित इंटरफ़ेस प्रदान करता है, जहाँ केवल अनुमत मॉड्यूल (`AdminPermissionResolver` द्वारा सत्यापित) प्रदर्शित होते हैं।
+
+नीचे दिए गए आरेख में `UnifiedCommandConsole` की संपूर्ण नेविगेशन टोपोलॉजी और 4 संप्रभु मॉड्यूल समूहों का संरचनात्मक प्रवाह दर्शाया गया है:
 
 ```mermaid
 flowchart TD
-    Founder[Founder Authenticated Console] --> Scaf[FounderSovereignScaffold]
-    Scaf --> Header[FounderHeader: Status, Active Identity & Back Controls]
-    Scaf --> Dash[FounderDashboard Hub]
-    
-    Dash --> PipeGrid[2x2 Mission Pipeline Grid]
-    PipeGrid --> UpPipe[Uploads: Ingestion Refinery Count]
-    PipeGrid --> IntelPipe[Intel: Sentinel Drafts Count]
-    PipeGrid --> RevPipe[Reviews: Pending Human Approvals]
-    PipeGrid --> FailPipe[AI Failures: Dead Letter Queue Monitor]
-    
-    Dash --> QuickCmd[Quick Commands 4-Column Grid]
-    QuickCmd --> QC1[Notification Ingest]
-    QuickCmd --> QC2[Syllabus Tree Config]
-    QuickCmd --> QC3[PYQ Vault Refinery]
-    QuickCmd --> QC4[Study Material Refinery]
-    QuickCmd --> QC5[Notice Updates]
-    QuickCmd --> QC6[Review Workspace]
-    QuickCmd --> QC7[Mission Registries]
-    
-    Dash --> Preview1[Review Queue Preview Stream: Top 3 Under Review]
-    Dash --> Preview2[Intelligence Feed Preview Stream: Top 3 Draft Signals]
-    
-    Scaf --> Nav[FounderBottomNavigation: 5 Sovereign Domains]
+    WebShell[WebShell Entry: lib/web/web_shell.dart] --> UCC[UnifiedCommandConsole: lib/web/shared/unified_command_console.dart]
+
+    UCC --> Identity[Identity Header: Online Pulse, User Name & Designation]
+
+    UCC --> FounderMode[Mode: ConsoleRoleMode.founder]
+    UCC --> AdminMode[Mode: ConsoleRoleMode.admin]
+
+    FounderMode --> G1[Group 1: MISSION & DELIVERY]
+    G1 --> G1_M1[Mission Control Room: MissionControlRoom]
+    G1 --> G1_M2[Mission Delivery Preview: Verification & Visibility]
+
+    FounderMode --> G2[Group 2: CONTENT PIPELINE]
+    G2 --> G2_M1[Document Command Center: FDC]
+    G2 --> G2_M2[Verification Center: Syllabus & PYQ Audit]
+    G2 --> G2_M3[Factory Hub: UploadFactoryCenter Integration]
+    G2 --> G2_M4[Publish Gate: MissionPublishReadinessPanel]
+
+    FounderMode --> G3[Group 3: STUDENT & HEALTH]
+    G3 --> G3_M1[Student Delivery Health: FounderStudentHealthWeb]
+
+    FounderMode --> G4[Group 4: SYSTEM & GOVERNANCE]
+    G4 --> G4_M1[Admin Governance: AccessSecurityWeb]
+    G4 --> G4_M2[System Ops / Dev Mode: FounderSystemOperationsWeb]
+
+    AdminMode --> A_Queue[My Work Queue: AdminTasksList]
+    AdminMode --> A_MCR[Mission Control Room - Perm Gated]
+    AdminMode --> A_SML[Study Master Library - Perm Gated]
+    AdminMode --> A_DCC[Document Command Center - Perm Gated]
+    AdminMode --> A_Intel[Intelligence Room - Perm Gated]
+    AdminMode --> A_Log[Recent Activity Log - Perm Gated]
+    AdminMode --> A_Access[My Access Panel]
 ```
 
 ![Figure 13.1: Operations Home Command Grid Overview](assets/founder_screens/FW_FINAL_001_OPERATIONS_HOME_OVERVIEW.png)
 
-#### Subsection 2.2 — The 2x2 Mission Pipeline Grid (Uploads, Intel, Reviews, AI Failures)
+#### Subsection 2.2 — The 4 Sovereign Module Groups in Founder Mode
 
-डैशबोर्ड के शीर्ष पर स्थित $2 \times 2$ ग्रिड (ऊंचाई 110dp) प्लेटफॉर्म की परिचालन गतिशीलता का त्वरित दृश्य प्रदान करता है:
+संस्थापक मोड में `UnifiedCommandConsole` 4 सुव्यवस्थित परिचालन समूहों में विभाजित है:
 
-```dart
-SizedBox(
-  height: 110,
-  child: GridView.count(
-    crossAxisCount: 2,
-    mainAxisSpacing: 10,
-    crossAxisSpacing: 10,
-    childAspectRatio: 2.5,
-    physics: const NeverScrollableScrollPhysics(),
-    children: [
-      _pipelineCard("UPLOADS", 1, Icons.cloud_upload_rounded, Colors.blueAccent),
-      _pipelineCard("INTEL", 2, Icons.radar_rounded, Colors.purpleAccent),
-      _pipelineCard("REVIEWS", 3, Icons.fact_check_rounded, Colors.orangeAccent),
-      _pipelineCard("AI FAILURES", 4, Icons.error_outline_rounded, Colors.redAccent),
-    ],
-  ),
-),
-```
+##### 1. Group: MISSION & DELIVERY
+- **Mission Control (`MissionControlRoom`):** परीक्षा साम्राज्यों (Exam Realms) का मुख्य प्रशासनिक कक्ष (`lib/web/founder/mission_control/mission_control_room.dart`)। यह `MissionControlCenter` को समाहित करता है, जिसमें नया मिशन निर्माण (`MissionCreationCenter`), अनलिंक्ड सत्यापित एसेट्स कतार, और लाइव पोर्टफोलियो सुलह (`FounderMissionInventory`) शामिल हैं। किसी मिशन का चयन करने पर यह सीधे `MissionDocumentsTab`, `UploadFactoryCenter`, `MissionPublishReadinessPanel` या `MissionVariableAuthorityPanel` में नेविगेट करने की सुविधा प्रदान करता है।
+- **Mission Delivery Preview:** छात्र अनुभव और विजिबिलिटी डायग्नोस्टिक्स का लाइव सत्यापन पैनल (`widget.founderDeliveryPreviewBuilder`)।
 
-##### Pipeline Metric Stream Bindings:
-- **UPLOADS:** `FirebaseFirestore.instance.collection('ingestion_refinery').where('status', isEqualTo: 'pending')` से स्ट्रीम होता है। यह दर्शाता है कि कितने रॉ डॉक्युमेंट्स पार्सिंग की प्रतीक्षा कर रहे हैं।
-- **INTEL:** `FirebaseFirestore.instance.collection('sentinel_drafts').where('status', isEqualTo: 'draft')` से स्ट्रीम होता है। यह स्वायत्त स्काउट्स द्वारा खोजी गई नई भर्तियों की संख्या है।
-- **REVIEWS:** `CommandCenterRepository.streamTotalPendingReviews()` से स्ट्रीम होता है। यह मानव सत्यापन की प्रतीक्षा कर रहे कंटेंट का कुल योग है।
-- **AI FAILURES:** `CommandCenterRepository.streamAIFailuresCount()` से स्ट्रीम होता है। यह विफल वर्कर टास्क्स और डेड-लेटर क्यू (DLQ) की वास्तविक समय गणना है।
+##### 2. Group: CONTENT PIPELINE
+- **Document Command Center (FDC):** आधिकारिक स्रोत दस्तावेज़ों का केंद्रीय भंडार (`lib/web/founder/fdc/document_command_center.dart`)। जब कोई मिशन चुना जाता है, तो यह कार्यक्षेत्र सीधे `MissionDocumentsTab` से जुड़ जाता है।
+- **Verification Center:** अकादमिक डेटा सत्यापन हब। यह चयनित मिशन के सिलेबस सत्यापन और PYQ सत्यापन टैब्स (`targetDetailTab = 1`, `targetSubTab = 1` या `2`) को सीधे लोड करता है।
+- **Factory Hub:** अंतर्ग्रहण फैक्ट्री का प्रवेश द्वार। यह `UploadFactoryCenter` (`targetDetailTab = 2`) में रूट करता है, जो वास्तविक समय में `ai_queue`, एक्टिव वर्कर्स, और रिव्यू स्ट्रीम्स को मॉनिटर करता है।
+- **Publish Gate:** छात्र प्रकाशन से पूर्व अंतिम सुरक्षा द्वार (`targetDetailTab = 3`)। यह `MissionPublishReadinessPanel` को लोड करता है, जो 5 अनिवार्य साक्ष्यों की पुष्टि करता है।
+
+##### 3. Group: STUDENT & HEALTH
+- **Student Delivery Health (`FounderStudentHealthWeb`):** छात्रों के लाइव अध्ययन सत्रों, सक्रिय स्क्रीन, और रूट टेलीमेट्री का समग्र (aggregate) निरीक्षण। यह Non-Interference Law का कड़ाई से पालन करता है (छात्र के व्यक्तिगत मास्टरी स्कोर या प्रगति को संपादित करने का कोई विकल्प नहीं)।
+
+##### 4. Group: SYSTEM & GOVERNANCE
+- **Admin Governance (`AccessSecurityWeb`):** प्रशासनिक अनुमतियाँ, कस्टम क्लेम्स प्रतिनिधिमंडल, और भूमिका ऑडिट।
+- **System Ops / Dev Mode (`FounderSystemOperationsWeb`):** सिस्टम विटल्स, AI टोकन उपभोग गेज, वर्कर किल-स्विचेस, और फोरेंसिक ऑडिट लॉग्स।
+
+#### Subsection 2.3 — Historical Context: The `FounderDashboard` Prototype Canvas
+
+**File Path:** `lib/features/admin/presentation/widgets/dashboard/founder_dashboard.dart`
+**Status:** `SUPERSEDED_PROTOTYPE` (संरक्षित संदर्भ)
+
+प्रारंभिक विकास चरण में `founder_dashboard.dart` ने बॉटम नेविगेशन (`FounderBottomNavigation`) और $2 \times 2$ पाइपलाइन ग्रिड (Uploads, Intel, Reviews, AI Failures) के साथ एक प्रायोगिक 5-टैब प्रोटोटाइप के रूप में कार्य किया था। उत्पादन परिवेश में डेस्कटॉप-क्लास मल्टी-विंडो ऑपरेशंस और सख्त भूमिका पृथक्करण की आवश्यकताओं के कारण इस प्रोटोटाइप को `UnifiedCommandConsole` द्वारा प्रतिस्थापित (superseded) कर दिया गया।
+
+प्रोटोटाइप ग्रिड की मेट्रिक्स निम्नलिखित भौतिक स्ट्रीम्स से जुड़ी हुई थीं:
+- **UPLOADS:** `FirebaseFirestore.instance.collection('ingestion_refinery').where('status', isEqualTo: 'pending')`
+- **INTEL:** `FirebaseFirestore.instance.collection('sentinel_drafts').where('status', isEqualTo: 'draft')`
+- **REVIEWS:** `system_metrics/content_summary` का एग्रीगेटेड स्नैपशॉट (`pendingDigibooks`, `pendingQuestions`, `pendingNodes`, `pendingSentinel`)।
+- **AI FAILURES:** डेड-लेटर क्यू (DLQ) काउंट।
+
+उत्पादन वातावरण में ये सभी मेट्रिक्स अब `UnifiedCommandConsole` के संबंधित मॉड्यूल समूहों (Factory Hub, Verification Center, System Ops) में वास्तविक समय में अंतर्निहित हैं।
 
 ![Figure 13.2: Operations Home Corpus Health & Telemetry Metrics](assets/founder_screens/FW_FINAL_002_OPERATIONS_HOME_CORPUS_HEALTH.png)
 
-#### Subsection 2.3 — 4-Column Quick Commands Grid
+#### Subsection 2.4 — The 9 Canonical Mission Pipeline Invariants (Patch Safety Contract)
 
-**File Path:** `lib/features/admin/presentation/widgets/dashboard/founder_dashboard.dart`  
-**Lines:** 39–60
+**Source Reference:** `docs/patch_safety/rc_founder_web_canonical_backend_live_integration_20260831/`
 
-त्वरित आदेश ग्रिड संस्थापक को सीधे लक्षित इन्जेशन और प्रबंधन स्क्रीन पर जाने की सुविधा देता है:
-```dart
-_quickCommandItem("Notification", Icons.campaign_rounded, () => onTabSwitch(1)),
-_quickCommandItem("Syllabus", Icons.account_tree_rounded, () => onTabSwitch(1)),
-_quickCommandItem("PYQ", Icons.history_edu_rounded, () => onTabSwitch(1)),
-_quickCommandItem("Material", Icons.menu_book_rounded, () => onTabSwitch(1)),
-_quickCommandItem("Notice", Icons.update_rounded, () => onTabSwitch(1)),
-_quickCommandItem("Reviews", Icons.fact_check_rounded, () => onTabSwitch(3)),
-_quickCommandItem("Recruitments", Icons.rocket_launch_rounded, () => onTabSwitch(2)),
-```
+लाइव बैकएंड एकीकरण और परिचालन अखंडता को बनाए रखने के लिए 9 अपरिवर्तनीय नियम (Canonical Invariants) कोडबेस और बैकएंड में लागू हैं:
 
-#### Subsection 2.4 — Realtime Preview Panes
+1. **Create Mission Pipeline Invariant (`05_create_mission_pipeline.md`):**
+   संस्थापक द्वारा नया मिशन निर्माण `MissionCreationCenter` से प्रारंभ होता है। यह **Quad Identity Validation** (`examMatch`, `orgMatch`, `yearMatch`, `categoryMatch`) अनिवार्य करता है। सत्यापन सफल होने पर यह क्लाउड फ़ंक्शन `handleSentinelAction` को `launch_exam_mission` एक्शन के साथ निष्पादित करता है। बैकएंड लेनदेन (transaction) `mission_realms`, `recruitments`, और `student_mission_catalog` तीनों संग्रहों में परमाणु (atomic) रूप से लिखता है (52-case integration lane द्वारा प्रमाणित)।
 
-डैशबोर्ड के निचले भाग में दो रीयल-टाइम पूर्वावलोकन सूचियां (Previews) प्रदर्शित होती हैं:
-1. **Review Queue Preview (`_streamPreviewList('sentinel_drafts', 'under_review')`):** शीर्ष 3 ड्राफ्ट्स जो वर्तमान में संपादकीय समीक्षा में हैं।
-2. **Intelligence Feed Preview (`_streamPreviewList('sentinel_drafts', 'draft')`):** शीर्ष 3 हालिया सिग्नल जो स्काउट्स द्वारा खोजे गए हैं।
+2. **Mission Variables Authority Invariant (`06_mission_variables.md`):**
+   `MissionVariableAuthorityPanel` मिशन की आधिकारिक तकनीकी संरचना (रिक्तियां, पात्रता, परीक्षा पेपर, श्रेणियां, शुल्क, भाषा नीति) को नियंत्रित करता है। यह `handleSentinelAction` के `update_mission_variables` एक्शन का उपयोग करता है। इसके तहत संस्थापक प्राधिकरण, न्यूनतम 12 वर्णों का स्पष्ट परिवर्तन कारण (`_reason.text.trim().length >= 12`), अपेक्षित संस्करण संख्या (`expectedVersion`), और अपरिवर्तनीय ऑडिट अनिवार्य है। यदि किसी मिशन का `mission_realms` रिकॉर्ड अनुपस्थित है, तो म्यूटेशन पूरी तरह अवरुद्ध हो जाता है (`VARIABLE CHANGES LOCKED — Authority repair required`)।
 
-खाली स्थिति में, यह `_emptyBox()` रेंडर करता है जो सच्चाई के साथ "NO SIGNALS" प्रदर्शित करता है (Zero-Fake UI Standard)।
+3. **Lifecycle Wiring & Fail-Closed Guard (`07_lifecycle_wiring.md`):**
+   मिशन रील्म की अवस्था परिवर्तन (`archive_realm`, `restore_realm`, `delete_realm_permanently`) केवल अधिकृत कॉलेबल क्रियाओं द्वारा ही संभव है। प्रत्येक क्रिया के लिए पुष्टिकरण, न्यूनतम 12-अक्षरीय कारण, विशिष्ट `requestId`, और नियतात्मक ऑडिट ट्रेल अनिवार्य है। कैनोनिकल पहचान बेमेल (Identity Mismatch) होने पर सिस्टम तुरंत फ़ेल-क्लोज़्ड (fail-closed) हो जाता है। लिगेसी रील्म-विहीन रिकॉर्ड्स को कभी भी लाइफसाइकिल म्यूटेशन नियंत्रण प्राप्त नहीं होता।
 
-#### Subsection 2.5 — Physical Telemetry Stream Integration (`CommandCenterRepository`)
+4. **Document Pipeline Integration (`08_document_pipeline.md`):**
+   `DocumentCommandCenter` में किसी मिशन का चयन उसे सीधे `MissionDocumentsTab` से जोड़ देता है। आधिकारिक दस्तावेज़ अपलोड करने पर SHA-256 हैश जेनरेट होता है, और मेटाडेटा `mission_realms/{id}/official_documents` में तथा फाइल स्टोरेज पाथ `mission_realms/{id}/official_documents/{hash}.pdf` में सहेजी जाती है। यह प्रक्रिया स्वचालित रूप से `ingestion_refinery` और `ai_queue` में दर्ज होती है।
 
-**File Path:** `lib/features/admin/data/command_center_repository.dart`  
-**Lines:** 12–47
+5. **Verification Center Direct Routing (`09_verification_center.md`):**
+   वेरिफिकेशन सेंटर से किसी भी सत्यापन क्रिया (सिलेबस या PYQ) पर टैप करने पर यह चयनित मिशन के वास्तविक सिलेबस/PYQ सत्यापन कार्यक्षेत्र में रूट करता है। इसमें कोई अप्रमाणित या सिंथेटिक सफलता फ़ॉलबैक मौजूद नहीं है।
 
-डैशबोर्ड को शक्ति प्रदान करने वाली वास्तविक डेटा लेयर अत्यधिक अनुकूलित (optimized) है:
+6. **Factory Hub Live Integration (`10_factory_hub.md`):**
+   फैक्ट्री हब सीधे `UploadFactoryCenter` से जुड़ा हुआ है। इसके सभी काउंट्स और स्टेटस वास्तविक `ai_queue`, वर्कर रजिस्ट्री, रिव्यू क्यू, और सक्रिय मिशन स्ट्रीम्स से सीधे पढ़े जाते हैं।
 
-```dart
-static Stream<int> streamTotalPendingReviews() {
-  // Optimization: Use a dedicated system_metrics document for high-scale counters
-  return _firestore.collection('system_metrics').doc('content_summary').snapshots().map((snap) {
-    if (!snap.exists) return 0;
-    final data = snap.data()!;
-    return (data['pendingDigibooks'] ?? 0) + 
-           (data['pendingQuestions'] ?? 0) + 
-           (data['pendingNodes'] ?? 0) + 
-           (data['pendingSentinel'] ?? 0);
-  });
-}
-```
+7. **Publish Gate Readiness Enforcement (`11_publish_gate.md`):**
+   `MissionPublishReadinessPanel` छात्रों के लिए किसी मिशन को लाइव करने से पूर्व 5 अनिवार्य साक्ष्यों की जांच करता है:
+   - `canonicalVerified`: स्रोत स्लॉट्स में कैनोनिकल संस्करण सत्यापित है।
+   - `sourceCurrent`: सक्रियण कालखंड (`activationEpoch > 0`) वर्तमान है।
+   - `deltaApplied`: अकादमिक डेल्टा सफलतापूर्वक लागू किया गया है।
+   - `downstreamComplete`: सभी डाउनस्ट्रीम आर्टिफ़ैक्ट्स पूरी तरह उत्पन्न हो चुके हैं।
+   - `studentVisible`: कैटलॉग में `cardVisible == true` और `userPanelVisible == true` है।
+   यदि कोई भी साक्ष्य अनुपस्थित है, तो गेट `NOT_READY / BLOCKED` स्थिति दर्शाता है। यह पैनल विशुद्ध रूप से पठनीय (read-only) है और अनधिकृत प्रकाशन को रोकता है।
 
-यह आर्किटेक्चर क्लाइंट-साइड पर हजारों अनफ़िल्टर्ड दस्तावेज़ों को पढ़ने के स्थान पर एग्रीगेटेड `system_metrics` डॉक्युमेंट का उपयोग करता है, जिससे डेटाबेस लागत और लेटेंसी न्यूनतम रहती है।
+8. **Mission Delivery Preview Diagnostics (`12_delivery_preview.md`):**
+   सुलझाया गया इन्वेंटरी मॉडल दृश्यता और प्राधिकरण-विहीन डायग्नोस्टिक्स को उजागर करता है ताकि किसी भी अप्रमाणित डेटा का छात्रों तक पहुंचना असंभव हो।
+
+9. **Student Delivery Health Invariant (`13_student_health.md`):**
+   `FounderStudentHealthWeb` केवल समग्र डिलीवरी स्वास्थ्य की निगरानी करता है। संस्थापक के पास छात्र के व्यक्तिगत मास्टरी स्कोर, असेसमेंट प्रयासों, या शैक्षणिक उत्तरों को बदलने का शून्य अधिकार (Zero Write Authority) है।
 
 ---
 
@@ -287,7 +292,7 @@ static Stream<int> streamTotalPendingReviews() {
 
 #### Subsection 3.1 — The Three-Collection Reconciliation Algorithm
 
-**File Path:** `lib/web/founder/mission_control/founder_mission_inventory.dart`  
+**File Path:** `lib/web/founder/mission_control/founder_mission_inventory.dart`
 **Lines:** 21–48, 153–182
 
 RankCrackers में परीक्षा मिशन की स्थिति केवल एक फ़्लैग पर निर्भर नहीं करती। `FounderMissionInventory` तीन अलग-अलग Firestore संग्रहों को वास्तविक समय में संयोजित और सुलझाता (reconcile) है:
@@ -325,11 +330,11 @@ graph TD
     MR[mission_realms: System Infrastructure & Canonical Schema]
     RC[recruitments: Official Board Notifications & Dates]
     SMC[student_mission_catalog: Published Student Access Surface]
-    
+
     MR --- ReconciliationEngine[Three-Way State Reconciliation Engine]
     RC --- ReconciliationEngine
     SMC --- ReconciliationEngine
-    
+
     ReconciliationEngine --> LiveRec[Kind: LIVE - Visible, Synchronized, Active]
     ReconciliationEngine --> DraftRec[Kind: FOUNDER DRAFTS - Under Construction]
     ReconciliationEngine --> PassRec[Kind: PASSIVE - Maintained but Inactive Intake]
@@ -364,37 +369,56 @@ graph TD
 #### Subsection 3.3 — Discrepancy Detection & "Needs Attention" Heuristics
 
 **File Path:** `lib/web/founder/mission_control/founder_mission_inventory.dart`
+**Lines:** 224–227
 
-प्लेटफ़ॉर्म की स्थिरता सुनिश्चित करने के लिए, सिस्टम स्वचालित रूप से विसंगतियों का पता लगाता है:
+प्लेटफ़ॉर्म की स्थिरता और डेटा अखंडता सुनिश्चित करने के लिए, सिस्टम स्वचालित रूप से विसंगतियों का पता लगाता है। लाइव कोडबेस में `needsAttention` गुण तीन सख्त फोरेंसिक स्थितियों की जांच करता है:
+
 ```dart
-bool get needsAttention {
-  // Discrepancy 1: Published in recruitment, but missing or invisible in student catalog
-  final recruitmentPublished = recruitment?['status'] == 'published';
-  if (recruitmentPublished && !studentVisible) return true;
-
-  // Discrepancy 2: Student visible, but marked draft or archived in realm
-  if (studentVisible && (realm?['status'] == 'draft' || realm?['status'] == 'archived')) return true;
-
-  // Discrepancy 3: Missing essential blueprint or board metadata
-  if (studentVisible && (recruitment?['examBlueprintId'] == null || recruitment?['boardId'] == null)) return true;
-
-  return false;
-}
+bool get needsAttention =>
+    realm == null ||
+    (!sourceReady && !sourceCandidate) ||
+    (!hasCanonicalVariables && !hasLegacyVariables);
 ```
 
-यदि किसी मिशन में कोई असंगति पाई जाती है, तो उसे तत्काल **"NEEDS ATTENTION"** फ़िल्टर में हाइलाइट किया जाता है, जिससे एडमिन डेटा विसंगतियों को तुरंत ठीक कर सके।
+##### Three Live Forensic Invariants:
+1. **Discrepancy 1 — Missing Realm Authority (`realm == null`):** यदि कोई मिशन कैटलॉग या भर्ती तालिका में मौजूद है लेकिन उसका `mission_realms` दस्तावेज़ अनुपस्थित है, तो इसे तुरंत विसंगति माना जाता है। ऐसे लिगेसी रिकॉर्ड्स को `STUDENT_VISIBLE, REALM_MISSING, AUTHORITY_REPAIR_REQUIRED and LIFECYCLE_MUTATION_BLOCKED` स्थिति में रखा जाता है ताकि अनधिकृत या क्षतिग्रस्त डेटा में लाइफसाइकिल म्यूटेशन निष्पादित न हो सके।
+2. **Discrepancy 2 — Missing Official Source (`!sourceReady && !sourceCandidate`):** मिशन के पास न तो कोई सत्यापित कैनोनिकल स्रोत संस्करण (`canonicalSourceVersionId != null` / `sourceAuthorityState == 'CANONICAL'`) है और न ही कोई उम्मीदवार स्रोत दस्तावेज़ (`sourceVersionId != null` / `sourceDocumentId != null`)।
+3. **Discrepancy 3 — Missing Variable Structure (`!hasCanonicalVariables && !hasLegacyVariables`):** मिशन के पास न तो कैनोनिकल `missionVariables` मैप उपलब्ध है और न ही लिगेसी वेरिएबल्स सूची।
+
+यदि किसी मिशन में इनमें से कोई भी स्थिति पाई जाती है, तो उसे तत्काल **"NEEDS ATTENTION"** फ़िल्टर में हाइलाइट किया जाता है, जिससे संस्थापक डेटा विसंगतियों को प्राथमिकता के साथ ठीक कर सके।
 
 ![Figure 13.6: Mission Control Documents Tab & Status Matrix](assets/founder_screens/FW_FINAL_006_MISSION_CONTROL_DOCUMENTS_TAB.png)
 ![Figure 13.7: Document Detail Inspection Dialog](assets/founder_screens/FW_FINAL_007_MISSION_CONTROL_DOCUMENT_DETAIL_DIALOG.png)
 
-#### Subsection 3.4 — Dynamic Responsive Portfolio Grid Rendering
+#### Subsection 3.4 — Dynamic Responsive Portfolio Grid, Summary Metrics & Governed Lifecycle Actions
 
 `FounderMissionInventory` विभिन्न स्क्रीन आकारों के लिए डायनामिक रिस्पॉन्सिव ग्रिड रेंडर करता है:
 - **Ultra-Wide ($\ge 1450\text{px}$):** 3-कॉलम लेआउट।
 - **Desktop / Laptop ($1050\text{px} - 1449\text{px}$):** 2-कॉलम लेआउट।
 - **Tablet / Split Screen ($< 1050\text{px}$):** 1-कॉलम लेआउट।
 
-प्रत्येक `_MissionPortfolioCard` में परीक्षा का बोर्ड, पात्रता तिथियां, कुल सीटें, और छात्र दृश्यता टॉगल शामिल होते हैं।
+##### 1. The 5 Live Portfolio Summary Metrics (`_summary`):
+- **LIVE (Green):** `rows.where((r) => r.kind == MissionPortfolioFilter.live).length` — सक्रिय रूप से छात्रों के लिए दृश्यमान मिशन्स।
+- **FOUNDER DRAFTS (White70):** `rows.where((r) => r.kind == MissionPortfolioFilter.draft).length` — निर्माणाधीन या अप्रकाशित ड्राफ्ट्स।
+- **PASSIVE (Orange):** `rows.where((r) => r.kind == MissionPortfolioFilter.passive).length` — निष्क्रिय या होल्ड पर रखे गए मिशन्स।
+- **ARCHIVED (White38):** `rows.where((r) => r.kind == MissionPortfolioFilter.archived).length` — समाप्त हो चुकी परीक्षाएं।
+- **NEEDS ATTENTION (Amber):** `rows.where((r) => r.needsAttention).length` — विसंगति या प्राधिकरण-विहीन मिशन्स।
+
+##### 2. Mission Portfolio Card Diagnostics & Truth Badges:
+प्रत्येक `_MissionPortfolioCard` में निम्नलिखित 4 कैनोनिकल सत्यापन सत्य (Truth Badges) प्रदर्शित होते हैं:
+- **MISSION AUTHORITY:** `AUTHORITY CONNECTED` (यदि `realm != null`) अथवा `AUTHORITY REPAIR REQUIRED` (यदि `realm == null`)।
+- **SOURCE DOCUMENT:** `SOURCE CANONICAL` (सत्यापित स्रोत), `SOURCE CANDIDATE` (प्रस्तावित स्रोत), अथवा `NO OFFICIAL SOURCE`।
+- **VARIABLES / STRUCTURE:** `VARIABLES READY`, `VARIABLE REVIEW REQUIRED`, अथवा `STRUCTURE UNKNOWN`।
+- **PIPELINE / DELIVERY:** `PIPELINE CONNECTED` (यदि कंटेंट लॉक्स सक्रिय हैं) अथवा `PIPELINE NOT READY`।
+
+##### 3. Governed Card Lifecycle Actions & Permanent Deletion Preflight:
+- **Open Mission:** सीधे `MissionControlRoom` के संबंधित मिशन विवरण कार्यक्षेत्र को सक्रिय करता है।
+- **Archive / Restore:** क्लाउड फ़ंक्शन `handleSentinelAction` को `archive_realm` या `restore_realm` एक्शन के साथ निष्पादित करता है।
+- **Permanent Delete Preflight:** आकस्मिक डेटा हानि को रोकने के लिए एक बहु-स्तरीय सुरक्षा संवाद (`AlertDialog`):
+  - यह नियम लागू करता है: *"Deletion is allowed only when Student history, sources, academic content, publication history and active jobs are absent."*
+  - संस्थापक को पुष्टि के लिए सटीक मिशन आईडी टाइप करना अनिवार्य है (`identity.text.trim() == row.id`)।
+  - संस्थापक को न्यूनतम 12 अक्षरों का ठोस कारण दर्ज करना अनिवार्य है (`reason.text.trim().length >= 12`)।
+  - पुष्टि के बाद यह `delete_realm_permanently` एक्शन को कॉल करता है जिसमें अद्वितीय `requestId` और टाइमस्टैम्प शामिल होता है।
 
 ![Figure 13.8: Syllabus Atom Verification Surface](assets/founder_screens/FW_FINAL_008_MISSION_CONTROL_SYLLABUS_ATOM_VERIFICATION.png)
 ![Figure 13.9: PYQ Solution Verification Surface](assets/founder_screens/FW_FINAL_009_MISSION_CONTROL_PYQ_VERIFICATION.png)
@@ -460,14 +484,14 @@ _summaryCard("LIVE", CommandCenterRepository.streamActiveMissionsCount(), Colors
 
 #### Subsection 5.1 — The Autonomous Scout Battalion Architecture
 
-**File Path:** `lib/features/admin/presentation/widgets/intelligence/intelligence_command_center.dart`  
+**File Path:** `lib/features/admin/presentation/widgets/intelligence/intelligence_command_center.dart`
 **Lines:** 10–56
 
 RankCrackers का स्काउटिंग सिस्टम स्वायत्त कार्यकर्ताओं (Autonomous AI Workers) के एक संगठित दस्ते के रूप में कार्य करता है। यह दस्ता विभिन्न सरकारी भर्ती पोर्टलों (UPSC, SSC, NTA, राज्य लोक सेवा आयोगों) की वेबसाइटों की लगातार निगरानी करता है।
 
 #### Subsection 5.2 — Token Consumption & Monthly Budget Telemetry
 
-**File Path:** `lib/features/admin/presentation/widgets/intelligence/widgets/budget_consumption_card.dart` एवं `lib/features/admin/data/command_center_repository.dart`  
+**File Path:** `lib/features/admin/presentation/widgets/intelligence/widgets/budget_consumption_card.dart` एवं `lib/features/admin/data/command_center_repository.dart`
 **Lines:** 52–60
 
 AI टोकन और क्लाउड एपीआई लागत की अनियंत्रित वृद्धि को रोकने के लिए, सिस्टम मासिक बजट सीमा लागू करता है:
@@ -487,7 +511,7 @@ static Stream<int> streamAiBudgetUsage() {
 
 #### Subsection 5.3 — Worker Governance & Lifecycle Telemetry (`WorkerRegistry`)
 
-**File Path:** `lib/core/models/worker_registry.dart`  
+**File Path:** `lib/core/models/worker_registry.dart`
 **Lines:** 9–86
 
 प्रत्येक AI वर्कर का राज्य और स्वास्थ्य `worker_registry` डॉक्युमेंट द्वारा ट्रैक किया जाता है:
@@ -506,7 +530,7 @@ if (hb != null && now.difference(hb).inSeconds <= 60) {
 
 #### Subsection 5.4 — Live Worker Kill-Switch / Toggle Contract
 
-**File Path:** `lib/features/admin/data/command_center_repository.dart`  
+**File Path:** `lib/features/admin/data/command_center_repository.dart`
 **Lines:** 96–101
 
 संस्थापक के पास किसी भी वर्कर को तत्काल रोकने का सार्वभौम अधिकार (Kill-Switch) है:
@@ -534,7 +558,7 @@ static Future<void> toggleWorker(String workerId, bool enabled) async {
 
 #### Subsection 6.1 — Discovery Review State Machine
 
-**File Path:** `lib/features/admin/presentation/widgets/review_queue/review_queue.dart`  
+**File Path:** `lib/features/admin/presentation/widgets/review_queue/review_queue.dart`
 **Lines:** 88–94
 
 किसी भी सामग्री की सत्यता 5-स्तरीय राज्य मशीन द्वारा नियंत्रित होती है:
@@ -558,7 +582,7 @@ stateDiagram-v2
 
 #### Subsection 6.2 — Outcome Verification Center: 7 Forensic Governance Tabs
 
-**File Path:** `lib/features/admin/presentation/widgets/review_queue/outcome_verification_center.dart`  
+**File Path:** `lib/features/admin/presentation/widgets/review_queue/outcome_verification_center.dart`
 **Lines:** 33–55
 
 `OutcomeVerificationCenter` प्लेटफ़ॉर्म पर छात्रों के परिणाम, प्रमाणपत्र पात्रता, और परीक्षा प्रयासों की फोरेंसिक जांच के लिए 7 विशेष टैब प्रदान करता है:
@@ -575,7 +599,7 @@ stateDiagram-v2
 
 #### Subsection 6.3 — Production Data Isolation & Test Data Purge Protocol
 
-**File Path:** `lib/features/admin/presentation/widgets/review_queue/outcome_verification_center.dart`  
+**File Path:** `lib/features/admin/presentation/widgets/review_queue/outcome_verification_center.dart`
 **Lines:** 80–100
 
 डेवलपमेंट और टेस्टिंग के दौरान उत्पन्न किए गए नकली डेटा को उत्पादन डेटा से पूरी तरह अलग रखने के लिए दोहरे सुरक्षा उपाय लागू हैं:
@@ -597,7 +621,7 @@ stateDiagram-v2
 
 #### Subsection 7.1 — AI Infrastructure Vitals & Dead Letter Queue Monitoring
 
-**File Path:** `lib/features/admin/presentation/widgets/system_health/system_health_center.dart`  
+**File Path:** `lib/features/admin/presentation/widgets/system_health/system_health_center.dart`
 **Lines:** 25–42
 
 `SystemHealthCenter` 4 उप-प्रणालियों की निरंतर निगरानी करता है:
@@ -613,7 +637,7 @@ stateDiagram-v2
 
 #### Subsection 7.2 — Student Health Observability without Private Data Tampering
 
-**File Path:** `lib/web/founder/health/founder_student_health_web.dart`  
+**File Path:** `lib/web/founder/health/founder_student_health_web.dart`
 **Lines:** 38–72, 75–100
 
 `FounderStudentHealthWeb` सीधे `telemetry_nexus` संग्रह से 500 नवीनतम घटनाओं को सुनता है:
@@ -664,7 +688,7 @@ StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
 
 #### Subsection 8.1 — Forensic Activity Ledger
 
-**File Path:** `lib/features/admin/presentation/widgets/dashboard/founder_activity_ledger.dart`  
+**File Path:** `lib/features/admin/presentation/widgets/dashboard/founder_activity_ledger.dart`
 **Lines:** 24–77
 
 प्लेटफॉर्म की सुरक्षा और ऑडिटेबिलिटी का आधार `FounderActivityLedger` है। प्रत्येक संवेदनशील घटना को रंग-कोडित गंभीरता के साथ लॉग किया जाता है:
@@ -702,7 +726,7 @@ if (log['impactLevel'] == 'CRITICAL' || log['severity'] == 'HIGH') {
 
 #### Subsection 8.2 — Role Hierarchy: Founders, Administrators, Content Managers, Reviewers
 
-**File Path:** `lib/features/admin/presentation/widgets/people_access/people_access_center.dart`  
+**File Path:** `lib/features/admin/presentation/widgets/people_access/people_access_center.dart`
 **Lines:** 34–57
 
 RankCrackers 2.0 का अधिकार पदानुक्रम 4 स्तरों में व्यवस्थित है:
@@ -715,7 +739,7 @@ RankCrackers 2.0 का अधिकार पदानुक्रम 4 स्�
 
 #### Subsection 8.3 — Custom Claims Grant Dialog & Authority Delegation Protocol
 
-**File Path:** `lib/features/admin/presentation/widgets/people_access/people_access_center.dart`  
+**File Path:** `lib/features/admin/presentation/widgets/people_access/people_access_center.dart`
 **Lines:** 58–71, 84–100
 
 केवल वे यूज़र्स जिनके पास सक्रिय `founder == true` कस्टम क्लेम है, नए अधिकार प्रदान करने का संवाद (`GRANT AUTHORITY`) खोल सकते हैं:
@@ -745,7 +769,7 @@ FutureBuilder<IdTokenResult>(
 
 #### Subsection 9.1 — Firestore Rules for Founder Collections
 
-**File Path:** `firestore.rules`  
+**File Path:** `firestore.rules`
 **Lines:** 38–60, 394–400
 
 संस्थापक-स्तर के संग्रहों को अनधिकृत पहुंच से बचाने के लिए सख्त सुरक्षा नियम लागू हैं:
@@ -893,7 +917,7 @@ Chief Author Mandate के तहत Founder Web Operations & Mission Control �
 - **4. Mutations:** `download_audit` संग्रह में फोरेंसिक प्रविष्टि (`uid`, `realmId`, `assetType`, `filePath`, `timestamp`, `ip`)।
 - **5. Retries:** Not applicable (क्लाइंट विफलता पर पुनः प्रयास करता है)।
 - **6. Timeout:** 5 मिनट (300,000ms) की समय-सीमा वाला V4 हस्ताक्षरित URL (`version: 'v4', action: 'read', expires: Date.now() + 5 * 60 * 1000`)।
-- **7. Security Boundary:** 
+- **7. Security Boundary:**
   - प्रमाणीकरण अनिवार्य (`if (!auth) throw HttpsError('unauthenticated')`)।
   - भौतिक भंडारण फ़ाइल अस्तित्व जांच (`file.exists()`) हस्ताक्षर करने से पूर्व अनिवार्य।
   - पायरेसी और असामान्य डाउनलोड डिटेक्शन के लिए आईपी लॉगिंग (`context.rawRequest.ip`)।
