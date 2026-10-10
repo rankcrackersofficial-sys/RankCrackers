@@ -23,3 +23,7 @@ Founder delivery preview does not publish or verify authority by itself. Founder
 **LAST_VERIFIED_SHA:** Pending.
 **LAST_VERIFIED_AT:** Pending.
 **EVIDENCE_REFERENCES:** Architecture link above; live verification pending.
+
+
+## Primary historical Founder Console evidence
+Founder Web `https://rankcrackers.in`. Navigation: Mission Control → Official Updates → Founder Held Review; Mission Control → Mission Inventory → Mission Detail → Mission Documents. Historical 04 Oct authenticated view displayed held cards but dedicated REVIEW HELD CANDIDATE control was not visible. Later integration candidate `0f8175ea6008616b8838266236994f455573b152` reported accepted as a deployment candidate; live Gate-B still unverified. Student Android UI/login/behavior frozen. Founder preview does not publish or independently verify academic authority; Founder human ACCEPT_BIND/REJECT/HOLD adjudicates held review.
