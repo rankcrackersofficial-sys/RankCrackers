@@ -17,3 +17,10 @@ export { buildPersonalizedRecruitmentDossier, buildDeliveryDecision, buildDiscov
 export { deriveCanonicalLearningState, canWriteCanonicalLearningState } from './services/learningStateAuthority';
 export { resolveRevisionCandidate, compressRevisionCandidates, transitionRecovery } from './services/revisionDeskAuthority';
 export { createQualifiedEvidence, buildRankRadarProjection, compatibleTrajectory } from './services/qualifiedRankingAuthority';
+export {
+  archiveEventIdentity,
+  qualifyArchiveEvent,
+  reconstructThen,
+  SACRED_ARCHIVE_ARCHITECTURE_ID,
+  SACRED_ARCHIVE_SCHEMA_VERSION,
+} from './services/sacredArchiveAuthority';
