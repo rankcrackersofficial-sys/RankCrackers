@@ -17,3 +17,7 @@ Do not create extra Domains for features already owned by existing Domains. Chan
 
 ## Permanent ID and onboarding rule
 Each existing chat must display its exact **DOMAIN-A**, **DOMAIN-B**, **DOMAIN-C**, **DOMAIN-D**, or **DOMAIN-E** identifier in its opening instruction and report. These are the currently documented five primary rooms; feature ownership is not automatically a new lettered Domain. No room is linked automatically by GitHub; each must run its own bootstrap, then confirm the current branch SHA and state-file path. **Do not reassign permanent IDs when chat titles differ.**
+
+
+## Verified one-time Chat bootstrap acknowledgements — 2026-10-10
+The Founder supplied explicit read-only acknowledgement reports for **DOMAIN-A, DOMAIN-B, DOMAIN-C, DOMAIN-D and DOMAIN-E**; all referenced review SHA `a57657ea3c984f1b6ced4f72c34c7734b28c15ab` and the expected individual files. **Do not confuse one-time read acknowledgement with automatic two-way synchronization or canonical merge.** Each room's fuller current/historical evidence classification is in its respective Domain State file. Future update protocol remains event-driven through reviewed Git changes.
