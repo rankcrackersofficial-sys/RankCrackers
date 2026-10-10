@@ -1,4 +1,4 @@
-# Rank Cracker Book — Canonical Index
+# RankCrackers — Canonical Index
 
 ## संपादकीय संरचना
 

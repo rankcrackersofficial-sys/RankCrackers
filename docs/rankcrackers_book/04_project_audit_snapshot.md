@@ -2,7 +2,7 @@
 
 **Audit status:** प्रारंभिक संरचनात्मक audit  
 **Reference date:** 9 October 2026  
-**Editor:** Rank Cracker Book का प्रबंध संपादक
+**Editor:** RankCrackers Book का प्रबंध संपादक
 
 ## 1. Audit का उद्देश्य
 

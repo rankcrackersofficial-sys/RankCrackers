@@ -1,4 +1,4 @@
-# Rank Cracker Book — Living Technical-Product Reference
+# RankCrackers — Living Technical Product & Architecture Book
 
 **आधिकारिक संदर्भ ग्रंथ — Rank Crackers Ecosystem**
 
@@ -27,7 +27,7 @@ Rank Cracker केवल एक application नहीं है। यह व�
 यह प्रथम edition अंतिम रूप नहीं है। Rank Cracker जैसे जीवंत project के साथ यह पुस्तक भी विकसित होगी—नए features, नए workflows, नए lessons और नए engineering decisions इसमें समय-समय पर जोड़े जाएँगे।
 
 — प्रबंध संपादक  
-Rank Cracker Book
+RankCrackers — Living Technical Product & Architecture Book
 
 
 ---
@@ -38,7 +38,7 @@ Rank Cracker Book
 <!-- SECTION BREAK: Preliminary Reference: Canonical Index (02_index.md) -->
 <!-- ======================================================== -->
 
-# Rank Cracker Book — Canonical Index
+# RankCrackers — Canonical Index
 
 ## संपादकीय संरचना
 
@@ -450,7 +450,7 @@ Project में उपलब्ध login screens, splash screen, student scree
 
 ### 8.5 Heading Hierarchy & Auto TOC
 Book hierarchy को Google Docs native heading styles से map करें:
-- **Title:** Book title (*Rank Cracker Book*)
+- **Title:** Book title (*RankCrackers — Living Technical Product & Architecture Book*)
 - **Heading 1:** Volume (उदा. *Volume A — Product और मूल दृष्टि*)
 - **Heading 2:** Part (उदा. *Part 1 — Genesis, Philosophy & Student Journey*)
 - **Heading 3:** Chapter (उदा. *Chapter 17 — Product Vision...*)
@@ -553,7 +553,7 @@ Chief Author का अंतिम मानदंड page count नहीं, 
 
 **Audit status:** प्रारंभिक संरचनात्मक audit  
 **Reference date:** 9 October 2026  
-**Editor:** Rank Cracker Book का प्रबंध संपादक
+**Editor:** RankCrackers Book का प्रबंध संपादक
 
 ## 1. Audit का उद्देश्य
 
@@ -1003,10 +1003,10 @@ if (!isMissionValid && !isPrivileged) {
 <!-- SECTION BREAK: Preliminary Reference: Operating Handoff & Chief Author Directive (12_handoff_to_antigravity_2_0.md) -->
 <!-- ======================================================== -->
 
-# Rank Cracker Book — Antigravity 2.0 Handoff Document
+# RankCrackers Book — Antigravity 2.0 Handoff Document
 
 **Handoff recipient:** Antigravity 2.0  
-**Handoff purpose:** Rank Cracker Book project को व्यवस्थित रूप से आगे बढ़ाना  
+**Handoff purpose:** RankCrackers Book project को व्यवस्थित रूप से आगे बढ़ाना
 **Primary language:** हिन्दी, आवश्यक technical terminology और code English में  
 **Status:** Active long-form documentation project
 
@@ -1079,7 +1079,7 @@ Book manuscript folder:
 
 Canonical Google Docs living book:
 
-[Rank Cracker Book — Living Technical Reference](https://docs.google.com/document/d/1zMT940eozloy03y7FBHSkqNqh9SgnaotPL2v-FWzWoA/edit)
+[RankCrackers — Living Technical Product & Architecture Book](https://docs.google.com/document/d/1zMT940eozloy03y7FBHSkqNqh9SgnaotPL2v-FWzWoA/edit)
 
 यह document RankCrackers Official Google Drive account में बनाया गया है। इसमें title page, official logo, editorial declaration, professional contents structure और प्रारंभिक chapter summaries मौजूद हैं। आगे substantive chapters पूरे होने पर Google Docs manuscript में भी update किए जाएँ।
 
@@ -1272,7 +1272,7 @@ Antigravity 2.0 को audit स्वयं करना है। किसी
 
 Book को complete तभी माना जाएगा जब project के relevant source areas audit हो चुके हों, प्रत्येक domain के user और technical workflows लिखे जा चुके हों, code references जुड़े हों, security और failure states documented हों, और local तथा Google Docs manuscripts में consistency verify हो चुकी हो। Page count completion criterion नहीं है; completeness, accuracy और maintainability हैं।
 
-**Handoff conclusion:** Antigravity 2.0 को इस document को operating brief मानकर Rank Cracker Book को उसी professional, exhaustive और code-integrated standard पर आगे बढ़ाना है।
+**Handoff conclusion:** Antigravity 2.0 को इस document को operating brief मानकर RankCrackers Book को उसी professional, exhaustive और code-integrated standard पर आगे बढ़ाना है।
 
 ## 13. Chief Author directive
 
