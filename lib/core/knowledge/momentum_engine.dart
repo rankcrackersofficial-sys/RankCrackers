@@ -4,7 +4,7 @@ import '../models/momentum_state.dart';
 
 class MomentumEngine {
   // ===================================================
-  // MOMENTUM CALCULATION 🔱
+  // MOMENTUM CALCULATION 
   // ===================================================
 
   static MomentumState calculate({

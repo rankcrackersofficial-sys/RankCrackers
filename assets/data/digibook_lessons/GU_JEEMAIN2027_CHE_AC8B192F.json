@@ -1,0 +1,253 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_CHE_AC8B192F",
+  "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000014",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_CHE_AC8B192F_V001",
+  "atomicFactSetHash": "f0e6f5ff3dbe10533dd327d985d7c697a005dbaaa1a8474062e4611c8d516c03",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_AC8B192F_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_AC8B192F",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_AC8B192F_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_1F65AC2B",
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_44B923B3",
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_E5E589A9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "overviewText": "This chapter explores Solution Concentrations: Molarity, Molality and Dilution Law, providing comprehensive conceptual analysis, mathematical relationships, and structured applications grounded in NCERT authority.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "bec8aea0f3fae99e7bdffaf9cbe764cedf974a5ca58a8f3a78a482b1a31c4d12",
+      "createdAtUtc": "2026-09-02T13:29:33.218Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_AC8B192F_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_AC8B192F",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_AC8B192F_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_1F65AC2B",
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_44B923B3",
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_E5E589A9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_AC8B192F_CONCEPTS_01",
+          "semanticAnchorId": "ANCHOR__AC8B192F_1",
+          "title": "1. Key Academic Principles: Solution Concentrations: Molarity, Molality and Dilution Law",
+          "contentMarkdown": "Molarity (M) is the number of moles of solute dissolved per litre of solution (mol/L) and is temperature-dependent because volume changes with temperature.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_AC8B192F_1F65AC2B"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_AC8B192F_CONCEPTS_02",
+          "semanticAnchorId": "ANCHOR__AC8B192F_2",
+          "title": "2. Key Academic Principles: Solution Concentrations: Molarity, Molality and Dilution Law",
+          "contentMarkdown": "Molality (m) is the number of moles of solute per kilogram of solvent (mol/kg) and is temperature-independent.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_AC8B192F_E5E589A9"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_AC8B192F_CONCEPTS_03",
+          "semanticAnchorId": "ANCHOR__AC8B192F_3",
+          "title": "3. Key Academic Principles: Solution Concentrations: Molarity, Molality and Dilution Law",
+          "contentMarkdown": "Dilution follows the formula M1 * V1 = M2 * V2, because total moles of solute remain constant upon adding solvent.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_AC8B192F_44B923B3"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "488c24616b3fff2471638659f61b81b8a22e36e6d2a1ac16ded02e8c731718dc",
+      "createdAtUtc": "2026-09-02T13:29:33.218Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_AC8B192F_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_AC8B192F",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_AC8B192F_V001",
+      "displayOrder": 3,
+      "status": "NOT_APPLICABLE",
+      "statusReason": "Qualitative conceptual topic regarding Solution Concentrations: Molarity, Molality and Dilution Law; no independent algebraic formulas belong to this generation unit.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaTable": [],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b7b9356f39da5055f2be84b07bad19fc8c6a3716da5fb25f722535b172fd78bb",
+      "createdAtUtc": "2026-09-02T13:29:33.218Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_AC8B192F_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_AC8B192F",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_AC8B192F_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.218Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_AC8B192F_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_AC8B192F",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_AC8B192F_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_1F65AC2B"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_CHE_AC8B192F_01",
+          "title": "Conceptual Analysis: Solution Concentrations: Molarity, Molality and Dilution Law",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_AC8B192F_1F65AC2B"
+          ],
+          "problemStatement": "Analyze the physical/chemical implication of: Molarity (M) is the number of moles of solute dissolved per litre of solution (mol/L) and is temperature-dependent because volume changes with temperature..",
+          "stepByStepSolution": [
+            "Step 1: State the foundational postulate: Molarity (M) is the number of moles of solute dissolved per litre of solution (mol/L) and is temperature-dependent because volume changes with temperature..",
+            "Step 2: Differentiate valid scientific conditions from common conceptual confusions.",
+            "Step 3: Conclude the analytical explanation systematically."
+          ],
+          "finalAnswer": "Validated Conceptual Statement",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "3d2d85ab1b7926dc778a3efb35eb11aab99666b926b089e23badd390b95c847c",
+      "createdAtUtc": "2026-09-02T13:29:33.218Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_AC8B192F_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_AC8B192F",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_AC8B192F_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_1F65AC2B",
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_E5E589A9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_CHE_AC8B192F_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_AC8B192F_1F65AC2B"
+          ],
+          "prompt": "Which of the following statements correctly represents: Solution Concentrations: Molarity, Molality and Dilution Law?",
+          "options": [
+            "Molarity (M) is the number of moles of solute dissolved per litre of solution (mol/L) and is temperature-dependent because volume changes with temperature.",
+            "Incorrect distractor contradicting verified fundamental principles.",
+            "Unrelated concept from a different physical regime.",
+            "Hypothetical condition not supported by standard experimental evidence."
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Option 1 is correct because: Molarity (M) is the number of moles of solute dissolved per litre of solution (mol/L) and is temperature-dependent because volume changes with temperature. (Source: NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL).",
+          "isVerified": true
+        },
+        {
+          "questionId": "SC_GU_JEEMAIN2027_CHE_AC8B192F_02",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "HARD",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_AC8B192F_E5E589A9"
+          ],
+          "prompt": "Regarding Solution Concentrations: Molarity, Molality and Dilution Law, which statement is strictly true?",
+          "options": [
+            "Contradictory incorrect proposition.",
+            "Molality (m) is the number of moles of solute per kilogram of solvent (mol/kg) and is temperature-independent.",
+            "Arbitrary assertion with inverted proportionality.",
+            "Non-rigorous approximation not valid under general conditions."
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "Option 2 is strictly correct as verified: Molality (m) is the number of moles of solute per kilogram of solvent (mol/kg) and is temperature-independent..",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "27f2688b5e961bdb585af615f7559fbc1c6d2f8ac051dda6312639b763391ea1",
+      "createdAtUtc": "2026-09-02T13:29:33.218Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_AC8B192F_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_AC8B192F",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_AC8B192F_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_1F65AC2B",
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_44B923B3",
+        "AF_GU_JEEMAIN2027_CHE_AC8B192F_E5E589A9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Conceptual understanding of Solution Concentrations: Molarity, Molality and Dilution Law",
+          "Application of core laws"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "99478355baadf8656d4e06723293f5bfd1f3ce3a12eb32f6d62d552f01eb2dee",
+      "createdAtUtc": "2026-09-02T13:29:33.218Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 5,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 1,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.218Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

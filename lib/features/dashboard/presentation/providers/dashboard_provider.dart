@@ -4,7 +4,7 @@ import '../../../../core/models/node_runtime_state.dart';
 import '../../../../core/models/readiness_state.dart';
 
 // =========================================
-// REAL KNOWLEDGE FLOW PROVIDER 🔱
+// REAL KNOWLEDGE FLOW PROVIDER 
 // =========================================
 
 class DashboardTopicModel {
@@ -55,7 +55,7 @@ final missionReadinessProvider = Provider<ReadinessState?>((ref) {
   return engine.readinessState;
 });
 
-/// 🔱 Performance-optimized User Metrics Provider
+/// Performance-optimized User Metrics Provider
 final userProfileStatsProvider = Provider<Map<String, int>>((ref) {
   final engine = ref.watch(knowledgeEngineProvider);
   final states = engine.nodeStates.values;

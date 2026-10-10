@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-/// 🔱 BENCHMARK RESULT
+/// BENCHMARK RESULT
 class BenchmarkResult {
   final String label;
   final int durationMs;
@@ -13,10 +13,10 @@ class BenchmarkResult {
   });
 
   @override
-  String toString() => '🔱 BENCHMARK [$label]: ${durationMs}ms';
+  String toString() => 'BENCHMARK [$label]: ${durationMs}ms';
 }
 
-/// 🔱 BENCHMARK REPOSITORY
+/// BENCHMARK REPOSITORY
 class BenchmarkRepository {
   static final List<BenchmarkResult> _results = [];
   static void add(BenchmarkResult result) {
@@ -27,7 +27,7 @@ class BenchmarkRepository {
   static void clear() => _results.clear();
 }
 
-/// 🔱 BENCHMARK UTIL
+/// BENCHMARK UTIL
 /// Precise timing utility for performance profiling.
 class BenchmarkUtil {
   static final Map<String, Stopwatch> _watches = {};

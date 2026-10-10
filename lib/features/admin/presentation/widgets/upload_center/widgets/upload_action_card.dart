@@ -45,7 +45,7 @@ class UploadActionCard extends StatelessWidget {
                 );
                 
                 if (context.mounted) {
-                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('🔱 INGESTION TRIGGERED: Asset uploaded and worker notified.')));
+                  ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('INGESTION TRIGGERED: Asset uploaded and worker notified.')));
                 }
               }
             },

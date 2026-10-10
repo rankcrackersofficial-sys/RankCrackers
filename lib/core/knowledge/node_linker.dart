@@ -1,7 +1,7 @@
 import '../models/micro_topic_node.dart';
 import 'knowledge_graph.dart';
 
-/// 🔱 NODE LINKER
+/// NODE LINKER
 /// Handles relationship lookups and graph traversal.
 class NodeLinker {
   final KnowledgeGraph graph;
@@ -45,7 +45,7 @@ class NodeLinker {
   }
 
   // ===================================================
-  // RECURSIVE TRAVERSAL 🔱
+  // RECURSIVE TRAVERSAL 
   // ===================================================
 
   /// Returns all prerequisites recursively up to a certain depth.

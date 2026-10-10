@@ -1,0 +1,285 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_10A164C1",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U03_T_00000003",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_10A164C1_V001",
+  "atomicFactSetHash": "c3016f8c2f26c1af0cd08b013f7781b7eeef8517cb2d78c890c53735d0a23084",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_10A164C1_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_10A164C1",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_10A164C1_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_12BE6F76",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_5482452A",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_8E944C2F",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_B0CFBBFE",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_B35C7BE0",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_BA3ACA98",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_BC6353B4",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_CA00FA92",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_E2F4716A"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "overviewText": "This chapter analyzes Newtons Third Law of Motion ($F_{AB} = -F_{BA}$), impulse-momentum theorem, and momentum conservation.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "890d374fca8c1c03bfab84cf159071741f2e2129dfbcfa92f64bd512e5f733a4",
+      "createdAtUtc": "2026-09-02T13:29:33.036Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_10A164C1_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_10A164C1",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_10A164C1_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_12BE6F76",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_5482452A",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_8E944C2F",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_B0CFBBFE",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_B35C7BE0",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_BA3ACA98",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_BC6353B4",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_CA00FA92",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_E2F4716A"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_10A164C1_CONCEPTS_01_THIRD_LAW",
+          "semanticAnchorId": "ANCHOR_NEWTON_THIRD_LAW",
+          "title": "1. Newtons Third Law of Motion",
+          "contentMarkdown": "Newtons Third Law states that every action has an equal and opposite reaction: $$\\mathbf{F}_{AB} = -\\\\mathbf{F}_{BA}$$. Action-reaction forces act simultaneously on different bodies and never cancel each other.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_8E944C2F",
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_CA00FA92"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_10A164C1_CONCEPTS_02_IMPULSE_MOMENTUM",
+          "semanticAnchorId": "ANCHOR_IMPULSE_MOMENTUM",
+          "title": "2. Impulse and Impulse-Momentum Theorem",
+          "contentMarkdown": "Impulse $\\\\mathbf{J}$ is the time integral of force: $$\\mathbf{J} = \\\\int \\\\mathbf{F} dt = \\\\Delta \\\\mathbf{p} = \\\\mathbf{p}_{\\\\text{final}} - \\\\mathbf{p}_{\\\\text{initial}}$$. A large force acting for a short time is an impulsive force.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_B0CFBBFE",
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_B35C7BE0",
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_BC6353B4",
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_5482452A"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_10A164C1_CONCEPTS_03_CONSERVATION_COLLISIONS",
+          "semanticAnchorId": "ANCHOR_MOMENTUM_CONSERVATION",
+          "title": "3. Conservation of Linear Momentum and Gun Recoil",
+          "contentMarkdown": "Total momentum of an isolated system is conserved: $$m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2$$. Gun recoil velocity is $$v_{\\\\text{recoil}} = -\\\\frac{m_{\\\\text{bullet}}}{M_{\\\\text{gun}}} v_{\\\\text{bullet}}$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_E2F4716A",
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_12BE6F76",
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_BA3ACA98"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "5fdbc56a391d7f88b82eab2e21fd4762548777fb8ab5733b9a93e2988244404c",
+      "createdAtUtc": "2026-09-02T13:29:33.036Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_10A164C1_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_10A164C1",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_10A164C1_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_5482452A",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_12BE6F76",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_BA3ACA98"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Impulse-Momentum Theorem",
+          "formula": "\\\\mathbf{J} = \\\\Delta \\\\mathbf{p} = \\\\mathbf{F}_{\\\\text{avg}} \\\\Delta t",
+          "constraints": "Short duration impact",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_5482452A"
+          ]
+        },
+        {
+          "name": "Linear Momentum Conservation",
+          "formula": "m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2",
+          "constraints": "Zero net external force",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_12BE6F76"
+          ]
+        },
+        {
+          "name": "Gun Recoil Velocity",
+          "formula": "v_{\\\\text{recoil}} = - \\\\frac{m_{\\\\text{bullet}}}{M_{\\\\text{gun}}} v_{\\\\text{bullet}}",
+          "constraints": "Initially at rest",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_BA3ACA98"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "bfe1bb3ef0321c54849692fced06ce53b16484e18864ac78c386e8ac5efa4082",
+      "createdAtUtc": "2026-09-02T13:29:33.036Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_10A164C1_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_10A164C1",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_10A164C1_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.036Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_10A164C1_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_10A164C1",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_10A164C1_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_BA3ACA98"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_10A164C1_01",
+          "title": "Gun Recoil Velocity Calculation",
+          "problemStatement": "A rifle of mass $M = 4.0\\\\text{ kg}$ fires a bullet of mass $m = 0.02\\\\text{ kg}$ with muzzle speed $v = 400\\\\text{ m/s}$. Find recoil velocity.",
+          "stepByStepSolution": [
+            "Step 1: Identify $M = 4.0\\\\text{ kg}$, $m = 0.02\\\\text{ kg}$, $v_{\\\\text{bullet}} = 400\\\\text{ m/s}$.",
+            "Step 2: Apply conservation of momentum: $v_{\\\\text{recoil}} = -\\\\frac{m}{M} v = -\\\\frac{0.02}{4.0} \\\\times 400 = -2.0\\\\text{ m/s}$."
+          ],
+          "finalAnswer": "v_{\\\\text{recoil}} = -2.0\\\\text{ m/s}",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_BA3ACA98"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "22cb0ef37d4e5fff86547d07413822537e205073aa52f9ec016b6bdec54b04fa",
+      "createdAtUtc": "2026-09-02T13:29:33.036Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_10A164C1_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_10A164C1",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_10A164C1_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_CA00FA92"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_10A164C1_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Why do action and reaction force pairs never cancel each other out to produce zero acceleration?",
+          "options": [
+            "They act simultaneously on two different interacting bodies",
+            "Action force is always larger than reaction force",
+            "Reaction force acts with a time delay",
+            "They act in perpendicular directions"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Newtons Third Law forces act on distinct bodies, so they cannot cancel each other in a single body free-body diagram.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_10A164C1_CA00FA92"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "96da4697831d5ec8eac780ff5e45de1f36645cc457cb3c90e4ffac0839a77009",
+      "createdAtUtc": "2026-09-02T13:29:33.036Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_10A164C1_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_10A164C1",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_10A164C1_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_12BE6F76",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_5482452A",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_8E944C2F",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_B0CFBBFE",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_B35C7BE0",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_BA3ACA98",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_BC6353B4",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_CA00FA92",
+        "AF_GU_JEEMAIN2027_PHY_10A164C1_E2F4716A"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Impulse calculations",
+          "Recoil and momentum conservation"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "288068d872effa2ae93a95c973530a96432830faea81184142308aa699b82cd5",
+      "createdAtUtc": "2026-09-02T13:29:33.036Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.036Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

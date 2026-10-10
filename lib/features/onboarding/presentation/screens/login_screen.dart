@@ -8,6 +8,8 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/premium_button.dart';
 import '../../../../shared/session/session_manager.dart';
 
+/// [LEGACY_UNREACHABLE] Deprecated legacy login screen with local 4-digit OTP.
+/// Zero production callers. Production student authentication routes exclusively via UnifiedIdentityScreen.
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -577,7 +579,7 @@ class _LoginBodyEngineState
 
                       child: Text(
 
-                        "The Self Study Coach",
+                        "May Our Learning Be Radiant.",
 
                         style:
                         GoogleFonts
@@ -930,7 +932,7 @@ class _LoginBodyEngineState
 
                             Image.asset(
 
-                              "assets/images/google.png",
+                              "assets/images/Google.png",
 
                               width: 24,
                               height: 24,

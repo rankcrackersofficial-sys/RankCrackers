@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 QUESTION OUTCOME (Blueprint v1.0 - Sprint N)
+/// QUESTION OUTCOME (Blueprint v1.0 - Sprint N)
 /// Represents the result of a single question attempt within a Battle Session.
 class QuestionOutcome extends Equatable {
   final String questionId;

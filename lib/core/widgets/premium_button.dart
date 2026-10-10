@@ -20,7 +20,7 @@ class PremiumButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: ResponsiveHelper.buttonHeight(context), // 🔱 Adaptive Height v2.0
+      height: ResponsiveHelper.buttonHeight(context), // Adaptive Height v2.0
       child: ElevatedButton(
         onPressed: isLoading ? null : onTap,
         style: ElevatedButton.styleFrom(
@@ -42,7 +42,7 @@ class PremiumButton extends StatelessWidget {
             : Text(
                 text,
                 style: GoogleFonts.poppins(
-                  fontSize: ResponsiveHelper.sp(context, 15), // 🔱 Refined Font v2.0
+                  fontSize: ResponsiveHelper.sp(context, 15), // Refined Font v2.0
                   fontWeight: FontWeight.w700,
                   color: Colors.black,
                 ),

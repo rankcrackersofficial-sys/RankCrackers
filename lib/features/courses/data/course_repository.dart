@@ -6,14 +6,14 @@ class CourseRepository {
   static const String collection = 'courses';
 
   // ===================================================
-  // CREATE COURSE 🔱
+  // CREATE COURSE 
   // ===================================================
   static Future<void> create(Course course) async {
     await _db.collection(collection).doc(course.id).set(course.toMap());
   }
 
   // ===================================================
-  // STREAM COURSES 🔱
+  // STREAM COURSES 
   // ===================================================
   static Stream<List<Course>> stream() {
     return _db.collection(collection).snapshots().map((snapshot) {

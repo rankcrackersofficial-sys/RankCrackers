@@ -49,3 +49,9 @@ service-account.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Visual QA Integration Screenshots
+/docs/patch_safety/
+
+# Project-Local Scratch & Temporary Artifacts (AG-R4 Policy)
+.local/

@@ -2,7 +2,7 @@ import '../models/micro_topic_node.dart';
 import '../../features/progress/data/models/user_progress.dart';
 
 /**
- * 🔱 RECONCILIATION ENGINE
+ * RECONCILIATION ENGINE
  * Detects orphans, stale projections, and consistency between factory and student realm.
  */
 class ReconciliationEngine {

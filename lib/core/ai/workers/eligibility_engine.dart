@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:rank_crackers/core/models/notification_canonical.dart';
 
-/// 🔱 ELIGIBILITY INTELLIGENCE ENGINE (Sprint F.2)
+/// ELIGIBILITY INTELLIGENCE ENGINE (Sprint F.2)
 class EligibilityIntelligenceEngine {
   static Future<UserRelevanceEngine> analyze(NotificationIntelligence intel) async {
-    debugPrint("🔱 ELIGIBILITY ENGINE: Simulating user relevance mapping...");
+    debugPrint("ELIGIBILITY ENGINE: Simulating user relevance mapping...");
     
     final List<String> eligibleCategories = ['UR', 'EWS', 'OBC', 'SC', 'ST'];
     final List<String> specialBenefits = [];

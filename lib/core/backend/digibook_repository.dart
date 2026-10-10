@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/digibook_block.dart';
 
-/// 🔱 DIGIBOOK REPOSITORY
+/// DIGIBOOK REPOSITORY
 /// Sovereign storage authority for mission-specific learning knowledge.
 class DigiBookRepository {
   static final _firestore = FirebaseFirestore.instance;
@@ -17,7 +17,7 @@ class DigiBookRepository {
   }
 
   static Future<List<DigiBookBlock>> fetchByMission(String examId) async {
-    // 🔱 Exam Isolation Law (G1 Fix): Query only blocks linked to this specific mission
+    // Exam Isolation Law (G1 Fix): Query only blocks linked to this specific mission
     final snap = await _firestore
         .collection(_collection)
         .where('examId', isEqualTo: examId)
@@ -27,7 +27,7 @@ class DigiBookRepository {
     return snap.docs.map((d) => DigiBookBlock.fromMap(d.data())).toList();
   }
 
-  /// 🔱 Traceability: Stream only verified learning material.
+  /// Traceability: Stream only verified learning material.
   static Stream<List<DigiBookBlock>> streamPublished() {
     return _firestore
         .collection(_collection)

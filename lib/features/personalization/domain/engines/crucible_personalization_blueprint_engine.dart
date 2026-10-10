@@ -117,6 +117,7 @@ final class CruciblePersonalizationBlueprintEngine {
     final blueprint = CruciblePersonalizationBlueprint(
       studentId: decision.studentId,
       targetAmtnId: decision.targetAmtnId,
+      missionId: decision.missionId,
       createdAtUtc: createdAtUtc,
       allocations: List.unmodifiable(allocations),
       totalQuestionCount: total,

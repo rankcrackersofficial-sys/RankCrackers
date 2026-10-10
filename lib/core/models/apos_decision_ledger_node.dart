@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 APOS DECISION LEDGER NODE (Blueprint v1.0 - Document 64)
+/// APOS DECISION LEDGER NODE (Blueprint v1.0 - Document 64)
 /// Permanent forensic log of every executive decision made by the system.
 class APOSDecisionLedgerNode extends Equatable {
   final String id;

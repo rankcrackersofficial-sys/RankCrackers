@@ -1,11 +1,11 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 SENTINEL NOTIFICATION CANDIDATE (Unified Architecture)
+/// SENTINEL NOTIFICATION CANDIDATE (Unified Architecture)
 /// Represents a potential alert derived from system intelligence or opportunity matching.
 class NotificationCandidate extends Equatable {
   final String id;
   
-  // 🔱 Recruitment Context (Phase 9)
+  // Recruitment Context (Phase 9)
   final String? uid;
   final String? opportunityId;
   final double? relevanceScore;
@@ -13,7 +13,7 @@ class NotificationCandidate extends Equatable {
   final bool? isNew;
   final List<String>? reasons;
 
-  // 🔱 Discovery Context (Legacy/Sentinel)
+  // Discovery Context (Legacy/Sentinel)
   final String? recruitmentId;
   final String? title;
   final String? summary;

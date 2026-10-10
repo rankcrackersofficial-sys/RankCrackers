@@ -59,6 +59,7 @@ class DashboardConstants {
     ],
   );
 
+  // ignore: constant_identifier_names
   static const bool DASHBOARD_START_SMART_START_VISIBLE = false;
 
 }

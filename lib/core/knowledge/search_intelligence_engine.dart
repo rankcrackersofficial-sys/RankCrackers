@@ -2,7 +2,7 @@ import '../models/micro_topic_node.dart';
 import '../models/node_runtime_state.dart';
 import 'knowledge_graph.dart';
 
-/// 🔱 SEARCH INTELLIGENCE ENGINE (Document 67 Compliant)
+/// SEARCH INTELLIGENCE ENGINE (Document 67 Compliant)
 /// Sovereign authority for knowledge summoning and discovery.
 class SearchIntelligenceEngine {
   final KnowledgeGraph graph;
@@ -13,7 +13,7 @@ class SearchIntelligenceEngine {
     required this.states,
   });
 
-  /// 🔱 SUMMON NODES (Graph-Aware Search)
+  /// SUMMON NODES (Graph-Aware Search)
   /// Performs fuzzy matching and enriches results with graph context.
   List<SearchResult> summon(String query) {
     if (query.isEmpty) return [];

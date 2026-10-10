@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import '../../models/notification_canonical.dart';
 
-/// 🔱 ATOMIC RULE EXTRACTION ENGINE (Sprint F.1)
+/// ATOMIC RULE EXTRACTION ENGINE (Sprint F.1)
 class AtomicRuleEngine {
   static Future<List<AtomicNotificationRule>> extractRules(String text) async {
-    debugPrint("🔱 ATOMIC RULE ENGINE: Scanning for constitutional rules...");
+    debugPrint("ATOMIC RULE ENGINE: Scanning for constitutional rules...");
     
     final List<AtomicNotificationRule> rules = [];
 

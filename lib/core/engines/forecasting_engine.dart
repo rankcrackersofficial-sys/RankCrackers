@@ -4,13 +4,13 @@ import '../models/coverage_state.dart';
 import '../models/risk_state.dart';
 import '../models/momentum_state.dart';
 
-/// 🔱 FORECASTING ENGINE
+/// FORECASTING ENGINE
 /// Sovereign authority for predicting preparation outcomes.
 /// Implements Document 32 Sections 37-42, Document 34 Section 39, and Document 35 Section 40.
 class ForecastingEngine {
   
   // ===================================================
-  // READINESS FORECAST 🔱
+  // READINESS FORECAST 
   // ===================================================
 
   /// Estimates the readiness score at a future point in time.
@@ -19,7 +19,7 @@ class ForecastingEngine {
     required MomentumState momentum,
     required int daysForward,
   }) {
-    // 🔱 Formula: CurrentScore + (Velocity * Days * Confidence)
+    // Formula: CurrentScore + (Velocity * Days * Confidence)
     // High confidence (>0.8) makes the forecast more aggressive.
     final double velocityFactor = momentum.momentumScore * currentState.confidence;
     final double projection = currentState.score + (velocityFactor * daysForward * 0.5);
@@ -28,7 +28,7 @@ class ForecastingEngine {
   }
 
   // ===================================================
-  // MISSION SUCCESS PROBABILITY 🔱
+  // MISSION SUCCESS PROBABILITY 
   // ===================================================
 
   /// Calculates the statistical probability of examination success.
@@ -37,8 +37,8 @@ class ForecastingEngine {
     required RiskState risk,
     required double examDifficulty, // 0.0 - 1.0
   }) {
-    // 🔱 Constitutional Model: Readiness (60%) - Risk (30%) - Environment (10%)
-    // 🔱 Audit Fix: Removed double-penalty on confidence to align with Documentation 32 Section 15.
+    // Constitutional Model: Readiness (60%) - Risk (30%) - Environment (10%)
+    // Audit Fix: Removed double-penalty on confidence to align with Documentation 32 Section 15.
     final double readinessComponent = readiness.score / 100.0;
     final double riskComponent = 1.0 - risk.overallRisk;
     final double environmentComponent = 1.0 - examDifficulty;
@@ -52,7 +52,7 @@ class ForecastingEngine {
   }
 
   // ===================================================
-  // COVERAGE FORECAST 🔱
+  // COVERAGE FORECAST 
   // ===================================================
 
   /// Predicts when 100% atomic coverage will be achieved.

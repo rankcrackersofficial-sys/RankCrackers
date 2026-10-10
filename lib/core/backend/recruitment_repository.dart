@@ -57,6 +57,11 @@ class RecruitmentRepository {
       examDifficulty: 0.6,
       variantCode: missionId,
       version: 'ONE_TIME_PRODUCTION_EXPORT_DERIVED_EMULATOR_ONLY',
+      jurisdictionLevel: mission['jurisdictionLevel']?.toString() ?? 'CENTRAL',
+      stateCode: mission['stateCode']?.toString(),
+      stateName: mission['stateName']?.toString(),
+      authorityGroupKey: mission['authorityGroupKey']?.toString() ?? '',
+      authorityDisplayName: mission['authorityDisplayName']?.toString() ?? '',
     );
   }
 

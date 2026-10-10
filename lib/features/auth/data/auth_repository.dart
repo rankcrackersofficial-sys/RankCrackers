@@ -4,6 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import '../../../core/knowledge/knowledge_engine.dart';
+import '../../../shared/session/session_manager.dart';
 import '../domain/repositories/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepository {
@@ -244,6 +246,8 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<void> signOut() async {
     try {
+      await SessionManager.logout();
+      await KnowledgeEngine.instance.clearSessionState();
       await _googleSignIn.disconnect();
       await _googleSignIn.signOut();
       await _auth.signOut();

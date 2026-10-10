@@ -249,7 +249,7 @@ class _AssetTile extends ConsumerWidget {
               const Icon(Icons.file_download_outlined, color: Colors.white24),
           onTap: () async {
             if (url.isNotEmpty) {
-              // 🔱 Secure Download Flow (Audit GAP Hardened)
+              // Secure Download Flow (Audit GAP Hardened)
               final repo = ref.read(archiveRepositoryProvider);
               final secureUrl = await repo.getSecureUrl(url,
                   realmId: realmId, assetType: type);

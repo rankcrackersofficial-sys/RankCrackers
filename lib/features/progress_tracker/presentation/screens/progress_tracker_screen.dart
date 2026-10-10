@@ -12,14 +12,9 @@ class ProgressTrackerScreen extends StatelessWidget {
       backgroundColor: AppColors.background,
       body: GovernedNotReadyPanel(
         icon: Icons.leaderboard_rounded,
-        title: 'Rank Radar is not ready yet',
+        title: 'Rank Radar',
         message:
-            'Rank, accuracy, streak, competition position and subject trends will appear only after verified progress and competition projections are published for this mission.',
-        founderStatus: 'FOUNDER HEALTH: RANK RADAR NOT READY',
-        checkpoints: [
-          'No rank, score, streak or competition number is invented on the Student Panel.',
-          'Founder Web can see this as a missing governed pipeline instead of a fake healthy state.',
-        ],
+            'Subject analysis, target completion trends, and learning performance tracking will become available as you participate in active battles and complete modules.',
       ),
     );
   }

@@ -7,7 +7,7 @@ class AuthService {
   static User? get currentUser => _auth.currentUser;
 
   // ===================================================
-  // SIGN IN ANONYMOUSLY (With Error Handling) 🔱
+  // SIGN IN ANONYMOUSLY (With Error Handling) 
   // ===================================================
   static Future<UserCredential?> signInAnonymously() async {
     try {

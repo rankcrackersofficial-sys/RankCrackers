@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 MISSION NODE (Blueprint v1.1 - Sprint M Ready)
+/// MISSION NODE (Blueprint v1.1 - Sprint M Ready)
 /// Represents a daily actionable study mission generated from Fusion intelligence.
 class MissionNode extends Equatable {
   final String id;
@@ -9,7 +9,7 @@ class MissionNode extends Equatable {
 
   final List<String> atomicTopicIds; // Topics assigned to this mission
   
-  // 🔱 Audit Sprint M Gap Fix: Forensic Linkage
+  // Audit Sprint M Gap Fix: Forensic Linkage
   final List<String> sourceFusionIds;
   final List<String> sourceRiskIds;
 

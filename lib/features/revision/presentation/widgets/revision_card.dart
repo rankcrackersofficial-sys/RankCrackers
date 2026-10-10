@@ -23,7 +23,7 @@ class RevisionCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🔱 PREMIUM CARD DNA: Title
+          // PREMIUM CARD DNA: Title
           Text(
             title.toUpperCase(),
             style: AppTypography.cardTitle.copyWith(color: AppColors.error),
@@ -31,7 +31,7 @@ class RevisionCard extends StatelessWidget {
 
           const SizedBox(height: 10),
 
-          // 🔱 PREMIUM CARD DNA: Subtitle
+          // PREMIUM CARD DNA: Subtitle
           Text(
             subtitle,
             style: AppTypography.subtitle,
@@ -39,7 +39,7 @@ class RevisionCard extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // 🔱 PREMIUM CARD DNA: Metric Row
+          // PREMIUM CARD DNA: Metric Row
           Row(
             children: [
               const Icon(

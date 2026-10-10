@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "1.0.0",
+  "profileStatus": "MATERIALIZATION_READY",
+  "identity": {
+    "missionId": "mock_multi_paper",
+    "canonicalExamName": "Multi Paper Exam",
+    "canonicalDisplayName": "Multi Paper Exam 2026"
+  },
+  "missionTargetYear": 2026,
+  "sourceBaselineYear": 2025,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "authority": {
+    "organization": "National Authority",
+    "officialPortals": [
+      "https://authority.gov.in"
+    ],
+    "sourceDocumentType": "Official Notification",
+    "officialNotificationTitle": "Multi Paper Exam Official Notification",
+    "officialPdfUrl": "https://authority.gov.in/docs/notification.pdf",
+    "sha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+    "evidenceClass": "BYTE_VERIFIED",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "paperModel": {
+    "paperCount": 2,
+    "papers": [
+      {
+        "paperId": "paper_1",
+        "paperNumber": 1,
+        "paperName": "Paper 1 General",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "mode": "Offline",
+        "durationMinutes": 90,
+        "totalQuestions": 75,
+        "totalMarks": 150
+      },
+      {
+        "paperId": "paper_2",
+        "paperNumber": 2,
+        "paperName": "Paper 2 Subject",
+        "isCommonPaper": false,
+        "isVariantSpecific": true,
+        "mode": "Offline",
+        "durationMinutes": 180,
+        "totalQuestions": 150,
+        "totalMarks": 300
+      }
+    ]
+  },
+  "variantModel": {
+    "hasVariants": false,
+    "variants": []
+  },
+  "subjectModel": {
+    "subjects": [
+      {
+        "subjectId": "subj_1",
+        "subjectName": "Subject 1",
+        "canonicalKey": "key_1"
+      }
+    ]
+  },
+  "languageModel": {
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+      "English",
+      "Hindi"
+    ],
+    "mediumPolicy": "BILINGUAL"
+  },
+  "s2DocumentProfile": {
+    "expectedPapers": [
+      "Paper 1 General",
+      "Paper 2 Subject"
+    ],
+    "paperAliases": {
+      "General Paper": [
+        "Paper 1"
+      ]
+    },
+    "expectedSubjects": [
+      "Subject 1"
+    ],
+    "subjectAliases": {
+      "Subject 1": [
+        "Subj 1"
+      ]
+    },
+    "languageScripts": [
+      "Latin",
+      "Devanagari"
+    ],
+    "preferredOcrLanguages": [
+      "eng",
+      "hin"
+    ],
+    "sourceYearPolicy": "USE_2025_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+  },
+  "fieldAuthorityMap": {
+    "paperStructure": "SOURCE_VERIFIED",
+    "subjectModel": "SOURCE_VERIFIED"
+  },
+  "profileHash": "dec546b73e90c2e5abcd129062ee0bf13f208294cf499ed614f5a572f8bbe43c"
+}

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // =========================================
-  // BASE - LUXURY TACTICAL NOIR 🔱
+  // BASE - LUXURY TACTICAL NOIR 
   // =========================================
   // Deep matte darks
   static const Color background = Color(0xFF0A0C10); 
@@ -59,7 +59,7 @@ class AppColors {
   ];
 
   // =========================================
-  // LEGACY COMPATIBILITY - FIXING ANALYZE 🔱
+  // LEGACY COMPATIBILITY - FIXING ANALYZE 
   // =========================================
   static const Color card = surface;
   static const Color tacticalSurface = surface;

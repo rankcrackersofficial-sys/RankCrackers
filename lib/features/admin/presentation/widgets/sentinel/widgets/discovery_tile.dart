@@ -58,7 +58,7 @@ class DiscoveryTile extends StatelessWidget {
                     onTap: () async {
                       await SentinelAdminRepository.handleAction(draftId: draft.id, action: 'publish');
                       if (context.mounted) {
-                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('🔱 MISSION PUBLISHED: Intelligence delivered to feed.')));
+                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('MISSION PUBLISHED: Intelligence delivered to feed.')));
                       }
                     }
                   ),

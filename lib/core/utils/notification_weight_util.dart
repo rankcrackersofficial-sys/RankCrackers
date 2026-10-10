@@ -1,4 +1,4 @@
-/// 🔱 NOTIFICATION WEIGHT UTILITY
+/// NOTIFICATION WEIGHT UTILITY
 /// Normalizes board marks into a standard signal range.
 
 library;

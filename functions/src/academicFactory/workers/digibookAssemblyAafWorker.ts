@@ -2,7 +2,7 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 DIGIBOOK ASSEMBLY AAF WORKER
+ * DIGIBOOK ASSEMBLY AAF WORKER
  * Implements the Dart-bridge Parity Proof.
  * Binds the DigiBook Assembly logic.
  */

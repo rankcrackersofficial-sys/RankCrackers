@@ -1,10 +1,10 @@
 import '../models/notification_event.dart';
 
-/// 🔱 NOTIFICATION ENGINE
+/// NOTIFICATION ENGINE
 /// Sovereign authority for tactical communication.
 class NotificationEngine {
   // ===================================================
-  // ALERT GENERATION 🔱
+  // ALERT GENERATION 
   // ===================================================
 
   /// Generates a critical alert for upcoming exam deadlines.
@@ -16,7 +16,7 @@ class NotificationEngine {
     return NotificationEvent(
       id: 'alert_exam_${DateTime.now().millisecondsSinceEpoch}',
       missionId: missionId,
-      title: 'MISSION DEADLINE APPROACHING 🔱',
+      title: 'MISSION DEADLINE APPROACHING ',
       message: '$recruitmentTitle is only $daysRemaining days away. Stabilize your core facts now.',
       timestamp: DateTime.now(),
       type: 'exam_reminder',
@@ -70,7 +70,7 @@ class NotificationEngine {
     return NotificationEvent(
       id: 'alert_phase_${DateTime.now().millisecondsSinceEpoch}',
       missionId: missionId,
-      title: 'CRUCIBLE PHASE ASCENSION 🔱',
+      title: 'CRUCIBLE PHASE ASCENSION ',
       message: 'You have entered Phase $newPhase. Tactical complexity has increased.',
       timestamp: DateTime.now(),
       type: 'crucible_phase',

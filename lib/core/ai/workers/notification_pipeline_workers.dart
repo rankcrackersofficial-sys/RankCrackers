@@ -6,7 +6,7 @@ import 'document_intelligence_workers.dart';
 import 'atomic_rule_engine.dart';
 import 'eligibility_engine.dart';
 
-/// 🔱 NOTIFICATION WORKER PIPELINE v2.1 (Sprint O Hardened)
+/// NOTIFICATION WORKER PIPELINE v2.1 (Sprint O Hardened)
 /// Orchestrates dynamic extraction, classification, and linkage.
 
 class RealPdfChunkEngine {
@@ -89,22 +89,22 @@ class NotificationReportBuilder {
     required String hash,
     required String text,
   }) async {
-    debugPrint("🔱 NOTIFICATION REPORT BUILDER: Running v2.1 Intelligence Pipeline...");
+    debugPrint("NOTIFICATION REPORT BUILDER: Running v2.1 Intelligence Pipeline...");
     
     final chunks = RealPdfChunkEngine.chunkify(text);
     
-    // 🔱 Step 1: Classification & Resolution
+    // Step 1: Classification & Resolution
     await DocumentClassificationEngine.classify(text);
     final linkedRealm = await RecruitmentResolverEngine.resolve(text);
     
-    // 🔱 Step 2: Meta Extraction
+    // Step 2: Meta Extraction
     final meta = await NotificationExtractionEngine.extractMetadata(text);
     final vacancy = await VacancyIntelligenceWorker.process(text);
     
-    // 🔱 Step 3: Atomic Rule Extraction
+    // Step 3: Atomic Rule Extraction
     final rules = await AtomicRuleEngine.extractRules(text);
 
-    // 🔱 Step 4: Knowledge Graph Linkage & Corrigendum Tracking
+    // Step 4: Knowledge Graph Linkage & Corrigendum Tracking
     await CorrigendumEngine.analyze(text, linkedRealm?.realmId ?? "new_realm");
 
     final kGraph = NotificationKnowledgeGraph(
@@ -112,7 +112,7 @@ class NotificationReportBuilder {
       linkedSyllabusTopics: ["${meta['organization']?.toLowerCase()}_syllabus_general"],
     );
 
-    // 🔱 Step 5: Intelligence & Relevance
+    // Step 5: Intelligence & Relevance
     final initialIntelligence = NotificationIntelligence(
       vacancy: vacancy,
       exam: ExamIntelligence(stages: ['Preliminary']),
@@ -126,7 +126,7 @@ class NotificationReportBuilder {
     final userRelevance = await EligibilityIntelligenceEngine.analyze(initialIntelligence);
     final finalIntelligence = initialIntelligence.copyWith(userRelevance: userRelevance);
 
-    // 🔱 Step 6: Evidence Assembly
+    // Step 6: Evidence Assembly
     final evidence = EvidenceMap(
       factEvidence: {
         'total_vacancies': Evidence(
@@ -137,7 +137,7 @@ class NotificationReportBuilder {
       confidence: ConfidenceReport(average: 0.85),
     );
 
-    // 🔱 Step 7: Final Assembly
+    // Step 7: Final Assembly
     final identity = NotificationIdentity(
       notificationId: id,
       notificationNumber: meta['advertisement_number']!,

@@ -21,7 +21,7 @@ class PremiumPaywallWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // 🔱 Blur Effect for content behind
+        // Blur Effect for content behind
         ClipRRect(
           child: BackdropFilter(
             filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),

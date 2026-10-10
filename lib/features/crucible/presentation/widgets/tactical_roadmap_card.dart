@@ -18,7 +18,7 @@ class TacticalRoadmapCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🔱 PREMIUM CARD DNA: Title
+          // PREMIUM CARD DNA: Title
           Text(
             "TACTICAL ROADMAP",
             style: AppTypography.cardTitle.copyWith(color: AppColors.gold, letterSpacing: 2.2, fontSize: 11),
@@ -38,6 +38,7 @@ class TacticalRoadmapCard extends StatelessWidget {
                   secondTask: dayPlan['secondTask'],
                   thirdTask: dayPlan['thirdTask'],
                   locked: dayPlan['locked'] ?? false,
+                  onTap: dayPlan['onTap'],
                 ),
               );
             },

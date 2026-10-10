@@ -1,13 +1,13 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 EXAM CLOCK STATUS (Blueprint v1.0 - Sprint O)
+/// EXAM CLOCK STATUS (Blueprint v1.0 - Sprint O)
 enum ExamClockStatus {
   ON_TRACK,
   AT_RISK,
   OFF_TRACK
 }
 
-/// 🔱 EXAM CLOCK NODE (Blueprint v1.0 - Document 52)
+/// EXAM CLOCK NODE (Blueprint v1.0 - Document 52)
 /// Tracks the temporal feasibility of the preparation plan.
 class ExamClockNode extends Equatable {
   final String userId;

@@ -1,0 +1,11 @@
+'use strict';
+const assert = require('assert');
+const { completeExecution, issueProjection } = require('./services/authority_intelligence/taught_content_execution_r40');
+const { project } = require('./services/authority_intelligence/taught_content_projection_r42');
+const base = { realmId: 'r', missionId: 'm', subject: 's', atom: { id: 'a', version: 1 }, material: { id: 'mat', version: 1, hash: 'mh' }, teacher: { id: 't', version: 1 }, pedagogy: { id: 'p', version: 1, hash: 'ph' }, executor: { id: 'x', version: 1 }, authorizationVersion: 1, executionId: 'e', fingerprint: 'fp' };
+const state = { ...base, authoritySnapshot: base, status: 'CLAIMED', owner: 'x', fencingToken: 1, leaseGeneration: 1, statusVersion: 1, leaseExpiresAtMs: 2000 };
+const token = { ...base, owner: 'x', fencingToken: 1, leaseGeneration: 1, statusVersion: 1, nowMs: 1000 };
+const mutations = ['realmId','missionId','subject','atom','material','teacher','pedagogy','executor','authorizationVersion','executionId','fingerprint']; let passed = 0;
+for (const key of mutations) { try { const altered = { ...token, [key]: typeof token[key] === 'object' ? { ...token[key], id: 'foreign' } : 'foreign' }; assert.throws(() => completeExecution(state, altered, {}), /EXECUTION_BINDING_MISMATCH/); passed++; console.log(`PASS completion mutation ${key}`); } catch (e) { console.error(`FAIL completion mutation ${key}: ${e.message}`); process.exitCode = 1; } }
+try { const altered = { realmId: 'r', missionId: 'm', subject: 's', atomId: 'a', materialHash: 'foreign', executionId: 'e' }; const exec = { ...state, status: 'EXECUTED' }; const ev = { ...base, evidenceId: 'ev', fencingToken: 1, leaseGeneration: 1, completion: {}, issuer: 'server', retentionClassId: 'r' }; const { hashEvidence } = require('./services/authority_intelligence/taught_content_eligibility_r40'); ev.evidenceHash = hashEvidence(ev); assert.throws(() => issueProjection(exec, ev, altered), /PROJECTION_REQUEST_MISMATCH|EVIDENCE_BINDING_MISMATCH/); passed++; console.log('PASS external projection override'); } catch (e) { console.error(`FAIL external projection override: ${e.message}`); process.exitCode = 1; }
+console.log(JSON.stringify({ total: mutations.length + 1, passed, failed: mutations.length + 1 - passed }));

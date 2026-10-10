@@ -1,6 +1,9 @@
 import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
 import 'dart:math';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import '../models/micro_topic_node.dart';
 import '../models/node_runtime_state.dart';
 import '../models/recruitment.dart';
@@ -27,6 +30,9 @@ import 'knowledge_cache.dart';
 import '../firebase/firestore_service.dart';
 import '../utils/benchmark_util.dart';
 import '../telemetry/telemetry_engine.dart';
+import '../../shared/providers/session_provider.dart';
+import '../../shared/session/session_manager.dart';
+import '../../features/digibook/domain/services/digibook_canonical_bridge_service.dart';
 
 class KnowledgeEngine extends ChangeNotifier {
   static final KnowledgeEngine _instance = KnowledgeEngine._internal();
@@ -78,6 +84,25 @@ class KnowledgeEngine extends ChangeNotifier {
   ReadinessState? get readinessState => _readinessState;
   double get successProbability => _successProbability;
 
+  String? _metricsUid;
+  String? _metricsRecruitmentId;
+
+  bool isMetricsValidForCurrentSession() {
+    if (_isHydrating || _isLoading) return false;
+    final sessionUser = SessionUser.getSync();
+    final currentUid = sessionUser.uid;
+    final currentRecruitmentId = sessionUser.recruitmentId.isNotEmpty ? sessionUser.recruitmentId : _activeRecruitment?.id;
+
+    if (currentUid.isEmpty || _metricsUid != currentUid) {
+      return false;
+    }
+    if (currentRecruitmentId == null || currentRecruitmentId.isEmpty || _metricsRecruitmentId != currentRecruitmentId) {
+      return false;
+    }
+    return _userProgressMap.isNotEmpty;
+  }
+
+  // ===================================================
   // ===================================================
   // INITIALIZATION 🔱
   // ===================================================
@@ -87,6 +112,28 @@ class KnowledgeEngine extends ChangeNotifier {
     if (_isHydrating) {
       debugPrint("🔱 KNOWLEDGE HYDRATION LOCK ACTIVE");
       return;
+    }
+
+    // 🔱 Auto-resolve recruitment from session if not provided
+    if (recruitment == null && _activeRecruitment == null) {
+      final sessionUser = SessionUser.getSync();
+      if (sessionUser.examId.isNotEmpty) {
+        final state = SessionManager.getUserStateSync() ?? 'Central';
+        final stateCode = SessionManager.getUserStateCodeSync();
+        recruitment = Recruitment(
+          id: sessionUser.recruitmentId.isNotEmpty ? sessionUser.recruitmentId : sessionUser.examId,
+          recruitmentGroupId: sessionUser.examId,
+          boardId: '',
+          examId: sessionUser.examId,
+          examBlueprintId: '${sessionUser.examId}_blueprint',
+          title: sessionUser.examName,
+          titleHindi: sessionUser.examName,
+          year: 2026,
+          state: state,
+          stateCode: stateCode,
+          examCategory: 'Engineering',
+        );
+      }
     }
 
     final bool missionChanged = _activeRecruitment?.id != recruitment?.id;
@@ -134,8 +181,8 @@ class KnowledgeEngine extends ChangeNotifier {
       }
 
       // 🔱 Priority B: Load from Knowledge Cache first
-      if (recruitment != null) {
-        final cachedNodes = await KnowledgeCache.loadGraph(recruitment.examId);
+      if (_activeRecruitment != null) {
+        final cachedNodes = await KnowledgeCache.loadGraph(_activeRecruitment!.examId);
         if (cachedNodes != null && _graph == null) {
           _graph = KnowledgeGraph(cachedNodes);
           debugPrint("🔱 CACHE HIT: Graph hydrated from local storage.");
@@ -146,9 +193,12 @@ class KnowledgeEngine extends ChangeNotifier {
       }
 
       // 🔱 1. Subscribe to Live Node Matrix (Syllabus)
-      final nodesStream = _activeRecruitment != null 
-          ? FirestoreService.streamNodesByExam(_activeRecruitment!.examId) 
-          : BackendProvider.adapter.streamNodes();
+      if (_activeRecruitment == null) {
+        debugPrint("🔱 KNOWLEDGE: Delaying node stream until mission is active.");
+        return;
+      }
+
+      final nodesStream = FirestoreService.streamNodesByExam(_activeRecruitment!.examId);
 
       _nodeSubscription = nodesStream
         .handleError((e) {
@@ -161,7 +211,7 @@ class KnowledgeEngine extends ChangeNotifier {
             sink.add([]);
           },
         )
-        .listen((nodesData) {
+        .listen((nodesData) async {
         // 🔱 Guard against stale async updates
         if (recruitment?.id != _activeRecruitment?.id) {
           debugPrint("🔱 KNOWLEDGE: Ignoring stale node stream response.");
@@ -177,8 +227,19 @@ class KnowledgeEngine extends ChangeNotifier {
         // 🔱 Type-Safety Hardening: Ensuring nodes are correctly typed
         final List<MicroTopicNode> nodes = nodesData;
 
-        final filteredNodes = _activeRecruitment != null
-            ? nodes.where((n) => n.examId == _activeRecruitment!.examId).toList()
+        var filteredNodes = _activeRecruitment != null
+            ? nodes.where((n) {
+                final isSameExam = n.examId == _activeRecruitment!.examId;
+                // 🛡️ JEE HARDENING: Paper-1 Scope (allows empty, PAPER_1, paper_1, PAPER-1)
+                final paperIdNorm = n.paperId.trim().toUpperCase();
+                final isPaper1 = n.examId != 'jee_main_2026' ||
+                    paperIdNorm.isEmpty ||
+                    paperIdNorm == 'PAPER_1' ||
+                    paperIdNorm == 'PAPER 1' ||
+                    paperIdNorm == 'PAPER-1' ||
+                    paperIdNorm == 'PAPER1';
+                return isSameExam && isPaper1;
+              }).toList()
             : nodes;
 
         _graph = KnowledgeGraph(filteredNodes);
@@ -201,10 +262,7 @@ class KnowledgeEngine extends ChangeNotifier {
           recruitmentId: _activeRecruitment?.id,
         ));
 
-        debugPrint("🔱 KNOWLEDGE INIT COMPLETE");
-        if (filteredNodes.isEmpty) {
-          debugPrint("🔱 KNOWLEDGE: NO NODES FOUND");
-        }
+        debugPrint("🔱 KNOWLEDGE INIT COMPLETE (${filteredNodes.length} nodes)");
         notifyListeners();
       });
 
@@ -454,6 +512,10 @@ class KnowledgeEngine extends ChangeNotifier {
       risk: _riskState!, 
       examDifficulty: _activeRecruitment?.examDifficulty ?? 0.6,
     );
+
+    final sessionUser = SessionUser.getSync();
+    _metricsUid = sessionUser.uid;
+    _metricsRecruitmentId = _activeRecruitment?.id;
   }
 
   double _calculateAvgAssessmentPerformance() {
@@ -564,8 +626,8 @@ class KnowledgeEngine extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Resets the engine state completely to prevent singleton pollution.
-  Future<void> clearForTest() async {
+  /// Resets the engine session state completely to prevent cross-user leakage in production.
+  Future<void> clearSessionState() async {
     await _progressSubscription?.cancel();
     await _nodeSubscription?.cancel();
 
@@ -588,10 +650,103 @@ class KnowledgeEngine extends ChangeNotifier {
     _riskState = null;
     _momentumState = null;
     _readinessState = null;
+    _successProbability = 0.0;
+
+    _metricsUid = null;
+    _metricsRecruitmentId = null;
 
     _subjectMastery.clear();
     _subjectCoverage.clear();
     
     notifyListeners();
   }
+
+  /// Resets the engine state completely to prevent singleton pollution in tests.
+  @visibleForTesting
+  Future<void> clearForTest() async {
+    await clearSessionState();
+  }
+
+  PublicationState getSyllabusPublicationState() {
+    if (_isHydrating || _isLoading) {
+      return PublicationState.MISSION_CONTENT_NOT_PUBLISHED;
+    }
+    if (_graph == null || _graph!.allNodes.isEmpty) {
+      return PublicationState.MISSION_CONTENT_NOT_PUBLISHED;
+    }
+    final activeMissionId = _activeRecruitment?.examId ?? '';
+    if (activeMissionId.isEmpty) {
+      return PublicationState.MISSION_CONTENT_NOT_PUBLISHED;
+    }
+    for (final node in _graph!.allNodes) {
+      if (node.examId != activeMissionId) {
+        return PublicationState.MISSION_CONTENT_NOT_PUBLISHED;
+      }
+    }
+    return PublicationState.READY;
+  }
+
+  PublicationState getDigiBookPublicationState() {
+    if (_isHydrating || _isLoading) {
+      return PublicationState.MISSION_CONTENT_NOT_PUBLISHED;
+    }
+    if (_graph == null || _graph!.allNodes.isEmpty) {
+      return PublicationState.MISSION_CONTENT_NOT_PUBLISHED;
+    }
+
+    final activeMissionId = _activeRecruitment?.examId ?? '';
+    if (activeMissionId.isEmpty) {
+      return PublicationState.MISSION_CONTENT_NOT_PUBLISHED;
+    }
+
+    int validGovernedNodes = 0;
+    for (final node in _graph!.allNodes) {
+      // Exact Firestore Governed Readability Contract Alignment:
+      // 1. Mission Isolation & Canonical Mission Binding
+      if (node.examId != activeMissionId) {
+        return PublicationState.MISSION_CONTENT_NOT_PUBLISHED;
+      }
+
+      // 2. Publication & Student Visibility Authorization
+      if (node.status != 'published' || !node.studentVisibilityAuthorized) {
+        continue;
+      }
+
+      // 3. Non-Synthetic, Non-Hold, Non-Stale
+      if (node.isSynthetic || node.isStructuralHold || node.isStale ||
+          node.description == "Materialized via RELIABILITY FF01 progressive publication.") {
+        continue;
+      }
+
+      // 4. Source Approval & Verification Status
+      if (!node.sourceApproved || node.verificationStatus != 'VERIFIED') {
+        continue;
+      }
+
+      // 5. Governance Metadata Identifiers
+      if (node.canonicalAtomId == null || node.canonicalAtomId!.isEmpty ||
+          node.canonicalMissionId == null || node.canonicalMissionId != activeMissionId ||
+          node.approvedSourceId == null || node.approvedSourceId!.isEmpty ||
+          node.verificationId == null || node.verificationId!.isEmpty ||
+          node.contentRegistryId.isEmpty) {
+        continue;
+      }
+
+      validGovernedNodes++;
+    }
+
+    if (validGovernedNodes == 0) {
+      return PublicationState.MISSION_CONTENT_NOT_PUBLISHED;
+    }
+
+    return PublicationState.READY;
+  }
+}
+
+enum PublicationState {
+  READY,
+  MISSION_CONTENT_NOT_PUBLISHED,
+  PERSONALIZATION_EVIDENCE_MISSING,
+  SYNC_REQUIRED,
+  ERROR
 }

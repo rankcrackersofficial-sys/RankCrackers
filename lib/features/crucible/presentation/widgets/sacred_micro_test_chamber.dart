@@ -14,22 +14,17 @@ class SacredMicroTestChamber
   final Duration remainingTime;
 
   final String battleTitle;
-
   final double readiness;
+  final VoidCallback? onSubmit;
 
   const SacredMicroTestChamber({
-
     super.key,
-
     required this.totalQuestions,
-
     required this.completedQuestions,
-
     required this.remainingTime,
-
     required this.battleTitle,
-
     required this.readiness,
+    this.onSubmit,
   });
 
   @override
@@ -613,6 +608,24 @@ class _SacredMicroTestChamberState
                   ],
                 ),
               ),
+              if (widget.onSubmit != null) ...[
+                const SizedBox(height: 24),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFD4AF37),
+                      foregroundColor: Colors.black,
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                    ),
+                    onPressed: widget.onSubmit,
+                    child: const Text('SUBMIT ATTEMPT', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ),
+              ],
             ],
           ),
         );

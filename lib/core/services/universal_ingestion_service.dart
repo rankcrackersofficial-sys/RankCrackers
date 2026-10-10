@@ -22,11 +22,11 @@ class UniversalIngestionService {
     required String documentStatus,
     Map<String, dynamic> extraMetadata = const {},
   }) async {
-    debugPrint('🔱 INGESTION: Starting registration for $fileName');
+    debugPrint('INGESTION: Starting registration for $fileName');
     final fileType = fileName.split('.').last.toLowerCase();
     final fileHash = sha256.convert(bytes).toString();
     final recordId = 'hash_$fileHash';
-    debugPrint('🔱 INGESTION: File Hash: $fileHash');
+    debugPrint('INGESTION: File Hash: $fileHash');
 
     final docRef = FirebaseFirestore.instance.collection('ingestion_refinery').doc(recordId);
     final doc = await docRef.get();
@@ -35,7 +35,7 @@ class UniversalIngestionService {
     String storagePath;
     
     if (doc.exists) {
-      debugPrint('🔱 INGESTION: Physical collision detected. Re-triggering AI Analysis Chain.');
+      debugPrint('INGESTION: Physical collision detected. Re-triggering AI Analysis Chain.');
       final existingData = doc.data()!;
       downloadUrl = existingData['sourceUrl'];
       storagePath = existingData['storagePath'] ?? 'ingestion_refinery/$fileHash.$fileType';
@@ -50,7 +50,7 @@ class UniversalIngestionService {
       await _triggerIngestionPipeline(record);
       return record;
     } else {
-      debugPrint('🔱 INGESTION: New file detected. Uploading to storage...');
+      debugPrint('INGESTION: New file detected. Uploading to storage...');
       storagePath = 'ingestion_refinery/$fileHash.$fileType';
       downloadUrl = await AdminStorageService.upload(
         bytes: bytes,
@@ -58,7 +58,7 @@ class UniversalIngestionService {
         path: storagePath,
         contentType: _getMimeType(fileType),
       );
-      debugPrint('🔱 INGESTION: Upload complete. URL: $downloadUrl');
+      debugPrint('INGESTION: Upload complete. URL: $downloadUrl');
     }
 
     final record = IngestionRecord(
@@ -81,21 +81,21 @@ class UniversalIngestionService {
       extraMetadata: extraMetadata,
     );
 
-    // 🔱 Forensic Fix: Use server timestamp for precise UI ordering
+    // Forensic Fix: Use server timestamp for precise UI ordering
     final recordMap = record.toMap();
     recordMap['createdAt'] = FieldValue.serverTimestamp();
 
-    debugPrint('🔱 INGESTION: Committing record to refinery...');
+    debugPrint('INGESTION: Committing record to refinery...');
     await FirestoreService.uploadBatch('ingestion_refinery', [recordMap]);
     
-    // 🔱 Trigger Constitution-Grade AI Chain
+    // Trigger Constitution-Grade AI Chain
     await _triggerIngestionPipeline(record);
 
     return record;
   }
 
   static Future<void> _triggerIngestionPipeline(IngestionRecord record) async {
-    debugPrint('🔱 INGESTION: Triggering pipeline for ${record.id}');
+    debugPrint('INGESTION: Triggering pipeline for ${record.id}');
     // Phase 1: Physical Extraction (Constitution Stage 2)
     await AIQueueService.push(
       type: AITaskType.pdfParse,
@@ -103,7 +103,7 @@ class UniversalIngestionService {
         'id': record.id,
         'fileName': record.fileName,
         'filePath': record.sourceUrl,
-        'storagePath': record.storagePath, // 🔱 ADDED FOR WORKER RELIABILITY
+        'storagePath': record.storagePath, // ADDED FOR WORKER RELIABILITY
         'fileType': record.fileType,
         'intent': record.assetType,
         'status': 'parsing',

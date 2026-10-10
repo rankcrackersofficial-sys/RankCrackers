@@ -36,15 +36,13 @@ class FounderStudentHealthWeb extends StatelessWidget {
           Expanded(
             child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
               stream: FirebaseFirestore.instance
-                  .collection('student_panel_health')
-                  .orderBy('order')
+                  .collection('telemetry_nexus')
+                  .orderBy('timestamp', descending: true)
+                  .limit(500)
                   .snapshots(),
               builder: (context, snapshot) {
                 final docs = snapshot.data?.docs ?? const [];
-                final records = docs
-                    .map((doc) => _HealthRecord.fromMap(doc.id, doc.data()))
-                    .where((record) => record.surface.isNotEmpty)
-                    .toList(growable: false);
+                final records = _telemetryRecords(docs);
 
                 if (snapshot.hasError) {
                   return _HealthGrid(
@@ -74,66 +72,125 @@ class FounderStudentHealthWeb extends StatelessWidget {
     );
   }
 
+  static List<_HealthRecord> _telemetryRecords(
+    List<QueryDocumentSnapshot<Map<String, dynamic>>> docs,
+  ) {
+    final grouped = <String, List<Map<String, dynamic>>>{};
+    for (final doc in docs) {
+      final data = doc.data();
+      if (data['eventName'] != 'student_surface_opened') continue;
+      final metadata = Map<String, dynamic>.from(data['metadata'] ?? const {});
+      final surface = (metadata['surface'] ?? '').toString();
+      if (surface.isEmpty || surface == 'unknown') continue;
+      grouped.putIfAbsent(surface, () => []).add(data);
+    }
+
+    final records = grouped.entries.map((entry) {
+      final events = entry.value;
+      final users = events
+          .map((event) => (event['userId'] ?? '').toString())
+          .where((uid) => uid.isNotEmpty)
+          .toSet();
+      final missions = events
+          .map((event) => (event['recruitmentId'] ?? '').toString())
+          .where((mission) => mission.isNotEmpty)
+          .toSet();
+      final latest = events.first;
+      final metadata =
+          Map<String, dynamic>.from(latest['metadata'] ?? const {});
+      final route = (metadata['route'] ?? entry.key).toString();
+      return _HealthRecord(
+        id: entry.key,
+        surface: _surfaceLabel(entry.key),
+        status: 'HEALTHY',
+        studentState: '${users.length} students / ${events.length} events',
+        founderState: '${missions.length} mission linkage',
+        detail: 'Latest verified activity: $route',
+        canFounderMutateTruth: false,
+      );
+    }).toList(growable: false);
+    records.sort((a, b) => a.surface.compareTo(b.surface));
+    return records;
+  }
+
+  static String _surfaceLabel(String surface) {
+    const labels = <String, String>{
+      'dashboard': 'Dashboard / Mission Status',
+      'crucible': 'Crucible',
+      'digibook': 'DigiBook',
+      'syllabus': 'Syllabus / Knowledge Map',
+      'recruitment': 'Career Signals',
+      'pyq-vault': 'PYQ Vault',
+      'progress-tracker': 'Performance / Progress',
+      'revision-desk': 'Revision Desk',
+      'test-arena': 'Test Arena',
+      'sentinel-center': 'Sentinel Intel',
+      'notification-center': 'Notifications',
+      'profile': 'Profile',
+    };
+    return labels[surface] ?? surface.replaceAll('-', ' ');
+  }
+
   static List<_HealthRecord> _fallbackRecords({required String reason}) {
     const rows = [
       (
         'DigiBook',
-        'RUNTIME_PROOF_PENDING',
+        'AWAITING RUNTIME PROOF',
         'Founder controls exist. Student runtime proof is required.'
       ),
       (
         'Crucible',
-        'RUNTIME_PROOF_PENDING',
+        'AWAITING RUNTIME PROOF',
         'Founder controls exist. Student runtime proof is required.'
       ),
       (
         'Syllabus / Knowledge Map',
-        'RUNTIME_PROOF_PENDING',
+        'AWAITING RUNTIME PROOF',
         'Founder controls exist. Student runtime proof is required.'
       ),
       (
         'Career Signals',
-        'NOT_READY',
+        'NOT READY',
         'Governed opportunity matching pipeline is not published.'
       ),
       (
         'Rank Radar',
-        'NOT_READY',
+        'NOT READY',
         'Verified competition/progress projection is not published.'
       ),
       (
         'Performance / Progress',
-        'NOT_READY',
+        'NOT READY',
         'Verified progress analytics projection is not published.'
       ),
       (
         'Notifications',
-        'NOT_READY',
+        'NOT READY',
         'Student-safe notification feed requires governed backend records.'
       ),
       (
         'PYQ Vault',
-        'NOT_READY',
+        'NOT READY',
         'Founder-approved PYQ source pipeline is required.'
       ),
       (
         'Test Arena',
-        'NOT_READY',
+        'NOT READY',
         'Verified test blueprint/result pipeline is required.'
       ),
       (
         'Revision Desk',
-        'NOT_READY',
+        'NOT READY',
         'Personalized revision loop requires verified learning evidence.'
       ),
       (
         'Sentinel Intel',
-        'NOT_READY',
+        'NOT READY',
         'Founder-visible alerts require governed incidents and no private leakage.'
       ),
       (
         'Planner / Schedule',
-        'NOT_READY',
+        'NOT READY',
         'Schedule recommendations require personalization authority.'
       ),
     ];
@@ -145,7 +202,7 @@ class FounderStudentHealthWeb extends StatelessWidget {
             surface: row.$1,
             status: row.$2,
             studentState:
-                row.$2 == 'NOT_READY' ? 'Safe Not Ready' : 'Safe pending proof',
+                row.$2 == 'NOT READY' ? 'Safe Not Ready' : 'Safe pending proof',
             founderState: '$reason / ${row.$2}',
             detail: row.$3,
             canFounderMutateTruth: false,
@@ -316,7 +373,7 @@ class _HealthRecord {
     return _HealthRecord(
       id: id,
       surface: (data['surface'] ?? data['surfaceName'] ?? '').toString(),
-      status: (data['status'] ?? 'NOT_READY').toString(),
+      status: (data['status'] ?? 'NOT READY').toString(),
       studentState: (data['studentState'] ?? 'Safe state pending').toString(),
       founderState: (data['founderState'] ?? 'Health state pending').toString(),
       detail: (data['detail'] ?? data['message'] ?? 'No detail published.')

@@ -20,7 +20,7 @@ class MissionBlueprintCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🔱 PREMIUM CARD DNA: Title
+          // PREMIUM CARD DNA: Title
           Text(
             'TODAY\'S DHARMA',
             style: AppTypography.cardTitle.copyWith(color: AppColors.gold, letterSpacing: 2.2, fontSize: 11),
@@ -28,7 +28,7 @@ class MissionBlueprintCard extends StatelessWidget {
 
           const SizedBox(height: 10),
 
-          // 🔱 PREMIUM CARD DNA: Subtitle
+          // PREMIUM CARD DNA: Subtitle
           Text(
             hasEvidence
                 ? 'Today\'s tactical objectives generated from your weakest and highest priority learning nodes.'
@@ -50,7 +50,7 @@ class MissionBlueprintCard extends StatelessWidget {
                   completed: mission['completed'] ?? '',
                   running: mission['running'] ?? '',
                   locked: mission['locked'] ?? '',
-                  onTap: mission['onTap'], // 🔱 Pass the click
+                  onTap: mission['onTap'], // Pass the click
                 ),
               );
             },

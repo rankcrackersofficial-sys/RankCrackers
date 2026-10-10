@@ -3,23 +3,23 @@ import '../models/micro_topic_node.dart';
 import '../models/node_runtime_state.dart';
 import '../models/atomic_coverage_state.dart';
 
-/// 🔱 COVERAGE ENGINE (Document 34 Compliant)
+/// COVERAGE ENGINE (Document 34 Compliant)
 /// Sovereign authority for syllabus completion measurement.
 class CoverageEngine {
   
   // ===================================================
-  // ATOMIC COVERAGE CALCULATION 🔱
+  // ATOMIC COVERAGE CALCULATION 
   // ===================================================
 
   /// Calculates the coverage score for a single knowledge atom.
   static AtomicCoverageState calculateAtomic({
     required String atomicTopicId,
-    required double readingEvidence,    // 🔱 Article 7: Replaces generic schedule completion
-    required double assessmentEvidence, // 🔱 Article 7: Replaces generic assessment evidence
-    required double revisionEvidence,   // 🔱 Article 7: Added for stability
+    required double readingEvidence,    // Article 7: Replaces generic schedule completion
+    required double assessmentEvidence, // Article 7: Replaces generic assessment evidence
+    required double revisionEvidence,   // Article 7: Added for stability
     AtomicCoverageState? previousState,
   }) {
-    // 🔱 CONSTITUTIONAL MODEL (Redefined for Article 7)
+    // CONSTITUTIONAL MODEL (Redefined for Article 7)
     final double score = 
         (readingEvidence * 0.35) + 
         (assessmentEvidence * 0.45) + 
@@ -32,13 +32,13 @@ class CoverageEngine {
       score: clampedScore * 100,
       status: _determineStatus(clampedScore),
       trend: _determineTrend(clampedScore, (previousState?.score ?? 0) / 100),
-      verificationScore: readingEvidence, // 🔱 Audit Fix: Using physical evidence for verification
+      verificationScore: readingEvidence, // Audit Fix: Using physical evidence for verification
       lastEvidenceAt: DateTime.now(),
     );
   }
 
   // ===================================================
-  // MISSION COVERAGE CALCULATION 🔱
+  // MISSION COVERAGE CALCULATION 
   // ===================================================
 
   static CoverageState calculate({
@@ -62,7 +62,7 @@ class CoverageEngine {
       );
     }
 
-    // 🔱 1. Aggregate Atomic Coverage (Section 35)
+    // 1. Aggregate Atomic Coverage (Section 35)
     // Mission Coverage derives from the average of all constituent atomic states.
     double totalAtomicScore = 0.0;
     int totalAtoms = 0;
@@ -80,7 +80,7 @@ class CoverageEngine {
         ? (totalAtomicScore / totalAtoms) / 100 
         : _calculateLegacyNodeCoverage(nodes, states);
 
-    // 🔱 2. Performance Metadata
+    // 2. Performance Metadata
     final completedCount = nodes.where((n) => states[n.id]?.completed ?? false).length;
     final masteredCount = nodes.where((n) => (states[n.id]?.mastery ?? 0.0) >= 0.80).length;
     
@@ -108,7 +108,7 @@ class CoverageEngine {
   }
 
   // ===================================================
-  // UTILITIES 🔱
+  // UTILITIES 
   // ===================================================
 
   static String _determineStatus(double score) {

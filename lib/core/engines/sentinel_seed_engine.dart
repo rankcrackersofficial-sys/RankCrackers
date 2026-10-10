@@ -1,7 +1,7 @@
 import '../models/sentinel_draft.dart';
 import '../models/audit_record.dart';
 
-/// 🔱 SENTINEL SEED ENGINE
+/// SENTINEL SEED ENGINE
 /// Generates canonical seed data for the Draft Zone.
 class SentinelSeedEngine {
   

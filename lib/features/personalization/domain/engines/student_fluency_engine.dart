@@ -10,6 +10,7 @@ final class StudentFluencyEstimate {
   const StudentFluencyEstimate({
     required this.studentId,
     required this.amtnId,
+    required this.missionId,
     required this.calculatedAtUtc,
     required this.score,
     required this.pattern,
@@ -21,6 +22,7 @@ final class StudentFluencyEstimate {
 
   final String studentId;
   final String amtnId;
+  final String missionId;
   final DateTime calculatedAtUtc;
   final double? score;
   final StudentFluencyPattern pattern;
@@ -38,6 +40,7 @@ final class StudentFluencyEngine {
   StudentFluencyEstimate calculate({
     required String studentId,
     required String amtnId,
+    required String missionId,
     required DateTime calculatedAtUtc,
     required Iterable<StudentEvidenceEvent> events,
   }) {
@@ -49,6 +52,7 @@ final class StudentFluencyEngine {
     final accepted = <StudentEvidenceEvent>[];
     for (final e in events) {
       if (e.studentId == studentId &&
+          e.missionId == missionId &&
           e.amtnId == amtnId &&
           policy.evaluate(e, StudentEvidenceUse.fluency).eligible) {
         accepted.add(e);
@@ -59,6 +63,7 @@ final class StudentFluencyEngine {
       return StudentFluencyEstimate(
         studentId: studentId,
         amtnId: amtnId,
+        missionId: missionId,
         calculatedAtUtc: calculatedAtUtc,
         score: null,
         pattern: StudentFluencyPattern.unknown,
@@ -88,6 +93,7 @@ final class StudentFluencyEngine {
     return StudentFluencyEstimate(
       studentId: studentId,
       amtnId: amtnId,
+      missionId: missionId,
       calculatedAtUtc: calculatedAtUtc,
       score: score,
       pattern: _pattern(accuracy, ratio),

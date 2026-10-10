@@ -2,19 +2,19 @@ import '../../crucible/models/tactical_schedule.dart';
 import '../models/digibook_session.dart';
 import '../models/digibook_content.dart';
 
-/// 🔱 DIGIBOOK ENGINE (Document 28 Compliant)
+/// DIGIBOOK ENGINE (Document 28 Compliant)
 /// Sovereign authority for mission-specific learning knowledge.
 /// Implements the "One Level Up Law" and Atomic Topic Mapping.
 class DigiBookEngine {
   
   // ===================================================
-  // SESSION BUILDER 🔱
+  // SESSION BUILDER 
   // ===================================================
 
   /// Orchestrates the generation of a mission-specific study session.
   static DigiBookSession build({
     required TacticalSchedule schedule,
-    required Map<String, DigiBookContent> contentMap, // 🔱 Decoupled
+    required Map<String, DigiBookContent> contentMap, // Decoupled
   }) {
     int estimatedMinutes = 0;
 
@@ -22,7 +22,7 @@ class DigiBookEngine {
       final payload = contentMap[node.id];
       if (payload == null) continue;
 
-      // 🔱 CONTENT-WEIGHTED TIME LAW
+      // CONTENT-WEIGHTED TIME LAW
       estimatedMinutes += (payload.beginnerContent.length ~/ 150) +
           (payload.intermediateContent.length ~/ 130) +
           (payload.proContent.length ~/ 110) +
@@ -34,13 +34,13 @@ class DigiBookEngine {
     return DigiBookSession(
       title: 'TACTICAL SESSION ${schedule.scheduleIndex + 1}',
       nodes: schedule.nodes,
-      payloads: contentMap.values.toList(), // 🔱 Simplified
+      payloads: contentMap.values.toList(), // Simplified
       estimatedMinutes: estimatedMinutes,
     );
   }
 
   // ===================================================
-  // ONE LEVEL UP LAW 🔱
+  // ONE LEVEL UP LAW 
   // ===================================================
 
   /// Determines the appropriate content depth based on the recruitment target.
@@ -48,7 +48,7 @@ class DigiBookEngine {
   static String determineContentDepth(String recruitmentId) {
     final id = recruitmentId.toLowerCase();
     
-    // 🔱 Elevation Mapping
+    // Elevation Mapping
     if (id.contains('reet')) return 'intermediate'; // REET -> 2nd Grade equivalent
     if (id.contains('2nd_grade')) return 'pro';      // 2nd Grade -> 1st Grade equivalent
     if (id.contains('1st_grade') || id.contains('school_lecturer')) return 'academic'; // 1st Grade -> Professor
@@ -57,7 +57,7 @@ class DigiBookEngine {
   }
 
   // ===================================================
-  // ATOMIC METRICS 🔱
+  // ATOMIC METRICS 
   // ===================================================
 
   /// Aggregates total MCQs across all difficulty layers in the session.

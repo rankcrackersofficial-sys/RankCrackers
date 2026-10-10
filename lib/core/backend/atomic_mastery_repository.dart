@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../models/atomic_mastery_state.dart';
 import '../firebase/firestore_service.dart';
 
-/// 🔱 ATOMIC MASTERY REPOSITORY
+/// ATOMIC MASTERY REPOSITORY
 /// Sovereign storage authority for granular competency truth.
 class AtomicMasteryRepository {
   static Future<void> save(AtomicMasteryState state) async {

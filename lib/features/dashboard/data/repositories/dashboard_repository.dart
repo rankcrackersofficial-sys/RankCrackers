@@ -51,7 +51,7 @@ class DashboardRepository {
       List<dynamic>
       nodes,
       ) {
-    // 🔱 MAPPED FROM LEGACY LOCAL DATA SOURCE: DISABLED
+    // MAPPED FROM LEGACY LOCAL DATA SOURCE: DISABLED
     // TODO: Bind to published authority/progress projections
     return [];
   }

@@ -3,11 +3,11 @@ import '../models/micro_topic_node.dart';
 import '../models/node_runtime_state.dart';
 import 'knowledge_graph.dart';
 
-/// 🔱 MASTERY PROPAGATION ENGINE
+/// MASTERY PROPAGATION ENGINE
 /// Handles recursive graph traversal for cascading risk and weakness mapping.
 class MasteryPropagationEngine {
   // ===================================================
-  // PROPAGATE WEAKNESS 🔱
+  // PROPAGATE WEAKNESS 
   // ===================================================
 
   /// Identifies all nodes affected by a source node's weakness.
@@ -30,7 +30,7 @@ class MasteryPropagationEngine {
       final node = graph.getNode(currentId);
       if (node == null) {
         if (kDebugMode) {
-          print("🔱 GRAPH INTEGRITY: Node $currentId not found. Skipping dependency.");
+          print("GRAPH INTEGRITY: Node $currentId not found. Skipping dependency.");
         }
         return;
       }
@@ -51,7 +51,7 @@ class MasteryPropagationEngine {
   }
 
   // ===================================================
-  // CASCADE RISK SCORE 🔱
+  // CASCADE RISK SCORE 
   // ===================================================
 
   /// Calculates the aggregate risk fallout if a specific node fails.

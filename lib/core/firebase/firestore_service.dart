@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
+import '../../data/india_states.dart';
 import '../models/micro_topic_node.dart';
 import '../models/recruitment.dart';
 import '../models/mission_variant.dart';
@@ -21,7 +22,7 @@ class FirestoreService {
   static const String nodeCollection = 'micro_nodes';
   static const String recruitmentCollection = 'recruitments';
   static const String stateRegistryCollection =
-      'published_states'; // 🔱 Amendment v3.0: State Registry Law
+      'published_states'; // Amendment v3.0: State Registry Law
   static const String variantCollection = 'mission_variants';
   static const String blueprintCollection = 'blueprints';
   static const String protocolCollection = 'protocols';
@@ -36,7 +37,7 @@ class FirestoreService {
   static const String studentMissionCatalogCollection =
       'student_mission_catalog';
 
-  // 🔱 EXTRACTION REALM (Document 50J)
+  // EXTRACTION REALM (Document 50J)
   static const String semanticUnitCollection = 'semantic_units';
   static const String atomicFactCollection = 'atomic_facts';
   static const String factRelationshipCollection = 'fact_relationships';
@@ -48,7 +49,7 @@ class FirestoreService {
       'verification_candidates';
 
   // ===================================================
-  // AI WORKER OPS 🔱
+  // AI WORKER OPS 
   // ===================================================
 
   static Stream<List<Map<String, dynamic>>> streamAIQueue() {
@@ -59,7 +60,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // NOTIFICATION CANDIDATES 🔱
+  // NOTIFICATION CANDIDATES 
   // ===================================================
 
   static Future<void> saveNotificationCandidate(
@@ -80,7 +81,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // SENTINEL INTELLIGENCE 🔱
+  // SENTINEL INTELLIGENCE 
   // ===================================================
 
   static Future<void> saveSentinelDraft(SentinelDraft draft) async {
@@ -115,8 +116,9 @@ class FirestoreService {
             snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList());
   }
 
+
   // ===================================================
-  // QUERY OPS 🔱
+  // QUERY OPS 
   // ===================================================
   static Future<List<Map<String, dynamic>>> queryCollection(
     String collection, {
@@ -135,7 +137,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // BATCH UPLOAD HARDENING 🔱
+  // BATCH UPLOAD HARDENING 
   // ===================================================
 
   /// Performs an idempotent, atomic batch upload.
@@ -149,7 +151,7 @@ class FirestoreService {
       final id = item['id'];
       if (id == null || id.toString().isEmpty) continue;
 
-      // 🔱 Idempotency: Overwrite existing doc with same ID to prevent duplication
+      // Idempotency: Overwrite existing doc with same ID to prevent duplication
       final docRef = colRef.doc(id);
       batch.set(docRef, item, SetOptions(merge: true));
     }
@@ -157,22 +159,22 @@ class FirestoreService {
     try {
       await batch.commit();
       debugPrint(
-          '🔱 BATCH COMMIT SUCCESS: $collection (${items.length} items)');
+          'BATCH COMMIT SUCCESS: $collection (${items.length} items)');
     } catch (e) {
-      debugPrint('🔱 BATCH COMMIT FAILED: $e');
+      debugPrint('BATCH COMMIT FAILED: $e');
       rethrow; // Ensure upper layers can handle rollback logic
     }
   }
 
   // ===================================================
-  // UPLOAD NODE 🔱
+  // UPLOAD NODE 
   // ===================================================
   static Future<void> uploadNode(MicroTopicNode node) async {
     await _firestore.collection(nodeCollection).doc(node.id).set(node.toMap());
   }
 
   // ===================================================
-  // UPLOAD RECRUITMENT 🔱
+  // UPLOAD RECRUITMENT 
   // ===================================================
   static Future<void> uploadRecruitment(Recruitment recruitment) async {
     await _firestore
@@ -182,7 +184,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // STATE REGISTRY 🔱
+  // STATE REGISTRY 
   // ===================================================
   static Future<void> registerPublishedState(String state) async {
     await _firestore
@@ -203,7 +205,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // UPLOAD VARIANT 🔱
+  // UPLOAD VARIANT 
   // ===================================================
   static Future<void> uploadVariant(MissionVariant variant) async {
     await _firestore
@@ -213,7 +215,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // PROTOCOL STATE 🔱
+  // PROTOCOL STATE 
   // ===================================================
   static Future<void> saveProtocolState(
       String uid, CrucibleProtocolState state) async {
@@ -238,7 +240,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // SCHEDULES 🔱
+  // SCHEDULES 
   // ===================================================
   static Future<void> saveSchedule(CrucibleSchedule schedule) async {
     await _firestore
@@ -259,7 +261,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // UPLOAD BLUEPRINT 🔱
+  // UPLOAD BLUEPRINT 
   // ===================================================
   static Future<void> uploadBlueprint(ExamBlueprint blueprint) async {
     await _firestore
@@ -269,7 +271,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // FETCH RECRUITMENTS 🔱
+  // FETCH RECRUITMENTS 
   // ===================================================
   static Future<List<Recruitment>> fetchRecruitments() async {
     final snapshot = await _firestore.collection(recruitmentCollection).get();
@@ -428,6 +430,48 @@ class FirestoreService {
                 ? _catalogString(data, 'catalogStatus')
                 : _catalogString(data, 'status');
 
+    final rawJurisdiction = (data['jurisdictionLevel'] ?? data['jurisdictionType'])?.toString().toUpperCase();
+    final rawRegion = (data['regionCode'] ?? data['region'] ?? data['stateCode'])?.toString().toUpperCase();
+    final jurisdiction = rawJurisdiction != null && rawJurisdiction.isNotEmpty
+        ? rawJurisdiction
+        : (rawRegion == 'IN' || normalizedState.toLowerCase() == 'central' ? 'CENTRAL' : 'STATE');
+    final stateCode = data['stateCode']?.toString() ?? (rawRegion != 'IN' ? rawRegion : null);
+    final stateName = data['stateName']?.toString() ??
+        (normalizedState != 'Central' ? normalizedState : (stateCode != null ? IndiaStates.getStateName(stateCode) : null));
+    final authorityGroupKey = (data['authorityGroupKey'] ?? data['authorityId'] ?? data['canonicalAuthorityKey'] ?? '').toString().toLowerCase();
+    final authorityDisplayName = (data['authorityDisplayName'] ?? data['authorityName'] ?? '').toString();
+    final rawStatus = (data['status'] ?? 'CATALOG_VISIBLE').toString();
+    final upperStatus = rawStatus.toUpperCase();
+    final pubUpper = publicationState.toUpperCase();
+
+    final isArchived = data['archived'] == true || upperStatus == 'ARCHIVED' || pubUpper == 'ARCHIVED';
+    final isFounderHold = data['founderHold'] == true || upperStatus == 'HOLD';
+    final isGovernanceLock = data['manualGovernanceLock'] == true;
+
+    final isNonStartableStatus = upperStatus == 'PREPARING' ||
+        upperStatus == 'COMING_SOON' ||
+        upperStatus == 'HOLD' ||
+        upperStatus == 'DRAFT' ||
+        upperStatus == 'INTERNAL_DRAFT' ||
+        upperStatus == 'BLOCKED' ||
+        upperStatus == 'PAUSED' ||
+        pubUpper == 'INTERNAL_DRAFT' ||
+        pubUpper == 'DRAFT' ||
+        pubUpper == 'INTERNAL' ||
+        isArchived ||
+        isFounderHold ||
+        isGovernanceLock;
+
+    final visibilityMap = data['visibility'] is Map ? data['visibility'] as Map : null;
+    final rawQuickEntry = data['quickEntryEnabled'] ?? visibilityMap?['quickEntryEnabled'];
+    final rawSmartEntry = data['smartEntryEnabled'] ?? visibilityMap?['smartEntryEnabled'];
+    final rawSelectionReady = data['missionSelectionReady'] ?? visibilityMap?['missionSelectionReady'];
+    final rawDiscoverable = data['catalogDiscoverable'] ?? visibilityMap?['catalogDiscoverable'];
+
+    final bool quickEnabled = !isNonStartableStatus && (rawQuickEntry == true);
+    final bool smartEnabled = !isNonStartableStatus && (rawSmartEntry == true);
+    final bool selectionReady = !isNonStartableStatus && (rawSelectionReady == true);
+
     return Recruitment(
       id: docId,
       recruitmentGroupId: 'student_mission_catalog',
@@ -446,7 +490,7 @@ class FirestoreService {
               data['type'] ??
               'category_pending')
           .toString(),
-      status: (data['status'] ?? 'CATALOG_VISIBLE').toString(),
+      status: rawStatus,
       examDifficulty: 0.6,
       variantCode: (data['variantCode'] ?? missionId).toString(),
       missionVariables: _extractMissionVariables(data),
@@ -456,7 +500,61 @@ class FirestoreService {
       sourcePath: sourcePath,
       sourceType: sourceType,
       studentPublicationState: publicationState,
+      jurisdictionLevel: jurisdiction,
+      stateCode: stateCode,
+      stateName: stateName,
+      authorityGroupKey: authorityGroupKey,
+      authorityDisplayName: authorityDisplayName,
+      quickEntryEnabled: quickEnabled,
+      smartEntryEnabled: smartEnabled,
+      missionSelectionReady: selectionReady,
+      catalogDiscoverable: rawDiscoverable == true || (rawDiscoverable == null && !isArchived),
+      archived: isArchived,
+      founderHold: isFounderHold,
+      manualGovernanceLock: isGovernanceLock,
+      variantRequired: data['variantRequired'] == true,
     );
+  }
+
+  static bool _isStudentDiscoverableCatalogDoc(
+      String docId, Map<String, dynamic> data) {
+    if (!_hasCanonicalMissionLineage(docId, data)) return false;
+
+    // Direct boolean guard
+    if (data['archived'] == true) return false;
+    if (data['cardVisible'] == false) return false;
+    if (data['userPanelVisible'] == false) return false;
+    if (data['catalogDiscoverable'] == false) return false;
+    if (data['founderHold'] == true) return false;
+    if (data['manualGovernanceLock'] == true) return false;
+
+    // Publication state guard (Strict non-leak for INTERNAL_DRAFT)
+    final pubState = _catalogString(data, 'studentPublicationState').toUpperCase();
+    if (pubState == 'INTERNAL_DRAFT' ||
+        pubState == 'DRAFT' ||
+        pubState == 'INTERNAL' ||
+        pubState == 'UNPUBLISHED' ||
+        pubState == 'ARCHIVED') {
+      return false;
+    }
+
+    final catStatus = _catalogString(data, 'catalogStatus').toUpperCase();
+    if (catStatus == 'INTERNAL_DRAFT' ||
+        catStatus == 'DRAFT' ||
+        catStatus == 'INTERNAL' ||
+        catStatus == 'UNPUBLISHED' ||
+        catStatus == 'ARCHIVED') {
+      return false;
+    }
+
+    final rawStatus = _catalogString(data, 'status').toUpperCase();
+    if (rawStatus == 'INTERNAL_DRAFT' ||
+        rawStatus == 'DRAFT' ||
+        rawStatus == 'ARCHIVED') {
+      return false;
+    }
+
+    return true;
   }
 
   static Stream<List<Recruitment>> streamStudentMissionCatalogRecruitments() {
@@ -468,7 +566,7 @@ class FirestoreService {
         .snapshots()
         .map((snapshot) {
       return snapshot.docs
-          .where((doc) => _hasCanonicalMissionLineage(doc.id, doc.data()))
+          .where((doc) => _isStudentDiscoverableCatalogDoc(doc.id, doc.data()))
           .map((doc) => _studentCatalogDocToRecruitment(doc.id, doc.data()))
           .toList();
     });
@@ -482,7 +580,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // LIVE RECRUITMENT STREAM 🔱
+  // LIVE RECRUITMENT STREAM 
   // ===================================================
   static Stream<List<Recruitment>> streamRecruitments() {
     return _firestore
@@ -496,7 +594,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // FETCH BLUEPRINT 🔱
+  // FETCH BLUEPRINT 
   // ===================================================
   static Future<ExamBlueprint?> fetchBlueprint(String blueprintId) async {
     final doc =
@@ -506,7 +604,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // LIVE BLUEPRINT STREAM 🔱
+  // LIVE BLUEPRINT STREAM 
   // ===================================================
   static Stream<List<ExamBlueprint>> streamBlueprints() {
     return _firestore
@@ -520,7 +618,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // FETCH NODES 🔱
+  // FETCH NODES 
   // ===================================================
   static Future<List<MicroTopicNode>> fetchNodes() async {
     final snapshot = await _firestore.collection(nodeCollection).get();
@@ -540,7 +638,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // NOTIFICATIONS 🔱
+  // NOTIFICATIONS 
   // ===================================================
   static Future<void> saveNotification(
       String uid, NotificationEvent event) async {
@@ -565,7 +663,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // LIVE NODE STREAM 🔱
+  // LIVE NODE STREAM 
   // ===================================================
   static Stream<List<MicroTopicNode>> streamNodes() {
     return _firestore.collection(nodeCollection).snapshots().map((snapshot) {
@@ -575,7 +673,7 @@ class FirestoreService {
     });
   }
 
-  /// 🔱 Phase 6.1: Scoped Node Streaming
+  /// Phase 6.1: Scoped Node Streaming
   static Stream<List<MicroTopicNode>> streamNodesByExam(String examId) {
     return _firestore
         .collection(nodeCollection)
@@ -583,13 +681,23 @@ class FirestoreService {
         .snapshots()
         .map((snapshot) {
       return snapshot.docs
-          .map((doc) => MicroTopicNode.fromMap(doc.data()))
+          .map((doc) => MicroTopicNode.fromMap({'id': doc.id, ...doc.data()}))
           .toList();
     });
   }
 
+  /// Sovereign Hierarchy Retrieval
+  static Stream<List<Map<String, dynamic>>> streamStructuredNodes(String missionId) {
+    return _firestore
+        .collection('mission_realms')
+        .doc(missionId)
+        .collection('structured_nodes')
+        .snapshots()
+        .map((snap) => snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList());
+  }
+
   // ===================================================
-  // STREAM PROGRESS 🔱
+  // STREAM PROGRESS 
   // ===================================================
   static Stream<List<Map<String, dynamic>>> streamProgress(String uid) {
     return _firestore
@@ -601,7 +709,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // SAVE USER PROGRESS 🔱
+  // SAVE USER PROGRESS 
   // ===================================================
   static Future<void> saveProgress({
     required String uid,
@@ -617,7 +725,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // LOAD USER PROGRESS 🔱
+  // LOAD USER PROGRESS 
   // ===================================================
   static Future<List<Map<String, dynamic>>> loadProgress(String uid) async {
     final snapshot = await _firestore
@@ -629,7 +737,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // SAVE USER PROFILE 🔱
+  // SAVE USER PROFILE 
   // ===================================================
   static Future<void> saveUserProfile({
     required String uid,
@@ -642,9 +750,9 @@ class FirestoreService {
         .set(profileData, SetOptions(merge: true));
   }
 
-  /// 🔱 Fetch specific user profile with role awareness
+  /// Fetch specific user profile with role awareness
   static Future<UserProfile?> fetchUserProfile(String uid) async {
-    // 🔱 Sovereignty Law: Check Dedicated Founder collection first (Phase 6 Recommendation)
+    // Sovereignty Law: Check Dedicated Founder collection first (Phase 6 Recommendation)
     final founderDoc = await _firestore.collection('founders').doc(uid).get();
     if (founderDoc.exists) {
       final data = founderDoc.data()!;
@@ -655,7 +763,7 @@ class FirestoreService {
 
     final doc = await _firestore.collection('users').doc(uid).get();
     if (!doc.exists) {
-      // 🔱 If matching Founder UID but no doc, create a virtual sovereign profile
+      // If matching Founder UID but no doc, create a virtual sovereign profile
       if (uid == FounderIdentity.founderUid) {
         return UserProfile(
           uid: uid,
@@ -669,7 +777,7 @@ class FirestoreService {
 
     final data = doc.data()!;
 
-    // 🔱 Hardened Role Injection
+    // Hardened Role Injection
     if (uid == FounderIdentity.founderUid) {
       data['role'] = 'founder';
       data['tier'] = SubscriptionTier.elite.name;
@@ -682,7 +790,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // ATOMIC MASTERY 🔱
+  // ATOMIC MASTERY 
   // ===================================================
   static Future<void> saveAtomicMastery(
       String uid, AtomicMasteryState state) async {
@@ -706,7 +814,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // ATOMIC COVERAGE 🔱
+  // ATOMIC COVERAGE 
   // ===================================================
   static Future<void> saveAtomicCoverage(
       String uid, AtomicCoverageState state) async {
@@ -730,7 +838,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // ATOMIC RISK 🔱
+  // ATOMIC RISK 
   // ===================================================
   static Future<void> saveAtomicRisk(String uid, AtomicRiskState state) async {
     await _firestore

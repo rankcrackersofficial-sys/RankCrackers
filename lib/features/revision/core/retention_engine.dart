@@ -2,7 +2,7 @@ import 'dart:math';
 
 class RetentionEngine {
   // ===================================================
-  // NEUROSCIENCE-INSPIRED FORGETTING CURVE 🔱
+  // NEUROSCIENCE-INSPIRED FORGETTING CURVE 
   // ===================================================
   static double predictDecay({
     required double initialMastery,
@@ -16,7 +16,7 @@ class RetentionEngine {
   }
 
   // ===================================================
-  // SMART REVISION SCHEDULING 🔱
+  // SMART REVISION SCHEDULING 
   // ===================================================
   static DateTime calculateNextRevision(int revisionLevel, double currentMastery) {
     int baseHours;

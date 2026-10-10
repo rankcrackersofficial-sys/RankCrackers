@@ -4,6 +4,8 @@ const { FieldValue } = require('firebase-admin/firestore');
 const crypto = require("crypto");
 const { logFounderActivity } = require("../services/audit_service");
 const { getLifecycleBlueprint } = require("../helpers/blueprints");
+const { executeUnifiedMissionCreation } = require("../services/mission_cycle_store");
+const { executeCycleAwarePublication } = require("../services/mission_cycle_lifecycle");
 const { validateOrResolveId } = require("../canonical_mission_registry");
 const {
   assertActiveFounder,
@@ -376,6 +378,28 @@ exports.handleSentinelAction = functions
       const recRef = recruitmentId ? db.collection('recruitments').doc(recruitmentId) : null;
 
       // ACTION: LAUNCH EXAM MISSION
+      // B5: UNIFIED MISSION CREATION - B1 identity -> B3 preflight -> B2 cycle -> draft pointer.
+      // (Early return: the pre-existing shell-only branch below is retained untouched for the
+      //  owning lane reconciliation and is superseded by this governed flow.)
+      if (action === 'launch_exam_mission') {
+        const unifiedCreation = await executeUnifiedMissionCreation({
+          transaction: transaction,
+          db: db,
+          payload: payload || {},
+          actorId: auth.uid,
+          recordedAt: FieldValue.serverTimestamp(),
+        });
+        return {
+          success: true,
+          action,
+          missionId: unifiedCreation.missionId,
+          cycleKey: unifiedCreation.cycleKey,
+          createdParent: unifiedCreation.createdParent,
+          syllabusBindingMode: unifiedCreation.syllabusBindingMode,
+          enrichmentStatus: unifiedCreation.summary.enrichmentStatus,
+          enrichmentTaskKey: unifiedCreation.handoff.enrichmentTaskKey,
+        };
+      }
       if (action === 'launch_exam_mission') {
         const { notificationId, syllabusId, examName, organization, year, examCategory, cycle, nature } = payload;
         const catCode = normalizeMissionCategory(examCategory);
@@ -405,7 +429,7 @@ exports.handleSentinelAction = functions
         const now = FieldValue.serverTimestamp();
         const realmData = {
           realm_id: realmId, exam_name: examName, exam_category: catCode, organization, exam_year: targetYear,
-          status: nature || 'PASSIVE',
+          status: 'PASSIVE',
           notification_ids: notificationId ? [notificationId] : [],
           syllabus_ids: syllabusId ? [syllabusId] : [],
           analytics: { totalAttempts: 0, qualified: 0, graduated: 0, verified: 0 },
@@ -427,7 +451,7 @@ exports.handleSentinelAction = functions
           org: organization,
           year: targetYear,
           examCategory: catCode,
-          status: 'published',
+          status: 'internal_draft',
           nature: nature || 'PASSIVE',
           createdAt: now,
           version: '1.0.0'
@@ -527,15 +551,33 @@ exports.handleSentinelAction = functions
           };
           const now = FieldValue.serverTimestamp();
 
+          // B5: CYCLE-AWARE PUBLICATION - launch_realm requires an explicit cycleKey,
+          // loads the selected authoritative cycle, and enforces B4 evidence-derived
+          // publication eligibility. The selected cycle is never inferred.
+          let cyclePublication = null;
+          if (action === 'launch_realm') {
+            cyclePublication = await executeCycleAwarePublication({
+              transaction: transaction,
+              db: db,
+              missionId: recruitmentId,
+              cycleKey: (payload || {}).cycleKey,
+              reason,
+              requestId,
+              recordedAt: now,
+            });
+          }
+
           transaction.update(realmRef, {
             status: target.realm,
-            updated_at: now
+            updated_at: now,
+            ...(cyclePublication ? cyclePublication.pointerUpdate : {})
           });
 
           transaction.update(recRef, {
             status: target.recruitment,
             updatedAt: now
           });
+          const isLaunch = action === 'launch_realm';
           transaction.update(catalogRef, {
             status: target.catalog,
             catalogStatus: target.catalog,
@@ -546,9 +588,19 @@ exports.handleSentinelAction = functions
             'visibility.studentVisible': target.visible,
             'visibility.catalogVisible': target.visible,
             'visibility.userPanelVisible': target.visible,
+            'visibility.quickEntryEnabled': isLaunch,
+            'visibility.smartEntryEnabled': false,
             lifecycleMutation: { action, requestId, reason },
             updatedAt: now,
           });
+
+          // B5: the selected authoritative cycle becomes the published cycle.
+          if (cyclePublication) {
+            transaction.update(
+              db.collection('mission_realms').doc(recruitmentId).collection('cycles').doc(cyclePublication.cycleKey),
+              cyclePublication.cycleUpdate
+            );
+          }
           transaction.create(auditRef, {
             type: 'MISSION_LIFECYCLE', missionId: recruitmentId, actorId: auth.uid,
             action, requestId, reason, previousState,
@@ -981,7 +1033,7 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
     sourceMissionVersion: String(realmData.version || realmData.canonicalVersion || recruitmentData.version || '1'),
     sourcePath: `mission_realms/${realmId}`,
     sourceType: 'mission_realms',
-    studentPublicationState: isArchived ? 'ARCHIVED' : 'PREPARING',
+    studentPublicationState: isArchived ? 'ARCHIVED' : 'INTERNAL_DRAFT',
     title: name,
     name: name,
     subtitle: name,
@@ -994,17 +1046,17 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
     mediumPolicy: realmData.mediumPolicy || recruitmentData.mediumPolicy || 'ENGLISH_ONLY',
     supportedMediums: Array.isArray(realmData.supportedMediums) ? realmData.supportedMediums : ['ENGLISH'],
     defaultMedium: realmData.defaultMedium || recruitmentData.defaultMedium || 'ENGLISH',
-    status: isArchived ? 'ARCHIVED' : 'PREPARING',
-    catalogStatus: isArchived ? 'ARCHIVED' : 'PREPARING',
-    studentMessage: isArchived ? 'Mission archived.' : 'Mission is visible to eligible students and awaiting final Founder verification.',
-    userPanelVisible: true,
-    cardVisible: true,
+    status: isArchived ? 'ARCHIVED' : 'INTERNAL_DRAFT',
+    catalogStatus: isArchived ? 'ARCHIVED' : 'INTERNAL_DRAFT',
+    studentMessage: isArchived ? 'Mission archived.' : 'Mission is in internal draft preparation and is not yet published.',
+    userPanelVisible: false,
+    cardVisible: false,
     visibility: {
-      studentVisible: true,
-      catalogVisible: true,
-      userPanelVisible: true,
-      quickEntryEnabled: true,
-      smartEntryEnabled: true
+      studentVisible: false,
+      catalogVisible: false,
+      userPanelVisible: false,
+      quickEntryEnabled: false,
+      smartEntryEnabled: false
     },
     archived: isArchived,
     titleHindi: realmData.titleHindi || recruitmentData.titleHindi || '',

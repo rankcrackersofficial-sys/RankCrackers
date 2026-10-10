@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 FUSION NODE (Blueprint v1.1 - Sprint L Ready)
+/// FUSION NODE (Blueprint v1.1 - Sprint L Ready)
 /// The bridge between intelligence and action. 
 /// Fuses Breadth (Coverage) and Depth (Mastery) to dictate student strategy.
 class FusionNode extends Equatable {
@@ -16,7 +16,7 @@ class FusionNode extends Equatable {
   final int priorityScore; // 1-100 (derived from fusion)
   final String action; // IGNORE, REVISE, PRACTICE, MASTER, EMERGENCY
   
-  final List<String> reasons; // 🔱 Audit Sprint L Gap Fix: WHY this priority?
+  final List<String> reasons; // Audit Sprint L Gap Fix: WHY this priority?
 
   final DateTime fusedAt;
 

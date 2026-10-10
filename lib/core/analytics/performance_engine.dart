@@ -1,7 +1,7 @@
 import '../models/micro_topic_node.dart';
 import '../models/node_runtime_state.dart';
 
-/// 🔱 PERFORMANCE ENGINE (Legacy Bridge)
+/// PERFORMANCE ENGINE (Legacy Bridge)
 /// Provides aggregate metrics for topics and mastery.
 class PerformanceEngine {
   // ===================================================

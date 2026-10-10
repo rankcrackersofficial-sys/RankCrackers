@@ -1,12 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:rank_crackers/core/models/decision_trace_node.dart';
 
-/// 🔱 RECOMMENDATION CONFIDENCE ENGINE (Blueprint v1.0 - Document 63)
+/// RECOMMENDATION CONFIDENCE ENGINE (Blueprint v1.0 - Document 63)
 /// Measures the structural integrity and data density behind an APOS decision.
 class RecommendationConfidenceEngine {
   
   static double calculateConfidence(DecisionTraceNode trace) {
-    debugPrint("🔱 CONFIDENCE ENGINE: Auditing data density for ${trace.targetId}...");
+    debugPrint("CONFIDENCE ENGINE: Auditing data density for ${trace.targetId}...");
 
     double confidence = 0.5; // Baseline
     final inputs = trace.inputs;

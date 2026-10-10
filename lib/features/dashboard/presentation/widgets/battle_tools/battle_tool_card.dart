@@ -29,63 +29,69 @@ class BattleToolCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final sessionUser = ref.watch(sessionUserProvider).valueOrNull ?? SessionUser.getSync();
+    final sessionUser =
+        ref.watch(sessionUserProvider).valueOrNull ?? SessionUser.getSync();
     final stats = ref.watch(userProfileStatsProvider);
     final totalBattles = stats['totalBattles'] ?? 0;
 
-    // 1. Resolve State Mapping
+    // 1. Resolve State Mapping with Student-Safe Labels
     final bool isRPSC = sessionUser.examId.toLowerCase().contains('rpsc') ||
         sessionUser.examName.toUpperCase().contains('RPSC');
 
-    String statusText = 'ACTIVE';
+    String statusText = 'Active';
     String subtitleText = 'Launch Tool';
     String explanationText = '';
     bool isReady = true;
 
     if (isRPSC) {
       isReady = false;
-      statusText = 'MISSION_CONTENT_NOT_PUBLISHED';
+      statusText = 'Not Published';
       subtitleText = 'Not Published';
-      explanationText = 'This RPSC 1st Grade tool is currently not published on the cloud platform. Sync with academic mentors is required.';
+      explanationText =
+          'This RPSC 1st Grade tool is currently not published on the platform.';
     } else {
       if (toolKey == 'test_arena') {
         if (totalBattles == 0) {
           isReady = false;
-          statusText = 'NEEDS_EVIDENCE';
-          subtitleText = 'Needs Evidence';
-          explanationText = 'Test Arena requires active diagnostic evidence to dynamically calibrate practice papers. Complete a topic diagnostic or practice session first.';
+          statusText = 'Needs Event';
+          subtitleText = 'Not Ready';
+          explanationText =
+              'Test Arena is not ready yet. Standardized test events will appear here when an eligible governed event is available.';
         } else {
-          statusText = 'ACTIVE';
+          statusText = 'Active';
           subtitleText = 'Standard Mode';
         }
       } else if (toolKey == 'pyq_vault') {
         if (totalBattles == 0) {
           isReady = false;
-          statusText = 'NO_PYQ_SET';
+          statusText = 'Needs Set';
           subtitleText = 'No PYQ Set';
-          explanationText = 'No previous year question papers are mapped to your current sub-topic selection. Generate learning evidence first.';
+          explanationText =
+              'No previous year question papers are mapped to your current sub-topic selection yet.';
         } else {
-          statusText = 'ACTIVE';
+          statusText = 'Active';
           subtitleText = 'Standard Mode';
         }
       } else if (toolKey == 'revision_desk') {
         if (totalBattles == 0) {
           isReady = false;
-          statusText = 'NO_REVISION_STATE';
+          statusText = 'Needs State';
           subtitleText = 'No Revision State';
-          explanationText = 'Revision Desk requires active bookmarks or weak-node history to formulate revision cycles. Practice more to activate.';
+          explanationText =
+              'Revision Desk requires active bookmarks or weak-topic history to formulate revision cycles.';
         } else {
-          statusText = 'ACTIVE';
+          statusText = 'Active';
           subtitleText = 'Standard Mode';
         }
       } else if (toolKey == 'rank_radar') {
         if (totalBattles == 0) {
           isReady = false;
-          statusText = 'INSUFFICIENT_RANK_EVIDENCE';
+          statusText = 'Needs Data';
           subtitleText = 'Needs Evidence';
-          explanationText = 'Rank Radar utilizes overall exam percentile and battle performance history to estimate state-wide ranks. Insufficient evidence generated.';
+          explanationText =
+              'Rank Radar estimates percentiles based on verified test performance history.';
         } else {
-          statusText = 'ACTIVE';
+          statusText = 'Active';
           subtitleText = 'Standard Mode';
         }
       }
@@ -94,13 +100,14 @@ class BattleToolCard extends ConsumerWidget {
     return GestureDetector(
       onTap: isReady
           ? () => context.push(route)
-          : () => _showBattleToolStatusSheet(context, title, statusText, explanationText),
+          : () => _showBattleToolStatusSheet(
+              context, title, statusText, explanationText),
       child: DarkCard(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
         border: Border.all(
           color: isReady
-              ? (featured ? AppColors.gold.withValues(alpha: 0.4) : AppColors.borderSoft)
-              : AppColors.borderSoft.withValues(alpha: 0.4),
+              ? glowColor.withValues(alpha: 0.4)
+              : AppColors.gold.withValues(alpha: 0.25),
           width: 1.0,
         ),
         child: Column(
@@ -110,53 +117,79 @@ class BattleToolCard extends ConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  icon,
-                  color: isReady ? AppColors.gold : Colors.white60,
-                  size: 20,
-                ),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  padding: const EdgeInsets.all(7),
                   decoration: BoxDecoration(
-                    color: isReady ? AppColors.gold.withValues(alpha: 0.1) : Colors.white10,
-                    borderRadius: BorderRadius.circular(6),
+                    color: glowColor.withValues(alpha: 0.14),
+                    borderRadius: BorderRadius.circular(8),
                     border: Border.all(
-                      color: isReady ? AppColors.gold.withValues(alpha: 0.3) : Colors.white24,
-                      width: 0.8,
+                      color: isReady
+                          ? glowColor.withValues(alpha: 0.5)
+                          : AppColors.gold.withValues(alpha: 0.35),
+                      width: 1.0,
                     ),
                   ),
-                  child: Text(
-                    statusText,
-                    style: AppTypography.label.copyWith(
-                      fontSize: 7.5,
-                      fontWeight: FontWeight.bold,
-                      color: isReady ? AppColors.gold : Colors.white60,
+                  child: Icon(
+                    icon,
+                    color: isReady ? glowColor : AppColors.gold,
+                    size: 19,
+                  ),
+                ),
+                Flexible(
+                  child: Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: isReady
+                          ? AppColors.gold.withValues(alpha: 0.15)
+                          : AppColors.gold.withValues(alpha: 0.08),
+                      borderRadius: BorderRadius.circular(6),
+                      border: Border.all(
+                        color: isReady
+                            ? AppColors.gold.withValues(alpha: 0.5)
+                            : AppColors.gold.withValues(alpha: 0.25),
+                        width: 0.8,
+                      ),
+                    ),
+                    child: Text(
+                      statusText,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppTypography.label.copyWith(
+                        fontSize: 9.5,
+                        fontWeight: FontWeight.bold,
+                        color: isReady
+                            ? AppColors.gold
+                            : AppColors.gold.withValues(alpha: 0.8),
+                      ),
                     ),
                   ),
                 ),
               ],
             ),
+            const SizedBox(height: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
                   title,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.cardTitle.copyWith(
-                    fontSize: 13,
+                    fontSize: 13.5,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const SizedBox(height: 4),
+                const SizedBox(height: 2),
                 Text(
                   subtitleText,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.subtitle.copyWith(
-                    fontSize: 9.5,
-                    color: isReady ? AppColors.gold : Colors.white70,
+                    fontSize: 10.5,
+                    color: isReady ? AppColors.gold : Colors.white60,
                   ),
                 ),
               ],
@@ -187,7 +220,7 @@ class BattleToolCard extends ConsumerWidget {
               topRight: Radius.circular(24),
             ),
             border: Border(
-              top: BorderSide(color: Colors.redAccent, width: 1.5),
+              top: BorderSide(color: AppColors.gold, width: 1.5),
             ),
           ),
           padding: const EdgeInsets.all(24),
@@ -198,58 +231,61 @@ class BattleToolCard extends ConsumerWidget {
               Row(
                 children: [
                   const Icon(
-                    Icons.security_rounded,
+                    Icons.bolt_rounded,
                     color: AppColors.gold,
                     size: 24,
                   ),
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
-                      toolTitle.toUpperCase(),
+                      toolTitle,
                       style: AppTypography.hero.copyWith(
                         fontSize: 18,
                         color: Colors.white,
-                        letterSpacing: 1.0,
+                        letterSpacing: 0.5,
                       ),
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
-                      color: Colors.red.withValues(alpha: 0.1),
+                      color: AppColors.gold.withValues(alpha: 0.15),
                       borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: Colors.redAccent.withValues(alpha: 0.3)),
+                      border: Border.all(
+                          color: AppColors.gold.withValues(alpha: 0.4)),
                     ),
                     child: Text(
                       statusCode,
                       style: AppTypography.label.copyWith(
-                        fontSize: 9,
+                        fontSize: 11,
                         fontWeight: FontWeight.bold,
-                        color: Colors.redAccent,
+                        color: AppColors.gold,
                       ),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 18),
               Text(
-                'STATUS DISCLOSURE',
+                'STATUS',
                 style: AppTypography.label.copyWith(
-                  fontSize: 9,
-                  color: Colors.white38,
+                  fontSize: 11,
+                  color: Colors.white70,
                   letterSpacing: 1.0,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(height: 6),
               Text(
                 explanation,
                 style: AppTypography.body.copyWith(
-                  fontSize: 12,
+                  fontSize: 13,
                   color: Colors.white70,
-                  height: 1.5,
+                  height: 1.45,
                 ),
               ),
-              const SizedBox(height: 28),
+              const SizedBox(height: 24),
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
@@ -264,7 +300,7 @@ class BattleToolCard extends ConsumerWidget {
                     ),
                   ),
                   child: Text(
-                    '[ Got it ]',
+                    'Got it',
                     style: AppTypography.button.copyWith(
                       fontSize: 13,
                       fontWeight: FontWeight.bold,

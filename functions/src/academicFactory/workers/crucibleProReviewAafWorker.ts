@@ -2,7 +2,7 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 CRUCIBLE PRO REVIEW AAF WORKER
+ * CRUCIBLE PRO REVIEW AAF WORKER
  * Binds the LLM-based Pro Academic Reviewer capability.
  * Actor: "RankCrackers Pro academic reviewer"
  */

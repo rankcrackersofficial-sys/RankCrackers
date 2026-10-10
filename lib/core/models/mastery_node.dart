@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 MASTERY NODE (Blueprint v1.0 - Document 47)
+/// MASTERY NODE (Blueprint v1.0 - Document 47)
 /// Represents a user's mastery over a specific Atomic Topic.
 class MasteryNode extends Equatable {
   final String id; // Format: [userId]_[atomicTopicId]

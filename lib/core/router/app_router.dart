@@ -1,11 +1,13 @@
+import 'dart:async';
+import 'package:flutter/foundation.dart';
+import '../telemetry/student_route_telemetry.dart';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../utils/app_routes.dart';
 import '../theme/app_colors.dart';
-import '../theme/app_typography.dart';
 import '../navigation/main_navigation_shell.dart';
 import '../models/micro_topic_node.dart';
-import '../knowledge/knowledge_engine.dart';
 
 // SCREENS
 import '../../features/onboarding/presentation/screens/splash_screen.dart';
@@ -17,6 +19,8 @@ import '../../features/crucible/presentation/screens/crucible_screen.dart';
 import '../../features/syllabus/presentation/screens/syllabus_screen.dart';
 import '../../features/profile/presentation/screens/profile_screen.dart';
 import '../../features/home/presentation/screens/digi_book_screen.dart';
+import '../../features/digibook/presentation/screens/digi_book_library_screen.dart';
+import '../../features/digibook/domain/models/digibook_launch_args.dart';
 import '../../features/assessment/presentation/screens/diagnostic_result_screen.dart';
 import '../../features/deep_profile/screens/deep_profile_screen.dart';
 import '../../features/opportunities/screens/opportunities_screen.dart';
@@ -26,10 +30,17 @@ import '../../features/progress_tracker/presentation/screens/progress_tracker_sc
 import '../../features/pyq/presentation/screens/pyq_vault_screen.dart';
 import '../../features/revision/presentation/screens/revision_desk_screen.dart';
 import '../../features/test_arena/presentation/screens/test_arena_screen.dart';
+import '../../features/test_arena/presentation/screens/test_arena_founder_harness_screen.dart';
 import '../../features/preview/presentation/screens/nebula_founder_preview_screen.dart';
+import '../theme/tactical_noir_background.dart';
+import '../../features/crucible/presentation/widgets/sacred_micro_test_chamber.dart';
+import '../../features/crucible/presentation/widgets/sacred_macro_test_citadel.dart';
+import '../../features/crucible/presentation/widgets/sacred_rebuild_chamber.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../shared/session/session_manager.dart';
+import '../../shared/providers/session_provider.dart';
 import '../constants/founder_identity.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -50,6 +61,9 @@ final GoRouter appRouter = GoRouter(
   redirect: (context, state) {
     final user = FirebaseAuth.instance.currentUser;
     final matchedLocation = state.matchedLocation;
+    if (user != null && !FounderIdentity.isFounderUser(user)) {
+      unawaited(StudentRouteTelemetry.instance.report(matchedLocation));
+    }
 
     debugPrint("🔱 ROUTER REDIRECT: $matchedLocation");
 
@@ -86,11 +100,11 @@ final GoRouter appRouter = GoRouter(
           : AppRoutes.profileSetup;
     }
 
-    // 🔱 Authority 4: Mission Gate (Must select mission)
+    // 🔱 Authority 4: Mission Gate (Must select valid mission)
     final String? selectedExam = SessionManager.selectedExamSync();
-    if (selectedExam == null && !isPrivileged) {
-      debugPrint("🔱 ROUTER: Mission missing, routing to Realm");
-      if (matchedLocation == AppRoutes.profileSetup) return null;
+    final bool isMissionValid = SessionManager.isMissionValid(selectedExam);
+    if (!isMissionValid && !isPrivileged) {
+      debugPrint("🔱 ROUTER: Mission missing or invalid, routing to Realm");
       return (matchedLocation == AppRoutes.missionRealm)
           ? null
           : AppRoutes.missionRealm;
@@ -216,6 +230,199 @@ final GoRouter appRouter = GoRouter(
       path: AppRoutes.testArena,
       builder: (context, state) => const TestArenaScreen(),
     ),
+    if (kDebugMode)
+      GoRoute(
+        path: AppRoutes.testArenaFounderHarness,
+        builder: (context, state) => const TestArenaFounderHarnessScreen(),
+      ),
+    GoRoute(
+      path: AppRoutes.sacredMicroChamber,
+      builder: (context, state) {
+        final args = state.extra as Map<String, dynamic>? ?? {};
+        return Scaffold(
+          backgroundColor: AppColors.background,
+          body: TacticalNoirBackground(
+            child: SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    IconButton(
+                      icon: const Icon(Icons.arrow_back_rounded,
+                          color: Colors.white),
+                      onPressed: () => context.pop(),
+                    ),
+                    const SizedBox(height: 16),
+                    Expanded(
+                      child: SacredMicroTestChamber(
+                        totalQuestions: args['totalQuestions'] as int? ?? 50,
+                        completedQuestions:
+                            args['completedQuestions'] as int? ?? 0,
+                        remainingTime: args['remainingTime'] as Duration? ??
+                            const Duration(hours: 1),
+                        battleTitle: args['battleTitle'] as String? ??
+                            'Ascension Micro Test',
+                        readiness: args['readiness'] as double? ?? 1.0,
+                        onSubmit: () async {
+                          showDialog(
+                            context: context,
+                            barrierDismissible: false,
+                            builder: (context) => const Center(
+                              child: CircularProgressIndicator(
+                                  color: AppColors.gold),
+                            ),
+                          );
+
+                          try {
+                            final sessionUser = SessionUser.getSync();
+                            final recruitmentId = sessionUser.recruitmentId;
+                            if (recruitmentId.isEmpty ||
+                                recruitmentId == 'unresolved') {
+                              throw 'No active recruitment found.';
+                            }
+                            final scheduleId = args['scheduleId'] as String?;
+                            final score = args['score'] as num?;
+                            if (scheduleId == null ||
+                                scheduleId.isEmpty ||
+                                score == null) {
+                              throw 'Verified attempt payload is incomplete.';
+                            }
+
+                            final callable = FirebaseFunctions.instance
+                                .httpsCallable('handleMissionAction');
+                            final result = await callable.call({
+                              'action': 'submit_micro_attempt',
+                              'realmId': recruitmentId,
+                              'payload': {
+                                'recruitmentId': recruitmentId,
+                                'scheduleId': scheduleId,
+                                'score': score,
+                              },
+                            });
+
+                            Navigator.pop(context);
+
+                            if (result.data != null &&
+                                result.data['success'] == true) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                    content: Text(
+                                        'Attempt submitted and evaluated successfully.')),
+                              );
+                              context.pop();
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                    content: Text(
+                                        'Submission failed: ${result.data['message']}')),
+                              );
+                            }
+                          } catch (e) {
+                            Navigator.pop(context);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text('Error: $e')),
+                            );
+                          }
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    ),
+    GoRoute(
+      path: AppRoutes.sacredMacroCitadel,
+      builder: (context, state) {
+        final args = state.extra as Map<String, dynamic>? ?? {};
+        return Scaffold(
+          backgroundColor: AppColors.background,
+          body: TacticalNoirBackground(
+            child: SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    IconButton(
+                      icon: const Icon(Icons.arrow_back_rounded,
+                          color: Colors.white),
+                      onPressed: () => context.pop(),
+                    ),
+                    const SizedBox(height: 16),
+                    Expanded(
+                      child: SacredMacroTestCitadel(
+                        title:
+                            args['title'] as String? ?? 'Ascension Macro Test',
+                        totalQuestions: args['totalQuestions'] as int? ?? 100,
+                        completedQuestions:
+                            args['completedQuestions'] as int? ?? 0,
+                        remainingTime: args['remainingTime'] as Duration? ??
+                            const Duration(hours: 3),
+                        readiness: args['readiness'] as double? ?? 1.0,
+                        rebuildTargets: args['rebuildTargets'] as int? ?? 0,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    ),
+    GoRoute(
+      path: AppRoutes.sacredRebuildChamber,
+      builder: (context, state) {
+        final args = state.extra as Map<String, dynamic>? ?? {};
+        return Scaffold(
+          backgroundColor: AppColors.background,
+          body: TacticalNoirBackground(
+            child: SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    IconButton(
+                      icon: const Icon(Icons.arrow_back_rounded,
+                          color: Colors.white),
+                      onPressed: () => context.pop(),
+                    ),
+                    const SizedBox(height: 16),
+                    Expanded(
+                      child: SacredRebuildChamber(
+                        rebuildNodes:
+                            args['rebuildNodes'] as List<RebuildNode>? ??
+                                const [],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    ),
+    GoRoute(
+      path: AppRoutes.digibookReader,
+      parentNavigatorKey: _rootNavigatorKey,
+      builder: (context, state) {
+        final extra = state.extra;
+        if (extra is DigiBookLaunchArgs) {
+          return DigiBookScreen(args: extra);
+        }
+        if (extra is MicroTopicNode) {
+          return DigiBookScreen(node: extra);
+        }
+        return const DigiBookLibraryScreen();
+      },
+    ),
     // 🔱 Stateful Shell for Root Bottom Navigation
     StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
@@ -248,103 +455,7 @@ final GoRouter appRouter = GoRouter(
           routes: [
             GoRoute(
               path: AppRoutes.digibook,
-              builder: (context, state) {
-                final MicroTopicNode? extraNode =
-                    state.extra as MicroTopicNode?;
-
-                // If node passed via extra, use it immediately 🔱
-                if (extraNode != null) {
-                  return DigiBookScreen(node: extraNode);
-                }
-
-                // Fallback to KnowledgeEngine nodes
-                return ListenableBuilder(
-                  listenable: KnowledgeEngine.instance,
-                  builder: (context, _) {
-                    final allNodes = KnowledgeEngine.instance.allNodes;
-
-                    if (allNodes.isEmpty) {
-                      return Scaffold(
-                        backgroundColor: AppColors.background,
-                        body: SafeArea(
-                          child: Center(
-                            child: Padding(
-                              padding: const EdgeInsets.all(24),
-                              child: Container(
-                                constraints:
-                                    const BoxConstraints(maxWidth: 420),
-                                padding: const EdgeInsets.all(22),
-                                decoration: BoxDecoration(
-                                  color: AppColors.surface,
-                                  borderRadius: BorderRadius.circular(20),
-                                  border:
-                                      Border.all(color: AppColors.borderSoft),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color:
-                                          Colors.black.withValues(alpha: 0.28),
-                                      blurRadius: 24,
-                                      offset: const Offset(0, 14),
-                                    ),
-                                  ],
-                                ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    const Icon(
-                                      Icons.auto_stories_outlined,
-                                      size: 46,
-                                      color: AppColors.gold,
-                                    ),
-                                    const SizedBox(height: 16),
-                                    Text(
-                                      'DigiBook is preparing your first map',
-                                      textAlign: TextAlign.center,
-                                      style: AppTypography.cardTitle.copyWith(
-                                        color: Colors.white70,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 10),
-                                    Text(
-                                      'Your learning matrix is not available in this test session yet. No mastery or study data has been invented.',
-                                      textAlign: TextAlign.center,
-                                      style: AppTypography.body.copyWith(
-                                        color: Colors.white38,
-                                        fontSize: 12,
-                                      ),
-                                    ),
-                                    const SizedBox(height: 18),
-                                    OutlinedButton(
-                                      onPressed:
-                                          KnowledgeEngine.instance.isHydrating
-                                              ? null
-                                              : () => KnowledgeEngine.instance
-                                                      .initialize(
-                                                    force: true,
-                                                  ),
-                                      style: OutlinedButton.styleFrom(
-                                        side: const BorderSide(
-                                          color: AppColors.borderSoft,
-                                        ),
-                                      ),
-                                      child: Text(
-                                        KnowledgeEngine.instance.isHydrating
-                                            ? 'Checking...'
-                                            : 'Check again',
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      );
-                    }
-                    return DigiBookScreen(node: allNodes.first);
-                  },
-                );
-              },
+              builder: (context, state) => const DigiBookLibraryScreen(),
             ),
           ],
         ),

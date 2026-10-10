@@ -1,4 +1,4 @@
-/// 🔱 EXAM BLUEPRINT MODELS
+/// EXAM BLUEPRINT MODELS
 /// The "Tactical Rulebook" layer. Defines technical constraints of the battle.
 
 library;
@@ -57,7 +57,7 @@ class ExamBlueprint {
   final int durationMinutes;
   final String status; // draft, review, verified, published, archived
   final int version; 
-  final String? promotionBatchId; // 🔱 Added: For referential tracking
+  final String? promotionBatchId; // Added: For referential tracking
 
   const ExamBlueprint({
     required this.id,
@@ -132,5 +132,5 @@ class ExamBlueprint {
   }
 }
 
-/// 🔱 Backward Compatibility Bridge
+/// Backward Compatibility Bridge
 typedef ExamNotification = ExamBlueprint;

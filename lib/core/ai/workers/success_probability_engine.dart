@@ -7,7 +7,7 @@ import 'package:rank_crackers/core/models/momentum_node.dart';
 import 'package:rank_crackers/core/models/recruitment_realm.dart';
 import 'scenario_simulator.dart';
 
-/// 🔱 SUCCESS PROBABILITY ENGINE (Blueprint v1.2 - Constitutional Hardened)
+/// SUCCESS PROBABILITY ENGINE (Blueprint v1.2 - Constitutional Hardened)
 /// Computes executive probability by fusing forecast, clock, and multi-dimensional subject readiness.
 class SuccessProbabilityEngine {
   
@@ -19,11 +19,11 @@ class SuccessProbabilityEngine {
     required List<FusionNode> fusionNodes,
     required MomentumNode momentum,
   }) {
-    debugPrint("🔱 PROBABILITY ENGINE: Finalizing executive success metric...");
+    debugPrint("PROBABILITY ENGINE: Finalizing executive success metric...");
 
     final List<String> drivers = [];
     
-    // 🔱 1. Subject Readiness Breakdown (Audit GAP Q-4)
+    // 1. Subject Readiness Breakdown (Audit GAP Q-4)
     // Now uses Mastery + Coverage - Risk
     final Map<String, List<double>> subjectScores = {};
     for (var node in fusionNodes) {
@@ -39,7 +39,7 @@ class SuccessProbabilityEngine {
        return MapEntry(key, list.reduce((a, b) => a + b) / list.length);
     });
 
-    // 🔱 2. Dynamic Probability (Audit GAP Q-5)
+    // 2. Dynamic Probability (Audit GAP Q-5)
     // Uses realmDifficultyScore instead of hardcoded 0.85
     double baseProb = forecast.projectedReadinessExamDay;
     double probability = baseProb * realm.realmDifficultyScore; 
@@ -52,7 +52,7 @@ class SuccessProbabilityEngine {
       drivers.add("Syllabus velocity is below required threshold");
     }
 
-    // 🔱 3. Dynamic Impact Analysis
+    // 3. Dynamic Impact Analysis
     final scenarios = ScenarioSimulator.simulateTimeScenarios(
       userId: userId, 
       realmId: realm.realmId, 

@@ -2,7 +2,7 @@ import '../../../core/models/micro_topic_node.dart';
 import '../../../core/models/exam_blueprint.dart';
 import '../../../core/utils/notification_weight_util.dart';
 
-/// 🔱 IMPORTANCE ENGINE
+/// IMPORTANCE ENGINE
 /// Calculates the tactical priority of a topic within a specific mission.
 
 class ImportanceEngine {

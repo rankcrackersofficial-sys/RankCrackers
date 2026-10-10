@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 
-/// 🔱 PEOPLE & ACCESS REPOSITORY (P2 Audit Fix)
+/// PEOPLE & ACCESS REPOSITORY (P2 Audit Fix)
 class AccessRepository {
   static final _firestore = FirebaseFirestore.instance;
   static final _functions = FirebaseFunctions.instance;

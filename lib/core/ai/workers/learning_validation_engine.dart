@@ -2,16 +2,16 @@ import 'package:flutter/foundation.dart';
 import 'package:rank_crackers/core/models/battle_session.dart';
 import 'package:rank_crackers/core/models/forecast_node.dart';
 
-/// 🔱 LEARNING VALIDATION ENGINE (Blueprint v1.0 - Document 69)
+/// LEARNING VALIDATION ENGINE (Blueprint v1.0 - Document 69)
 /// Measures APOS prediction accuracy against real student outcomes.
 class LearningValidationEngine {
   static Map<String, dynamic> validatePrediction({
     required ForecastNode forecast,
     required BattleSession actualSession,
   }) {
-    debugPrint("🔱 LEARNING VALIDATION: Comparing prediction vs reality...");
+    debugPrint("LEARNING VALIDATION: Comparing prediction vs reality...");
 
-    // 🔱 Metric: Accuracy of Readiness projection
+    // Metric: Accuracy of Readiness projection
     // We compare predicted readiness gain vs actual session accuracy
     double predictedGain =
         forecast.projectedReadiness7d; // Simple comparison for v1

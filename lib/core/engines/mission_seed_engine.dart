@@ -3,18 +3,18 @@ import '../models/recruitment.dart';
 import '../models/exam_blueprint.dart';
 import '../models/micro_topic_node.dart';
 
-/// 🔱 MISSION SEED ENGINE
+/// MISSION SEED ENGINE
 /// Generates the "Golden Path" dataset for Phase 4C End-to-End Testing.
 class MissionSeedEngine {
 
   static void _requireDebug() {
     if (!kDebugMode) {
-      throw Exception('🔱 COMMAND DENIED: Seeding prohibited in release student paths.');
+      throw Exception('COMMAND DENIED: Seeding prohibited in release student paths.');
     }
   }
 
   // ===================================================
-  // PUNJAB SCHOOL LECTURER (Competitive) 🔱
+  // PUNJAB SCHOOL LECTURER (Competitive) 
   // ===================================================
   
   static Map<String, dynamic> generatePunjabMathematics() {
@@ -76,7 +76,7 @@ class MissionSeedEngine {
   }
 
   // ===================================================
-  // UGC NET (Qualifying) 🔱
+  // UGC NET (Qualifying) 
   // ===================================================
 
   static Map<String, dynamic> generateUgcNetPaper1() {

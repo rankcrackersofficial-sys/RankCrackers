@@ -10,7 +10,7 @@ import 'package:rank_crackers/core/widgets/dark_card.dart';
 import '../shared/center_header.dart';
 import '../intelligence/widgets/intelligence_feed_tile.dart';
 
-/// 🔱 RECRUITMENT INTELLIGENCE CENTER (Hardened v4.1)
+/// RECRUITMENT INTELLIGENCE CENTER (Hardened v4.1)
 /// Strategic monitoring chamber for the Founder.
 class RecruitmentIntelligenceCenter extends StatefulWidget {
   const RecruitmentIntelligenceCenter({super.key});
@@ -45,7 +45,7 @@ class _RecruitmentIntelligenceCenterState extends State<RecruitmentIntelligenceC
         ),
         const SizedBox(height: 32),
 
-        // 🔱 Section: RECRUITMENT CANDIDATES (Ready for Manifestation)
+        // Section: RECRUITMENT CANDIDATES (Ready for Manifestation)
         _candidatesSection(),
         const SizedBox(height: 40),
 

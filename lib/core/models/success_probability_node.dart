@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 SUCCESS PROBABILITY (Blueprint v1.0 - Document 57)
+/// SUCCESS PROBABILITY (Blueprint v1.0 - Document 57)
 /// The executive intelligence layer that predicts exam outcome.
 class SuccessProbabilityNode extends Equatable {
   final String userId;

@@ -57,9 +57,9 @@ class WorkerCard extends StatelessWidget {
                   Switch(
                     value: worker.enabled,
                     onChanged: isCritical ? null : (v) async {
-                      // 🔱 Forensic Fix: Prevent crash if ID is empty
+                      // Forensic Fix: Prevent crash if ID is empty
                       if (worker.id.isEmpty) {
-                        debugPrint('🔱 WORKER_CARD: Cannot update worker with empty ID.');
+                        debugPrint('WORKER_CARD: Cannot update worker with empty ID.');
                         return;
                       }
                       await WorkerRegistryRepository.updateWorker(worker.id, {'enabled': v});

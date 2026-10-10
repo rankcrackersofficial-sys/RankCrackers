@@ -1,0 +1,256 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_1C4E0301",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U05_T_00000002",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_1C4E0301_V001",
+  "atomicFactSetHash": "90a601f7c2674b121267e5ad3f4ae9074e6f27e6e12f4ab446af355db7419c5b",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1C4E0301_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1C4E0301",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1C4E0301_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_1AE53CFF",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_9A4AB3E4",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_CCBB04EE",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_D3B00BF4",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_DB367E6F",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_DBC7CBFB"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "overviewText": "This chapter explores pure rolling motion, rotational kinetic energy ($K_{\\\\text{rot}} = \\\\frac{1}{2}I\\\\omega^2$), and acceleration down an incline.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "9d9e5824f64a765e1b09fc913d733b20b675c9bd85507fa740e6c7f3361fd7d4",
+      "createdAtUtc": "2026-09-02T13:29:33.049Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1C4E0301_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1C4E0301",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1C4E0301_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_1AE53CFF",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_9A4AB3E4",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_CCBB04EE",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_D3B00BF4",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_DB367E6F",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_DBC7CBFB"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_1C4E0301_CONCEPTS_01_ROLLING_KINEMATICS_ENERGY",
+          "semanticAnchorId": "ANCHOR_ROLLING_KINEMATICS_ENERGY",
+          "title": "1. Pure Rolling Kinematics and Kinetic Energy",
+          "contentMarkdown": "In pure rolling without slipping, contact point speed is zero and $$v_{\\\\text{cm}} = R\\\\omega$$. Rotational kinetic energy is $$K_{\\\\text{rot}} = \\\\frac{1}{2}I\\\\omega^2$$ and total kinetic energy is $$K_{\\\\text{total}} = \\\\frac{1}{2} M v_{\\\\text{cm}}^2 \\\\left[1 + \\\\frac{k^2}{R^2}\\\\right]$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1C4E0301_DBC7CBFB",
+            "AF_GU_JEEMAIN2027_PHY_1C4E0301_CCBB04EE",
+            "AF_GU_JEEMAIN2027_PHY_1C4E0301_D3B00BF4",
+            "AF_GU_JEEMAIN2027_PHY_1C4E0301_DB367E6F"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_1C4E0301_CONCEPTS_02_INCLINED_PLANE_ROLLING",
+          "semanticAnchorId": "ANCHOR_INCLINED_PLANE_ROLLING",
+          "title": "2. Acceleration Rolling Down an Inclined Plane",
+          "contentMarkdown": "Linear acceleration rolling down an incline of angle $\\\\theta$ is $$a_{\\\\text{cm}} = \\\\frac{g\\\\sin\\\\theta}{1 + k^2/R^2}$$. A solid sphere reaches bottom first because its $k^2/R^2 = 2/5$ is lowest.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1C4E0301_1AE53CFF",
+            "AF_GU_JEEMAIN2027_PHY_1C4E0301_9A4AB3E4"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "96258adb553e53954e41dda3d27731e57c1734c0a8e88b6ba5a951ed2521c7c3",
+      "createdAtUtc": "2026-09-02T13:29:33.049Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1C4E0301_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1C4E0301",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1C4E0301_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_CCBB04EE",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_1AE53CFF"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Total Rolling Kinetic Energy",
+          "formula": "K_{\\\\text{total}} = \\\\frac{1}{2} M v_{\\\\text{cm}}^2 \\\\left[1 + \\\\frac{k^2}{R^2}\\\\right]",
+          "constraints": "Pure rolling without slipping",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1C4E0301_CCBB04EE"
+          ]
+        },
+        {
+          "name": "Rolling Acceleration on Incline",
+          "formula": "a_{\\\\text{cm}} = \\\\frac{g \\\\sin\\\\theta}{1 + \\\\frac{k^2}{R^2}}",
+          "constraints": "Incline angle theta, no slipping",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1C4E0301_1AE53CFF"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "4bd601e4c4ec39b15ef239273879205d0c1f50518cc12f05e3f2691ee937a00a",
+      "createdAtUtc": "2026-09-02T13:29:33.049Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1C4E0301_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1C4E0301",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1C4E0301_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.049Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1C4E0301_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1C4E0301",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1C4E0301_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_1AE53CFF"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_1C4E0301_01",
+          "title": "Acceleration of a Solid Cylinder Rolling Down Incline",
+          "problemStatement": "Calculate acceleration of a solid cylinder ($k^2/R^2 = 1/2$) rolling down a $30^\\\\circ$ incline ($g = 9.8\\\\text{ m/s}^2$).",
+          "stepByStepSolution": [
+            "Step 1: Identify $\\\\theta = 30^\\\\circ$ ($\\\\sin 30^\\\\circ = 0.5$), $k^2/R^2 = 0.5$, $g = 9.8\\\\text{ m/s}^2$.",
+            "Step 2: Apply formula: $a_{\\\\text{cm}} = \\\\frac{g \\\\sin 30^\\\\circ}{1 + 0.5} = \\\\frac{9.8 \\\\times 0.5}{1.5} = \\\\frac{4.9}{1.5} \\\\approx 3.27\\\\text{ m/s}^2$."
+          ],
+          "finalAnswer": "a_{\\\\text{cm}} \\\\approx 3.27\\\\text{ m/s}^2",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1C4E0301_1AE53CFF"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "9e5aad6a1e07146d6ac33b3d3c7d97edcd139b4381162c3767516b4a7065aff9",
+      "createdAtUtc": "2026-09-02T13:29:33.049Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1C4E0301_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1C4E0301",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1C4E0301_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_DB367E6F"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_1C4E0301_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "What is the instantaneous linear velocity of the contact point during pure rolling without slipping?",
+          "options": [
+            "Zero ($0$)",
+            "v_cm",
+            "2 * v_cm",
+            "R * omega^2"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "In pure rolling without slipping, translational forward velocity $+v_{\\\\text{cm}}$ is exactly canceled by backward rotational peripheral velocity $-R\\\\omega = -v_{\\\\text{cm}}$.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1C4E0301_DB367E6F"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b3d5580436d3efa823726cc16deb0f80025fe91c6bdd35e9d5dc64178869f93c",
+      "createdAtUtc": "2026-09-02T13:29:33.049Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1C4E0301_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1C4E0301",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1C4E0301_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_1AE53CFF",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_9A4AB3E4",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_CCBB04EE",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_D3B00BF4",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_DB367E6F",
+        "AF_GU_JEEMAIN2027_PHY_1C4E0301_DBC7CBFB"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Rolling kinetic energy calculation",
+          "Incline rolling race comparison"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "ebfbe9e3dabc85885464a452ca23f4d08036947df624f1722799cfaf28e1cb85",
+      "createdAtUtc": "2026-09-02T13:29:33.049Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.049Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

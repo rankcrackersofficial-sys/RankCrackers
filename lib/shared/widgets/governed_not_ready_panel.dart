@@ -14,7 +14,7 @@ class GovernedNotReadyPanel extends StatelessWidget {
     super.key,
     required this.title,
     required this.message,
-    required this.founderStatus,
+    this.founderStatus = '',
     this.icon = Icons.hourglass_empty_rounded,
     this.checkpoints = const [],
   });
@@ -71,53 +71,6 @@ class GovernedNotReadyPanel extends StatelessWidget {
                           height: 1.45,
                         ),
                       ),
-                      const SizedBox(height: 18),
-                      Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.all(14),
-                        decoration: BoxDecoration(
-                          color: AppColors.background.withValues(alpha: 0.45),
-                          borderRadius: BorderRadius.circular(14),
-                          border: Border.all(color: AppColors.borderSoft),
-                        ),
-                        child: Text(
-                          founderStatus,
-                          style: AppTypography.label.copyWith(
-                            color: AppColors.gold,
-                            fontSize: 11,
-                            letterSpacing: 0.8,
-                          ),
-                        ),
-                      ),
-                      if (checkpoints.isNotEmpty) ...[
-                        const SizedBox(height: 18),
-                        ...checkpoints.map(
-                          (item) => Padding(
-                            padding: const EdgeInsets.only(bottom: 8),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Icon(
-                                  Icons.lock_outline_rounded,
-                                  color: AppColors.gold,
-                                  size: 15,
-                                ),
-                                const SizedBox(width: 10),
-                                Expanded(
-                                  child: Text(
-                                    item,
-                                    style: AppTypography.body.copyWith(
-                                      color: Colors.white54,
-                                      fontSize: 12,
-                                      height: 1.35,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
                     ],
                   ),
                 ),

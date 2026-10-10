@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import '../../personalization/models/student_learning_level.dart';
+import '../../../core/utils/temporal_normalizer.dart';
 
 /// STUDENT CRUCIBLE LEDGER
 /// Sovereign individual completion and mastery ledger.
@@ -112,25 +113,50 @@ class StudentCrucibleLedger extends Equatable {
   }
 
   factory StudentCrucibleLedger.fromMap(Map<String, dynamic> map) {
+    final rawScores = map['scheduleScores'];
+    final parsedScheduleScores = <String, double>{};
+    if (rawScores is Map) {
+      rawScores.forEach((k, v) {
+        if (v is num) parsedScheduleScores[k.toString()] = v.toDouble();
+      });
+    }
+
+    final rawMacroScores = map['phaseMacroScores'];
+    final parsedMacroScores = <int, double>{};
+    if (rawMacroScores is Map) {
+      rawMacroScores.forEach((k, v) {
+        final parsedKey = int.tryParse(k.toString());
+        if (parsedKey != null && v is num) {
+          parsedMacroScores[parsedKey] = v.toDouble();
+        }
+      });
+    }
+
     return StudentCrucibleLedger(
-      uid: map['uid'] ?? '',
-      missionId: map['missionId'] ?? '',
-      joinedAt: DateTime.fromMillisecondsSinceEpoch(map['joinedAt'] ?? 0),
-      joinedOrbit: map['joinedOrbit'] ?? 1,
-      joinedCycleDay: map['joinedCycleDay'] ?? 1,
-      joinedScheduleIndex: map['joinedScheduleIndex'] ?? 1,
-      firstCountedScheduleId: map['firstCountedScheduleId'] ?? '',
+      uid: map['uid']?.toString() ?? '',
+      missionId: map['missionId']?.toString() ?? '',
+      joinedAt: TemporalNormalizer.parseRequired(
+        map['joinedAt'],
+        fallback: DateTime.fromMillisecondsSinceEpoch(0),
+        fieldName: 'joinedAt',
+      ),
+      joinedOrbit: (map['joinedOrbit'] as num?)?.toInt() ?? 1,
+      joinedCycleDay: (map['joinedCycleDay'] as num?)?.toInt() ?? 1,
+      joinedScheduleIndex: (map['joinedScheduleIndex'] as num?)?.toInt() ?? 1,
+      firstCountedScheduleId: map['firstCountedScheduleId']?.toString() ?? '',
       currentLevel: LearningLevel.values.firstWhere(
         (e) => e.name == map['currentLevel'],
         orElse: () => LearningLevel.middle,
       ),
-      completedScheduleIds: Set<String>.from(map['completedScheduleIds'] ?? []),
-      scheduleScores: Map<String, double>.from(map['scheduleScores'] ?? {}),
-      phaseMacroScores: (map['phaseMacroScores'] as Map<String, dynamic>? ?? {}).map(
-        (k, v) => MapEntry(int.parse(k), (v as num).toDouble()),
-      ),
-      backlogScheduleIds: Set<String>.from(map['backlogScheduleIds'] ?? []),
-      isMissionReady: map['isMissionReady'] ?? false,
+      completedScheduleIds: map['completedScheduleIds'] is List
+          ? Set<String>.from((map['completedScheduleIds'] as List).map((e) => e.toString()))
+          : const {},
+      scheduleScores: parsedScheduleScores,
+      phaseMacroScores: parsedMacroScores,
+      backlogScheduleIds: map['backlogScheduleIds'] is List
+          ? Set<String>.from((map['backlogScheduleIds'] as List).map((e) => e.toString()))
+          : const {},
+      isMissionReady: map['isMissionReady'] == true,
     );
   }
 

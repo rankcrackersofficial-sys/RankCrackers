@@ -6,12 +6,21 @@ const DEFAULT_LEASE_DURATION_MS = 5 * 60 * 1000; // 5 minutes
 const RETRY_BACKOFF_BASE_MS = 60 * 1000; // 1 minute
 
 /**
- * 🔱 AAF QUEUE REPOSITORY (academic_factory_v1)
+ * AAF QUEUE REPOSITORY (academic_factory_v1)
  * Persistent Transaction Core for AAF-004C.
  * Enforces strict domain parity, lease authority, and semantic idempotency.
  */
 export class AafQueueRepository {
-  private db = admin.firestore();
+  private _db?: admin.firestore.Firestore;
+
+  private get db(): admin.firestore.Firestore {
+    if (!this._db) {
+      this._db = admin.firestore();
+    }
+    return this._db;
+  }
+
+  constructor() {}
 
   /**
    * 🛡️ TRANSACTIONAL ENQUEUE
@@ -270,6 +279,18 @@ export class AafQueueRepository {
       });
       return true;
     });
+  }
+
+  /**
+   * 🛡️ FIND EXPIRED LEASES
+   */
+  async findExpiredLeases(): Promise<string[]> {
+    const now = admin.firestore.Timestamp.now();
+    const snapshot = await this.db.collection(QUEUE_COLLECTION)
+      .where('state', 'in', ['leased', 'running'])
+      .where('leaseExpiresAtUtc', '<', now)
+      .get();
+    return snapshot.docs.map(doc => doc.id);
   }
 
   /**

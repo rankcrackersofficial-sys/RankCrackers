@@ -3,7 +3,7 @@ import '../../../core/ai/models/ai_task_type.dart';
 
 class RevisionWorkerTrigger {
   // ===================================================
-  // GENERATE REVISION 🔱
+  // GENERATE REVISION 
   // ===================================================
   static Future<void> generate({
     required String nodeId,

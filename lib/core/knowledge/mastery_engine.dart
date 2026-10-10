@@ -1,22 +1,22 @@
 import 'dart:math';
 
-/// 🔱 MASTERY ENGINE (Document 33)
+/// MASTERY ENGINE (Document 33)
 /// Sovereign authority for competency measurement at Atomic Topic Level.
 class MasteryEngine {
   // ===================================================
-  // CONSTITUTIONAL FORMULA 🔱 (Section 18)
+  // CONSTITUTIONAL FORMULA (Section 18)
   // ===================================================
 
   /// Calculates the Mastery Score based on four impact factors.
   /// Result is normalized (0.0 - 1.0) for internal use, usually displayed as 0-100.
   static double calculateScore({
-    required double assessmentEvidence, // 🔱 Article 7 Audit Fix: Performance evidence (40%)
-    required double readingEvidence,    // 🔱 Article 7 Audit Fix: Baseline understanding (20%)
-    required double revisionEvidence,   // 🔱 Article 7 Audit Fix: Stability evidence (20%)
-    required double retention,          // 🔱 Memory Decay (10%)
-    required double difficulty,         // 🔱 Weighted complexity (10%)
+    required double assessmentEvidence, // Article 7 Audit Fix: Performance evidence (40%)
+    required double readingEvidence,    // Article 7 Audit Fix: Baseline understanding (20%)
+    required double revisionEvidence,   // Article 7 Audit Fix: Stability evidence (20%)
+    required double retention,          // Memory Decay (10%)
+    required double difficulty,         // Weighted complexity (10%)
   }) {
-    // 🔱 CONSTITUTIONAL MODEL (Redefined for Evidence Law)
+    // CONSTITUTIONAL MODEL (Redefined for Evidence Law)
     final double score = 
         (assessmentEvidence.clamp(0.0, 1.0) * 0.40) +
         (readingEvidence.clamp(0.0, 1.0) * 0.20) +
@@ -28,7 +28,7 @@ class MasteryEngine {
   }
 
   // ===================================================
-  // MASTERY STATES 🔱 (Section 24-30)
+  // MASTERY STATES (Section 24-30)
   // ===================================================
 
   /// Maps a raw score (0-100) to a constitutional competency state.
@@ -41,7 +41,7 @@ class MasteryEngine {
   }
 
   // ===================================================
-  // TREND DETECTION 🔱 (Section 57)
+  // TREND DETECTION (Section 57)
   // ===================================================
 
   static String determineTrend(double current, double previous) {
@@ -53,7 +53,7 @@ class MasteryEngine {
   }
 
   // ===================================================
-  // UTILITIES 🔱
+  // UTILITIES 
   // ===================================================
 
   /// Calculates consistency based on a series of results.
@@ -66,7 +66,7 @@ class MasteryEngine {
     return (winRate * 0.8 + volumeBonus).clamp(0.0, 1.0);
   }
 
-  /// 🔱 CONFIDENCE LAW (Section 59)
+  /// CONFIDENCE LAW (Section 59)
   /// Measures the trustworthiness of a mastery score based on evidence density.
   static double calculateConfidence({
     required int evidenceCount,
@@ -83,7 +83,7 @@ class MasteryEngine {
   }
 
   // ===================================================
-  // LEGACY BRIDGE 🔱
+  // LEGACY BRIDGE 
   // ===================================================
 
   /// Legacy wrapper to maintain compatibility with existing diagnostic callers.
@@ -95,7 +95,7 @@ class MasteryEngine {
     if (attempts == 0) return previousMastery;
     final accuracy = correct / attempts;
     
-    // 🔱 Audit Fix: Map legacy metrics to Constitutional Evidence Chain
+    // Audit Fix: Map legacy metrics to Constitutional Evidence Chain
     return calculateScore(
       assessmentEvidence: accuracy,
       readingEvidence: previousMastery > 0 ? 0.5 : 0.0, // Assumption based on previous state

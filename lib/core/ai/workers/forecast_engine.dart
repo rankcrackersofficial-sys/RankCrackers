@@ -3,7 +3,7 @@ import 'package:rank_crackers/core/models/forecast_node.dart';
 import 'package:rank_crackers/core/models/momentum_node.dart';
 import 'package:rank_crackers/core/models/exam_clock_node.dart';
 
-/// 🔱 READINESS FORECAST ENGINE (Blueprint v1.1 - Evidence Driven)
+/// READINESS FORECAST ENGINE (Blueprint v1.1 - Evidence Driven)
 /// Projects future states based on current velocity, momentum, and remaining budget.
 class ForecastEngine {
   
@@ -16,9 +16,9 @@ class ForecastEngine {
     required double currentCoverage,
     required double currentMastery,
   }) {
-    debugPrint("🔱 FORECAST ENGINE: Projecting preparation trajectory for $userId...");
+    debugPrint("FORECAST ENGINE: Projecting preparation trajectory for $userId...");
 
-    // 🔱 Velocity Calculation (Audit GAP P-1 Hardened)
+    // Velocity Calculation (Audit GAP P-1 Hardened)
     // velocity is determined by momentum status weighted by recent accuracy
     double baseVelocity = 0.5; // Baseline
     double momentumMultiplier = 1.0;

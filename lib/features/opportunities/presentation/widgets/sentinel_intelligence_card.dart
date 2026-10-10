@@ -27,7 +27,7 @@ class SentinelIntelligenceCard extends ConsumerWidget {
               const SizedBox(width: 10),
               Text("SENTINEL INTEL",
                   style: AppTypography.label
-                      .copyWith(color: AppColors.gold, fontSize: 8)),
+                      .copyWith(color: AppColors.gold, fontSize: 8, fontWeight: FontWeight.bold)),
               const Spacer(),
               const Icon(Icons.arrow_forward_ios_rounded,
                   size: 10, color: Colors.white10),
@@ -38,21 +38,21 @@ class SentinelIntelligenceCard extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               _miniAlert(
-                  "New",
+                  "Mastery",
                   metricsAsync.hasValue
-                      ? metricsAsync.valueOrNull!.newAlerts.toString()
+                      ? metricsAsync.valueOrNull!.masterySignals.toString()
                       : "--",
                   AppColors.info),
               _miniAlert(
-                  "Expiry",
+                  "Risk",
                   metricsAsync.hasValue
-                      ? metricsAsync.valueOrNull!.expiringForms.toString()
+                      ? metricsAsync.valueOrNull!.riskAlerts.toString()
                       : "--",
                   AppColors.error),
               _miniAlert(
-                  "Priority",
+                  "Mission",
                   metricsAsync.hasValue
-                      ? metricsAsync.valueOrNull!.highPriorityExams.toString()
+                      ? metricsAsync.valueOrNull!.missionCriticals.toString()
                       : "--",
                   AppColors.gold),
             ],
@@ -102,7 +102,7 @@ class SentinelIntelligenceCard extends ConsumerWidget {
             style: AppTypography.hero.copyWith(fontSize: 16, color: color)),
         Text(label.toUpperCase(),
             style: AppTypography.label
-                .copyWith(fontSize: 8, color: Colors.white30)),
+                .copyWith(fontSize: 8, color: Colors.white70, fontWeight: FontWeight.bold)),
       ],
     );
   }

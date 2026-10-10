@@ -3,14 +3,14 @@ import '../models/opportunity.dart';
 import '../models/opportunity_match.dart';
 import 'sentinel_metrics_aggregator.dart';
 
-/// 🔱 SENTINEL METRICS SERVICE
+/// SENTINEL METRICS SERVICE
 /// Orchestrates the aggregation and persistence of career intelligence metrics.
 class SentinelMetricsService {
   final SentinelRepository _repository;
 
   SentinelMetricsService(this._repository);
 
-  /// 🔱 REFRESH METRICS
+  /// REFRESH METRICS
   /// Calculates latest metrics and persists them to the Warrior's citadel.
   Future<void> refreshMetrics({
     required String uid,

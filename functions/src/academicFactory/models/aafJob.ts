@@ -1,7 +1,7 @@
 import * as admin from 'firebase-admin';
 
 /**
- * 🔱 AAF DOMAIN LIFECYCLE STATES
+ * AAF DOMAIN LIFECYCLE STATES
  * Exact 13 states from AAF-003B contract.
  */
 export type AafJobState =
@@ -20,7 +20,7 @@ export type AafJobState =
   | 'failedTerminal';
 
 /**
- * 🔱 AAF JOB METADATA CONTRACT (academic_factory_v1)
+ * AAF JOB METADATA CONTRACT (academic_factory_v1)
  * Physical implementation of AAF-004B Persistent Transaction Core.
  * No academic payloads allowed. Flat metadata only.
  */

@@ -14,6 +14,7 @@ final class StudentLearningStateEngine {
   StudentLearningState assemble({
     required String studentId,
     required String amtnId,
+    required String missionId,
     required DateTime calculatedAtUtc,
     required StudentMasteryEstimate mastery,
     required StudentRetentionEstimate retention,
@@ -28,6 +29,9 @@ final class StudentLearningStateEngine {
     if (mastery.studentId != studentId ||
         retention.studentId != studentId ||
         fluency.studentId != studentId ||
+        mastery.missionId != missionId ||
+        retention.missionId != missionId ||
+        fluency.missionId != missionId ||
         mastery.amtnId != amtnId ||
         retention.amtnId != amtnId ||
         fluency.amtnId != amtnId) {
@@ -35,7 +39,7 @@ final class StudentLearningStateEngine {
     }
 
     final events = rawEvents
-        .where((e) => e.studentId == studentId && e.amtnId == amtnId)
+        .where((e) => e.studentId == studentId && e.missionId == missionId && e.amtnId == amtnId)
         .toList();
 
     double? rate(bool Function(StudentEvidenceEvent) predicate) {
@@ -51,6 +55,7 @@ final class StudentLearningStateEngine {
     final state = StudentLearningState(
       studentId: studentId,
       amtnId: amtnId,
+      missionId: missionId,
       calculatedAtUtc: calculatedAtUtc,
       masteryProbability: mastery.probability,
       masteryBand: mastery.band,

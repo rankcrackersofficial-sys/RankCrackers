@@ -4,6 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../deep_profile/providers/warrior_profile_provider.dart';
+
 import '../../domain/repositories/auth_repository.dart';
 import '../../data/auth_repository.dart';
 
@@ -59,8 +61,9 @@ class SecureAuthState {
 
 class AuthNotifier extends StateNotifier<SecureAuthState> {
   final AuthRepository _repository;
+  final Ref _ref;
 
-  AuthNotifier(this._repository)
+  AuthNotifier(this._repository, this._ref)
       : super(
           SecureAuthState(
             user: _repository.currentUser,
@@ -180,6 +183,7 @@ class AuthNotifier extends StateNotifier<SecureAuthState> {
   // =====================================================
 
   Future<void> signOut() async {
+    _ref.read(warriorProfileProvider.notifier).clear();
     await _repository.signOut();
     state = state.copyWith(clearUser: true);
   }
@@ -236,5 +240,5 @@ class AuthNotifier extends StateNotifier<SecureAuthState> {
 final authNotifierProvider =
     StateNotifierProvider<AuthNotifier, SecureAuthState>((ref) {
   final repository = ref.watch(authRepositoryProvider);
-  return AuthNotifier(repository);
+  return AuthNotifier(repository, ref);
 });

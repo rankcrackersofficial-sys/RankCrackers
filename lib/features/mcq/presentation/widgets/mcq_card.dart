@@ -10,7 +10,7 @@ import '../../../../core/knowledge/knowledge_engine.dart';
 import '../../../../core/telemetry/telemetry_engine.dart';
 import '../../../progress/data/models/user_progress.dart';
 
-/// 🔱 MCQ CARD
+/// MCQ CARD
 /// The tactical unit for micro-combat. Type-safe and cloud-synced.
 class McqCard extends StatefulWidget {
   final String nodeId;
@@ -103,13 +103,13 @@ class _McqCardState extends State<McqCard> {
 
                       final correctAnswer = selected == correct;
 
-                      // 🔱 CALC MASTERY (Memory Engine logic remains legacy for now)
+                      // CALC MASTERY (Memory Engine logic remains legacy for now)
                       final mastery = MemoryEngine.updateMastery(
                         current: widget.currentMastery,
                         correct: correctAnswer,
                       );
 
-                      // 🔱 SYNC TO CLOUD via Write Buffer
+                      // SYNC TO CLOUD via Write Buffer
                       final existing = KnowledgeEngine.instance.userProgress.firstWhere(
                         (p) => p.nodeId == widget.nodeId, 
                         orElse: () => UserProgress.empty(widget.nodeId)

@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 class StudyMaterialDetectionWorker {
   static Future<Map<String, dynamic>> analyze(String text) async {
     debugPrint("STUDY MATERIAL WORKER: Deep Knowledge Classification...");
-    // 🔱 Hardened Study Material Analysis Report (Rule 4 Heart)
+    // Hardened Study Material Analysis Report (Rule 4 Heart)
     return {
       'title': 'NCERT History Class 12 (Modern)',
       'subjects': ['History'],

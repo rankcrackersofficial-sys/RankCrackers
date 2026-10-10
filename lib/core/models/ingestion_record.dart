@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 INGESTION RECORD (Hardened v8.2.6)
+/// INGESTION RECORD (Hardened v8.2.6)
 /// Tracks the physical entry of a source file into the refinery with full metadata.
 class IngestionRecord extends Equatable {
   final String id;
@@ -11,15 +11,15 @@ class IngestionRecord extends Equatable {
   final String fileHash; 
   final String status; 
   final String? sourceUrl;
-  final String? storagePath; // 🔱 Added: Physical Traceability for Purge
+  final String? storagePath; // Added: Physical Traceability for Purge
   final DateTime createdAt;
   
-  // 🔱 Governance Fields (Constitution v1.0)
+  // Governance Fields (Constitution v1.0)
   final bool archived;
   final DateTime? archivedAt;
   final String? archivedBy;
   
-  // 🔱 Metadata Pipeline (Audit P12H)
+  // Metadata Pipeline (Audit P12H)
   final String assetType; // notification, syllabus, pyq, study_material
   final String recruitmentId;
   final String documentStatus; // LIVE, HISTORICAL

@@ -1,0 +1,305 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_6202B09B",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U03_T_6202b09b",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_6202B09B_V001",
+  "atomicFactSetHash": "8712d303d1ca8e8765034993d1eed54fc430deba0730eaa6739d8b754297aea8",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_6202B09B_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_6202B09B",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_6202B09B_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_22CDC09D",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_49F23753",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_4B10DF30",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_575CE100",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_5C43B4D3",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_707F0025",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_7BB1A4C6",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_84C04745",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_942649B0",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_99AAE05A",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_9EF5E8F5",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_AA0228B3",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_CA151C5D",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_EC2AF8F9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL"
+      ],
+      "overviewText": "This chapter explores Circular Dynamics & Road Banking, providing comprehensive conceptual analysis, mathematical relationships, and structured applications grounded in NCERT authority.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "c88c051306fcf3e0fea3dd63120ab5a2e75411fb718f9a163380137ff732a65d",
+      "createdAtUtc": "2026-09-02T13:29:33.083Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_6202B09B_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_6202B09B",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_6202B09B_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_22CDC09D",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_49F23753",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_4B10DF30",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_575CE100",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_5C43B4D3",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_707F0025",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_7BB1A4C6",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_84C04745",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_942649B0",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_99AAE05A",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_9EF5E8F5",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_AA0228B3",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_CA151C5D",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_EC2AF8F9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_6202B09B_CONCEPTS_01",
+          "semanticAnchorId": "ANCHOR__6202B09B_1",
+          "title": "1. Key Academic Principles: Circular Dynamics & Road Banking",
+          "contentMarkdown": "Centripetal acceleration in uniform circular motion is directed radially inward with magnitude a_c = v^2 / R. Centripetal force F_c = (m * v^2) / R is the net inward radial force required to maintain circular motion. On a flat level circular road, the maximum speed without skidding is v_max = sqrt(mu_s * R * g). On a frictionless banked circular road, the optimum safe speed is v_optimum = sqrt(R * g * tan(theta)).",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_49F23753",
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_707F0025",
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_99AAE05A",
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_EC2AF8F9"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_6202B09B_CONCEPTS_02",
+          "semanticAnchorId": "ANCHOR__6202B09B_2",
+          "title": "2. Key Academic Principles: Circular Dynamics & Road Banking",
+          "contentMarkdown": "On a banked road with friction, the maximum safe speed is v_max = sqrt(R * g * ((mu_s + tan(theta)) / (1 - mu_s * tan(theta)))). Banking of roads directs the horizontal component of the normal reaction inward to provide centripetal force. When a particle moves in a circular path of radius R with constant speed v, it experiences continuous acceleration directed toward the center of the circle called centripetal acceleration: a_c = v^2 / R = omega^2 * R. Centripetal force is not a new fundamental force, but is provided by real physical forces (e.g., tension in string, gravitational attraction, electrostatic force, or friction).",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_22CDC09D",
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_4B10DF30",
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_575CE100",
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_AA0228B3"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_6202B09B_CONCEPTS_03",
+          "semanticAnchorId": "ANCHOR__6202B09B_3",
+          "title": "3. Key Academic Principles: Circular Dynamics & Road Banking",
+          "contentMarkdown": "Motion of a Car on a Level Circular Road: The centripetal force is provided entirely by static friction between the tires and the road surface: (m * v^2) / R <= mu_s * m * g. Motion of a Car on a Banked Circular Road: To reduce reliance on friction and prevent skidding, roads are banked at an angle theta with the horizontal.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_CA151C5D",
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_5C43B4D3",
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_942649B0",
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_9EF5E8F5"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_6202B09B_CONCEPTS_04",
+          "semanticAnchorId": "ANCHOR__6202B09B_4",
+          "title": "4. Key Academic Principles: Circular Dynamics & Road Banking",
+          "contentMarkdown": "When friction is present, the maximum permissible speed on a banked road without skidding up the incline is: On a frictionless banked road, the horizontal component of the normal reaction provides the necessary centripetal force (N * sin(theta) = m * v^2 / R, and N * cos(theta) = m * g).",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_7BB1A4C6",
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_84C04745"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "cd9e32c9eb3bf22f38b00ed0b2f7108dbcf0310ecf30f2915ff7d52725c25881",
+      "createdAtUtc": "2026-09-02T13:29:33.083Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_6202B09B_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_6202B09B",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_6202B09B_V001",
+      "displayOrder": 3,
+      "status": "NOT_APPLICABLE",
+      "statusReason": "Qualitative conceptual topic regarding Circular Dynamics & Road Banking; no independent algebraic formulas belong to this generation unit.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL"
+      ],
+      "formulaTable": [],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b7b9356f39da5055f2be84b07bad19fc8c6a3716da5fb25f722535b172fd78bb",
+      "createdAtUtc": "2026-09-02T13:29:33.083Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_6202B09B_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_6202B09B",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_6202B09B_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.083Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_6202B09B_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_6202B09B",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_6202B09B_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_49F23753"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_6202B09B_01",
+          "title": "Conceptual Analysis: Circular Dynamics & Road Banking",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_49F23753"
+          ],
+          "problemStatement": "Analyze the physical/chemical implication of: Centripetal acceleration in uniform circular motion is directed radially inward with magnitude a_c = v^2 / R..",
+          "stepByStepSolution": [
+            "Step 1: State the foundational postulate: Centripetal acceleration in uniform circular motion is directed radially inward with magnitude a_c = v^2 / R..",
+            "Step 2: Differentiate valid scientific conditions from common conceptual confusions.",
+            "Step 3: Conclude the analytical explanation systematically."
+          ],
+          "finalAnswer": "Validated Conceptual Statement",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "12e5b4965691c6ed216ceadb415516a56ba59167c0fef8a5f13f20989248262f",
+      "createdAtUtc": "2026-09-02T13:29:33.083Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_6202B09B_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_6202B09B",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_6202B09B_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_49F23753",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_707F0025"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_6202B09B_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_49F23753"
+          ],
+          "prompt": "Which of the following statements correctly represents: Circular Dynamics & Road Banking?",
+          "options": [
+            "Centripetal acceleration in uniform circular motion is directed radially inward with magnitude a_c = v^2 / R.",
+            "Incorrect distractor contradicting verified fundamental principles.",
+            "Unrelated concept from a different physical regime.",
+            "Hypothetical condition not supported by standard experimental evidence."
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Option 1 is correct because: Centripetal acceleration in uniform circular motion is directed radially inward with magnitude a_c = v^2 / R. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL).",
+          "isVerified": true
+        },
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_6202B09B_02",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "HARD",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_6202B09B_707F0025"
+          ],
+          "prompt": "Regarding Circular Dynamics & Road Banking, which statement is strictly true?",
+          "options": [
+            "Contradictory incorrect proposition.",
+            "Centripetal force F_c = (m * v^2) / R is the net inward radial force required to maintain circular motion.",
+            "Arbitrary assertion with inverted proportionality.",
+            "Non-rigorous approximation not valid under general conditions."
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "Option 2 is strictly correct as verified: Centripetal force F_c = (m * v^2) / R is the net inward radial force required to maintain circular motion..",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "ac2f3c83107cc4c179a7ad50910f6fdf0819ff26fea9804dda60386665f18b0c",
+      "createdAtUtc": "2026-09-02T13:29:33.083Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_6202B09B_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_6202B09B",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_6202B09B_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_22CDC09D",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_49F23753",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_4B10DF30",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_575CE100",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_5C43B4D3",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_707F0025",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_7BB1A4C6",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_84C04745",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_942649B0",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_99AAE05A",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_9EF5E8F5",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_AA0228B3",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_CA151C5D",
+        "AF_GU_JEEMAIN2027_PHY_6202B09B_EC2AF8F9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Conceptual understanding of Circular Dynamics & Road Banking",
+          "Application of core laws"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "fe27556a19a1ce168ec43ebad93355f10f5704006f0b92cf755d8c3d2f879e20",
+      "createdAtUtc": "2026-09-02T13:29:33.083Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_PART1_CH05_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 5,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 1,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.083Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

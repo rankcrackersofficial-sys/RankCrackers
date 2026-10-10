@@ -3,8 +3,12 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../../../core/utils/app_routes.dart';
+import '../../../../shared/session/session_manager.dart';
+import '../../../../core/constants/founder_identity.dart';
+import '../../../../core/backend/recruitment_repository.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -30,7 +34,7 @@ class _SplashScreenState
   @override
   void initState() {
     super.initState();
-    debugPrint("🔱 SPLASH START");
+    debugPrint("SPLASH START");
     _controller = AnimationController(
 
       vsync: this,
@@ -89,23 +93,89 @@ class _SplashScreenState
   }
 
   Future<void> _initialize() async {
-    print("🔱 STEP-1: Splash Initialization Started");
+    debugPrint("STEP-1: Splash Initialization Started");
 
+    String targetRoute = AppRoutes.login;
+
+    try {
+      if (!SessionManager.disableFirebaseForTest) {
+        final user = FirebaseAuth.instance.currentUser;
+        if (user != null) {
+          debugPrint("AUTH_USER_PRESENT=true");
+          final bool isPrivileged = FounderIdentity.isFounderUser(user);
+          if (isPrivileged) {
+            targetRoute = AppRoutes.dashboard;
+          } else {
+            // Rehydrate server-side profile if needed
+            await SessionManager.syncProfileFromFirestore(user);
+            final bool isComplete = SessionManager.profileCompletedSync();
+            final bool consentAccepted = SessionManager.consentAcceptedSync();
+            debugPrint("PROFILE_AUTHORITY_STATE=${isComplete ? 'COMPLETE' : 'INCOMPLETE'}");
+            debugPrint("CONSENT_ACCEPTED=$consentAccepted");
+
+            if (!isComplete) {
+              targetRoute = AppRoutes.profileSetup;
+            } else {
+              final selectedExam = SessionManager.selectedExamSync();
+              final hasSavedMission = selectedExam != null && selectedExam.isNotEmpty;
+              debugPrint("MISSION_ID_PRESENT=$hasSavedMission");
+
+              // Dynamic mission access snapshot resolution (Section 4 & 5)
+              bool snapshotEstablished = false;
+              try {
+                final recruitments = await RecruitmentRepository.fetchPublished()
+                    .timeout(const Duration(seconds: 3));
+                final accessibleIds = recruitments.map((r) => r.examId).toList();
+                SessionManager.registerAccessibleMissions(accessibleIds, source: 'SPLASH_CATALOG_HYDRATION');
+                snapshotEstablished = true;
+                debugPrint("MISSION_ACCESS_SNAPSHOT_READY=true");
+              } catch (e) {
+                debugPrint("MISSION_ACCESS_SNAPSHOT_READY=false (offline/timeout: $e)");
+              }
+
+              if (snapshotEstablished) {
+                final isMissionValid = SessionManager.isMissionValid(selectedExam);
+                debugPrint("MISSION_RESOLUTION_VALID=$isMissionValid");
+                if (isMissionValid) {
+                  targetRoute = AppRoutes.dashboard;
+                } else {
+                  targetRoute = AppRoutes.missionRealm;
+                }
+              } else {
+                // Section 5: SNAPSHOT FAILURE MUST FAIL CLOSED
+                // If authenticated complete-profile user has a saved mission but authoritative
+                // MissionAccessSnapshot cannot be established:
+                // DO NOT route to Dashboard merely from cached mission validity.
+                // SNAPSHOT_FAILURE_TO_DASHBOARD_COUNT = 0
+                debugPrint("SNAPSHOT_FAILURE: Failing closed to Mission Realm");
+                targetRoute = AppRoutes.missionRealm;
+              }
+            }
+          }
+        } else {
+          debugPrint("AUTH_USER_PRESENT=false");
+          targetRoute = AppRoutes.login;
+        }
+      }
+    } catch (e) {
+      debugPrint("SPLASH_AUTH_CHECK_ERROR: $e");
+      targetRoute = AppRoutes.login;
+    }
+
+    debugPrint("FINAL_ROUTE=$targetRoute");
+
+    // Splash animation timing
     await Future.delayed(
-      const Duration(seconds: 3),
+      const Duration(milliseconds: 2000),
     );
 
     if (!mounted) return;
 
     try {
-      // 🔱 Authority Handover: 
-      // We navigate to Login. The GoRouter 'redirect' logic will verify Authority
-      // and determine if the user should go to Dashboard, Identity, or stay at Login.
-      debugPrint("🔱 STEP-2: Handing over authority to Sovereign Router.");
-      context.go(AppRoutes.login);
+      debugPrint("STEP-2: Navigating to canonical target route: $targetRoute");
+      context.go(targetRoute);
     } catch (e) {
-      debugPrint("🔱 CRITICAL ERROR during Splash Sequence: $e");
-      context.go(AppRoutes.login);
+      debugPrint("CRITICAL ERROR during Splash Sequence: $e");
     }
   }
 
@@ -147,11 +217,10 @@ class _SplashScreenState
           ),
         ),
 
-        child: Stack(
-
-          alignment: Alignment.center,
-
-          children: [
+        child: SafeArea(
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
 
             // ==========================================
             // GOLDEN DIVINE AURA
@@ -371,104 +440,39 @@ class _SplashScreenState
                         // ==========================================
 
                         Container(
-
-                          width: 150,
-                          height: 150,
-
-                          padding:
-                          const EdgeInsets
-                              .all(
-                            20,
-                          ),
-
-                          decoration:
-                          BoxDecoration(
-
-                            color:
-                            const Color(
-                              0xFF070A12,
-                            ),
-
-                            borderRadius:
-                            BorderRadius
-                                .circular(
-                              42,
-                            ),
-
+                          width: 90,
+                          height: 90,
+                          padding: const EdgeInsets.all(18),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF070A12),
+                            borderRadius: BorderRadius.circular(24),
                             border: Border.all(
-
-                              color:
-                              goldAccent
-                                  .withValues(
-                                alpha:
-                                0.30,
-                              ),
-
+                              color: goldAccent.withValues(alpha: 0.30),
                               width: 1.8,
                             ),
-
                             boxShadow: [
-
                               BoxShadow(
-
-                                color:
-                                goldAccent
-                                    .withValues(
-                                  alpha:
-                                  _logoGlowAnimation
-                                      .value,
+                                color: goldAccent.withValues(
+                                  alpha: _logoGlowAnimation.value,
                                 ),
-
-                                blurRadius:
-                                55,
-
-                                spreadRadius:
-                                4,
+                                blurRadius: 40,
+                                spreadRadius: 3,
                               ),
-
                               BoxShadow(
-
-                                color:
-                                Colors.black
-                                    .withValues(
-                                  alpha:
-                                  0.5,
-                                ),
-
-                                blurRadius:
-                                25,
-
-                                offset:
-                                const Offset(
-                                  0,
-                                  12,
-                                ),
+                                color: Colors.black.withValues(alpha: 0.5),
+                                blurRadius: 20,
+                                offset: const Offset(0, 8),
                               ),
                             ],
                           ),
-
                           child: Image.asset(
-
                             "assets/images/logo.png",
-
                             fit: BoxFit.contain,
-
-                            errorBuilder:
-                                (
-                                context,
-                                error,
-                                stackTrace,
-                                ) {
-
+                            errorBuilder: (context, error, stackTrace) {
                               return const Icon(
-
-                                Icons
-                                    .shield_rounded,
-
-                                size: 65,
-
-                                color:
-                                goldAccent,
+                                Icons.shield_rounded,
+                                size: 40,
+                                color: goldAccent,
                               );
                             },
                           ),
@@ -502,77 +506,27 @@ class _SplashScreenState
                           ),
                         ),
 
-                        const SizedBox(
-                          height: 10,
+                        const SizedBox(height: 14),
+                        Text(
+                          "तेजस्वि नावधीतमस्तु।",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.notoSans(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                            color: goldAccent.withValues(alpha: 0.95),
+                            letterSpacing: 0.8,
+                          ),
                         ),
-
-                        // ==========================================
-                        // TAGLINE
-                        // ==========================================
-
-                        Container(
-
-                          padding:
-                          const EdgeInsets
-                              .symmetric(
-                            horizontal: 16,
-                            vertical: 8,
-                          ),
-
-                          decoration:
-                          BoxDecoration(
-
-                            color:
-                            Colors.white
-                                .withValues(
-                              alpha: 0.03,
-                            ),
-
-                            borderRadius:
-                            BorderRadius
-                                .circular(
-                              30,
-                            ),
-
-                            border: Border.all(
-
-                              color:
-                              goldAccent
-                                  .withValues(
-                                alpha:
-                                0.10,
-                              ),
-                            ),
-                          ),
-
-                          child: Text(
-
-                            "The Self Study Coach",
-
-                            style:
-                            GoogleFonts
-                                .poppins(
-
-                              fontSize: 12,
-
-                              fontStyle:
-                              FontStyle
-                                  .italic,
-
-                              fontWeight:
-                              FontWeight
-                                  .w500,
-
-                              color:
-                              goldAccent
-                                  .withValues(
-                                alpha:
-                                0.88,
-                              ),
-
-                              letterSpacing:
-                              0.8,
-                            ),
+                        const SizedBox(height: 6),
+                        Text(
+                          "May Our Learning Be Radiant.",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.poppins(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            fontStyle: FontStyle.italic,
+                            color: Colors.white.withValues(alpha: 0.78),
+                            letterSpacing: 0.5,
                           ),
                         ),
                       ],
@@ -587,89 +541,30 @@ class _SplashScreenState
             // ==========================================
 
             Positioned(
-
               bottom: 60,
-
               child: Opacity(
-
-                opacity:
-                _fadeAnimation.value,
-
-                child: Column(
-
-                  children: [
-
-                    Container(
-
-                      width: 52,
-                      height: 52,
-
-                      padding:
-                      const EdgeInsets
-                          .all(
-                        10,
-                      ),
-
-                      decoration:
-                      BoxDecoration(
-
-                        shape:
-                        BoxShape.circle,
-
-                        border: Border.all(
-
-                          color:
-                          goldAccent
-                              .withValues(
-                            alpha:
-                            0.15,
-                          ),
-                        ),
-                      ),
-
-                      child:
-                      const CircularProgressIndicator(
-
-                        color:
-                        goldAccent,
-
-                        strokeWidth: 2.8,
-                      ),
+                opacity: _fadeAnimation.value,
+                child: Container(
+                  width: 44,
+                  height: 44,
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: goldAccent.withValues(alpha: 0.15),
                     ),
-
-                    const SizedBox(
-                      height: 18,
-                    ),
-
-                    Text(
-
-                      "Preparing The Battlefield...",
-
-                      style:
-                      GoogleFonts.poppins(
-
-                        fontSize: 11,
-
-                        fontWeight:
-                        FontWeight.w600,
-
-                        color:
-                        Colors.white
-                            .withValues(
-                          alpha: 0.42,
-                        ),
-
-                        letterSpacing:
-                        1,
-                      ),
-                    ),
-                  ],
+                  ),
+                  child: const CircularProgressIndicator(
+                    color: goldAccent,
+                    strokeWidth: 2.5,
+                  ),
                 ),
               ),
             ),
           ],
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 }

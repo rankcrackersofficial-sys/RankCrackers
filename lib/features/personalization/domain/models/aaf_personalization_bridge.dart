@@ -13,11 +13,12 @@ enum AafPublicProjectionStatus {
 }
 
 final class AafPersonalizationBridgeAuthority {
-  static const int currentSchemaVersion = 1;
+  static const int currentSchemaVersion = 2;
 
   const AafPersonalizationBridgeAuthority({
     required this.studentId,
     required this.targetAmtnId,
+    required this.missionId,
     required this.canonicalSemanticTopicId,
     required this.canonicalKnowledgeVersion,
     required this.publicProjectionId,
@@ -31,6 +32,7 @@ final class AafPersonalizationBridgeAuthority {
 
   final String studentId;
   final String targetAmtnId;
+  final String missionId;
   final String canonicalSemanticTopicId;
   final int canonicalKnowledgeVersion;
   final String publicProjectionId;
@@ -49,6 +51,7 @@ final class AafPersonalizationBridgeAuthority {
   void validate() {
     _requireNonEmpty(studentId, 'studentId');
     _requireNonEmpty(targetAmtnId, 'targetAmtnId');
+    _requireNonEmpty(missionId, 'missionId');
     _requireNonEmpty(
       canonicalSemanticTopicId,
       'canonicalSemanticTopicId',
@@ -91,6 +94,7 @@ final class AafPersonalizationBridgeAuthority {
       'schemaVersion': schemaVersion,
       'studentId': studentId,
       'targetAmtnId': targetAmtnId,
+      'missionId': missionId,
       'canonicalSemanticTopicId': canonicalSemanticTopicId,
       'canonicalKnowledgeVersion': canonicalKnowledgeVersion,
       'publicProjectionId': publicProjectionId,

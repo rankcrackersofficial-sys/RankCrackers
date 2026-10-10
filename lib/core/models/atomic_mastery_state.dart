@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 ATOMIC MASTERY STATE
+/// ATOMIC MASTERY STATE
 /// Represents the granular competence level of an Atomic Topic.
 /// Implements Document 33.
 class AtomicMasteryState extends Equatable {

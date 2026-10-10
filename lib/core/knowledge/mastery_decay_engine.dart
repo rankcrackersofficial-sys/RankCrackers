@@ -1,6 +1,6 @@
 import 'dart:math';
 
-/// 🔱 MASTERY DECAY ENGINE
+/// MASTERY DECAY ENGINE
 /// Calculates the natural erosion of knowledge competence over time.
 /// Implements Document 33 Sections 31-36.
 class MasteryDecayEngine {

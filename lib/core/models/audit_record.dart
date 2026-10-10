@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 AUDIT RECORD (Document 50 Component)
+/// AUDIT RECORD (Document 50 Component)
 /// Tracks the origin, discovery, and validation history of any intelligence item.
 class AuditRecord extends Equatable {
   final String sourceUrl;
@@ -9,16 +9,16 @@ class AuditRecord extends Equatable {
   final DateTime createdAt; 
   final DateTime discoveredAt; 
   final DateTime lastSeenAt; 
-  final DateTime? processedAt; // 🔱 Added: For chronologically ordered review
+  final DateTime? processedAt; // Added: For chronologically ordered review
   final int discoveryCount; 
   final int contentVersion; 
-  final String impactLevel; // 🔱 Added: LOW, MEDIUM, HIGH, CRITICAL
-  final double confidenceScore; // 🔱 Added: 0.0 - 1.0 (Review prioritization)
+  final String impactLevel; // Added: LOW, MEDIUM, HIGH, CRITICAL
+  final double confidenceScore; // Added: 0.0 - 1.0 (Review prioritization)
   final String workerVersion;
-  final String provider; // 🔱 Added: Gemini, Groq, OpenRouter, etc.
+  final String provider; // Added: Gemini, Groq, OpenRouter, etc.
   final String validationStatus; // pending, under_review, failed, success, corrigendum_detected
   final String? publishedBy; 
-  final String? promotionBatchId; // 🔱 Added: For rollback grouping (prom_date_num)
+  final String? promotionBatchId; // Added: For rollback grouping (prom_date_num)
   final DateTime? validatedAt; 
   final DateTime? publishedAt;
 
@@ -109,7 +109,7 @@ class AuditRecord extends Equatable {
   }
 
   factory AuditRecord.fromMap(Map<String, dynamic> map) {
-    // 🔱 Firestore Timestamp Handling
+    // Firestore Timestamp Handling
     DateTime parseDate(dynamic value) {
       if (value == null) return DateTime.fromMillisecondsSinceEpoch(0);
       if (value is int) return DateTime.fromMillisecondsSinceEpoch(value);

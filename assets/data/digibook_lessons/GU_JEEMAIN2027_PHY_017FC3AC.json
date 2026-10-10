@@ -1,0 +1,273 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_017FC3AC",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U04_T_00000002",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_017FC3AC_V001",
+  "atomicFactSetHash": "2a94e3b25fce4a7bc4af93f58ab4228c398fdfd15afa679baf44fcae74e9946f",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_017FC3AC_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_017FC3AC",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_017FC3AC_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_014112D4",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_1A7D8088",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_1E47C4FC",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_A4D4DBDF",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_A945E79C",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_BEE213A5",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_C18DF432",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_D1758E57"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH06_OFFICIAL"
+      ],
+      "overviewText": "This chapter explores potential energy, conservative forces, spring restoring force, and mechanical energy conservation.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b427c6bffb6ca46b4142cb0783aa1ffb03de337457b63eba183976295693b968",
+      "createdAtUtc": "2026-09-02T13:29:33.028Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_017FC3AC_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_017FC3AC",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_017FC3AC_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_014112D4",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_1A7D8088",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_1E47C4FC",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_A4D4DBDF",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_A945E79C",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_BEE213A5",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_C18DF432",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_D1758E57"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH06_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_017FC3AC_CONCEPTS_01_CONSERVATIVE_FORCES",
+          "semanticAnchorId": "ANCHOR_CONSERVATIVE_FORCES",
+          "title": "1. Conservative Forces and Potential Energy Relation",
+          "contentMarkdown": "A force is conservative if work done is path-independent. Potential energy $V(x)$ relates to conservative force by $$F(x) = -\\\\frac{dV(x)}{dx}$$, meaning $$\\Delta V = -W_{\\\\text{conservative}}$$. Gravitational potential energy near Earth is $$V(h) = mgh$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_1E47C4FC",
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_A945E79C",
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_D1758E57",
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_C18DF432",
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_014112D4"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_017FC3AC_CONCEPTS_02_SPRING_AND_CONSERVATION",
+          "semanticAnchorId": "ANCHOR_SPRING_AND_CONSERVATION",
+          "title": "2. Ideal Spring Potential Energy and Energy Conservation",
+          "contentMarkdown": "An ideal spring exerts restoring force $$F_s = -kx$$ and stores potential energy $$V_s = \\\\frac{1}{2}kx^2$$. Total mechanical energy is conserved: $$\\Delta E = 0$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_1A7D8088",
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_A4D4DBDF",
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_BEE213A5"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "04b09a23210b3e238025beecb5b27d98164a186b5b0b05d25df6e905df8dfdee",
+      "createdAtUtc": "2026-09-02T13:29:33.028Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_017FC3AC_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_017FC3AC",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_017FC3AC_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_D1758E57",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_A4D4DBDF",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_014112D4"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH06_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Conservative Force Potential Derivative",
+          "formula": "F(x) = -\\\\frac{dV(x)}{dx}",
+          "constraints": "1D conservative force field",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_D1758E57"
+          ]
+        },
+        {
+          "name": "Spring Potential Energy",
+          "formula": "V_s = \\\\frac{1}{2} k x^2",
+          "constraints": "Hookes law regime",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_A4D4DBDF"
+          ]
+        },
+        {
+          "name": "Gravitational Potential Energy",
+          "formula": "V(h) = m g h",
+          "constraints": "Uniform gravity near surface",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_014112D4"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "2df92792fe625505a77a0e4784525f387a5727ac7d3cf10df9bc59054b656d77",
+      "createdAtUtc": "2026-09-02T13:29:33.028Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_017FC3AC_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_017FC3AC",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_017FC3AC_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH06_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.028Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_017FC3AC_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_017FC3AC",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_017FC3AC_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_A4D4DBDF"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH06_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_017FC3AC_01",
+          "title": "Energy Stored in a Compressed Spring",
+          "problemStatement": "Calculate the potential energy stored in a spring with $k = 400\\\\text{ N/m}$ compressed by $0.05\\\\text{ m}$.",
+          "stepByStepSolution": [
+            "Step 1: Identify spring constant $k = 400\\\\text{ N/m}$ and displacement $x = 0.05\\\\text{ m}$.",
+            "Step 2: Apply formula: $V_s = \\\\frac{1}{2} k x^2 = \\\\frac{1}{2} \\\\times 400 \\\\times (0.05)^2 = 200 \\\\times 0.0025 = 0.5\\\\text{ J}$."
+          ],
+          "finalAnswer": "V_s = 0.5\\\\text{ J}",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_A4D4DBDF"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "fd02d561cd1a2002d0c9fde5c1e85f5384f723199c1b5e761b205e27170f77f3",
+      "createdAtUtc": "2026-09-02T13:29:33.028Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_017FC3AC_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_017FC3AC",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_017FC3AC_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_D1758E57"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH06_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_017FC3AC_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "How is a 1D conservative force $F(x)$ mathematically related to its potential energy function $V(x)$?",
+          "options": [
+            "F(x) = - dV(x)/dx",
+            "F(x) = + dV(x)/dx",
+            "F(x) = Integral V(x) dx",
+            "F(x) = V(x)^2"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Conservative force is the negative spatial derivative of potential energy: $F(x) = -dV(x)/dx$.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_017FC3AC_D1758E57"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "e4f495b4ce90c2dd3d50229402ca1c780f60620853302ace708c5c51d88bdf43",
+      "createdAtUtc": "2026-09-02T13:29:33.028Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_017FC3AC_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_017FC3AC",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_017FC3AC_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_014112D4",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_1A7D8088",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_1E47C4FC",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_A4D4DBDF",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_A945E79C",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_BEE213A5",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_C18DF432",
+        "AF_GU_JEEMAIN2027_PHY_017FC3AC_D1758E57"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH06_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Spring energy calculations",
+          "Force-potential derivative evaluation"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "4f5baea431a81dfd6fa4bb920dbae39f0f82eeb1993fb58c791f33029d57cb56",
+      "createdAtUtc": "2026-09-02T13:29:33.028Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_CH06_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.028Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

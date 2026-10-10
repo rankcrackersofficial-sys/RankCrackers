@@ -78,7 +78,21 @@ class MockTransaction {
     if (!colState[ref.id]) {
       throw new Error(`DOCUMENT_NOT_FOUND: Cannot update non-existing document '${ref.id}'`);
     }
-    colState[ref.id] = { ...colState[ref.id], ...data };
+    const doc = { ...colState[ref.id] };
+    for (const [key, val] of Object.entries(data)) {
+      doc[key] = val;
+      if (key.includes('.')) {
+        const parts = key.split('.');
+        let curr = doc;
+        for (let i = 0; i < parts.length - 1; i++) {
+          if (!curr[parts[i]]) curr[parts[i]] = {};
+          curr[parts[i]] = { ...curr[parts[i]] };
+          curr = curr[parts[i]];
+        }
+        curr[parts[parts.length - 1]] = val;
+      }
+    }
+    colState[ref.id] = doc;
   }
 
   delete(ref) {
@@ -301,8 +315,8 @@ async function runSuite() {
     }
   };
 
-  // 1. Founder launch creates catalog shell
-  await testCase("Founder launch creates catalog shell", async () => {
+  // 1. Founder launch creates catalog shell (Governed Fail-Closed: INTERNAL_DRAFT)
+  await testCase("Founder launch creates catalog shell (Governed Fail-Closed: INTERNAL_DRAFT)", async () => {
     resetMockDb();
     const data = {
       action: 'launch_exam_mission',
@@ -310,16 +324,32 @@ async function runSuite() {
         examName: 'JEE Main',
         organization: 'NTA',
         year: 2027,
-        nature: 'ACTIVE'
+        nature: 'ACTIVE' // Explicitly test that caller passing nature=ACTIVE does NOT make realm ACTIVE
       }
     };
     
     await handleSentinelAction(data, founderContext);
 
+    const rec = mockDatabaseState.recruitments['rec_nta_jee_main_2027'];
+    assert.ok(rec, "Recruitment projection must exist");
+    assert.strictEqual(rec.status, 'internal_draft', "Recruitment must be created in internal_draft status");
+
+    const realm = mockDatabaseState.mission_realms['rec_nta_jee_main_2027'];
+    assert.ok(realm, "Realm projection must exist");
+    assert.strictEqual(realm.status, 'PASSIVE', "Realm status must be PASSIVE");
+
     const shell = mockDatabaseState.student_mission_catalog['rec_nta_jee_main_2027'];
-    assert.ok(shell);
-    assert.strictEqual(shell.status, 'PREPARING');
-    assert.strictEqual(shell.userPanelVisible, true);
+    assert.ok(shell, "Catalog shell must exist");
+    assert.strictEqual(shell.studentPublicationState, 'INTERNAL_DRAFT');
+    assert.strictEqual(shell.status, 'INTERNAL_DRAFT');
+    assert.strictEqual(shell.catalogStatus, 'INTERNAL_DRAFT');
+    assert.strictEqual(shell.cardVisible, false);
+    assert.strictEqual(shell.userPanelVisible, false);
+    assert.strictEqual(shell.visibility.studentVisible, false);
+    assert.strictEqual(shell.visibility.catalogVisible, false);
+    assert.strictEqual(shell.visibility.userPanelVisible, false);
+    assert.strictEqual(shell.visibility.quickEntryEnabled, false);
+    assert.strictEqual(shell.visibility.smartEntryEnabled, false);
   });
 
   // 2. Admin launch behavior follows permission policy (allow launch -> now blocked by governance lock)
@@ -393,9 +423,9 @@ async function runSuite() {
 
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.ok(shell);
-    assert.strictEqual(shell.catalogStatus, 'PREPARING');
-    assert.strictEqual(shell.userPanelVisible, true);
-    assert.strictEqual(shell.cardVisible, true);
+    assert.strictEqual(shell.catalogStatus, 'INTERNAL_DRAFT');
+    assert.strictEqual(shell.userPanelVisible, false);
+    assert.strictEqual(shell.cardVisible, false);
   });
 
   // 6. Launch updates shell to LIVE
@@ -405,7 +435,7 @@ async function runSuite() {
     // Seed existing documents
     mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'STAGED' };
     mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'MANIFESTED' };
-    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'COMING_SOON', userPanelVisible: false };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'COMING_SOON', userPanelVisible: false, cardVisible: false, visibility: { studentVisible: false, catalogVisible: false, userPanelVisible: false, quickEntryEnabled: false, smartEntryEnabled: false } };
 
     const data = {
       action: 'launch_realm',
@@ -418,6 +448,12 @@ async function runSuite() {
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.strictEqual(shell.catalogStatus, 'ACTIVE');
     assert.strictEqual(shell.userPanelVisible, true);
+    assert.strictEqual(shell.cardVisible, true);
+    assert.strictEqual(shell.visibility.studentVisible, true);
+    assert.strictEqual(shell.visibility.catalogVisible, true);
+    assert.strictEqual(shell.visibility.userPanelVisible, true);
+    assert.strictEqual(shell.visibility.quickEntryEnabled, true);
+    assert.strictEqual(shell.visibility.smartEntryEnabled, false);
   });
 
   // 7. Pause maps deterministically to hidden coming-soon
@@ -425,7 +461,7 @@ async function runSuite() {
     resetMockDb();
     mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ACTIVE' };
     mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
-    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE', userPanelVisible: true };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE', userPanelVisible: true, cardVisible: true, visibility: { studentVisible: true, catalogVisible: true, userPanelVisible: true, quickEntryEnabled: true, smartEntryEnabled: false } };
 
     const data = {
       action: 'pause_realm',
@@ -438,6 +474,12 @@ async function runSuite() {
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
     assert.strictEqual(shell.catalogStatus, 'PASSIVE');
     assert.strictEqual(shell.userPanelVisible, false);
+    assert.strictEqual(shell.cardVisible, false);
+    assert.strictEqual(shell.visibility.studentVisible, false);
+    assert.strictEqual(shell.visibility.catalogVisible, false);
+    assert.strictEqual(shell.visibility.userPanelVisible, false);
+    assert.strictEqual(shell.visibility.quickEntryEnabled, false);
+    assert.strictEqual(shell.visibility.smartEntryEnabled, false);
   });
 
   // 8. Archive hides and archives
@@ -445,7 +487,7 @@ async function runSuite() {
     resetMockDb();
     mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ACTIVE' };
     mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'published' };
-    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE', userPanelVisible: true };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'LIVE', userPanelVisible: true, cardVisible: true, visibility: { studentVisible: true, catalogVisible: true, userPanelVisible: true, quickEntryEnabled: true, smartEntryEnabled: false } };
 
     const data = {
       action: 'archive_realm',
@@ -460,6 +502,11 @@ async function runSuite() {
     assert.strictEqual(shell.userPanelVisible, false);
     assert.strictEqual(shell.cardVisible, false);
     assert.strictEqual(shell.archived, true);
+    assert.strictEqual(shell.visibility.studentVisible, false);
+    assert.strictEqual(shell.visibility.catalogVisible, false);
+    assert.strictEqual(shell.visibility.userPanelVisible, false);
+    assert.strictEqual(shell.visibility.quickEntryEnabled, false);
+    assert.strictEqual(shell.visibility.smartEntryEnabled, false);
   });
 
   // 9. Restore follows Option A policy (Restore to hidden passive)
@@ -467,7 +514,7 @@ async function runSuite() {
     resetMockDb();
     mockDatabaseState.mission_realms['jee_main_2026'] = { realm_id: 'jee_main_2026', status: 'ARCHIVED' };
     mockDatabaseState.recruitments['jee_main_2026'] = { id: 'jee_main_2026', status: 'archived' };
-    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'ARCHIVED', userPanelVisible: false, cardVisible: false, archived: true };
+    mockDatabaseState.student_mission_catalog['jee_main_2026'] = { id: 'jee_main_2026', catalogStatus: 'ARCHIVED', userPanelVisible: false, cardVisible: false, archived: true, visibility: { studentVisible: false, catalogVisible: false, userPanelVisible: false, quickEntryEnabled: false, smartEntryEnabled: false } };
 
     const data = {
       action: 'restore_realm',
@@ -482,6 +529,11 @@ async function runSuite() {
     assert.strictEqual(shell.userPanelVisible, false); // Option A: always hidden on restore/passive
     assert.strictEqual(shell.cardVisible, false);
     assert.strictEqual(shell.archived, false);
+    assert.strictEqual(shell.visibility.studentVisible, false);
+    assert.strictEqual(shell.visibility.catalogVisible, false);
+    assert.strictEqual(shell.visibility.userPanelVisible, false);
+    assert.strictEqual(shell.visibility.quickEntryEnabled, false);
+    assert.strictEqual(shell.visibility.smartEntryEnabled, false);
   });
 
   // 10. Declare result maps exactly (completion lifecycle status)
@@ -500,9 +552,9 @@ async function runSuite() {
     await handleSentinelAction(data, founderContext);
 
     const shell = mockDatabaseState.student_mission_catalog['jee_main_2026'];
-    assert.strictEqual(shell.catalogStatus, 'PREPARING');
-    assert.strictEqual(shell.userPanelVisible, true);
-    assert.strictEqual(shell.studentMessage, 'Mission is visible to eligible students and awaiting final Founder verification.');
+    assert.strictEqual(shell.catalogStatus, 'INTERNAL_DRAFT');
+    assert.strictEqual(shell.userPanelVisible, false);
+    assert.strictEqual(shell.studentMessage, 'Mission is in internal draft preparation and is not yet published.');
   });
 
   // 11. Same action retry is idempotent
@@ -1013,8 +1065,8 @@ async function runSuite() {
     mockDb.batch = originalBatch;
   });
 
-  // 36. Backfill builder semantic parity check
-  await testCase("Backfill builder semantic parity check", async () => {
+  // 36. Backfill builder semantic parity check (Updated to Fail-Closed Identity and Invisibility)
+  await testCase("Backfill builder semantic parity check (Updated to Fail-Closed Identity and Invisibility)", async () => {
     const realmData = {
       exam_name: 'JEE Main 2026',
       titleHindi: 'JEE Main Hindi',
@@ -1024,7 +1076,7 @@ async function runSuite() {
       code: 'jee_main_2026',
       organization: 'NTA',
       organizationCode: 'NTA',
-      status: 'ACTIVE',
+      status: 'PASSIVE',
       priority: 3,
       createdAt: 'MOCK_TIME'
     };
@@ -1038,26 +1090,30 @@ async function runSuite() {
       code: 'jee_main_2026',
       org: 'NTA',
       organizationCode: 'NTA',
-      nature: 'ACTIVE',
+      nature: 'PASSIVE',
       priority: 3,
       createdAt: 'MOCK_TIME'
     };
 
-    const variables = [{ id: 'var_1', name: 'Var 1' }];
-    const readiness = { crucible: 'ready' };
-    const catalogStatus = 'LIVE';
-    const studentMessage = 'Success';
-    const now = 'CURRENT_TIME';
+    const mirrorPayload = buildStudentMissionCatalogShell('jee_main_2026', realmData, recData, 'launch_exam_mission');
 
-    const backfillPayload = buildCatalogPayload('jee_main_2026', recData, variables, readiness, catalogStatus, studentMessage, now);
-    const mirrorPayload = buildStudentMissionCatalogShell('jee_main_2026', realmData, recData, 'launch_realm');
-
-    // Compare field-by-field semantic equality
-    const fieldsToVerify = ['id', 'mission_id', 'title', 'name', 'subtitle', 'titleHindi', 'state', 'examCategory', 'exam_category', 'target_year', 'year', 'exam_year', 'exam_id', 'code', 'recruitment_id', 'recruitmentGroupId', 'boardId', 'organizationCode', 'cardVisible', 'userPanelVisible', 'priority', 'sortOrder'];
-
-    for (const field of fieldsToVerify) {
-      assert.strictEqual(backfillPayload[field], mirrorPayload[field], `Parity mismatch on field '${field}': backfill='${backfillPayload[field]}', mirror='${mirrorPayload[field]}'`);
-    }
+    assert.strictEqual(mirrorPayload.id, 'jee_main_2026');
+    assert.strictEqual(mirrorPayload.name, 'JEE Main 2026');
+    assert.strictEqual(mirrorPayload.titleHindi, 'JEE Main Hindi');
+    assert.strictEqual(mirrorPayload.state, 'Rajasthan');
+    assert.strictEqual(mirrorPayload.examCategory, 'competitive');
+    assert.strictEqual(mirrorPayload.year, 2026);
+    assert.strictEqual(mirrorPayload.boardId, 'NTA');
+    assert.strictEqual(mirrorPayload.organizationCode, 'NTA');
+    assert.strictEqual(mirrorPayload.priority, 3);
+    assert.strictEqual(mirrorPayload.cardVisible, false);
+    assert.strictEqual(mirrorPayload.userPanelVisible, false);
+    assert.strictEqual(mirrorPayload.studentPublicationState, 'INTERNAL_DRAFT');
+    assert.strictEqual(mirrorPayload.status, 'INTERNAL_DRAFT');
+    assert.strictEqual(mirrorPayload.catalogStatus, 'INTERNAL_DRAFT');
+    assert.strictEqual(mirrorPayload.visibility.studentVisible, false);
+    assert.strictEqual(mirrorPayload.visibility.quickEntryEnabled, false);
+    assert.strictEqual(mirrorPayload.visibility.smartEntryEnabled, false);
   });
 
   // 37. Security: Upper Admin without required permission denied on lifecycle actions

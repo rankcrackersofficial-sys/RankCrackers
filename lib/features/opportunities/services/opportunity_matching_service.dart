@@ -3,13 +3,13 @@ import '../models/opportunity_match.dart';
 import '../../deep_profile/models/warrior_profile.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-/// 🔱 OPPORTUNITY MATCHING SERVICE
+/// OPPORTUNITY MATCHING SERVICE
 /// Sovereign authority for evaluating warrior eligibility against recruitments.
 class OpportunityMatchingService {
   static final _firestore = FirebaseFirestore.instance;
   static const String _collection = 'opportunity_matches';
 
-  /// 🔱 EVALUATE ELIGIBILITY (Document 50A Phase 3)
+  /// EVALUATE ELIGIBILITY (Document 50A Phase 3)
   /// Performs precision matching between a warrior profile and an opportunity.
   static OpportunityMatch evaluate({
     required WarriorProfile profile,
@@ -21,14 +21,14 @@ class OpportunityMatchingService {
     final List<String> missingRequirements = [];
     final List<String> benefitReasons = [];
 
-    // 🔱 Score Weights
+    // Score Weights
     const double weightAge = 0.25;
     const double weightQual = 0.35;
     const double weightSubject = 0.15;
     const double weightBenefit = 0.15;
     const double weightDomicile = 0.10;
 
-    // 1. AGE CHECK 🔱 (Precision calculation)
+    // 1. AGE CHECK (Precision calculation)
     if (profile.dateOfBirth != null) {
       final dob = profile.dateOfBirth!;
       final now = DateTime.now();
@@ -49,7 +49,7 @@ class OpportunityMatchingService {
       }
     }
 
-    // 2. CATEGORY & RELAXATION CHECK 🔱
+    // 2. CATEGORY & RELAXATION CHECK 
     if (profile.category.isNotEmpty) {
       matchScore += weightBenefit;
       eligibilityReasons.add('✓ Category matched (${profile.category})');
@@ -58,7 +58,7 @@ class OpportunityMatchingService {
       }
     }
 
-    // 3. DOMICILE CHECK 🔱
+    // 3. DOMICILE CHECK 
     if (profile.domicileState.isNotEmpty) {
       if (profile.domicileState == opportunity.state) {
         matchScore += weightDomicile;
@@ -66,31 +66,43 @@ class OpportunityMatchingService {
       }
     }
 
-    // 4. EDUCATION CHECK 🔱 (Precision Match)
+    // 4. EDUCATION CHECK (Precision Match)
     double qualAccumulator = 0.0;
     int qualChecks = 0;
 
     // A. Graduation Degree
     if (opportunity.requiresGraduation) {
       qualChecks++;
-      if (profile.isGraduationCompleted && (opportunity.acceptedDegrees.isEmpty || opportunity.acceptedDegrees.contains(profile.graduationDegree))) {
+
+      final ugRecords = profile.educationRecords.where((r) => r.level == "Bachelor's Degree");
+      final ugRecord = ugRecords.isNotEmpty ? ugRecords.first : null;
+      final isComp = ugRecord != null ? ugRecord.status == 'Completed' : (profile.isGraduationCompleted && profile.degreeCompletionStatus == 'Completed');
+      final degree = ugRecord != null ? (ugRecord.degreeId ?? '') : profile.graduationDegree;
+
+      if (isComp && (opportunity.acceptedDegrees.isEmpty || opportunity.acceptedDegrees.contains(degree))) {
         qualAccumulator += 1.0;
         eligibilityReasons.add('✓ Graduation degree matched');
       } else {
         eligible = false;
-        missingRequirements.add('Required graduation degree not matched');
+        missingRequirements.add('Incomplete or incompatible graduation degree');
       }
     }
 
     // B. Post Graduation Degree
     if (opportunity.requiresPostGraduation) {
       qualChecks++;
-      if (profile.isPostGraduationCompleted && (opportunity.acceptedPgDegrees.isEmpty || opportunity.acceptedPgDegrees.contains(profile.postGraduationDegree))) {
+
+      final pgRecords = profile.educationRecords.where((r) => r.level == "Master's Degree");
+      final pgRecord = pgRecords.isNotEmpty ? pgRecords.first : null;
+      final isComp = pgRecord != null ? pgRecord.status == 'Completed' : profile.isPostGraduationCompleted;
+      final degree = pgRecord != null ? (pgRecord.degreeId ?? '') : profile.postGraduationDegree;
+
+      if (isComp && (opportunity.acceptedPgDegrees.isEmpty || opportunity.acceptedPgDegrees.contains(degree))) {
         qualAccumulator += 1.0;
         eligibilityReasons.add('✓ PG degree matched');
       } else {
         eligible = false;
-        missingRequirements.add('Required PG degree not matched');
+        missingRequirements.add('Incomplete or incompatible PG degree');
       }
     }
 
@@ -117,15 +129,20 @@ class OpportunityMatchingService {
       matchScore += (qualAccumulator / qualChecks) * weightQual;
     }
 
-    // 5. SUBJECT CHECK 🔱
+    // 5. SUBJECT CHECK 
     double subjectAccumulator = 0.0;
     int subjectChecks = 0;
 
     // A. UG Subjects
     if (opportunity.acceptedUgSubjects.isNotEmpty) {
       subjectChecks++;
+
+      // 🔱 Check level-specific Education Records first
+      final ugRecords = profile.educationRecords.where((r) => r.level == "Bachelor's Degree");
+      final ugSubjects = ugRecords.isNotEmpty ? ugRecords.first.subjectIds : profile.graduationSubjects;
+
       bool ugMatch = false;
-      for (var s in profile.graduationSubjects) {
+      for (var s in ugSubjects) {
         if (opportunity.acceptedUgSubjects.contains(s)) {
           ugMatch = true;
           break;
@@ -143,8 +160,12 @@ class OpportunityMatchingService {
     // B. PG Subjects
     if (opportunity.acceptedPgSubjects.isNotEmpty) {
       subjectChecks++;
+
+      final pgRecords = profile.educationRecords.where((r) => r.level == "Master's Degree");
+      final pgSubjects = pgRecords.isNotEmpty ? pgRecords.first.subjectIds : profile.postGraduationSubjects;
+
       bool pgMatch = false;
-      for (var s in profile.postGraduationSubjects) {
+      for (var s in pgSubjects) {
         if (opportunity.acceptedPgSubjects.contains(s)) {
           pgMatch = true;
           break;
@@ -163,7 +184,27 @@ class OpportunityMatchingService {
       matchScore += (subjectAccumulator / subjectChecks) * weightSubject;
     }
 
-    // 🔱 RESULT CONSOLIDATION
+    // C. 10+2 / Secondary School Subjects
+    if (opportunity.requiredSubjects.isNotEmpty) {
+      // 🔱 Check level-specific Education Records for 10+2
+      final hscRecords = profile.educationRecords.where((r) => r.level == "Class 12");
+      final schoolSubjects = hscRecords.isNotEmpty ? hscRecords.first.subjectIds : profile.subjectsStudied;
+
+      // 🔱 Authority Note: For medical/engineering, PCB/PCM are collective requirements.
+      final bool allSubjectsMatched = opportunity.requiredSubjects.every(
+        (reqSub) => schoolSubjects.contains(reqSub)
+      );
+
+      if (!allSubjectsMatched) {
+        eligible = false;
+        final missing = opportunity.requiredSubjects.where((s) => !schoolSubjects.contains(s)).join(", ");
+        missingRequirements.add('Missing required 10+2 subjects: $missing');
+      } else {
+        eligibilityReasons.add('✓ All required secondary subjects matched');
+      }
+    }
+
+    // RESULT CONSOLIDATION
     return OpportunityMatch(
       uid: profile.uid,
       opportunityId: opportunity.id,
@@ -175,7 +216,7 @@ class OpportunityMatchingService {
     );
   }
 
-  /// 🔱 PERSIST MATCH
+  /// PERSIST MATCH
   static Future<void> saveMatch(OpportunityMatch match) async {
     final docId = '${match.uid}_${match.opportunityId}';
     await _firestore.collection(_collection).doc(docId).set(match.toMap());

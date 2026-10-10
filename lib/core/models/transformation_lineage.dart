@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 TRANSFORMATION LINEAGE (Document 50J Article 4.1)
+/// TRANSFORMATION LINEAGE (Document 50J Article 4.1)
 /// Records each transformation step in the refinery pipeline.
 /// Enables full auditability from Question back to Source Document.
 class TransformationLineage extends Equatable {
@@ -8,7 +8,7 @@ class TransformationLineage extends Equatable {
   final String inputCollection; 
   final String inputId; 
   final String outputCollection; 
-  final List<String> outputIds; // 🔱 Batch Support (Audit Finding 4)
+  final List<String> outputIds; // Batch Support (Audit Finding 4)
   final String workerId; 
   final String promptVersion;
   final TransformationType type;

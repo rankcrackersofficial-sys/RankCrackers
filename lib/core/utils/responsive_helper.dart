@@ -4,7 +4,7 @@ class ResponsiveHelper {
   static double width(BuildContext context) => MediaQuery.sizeOf(context).width;
   static double height(BuildContext context) => MediaQuery.sizeOf(context).height;
 
-  // 🔱 BREAKPOINTS v4.2
+  // BREAKPOINTS v4.2
   static bool isUltraCompact(BuildContext context) => height(context) < 600;
   static bool isSmallPhone(BuildContext context) => width(context) < 360;
   static bool isNormalPhone(BuildContext context) => width(context) >= 360 && width(context) < 430;
@@ -20,7 +20,7 @@ class ResponsiveHelper {
   static double wp(BuildContext context, double p) => width(context) * p;
   static double hp(BuildContext context, double p) => height(context) * p;
 
-  /// 🔱 Proportional Font Scaling v4.2
+  /// Proportional Font Scaling v4.2
   static double sp(BuildContext context, double size) {
     final scale = width(context) / 375;
     double multiplier = isSmallPhone(context) ? 0.85 : 1.0;
@@ -31,13 +31,13 @@ class ResponsiveHelper {
     );
   }
 
-  /// 🔱 Component Metrics
+  /// Component Metrics
   static double fieldHeight(BuildContext context) => isCompact(context) ? 46.0 : 56.0;
   static double buttonHeight(BuildContext context) => isSmallPhone(context) ? 52.0 : 60.0;
   static double headerHeight(BuildContext context) => isCompact(context) ? 56.0 : 72.0;
   static double bottomNavHeight(BuildContext context) => isCompact(context) ? 64.0 : 80.0;
   
-  /// 🔱 Spacing Metrics
+  /// Spacing Metrics
   static double sectionSpacing(BuildContext context) {
     if (isUltraCompact(context)) return 12.0;
     if (isCompact(context)) return 24.0;
@@ -46,7 +46,7 @@ class ResponsiveHelper {
   
   static double compactGap(BuildContext context) => isCompact(context) ? 8.0 : 16.0;
 
-  /// 🔱 Adaptive Graphics
+  /// Adaptive Graphics
   static double avatarSize(BuildContext context) {
     if (isUltraCompact(context)) return 56.0;
     if (isSmallPhone(context)) return 68.0;
@@ -56,7 +56,7 @@ class ResponsiveHelper {
   
   static double iconSize(BuildContext context) => isCompact(context) ? 16.0 : 22.0;
 
-  /// 🔱 Grid Layout Rules
+  /// Grid Layout Rules
   static int crossAxisCount(BuildContext context) {
     if (isTablet(context)) return 4;
     if (isDesktop(context)) return 6;
@@ -69,7 +69,7 @@ class ResponsiveHelper {
     return 0.92;
   }
 
-  /// 🔱 Card Metrics
+  /// Card Metrics
   static double cardPadding(BuildContext context) {
     if (isSmallPhone(context)) return 12.0;
     if (isTablet(context)) return 20.0;

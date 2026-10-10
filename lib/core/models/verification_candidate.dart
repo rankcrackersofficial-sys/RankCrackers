@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 VERIFICATION CANDIDATE (Document 50I-B Audit Finding 2)
+/// VERIFICATION CANDIDATE (Document 50I-B Audit Finding 2)
 /// Aggregated refinery output waiting for Sentinel review.
 class VerificationCandidate extends Equatable {
   final String id;

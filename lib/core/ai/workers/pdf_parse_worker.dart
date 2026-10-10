@@ -10,7 +10,7 @@ import '../../engines/chunking_engine.dart';
 import 'notification_pipeline_workers.dart';
 import 'syllabus_pipeline_workers.dart';
 
-/// 🔱 PDF PARSE WORKER (Hardened v2.5 Sovereign)
+/// PDF PARSE WORKER (Hardened v2.5 Sovereign)
 /// Orchestrates Autonomous Extraction & Blueprint Decomposition.
 class PdfParseWorker {
   
@@ -21,7 +21,7 @@ class PdfParseWorker {
     required String fileName,
     required String filePath, // Local path or URL
   }) async {
-    debugPrint("🔱 PDF WORKER: Extracting text from $fileName");
+    debugPrint("PDF WORKER: Extracting text from $fileName");
 
     File? file;
     
@@ -33,7 +33,7 @@ class PdfParseWorker {
       }
 
       if (file == null || !await file.exists()) {
-        debugPrint("🔱 PDF WORKER ERROR: Source file not found: $filePath");
+        debugPrint("PDF WORKER ERROR: Source file not found: $filePath");
         return;
       }
 
@@ -42,7 +42,7 @@ class PdfParseWorker {
       final List<Map<String, dynamic>> pageMap = extraction['pageMap'];
       final bool ocrFlag = extraction['ocrFlag'];
 
-      // 🔱 Phase 2: Notification Pipeline
+      // Phase 2: Notification Pipeline
       try {
         final canonicalReport = await NotificationReportBuilder.build(
           id: recordId,
@@ -71,13 +71,13 @@ class PdfParseWorker {
         );
 
         await SentinelRepository.injectDrafts([draft]);
-        debugPrint("🔱 PDF WORKER: Notification Intelligence Pipeline Success.");
+        debugPrint("PDF WORKER: Notification Intelligence Pipeline Success.");
         return;
       } catch (e) {
-        debugPrint("🔱 PDF WORKER: Notification Pipeline Bypassed - $e");
+        debugPrint("PDF WORKER: Notification Pipeline Bypassed - $e");
       }
 
-      // 🔱 Phase 3: Syllabus Decomposition Pipeline
+      // Phase 3: Syllabus Decomposition Pipeline
       try {
         final syllabusReports = await SyllabusReportBuilder.build(
           text: extractedText,
@@ -105,17 +105,17 @@ class PdfParseWorker {
           )).toList();
 
           await SentinelRepository.injectDrafts(drafts);
-          debugPrint("🔱 PDF WORKER: Syllabus Atomic Decomposition Success. Staged ${drafts.length} drafts.");
+          debugPrint("PDF WORKER: Syllabus Atomic Decomposition Success. Staged ${drafts.length} drafts.");
           return;
         }
       } catch (e) {
-        debugPrint("🔱 PDF WORKER: Syllabus Pipeline Bypassed - $e");
+        debugPrint("PDF WORKER: Syllabus Pipeline Bypassed - $e");
       }
 
-      // 🔱 Fallback: Generic Extraction
+      // Fallback: Generic Extraction
       final chunks = ChunkingEngine.segment(extractedText);
 
-      // 🔱 Isolation Zone Registration
+      // Isolation Zone Registration
       final draft = SentinelDraft(
         id: 'pdf_draft_${DateTime.now().millisecondsSinceEpoch}_$recordId',
         type: 'pdf_extraction',
@@ -150,17 +150,17 @@ class PdfParseWorker {
       );
 
       await SentinelRepository.injectDrafts([draft]);
-      debugPrint("🔱 PDF WORKER: Extraction complete. Draft staged.");
+      debugPrint("PDF WORKER: Extraction complete. Draft staged.");
 
     } catch (e) {
-      debugPrint("🔱 PDF WORKER ERROR: Extraction failed - $e");
+      debugPrint("PDF WORKER ERROR: Extraction failed - $e");
     } finally {
-      // 🔱 Cleanup temporary assets
+      // Cleanup temporary assets
       if (filePath.startsWith('http') && file != null) {
         try {
           if (await file.exists()) await file.delete();
         } catch (e) {
-          debugPrint("🔱 PDF WORKER: Cleanup failed - $e");
+          debugPrint("PDF WORKER: Cleanup failed - $e");
         }
       }
     }
@@ -174,7 +174,7 @@ class PdfParseWorker {
       await dio.download(url, tempPath);
       return File(tempPath);
     } catch (e) {
-      debugPrint("🔱 PDF WORKER: Download failed - $e");
+      debugPrint("PDF WORKER: Download failed - $e");
       return null;
     }
   }

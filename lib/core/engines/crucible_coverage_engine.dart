@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import '../../features/crucible/models/crucible_node.dart';
 
-/// 🔱 CRUCIBLE COVERAGE ENGINE (Audit GAP-H5)
+/// CRUCIBLE COVERAGE ENGINE (Audit GAP-H5)
 /// Measures diversity, distribution, and density of assessments.
 class CrucibleCoverageEngine {
   

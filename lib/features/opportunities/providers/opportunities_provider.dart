@@ -2,7 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/opportunity.dart';
 
-/// 🔱 OPPORTUNITIES PROVIDER
+/// OPPORTUNITIES PROVIDER
 /// Streams all active recruitment notifications from Firestore.
 final allOpportunitiesProvider = StreamProvider<List<Opportunity>>((ref) {
   return FirebaseFirestore.instance

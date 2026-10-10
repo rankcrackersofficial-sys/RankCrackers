@@ -4,7 +4,7 @@ import 'package:equatable/equatable.dart';
 enum WorkerMode { auto, manual }
 enum WorkerPriority { critical, high, normal, low }
 
-/// 🔱 WORKER REGISTRY MODEL
+/// WORKER REGISTRY MODEL
 /// Constitutional authority for autonomous system entities.
 class WorkerRegistry extends Equatable {
   final String id;

@@ -4,7 +4,7 @@ import 'node_linker.dart';
 import 'adaptive_mapper.dart';
 import 'mastery_propagation_engine.dart';
 
-/// 🔱 KNOWLEDGE GRAPH
+/// KNOWLEDGE GRAPH
 /// Represents the universe of knowledge. Stores immutable content.
 class KnowledgeGraph {
   static const double maxDangerScore = 10.0;
@@ -32,7 +32,7 @@ class KnowledgeGraph {
   }
 
   // ===================================================
-  // GRAPH QUERIES 🔱 (State-Aware via Mapper/Detector)
+  // GRAPH QUERIES (State-Aware via Mapper/Detector)
   // ===================================================
 
   List<MicroTopicNode> getLinkedNodes(String nodeId) {
@@ -50,7 +50,7 @@ class KnowledgeGraph {
   }
 
   // ===================================================
-  // PROPAGATION & RISK 🔱 (State-Aware)
+  // PROPAGATION & RISK (State-Aware)
   // ===================================================
 
   List<MicroTopicNode> getAffectedNodes(
@@ -80,7 +80,7 @@ class KnowledgeGraph {
     );
   }
 
-  /// 🔱 GLOBAL CASCADE RISK LAW
+  /// GLOBAL CASCADE RISK LAW
   /// Calculates the aggregate systemic risk of the entire knowledge graph.
   double getGlobalCascadeRisk(Map<String, NodeRuntimeState> states) {
     final allNodesList = allNodes;
@@ -91,7 +91,7 @@ class KnowledgeGraph {
 
     for (final node in allNodesList) {
       final state = states[node.id];
-      // 🔱 Identify potential collapse sources (Weak Nodes)
+      // Identify potential collapse sources (Weak Nodes)
       if (state != null && state.mastery < 0.50) {
         final nodeCascadeRisk = getCascadeRisk(node.id, states);
         if (nodeCascadeRisk > peakSeverity) {

@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 RISK NODE (Blueprint v1.0 - Document 49)
+/// RISK NODE (Blueprint v1.0 - Document 49)
 /// Represents the decision-making intelligence for an Atomic Topic.
 class RiskNode extends Equatable {
   final String id; // [userId]_[atomicTopicId]

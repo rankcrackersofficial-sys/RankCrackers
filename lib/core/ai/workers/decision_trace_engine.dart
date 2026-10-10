@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:rank_crackers/core/models/decision_trace_node.dart';
 
-/// 🔱 DECISION TRACE ENGINE (Blueprint v1.0 - Document 61)
+/// DECISION TRACE ENGINE (Blueprint v1.0 - Document 61)
 /// Physically reconstructs the "Why" behind every APOS recommendation.
 class DecisionTraceEngine {
   
@@ -14,7 +14,7 @@ class DecisionTraceEngine {
     required List<String> logicalChain,
     required String source,
   }) {
-    debugPrint("🔱 DECISION TRACE: Recording logical evidence for $targetType $targetId");
+    debugPrint("DECISION TRACE: Recording logical evidence for $targetType $targetId");
 
     return DecisionTraceNode(
       id: "trace_${DateTime.now().millisecondsSinceEpoch}_$targetId",

@@ -56,7 +56,7 @@ class DeadLetterQueue extends StatelessWidget {
                       TacticalButton(
                         title: "RETRY TASK", 
                         onTap: () async {
-                          // 🔱 Re-inject into queue logic
+                          // Re-inject into queue logic
                         }
                       ),
                     ],

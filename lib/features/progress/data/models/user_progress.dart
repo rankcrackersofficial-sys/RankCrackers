@@ -4,21 +4,21 @@ import '../../../../core/models/atomic_mastery_state.dart';
 import '../../../../core/models/atomic_coverage_state.dart';
 import '../../../../core/models/atomic_risk_state.dart';
 
-/// 🔱 USER PROGRESS LAW: Sovereign Personal Truth.
+/// USER PROGRESS LAW: Sovereign Personal Truth.
 /// Tracks mastery, coverage, and risk at both node and atomic levels.
 class UserProgress extends Equatable {
   final String nodeId;
   final double mastery; 
   final Map<String, double> factMastery; 
   final Map<String, AtomicMasteryState> atomicMastery; 
-  final Map<String, AtomicCoverageState> atomicCoverage; // 🔱 Phase 2D: Document 34
-  final Map<String, AtomicRiskState> atomicRisk; // 🔱 Phase 2D: Document 35
+  final Map<String, AtomicCoverageState> atomicCoverage; // Phase 2D: Document 34
+  final Map<String, AtomicRiskState> atomicRisk; // Phase 2D: Document 35
   final int revisionLevel;
   final int battlesWon;
   final int battlesLost;
   final DateTime lastReviewed;
 
-  // 🔱 EVIDENCE CHAIN (Article 7)
+  // EVIDENCE CHAIN (Article 7)
   final double assessmentEvidence;
   final double readingEvidence;
   final double revisionEvidence;
@@ -41,7 +41,7 @@ class UserProgress extends Equatable {
     this.evidenceScore = 0.0,
   });
 
-  /// 🔱 EMPTY PROGRESS FACTORY
+  /// EMPTY PROGRESS FACTORY
   factory UserProgress.empty(String nodeId) {
     return UserProgress(
       nodeId: nodeId,

@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 COVERAGE NODE (Blueprint v1.0 - Document 48)
+/// COVERAGE NODE (Blueprint v1.0 - Document 48)
 /// Tracks the Breadth of a student's engagement with an Atomic Topic.
 class CoverageNode extends Equatable {
   final String id; // [userId]_[atomicTopicId]

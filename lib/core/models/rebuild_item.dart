@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 REBUILD ITEM
+/// REBUILD ITEM
 /// Represents a tactical objective for recovery.
 class RebuildItem extends Equatable {
   final String nodeId;

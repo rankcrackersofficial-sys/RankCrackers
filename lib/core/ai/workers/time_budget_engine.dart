@@ -4,7 +4,7 @@ import 'package:rank_crackers/core/models/fusion_node.dart';
 import 'package:rank_crackers/core/models/momentum_node.dart';
 import 'package:rank_crackers/core/models/exam_clock_node.dart';
 
-/// 🔱 TIME BUDGET ENGINE (Blueprint v1.0 - Document 53)
+/// TIME BUDGET ENGINE (Blueprint v1.0 - Document 53)
 /// Optimizes daily study time distribution based on threat levels and temporal pressure.
 class TimeBudgetEngine {
   
@@ -16,7 +16,7 @@ class TimeBudgetEngine {
     required MomentumNode momentum,
     required ExamClockNode clock,
   }) {
-    debugPrint("🔱 TIME BUDGET: Optimizing allocation for $dailyLimitMinutes minutes...");
+    debugPrint("TIME BUDGET: Optimizing allocation for $dailyLimitMinutes minutes...");
 
     final Map<String, int> subjectAllocation = {};
     final Map<String, int> actionAllocation = {
@@ -37,7 +37,7 @@ class TimeBudgetEngine {
       );
     }
 
-    // 🔱 Strategy: Higher weight to EMERGENCY and HIGH RISK
+    // Strategy: Higher weight to EMERGENCY and HIGH RISK
     // Also consider Exam Clock pressure
     double pressureMultiplier = 1.0;
     if (clock.status == ExamClockStatus.OFF_TRACK) {
@@ -68,7 +68,7 @@ class TimeBudgetEngine {
       double proportion = (node.priorityScore * nodeWeight) / totalWeightedPriority;
       int allocated = (proportion * dailyLimitMinutes).toInt();
       
-      // 🔱 Audit GAP-O-2: Degrade Gracefully (Min 5 mins if budget allows)
+      // Audit GAP-O-2: Degrade Gracefully (Min 5 mins if budget allows)
       if (allocated < 5 && remainingMinutes >= 5) allocated = 5;
       
       allocated = allocated.clamp(0, remainingMinutes);
@@ -82,7 +82,7 @@ class TimeBudgetEngine {
       subjectAllocation[subject] = (subjectAllocation[subject] ?? 0) + allocated;
     }
 
-    // 🔱 Audit GAP-O-1: Rounding Recovery
+    // Audit GAP-O-1: Rounding Recovery
     // Assign any leftover minutes to the highest priority node
     if (remainingMinutes > 0 && activeNodes.isNotEmpty) {
       final highestPriorityAction = activeNodes.first.action;

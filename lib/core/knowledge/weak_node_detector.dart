@@ -2,7 +2,7 @@ import '../models/micro_topic_node.dart';
 import '../models/node_runtime_state.dart';
 import 'knowledge_graph.dart';
 
-/// 🔱 WEAK NODE DETECTOR
+/// WEAK NODE DETECTOR
 /// Identifies knowledge gaps based on runtime mastery data.
 class WeakNodeDetector {
   final KnowledgeGraph graph;

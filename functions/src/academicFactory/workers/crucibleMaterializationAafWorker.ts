@@ -2,7 +2,7 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 CRUCIBLE MATERIALIZATION AAF WORKER
+ * CRUCIBLE MATERIALIZATION AAF WORKER
  * Binds the Materialize Worker logic for Questions.
  */
 export async function crucibleMaterializationAafWorker(job: AafJobMetadata): Promise<AafWorkerResult> {

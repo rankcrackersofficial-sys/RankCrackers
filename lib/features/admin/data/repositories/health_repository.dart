@@ -3,7 +3,7 @@ import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 
-/// 🔱 SYSTEM HEALTH REPOSITORY (v3.0 Sovereign Telemetry)
+/// SYSTEM HEALTH REPOSITORY (v3.0 Sovereign Telemetry)
 class HealthRepository {
   static final _firestore = FirebaseFirestore.instance;
   static final _functions = FirebaseFunctions.instance;
@@ -28,7 +28,7 @@ class HealthRepository {
     await _functions.httpsCallable('toggleAiSystem').call({'enabled': enabled});
   }
 
-  /// 🔱 Phase 3-7: Live Health Diagnostics
+  /// Phase 3-7: Live Health Diagnostics
   static Future<Map<String, dynamic>> getLiveSystemHealth() async {
     final start = DateTime.now().millisecondsSinceEpoch;
     final Map<String, dynamic> health = {
@@ -41,12 +41,12 @@ class HealthRepository {
       'latency': {},
     };
 
-    // 🔱 Phase 3: Auth Health
+    // Phase 3: Auth Health
     if (FirebaseAuth.instance.currentUser != null) {
       health['services']['auth'] = 'ONLINE';
     }
 
-    // 🔱 Phase 4: Firestore Health + Latency
+    // Phase 4: Firestore Health + Latency
     try {
       final fStart = DateTime.now().millisecondsSinceEpoch;
       await _firestore.collection('system_config').doc('global').get(const GetOptions(source: Source.server));
@@ -56,7 +56,7 @@ class HealthRepository {
       health['services']['firestore'] = 'ERROR';
     }
 
-    // 🔱 Phase 5: Cloud Functions Health
+    // Phase 5: Cloud Functions Health
     try {
       final result = await _functions.httpsCallable('getSystemHealth').call();
       final data = Map<String, dynamic>.from(result.data);
@@ -82,7 +82,7 @@ class HealthRepository {
     return health;
   }
 
-  /// 🔱 Phase 7: Gemini Direct Ping (Sovereign Verification)
+  /// Phase 7: Gemini Direct Ping (Sovereign Verification)
   static Future<Map<String, dynamic>> pingGemini() async {
     final start = DateTime.now().millisecondsSinceEpoch;
     try {

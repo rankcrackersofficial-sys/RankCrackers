@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "1.0.0",
+  "profileStatus": "MATERIALIZATION_READY",
+  "identity": {
+    "missionId": "mock_portal_registry",
+    "canonicalExamName": "Portal Registry Exam",
+    "canonicalDisplayName": "Portal Registry Exam 2026"
+  },
+  "missionTargetYear": 2026,
+  "sourceBaselineYear": 2025,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "authority": {
+    "organization": "State Commission",
+    "officialPortals": [
+      "https://commission.gov.in",
+      "https://portal.commission.gov.in"
+    ],
+    "sourceDocumentType": "Official Web Portal Advertisement Table",
+    "officialAdvertisementReference": "Advt. 01/2025",
+    "officialNotificationTitle": "Recruitment Portal Listing",
+    "sha256": null,
+    "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "paperModel": {
+    "paperCount": 1,
+    "papers": [
+      {
+        "paperId": "paper_1",
+        "paperNumber": 1,
+        "paperName": "General Paper",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "mode": "CBT",
+        "durationMinutes": 180,
+        "totalQuestions": 75,
+        "totalMarks": 300
+      }
+    ]
+  },
+  "variantModel": {
+    "hasVariants": false,
+    "variants": []
+  },
+  "subjectModel": {
+    "subjects": [
+      {
+        "subjectId": "subj_1",
+        "subjectName": "Subject 1",
+        "canonicalKey": "key_1"
+      }
+    ]
+  },
+  "languageModel": {
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+      "English",
+      "Hindi"
+    ],
+    "mediumPolicy": "BILINGUAL"
+  },
+  "s2DocumentProfile": {
+    "expectedPapers": [
+      "General Paper"
+    ],
+    "paperAliases": {
+      "General Paper": [
+        "Paper 1"
+      ]
+    },
+    "expectedSubjects": [
+      "Subject 1"
+    ],
+    "subjectAliases": {
+      "Subject 1": [
+        "Subj 1"
+      ]
+    },
+    "languageScripts": [
+      "Latin",
+      "Devanagari"
+    ],
+    "preferredOcrLanguages": [
+      "eng",
+      "hin"
+    ],
+    "sourceYearPolicy": "USE_2025_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+  },
+  "fieldAuthorityMap": {
+    "paperStructure": "SOURCE_VERIFIED",
+    "subjectModel": "SOURCE_VERIFIED"
+  },
+  "profileHash": "c809d068355d2167dd29397b444f9415dddc44b480773f9fbeeec1ab35a8b8ba"
+}

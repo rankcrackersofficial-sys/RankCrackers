@@ -199,27 +199,9 @@ class SmartNotesScreen extends StatelessWidget {
             const SizedBox(height: 18),
 
             _buildNotesCard(
-              "Modern History",
-              "Important revolts & movements",
-              Icons.history_edu_rounded,
-            ),
-
-            _buildNotesCard(
-              "Indian Constitution",
-              "Fundamental Rights summary",
-              Icons.gavel_rounded,
-            ),
-
-            _buildNotesCard(
-              "Science Biology",
-              "Human body systems quick notes",
-              Icons.science_rounded,
-            ),
-
-            _buildNotesCard(
-              "Geography Maps",
-              "Rivers & mountain ranges",
-              Icons.public_rounded,
+              "Preparing Smart Notes",
+              "Academic content is being projected for JEE Main.",
+              Icons.hourglass_empty_rounded,
             ),
 
             const SizedBox(height: 28),

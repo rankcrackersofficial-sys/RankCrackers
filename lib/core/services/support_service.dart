@@ -2,13 +2,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 
-/// 🔱 SUPPORT SERVICE
+/// SUPPORT SERVICE
 /// Central authority for warrior assistance and feedback.
 /// Connects the Support Center to the Admin Command Plane.
 class SupportService {
   static final _firestore = FirebaseFirestore.instance;
 
-  /// 🔱 CREATE SUPPORT TICKET
+  /// CREATE SUPPORT TICKET
   static Future<void> createTicket({
     required String type, // help, feedback, bug_report
     required String message,
@@ -29,9 +29,9 @@ class SupportService {
         'createdAt': FieldValue.serverTimestamp(),
         'metadata': metadata,
       });
-      debugPrint('🔱 SUPPORT: Ticket $ticketId created.');
+      debugPrint('SUPPORT: Ticket $ticketId created.');
     } catch (e) {
-      debugPrint('🔱 SUPPORT ERROR: Failed to create ticket - $e');
+      debugPrint('SUPPORT ERROR: Failed to create ticket - $e');
       rethrow;
     }
   }

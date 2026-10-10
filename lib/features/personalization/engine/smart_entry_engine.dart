@@ -1,4 +1,5 @@
 import 'dart:math';
+import '../../../core/models/canonical_academic_ref.dart';
 import '../../../core/models/question_model.dart';
 import '../../crucible/models/mission_crucible_blueprint.dart';
 import '../models/student_learning_level.dart';
@@ -24,6 +25,13 @@ class DiagnosticItemResponse {
 
   /// Alias for backward compatibility with subjectId callers.
   String get subjectId => domainId;
+
+  /// Canonical Academic Reference adapter (Fail-Closed: not routable until explicit GU is bound)
+  CanonicalAcademicRef get canonicalRef => CanonicalAcademicRef.fromDiagnosticItem(
+        missionId: 'jee_main_2027',
+        domainId: domainId,
+        questionId: questionId,
+      );
 }
 
 /// ASSESSMENT WINDOW EVIDENCE

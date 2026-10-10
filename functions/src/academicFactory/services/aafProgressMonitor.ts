@@ -1,7 +1,7 @@
 import * as admin from 'firebase-admin';
 
 /**
- * 🔱 AAF PROGRESS MONITOR
+ * AAF PROGRESS MONITOR
  * Aggregates persistent state for a Run or Mission.
  */
 export class AafProgressMonitor {

@@ -1,9 +1,9 @@
 import '../models/opportunity.dart';
 
-/// 🔱 OPPORTUNITY FILTER SERVICE
+/// OPPORTUNITY FILTER SERVICE
 /// Sovereign authority for categorizing and sorting opportunities.
 class OpportunityFilterService {
-  /// 🔱 CLOSING SOON
+  /// CLOSING SOON
   /// Surfacing opportunities within the critical 7-day boundary.
   static List<Opportunity> getClosingSoon(List<Opportunity> list) {
     final now = DateTime.now();
@@ -14,7 +14,7 @@ class OpportunityFilterService {
       ..sort((a, b) => a.lastDate.compareTo(b.lastDate));
   }
 
-  /// 🔱 NEW THIS WEEK
+  /// NEW THIS WEEK
   /// Highlighting recent releases within the last 7 days.
   static List<Opportunity> getNewThisWeek(List<Opportunity> list) {
     final now = DateTime.now();

@@ -1,0 +1,295 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_2218270C",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U05_T_00000003",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_2218270C_V001",
+  "atomicFactSetHash": "ff6e4aaca69f077f36117cd8e48d90d647246e6cb6b767cbbc1f7212509d1f6d",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_2218270C_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_2218270C",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_2218270C_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_2218270C_19F35CBB",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_21EC7CBE",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_2C06A2B4",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_32E99AC5",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_647D8984",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_7DE2E1B8",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_7EA0F8A3",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_8CAE2DC0",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_A7E19377",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_A8BB6369",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_D7D82CF3"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "overviewText": "This chapter details Moment of Inertia, Radius of Gyration ($I = M k^2$), Parallel and Perpendicular Axis Theorems, and standard geometric bodies.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "887fa2f14765598fe7bdb3178512d7f36e5e9a3af258b9d2d80843039458bd1d",
+      "createdAtUtc": "2026-09-02T13:29:33.052Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_2218270C_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_2218270C",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_2218270C_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_2218270C_19F35CBB",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_21EC7CBE",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_2C06A2B4",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_32E99AC5",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_647D8984",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_7DE2E1B8",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_7EA0F8A3",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_8CAE2DC0",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_A7E19377",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_A8BB6369",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_D7D82CF3"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_2218270C_CONCEPTS_01_MOMENT_OF_INERTIA_GYRATION",
+          "semanticAnchorId": "ANCHOR_INERTIA_AND_GYRATION",
+          "title": "1. Moment of Inertia and Radius of Gyration",
+          "contentMarkdown": "Moment of inertia $I = \\\\sum m_i r_i^2$ measures rotational resistance. It depends on mass, shape, size, and mass distribution relative to the axis. Radius of gyration $k$ is defined by $$I = M k^2$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_2218270C_8CAE2DC0",
+            "AF_GU_JEEMAIN2027_PHY_2218270C_21EC7CBE",
+            "AF_GU_JEEMAIN2027_PHY_2218270C_7DE2E1B8",
+            "AF_GU_JEEMAIN2027_PHY_2218270C_A7E19377"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_2218270C_CONCEPTS_02_AXIS_THEOREMS",
+          "semanticAnchorId": "ANCHOR_AXIS_THEOREMS",
+          "title": "2. Parallel and Perpendicular Axis Theorems",
+          "contentMarkdown": "Parallel Axis Theorem: $$I = I_{\\\\text{cm}} + M d^2$$. Perpendicular Axis Theorem for planar laminae: $$I_z = I_x + I_y$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_2218270C_A8BB6369",
+            "AF_GU_JEEMAIN2027_PHY_2218270C_D7D82CF3"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_2218270C_CONCEPTS_03_STANDARD_BODIES",
+          "semanticAnchorId": "ANCHOR_STANDARD_BODIES",
+          "title": "3. Moments of Inertia of Standard Rigid Bodies",
+          "contentMarkdown": "Moments of Inertia for standard bodies: Ring: $I = M R^2$; Disc: $I = \\\\frac{1}{2} M R^2$; Solid Sphere: $I = \\\\frac{2}{5} M R^2$; Thin Rod: $I = \\\\frac{1}{12} M L^2$ (bisector) and $I = \\\\frac{1}{3} M L^2$ (end); Solid Cylinder: $I = \\\\frac{1}{2} M R^2$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_2218270C_647D8984",
+            "AF_GU_JEEMAIN2027_PHY_2218270C_7EA0F8A3",
+            "AF_GU_JEEMAIN2027_PHY_2218270C_2C06A2B4",
+            "AF_GU_JEEMAIN2027_PHY_2218270C_19F35CBB",
+            "AF_GU_JEEMAIN2027_PHY_2218270C_32E99AC5"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "3a6bb4ba07134a7b7d9387c606cd20cf620a863754973515aad6a6f998e73a9b",
+      "createdAtUtc": "2026-09-02T13:29:33.052Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_2218270C_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_2218270C",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_2218270C_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_2218270C_A8BB6369",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_D7D82CF3",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_2C06A2B4"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Parallel Axis Theorem",
+          "formula": "I = I_{\\\\text{cm}} + M d^2",
+          "constraints": "Parallel axes separated by distance d",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_2218270C_A8BB6369"
+          ]
+        },
+        {
+          "name": "Perpendicular Axis Theorem",
+          "formula": "I_z = I_x + I_y",
+          "constraints": "Planar laminar body in xy-plane",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_2218270C_D7D82CF3"
+          ]
+        },
+        {
+          "name": "Solid Sphere Moment of Inertia",
+          "formula": "I = \\\\frac{2}{5} M R^2",
+          "constraints": "Uniform sphere about diameter",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_2218270C_2C06A2B4"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d1d59791255ee2293d8264975ffefaa173e76613ac6692b0de2b21b338ce0e9b",
+      "createdAtUtc": "2026-09-02T13:29:33.052Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_2218270C_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_2218270C",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_2218270C_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.052Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_2218270C_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_2218270C",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_2218270C_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_2218270C_A8BB6369",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_19F35CBB"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_2218270C_01",
+          "title": "Parallel Axis Theorem for a Thin Rod",
+          "problemStatement": "Using $I_{\\\\text{cm}} = \\\\frac{1}{12}ML^2$ for a thin rod about its bisector, find $I$ about an axis passing through one end.",
+          "stepByStepSolution": [
+            "Step 1: Distance from center of mass to one end is $d = L/2$.",
+            "Step 2: Apply Parallel Axis Theorem: $I = I_{\\\\text{cm}} + M d^2 = \\\\frac{1}{12}ML^2 + M(L/2)^2 = \\\\frac{1}{12}ML^2 + \\\\frac{1}{4}ML^2 = \\\\frac{4}{12}ML^2 = \\\\frac{1}{3}ML^2$."
+          ],
+          "finalAnswer": "I = \\\\frac{1}{3} M L^2",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_2218270C_A8BB6369",
+            "AF_GU_JEEMAIN2027_PHY_2218270C_19F35CBB"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "75a2ec8e3a76648309a7a29b6c9f40a23a8e4d2247874d68d8831b0f50da3bc2",
+      "createdAtUtc": "2026-09-02T13:29:33.052Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_2218270C_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_2218270C",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_2218270C_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_2218270C_D7D82CF3"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_2218270C_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Which theorem states that for a planar laminar body in the xy plane, $I_z = I_x + I_y$?",
+          "options": [
+            "Perpendicular Axis Theorem",
+            "Parallel Axis Theorem",
+            "Work-Energy Theorem",
+            "Keplers Second Law"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "The Perpendicular Axis Theorem applies strictly to 2D laminar bodies: $I_z = I_x + I_y$.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_2218270C_D7D82CF3"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "544b11d9d4d4bde31693231a6e9c3390c44ee3c02f1e0de99d3881b01da32d30",
+      "createdAtUtc": "2026-09-02T13:29:33.052Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_2218270C_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_2218270C",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_2218270C_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_2218270C_19F35CBB",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_21EC7CBE",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_2C06A2B4",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_32E99AC5",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_647D8984",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_7DE2E1B8",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_7EA0F8A3",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_8CAE2DC0",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_A7E19377",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_A8BB6369",
+        "AF_GU_JEEMAIN2027_PHY_2218270C_D7D82CF3"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Axis theorem application",
+          "Moment of inertia body evaluations"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "c472acafce197324ff5e30d762526f1b50931969149516483d58fda3ac5e63eb",
+      "createdAtUtc": "2026-09-02T13:29:33.052Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.052Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

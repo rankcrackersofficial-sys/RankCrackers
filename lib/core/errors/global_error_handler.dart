@@ -3,10 +3,10 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
 class GlobalErrorHandler {
   // ===================================================
-  // HANDLE ERROR 🔱
+  // HANDLE ERROR 
   // ===================================================
   static void handle(dynamic error, [StackTrace? stack]) {
-    debugPrint('🔱 TACTICAL ERROR CAPTURED: $error');
+    debugPrint('TACTICAL ERROR CAPTURED: $error');
     
     // Push to Crashlytics in production
     if (!kDebugMode) {
@@ -15,7 +15,7 @@ class GlobalErrorHandler {
   }
 
   // ===================================================
-  // HANDLE FATAL ERROR 🔱
+  // HANDLE FATAL ERROR 
   // ===================================================
   static void handleFatal(dynamic error, [StackTrace? stack]) {
     debugPrint('🔥 CRITICAL SYSTEM FAILURE: $error');

@@ -5,7 +5,7 @@ import 'template_engine.dart';
 import 'distractor_engine.dart';
 import 'difficulty_engine.dart';
 
-/// 🔱 MCQ GENERATOR (Core Phase 13 Engine)
+/// MCQ GENERATOR (Core Phase 13 Engine)
 /// Generates assessment evidence from knowledge blocks at zero AI cost.
 class McqGenerator {
   final TemplateEngine _templates = TemplateEngine();
@@ -48,7 +48,7 @@ class McqGenerator {
       options: allOptions,
       answerIndex: correctIndex,
       difficulty: difficulty,
-      status: 'review', // 🔱 Auto-generated questions go to review
+      status: 'review', // Auto-generated questions go to review
       sourceType: 'auto_generator_v1',
       updatedAt: DateTime.now(),
     );

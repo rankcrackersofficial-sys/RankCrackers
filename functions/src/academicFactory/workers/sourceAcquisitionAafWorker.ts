@@ -2,7 +2,7 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 SOURCE ACQUISITION AAF WORKER
+ * SOURCE ACQUISITION AAF WORKER
  * Binds the Sentinel Parsing capability.
  */
 export async function sourceAcquisitionAafWorker(job: AafJobMetadata): Promise<AafWorkerResult> {

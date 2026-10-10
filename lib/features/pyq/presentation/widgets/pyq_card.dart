@@ -18,7 +18,7 @@ class PyqCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🔱 PREMIUM CARD DNA: Title
+          // PREMIUM CARD DNA: Title
           Text(
             pyq.question,
             maxLines: 4,
@@ -28,7 +28,7 @@ class PyqCard extends StatelessWidget {
 
           const SizedBox(height: 10),
 
-          // 🔱 PREMIUM CARD DNA: Subtitle
+          // PREMIUM CARD DNA: Subtitle
           Text(
             'Examined in ${pyq.year}. Crucial concept for active preparation cycles.',
             style: AppTypography.subtitle,
@@ -36,7 +36,7 @@ class PyqCard extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // 🔱 PREMIUM CARD DNA: Metric Row
+          // PREMIUM CARD DNA: Metric Row
           Row(
             children: [
               const Icon(

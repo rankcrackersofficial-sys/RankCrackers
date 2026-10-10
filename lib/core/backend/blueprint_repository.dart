@@ -1,7 +1,7 @@
 import '../models/exam_blueprint.dart';
 import '../firebase/firestore_service.dart';
 
-/// 🔱 BLUEPRINT REPOSITORY
+/// BLUEPRINT REPOSITORY
 /// Access layer for tactical rulebooks.
 class BlueprintRepository {
   static Future<ExamBlueprint?> getById(String id) async {

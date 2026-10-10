@@ -7,7 +7,7 @@ import 'coverage_state.dart';
 import 'risk_state.dart';
 import 'momentum_state.dart';
 
-/// 🔱 MISSION CONTEXT
+/// MISSION CONTEXT
 /// Represents the total strategic situation of a warrior's mission.
 /// Combines identity, technical rules, knowledge structure, and performance metrics.
 class MissionContext extends Equatable {
@@ -33,7 +33,7 @@ class MissionContext extends Equatable {
   List<Object?> get props => [
     recruitment,
     blueprint,
-    // 🔱 OPTIMIZATION: Exclude heavy KnowledgeGraph from value-equality 
+    // OPTIMIZATION: Exclude heavy KnowledgeGraph from value-equality 
     // to prevent unnecessary rebuilds. Identity and state are enough.
     states,
     coverage,

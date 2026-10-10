@@ -1,6 +1,6 @@
 import 'models/token_usage.dart';
 
-/// 🔱 TOKEN CONTROL ENGINE
+/// TOKEN CONTROL ENGINE
 /// Monitors and limits AI token consumption per provider.
 class TokenControlEngine {
   static final Map<String, TokenUsage> _usage = {

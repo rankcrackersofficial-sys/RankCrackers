@@ -4,12 +4,12 @@ import '../models/atomic_risk_state.dart';
 import '../models/atomic_mastery_state.dart';
 import '../models/atomic_coverage_state.dart';
 
-/// 🔱 RISK ENGINE (Document 35 Compliant)
+/// RISK ENGINE (Document 35 Compliant)
 /// Sovereign authority for vulnerability detection.
 class RiskEngine {
   
   // ===================================================
-  // ATOMIC RISK CALCULATION 🔱
+  // ATOMIC RISK CALCULATION 
   // ===================================================
 
   /// Calculates the vulnerability score for a single knowledge atom.
@@ -21,7 +21,7 @@ class RiskEngine {
     required double recencyWeakness,    // 0.0 - 1.0 (inverse of recency)
     AtomicRiskState? previousState,
   }) {
-    // 🔱 CONSTITUTIONAL MODEL (Section 18)
+    // CONSTITUTIONAL MODEL (Section 18)
     final double coverageDeficiency = 1.0 - (coverage.score / 100);
     final double masteryDeficiency = 1.0 - (mastery.score / 100);
 
@@ -37,7 +37,7 @@ class RiskEngine {
       id: 'risk_${atomicTopicId}_${DateTime.now().millisecondsSinceEpoch}',
       atomicTopicId: atomicTopicId,
       score: clampedScore * 100,
-      confidence: mastery.confidence, // 🔱 Risk confidence maps to evidence density
+      confidence: mastery.confidence, // Risk confidence maps to evidence density
       status: _determineStatus(clampedScore * 100),
       trend: _determineTrend(clampedScore * 100, previousState?.score ?? (clampedScore * 100)),
       coverageDeficiency: coverageDeficiency,
@@ -49,7 +49,7 @@ class RiskEngine {
   }
 
   // ===================================================
-  // MISSION RISK CALCULATION 🔱
+  // MISSION RISK CALCULATION 
   // ===================================================
 
   static RiskState calculate({
@@ -65,7 +65,7 @@ class RiskEngine {
         ? 1.0
         : 1.0 - (coverage.masteredNodes / coverage.totalNodes);
 
-    // 🔱 3. Blended Weakness Protocol (Section 18 Logic applied at Mission Level)
+    // 3. Blended Weakness Protocol (Section 18 Logic applied at Mission Level)
     // Constitutional Law: Weights prioritize Internal Mastery (35%) and External Graph Propagation (30%)
     final weaknessRisk = (atomicWeaknessRisk * 0.7) + (cascadeRisk * 0.3);
 
@@ -82,7 +82,7 @@ class RiskEngine {
   }
 
   // ===================================================
-  // UTILITIES 🔱
+  // UTILITIES 
   // ===================================================
 
   static String _determineStatus(double score) {

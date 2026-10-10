@@ -11,17 +11,17 @@ class BattleToolsGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 🔱 Adaptive Grid v3.0
+    // 🔱 Compact Balanced Grid Layout (Zero Empty Void, Zero Overflow)
     int crossAxisCount = ResponsiveHelper.isTablet(context) ? 4 : 2;
-    double aspectRatio = ResponsiveHelper.isCompact(context) ? 1.0 : 0.92;
+    double aspectRatio = ResponsiveHelper.isCompact(context) ? 1.28 : 1.22;
 
     return GridView(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount,
-        mainAxisSpacing: 12,
-        crossAxisSpacing: 12,
+        mainAxisSpacing: 10,
+        crossAxisSpacing: 10,
         childAspectRatio: aspectRatio,
       ),
       children: const [

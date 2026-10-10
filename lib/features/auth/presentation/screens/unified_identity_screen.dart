@@ -5,8 +5,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/theme/tactical_noir_background.dart';
@@ -16,7 +14,6 @@ import '../../../../shared/session/session_manager.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import '../../../../core/firebase/firestore_service.dart';
 import '../../../../data/india_states.dart';
-import '../../../../data/india_districts.dart';
 import '../providers/auth_provider.dart';
 
 class UnifiedIdentityScreen extends ConsumerStatefulWidget {
@@ -29,6 +26,14 @@ class UnifiedIdentityScreen extends ConsumerStatefulWidget {
   final bool forceProfileSetupForTest;
   final bool disableFirebaseAuthLookupForTest;
   final bool disableAnimationsForTest;
+
+  static String normalizeIndianMobile(String input) {
+    final digits = input.replaceAll(RegExp(r'\D'), '');
+    if (digits.length == 10) return digits;
+    if (digits.length == 12 && digits.startsWith('91')) return digits.substring(2);
+    if (digits.length == 11 && digits.startsWith('0')) return digits.substring(1);
+    return digits;
+  }
 
   @override
   ConsumerState<UnifiedIdentityScreen> createState() =>
@@ -54,16 +59,24 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   // State
   List<String> districtsList = [];
   bool _isSaving = false;
+  bool _isCheckingProfile = false;
   bool _identityEstablished = false;
   bool _passwordVisible = false;
   bool consentAccepted = false;
 
-  bool get _canSubmitIdentity =>
-      nameController.text.trim().isNotEmpty &&
-      mobileController.text.trim().length == 10 &&
-      stateController.text.trim().isNotEmpty &&
-      districtController.text.trim().isNotEmpty &&
-      consentAccepted;
+  static String normalizeIndianMobile(String input) =>
+      UnifiedIdentityScreen.normalizeIndianMobile(input);
+
+  bool get _canSubmitIdentity {
+    final norm = normalizeIndianMobile(mobileController.text.trim());
+    final stateText = stateController.text.trim();
+    final isValidState = IndiaStates.statesAndUTs.any(
+        (s) => s.toLowerCase() == stateText.toLowerCase());
+    return nameController.text.trim().isNotEmpty &&
+        norm.length == 10 &&
+        isValidState &&
+        consentAccepted;
+  }
 
   late AnimationController _animationController;
   late Animation<double> glowAnimation;
@@ -99,25 +112,44 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
 
     emailFocusNode.addListener(_refreshIdentityCta);
     passwordFocusNode.addListener(_refreshIdentityCta);
+    stateFocusNode.addListener(_refreshIdentityCta);
 
-    if (!widget.disableFirebaseAuthLookupForTest) {
+    // Synchronous first-frame hydration from SessionManager cache
+    final cachedName = SessionManager.getStudentNameSync();
+    if (cachedName != null && cachedName.isNotEmpty && nameController.text.isEmpty) {
+      nameController.text = cachedName;
+    }
+    final cachedMobile = SessionManager.getStudentMobileSync();
+    if (cachedMobile != null && cachedMobile.isNotEmpty && mobileController.text.isEmpty) {
+      final norm = normalizeIndianMobile(cachedMobile);
+      mobileController.text = norm.isNotEmpty ? norm : cachedMobile;
+    }
+    final cachedState = SessionManager.getUserStateSync();
+    if (cachedState != null && cachedState.isNotEmpty && stateController.text.isEmpty) {
+      stateController.text = cachedState;
+    }
+
+    if (!widget.disableFirebaseAuthLookupForTest && !SessionManager.disableFirebaseForTest) {
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
-        nameController.text = user.displayName ?? '';
+        if (nameController.text.isEmpty) {
+          nameController.text = user.displayName ?? '';
+        }
         _checkAndRehydrateProfile(user);
       }
     }
   }
 
   Future<void> _checkAndRehydrateProfile(User user) async {
+    if (!mounted) return;
+    setState(() => _isCheckingProfile = true);
     try {
       final doc = await FirebaseFirestore.instance.collection('users').doc(user.uid).get(
         const GetOptions(source: Source.server)
       ).timeout(const Duration(seconds: 3));
       
       final data = doc.data();
-      final exists = doc.exists && (data?['name']?.toString().isNotEmpty ?? false);
-      if (exists && data != null && mounted) {
+      if (doc.exists && data != null && mounted) {
         final status = data['status']?.toString() ?? 'active';
         if (status == 'deactivated') {
           if (!mounted) return;
@@ -153,30 +185,78 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           }
         }
 
-        final name = data['name']?.toString() ?? '';
-        final city = data['city']?.toString() ?? '';
-        final mobile = data['mobile']?.toString() ?? '';
-        final stateStr = data['state']?.toString() ?? '';
+        final name = (data['name'] ?? user.displayName ?? '').toString().trim();
+        final city = (data['city'] ?? '').toString().trim();
+        final rawMobile = (data['mobile'] ?? '').toString().trim();
+        final mobile = normalizeIndianMobile(rawMobile);
+        final stateStr = (data['state'] ?? data['stateName'] ?? '').toString().trim();
+        final stateCode = (data['stateCode'] ?? IndiaStates.getStateCode(stateStr) ?? '').toString().trim();
+        final rawExam = (data['selectedExamId'] ?? data['selectedExam'] ?? data['examId'] ?? '').toString().trim();
+        final examName = (data['selectedExamName'] ?? data['examName'] ?? '').toString().trim();
 
-        await SessionManager.completeLogin();
-        await SessionManager.completeProfile(studentName: name, studentCity: city);
-        await SessionManager.saveFirebaseIdentity(uid: user.uid, email: user.email ?? '');
-        await SessionManager.saveStudentMobile(mobile);
-        
-        final prefs = await SharedPreferences.getInstance();
-        if (stateStr.isNotEmpty) {
-          await prefs.setString('user_state', stateStr);
+        // Strict Nested Consent Law: MUST have consent.termsAccepted == true
+        final consentMap = data['consent'];
+        final bool hasConsent = (consentMap is Map && consentMap['termsAccepted'] == true);
+
+        final bool isValidState = IndiaStates.statesAndUTs.any(
+          (s) => s.toLowerCase() == stateStr.toLowerCase(),
+        );
+
+        // Hydrate controllers immediately with normalized values
+        if (name.isNotEmpty) nameController.text = name;
+        if (mobile.isNotEmpty) {
+          mobileController.text = mobile;
+        } else if (rawMobile.isNotEmpty) {
+          mobileController.text = rawMobile;
         }
+        if (stateStr.isNotEmpty) stateController.text = stateStr;
+        consentAccepted = hasConsent;
 
-        if (mounted) {
-          setState(() {
-            _identityEstablished = true;
-          });
-          context.go(AppRoutes.missionRealm);
+        // Check required profile completeness: Name, Mobile (10 digits), State, AND Persisted Consent
+        final bool isProfileComplete = name.isNotEmpty &&
+            mobile.length == 10 &&
+            isValidState &&
+            hasConsent;
+
+        if (isProfileComplete) {
+          debugPrint('RETURNING_USER_COMPLETE_PROFILE_BYPASS');
+          await SessionManager.completeLogin();
+          await SessionManager.completeProfile(
+            studentName: name,
+            studentCity: city,
+            studentState: stateStr,
+            studentStateCode: stateCode,
+            consentAccepted: true,
+          );
+          await SessionManager.saveFirebaseIdentity(uid: user.uid, email: user.email ?? '');
+          await SessionManager.saveStudentMobile(mobile);
+          await SessionManager.saveStudentState(stateStr, stateCode: stateCode);
+          await SessionManager.saveConsent(true);
+
+          final canonicalExamId = SessionManager.resolveCanonicalMissionId(rawExam) ?? (rawExam.isNotEmpty ? rawExam : null);
+          if (canonicalExamId != null) {
+            await SessionManager.saveExam(canonicalExamId, examName: examName);
+          }
+
+          if (mounted) {
+            setState(() {
+              _identityEstablished = true;
+            });
+            if (canonicalExamId != null && SessionManager.isMissionValid(canonicalExamId)) {
+              context.go(AppRoutes.dashboard);
+            } else {
+              context.go(AppRoutes.missionRealm);
+            }
+            return;
+          }
         }
       }
     } catch (e) {
-      debugPrint('🔱 PROFILE AUTO REHYDRATE FAIL: $e');
+      debugPrint('PROFILE AUTO REHYDRATE FAIL: $e');
+    } finally {
+      if (mounted) {
+        setState(() => _isCheckingProfile = false);
+      }
     }
   }
 
@@ -202,6 +282,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     districtController.dispose();
     emailFocusNode.removeListener(_refreshIdentityCta);
     passwordFocusNode.removeListener(_refreshIdentityCta);
+    stateFocusNode.removeListener(_refreshIdentityCta);
     emailFocusNode.dispose();
     passwordFocusNode.dispose();
     stateFocusNode.dispose();
@@ -238,9 +319,10 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       debugPrint('E06_ROUTE_DECISION_STARTED');
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
-        setState(() {
+        if (nameController.text.isEmpty) {
           nameController.text = user.displayName ?? '';
-        });
+        }
+        await _checkAndRehydrateProfile(user);
       }
       debugPrint('E07_ROUTE_DECISION_COMPLETE');
     } else {
@@ -258,9 +340,10 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       debugPrint('G13_ROUTE_DECISION_STARTED');
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
-        setState(() {
+        if (nameController.text.isEmpty) {
           nameController.text = user.displayName ?? '';
-        });
+        }
+        await _checkAndRehydrateProfile(user);
       }
       debugPrint('G14_ROUTE_DECISION_COMPLETE');
     } else {
@@ -296,57 +379,60 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
 
   // IDENTITY ACTIONS
   Future<void> _establishIdentity() async {
+    debugPrint('IDENTITY_TAP');
     final user = FirebaseAuth.instance.currentUser;
-    if (user == null) return;
+    debugPrint('FIREBASE_USER_PRESENT=${user != null}');
+    if (user == null) {
+      debugPrint('ERROR=No authenticated Firebase user');
+      return;
+    }
 
-    if (nameController.text.trim().isEmpty) {
+    final name = nameController.text.trim();
+    final rawMobile = mobileController.text.trim();
+    final mobile = normalizeIndianMobile(rawMobile);
+    final rawState = stateController.text.trim();
+    final canonicalState = IndiaStates.statesAndUTs.firstWhere(
+      (s) => s.toLowerCase() == rawState.toLowerCase(),
+      orElse: () => rawState,
+    );
+
+    debugPrint('VALID_NAME=${name.isNotEmpty}');
+    debugPrint('VALID_MOBILE=${mobile.length == 10}');
+    debugPrint('VALID_STATE=${canonicalState.isNotEmpty}');
+    debugPrint('CONSENT_TRUE=$consentAccepted');
+    debugPrint('IDENTITY_CAN_SUBMIT=$_canSubmitIdentity');
+
+    if (name.isEmpty) {
       _showSnackBar("Please enter your name");
       return;
     }
-    if (mobileController.text.length != 10) {
-      _showSnackBar("Please enter a 10-digit mobile number");
+    if (mobile.length != 10) {
+      _showSnackBar("Please enter a valid 10-digit mobile number");
       return;
     }
-    if (stateController.text.isEmpty || districtController.text.isEmpty) {
-      _showSnackBar("Please select your location");
+    if (canonicalState.isEmpty ||
+        !IndiaStates.statesAndUTs.any((s) => s.toLowerCase() == canonicalState.toLowerCase())) {
+      _showSnackBar("Please select a valid state");
+      return;
+    }
+    if (!consentAccepted) {
+      _showSnackBar("Please accept terms and conditions");
       return;
     }
 
     setState(() => _isSaving = true);
+    debugPrint('SERVER_PROFILE_SAVE_START');
 
     try {
-      final name = nameController.text.trim();
-      final city = districtController.text.trim();
-      final mobile = mobileController.text.trim();
-      final stateStr = stateController.text.trim();
+      final stateCode = IndiaStates.getStateCode(canonicalState) ?? '';
+      final existingCity = await SessionManager.getStudentCity() ?? '';
 
-      // Step 1: Save local truth immediately.
-      await SessionManager.completeLogin();
-      await SessionManager.completeProfile(
-          studentName: name, studentCity: city);
-      await SessionManager.saveFirebaseIdentity(
-          uid: user.uid, email: user.email ?? '');
-      await SessionManager.saveStudentMobile(mobile);
-
-      debugPrint('PROFILE SAVED');
-
-      if (mounted) {
-        setState(() => _identityEstablished = true);
-      }
-
-      // Step 2: Show the established badge briefly before dashboard navigation.
-      await Future.delayed(const Duration(milliseconds: 500));
-
-      if (!mounted) return;
-      debugPrint("GOING TO MISSION REALM");
-      context.go(AppRoutes.missionRealm);
-
-      // Step 3: Background operations run after navigation starts.
-      // These run after navigation starts and don't block the user.
-      unawaited(FirestoreService.saveUserProfile(uid: user.uid, profileData: {
+      // Step 1: Commit authoritatively to Firestore FIRST.
+      final profileData = <String, dynamic>{
         'name': name,
-        'city': city,
-        'state': stateStr,
+        'state': canonicalState,
+        if (stateCode.isNotEmpty) 'stateCode': stateCode,
+        if (canonicalState.isNotEmpty) 'stateName': canonicalState,
         'mobile': mobile,
         'onboardingCompleted': true,
         'updatedAt': FieldValue.serverTimestamp(),
@@ -358,17 +444,56 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           'termsVersion': '1.0.0',
           'acceptedAt': FieldValue.serverTimestamp(),
         },
-      }).then((_) => debugPrint("CLOUD SYNC COMPLETE")));
+      };
+      if (existingCity.isNotEmpty) {
+        profileData['city'] = existingCity;
+      }
 
-      // LEVEL-12.4
-      // Disable hydration temporarily
-      /*
-      unawaited(KnowledgeEngine.instance.initialize(recruitment: /* mission selected later in Mission Realm */ null, force: true)
-          .timeout(const Duration(seconds: 10))
-          .then((_) => debugPrint("ENGINE HYDRATION TRIGGERED")));
-      */
+      if (!SessionManager.disableFirebaseForTest) {
+        await FirestoreService.saveUserProfile(
+          uid: user.uid,
+          profileData: profileData,
+        );
+        debugPrint('CLOUD SYNC COMPLETE');
+      }
+
+      // Step 2: Update trusted local cache ONLY after successful server commit.
+      await SessionManager.completeLogin();
+      await SessionManager.completeProfile(
+        studentName: name,
+        studentCity: existingCity,
+        studentState: canonicalState,
+        studentStateCode: stateCode,
+        consentAccepted: true,
+      );
+      await SessionManager.saveFirebaseIdentity(
+          uid: user.uid, email: user.email ?? '');
+      await SessionManager.saveStudentMobile(mobile);
+      await SessionManager.saveStudentState(canonicalState, stateCode: stateCode);
+      await SessionManager.saveConsent(true);
+
+      debugPrint('LOCAL_PROFILE_SAVE_SUCCESS');
+      debugPrint('PROFILE SAVED');
+
+      if (mounted) {
+        setState(() => _identityEstablished = true);
+      }
+
+      // Step 3: Brief badge display before navigation.
+      await Future.delayed(const Duration(milliseconds: 500));
+
+      if (!mounted) {
+        debugPrint('ERROR=Component unmounted before routing');
+        return;
+      }
+      debugPrint('ROUTE_TO_MISSION_REALM_START');
+      debugPrint("GOING TO MISSION REALM");
+      debugPrint('ROUTER_REDIRECT_TARGET=${AppRoutes.missionRealm}');
+      context.go(AppRoutes.missionRealm);
+      debugPrint('ROUTE_TO_MISSION_REALM_SUCCESS');
     } catch (e) {
-      _showSnackBar("Identity Save Error: $e");
+      debugPrint('IDENTITY SAVE ERROR: $e');
+      _showSnackBar("Failed to save profile. Please check your connection and try again.");
     } finally {
       if (mounted) setState(() => _isSaving = false);
     }
@@ -387,7 +512,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (context) {
-        List<String> filteredItems = items;
+        List<String> filteredItems = List<String>.from(items);
+        final searchController = TextEditingController();
         return StatefulBuilder(
           builder: (context, setModalState) {
             return Container(
@@ -395,15 +521,26 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
               child: Column(
                 children: [
-                  Text(title,
-                      style:
-                          AppTypography.cardTitle.copyWith(color: goldAccent)),
-                  const SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(title,
+                          style:
+                              AppTypography.cardTitle.copyWith(color: goldAccent)),
+                      IconButton(
+                        icon: const Icon(Icons.close, color: Colors.white54, size: 20),
+                        onPressed: () => Navigator.pop(context),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
                   TextField(
+                    key: const ValueKey('state_search_input'),
+                    controller: searchController,
                     autofocus: true,
                     style: const TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                      hintText: "Search...",
+                      hintText: "Search State / UT...",
                       hintStyle: const TextStyle(color: Colors.white24),
                       prefixIcon: const Icon(Icons.search, color: goldAccent),
                       filled: true,
@@ -411,34 +548,67 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none),
+                      suffixIcon: searchController.text.isNotEmpty
+                          ? IconButton(
+                              icon: const Icon(Icons.clear, color: Colors.white38, size: 18),
+                              onPressed: () {
+                                setModalState(() {
+                                  searchController.clear();
+                                  filteredItems = List<String>.from(items);
+                                });
+                              },
+                            )
+                          : null,
                     ),
                     onChanged: (val) {
                       setModalState(() {
-                        filteredItems = items
-                            .where((i) =>
-                                i.toLowerCase().contains(val.toLowerCase()))
-                            .toList();
+                        if (val.trim().isEmpty) {
+                          filteredItems = List<String>.from(items);
+                        } else {
+                          final q = val.trim().toLowerCase();
+                          final startsWith = items.where((i) => i.toLowerCase().startsWith(q)).toList();
+                          final contains = items.where((i) => !i.toLowerCase().startsWith(q) && i.toLowerCase().contains(q)).toList();
+                          filteredItems = [...startsWith, ...contains];
+                        }
                       });
                     },
                   ),
                   const SizedBox(height: 12),
                   Expanded(
-                    child: ListView.builder(
-                      itemCount: filteredItems.length,
-                      itemBuilder: (context, index) {
-                        return Material(
-                          color: Colors.transparent,
-                          child: ListTile(
-                            title: Text(filteredItems[index],
-                                style: const TextStyle(color: Colors.white70)),
-                            onTap: () {
-                              onSelected(filteredItems[index]);
-                              Navigator.pop(context);
+                    child: filteredItems.isEmpty
+                        ? Center(
+                            child: Text(
+                              'No matching states found',
+                              style: AppTypography.body.copyWith(color: Colors.white38),
+                            ),
+                          )
+                        : ListView.builder(
+                            itemCount: filteredItems.length,
+                            itemBuilder: (context, index) {
+                              final item = filteredItems[index];
+                              final isSelected = item.toLowerCase() == stateController.text.trim().toLowerCase();
+                              return Material(
+                                color: Colors.transparent,
+                                child: ListTile(
+                                  key: ValueKey('state_item_$item'),
+                                  title: Text(
+                                    item,
+                                    style: TextStyle(
+                                      color: isSelected ? goldAccent : Colors.white70,
+                                      fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                                    ),
+                                  ),
+                                  trailing: isSelected
+                                      ? const Icon(Icons.check, color: goldAccent, size: 18)
+                                      : null,
+                                  onTap: () {
+                                    onSelected(item);
+                                    Navigator.pop(context);
+                                  },
+                                ),
+                              );
                             },
                           ),
-                        );
-                      },
-                    ),
                   ),
                 ],
               ),
@@ -460,9 +630,12 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('🔱 UnifiedIdentityScreen: build called');
+    debugPrint('UnifiedIdentityScreen: build called');
     final authState = ref.watch(authNotifierProvider);
-    final user = authState.user ?? (widget.disableFirebaseAuthLookupForTest ? null : FirebaseAuth.instance.currentUser);
+    final user = authState.user ??
+        ((widget.disableFirebaseAuthLookupForTest || SessionManager.disableFirebaseForTest)
+            ? null
+            : FirebaseAuth.instance.currentUser);
     final showProfileSetup = widget.forceProfileSetupForTest || user != null;
 
     return Scaffold(
@@ -486,14 +659,23 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                       _buildHeader(),
                       SizedBox(
                           height: ResponsiveHelper.sectionSpacing(context)),
-                      if (showProfileSetup) ...[
-                        _buildAccountControlBar(user?.email),
-                        SizedBox(height: ResponsiveHelper.compactGap(context)),
+                      if (_isCheckingProfile)
+                        const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 40),
+                          child: Center(
+                            child: CircularProgressIndicator(color: goldAccent),
+                          ),
+                        )
+                      else ...[
+                        if (showProfileSetup) ...[
+                          _buildAccountControlBar(user?.email),
+                          SizedBox(height: ResponsiveHelper.compactGap(context)),
+                        ],
+                        if (!showProfileSetup)
+                          _buildLoginSection(authState.isLoading)
+                        else
+                          _buildIdentityForm(userPhotoUrl: user?.photoURL),
                       ],
-                      if (!showProfileSetup)
-                        _buildLoginSection(authState.isLoading)
-                      else
-                        _buildIdentityForm(userPhotoUrl: user?.photoURL),
                       SizedBox(
                           height: ResponsiveHelper.sectionSpacing(context)),
                       _buildFooter(),
@@ -569,10 +751,31 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   }
 
   Widget _buildLogo() {
+    final size = ResponsiveHelper.isCompact(context) ? 58.0 : 72.0;
     return Center(
-      child: Image.asset(
-        "assets/images/logo.png",
-        height: ResponsiveHelper.isCompact(context) ? 50 : 80,
+      child: Container(
+        width: size,
+        height: size,
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: const Color(0xFF070A12),
+          borderRadius: BorderRadius.circular(size * 0.28),
+          border: Border.all(
+            color: goldAccent.withValues(alpha: 0.35),
+            width: 1.5,
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: goldAccent.withValues(alpha: 0.12),
+              blurRadius: 20,
+              spreadRadius: 1,
+            ),
+          ],
+        ),
+        child: Image.asset(
+          "assets/images/logo.png",
+          fit: BoxFit.contain,
+        ),
       ),
     );
   }
@@ -589,11 +792,13 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           ),
         ),
         Text(
-          "SOVEREIGN IDENTITY",
-          style: AppTypography.label.copyWith(
-            fontSize: 8,
-            color: goldAccent.withValues(alpha: .6),
-            letterSpacing: 2,
+          "May Our Learning Be Radiant.",
+          style: GoogleFonts.poppins(
+            fontSize: 11,
+            fontWeight: FontWeight.w500,
+            fontStyle: FontStyle.italic,
+            color: goldAccent.withValues(alpha: .88),
+            letterSpacing: 0.8,
           ),
         ),
       ],
@@ -735,7 +940,15 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                     ),
                   )
                 else
-                  Image.asset("assets/images/google.png", width: 20),
+                  Image.asset(
+                    "assets/images/Google.png",
+                    width: 20,
+                    errorBuilder: (context, error, stackTrace) => const Icon(
+                      Icons.g_mobiledata_rounded,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                  ),
                 const SizedBox(width: 12),
                 Flexible(
                   child: Text(
@@ -818,72 +1031,63 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
             keyboard: TextInputType.phone,
           ),
           const SizedBox(height: 12),
-          _miniSelector(
-            title: "STATE / UT",
-            hint: "Select State",
-            controller: stateController,
-            onTap: () => _showSearchSheet(
-              title: "Select State",
-              items: IndiaStates.statesAndUTs,
-              onSelected: (val) {
-                setState(() {
-                  stateController.text = val;
-                  districtController.clear();
-                });
-              },
-            ),
-          ),
-          const SizedBox(height: 12),
-          _miniSelector(
-            title: "DISTRICT",
-            hint: "Select District",
-            controller: districtController,
-            enabled: stateController.text.isNotEmpty,
+          _buildDualModeStateField(),
+          const SizedBox(height: 14),
+          InkWell(
+            key: const ValueKey('consent_row_tap'),
             onTap: () {
-              if (stateController.text.isEmpty) return;
-              _showSearchSheet(
-                title: "Select District",
-                items: IndiaDistricts.districts[stateController.text] ?? [],
-                onSelected: (val) =>
-                    setState(() => districtController.text = val),
-              );
+              setState(() {
+                consentAccepted = !consentAccepted;
+              });
             },
-          ),
-          Row(
-            children: [
-              GestureDetector(
-                key: const ValueKey('consent_checkbox'),
-                onTap: () {
-                  setState(() {
-                    consentAccepted = !consentAccepted;
-                  });
-                },
-                child: Container(
-                  width: 18,
-                  height: 18,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: AppColors.gold, width: 1.5),
-                    borderRadius: BorderRadius.circular(4),
-                    color: consentAccepted ? AppColors.gold : Colors.transparent,
+            borderRadius: BorderRadius.circular(6),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  GestureDetector(
+                    key: const ValueKey('consent_checkbox'),
+                    onTap: () {
+                      setState(() {
+                        consentAccepted = !consentAccepted;
+                      });
+                    },
+                    child: Container(
+                      width: 20,
+                      height: 20,
+                      margin: const EdgeInsets.only(top: 1),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: AppColors.gold, width: 1.5),
+                        borderRadius: BorderRadius.circular(4),
+                        color: consentAccepted ? AppColors.gold : Colors.transparent,
+                      ),
+                      child: consentAccepted
+                          ? const Icon(Icons.check, size: 14, color: Colors.black)
+                          : null,
+                    ),
                   ),
-                  child: consentAccepted
-                      ? const Icon(Icons.check, size: 12, color: Colors.black)
-                      : null,
-                ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      "I agree to the Privacy Policy and Terms of Service.",
+                      style: AppTypography.body.copyWith(
+                        fontSize: 11,
+                        color: Colors.white70,
+                        height: 1.35,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              Expanded(
-                child: Text(
-                  "I accept the Privacy Policy and Terms of Service (pending Founder legal content confirmation).",
-                  style: AppTypography.body.copyWith(fontSize: 10, color: Colors.white70),
-                ),
-              ),
-            ],
+            ),
           ),
           const SizedBox(height: 16),
           if (_identityEstablished)
             _buildIdentityEstablishedBadge()
           else
             _SovereignIdentityCta(
+              key: const ValueKey('identity_cta_button'),
               text: _isSaving ? "ESTABLISHING IDENTITY" : "ESTABLISH IDENTITY",
               isLoading: _isSaving,
               enabled: _canSubmitIdentity && !_isSaving,
@@ -1034,7 +1238,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                 ),
                 const SizedBox(height: 3),
                 Text(
-                  "Sovereign profile secured",
+                  "Profile saved securely",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.subtitle.copyWith(fontSize: 10),
@@ -1050,7 +1254,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   Widget _buildFooter() {
     return Center(
       child: Text(
-        "Secure | Sovereign | AI Driven",
+        "Secure | Focused | Adaptive",
         style: AppTypography.label.copyWith(
           fontSize: 7,
           color: Colors.white12,
@@ -1139,51 +1343,184 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     );
   }
 
-  Widget _miniSelector({
-    required String title,
-    required String hint,
-    required TextEditingController controller,
-    required VoidCallback onTap,
-    bool enabled = true,
-  }) {
-    return GestureDetector(
-      onTap: enabled ? onTap : null,
-      child: Container(
-        height: ResponsiveHelper.fieldHeight(context),
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        decoration: BoxDecoration(
-          color: enabled
-              ? AppColors.elevatedSurface.withValues(alpha: 0.94)
-              : AppColors.surface.withValues(alpha: 0.72),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: AppColors.border.withValues(alpha: 0.95)),
-        ),
-        child: Row(
-          children: [
-            Icon(Icons.location_on_outlined,
-                color: goldAccent.withValues(alpha: 0.5), size: 18),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Text(
-                controller.text.isEmpty ? hint : controller.text,
-                style: TextStyle(
-                  color:
-                      controller.text.isEmpty ? Colors.white10 : Colors.white70,
-                  fontSize: 13,
-                ),
-              ),
+  Widget _buildDualModeStateField() {
+    final isFocused = stateFocusNode.hasFocus;
+    final text = stateController.text.trim();
+    final bool hasExactMatch = IndiaStates.statesAndUTs.any(
+      (s) => s.toLowerCase() == text.toLowerCase(),
+    );
+    final suggestions = (isFocused && text.isNotEmpty && !hasExactMatch)
+        ? IndiaStates.searchStates(text)
+        : <String>[];
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 160),
+          height: ResponsiveHelper.fieldHeight(context),
+          decoration: BoxDecoration(
+            color: AppColors.elevatedSurface.withValues(alpha: 0.94),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(
+              color: isFocused
+                  ? goldAccent.withValues(alpha: 0.42)
+                  : AppColors.border.withValues(alpha: 0.95),
+              width: 1,
             ),
-            const Icon(Icons.keyboard_arrow_down_rounded,
-                color: Colors.white10, size: 18),
-          ],
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.18),
+                blurRadius: 12,
+                offset: const Offset(0, 6),
+              ),
+            ],
+          ),
+          child: TextField(
+            key: const ValueKey('state_input_field'),
+            controller: stateController,
+            focusNode: stateFocusNode,
+            textCapitalization: TextCapitalization.words,
+            style: const TextStyle(color: Colors.white, fontSize: 13),
+            onChanged: (val) {
+              setState(() {});
+            },
+            decoration: InputDecoration(
+              hintText: "Select State",
+              hintStyle: TextStyle(
+                color: Colors.white.withValues(alpha: 0.10),
+                fontSize: 13,
+              ),
+              prefixIcon: Icon(
+                Icons.location_on_outlined,
+                color: goldAccent.withValues(alpha: 0.56),
+                size: 18,
+              ),
+              suffixIcon: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (stateController.text.isNotEmpty)
+                    IconButton(
+                      icon: const Icon(Icons.clear, color: Colors.white38, size: 16),
+                      tooltip: "Clear state",
+                      splashRadius: 16,
+                      onPressed: () {
+                        setState(() {
+                          stateController.clear();
+                        });
+                      },
+                    ),
+                  IconButton(
+                    key: const ValueKey('browse_states_button'),
+                    icon: const Icon(Icons.keyboard_arrow_down_rounded,
+                        color: Colors.white38, size: 20),
+                    tooltip: "Browse all states",
+                    splashRadius: 18,
+                    onPressed: () => _showSearchSheet(
+                      title: "Select State",
+                      items: IndiaStates.statesAndUTs,
+                      onSelected: (val) {
+                        setState(() {
+                          stateController.text = val;
+                          stateFocusNode.unfocus();
+                        });
+                      },
+                    ),
+                  ),
+                ],
+              ),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16),
+              border: InputBorder.none,
+            ),
+          ),
         ),
-      ),
+        if (suggestions.isNotEmpty) ...[
+          const SizedBox(height: 6),
+          Container(
+            constraints: const BoxConstraints(maxHeight: 180),
+            decoration: BoxDecoration(
+              color: AppColors.surface2,
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: goldAccent.withValues(alpha: 0.35),
+                width: 1,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.4),
+                  blurRadius: 14,
+                  offset: const Offset(0, 6),
+                ),
+              ],
+            ),
+            child: ListView.separated(
+              shrinkWrap: true,
+              padding: const EdgeInsets.symmetric(vertical: 4),
+              itemCount: suggestions.length,
+              separatorBuilder: (_, __) => const Divider(
+                color: Colors.white10,
+                height: 1,
+                thickness: 0.5,
+              ),
+              itemBuilder: (context, index) {
+                final suggestion = suggestions[index];
+                return Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    key: ValueKey('state_suggestion_$suggestion'),
+                    onTap: () {
+                      setState(() {
+                        stateController.text = suggestion;
+                        stateFocusNode.unfocus();
+                      });
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 10),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.location_city_rounded,
+                            size: 15,
+                            color: goldAccent.withValues(alpha: 0.7),
+                          ),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: Text(
+                              suggestion,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                          Text(
+                            IndiaStates.getStateCode(suggestion) ?? '',
+                            style: TextStyle(
+                              color: goldAccent.withValues(alpha: 0.6),
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
+      ],
     );
   }
 }
 
 class _SovereignIdentityCta extends StatefulWidget {
   const _SovereignIdentityCta({
+    super.key,
     required this.text,
     required this.enabled,
     required this.isLoading,

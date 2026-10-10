@@ -1,0 +1,5 @@
+'use strict';
+const { selectCrucibleContent } = require('./crucible_assessment_gate_r42');
+function phaseForDay(day) { if (!Number.isInteger(day) || day < 1 || day > 98) throw new Error('CRUCIBLE_DAY_INVALID'); return { day, phase: Math.floor((day - 1) / 14) + 1 }; }
+function assembleCrucibleAssessment({ realmId, missionId, subject, day, mode, candidates, authorityById }) { if (!realmId || !missionId || !subject) throw new Error('CRUCIBLE_SCOPE_REQUIRED'); if (mode === 'major') throw new Error('MAJOR_TEST_OUTSIDE_CRUCIBLE'); const cycle = phaseForDay(day); const scoped = (candidates || []).filter((x) => x.realmId === realmId && x.missionId === missionId && x.subject === subject && x.mode === mode); const items = selectCrucibleContent(scoped, authorityById || {}); return Object.freeze({ engine: 'CRUCIBLE', realmId, missionId, subject, mode, cycle, items: Object.freeze(items.map((x) => Object.freeze({ ...x }))), eligible: items.length > 0 }); }
+module.exports = Object.freeze({ assembleCrucibleAssessment, phaseForDay });

@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 NOTIFICATION EVENT
+/// NOTIFICATION EVENT
 /// Represents a tactical alert or system event directed at the warrior.
 /// Implements Document 16 Sections 59–63.
 class NotificationEvent extends Equatable {
@@ -8,7 +8,7 @@ class NotificationEvent extends Equatable {
   final String missionId;
   final String type; // system, mission, social, stall, rebuild, exam_reminder
   final String priorityState; // low, medium, high, critical
-  final double priorityScore; // 🔱 Calculated via NotificationImportanceEngine
+  final double priorityScore; // Calculated via NotificationImportanceEngine
   final String title;
   final String message;
   final Map<String, dynamic> context;

@@ -9,6 +9,7 @@ import '../../personalization/domain/engines/syllabus_personalization_route_engi
 import '../../personalization/domain/engines/digibook_personalization_route_engine.dart';
 import '../../personalization/domain/engines/crucible_personalization_blueprint_engine.dart';
 import '../../personalization/domain/engines/student_revision_queue_engine.dart';
+import '../../personalization/domain/engines/student_revision_closed_loop_engine.dart';
 import '../../personalization/domain/engines/student_coaching_support_engine.dart';
 import '../../personalization/domain/models/aaf_personalization_bridge.dart';
 import '../../personalization/domain/models/student_evidence_event.dart';

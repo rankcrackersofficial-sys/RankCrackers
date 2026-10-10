@@ -1,22 +1,23 @@
 import 'package:equatable/equatable.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-/// 🔱 CRUCIBLE PROTOCOL STATE
+/// CRUCIBLE PROTOCOL STATE
 /// Tracks the warrior's position in the 100-Day Protocol.
 class CrucibleProtocolState extends Equatable {
   final String recruitmentId;
   final int phaseIndex; // 1-7
   final int scheduleIndex; // 1-42
-  final String currentScheduleId; // 🔱 ADDED: Specific session identifier
+  final String currentScheduleId; // ADDED: Specific session identifier
   final String status; // study, rebuild, micro_test, macro_test, major_test
   final DateTime scheduleStartTime;
   final DateTime protocolStartTime;
   final DateTime currentBoundaryTime;
-  final DateTime? lastProgressAt; // 🔱 ADDED: Stall detection anchor
+  final DateTime? lastProgressAt; // ADDED: Stall detection anchor
   final bool isVIP;
   final bool isStalled;
-  final bool isPaused; // 🔱 ADDED: Pause tracking flag
-  final DateTime? pausedAt; // 🔱 ADDED: When the pause started
-  final int pausedDurationMs; // 🔱 ADDED: Accumulated pause duration in milliseconds
+  final bool isPaused; // ADDED: Pause tracking flag
+  final DateTime? pausedAt; // ADDED: When the pause started
+  final int pausedDurationMs; // ADDED: Accumulated pause duration in milliseconds
 
   const CrucibleProtocolState({
     required this.recruitmentId,
@@ -89,6 +90,26 @@ class CrucibleProtocolState extends Equatable {
     };
   }
 
+  static DateTime _parseDateTime(dynamic val) {
+    if (val == null) return DateTime.fromMillisecondsSinceEpoch(0);
+    if (val is Timestamp) return val.toDate();
+    if (val is DateTime) return val;
+    if (val is int) return DateTime.fromMillisecondsSinceEpoch(val);
+    if (val is String) {
+      return DateTime.tryParse(val) ?? DateTime.fromMillisecondsSinceEpoch(0);
+    }
+    return DateTime.fromMillisecondsSinceEpoch(0);
+  }
+
+  static DateTime? _parseNullableDateTime(dynamic val) {
+    if (val == null) return null;
+    if (val is Timestamp) return val.toDate();
+    if (val is DateTime) return val;
+    if (val is int) return DateTime.fromMillisecondsSinceEpoch(val);
+    if (val is String) return DateTime.tryParse(val);
+    return null;
+  }
+
   factory CrucibleProtocolState.fromMap(Map<String, dynamic> map) {
     return CrucibleProtocolState(
       recruitmentId: map['recruitmentId'] ?? '',
@@ -96,18 +117,14 @@ class CrucibleProtocolState extends Equatable {
       scheduleIndex: map['scheduleIndex'] ?? 1,
       currentScheduleId: map['currentScheduleId'] ?? '',
       status: map['status'] ?? 'study',
-      scheduleStartTime: DateTime.fromMillisecondsSinceEpoch(map['scheduleStartTime'] ?? 0),
-      protocolStartTime: DateTime.fromMillisecondsSinceEpoch(map['protocolStartTime'] ?? 0),
-      currentBoundaryTime: DateTime.fromMillisecondsSinceEpoch(map['currentBoundaryTime'] ?? 0),
-      lastProgressAt: map['lastProgressAt'] != null 
-          ? DateTime.fromMillisecondsSinceEpoch(map['lastProgressAt']) 
-          : null,
+      scheduleStartTime: _parseDateTime(map['scheduleStartTime']),
+      protocolStartTime: _parseDateTime(map['protocolStartTime']),
+      currentBoundaryTime: _parseDateTime(map['currentBoundaryTime']),
+      lastProgressAt: _parseNullableDateTime(map['lastProgressAt']),
       isVIP: map['isVIP'] ?? false,
       isStalled: map['isStalled'] ?? false,
       isPaused: map['isPaused'] ?? false,
-      pausedAt: map['pausedAt'] != null 
-          ? DateTime.fromMillisecondsSinceEpoch(map['pausedAt']) 
-          : null,
+      pausedAt: _parseNullableDateTime(map['pausedAt']),
       pausedDurationMs: map['pausedDurationMs'] ?? 0,
     );
   }

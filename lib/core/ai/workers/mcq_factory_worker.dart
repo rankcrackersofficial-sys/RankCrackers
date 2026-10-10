@@ -3,18 +3,18 @@ import '../../models/sentinel_draft.dart';
 import '../../models/audit_record.dart';
 import '../../backend/sentinel_repository.dart';
 
-/// 🔱 MCQ FACTORY WORKER
+/// MCQ FACTORY WORKER
 /// Implements the Evidence Discovery Law: AI extracts questions from sources.
 class MCQFactoryWorker {
   
-  /// 🔱 EVIDENCE EXTRACTION PROTOCOL
+  /// EVIDENCE EXTRACTION PROTOCOL
   /// Logic for transforming raw source content into MCQ Drafts.
   static Future<void> extractEvidence({
     required String nodeId,
     required String sourceText,
     required String workerVersion,
   }) async {
-    debugPrint("🔱 MCQ WORKER: Extracting assessment evidence for $nodeId");
+    debugPrint("MCQ WORKER: Extracting assessment evidence for $nodeId");
 
     // 1. Construct Sentinel Draft
     final draft = SentinelDraft(
@@ -43,6 +43,6 @@ class MCQFactoryWorker {
     // 2. Isolated Injection
     await SentinelRepository.injectDrafts([draft]);
     
-    debugPrint("🔱 MCQ WORKER: Evidence extracted. MCQs staged for Human Audit.");
+    debugPrint("MCQ WORKER: Evidence extracted. MCQs staged for Human Audit.");
   }
 }

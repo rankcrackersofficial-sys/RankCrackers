@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 MISSION VARIANT
+/// MISSION VARIANT
 /// Defines a specific sub-target within a parent recruitment (e.g., Subject-wise papers).
 /// Implements Document 26 Section 30.
 class MissionVariant extends Equatable {

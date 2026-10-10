@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 class PyqDetectionWorker {
   static Future<Map<String, dynamic>> analyze(String text) async {
     debugPrint("PYQ WORKER: Extracting physical assessment evidence...");
-    // 🔱 Hardened PYQ Intelligence Report
+    // Hardened PYQ Intelligence Report
     return {
       'title': 'SSC GD 2024 Shift 1',
       'exam': 'SSC GD',

@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_app_check/firebase_app_check.dart';
 import 'dart:async';
+import 'core/telemetry/telemetry_engine.dart';
 import 'package:flutter/foundation.dart';
 import 'firebase_options.dart';
 import 'core/router/app_router.dart';
@@ -16,16 +17,16 @@ Future<void> main() async {
   try {
     WidgetsFlutterBinding.ensureInitialized();
 
-    // 🔱 PRODUCTION BOOTSTRAP
+    // PRODUCTION BOOTSTRAP
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
     await configureFirebaseEmulatorsFromDartDefines();
 
-    // 🔱 SESSION BOOTSTRAP (Level-12.8 Hardening)
+    // SESSION BOOTSTRAP (Level-12.8 Hardening)
     await SessionManager.initialize();
 
-    // 🔱 APP CHECK INITIALIZATION
+    // APP CHECK INITIALIZATION
     try {
       await FirebaseAppCheck.instance.activate(
         androidProvider:
@@ -34,6 +35,11 @@ Future<void> main() async {
       );
     } catch (e) {
       debugPrint('⚠️ App Check failed: $e');
+    }
+    try {
+      await TelemetryEngine.instance.init();
+    } catch (e) {
+      debugPrint('Telemetry bootstrap failed safely: $e');
     }
 
     runApp(

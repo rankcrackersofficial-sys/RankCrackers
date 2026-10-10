@@ -1,15 +1,15 @@
 import 'package:flutter/foundation.dart';
 
-/// 🔱 KNOWLEDGE EXPANSION WORKER (Audit Sprint I Hardened)
+/// KNOWLEDGE EXPANSION WORKER (Audit Sprint I Hardened)
 /// Orchestrates deep pedagogical expansion via AI Provider Dispatcher.
 class KnowledgeExpansionWorker {
   
-  /// 🔱 EXPANSION ORCHESTRATOR
+  /// EXPANSION ORCHESTRATOR
   /// Dispatches expansion tasks to the Provider Router and validates the result.
   static Future<Map<String, dynamic>> expand(String topicTitle, List<String> microTopics) async {
-    debugPrint("🔱 KNOWLEDGE WORKER: Dispatching expansion for [$topicTitle] to AI Queue...");
+    debugPrint("KNOWLEDGE WORKER: Dispatching expansion for [$topicTitle] to AI Queue...");
 
-    // 🔱 PRODUCTION PROTOCOL:
+    // PRODUCTION PROTOCOL:
     // 1. Worker Dispatcher: Assigns to Gemini/GPT Provider
     // 2. Provider Router: Handles API calling
     // 3. Result Validator: Checks for Hallucination/Accuracy

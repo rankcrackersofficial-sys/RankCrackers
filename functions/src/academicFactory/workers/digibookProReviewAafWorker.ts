@@ -2,7 +2,7 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 DIGIBOOK PRO REVIEW AAF WORKER
+ * DIGIBOOK PRO REVIEW AAF WORKER
  * Binds the LLM-based Pro DigiBook Reviewer capability.
  * Actor: "RankCrackers Pro DigiBook reviewer"
  */

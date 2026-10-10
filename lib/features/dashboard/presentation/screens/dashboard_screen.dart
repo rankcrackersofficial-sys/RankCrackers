@@ -24,7 +24,6 @@ import '../widgets/battle_tools/battle_tools_grid.dart';
 import '../widgets/archive/archive_preview_card.dart';
 import '../widgets/notifications/latest_updates_card.dart';
 import '../../../../shared/widgets/command_header.dart';
-import '../../../opportunities/presentation/widgets/sentinel_intelligence_card.dart';
 
 class DashboardScreen extends ConsumerStatefulWidget {
   const DashboardScreen(
@@ -144,9 +143,10 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                       8),
                   child: Text('MISSION HUB',
                       style: AppTypography.label.copyWith(
-                          fontSize: 8,
+                          fontSize: 11,
                           letterSpacing: 1.2,
-                          color: Colors.white38)),
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white70)),
                 ),
               ),
 
@@ -185,19 +185,20 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                         children: [
                           Expanded(
                             child: _compactPillarCard(
-                              Icons.account_tree_rounded,
-                              'SYLLABUS',
-                              () => context.go(AppRoutes.syllabus),
-                              color: Colors.purpleAccent,
+                              Icons.bolt_rounded,
+                              'TEST ARENA',
+                              () => context.push(AppRoutes.testArena),
+                              color: AppColors.gold,
+                              secondary: true,
                             ),
                           ),
                           const SizedBox(width: 10),
                           Expanded(
                             child: _compactPillarCard(
-                              Icons.travel_explore_rounded,
+                              Icons.work_outline_rounded,
                               'CAREER SIGNALS',
-                              () => context.go(AppRoutes.recruitment),
-                              color: AppColors.gold,
+                              () => context.push(AppRoutes.opportunities),
+                              color: Colors.cyanAccent,
                               secondary: true,
                             ),
                           ),
@@ -208,54 +209,59 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                 ),
               ),
 
-              // 🔱 FOLD 3: Battle Tools
-              SliverPadding(
-                padding: EdgeInsets.fromLTRB(
-                    ResponsiveHelper.wp(context, 0.05),
-                    ResponsiveHelper.sectionSpacing(context),
-                    ResponsiveHelper.wp(context, 0.05),
-                    0),
-                sliver: SliverToBoxAdapter(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("BATTLE TOOLS",
-                          style: AppTypography.label
-                              .copyWith(fontSize: 8, color: Colors.white38)),
-                      const SizedBox(height: 12),
-                      const BattleToolsGrid(),
-                    ],
-                  ),
-                ),
-              ),
-
-              // 🔱 FOLD 4: Intelligence & Feed
+              // 🔱 FOLD 3: Battle Tools (P0/P1 Compact Layout)
               SliverToBoxAdapter(
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(
                       ResponsiveHelper.wp(context, 0.05),
                       ResponsiveHelper.sectionSpacing(context),
                       ResponsiveHelper.wp(context, 0.05),
-                      0),
-                  child: const SentinelIntelligenceCard(),
+                      8),
+                  child: Text('BATTLE TOOLS',
+                      style: AppTypography.label.copyWith(
+                          fontSize: 11,
+                          letterSpacing: 1.2,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white70)),
+                ),
+              ),
+
+              SliverPadding(
+                padding: EdgeInsets.symmetric(
+                    horizontal: ResponsiveHelper.wp(context, 0.05)),
+                sliver: const SliverToBoxAdapter(
+                  child: BattleToolsGrid(),
+                ),
+              ),
+
+              // 🔱 FOLD 4: Intelligence Stream
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(
+                      ResponsiveHelper.wp(context, 0.05),
+                      ResponsiveHelper.sectionSpacing(context),
+                      ResponsiveHelper.wp(context, 0.05),
+                      8),
+                  child: Text('LATEST UPDATES',
+                      style: AppTypography.label.copyWith(
+                          fontSize: 11,
+                          letterSpacing: 1.2,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white70)),
                 ),
               ),
 
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(
-                      ResponsiveHelper.wp(context, 0.05),
-                      12,
-                      ResponsiveHelper.wp(context, 0.05),
-                      0),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: ResponsiveHelper.wp(context, 0.05)),
                   child: Consumer(
-                    builder: (context, ref, child) {
-                      final notificationsAsync =
-                          ref.watch(notificationListProvider);
-                      return notificationsAsync.maybeWhen(
-                        data: (list) {
-                          if (list.isEmpty) return const SizedBox.shrink();
-                          final latest = list.first;
+                    builder: (context, ref, _) {
+                      final notifsAsync = ref.watch(notificationListProvider);
+                      return notifsAsync.maybeWhen(
+                        data: (notifs) {
+                          if (notifs.isEmpty) return const SizedBox.shrink();
+                          final latest = notifs.first;
                           return LatestUpdatesCard(item: {
                             'tag': latest.source.toUpperCase(),
                             'title': latest.title,
@@ -268,6 +274,8 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                   ),
                 ),
               ),
+
+
 
               SliverToBoxAdapter(
                 child: Padding(
@@ -299,8 +307,8 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
           children: [
             Icon(
               icon,
-              color: color.withValues(alpha: secondary ? 0.68 : 0.88),
-              size: secondary ? 20 : 22,
+              color: color.withValues(alpha: secondary ? 0.85 : 1.0),
+              size: secondary ? 22 : 24,
             ),
             const SizedBox(height: 6),
             Text(label,
@@ -308,9 +316,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: AppTypography.label.copyWith(
-                    fontSize: secondary ? 7.5 : 8.5,
+                    fontSize: secondary ? 11 : 12,
                     fontWeight: FontWeight.bold,
-                    color: secondary ? Colors.white54 : Colors.white70)),
+                    color: Colors.white)),
           ],
         ),
       ),
@@ -327,10 +335,13 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
       children: [
         Text("TODAY'S PRIORITY",
             style: AppTypography.label.copyWith(
-                fontSize: 8, letterSpacing: 1.0, color: Colors.white38)),
+                fontSize: 11,
+                letterSpacing: 1.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.white70)),
         const SizedBox(height: 8),
         DarkCard(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
           child: Row(
             children: [
               Expanded(
@@ -340,20 +351,27 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                     Text(
                         priorityNode?.title ??
                             'Your first priority unlocks after the first assessment',
-                        style: AppTypography.cardTitle.copyWith(fontSize: 13)),
+                        style: AppTypography.cardTitle.copyWith(
+                            fontSize: 14,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 4),
                     Text(
                         priorityNode == null
                             ? 'No weakness has been inferred yet. Start learning to build your map.'
                             : state == null
                                 ? 'Mastery evidence pending. Start learning to build a real priority signal.'
                                 : 'Target: ${(state.mastery * 100).toInt()}% Mastery',
-                        style: AppTypography.body
-                            .copyWith(fontSize: 9, color: Colors.white38)),
+                        style: AppTypography.body.copyWith(
+                            fontSize: 12.5,
+                            color: Colors.white70,
+                            height: 1.35)),
                   ],
                 ),
               ),
+              const SizedBox(width: 8),
               const Icon(Icons.arrow_forward_ios_rounded,
-                  color: Colors.white10, size: 12),
+                  color: AppColors.gold, size: 14),
             ],
           ),
         ),
@@ -379,117 +397,147 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("MISSION STATUS",
-            style: AppTypography.label.copyWith(
-                fontSize: 8, letterSpacing: 1.0, color: Colors.white38)),
-        const SizedBox(height: 8),
-        DarkCard(
-          padding: const EdgeInsets.all(12),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  _statusItem(
-                    "READINESS",
-                    hasReadinessEvidence
-                        ? "${readiness.score.toInt()}%"
-                        : "Pending",
-                    hasReadinessEvidence ? AppColors.gold : Colors.white38,
-                    showBorder: true,
-                  ),
-                  _statusItem(
-                    "COVERAGE",
-                    hasCoverageEvidence
-                        ? "${(coverage.coveragePercent * 100).toInt()}%"
-                        : "Pending",
-                    hasCoverageEvidence ? Colors.blueAccent : Colors.white38,
-                    showBorder: false,
-                  ),
-                ],
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8.0),
-                child: Divider(color: Colors.white10, height: 1),
-              ),
-              Row(
-                children: [
-                  _statusItem(
-                    "STREAK",
-                    hasMomentumEvidence
-                        ? "${momentum.studyStreakDays}d"
-                        : "Pending",
-                    hasMomentumEvidence ? Colors.orangeAccent : Colors.white38,
-                    showBorder: true,
-                  ),
-                  _statusItem(
-                    "RISK",
-                    hasRiskEvidence
-                        ? risk.highRisk
-                            ? "HIGH"
-                            : "LOW"
-                        : "Pending",
-                    hasRiskEvidence
-                        ? risk.highRisk
-                            ? Colors.redAccent
-                            : Colors.greenAccent
-                        : Colors.white38,
-                    showBorder: false,
-                  ),
-                ],
-              ),
-            ],
+        Text(
+          "MISSION STATUS",
+          style: AppTypography.label.copyWith(
+            fontSize: 11,
+            letterSpacing: 1.2,
+            fontWeight: FontWeight.bold,
+            color: Colors.white70,
           ),
+        ),
+        const SizedBox(height: 8),
+        Row(
+          children: [
+            Expanded(
+              child: _isolatedStatusCard(
+                label: "READINESS",
+                value: hasReadinessEvidence ? "${readiness.score.toInt()}%" : "Pending",
+                color: AppColors.gold,
+                icon: Icons.military_tech_rounded,
+                isPending: !hasReadinessEvidence,
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: _isolatedStatusCard(
+                label: "COVERAGE",
+                value: hasCoverageEvidence ? "${(coverage.coveragePercent * 100).toInt()}%" : "Pending",
+                color: Colors.lightBlueAccent,
+                icon: Icons.track_changes_rounded,
+                isPending: !hasCoverageEvidence,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        Row(
+          children: [
+            Expanded(
+              child: _isolatedStatusCard(
+                label: "STREAK",
+                value: hasMomentumEvidence ? "${momentum.studyStreakDays}d" : "Pending",
+                color: Colors.orangeAccent,
+                icon: Icons.local_fire_department_rounded,
+                isPending: !hasMomentumEvidence,
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: _isolatedStatusCard(
+                label: "RISK",
+                value: hasRiskEvidence
+                    ? (risk.highRisk ? "HIGH" : "LOW")
+                    : "Pending",
+                color: hasRiskEvidence
+                    ? (risk.highRisk ? Colors.redAccent : Colors.greenAccent)
+                    : Colors.white,
+                icon: Icons.shield_outlined,
+                isPending: !hasRiskEvidence,
+              ),
+            ),
+          ],
         ),
       ],
     );
   }
 
-  Widget _statusItem(String label, String value, Color color, {bool showBorder = true}) {
-    final isPending = value == "Pending";
-    return Expanded(
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 6),
-        decoration: BoxDecoration(
-          border: showBorder
-              ? const Border(right: BorderSide(color: Colors.white10, width: 1.0))
-              : null,
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              label,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              textAlign: TextAlign.center,
-              style: AppTypography.label.copyWith(
-                fontSize: 9,
-                letterSpacing: 0.8,
-                fontWeight: FontWeight.w600,
-                color: Colors.white54,
-              ),
-            ),
-            const SizedBox(height: 4),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                value,
+  Widget _isolatedStatusCard({
+    required String label,
+    required String value,
+    required Color color,
+    required IconData icon,
+    required bool isPending,
+  }) {
+    return DarkCard(
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+      border: Border.all(
+        color: isPending
+            ? AppColors.borderSoft
+            : color.withValues(alpha: 0.35),
+        width: 1.0,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                label,
                 maxLines: 1,
-                textAlign: TextAlign.center,
-                style: isPending
-                    ? AppTypography.body.copyWith(
-                        fontSize: 10,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.white24,
-                      )
-                    : AppTypography.hero.copyWith(
-                        fontSize: 16,
-                        color: color,
-                      ),
+                overflow: TextOverflow.ellipsis,
+                style: AppTypography.cardTitle.copyWith(
+                  fontSize: 11.5,
+                  letterSpacing: 1.1,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white70,
+                ),
               ),
-            ),
-          ],
-        ),
+              Container(
+                padding: const EdgeInsets.all(4),
+                decoration: BoxDecoration(
+                  color: color.withValues(alpha: 0.12),
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: Icon(icon, color: color, size: 14),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: isPending
+                ? Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                    decoration: BoxDecoration(
+                      color: AppColors.gold.withValues(alpha: 0.08),
+                      borderRadius: BorderRadius.circular(6),
+                      border: Border.all(color: AppColors.gold.withValues(alpha: 0.2)),
+                    ),
+                    child: Text(
+                      'Pending Evidence',
+                      maxLines: 1,
+                      style: AppTypography.label.copyWith(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.gold.withValues(alpha: 0.8),
+                        letterSpacing: 0.4,
+                      ),
+                    ),
+                  )
+                : Text(
+                    value,
+                    maxLines: 1,
+                    style: AppTypography.hero.copyWith(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                      color: color,
+                    ),
+                  ),
+          ),
+        ],
       ),
     );
   }

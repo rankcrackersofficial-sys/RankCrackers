@@ -1,18 +1,18 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 CRUCIBLE SCHEDULE
+/// CRUCIBLE SCHEDULE
 /// The specific tactical session roadmap for a 2-day block.
 class CrucibleSchedule extends Equatable {
   final String id;
   final String recruitmentId;
   final int scheduleIndex;
   final List<String> nodeIds;
-  final List<String> atomicTopicIds; // 🔱 Document 30: Constitutional Unit of Coverage
+  final List<String> atomicTopicIds; // Document 30: Constitutional Unit of Coverage
   final String scheduleType; // study, rebuild, macro_test, major_test
   final double targetHours;
   final String blueprintId;
   final String digibookSessionId;
-  final double priorityScore; // 🔱 ADDED: Dynamic sorting anchor
+  final double priorityScore; // ADDED: Dynamic sorting anchor
 
   const CrucibleSchedule({
     required this.id,

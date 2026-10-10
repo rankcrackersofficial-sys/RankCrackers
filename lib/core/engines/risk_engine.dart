@@ -1,10 +1,10 @@
 import 'dart:math';
 
-/// 🔱 RISK ENGINE (Document 49)
+/// RISK ENGINE (Document 49)
 /// Quantifies the potential for failure in specific knowledge segments.
 class RiskEngine {
   
-  /// 🔱 CALCULATION: PROBABILITY OF FAILURE
+  /// CALCULATION: PROBABILITY OF FAILURE
   /// Risk factors: Low Mastery, High Decay, High Complexity.
   static double calculateRiskScore({
     required double masteryScore,
@@ -27,7 +27,7 @@ class RiskEngine {
     return max(0.0, min(1.0, risk));
   }
 
-  /// 🔱 RISK CATEGORIZATION
+  /// RISK CATEGORIZATION
   static String getRiskCategory(double riskScore) {
     if (riskScore >= 0.8) return 'CRITICAL';
     if (riskScore >= 0.5) return 'HIGH';

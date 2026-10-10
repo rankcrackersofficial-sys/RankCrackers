@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 ATOMIC COVERAGE STATE
+/// ATOMIC COVERAGE STATE
 /// Represents the scope completion level of an Atomic Topic.
 /// Implements Document 34.
 class AtomicCoverageState extends Equatable {

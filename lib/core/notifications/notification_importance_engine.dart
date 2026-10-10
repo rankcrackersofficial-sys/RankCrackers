@@ -1,4 +1,4 @@
-/// 🔱 NOTIFICATION IMPORTANCE ENGINE
+/// NOTIFICATION IMPORTANCE ENGINE
 /// Sovereign authority for determining tactical alert priorities.
 /// Implements Document 16 Section 73.
 class NotificationImportanceEngine {
@@ -11,7 +11,7 @@ class NotificationImportanceEngine {
     required double timeUrgency,    // Deadline proximity (15%)
     required double userImpact,      // Persona-specific relevance (10%)
   }) {
-    // 🔱 CONSTITUTIONAL FORMULA WITH INPUT HARDENING
+    // CONSTITUTIONAL FORMULA WITH INPUT HARDENING
     final double priorityScore = 
         (riskImpact.clamp(0.0, 1.0) * 0.30) +
         (readinessImpact.clamp(0.0, 1.0) * 0.25) +

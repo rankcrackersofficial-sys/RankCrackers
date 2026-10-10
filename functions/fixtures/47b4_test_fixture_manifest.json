@@ -1,0 +1,170 @@
+{
+  "manifestVersion": "1.0.0",
+  "manifestId": "47b4_engine_test_fixture_manifest",
+  "description": "Governed test fixture manifest for Gate 47B4 generic materializer validation",
+  "fixtureOnly": true,
+  "productionEligible": false,
+  "missions": [
+    {
+      "missionId": "jee_main_2026",
+      "title": "JEE Main 2026",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "region": "NATIONAL",
+      "sector": "ENGINEERING",
+      "examCategory": "competitive",
+      "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+      "examPurpose": "Admission to UG Engineering Programs",
+      "variants": [],
+      "officialSourceLocator": {
+        "officialListingPageUrl": "https://jeemain.nta.nic.in/",
+        "exactDocumentUrl": "https://jeemain.nta.nic.in/doc2026.pdf",
+        "bytesAvailable": false,
+        "sha256Verified": false
+      },
+      "latestEffectiveSource": {
+        "effectiveNotification": "https://jeemain.nta.nic.in/doc2026.pdf",
+        "lastVerifiedDate": "2026-09-01T00:00:00.000Z"
+      },
+      "pyqArchiveRef": {
+        "collectionPath": "mission_realms/jee_main_2026/pyq_archives",
+        "unboundedSupport": true
+      },
+      "readiness": {
+        "syllabusReady": "PREPARING",
+        "digibookReady": "PREPARING",
+        "questionBankReady": "PREPARING",
+        "crucibleReady": "PREPARING"
+      },
+      "visibility": {
+        "studentVisible": true
+      }
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "title": "UPSC Civil Services Prelims",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "region": "NATIONAL",
+      "sector": "CIVIL_SERVICES",
+      "examCategory": "competitive",
+      "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+      "examPurpose": "Recruitment to All India and Central Civil Services",
+      "variants": [],
+      "officialSourceLocator": {
+        "officialListingPageUrl": "https://upsc.gov.in/examinations/active-examinations",
+        "exactDocumentUrl": "https://upsc.gov.in/sites/default/files/Notification-CS_P_2024_Eng.pdf",
+        "bytesAvailable": false,
+        "sha256Verified": false
+      },
+      "latestEffectiveSource": {
+        "effectiveNotification": "https://upsc.gov.in/sites/default/files/Notification-CS_P_2024_Eng.pdf",
+        "lastVerifiedDate": "2026-09-01T00:00:00.000Z"
+      },
+      "pyqArchiveRef": {
+        "collectionPath": "mission_realms/upsc_cse_prelims/pyq_archives",
+        "unboundedSupport": true
+      },
+      "readiness": {
+        "syllabusReady": "PREPARING",
+        "digibookReady": "PREPARING",
+        "questionBankReady": "PREPARING",
+        "crucibleReady": "PREPARING"
+      },
+      "visibility": {
+        "studentVisible": true
+      }
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "title": "RPSC RAS / RTS Combined Competitive Exam",
+      "canonicalAuthorityKey": "auth_in_rj_rpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "RJ",
+      "stateName": "Rajasthan",
+      "region": "REGIONAL",
+      "sector": "CIVIL_SERVICES",
+      "examCategory": "competitive",
+      "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+      "examPurpose": "Recruitment to Rajasthan Administrative Service",
+      "variants": [],
+      "officialSourceLocator": {
+        "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+        "exactDocumentUrl": null,
+        "bytesAvailable": false,
+        "sha256Verified": false
+      },
+      "latestEffectiveSource": {
+        "effectiveNotification": "https://rpsc.rajasthan.gov.in/advertisements",
+        "lastVerifiedDate": "2026-09-01T00:00:00.000Z"
+      },
+      "pyqArchiveRef": {
+        "collectionPath": "mission_realms/rpsc_ras_prelims/pyq_archives",
+        "unboundedSupport": true
+      },
+      "readiness": {
+        "syllabusReady": "PREPARING",
+        "digibookReady": "PREPARING",
+        "questionBankReady": "PREPARING",
+        "crucibleReady": "PREPARING"
+      },
+      "visibility": {
+        "studentVisible": true
+      }
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "title": "DSSSB Delhi Trained Graduate Teacher",
+      "canonicalAuthorityKey": "auth_in_dl_dsssb",
+      "jurisdictionLevel": "UT",
+      "stateCode": "DL",
+      "stateName": "Delhi",
+      "region": "REGIONAL",
+      "sector": "TEACHING",
+      "examCategory": "competitive",
+      "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+      "examPurpose": "Recruitment of TGT Teachers in Delhi Directorate of Education",
+      "variants": [
+        {
+          "variantId": "tgt_maths",
+          "displayName": "TGT Mathematics",
+          "variantDimension": "TRACK",
+          "sourceEvidenceRef": "dsssb_advt_02_2024_appendix_a"
+        },
+        {
+          "variantId": "tgt_natural_science",
+          "displayName": "TGT Natural Science",
+          "variantDimension": "TRACK",
+          "sourceEvidenceRef": "dsssb_advt_02_2024_appendix_b"
+        }
+      ],
+      "officialSourceLocator": {
+        "officialListingPageUrl": "https://dsssb.delhi.gov.in/notifications",
+        "exactDocumentUrl": null,
+        "bytesAvailable": false,
+        "sha256Verified": false
+      },
+      "latestEffectiveSource": {
+        "effectiveNotification": "https://dsssb.delhi.gov.in/notifications",
+        "lastVerifiedDate": "2026-09-01T00:00:00.000Z"
+      },
+      "pyqArchiveRef": {
+        "collectionPath": "mission_realms/dsssb_delhi_tgt/pyq_archives",
+        "unboundedSupport": true
+      },
+      "readiness": {
+        "syllabusReady": "PREPARING",
+        "digibookReady": "PREPARING",
+        "questionBankReady": "PREPARING",
+        "crucibleReady": "PREPARING"
+      },
+      "visibility": {
+        "studentVisible": true
+      }
+    }
+  ]
+}

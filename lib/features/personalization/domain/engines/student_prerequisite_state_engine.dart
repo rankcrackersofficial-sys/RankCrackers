@@ -8,6 +8,7 @@ final class StudentPrerequisiteDiagnosis {
   const StudentPrerequisiteDiagnosis({
     required this.studentId,
     required this.targetAmtnId,
+    required this.missionId,
     required this.calculatedAtUtc,
     required this.readiness,
     required this.confidence,
@@ -17,6 +18,7 @@ final class StudentPrerequisiteDiagnosis {
 
   final String studentId;
   final String targetAmtnId;
+  final String missionId;
   final DateTime calculatedAtUtc;
   final StudentPrerequisiteReadiness readiness;
   final StudentLearningStateConfidence confidence;
@@ -30,6 +32,7 @@ final class StudentPrerequisiteStateEngine {
   StudentPrerequisiteDiagnosis diagnose({
     required String studentId,
     required String targetAmtnId,
+    required String missionId,
     required DateTime calculatedAtUtc,
     required Map<String, StudentLearningState> prerequisiteStates,
   }) {
@@ -40,6 +43,7 @@ final class StudentPrerequisiteStateEngine {
       return StudentPrerequisiteDiagnosis(
         studentId: studentId,
         targetAmtnId: targetAmtnId,
+        missionId: missionId,
         calculatedAtUtc: calculatedAtUtc,
         readiness: StudentPrerequisiteReadiness.ready,
         confidence: StudentLearningStateConfidence.high,
@@ -75,6 +79,7 @@ final class StudentPrerequisiteStateEngine {
       return StudentPrerequisiteDiagnosis(
         studentId: studentId,
         targetAmtnId: targetAmtnId,
+        missionId: missionId,
         calculatedAtUtc: calculatedAtUtc,
         readiness: StudentPrerequisiteReadiness.blocked,
         confidence: StudentLearningStateConfidence.high,
@@ -87,6 +92,7 @@ final class StudentPrerequisiteStateEngine {
       return StudentPrerequisiteDiagnosis(
         studentId: studentId,
         targetAmtnId: targetAmtnId,
+        missionId: missionId,
         calculatedAtUtc: calculatedAtUtc,
         readiness: StudentPrerequisiteReadiness.partial,
         confidence: insufficient
@@ -100,6 +106,7 @@ final class StudentPrerequisiteStateEngine {
     return StudentPrerequisiteDiagnosis(
       studentId: studentId,
       targetAmtnId: targetAmtnId,
+      missionId: missionId,
       calculatedAtUtc: calculatedAtUtc,
       readiness: StudentPrerequisiteReadiness.ready,
       confidence: StudentLearningStateConfidence.high,

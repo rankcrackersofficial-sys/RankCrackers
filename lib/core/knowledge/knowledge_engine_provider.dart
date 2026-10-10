@@ -6,20 +6,32 @@ import '../firebase/firestore_service.dart';
 import '../../shared/providers/session_provider.dart';
 
 final knowledgeEngineProvider = ChangeNotifierProvider<KnowledgeEngine>((ref) {
-  return KnowledgeEngine();
+  return KnowledgeEngine.instance;
 });
 
-/// 🔱 LIVE SYLLABUS PROVIDER (G2 Alignment)
+/// LIVE SYLLABUS PROVIDER (G2 Alignment)
 /// Streams syllabus nodes directly from Firestore based on the active exam.
 final liveNodesProvider = StreamProvider<List<MicroTopicNode>>((ref) {
   final sessionUser = ref.watch(sessionUserProvider).valueOrNull;
-  final examId = sessionUser?.examId ?? 'ras';
+  final examId = sessionUser?.examId;
   
-  return FirestoreService.streamNodesByExam(examId);
+  if (examId == null || examId.isEmpty) {
+    return Stream.value(<MicroTopicNode>[]);
+  }
+  
+  return FirestoreService.streamNodesByExam(examId).map((nodes) {
+    return nodes.where((node) {
+      final status = node.status.toLowerCase();
+      final isPublished = status == 'published' || status == 'active' || status == 'live' || status.isEmpty;
+      // Strict Paper-1 Scope for JEE
+      final isPaper1 = node.examId != 'jee_main_2026' || node.paperId == 'PAPER_1' || node.paperId.isEmpty;
+      return isPublished && isPaper1;
+    }).toList();
+  });
 });
 
 final allNodesProvider = Provider<List<MicroTopicNode>>((ref) {
-  // 🔱 Optimization: Prefer live stream if available
+  // Optimization: Prefer live stream if available
   final liveNodes = ref.watch(liveNodesProvider).valueOrNull;
   if (liveNodes != null && liveNodes.isNotEmpty) return liveNodes;
 

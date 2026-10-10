@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter/foundation.dart';
 
-/// 🔱 SENTINEL ADMIN REPOSITORY (P4 & P7 Audit Fix)
+/// SENTINEL ADMIN REPOSITORY (P4 & P7 Audit Fix)
 class SentinelAdminRepository {
   static final _firestore = FirebaseFirestore.instance;
   static final _functions = FirebaseFunctions.instance;
@@ -47,9 +47,9 @@ class SentinelAdminRepository {
     required String action,
     Map<String, dynamic>? payload,
   }) async {
-    // 🔱 Audit: If corrections exist, ensure they are structured for the Feedback Engine
+    // Audit: If corrections exist, ensure they are structured for the Feedback Engine
     if (payload != null && payload.containsKey('corrections')) {
-      debugPrint("🔱 SENTINEL REPO: Packaging Correction Dataset for AI Feedback Loop...");
+      debugPrint("SENTINEL REPO: Packaging Correction Dataset for AI Feedback Loop...");
       // Wrap corrections with environmental metadata for Data Science
       payload['feedbackContext'] = {
         'timestamp': DateTime.now().toIso8601String(),
@@ -65,7 +65,7 @@ class SentinelAdminRepository {
     });
   }
 
-  /// 🔱 VERIFY KNOWLEDGE BLOCK
+  /// VERIFY KNOWLEDGE BLOCK
   static Future<void> verifyKnowledgeBlock(String blockId, {String status = 'verified'}) async {
     await _functions.httpsCallable('handleSentinelAction').call({
       'action': 'verify_knowledge_block',
@@ -76,14 +76,14 @@ class SentinelAdminRepository {
     });
   }
 
-  /// 🔱 LOG FOUNDER ACTIVITY
+  /// LOG FOUNDER ACTIVITY
   /// Manually log actions like Preview or Download via Sovereign Proxy.
   static Future<void> logActivity({
     required String type,
     required String message,
     Map<String, dynamic>? metadata,
   }) async {
-    // 🔱 Hardened v3.9: Direct write to log is now forbidden.
+    // Hardened v3.9: Direct write to log is now forbidden.
     await _functions.httpsCallable('handleSentinelAction').call({
       'action': 'log_founder_activity',
       'payload': {

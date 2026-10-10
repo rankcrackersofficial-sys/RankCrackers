@@ -1,0 +1,285 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_4E89B101",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U02_T_00000001",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_4E89B101_V001",
+  "atomicFactSetHash": "c9e8e84ee44d19900e8415385bb0799a53c5fe6920300b424f5fe2c433fc9ef6",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_4E89B101_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_4E89B101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_4E89B101_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_0861E830",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_0DF6D00D",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_569302EE",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_5A404D5E",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_73C66253",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_7AEB16A2",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_8A6170DB",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_A33B7FCC",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_A71B7E75",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_ABA9E76F",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_D42C181E"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "overviewText": "This chapter formulates scalar and vector definitions, the Parallelogram Law of vector addition, and 2D rectangular component resolution.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "f99fef76d199112b1d247f286a68ddda1c54e6c2ce9f39207bac291b6f236033",
+      "createdAtUtc": "2026-09-02T13:29:33.069Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_4E89B101_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_4E89B101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_4E89B101_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_0861E830",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_0DF6D00D",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_569302EE",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_5A404D5E",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_73C66253",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_7AEB16A2",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_8A6170DB",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_A33B7FCC",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_A71B7E75",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_ABA9E76F",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_D42C181E"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_4E89B101_CONCEPTS_01_SCALARS_VECTORS_ADDITION",
+          "semanticAnchorId": "ANCHOR_SCALARS_VECTORS_ADDITION",
+          "title": "1. Scalars, Vectors, and Parallelogram Law",
+          "contentMarkdown": "Scalars have magnitude only. Vectors possess magnitude and direction and obey vector addition laws. Parallelogram Law resultant magnitude is $$R = \\\\sqrt{A^2 + B^2 + 2AB\\\\cos\\\\theta}$$ and direction is $$\\tan\\\\alpha = \\\\frac{B\\\\sin\\\\theta}{A + B\\\\cos\\\\theta}$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_0861E830",
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_ABA9E76F",
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_D42C181E",
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_569302EE",
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_8A6170DB",
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_0DF6D00D",
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_5A404D5E"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_4E89B101_CONCEPTS_02_RECTANGULAR_RESOLUTION",
+          "semanticAnchorId": "ANCHOR_RECTANGULAR_RESOLUTION",
+          "title": "2. Resolution of Vectors into Rectangular Components",
+          "contentMarkdown": "A 2D vector resolves into $A_x = A\\\\cos\\\\theta$ and $A_y = A\\\\sin\\\\theta$. The magnitude is $$|A| = \\\\sqrt{A_x^2 + A_y^2}$$ and direction angle is $$\\theta = \\\\arctan(A_y/A_x)$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_7AEB16A2",
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_73C66253",
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_A33B7FCC",
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_A71B7E75"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "dd4cdfdc6b50656468bca66cbb460ae8130749b9d8f70e74f22702c62ee50ed6",
+      "createdAtUtc": "2026-09-02T13:29:33.069Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_4E89B101_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_4E89B101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_4E89B101_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_0DF6D00D",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_5A404D5E",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_A33B7FCC"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Vector Resultant Magnitude",
+          "formula": "R = \\\\sqrt{A^2 + B^2 + 2AB\\\\cos\\\\theta}",
+          "constraints": "Angle theta between vectors",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_0DF6D00D"
+          ]
+        },
+        {
+          "name": "Resultant Direction Angle",
+          "formula": "\\\\tan\\\\alpha = \\\\frac{B\\\\sin\\\\theta}{A + B\\\\cos\\\\theta}",
+          "constraints": "Angle alpha with vector A",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_5A404D5E"
+          ]
+        },
+        {
+          "name": "Vector Magnitude from Components",
+          "formula": "|A| = \\\\sqrt{A_x^2 + A_y^2}",
+          "constraints": "Orthogonal components Ax, Ay",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_A33B7FCC"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "1495a5aa038eb65d639c6b4fa4ae85843d88f296992863f6aee40a97d6be4871",
+      "createdAtUtc": "2026-09-02T13:29:33.069Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_4E89B101_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_4E89B101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_4E89B101_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.069Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_4E89B101_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_4E89B101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_4E89B101_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_0DF6D00D"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_4E89B101_01",
+          "title": "Resultant of Two Orthogonal Vectors",
+          "problemStatement": "Two vectors of magnitudes $3\\\\text{ N}$ and $4\\\\text{ N}$ act perpendicularly ($\\\\theta = 90^\\\\circ$). Find the resultant magnitude.",
+          "stepByStepSolution": [
+            "Step 1: Identify $A = 3\\\\text{ N}$, $B = 4\\\\text{ N}$, $\\\\theta = 90^\\\\circ$ ($\\\\cos 90^\\\\circ = 0$).",
+            "Step 2: Apply formula: $R = \\\\sqrt{A^2 + B^2 + 2AB\\\\cos 90^\\\\circ} = \\\\sqrt{3^2 + 4^2 + 0} = \\\\sqrt{9 + 16} = 5\\\\text{ N}$."
+          ],
+          "finalAnswer": "R = 5\\\\text{ N}",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_0DF6D00D"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "f1c87e6d00c9f8e2da947d1a00f67bfcd492f07bea6730b8c144161a3e9b46dd",
+      "createdAtUtc": "2026-09-02T13:29:33.069Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_4E89B101_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_4E89B101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_4E89B101_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_A33B7FCC"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_4E89B101_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "If vector $\\\\mathbf{A}$ has orthogonal components $A_x = 6$ and $A_y = 8$, what is the magnitude $|A|$?",
+          "options": [
+            "10",
+            "14",
+            "2",
+            "48"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "$|A| = \\\\sqrt{A_x^2 + A_y^2} = \\\\sqrt{6^2 + 8^2} = \\\\sqrt{36 + 64} = \\\\sqrt{100} = 10$.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_4E89B101_A33B7FCC"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "5d6db82ca226b8970e1ad0118ba0ca86e570aeb7e7dea1fff2228aeae5018178",
+      "createdAtUtc": "2026-09-02T13:29:33.069Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_4E89B101_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_4E89B101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_4E89B101_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_0861E830",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_0DF6D00D",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_569302EE",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_5A404D5E",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_73C66253",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_7AEB16A2",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_8A6170DB",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_A33B7FCC",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_A71B7E75",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_ABA9E76F",
+        "AF_GU_JEEMAIN2027_PHY_4E89B101_D42C181E"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Vector addition resultant calculation",
+          "Rectangular component decomposition"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "5a152bbe9ee6a6ae6fb79983cf617b31bef1a952f8595a0a14add47f1a0fcc80",
+      "createdAtUtc": "2026-09-02T13:29:33.069Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.069Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

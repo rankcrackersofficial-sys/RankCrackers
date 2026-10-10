@@ -1,4 +1,5 @@
 import 'dart:async';
+import '../../shared/session/session_manager.dart';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -11,7 +12,7 @@ import 'dart:io';
 import '../firebase/firestore_service.dart';
 import './models/telemetry_record.dart';
 
-/// 🔱 TELEMETRY ENGINE (v2 Hardened)
+/// TELEMETRY ENGINE (v2 Hardened)
 /// Sovereign authority for capturing and reporting real-world tactical performance.
 /// Implements Session Tracking, Privacy Hashing, and Persistent Queuing.
 class TelemetryEngine {
@@ -32,7 +33,7 @@ class TelemetryEngine {
   String? _buildNumber;
   String? _sessionId;
 
-  /// 🔱 INITIALIZES PRODUCTION CONTEXT
+  /// INITIALIZES PRODUCTION CONTEXT
   Future<void> init() async {
     // 1. Device Context
     final deviceInfo = DeviceInfoPlugin();
@@ -52,15 +53,16 @@ class TelemetryEngine {
     _buildNumber = packageInfo.buildNumber;
 
     // 3. Session Lifecycle
-    _sessionId = 'sess_${DateTime.now().millisecondsSinceEpoch}_${_generateShortHash(DateTime.now().toIso8601String())}';
+    _sessionId =
+        'sess_${DateTime.now().millisecondsSinceEpoch}_${_generateShortHash(DateTime.now().toIso8601String())}';
 
     // 4. Recovery: Hydrate from persistent storage
     await _hydrateQueue();
-    
-    debugPrint('🔱 TELEMETRY INITIALIZED: Session $_sessionId');
+
+    debugPrint('TELEMETRY INITIALIZED: Session $_sessionId');
   }
 
-  /// 🔱 CAPTURES A PERFORMANCE EVENT
+  /// CAPTURES A PERFORMANCE EVENT
   Future<void> capture({
     required String eventName,
     required int durationMs,
@@ -71,7 +73,9 @@ class TelemetryEngine {
   }) async {
     final uid = FirebaseAuth.instance.currentUser?.uid ?? 'anonymous';
     final network = await _getNetworkType();
-    
+    final effectiveRecruitmentId =
+        recruitmentId ?? SessionManager.selectedRecruitmentIdSync() ?? '';
+
     final record = TelemetryRecord(
       id: 'tel_${DateTime.now().microsecondsSinceEpoch}',
       eventName: eventName,
@@ -80,7 +84,8 @@ class TelemetryEngine {
       errorCode: errorCode,
       sessionId: _sessionId ?? 'unknown',
       anonymizedUserId: _generateShortHash(uid),
-      recruitmentId: recruitmentId,
+      userId: uid,
+      recruitmentId: effectiveRecruitmentId,
       deviceModel: _deviceModel ?? 'Unknown',
       osVersion: _osVersion ?? 'Unknown',
       appVersion: _appVersion ?? '1.0.0',
@@ -91,38 +96,40 @@ class TelemetryEngine {
     );
 
     _buffer.add(record);
-    await _persistQueue(); // 🔱 Security: Save to disk on every capture
-    
-    // 🔱 Rolling Timer Hardening
+    await _persistQueue(); // Security: Save to disk on every capture
+
+    // Rolling Timer Hardening
     _flushTimer?.cancel();
     _flushTimer = Timer(_flushInterval, flush);
-    
+
     if (kDebugMode) {
-      debugPrint('🔱 TELEMETRY: Captured $eventName in ${durationMs}ms [${success ? 'SUCCESS' : 'FAILED'}]');
+      debugPrint(
+          'TELEMETRY: Captured $eventName in ${durationMs}ms [${success ? 'SUCCESS' : 'FAILED'}]');
     }
   }
 
-  /// 🔱 COMMITS BATTALION METRICS TO FIRESTORE
+  /// COMMITS BATTALION METRICS TO FIRESTORE
   Future<void> flush() async {
     if (_buffer.isEmpty) return;
 
-    final List<Map<String, dynamic>> items = _buffer.map((r) => r.toMap()).toList();
-    
+    final List<Map<String, dynamic>> items =
+        _buffer.map((r) => r.toMap()).toList();
+
     try {
-      // 🔱 Authority: Batch upload to telemetry nexus
+      // Authority: Batch upload to telemetry nexus
       await FirestoreService.uploadBatch('telemetry_nexus', items);
-      
+
       _buffer.clear();
       await _clearPersistentQueue();
-      debugPrint('🔱 TELEMETRY FLUSHED: ${items.length} records committed.');
+      debugPrint('TELEMETRY FLUSHED: ${items.length} records committed.');
     } catch (e) {
-      debugPrint('🔱 TELEMETRY ERROR: Flush failed - $e. Retention active.');
+      debugPrint('TELEMETRY ERROR: Flush failed - $e. Retention active.');
     } finally {
       _flushTimer = null;
     }
   }
 
-  /// 🔱 INTERNAL: Persistence logic for offline/crash recovery
+  /// INTERNAL: Persistence logic for offline/crash recovery
   Future<void> _persistQueue() async {
     final prefs = await SharedPreferences.getInstance();
     final jsonList = _buffer.map((r) => json.encode(r.toMap())).toList();
@@ -136,7 +143,8 @@ class TelemetryEngine {
       for (var item in jsonList) {
         _buffer.add(TelemetryRecord.fromMap(json.decode(item)));
       }
-      debugPrint('🔱 TELEMETRY RECOVERY: ${_buffer.length} records restored from disk.');
+      debugPrint(
+          'TELEMETRY RECOVERY: ${_buffer.length} records restored from disk.');
     }
   }
 
@@ -145,7 +153,7 @@ class TelemetryEngine {
     await prefs.remove(_storageKey);
   }
 
-  /// 🔱 UTILITIES
+  /// UTILITIES
   String _generateShortHash(String input) {
     return sha256.convert(utf8.encode(input)).toString().substring(0, 12);
   }

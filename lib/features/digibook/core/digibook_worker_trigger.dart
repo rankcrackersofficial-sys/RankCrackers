@@ -3,7 +3,7 @@ import '../../../core/ai/models/ai_task_type.dart';
 
 class DigiBookWorkerTrigger {
   // ===================================================
-  // GENERATE DIGIBOOK 🔱
+  // GENERATE DIGIBOOK 
   // ===================================================
   static Future<void> generate({
     required String nodeId,

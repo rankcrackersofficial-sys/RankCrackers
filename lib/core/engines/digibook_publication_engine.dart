@@ -4,7 +4,7 @@ import '../models/atomic_fact.dart';
 import '../models/question_model.dart';
 import '../models/micro_topic_node.dart';
 
-/// 🔱 PAYLOAD ASSEMBLY RESULT
+/// PAYLOAD ASSEMBLY RESULT
 /// Bundles the delivery payload with its sovereign audit record.
 class PayloadAssemblyResult {
   final DigiBookContent payload;
@@ -12,11 +12,11 @@ class PayloadAssemblyResult {
   PayloadAssemblyResult({required this.payload, required this.audit});
 }
 
-/// 🔱 DIGIBOOK PUBLICATION ENGINE (v2.2 - Human-Centered Factory)
+/// DIGIBOOK PUBLICATION ENGINE (v2.2 - Human-Centered Factory)
 /// Sovereign authority for aggregating and auditing heavy truth payloads.
 class DigiBookPublicationEngine {
   
-  /// 🔱 PEDAGOGICAL SEQUENCE CONTRACT
+  /// PEDAGOGICAL SEQUENCE CONTRACT
   static const List<String> pedagogicalOrder = [
     'refresher',
     'intuition',
@@ -31,7 +31,7 @@ class DigiBookPublicationEngine {
     'quick_revision',
   ];
 
-  /// 🔱 ASSEMBLE & AUDIT
+  /// ASSEMBLE & AUDIT
   /// Aggregates only VERIFIED blocks in strict pedagogical order.
   static PayloadAssemblyResult assemble({
     required MicroTopicNode node,
@@ -42,22 +42,22 @@ class DigiBookPublicationEngine {
     List<QuestionModel> mediumMcqs = const [],
     List<QuestionModel> hardMcqs = const [],
   }) {
-    // 🔱 FLAG-1: Referential Integrity Enforcement
+    // FLAG-1: Referential Integrity Enforcement
     if (node.contentRegistryId != 'payload_${node.id}') {
       throw Exception("CONSTITUTIONAL VIOLATION: Registry Integrity Broken for ${node.id}. Expected 'payload_${node.id}', found '${node.contentRegistryId}'");
     }
 
-    // 🔱 GAP-1: Verification Filter
+    // GAP-1: Verification Filter
     final verifiedBlocks = blocks.where((b) => 
       b.status == 'verified' && b.verifiedBy != null
     ).toList();
     
-    // 🔱 FLAG-2: Empty Payload Prevention
+    // FLAG-2: Empty Payload Prevention
     if (verifiedBlocks.isEmpty) {
       throw Exception("PUBLICATION BLOCKED: No verified atoms found for Node ${node.id}. Truth cannot be empty.");
     }
 
-    // 🔱 HUMAN-CENTERED SORTING
+    // HUMAN-CENTERED SORTING
     verifiedBlocks.sort((a, b) {
       int indexA = pedagogicalOrder.indexOf(a.type);
       int indexB = pedagogicalOrder.indexOf(b.type);
@@ -74,7 +74,7 @@ class DigiBookPublicationEngine {
     List<String> revisionPoints = [];
     List<String> pyqStrings = [];
 
-    // 🔱 G4: Source Aggregation
+    // G4: Source Aggregation
     final Set<String> sourceFactIds = {};
     final Set<String> sourceDocumentIds = {};
 
@@ -130,7 +130,7 @@ class DigiBookPublicationEngine {
     if (pro.isEmpty) pro = intermediate;
     if (academic.isEmpty) academic = pro;
 
-    // 🔱 HARDENED AUDIT (G4 Alignment)
+    // HARDENED AUDIT (G4 Alignment)
     final audit = {
       'id': 'audit_${node.id}_v$version',
       'payloadId': node.contentRegistryId,
@@ -150,7 +150,7 @@ class DigiBookPublicationEngine {
       intermediateContent: intermediate.trim(),
       proContent: pro.trim(),
       academicContent: academic.trim(),
-      facts: const [], // 🔱 Note: facts list in content is legacy; we use sourceAtomicFactIds in audit now
+      facts: const [], // Note: facts list in content is legacy; we use sourceAtomicFactIds in audit now
       oneLiners: oneLiners,
       revisionPoints: revisionPoints,
       easyMcqs: easyMcqs,

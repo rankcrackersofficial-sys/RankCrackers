@@ -1,4 +1,4 @@
-/// 🔱 NOTIFICATION KNOWLEDGE GRAPH (v1.0)
+/// NOTIFICATION KNOWLEDGE GRAPH (v1.0)
 class NotificationKnowledgeGraph {
   final List<String> linkedSyllabusTopics;
   final List<String> linkedAtomicTopics;

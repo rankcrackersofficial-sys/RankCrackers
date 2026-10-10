@@ -1,16 +1,16 @@
 import 'package:flutter/foundation.dart';
 
-/// 🔱 CHUNKING ENGINE (v4 Page-Aware Semantic)
+/// CHUNKING ENGINE (v4 Page-Aware Semantic)
 /// Implements Phase 9 Step 4: Multi-Lingual & Structural Segmentation.
 /// Optimized for NCERT, History Books, and State Notifications.
 class ChunkingEngine {
   
-  /// 🔱 SEGMENTATION PROTOCOL
+  /// SEGMENTATION PROTOCOL
   /// Splits text based on structural hierarchy: Page > Chapter > Section.
   static List<Map<String, dynamic>> segment(String text, {int maxChunkSize = 1500}) {
-    debugPrint("🔱 CHUNKING ENGINE: Initiating Page-Aware Semantic Segmentation.");
+    debugPrint("CHUNKING ENGINE: Initiating Page-Aware Semantic Segmentation.");
 
-    // 🔱 Step 1: Structural Hierarchy Regex
+    // Step 1: Structural Hierarchy Regex
     final RegExp pageRegex = RegExp(r'\[\[PAGE_(\d+)\]\]', caseSensitive: false);
     
     final RegExp chapterRegex = RegExp(
@@ -40,7 +40,7 @@ class ChunkingEngine {
         continue;
       }
 
-      // 🔱 Step 2: Page Detection
+      // Step 2: Page Detection
       final pageMatch = pageRegex.firstMatch(trimmedLine);
       if (pageMatch != null) {
         if (currentChunk.isNotEmpty) _addChunk(chunks, chunkIndex++, currentChunk, currentChapter, currentSection, currentPage, lineInChunk);
@@ -50,7 +50,7 @@ class ChunkingEngine {
         continue;
       }
 
-      // 🔱 Step 3: Chapter/Unit Detection
+      // Step 3: Chapter/Unit Detection
       if (chapterRegex.hasMatch(trimmedLine)) {
         if (currentChunk.isNotEmpty) _addChunk(chunks, chunkIndex++, currentChunk, currentChapter, currentSection, currentPage, lineInChunk);
         currentChapter = trimmedLine;
@@ -60,7 +60,7 @@ class ChunkingEngine {
         continue;
       }
 
-      // 🔱 Step 4: Section/Topic Detection
+      // Step 4: Section/Topic Detection
       if (sectionRegex.hasMatch(trimmedLine)) {
         if (currentChunk.isNotEmpty) _addChunk(chunks, chunkIndex++, currentChunk, currentChapter, currentSection, currentPage, lineInChunk);
         currentSection = trimmedLine;
@@ -69,7 +69,7 @@ class ChunkingEngine {
         continue;
       }
 
-      // 🔱 Step 5: Overflow Chunking
+      // Step 5: Overflow Chunking
       if ((currentChunk.length + trimmedLine.length) > maxChunkSize) {
         _addChunk(chunks, chunkIndex++, currentChunk, currentChapter, currentSection, currentPage, lineInChunk);
         currentChunk = "";
@@ -84,7 +84,7 @@ class ChunkingEngine {
       _addChunk(chunks, chunkIndex++, currentChunk, currentChapter, currentSection, currentPage, lineInChunk);
     }
 
-    debugPrint("🔱 CHUNKING COMPLETE: ${chunks.length} semantic units extracted.");
+    debugPrint("CHUNKING COMPLETE: ${chunks.length} semantic units extracted.");
     return chunks;
   }
 

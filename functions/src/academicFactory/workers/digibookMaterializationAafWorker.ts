@@ -2,7 +2,7 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 DIGIBOOK MATERIALIZATION AAF WORKER
+ * DIGIBOOK MATERIALIZATION AAF WORKER
  * Binds the Promotion Worker logic for DigiBook knowledge blocks.
  */
 export async function digibookMaterializationAafWorker(job: AafJobMetadata): Promise<AafWorkerResult> {

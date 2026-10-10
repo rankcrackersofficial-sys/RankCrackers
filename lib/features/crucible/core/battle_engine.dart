@@ -3,16 +3,16 @@ import '../../../core/models/node_runtime_state.dart';
 import '../../../core/models/question_model.dart';
 import '../../digibook/models/digibook_content.dart';
 
-/// 🔱 BATTLE ENGINE
+/// BATTLE ENGINE
 /// Orchestrates tactical combat. Now fully Atomic-Aware and Type-Safe.
 class BattleEngine {
   // ===================================================
-  // DYNAMIC WEAKNESS FORGE 🔱
+  // DYNAMIC WEAKNESS FORGE 
   // ===================================================
   static List<QuestionModel> generateWeaknessCombat({
     required List<MicroTopicNode> weakNodes,
     required Map<String, NodeRuntimeState> states,
-    required Map<String, DigiBookContent> contentMap, // 🔱 Document 46A: Decoupled content
+    required Map<String, DigiBookContent> contentMap, // Document 46A: Decoupled content
     Map<String, List<String>> nodeRiskFacts = const {},
   }) {
     List<QuestionModel> combatSet = [];
@@ -22,7 +22,7 @@ class BattleEngine {
       final payload = contentMap[node.id];
       if (payload == null) continue;
       
-      // 🔱 Identify Atomic Strike Pool
+      // Identify Atomic Strike Pool
       final List<QuestionModel> allNodeQuestions = [
         ...payload.easyMcqs,
         ...payload.mediumMcqs,
@@ -39,7 +39,7 @@ class BattleEngine {
         final pool = state.mastery < 0.3 ? payload.easyMcqs : payload.mediumMcqs;
         combatSet.addAll(pool.take(5));
       } else {
-        // 🔱 Combat Composition Rule: 60% Targeted Strike, 40% Breadth Coverage
+        // Combat Composition Rule: 60% Targeted Strike, 40% Breadth Coverage
         targetedQuestions.shuffle();
         final List<QuestionModel> breadthPool = List.from(allNodeQuestions)..shuffle();
 
@@ -62,7 +62,7 @@ class BattleEngine {
   }
 
   // ===================================================
-  // CORE BATTLE LOGIC 🔱
+  // CORE BATTLE LOGIC 
   // ===================================================
 
   static MicroTopicNode? getPriorityNode(

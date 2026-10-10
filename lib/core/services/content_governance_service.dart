@@ -3,13 +3,13 @@ import '../models/digibook_block.dart';
 import '../backend/question_repository.dart';
 import '../backend/digibook_repository.dart';
 
-/// 🔱 CONTENT GOVERNANCE SERVICE
+/// CONTENT GOVERNANCE SERVICE
 /// Implements the Constitutional Gate for content quality.
 /// Enforces Human Authority Law: No AI content reaches learners without human verification.
 class ContentGovernanceService {
   
   // ===================================================
-  // QUESTION GOVERNANCE 🔱
+  // QUESTION GOVERNANCE 
   // ===================================================
 
   static Future<void> submitQuestionForReview(QuestionModel question) async {
@@ -48,7 +48,7 @@ class ContentGovernanceService {
   }
 
   // ===================================================
-  // DIGIBOOK GOVERNANCE 🔱
+  // DIGIBOOK GOVERNANCE 
   // ===================================================
 
   static Future<void> submitBlockForReview(DigiBookBlock block) async {

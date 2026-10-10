@@ -29,7 +29,7 @@ class TacticalNoirBackground extends StatelessWidget {
       ),
       child: Stack(
         children: [
-          // 🔱 TOP AMBIENT GLOW (Proportional)
+          // TOP AMBIENT GLOW (Proportional)
           Positioned(
             top: -screenHeight * 0.12,
             right: -screenWidth * 0.2,
@@ -43,7 +43,7 @@ class TacticalNoirBackground extends StatelessWidget {
             ),
           ),
 
-          // 🔱 LEFT DEPTH LIGHT (Proportional)
+          // LEFT DEPTH LIGHT (Proportional)
           Positioned(
             left: -screenWidth * 0.25,
             top: screenHeight * 0.3,
@@ -57,7 +57,7 @@ class TacticalNoirBackground extends StatelessWidget {
             ),
           ),
 
-          // 🔱 BOTTOM MATTE DEPTH (Proportional)
+          // BOTTOM MATTE DEPTH (Proportional)
           Positioned(
             bottom: -screenHeight * 0.15,
             right: -screenWidth * 0.25,

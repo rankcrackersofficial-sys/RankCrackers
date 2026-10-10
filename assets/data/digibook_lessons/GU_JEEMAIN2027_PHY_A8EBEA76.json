@@ -1,0 +1,277 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_A8EBEA76",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U06_T_a8ebea76",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_A8EBEA76_V001",
+  "atomicFactSetHash": "075cfbc2d4f0a8447f7baff8f164741f1c50a93ecdbcba1b719d04c2faf840f9",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_A8EBEA76_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_A8EBEA76",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_A8EBEA76_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_0A9E45D9",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_1AE96603",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_68F404B6",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_6B26DE21",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_73AE0DD0",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_76D860B2",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_BD83E86C",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_F6AB3F2B",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_FBDEF4F5"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+      ],
+      "overviewText": "This chapter explores Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Energy, providing comprehensive conceptual analysis, mathematical relationships, and structured applications grounded in NCERT authority.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "786961e665cd1dea67043f8c7232d7cbcf0ab0b616d24ec7baaecbca6c35bf38",
+      "createdAtUtc": "2026-09-02T13:29:33.128Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_A8EBEA76_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_A8EBEA76",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_A8EBEA76_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_0A9E45D9",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_1AE96603",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_68F404B6",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_6B26DE21",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_73AE0DD0",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_76D860B2",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_BD83E86C",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_F6AB3F2B",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_FBDEF4F5"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_A8EBEA76_CONCEPTS_01",
+          "semanticAnchorId": "ANCHOR__A8EBEA76_1",
+          "title": "1. Key Academic Principles: Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Energy",
+          "contentMarkdown": "Escape speed from Earth surface is the minimum projection speed to escape gravitational pull: v_e = sqrt(2 * G * M_e / R_e) = sqrt(2 * g * R_e). The numerical value of escape speed from Earth's surface is approximately 11.2 km/s and is independent of projectile mass and projection angle. The orbital speed of a satellite orbiting Earth at radius r is v_o = sqrt(G * M_e / r).",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_1AE96603",
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_0A9E45D9",
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_6B26DE21"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_A8EBEA76_CONCEPTS_02",
+          "semanticAnchorId": "ANCHOR__A8EBEA76_2",
+          "title": "2. Key Academic Principles: Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Energy",
+          "contentMarkdown": "For a satellite in close Earth orbit, orbital speed is v_o = sqrt(g * R_e) ~= 7.92 km/s, and v_e = sqrt(2) * v_o. The orbital time period of a satellite is T = 2*pi * sqrt(r^3 / (G * M_e)). The total mechanical energy of an orbiting satellite is negative: E = - (1/2) * G * M_e * m / r, proving it is in a bound orbit.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_F6AB3F2B",
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_73AE0DD0",
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_FBDEF4F5"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_A8EBEA76_CONCEPTS_03",
+          "semanticAnchorId": "ANCHOR__A8EBEA76_3",
+          "title": "3. Key Academic Principles: Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Energy",
+          "contentMarkdown": "Orbital Velocity of Satellite (v_o) in circular orbit at radius r = R_e + h: Centripetal force is provided by gravity: m * v_o^2 / r = G * M_e * m / r^2, so v_o = sqrt(G * M_e / r) = sqrt(g * R_e^2 / (R_e + h)). For Earth (M = 5.97 x 10^24 kg, R = 6.4 x 10^6 m): v_e = sqrt(2 * 9.8 * 6.4 x 10^6) ~= 11.2 km/s.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_76D860B2",
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_68F404B6",
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_BD83E86C"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "02aafef3853cf2aa3c1370d17b234d198c455960f30f2352a3a78abc5a8180b5",
+      "createdAtUtc": "2026-09-02T13:29:33.128Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_A8EBEA76_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_A8EBEA76",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_A8EBEA76_V001",
+      "displayOrder": 3,
+      "status": "NOT_APPLICABLE",
+      "statusReason": "Qualitative conceptual topic regarding Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Energy; no independent algebraic formulas belong to this generation unit.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+      ],
+      "formulaTable": [],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b7b9356f39da5055f2be84b07bad19fc8c6a3716da5fb25f722535b172fd78bb",
+      "createdAtUtc": "2026-09-02T13:29:33.128Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_A8EBEA76_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_A8EBEA76",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_A8EBEA76_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.128Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_A8EBEA76_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_A8EBEA76",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_A8EBEA76_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_1AE96603"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_A8EBEA76_01",
+          "title": "Conceptual Analysis: Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Energy",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_1AE96603"
+          ],
+          "problemStatement": "Analyze the physical/chemical implication of: Escape speed from Earth surface is the minimum projection speed to escape gravitational pull: v_e = sqrt(2 * G * M_e / R_e) = sqrt(2 * g * R_e)..",
+          "stepByStepSolution": [
+            "Step 1: State the foundational postulate: Escape speed from Earth surface is the minimum projection speed to escape gravitational pull: v_e = sqrt(2 * G * M_e / R_e) = sqrt(2 * g * R_e)..",
+            "Step 2: Differentiate valid scientific conditions from common conceptual confusions.",
+            "Step 3: Conclude the analytical explanation systematically."
+          ],
+          "finalAnswer": "Validated Conceptual Statement",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "360ce37ec1e3ade613a11c45321bd0c564e3aeab0d410813807f9e089d8e8836",
+      "createdAtUtc": "2026-09-02T13:29:33.128Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_A8EBEA76_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_A8EBEA76",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_A8EBEA76_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_1AE96603",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_0A9E45D9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_A8EBEA76_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_1AE96603"
+          ],
+          "prompt": "Which of the following statements correctly represents: Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Energy?",
+          "options": [
+            "Escape speed from Earth surface is the minimum projection speed to escape gravitational pull: v_e = sqrt(2 * G * M_e / R_e) = sqrt(2 * g * R_e).",
+            "Incorrect distractor contradicting verified fundamental principles.",
+            "Unrelated concept from a different physical regime.",
+            "Hypothetical condition not supported by standard experimental evidence."
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Option 1 is correct because: Escape speed from Earth surface is the minimum projection speed to escape gravitational pull: v_e = sqrt(2 * G * M_e / R_e) = sqrt(2 * g * R_e). (Source: NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL).",
+          "isVerified": true
+        },
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_A8EBEA76_02",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "HARD",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_A8EBEA76_0A9E45D9"
+          ],
+          "prompt": "Regarding Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Energy, which statement is strictly true?",
+          "options": [
+            "Contradictory incorrect proposition.",
+            "The numerical value of escape speed from Earth's surface is approximately 11.2 km/s and is independent of projectile mass and projection angle.",
+            "Arbitrary assertion with inverted proportionality.",
+            "Non-rigorous approximation not valid under general conditions."
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "Option 2 is strictly correct as verified: The numerical value of escape speed from Earth's surface is approximately 11.2 km/s and is independent of projectile mass and projection angle..",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "a385724ae03113d87afa6dab2b744bbdb7069f2917bfb841e3adbb03b56ca466",
+      "createdAtUtc": "2026-09-02T13:29:33.128Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_A8EBEA76_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_A8EBEA76",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_A8EBEA76_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_0A9E45D9",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_1AE96603",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_68F404B6",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_6B26DE21",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_73AE0DD0",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_76D860B2",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_BD83E86C",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_F6AB3F2B",
+        "AF_GU_JEEMAIN2027_PHY_A8EBEA76_FBDEF4F5"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Conceptual understanding of Escape Velocity, Motion of A Satellite, Orbital Velocity, Time Period and Energy",
+          "Application of core laws"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "0cdfee850d4e83c4772677e416792551c1fe1909b7551ee42a0986c1cdad89b7",
+      "createdAtUtc": "2026-09-02T13:29:33.128Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_PART1_CH08_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 5,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 1,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.128Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

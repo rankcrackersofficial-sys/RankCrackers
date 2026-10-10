@@ -5,20 +5,20 @@ import '../../features/profile/data/models/user_profile_model.dart';
 import '../../features/digibook/core/digibook_engine.dart';
 import '../../features/digibook/models/digibook_content.dart';
 
-/// 🔱 LEARNING STATE ENGINE
+/// LEARNING STATE ENGINE
 /// Manages the delivery layer and combat difficulty based on user progress.
 class LearningStateEngine {
   // ===================================================
-  // ADAPTIVE DELIVERY (DIGIBOOK) 🔱
+  // ADAPTIVE DELIVERY (DIGIBOOK) 
   // ===================================================
   static String getRenderLayer({
-    required DigiBookContent payload, // 🔱 Document 46A: Using payload
+    required DigiBookContent payload, // Document 46A: Using payload
     required NodeRuntimeState state,
     required CognitiveProfile profile,
     required UserProfile user,
     required String recruitmentId,
   }) {
-    // 1. ONE LEVEL UP LAW (Constitutional Depth) 🔱
+    // 1. ONE LEVEL UP LAW (Constitutional Depth) 
     final String floorLevel = DigiBookEngine.determineContentDepth(recruitmentId);
 
     // 2. Warrior Tier Restriction
@@ -62,10 +62,10 @@ class LearningStateEngine {
   }
 
   // ===================================================
-  // ADAPTIVE COMBAT (MCQ) 🔱
+  // ADAPTIVE COMBAT (MCQ) 
   // ===================================================
   static List<QuestionModel> getAdaptiveMcqs({
-    required DigiBookContent payload, // 🔱 Decoupled
+    required DigiBookContent payload, // Decoupled
     required double currentMastery,
   }) {
     if (currentMastery < 0.4) {
@@ -78,7 +78,7 @@ class LearningStateEngine {
   }
 
   // ===================================================
-  // LEGACY COMPATIBILITY METHODS 🔱
+  // LEGACY COMPATIBILITY METHODS 
   // ===================================================
   static bool needsBattle(NodeRuntimeState state) {
     return state.mastery < 0.6 || state.activeBattle;

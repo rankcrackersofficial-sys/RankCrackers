@@ -2,7 +2,7 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 CRUCIBLE VALIDATION AAF WORKER
+ * CRUCIBLE VALIDATION AAF WORKER
  * Binds automated assessment item validation logic.
  */
 export async function crucibleValidationAafWorker(job: AafJobMetadata): Promise<AafWorkerResult> {

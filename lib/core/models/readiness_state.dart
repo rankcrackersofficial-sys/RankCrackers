@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 READINESS STATE
+/// READINESS STATE
 /// The supreme learner metric representing total examination preparedness.
 /// Implements Document 32 Sections 10-27.
 class ReadinessState extends Equatable {

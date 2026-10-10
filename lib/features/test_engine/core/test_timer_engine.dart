@@ -4,7 +4,7 @@ class TestTimerEngine {
   static Timer? _timer;
 
   // ===================================================
-  // START TIMER 🔱
+  // START TIMER 
   // ===================================================
   static void start({
     required int seconds,

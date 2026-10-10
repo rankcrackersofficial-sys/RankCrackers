@@ -1,4 +1,4 @@
-/// 🔱 NOTIFICATION EVIDENCE (v1.0)
+/// NOTIFICATION EVIDENCE (v1.0)
 class EvidenceMap {
   final Map<String, Evidence> factEvidence;
   final ConfidenceReport confidence;

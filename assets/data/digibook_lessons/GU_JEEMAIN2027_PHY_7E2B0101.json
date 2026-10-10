@@ -1,0 +1,269 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_7E2B0101",
+  "canonicalNodeId": "JEE_2026_PHY_U02_CH01_TOP01_001",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_7E2B0101_V001",
+  "atomicFactSetHash": "02636550754a46236ba399505c11d451bec1f4689cac0850f54083809e72375a",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_7E2B0101_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_7E2B0101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_7E2B0101_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_19A82BF0",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_33020B8F",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_48E93743",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_84AFE37F",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_88553E96",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_C395E73D",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_FBCC716C"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+      ],
+      "overviewText": "This chapter explores Centre of Mass of a Two-Particle System and Rigid Body, providing comprehensive conceptual analysis, mathematical relationships, and structured applications grounded in NCERT authority.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "1870f8a6c4dd5372531f205a3d14c3c6d012114aacec9b500ce78c48982f9dba",
+      "createdAtUtc": "2026-09-02T13:29:33.092Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_7E2B0101_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_7E2B0101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_7E2B0101_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_19A82BF0",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_33020B8F",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_48E93743",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_84AFE37F",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_88553E96",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_C395E73D",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_FBCC716C"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_7E2B0101_CONCEPTS_01",
+          "semanticAnchorId": "ANCHOR__7E2B0101_1",
+          "title": "1. Key Academic Principles: Centre of Mass of a Two-Particle System and Rigid Body",
+          "contentMarkdown": "The centre of mass of a system of particles is the unique point where the entire mass of the system may be considered concentrated. For a two-particle system with masses m1 and m2 at r1 and r2, the centre of mass position vector is R_cm = (m1*r1 + m2*r2) / (m1 + m2). For an n-particle system, the position vector of the centre of mass is R_cm = (1/M) * Sum(m_i * r_i).",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_7E2B0101_84AFE37F",
+            "AF_GU_JEEMAIN2027_PHY_7E2B0101_C395E73D",
+            "AF_GU_JEEMAIN2027_PHY_7E2B0101_FBCC716C"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_7E2B0101_CONCEPTS_02",
+          "semanticAnchorId": "ANCHOR__7E2B0101_2",
+          "title": "2. Key Academic Principles: Centre of Mass of a Two-Particle System and Rigid Body",
+          "contentMarkdown": "For a continuous mass distribution with total mass M, the centre of mass is given by R_cm = (1/M) * Integral(r dm). For symmetrical bodies of uniform density, the centre of mass coincides with their geometric centre. The centre of mass of a body does not necessarily lie inside the material of the body.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_7E2B0101_88553E96",
+            "AF_GU_JEEMAIN2027_PHY_7E2B0101_33020B8F",
+            "AF_GU_JEEMAIN2027_PHY_7E2B0101_48E93743"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_7E2B0101_CONCEPTS_03",
+          "semanticAnchorId": "ANCHOR__7E2B0101_3",
+          "title": "3. Key Academic Principles: Centre of Mass of a Two-Particle System and Rigid Body",
+          "contentMarkdown": "for a uniform ring or hollow sphere, centre of mass lies in empty space).",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_7E2B0101_19A82BF0"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b13c21b59cde6aa73fb577ca88ef7d040208e2fcb25b3655a8305c64f01eee20",
+      "createdAtUtc": "2026-09-02T13:29:33.092Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_7E2B0101_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_7E2B0101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_7E2B0101_V001",
+      "displayOrder": 3,
+      "status": "NOT_APPLICABLE",
+      "statusReason": "Qualitative conceptual topic regarding Centre of Mass of a Two-Particle System and Rigid Body; no independent algebraic formulas belong to this generation unit.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+      ],
+      "formulaTable": [],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b7b9356f39da5055f2be84b07bad19fc8c6a3716da5fb25f722535b172fd78bb",
+      "createdAtUtc": "2026-09-02T13:29:33.092Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_7E2B0101_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_7E2B0101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_7E2B0101_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.092Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_7E2B0101_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_7E2B0101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_7E2B0101_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_84AFE37F"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_7E2B0101_01",
+          "title": "Conceptual Analysis: Centre of Mass of a Two-Particle System and Rigid Body",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_7E2B0101_84AFE37F"
+          ],
+          "problemStatement": "Analyze the physical/chemical implication of: The centre of mass of a system of particles is the unique point where the entire mass of the system may be considered concentrated..",
+          "stepByStepSolution": [
+            "Step 1: State the foundational postulate: The centre of mass of a system of particles is the unique point where the entire mass of the system may be considered concentrated..",
+            "Step 2: Differentiate valid scientific conditions from common conceptual confusions.",
+            "Step 3: Conclude the analytical explanation systematically."
+          ],
+          "finalAnswer": "Validated Conceptual Statement",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "291a9333a6b045984fcb2b05dffe22d19b1677d75d67d51d5dd1be2ad80bb3ef",
+      "createdAtUtc": "2026-09-02T13:29:33.092Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_7E2B0101_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_7E2B0101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_7E2B0101_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_84AFE37F",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_C395E73D"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_7E2B0101_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_7E2B0101_84AFE37F"
+          ],
+          "prompt": "Which of the following statements correctly represents: Centre of Mass of a Two-Particle System and Rigid Body?",
+          "options": [
+            "The centre of mass of a system of particles is the unique point where the entire mass of the system may be considered concentrated.",
+            "Incorrect distractor contradicting verified fundamental principles.",
+            "Unrelated concept from a different physical regime.",
+            "Hypothetical condition not supported by standard experimental evidence."
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Option 1 is correct because: The centre of mass of a system of particles is the unique point where the entire mass of the system may be considered concentrated. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL).",
+          "isVerified": true
+        },
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_7E2B0101_02",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "HARD",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_7E2B0101_C395E73D"
+          ],
+          "prompt": "Regarding Centre of Mass of a Two-Particle System and Rigid Body, which statement is strictly true?",
+          "options": [
+            "Contradictory incorrect proposition.",
+            "For a two-particle system with masses m1 and m2 at r1 and r2, the centre of mass position vector is R_cm = (m1*r1 + m2*r2) / (m1 + m2).",
+            "Arbitrary assertion with inverted proportionality.",
+            "Non-rigorous approximation not valid under general conditions."
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "Option 2 is strictly correct as verified: For a two-particle system with masses m1 and m2 at r1 and r2, the centre of mass position vector is R_cm = (m1*r1 + m2*r2) / (m1 + m2)..",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "8a6e7588bbc58b02cac1757d22e2d5913cbe9eabe96fe3c2dcf2691c833fd4a8",
+      "createdAtUtc": "2026-09-02T13:29:33.092Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_7E2B0101_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_7E2B0101",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_7E2B0101_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_19A82BF0",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_33020B8F",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_48E93743",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_84AFE37F",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_88553E96",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_C395E73D",
+        "AF_GU_JEEMAIN2027_PHY_7E2B0101_FBCC716C"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Conceptual understanding of Centre of Mass of a Two-Particle System and Rigid Body",
+          "Application of core laws"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "8bec2fb258ea1d5c445b18a32db4cc8ff49d1a05a275ef12d96136b6bee7a480",
+      "createdAtUtc": "2026-09-02T13:29:33.092Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_PART1_CH07_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 5,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 1,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.092Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

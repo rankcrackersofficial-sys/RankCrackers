@@ -6,7 +6,7 @@ class ArchiveRepository {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseFunctions _functions = FirebaseFunctions.instance;
 
-  /// 🔱 Streams all active recruitment realms for the student archive
+  /// Streams all active recruitment realms for the student archive
   Stream<List<RecruitmentRealm>> streamActiveRealms() {
     return _firestore
         .collection('mission_realms')
@@ -17,7 +17,7 @@ class ArchiveRepository {
             .toList());
   }
 
-  /// 🔱 Fetches a specific realm's assets
+  /// Fetches a specific realm's assets
   Future<List<Map<String, dynamic>>> getRealmAssets(String realmId) async {
     final doc = await _firestore.collection('mission_realms').doc(realmId).get();
     if (doc.exists) {
@@ -27,7 +27,7 @@ class ArchiveRepository {
     return [];
   }
 
-  /// 🔱 Generates a secure, time-limited signed URL for an asset
+  /// Generates a secure, time-limited signed URL for an asset
   Future<String?> getSecureUrl(String assetUrl, {String? realmId, String? assetType}) async {
     try {
       final result = await _functions.httpsCallable('getSecureAssetUrl').call({
@@ -39,7 +39,7 @@ class ArchiveRepository {
         return result.data['signedUrl'] as String;
       }
     } catch (e) {
-      print("🔱 SECURE URL ERROR: $e");
+      print("SECURE URL ERROR: $e");
     }
     return null;
   }

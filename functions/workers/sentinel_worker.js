@@ -14,7 +14,7 @@ const getRefineryPrompt = require("../helpers/prompts");
 const calculateTokenEstimate = require("../helpers/token_estimator");
 
 const WORKER_VERSION = "9.2.0 (Forensic-Supreme)";
-const visionClient = new vision.ImageAnnotatorClient();
+let visionClient = null;
 const ALLOWED_STORAGE_HOSTS = ["firebasestorage.googleapis.com"];
 
 /**
@@ -46,7 +46,7 @@ exports.sentinelBackgroundWorker = functions
 
     const { type, payload } = task;
 
-    if (type === 'STRUCTURAL' || type === 'SVO_EXTRACTION' || type === 'MANIFEST_KNOWLEDGE' || type === 'ENCODING_NORMALIZATION') return;
+    if (type === 'STRUCTURAL' || type === 'SVO_EXTRACTION' || type === 'MANIFEST_KNOWLEDGE' || type === 'ENCODING_NORMALIZATION' || type === 'SYLLABUS_B3') return;
 
     // 🛡️ GENERIC TASK GUARD: mcq, digibook, and revision are handled by the generic queue worker.
     if (['mcq', 'digibook', 'revision'].includes(type)) return;
@@ -127,6 +127,9 @@ exports.sentinelBackgroundWorker = functions
 
         if (!rawText || rawText.trim().length < 150) {
             console.log(`OCR: Scanned PDF detected. Invoking Vision API with Buffer.`);
+            if (!visionClient) {
+                visionClient = new vision.ImageAnnotatorClient();
+            }
             const [result] = await visionClient.documentTextDetection({ content: fileBuffer });
             rawText = result.fullTextAnnotation?.text || "";
             extractionMethod = "OCR";
@@ -134,6 +137,9 @@ exports.sentinelBackgroundWorker = functions
       }
       else if (['png', 'jpg', 'jpeg', 'webp'].includes(extension)) {
         console.log(`OCR: Processing image source via Vision API.`);
+        if (!visionClient) {
+            visionClient = new vision.ImageAnnotatorClient();
+        }
         const [result] = await visionClient.textDetection({ content: fileBuffer });
         rawText = result.fullTextAnnotation?.text || "";
         extractionMethod = "OCR";

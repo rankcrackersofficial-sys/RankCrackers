@@ -35,6 +35,7 @@ final class StudentRevisionClosedLoopCandidate {
   const StudentRevisionClosedLoopCandidate({
     required this.studentId,
     required this.amtnId,
+    required this.missionId,
     String? canonicalSemanticTopicId,
     required this.triggerType,
     required this.decayFactor,
@@ -50,6 +51,7 @@ final class StudentRevisionClosedLoopCandidate {
 
   final String studentId;
   final String amtnId;
+  final String missionId;
   final String canonicalSemanticTopicId;
   final RevisionTriggerType triggerType;
   final double decayFactor;
@@ -60,6 +62,7 @@ final class StudentRevisionClosedLoopCandidate {
   void validate() {
     StudentRevisionClosedLoopEngine._requireText(studentId, 'studentId');
     StudentRevisionClosedLoopEngine._requireText(amtnId, 'amtnId');
+    StudentRevisionClosedLoopEngine._requireText(missionId, 'missionId');
     StudentRevisionClosedLoopEngine._requireText(
         canonicalSemanticTopicId, 'canonicalSemanticTopicId');
     StudentRevisionClosedLoopEngine._requireText(
@@ -74,7 +77,8 @@ final class StudentRevisionClosedLoopCandidate {
     }
     currentLearningState.validate();
     if (currentLearningState.studentId != studentId ||
-        currentLearningState.amtnId != amtnId) {
+        currentLearningState.amtnId != amtnId ||
+        currentLearningState.missionId != missionId) {
       throw const FormatException('Learning state identity mismatch.');
     }
   }
@@ -104,7 +108,7 @@ final class StudentRevisionClosedLoopEngine {
     final unique = <StudentRevisionClosedLoopCandidate>[];
     for (final candidate in rawCandidates) {
       candidate.validate();
-      final key = '${candidate.studentId}|${candidate.amtnId}|'
+      final key = '${candidate.studentId}|${candidate.missionId}|${candidate.amtnId}|'
           '${candidate.canonicalKnowledgeVersion}|'
           '${candidate.publicProjectionId}';
       if (seen.add(key)) {
@@ -150,8 +154,12 @@ final class StudentRevisionClosedLoopEngine {
 
     if (aafAuthority.studentId != candidate.studentId ||
         aafAuthority.targetAmtnId != candidate.amtnId ||
-        aafAuthority.publicProjectionId != candidate.publicProjectionId) {
+        aafAuthority.missionId != candidate.missionId) {
       throw const FormatException('AAF revision route identity mismatch.');
+    }
+
+    if (aafAuthority.publicProjectionId != candidate.publicProjectionId) {
+      return StudentRevisionCompletionDecision.blockedByIneligibleProjection;
     }
 
     if (aafAuthority.status != AafPublicProjectionStatus.current) {
@@ -207,6 +215,7 @@ final class StudentRevisionClosedLoopEngine {
 
     evidenceEvent.validate();
     if (evidenceEvent.studentId != candidate.studentId ||
+        evidenceEvent.missionId != candidate.missionId ||
         evidenceEvent.amtnId != candidate.amtnId) {
       throw const FormatException('Revision completion evidence mismatch.');
     }
@@ -255,6 +264,7 @@ final class StudentRevisionClosedLoopEngine {
     candidate.validate();
     event.validate();
     if (event.studentId != candidate.studentId ||
+        event.missionId != candidate.missionId ||
         event.amtnId != candidate.amtnId) {
       throw const FormatException('Evidence event identity mismatch.');
     }

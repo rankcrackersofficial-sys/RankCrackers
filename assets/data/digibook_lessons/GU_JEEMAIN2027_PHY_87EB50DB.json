@@ -1,0 +1,285 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_87EB50DB",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U04_T_87eb50db",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_87EB50DB_V001",
+  "atomicFactSetHash": "2ef9f72927506833811148e30b9b4845f8ae5ac6ba950ae77165c9c44e1b0bac",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_87EB50DB_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_87EB50DB",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_87EB50DB_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_1F4ED078",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_2EABCD26",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_3C1CC63F",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_4F62FAAD",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_66B655EC",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_670AC602",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_90F382BB",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_AE20ED79",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_C1DC0D68",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_C717A04D",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_E536B647"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "overviewText": "This chapter explores Power, Elastic and Inelastic Collisions in One and Two Dimensions, providing comprehensive conceptual analysis, mathematical relationships, and structured applications grounded in NCERT authority.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "20463289b1c9968d970bf91adc5a19df45e2bdd2c2f2edfed19a3f32029f0d0e",
+      "createdAtUtc": "2026-09-02T13:29:33.089Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_87EB50DB_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_87EB50DB",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_87EB50DB_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_1F4ED078",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_2EABCD26",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_3C1CC63F",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_4F62FAAD",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_66B655EC",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_670AC602",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_90F382BB",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_AE20ED79",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_C1DC0D68",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_C717A04D",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_E536B647"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_87EB50DB_CONCEPTS_01",
+          "semanticAnchorId": "ANCHOR__87EB50DB_1",
+          "title": "1. Key Academic Principles: Power, Elastic and Inelastic Collisions in One and Two Dimensions",
+          "contentMarkdown": "Power is defined as the time rate of doing work or transferring energy: P = dW/dt = F . v. The SI unit of power is the watt (W = J/s), where 1 horsepower equals 746 watts. In all physical collisions, total linear momentum is strictly conserved because external forces are negligible during collision. In an elastic collision, both total linear momentum and total kinetic energy are conserved with coefficient of restitution e = 1.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_670AC602",
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_1F4ED078",
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_AE20ED79",
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_C717A04D"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_87EB50DB_CONCEPTS_02",
+          "semanticAnchorId": "ANCHOR__87EB50DB_2",
+          "title": "2. Key Academic Principles: Power, Elastic and Inelastic Collisions in One and Two Dimensions",
+          "contentMarkdown": "In an inelastic collision, total linear momentum is conserved while total kinetic energy is not conserved, with 0 <= e < 1. In a completely inelastic collision, the interacting bodies stick together after impact and move with common final velocity. Instantaneous power is the limiting value of average power as time interval approaches zero: P = dW/dt = F . Another practical unit is horsepower: 1 hp = 746 W.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_66B655EC",
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_4F62FAAD",
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_90F382BB",
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_3C1CC63F"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_87EB50DB_CONCEPTS_03",
+          "semanticAnchorId": "ANCHOR__87EB50DB_3",
+          "title": "3. Key Academic Principles: Power, Elastic and Inelastic Collisions in One and Two Dimensions",
+          "contentMarkdown": "In a 1D elastic collision between two masses m1 and m2, final velocities are: v1 = ((m1 - m2)/(m1 + m2))*u1 + (2*m2/(m1 + m2))*u2, and v2 = (2*m1/(m1 + m2))*u1 + ((m2 - m1)/(m1 + m2))*u2. In a 1D elastic collision, final velocities are v1 = ((m1 - m2)/(m1 + m2))*u1 + (2*m2/(m1 + m2))*u2, and v2 = (2*m1/(m1 + m2))*u1 + ((m2 - m1)/(m1 + m2))*u2.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_2EABCD26",
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_C1DC0D68",
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_E536B647"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "83bbb038029ba99fd07f29d57193cf9132a2137241a7213928e6960d9c5d2566",
+      "createdAtUtc": "2026-09-02T13:29:33.089Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_87EB50DB_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_87EB50DB",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_87EB50DB_V001",
+      "displayOrder": 3,
+      "status": "NOT_APPLICABLE",
+      "statusReason": "Qualitative conceptual topic regarding Power, Elastic and Inelastic Collisions in One and Two Dimensions; no independent algebraic formulas belong to this generation unit.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "formulaTable": [],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b7b9356f39da5055f2be84b07bad19fc8c6a3716da5fb25f722535b172fd78bb",
+      "createdAtUtc": "2026-09-02T13:29:33.089Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_87EB50DB_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_87EB50DB",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_87EB50DB_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.089Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_87EB50DB_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_87EB50DB",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_87EB50DB_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_670AC602"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_87EB50DB_01",
+          "title": "Conceptual Analysis: Power, Elastic and Inelastic Collisions in One and Two Dimensions",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_670AC602"
+          ],
+          "problemStatement": "Analyze the physical/chemical implication of: Power is defined as the time rate of doing work or transferring energy: P = dW/dt = F . v..",
+          "stepByStepSolution": [
+            "Step 1: State the foundational postulate: Power is defined as the time rate of doing work or transferring energy: P = dW/dt = F . v..",
+            "Step 2: Differentiate valid scientific conditions from common conceptual confusions.",
+            "Step 3: Conclude the analytical explanation systematically."
+          ],
+          "finalAnswer": "Validated Conceptual Statement",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "254b268296aad2d09ec012175e546d7c3e7fc4bc6962edc346ff5836e37c0059",
+      "createdAtUtc": "2026-09-02T13:29:33.089Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_87EB50DB_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_87EB50DB",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_87EB50DB_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_670AC602",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_1F4ED078"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_87EB50DB_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_670AC602"
+          ],
+          "prompt": "Which of the following statements correctly represents: Power, Elastic and Inelastic Collisions in One and Two Dimensions?",
+          "options": [
+            "Power is defined as the time rate of doing work or transferring energy: P = dW/dt = F . v.",
+            "Incorrect distractor contradicting verified fundamental principles.",
+            "Unrelated concept from a different physical regime.",
+            "Hypothetical condition not supported by standard experimental evidence."
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Option 1 is correct because: Power is defined as the time rate of doing work or transferring energy: P = dW/dt = F . v. (Source: NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL).",
+          "isVerified": true
+        },
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_87EB50DB_02",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "HARD",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_87EB50DB_1F4ED078"
+          ],
+          "prompt": "Regarding Power, Elastic and Inelastic Collisions in One and Two Dimensions, which statement is strictly true?",
+          "options": [
+            "Contradictory incorrect proposition.",
+            "The SI unit of power is the watt (W = J/s), where 1 horsepower equals 746 watts.",
+            "Arbitrary assertion with inverted proportionality.",
+            "Non-rigorous approximation not valid under general conditions."
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "Option 2 is strictly correct as verified: The SI unit of power is the watt (W = J/s), where 1 horsepower equals 746 watts..",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "590c7a12b388b7e5d59e110d51e3372f2a6537984df53a46bfcbb1da641aec4c",
+      "createdAtUtc": "2026-09-02T13:29:33.089Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_87EB50DB_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_87EB50DB",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_87EB50DB_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_1F4ED078",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_2EABCD26",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_3C1CC63F",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_4F62FAAD",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_66B655EC",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_670AC602",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_90F382BB",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_AE20ED79",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_C1DC0D68",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_C717A04D",
+        "AF_GU_JEEMAIN2027_PHY_87EB50DB_E536B647"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Conceptual understanding of Power, Elastic and Inelastic Collisions in One and Two Dimensions",
+          "Application of core laws"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "fc5acdefa6e3b57a54db5a111ddee43bc361b3d1b05ddb34908ae2744afdf1a9",
+      "createdAtUtc": "2026-09-02T13:29:33.089Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 5,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 1,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.089Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

@@ -6,7 +6,7 @@ import '../firebase/firestore_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// 🔱 WRITE BUFFER ENGINE (Hardened)
+/// WRITE BUFFER ENGINE (Hardened)
 /// Implements Priority C: Optimized persistent local buffering.
 /// Prevents data loss on app kill and reduces Firestore overhead.
 class WriteBufferEngine {
@@ -21,7 +21,7 @@ class WriteBufferEngine {
   static const Duration _flushInterval = Duration(seconds: 30);
   static const String _storageKey = 'persistent_write_buffer';
 
-  /// 🔱 INITIALIZES BUFFER RECOVERY
+  /// INITIALIZES BUFFER RECOVERY
   Future<void> init() async {
     final prefs = await SharedPreferences.getInstance();
     final jsonMap = prefs.getString(_storageKey);
@@ -30,14 +30,14 @@ class WriteBufferEngine {
       data.forEach((nodeId, value) {
         _buffer[nodeId] = UserProgress.fromMap(Map<String, dynamic>.from(value));
       });
-      debugPrint('🔱 WRITE BUFFER: ${_buffer.length} updates recovered from disk.');
+      debugPrint('WRITE BUFFER: ${_buffer.length} updates recovered from disk.');
     }
   }
 
-  /// 🔱 BUFFERS A PROGRESS UPDATE
+  /// BUFFERS A PROGRESS UPDATE
   Future<void> bufferUpdate(UserProgress progress) async {
     _buffer[progress.nodeId] = progress;
-    await _persistBuffer(); // 🔱 Save to disk immediately on every event
+    await _persistBuffer(); // Save to disk immediately on every event
     
     _flushTimer ??= Timer(_flushInterval, flush);
   }
@@ -48,7 +48,7 @@ class WriteBufferEngine {
     await prefs.setString(_storageKey, json.encode(data));
   }
 
-  /// 🔱 BATCH COMMITS TO FIRESTORE
+  /// BATCH COMMITS TO FIRESTORE
   /// Implements All-or-Nothing Batched Upload.
   Future<void> flush() async {
     if (_buffer.isEmpty) return;
@@ -67,21 +67,21 @@ class WriteBufferEngine {
     }
 
     try {
-      // 🔱 Execute Idempotent Batch Upload
+      // Execute Idempotent Batch Upload
       await FirestoreService.uploadBatch('users/${user.uid}/progress', items);
       
-      // 🔱 Clear buffer only on success
+      // Clear buffer only on success
       _buffer.removeWhere((key, value) => nodeIds.contains(key));
-      await _persistBuffer(); // 🔱 Update disk storage
-      debugPrint('🔱 WRITE BUFFER FLUSHED: ${items.length} updates committed.');
+      await _persistBuffer(); // Update disk storage
+      debugPrint('WRITE BUFFER FLUSHED: ${items.length} updates committed.');
     } catch (e) {
-      debugPrint('🔱 WRITE BUFFER ERROR: Flush failed - $e. Retrying in next cycle.');
+      debugPrint('WRITE BUFFER ERROR: Flush failed - $e. Retrying in next cycle.');
     } finally {
       _flushTimer = null;
     }
   }
 
-  /// 🔱 EMERGENCY FLUSH (e.g. Session Exit)
+  /// EMERGENCY FLUSH (e.g. Session Exit)
   Future<void> forceFlush() async {
     _flushTimer?.cancel();
     await flush();

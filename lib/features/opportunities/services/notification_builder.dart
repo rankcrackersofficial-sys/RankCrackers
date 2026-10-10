@@ -3,7 +3,7 @@ import '../../../core/models/notification_priority.dart';
 import '../models/opportunity.dart';
 import '../models/opportunity_match.dart';
 
-/// 🔱 NOTIFICATION BUILDER
+/// NOTIFICATION BUILDER
 /// Pure functional service to transform intelligence events into user-facing alerts.
 class NotificationBuilder {
   

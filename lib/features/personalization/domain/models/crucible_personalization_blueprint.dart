@@ -45,11 +45,12 @@ final class CruciblePersonalizationAllocation {
 }
 
 final class CruciblePersonalizationBlueprint {
-  static const int currentSchemaVersion = 2;
+  static const int currentSchemaVersion = 3;
 
   const CruciblePersonalizationBlueprint({
     required this.studentId,
     required this.targetAmtnId,
+    required this.missionId,
     required this.createdAtUtc,
     required this.allocations,
     required this.totalQuestionCount,
@@ -59,6 +60,7 @@ final class CruciblePersonalizationBlueprint {
 
   final String studentId;
   final String targetAmtnId;
+  final String missionId;
   final DateTime createdAtUtc;
   final List<CruciblePersonalizationAllocation> allocations;
   final int totalQuestionCount;
@@ -68,6 +70,7 @@ final class CruciblePersonalizationBlueprint {
   void validate() {
     if (studentId.trim().isEmpty ||
         targetAmtnId.trim().isEmpty ||
+        missionId.trim().isEmpty ||
         !createdAtUtc.isUtc ||
         totalQuestionCount <= 0 ||
         durationMinutes <= 0 ||

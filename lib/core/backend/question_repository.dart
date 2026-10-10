@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/question_model.dart';
 
-/// 🔱 QUESTION BANK REPOSITORY
+/// QUESTION BANK REPOSITORY
 /// Sovereign storage authority for assessment evidence.
 class QuestionRepository {
   static final _firestore = FirebaseFirestore.instance;
@@ -26,7 +26,7 @@ class QuestionRepository {
     return snap.docs.map((d) => QuestionModel.fromMap(d.data())).toList();
   }
 
-  /// 🔱 Traceability & Verification: Stream only published questions for learners.
+  /// Traceability & Verification: Stream only published questions for learners.
   static Stream<List<QuestionModel>> streamPublished() {
     return _firestore
         .collection(_collection)

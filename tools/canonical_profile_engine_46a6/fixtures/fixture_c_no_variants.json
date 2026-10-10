@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0.0",
+  "profileStatus": "MATERIALIZATION_READY",
+  "identity": {
+    "missionId": "mock_no_variants",
+    "canonicalExamName": "Standard Mission",
+    "canonicalDisplayName": "Standard Mission 2027"
+  },
+  "missionTargetYear": 2027,
+  "sourceBaselineYear": 2027,
+  "cycleRelation": "SAME_YEAR_OFFICIAL_CYCLE",
+  "authority": {
+    "organization": "National Authority",
+    "officialPortals": [
+      "https://authority.gov.in"
+    ],
+    "sourceDocumentType": "Official Notification",
+    "officialNotificationTitle": "Standard Mission Official Notification",
+    "officialPdfUrl": "https://authority.gov.in/docs/notification.pdf",
+    "sha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+    "evidenceClass": "BYTE_VERIFIED",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "paperModel": {
+    "paperCount": 1,
+    "papers": [
+      {
+        "paperId": "paper_1",
+        "paperNumber": 1,
+        "paperName": "General Paper",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "mode": "CBT",
+        "durationMinutes": 180,
+        "totalQuestions": 75,
+        "totalMarks": 300
+      }
+    ]
+  },
+  "variantModel": {
+    "hasVariants": false,
+    "variants": []
+  },
+  "subjectModel": {
+    "subjects": [
+      {
+        "subjectId": "subj_1",
+        "subjectName": "Subject 1",
+        "canonicalKey": "key_1"
+      }
+    ]
+  },
+  "languageModel": {
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+      "English",
+      "Hindi"
+    ],
+    "mediumPolicy": "BILINGUAL"
+  },
+  "s2DocumentProfile": {
+    "expectedPapers": [
+      "General Paper"
+    ],
+    "paperAliases": {
+      "General Paper": [
+        "Paper 1"
+      ]
+    },
+    "expectedSubjects": [
+      "Subject 1"
+    ],
+    "subjectAliases": {
+      "Subject 1": [
+        "Subj 1"
+      ]
+    },
+    "languageScripts": [
+      "Latin",
+      "Devanagari"
+    ],
+    "preferredOcrLanguages": [
+      "eng",
+      "hin"
+    ],
+    "sourceYearPolicy": "USE_2027_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+  },
+  "fieldAuthorityMap": {
+    "paperStructure": "SOURCE_VERIFIED",
+    "subjectModel": "SOURCE_VERIFIED"
+  },
+  "profileHash": "2c0215da20768c6f65a03a8256856fb1f37fb71dbeffcb14a34a0c0857a1a314"
+}

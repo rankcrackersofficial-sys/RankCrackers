@@ -3,7 +3,7 @@ import '../models/recruitment_realm.dart';
 import '../models/notification_canonical.dart';
 import '../models/syllabus_canonical.dart';
 
-/// 🔱 RECRUITMENT REALM CREATION ENGINE (Blueprint v1.0)
+/// RECRUITMENT REALM CREATION ENGINE (Blueprint v1.0)
 /// Orchestrates the birth of a Recruitment Realm from verified components.
 
 class RealmCreationEngine {
@@ -15,27 +15,27 @@ class RealmCreationEngine {
     required String founderId,
     bool coverageValidationPassed = false,
   }) async {
-    debugPrint("🔱 REALM ENGINE: Initiating creation protocol...");
+    debugPrint("REALM ENGINE: Initiating creation protocol...");
 
-    // 🔱 Section 2 & 16: Creation Conditions
+    // Section 2 & 16: Creation Conditions
     if (notification.feedback.status != 'verified') {
-      debugPrint("🔱 REALM ENGINE ERROR: Notification not verified. Creation blocked.");
+      debugPrint("REALM ENGINE ERROR: Notification not verified. Creation blocked.");
       return null;
     }
 
-    // 🔱 SYLLABUS INTEGRITY CHECK
+    // SYLLABUS INTEGRITY CHECK
     if (syllabus.atomicTopics.isEmpty) {
-      debugPrint("🔱 REALM ENGINE ERROR: Atomic Graph incomplete. Creation blocked.");
+      debugPrint("REALM ENGINE ERROR: Atomic Graph incomplete. Creation blocked.");
       return null;
     }
 
-    // 🔱 COVERAGE VALIDATION (Audit Fix)
+    // COVERAGE VALIDATION (Audit Fix)
     if (!coverageValidationPassed) {
-      debugPrint("🔱 REALM ENGINE ERROR: Coverage Validation failed. Creation blocked.");
+      debugPrint("REALM ENGINE ERROR: Coverage Validation failed. Creation blocked.");
       return null;
     }
 
-    // 🔱 SECTION 4: Realm ID Law
+    // SECTION 4: Realm ID Law
     final org = notification.identity.organization.toLowerCase().replaceAll(' ', '_');
     final exam = notification.identity.recruitmentName.toLowerCase().replaceAll(' ', '_');
     final year = 2026; // Should be extracted
@@ -44,7 +44,7 @@ class RealmCreationEngine {
 
     final realm = RecruitmentRealm(
       realmId: realmId,
-      examName: notification.identity.recruitmentName, // 🔱 Using identity name as examName
+      examName: notification.identity.recruitmentName, // Using identity name as examName
       recruitmentName: notification.identity.recruitmentName,
       organization: notification.identity.organization,
       examYear: year,
@@ -59,11 +59,11 @@ class RealmCreationEngine {
       syllabusVerified: true,
     );
 
-    debugPrint("🔱 REALM ENGINE: Realm ${realm.realmId} is READY.");
+    debugPrint("REALM ENGINE: Realm ${realm.realmId} is READY.");
     return realm;
   }
 
-  /// 🔱 SECTION 12: Manual Override
+  /// SECTION 12: Manual Override
   static Future<RecruitmentRealm> createManualRealm({
     required String reason,
     required String recruitmentName,
@@ -71,7 +71,7 @@ class RealmCreationEngine {
     required int year,
     required String founderId,
   }) async {
-    debugPrint("🔱 REALM ENGINE: Manual override triggered by Founder. Reason: $reason");
+    debugPrint("REALM ENGINE: Manual override triggered by Founder. Reason: $reason");
     
     final realmId = "rec_manual_${organization.toLowerCase()}_${recruitmentName.toLowerCase()}_$year";
     

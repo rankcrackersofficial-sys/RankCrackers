@@ -1,0 +1,363 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_54665F87",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U01_T_54665f87",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_54665F87_V001",
+  "atomicFactSetHash": "a86eaf7a4fdf40724ed644cac05369cafe7a29187fda99905b7a9404f42b6d5a",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_54665F87_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_54665F87",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_54665F87_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_54665F87_06D53D13",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_2ECFFA8F",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_4B375DFB",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_50B0611B",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_62FC21BB",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_63D40BF8",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_8316E5D4",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_86358E7D",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_866503B1",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_D6365B8F",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_D8032D2A",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_EB371CED"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "overviewText": "This Generation Unit provides a rigorous treatment of physical dimensions, dimensional formulas, the principle of homogeneity of dimensions, and their applications to unit conversion, equation testing, and formula deduction, as well as the fundamental limitations of dimensional analysis.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "e4e51a3c60f70a0dba35f8beec719cfcb3f93eddcc61d5f059a1502bbbd7c065",
+      "createdAtUtc": "2026-09-02T13:29:32.997Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_54665F87_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_54665F87",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_54665F87_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_54665F87_06D53D13",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_2ECFFA8F",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_4B375DFB",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_50B0611B",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_62FC21BB",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_63D40BF8",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_8316E5D4",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_86358E7D",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_866503B1",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_D6365B8F",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_D8032D2A",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_EB371CED"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_54665F87_CONCEPTS_01_BASE_DIMENSIONS",
+          "semanticAnchorId": "ANCHOR_DIMENSIONS_AND_BASE_QUANTITIES",
+          "title": "1. Dimensions and Fundamental Base Quantities",
+          "contentMarkdown": "The **dimensions** of a physical quantity are the powers (or exponents) to which base quantities are raised to represent that quantity.\nIn the SI system, there are seven fundamental base dimensions: length $[L]$, mass $[M]$, time $[T]$, electric current $[A]$, thermodynamic temperature $[K]$, luminous intensity $[cd]$, and amount of substance $[mol]$. In mechanics, all derived quantities are expressed purely in terms of $[M]$, $[L]$, and $[T]$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_54665F87_06D53D13",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_4B375DFB",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_50B0611B"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_54665F87_CONCEPTS_02_FORMULAS_AND_VOLUME",
+          "semanticAnchorId": "ANCHOR_DIMENSIONAL_FORMULAS_VOLUME",
+          "title": "2. Dimensional Formulas and Derived Quantities",
+          "contentMarkdown": "A **dimensional formula** expresses how and which base quantities enter into a physical quantity. For instance, the dimensions of volume are zero in mass $[M^0]$, $3$ in length $[L^3]$, and zero in time $[T^0]$, written $[V] = [M^0 L^3 T^0]$. An equation is dimensionally consistent if the dimensions of LHS and RHS are identical.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_54665F87_8316E5D4",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_D6365B8F"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_54665F87_CONCEPTS_03_HOMOGENEITY_AND_CONVERSION",
+          "semanticAnchorId": "ANCHOR_HOMOGENEITY_AND_CONVERSION",
+          "title": "3. Principle of Homogeneity and Unit Conversion",
+          "contentMarkdown": "The **principle of homogeneity of dimensions** states that the dimensions of all terms on both sides of a physical equation must be identical. Consequently, physical quantities can be added or subtracted if and only if they possess identical dimensions.\nDimensional analysis enables conversion of units between systems using the invariant relation $n_1 u_1 = n_2 u_2$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_62FC21BB",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_2ECFFA8F"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_54665F87_CONCEPTS_04_DEDUCTION_AND_LIMITATIONS",
+          "semanticAnchorId": "ANCHOR_DEDUCTION_AND_LIMITATIONS",
+          "title": "4. Formula Deduction and Limitations of Dimensional Analysis",
+          "contentMarkdown": "Dimensional analysis can establish power-law relationships among physical quantities when their mutual dependencies are known.\n\n**Critical Limitations**:\n1. It cannot determine dimensionless proportionality constants (e.g., $2\\pi, 1/2$).\n2. It cannot deduce relations involving trigonometric, logarithmic, or exponential functions.\n3. It fails if a quantity depends on more variables than the available independent fundamental dimensions.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_54665F87_63D40BF8",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_EB371CED",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_866503B1",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_86358E7D",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_D8032D2A"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "9d84aff0a9d664d75e3c335353dc8067bc19e64d24f51eae43bb9efa363ead89",
+      "createdAtUtc": "2026-09-02T13:29:32.997Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_54665F87_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_54665F87",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_54665F87_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_2ECFFA8F",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_8316E5D4"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Principle of Homogeneity",
+          "formula": "[\\text{LHS}] = [\\text{RHS}]",
+          "constraints": "Applies to every valid physical relation across all terms",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA"
+          ]
+        },
+        {
+          "name": "Unit Conversion Invariant",
+          "formula": "n_1 u_1 = n_2 u_2 \\implies n_2 = n_1 \\left(\\frac{M_1}{M_2}\\right)^a \\left(\\frac{L_1}{L_2}\\right)^b \\left(\\frac{T_1}{T_2}\\right)^c",
+          "constraints": "Converts numerical value n1 in unit u1 to n2 in unit u2",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_54665F87_2ECFFA8F"
+          ]
+        },
+        {
+          "name": "Volume Dimensional Formula",
+          "formula": "[V] = [M^0 L^3 T^0]",
+          "constraints": "Base dimensions in mechanics",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_54665F87_8316E5D4"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "26cdf6c91d2e4f60dea0326095e691647df6ff242e0c5ef46c091d4123c29525",
+      "createdAtUtc": "2026-09-02T13:29:32.997Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_54665F87_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_54665F87",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_54665F87_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No external empirical exam distractor / error telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:32.997Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_54665F87_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_54665F87",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_54665F87_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_D6365B8F",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_D8032D2A",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_2ECFFA8F",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_4B375DFB"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_54665F87_01_CHECK_EQUATION_CONSISTENCY",
+          "title": "Checking Consistency of Kinematic Equation",
+          "problemStatement": "Using dimensional analysis, verify whether the equation $s = ut + \\frac{1}{2}at^2$ is dimensionally consistent.",
+          "stepByStepSolution": [
+            "Step 1: Determine the dimensions of the Left-Hand Side (LHS):\n$[s] = [L] = [M^0 L^1 T^0]$.",
+            "Step 2: Determine the dimensions of the first term on RHS ($ut$):\n$[ut] = [u][t] = [L T^{-1}][T] = [L] = [M^0 L^1 T^0]$.",
+            "Step 3: Determine the dimensions of the second term on RHS ($\\frac{1}{2}at^2$):\nSince $1/2$ is a dimensionless number, $[\\frac{1}{2}at^2] = [a][t^2] = [L T^{-2}][T^2] = [L] = [M^0 L^1 T^0]$.",
+            "Step 4: Compare all terms: Since $[\\text{LHS}] = [ut] = [\\frac{1}{2}at^2] = [L]$, by the principle of homogeneity, the equation is dimensionally consistent."
+          ],
+          "finalAnswer": "The equation s = ut + (1/2)at^2 is dimensionally consistent since all terms have dimensions [L].",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_D6365B8F",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_D8032D2A"
+          ],
+          "isVerified": true
+        },
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_54665F87_02_UNIT_CONVERSION_JOULE_ERG",
+          "title": "Unit Conversion of Energy from SI (Joule) to CGS (Erg)",
+          "problemStatement": "Convert $1\\text{ Joule}$ (SI unit of work/energy) into $\\text{erg}$ (CGS unit) using dimensional analysis.",
+          "stepByStepSolution": [
+            "Step 1: Write the dimensional formula of energy/work:\n$[\\text{Energy}] = [M^1 L^2 T^{-2}]$, so $a = 1, b = 2, c = -2$.",
+            "Step 2: Apply the unit conversion formula $n_2 = n_1 \\left(\\frac{M_1}{M_2}\\right)^a \\left(\\frac{L_1}{L_2}\\right)^b \\left(\\frac{T_1}{T_2}\\right)^c$.",
+            "Step 3: Substitute SI ($M_1 = 1\\text{ kg}, L_1 = 1\\text{ m}, T_1 = 1\\text{ s}$) and CGS ($M_2 = 1\\text{ g}, L_2 = 1\\text{ cm}, T_2 = 1\\text{ s}$):\n$n_2 = 1 \\times \\left(\\frac{1000\\text{ g}}{1\\text{ g}}\\right)^1 \\times \\left(\\frac{100\\text{ cm}}{1\\text{ cm}}\\right)^2 \\times \\left(\\frac{1\\text{ s}}{1\\text{ s}}\\right)^{-2}$.",
+            "Step 4: Compute the numerical value:\n$n_2 = 1 \\times 10^3 \\times 10^4 \\times 1 = 10^7$."
+          ],
+          "finalAnswer": "1 Joule = 10^7 erg.",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_54665F87_2ECFFA8F",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_4B375DFB"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "e806628a522fa464a0c85a3e2f818a93c5279c11ae1555fb0e42efede1328ca4",
+      "createdAtUtc": "2026-09-02T13:29:32.997Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_54665F87_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_54665F87",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_54665F87_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_62FC21BB",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_8316E5D4",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_EB371CED",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_866503B1"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_54665F87_01_HOMOGENEITY_ADDITION",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "If $P + \\frac{a}{V^2} = \\frac{R T}{V - b}$, what must be the dimensional formula of the constant $a$ where $P$ is pressure and $V$ is volume?",
+          "options": [
+            "$[M^1 L^5 T^{-2}]$",
+            "$[M^1 L^3 T^{-2}]$",
+            "$[M^1 L^{-1} T^{-2}]$",
+            "$[M^0 L^3 T^0]$"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "By the principle of homogeneity, quantities can be added only if they have identical dimensions. Therefore, $[P] = [\\frac{a}{V^2}] \\implies [a] = [P][V^2]$. Since $[P] = [M^1 L^{-1} T^{-2}]$ and $[V] = [L^3] \\implies [V^2] = [L^6]$, we have $[a] = [M^1 L^{-1} T^{-2}][L^6] = [M^1 L^5 T^{-2}]$.",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_62FC21BB",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_8316E5D4"
+          ],
+          "isVerified": true
+        },
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_54665F87_02_DIMENSIONAL_LIMITATION",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Which of the following physical relationships CANNOT be derived purely using dimensional analysis?",
+          "options": [
+            "$y = A \\sin(\\omega t - kx)$",
+            "$T = 2\\pi \\sqrt{l/g}$ (determining the constant $2\\pi$)",
+            "$E = m c^2$",
+            "Both A and B"
+          ],
+          "correctOptionIndex": 3,
+          "explanation": "Dimensional analysis cannot deduce trigonometric equations ($y = A \\sin(\\omega t - kx)$) nor can it determine dimensionless constants of proportionality like $2\\pi$. Hence Both A and B cannot be derived.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_54665F87_EB371CED",
+            "AF_GU_JEEMAIN2027_PHY_54665F87_866503B1"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "4bff9063644644057def7b054b1e7d33242dad7303a2704ab02f4d0a2778aa3b",
+      "createdAtUtc": "2026-09-02T13:29:32.997Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_54665F87_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_54665F87",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_54665F87_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_54665F87_06D53D13",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_2ECFFA8F",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_4B375DFB",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_50B0611B",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_62FC21BB",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_63D40BF8",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_811EA8BA",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_8316E5D4",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_86358E7D",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_866503B1",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_D6365B8F",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_D8032D2A",
+        "AF_GU_JEEMAIN2027_PHY_54665F87_EB371CED"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Expressing derived physical quantities in base dimensions [M, L, T, A, K, cd, mol]",
+          "Applying the principle of homogeneity to determine unknown constant dimensions",
+          "Converting units between SI, CGS and customized systems via n1*u1 = n2*u2",
+          "Identifying boundaries and limitations of dimensional analysis"
+        ],
+        "supportedQuestionFormats": [
+          "Single Choice MCQ (4 options)",
+          "Numerical Value Questions",
+          "Dimensional Formula Match Matrix"
+        ],
+        "readinessStatement": "This Generation Unit covers all canonical conceptual prerequisites required for exam assessments on dimensional analysis."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "41264d6841e472a0ae8899f4e1e372356a5a5e4b82232e2d88686a4c58602951",
+      "createdAtUtc": "2026-09-02T13:29:32.997Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:32.997Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

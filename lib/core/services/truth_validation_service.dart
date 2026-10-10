@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
 
-/// 🔱 TRUTH VALIDATION SERVICE (v2 Hardened)
+/// TRUTH VALIDATION SERVICE (v2 Hardened)
 /// Implements Phase 10 & 11: The Constitutional Truth Layer.
 /// Operates with Canonical Entity Registry and Cross-Verification.
 class TruthValidationService {
   
-  // 🔱 CANONICAL ENTITY REGISTRY (v2)
+  // CANONICAL ENTITY REGISTRY (v2)
   // Physical list of sovereign entities to prevent spelling conflicts.
   static const Map<String, List<String>> _canonicalRegistry = {
     'Lala Lajpat Rai': ['Lala Lajpat Roy', 'Lajpat Rai', 'L.L. Rai'],
@@ -13,9 +13,9 @@ class TruthValidationService {
     'Jawaharlal Nehru': ['Pt. Nehru', 'J.L. Nehru'],
   };
 
-  /// 🔱 VALIDATE KNOWLEDGE ATOM
+  /// VALIDATE KNOWLEDGE ATOM
   static Future<Map<String, dynamic>> validate(String text, {String? contextId}) async {
-    debugPrint("🔱 TRUTH LAYER: Executing structural and entity validation.");
+    debugPrint("TRUTH LAYER: Executing structural and entity validation.");
 
     // 1. ENTITY CROSS-VERIFICATION (Step 4 Upgrade)
     final entityConflicts = _verifyEntities(text);
@@ -23,7 +23,7 @@ class TruthValidationService {
     // 2. TEMPORAL LOGIC VALIDATION
     final temporalConflicts = _verifyTimeline(text);
 
-    // 3. FACTUAL CONSISTENCY CHECK (Phase 11 Upgrade) 🔱
+    // 3. FACTUAL CONSISTENCY CHECK (Phase 11 Upgrade) 
     // Checks for known factual impossibilities (Hallucination Detection).
     final factConflicts = _verifyFactIntegrity(text);
     
@@ -49,7 +49,7 @@ class TruthValidationService {
     };
   }
 
-  /// 🔱 INTERNAL: ENTITY REGISTRY CHECK
+  /// INTERNAL: ENTITY REGISTRY CHECK
   static List<String> _verifyEntities(String text) {
     final List<String> conflicts = [];
     
@@ -65,7 +65,7 @@ class TruthValidationService {
     return conflicts;
   }
 
-  /// 🔱 INTERNAL: TIMELINE VALIDATION
+  /// INTERNAL: TIMELINE VALIDATION
   static List<String> _verifyTimeline(String text) {
     final List<String> conflicts = [];
     final yearRegex = RegExp(r'\b(1[0-7][0-9]{2}|2[1-9][0-9]{2})\b');
@@ -76,7 +76,7 @@ class TruthValidationService {
     return conflicts;
   }
 
-  /// 🔱 INTERNAL: FACT INTEGRITY (Hallucination Detection)
+  /// INTERNAL: FACT INTEGRITY (Hallucination Detection)
   static List<String> _verifyFactIntegrity(String text) {
     final List<String> conflicts = [];
     
@@ -95,7 +95,7 @@ class TruthValidationService {
     return conflicts;
   }
 
-  /// 🔱 INTERNAL: CONFIDENCE SCORING ENGINE
+  /// INTERNAL: CONFIDENCE SCORING ENGINE
   static double _calculateConfidence(String text, List<String> conflicts) {
     double score = 1.0;
     score -= (conflicts.length * 0.25); // Heavier penalty for registry conflicts

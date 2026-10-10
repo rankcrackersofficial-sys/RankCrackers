@@ -77,7 +77,7 @@ class CommandCenterRepository {
   }
 
   static Stream<int> streamActiveWorkersCount() {
-    // 🔱 Definition of "Active" matching constitutional ONLINE rule (<= 60s)
+    // Definition of "Active" matching constitutional ONLINE rule (<= 60s)
     final threshold = DateTime.now().subtract(const Duration(seconds: 60));
     return _firestore
         .collection('worker_registry')

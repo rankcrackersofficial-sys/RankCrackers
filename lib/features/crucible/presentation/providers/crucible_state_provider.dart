@@ -6,7 +6,7 @@ import '../../../../shared/providers/session_provider.dart';
 final crucibleProtocolStateProvider = StreamProvider.autoDispose<CrucibleProtocolState?>((ref) {
   final sessionUserAsync = ref.watch(sessionUserProvider);
   return sessionUserAsync.when(
-    data: (user) => CrucibleRepository.streamProtocolState(user.examId),
+    data: (user) => CrucibleRepository.streamProtocolState(user.recruitmentId),
     loading: () => const Stream.empty(),
     error: (err, stack) => const Stream.empty(),
   );

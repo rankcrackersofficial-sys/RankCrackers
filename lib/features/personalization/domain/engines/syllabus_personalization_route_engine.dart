@@ -67,6 +67,7 @@ final class SyllabusPersonalizationRouteEngine {
 
     final route = SyllabusPersonalizationRoute(
       studentId: studentId,
+      missionId: decision.missionId,
       examId: examId,
       createdAtUtc: createdAtUtc,
       currentTargetAmtnId: targetAmtnId,

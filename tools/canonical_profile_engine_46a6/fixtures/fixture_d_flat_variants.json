@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "1.0.0",
+  "profileStatus": "MATERIALIZATION_READY",
+  "identity": {
+    "missionId": "mock_flat_variants",
+    "canonicalExamName": "Discipline Exam",
+    "canonicalDisplayName": "Discipline Exam 2026"
+  },
+  "missionTargetYear": 2026,
+  "sourceBaselineYear": 2025,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "authority": {
+    "organization": "National Authority",
+    "officialPortals": [
+      "https://authority.gov.in"
+    ],
+    "sourceDocumentType": "Official Notification",
+    "officialNotificationTitle": "Discipline Exam Official Notification",
+    "officialPdfUrl": "https://authority.gov.in/docs/notification.pdf",
+    "sha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+    "evidenceClass": "BYTE_VERIFIED",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "paperModel": {
+    "paperCount": 1,
+    "papers": [
+      {
+        "paperId": "paper_1",
+        "paperNumber": 1,
+        "paperName": "General Paper",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "mode": "CBT",
+        "durationMinutes": 180,
+        "totalQuestions": 75,
+        "totalMarks": 300
+      }
+    ]
+  },
+  "variantModel": {
+    "hasVariants": true,
+    "variantDimension": "academic_discipline",
+    "variants": [
+      {
+        "variantId": "var_english",
+        "variantName": "English",
+        "code": "ENG",
+        "status": "ACTIVE"
+      },
+      {
+        "variantId": "var_hindi",
+        "variantName": "Hindi",
+        "code": "HIN",
+        "status": "ACTIVE"
+      },
+      {
+        "variantId": "var_math",
+        "variantName": "Mathematics",
+        "code": "MAT",
+        "status": "ACTIVE"
+      }
+    ]
+  },
+  "subjectModel": {
+    "subjects": [
+      {
+        "subjectId": "subj_1",
+        "subjectName": "Subject 1",
+        "canonicalKey": "key_1"
+      }
+    ]
+  },
+  "languageModel": {
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+      "English",
+      "Hindi"
+    ],
+    "mediumPolicy": "BILINGUAL"
+  },
+  "s2DocumentProfile": {
+    "expectedPapers": [
+      "General Paper"
+    ],
+    "paperAliases": {
+      "General Paper": [
+        "Paper 1"
+      ]
+    },
+    "expectedSubjects": [
+      "Subject 1"
+    ],
+    "subjectAliases": {
+      "Subject 1": [
+        "Subj 1"
+      ]
+    },
+    "languageScripts": [
+      "Latin",
+      "Devanagari"
+    ],
+    "preferredOcrLanguages": [
+      "eng",
+      "hin"
+    ],
+    "sourceYearPolicy": "USE_2025_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+  },
+  "fieldAuthorityMap": {
+    "paperStructure": "SOURCE_VERIFIED",
+    "subjectModel": "SOURCE_VERIFIED"
+  },
+  "profileHash": "2f9c9af7923b1e304992aa15387448c69ccc7b08f52f60753cc9475789c11864"
+}

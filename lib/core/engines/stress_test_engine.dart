@@ -3,11 +3,11 @@ import '../models/micro_topic_node.dart';
 import '../models/recruitment.dart';
 import '../models/exam_blueprint.dart';
 
-/// 🔱 STRESS TEST ENGINE
+/// STRESS TEST ENGINE
 /// Implements Phase 6.2: Physical stress testing for scaling validation.
 class StressTestEngine {
   
-  /// 🔱 GENERATES CONFIGURABLE DATASET
+  /// GENERATES CONFIGURABLE DATASET
   static Map<String, dynamic> generateDataset({
     required int nodeCount,
     required int atomsPerNode,

@@ -1,6 +1,6 @@
 class ResultEngine {
   // ===================================================
-  // CALCULATE SCORE 🔱
+  // CALCULATE SCORE 
   // ===================================================
   static double calculate({
     required int correct,

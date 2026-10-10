@@ -1,11 +1,11 @@
 import 'package:equatable/equatable.dart';
 import 'audit_record.dart';
 
-/// 🔱 SENTINEL DRAFT (Document 50 Component)
+/// SENTINEL DRAFT (Document 50 Component)
 /// The "Isolation Zone" for raw intelligence data before validation and publication.
 class SentinelDraft extends Equatable {
   final String id;
-  final String? sourceId; // 🔱 Added: Physical Traceability
+  final String? sourceId; // Added: Physical Traceability
   final String type; // recruitment, blueprint, node, combined
   final Map<String, dynamic> rawData; // Extracted JSON from Workers
   final AuditRecord audit;
@@ -50,7 +50,7 @@ class SentinelDraft extends Equatable {
   }
 
   factory SentinelDraft.fromMap(Map<String, dynamic> map) {
-    // 🔱 Hardened casting for high-volume fact ingestion
+    // Hardened casting for high-volume fact ingestion
     return SentinelDraft(
       id: map['id'] ?? '',
       sourceId: map['sourceId'],

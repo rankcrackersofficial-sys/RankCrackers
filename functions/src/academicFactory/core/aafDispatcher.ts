@@ -4,13 +4,22 @@ import { AafJobMetadata } from '../models/aafJob';
 import * as admin from 'firebase-admin';
 
 /**
- * 🔱 AAF GOVERNED DISPATCHER
+ * AAF GOVERNED DISPATCHER
  * Executes jobs via registered handlers with strict lifecycle guards.
  * Implements AAF-004C Hardened.
  */
 export class AafDispatcher {
   private repo = new AafQueueRepository();
-  private db = admin.firestore();
+  private _db?: admin.firestore.Firestore;
+
+  private get db(): admin.firestore.Firestore {
+    if (!this._db) {
+      this._db = admin.firestore();
+    }
+    return this._db;
+  }
+
+  constructor() {}
 
   /**
    * 🛡️ DISPATCH (The Persistent Loop)
@@ -47,10 +56,10 @@ export class AafDispatcher {
       await this.repo.submitForReview(idempotencyKey, workerId, result.outputHash);
 
       // Note: Approval/Materialization/Publication are handled via separate governance triggers or human-in-the-loop steps.
-      console.log(`🔱 AAF DISPATCHER: Job ${idempotencyKey} submitted for review.`);
+      console.log(`AAF DISPATCHER: Job ${idempotencyKey} submitted for review.`);
 
     } catch (error) {
-      console.error(`🔱 AAF DISPATCHER FAILED [${job.type}]:`, error);
+      console.error(`AAF DISPATCHER FAILED [${job.type}]:`, error);
       await this.repo.fail(idempotencyKey, error instanceof Error ? error.message : 'Unknown dispatch error');
     }
   }

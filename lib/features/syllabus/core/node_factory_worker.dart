@@ -3,7 +3,7 @@ import '../../../core/models/micro_topic_node.dart';
 
 class NodeFactoryWorker {
   // ===================================================
-  // CREATE NODES 🔱
+  // CREATE NODES 
   // ===================================================
   static List<MicroTopicNode> generate({
     required String exam,
@@ -26,7 +26,7 @@ class NodeFactoryWorker {
             subjectHindi: chunk.subject,
             chapterHindi: chunk.chapter,
             description: '',
-            contentRegistryId: 'payload_$id', // 🔱 Sovereign decoupling pointer
+            contentRegistryId: 'payload_$id', // Sovereign decoupling pointer
             difficulty: 2,
             importance: 3,
             status: 'draft',

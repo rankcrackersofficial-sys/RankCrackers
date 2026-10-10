@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 OPPORTUNITY MATCH (Document 50A Section 3)
+/// OPPORTUNITY MATCH (Document 50A Section 3)
 /// Represents the personalized alignment between a warrior and an opportunity.
 class OpportunityMatch extends Equatable {
   final String uid;
@@ -9,8 +9,8 @@ class OpportunityMatch extends Equatable {
   final double matchScore;
   final List<String> matchedRules;
   final List<String> missingRequirements;
-  final List<String> eligibilityReasons; // 🔱 Explainability Layer
-  final List<String> benefitReasons; // 🔱 Benefit Attribution
+  final List<String> eligibilityReasons; // Explainability Layer
+  final List<String> benefitReasons; // Benefit Attribution
 
   const OpportunityMatch({
     required this.uid,

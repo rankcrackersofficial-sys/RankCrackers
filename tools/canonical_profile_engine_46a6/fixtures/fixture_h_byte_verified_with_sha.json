@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "1.0.0",
+  "profileStatus": "MATERIALIZATION_READY",
+  "identity": {
+    "missionId": "mock_byte_verified",
+    "canonicalExamName": "Byte Verified Official Bulletin",
+    "canonicalDisplayName": "Byte Verified Official Bulletin 2027"
+  },
+  "missionTargetYear": 2027,
+  "sourceBaselineYear": 2026,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "authority": {
+    "organization": "National Testing Agency",
+    "officialPortals": [
+      "https://nta.ac.in"
+    ],
+    "sourceDocumentType": "Information Bulletin PDF",
+    "officialNotificationTitle": "National Exam Bulletin 2026",
+    "officialPdfUrl": "https://nta.ac.in/assets/bulletin.pdf",
+    "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+    "evidenceClass": "BYTE_VERIFIED",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "paperModel": {
+    "paperCount": 1,
+    "papers": [
+      {
+        "paperId": "paper_1",
+        "paperNumber": 1,
+        "paperName": "General Paper",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "mode": "CBT",
+        "durationMinutes": 180,
+        "totalQuestions": 75,
+        "totalMarks": 300
+      }
+    ]
+  },
+  "variantModel": {
+    "hasVariants": false,
+    "variants": []
+  },
+  "subjectModel": {
+    "subjects": [
+      {
+        "subjectId": "subj_1",
+        "subjectName": "Subject 1",
+        "canonicalKey": "key_1"
+      }
+    ]
+  },
+  "languageModel": {
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+      "English",
+      "Hindi"
+    ],
+    "mediumPolicy": "BILINGUAL"
+  },
+  "s2DocumentProfile": {
+    "expectedPapers": [
+      "General Paper"
+    ],
+    "paperAliases": {
+      "General Paper": [
+        "Paper 1"
+      ]
+    },
+    "expectedSubjects": [
+      "Subject 1"
+    ],
+    "subjectAliases": {
+      "Subject 1": [
+        "Subj 1"
+      ]
+    },
+    "languageScripts": [
+      "Latin",
+      "Devanagari"
+    ],
+    "preferredOcrLanguages": [
+      "eng",
+      "hin"
+    ],
+    "sourceYearPolicy": "USE_2026_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+  },
+  "fieldAuthorityMap": {
+    "paperStructure": "SOURCE_VERIFIED",
+    "subjectModel": "SOURCE_VERIFIED"
+  },
+  "profileHash": "3f2278023679c2c105c454740ac1a1b798a65dea5288dd1a37e94a4f8d5684ae"
+}

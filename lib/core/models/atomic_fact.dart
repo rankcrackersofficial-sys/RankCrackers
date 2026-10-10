@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:equatable/equatable.dart';
 
-/// 🔱 ATOMIC FACT v2.1 (Document 50J Article 1.2 & 1.7 Amended)
+/// ATOMIC FACT v2.1 (Document 50J Article 1.2 & 1.7 Amended)
 /// Smallest machine-reasoning truth unit using SVO structure.
 class AtomicFact extends Equatable {
   // Layer 1: Identity & Lineage
@@ -51,7 +51,7 @@ class AtomicFact extends Equatable {
     required this.sourceHash,
   });
 
-  /// 🔱 DERIVED STATEMENT (Article 5 Amendment)
+  /// DERIVED STATEMENT (Article 5 Amendment)
   /// Subject + Predicate + Object = Natural Language Truth
   String get statement => '$subject $predicate $object${context != null ? " ($context)" : ""}';
 

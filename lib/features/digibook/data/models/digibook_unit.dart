@@ -1,10 +1,10 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 DIGIBOOK UNIT (Blueprint v1.2 - Hardened Audit Fix)
+/// DIGIBOOK UNIT (Blueprint v1.2 - Hardened Audit Fix)
 /// Law: 1 Atomic Topic = 1 DigiBook Unit
 class DigiBookUnit extends Equatable {
   final String id;
-  final String atomicTopicId; // 🔱 Mandatory Syllabus Mapping
+  final String atomicTopicId; // Mandatory Syllabus Mapping
   final String chapterId;
   final String realmId;
   
@@ -14,12 +14,12 @@ class DigiBookUnit extends Equatable {
   final List<String> examples;
   final List<String> keywords;
 
-  // 🔱 PYQ LINKAGE (GAP-2)
+  // PYQ LINKAGE (GAP-2)
   final List<String> pyqIds;
   final int pyqCount;
   final double pyqWeightage;
   
-  // 🔱 CRUCIBLE DEPENDENCY (GAP-5)
+  // CRUCIBLE DEPENDENCY (GAP-5)
   final bool crucibleMapped;
   final List<String> crucibleNodeIds;
 

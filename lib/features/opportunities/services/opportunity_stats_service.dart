@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-/// 🔱 OPPORTUNITY STATS SERVICE
+/// OPPORTUNITY STATS SERVICE
 /// Provides aggregate counts for dashboard visibility.
 class OpportunityStatsService {
   static final _firestore = FirebaseFirestore.instance;
 
-  /// 🔱 GET ACTIVE COUNT
+  /// GET ACTIVE COUNT
   static Stream<int> streamActiveCount() {
     return _firestore
         .collection('recruitments')
@@ -14,7 +14,7 @@ class OpportunityStatsService {
         .map((snapshot) => snapshot.docs.length);
   }
 
-  /// 🔱 GET LATEST UPDATES COUNT
+  /// GET LATEST UPDATES COUNT
   /// Count of updates in the last 7 days.
   static Stream<int> streamLatestUpdatesCount() {
     final sevenDaysAgo = DateTime.now().subtract(const Duration(days: 7)).millisecondsSinceEpoch;

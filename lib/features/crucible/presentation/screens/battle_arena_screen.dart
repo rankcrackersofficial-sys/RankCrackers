@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/theme/app_colors.dart';
+import '../../../../core/theme/tactical_noir_background.dart';
 
 class BattleArenaScreen extends StatelessWidget {
 
@@ -13,7 +14,7 @@ class BattleArenaScreen extends StatelessWidget {
     return Scaffold(
 
       backgroundColor:
-      const Color(0xFFF4F8FF),
+      AppColors.background,
 
       appBar: AppBar(
 
@@ -37,7 +38,8 @@ class BattleArenaScreen extends StatelessWidget {
         ),
       ),
 
-      body: SingleChildScrollView(
+      body: TacticalNoirBackground(
+        child: SingleChildScrollView(
 
         physics:
         const BouncingScrollPhysics(),
@@ -323,6 +325,7 @@ class BattleArenaScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }

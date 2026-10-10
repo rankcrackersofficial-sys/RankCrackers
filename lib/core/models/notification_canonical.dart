@@ -10,7 +10,7 @@ export 'notification/notification_graph.dart';
 export 'notification/notification_evidence.dart';
 export 'notification/notification_feedback.dart';
 
-/// 🔱 NOTIFICATION CANONICAL (v2.0 Modular Architecture)
+/// NOTIFICATION CANONICAL (v2.0 Modular Architecture)
 /// Orchestrates the 5 pillars of notification intelligence.
 class NotificationCanonical {
   final NotificationIdentity identity;

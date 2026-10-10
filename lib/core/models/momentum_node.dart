@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 MOMENTUM STATUS (Blueprint v1.0 - Sprint N)
+/// MOMENTUM STATUS (Blueprint v1.0 - Sprint N)
 enum MomentumStatus {
   RISING,
   STABLE,
@@ -8,13 +8,13 @@ enum MomentumStatus {
   COLLAPSING
 }
 
-/// 🔱 MOMENTUM NODE (Blueprint v1.0 - Document 50)
+/// MOMENTUM NODE (Blueprint v1.0 - Document 50)
 /// Tracks a user's performance trajectory over time.
 class MomentumNode extends Equatable {
   final String userId;
   final String realmId;
   
-  // 🔱 Metrics (7-day trend)
+  // Metrics (7-day trend)
   final double masteryGrowth;
   final double coverageGrowth;
   final double missionCompletionRate;

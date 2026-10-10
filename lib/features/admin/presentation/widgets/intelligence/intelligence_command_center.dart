@@ -7,7 +7,7 @@ import 'worker_governance_center.dart';
 import 'widgets/budget_consumption_card.dart';
 import 'widgets/intelligence_feed_tile.dart';
 
-/// 🔱 INTELLIGENCE COMMAND CENTER
+/// INTELLIGENCE COMMAND CENTER
 /// Strategic orchestration of the autonomous scouting battalion.
 class IntelligenceCommandCenter extends StatelessWidget {
   const IntelligenceCommandCenter({super.key});

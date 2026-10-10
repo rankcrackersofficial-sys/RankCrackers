@@ -11,18 +11,18 @@ import '../../models/sentinel_draft.dart';
 import '../../models/audit_record.dart';
 import '../../backend/sentinel_repository.dart';
 
-/// 🔱 DIGIBOOK ASSEMBLY WORKER (Sprint G Hardened)
+/// DIGIBOOK ASSEMBLY WORKER (Sprint G Hardened)
 /// Law: Verified Syllabus -> Atomic Topics -> DigiBook Builder -> DigiBook
 class DigiBookAssemblyWorker {
   static Future<void> assemble(
       RecruitmentRealm realm, List<SyllabusCanonical> syllabuses) async {
     debugPrint(
-        "🔱 DIGIBOOK WORKER: Initiating assembly for ${realm.realmId}...");
+        "DIGIBOOK WORKER: Initiating assembly for ${realm.realmId}...");
     final draft = await buildDraft(realm: realm, syllabuses: syllabuses);
     if (draft != null) {
       await SentinelRepository.injectDrafts([draft]);
       debugPrint(
-          "🔱 DIGIBOOK WORKER: Assembly complete. Staged for Founder review.");
+          "DIGIBOOK WORKER: Assembly complete. Staged for Founder review.");
     }
   }
 
@@ -33,7 +33,7 @@ class DigiBookAssemblyWorker {
   }) async {
     if (!realm.syllabusVerified) {
       debugPrint(
-          "🔱 DIGIBOOK WORKER ERROR: Syllabus not verified. Assembly blocked.");
+          "DIGIBOOK WORKER ERROR: Syllabus not verified. Assembly blocked.");
       return null;
     }
 
@@ -49,7 +49,7 @@ class DigiBookAssemblyWorker {
 
       if (syllabus.atomicTopics.isEmpty) {
         debugPrint(
-            "🔱 DIGIBOOK WORKER ERROR: No Atomic Topics found for ${syllabus.subject}. Skipping subject.");
+            "DIGIBOOK WORKER ERROR: No Atomic Topics found for ${syllabus.subject}. Skipping subject.");
         continue;
       }
 
@@ -57,11 +57,11 @@ class DigiBookAssemblyWorker {
         allAtomicTopicIds.add(atomic.atomicId);
         final unitId = "unit_${realm.realmId}_${atomic.atomicId}";
 
-        // 🔱 EXPANSION PROTOCOL (GAP-H3)
+        // EXPANSION PROTOCOL (GAP-H3)
         final expansion = await KnowledgeExpansionWorker.expand(
             atomic.title, atomic.microTopics.map((e) => e.title).toList());
 
-        // 🔱 PYQ LINKAGE (GAP-H1)
+        // PYQ LINKAGE (GAP-H1)
         final pyqMapping = await PYQLinkageEngine.mapTopic(atomic.atomicId);
 
         final unit = DigiBookUnit(
@@ -75,12 +75,12 @@ class DigiBookAssemblyWorker {
           examples: expansion['examples'],
           keywords: expansion['keywords'],
 
-          // 🔱 Hardened PYQ Data
+          // Hardened PYQ Data
           pyqIds: List<String>.from(pyqMapping['pyqIds']),
           pyqCount: pyqMapping['pyqCount'],
           pyqWeightage: pyqMapping['pyqWeightage'],
 
-          // 🔱 CRUCIBLE DEPENDENCY
+          // CRUCIBLE DEPENDENCY
           crucibleMapped: false,
           crucibleNodeIds: const [],
 
@@ -105,17 +105,17 @@ class DigiBookAssemblyWorker {
       chapterMaps.add(chapter.toMap());
     }
 
-    // 🔱 COVERAGE VALIDATION (GAP-3)
+    // COVERAGE VALIDATION (GAP-3)
     final coverageReport = CoverageValidationEngine.validate(
         atomicTopicIds: allAtomicTopicIds,
         digibookUnitTopicIds: generatedUnitTopicIds);
 
     if (!coverageReport['isValid']) {
       debugPrint(
-          "🔱 DIGIBOOK WORKER WARNING: Coverage gap detected! ${coverageReport['missing_topic_ids'].length} topics missing.");
+          "DIGIBOOK WORKER WARNING: Coverage gap detected! ${coverageReport['missing_topic_ids'].length} topics missing.");
     }
 
-    // 🔱 Create Sentinel Draft for DigiBook Review
+    // Create Sentinel Draft for DigiBook Review
     return SentinelDraft(
       id: "db_draft_${realm.realmId}",
       type: 'digibook',
@@ -123,7 +123,7 @@ class DigiBookAssemblyWorker {
         'realmId': realm.realmId,
         'chapters': chapterMaps,
         'units': unitMaps,
-        'coverage_report': coverageReport, // 🔱 Attached for Founder Review
+        'coverage_report': coverageReport, // Attached for Founder Review
       },
       status: 'under_review',
       audit: AuditRecord(

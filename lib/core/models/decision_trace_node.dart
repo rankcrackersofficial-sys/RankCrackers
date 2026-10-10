@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 DECISION TRACE NODE (Blueprint v1.0 - Document 61)
+/// DECISION TRACE NODE (Blueprint v1.0 - Document 61)
 /// Captures the physical evidence and logical flow behind an APOS decision.
 class DecisionTraceNode extends Equatable {
   final String id;

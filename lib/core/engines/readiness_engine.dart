@@ -2,12 +2,12 @@ import '../models/readiness_state.dart';
 import '../models/coverage_state.dart';
 import '../models/risk_state.dart';
 
-/// 🔱 MISSION READINESS ENGINE
+/// MISSION READINESS ENGINE
 /// Sovereign authority for estimating total mission preparedness.
 /// Implements Document 32.
 class ReadinessEngine {
   // ===================================================
-  // READINESS CALCULATION 🔱
+  // READINESS CALCULATION 
   // ===================================================
 
   /// Calculates the current readiness state based on preparation evidence.
@@ -18,29 +18,38 @@ class ReadinessEngine {
     required RiskState risk,
     ReadinessState? previousState,
   }) {
-    // 🔱 CONSTITUTIONAL FORMULA (Section 15)
+    // CONSTITUTIONAL FORMULA (Section 15)
     // Scale inputs to 0-100 for the formula
     final double cov = coverage.coveragePercent * 100;
     final double mast = masteryPercent * 100;
     final double asst = assessmentPerformance * 100;
     final double rsk = risk.overallRisk * 100;
 
-    final double score = 
-        (cov * 0.30) + 
-        (mast * 0.30) + 
-        (asst * 0.30) + 
-        ((100 - rsk) * 0.10);
+    // Zero-Fake Academic Law: If there is zero preparation evidence
+    // (coverage == 0, mastery == 0, assessment == 0), do NOT produce a synthetic
+    // 4% baseline derived solely from uncalibrated risk defaults!
+    final bool hasEvidence = coverage.coveragePercent > 0 ||
+        masteryPercent > 0 ||
+        assessmentPerformance > 0;
+
+    final double score = hasEvidence
+        ? ((cov * 0.30) +
+            (mast * 0.30) +
+            (asst * 0.30) +
+            ((100 - rsk) * 0.10))
+        : 0.0;
 
     final clampedScore = score.clamp(0.0, 100.0);
 
-    // 🔱 CONFIDENCE LOGIC (Section 28-32)
+    // CONFIDENCE LOGIC (Section 28-32)
     // Confidence increases as preparation depth (Coverage) grows.
-    final double confidence = (coverage.coveragePercent * 0.5) + (assessmentPerformance * 0.5);
+    final double confidence =
+        (coverage.coveragePercent * 0.5) + (assessmentPerformance * 0.5);
 
     return ReadinessState(
       score: clampedScore,
       confidence: confidence.clamp(0.0, 1.0),
-      status: _determineStatus(clampedScore),
+      status: _determineStatus(clampedScore, hasEvidence: hasEvidence),
       trend: _determineTrend(clampedScore, previousState?.score ?? clampedScore),
       successProbability: (clampedScore / 100.0) * confidence.clamp(0.0, 1.0),
       calculatedAt: DateTime.now(),
@@ -48,10 +57,11 @@ class ReadinessEngine {
   }
 
   // ===================================================
-  // STATE THRESHOLDS 🔱 (Section 27)
+  // STATE THRESHOLDS (Section 27)
   // ===================================================
 
-  static String _determineStatus(double score) {
+  static String _determineStatus(double score, {bool hasEvidence = true}) {
+    if (!hasEvidence) return 'Pending Evidence';
     if (score <= 20) return 'Critical';
     if (score <= 40) return 'Weak';
     if (score <= 60) return 'Developing';
@@ -60,7 +70,7 @@ class ReadinessEngine {
   }
 
   // ===================================================
-  // TREND DETECTION 🔱 (Section 34)
+  // TREND DETECTION (Section 34)
   // ===================================================
 
   static String _determineTrend(double current, double previous) {

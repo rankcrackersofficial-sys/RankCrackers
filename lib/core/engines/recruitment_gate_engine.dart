@@ -4,11 +4,11 @@ import '../models/mission_context.dart';
 import '../../features/crucible/models/crucible_protocol_state.dart';
 import '../knowledge/knowledge_engine.dart';
 
-/// 🔱 RECRUITMENT GATE ENGINE
+/// RECRUITMENT GATE ENGINE
 /// Sovereign authority for managing the entry-gate to missions.
 class RecruitmentGateEngine {
   // ===================================================
-  // MISSION ACTIVATION 🔱
+  // MISSION ACTIVATION 
   // ===================================================
 
   /// Orchestrates the building of a complete Mission Context.
@@ -54,7 +54,7 @@ class RecruitmentGateEngine {
   }
 
   // ===================================================
-  // VARIANT VALIDATION 🔱
+  // VARIANT VALIDATION 
   // ===================================================
 
   static bool validateVariant(Recruitment recruitment, String? userVariantCode) {

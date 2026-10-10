@@ -2,13 +2,13 @@ import '../models/notification_candidate.dart';
 import '../models/sentinel_draft.dart';
 import '../firebase/firestore_service.dart';
 
-/// 🔱 SENTINEL NOTIFICATION SERVICE
+/// SENTINEL NOTIFICATION SERVICE
 /// Governs the creation and deduplication of Notification Candidates.
 /// Implements Phase 4E-D (Constitutional Laws N1-N6).
 class SentinelNotificationService {
   
   // ===================================================
-  // CANDIDATE GENERATION 🔱
+  // CANDIDATE GENERATION 
   // ===================================================
 
   /// Generates a Notification Candidate from a validated Sentinel Draft.
@@ -18,10 +18,10 @@ class SentinelNotificationService {
     required String impact, // LOW, MEDIUM, HIGH, CRITICAL
     required String type,
   }) async {
-    // 🔱 N3: Deduplication (Canonical ID based on type, recruitment, and version)
+    // N3: Deduplication (Canonical ID based on type, recruitment, and version)
     final candidateId = 'cand_${draft.rawData['id']}_${type}_${draft.audit.contentVersion}';
 
-    // 🔱 N4: Expiry Logic (Standard: 30 days or based on exam date)
+    // N4: Expiry Logic (Standard: 30 days or based on exam date)
     final now = DateTime.now();
     final expires = now.add(const Duration(days: 30));
 
@@ -43,12 +43,12 @@ class SentinelNotificationService {
       },
     );
 
-    // 🔱 N5: Source Traceability (Stored in candidate record)
+    // N5: Source Traceability (Stored in candidate record)
     await FirestoreService.saveNotificationCandidate(candidate);
   }
 
   // ===================================================
-  // UTILITIES 🔱
+  // UTILITIES 
   // ===================================================
 
   /// Generates mission-relevant titles while adhering to User Trust Rule (N6).

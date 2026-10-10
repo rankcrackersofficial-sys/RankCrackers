@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:rank_crackers/core/models/mastery_node.dart';
 
-/// 🔱 MASTERY UPDATE WORKER (Blueprint v1.0)
+/// MASTERY UPDATE WORKER (Blueprint v1.0)
 /// Logic: MCQ Submitted -> Evaluation -> Difficulty/PYQ Weight -> Mastery Delta -> Firestore
 class MasteryUpdateWorker {
   
@@ -12,17 +12,17 @@ class MasteryUpdateWorker {
     required bool isPYQ,
     required double responseTimeSeconds,
   }) {
-    debugPrint("🔱 MASTERY WORKER: Calculating delta for ${currentNode.atomicTopicId}...");
+    debugPrint("MASTERY WORKER: Calculating delta for ${currentNode.atomicTopicId}...");
 
     double delta = 0.0;
     int newStreak = isCorrect ? currentNode.streak + 1 : 0;
 
     if (isCorrect) {
-      // 🔱 Mastery Delta Logic (Audit Sprint J Hardening)
+      // Mastery Delta Logic (Audit Sprint J Hardening)
       delta = difficulty.toDouble(); 
       if (isPYQ) delta += 3.0; // PYQ Correct Bonus
       
-      // 🔱 Multi-Tier Response Time Discrimination
+      // Multi-Tier Response Time Discrimination
       if (responseTimeSeconds < 10) {
         delta += 2.0; // Rapid Recall (+2)
       } else if (responseTimeSeconds < 20) {
@@ -38,7 +38,7 @@ class MasteryUpdateWorker {
 
     double newScore = (currentNode.masteryScore + delta).clamp(0.0, 100.0);
     
-    // 🔱 Status Flow Logic
+    // Status Flow Logic
     String newStatus = currentNode.status;
     if (newScore >= 90) newStatus = 'MASTERED';
     else if (newScore >= 60) newStatus = 'PRACTICING';

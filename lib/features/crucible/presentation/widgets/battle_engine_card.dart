@@ -31,9 +31,9 @@ class BattleEngineCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🔱 PREMIUM CARD DNA
+          // PREMIUM CARD DNA
           Text(
-            "100 DAYS BATTLE",
+            "98 DAYS BATTLE",
             style: AppTypography.cardTitle.copyWith(
                 color: AppColors.gold, letterSpacing: 2.5, fontSize: 11),
           ),
@@ -73,7 +73,7 @@ class BattleEngineCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      "Day $dayCount of 100",
+                      "Day $dayCount of 98",
                       style: AppTypography.section.copyWith(fontSize: 18),
                     ),
                     const SizedBox(height: 4),

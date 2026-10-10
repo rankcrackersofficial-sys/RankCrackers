@@ -1,7 +1,7 @@
 import { AafWorker } from '../workers/aafWorkerTypes';
 
 /**
- * 🔱 AAF CANONICAL JOB REGISTRY (FIXED CONTRACT)
+ * AAF CANONICAL JOB REGISTRY (FIXED CONTRACT)
  * Maps the 13 canonical AAF job types to specialized worker adapters.
  * Implements AAF-004D FIX4 FINAL.
  */

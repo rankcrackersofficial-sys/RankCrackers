@@ -4,12 +4,12 @@ import '../models/opportunity.dart';
 import '../models/opportunity_match.dart';
 import '../../../core/models/notification_candidate.dart';
 
-/// 🔱 SENTINEL NOTIFICATION SERVICE (Phase 9)
+/// SENTINEL NOTIFICATION SERVICE (Phase 9)
 /// Orchestrates the generation and ranking of recruitment alerts.
 class RecruitmentAlertService {
   static final _firestore = FirebaseFirestore.instance;
 
-  /// 🔱 GENERATE CANDIDATE
+  /// GENERATE CANDIDATE
   /// Implements Priority Model (Match 50%, Urgency 30%, Freshness 20%).
   static NotificationCandidate generateCandidate({
     required String uid,
@@ -18,7 +18,7 @@ class RecruitmentAlertService {
   }) {
     final now = DateTime.now();
     
-    // 🔱 Normalization Law: Ensure all scores are in 0.0 -> 1.0 range
+    // Normalization Law: Ensure all scores are in 0.0 -> 1.0 range
     final normalizedMatch = match.matchScore / 100.0;
 
     // 1. URGENCY SCORE (30%)
@@ -43,7 +43,7 @@ class RecruitmentAlertService {
       freshnessScore = 0.5;
     }
 
-    // 🔱 CONSTITUTIONAL PRIORITY FORMULA (Phase 9D Hardened)
+    // CONSTITUTIONAL PRIORITY FORMULA (Phase 9D Hardened)
     final double priority = 
         (normalizedMatch * 0.50) + 
         (urgencyScore * 0.30) + 
@@ -58,11 +58,11 @@ class RecruitmentAlertService {
       isNew: daysSinceNotification <= 2,
       reasons: match.eligibilityReasons,
       createdAt: now,
-      status: 'pending', // 🔱 Staging State
+      status: 'pending', // Staging State
     );
   }
 
-  /// 🔱 PUSH TO GOVERNANCE QUEUE
+  /// PUSH TO GOVERNANCE QUEUE
   /// Implements Transactional Deduplication and Staging (Audit Fix #2 & #4).
   static Future<void> pushToQueue(NotificationCandidate candidate, String title) async {
     final historyId = '${candidate.uid}_${candidate.opportunityId}';
@@ -74,11 +74,11 @@ class RecruitmentAlertService {
       final historyDoc = await transaction.get(historyRef);
       
       if (historyDoc.exists) {
-        debugPrint('🔱 DEDUPLICATION: Alert already exists in history for ${candidate.opportunityId}');
+        debugPrint('DEDUPLICATION: Alert already exists in history for ${candidate.opportunityId}');
         return;
       }
 
-      // 🔱 1. LOCK DEDUPLICATION (Audit Fix #2)
+      // 1. LOCK DEDUPLICATION (Audit Fix #2)
       // Renamed to 'discoveredAt' to prevent deadlock with Delivery Worker.
       transaction.set(historyRef, {
         'uid': candidate.uid,
@@ -86,14 +86,14 @@ class RecruitmentAlertService {
         'discoveredAt': FieldValue.serverTimestamp(),
       });
 
-      // 🔱 2. PUSH TO CANDIDATES (The Ingestion Layer)
+      // 2. PUSH TO CANDIDATES (The Ingestion Layer)
       transaction.set(candidateRef, {
         ...candidate.toMap(),
         'title': title,
         'serverTimestamp': FieldValue.serverTimestamp(),
       });
 
-      // 🔱 3. PUSH TO SENTINEL DRAFTS (The Governance Layer - Audit Fix #5)
+      // 3. PUSH TO SENTINEL DRAFTS (The Governance Layer - Audit Fix #5)
       // Physically implements: Candidate -> Draft transition
       transaction.set(draftRef, {
         'id': 'draft_${candidate.id}',

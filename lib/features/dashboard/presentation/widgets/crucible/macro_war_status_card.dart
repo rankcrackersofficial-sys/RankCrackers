@@ -12,7 +12,7 @@ class MacroWarStatusCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🔱 PREMIUM CARD DNA: Title
+          // PREMIUM CARD DNA: Title
           Text(
             'MACRO WAR STATUS',
             style: AppTypography.cardTitle.copyWith(color: AppColors.gold, letterSpacing: 2.2, fontSize: 11),
@@ -50,7 +50,7 @@ class MacroWarStatusCard extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // 🔱 PREMIUM CARD DNA: Subtitle
+          // PREMIUM CARD DNA: Subtitle
           Text(
             'Recovery debt is controlled. Maintain the evening revision block for maximum cognitive yield.',
             style: AppTypography.subtitle,

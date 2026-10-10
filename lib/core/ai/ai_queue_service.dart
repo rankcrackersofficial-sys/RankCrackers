@@ -9,7 +9,7 @@ import 'workers/duplicate_detection_worker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-/// 🔱 GLOBAL KEY FOR EMERGENCY ALERTS
+/// GLOBAL KEY FOR EMERGENCY ALERTS
 final GlobalKey<ScaffoldMessengerState> aiQueueMessengerKey = GlobalKey<ScaffoldMessengerState>();
 
 class AIQueueService {
@@ -21,9 +21,9 @@ class AIQueueService {
     required Map<String, dynamic> payload,
   }) async {
     try {
-      debugPrint('🔱 QUEUE: Pushing task type ${type.name}');
+      debugPrint('QUEUE: Pushing task type ${type.name}');
       final taskId = payload['id'] ?? 'task_${DateTime.now().millisecondsSinceEpoch}';
-      debugPrint('🔱 QUEUE: Resolved Task ID: $taskId');
+      debugPrint('QUEUE: Resolved Task ID: $taskId');
 
       // Auto File Type Detection (Audit Patch)
       if (payload['fileType'] == null && payload['fileName'] != null) {
@@ -38,7 +38,7 @@ class AIQueueService {
 
       if (existingQueue.exists) {
         final existingStatus = existingQueue.data()?['status'];
-        debugPrint('🔱 QUEUE: Existing task found with status: $existingStatus');
+        debugPrint('QUEUE: Existing task found with status: $existingStatus');
         
         await FirebaseFirestore.instance.collection('ai_queue').doc(taskId).update({
           'status': 'received',
@@ -51,24 +51,24 @@ class AIQueueService {
       // 2. CACHE CHECK
       final cached = await CacheFirstEngine.exists(taskId);
       if (cached) {
-        debugPrint('🔱 QUEUE: Cache Hit for $taskId. Skipping injection.');
+        debugPrint('QUEUE: Cache Hit for $taskId. Skipping injection.');
         _showDebugNotice('CACHE HIT: Task already processed.');
         return;
       }
 
       // 3. PROVIDER SELECTION
       final provider = AIProviderConfig.provider(type);
-      debugPrint('🔱 QUEUE: Selected Provider: ${provider.name}');
+      debugPrint('QUEUE: Selected Provider: ${provider.name}');
 
       // 4. TOKEN CHECK
       if (!TokenControlEngine.canExecute(provider.name)) {
-        debugPrint('🔱 QUEUE: Token Limit reached for ${provider.name}');
+        debugPrint('QUEUE: Token Limit reached for ${provider.name}');
         _showDebugNotice('TOKEN LIMIT: Provider ${provider.name} exhausted.');
         return;
       }
 
       // 5. PUSH TO CLOUD QUEUE
-      debugPrint('🔱 QUEUE: Attempting direct injection...');
+      debugPrint('QUEUE: Attempting direct injection...');
       await FirebaseFirestore.instance.collection('ai_queue').doc(taskId).set({
         'type': type.name,
         'provider': provider.name,
@@ -77,7 +77,7 @@ class AIQueueService {
         'createdAt': FieldValue.serverTimestamp(),
         'manualTrigger': true,
       });
-      debugPrint('🔱 QUEUE: Task $taskId successfully injected directly.');
+      debugPrint('QUEUE: Task $taskId successfully injected directly.');
       _showDebugNotice('SUCCESS: Task added to queue.', isError: false);
 
     } catch (e) {

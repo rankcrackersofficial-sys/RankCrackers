@@ -2,23 +2,23 @@ import 'package:flutter/foundation.dart';
 import '../../backend/realm_repository.dart';
 import '../../models/recruitment_realm.dart';
 
-/// 🔱 DOCUMENT CLASSIFICATION ENGINE (Hardened v2.0 - Final Certification)
+/// DOCUMENT CLASSIFICATION ENGINE (Hardened v2.0 - Final Certification)
 /// High-resolution semantic classification for recruitment assets.
 class DocumentClassificationEngine {
   static Future<String> classify(String text) async {
     final lowerText = text.toLowerCase();
     
-    // 🔱 SYLLABUS DETECTION
+    // SYLLABUS DETECTION
     if (lowerText.contains("syllabus") || lowerText.contains("scheme of examination")) {
       return "SYLLABUS";
     }
 
-    // 🔱 CORRIGENDUM / AMENDMENT
+    // CORRIGENDUM / AMENDMENT
     if (lowerText.contains("corrigendum") || lowerText.contains("amendment") || lowerText.contains("शुद्धिपत्र")) {
       return "CORRIGENDUM";
     }
 
-    // 🔱 RESULT SEMANTIC RESOLUTION (Audit GAP A-6)
+    // RESULT SEMANTIC RESOLUTION (Audit GAP A-6)
     if (lowerText.contains("result") || lowerText.contains("selection list") || lowerText.contains("परिणाम")) {
       if (lowerText.contains("final")) return "FINAL_RESULT";
       if (lowerText.contains("waiting") || lowerText.contains("reserve")) return "WAITING_LIST";
@@ -28,22 +28,22 @@ class DocumentClassificationEngine {
       return "RESULT";
     }
 
-    // 🔱 ADMIT CARD
+    // ADMIT CARD
     if (lowerText.contains("admit card") || lowerText.contains("hall ticket") || lowerText.contains("प्रवेश पत्र")) {
       return "ADMIT_CARD";
     }
 
-    // 🔱 ANSWER KEY
+    // ANSWER KEY
     if (lowerText.contains("answer key") || lowerText.contains("उत्तर कुंजी")) {
       return "ANSWER_KEY";
     }
 
-    // 🔱 CUTOFF
+    // CUTOFF
     if (lowerText.contains("cutoff") || lowerText.contains("cut-off")) {
       return "CUTOFF";
     }
     
-    // 🔱 NOTIFICATION / ADVERTISEMENT
+    // NOTIFICATION / ADVERTISEMENT
     if (lowerText.contains("advertisement") || lowerText.contains("notification") || lowerText.contains("notice")) {
       return "NOTIFICATION";
     }
@@ -52,7 +52,7 @@ class DocumentClassificationEngine {
   }
 }
 
-/// 🔱 RECRUITMENT RESOLVER ENGINE (Hardened v2.0 - Final Certification)
+/// RECRUITMENT RESOLVER ENGINE (Hardened v2.0 - Final Certification)
 /// Multi-signal fusion matching (Advt, Year, Authority, Exam Name).
 class RecruitmentResolverEngine {
   static Future<RecruitmentRealm?> resolve(String text) async {
@@ -76,7 +76,7 @@ class RecruitmentResolverEngine {
       }
     }
 
-    // 🔱 FUSION RESOLUTION (Audit GAP A-8)
+    // FUSION RESOLUTION (Audit GAP A-8)
     final List<RecruitmentRealm> realms = await RealmRepository.getAllRealms();
     
     RecruitmentRealm? bestMatch;
@@ -85,10 +85,10 @@ class RecruitmentResolverEngine {
     for (var realm in realms) {
        double currentScore = 0;
 
-       // 🔱 Exact Advt No is an immediate resolution
+       // Exact Advt No is an immediate resolution
        if (advtNo != null && realm.advertisementNumber == advtNo) return realm;
 
-       // 🔱 Signal Fusing
+       // Signal Fusing
        if (detectedOrg != null && realm.organization == detectedOrg) currentScore += 0.4;
        if (detectedYear != null && realm.examYear == detectedYear) currentScore += 0.3;
        
@@ -110,7 +110,7 @@ class RecruitmentResolverEngine {
   }
 }
 
-/// 🔱 CORRIGENDUM TRACKING ENGINE (Hardened v2.0 - Final Certification)
+/// CORRIGENDUM TRACKING ENGINE (Hardened v2.0 - Final Certification)
 /// Physical diffing intent to track changes in notification baseline.
 class CorrigendumEngine {
   static Future<Map<String, dynamic>> analyze(String text, String realmId) async {
@@ -123,7 +123,7 @@ class CorrigendumEngine {
       'corrigendum_number': corNo,
       'parent_realm': realmId,
       'supersedes_previous': true,
-      'impact_assessment': _performImpactDiff(text), // 🔱 Audit GAP A-7
+      'impact_assessment': _performImpactDiff(text), // Audit GAP A-7
     };
   }
 
@@ -131,7 +131,7 @@ class CorrigendumEngine {
     final List<Map<String, dynamic>> diffs = [];
     final lowerText = text.toLowerCase();
     
-    // 🔱 PHYSICAL AMENDMENT DIFFING (Intent-Based)
+    // PHYSICAL AMENDMENT DIFFING (Intent-Based)
     if (lowerText.contains("vacancy") || lowerText.contains("posts")) {
       diffs.add({
         'field': 'total_vacancies',

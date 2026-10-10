@@ -2,7 +2,7 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 CRUCIBLE REPAIR AAF WORKER
+ * CRUCIBLE REPAIR AAF WORKER
  * Implements the repair-parity proof.
  * Binds the assessment item repair logic from repair_crucible.js.
  */

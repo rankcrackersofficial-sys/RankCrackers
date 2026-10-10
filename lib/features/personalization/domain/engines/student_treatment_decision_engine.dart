@@ -27,7 +27,8 @@ final class StudentTreatmentDecisionEngine {
       throw const FormatException('createdAtUtc must be UTC.');
     }
     if (prerequisite.studentId != state.studentId ||
-        prerequisite.targetAmtnId != state.amtnId) {
+        prerequisite.targetAmtnId != state.amtnId ||
+        prerequisite.missionId != state.missionId) {
       throw const FormatException('Prerequisite diagnosis identity mismatch.');
     }
 
@@ -211,6 +212,7 @@ final class StudentTreatmentDecisionEngine {
     final decision = StudentTreatmentDecision(
       studentId: state.studentId,
       targetAmtnId: state.amtnId,
+      missionId: state.missionId,
       createdAtUtc: createdAtUtc,
       directives: List.unmodifiable(directives),
       schemaVersion: StudentTreatmentDecision.currentSchemaVersion,

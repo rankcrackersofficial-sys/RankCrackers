@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 FACT INTELLIGENCE (Document 50I-B Audit Finding 1)
+/// FACT INTELLIGENCE (Document 50I-B Audit Finding 1)
 /// Stores enriched metadata for an Atomic Fact.
 /// Separated from the Fact core to maintain version lineage.
 class FactIntelligence extends Equatable {

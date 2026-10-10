@@ -19,7 +19,7 @@ class _OutcomeVerificationCenterState extends State<OutcomeVerificationCenter> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 7, // 🔱 Forensic Fix: Corrected length for 7 tabs
+      length: 7, // Forensic Fix: Corrected length for 7 tabs
       child: Column(
         children: [
           _governanceHeader(),

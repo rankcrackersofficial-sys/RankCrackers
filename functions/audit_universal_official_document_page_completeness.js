@@ -317,13 +317,14 @@ async function main() {
     const missionData = missionDoc.data();
     if (Array.isArray(missionData.officialDocuments)) {
       missionData.officialDocuments.forEach((doc, idx) => {
+        const docId = doc.id || doc.documentId || doc.docId || `root_official_${idx}`;
         officialDocs.push({
-          id: doc.id || doc.documentId || doc.docId || `root_official_${idx}`,
+          id: docId,
           mission_id: missionId,
           mission_title: missionData.title || 'N/A',
           __source: 'mission_root.officialDocuments',
           __path: `mission_realms/${missionId}.officialDocuments[${idx}]`,
-          __ref: null,
+          __ref: db.collection('mission_realms').doc(missionId).collection('official_documents').doc(docId),
           ...doc,
         });
       });
@@ -351,11 +352,12 @@ async function main() {
     const keys = docKeys(record);
     const existing = officialDocs.some(doc => keys.length > 0 && docKeys(doc).some(key => keys.includes(key)));
     if (!existing) {
+      const docId = record.id || record.documentId || record.document_id || record.docId || record.sourceId || record.source_id;
       officialDocs.push({
         ...record,
         mission_id: missionId || 'unknown',
         mission_title: 'N/A',
-        __ref: null,
+        __ref: (missionId && missionId !== 'unknown' && docId) ? db.collection('mission_realms').doc(missionId).collection('official_documents').doc(docId) : null,
       });
     }
   }
@@ -364,7 +366,8 @@ async function main() {
   for (const doc of officialDocs) {
     const missionId = normalizeId(getField(doc, ['mission_id', 'missionId', 'realmId', 'recruitmentId'], 'unknown'));
     const key = `${missionId}::${doc.id}`;
-    merged.set(key, { ...(merged.get(key) || {}), ...doc, mission_id: missionId });
+    const existing = merged.get(key) || {};
+    merged.set(key, { ...existing, ...doc, __ref: doc.__ref || existing.__ref, mission_id: missionId });
   }
 
   const reports = [];

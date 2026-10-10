@@ -61,7 +61,7 @@ class GovernanceCenter extends StatelessWidget {
                               onTap: () async {
                                 final success = await AdminUploadEngine.publishRecruitment(r);
                                 if (context.mounted && success) {
-                                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('🔱 ${r.title} PUBLISHED')));
+                                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('${r.title} PUBLISHED')));
                                 } else if (context.mounted) {
                                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('❌ VALIDATION FAILED: Hierarchy Incomplete.')));
                                 }

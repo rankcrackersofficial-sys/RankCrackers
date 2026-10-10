@@ -1,0 +1,254 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0005",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U_REM_0005",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0005_V001",
+  "atomicFactSetHash": "2034ed632530ee4d0ce17a9fba3ed3fd7bec210739ef86d83e751d3de3e95269",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0005_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0005",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0005_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_2AA5F227",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_3FF28F20",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_69380DBB",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_B2EB39F9",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_B94D09A3"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "overviewText": "This chapter establishes rotational kinetic energy (1/2 I omega^2), the total kinetic energy of rolling without slipping, and the linear acceleration of rolling bodies on an inclined plane.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "94ad61f17c8fcae8d6502862dedb7ea3045a0289a99f7e2a5ecaf8b9bd926a8c",
+      "createdAtUtc": "2026-09-02T14:13:02.096Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0005_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0005",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0005_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_2AA5F227",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_3FF28F20",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_69380DBB",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_B2EB39F9",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_B94D09A3"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_REM_0005_01",
+          "semanticAnchorId": "ANCHOR_ROTATIONAL_KINETIC_ENERGY",
+          "title": "1. Rotational and Rolling Kinetic Energy",
+          "contentMarkdown": "Rotational kinetic energy of a body of moment of inertia I rotating with angular velocity $$\\omega$$ is $$K_{rot} = \\frac{1}{2} I \\omega^2$$. For a body of mass M, radius R, and radius of gyration k rolling without slipping: $$K_{total} = K_{trans} + K_{rot} = \\frac{1}{2} M v_{cm}^2 \\left( 1 + \\frac{k^2}{R^2} \\right)$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0005_69380DBB",
+            "AF_GU_JEEMAIN2027_PHY_REM_0005_B94D09A3"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_REM_0005_02",
+          "semanticAnchorId": "ANCHOR_ROLLING_INCLINED_PLANE",
+          "title": "2. Acceleration on Incline and Body Comparison",
+          "contentMarkdown": "Linear acceleration of a body rolling down an incline of angle $$\\theta$$ without slipping is $$a_{cm} = \\frac{g \\sin \\theta}{1 + k^2/R^2}$$. The ratio $$k^2/R^2$$ is 0.4 for a solid sphere, 0.5 for a solid disc/cylinder, and 1.0 for a thin spherical shell or ring. Therefore, a solid sphere reaches the bottom with the greatest acceleration and in the shortest time.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0005_B2EB39F9",
+            "AF_GU_JEEMAIN2027_PHY_REM_0005_2AA5F227",
+            "AF_GU_JEEMAIN2027_PHY_REM_0005_3FF28F20"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "8dad05bb19d07dcbb99599d87ff691a4897c35fad9892a1561cbdaef7954df62",
+      "createdAtUtc": "2026-09-02T14:13:02.096Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0005_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0005",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0005_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_B94D09A3",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_B2EB39F9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Total Kinetic Energy of Rolling without Slipping",
+          "formula": "K_{total} = \\frac{1}{2} M v_{cm}^2 \\left( 1 + \\frac{k^2}{R^2} \\right)",
+          "constraints": "Pure rolling without slipping on stationary surface",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0005_B94D09A3"
+          ]
+        },
+        {
+          "name": "Linear Acceleration on Inclined Plane",
+          "formula": "a_{cm} = \\frac{g \\sin \\theta}{1 + \\frac{k^2}{R^2}}",
+          "constraints": "Pure rolling down an inclined plane of slope theta",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0005_B2EB39F9"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d9bffd54768883f65a3c92075558db64feef8583744fef828b18a0f42876cf86",
+      "createdAtUtc": "2026-09-02T14:13:02.096Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0005_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0005",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0005_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T14:13:02.096Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0005_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0005",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0005_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_B2EB39F9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_REM_0005_01",
+          "title": "Acceleration Ratio of Sphere vs Cylinder on Incline",
+          "problemStatement": "A solid sphere (k^2/R^2 = 2/5) and a solid cylinder (k^2/R^2 = 1/2) roll down the same incline from rest. Find the ratio of their accelerations a_sphere / a_cylinder.",
+          "stepByStepSolution": [
+            "Step 1: Formula for pure rolling acceleration: a_cm = (g * sin(theta)) / (1 + k^2/R^2).",
+            "Step 2: For solid sphere: 1 + k^2/R^2 = 1 + 2/5 = 7/5 ==> a_sphere = (5/7) * g * sin(theta).",
+            "Step 3: For solid cylinder: 1 + k^2/R^2 = 1 + 1/2 = 3/2 ==> a_cylinder = (2/3) * g * sin(theta).",
+            "Step 4: Calculate ratio: a_sphere / a_cylinder = [(5/7) * g * sin(theta)] / [(2/3) * g * sin(theta)] = (5/7) / (2/3) = (5/7) * (3/2) = 15/14."
+          ],
+          "finalAnswer": "a_sphere / a_cylinder = 15 / 14 (≈ 1.071)",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0005_B2EB39F9"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "196ec10e7419a2afb7d60a2cc943798eb1956bcff977253f5390a34037205a5d",
+      "createdAtUtc": "2026-09-02T14:13:02.096Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0005_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0005",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0005_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_3FF28F20"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_REM_0005_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Which of the following rolling bodies reaches the bottom of an inclined plane first when released simultaneously from rest?",
+          "options": [
+            "Solid sphere (k^2/R^2 = 0.4)",
+            "Solid cylinder (k^2/R^2 = 0.5)",
+            "Thin hollow spherical shell (k^2/R^2 = 0.67)",
+            "Thin circular ring (k^2/R^2 = 1.0)"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Because a_cm = (g*sin(theta))/(1 + k^2/R^2), the body with the smallest k^2/R^2 ratio has the highest acceleration and reaches the bottom in the shortest time. The solid sphere has the lowest ratio (0.4).",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0005_3FF28F20"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "ebc33af884dc56df859116ccd6c27ff86243f483d2162e1fd5c8dfffa86b8369",
+      "createdAtUtc": "2026-09-02T14:13:02.096Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0005_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0005",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0005_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_2AA5F227",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_3FF28F20",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_69380DBB",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_B2EB39F9",
+        "AF_GU_JEEMAIN2027_PHY_REM_0005_B94D09A3"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Rolling kinetic energy",
+          "Acceleration down inclined planes"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "06855ef8e2a00a1e1c5a5e88b8e98d722905429d42fe82f227b6e99ef8b7bf53",
+      "createdAtUtc": "2026-09-02T14:13:02.096Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T14:13:02.096Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

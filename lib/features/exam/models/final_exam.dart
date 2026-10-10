@@ -1,6 +1,6 @@
 import '../../../core/models/question_model.dart';
 
-/// 🔱 FINAL EXAM
+/// FINAL EXAM
 /// Represents a compiled assessment for a specific mission.
 class FinalExam {
   final String examName;

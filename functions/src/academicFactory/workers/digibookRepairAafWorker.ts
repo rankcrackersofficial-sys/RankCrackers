@@ -2,7 +2,7 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 DIGIBOOK REPAIR AAF WORKER
+ * DIGIBOOK REPAIR AAF WORKER
  * Binds the Sentinel Canonical Repair capability.
  */
 export async function digibookRepairAafWorker(job: AafJobMetadata): Promise<AafWorkerResult> {

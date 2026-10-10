@@ -1,15 +1,15 @@
 import 'package:flutter/foundation.dart';
 
-/// 🔱 LOCAL REPAIR ENGINE
+/// LOCAL REPAIR ENGINE
 /// Implements the "Emergency Offline" path for Phase 11.
 /// Runs physically on-device using regex and heuristic-based cleanup.
 class LocalRepairEngine {
   
-  /// 🔱 EXECUTE LOCAL REPAIR
+  /// EXECUTE LOCAL REPAIR
   static Future<Map<String, dynamic>> repair({
     required String text,
   }) async {
-    debugPrint("🔱 LOCAL WORKER: Initiating on-device repair (Emergency Path)");
+    debugPrint("LOCAL WORKER: Initiating on-device repair (Emergency Path)");
 
     // 1. OCR Noise Heuristics
     String corrected = text

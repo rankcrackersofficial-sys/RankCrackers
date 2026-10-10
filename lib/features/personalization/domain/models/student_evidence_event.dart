@@ -90,11 +90,12 @@ enum StudentEvidenceDifficulty {
 ///
 /// No downstream engine is permitted to invent missing values.
 final class StudentEvidenceEvent {
-  static const int currentSchemaVersion = 2;
+  static const int currentSchemaVersion = 3;
 
   const StudentEvidenceEvent({
     required this.eventId,
     required this.studentId,
+    required this.missionId,
     required this.source,
     required this.action,
     required this.occurredAtUtc,
@@ -119,6 +120,7 @@ final class StudentEvidenceEvent {
 
   final String eventId;
   final String studentId;
+  final String missionId;
 
   /// Optional learning/assessment session identity.
   final String? sessionId;
@@ -218,6 +220,7 @@ final class StudentEvidenceEvent {
   void validate() {
     _requireText(eventId, 'StudentEvidenceEvent.eventId');
     _requireText(studentId, 'StudentEvidenceEvent.studentId');
+    _requireText(missionId, 'StudentEvidenceEvent.missionId');
 
     _validateOptionalText(sessionId, 'StudentEvidenceEvent.sessionId');
     _validateOptionalText(amtnId, 'StudentEvidenceEvent.amtnId');
@@ -393,6 +396,7 @@ final class StudentEvidenceEvent {
       'schemaVersion': schemaVersion,
       'eventId': eventId,
       'studentId': studentId,
+      'missionId': missionId,
       'sessionId': sessionId,
       'source': source.wireName,
       'action': action.wireName,
@@ -441,6 +445,7 @@ final class StudentEvidenceEvent {
     final event = StudentEvidenceEvent(
       eventId: _readRequiredString(json, 'eventId'),
       studentId: _readRequiredString(json, 'studentId'),
+      missionId: _readRequiredString(json, 'missionId'),
       sessionId: _readOptionalString(json, 'sessionId'),
       source: StudentEvidenceSourceWire.parse(
         _readRequiredString(json, 'source'),

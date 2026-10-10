@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-/// 🔱 NOTIFICATION FEEDBACK (v1.0)
+/// NOTIFICATION FEEDBACK (v1.0)
 class NotificationFeedback {
   final String status;
   final String? verifiedBy;

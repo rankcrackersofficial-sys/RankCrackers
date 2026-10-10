@@ -1,4 +1,4 @@
-/// 🔱 COMPLETION ENGINE
+/// COMPLETION ENGINE
 /// Sovereign authority for determining if a node is "Securely Covered."
 class CompletionEngine {
   static bool isCompleted({
@@ -7,7 +7,7 @@ class CompletionEngine {
     required int revisionLevel,
     int factCount = 0,
   }) {
-    // 🔱 CONSTITUTIONAL COMPLETION LAW (UPGRADED)
+    // CONSTITUTIONAL COMPLETION LAW (UPGRADED)
     
     // 1. Threshold Mastery: Node must reach 80% aggregate score.
     if (mastery < 0.80) return false;

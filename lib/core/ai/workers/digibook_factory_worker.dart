@@ -3,17 +3,17 @@ import '../../models/sentinel_draft.dart';
 import '../../models/audit_record.dart';
 import '../../backend/sentinel_repository.dart';
 
-/// 🔱 DIGIBOOK FACTORY WORKER
+/// DIGIBOOK FACTORY WORKER
 /// Implements the Knowledge Synthesis Rule: AI structures content, Humans authorize it.
 class DigiBookFactoryWorker {
   
-  /// 🔱 KNOWLEDGE STRUCTURING PROTOCOL
+  /// KNOWLEDGE STRUCTURING PROTOCOL
   static Future<void> structureContent({
     required String atomicTopicId,
     required Map<String, dynamic> structuredData,
     required String workerVersion,
   }) async {
-    debugPrint("🔱 DIGIBOOK WORKER: Structuring content for $atomicTopicId");
+    debugPrint("DIGIBOOK WORKER: Structuring content for $atomicTopicId");
 
     // 1. Construct Sentinel Draft
     final draft = SentinelDraft(
@@ -38,6 +38,6 @@ class DigiBookFactoryWorker {
     // 2. Isolated Injection
     await SentinelRepository.injectDrafts([draft]);
     
-    debugPrint("🔱 DIGIBOOK WORKER: Content structured. Blocks isolated for review.");
+    debugPrint("DIGIBOOK WORKER: Content structured. Blocks isolated for review.");
   }
 }

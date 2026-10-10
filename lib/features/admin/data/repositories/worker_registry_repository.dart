@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../../../../core/models/worker_registry.dart';
 
-/// 🔱 WORKER REGISTRY REPOSITORY
+/// WORKER REGISTRY REPOSITORY
 /// Command interface for physical worker governance.
 class WorkerRegistryRepository {
   static final _firestore = FirebaseFirestore.instance;
@@ -11,7 +11,7 @@ class WorkerRegistryRepository {
     return _firestore.collection(_collection).snapshots().map((snap) {
       return snap.docs.map((doc) {
         final data = doc.data();
-        // 🔱 Forensic Fix: Ensure ID is preserved from document ID if missing in data
+        // Forensic Fix: Ensure ID is preserved from document ID if missing in data
         if (!data.containsKey('id') || data['id'] == null || data['id'].toString().isEmpty) {
           data['id'] = doc.id;
         }
@@ -35,7 +35,7 @@ class WorkerRegistryRepository {
     });
   }
 
-  /// 🔱 Initial Registration of all Workers in the Battalion
+  /// Initial Registration of all Workers in the Battalion
   static Future<void> bootstrapBattalion() async {
     final List<Map<String, dynamic>> initialWorkers = [
       {'id': 'notification_scout', 'name': 'Notification Scout Worker'},

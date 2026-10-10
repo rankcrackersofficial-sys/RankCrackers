@@ -9,13 +9,13 @@ import '../firebase/firestore_service.dart';
 import '../backend/question_repository.dart';
 import '../backend/digibook_repository.dart';
 
-/// 🔱 SENTINEL VALIDATION SERVICE
+/// SENTINEL VALIDATION SERVICE
 /// Handles validation drills and the promotion of drafts to production.
 /// Implements Phase 4D (Validation Drills) and Promotion Flow.
 class SentinelValidationService {
   
   // ===================================================
-  // DRILL A: DUPLICATE ATTACK (ENHANCED) 🔱
+  // DRILL A: DUPLICATE ATTACK (ENHANCED) 
   // ===================================================
 
   /// Simulates a duplicate attack with discovery count tracking.
@@ -40,7 +40,7 @@ class SentinelValidationService {
   }
 
   // ===================================================
-  // DRILL B: CORRIGENDUM ATTACK 🔱
+  // DRILL B: CORRIGENDUM ATTACK 
   // ===================================================
 
   /// Updates a draft with new data and verifies hash-based detection.
@@ -77,7 +77,7 @@ class SentinelValidationService {
   }
 
   // ===================================================
-  // DRILL C: HALLUCINATION ATTACK 🔱
+  // DRILL C: HALLUCINATION ATTACK 
   // ===================================================
 
   /// Validates extracted data against strict rules to detect AI hallucinations.
@@ -129,7 +129,7 @@ class SentinelValidationService {
   }
 
   // ===================================================
-  // DRILL D: DRAFT -> PUBLISH GATE 🔱
+  // DRILL D: DRAFT -> PUBLISH GATE 
   // ===================================================
 
   /// Promotes a Sentinel Draft to a Production Recruitment.
@@ -138,49 +138,49 @@ class SentinelValidationService {
   static Future<bool> promoteToProduction({
     required SentinelDraft draft,
     required String? adminId,
-    required String? batchId, // 🔱 Scenario E1: Promotion Batch ID for Rollback
+    required String? batchId, // Scenario E1: Promotion Batch ID for Rollback
   }) async {
-    // 🔱 Scenario D1 & D2: Status Verification
+    // Scenario D1 & D2: Status Verification
     if (draft.audit.validationStatus == 'pending' || draft.audit.validationStatus == 'failed') {
-      print('🔱 PROMOTION DENIED: Constitutional validation not passed (${draft.audit.validationStatus})');
+      print('PROMOTION DENIED: Constitutional validation not passed (${draft.audit.validationStatus})');
       return false;
     }
 
-    // 🔱 Scenario D3: Authorization Check
+    // Scenario D3: Authorization Check
     if (adminId == null || adminId.isEmpty) {
-      print('🔱 PROMOTION DENIED: Admin authorization missing.');
+      print('PROMOTION DENIED: Admin authorization missing.');
       return false;
     }
 
     if (batchId == null || batchId.isEmpty) {
-      print('🔱 PROMOTION DENIED: Promotion Batch ID missing.');
+      print('PROMOTION DENIED: Promotion Batch ID missing.');
       return false;
     }
 
-    // 🔱 Scenario D4 & D5: State Finality Check
+    // Scenario D4 & D5: State Finality Check
     if (draft.audit.validationStatus != 'success') {
-      print('🔱 PROMOTION DENIED: Draft status must be SUCCESS for promotion.');
+      print('PROMOTION DENIED: Draft status must be SUCCESS for promotion.');
       return false;
     }
 
     if (draft.type != 'recruitment') {
-      print('🔱 PROMOTION DENIED: Target type mismatch.');
+      print('PROMOTION DENIED: Target type mismatch.');
       return false;
     }
 
     try {
-      // 🔱 Scenario D5: Transaction Integrity
+      // Scenario D5: Transaction Integrity
       // We use the same map-driven construction to ensure parity
       final recruitment = Recruitment.fromMap(draft.rawData).copyWith(
         status: 'published',
         version: draft.audit.contentVersion.toString(),
       );
 
-      // 🔱 Scenario D6: Double Promotion Protection (Idempotency)
+      // Scenario D6: Double Promotion Protection (Idempotency)
       // Firestore uploadRecruitment uses .set() which is idempotent by ID
       await FirestoreService.uploadRecruitment(recruitment);
 
-      // 🔱 Audit Completion
+      // Audit Completion
       final updatedAudit = draft.audit.copyWith(
         publishedBy: adminId,
         promotionBatchId: batchId,
@@ -195,16 +195,16 @@ class SentinelValidationService {
 
       await SentinelRepository.injectDrafts([updatedDraft]);
       
-      print('🔱 PROMOTION SUCCESS: Draft ${draft.id} is now LIVE as ${recruitment.title}');
+      print('PROMOTION SUCCESS: Draft ${draft.id} is now LIVE as ${recruitment.title}');
       return true;
     } catch (e) {
-      print('🔱 PROMOTION TRANSACTION FAILED: $e');
+      print('PROMOTION TRANSACTION FAILED: $e');
       return false;
     }
   }
 
   // ===================================================
-  // PHASE 4E-B: BLUEPRINT PROMOTION 🔱
+  // PHASE 4E-B: BLUEPRINT PROMOTION 
   // ===================================================
 
   /// Promotes a Blueprint Draft ensuring referential integrity with a published Recruitment.
@@ -213,23 +213,23 @@ class SentinelValidationService {
     required String? adminId,
     required String? batchId,
   }) async {
-    // 🔱 Integrity Check B1, B2: Recruitment must exist and be published
+    // Integrity Check B1, B2: Recruitment must exist and be published
     final String recruitmentId = draft.rawData['recruitmentId'] ?? '';
     final recruitment = await FirestoreService.fetchRecruitment(recruitmentId);
 
     if (recruitment == null || recruitment.status != 'published') {
-      print('🔱 PROMOTION DENIED: Orphaned Blueprint. Parent recruitment must be published first.');
+      print('PROMOTION DENIED: Orphaned Blueprint. Parent recruitment must be published first.');
       return false;
     }
 
-    // 🔱 Validation B3: Validation status check
+    // Validation B3: Validation status check
     if (draft.audit.validationStatus != 'success') {
-      print('🔱 PROMOTION DENIED: Blueprint validation failed.');
+      print('PROMOTION DENIED: Blueprint validation failed.');
       return false;
     }
 
     try {
-      // 🔱 Promotion B4: Persist batchId and elevate status
+      // Promotion B4: Persist batchId and elevate status
       final blueprint = ExamBlueprint.fromMap(draft.rawData).copyWith(
         status: 'published',
         version: draft.audit.contentVersion,
@@ -238,7 +238,7 @@ class SentinelValidationService {
 
       await FirestoreService.uploadBlueprint(blueprint);
 
-      // 🔱 Audit Sync
+      // Audit Sync
       final updatedDraft = draft.copyWith(
         status: 'published',
         audit: draft.audit.copyWith(
@@ -249,16 +249,16 @@ class SentinelValidationService {
       );
 
       await SentinelRepository.injectDrafts([updatedDraft]);
-      print('🔱 PROMOTION SUCCESS: Blueprint ${blueprint.id} is now LIVE for ${recruitment.title}');
+      print('PROMOTION SUCCESS: Blueprint ${blueprint.id} is now LIVE for ${recruitment.title}');
       return true;
     } catch (e) {
-      print('🔱 BLUEPRINT PROMOTION FAILED: $e');
+      print('BLUEPRINT PROMOTION FAILED: $e');
       return false;
     }
   }
 
   // ===================================================
-  // PHASE 4E-C: MICRO NODE PROMOTION 🔱
+  // PHASE 4E-C: MICRO NODE PROMOTION 
   // ===================================================
 
   /// Promotes a Micro Node Draft ensuring referential integrity with a published Blueprint.
@@ -268,32 +268,32 @@ class SentinelValidationService {
     required String? adminId,
     required String? batchId,
   }) async {
-    // 🔱 Integrity Check C1, C2: Blueprint must exist and be published
+    // Integrity Check C1, C2: Blueprint must exist and be published
     final String blueprintId = draft.rawData['blueprintId'] ?? ''; // or extracted from DNA
     final blueprint = await FirestoreService.fetchBlueprint(blueprintId);
 
     if (blueprint == null || blueprint.status != 'published') {
-      print('🔱 PROMOTION DENIED: Orphaned Node. Parent blueprint must be published first.');
+      print('PROMOTION DENIED: Orphaned Node. Parent blueprint must be published first.');
       return false;
     }
 
-    // 🔱 Validation B3: Validation status check
+    // Validation B3: Validation status check
     if (draft.audit.validationStatus != 'success') {
-      print('🔱 PROMOTION DENIED: Node validation failed.');
+      print('PROMOTION DENIED: Node validation failed.');
       return false;
     }
 
     try {
-      // 🔱 Promotion C5: Persist batchId and elevate status
+      // Promotion C5: Persist batchId and elevate status
       final node = MicroTopicNode.fromMap(draft.rawData).copyWith(
         status: 'published',
         promotionBatchId: batchId,
       );
 
-      // 🔱 C4: Duplicate Node Defense (Idempotent merge by ID)
+      // C4: Duplicate Node Defense (Idempotent merge by ID)
       await FirestoreService.uploadNode(node);
 
-      // 🔱 Audit Sync
+      // Audit Sync
       final updatedDraft = draft.copyWith(
         status: 'published',
         audit: draft.audit.copyWith(
@@ -304,16 +304,16 @@ class SentinelValidationService {
       );
 
       await SentinelRepository.injectDrafts([updatedDraft]);
-      print('🔱 PROMOTION SUCCESS: Node ${node.id} (${node.title}) is now LIVE.');
+      print('PROMOTION SUCCESS: Node ${node.id} (${node.title}) is now LIVE.');
       return true;
     } catch (e) {
-      print('🔱 NODE PROMOTION FAILED: $e');
+      print('NODE PROMOTION FAILED: $e');
       return false;
     }
   }
 
   // ===================================================
-  // PHASE 4E-D: QUESTION PROMOTION 🔱
+  // PHASE 4E-D: QUESTION PROMOTION 
   // ===================================================
 
   /// Promotes an Assessment Evidence Draft to a Production Question.
@@ -343,13 +343,13 @@ class SentinelValidationService {
       await SentinelRepository.injectDrafts([updatedDraft]);
       return true;
     } catch (e) {
-      print('🔱 QUESTION PROMOTION FAILED: $e');
+      print('QUESTION PROMOTION FAILED: $e');
       return false;
     }
   }
 
   // ===================================================
-  // PHASE 4E-E: DIGIBOOK BLOCK PROMOTION 🔱
+  // PHASE 4E-E: DIGIBOOK BLOCK PROMOTION 
   // ===================================================
 
   /// Promotes a DigiBook Block Draft to Production.
@@ -379,7 +379,7 @@ class SentinelValidationService {
       await SentinelRepository.injectDrafts([updatedDraft]);
       return true;
     } catch (e) {
-      print('🔱 DIGIBOOK PROMOTION FAILED: $e');
+      print('DIGIBOOK PROMOTION FAILED: $e');
       return false;
     }
   }

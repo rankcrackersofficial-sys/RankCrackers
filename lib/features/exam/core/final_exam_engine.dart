@@ -4,7 +4,7 @@ import '../models/exam_pattern.dart';
 import '../models/final_exam.dart';
 import '../../digibook/models/digibook_content.dart';
 
-/// 🔱 FINAL EXAM ENGINE
+/// FINAL EXAM ENGINE
 /// Compiles subject-balanced exams based on mission patterns.
 class FinalExamEngine {
   // ===================================================
@@ -14,7 +14,7 @@ class FinalExamEngine {
     required String examName,
     required List<ExamPattern> patterns,
     required List<MicroTopicNode> nodes,
-    required Map<String, DigiBookContent> contentMap, // 🔱 Decoupled
+    required Map<String, DigiBookContent> contentMap, // Decoupled
   }) {
     final questions = <QuestionModel>[];
     final used = <String>{};
@@ -57,7 +57,7 @@ class FinalExamEngine {
       final payload = contentMap[node.id];
       if (payload == null) continue;
 
-      // 🔱 Aggregate all MCQ layers for final exam pool
+      // Aggregate all MCQ layers for final exam pool
       final pool = [
         ...payload.easyMcqs,
         ...payload.mediumMcqs,

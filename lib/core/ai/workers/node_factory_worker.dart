@@ -3,18 +3,18 @@ import '../../models/sentinel_draft.dart';
 import '../../models/audit_record.dart';
 import '../../backend/sentinel_repository.dart';
 
-/// 🔱 NODE FACTORY WORKER
+/// NODE FACTORY WORKER
 /// Implements the Structural Authority: AI maps nodes, Humans verify them.
 class NodeFactoryWorker {
   
-  /// 🔱 NODE ASSEMBLY PROTOCOL
+  /// NODE ASSEMBLY PROTOCOL
   /// Transforms raw syllabus extraction into a structured MicroTopicNode Draft.
   static Future<void> assembleNode({
     required String sourceId,
     required Map<String, dynamic> rawNodeData,
     required String workerVersion,
   }) async {
-    debugPrint("🔱 NODE WORKER: Assembling structure for $sourceId");
+    debugPrint("NODE WORKER: Assembling structure for $sourceId");
 
     // 1. Map to Sentinel Draft
     final draft = SentinelDraft(
@@ -39,6 +39,6 @@ class NodeFactoryWorker {
     // 2. Isolated Injection
     await SentinelRepository.injectDrafts([draft]);
     
-    debugPrint("🔱 NODE WORKER: Assembly complete. Node structure isolated for verification.");
+    debugPrint("NODE WORKER: Assembly complete. Node structure isolated for verification.");
   }
 }

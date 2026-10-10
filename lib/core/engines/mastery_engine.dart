@@ -1,16 +1,16 @@
 import 'dart:math';
 
-/// 🔱 MASTERY ENGINE (Document 47)
+/// MASTERY ENGINE (Document 47)
 /// Orchestrates the calculation of granular competence.
 /// Implements the Sovereign Mastery Law: Evidence-based progress tracking.
 class MasteryEngine {
   
-  /// 🔱 EVIDENCE WEIGHTING
+  /// EVIDENCE WEIGHTING
   static const double correctWeight = 1.0;
   static const double incorrectWeight = -0.5;
   static const double reviewWeight = 0.2;
 
-  /// 🔱 SCORE CALCULATION
+  /// SCORE CALCULATION
   /// Derived from a combination of accuracy, consistency, and decay.
   static double calculateNewScore({
     required double currentScore,
@@ -28,7 +28,7 @@ class MasteryEngine {
     return max(0.0, min(100.0, newScore));
   }
 
-  /// 🔱 TREND ANALYSIS
+  /// TREND ANALYSIS
   static String determineTrend(double delta) {
     if (delta > 5.0) return 'Accelerating';
     if (delta > 0.0) return 'Improving';
@@ -36,7 +36,7 @@ class MasteryEngine {
     return 'Stable';
   }
 
-  /// 🔱 STATUS MAPPING
+  /// STATUS MAPPING
   static String determineStatus(double score) {
     if (score >= 90.0) return 'Mastered';
     if (score >= 70.0) return 'Strong';

@@ -1,0 +1,257 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0004",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U_REM_0004",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0004_V001",
+  "atomicFactSetHash": "8d6145bbbe35caeec61d8aa015be3eb904c334043d2abbf9e69ee6e05e1a523c",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0004_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0004",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0004_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_2C492A95",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_50651CFD",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_93E68788",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_A994B889",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_C87D2631",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_E4D8D1E8"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "overviewText": "This chapter establishes scalar and vector definitions, vector addition laws (Triangle Law, Parallelogram Law), and the rectangular resolution of vectors in two and three dimensions.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "80c66cefd67601cffffa9c975c20f3b1a2c59f433ceb1f8c7e00b12324910713",
+      "createdAtUtc": "2026-09-02T14:13:02.093Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0004_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0004",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0004_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_2C492A95",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_50651CFD",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_93E68788",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_A994B889",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_C87D2631",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_E4D8D1E8"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_REM_0004_01",
+          "semanticAnchorId": "ANCHOR_SCALARS_VECTORS_ADDITION",
+          "title": "1. Scalars, Vectors, and Addition Laws",
+          "contentMarkdown": "A scalar quantity has magnitude only. A vector quantity has both magnitude and direction and obeys the triangle law or parallelogram law of vector addition. Triangle Law: $$\\vec{R} = \\vec{A} + \\vec{B}$$, where resultant is the closing side of the triangle taken in reverse order.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0004_2C492A95",
+            "AF_GU_JEEMAIN2027_PHY_REM_0004_50651CFD",
+            "AF_GU_JEEMAIN2027_PHY_REM_0004_A994B889"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_REM_0004_02",
+          "semanticAnchorId": "ANCHOR_PARALLELOGRAM_AND_RESOLUTION",
+          "title": "2. Parallelogram Law & Rectangular Component Resolution",
+          "contentMarkdown": "Parallelogram Law resultant magnitude: $$R = \\sqrt{A^2 + B^2 + 2AB \\cos \\theta}$$. In two dimensions, vector resolution along Cartesian axes gives $$\\vec{A} = A_x \\hat{i} + A_y \\hat{j}$$, where $$A_x = A \\cos \\theta$$ and $$A_y = A \\sin \\theta$$. Magnitude $$|\\vec{A}| = \\sqrt{A_x^2 + A_y^2}$$ and $$\\theta = \\arctan(A_y / A_x)$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0004_E4D8D1E8",
+            "AF_GU_JEEMAIN2027_PHY_REM_0004_C87D2631",
+            "AF_GU_JEEMAIN2027_PHY_REM_0004_93E68788"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "4a6ca53f308e60fc360c5bcc101d5afab51bdbe27fbe4bd9f1cfdd0f1ae57ce2",
+      "createdAtUtc": "2026-09-02T14:13:02.093Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0004_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0004",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0004_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_E4D8D1E8",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_C87D2631"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Parallelogram Law Resultant Magnitude",
+          "formula": "R = \\sqrt{A^2 + B^2 + 2AB \\cos \\theta}",
+          "constraints": "Two coplanar vectors meeting at a point",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0004_E4D8D1E8"
+          ]
+        },
+        {
+          "name": "Rectangular Vector Components in 2D",
+          "formula": "\\vec{A} = A_x \\hat{i} + A_y \\hat{j}, \\quad A_x = A \\cos \\theta, \\quad A_y = A \\sin \\theta",
+          "constraints": "2D Cartesian coordinate system",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0004_C87D2631"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "8e1fe6ec2a598724368bf78c65dc80a1d61bfc889b83de94d6837faafd44e13f",
+      "createdAtUtc": "2026-09-02T14:13:02.093Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0004_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0004",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0004_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T14:13:02.093Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0004_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0004",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0004_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_C87D2631"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_REM_0004_01",
+          "title": "Orthogonal Force Vector Components",
+          "problemStatement": "A force of magnitude 50 N acts at an angle of 60 degrees to the positive x-axis. Find its x and y components.",
+          "stepByStepSolution": [
+            "Step 1: Given F = 50 N, theta = 60 degrees.",
+            "Step 2: Calculate Fx = F * cos(60 deg) = 50 * 0.5 = 25.0 N.",
+            "Step 3: Calculate Fy = F * sin(60 deg) = 50 * (sqrt(3)/2) = 43.30 N."
+          ],
+          "finalAnswer": "Fx = 25.0 N, Fy = 43.30 N",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0004_C87D2631"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "1fbc345a20261fc16d0fab01dec0f57275d5804baeaba95dbb1d1c5ad6e694e2",
+      "createdAtUtc": "2026-09-02T14:13:02.093Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0004_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0004",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0004_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_E4D8D1E8"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_REM_0004_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "If two vectors of equal magnitude F act perpendicular to each other (theta = 90 degrees), what is the magnitude of their resultant?",
+          "options": [
+            "sqrt(2) * F",
+            "2 * F",
+            "F",
+            "F / sqrt(2)"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Using R = sqrt(F^2 + F^2 + 2*F*F*cos(90 deg)) = sqrt(2*F^2 + 0) = sqrt(2) * F.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0004_E4D8D1E8"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "aec5ef005fe506766ddf8a8289151c6cbabfff5667dc556919b4a6d48f027e21",
+      "createdAtUtc": "2026-09-02T14:13:02.093Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0004_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0004",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0004_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_2C492A95",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_50651CFD",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_93E68788",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_A994B889",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_C87D2631",
+        "AF_GU_JEEMAIN2027_PHY_REM_0004_E4D8D1E8"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Vector resolution",
+          "Resultant vector magnitude and direction"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "2e3f76fec242aa25c56dcf7c1d883375678bd48e7b8f13643fc9569d7e4d9c58",
+      "createdAtUtc": "2026-09-02T14:13:02.093Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_CH04_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T14:13:02.093Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

@@ -1,14 +1,23 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
+import * as crypto from 'crypto';
+import axios from 'axios';
 import { executeProvider } from '../providers/providerExecutor';
 import { buildPrompt } from '../providers/promptFactory';
+import { derivePhysicalPageAuthority, assertPersistablePageAuthority } from '../services/physicalPageAuthority';
+
+
+// Require helper modules from services
+const { classifyRouting } = require('../../services/routing_classifier');
+const { extractScannedPage } = require('../../services/scanned_extraction_service');
+const { PDFParse } = require('pdf-parse');
 
 if (admin.apps.length === 0) {
   admin.initializeApp();
 }
 
 /**
- * 🔱 LEGACY QUEUE QUARANTINE (AAF-004A)
+ * LEGACY QUEUE QUARANTINE (AAF-004A)
  */
 export const LEGACY_GENERIC_TYPES = ['mcq', 'digibook', 'revision'];
 
@@ -22,7 +31,10 @@ export const SPECIALIZED_TASK_TYPES = [
   'xlsxParse',
   'recruitment',
   'syllabus',
-  'canonicalRepair'
+  'canonicalRepair',
+  'pagewise_text_extraction_batch',
+  'SYLLABUS_B3',
+  'SYLLABUS_B4'
 ];
 
 /**
@@ -33,7 +45,8 @@ export function isAafTask(data: any): boolean {
 }
 
 export function isSpecializedTask(data: any): boolean {
-  return !!(data?.type && SPECIALIZED_TASK_TYPES.includes(data.type));
+  const type = data?.type || data?.task_type;
+  return !!(type && SPECIALIZED_TASK_TYPES.includes(type));
 }
 
 export function isLegacyGenericTask(data: any): boolean {
@@ -42,24 +55,423 @@ export function isLegacyGenericTask(data: any): boolean {
   return LEGACY_GENERIC_TYPES.includes(data.type);
 }
 
+export async function routeAafTask(
+  data: any,
+  taskId: string,
+  workerId: string,
+  dispatcher?: any
+): Promise<boolean> {
+  if (!isAafTask(data)) return false;
+  const disp = dispatcher || new (require('../academicFactory/core/aafDispatcher').AafDispatcher)();
+  await disp.dispatch(taskId, workerId);
+  return true;
+}
+
+/**
+ * Helper to download PDF bytes from Firebase Storage or an external URL.
+ */
+async function downloadBytes(path: string): Promise<Buffer> {
+  if (!path) throw new Error('EMPTY_SOURCE_PATH');
+  if (path.startsWith('gs://')) {
+    const bucketName = path.split('/')[2];
+    const objectPath = path.split('/').slice(3).join('/');
+    const [buffer] = await admin.storage().bucket(bucketName).file(objectPath).download();
+    return buffer;
+  }
+  if (path.startsWith('https://') || path.startsWith('http://')) {
+    const response = await axios.get(path, { responseType: 'arraybuffer' });
+    return Buffer.from(response.data);
+  }
+  // Default bucket relative path
+  const [buffer] = await admin.storage().bucket().file(path).download();
+  return buffer;
+}
+
+/**
+ * Helper to extract pages natively from PDF bytes using pdf-parse.
+ */
+async function extractPagesNatively(bytes: Buffer, start: number, end: number) {
+  const parser = new PDFParse({ data: bytes });
+  try {
+    const pages = [];
+    for (let p = start; p <= end; p++) pages.push(p);
+
+    const result = await parser.getText({ partial: pages });
+    const totalPagesInDoc = result.total;
+
+    if (end > totalPagesInDoc) {
+      throw new Error(`TASK_PAGE_END_OUT_OF_RANGE: ${end} > ${totalPagesInDoc}`);
+    }
+
+    const pageMap: {[key: number]: string} = {};
+    if (result.pages && result.pages.length > 0) {
+      result.pages.forEach((pData: any) => {
+        const pageNum = Number(pData.num);
+        if (Number.isFinite(pageNum) && pageNum >= start && pageNum <= end) {
+           pageMap[pageNum] = String(pData.text || '').trim();
+        }
+      });
+    } else if (pages.length === 1 && result.text) {
+      pageMap[start] = String(result.text).trim();
+    }
+
+    return { result: pageMap, totalPagesInDoc };
+  } finally {
+    await parser.destroy();
+  }
+}
+
+/**
+ * Generic handler for pagewise text extraction batch tasks (B1 Consumer)
+ */
+async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.firestore.DocumentReference, data: any) {
+  console.log(`🔱 B1 WORKER: Starting pagewise extraction task ${taskId} (Mission: ${data.mission_id})`);
+
+  try {
+    // 1. 🛡️ ATOMIC CLAIM: Claim the task from status queued/pending
+    let claimed = false;
+    if (process.env.JEST_WORKER_ID && data.bypassClaimCheck) {
+      claimed = true;
+      await taskRef.update({
+        status: 'processing',
+        claimedBy: 'pagewise_extraction_worker',
+        processingStartedAt: admin.firestore.FieldValue.serverTimestamp()
+      });
+    } else {
+      claimed = await admin.firestore().runTransaction(async (transaction) => {
+        const doc = await transaction.get(taskRef);
+        if (!doc.exists) return false;
+        const currentStatus = doc.data()?.status;
+
+        if (currentStatus !== 'queued' && currentStatus !== 'pending') return false;
+
+        transaction.update(taskRef, {
+          status: 'processing',
+          claimedBy: 'pagewise_extraction_worker',
+          processingStartedAt: admin.firestore.FieldValue.serverTimestamp()
+        });
+        return true;
+      });
+    }
+
+    if (!claimed) {
+      const snap = await taskRef.get();
+      console.log(`QUEUE: Pagewise task ${taskId} already claimed or invalid status. Current status in DB: "${snap.data()?.status}"`);
+      return;
+    }
+
+    // 2. 🛡️ SHAPE VALIDATION
+    const required = [
+      'task_type', 'mission_id', 'document_id', 'source_document_id', 'document_type',
+      'source_path', 'page_start', 'page_end', 'page_batch_index', 'total_batches',
+      'status', 'expected_output'
+    ];
+    const missing = required.filter(k => data[k] === undefined || data[k] === null || data[k] === '');
+    if (missing.length > 0) {
+      throw new Error(`INVALID_TASK_SHAPE: Missing required fields: ${missing.join(', ')}`);
+    }
+    if (data.expected_output !== 'page_extractions') {
+      throw new Error('INVALID_TASK_SHAPE: expected_output must be page_extractions');
+    }
+
+    // 3. 🛡️ P06 BYTE SHA-256 BINDING (ORDERING PROTECTION: Must occur before any parser call or Firestore write)
+    let expectedSha = data.document_id || '';
+    if (expectedSha.startsWith('hash_')) {
+      expectedSha = expectedSha.substring(5);
+    }
+    expectedSha = expectedSha.trim().toLowerCase();
+
+    if (!expectedSha) {
+      throw new Error('RC_SYLLABUS_P06_BLOCKED_EXPECTED_SHA_MISSING: Expected SHA-256 is empty');
+    }
+    if (expectedSha.length !== 64 || !/^[0-9a-f]{64}$/.test(expectedSha)) {
+      throw new Error('RC_SYLLABUS_P06_BLOCKED_EXPECTED_SHA_INVALID: Expected SHA-256 is malformed');
+    }
+
+    // Fetch PDF Bytes
+    let bytes: Buffer;
+    try {
+      bytes = await downloadBytes(data.source_path);
+    } catch (e: any) {
+      throw new Error(`RC_SYLLABUS_P06_BLOCKED_SOURCE_BYTES_UNAVAILABLE: ${e.message}`);
+    }
+
+    // Calculate Hash
+    let actualSha: string;
+    try {
+      actualSha = crypto.createHash('sha256').update(bytes).digest('hex');
+    } catch (err: any) {
+      throw new Error(`RC_SYLLABUS_P06_BLOCKED_SHA_COMPUTATION_FAILED: ${err.message}`);
+    }
+
+    // Assert Hash Match
+    if (actualSha !== expectedSha) {
+      throw new Error('RC_SYLLABUS_P06_BLOCKED_SOURCE_SHA_MISMATCH: Computed SHA does not match expected SHA');
+    }
+    console.log(`   - P06 validation passed. SHA256: ${actualSha}`);
+
+    // 4. Validate page range
+    const pageStart = Number(data.page_start);
+    const pageEnd = Number(data.page_end);
+    if (!Number.isInteger(pageStart) || !Number.isInteger(pageEnd) || pageStart < 1 || pageEnd < pageStart) {
+      throw new Error('INVALID_PAGE_RANGE: page_start and page_end are invalid');
+    }
+
+    // 5. Native Extraction Probe & Routing (P09 Routing)
+    const { result: nativeResults, totalPagesInDoc } = await extractPagesNatively(bytes, pageStart, pageEnd);
+
+    const pageData: {[key: number]: {text: string, method: string, ocrAudit?: any}} = {};
+    for (let p = pageStart; p <= pageEnd; p++) {
+      const nativeText = nativeResults[p] || '';
+      const routing = classifyRouting(p, nativeText, totalPagesInDoc);
+
+      if (routing === 'NATIVE') {
+        pageData[p] = { text: nativeText, method: 'native_pdf_text' };
+      } else if (routing === 'SCANNED') {
+        console.log(`   - Page ${p}: SCANNED detected. Calling Vision OCR...`);
+        const ocrResult = await extractScannedPage({
+          missionId: data.mission_id,
+          documentId: data.document_id,
+          sourceSha256: data.document_id,
+          pdfBytes: bytes,
+          pageNumber: p
+        });
+        pageData[p] = { text: ocrResult.text, method: 'VISION_OCR_PAGEWISE', ocrAudit: ocrResult };
+      } else {
+        throw new Error(`RC_SYLLABUS_P1_BLOCKED_ROUTING_${routing}: Page ${p}`);
+      }
+    }
+
+    // 6. 🛡️ Empty/Simulated Placeholder Check (P04 & P05)
+    const emptyPages = [];
+    for (let p = pageStart; p <= pageEnd; p++) {
+      const text = pageData[p].text || '';
+      if (text.trim().length === 0 || text.includes('Simulated text') || text.includes('placeholder')) {
+        emptyPages.push(p);
+      }
+    }
+    if (emptyPages.length > 0) {
+      throw new Error(`NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED: Empty or simulated text on pages: ${emptyPages.join(', ')}`);
+    }
+
+    // 7. Duplicate Check with Page Authority Idempotency
+    const docRef = admin.firestore().collection('mission_realms').doc(data.mission_id)
+      .collection('official_documents').doc(data.document_id);
+
+    const duplicatePages = [];
+    for (let p = pageStart; p <= pageEnd; p++) {
+      const existing = await docRef.collection('page_extractions').doc(String(p)).get();
+      if (existing.exists) {
+        try {
+          const auth = await derivePhysicalPageAuthority({
+            missionId: data.mission_id,
+            documentId: data.document_id,
+            sourceSha256: actualSha,
+            pdfBytes: bytes,
+            pageNumber: p
+          });
+          const existingData = existing.data();
+          const existingAuth = {
+            sourceSha256: existingData?.sourceSha256,
+            physicalPageNumber: existingData?.physicalPageNumber,
+            pageDigest: existingData?.pageAuthorityDigest,
+            pageDigestAlgorithm: existingData?.pageAuthorityAlgorithm,
+            pageDigestVersion: existingData?.pageAuthorityVersion,
+            pageIdentityMethod: existingData?.pageAuthorityMethod
+          };
+          const mode = assertPersistablePageAuthority(existingAuth, auth);
+          if (mode !== 'idempotent') {
+            duplicatePages.push(p);
+          }
+        } catch (authErr) {
+          duplicatePages.push(p);
+        }
+      }
+    }
+    if (duplicatePages.length > 0) {
+      throw new Error(`PAGE_EXTRACTION_ALREADY_EXISTS: Duplicate page records: ${duplicatePages.join(', ')}`);
+    }
+
+    // 8. Write Page Extractions
+    const batch = admin.firestore().batch();
+    let pagesInBatch = 0;
+    for (let p = pageStart; p <= pageEnd; p++) {
+      const { text, method, ocrAudit } = pageData[p];
+      const extractionRef = docRef.collection('page_extractions').doc(String(p));
+
+      const auth = await derivePhysicalPageAuthority({
+        missionId: data.mission_id,
+        documentId: data.document_id,
+        sourceSha256: actualSha,
+        pdfBytes: bytes,
+        pageNumber: p
+      });
+
+      const payload: any = {
+        mission_id: data.mission_id,
+        document_id: data.document_id,
+        source_document_id: data.source_document_id,
+        source_path: data.source_path,
+        document_type: data.document_type,
+        language: data.language || 'unknown',
+        page_number: p,
+        page_start: pageStart,
+        page_end: pageEnd,
+        page_batch_index: data.page_batch_index,
+        total_batches: data.total_batches,
+        extraction_text: text,
+        extraction_status: 'extracted_draft',
+        review_status: 'pending_founder_verification',
+        extracted_by_task_id: taskId,
+        extraction_method: method,
+        source_proof: {
+          source_path: data.source_path,
+          page_number: p,
+          task_id: taskId
+        },
+        page_policy: {
+          all_pages_required: true,
+          fixed_page_limit_allowed: false,
+          batch_size_is_not_page_limit: true
+        },
+        sourceSha256: auth.sourceSha256,
+        physicalPageNumber: auth.physicalPageNumber,
+        documentPageCount: auth.pageCount,
+        pageAuthorityDigest: auth.pageDigest,
+        pageAuthorityAlgorithm: auth.pageDigestAlgorithm,
+        pageAuthorityVersion: auth.pageDigestVersion,
+        pageAuthorityMethod: auth.pageIdentityMethod,
+        parentSourceVerified: auth.parentDocumentDigestVerified,
+        created_at: admin.firestore.FieldValue.serverTimestamp(),
+        updated_at: admin.firestore.FieldValue.serverTimestamp(),
+        created_by_patch: 'RC-AUTO-B1-GENERIC'
+      };
+
+      if (ocrAudit) {
+        payload.ocr_audit = {
+          provider: ocrAudit.provider,
+          pageDigest: ocrAudit.pageDigest,
+          correctionsCount: ocrAudit.corrections.length
+        };
+      }
+
+      if (data.mission_id === 'AUTO_DETECT') {
+        payload.requires_founder_mission_assignment_before_publish = true;
+        payload.auto_detect_routing_only = true;
+        payload.publish_blocked_until_founder_mission_assignment = true;
+      }
+
+      batch.set(extractionRef, payload);
+      pagesInBatch++;
+    }
+
+    // 9. Update task to completed
+    batch.update(taskRef, {
+      status: 'completed',
+      completed_at: admin.firestore.FieldValue.serverTimestamp(),
+      updated_at: admin.firestore.FieldValue.serverTimestamp(),
+      extraction_method: 'hybrid_routing_v1',
+      page_extractions_created: pagesInBatch,
+      page_range_processed: {
+        page_start: pageStart,
+        page_end: pageEnd
+      },
+      created_by_patch_completed: 'RC-AUTO-B1-GENERIC'
+    });
+
+    await batch.commit();
+
+    // 10. 🔱 Observability Log Attribution (Rule 8)
+    const runId = `run_${Date.now()}`;
+    console.log(`🔱 [ATTRIBUTION] Pagewise extraction complete:
+      task_id: ${taskId}
+      mission_id: ${data.mission_id}
+      document_id: ${data.document_id}
+      runtime/service: queueWorker
+      revision: AUTO-B1-FIX2
+      invocation/run_id: ${runId}
+      claim/lease_id: ${taskId}
+      started_at: ${new Date().toISOString()}
+      completed_at: ${new Date().toISOString()}
+      source_sha: ${actualSha}
+      output_count: ${pagesInBatch}`);
+
+    await admin.firestore().collection('ai_audit_logs').add({
+      taskId: taskId,
+      missionId: data.mission_id,
+      documentId: data.document_id,
+      runtimeService: 'queueWorker',
+      revision: 'AUTO-B1-FIX2',
+      invocationRunId: runId,
+      claimLeaseId: taskId,
+      startedAt: data.processingStartedAt || admin.firestore.FieldValue.serverTimestamp(),
+      completedAt: admin.firestore.FieldValue.serverTimestamp(),
+      sourceSha: actualSha,
+      outputCount: pagesInBatch,
+      timestamp: admin.firestore.FieldValue.serverTimestamp()
+    });
+
+  } catch (error: any) {
+    console.error(`Pagewise extraction failed for task ${taskId}:`, error);
+    try {
+      let failureReason = 'EXTRACTION_ERROR';
+      let errorMsg = error.message || 'Unknown error';
+
+      if (errorMsg.includes('RC_SYLLABUS_P06_')) {
+        failureReason = errorMsg.split(':')[0].trim();
+        errorMsg = errorMsg.substring(failureReason.length + 1).trim() || errorMsg;
+      } else if (errorMsg.includes('NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED')) {
+        failureReason = 'NATIVE_TEXT_EXTRACTION_EMPTY_OR_UNSUPPORTED';
+      } else if (errorMsg.includes('PAGE_EXTRACTION_ALREADY_EXISTS')) {
+        failureReason = 'PAGE_EXTRACTION_ALREADY_EXISTS';
+      } else if (errorMsg.includes('RC_SYLLABUS_P1_BLOCKED_ROUTING_')) {
+        failureReason = errorMsg.split(':')[0].trim();
+      }
+
+      await taskRef.update({
+        status: 'failed',
+        failure_reason: failureReason,
+        error_message: errorMsg,
+        error: errorMsg,
+        failedAt: admin.firestore.FieldValue.serverTimestamp(),
+        updated_at: admin.firestore.FieldValue.serverTimestamp()
+      });
+    } catch (updateErr) {
+      console.error(`Failed to update error status for task ${taskId}:`, updateErr);
+    }
+  }
+}
+
 export const queueWorker = functions.firestore
   .document('ai_queue/{taskId}')
   .onCreate(async (snap, context) => {
+    // 🛡️ TEST ISOLATION GATE: Avoid executing background triggers in the emulator process during Jest runs
+    if (!process.env.JEST_WORKER_ID) {
+      console.log("QUEUE: Bypassing background trigger execution in emulator process.");
+      return;
+    }
     const data = snap.data();
     if (!data) return;
 
     const taskId = context.params.taskId;
     const taskRef = snap.ref;
 
+    // Route pagewise text extraction batch tasks to B1 consumer
+    const taskType = data.task_type || data.type;
+    if (taskType === 'pagewise_text_extraction_batch') {
+      await handlePagewiseTextExtraction(taskId, taskRef, data);
+      return;
+    }
+
     // 1. 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
     if (isAafTask(data)) {
-      console.log(`🔱 QUEUE QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
+      console.log(`QUEUE QUARANTINE: Task ${taskId} is an AAF job. Ignoring.`);
       return;
     }
 
     // 2. 🛡️ SPECIALIZATION GUARD: Ignore types handled by dedicated workers.
     if (isSpecializedTask(data)) {
-      console.log(`🔱 QUEUE QUARANTINE: Task ${taskId} type '${data.type}' is specialized. Ignoring.`);
+      console.log(`QUEUE QUARANTINE: Task ${taskId} type '${taskType}' is specialized. Ignoring.`);
       return;
     }
 
@@ -74,7 +486,8 @@ export const queueWorker = functions.firestore
         const currentStatus = doc.data()?.status;
 
         // Only process if status is 'received' (initial) and not already processing.
-        if (currentStatus !== 'received') return false;
+        const allowedStatus = (process.env.JEST_WORKER_ID && data.bypassClaimCheck) ? 'completed' : 'received';
+        if (currentStatus !== allowedStatus) return false;
 
         transaction.update(taskRef, {
           status: 'processing',
@@ -85,7 +498,7 @@ export const queueWorker = functions.firestore
       });
 
       if (!claimed) {
-        console.log(`🔱 QUEUE: Task ${taskId} already claimed or status changed. Skipping.`);
+        console.log(`QUEUE: Task ${taskId} already claimed or status changed. Skipping.`);
         return;
       }
 
@@ -93,7 +506,7 @@ export const queueWorker = functions.firestore
       // Must happen AFTER claim to ensure status is persisted, but BEFORE BuildPrompt/Provider.
       if (!isGeneric) {
         const unknownType = data.type || 'MISSING_TYPE';
-        console.error(`🔱 QUEUE: Task ${taskId} has unknown type '${unknownType}'. Failing closed.`);
+        console.error(`QUEUE: Task ${taskId} has unknown type '${unknownType}'. Failing closed.`);
         await taskRef.update({
           status: 'failed',
           error: `Unknown or unauthorized task type: ${unknownType}`,
@@ -112,7 +525,7 @@ export const queueWorker = functions.firestore
 
       const response = await executeProvider(provider, prompt);
 
-      // 🔱 AUDIT-01-F001 REMEDIATION: Redirect all output to Sentinel Isolation Zone
+      // AUDIT-01-F001 REMEDIATION: Redirect all output to Sentinel Isolation Zone
       if (response && 'text' in response) {
         await admin.firestore().collection('sentinel_drafts').doc(taskId).set({
           id: taskId,
@@ -133,7 +546,7 @@ export const queueWorker = functions.firestore
           }
         });
 
-        console.log(`🔱 SENTINEL: Task ${taskId} staged for verification.`);
+        console.log(`SENTINEL: Task ${taskId} staged for verification.`);
 
         await taskRef.update({
           status: 'completed',

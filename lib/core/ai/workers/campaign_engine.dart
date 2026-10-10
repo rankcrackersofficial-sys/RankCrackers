@@ -3,7 +3,7 @@ import 'package:rank_crackers/core/models/campaign_node.dart';
 import 'package:rank_crackers/core/models/fusion_node.dart';
 import 'package:rank_crackers/core/models/momentum_node.dart';
 
-/// 🔱 ADAPTIVE CAMPAIGN ENGINE (Blueprint v1.0 - Document 51)
+/// ADAPTIVE CAMPAIGN ENGINE (Blueprint v1.0 - Document 51)
 /// Generates multi-day strategic campaigns based on student momentum and risk clusters.
 class CampaignEngine {
   
@@ -13,7 +13,7 @@ class CampaignEngine {
     required List<FusionNode> riskCluster, // Topics with High/Critical risk in same subject
     required MomentumNode momentum,
   }) {
-    debugPrint("🔱 CAMPAIGN ENGINE: Forging strategic mission plan for $userId...");
+    debugPrint("CAMPAIGN ENGINE: Forging strategic mission plan for $userId...");
 
     final String subject = riskCluster.isNotEmpty ? riskCluster.first.atomicTopicId.split('_')[0].toUpperCase() : 'General';
     final String title = "$subject Strategic Recovery Campaign";

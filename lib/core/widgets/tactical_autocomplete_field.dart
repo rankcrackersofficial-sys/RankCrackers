@@ -62,7 +62,7 @@ class _TacticalAutocompleteFieldState extends State<TacticalAutocompleteField> {
         ),
         SizedBox(height: ResponsiveHelper.compactGap(context) * 0.4),
 
-        // 🔱 Forensic Fix: Removed LayoutBuilder wrapper to stabilize semantics tree.
+        // Forensic Fix: Removed LayoutBuilder wrapper to stabilize semantics tree.
         // We use a GlobalKey to get the width of the field for the dropdown.
         RawAutocomplete<String>(
           textEditingController: widget.controller,
@@ -123,7 +123,7 @@ class _TacticalAutocompleteFieldState extends State<TacticalAutocompleteField> {
           optionsViewBuilder: (context, onSelected, options) {
             return Align(
               alignment: Alignment.topLeft,
-              child: ExcludeSemantics( // 🔱 Forensic Fix: Prevents semantics tree corruption during overlay transitions
+              child: ExcludeSemantics( // Forensic Fix: Prevents semantics tree corruption during overlay transitions
                 child: Material(
                   elevation: 8,
                   color: Colors.transparent,

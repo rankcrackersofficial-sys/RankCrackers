@@ -44,10 +44,11 @@ final class SyllabusPersonalizationNodeRoute {
 }
 
 final class SyllabusPersonalizationRoute {
-  static const int currentSchemaVersion = 2;
+  static const int currentSchemaVersion = 3;
 
   const SyllabusPersonalizationRoute({
     required this.studentId,
+    required this.missionId,
     required this.examId,
     required this.createdAtUtc,
     required this.currentTargetAmtnId,
@@ -56,6 +57,7 @@ final class SyllabusPersonalizationRoute {
   });
 
   final String studentId;
+  final String missionId;
   final String examId;
   final DateTime createdAtUtc;
   final String currentTargetAmtnId;
@@ -64,6 +66,7 @@ final class SyllabusPersonalizationRoute {
 
   void validate() {
     if (studentId.trim().isEmpty ||
+        missionId.trim().isEmpty ||
         examId.trim().isEmpty ||
         currentTargetAmtnId.trim().isEmpty ||
         !createdAtUtc.isUtc ||

@@ -1,13 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 
-/// 🔱 DUPLICATE DETECTION WORKER
+/// DUPLICATE DETECTION WORKER
 /// Implements Step 5: Collision Avoidance and Cross-Check.
 class DuplicateDetectionWorker {
   
-  /// 🔱 COLLISION PROTOCOL
+  /// COLLISION PROTOCOL
   static Future<Map<String, dynamic>> checkCollision(String fileHash) async {
-    debugPrint("🔱 DUPLICATE WORKER: Checking hash collision for $fileHash");
+    debugPrint("DUPLICATE WORKER: Checking hash collision for $fileHash");
 
     final existing = await FirebaseFirestore.instance
         .collection('ingestion_refinery')
@@ -29,12 +29,12 @@ class DuplicateDetectionWorker {
     };
   }
 
-  /// 🔱 SEMANTIC SIMILARITY PROTOCOL (Phase 9 Step 5)
+  /// SEMANTIC SIMILARITY PROTOCOL (Phase 9 Step 5)
   /// Checks for content similarity even if hashes differ.
   static Future<Map<String, dynamic>> checkSemanticSimilarity(String text) async {
-    // 🔱 Step 5: Meaning Similarity (Logical Verification)
+    // Step 5: Meaning Similarity (Logical Verification)
     // In production, this computes vector embeddings and performs cosine similarity search.
-    debugPrint("🔱 DUPLICATE WORKER: Analyzing semantic similarity.");
+    debugPrint("DUPLICATE WORKER: Analyzing semantic similarity.");
     
     // Example logical check: 
     // If text contains "Mastery" and "Coverage" and was already processed, flag as candidate.

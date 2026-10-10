@@ -1,0 +1,216 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_CHE_2AE52211",
+  "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000006",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_CHE_2AE52211_V001",
+  "atomicFactSetHash": "2711cdc1a004a11505d170f6cc2d28165e5894986395efcbc6f363f1df875d45",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AE52211_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AE52211",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AE52211_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AE52211_315436E4",
+        "AF_GU_JEEMAIN2027_CHE_2AE52211_CB7347EB"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "overviewText": "This chapter explains balancing chemical equations in accordance with mass conservation and stoichiometric mole ratios.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "be2c2d9513f5d55d0017982c059b54342ee8671fdc14036c5853083a0e83ed5d",
+      "createdAtUtc": "2026-09-02T13:29:33.153Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AE52211_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AE52211",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AE52211_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AE52211_315436E4",
+        "AF_GU_JEEMAIN2027_CHE_2AE52211_CB7347EB"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_2AE52211_CONCEPTS_01_BALANCED_EQUATIONS",
+          "semanticAnchorId": "ANCHOR_BALANCED_EQUATIONS",
+          "title": "1. Balanced Equations and Stoichiometric Coefficients",
+          "contentMarkdown": "A balanced chemical equation has equal atom counts of each element on reactant and product sides, satisfying the Law of Conservation of Mass. Stoichiometric coefficients specify mole ratios.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2AE52211_CB7347EB",
+            "AF_GU_JEEMAIN2027_CHE_2AE52211_315436E4"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "89a181b3059fcba647d398b6bf3cdc6f42f4c15ca5ad0cd805e6406521662995",
+      "createdAtUtc": "2026-09-02T13:29:33.153Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AE52211_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AE52211",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AE52211_V001",
+      "displayOrder": 3,
+      "status": "NOT_APPLICABLE",
+      "statusReason": "Chemical equation balancing is a qualitative/stoichiometric balancing method with no standalone algebraic formulas.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "formulaTable": [],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b7b9356f39da5055f2be84b07bad19fc8c6a3716da5fb25f722535b172fd78bb",
+      "createdAtUtc": "2026-09-02T13:29:33.153Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AE52211_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AE52211",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AE52211_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.153Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AE52211_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AE52211",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AE52211_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AE52211_CB7347EB",
+        "AF_GU_JEEMAIN2027_CHE_2AE52211_315436E4"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_CHE_2AE52211_01",
+          "title": "Balancing Combustion of Propane",
+          "problemStatement": "Balance the chemical reaction: $C_3H_8 + O_2 \\\\rightarrow CO_2 + H_2O$.",
+          "stepByStepSolution": [
+            "Step 1: Balance Carbon: $3$ carbons on left $\\\\implies 3 CO_2$.",
+            "Step 2: Balance Hydrogen: $8$ hydrogens on left $\\\\implies 4 H_2O$.",
+            "Step 3: Balance Oxygen: Right side has $3(2) + 4(1) = 10$ oxygens $\\\\implies 5 O_2$. Balanced: $C_3H_8 + 5O_2 \\\\rightarrow 3CO_2 + 4H_2O$."
+          ],
+          "finalAnswer": "C_3H_8 + 5O_2 \\\\rightarrow 3CO_2 + 4H_2O",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2AE52211_CB7347EB",
+            "AF_GU_JEEMAIN2027_CHE_2AE52211_315436E4"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "4617f870a73692012c1586e3a5161e10fcd7030c462cc8810c7268d87c9fcb53",
+      "createdAtUtc": "2026-09-02T13:29:33.153Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AE52211_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AE52211",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AE52211_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AE52211_CB7347EB"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_CHE_2AE52211_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "What fundamental physical law requires a chemical equation to be balanced?",
+          "options": [
+            "Law of Conservation of Mass",
+            "Avogadros Law",
+            "Law of Multiple Proportions",
+            "Gay-Lussacs Law"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Atoms are neither created nor destroyed in a chemical reaction; thus total mass and atom counts are conserved.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2AE52211_CB7347EB"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "c416fdfe4c6386c04270591864a60c17a0c94504e0ee514f6fe2f799107e269e",
+      "createdAtUtc": "2026-09-02T13:29:33.153Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AE52211_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AE52211",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AE52211_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AE52211_315436E4",
+        "AF_GU_JEEMAIN2027_CHE_2AE52211_CB7347EB"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Stoichiometric coefficient determination",
+          "Conservation of mass verification"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "aab49f1cf11e3a427851dbd0d9950f9aa145916da9488b38a43f2347e312478c",
+      "createdAtUtc": "2026-09-02T13:29:33.153Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 5,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 1,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.153Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

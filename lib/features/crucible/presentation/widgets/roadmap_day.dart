@@ -9,6 +9,7 @@ class RoadmapDay extends StatelessWidget {
   final String secondTask;
   final String thirdTask;
   final bool locked;
+  final VoidCallback? onTap;
 
   const RoadmapDay({
     super.key,
@@ -17,16 +18,19 @@ class RoadmapDay extends StatelessWidget {
     required this.secondTask,
     required this.thirdTask,
     this.locked = false,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return DarkCard(
-      padding: const EdgeInsets.all(18),
-      backgroundColor: locked ? Colors.transparent : AppColors.surface,
-      border: Border.all(
-        color: locked ? Colors.white10 : AppColors.gold.withValues(alpha: 0.1),
-      ),
+    return GestureDetector(
+      onTap: locked ? null : onTap,
+      child: DarkCard(
+        padding: const EdgeInsets.all(18),
+        backgroundColor: locked ? Colors.transparent : AppColors.surface,
+        border: Border.all(
+          color: locked ? Colors.white10 : AppColors.gold.withValues(alpha: 0.1),
+        ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -61,7 +65,7 @@ class RoadmapDay extends StatelessWidget {
             ),
         ],
       ),
-    );
+    ),);
   }
 
   Widget _taskItem(String task) {

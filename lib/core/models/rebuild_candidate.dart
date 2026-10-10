@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 REBUILD CANDIDATE (Article 12)
+/// REBUILD CANDIDATE (Article 12)
 /// Represents a topic identified for recovery based on failure evidence.
 class RebuildCandidate extends Equatable {
   final String nodeId;

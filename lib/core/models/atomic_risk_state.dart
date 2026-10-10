@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 ATOMIC RISK STATE
+/// ATOMIC RISK STATE
 /// Represents the vulnerability level of an Atomic Topic.
 /// Implements Document 35.
 class AtomicRiskState extends Equatable {

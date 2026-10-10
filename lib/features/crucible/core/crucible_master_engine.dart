@@ -6,47 +6,47 @@ class CrucibleMasterEngine {
     required List<MicroTopicNode> nodes,
     required Map<String, NodeRuntimeState> states,
   }) {
-    // 🔱 Identity Mapping for Foundation Shield & Revision Chain
+    // Identity Mapping for Foundation Shield & Revision Chain
     final weakNodeIds = nodes.where((n) {
       final state = states[n.id];
       return state != null && state.mastery < 0.50;
     }).map((n) => n.id).toSet();
 
-    // 🔱 Foundation Multiplier: Delay advanced topics with weak prerequisites
+    // Foundation Multiplier: Delay advanced topics with weak prerequisites
     double getFoundationMultiplier(MicroTopicNode node) {
       if (node.prerequisiteIds.isEmpty) return 1.0;
       for (final preId in node.prerequisiteIds) {
         final preNodeState = states[preId];
         if (preNodeState != null && preNodeState.mastery < 0.50) {
-          return 0.6; // 🔱 Soft Foundation Penalty
+          return 0.6; // Soft Foundation Penalty
         }
       }
       return 1.0;
     }
 
-    // 🔱 Revision Multiplier: Boost nodes belonging to a struggling chain
+    // Revision Multiplier: Boost nodes belonging to a struggling chain
     double getRevisionMultiplier(MicroTopicNode node) {
       if (node.revisionChainIds.isEmpty) return 1.0;
       for (final chainId in node.revisionChainIds) {
         if (weakNodeIds.contains(chainId)) {
-          return 1.2; // 🔱 Contextual Boost
+          return 1.2; // Contextual Boost
         }
       }
       return 1.0;
     }
 
-    // 🔱 Unlocker Multiplier: Boost nodes that are foundations for weak areas
+    // Unlocker Multiplier: Boost nodes that are foundations for weak areas
     double getUnlockerMultiplier(MicroTopicNode node) {
       if (node.dependentIds.isEmpty) return 1.0;
       for (final depId in node.dependentIds) {
         if (weakNodeIds.contains(depId)) {
-          return 1.1; // 🔱 Strategic Unlocker Boost
+          return 1.1; // Strategic Unlocker Boost
         }
       }
       return 1.0;
     }
 
-    // 🔱 Strategic Sorting: Factor in Importance, Mastery, Foundations, Chains, and Unlockers
+    // Strategic Sorting: Factor in Importance, Mastery, Foundations, Chains, and Unlockers
     final sortedNodes = [...nodes];
     sortedNodes.sort((a, b) {
       final aState = states[a.id] ?? NodeRuntimeState(nodeId: a.id);
@@ -74,7 +74,7 @@ class CrucibleMasterEngine {
     for (final node in sortedNodes) {
       final state = states[node.id] ?? NodeRuntimeState(nodeId: node.id);
       
-      // 🔱 Dynamic Hours based on Importance + Mastery
+      // Dynamic Hours based on Importance + Mastery
       double hours;
       if (node.importance >= 8 && state.mastery < 0.5) {
         hours = 4.0; // High Stakes Depth Study
@@ -86,7 +86,7 @@ class CrucibleMasterEngine {
         hours = 1.0;
       }
 
-      // 🔱 Dynamic Priority Labels
+      // Dynamic Priority Labels
       String priority;
       if (node.importance >= 9 && state.mastery < 0.4) {
         priority = 'legendary';

@@ -32,7 +32,7 @@ class DashboardLocalDatasource {
   // =========================================
 
   Future<List<dynamic>> getAllTopics() async {
-    // 🔱 LEGACY LOCAL DATA SOURCE DISABLED
+    // LEGACY LOCAL DATA SOURCE DISABLED
     return [];
   }
 
@@ -41,7 +41,7 @@ class DashboardLocalDatasource {
   // =========================================
 
   Future<List<dynamic>> getWeakTopics() async {
-    // 🔱 LEGACY LOCAL DATA SOURCE DISABLED
+    // LEGACY LOCAL DATA SOURCE DISABLED
     return [];
   }
 

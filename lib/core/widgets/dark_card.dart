@@ -30,7 +30,7 @@ class DarkCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 🔱 PREMIUM MATTE DNA (Radius = 16.0)
+    // PREMIUM MATTE DNA (Radius = 16.0)
     final effectiveRadius = borderRadius ?? 
         decoration?.borderRadius as BorderRadius? ?? 
         BorderRadius.circular(16);
@@ -38,7 +38,7 @@ class DarkCard extends StatelessWidget {
     return Container(
       width: double.infinity,
       constraints: BoxConstraints(
-        minHeight: ResponsiveHelper.cardMinHeight(context), // 🔱 Adaptive minHeight v2.0
+        minHeight: ResponsiveHelper.cardMinHeight(context), // Adaptive minHeight v2.0
       ),
       height: height,
       margin: margin,
@@ -56,7 +56,7 @@ class DarkCard extends StatelessWidget {
         borderRadius: effectiveRadius,
         clipBehavior: Clip.antiAlias,
         child: Padding(
-          padding: padding ?? EdgeInsets.all(ResponsiveHelper.cardPadding(context)), // 🔱 Adaptive Padding v2.0
+          padding: padding ?? EdgeInsets.all(ResponsiveHelper.cardPadding(context)), // Adaptive Padding v2.0
           child: child,
         ),
       ),

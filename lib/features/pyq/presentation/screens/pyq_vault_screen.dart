@@ -12,14 +12,9 @@ class PyqVaultScreen extends StatelessWidget {
       backgroundColor: AppColors.background,
       body: GovernedNotReadyPanel(
         icon: Icons.history_edu_rounded,
-        title: 'PYQ Vault is not ready yet',
+        title: 'PYQ Vault',
         message:
-            'Previous-year questions, pattern analysis and weakness maps will appear only after Founder-approved PYQ sources are verified and published through the governed pipeline.',
-        founderStatus: 'FOUNDER HEALTH: PYQ VAULT SOURCE PIPELINE REQUIRED',
-        checkpoints: [
-          'No question count, accuracy, year range or pattern insight is shown unless it comes from verified backend records.',
-          'Founder Web receives a Not Ready health signal while the PYQ pipeline is incomplete.',
-        ],
+            'Previous-year questions, question pattern analysis, and chapter weakness maps will become available once the question bank is fully loaded and synchronized with your active mission.',
       ),
     );
   }

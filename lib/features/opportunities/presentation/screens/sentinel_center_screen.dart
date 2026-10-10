@@ -21,17 +21,17 @@ class SentinelCenterScreen extends ConsumerWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
                 sliver: SliverList(
                   delegate: SliverChildListDelegate([
-                    _sectionLabel("Career Intelligence"),
+                    _sectionLabel("Academic Trend Intelligence"),
                     const SizedBox(height: 24),
-                    _alertPlaceholder("Sentinel is active. Scanning for career intelligence matching your current profile."),
+                    _alertPlaceholder("Sentinel intelligence monitoring is active. Verified trend updates and pattern intelligence will appear here as new insights are published for your preparation mission."),
                     const SizedBox(height: 48),
                     Center(
                       child: Column(
                         children: [
-                          Icon(Icons.radar_rounded, color: AppColors.gold.withValues(alpha: 0.2), size: 64),
+                          Icon(Icons.shield_rounded, color: AppColors.gold.withValues(alpha: 0.2), size: 64),
                           const SizedBox(height: 16),
-                          Text("Scanning for opportunities...",
-                            style: AppTypography.label.copyWith(color: Colors.white12)),
+                          Text("No active trend alerts",
+                            style: AppTypography.label.copyWith(color: Colors.white24)),
                         ],
                       ),
                     ),
@@ -54,7 +54,7 @@ class SentinelCenterScreen extends ConsumerWidget {
           children: [
             Text("SENTINEL CENTER", style: AppTypography.hero),
             const SizedBox(height: 8),
-            Text("Sovereign Career Intelligence", style: AppTypography.label.copyWith(color: Colors.white24)),
+            Text("Sovereign Academic Trend Intelligence", style: AppTypography.label.copyWith(color: Colors.white24)),
           ],
         ),
       ),

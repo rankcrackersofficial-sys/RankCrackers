@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 DIGIBOOK CHAPTER (Blueprint v1.0)
+/// DIGIBOOK CHAPTER (Blueprint v1.0)
 class DigiBookChapter extends Equatable {
   final String id;
   final String realmId;

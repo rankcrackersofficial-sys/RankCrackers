@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 OPPORTUNITY ENTITY (Document 50A Phase 6 Hardened)
+/// OPPORTUNITY ENTITY (Document 50A Phase 6 Hardened)
 /// Master structure for recruitment/notification data.
 class Opportunity extends Equatable {
   final String id;
@@ -13,7 +13,7 @@ class Opportunity extends Equatable {
   final String officialPdfUrl;
   final String status; // active, closed, archived
 
-  // 🔱 ELIGIBILITY LAYER
+  // ELIGIBILITY LAYER
   final int minimumAge;
   final int maximumAge;
   final int generalRelaxation;
@@ -25,7 +25,7 @@ class Opportunity extends Equatable {
   final bool widowRule;
   final bool divorceeRule;
 
-  // 🔱 QUALIFICATION REQUIREMENTS (Phase 6)
+  // QUALIFICATION REQUIREMENTS (Phase 6)
   final bool requiresGraduation;
   final bool requiresPostGraduation;
   final bool requiresBed;
@@ -38,11 +38,11 @@ class Opportunity extends Equatable {
   final bool requiresNursingQualification;
   final List<String> requiredSubjects;
   
-  // 🔱 SUBJECT MAPPING (Document 50A Phase 7 Hardened)
+  // SUBJECT MAPPING (Document 50A Phase 7 Hardened)
   final List<String> acceptedPgSubjects;
   final List<String> acceptedUgSubjects;
 
-  // 🔱 ACCEPTED CREDENTIALS (Explainability Layer)
+  // ACCEPTED CREDENTIALS (Explainability Layer)
   final List<String> acceptedDegrees;
   final List<String> acceptedPgDegrees;
   final List<String> acceptedProfessionalQualifications;
@@ -50,7 +50,7 @@ class Opportunity extends Equatable {
   final List<String> educationRequirements;
   final List<String> experienceRequirements;
 
-  // 🔱 VACANCY BUCKETS
+  // VACANCY BUCKETS
   final int generalPosts;
   final int obcPosts;
   final int scPosts;
@@ -58,6 +58,15 @@ class Opportunity extends Equatable {
   final int ewsPosts;
   final int sapPosts;
   final int womenPosts;
+
+  final List<String> eligibleMissionIds;
+
+  // PROVENANCE & GOVERNANCE
+  final String sourceAuthority;
+  final String sourceDocumentId;
+  final String sourceVersion;
+  final String? eligibilityRuleId;
+  final String? eligibilityRuleVersion;
 
   const Opportunity({
     required this.id,
@@ -104,6 +113,12 @@ class Opportunity extends Equatable {
     this.ewsPosts = 0,
     this.sapPosts = 0,
     this.womenPosts = 0,
+    this.eligibleMissionIds = const [],
+    this.sourceAuthority = 'Governed Authority',
+    this.sourceDocumentId = '',
+    this.sourceVersion = 'v1.0.0',
+    this.eligibilityRuleId,
+    this.eligibilityRuleVersion,
   });
 
   Map<String, dynamic> toMap() {
@@ -152,6 +167,12 @@ class Opportunity extends Equatable {
       'ewsPosts': ewsPosts,
       'sapPosts': sapPosts,
       'womenPosts': womenPosts,
+      'eligibleMissionIds': eligibleMissionIds,
+      'sourceAuthority': sourceAuthority,
+      'sourceDocumentId': sourceDocumentId,
+      'sourceVersion': sourceVersion,
+      'eligibilityRuleId': eligibilityRuleId,
+      'eligibilityRuleVersion': eligibilityRuleVersion,
     };
   }
 
@@ -162,8 +183,8 @@ class Opportunity extends Equatable {
       department: map['department'] ?? '',
       state: map['state'] ?? '',
       totalPosts: map['totalPosts'] ?? 0,
-      notificationDate: DateTime.fromMillisecondsSinceEpoch(map['notificationDate']),
-      lastDate: DateTime.fromMillisecondsSinceEpoch(map['lastDate']),
+      notificationDate: DateTime.fromMillisecondsSinceEpoch(map['notificationDate'] ?? 0),
+      lastDate: DateTime.fromMillisecondsSinceEpoch(map['lastDate'] ?? 0),
       officialPdfUrl: map['officialPdfUrl'] ?? '',
       status: map['status'] ?? 'active',
       minimumAge: map['minimumAge'] ?? 18,
@@ -193,6 +214,12 @@ class Opportunity extends Equatable {
       ewsPosts: map['ewsPosts'] ?? 0,
       sapPosts: map['sapPosts'] ?? 0,
       womenPosts: map['womenPosts'] ?? 0,
+      eligibleMissionIds: List<String>.from(map['eligibleMissionIds'] ?? []),
+      sourceAuthority: map['sourceAuthority'] ?? 'Governed Authority',
+      sourceDocumentId: map['sourceDocumentId'] ?? '',
+      sourceVersion: map['sourceVersion'] ?? 'v1.0.0',
+      eligibilityRuleId: map['eligibilityRuleId'],
+      eligibilityRuleVersion: map['eligibilityRuleVersion'],
     );
   }
 
@@ -226,5 +253,9 @@ class Opportunity extends Equatable {
         acceptedDegrees,
         acceptedPgDegrees,
         acceptedProfessionalQualifications,
+        eligibleMissionIds,
+        sourceAuthority,
+        sourceDocumentId,
+        sourceVersion,
       ];
 }

@@ -12,7 +12,7 @@ import 'workers/xlsx_parse_worker.dart';
 
 class AIWorkerRouter {
   // ===================================================
-  // ROUTE TASK 🔱
+  // ROUTE TASK 
   // ===================================================
   static Future<void> route({
     required AITaskType task,
@@ -21,7 +21,7 @@ class AIWorkerRouter {
     final provider = AIProviderConfig.provider(task);
     debugPrint("Routing AI Task: ${task.name} via ${provider.name}");
 
-    // 🔱 Worker abstraction (Phase 9 Step 1)
+    // Worker abstraction (Phase 9 Step 1)
     switch (task) {
       case AITaskType.pdfParse:
         await PdfParseWorker.processPdf(
@@ -88,7 +88,7 @@ class AIWorkerRouter {
         break;
     }
 
-    // 🔱 Redirecting all API routes to Gemini
+    // Redirecting all API routes to Gemini
     if (provider == AIProvider.local) {
       await _handleLocal(task, payload);
     } else {
@@ -97,10 +97,10 @@ class AIWorkerRouter {
   }
 
   static Future<void> _handleGemini(AITaskType task, Map<String, dynamic> payload) async {
-    // 🔱 Worker logic for Gemini (Only supported API provider)
+    // Worker logic for Gemini (Only supported API provider)
   }
 
   static Future<void> _handleLocal(AITaskType task, Map<String, dynamic> payload) async {
-    // 🔱 Worker logic for Local Processing
+    // Worker logic for Local Processing
   }
 }

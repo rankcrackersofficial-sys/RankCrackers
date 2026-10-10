@@ -1,11 +1,11 @@
 import '../models/micro_topic_node.dart';
 import '../models/node_runtime_state.dart';
 
-/// 🔱 PERFORMANCE ENGINE
+/// PERFORMANCE ENGINE
 /// Sovereign authority for preparation metrics. Decoupled from Content.
 class PerformanceEngine {
   // ===================================================
-  // OVERALL MASTERY 🔱
+  // OVERALL MASTERY 
   // ===================================================
   static double calculateMastery(
     List<MicroTopicNode> nodes,
@@ -23,7 +23,7 @@ class PerformanceEngine {
   }
 
   // ===================================================
-  // WEAK TOPICS 🔱
+  // WEAK TOPICS 
   // ===================================================
   static List<MicroTopicNode> getWeakTopics(
     List<MicroTopicNode> nodes,
@@ -36,7 +36,7 @@ class PerformanceEngine {
   }
 
   // ===================================================
-  // STRONG TOPICS 🔱
+  // STRONG TOPICS 
   // ===================================================
   static List<MicroTopicNode> getStrongTopics(
     List<MicroTopicNode> nodes,

@@ -1,0 +1,339 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_DEB95734",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U01_T_deb95734",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_DEB95734_V001",
+  "atomicFactSetHash": "7dfd01486d0b89b6ee783d654cfdac7480e4dd2d6e0aa81a7195b3dd30d49313",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_DEB95734_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_DEB95734",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_DEB95734_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_18518A52",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_48859D68",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_5C39C275",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_5EEFF483",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_636A1E20",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_B28DADA1",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_BABBF96B",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_C6745CDC",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_CF2392A3",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_DA7F84B0",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_E9C529E2"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "overviewText": "This Generation Unit establishes the foundational principles of physical measurement, base and derived units, historical metric systems (CGS, FPS, MKS), the International System of Units (SI) adopted in 1971, and the two supplementary angular units (radian and steradian).",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "9d07aba6764d54f9ffc2d2493d3a5cb226e073500821838b827fa038a481614c",
+      "createdAtUtc": "2026-09-02T13:29:33.001Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_DEB95734_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_DEB95734",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_DEB95734_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_18518A52",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_48859D68",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_5C39C275",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_5EEFF483",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_636A1E20",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_B28DADA1",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_BABBF96B",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_C6745CDC",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_CF2392A3",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_DA7F84B0",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_E9C529E2"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_DEB95734_CONCEPTS_01_MEASUREMENT_AND_UNITS",
+          "semanticAnchorId": "ANCHOR_MEASUREMENT_AND_UNITS",
+          "title": "1. Physical Measurement and Definition of Units",
+          "contentMarkdown": "Measurement of any physical quantity involves comparison with an internationally accepted reference standard called a **unit**. The result of a measurement is expressed as $Q = n \\cdot u$, where $n$ is the numerical value and $u$ is the unit. Units for fundamental quantities are called **base units**, while combinations of base units yield **derived units**.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_DA7F84B0",
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_BABBF96B",
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_C6745CDC",
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_CF2392A3"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_DEB95734_CONCEPTS_02_SYSTEMS_AND_SI_STANDARD",
+          "semanticAnchorId": "ANCHOR_SYSTEMS_AND_SI_STANDARD",
+          "title": "2. Historical Systems and the International System of Units (SI)",
+          "contentMarkdown": "Three historical systems were extensively used: CGS (cm, g, s), FPS (foot, pound, s), and MKS (m, kg, s). In 1971, the General Conference on Weights and Measures (CGPM) established the **Systeme Internationale d' Unites (SI)** based on seven fundamental base units:\n1. Length: metre ($\\text{m}$)\n2. Mass: kilogram ($\\text{kg}$)\n3. Time: second ($\\text{s}$)\n4. Electric Current: ampere ($\\text{A}$)\n5. Thermodynamic Temperature: kelvin ($\\text{K}$)\n6. Amount of Substance: mole ($\\text{mol}$)\n7. Luminous Intensity: candela ($\\text{cd}$)",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_48859D68",
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_5C39C275",
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_636A1E20",
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_5EEFF483",
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_E9C529E2",
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_18518A52",
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_B28DADA1"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_DEB95734_CONCEPTS_03_SUPPLEMENTARY_ANGLES",
+          "semanticAnchorId": "ANCHOR_SUPPLEMENTARY_ANGLES",
+          "title": "3. Supplementary SI Units: Plane Angle and Solid Angle",
+          "contentMarkdown": "SI defines two dimensionless supplementary units:\n- **Plane Angle ($d\\theta$)**: measured in radians ($\\text{rad}$), defined as arc length divided by radius ($d\\theta = ds/r$).\n- **Solid Angle ($d\\Omega$)**: measured in steradians ($\\text{sr}$), defined as intercepted area divided by radius squared ($d\\Omega = dA/r^2$).",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "f686e7c0d014bd99345c85bfd8a16caf60fa0625ca1fc97dbdaba3d3ee0b8cd8",
+      "createdAtUtc": "2026-09-02T13:29:33.001Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_DEB95734_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_DEB95734",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_DEB95734_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_CF2392A3",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Physical Measurement Relation",
+          "formula": "Q = n \\cdot u",
+          "constraints": "Product of numerical value n and unit u remains invariant",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_CF2392A3"
+          ]
+        },
+        {
+          "name": "Plane Angle (Radian)",
+          "formula": "d\\theta = \\frac{ds}{r} \\quad (\\text{rad})",
+          "constraints": "Ratio of circular arc length to radius",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9"
+          ]
+        },
+        {
+          "name": "Solid Angle (Steradian)",
+          "formula": "d\\Omega = \\frac{dA}{r^2} \\quad (\\text{sr})",
+          "constraints": "Ratio of intercepted spherical surface area to r^2",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "94049d42121260c04b32d7800ce7e014ac3e3fb5704a397a8d3dce01bb69acdb",
+      "createdAtUtc": "2026-09-02T13:29:33.001Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_DEB95734_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_DEB95734",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_DEB95734_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No external empirical exam distractor / error telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.001Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_DEB95734_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_DEB95734",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_DEB95734_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_C6745CDC",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_5C39C275"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_DEB95734_01_SOLID_ANGLE_CALCULATION",
+          "title": "Calculating Solid Angle of a Hemisphere",
+          "problemStatement": "Calculate the total solid angle subtended by a complete hemisphere at its centre.",
+          "stepByStepSolution": [
+            "Step 1: State the formula for solid angle: $\\Omega = \\frac{A}{r^2}$, where $A$ is the spherical surface area.",
+            "Step 2: The surface area of a hemisphere of radius $r$ is $A = 2\\pi r^2$.",
+            "Step 3: Substitute $A$ into the solid angle formula:\n$\\Omega = \\frac{2\\pi r^2}{r^2} = 2\\pi\\text{ steradians (sr)}$."
+          ],
+          "finalAnswer": "The solid angle subtended by a hemisphere is 2π sr.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9"
+          ],
+          "isVerified": true
+        },
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_DEB95734_02_BASE_UNITS_IDENTIFICATION",
+          "title": "Identifying Base vs Derived Units for Force",
+          "problemStatement": "Express the SI derived unit of Force (Newton, $\\text{N}$) strictly in terms of SI base units.",
+          "stepByStepSolution": [
+            "Step 1: Recall Newton's second law: $F = m \\cdot a$.",
+            "Step 2: Identify the base unit of mass $m$: $[m] = \\text{kg}$.",
+            "Step 3: Identify the base units of acceleration $a$: $[a] = \\text{m}/\\text{s}^2 = \\text{m}\\cdot\\text{s}^{-2}$.",
+            "Step 4: Combine the base units to express Force:\n$1\\text{ N} = 1\\text{ kg}\\cdot\\text{m}\\cdot\\text{s}^{-2}$."
+          ],
+          "finalAnswer": "1 N = 1 kg·m·s⁻² in SI base units.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_C6745CDC",
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_5C39C275"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "abb129ba31e41c3d5a3a9af191c0a26f6f6f37bea8d9b18fd987a9c471d11578",
+      "createdAtUtc": "2026-09-02T13:29:33.001Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_DEB95734_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_DEB95734",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_DEB95734_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_48859D68",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_636A1E20"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_DEB95734_01_SUPPLEMENTARY_UNITS",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Which of the following represents a supplementary SI unit having units but no dimensions?",
+          "options": [
+            "Plane Angle (Radian)",
+            "Solid Angle (Steradian)",
+            "Both Radian and Steradian",
+            "Luminous Intensity (Candela)"
+          ],
+          "correctOptionIndex": 2,
+          "explanation": "Radian (rad) and Steradian (sr) are the two supplementary SI units. Both possess units but are geometrically dimensionless ratios ($[M^0 L^0 T^0]$).",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9"
+          ],
+          "isVerified": true
+        },
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_DEB95734_02_SI_BASE_SET",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Which pair of quantities are BOTH fundamental base quantities in the SI system?",
+          "options": [
+            "Electric Current and Thermodynamic Temperature",
+            "Force and Velocity",
+            "Work and Pressure",
+            "Energy and Plane Angle"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Electric current (ampere, A) and Thermodynamic temperature (kelvin, K) are among the 7 SI base quantities. Force, velocity, work, and pressure are derived quantities.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_48859D68",
+            "AF_GU_JEEMAIN2027_PHY_DEB95734_636A1E20"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "69ccf2882ee5b9afe9f59193fb5413bed3f9dda2093234d4c4c269e8846544cc",
+      "createdAtUtc": "2026-09-02T13:29:33.001Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_DEB95734_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_DEB95734",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_DEB95734_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_18518A52",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_3B4860F9",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_48859D68",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_5C39C275",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_5EEFF483",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_636A1E20",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_B28DADA1",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_BABBF96B",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_C6745CDC",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_CF2392A3",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_DA7F84B0",
+        "AF_GU_JEEMAIN2027_PHY_DEB95734_E9C529E2"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Distinguishing fundamental base units from derived units",
+          "Calculating plane angle and solid angle subtended by geometric surfaces",
+          "Converting historical CGS/FPS units into standard SI metric equivalents"
+        ],
+        "supportedQuestionFormats": [
+          "Single Choice MCQ (4 options)",
+          "Numerical Value Questions"
+        ],
+        "readinessStatement": "This Generation Unit covers all canonical conceptual prerequisites required for exam assessments on SI units."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "8007a93ac0882c0f26f01063a28cdf286cb94a400ae5b5de43d6dd339c032821",
+      "createdAtUtc": "2026-09-02T13:29:33.001Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.001Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

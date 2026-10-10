@@ -1,6 +1,6 @@
 import '../models/atomic_mastery_state.dart';
 
-/// 🔱 MASTERY AGGREGATION ENGINE
+/// MASTERY AGGREGATION ENGINE
 /// Implements the Aggregation Law (Section 35, Document 33).
 /// Derives higher-level competency metrics from Atomic Mastery.
 class MasteryAggregationEngine {

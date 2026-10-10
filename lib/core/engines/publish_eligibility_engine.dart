@@ -5,7 +5,7 @@ import '../models/micro_topic_node.dart';
 import '../models/question_model.dart';
 import '../models/digibook_block.dart';
 
-/// 🔱 PUBLISH ELIGIBILITY ENGINE
+/// PUBLISH ELIGIBILITY ENGINE
 /// Sovereign authority for enforcing Mission Completeness (Document 26 Section 37).
 class PublishEligibilityEngine {
   

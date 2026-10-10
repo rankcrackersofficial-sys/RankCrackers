@@ -1,0 +1,411 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_MAT_9BB8FB46",
+  "canonicalNodeId": "JEE_MAIN_2026_MAT_U01_T_00000001",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_MAT_9BB8FB46_V001",
+  "atomicFactSetHash": "1229d8e640b57db52fa7135fece2ca184d92c9b33188225abdd0363003de759f",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_MAT_9BB8FB46_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_MAT_9BB8FB46",
+      "revisionId": "REV_GU_JEEMAIN2027_MAT_9BB8FB46_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_2E310406",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_621F66AA",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_6FF4E366",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_72B3D5FA",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_79B21169",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8092F0EE",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_871D5B7E",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_87E2CF75",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8E8CCB25",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_9C2209FD",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_CC297DF5",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_D1B6F61D",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_D3AE90CF",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_E7B2ED50"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_MATHEMATICS_CLASS_11_CH01_OFFICIAL"
+      ],
+      "overviewText": "This Generation Unit establishes the foundational theory of Sets, element membership notation (∈, ∉), roster and set-builder representations, standard number sets (N, Z, Q, R), empty and finite/infinite sets, subset relations (⊆, ⊂), real interval notations, power sets P(A) with cardinality 2^m, and the universal set U.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "f54ba6d7c254c54748c7eaf99aabf7f370179628842cf65e6fffd8bbcf7be7cc",
+      "createdAtUtc": "2026-09-02T13:29:32.986Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_MAT_9BB8FB46_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_MAT_9BB8FB46",
+      "revisionId": "REV_GU_JEEMAIN2027_MAT_9BB8FB46_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_2E310406",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_621F66AA",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_6FF4E366",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_72B3D5FA",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_79B21169",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8092F0EE",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_871D5B7E",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_87E2CF75",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8E8CCB25",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_9C2209FD",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_CC297DF5",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_D1B6F61D",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_D3AE90CF",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_E7B2ED50"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_MATHEMATICS_CLASS_11_CH01_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_MAT_9BB8FB46_CONCEPTS_01_DEF_AND_NOTATION",
+          "semanticAnchorId": "ANCHOR_SET_DEFINITION_AND_MEMBERSHIP",
+          "title": "1. Set Definition and Element Membership",
+          "contentMarkdown": "A **set** is a well-defined collection of distinct objects. If an object $a$ is an element of set $A$, we write $a \\in A$. If $b$ is not an element of $A$, we write $b \\notin A$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_D1B6F61D",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8E8CCB25"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_MAT_9BB8FB46_CONCEPTS_02_REPRESENTATIONS_AND_NUMBER_SETS",
+          "semanticAnchorId": "ANCHOR_REPRESENTATIONS_AND_NUMBER_SETS",
+          "title": "2. Representations and Standard Number Sets",
+          "contentMarkdown": "Sets are standardly represented in two forms:\n1. **Roster / Tabular Form**: Elements are listed separated by commas within braces $\\{\\}$, where order is immaterial and elements are not repeated.\n2. **Set-Builder Form**: Elements are described by their characterizing property: $A = \\{x : P(x)\\}$.\n\nStandard number sets: $\\mathbb{N}$ (natural numbers), $\\mathbb{Z}$ (integers), $\\mathbb{Q} = \\{p/q : p, q \\in \\mathbb{Z}, q \\neq 0\\}$ (rationals), and $\\mathbb{R}$ (reals).",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_621F66AA",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_D3AE90CF",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_6FF4E366"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_MAT_9BB8FB46_CONCEPTS_03_EMPTY_FINITE_EQUALITY",
+          "semanticAnchorId": "ANCHOR_EMPTY_FINITE_EQUALITY",
+          "title": "3. Empty Set, Finite/Infinite Sets, and Set Equality",
+          "contentMarkdown": "The **empty set** (null/void set) contains no elements, denoted by $\\phi$ or $\\{\\}$, with cardinality $n(\\phi) = 0$.\nA set is **finite** if it consists of a definite number of distinct elements $n(A)$; otherwise it is **infinite**.\nTwo sets $A$ and $B$ are **equal** ($A = B$) if they have identical elements, whereas sets with $n(A) = n(B)$ are **equivalent**.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_E7B2ED50",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_2E310406",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_87E2CF75"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_MAT_9BB8FB46_CONCEPTS_04_SUBSETS_AND_INTERVALS",
+          "semanticAnchorId": "ANCHOR_SUBSETS_AND_INTERVALS",
+          "title": "4. Subsets and Intervals of Real Numbers",
+          "contentMarkdown": "$A$ is a **subset** of $B$ ($A \\subseteq B$) if every element of $A$ is in $B$. If $A \\subseteq B$ and $A \\neq B$, $A$ is a **proper subset** ($A \\subset B$).\nAxioms: Every set is a subset of itself ($A \\subseteq A$) and $\\phi \\subseteq A$ for all $A$. Also, $A = B \\iff A \\subseteq B \\land B \\subseteq A$.\n\nSubsets of $\\mathbb{R}$ as intervals:\n- Open interval: $(a, b) = \\{x \\in \\mathbb{R} : a < x < b\\}$\n- Closed interval: $[a, b] = \\{x \\in \\mathbb{R} : a \\le x \\le b\\}$\n- Semi-open intervals: $[a, b) = \\{x \\in \\mathbb{R} : a \\le x < b\\}$ and $(a, b] = \\{x \\in \\mathbb{R} : a < x \\le b\\}$.\n- Interval length is $(b - a)$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8092F0EE",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_CC297DF5",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_871D5B7E",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_79B21169",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_9C2209FD"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_MAT_9BB8FB46_CONCEPTS_05_POWER_SET_AND_UNIVERSAL_SET",
+          "semanticAnchorId": "ANCHOR_POWER_SET_AND_UNIVERSAL_SET",
+          "title": "5. Power Set and Universal Set",
+          "contentMarkdown": "The **power set** $P(A)$ is the collection of all subsets of $A$, with $\\phi \\in P(A)$ and $A \\in P(A)$.\nIf $n(A) = m$, then $n(P(A)) = 2^m$, and the number of proper subsets is $2^m - 1$.\nA **universal set** $U$ is the comprehensive superset containing all objects and sets under consideration in a given context.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_72B3D5FA"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b9ec6904c0de5fdffd61c8bea7d3e04608b2f482946594e5970772e4f6fefb16",
+      "createdAtUtc": "2026-09-02T13:29:32.986Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_MAT_9BB8FB46_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_MAT_9BB8FB46",
+      "revisionId": "REV_GU_JEEMAIN2027_MAT_9BB8FB46_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8E8CCB25",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_E7B2ED50",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_871D5B7E",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_9C2209FD"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_MATHEMATICS_CLASS_11_CH01_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Element Membership",
+          "formula": "a \\in A, \\quad b \\notin A",
+          "constraints": "a is an element of set A; b is not an element of set A",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8E8CCB25"
+          ]
+        },
+        {
+          "name": "Empty Set Cardinality",
+          "formula": "n(\\phi) = 0",
+          "constraints": "\\phi = \\{\\}",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_E7B2ED50"
+          ]
+        },
+        {
+          "name": "Set Equality via Mutual Inclusion",
+          "formula": "A = B \\iff (A \\subseteq B \\land B \\subseteq A)",
+          "constraints": "Both sets share identical elements",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_871D5B7E"
+          ]
+        },
+        {
+          "name": "Power Set Cardinality",
+          "formula": "n(P(A)) = 2^m",
+          "constraints": "Set A is finite with n(A) = m elements",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48"
+          ]
+        },
+        {
+          "name": "Proper Subsets Count",
+          "formula": "N_{\\text{proper}} = 2^m - 1",
+          "constraints": "Excludes the improper subset A itself",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48"
+          ]
+        },
+        {
+          "name": "Interval Length on R",
+          "formula": "\\text{Length} = b - a",
+          "constraints": "Applies to (a,b), [a,b], [a,b), (a,b] with a < b",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_9C2209FD"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "050b312d3e7837e6bb6f9bb5bbcc416101ba882adbd64710e69847c5cd2b9a8d",
+      "createdAtUtc": "2026-09-02T13:29:32.986Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_MAT_9BB8FB46_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_MAT_9BB8FB46",
+      "revisionId": "REV_GU_JEEMAIN2027_MAT_9BB8FB46_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No external empirical exam distractor / error telemetry dataset bound to this canary yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_MATHEMATICS_CLASS_11_CH01_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:32.986Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_MAT_9BB8FB46_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_MAT_9BB8FB46",
+      "revisionId": "REV_GU_JEEMAIN2027_MAT_9BB8FB46_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8E8CCB25",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_621F66AA",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_79B21169",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_9C2209FD",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_MATHEMATICS_CLASS_11_CH01_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_MAT_9BB8FB46_01_POWER_SET_AND_SUBSETS",
+          "title": "Power Set and Subsets Listing",
+          "problemStatement": "Let $A = \\{1, 2, 3\\}$. Determine:\n(i) The total number of subsets of $A$\n(ii) The number of proper subsets of $A$\n(iii) The explicit power set $P(A)$",
+          "stepByStepSolution": [
+            "Step 1: Identify the number of elements in set $A$: $n(A) = m = 3$.",
+            "Step 2: Calculate the cardinality of the power set using the formula $n(P(A)) = 2^m = 2^3 = 8$.",
+            "Step 3: Calculate the number of proper subsets using the formula $2^m - 1 = 2^3 - 1 = 7$.",
+            "Step 4: List all subsets systematically by size:\n- Size 0: $\\phi$\n- Size 1: $\\{1\\}, \\{2\\}, \\{3\\}$\n- Size 2: $\\{1, 2\\}, \\{1, 3\\}, \\{2, 3\\}$\n- Size 3: $\\{1, 2, 3\\}$\nThus, $P(A) = \\{\\phi, \\{1\\}, \\{2\\}, \\{3\\}, \\{1, 2\\}, \\{1, 3\\}, \\{2, 3\\}, \\{1, 2, 3\\}\\}$."
+          ],
+          "finalAnswer": "(i) Total subsets = 8; (ii) Proper subsets = 7; (iii) P(A) = {ϕ, {1}, {2}, {3}, {1,2}, {1,3}, {2,3}, {1,2,3}}",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48"
+          ],
+          "isVerified": true
+        },
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_MAT_9BB8FB46_02_INTERVALS_AND_SET_BUILDER",
+          "title": "Real Interval Notation and Classification",
+          "problemStatement": "Given the set $S = \\{x \\in \\mathbb{R} : -3 \\le x < 5\\}$:\n(i) Write $S$ in interval notation.\n(ii) Identify whether the endpoints $-3$ and $5$ belong to $S$.\n(iii) Calculate the length of the interval.",
+          "stepByStepSolution": [
+            "Step 1: Observe the inequalities: $x$ is greater than or equal to $-3$ (inclusive, represented by $[$) and strictly less than $5$ (exclusive, represented by $)$).",
+            "Step 2: Express $S$ in interval notation as $[-3, 5)$, which is a semi-open interval.",
+            "Step 3: Check endpoint membership: Since $-3 \\le -3 < 5$, $-3 \\in S$. Since $5$ is strictly greater than the upper bound, $5 \\notin S$.",
+            "Step 4: Calculate interval length using the formula $b - a = 5 - (-3) = 5 + 3 = 8$."
+          ],
+          "finalAnswer": "(i) [-3, 5); (ii) -3 ∈ S and 5 ∉ S; (iii) Length = 8",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8E8CCB25",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_621F66AA",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_79B21169",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_9C2209FD"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "a6d312b1f34d1e73b61778a8ef04dface377c6e61fe9e0036bd242dbd041b5ae",
+      "createdAtUtc": "2026-09-02T13:29:32.986Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_MAT_9BB8FB46_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_MAT_9BB8FB46",
+      "revisionId": "REV_GU_JEEMAIN2027_MAT_9BB8FB46_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_E7B2ED50",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_CC297DF5",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_MATHEMATICS_CLASS_11_CH01_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_MAT_9BB8FB46_01_POWER_SET_EMPTY",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "If $A = \\phi$ (the empty set), what is the cardinality of the nested power set $P(P(A))$?",
+          "options": [
+            "0",
+            "1",
+            "2",
+            "4"
+          ],
+          "correctOptionIndex": 2,
+          "explanation": "For the empty set $A = \\phi$, $n(A) = 0$.\nThe first power set has cardinality $n(P(A)) = 2^0 = 1$ (with $P(A) = \\{\\phi\\}$).\nThe nested power set has cardinality $n(P(P(A))) = 2^{n(P(A))} = 2^1 = 2$.",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_E7B2ED50",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48"
+          ],
+          "isVerified": true
+        },
+        {
+          "questionId": "SC_GU_JEEMAIN2027_MAT_9BB8FB46_02_SUBSET_RELATION",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Which of the following statements is ALWAYS true for any set $A$ and its power set $P(A)$?",
+          "options": [
+            "$A \\subseteq P(A)$",
+            "$A \\in P(A)$",
+            "$\\phi \\subset P(A)$ only if $A \\neq \\phi$",
+            "$n(P(A)) = 2m$ where $m = n(A)$"
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "By definition of the power set $P(A)$, every subset of $A$ is an element of $P(A)$. Since $A \\subseteq A$ (every set is a subset of itself), it follows strictly that $A \\in P(A)$. Option A is incorrect because $A$ is an element of $P(A)$, not necessarily a subset. Option D is incorrect because $n(P(A)) = 2^m$, not $2m$.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_CC297DF5",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D",
+            "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "a7d5f31a754dc7dc042ef3c6d1f49c8e05dbbc72d9427a721c2a14c713ba3975",
+      "createdAtUtc": "2026-09-02T13:29:32.986Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_MAT_9BB8FB46_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_MAT_9BB8FB46",
+      "revisionId": "REV_GU_JEEMAIN2027_MAT_9BB8FB46_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_2E310406",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_39AE4B48",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_621F66AA",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_69C8729D",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_6FF4E366",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_72B3D5FA",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_79B21169",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8092F0EE",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_871D5B7E",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_87E2CF75",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_8E8CCB25",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_9C2209FD",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_CC297DF5",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_D1B6F61D",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_D3AE90CF",
+        "AF_GU_JEEMAIN2027_MAT_9BB8FB46_E7B2ED50"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_MATHEMATICS_CLASS_11_CH01_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Translating sets between Roster form and Set-Builder form",
+          "Evaluating element membership (∈, ∉) vs subset inclusion (⊆, ⊂)",
+          "Calculating nested Power Set cardinalities using 2^m",
+          "Interval notation conversion and length calculations on the real line"
+        ],
+        "supportedQuestionFormats": [
+          "Single Choice MCQ (4 options)",
+          "Numerical Value Questions",
+          "Multi-Concept Statement Verification"
+        ],
+        "readinessStatement": "This Generation Unit covers all canonical conceptual prerequisites required for exam assessments on basic set theory. Assessment readiness is evaluated through Crucible micro-tests and diagnostic checks."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "7b613d94423be79be53d21dd9ba456499db9466a599bc743775a953b82e7b516",
+      "createdAtUtc": "2026-09-02T13:29:32.986Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_MATHEMATICS_CLASS_11_CH01_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:32.986Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-CANARY"
+}

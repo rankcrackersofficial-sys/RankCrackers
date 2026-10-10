@@ -1,0 +1,269 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_1367A8D3",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U05_T_00000001",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_1367A8D3_V001",
+  "atomicFactSetHash": "23fb92c733cbfc3e0ba37b969e06b2a391973e0201ba90183cc892c58b5b0c47",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1367A8D3_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1367A8D3",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1367A8D3_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_084A1FCF",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_219CBAC8",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_2C707B98",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_37A5FDCC",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_4DA53D85",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_8C244587",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_C91AE3F9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "overviewText": "This chapter analyzes rotational equilibrium, the Principle of Moments, mechanical advantage, and rotational kinematic equations.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "662e1a4735ab87b7f66d7234cdccd819dc3e9da66ebda9218d50921f90a43e06",
+      "createdAtUtc": "2026-09-02T13:29:33.047Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1367A8D3_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1367A8D3",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1367A8D3_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_084A1FCF",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_219CBAC8",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_2C707B98",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_37A5FDCC",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_4DA53D85",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_8C244587",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_C91AE3F9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_1367A8D3_CONCEPTS_01_EQUILIBRIUM_MOMENTS",
+          "semanticAnchorId": "ANCHOR_ROTATIONAL_EQUILIBRIUM",
+          "title": "1. Mechanical Equilibrium and Principle of Moments",
+          "contentMarkdown": "A rigid body is in equilibrium if both translational ($$\\\\sum \\\\mathbf{F} = 0$$) and rotational ($$\\\\sum \\\\boldsymbol{\\\\tau} = 0$$) conditions hold. The Principle of Moments states $$\\text{Load} \\\\times \\\\text{Load Arm} = \\text{Effort} \\\\times \\\\text{Effort Arm}$$. Mechanical advantage is $$MA = \\\\frac{F_{\\\\text{load}}}{F_{\\\\text{effort}}} = \\\\frac{d_{\\\\text{effort}}}{d_{\\\\text{load}}}$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_4DA53D85",
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_37A5FDCC",
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_C91AE3F9",
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_8C244587"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_1367A8D3_CONCEPTS_02_ROTATIONAL_KINEMATICS",
+          "semanticAnchorId": "ANCHOR_ROTATIONAL_KINEMATICS",
+          "title": "2. Kinematics of Rotational Motion with Constant Acceleration",
+          "contentMarkdown": "For constant angular acceleration $\\\\alpha$: $$\\omega = \\\\omega_0 + \\\\alpha t$$, $$\\theta = \\\\omega_0 t + \\\\frac{1}{2}\\\\alpha t^2$$, and $$\\omega^2 = \\\\omega_0^2 + 2\\\\alpha \\\\theta$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_2C707B98",
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_084A1FCF",
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_219CBAC8"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "69c54d00b533448a311be840ec631945cf6f1d2fbb20d9074ba9bfc7ba01114f",
+      "createdAtUtc": "2026-09-02T13:29:33.047Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1367A8D3_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1367A8D3",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1367A8D3_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_2C707B98",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_084A1FCF",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_219CBAC8"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Angular Velocity Equation",
+          "formula": "\\\\omega = \\\\omega_0 + \\\\alpha t",
+          "constraints": "Constant angular acceleration alpha",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_2C707B98"
+          ]
+        },
+        {
+          "name": "Angular Displacement Equation",
+          "formula": "\\\\theta = \\\\omega_0 t + \\\\frac{1}{2} \\\\alpha t^2",
+          "constraints": "Constant angular acceleration alpha",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_084A1FCF"
+          ]
+        },
+        {
+          "name": "Angular Velocity-Displacement Relation",
+          "formula": "\\\\omega^2 = \\\\omega_0^2 + 2 \\\\alpha \\\\theta",
+          "constraints": "Constant angular acceleration alpha",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_219CBAC8"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "40848f9e2940eda932db27795dfbb1057b3876f2df26a0616e51856e03cab762",
+      "createdAtUtc": "2026-09-02T13:29:33.047Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1367A8D3_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1367A8D3",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1367A8D3_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.047Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1367A8D3_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1367A8D3",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1367A8D3_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_2C707B98"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_1367A8D3_01",
+          "title": "Angular Velocity after Uniform Acceleration",
+          "problemStatement": "A flywheel starts from rest and accelerates uniformly at $\\\\alpha = 2.0\\\\text{ rad/s}^2$ for $5.0\\\\text{ s}$. Find its final angular speed $\\\\omega$.",
+          "stepByStepSolution": [
+            "Step 1: Identify $\\\\omega_0 = 0$, $\\\\alpha = 2.0\\\\text{ rad/s}^2$, $t = 5.0\\\\text{ s}$.",
+            "Step 2: Apply formula: $\\\\omega = \\\\omega_0 + \\\\alpha t = 0 + 2.0 \\\\times 5.0 = 10.0\\\\text{ rad/s}$."
+          ],
+          "finalAnswer": "\\\\omega = 10.0\\\\text{ rad/s}",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_2C707B98"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "9c32b17b457838e73ab9639ddbac2d85d1fe47aa6cd643689c97d4cee2829a36",
+      "createdAtUtc": "2026-09-02T13:29:33.047Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1367A8D3_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1367A8D3",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1367A8D3_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_8C244587"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_1367A8D3_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "What condition must be satisfied for a rigid body to be in rotational equilibrium about any axis?",
+          "options": [
+            "Vector sum of all external torques is zero (Sum tau_ext = 0)",
+            "Total linear momentum is maximum",
+            "Angular speed must be constantly increasing",
+            "Normal reaction equals zero"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Rotational equilibrium requires zero net external torque ($$\\\\sum \\\\boldsymbol{\\\\tau}_{\\\\text{ext}} = 0$$).",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_1367A8D3_8C244587"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "0fe725a52a6d97a6a2d9faf7e7156f84c23a0597aae37aacfce908adcb0a90cc",
+      "createdAtUtc": "2026-09-02T13:29:33.047Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_1367A8D3_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_1367A8D3",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_1367A8D3_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_084A1FCF",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_219CBAC8",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_2C707B98",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_37A5FDCC",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_4DA53D85",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_8C244587",
+        "AF_GU_JEEMAIN2027_PHY_1367A8D3_C91AE3F9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Rotational kinematic variable calculation",
+          "Principle of moments evaluation"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "f797c0dd7fc9bb8e6bba1587a4d4ef65078e9d7724dac96c4f3895c3d78516cf",
+      "createdAtUtc": "2026-09-02T13:29:33.047Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.047Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

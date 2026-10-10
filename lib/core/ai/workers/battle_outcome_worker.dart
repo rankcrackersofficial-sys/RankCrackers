@@ -16,11 +16,11 @@ import 'campaign_adaptation_engine.dart';
 
 import 'package:collection/collection.dart';
 
-/// 🔱 BATTLE OUTCOME WORKER (Sprint M/N/O/Q Hardened - Blueprint v1.3)
+/// BATTLE OUTCOME WORKER (Sprint M/N/O/Q Hardened - Blueprint v1.3)
 /// Law: Action -> Feedback -> Recalculation. Closes the preparation loop.
 class BattleOutcomeWorker {
   
-  /// 🔱 CLOSED INTELLIGENCE LOOP
+  /// CLOSED INTELLIGENCE LOOP
   /// Triggers full stack recalculation after a mission battle.
   static Future<Map<String, dynamic>> finalizeSession({
     required BattleSession session,
@@ -30,9 +30,9 @@ class BattleOutcomeWorker {
     required double pyqWeightage,
     CampaignNode? activeCampaign, 
   }) async {
-    debugPrint("🔱 BATTLE WORKER: Finalizing session ${session.sessionId}. Closing Intelligence Loop...");
+    debugPrint("BATTLE WORKER: Finalizing session ${session.sessionId}. Closing Intelligence Loop...");
 
-    // 🔱 Adaptation Engine (Audit GAP-O-5)
+    // Adaptation Engine (Audit GAP-O-5)
     CampaignNode? adaptedCampaign;
     if (activeCampaign != null) {
       adaptedCampaign = CampaignAdaptationEngine.adapt(
@@ -41,9 +41,9 @@ class BattleOutcomeWorker {
       );
     }
 
-    // 🔱 Law: Mission Completion Logic
+    // Law: Mission Completion Logic
     if (session.result == MissionResult.FAILED) {
-      debugPrint("🔱 BATTLE WORKER: Mission FAILED. Recalculation restricted.");
+      debugPrint("BATTLE WORKER: Mission FAILED. Recalculation restricted.");
       return {
         'success': false, 
         'reason': 'Mission failed',
@@ -56,13 +56,13 @@ class BattleOutcomeWorker {
     final List<RiskNode> updatedRisk = [];
     final List<FusionNode> updatedFusion = [];
 
-    // 🔱 Granular Recalculation per Topic (Audit GAP-B-1 Safe Recovery)
+    // Granular Recalculation per Topic (Audit GAP-B-1 Safe Recovery)
     for (var topicId in mission.atomicTopicIds) {
       
       // 1. Coverage Update (Audit: firstWhereOrNull)
       final currentCov = currentCoverageNodes.firstWhereOrNull((n) => n.atomicTopicId == topicId);
       if (currentCov == null) {
-         debugPrint("🔱 BATTLE WORKER WARNING: Coverage Node missing for $topicId. Skipping.");
+         debugPrint("BATTLE WORKER WARNING: Coverage Node missing for $topicId. Skipping.");
          continue;
       }
 
@@ -115,7 +115,7 @@ class BattleOutcomeWorker {
       updatedFusion.add(newFusion);
     }
 
-    debugPrint("🔱 BATTLE WORKER: Intelligence Loop Closed. Full stack recalculated.");
+    debugPrint("BATTLE WORKER: Intelligence Loop Closed. Full stack recalculated.");
 
     return {
       'success': true,

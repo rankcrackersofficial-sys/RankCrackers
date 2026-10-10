@@ -34,7 +34,8 @@ service cloud.firestore {
       return request.auth != null
           && request.auth.token.keys().hasAny(['phone_number'])
           && request.auth.token.phone_number is string
-          && request.auth.token.phone_number.matches('^\\+91[6-9][0-9]{9}
+          && request.auth.token.phone_number.matches('^\\+91[6-9][0-9]{9}$');
+    }
     match /system_config/global {
       allow read: if isFounder();
       allow write: if false; // Only via Cloud Functions
@@ -447,10 +448,10 @@ service cloud.firestore {
         allow read, write: if request.auth != null && request.auth.uid == userId;
       }
     }
-  }
-}
 
-);
+    match /profile_snapshots/{snapshotId} {
+      allow read: if isFounder();
+      allow write: if false; // Server/Admin SDK only; immutable authority records.
     }
 
     function targetHasMatchingCanonicalMobile() {
@@ -832,6 +833,11 @@ service cloud.firestore {
     match /opportunity_matches/{matchId} {
       allow read: if request.auth != null && (resource == null || resource.data.uid == request.auth.uid || isFounder());
       allow write: if request.auth != null && (request.resource.data.uid == request.auth.uid || isFounder());
+    }
+
+    match /profile_snapshots/{snapshotId} {
+      allow read: if isFounder();
+      allow write: if false; // Server/Admin SDK only; immutable authority records.
     }
 
     match /users/{userId} {

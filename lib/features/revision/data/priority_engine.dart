@@ -1,7 +1,7 @@
 import '../../../core/models/micro_topic_node.dart';
 import '../../../core/models/node_runtime_state.dart';
 
-/// 🔱 PRIORITY ENGINE
+/// PRIORITY ENGINE
 /// Ranks nodes based on strategic importance and preparation gaps.
 class PriorityEngine {
   static List<MicroTopicNode> sort({

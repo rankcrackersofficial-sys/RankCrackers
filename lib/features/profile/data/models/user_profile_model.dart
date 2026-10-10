@@ -18,7 +18,7 @@ class UserProfile {
     required this.name,
     required this.email,
     this.tier = SubscriptionTier.warrior,
-    this.preferredLanguage = 'hindi',
+    this.preferredLanguage = 'english',
     this.targetExams = const [],
     this.region = 'rajasthan',
     this.eliteExpiry,
@@ -54,7 +54,7 @@ class UserProfile {
         (e) => e.name == map['tier'],
         orElse: () => SubscriptionTier.warrior,
       ),
-      preferredLanguage: map['preferredLanguage'] ?? 'hindi',
+      preferredLanguage: map['preferredLanguage'] ?? 'english',
       targetExams: List<String>.from(map['targetExams'] ?? []),
       region: map['region'] ?? 'rajasthan',
       eliteExpiry: map['eliteExpiry'] != null 

@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../models/atomic_coverage_state.dart';
 import '../firebase/firestore_service.dart';
 
-/// 🔱 ATOMIC COVERAGE REPOSITORY
+/// ATOMIC COVERAGE REPOSITORY
 /// Sovereign storage authority for granular scope completion truth.
 class AtomicCoverageRepository {
   static Future<void> save(AtomicCoverageState state) async {

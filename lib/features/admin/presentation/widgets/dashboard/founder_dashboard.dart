@@ -14,7 +14,7 @@ class FounderDashboard extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
       children: [
-        // 🔱 MISSION PIPELINE (2x2 Grid) - Height 110
+        // MISSION PIPELINE (2x2 Grid) - Height 110
         _sectionLabel("MISSION PIPELINE"),
         const SizedBox(height: 12),
         SizedBox(
@@ -29,14 +29,14 @@ class FounderDashboard extends StatelessWidget {
               _pipelineCard("UPLOADS", 1, Icons.cloud_upload_rounded, Colors.blueAccent),
               _pipelineCard("INTEL", 2, Icons.radar_rounded, Colors.purpleAccent),
               _pipelineCard("REVIEWS", 3, Icons.fact_check_rounded, Colors.orangeAccent),
-              _pipelineCard("AI FAILURES", 4, Icons.error_outline_rounded, Colors.redAccent), // 🔱 Phase 6: Failures Visibility
+              _pipelineCard("AI FAILURES", 4, Icons.error_outline_rounded, Colors.redAccent), // Phase 6: Failures Visibility
             ],
           ),
         ),
 
         const SizedBox(height: 24),
 
-        // 🔱 QUICK COMMANDS (4-Column) - Height 110
+        // QUICK COMMANDS (4-Column) - Height 110
         _sectionLabel("QUICK COMMANDS"),
         const SizedBox(height: 12),
         SizedBox(
@@ -61,7 +61,7 @@ class FounderDashboard extends StatelessWidget {
 
         const SizedBox(height: 24),
 
-        // 🔱 REVIEW QUEUE PREVIEW (Top 3) - Height 120
+        // REVIEW QUEUE PREVIEW (Top 3) - Height 120
         _sectionLabel("REVIEW QUEUE PREVIEW"),
         const SizedBox(height: 12),
         SizedBox(
@@ -71,7 +71,7 @@ class FounderDashboard extends StatelessWidget {
 
         const SizedBox(height: 24),
 
-        // 🔱 INTEL FEED PREVIEW (Top 3) - Height 120
+        // INTEL FEED PREVIEW (Top 3) - Height 120
         _sectionLabel("INTELLIGENCE FEED PREVIEW"),
         const SizedBox(height: 12),
         SizedBox(

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-/// 🔱 NOTIFICATION IDENTITY (v1.0)
+/// NOTIFICATION IDENTITY (v1.0)
 class NotificationIdentity {
   final String notificationId;
   final String notificationNumber; // Advertisement Number
@@ -14,7 +14,7 @@ class NotificationIdentity {
   final String documentStatus;
   final String sourceUrl;
   final String sourceHash;
-  final String? linkedRealmId; // 🔱 For Sprint E.1 Resolution
+  final String? linkedRealmId; // For Sprint E.1 Resolution
 
   NotificationIdentity({
     required this.notificationId,

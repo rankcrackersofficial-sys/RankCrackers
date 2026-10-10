@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 DIGIBOOK BLOCK (v2.1 Hardened - Source Traceability)
+/// DIGIBOOK BLOCK (v2.1 Hardened - Source Traceability)
 /// A granular unit of learning material mapped to an Atomic Topic.
 class DigiBookBlock extends Equatable {
   final String id;
@@ -9,7 +9,7 @@ class DigiBookBlock extends Equatable {
   final String content;
   final String? contentHindi;
   
-  // 🔱 GOVERNANCE FIELDS
+  // GOVERNANCE FIELDS
   final String status; // draft, review, verified, published, archived
   final int version;
   final String lastAdminId;
@@ -18,10 +18,10 @@ class DigiBookBlock extends Equatable {
   final String? verifiedBy;
   final DateTime? verifiedAt;
 
-  // 🔱 TRACEABILITY FIELDS (G4 Alignment)
+  // TRACEABILITY FIELDS (G4 Alignment)
   final List<String> sourceFactIds;
   final String? sourceDocumentId;
-  final String? examId; // 🔱 Added: Mission Isolation
+  final String? examId; // Added: Mission Isolation
 
   const DigiBookBlock({
     required this.id,

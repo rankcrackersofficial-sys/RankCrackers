@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 DIGIBOOK REVISION (Audit GAP-4)
+/// DIGIBOOK REVISION (Audit GAP-4)
 /// Tracks corrections made by the Founder or AI Workers to a DigiBook Unit.
 class DigiBookRevision extends Equatable {
   final String revisionId;

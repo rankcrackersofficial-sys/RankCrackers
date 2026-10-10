@@ -1,35 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/theme/tactical_noir_background.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_spacing.dart';
-import '../../../../core/utils/app_routes.dart'; // 🔱 Route import
-import '../../../../core/models/readiness_state.dart';
-import '../../../../core/models/momentum_state.dart';
+import '../../../../core/utils/app_routes.dart';
 import '../../../../core/widgets/dark_card.dart';
-import '../widgets/battle_engine_card.dart';
-import '../widgets/mission_blueprint_card.dart';
-import '../widgets/rebuild_zone_card.dart';
-import '../widgets/tactical_roadmap_card.dart';
-import '../widgets/live_timer_card.dart';
 import '../../../../shared/session/session_manager.dart';
 import '../../../../shared/providers/session_provider.dart';
 import '../../../../shared/widgets/command_header.dart';
 import '../../../../core/knowledge/knowledge_engine.dart';
-import '../../../../core/knowledge/coverage_engine.dart';
 import '../../../dashboard/presentation/providers/dashboard_provider.dart';
 import '../../core/crucible_clock_engine.dart';
-import '../../core/battle_engine.dart';
-import '../../core/crucible_master_engine.dart';
-import '../providers/crucible_state_provider.dart';
+import '../../core/crucible_canonical_schedules.dart';
 import '../../models/crucible_protocol_state.dart';
+import '../providers/crucible_state_provider.dart';
+import '../../../digibook/domain/services/digibook_canonical_bridge_service.dart';
+import '../../../digibook/domain/models/digibook_launch_args.dart';
 
-/// 🔱 CRUCIBLE SCREEN
-/// The tactical heart of the RankCrackers ecosystem.
+/// CRUCIBLE SCREEN
+/// Sovereign Student Panel for the 98-Day Continuous Learning Ring.
+/// Adheres strictly to the Universal Crucible Constitution and Academic Truth.
 class CrucibleScreen extends ConsumerStatefulWidget {
   const CrucibleScreen({super.key});
 
@@ -38,320 +31,1109 @@ class CrucibleScreen extends ConsumerStatefulWidget {
 }
 
 class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
-  String selectedExamId = 'ras';
-  String selectedVariantId = '';
-
   @override
   void initState() {
     super.initState();
-    loadMission();
-  }
-
-  Future<void> loadMission() async {
-    final examId = await SessionManager.getExamId();
-    final variantId = await SessionManager.getVariantId();
-    if (mounted) {
-      setState(() {
-        selectedExamId = examId ?? 'ras';
-        selectedVariantId = variantId ?? '';
-      });
-    }
+    DigiBookCanonicalBridgeService.instance.initialize();
   }
 
   @override
   Widget build(BuildContext context) {
-    final knowledge = KnowledgeEngine.instance;
-    final states = knowledge.nodeStates;
     final sessionUser = ref.watch(sessionUserProvider).valueOrNull;
     final readiness = ref.watch(missionReadinessProvider);
+    final knowledge = KnowledgeEngine.instance;
     final momentum = knowledge.momentumState;
-
-    ref.listen<AsyncValue<SessionUser>>(sessionUserProvider, (previous, next) {
-      if (next.hasValue) {
-        loadMission();
-      }
-    });
 
     final protocolStateAsync = ref.watch(crucibleProtocolStateProvider);
 
     return protocolStateAsync.when(
       data: (protocolState) {
         if (protocolState == null) {
-          return _buildPendingAuthorityState(sessionUser, readiness, momentum);
+          return _buildPreparingState(
+            sessionUser: sessionUser,
+            readiness: readiness,
+            momentum: momentum,
+          );
         }
-
-        final currentDay = CrucibleClockEngine.getProtocolDay(
-            state: protocolState, now: DateTime.now());
-        final currentPhase = protocolState.phaseIndex;
-        final progress = (currentDay / 99).clamp(0.0, 1.0);
-
-        final nodes = knowledge.allNodes
-            .where((e) => e.examId.toLowerCase() == selectedExamId.toLowerCase())
-            .toList();
-
-        final currentCycleDay = currentDay;
-        final phase = currentPhase;
-
-        final coverage = CoverageEngine.calculate(
-          examId: selectedExamId,
-          variantId: selectedVariantId,
-          nodes: nodes,
-          states: states,
-          atomicStates: knowledge.atomicCoverageStates,
-        );
-
-        final hasCrucibleEvidence = nodes.isNotEmpty && coverage.totalNodes > 0;
-
-        final plan =
-            CrucibleMasterEngine.generatePlan(nodes: nodes, states: states);
-
-        final missions = hasCrucibleEvidence
-            ? (plan.isEmpty
-                ? ['Awaiting tactical generation...']
-                : plan.take(3).map((e) => e['topicName'].toString()).toList())
-            : ['EVIDENCE PENDING'];
-        final missionComplete =
-            hasCrucibleEvidence ? coverage.coveragePercent : 0.0;
-        final pending =
-            hasCrucibleEvidence ? 1.0 - coverage.coveragePercent : 0.0;
-        final weakCount = hasCrucibleEvidence ? coverage.weakNodes : 0;
-        final weakAreas =
-            hasCrucibleEvidence ? weakCount / coverage.totalNodes : 0.0;
-
-        final priorityNode = BattleEngine.getPriorityNode(
-          nodes,
-          states,
-          riskFactor: knowledge.riskState?.overallRisk ?? 0.0,
-        );
-
-        final macroTestActive = CrucibleClockEngine.isMacroTestWindow(
-            enrollmentTime: protocolState.protocolStartTime);
-        final rebuildMode = CrucibleClockEngine.isRebuildPhase(
-            enrollmentTime: protocolState.protocolStartTime);
-
-        return Scaffold(
-          backgroundColor: AppColors.background,
-          body: TacticalNoirBackground(
-            child: SafeArea(
-              child: SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CommandHeader(
-                      userName: sessionUser?.name ?? 'Warrior',
-                      userPhoto: sessionUser?.photo,
-                      examName: sessionUser?.examName ?? selectedExamId,
-                      readiness: readiness,
-                      momentum: momentum,
-                      missionEvidenceVerified: hasCrucibleEvidence,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: AppSpacing.screenPadding),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SizedBox(height: 16),
-                          Text('THE CRUCIBLE',
-                              style: AppTypography.hero.copyWith(fontSize: 22)),
-                          const SizedBox(height: 6),
-                          Text(
-                              '100 Day Tactical Ascension Protocol • Day $currentDay',
-                              style: AppTypography.label),
-                          const SizedBox(height: 28),
-                          LiveTimerCard(
-                              day: currentCycleDay,
-                              phase: phase,
-                              protocolState: protocolState),
-                          const SizedBox(height: 24),
-                          BattleEngineCard(
-                            dayCount: currentDay,
-                            progress: progress,
-                            missionComplete: missionComplete,
-                            pending: pending,
-                            weakAreas: weakAreas,
-                            activeTopics: missions,
-                            hasEvidence: hasCrucibleEvidence,
-                          ),
-                          const SizedBox(height: 24),
-                          MissionBlueprintCard(
-                            hasEvidence: hasCrucibleEvidence,
-                            missions: plan.map((e) {
-                              final nodeId = e['topicId'].toString();
-                              final node = knowledge.getNode(nodeId);
-
-                              return {
-                                'subject': e['topicName'],
-                                'topics': 'Study Hours: ${e['hours']}',
-                                'completed': 'In Progress',
-                                'running':
-                                    e['priority'].toString().toUpperCase(),
-                                'locked': 'Next Session',
-                                'onTap': node != null
-                                    ? () => context.go(AppRoutes.digibook,
-                                        extra: node)
-                                    : null,
-                              };
-                            }).toList(),
-                          ),
-                          const SizedBox(height: 24),
-                          if (macroTestActive)
-                            Container(
-                              margin: const EdgeInsets.only(bottom: 20),
-                              padding: const EdgeInsets.all(16),
-                              decoration: BoxDecoration(
-                                color: Colors.red.withValues(alpha: 0.08),
-                                borderRadius: BorderRadius.circular(14),
-                                border: Border.all(
-                                    color: Colors.red.withValues(alpha: 0.2)),
-                              ),
-                              child: const Row(
-                                children: [
-                                  Icon(Icons.warning_amber, color: Colors.red),
-                                  SizedBox(width: 12),
-                                  Expanded(
-                                      child: Text('Macro Test Window Active',
-                                          style: TextStyle(
-                                              color: Colors.red,
-                                              fontWeight: FontWeight.bold))),
-                                ],
-                              ),
-                            ),
-                          if (rebuildMode) ...[
-                            RebuildZoneCard(
-                                weakZones: weakCount,
-                                priorityTopic:
-                                    priorityNode?.title ?? 'No Risk'),
-                            const SizedBox(height: 24),
-                          ],
-                          TacticalRoadmapCard(
-                            roadmap: [
-                              {
-                                'day': 'DAY $currentDay',
-                                'firstTask': hasCrucibleEvidence &&
-                                        missions.isNotEmpty &&
-                                        missions[0] !=
-                                            'Awaiting tactical generation...'
-                                    ? missions[0]
-                                    : 'EVIDENCE PENDING',
-                                'secondTask':
-                                    hasCrucibleEvidence && missions.length > 1
-                                        ? missions[1]
-                                        : 'EVIDENCE PENDING',
-                                'thirdTask': hasCrucibleEvidence
-                                    ? 'Revision Cycle'
-                                    : 'EVIDENCE PENDING',
-                                'locked': false,
-                              },
-                              {
-                                'day': 'DAY ${currentDay + 1}',
-                                'firstTask':
-                                    hasCrucibleEvidence && missions.length > 2
-                                        ? missions[2]
-                                        : 'EVIDENCE PENDING',
-                                'secondTask': hasCrucibleEvidence
-                                    ? 'Subject Drill'
-                                    : 'EVIDENCE PENDING',
-                                'thirdTask': hasCrucibleEvidence
-                                    ? 'Daily Battle'
-                                    : 'EVIDENCE PENDING',
-                                'locked': false,
-                              },
-                              {
-                                'day': 'DAY ${currentDay + 2}',
-                                'firstTask': '',
-                                'secondTask': '',
-                                'thirdTask': '',
-                                'locked': true,
-                              },
-                            ],
-                          ),
-                          const SizedBox(height: 100),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
+        return _buildCrucibleContent(
+          protocolState: protocolState,
+          sessionUser: sessionUser,
+          readiness: readiness,
+          momentum: momentum,
         );
       },
-      loading: () => const Scaffold(
+      loading: () => Scaffold(
         backgroundColor: AppColors.background,
-        body: Center(
-          child: CircularProgressIndicator(color: AppColors.gold),
+        body: TacticalNoirBackground(
+          child: const Center(
+            child: CircularProgressIndicator(color: AppColors.gold),
+          ),
         ),
       ),
-      error: (err, stack) => Scaffold(
-        backgroundColor: AppColors.background,
-        body: Center(
-          child: Text('Error loading protocol: $err',
-              style: AppTypography.body.copyWith(color: AppColors.error)),
+      error: (err, stack) => _buildPreparingState(
+        sessionUser: sessionUser,
+        readiness: readiness,
+        momentum: momentum,
+      ),
+    );
+  }
+
+  Widget _buildPreparingState({
+    required SessionUser? sessionUser,
+    required dynamic readiness,
+    required dynamic momentum,
+  }) {
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      body: TacticalNoirBackground(
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CommandHeader(
+                userName: sessionUser?.name ?? 'Warrior',
+                userPhoto: sessionUser?.photo,
+                examName: sessionUser?.examName ?? 'Mission',
+                readiness: readiness,
+                momentum: momentum,
+                missionEvidenceVerified: false,
+              ),
+              Expanded(
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: AppColors.surface,
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(color: AppColors.borderSoft),
+                          ),
+                          child: const Icon(
+                            Icons.local_fire_department_rounded,
+                            color: AppColors.gold,
+                            size: 40,
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        Text(
+                          'CRUCIBLE PREPARATION',
+                          style: AppTypography.hero.copyWith(
+                            fontSize: 18,
+                            color: Colors.white,
+                            letterSpacing: 1.1,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          'Crucible 98-day continuous orbit is not yet active for ${sessionUser?.examName ?? "this mission"}.\n\nYour schedule will activate as soon as official mission parameters are published.',
+                          textAlign: TextAlign.center,
+                          style: AppTypography.body.copyWith(
+                            fontSize: 13,
+                            color: Colors.white70,
+                            height: 1.45,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Widget _buildPendingAuthorityState(SessionUser? sessionUser,
-      ReadinessState? readiness, MomentumState? momentum) {
+  Widget _buildCrucibleContent({
+    required CrucibleProtocolState protocolState,
+    required SessionUser? sessionUser,
+    required dynamic readiness,
+    required dynamic momentum,
+  }) {
+    final now = DateTime.now();
+
+    // Sovereign Global Clock Authority
+    final globalStartTime = protocolState.protocolStartTime;
+    final effectiveState = protocolState;
+
+    final currentCycleDay = CrucibleClockEngine.getCycleDay(
+      state: effectiveState,
+      now: now,
+    );
+
+    final orbitNumber = CrucibleClockEngine.getOrbitNumber(
+      protocolStartTime: globalStartTime,
+      now: now,
+    );
+
+    final currentPhase = CrucibleCanonicalScheduleRegistry.getPhaseForCycleDay(currentCycleDay);
+    final isRebuild = CrucibleCanonicalScheduleRegistry.isRebuildDay(currentCycleDay);
+    final isMacro = CrucibleCanonicalScheduleRegistry.isMacroDay(currentCycleDay);
+
+    final activeSchedule = CrucibleCanonicalScheduleRegistry.getScheduleForCycleDay(currentCycleDay);
+
+    // Calculate position inside the 2-day schedule
+    final isDayB = activeSchedule != null && currentCycleDay == activeSchedule.endCycleDay;
+    final dayInScheduleLabel = isDayB ? 'Day B of 2' : 'Day A of 2';
+
     return Scaffold(
       backgroundColor: AppColors.background,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CommandHeader(
-                  userName: sessionUser?.name ?? 'Warrior',
+                  userName: sessionUser?.name ?? 'Candidate',
                   userPhoto: sessionUser?.photo,
-                  examName: sessionUser?.examName ?? selectedExamId,
+                  examName: sessionUser?.examName ?? 'JEE Main 2027',
                   readiness: readiness,
                   momentum: momentum,
                   missionEvidenceVerified: false,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(AppSpacing.screenPadding),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: AppSpacing.screenPadding,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      const SizedBox(height: 12),
+                      // 🔱 1. TOP COMPACT HEADER SECTION
+                      _buildCompactHeader(currentCycleDay, currentPhase, orbitNumber),
                       const SizedBox(height: 16),
-                      Text('THE CRUCIBLE',
-                          style: AppTypography.hero.copyWith(fontSize: 22)),
-                      const SizedBox(height: 6),
-                      Text('MISSION AUTHORITY PENDING',
-                          style: AppTypography.label),
-                      const SizedBox(height: 40),
-                      DarkCard(
-                        padding: const EdgeInsets.all(24),
-                        child: Column(
-                          children: [
-                            const Icon(Icons.security_rounded,
-                                color: AppColors.gold, size: 48),
-                            const SizedBox(height: 24),
-                            Text(
-                              'Protocol Synchronization Required',
-                              textAlign: TextAlign.center,
-                              style: AppTypography.section
-                                  .copyWith(color: AppColors.gold),
-                            ),
-                            const SizedBox(height: 12),
-                            Text(
-                              'The tactical Ascension Protocol is not yet initialized for this mission. Please ensure your mission is active and try again.',
-                              textAlign: TextAlign.center,
-                              style: AppTypography.body,
-                            ),
-                          ],
-                        ),
+
+                      // 🔱 2. TODAY'S ACTIVE SCHEDULE CARD
+                      _buildTodayScheduleCard(
+                        activeSchedule: activeSchedule,
+                        currentCycleDay: currentCycleDay,
+                        currentPhase: currentPhase,
+                        dayInScheduleLabel: dayInScheduleLabel,
+                        isRebuild: isRebuild,
+                        isMacro: isMacro,
                       ),
+                      const SizedBox(height: 16),
+
+                      // 🔱 3. PERSONAL COVERAGE LEDGER
+                      _buildPersonalCoverageCard(sessionUser, currentCycleDay),
+                      const SizedBox(height: 16),
+
+                      // 🔱 4. UPCOMING MILESTONES (REBUILD & MACRO)
+                      _buildMilestonesCard(currentCycleDay, currentPhase),
+                      const SizedBox(height: 16),
+
+                      // 🔱 5. 98-DAY CONTINUOUS RING VISUALIZATION
+                      _build98DayRingCard(currentCycleDay, currentPhase),
+                      const SizedBox(height: 16),
+
+                      // 🔱 6. ANCILLARY CALIBRATION & COMPETITION HOLDS
+                      _buildAncillaryHoldsCard(),
+                      const SizedBox(height: 60),
                     ],
                   ),
                 ),
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // SECTION 1: COMPACT HEADER SECTION (<= 110dp)
+  // ---------------------------------------------------------------------------
+  Widget _buildCompactHeader(int currentCycleDay, int currentPhase, int orbitNumber) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+              decoration: BoxDecoration(
+                color: AppColors.gold.withValues(alpha: 0.12),
+                borderRadius: BorderRadius.circular(4),
+                border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+              ),
+              child: const Text(
+                'JEE MAIN 2027',
+                style: TextStyle(
+                  color: AppColors.gold,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 1.1,
+                ),
+              ),
+            ),
+            Text(
+              'Continuous Learning Ring',
+              style: AppTypography.subtitle.copyWith(
+                color: AppColors.textSecondary,
+                fontSize: 11,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 6),
+        Text(
+          'THE CRUCIBLE',
+          style: AppTypography.hero.copyWith(
+            fontSize: 22,
+            fontWeight: FontWeight.w800,
+            letterSpacing: 1.2,
+            color: Colors.white,
+          ),
+        ),
+        const SizedBox(height: 2),
+        Text(
+          'DAY $currentCycleDay OF 98 • BLOCK $currentPhase OF 7 • CYCLE $orbitNumber',
+          style: AppTypography.label.copyWith(
+            color: AppColors.gold,
+            fontWeight: FontWeight.w600,
+            fontSize: 11,
+            letterSpacing: 1.0,
+          ),
+        ),
+      ],
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // SECTION 2: TODAY'S ACTIVE SCHEDULE CARD
+  // ---------------------------------------------------------------------------
+  Widget _buildTodayScheduleCard({
+    required CrucibleCanonicalSchedule? activeSchedule,
+    required int currentCycleDay,
+    required int currentPhase,
+    required String dayInScheduleLabel,
+    required bool isRebuild,
+    required bool isMacro,
+  }) {
+    if (isRebuild) {
+      return DarkCard(
+        padding: const EdgeInsets.all(18),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _buildTagChip('REBUILD WINDOW', AppColors.gold),
+                Text('Day $currentCycleDay of 98', style: AppTypography.subtitle),
+              ],
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Block $currentPhase Rebuild Window',
+              style: AppTypography.section.copyWith(color: Colors.white, fontSize: 17),
+            ),
+            const SizedBox(height: 6),
+            Text(
+              'No assessment evidence yet. Use this window to revisit missed or unfinished learning.',
+              style: AppTypography.body.copyWith(color: AppColors.textSecondary, fontSize: 13, height: 1.4),
+            ),
+            const SizedBox(height: 14),
+            OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(
+                side: const BorderSide(color: AppColors.gold),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
+              ),
+              icon: const Icon(Icons.menu_book_rounded, color: AppColors.gold, size: 16),
+              label: const Text('EXPLORE SYLLABUS', style: TextStyle(color: AppColors.gold, fontSize: 12, fontWeight: FontWeight.w700)),
+              onPressed: () => context.push(AppRoutes.syllabus),
+            ),
+          ],
+        ),
+      );
+    }
+
+    if (isMacro) {
+      return DarkCard(
+        padding: const EdgeInsets.all(18),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _buildTagChip('MACRO CITADEL', AppColors.gold),
+                Text('Day $currentCycleDay of 98', style: AppTypography.subtitle),
+              ],
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Block $currentPhase Comprehensive Milestone',
+              style: AppTypography.section.copyWith(color: Colors.white, fontSize: 17),
+            ),
+            const SizedBox(height: 6),
+            Text(
+              'Block synthesis training milestone (50 Questions / 120 Minutes).',
+              style: AppTypography.body.copyWith(color: AppColors.textSecondary, fontSize: 13, height: 1.4),
+            ),
+            const SizedBox(height: 14),
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.04),
+                borderRadius: BorderRadius.circular(6),
+                border: Border.all(color: Colors.white.withValues(alpha: 0.06)),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.info_outline_rounded, color: AppColors.textSecondary, size: 16),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      'Macro assessment is not ready yet.',
+                      style: AppTypography.subtitle.copyWith(color: AppColors.textSecondary, fontSize: 11),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    if (activeSchedule == null) {
+      return DarkCard(
+        padding: const EdgeInsets.all(18),
+        child: Text(
+          'No active schedule resolved for Day $currentCycleDay.',
+          style: AppTypography.body,
+        ),
+      );
+    }
+
+    // Resolve DigiBook Availability from Bridge
+    final bridge = DigiBookCanonicalBridgeService.instance;
+    final List<DigiBookAuthorityEntry> resolvedEntries = [];
+    for (final nodeId in activeSchedule.canonicalNodeIds) {
+      final res = bridge.resolveCanonicalNode(nodeId);
+      if (res.isMapped) {
+        resolvedEntries.addAll(res.entries);
+      }
+    }
+    // Also check direct GU bindings
+    for (final guId in activeSchedule.generationUnitIds) {
+      final entry = bridge.getEntryByGuId(guId);
+      if (entry != null && !resolvedEntries.any((e) => e.guId == guId)) {
+        resolvedEntries.add(entry);
+      }
+    }
+
+    final bool hasContent = resolvedEntries.isNotEmpty;
+
+    return DarkCard(
+      padding: const EdgeInsets.all(18),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Header Row
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              _buildTagChip('${activeSchedule.formattedCode} • $dayInScheduleLabel', AppColors.gold),
+              Text(
+                activeSchedule.subject.toUpperCase(),
+                style: const TextStyle(
+                  color: AppColors.textSecondary,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 1.0,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+
+          // Title
+          Text(
+            activeSchedule.canonicalTitle,
+            style: AppTypography.section.copyWith(
+              color: Colors.white,
+              fontSize: 17,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            '${activeSchedule.subject} • Block ${activeSchedule.phaseIndex}',
+            style: AppTypography.subtitle.copyWith(
+              color: AppColors.textSecondary,
+              fontSize: 12,
+            ),
+          ),
+          const SizedBox(height: 12),
+
+          // Truthful Content Availability Indicator (No operational/production jargon)
+          Row(
+            children: [
+              Icon(
+                hasContent ? Icons.check_circle_outline_rounded : Icons.radio_button_unchecked_rounded,
+                size: 14,
+                color: hasContent ? const Color(0xFF4CAF50) : AppColors.textSecondary,
+              ),
+              const SizedBox(width: 6),
+              Text(
+                hasContent
+                    ? 'Learning content available'
+                    : 'Learning content not available yet',
+                style: TextStyle(
+                  color: hasContent ? const Color(0xFF4CAF50) : AppColors.textSecondary,
+                  fontSize: 11,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.5,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+
+          // Action Buttons: LEARN / CONTINUE LEARNING & SYLLABUS
+          Row(
+            children: [
+              Expanded(
+                flex: 3,
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: hasContent ? AppColors.gold : Colors.white12,
+                    foregroundColor: hasContent ? Colors.black : Colors.white38,
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    elevation: 0,
+                  ),
+                  icon: const Icon(Icons.play_arrow_rounded, size: 18),
+                  label: Text(
+                    hasContent ? 'LEARN' : 'LEARN',
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 13,
+                      letterSpacing: 1.0,
+                    ),
+                  ),
+                  onPressed: hasContent
+                      ? () => _handleLearnAction(activeSchedule, resolvedEntries)
+                      : () => _handleUnavailableContent(activeSchedule),
+                ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                flex: 2,
+                child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(color: Colors.white.withValues(alpha: 0.2)),
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  onPressed: () => context.push(AppRoutes.syllabus),
+                  child: const Text(
+                    'SYLLABUS',
+                    style: TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 0.6,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 14),
+
+          // Micro Test Status (Truthful Hold, No governance internals)
+          Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.03),
+              borderRadius: BorderRadius.circular(6),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Icon(Icons.shield_outlined, color: AppColors.textSecondary, size: 15),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    'Micro assessment is not ready for this schedule yet.',
+                    style: AppTypography.subtitle.copyWith(
+                      color: AppColors.textSecondary,
+                      fontSize: 11,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // Multi-GU Learning Action (Zero Autoselect First GU without User Choice)
+  void _handleLearnAction(
+    CrucibleCanonicalSchedule schedule,
+    List<DigiBookAuthorityEntry> entries,
+  ) {
+    if (entries.isEmpty) {
+      _handleUnavailableContent(schedule);
+      return;
+    }
+
+    if (entries.length == 1) {
+      final entry = entries.first;
+      final launchArgs = DigiBookLaunchArgs(
+        generationUnitId: entry.guId,
+        canonicalNodeId: entry.canonicalNodeId,
+        revisionId: entry.lessonRevision,
+        subject: entry.subject,
+        topicTitle: entry.topic.isNotEmpty ? entry.topic : schedule.canonicalTitle,
+        factSemantics: entry.factSemantics,
+        atomicFactIds: entry.atomicFactIds,
+      );
+
+      context.push(AppRoutes.digibookReader, extra: launchArgs);
+      return;
+    }
+
+    // Multiple GUs: Render governed selection sheet
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: AppColors.surface,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '${schedule.formattedCode} — ${schedule.canonicalTitle}',
+                style: AppTypography.section.copyWith(color: Colors.white, fontSize: 16),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                'Select a learning module to begin (${entries.length} modules available):',
+                style: AppTypography.subtitle.copyWith(color: AppColors.textSecondary, fontSize: 12),
+              ),
+              const SizedBox(height: 12),
+              Flexible(
+                child: ListView.separated(
+                  shrinkWrap: true,
+                  itemCount: entries.length,
+                  separatorBuilder: (_, __) => const Divider(color: Colors.white10, height: 1),
+                  itemBuilder: (context, index) {
+                    final e = entries[index];
+                    return ListTile(
+                      dense: true,
+                      contentPadding: EdgeInsets.zero,
+                      leading: CircleAvatar(
+                        radius: 12,
+                        backgroundColor: AppColors.gold.withValues(alpha: 0.15),
+                        child: Text(
+                          '${index + 1}',
+                          style: const TextStyle(color: AppColors.gold, fontSize: 11, fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      title: Text(
+                        e.topic.isNotEmpty ? e.topic : 'Module ${index + 1}',
+                        style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600),
+                      ),
+                      trailing: const Icon(Icons.chevron_right_rounded, color: AppColors.textSecondary, size: 18),
+                      onTap: () {
+                        Navigator.pop(ctx);
+                        final launchArgs = DigiBookLaunchArgs(
+                          generationUnitId: e.guId,
+                          canonicalNodeId: e.canonicalNodeId,
+                          revisionId: e.lessonRevision,
+                          subject: e.subject,
+                          topicTitle: e.topic.isNotEmpty ? e.topic : schedule.canonicalTitle,
+                          factSemantics: e.factSemantics,
+                          atomicFactIds: e.atomicFactIds,
+                        );
+                        this.context.push(AppRoutes.digibookReader, extra: launchArgs);
+                      },
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _handleUnavailableContent(CrucibleCanonicalSchedule schedule) {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: AppColors.surface,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  const Icon(Icons.info_outline_rounded, color: AppColors.gold, size: 20),
+                  const SizedBox(width: 10),
+                  Text(
+                    'Learning Content Not Available Yet',
+                    style: AppTypography.section.copyWith(color: Colors.white, fontSize: 15),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+              Text(
+                'Learning content for "${schedule.canonicalTitle}" (${schedule.formattedCode}) is not available yet. You may explore related syllabus topics.',
+                style: AppTypography.body.copyWith(color: AppColors.textSecondary, fontSize: 13, height: 1.4),
+              ),
+              const SizedBox(height: 16),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.gold,
+                    foregroundColor: Colors.black,
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  ),
+                  onPressed: () {
+                    Navigator.pop(ctx);
+                    context.push(AppRoutes.syllabus);
+                  },
+                  child: const Text('EXPLORE SYLLABUS', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12)),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // SECTION 3: PERSONAL COVERAGE LEDGER (Zero Fake % Metrics)
+  // ---------------------------------------------------------------------------
+  Widget _buildPersonalCoverageCard(SessionUser? user, int currentCycleDay) {
+    return DarkCard(
+      padding: const EdgeInsets.all(18),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                'PERSONAL COVERAGE LEDGER',
+                style: TextStyle(
+                  color: AppColors.gold,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 1.2,
+                ),
+              ),
+              Text(
+                'Continuous Progress',
+                style: AppTypography.subtitle.copyWith(fontSize: 10),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Row(
+            children: [
+              Expanded(
+                child: _buildMetricTile(
+                  label: 'Schedules Done',
+                  value: '0',
+                  hint: 'Verified attempts',
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: _buildMetricTile(
+                  label: 'Modules Studied',
+                  value: '0',
+                  hint: 'Active sessions',
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: _buildMetricTile(
+                  label: 'Backlog Scope',
+                  value: '0',
+                  hint: 'Never-wait policy',
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Text(
+            'Your individual ledger records verified academic progress independently of the rotating mission clock. Late joiners start without fake failure or penalty.',
+            style: AppTypography.subtitle.copyWith(
+              color: AppColors.textSecondary,
+              fontSize: 10,
+              height: 1.3,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildMetricTile({
+    required String label,
+    required String value,
+    required String hint,
+  }) {
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.03),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            value,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+          const SizedBox(height: 3),
+          Text(
+            label,
+            style: const TextStyle(
+              color: AppColors.gold,
+              fontSize: 10,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 1),
+          Text(
+            hint,
+            style: const TextStyle(
+              color: AppColors.textSecondary,
+              fontSize: 9,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // SECTION 4: UPCOMING MILESTONES (REBUILD & MACRO)
+  // ---------------------------------------------------------------------------
+  Widget _buildMilestonesCard(int currentCycleDay, int currentPhase) {
+    final nextRebuildDay = currentPhase * 14 - 1; // e.g. Day 13 for Phase 1, Day 27 for Phase 2...
+    final nextMacroDay = currentPhase * 14; // e.g. Day 14 for Phase 1, Day 28 for Phase 2...
+
+    return DarkCard(
+      padding: const EdgeInsets.all(18),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'BLOCK $currentPhase MILESTONES',
+            style: const TextStyle(
+              color: AppColors.gold,
+              fontSize: 10,
+              fontWeight: FontWeight.w700,
+              letterSpacing: 1.2,
+            ),
+          ),
+          const SizedBox(height: 12),
+          _buildMilestoneRow(
+            icon: Icons.build_circle_outlined,
+            title: 'Rebuild Day • Day $nextRebuildDay',
+            subtitle: 'Personalized concept repair window for Block $currentPhase',
+          ),
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 6),
+            child: Divider(color: Colors.white10),
+          ),
+          _buildMilestoneRow(
+            icon: Icons.flag_outlined,
+            title: 'Macro Citadel • Day $nextMacroDay',
+            subtitle: 'Block $currentPhase synthesis assessment (50 Questions / 120 Min)',
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildMilestoneRow({
+    required IconData icon,
+    required String title,
+    required String subtitle,
+  }) {
+    return Row(
+      children: [
+        Container(
+          padding: const EdgeInsets.all(8),
+          decoration: BoxDecoration(
+            color: Colors.white.withValues(alpha: 0.04),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Icon(icon, color: AppColors.gold, size: 18),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: AppTypography.body.copyWith(
+                  color: Colors.white,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              const SizedBox(height: 1),
+              Text(
+                subtitle,
+                style: AppTypography.subtitle.copyWith(
+                  color: AppColors.textSecondary,
+                  fontSize: 10,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // SECTION 5: 98-DAY CONTINUOUS RING VISUALIZATION
+  // ---------------------------------------------------------------------------
+  Widget _build98DayRingCard(int currentCycleDay, int currentPhase) {
+    return DarkCard(
+      padding: const EdgeInsets.all(18),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                '98-DAY CONTINUOUS RING',
+                style: TextStyle(
+                  color: AppColors.gold,
+                  fontSize: 10,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 1.2,
+                ),
+              ),
+              Text(
+                '7 Blocks • 42 Schedules',
+                style: AppTypography.subtitle.copyWith(fontSize: 10),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          // 7 Phase Block Tiles
+          Row(
+            children: List.generate(7, (index) {
+              final phaseNum = index + 1;
+              final isCurrent = phaseNum == currentPhase;
+              final isPast = phaseNum < currentPhase;
+
+              return Expanded(
+                child: Container(
+                  margin: EdgeInsets.only(right: index < 6 ? 5 : 0),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  decoration: BoxDecoration(
+                    color: isCurrent
+                        ? AppColors.gold.withValues(alpha: 0.18)
+                        : (isPast
+                            ? Colors.white.withValues(alpha: 0.06)
+                            : Colors.white.withValues(alpha: 0.02)),
+                    borderRadius: BorderRadius.circular(6),
+                    border: Border.all(
+                      color: isCurrent
+                          ? AppColors.gold
+                          : Colors.white.withValues(alpha: 0.06),
+                      width: isCurrent ? 1.4 : 1.0,
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'B$phaseNum',
+                        style: TextStyle(
+                          color: isCurrent ? AppColors.gold : (isPast ? Colors.white70 : Colors.white38),
+                          fontSize: 11,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        '${(phaseNum - 1) * 14 + 1}-${phaseNum * 14}d',
+                        style: TextStyle(
+                          color: isCurrent ? AppColors.gold : AppColors.textSecondary,
+                          fontSize: 8,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            }),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            'Continuous rotation: Day 98 advances back to Day 1 without syllabus loss.',
+            style: AppTypography.subtitle.copyWith(
+              color: AppColors.textSecondary,
+              fontSize: 10,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // SECTION 6: ANCILLARY CALIBRATIONS & COMPETITION HOLDS
+  // ---------------------------------------------------------------------------
+  Widget _buildAncillaryHoldsCard() {
+    return Column(
+      children: [
+        // Smart Entry Card
+        DarkCard(
+          padding: const EdgeInsets.all(14),
+          child: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.04),
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: const Icon(Icons.tune_rounded, color: AppColors.textSecondary, size: 18),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Smart Entry — Not Ready',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(height: 1),
+                    Text(
+                      'Diagnostic calibration is not active for this mission yet.',
+                      style: AppTypography.subtitle.copyWith(
+                        color: AppColors.textSecondary,
+                        fontSize: 10,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              _buildTagChip('HELD', AppColors.textSecondary),
+            ],
+          ),
+        ),
+        const SizedBox(height: 8),
+
+        // Test Arena Card
+        DarkCard(
+          padding: const EdgeInsets.all(14),
+          child: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.04),
+                  borderRadius: BorderRadius.circular(6),
+                ),
+                child: const Icon(Icons.military_tech_outlined, color: AppColors.textSecondary, size: 18),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Test Arena — Not Ready',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(height: 1),
+                    Text(
+                      'Standardized competitive events are hosted in Test Arena.',
+                      style: AppTypography.subtitle.copyWith(
+                        color: AppColors.textSecondary,
+                        fontSize: 10,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              _buildTagChip('TEST ARENA', AppColors.gold),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildTagChip(String text, Color color) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.12),
+        borderRadius: BorderRadius.circular(4),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: color,
+          fontSize: 9,
+          fontWeight: FontWeight.w700,
+          letterSpacing: 0.7,
         ),
       ),
     );

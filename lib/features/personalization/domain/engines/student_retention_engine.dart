@@ -11,6 +11,7 @@ final class StudentRetentionEstimate {
   const StudentRetentionEstimate({
     required this.studentId,
     required this.amtnId,
+    required this.missionId,
     required this.calculatedAtUtc,
     required this.probability,
     required this.state,
@@ -20,6 +21,7 @@ final class StudentRetentionEstimate {
 
   final String studentId;
   final String amtnId;
+  final String missionId;
   final DateTime calculatedAtUtc;
   final double? probability;
   final StudentRetentionState state;
@@ -39,6 +41,7 @@ final class StudentRetentionEngine {
   StudentRetentionEstimate calculate({
     required String studentId,
     required String amtnId,
+    required String missionId,
     required DateTime calculatedAtUtc,
     required Iterable<StudentEvidenceEvent> events,
   }) {
@@ -50,7 +53,7 @@ final class StudentRetentionEngine {
     final eligible = <StudentEvidenceEvent>[];
 
     for (final e in events) {
-      if (e.studentId != studentId || e.amtnId != amtnId) continue;
+      if (e.studentId != studentId || e.missionId != missionId || e.amtnId != amtnId) continue;
       if (policy.evaluate(e, StudentEvidenceUse.retention).eligible) {
         eligible.add(e);
       }
@@ -60,6 +63,7 @@ final class StudentRetentionEngine {
       return StudentRetentionEstimate(
         studentId: studentId,
         amtnId: amtnId,
+        missionId: missionId,
         calculatedAtUtc: calculatedAtUtc,
         probability: null,
         state: StudentRetentionState.unknown,
@@ -87,6 +91,7 @@ final class StudentRetentionEngine {
     return StudentRetentionEstimate(
       studentId: studentId,
       amtnId: amtnId,
+      missionId: missionId,
       calculatedAtUtc: calculatedAtUtc,
       probability: p,
       state: _state(p),

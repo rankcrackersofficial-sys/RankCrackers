@@ -21,7 +21,7 @@ class SyllabusConstellationCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 🔱 PREMIUM CARD DNA
+                // PREMIUM CARD DNA
                 Text(
                   'BATTLE CONSTELLATION',
                   style: AppTypography.cardTitle.copyWith(color: AppColors.gold, letterSpacing: 2.2, fontSize: 11),

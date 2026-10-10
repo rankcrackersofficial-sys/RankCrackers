@@ -2,14 +2,14 @@ import '../models/opportunity.dart';
 import '../models/opportunity_match.dart';
 import '../models/sentinel_metrics.dart';
 
-/// 🔱 SENTINEL METRICS AGGREGATOR
+/// SENTINEL METRICS AGGREGATOR
 /// Consolidates match intelligence into command metrics.
 class SentinelMetricsAggregator {
   
   static SentinelMetrics aggregate({
     required List<Opportunity> allOpportunities,
     required List<OpportunityMatch> matches,
-    int unreadNotifications = 0, // 🔱 Phase 9D: Direct Feed Injection
+    int unreadNotifications = 0, // Phase 9D: Direct Feed Injection
   }) {
     final now = DateTime.now();
 

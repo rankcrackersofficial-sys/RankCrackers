@@ -7,13 +7,13 @@ import '../../../core/models/atomic_risk_state.dart';
 import '../models/crucible_schedule.dart';
 import '../models/crucible_protocol_state.dart';
 
-/// 🔱 CRUCIBLE ENGINE (Document 45 Compliant)
+/// CRUCIBLE ENGINE (Document 45 Compliant)
 /// Sovereign authority for orchestrating the 100-Day Tactical Protocol.
 /// Implements Dependency-Aware Sequencing, Momentum Compression, and Atomic Risk Injection.
 class CrucibleEngine {
   
   // ===================================================
-  // PROTOCOL ORCHESTRATION 🔱
+  // PROTOCOL ORCHESTRATION 
   // ===================================================
 
   /// Generates the complete tactical roadmap with systemic intelligence.
@@ -24,10 +24,10 @@ class CrucibleEngine {
     final List<MicroTopicNode> allNodes = context.graph.allNodes;
     if (allNodes.isEmpty) return [];
 
-    // 🔱 1. DEPENDENCY-AWARE SEQUENCING (Topological Order)
+    // 1. DEPENDENCY-AWARE SEQUENCING (Topological Order)
     final List<MicroTopicNode> sequencedNodes = _topologicalSort(allNodes);
 
-    // 🔱 2. DEADLINE & MOMENTUM COMPRESSION
+    // 2. DEADLINE & MOMENTUM COMPRESSION
     final int daysRemaining = context.recruitment.examDate?.difference(DateTime.now()).inDays ?? 100;
 
     int totalSchedules = 42; 
@@ -54,7 +54,7 @@ class CrucibleEngine {
       final scheduleIndex = i + 1;
       final double progress = (scheduleIndex / totalSchedules);
       
-      // 🔱 3. PROTOCOL PHASE RATIO LAW
+      // 3. PROTOCOL PHASE RATIO LAW
       String type = 'study';
       if (progress > 0.90) {
         type = 'major_test'; 
@@ -64,7 +64,7 @@ class CrucibleEngine {
         type = 'rebuild';    
       }
 
-      // 🔱 4. ATOMIC RISK INJECTION (Document 29)
+      // 4. ATOMIC RISK INJECTION (Document 29)
       // If systemic weakness is detected early, or a node has high atomic risk, inject rebuilds.
       bool hasHighAtomicRisk = false;
       for (final nodeId in scheduleNodes) {
@@ -83,7 +83,7 @@ class CrucibleEngine {
         if (scheduleIndex % 4 == 0) type = 'rebuild';
       }
 
-      // 🔱 5. GRANULAR SCHEDULE PRIORITY
+      // 5. GRANULAR SCHEDULE PRIORITY
       double nodePrioritySum = 0.0;
       for (final nodeId in scheduleNodes) {
         final state = states[nodeId];
@@ -129,7 +129,7 @@ class CrucibleEngine {
   }
 
   // ===================================================
-  // C1 DETERMINISTIC TRANSITIONS & LIFE CYCLES 🔱
+  // C1 DETERMINISTIC TRANSITIONS & LIFE CYCLES 
   // ===================================================
 
   /// Pause the protocol (student interaction paused, sovereign clock continues).
@@ -201,65 +201,42 @@ class CrucibleEngine {
     DateTime currentBoundaryTime = state.currentBoundaryTime;
     String currentScheduleId = state.currentScheduleId;
 
-    if (elapsed.inSeconds >= 100 * 24 * 3600) {
-      // Day 101+ Terminal handling.
-      if (isMajorTestSubmitted) {
-        status = 'completed';
-      } else {
-        status = 'major_test';
-      }
-      phaseIndex = 7;
-      scheduleIndex = 42;
-      scheduleStartTime = state.protocolStartTime.add(const Duration(days: 99));
-      currentBoundaryTime = state.protocolStartTime.add(const Duration(days: 100));
-    } else if (elapsed.inSeconds >= 99 * 24 * 3600) {
-      // Day 100: Major Test (elapsed 99 days to 100 days)
-      status = 'major_test';
-      phaseIndex = 7;
-      scheduleIndex = 42;
-      scheduleStartTime = state.protocolStartTime.add(const Duration(days: 99));
-      currentBoundaryTime = state.protocolStartTime.add(const Duration(days: 100));
-    } else if (elapsed.inSeconds >= 98 * 24 * 3600) {
-      // Day 99: Grand Simulation (elapsed 98 days to 99 days)
-      status = 'grand_simulation';
-      phaseIndex = 7;
-      scheduleIndex = 42;
-      scheduleStartTime = state.protocolStartTime.add(const Duration(days: 98));
-      currentBoundaryTime = state.protocolStartTime.add(const Duration(days: 99));
+    // Continuous 98-Day Ring Protocol (Day 98 -> Day 1 Rotation)
+    final totalRingSeconds = 98 * 24 * 3600;
+    final ringElapsedSeconds = elapsed.inSeconds % totalRingSeconds;
+    final ringElapsed = Duration(seconds: ringElapsedSeconds);
+
+    phaseIndex = (ringElapsedSeconds ~/ (14 * 24 * 3600)) + 1; // 1 to 7
+    final phaseStartOffset = Duration(days: (phaseIndex - 1) * 14);
+    final elapsedWithinPhase = ringElapsed - phaseStartOffset;
+
+    final rebuildStart = const Duration(days: 12); // Day 13 start (288 hours)
+    final macroStart = const Duration(days: 13);   // Day 14 start (312 hours)
+    final phaseEnd = const Duration(days: 14);     // Phase end (336 hours)
+
+    if (elapsedWithinPhase < rebuildStart) {
+      status = 'study';
+      final int scheduleOffset = (elapsedWithinPhase.inHours ~/ 48).clamp(0, 5);
+      scheduleIndex = (phaseIndex - 1) * 6 + scheduleOffset + 1;
+      final scheduleOffsetDuration = Duration(days: scheduleOffset * 2);
+      scheduleStartTime = state.protocolStartTime.add(phaseStartOffset).add(scheduleOffsetDuration);
+      currentBoundaryTime = scheduleStartTime.add(const Duration(hours: 48));
+      currentScheduleId = 'sch_${state.recruitmentId}_$scheduleIndex';
+    } else if (elapsedWithinPhase < macroStart) {
+      status = 'rebuild';
+      scheduleIndex = phaseIndex * 6;
+      scheduleStartTime = state.protocolStartTime.add(phaseStartOffset).add(rebuildStart);
+      currentBoundaryTime = state.protocolStartTime.add(phaseStartOffset).add(macroStart);
+    } else if (elapsedWithinPhase < phaseEnd) {
+      status = 'macro_test';
+      scheduleIndex = phaseIndex * 6;
+      scheduleStartTime = state.protocolStartTime.add(phaseStartOffset).add(macroStart);
+      currentBoundaryTime = state.protocolStartTime.add(phaseStartOffset).add(phaseEnd);
     } else {
-      // Day 1-98 (elapsed 0 days to 98 days)
-      phaseIndex = (elapsed.inSeconds ~/ (14 * 24 * 3600)) + 1;
-      final phaseStart = state.protocolStartTime.add(Duration(days: (phaseIndex - 1) * 14));
-      final elapsedWithinPhase = now.difference(phaseStart);
-
-      final rebuildStart = const Duration(days: 12);
-      final macroStart = const Duration(days: 12, hours: 23); // Day 14, 09:00 AM (12 days + 23 hours)
-      final macroEnd = const Duration(days: 13, hours: 1);    // Day 14, 11:00 AM (13 days + 1 hour)
-      final phaseEnd = const Duration(days: 14);
-
-      if (elapsedWithinPhase < rebuildStart) {
-        status = 'study';
-        final int scheduleOffset = elapsedWithinPhase.inHours ~/ 48; // 0 to 5
-        scheduleIndex = (phaseIndex - 1) * 6 + scheduleOffset + 1;
-        scheduleStartTime = phaseStart.add(Duration(days: scheduleOffset * 2));
-        currentBoundaryTime = scheduleStartTime.add(const Duration(hours: 48));
-        currentScheduleId = 'sch_${state.recruitmentId}_$scheduleIndex';
-      } else if (elapsedWithinPhase < macroStart) {
-        status = 'rebuild';
-        scheduleIndex = phaseIndex * 6;
-        scheduleStartTime = phaseStart.add(rebuildStart);
-        currentBoundaryTime = phaseStart.add(macroStart);
-      } else if (elapsedWithinPhase < macroEnd) {
-        status = 'macro_test';
-        scheduleIndex = phaseIndex * 6;
-        scheduleStartTime = phaseStart.add(macroStart);
-        currentBoundaryTime = phaseStart.add(macroEnd);
-      } else {
-        status = 'phase_transition_recovery';
-        scheduleIndex = phaseIndex * 6;
-        scheduleStartTime = phaseStart.add(macroEnd);
-        currentBoundaryTime = phaseStart.add(phaseEnd);
-      }
+      status = 'phase_transition_recovery';
+      scheduleIndex = phaseIndex * 6;
+      scheduleStartTime = state.protocolStartTime.add(phaseStartOffset).add(phaseEnd);
+      currentBoundaryTime = state.protocolStartTime.add(phaseStartOffset).add(phaseEnd);
     }
 
     return state.copyWith(
@@ -332,7 +309,7 @@ class CrucibleEngine {
   }
 
   // ===================================================
-  // INTERNAL UTILITIES 🔱
+  // INTERNAL UTILITIES 
   // ===================================================
 
   /// Performs a topological sort to ensure prerequisite-safe ordering.
@@ -386,7 +363,7 @@ class CrucibleEngine {
   }
 
   // ===================================================
-  // ASSESSMENT CONTRACT SEMANTICS 🔱
+  // ASSESSMENT CONTRACT SEMANTICS 
   // ===================================================
 
   static DateTime getGrandSimulationDayStart(DateTime protocolStartTime) {

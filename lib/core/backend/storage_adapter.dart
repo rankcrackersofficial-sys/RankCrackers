@@ -1,7 +1,7 @@
 import '../models/micro_topic_node.dart';
 
 abstract class StorageAdapter {
-  // 🔱 Decouples core logic from governed storage implementations.
+  // Decouples core logic from governed storage implementations.
   Future<void> saveNode(MicroTopicNode node);
   Future<List<MicroTopicNode>> fetchNodes();
   Stream<List<MicroTopicNode>> streamNodes();

@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:rank_crackers/core/models/campaign_node.dart';
 import 'package:rank_crackers/core/models/battle_session.dart';
 
-/// 🔱 CAMPAIGN ADAPTATION ENGINE (Blueprint v1.0 - Document 54)
+/// CAMPAIGN ADAPTATION ENGINE (Blueprint v1.0 - Document 54)
 /// Converts a Static Campaign into a Living Campaign by adjusting plans based on session outcomes.
 class CampaignAdaptationEngine {
   
@@ -10,11 +10,11 @@ class CampaignAdaptationEngine {
     required CampaignNode currentCampaign,
     required BattleSession lastSession,
   }) {
-    debugPrint("🔱 CAMPAIGN ADAPTOR: Checking session outcome for campaign rewrite...");
+    debugPrint("CAMPAIGN ADAPTOR: Checking session outcome for campaign rewrite...");
 
-    // 🔱 Audit GAP-5: Differentiated Adaptation
+    // Audit GAP-5: Differentiated Adaptation
     if (lastSession.result == MissionResult.FAILED || lastSession.result == MissionResult.PARTIAL) {
-      debugPrint("🔱 CAMPAIGN ADAPTOR: Mission ${lastSession.result.name}. Adjusting living curriculum.");
+      debugPrint("CAMPAIGN ADAPTOR: Mission ${lastSession.result.name}. Adjusting living curriculum.");
       
       final Map<int, List<String>> newSchedule = Map.from(currentCampaign.dayWiseMissionTypes);
       final int currentDayIndex = lastSession.startedAt.difference(currentCampaign.startDate).inDays + 1;
@@ -43,7 +43,7 @@ class CampaignAdaptationEngine {
   }
 
   static double _calculateEvidenceDrivenProgress(CampaignNode campaign, BattleSession lastSession) {
-    // 🔱 Audit GAP-3: Evidence-Driven Progress
+    // Audit GAP-3: Evidence-Driven Progress
     // In production, this counts finished vs scheduled missions.
     // For now, use weighted increments based on result.
     double increment = 0.0;

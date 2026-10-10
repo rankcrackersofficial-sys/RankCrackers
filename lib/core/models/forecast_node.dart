@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 READINESS FORECAST (Blueprint v1.0 - Document 55)
+/// READINESS FORECAST (Blueprint v1.0 - Document 55)
 /// Predicts future student state based on current momentum and study velocity.
 class ForecastNode extends Equatable {
   final String userId;

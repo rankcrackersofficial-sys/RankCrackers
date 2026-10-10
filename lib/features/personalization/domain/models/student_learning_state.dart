@@ -65,11 +65,12 @@ enum StudentLearningStateConfidence {
 /// Downstream treatment engines must not collapse them into psychological or
 /// personality labels.
 final class StudentLearningState {
-  static const int currentSchemaVersion = 2;
+  static const int currentSchemaVersion = 3;
 
   const StudentLearningState({
     required this.studentId,
     required this.amtnId,
+    required this.missionId,
     required this.calculatedAtUtc,
     required this.masteryProbability,
     required this.masteryBand,
@@ -92,6 +93,7 @@ final class StudentLearningState {
 
   final String studentId;
   final String amtnId;
+  final String missionId;
   final DateTime calculatedAtUtc;
 
   final double? masteryProbability;
@@ -149,6 +151,12 @@ final class StudentLearningState {
     if (amtnId.trim().isEmpty) {
       throw const FormatException(
         'StudentLearningState.amtnId must not be empty.',
+      );
+    }
+
+    if (missionId.trim().isEmpty) {
+      throw const FormatException(
+        'StudentLearningState.missionId must not be empty.',
       );
     }
 
@@ -298,6 +306,7 @@ final class StudentLearningState {
       'schemaVersion': schemaVersion,
       'studentId': studentId,
       'amtnId': amtnId,
+      'missionId': missionId,
       'calculatedAtUtc': calculatedAtUtc.toIso8601String(),
       'masteryProbability': masteryProbability,
       'masteryBand': masteryBand.wireName,
@@ -324,6 +333,7 @@ final class StudentLearningState {
     final state = StudentLearningState(
       studentId: _readRequiredString(json, 'studentId'),
       amtnId: _readRequiredString(json, 'amtnId'),
+      missionId: _readRequiredString(json, 'missionId'),
       calculatedAtUtc: _readRequiredUtcDateTime(
         json,
         'calculatedAtUtc',

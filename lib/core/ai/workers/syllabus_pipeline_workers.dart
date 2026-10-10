@@ -1,15 +1,15 @@
 import 'package:flutter/foundation.dart';
 import '../../models/syllabus_canonical.dart';
 
-/// 🔱 SYLLABUS ATOMIC DECOMPOSITION BLUEPRINT v1.1 (Hardened)
+/// SYLLABUS ATOMIC DECOMPOSITION BLUEPRINT v1.1 (Hardened)
 /// Orchestrates the transformation of raw PDF text into a Constitutional Knowledge Contract.
 
 class SyllabusParsingWorker {
   static Future<Map<String, dynamic>> parse(String text) async {
-    debugPrint("🔱 SYLLABUS PARSING WORKER: Identifying subjects and stages...");
+    debugPrint("SYLLABUS PARSING WORKER: Identifying subjects and stages...");
     final bool isSyllabus = text.contains(RegExp(r'Syllabus|Scheme|Topics', caseSensitive: false));
     
-    // 🔱 REAL EXTRACTION LOGIC (Placeholder for LLM Integration)
+    // REAL EXTRACTION LOGIC (Placeholder for LLM Integration)
     // In production, this uses NLP to identify subject boundaries.
     return {
       'valid': isSyllabus,
@@ -20,9 +20,9 @@ class SyllabusParsingWorker {
 
 class AtomicExtractionWorker {
   static Future<Map<String, dynamic>> extractStructure(String text, String subject) async {
-    debugPrint("🔱 ATOMIC EXTRACTION WORKER: Extracting deep hierarchy for $subject...");
+    debugPrint("ATOMIC EXTRACTION WORKER: Extracting deep hierarchy for $subject...");
     
-    // 🔱 PRODUCTION CONTRACT (v1.1)
+    // PRODUCTION CONTRACT (v1.1)
     // Each subject must be decomposed into Atomic and Micro topics.
     return {
       'subject': subject,
@@ -47,7 +47,7 @@ class SyllabusReportBuilder {
     required String text,
     required String id,
   }) async {
-    debugPrint("🔱 SYLLABUS REPORT BUILDER: Assembling Atomic Knowledge Contract...");
+    debugPrint("SYLLABUS REPORT BUILDER: Assembling Atomic Knowledge Contract...");
     
     final parseResult = await SyllabusParsingWorker.parse(text);
     if (!(parseResult['valid'] as bool)) {

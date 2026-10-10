@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 DRIFT DETECTION NODE (Blueprint v1.0 - Document 65)
+/// DRIFT DETECTION NODE (Blueprint v1.0 - Document 65)
 /// Captures divergence between plan execution and preparation outcomes.
 class DriftDetectionNode extends Equatable {
   final String id;

@@ -5,7 +5,7 @@ class NotificationItem {
   final String title;
   final String body;
   final NotificationPriority priority;
-  final String source; // 🔱 Sentinel, Recruitment, Coverage, Risk, System
+  final String source; // Sentinel, Recruitment, Coverage, Risk, System
   final DateTime createdAt;
   final bool read;
 

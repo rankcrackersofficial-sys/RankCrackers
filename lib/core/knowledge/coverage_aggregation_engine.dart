@@ -1,6 +1,6 @@
 import '../models/atomic_coverage_state.dart';
 
-/// 🔱 COVERAGE AGGREGATION ENGINE
+/// COVERAGE AGGREGATION ENGINE
 /// Implements the Aggregation Law (Section 35, Document 34).
 /// Derives higher-level scope completion metrics from Atomic Coverage.
 class CoverageAggregationEngine {

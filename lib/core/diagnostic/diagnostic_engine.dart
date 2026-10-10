@@ -2,11 +2,11 @@ import '../models/micro_topic_node.dart';
 import '../models/question_model.dart';
 import '../services/knowledge_content_service.dart';
 
-/// 🔱 DIAGNOSTIC ENGINE (Article 15 Hardened)
+/// DIAGNOSTIC ENGINE (Article 15 Hardened)
 /// Sovereign authority for initial baseline verification.
 class DiagnosticEngine {
   
-  /// 🔱 SUMMON DIAGNOSTIC COMBAT
+  /// SUMMON DIAGNOSTIC COMBAT
   /// Assembles a diagnostic test by summoning payloads for relevant nodes.
   static Future<List<QuestionModel>> generateDiagnostic({
     required List<MicroTopicNode> targetNodes,
@@ -24,7 +24,7 @@ class DiagnosticEngine {
       final payload = await KnowledgeContentService.fetchContent(node.id);
       if (payload == null) continue;
 
-      // 🔱 Weighted Diagnostic Law (Section 34)
+      // Weighted Diagnostic Law (Section 34)
       // Prioritize High PYQ Frequency nodes for baseline truth.
       if (node.pyqFrequency > 8) {
         combatPool.addAll(payload.diagnosticHard);

@@ -1,7 +1,7 @@
 import '../../../../core/models/micro_topic_node.dart';
 import '../../../../core/models/node_runtime_state.dart';
 
-/// 🔱 TACTICAL SCHEDULE ENGINE
+/// TACTICAL SCHEDULE ENGINE
 /// Builds localized preparation schedules based on node importance and runtime mastery.
 class TacticalScheduleEngine {
   static List<MicroTopicNode> build({

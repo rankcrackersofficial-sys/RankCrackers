@@ -3,7 +3,7 @@ import '../../../core/ai/models/ai_task_type.dart';
 
 class MCQWorkerTrigger {
   // ===================================================
-  // GENERATE MCQs 🔱
+  // GENERATE MCQs 
   // ===================================================
   static Future<void> generate({
     required String nodeId,

@@ -40,6 +40,8 @@ const { certificateRegistryWorker } = require("./workers/certificate_worker");
 const { certificateRenderWorker } = require("./workers/renderer_worker");
 const { knowledgeManifestationWorker } = require("./workers/manifestation_worker");
 const { queueWorker } = require("./lib/workers/queueWorker");
+// 🔱 UNIFIED MISSION ENRICHMENT WORKER (W1 live integration — B2/B3 contracts inside)
+const { missionEnrichmentWorker } = require("./workers/mission_enrichment_worker");
 
 exports.sentinelBackgroundWorker = sentinelBackgroundWorker;
 exports.structuralWorker = structuralWorker;
@@ -54,6 +56,7 @@ exports.certificateRegistryWorker = certificateRegistryWorker;
 exports.certificateRenderWorker = certificateRenderWorker;
 exports.knowledgeManifestationWorker = knowledgeManifestationWorker;
 exports.queueWorker = queueWorker;
+exports.missionEnrichmentWorker = missionEnrichmentWorker;
 
 // 🔱 FOUNDER ALERT EXPORTS
 const { founderCriticalAlert } = require("./workers/alert_worker");

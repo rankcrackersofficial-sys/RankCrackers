@@ -1,0 +1,371 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_CHE_910B0B49",
+  "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000001",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_CHE_910B0B49_V001",
+  "atomicFactSetHash": "a1b2f25f19f78857e61abdb8ee54f14c82713e6b910cc76db6241f79470b72c6",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_910B0B49_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_910B0B49",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_910B0B49_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_00838222",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_0545534C",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_0B9BC18A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_16BE7BF0",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5108CC",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5B52FE",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_35B08AE8",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_37A79A64",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_60CCB0AC",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_6F1C0227",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_78FE8A71",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_82F9DDAF",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_8886D9EE",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_A6FB4DD1",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_C8E94EA8",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D24B6647",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D38CBC1A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D8263123",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F2268E36",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F56F9DD0",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F7989E2A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_FBE5DD02"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "overviewText": "This Generation Unit provides a comprehensive foundation in chemical stoichiometry: the classical laws of chemical combination, Dalton's atomic theory, unified atomic mass units, Avogadro constant and the mole concept, molar mass, stoichiometric calculations, limiting reagents, and solution concentration measures (molarity and molality).",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "3e56e655bbf49d17c43ef32c30cb983f973d8ffb917d25b7002d6fa7c3b4f2ec",
+      "createdAtUtc": "2026-09-02T13:29:33.133Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_910B0B49_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_910B0B49",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_910B0B49_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_00838222",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_0545534C",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_0B9BC18A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_16BE7BF0",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5108CC",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5B52FE",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_35B08AE8",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_37A79A64",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_60CCB0AC",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_6F1C0227",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_78FE8A71",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_82F9DDAF",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_8886D9EE",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_A6FB4DD1",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_C8E94EA8",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D24B6647",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D38CBC1A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D8263123",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F2268E36",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F56F9DD0",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F7989E2A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_FBE5DD02"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_910B0B49_CONCEPTS_01_LAWS_OF_COMBINATION",
+          "semanticAnchorId": "ANCHOR_LAWS_OF_CHEMICAL_COMBINATION",
+          "title": "1. Classical Laws of Chemical Combination",
+          "contentMarkdown": "1. **Law of Conservation of Mass**: Matter can neither be created nor destroyed in a chemical reaction.\n2. **Law of Definite Proportions**: A given compound always contains exactly the same proportion of elements by mass.\n3. **Law of Multiple Proportions**: When two elements form more than one compound, the masses of one element that combine with a fixed mass of the other are in simple whole-number ratios (e.g. $\\text{H}_2\\text{O}$ vs $\\text{H}_2\\text{O}_2$ with oxygen mass ratio $16:32 = 1:2$).\n4. **Gay-Lussac's Law**: Gases combine in simple ratios by volume at constant $T$ and $P$ (e.g. $100\\text{ mL } \\text{H}_2 + 50\\text{ mL } \\text{O}_2 \\rightarrow 100\\text{ mL } \\text{H}_2\\text{O}$ vapor, ratio $2:1:2$).\n5. **Avogadro's Law**: Equal volumes of all gases at identical $T, P$ contain equal numbers of molecules (Avogadro distinguished atoms from molecules in 1811).",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_37A79A64",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_D8263123",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_35B08AE8",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_78FE8A71",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_F7989E2A",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_16BE7BF0",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_00838222",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_D24B6647"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_910B0B49_CONCEPTS_02_DALTON_THEORY_AND_ATOMIC_MASS",
+          "semanticAnchorId": "ANCHOR_DALTON_THEORY_ATOMIC_MASS",
+          "title": "2. Dalton's Atomic Theory and the Unified Atomic Mass Unit",
+          "contentMarkdown": "Dalton's atomic theory postulates that matter consists of indivisible atoms, with identical atoms possessing identical mass and chemical properties. Compounds form when atoms of different elements combine in fixed ratios, with chemical reactions involving rearrangement of atoms.\nOne **unified atomic mass unit** ($1\\text{ u}$) is defined as exactly $1/12$th the mass of one carbon-12 atom: $1\\text{ u} = 1.66056 \\times 10^{-24}\\text{ g}$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_60CCB0AC",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_D38CBC1A",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_A6FB4DD1",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_6F1C0227"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_910B0B49_CONCEPTS_03_MOLE_CONCEPT_AND_MOLAR_MASS",
+          "semanticAnchorId": "ANCHOR_MOLE_CONCEPT_MOLAR_MASS",
+          "title": "3. The Mole Concept and Molar Mass",
+          "contentMarkdown": "The **mole** (symbol $\\text{mol}$) is the SI base unit for amount of substance. One mole contains exactly $6.02214076 \\times 10^{23}$ elementary entities (the Avogadro constant $N_A$). The mass of 1 mole in grams is its **molar mass** ($M$), numerically equal to its atomic/molecular mass in unified mass units ($\\text{g/mol}$).",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_0B9BC18A",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5B52FE",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_F56F9DD0",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_82F9DDAF"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_910B0B49_CONCEPTS_04_STOICHIOMETRY_AND_LIMITING_REAGENT",
+          "semanticAnchorId": "ANCHOR_STOICHIOMETRY_LIMITING_REAGENT",
+          "title": "4. Stoichiometry and Limiting Reagent",
+          "contentMarkdown": "Stoichiometric coefficients define the quantitative mole and volume relationships in a balanced equation (e.g. $\\text{CH}_4(g) + 2\\text{O}_2(g) \\rightarrow \\text{CO}_2(g) + 2\\text{H}_2\\text{O}(g)$).\nThe **limiting reagent** is the reactant completely consumed first in a reaction. Once the limiting reagent is exhausted, the reaction ceases regardless of the amounts of excess reactants present.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_F2268E36",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_0545534C",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5108CC"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_910B0B49_CONCEPTS_05_SOLUTION_CONCENTRATIONS",
+          "semanticAnchorId": "ANCHOR_SOLUTION_CONCENTRATIONS",
+          "title": "5. Solution Concentrations: Molarity and Molality",
+          "contentMarkdown": "- **Molarity ($M$)**: number of moles of solute dissolved in 1 litre of solution: $M = \\frac{n_{\\text{solute}}}{V_{\\text{solution}}(\\text{L})}$. Molarity depends on temperature because liquid volume expands or contracts with temperature.\n- **Molality ($m$)**: number of moles of solute present in $1\\text{ kg}$ of solvent: $m = \\frac{n_{\\text{solute}}}{\\text{mass of solvent (kg)}}$. Molality is independent of temperature since mass is invariant with temperature.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_C8E94EA8",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_FBE5DD02",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_8886D9EE"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "3762a3be8cfd5fb661f3742c3c53cd1d833215f9ee7167fe59cb4333ab670c44",
+      "createdAtUtc": "2026-09-02T13:29:33.133Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_910B0B49_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_910B0B49",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_910B0B49_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_0B9BC18A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_C8E94EA8",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_8886D9EE",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_FBE5DD02",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_A6FB4DD1"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Avogadro Mole Relation",
+          "formula": "N = n \\cdot N_A = n \\cdot (6.02214076 \\times 10^{23})",
+          "constraints": "Number of particles N from moles n",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_0B9BC18A"
+          ]
+        },
+        {
+          "name": "Molarity Definition",
+          "formula": "M = \\frac{n_{\\text{solute}}}{V_{\\text{solution}} \\text{ (in L)}}",
+          "constraints": "Temperature dependent due to volume expansion",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_C8E94EA8",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_8886D9EE"
+          ]
+        },
+        {
+          "name": "Molality Definition",
+          "formula": "m = \\frac{n_{\\text{solute}}}{W_{\\text{solvent}} \\text{ (in kg)}}",
+          "constraints": "Temperature independent",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_FBE5DD02"
+          ]
+        },
+        {
+          "name": "Unified Atomic Mass Unit",
+          "formula": "1\\text{ u} = \\frac{1}{12} m(^{12}\\text{C}) = 1.66056 \\times 10^{-24}\\text{ g}",
+          "constraints": "Standard mass reference scale",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_A6FB4DD1"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "9b088b7208e32caba80e1049a43ae3a060343fd1939b7ef48969277fedeb96ae",
+      "createdAtUtc": "2026-09-02T13:29:33.133Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_910B0B49_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_910B0B49",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_910B0B49_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No external empirical exam distractor / error telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.133Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_910B0B49_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_910B0B49",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_910B0B49_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_0545534C",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5108CC"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_CHE_910B0B49_01_LIMITING_REAGENT_WATER",
+          "title": "Limiting Reagent in Water Synthesis",
+          "problemStatement": "$2\\text{ moles of } \\text{H}_2$ react with $2\\text{ moles of } \\text{O}_2$ according to $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$. Identify the limiting reagent and moles of $\\text{H}_2\\text{O}$ formed.",
+          "stepByStepSolution": [
+            "Step 1: Write stoichiometric requirements: $2\\text{ moles of } \\text{H}_2$ require $1\\text{ mole of } \\text{O}_2$ to form $2\\text{ moles of } \\text{H}_2\\text{O}$.",
+            "Step 2: Compare available reactants: $2\\text{ moles of } \\text{H}_2$ are present, which consumes exactly $1\\text{ mole of } \\text{O}_2$.",
+            "Step 3: Identify limiting and excess reactants: $\\text{H}_2$ is completely consumed (limiting reagent), leaving $2 - 1 = 1\\text{ mole of } \\text{O}_2$ in excess.",
+            "Step 4: Compute product formed based on limiting reagent: $2\\text{ moles of } \\text{H}_2\\text{O}$ are produced."
+          ],
+          "finalAnswer": "Limiting reagent = H2; H2O formed = 2 moles; Excess O2 remaining = 1 mole.",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_0545534C",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5108CC"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "ff13ea58ca02716d4771a66c007a1e8c23402881603bd32711d875de12a773ce",
+      "createdAtUtc": "2026-09-02T13:29:33.133Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_910B0B49_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_910B0B49",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_910B0B49_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_FBE5DD02",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_8886D9EE"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_CHE_910B0B49_01_MOLARITY_VS_MOLALITY_TEMP",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Why does molality remain unchanged when temperature increases, while molarity changes?",
+          "options": [
+            "Molality depends on mass of solvent which is temperature-independent",
+            "Molarity depends on mass of solute which expands with temperature",
+            "Both molarity and molality change equally with temperature",
+            "Molality involves volume of solution which is constant"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Molality ($m$) is defined as moles of solute per kilogram of solvent. Since mass does not change with temperature, molality is temperature-independent. Molarity ($M$) depends on solution volume, which expands with temperature.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_FBE5DD02",
+            "AF_GU_JEEMAIN2027_CHE_910B0B49_8886D9EE"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "297a6a64a52be18fd14cb52e1be3e5f52f0e5591e80d966e934ddfc83b027f86",
+      "createdAtUtc": "2026-09-02T13:29:33.133Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_910B0B49_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_910B0B49",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_910B0B49_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_00838222",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_0545534C",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_0B9BC18A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_16BE7BF0",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5108CC",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_2D5B52FE",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_35B08AE8",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_37A79A64",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_60CCB0AC",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_6F1C0227",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_78FE8A71",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_82F9DDAF",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_8886D9EE",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_A6FB4DD1",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_C8E94EA8",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D24B6647",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D38CBC1A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_D8263123",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F2268E36",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F56F9DD0",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_F7989E2A",
+        "AF_GU_JEEMAIN2027_CHE_910B0B49_FBE5DD02"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Calculating empirical formulas, molecular formulas, and limiting reagents",
+          "Converting between moles, particles, and volume at STP",
+          "Computing solution concentrations (molarity, molality, mole fraction)"
+        ],
+        "supportedQuestionFormats": [
+          "Single Choice MCQ (4 options)",
+          "Numerical Value Questions"
+        ],
+        "readinessStatement": "Covers essential prerequisites for stoichiometric calculations."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "90c17a62bac809b1dbab8f658f59acaef5c12e2ad252436bab609495c376c010",
+      "createdAtUtc": "2026-09-02T13:29:33.133Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.133Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

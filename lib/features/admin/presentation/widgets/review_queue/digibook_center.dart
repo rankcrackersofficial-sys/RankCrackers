@@ -115,7 +115,7 @@ class DigiBookCenter extends StatelessWidget {
                           );
                           await QuestionRepository.save(question);
                           if (context.mounted) {
-                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('🔱 MCQ GENERATED: Injected to Review Queue.')));
+                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('MCQ GENERATED: Injected to Review Queue.')));
                           }
                         }
                       ),

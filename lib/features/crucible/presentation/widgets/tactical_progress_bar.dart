@@ -15,7 +15,7 @@ class TacticalProgressBar extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // 🔱 DNA: Header
+        // DNA: Header
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

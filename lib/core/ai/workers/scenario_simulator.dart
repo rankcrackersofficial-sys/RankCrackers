@@ -4,7 +4,7 @@ import 'package:rank_crackers/core/models/forecast_node.dart';
 import 'package:rank_crackers/core/models/momentum_node.dart';
 import 'package:rank_crackers/core/models/exam_clock_node.dart';
 
-/// 🔱 SCENARIO SIMULATOR (Blueprint v1.1 - Non-Linear Hardened)
+/// SCENARIO SIMULATOR (Blueprint v1.1 - Non-Linear Hardened)
 /// Simulates 'What-If' scenarios based on diminishing returns of study time.
 class ScenarioSimulator {
   
@@ -16,12 +16,12 @@ class ScenarioSimulator {
     required double currentReadiness,
     required List<int> timeOptionsMinutes, // [120, 240, 480]
   }) {
-    debugPrint("🔱 SCENARIO SIMULATOR: Simulating readiness with Diminishing Returns...");
+    debugPrint("SCENARIO SIMULATOR: Simulating readiness with Diminishing Returns...");
 
     final Map<int, ForecastNode> scenarios = {};
 
     for (var minutes in timeOptionsMinutes) {
-      // 🔱 Logic: Fatigue Saturation Curve (Audit GAP Q-6)
+      // Logic: Fatigue Saturation Curve (Audit GAP Q-6)
       // Replaces pure Logarithmic model with a bell-curve inspired efficiency factor.
       // Peaks at 8-10 hours, then efficiency drops due to burnout.
       

@@ -1,0 +1,247 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_CHE_4DB27569",
+  "canonicalNodeId": "JEE_MAIN_2026_CHE_U02_T_00000002",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_CHE_4DB27569_V001",
+  "atomicFactSetHash": "877f49fd61e59256c9787f3bc46af95ce3b497e82f0a3cb878ff3b8abd743dc3",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_4DB27569_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_4DB27569",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_4DB27569_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_0435A3E3",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_114F8238",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_4F278484",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_508BD39E",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_CDD5892B",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_E7EC77A2"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      ],
+      "overviewText": "This chapter details the discovery of electron, proton, and neutron, measuring charge-to-mass ratio and fundamental charge.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "a0252449826bbd6eb28984ee4ff8d2f6f4f34931169b177d95df154b893d2b23",
+      "createdAtUtc": "2026-09-02T13:29:33.167Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_4DB27569_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_4DB27569",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_4DB27569_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_0435A3E3",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_114F8238",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_4F278484",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_508BD39E",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_CDD5892B",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_E7EC77A2"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_4DB27569_CONCEPTS_01_ELECTRONS_MILLIKAN",
+          "semanticAnchorId": "ANCHOR_ELECTRONS_MILLIKAN",
+          "title": "1. Discovery of the Electron and Charge Measurement",
+          "contentMarkdown": "Thomson discovered electrons with $e/m_e = 1.758820 \\\\times 10^{11}\\\\text{ C/kg}$. Millikan oil drop experiment measured $e = -1.6022 \\\\times 10^{-19}\\\\text{ C}$, yielding electron rest mass $m_e = 9.10938 \\\\times 10^{-31}\\\\text{ kg}$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_4DB27569_E7EC77A2",
+            "AF_GU_JEEMAIN2027_CHE_4DB27569_0435A3E3",
+            "AF_GU_JEEMAIN2027_CHE_4DB27569_CDD5892B",
+            "AF_GU_JEEMAIN2027_CHE_4DB27569_114F8238"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_4DB27569_CONCEPTS_02_PROTONS_NEUTRONS",
+          "semanticAnchorId": "ANCHOR_PROTONS_NEUTRONS",
+          "title": "2. Discovery of Protons and Neutrons",
+          "contentMarkdown": "Goldstein discovered protons ($m_p = 1.67262 \\\\times 10^{-27}\\\\text{ kg}$). Chadwick (1932) discovered neutrons ($m_n = 1.67493 \\\\times 10^{-27}\\\\text{ kg}$) via 9Be + 4He -> 12C + 1n.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_4DB27569_508BD39E",
+            "AF_GU_JEEMAIN2027_CHE_4DB27569_4F278484"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "8145ef0a852d09356b73705d89d659f3652f09da75fa6d9028a7b7e086b0c43f",
+      "createdAtUtc": "2026-09-02T13:29:33.167Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_4DB27569_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_4DB27569",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_4DB27569_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_0435A3E3"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Electron Mass from e and e/m",
+          "formula": "m_e = \\\\frac{e}{e/m_e} = 9.10938 \\\\times 10^{-31}\\\\text{ kg}",
+          "constraints": "Fundamental constants",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_4DB27569_0435A3E3"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "fcf16663cd1a29295e0ba1bb66c096e6dc705a93aedefa065c9de07327cb11cd",
+      "createdAtUtc": "2026-09-02T13:29:33.167Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_4DB27569_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_4DB27569",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_4DB27569_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.167Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_4DB27569_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_4DB27569",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_4DB27569_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_0435A3E3"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_CHE_4DB27569_01",
+          "title": "Calculation of Electron Rest Mass",
+          "problemStatement": "Given electron charge $e = 1.6022 \\\\times 10^{-19}\\\\text{ C}$ and $e/m_e = 1.758820 \\\\times 10^{11}\\\\text{ C/kg}$, calculate $m_e$.",
+          "stepByStepSolution": [
+            "Step 1: Set up formula: $m_e = \\\\frac{e}{e/m_e}$.",
+            "Step 2: Substitute values: $m_e = \\\\frac{1.6022 \\\\times 10^{-19}}{1.758820 \\\\times 10^{11}} \\\\approx 9.1094 \\\\times 10^{-31}\\\\text{ kg}$."
+          ],
+          "finalAnswer": "m_e \\\\approx 9.1094 \\\\times 10^{-31}\\\\text{ kg}",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_4DB27569_0435A3E3"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "a2c588413d464b1871987add85dcb0bbf2529ea1f272a2f9afb7d6c850aab0ef",
+      "createdAtUtc": "2026-09-02T13:29:33.167Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_4DB27569_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_4DB27569",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_4DB27569_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_508BD39E"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_CHE_4DB27569_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Which nuclear reaction led to the discovery of the neutron by James Chadwick in 1932?",
+          "options": [
+            "9Be + 4He -> 12C + 1n",
+            "1H + 1H -> 2H + e+",
+            "14N + 4He -> 17O + 1p",
+            "235U + 1n -> 141Ba + 92Kr"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Chadwick bombarded beryllium foil with alpha particles: 9Be + 4He -> 12C + 1n.",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_4DB27569_508BD39E"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "80b0dc26c2aeb8338af637871b3d1f006c120d546ef30c1d2229c89b769402ab",
+      "createdAtUtc": "2026-09-02T13:29:33.167Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_4DB27569_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_4DB27569",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_4DB27569_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_0435A3E3",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_114F8238",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_4F278484",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_508BD39E",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_CDD5892B",
+        "AF_GU_JEEMAIN2027_CHE_4DB27569_E7EC77A2"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Subatomic particle charge and mass calculation",
+          "Historical nuclear discovery reactions"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "86d3e9b64cb23251de4721a1661f6a642fdb3d8fc6dc714e23d2e51a53fcea93",
+      "createdAtUtc": "2026-09-02T13:29:33.167Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_CHEMISTRY_CLASS_11_CH02_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.167Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

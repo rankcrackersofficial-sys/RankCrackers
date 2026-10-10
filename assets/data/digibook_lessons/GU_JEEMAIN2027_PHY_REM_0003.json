@@ -1,0 +1,258 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0003",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U_REM_0003",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0003_V001",
+  "atomicFactSetHash": "8326691281f7f358d45e363769888893fb3ffe187daa375ce992d46845b8cf34",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0003_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0003",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0003_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_25754C33",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_2E151437",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_54DD92F9",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_8DE8B549",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_AB75C5FB",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_D5235CF0"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "overviewText": "This chapter establishes the relationship between total system linear momentum and centre of mass velocity, proving that internal forces cancel in pairs and external forces govern centre of mass acceleration.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b2ca4fec46b6476640163d310d8a1d6985e454c6eedd1104b36913b96a201368",
+      "createdAtUtc": "2026-09-02T14:13:02.082Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0003_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0003",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0003_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_25754C33",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_2E151437",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_54DD92F9",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_8DE8B549",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_AB75C5FB",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_D5235CF0"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_REM_0003_01",
+          "semanticAnchorId": "ANCHOR_MOMENTUM_CM_VELOCITY",
+          "title": "1. Total Linear Momentum and CM Velocity",
+          "contentMarkdown": "The velocity of the centre of mass is $$\\vec{V}_{cm} = \\frac{1}{M}\\sum m_i \\vec{v}_i = \\frac{\\vec{P}_{total}}{M}$$. The total linear momentum of a system of particles is equal to the product of total mass M and the velocity of its centre of mass: $$\\vec{P}_{total} = M \\vec{V}_{cm}$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0003_8DE8B549",
+            "AF_GU_JEEMAIN2027_PHY_REM_0003_2E151437"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_REM_0003_02",
+          "semanticAnchorId": "ANCHOR_NEWTON_SECOND_LAW_SYSTEM",
+          "title": "2. Newton's Second Law for System of Particles & Conservation",
+          "contentMarkdown": "Differentiating gives $$M \\vec{A}_{cm} = \\vec{F}_{ext}$$, because internal forces cancel in pairs by Newton's third law ($$\\sum \\vec{F}_{int} = 0$$). The centre of mass moves as if all mass and external forces were concentrated at that point. If $$\\vec{F}_{ext} = 0$$, then $$\\vec{A}_{cm} = 0$$, so $$\\vec{V}_{cm} = \\text{constant}$$ and total linear momentum $$\\vec{P}_{total} = \\text{constant}$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0003_25754C33",
+            "AF_GU_JEEMAIN2027_PHY_REM_0003_D5235CF0",
+            "AF_GU_JEEMAIN2027_PHY_REM_0003_54DD92F9",
+            "AF_GU_JEEMAIN2027_PHY_REM_0003_AB75C5FB"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "955fe04903d2207ff767292f9d09d4027b338827230ac4e6809aa094b8bdcf51",
+      "createdAtUtc": "2026-09-02T14:13:02.082Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0003_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0003",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0003_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_2E151437",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_25754C33"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Total Linear Momentum of System",
+          "formula": "\\vec{P}_{total} = M \\vec{V}_{cm} = \\sum_{i=1}^n m_i \\vec{v}_i",
+          "constraints": "System of n particles of total mass M",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0003_2E151437"
+          ]
+        },
+        {
+          "name": "Newton's Second Law for System of Particles",
+          "formula": "M \\vec{A}_{cm} = \\frac{d\\vec{P}_{total}}{dt} = \\vec{F}_{ext}",
+          "constraints": "Inertial reference frame (Sum F_int = 0)",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0003_25754C33"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "1591d6002c94b850d401884bbd81b0235966274508d655c57bfc12a23873ada3",
+      "createdAtUtc": "2026-09-02T14:13:02.082Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0003_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0003",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0003_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T14:13:02.082Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0003_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0003",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0003_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_54DD92F9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_REM_0003_01",
+          "title": "Recoil Velocity of Exploding Shell Pieces",
+          "problemStatement": "A stationary shell of mass 4 kg bursts into two pieces of masses 1 kg and 3 kg. If the 1 kg piece flies off with speed 30 m/s, find the velocity of the 3 kg piece.",
+          "stepByStepSolution": [
+            "Step 1: Initial state: System is at rest, so initial momentum P_initial = 0.",
+            "Step 2: Explosion involves only internal forces, so F_ext = 0 and total linear momentum is conserved: P_final = P_initial = 0.",
+            "Step 3: P_final = m1*v1 + m2*v2 = (1)*(30) + (3)*v2 = 0.",
+            "Step 4: Solve for v2: 30 + 3*v2 = 0 ==> v2 = -10 m/s."
+          ],
+          "finalAnswer": "v2 = -10 m/s (in opposite direction to the 1 kg piece)",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0003_54DD92F9"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d1f6cfc94f0b89a397f7c0b3185057d023d9902a4fd9b037044ed8b2469e3fd8",
+      "createdAtUtc": "2026-09-02T14:13:02.082Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0003_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0003",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0003_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_54DD92F9"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_REM_0003_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "If the net external force acting on a multi-particle system is zero (F_ext = 0), what can be concluded about the motion of its centre of mass?",
+          "options": [
+            "The centre of mass remains at rest or moves with constant velocity (A_cm = 0)",
+            "The centre of mass must accelerate due to internal interactions",
+            "Individual particles cannot have non-zero velocities",
+            "The total kinetic energy of the system is strictly constant"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "When F_ext = 0, M * A_cm = 0, which implies A_cm = 0 and V_cm = constant, conserving total system linear momentum P_total = M*V_cm.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_REM_0003_54DD92F9"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "794ec985f84d6a6f609a73018783bb75c47047add16d0c3feee887dda3f61646",
+      "createdAtUtc": "2026-09-02T14:13:02.082Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_REM_0003_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_REM_0003",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_REM_0003_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_25754C33",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_2E151437",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_54DD92F9",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_8DE8B549",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_AB75C5FB",
+        "AF_GU_JEEMAIN2027_PHY_REM_0003_D5235CF0"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Linear momentum conservation",
+          "Newton second law for multi-particle systems"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "ae8ba6fab555424b8a98295b646a1bda890a9c452ca1ea19eb9009fce9e7ccf8",
+      "createdAtUtc": "2026-09-02T14:13:02.082Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_CH07_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T14:13:02.082Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

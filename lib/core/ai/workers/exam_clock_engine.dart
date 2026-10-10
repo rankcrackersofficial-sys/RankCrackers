@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:rank_crackers/core/models/exam_clock_node.dart';
 
-/// 🔱 EXAM CLOCK ENGINE (Blueprint v1.0 - Document 52)
+/// EXAM CLOCK ENGINE (Blueprint v1.0 - Document 52)
 /// Calculates feasibility and track status based on deadline and remaining workload.
 class ExamClockEngine {
   
@@ -13,7 +13,7 @@ class ExamClockEngine {
     required int completedTopics,
     required double currentReadiness, // 0.0 to 100.0
   }) {
-    debugPrint("🔱 EXAM CLOCK: Calculating temporal feasibility for $userId...");
+    debugPrint("EXAM CLOCK: Calculating temporal feasibility for $userId...");
 
     final now = DateTime.now();
     final daysRemaining = examDate.difference(now).inDays;

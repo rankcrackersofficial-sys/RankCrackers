@@ -3,7 +3,7 @@ import '../models/node_runtime_state.dart';
 import 'knowledge_graph.dart';
 import 'weak_node_detector.dart';
 
-/// 🔱 ADAPTIVE MAPPER
+/// ADAPTIVE MAPPER
 /// Generates personalized study paths and recommendations based on runtime states.
 class AdaptiveMapper {
   final KnowledgeGraph graph;
@@ -15,7 +15,7 @@ class AdaptiveMapper {
   }
 
   /// Recommends topics for the user to study next using weighted fusion.
-  /// 🔱 FORMULA: (CascadeRisk * 40%) + (MasteryGap * 35%) + (Importance * 25%)
+  /// FORMULA: (CascadeRisk * 40%) + (MasteryGap * 35%) + (Importance * 25%)
   List<MicroTopicNode> getStudyRecommendations({int limit = 5}) {
     final allNodes = graph.allNodes;
     if (allNodes.isEmpty) return [];

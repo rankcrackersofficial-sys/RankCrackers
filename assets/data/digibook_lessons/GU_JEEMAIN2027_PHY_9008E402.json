@@ -1,0 +1,344 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_9008E402",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U01_T_9008e402",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_9008E402_V001",
+  "atomicFactSetHash": "c34f981226eabc26870ed91cf3f35a34d5b2de8d0816523d1ed1eb0660f9476b",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_9008E402_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_9008E402",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_9008E402_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_9008E402_09175661",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_5BB4C1F8",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_619719C5",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_6B4C0C4F",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_8AB83234",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_A039AEBD",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_A0B38F68",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_AB6CCE8E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_C084CCD4",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_C4C55D7E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_CEF4A60E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_D6FF5DAE",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_D76BA2D1"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "overviewText": "This Generation Unit covers the nature of measurement uncertainty, errors in experimental physics, the distinction between accuracy and precision, least count error, absolute, relative, and percentage errors, and the canonical rules for arithmetic operations with significant figures.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "345191685ea8d978ccf9837ed057f75cebd366497c4499be8b04227fbcbbc918",
+      "createdAtUtc": "2026-09-02T13:29:33.007Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_9008E402_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_9008E402",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_9008E402_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_9008E402_09175661",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_5BB4C1F8",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_619719C5",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_6B4C0C4F",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_8AB83234",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_A039AEBD",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_A0B38F68",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_AB6CCE8E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_C084CCD4",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_C4C55D7E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_CEF4A60E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_D6FF5DAE",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_D76BA2D1"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_9008E402_CONCEPTS_01_UNCERTAINTY_ACCURACY_PRECISION",
+          "semanticAnchorId": "ANCHOR_ACCURACY_AND_PRECISION",
+          "title": "1. Measurement Uncertainty, Accuracy, and Precision",
+          "contentMarkdown": "The result of every measurement by any measuring instrument contains some uncertainty called **error**. **Accuracy** indicates how close a measured value is to the true value of the quantity, whereas **precision** indicates the resolution or limit to which the quantity is measured by the instrument. The smallest value measurable by an instrument is its **least count**, and the associated uncertainty is the least count error.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_9008E402_5BB4C1F8",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_D6FF5DAE",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_6B4C0C4F",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_A039AEBD",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_CEF4A60E",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_C4C55D7E",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_8AB83234"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_9008E402_CONCEPTS_02_ABSOLUTE_RELATIVE_PERCENT_ERROR",
+          "semanticAnchorId": "ANCHOR_ERROR_FORMULATIONS",
+          "title": "2. Absolute, Relative, and Percentage Errors",
+          "contentMarkdown": "- **Absolute Error ($|\\Delta a_i|$)**: the magnitude of the difference between the true value and the measured value: $|\\Delta a_i| = |a_{\\text{true}} - a_i|$.\n- **Relative Error**: the ratio of the mean absolute error to the mean measured value: $\\text{Relative Error} = \\frac{\\Delta a_{\\text{mean}}}{a_{\\text{mean}}}$.\n- **Percentage Error**: relative error expressed in percentage: $\\delta a = \\frac{\\Delta a_{\\text{mean}}}{a_{\\text{mean}}} \\times 100\\%$.\nEvery calculated quantity based on measured values also inherits an error.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_9008E402_AB6CCE8E",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_09175661",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_A0B38F68",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_C084CCD4"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_9008E402_CONCEPTS_03_SIGNIFICANT_FIGURES_RULES",
+          "semanticAnchorId": "ANCHOR_SIGNIFICANT_FIGURES_ARITHMETIC",
+          "title": "3. Rules for Arithmetic with Significant Figures",
+          "contentMarkdown": "1. **Multiplication & Division**: The final result must retain as many significant figures as the input measurement with the least significant figures.\n2. **Addition & Subtraction**: The final result should retain as many decimal places as are present in the input number with the least decimal places.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_9008E402_D76BA2D1",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_619719C5"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "52cdc0d4c681d6ad9632118a0c29bcd64fb4bd75736e6ff625c942d40aa3fd54",
+      "createdAtUtc": "2026-09-02T13:29:33.007Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_9008E402_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_9008E402",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_9008E402_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_9008E402_AB6CCE8E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_09175661",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_A0B38F68"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Absolute Error",
+          "formula": "|\\Delta a_i| = |a_{\\text{true}} - a_i|",
+          "constraints": "Difference between true/mean value and measured value",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_9008E402_AB6CCE8E"
+          ]
+        },
+        {
+          "name": "Relative Error",
+          "formula": "\\text{Relative Error} = \\frac{\\Delta a_{\\text{mean}}}{a_{\\text{mean}}}",
+          "constraints": "Dimensionless ratio",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_9008E402_09175661"
+          ]
+        },
+        {
+          "name": "Percentage Error",
+          "formula": "\\delta a = \\left(\\frac{\\Delta a_{\\text{mean}}}{a_{\\text{mean}}}\\right) \\times 100\\%",
+          "constraints": "Expressed as a percentage",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_9008E402_A0B38F68"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "6039fd0c99aaebd6361ff006fd53588c9ccf2522f116016a6900feeecc0f7b0b",
+      "createdAtUtc": "2026-09-02T13:29:33.007Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_9008E402_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_9008E402",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_9008E402_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No external empirical exam distractor / error telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.007Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_9008E402_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_9008E402",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_9008E402_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_9008E402_D76BA2D1",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_A0B38F68",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_C084CCD4"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_9008E402_01_DENSITY_SIGNIFICANT_FIGURES",
+          "title": "Density Calculation with Significant Figures",
+          "problemStatement": "The mass of a substance is measured as $4.237\\text{ g}$ and its volume is measured as $2.51\\text{ cm}^3$. Calculate its density to the correct number of significant figures.",
+          "stepByStepSolution": [
+            "Step 1: State the formula for density: $\\rho = \\frac{\\text{mass}}{\\text{volume}} = \\frac{4.237\\text{ g}}{2.51\\text{ cm}^3}$.",
+            "Step 2: Identify significant figures in the inputs: mass has $4$ significant figures; volume has $3$ significant figures.",
+            "Step 3: Perform division: $\\rho = 1.6880478...\\text{ g/cm}^3$.",
+            "Step 4: Round to $3$ significant figures (the least among inputs): $\\rho = 1.69\\text{ g/cm}^3$."
+          ],
+          "finalAnswer": "Density = 1.69 g/cm³ (rounded to 3 significant figures).",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_9008E402_D76BA2D1"
+          ],
+          "isVerified": true
+        },
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_9008E402_02_PERCENTAGE_ERROR_COMBINATION",
+          "title": "Percentage Error in Kinetic Energy",
+          "problemStatement": "The percentage error in measuring mass $m$ is $2\\%$ and in velocity $v$ is $3\\%$. Determine the maximum percentage error in the calculated kinetic energy $E = \\frac{1}{2}mv^2$.",
+          "stepByStepSolution": [
+            "Step 1: Express kinetic energy formula: $E = \\frac{1}{2}mv^2$.",
+            "Step 2: Write relative error combination formula for powers: $\\frac{\\Delta E}{E} = \\frac{\\Delta m}{m} + 2\\left(\\frac{\\Delta v}{v}\\right)$.",
+            "Step 3: Substitute percentage errors: $\\delta E = \\delta m + 2\\delta v = 2\\% + 2(3\\%) = 2\\% + 6\\% = 8\\%$."
+          ],
+          "finalAnswer": "Maximum percentage error in kinetic energy is 8%.",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_9008E402_A0B38F68",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_C084CCD4"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "18212a31ec19e05dbd595e16e026a096526e384d38252a1a688dc55b8f221e9d",
+      "createdAtUtc": "2026-09-02T13:29:33.007Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_9008E402_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_9008E402",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_9008E402_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_9008E402_619719C5",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_D6FF5DAE",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_6B4C0C4F"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_9008E402_01_ADDITION_DECIMAL_RULE",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Adding $436.32\\text{ g}$, $227.2\\text{ g}$, and $0.301\\text{ g}$ yields what value to the correct significant figures?",
+          "options": [
+            "$663.8\\text{ g}$",
+            "$663.821\\text{ g}$",
+            "$663.82\\text{ g}$",
+            "$664\\text{ g}$"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "In addition, the result must retain as many decimal places as the number with the least decimal places ($227.2\\text{ g}$ has 1 decimal place). Sum = $663.821\\text{ g}$, rounded to 1 decimal place = $663.8\\text{ g}$.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_9008E402_619719C5"
+          ],
+          "isVerified": true
+        },
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_9008E402_02_ACCURACY_VS_PRECISION",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Which statement correctly distinguishes accuracy from precision?",
+          "options": [
+            "Accuracy refers to closeness to the true value; precision refers to resolution/reproducibility.",
+            "Accuracy depends on least count only; precision has no relation to instrument limit.",
+            "A precise measurement is always accurate.",
+            "Accuracy and precision are identical concepts in physics."
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Accuracy measures how close a result is to the true value, while precision measures the resolution and repeatability of the measurement.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_9008E402_D6FF5DAE",
+            "AF_GU_JEEMAIN2027_PHY_9008E402_6B4C0C4F"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "439edd4894374553e18599c71d3e5ebc17494ca5496b5b1c305f89d7d7c91d7e",
+      "createdAtUtc": "2026-09-02T13:29:33.007Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_9008E402_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_9008E402",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_9008E402_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_9008E402_09175661",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_5BB4C1F8",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_619719C5",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_6B4C0C4F",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_8AB83234",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_A039AEBD",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_A0B38F68",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_AB6CCE8E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_C084CCD4",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_C4C55D7E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_CEF4A60E",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_D6FF5DAE",
+        "AF_GU_JEEMAIN2027_PHY_9008E402_D76BA2D1"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Calculating absolute, relative, and percentage errors from experimental data",
+          "Applying propagation of errors in products, quotients, and power formulas",
+          "Rounding results strictly according to significant figure rules in addition and multiplication"
+        ],
+        "supportedQuestionFormats": [
+          "Single Choice MCQ (4 options)",
+          "Numerical Value Questions"
+        ],
+        "readinessStatement": "This Generation Unit covers all canonical conceptual prerequisites required for exam assessments on experimental error analysis."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "bb3e49a463fe31e7d97296720480d5319b4f106c9138981bddeec515ccbd77fc",
+      "createdAtUtc": "2026-09-02T13:29:33.007Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_PART1_CH02_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.007Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

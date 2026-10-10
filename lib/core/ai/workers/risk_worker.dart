@@ -3,7 +3,7 @@ import 'package:rank_crackers/core/models/risk_node.dart';
 import 'package:rank_crackers/core/models/mastery_node.dart';
 import 'package:rank_crackers/core/models/coverage_node.dart';
 
-/// 🔱 RISK ENGINE WORKER (Blueprint v1.0)
+/// RISK ENGINE WORKER (Blueprint v1.0)
 /// Law: Decision Loop Completer. Aggregates Mastery & Coverage to identify threats.
 class RiskWorker {
   
@@ -14,25 +14,25 @@ class RiskWorker {
     required MasteryNode mastery,
     required CoverageNode coverage,
     required double pyqWeightage, // 0.0 to 10.0
-    required int pyqCount, // 🔱 Audit GAP-4
-    required int recentFrequency, // 🔱 Audit GAP-4
+    required int pyqCount, // Audit GAP-4
+    required int recentFrequency, // Audit GAP-4
   }) {
-    debugPrint("🔱 RISK WORKER: Assessing threat level for $atomicTopicId...");
+    debugPrint("RISK WORKER: Assessing threat level for $atomicTopicId...");
 
     final List<String> reasons = [];
     
-    // 🔱 Risk Formula Inputs
+    // Risk Formula Inputs
     double masteryComponent = (100.0 - mastery.masteryScore); 
     double coverageComponent = (100.0 - coverage.coverageScore); 
     
-    // 🔱 Audit GAP-2: Forgetting Curve (Time Decay)
+    // Audit GAP-2: Forgetting Curve (Time Decay)
     final daysSinceLast = DateTime.now().difference(mastery.lastAttempted).inDays;
     double decayFactor = 0.0;
     if (daysSinceLast > 30) decayFactor = 20.0;
     else if (daysSinceLast > 15) decayFactor = 10.0;
     else if (daysSinceLast > 7) decayFactor = 5.0;
 
-    // 🔱 Audit GAP-4: Dynamic PYQ Threat
+    // Audit GAP-4: Dynamic PYQ Threat
     double dynamicPyqThreat = (pyqWeightage * 0.5) + (pyqCount * 0.3) + (recentFrequency * 0.2);
 
     // Weighted Risk Calculation (v1.2)
@@ -41,7 +41,7 @@ class RiskWorker {
                        (dynamicPyqThreat * 10.0 * 0.2) +
                        (decayFactor * 5.0 * 0.15);
 
-    // 🔱 Reason Extraction
+    // Reason Extraction
     if (mastery.masteryScore < 40) reasons.add("Weak Mastery");
     if (coverage.coverageScore < 50) reasons.add("Low Coverage");
     if (dynamicPyqThreat > 7.0 && mastery.masteryScore < 60) reasons.add("High PYQ Threat");

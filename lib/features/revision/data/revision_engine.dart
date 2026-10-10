@@ -1,7 +1,7 @@
 import '../../../core/models/micro_topic_node.dart';
 import '../../../core/models/node_runtime_state.dart';
 
-/// 🔱 REVISION ENGINE
+/// REVISION ENGINE
 /// Identifies nodes that require immediate or standard revision.
 class RevisionEngine {
   static List<MicroTopicNode> getRevisionNodes(

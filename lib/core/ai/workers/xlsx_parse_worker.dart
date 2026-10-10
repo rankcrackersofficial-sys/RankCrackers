@@ -5,18 +5,18 @@ import '../../models/sentinel_draft.dart';
 import '../../models/audit_record.dart';
 import '../../backend/sentinel_repository.dart';
 
-/// 🔱 XLSX PARSE WORKER (Hardened)
+/// XLSX PARSE WORKER (Hardened)
 /// Implements Phase 9 Step 1: Schema Detection & Row Mapping.
 class XlsxParseWorker {
   
-  /// 🔱 EXTRACTION PROTOCOL
+  /// EXTRACTION PROTOCOL
   static Future<void> processXlsx({
     required String recordId,
     required String fileHash,
     required String fileName,
     required String filePath,
   }) async {
-    debugPrint("🔱 XLSX WORKER: Detecting schema for $fileName");
+    debugPrint("XLSX WORKER: Detecting schema for $fileName");
 
     final file = File(filePath);
     final bytes = await file.readAsBytes();
@@ -72,6 +72,6 @@ class XlsxParseWorker {
     );
 
     await SentinelRepository.injectDrafts([draft]);
-    debugPrint("🔱 XLSX WORKER: Schema detection complete.");
+    debugPrint("XLSX WORKER: Schema detection complete.");
   }
 }

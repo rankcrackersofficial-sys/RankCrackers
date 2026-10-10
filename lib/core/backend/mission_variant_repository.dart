@@ -2,13 +2,13 @@ import '../models/mission_variant.dart';
 import '../firebase/firestore_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-/// 🔱 MISSION VARIANT REPOSITORY
+/// MISSION VARIANT REPOSITORY
 /// Access layer for sub-targets within a recruitment.
 class MissionVariantRepository {
   static final _firestore = FirebaseFirestore.instance;
   static const String _collection = FirestoreService.variantCollection;
 
-  /// 🔱 Learner Discovery: Stream only published variants for a recruitment.
+  /// Learner Discovery: Stream only published variants for a recruitment.
   static Stream<List<MissionVariant>> streamPublishedByRecruitment(String recruitmentId) {
     return _firestore
         .collection(_collection)

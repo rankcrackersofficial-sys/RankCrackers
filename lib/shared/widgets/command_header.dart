@@ -67,10 +67,10 @@ class CommandHeader extends StatelessWidget {
                   context.push(AppRoutes.profile);
                 },
                 child: CircleAvatar(
-                  radius: ResponsiveHelper.sp(context, 24),
+                  radius: ResponsiveHelper.sp(context, 18),
                   backgroundColor: AppColors.surface,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(22),
                     child: userPhoto != null
                         ? Image.network(userPhoto!, fit: BoxFit.cover)
                         : Image.asset('assets/images/logo.png',
@@ -82,15 +82,15 @@ class CommandHeader extends StatelessWidget {
                 right: 0,
                 bottom: 0,
                 child: Container(
-                  width: ResponsiveHelper.sp(context, 14),
-                  height: ResponsiveHelper.sp(context, 14),
+                  width: ResponsiveHelper.sp(context, 11),
+                  height: ResponsiveHelper.sp(context, 11),
                   decoration: const BoxDecoration(
                     color: AppColors.gold,
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
                     Icons.edit,
-                    size: ResponsiveHelper.sp(context, 8),
+                    size: ResponsiveHelper.sp(context, 6),
                     color: Colors.black,
                   ),
                 ),

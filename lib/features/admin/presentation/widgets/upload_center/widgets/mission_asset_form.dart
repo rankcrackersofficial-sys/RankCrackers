@@ -30,7 +30,7 @@ class _MissionAssetFormState extends State<MissionAssetForm> {
 
   @override
   Widget build(BuildContext context) {
-    // 🔱 Rules (Constitution v1.0):
+    // Rules (Constitution v1.0):
     // Zero Manual Classification for core assets.
     // Founder only provides the raw PDF.
     

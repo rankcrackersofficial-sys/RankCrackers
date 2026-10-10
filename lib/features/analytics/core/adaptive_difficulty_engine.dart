@@ -1,6 +1,6 @@
 class AdaptiveDifficultyEngine {
   // ===================================================
-  // PICK DIFFICULTY 🔱
+  // PICK DIFFICULTY 
   // ===================================================
   static int level({required double mastery}) {
     if (mastery < 0.40) return 1;

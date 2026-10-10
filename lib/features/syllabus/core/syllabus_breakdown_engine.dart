@@ -2,7 +2,7 @@ import '../models/syllabus_chunk.dart';
 
 class SyllabusBreakdownEngine {
   // ===================================================
-  // BREAKDOWN RAW SYLLABUS 🔱 Updated for Mission Law
+  // BREAKDOWN RAW SYLLABUS Updated for Mission Law
   // ===================================================
   static List<SyllabusChunk> process({
     required String rawSyllabus,

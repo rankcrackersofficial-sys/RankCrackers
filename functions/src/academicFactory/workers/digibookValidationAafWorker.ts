@@ -2,7 +2,7 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 DIGIBOOK VALIDATION AAF WORKER
+ * DIGIBOOK VALIDATION AAF WORKER
  * Binds automated consistency and coverage logic.
  */
 export async function digibookValidationAafWorker(job: AafJobMetadata): Promise<AafWorkerResult> {

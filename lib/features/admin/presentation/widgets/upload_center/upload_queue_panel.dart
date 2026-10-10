@@ -35,7 +35,7 @@ class UploadQueuePanel extends StatelessWidget {
   Widget build(BuildContext context) {
     Query baseQuery = FirebaseFirestore.instance.collection('ingestion_refinery');
 
-    // 🔱 Apply Governance Filter (Defaulting to Active + Under Review)
+    // Apply Governance Filter (Defaulting to Active + Under Review)
     Query filteredQuery = _applyGovernanceFilter(baseQuery, IngestionFilter.defaultView);
     
     if (assetType != null) {
@@ -225,7 +225,7 @@ class _DeleteButtonState extends State<_DeleteButton> {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("🔱 PERMANENT DELETION", style: AppTypography.heading.copyWith(color: Colors.redAccent)),
+                      Text("PERMANENT DELETION", style: AppTypography.heading.copyWith(color: Colors.redAccent)),
                       const SizedBox(height: 16),
                       Text("⚠️ This action will permanently remove:", style: AppTypography.body.copyWith(fontSize: 12)),
                       const SizedBox(height: 12),
@@ -250,7 +250,7 @@ class _DeleteButtonState extends State<_DeleteButton> {
                         },
                       ),
                       const SizedBox(height: 24),
-                      // 🔱 Forensic Fix: Responsive Action Container
+                      // Forensic Fix: Responsive Action Container
                       SizedBox(
                         width: double.infinity,
                         child: Wrap(

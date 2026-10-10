@@ -2,7 +2,7 @@ import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
 
 /**
- * 🔱 SOURCE VALIDATION AAF WORKER
+ * SOURCE VALIDATION AAF WORKER
  * Implements the 6-Counter Trust Proof.
  * Binds the Syllabus Source Worker logic.
  */

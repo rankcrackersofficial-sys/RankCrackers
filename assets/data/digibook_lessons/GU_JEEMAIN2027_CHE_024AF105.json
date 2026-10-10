@@ -1,0 +1,223 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_CHE_024AF105",
+  "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000005",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_CHE_024AF105_V001",
+  "atomicFactSetHash": "d6c4cb15206f549fbc10d8a9cdcedb9870ad212dee9c306cffc0638a6d855142",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_024AF105_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_024AF105",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_024AF105_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_024AF105_849320FD",
+        "AF_GU_JEEMAIN2027_CHE_024AF105_A7896E62"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "overviewText": "This chapter explains the determination of empirical and molecular formulae from percentage composition and molar mass.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d495839c0c8abe3ecc62df147dee665d2a89062caa445d159f3c7d296ce59f65",
+      "createdAtUtc": "2026-09-02T13:29:33.148Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_024AF105_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_024AF105",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_024AF105_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_024AF105_849320FD",
+        "AF_GU_JEEMAIN2027_CHE_024AF105_A7896E62"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_024AF105_CONCEPTS_01_EMPIRICAL_MOLECULAR",
+          "semanticAnchorId": "ANCHOR_EMPIRICAL_MOLECULAR",
+          "title": "1. Empirical and Molecular Formula Definitions and Scaling",
+          "contentMarkdown": "The **empirical formula** is the simplest whole-number ratio of atoms in a compound. The **molecular formula** is the exact number of atoms, given by $$(\\\\text{Empirical Formula})_n$$ where $$n = \\\\frac{\\\\text{Molar Mass}}{\\\\text{Empirical Formula Mass}}$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_024AF105_849320FD",
+            "AF_GU_JEEMAIN2027_CHE_024AF105_A7896E62"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "64e68b50b5f4eb24dc01ee218bc5a3b8294fd8636aeaaf5b87f34dae658d14a4",
+      "createdAtUtc": "2026-09-02T13:29:33.148Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_024AF105_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_024AF105",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_024AF105_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_024AF105_A7896E62"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Molecular Formula Scaling",
+          "formula": "n = \\\\frac{\\\\text{Molar Mass}}{\\\\text{Empirical Formula Mass}}",
+          "constraints": "n is a positive integer",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_024AF105_A7896E62"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "559fbfe4366ebd8113dc6e4f753312fe7062349a08b332145dc4f2730c5ac138",
+      "createdAtUtc": "2026-09-02T13:29:33.148Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_024AF105_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_024AF105",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_024AF105_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.148Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_024AF105_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_024AF105",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_024AF105_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_024AF105_A7896E62"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_CHE_024AF105_01",
+          "title": "Molecular Formula of Glucose from Empirical Formula",
+          "problemStatement": "A compound has empirical formula $CH_2O$ (empirical mass $30.03\\\\text{ g/mol}$) and molar mass $180.18\\\\text{ g/mol}$. Find its molecular formula.",
+          "stepByStepSolution": [
+            "Step 1: Calculate multiplier $n = \\\\frac{\\\\text{Molar Mass}}{\\\\text{Empirical Mass}} = \\\\frac{180.18}{30.03} = 6$.",
+            "Step 2: Multiply empirical subscripts by $n = 6$: $(CH_2O)_6 = C_6H_{12}O_6$."
+          ],
+          "finalAnswer": "C_6H_{12}O_6",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_024AF105_A7896E62"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "2767276c4cf9e5f0b1f210c8fbcda10bdeda806897d115335038748f7a82399c",
+      "createdAtUtc": "2026-09-02T13:29:33.148Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_024AF105_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_024AF105",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_024AF105_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_024AF105_849320FD"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_CHE_024AF105_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "What is the empirical formula of benzene ($C_6H_6$)?",
+          "options": [
+            "CH",
+            "C_2H_2",
+            "C_6H_6",
+            "C_3H_3"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Dividing subscripts by greatest common divisor (6) gives the simplest ratio $CH$.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_024AF105_849320FD"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "a4c37918a4f27d0cc37e854186886504252ab19f5e999c6487e575cd0c65280d",
+      "createdAtUtc": "2026-09-02T13:29:33.148Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_024AF105_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_024AF105",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_024AF105_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_024AF105_849320FD",
+        "AF_GU_JEEMAIN2027_CHE_024AF105_A7896E62"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Empirical formula reduction",
+          "Molecular formula multiplier derivation"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "9c659dbb30c9cc21f3170f245309b1b784c1fedc42d316ea87b7e86bf37bdbb1",
+      "createdAtUtc": "2026-09-02T13:29:33.148Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.148Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 TIME BUDGET NODE (Blueprint v1.0 - Document 53)
+/// TIME BUDGET NODE (Blueprint v1.0 - Document 53)
 /// Represents the daily distribution of study time across subjects or intelligence actions.
 class TimeBudgetNode extends Equatable {
   final String userId;

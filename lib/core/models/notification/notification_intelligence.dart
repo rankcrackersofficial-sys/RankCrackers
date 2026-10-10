@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-/// 🔱 NOTIFICATION INTELLIGENCE (v1.2 - Hardened & Compiled)
+/// NOTIFICATION INTELLIGENCE (v1.2 - Hardened & Compiled)
 class NotificationIntelligence {
   final VacancyIntelligence vacancy;
   final ExamIntelligence exam;

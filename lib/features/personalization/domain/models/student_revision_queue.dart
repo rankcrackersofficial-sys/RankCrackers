@@ -17,6 +17,7 @@ final class StudentRevisionQueueItem {
   const StudentRevisionQueueItem({
     required this.revisionItemId,
     required this.studentId,
+    required this.missionId,
     required this.amtnId,
     required this.state,
     required this.sequenceRank,
@@ -28,6 +29,7 @@ final class StudentRevisionQueueItem {
 
   final String revisionItemId;
   final String studentId;
+  final String missionId;
   final String amtnId;
   final StudentRevisionQueueState state;
   final int sequenceRank;
@@ -39,6 +41,7 @@ final class StudentRevisionQueueItem {
   void validate() {
     if (revisionItemId.trim().isEmpty ||
         studentId.trim().isEmpty ||
+        missionId.trim().isEmpty ||
         amtnId.trim().isEmpty ||
         sequenceRank <= 0 ||
         !reviewAtUtc.isUtc ||

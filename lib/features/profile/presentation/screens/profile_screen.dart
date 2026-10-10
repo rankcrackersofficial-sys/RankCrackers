@@ -260,9 +260,9 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       _buildMissionSection(sessionUser?.examName),
                       _buildAccountPrivacySection(sessionUser),
                       _buildHelpSupportSection(),
-                      _buildLegalSection(),
                       _buildSessionSection(),
                       _buildDangerZoneSection(),
+                      _buildLegalSection(),
                       _buildAdaptiveInsights(engine),
 
                       const SliverToBoxAdapter(child: SizedBox(height: 100)),
@@ -337,7 +337,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     );
   }
 
-  Widget _buildProfileSection(dynamic sessionUser) {
+  Widget _buildProfileSection(SessionUser? sessionUser) {
     return SliverToBoxAdapter(
       child: Padding(
         padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 16,
@@ -560,7 +560,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     );
   }
 
-  Widget _buildAccountPrivacySection(dynamic sessionUser) {
+  Widget _buildAccountPrivacySection(SessionUser? sessionUser) {
     return SliverToBoxAdapter(
       child: Padding(
         padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
@@ -587,7 +587,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               icon: Icons.privacy_tip_outlined,
               title: 'Privacy',
               subtitle: 'Manage data preferences and privacy settings',
-              onTap: () => _showLegalDialog('Privacy Policy', 'Your academic progress and career matches are 100% private and protected. Only you can view your performance insights.'),
+              onTap: () => _showLegalDialog('Privacy Policy', 'Your academic progress and career matches are private and protected under strict governed access controls. Only you can view your performance insights.'),
             ),
           ],
         ),

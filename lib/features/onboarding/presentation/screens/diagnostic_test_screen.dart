@@ -69,7 +69,7 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
     }
 
     try {
-      // 🔱 PHYSICAL HYDRATION: Fetching real AI-generated assessment pool
+      // PHYSICAL HYDRATION: Fetching real AI-generated assessment pool
       final snapshot = await FirebaseFirestore.instance
           .collection('mcq_pool')
           .where('examId', isEqualTo: examId)
@@ -94,7 +94,7 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
 
   void _loadUniversalDiagnostic() {
     setState(() {
-      // 🔱 FAKE UNIVERSAL CONTENT DISABLED
+      // FAKE UNIVERSAL CONTENT DISABLED
       questions = [];
       isLoading = false;
     });
@@ -196,7 +196,7 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
   }
 
   // ==========================================================
-  // DIAGNOSTIC HEADER 🔱
+  // DIAGNOSTIC HEADER 
   // ==========================================================
   Widget _buildDiagnosticHeader() {
     return SliverToBoxAdapter(
@@ -218,7 +218,7 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
   }
 
   // ==========================================================
-  // ASSESSMENT FOCUS CARD 🔱
+  // ASSESSMENT FOCUS CARD 
   // ==========================================================
   Widget _buildAssessmentFocus() {
     return SliverToBoxAdapter(
@@ -242,7 +242,7 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
   }
 
   // ==========================================================
-  // ADAPTIVE METRICS GRID 🔱
+  // ADAPTIVE METRICS GRID 
   // ==========================================================
   Widget _buildAdaptiveMetrics() {
     return SliverPadding(
@@ -304,7 +304,7 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
   }
 
   // ==========================================================
-  // QUESTION CHAMBER 🔱
+  // QUESTION CHAMBER 
   // ==========================================================
   Widget _buildQuestionChamber() {
     if (questions.isEmpty) {
@@ -409,7 +409,7 @@ class _DiagnosticTestScreenState extends ConsumerState<DiagnosticTestScreen> {
   }
 
   // ==========================================================
-  // COGNITIVE REFLECTION 🔱
+  // COGNITIVE REFLECTION 
   // ==========================================================
   Widget _buildCognitiveReflection() {
     return SliverToBoxAdapter(

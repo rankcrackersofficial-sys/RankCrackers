@@ -7,7 +7,7 @@ class PipelineProgressSteps extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 🔱 Physical Workflow Law: Upload -> Classify -> Store -> Publish
+    // Physical Workflow Law: Upload -> Classify -> Store -> Publish
     final bool uploaded = status != 'failed';
     final bool classified = status == 'classified' || status == 'under_review' || status == 'published';
     final bool stored = status == 'under_review' || status == 'published';

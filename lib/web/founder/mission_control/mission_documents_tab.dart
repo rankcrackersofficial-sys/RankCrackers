@@ -1,7 +1,8 @@
-﻿import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:crypto/crypto.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -98,7 +99,8 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
       MapEntry('sample_pyq', 'Sample PYQ'),
       MapEntry('sample_question_paper', 'Sample Question Paper'),
       MapEntry('topic_wise_sample_questions', 'Topic-wise Sample Questions'),
-      MapEntry('chapter_wise_sample_questions', 'Chapter-wise Sample Questions'),
+      MapEntry(
+          'chapter_wise_sample_questions', 'Chapter-wise Sample Questions'),
       MapEntry('study_material', 'Study Material'),
       MapEntry('topic_wise_study_material', 'Topic-wise Study Material'),
       MapEntry('chapter_wise_study_material', 'Chapter-wise Study Material'),
@@ -135,11 +137,13 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     final bool isFounder = widget.roleMode == ConsoleRoleMode.founder;
     final perms = widget.permissions ?? {};
     final currentSubTabLabels = [
-      if (isFounder) 'Upload Official Document',
-      'Mission Document Directory',
-      if (isFounder) 'Student Document Review',
-      if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms)) 'Syllabus Atom Verification',
-      if (isFounder || AdminPermissionResolver.canSeePyqReview(perms)) 'PYQ Question Review',
+      if (isFounder) 'Upload Source',
+      'Source Documents',
+      if (isFounder) 'Student Visibility',
+      if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms))
+        'Syllabus Verification',
+      if (isFounder || AdminPermissionResolver.canSeePyqReview(perms))
+        'PYQ Verification',
     ];
     final idx = currentSubTabLabels.indexOf(tabLabel);
     if (idx != -1) {
@@ -158,25 +162,27 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     if (isFounder || AdminPermissionResolver.canSeePyqReview(perms)) len++;
 
     _tabController = TabController(length: len, vsync: this);
-    
+
     final int? targetIndex = widget.initialSubTab;
     if (targetIndex != null) {
       // Map initial sub-tab index from Founder mode (fixed indices) to dynamic actual index
       String? requestedLabel;
-      if (targetIndex == 0) requestedLabel = 'Upload Official Document';
-      if (targetIndex == 1) requestedLabel = 'Mission Document Directory';
-      if (targetIndex == 2) requestedLabel = 'Student Document Review';
-      if (targetIndex == 3) requestedLabel = 'Syllabus Atom Verification';
-      if (targetIndex == 4) requestedLabel = 'PYQ Question Review';
-      
+      if (targetIndex == 0) requestedLabel = 'Upload Source';
+      if (targetIndex == 1) requestedLabel = 'Source Documents';
+      if (targetIndex == 2) requestedLabel = 'Student Visibility';
+      if (targetIndex == 3) requestedLabel = 'Syllabus Verification';
+      if (targetIndex == 4) requestedLabel = 'PYQ Verification';
+
       final currentSubTabLabels = [
-        if (isFounder) 'Upload Official Document',
-        'Mission Document Directory',
-        if (isFounder) 'Student Document Review',
-        if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms)) 'Syllabus Atom Verification',
-        if (isFounder || AdminPermissionResolver.canSeePyqReview(perms)) 'PYQ Question Review',
+        if (isFounder) 'Upload Source',
+        'Source Documents',
+        if (isFounder) 'Student Visibility',
+        if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms))
+          'Syllabus Verification',
+        if (isFounder || AdminPermissionResolver.canSeePyqReview(perms))
+          'PYQ Verification',
       ];
-      
+
       final mappedIdx = currentSubTabLabels.indexOf(requestedLabel ?? '');
       if (mappedIdx != -1) {
         _tabController.index = mappedIdx;
@@ -238,6 +244,18 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     });
   }
 
+  String _documentFamilyFor(String type) {
+    final value = type.toLowerCase();
+    if (value.contains('syllabus')) return 'SYLLABUS';
+    if (value.contains('pyq') || value.contains('question_paper')) return 'PYQ';
+    if (value.contains('amendment') ||
+        value.contains('shuddhi') ||
+        value.contains('corrigendum')) return 'AMENDMENT';
+    if (value.contains('notification') || value.contains('notice'))
+      return 'NOTIFICATION';
+    return 'OTHER_OFFICIAL_SOURCE';
+  }
+
   Future<void> _uploadDocument() async {
     final manualTitle = _titleCtrl.text.trim();
     if (_scope != 'MISSION_COMMON' && _selectedVariableId == null) {
@@ -259,7 +277,19 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     try {
       result = await FilePicker.platform.pickFiles(
         type: FileType.custom,
-        allowedExtensions: ['pdf', 'doc', 'docx', 'xlsx', 'json', 'csv', 'txt', 'png', 'jpg', 'jpeg', 'webp'],
+        allowedExtensions: [
+          'pdf',
+          'doc',
+          'docx',
+          'xlsx',
+          'json',
+          'csv',
+          'txt',
+          'png',
+          'jpg',
+          'jpeg',
+          'webp'
+        ],
         withData: true,
         allowMultiple: true,
       );
@@ -280,7 +310,10 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     }
 
     final files = result.files;
-    final unreadable = files.where((file) => file.bytes == null).map((file) => file.name).toList();
+    final unreadable = files
+        .where((file) => file.bytes == null)
+        .map((file) => file.name)
+        .toList();
     if (unreadable.isNotEmpty) {
       setState(() {
         _error = 'Could not read selected file bytes: ${unreadable.join(', ')}';
@@ -299,8 +332,12 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
 
     final now = FieldValue.serverTimestamp();
     final variable = _selectedVariable;
-    final variableName = variable == null ? null : (variable['displayName'] ?? variable['name'] ?? _selectedVariableId).toString();
-    final subjectCode = variable?['subjectCode']?.toString() ?? variable?['code']?.toString();
+    final variableName = variable == null
+        ? null
+        : (variable['displayName'] ?? variable['name'] ?? _selectedVariableId)
+            .toString();
+    final subjectCode =
+        variable?['subjectCode']?.toString() ?? variable?['code']?.toString();
     final subjectHindiName = variable?['hindiName']?.toString();
     final paper = _scope == 'PAPER_WISE' ? _paperType : null;
     var uploadedCount = 0;
@@ -309,17 +346,23 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     try {
       for (final file in files) {
         final bytes = file.bytes!;
-        final fallbackTitle = file.name.contains('.') ? file.name.substring(0, file.name.lastIndexOf('.')) : file.name;
+        final fallbackTitle = file.name.contains('.')
+            ? file.name.substring(0, file.name.lastIndexOf('.'))
+            : file.name;
         final title = manualTitle.isNotEmpty ? manualTitle : fallbackTitle;
-        final titleSource = manualTitle.isNotEmpty ? 'MANUAL' : 'FILE_NAME_FALLBACK';
+        final titleSource =
+            manualTitle.isNotEmpty ? 'MANUAL' : 'FILE_NAME_FALLBACK';
         final hash = sha256.convert(bytes).toString();
         final documentId = 'hash_$hash';
-        final ext = file.extension?.toLowerCase() ?? file.name.split('.').last.toLowerCase();
-        final storagePath = 'mission_realms/${widget.missionId}/official_documents/$documentId.$ext';
+        final ext = file.extension?.toLowerCase() ??
+            file.name.split('.').last.toLowerCase();
+        final storagePath =
+            'mission_realms/${widget.missionId}/official_documents/$documentId.$ext';
 
         try {
           final ref = FirebaseStorage.instance.ref(storagePath);
-          await ref.putData(bytes, SettableMetadata(contentType: mimeForExtension(ext)));
+          await ref.putData(
+              bytes, SettableMetadata(contentType: mimeForExtension(ext)));
           final downloadUrl = await ref.getDownloadURL();
 
           final docData = {
@@ -337,14 +380,23 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             'originalFileName': file.name,
             'titleSource': titleSource,
             'fileName': file.name,
+            'mimeType': mimeForExtension(ext),
+            'fileSize': bytes.length,
+            'sourceSha256': hash,
+            'documentFamily': _documentFamilyFor(_documentType),
+            'verificationState': 'PENDING',
+            'activationState': 'CANDIDATE',
+            'studentTruth': false,
             'storagePath': storagePath,
             'storageRawPath': storagePath,
             'downloadUrl': downloadUrl,
-            'variableId': _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
+            'variableId':
+                _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
             'variableName': _scope == 'MISSION_COMMON' ? null : variableName,
             'subjectCode': _scope == 'MISSION_COMMON' ? null : subjectCode,
             'subjectName': _scope == 'MISSION_COMMON' ? null : variableName,
-            'subjectHindiName': _scope == 'MISSION_COMMON' ? null : subjectHindiName,
+            'subjectHindiName':
+                _scope == 'MISSION_COMMON' ? null : subjectHindiName,
             'paperType': paper,
             'paperIndex': paper,
             'status': 'RECEIVED',
@@ -356,8 +408,16 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             'source': 'mission_documents_center',
           };
 
-          await FirebaseFirestore.instance.collection('mission_realms').doc(widget.missionId).collection('official_documents').doc(documentId).set(docData, SetOptions(merge: true));
-          await FirebaseFirestore.instance.collection('ingestion_refinery').doc(documentId).set({
+          await FirebaseFirestore.instance
+              .collection('mission_realms')
+              .doc(widget.missionId)
+              .collection('official_documents')
+              .doc(documentId)
+              .set(docData, SetOptions(merge: true));
+          await FirebaseFirestore.instance
+              .collection('ingestion_refinery')
+              .doc(documentId)
+              .set({
             ...docData,
             'sourceId': documentId,
             'fileType': ext,
@@ -372,7 +432,10 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             'updatedAt': now,
             'uploadedFrom': 'mission_documents_center',
           }, SetOptions(merge: true));
-          await FirebaseFirestore.instance.collection('ai_queue').doc(documentId).set({
+          await FirebaseFirestore.instance
+              .collection('ai_queue')
+              .doc(documentId)
+              .set({
             'type': 'pdfParse',
             'provider': 'gemini',
             'sourceType': 'MISSION_DOCUMENT',
@@ -380,7 +443,8 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             'missionId': widget.missionId,
             'scope': _scope,
             'documentType': _documentType,
-            'variableId': _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
+            'variableId':
+                _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
             'subjectCode': _scope == 'MISSION_COMMON' ? null : subjectCode,
             'paperType': paper,
             'storagePath': storagePath,
@@ -398,7 +462,8 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
               'missionId': widget.missionId,
               'scope': _scope,
               'documentType': _documentType,
-              'variableId': _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
+              'variableId':
+                  _scope == 'MISSION_COMMON' ? null : _selectedVariableId,
               'subjectCode': _scope == 'MISSION_COMMON' ? null : subjectCode,
               'paperType': paper,
               'mediumPolicy': widget.mission['mediumPolicy'] ?? 'ENGLISH_ONLY',
@@ -407,7 +472,13 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             'createdAt': now,
             'triggeredFrom': 'mission_documents_center',
           }, SetOptions(merge: true));
-          await FirebaseFirestore.instance.collection('mission_realms').doc(widget.missionId).collection('official_documents').doc(documentId).set({'aiQueueStatus': 'received', 'aiQueueTaskId': documentId}, SetOptions(merge: true));
+          await FirebaseFirestore.instance
+              .collection('mission_realms')
+              .doc(widget.missionId)
+              .collection('official_documents')
+              .doc(documentId)
+              .set({'aiQueueStatus': 'received', 'aiQueueTaskId': documentId},
+                  SetOptions(merge: true));
           uploadedCount++;
         } catch (fileError) {
           failedFiles.add('${file.name}: $fileError');
@@ -418,7 +489,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
         _info = failedFiles.isEmpty
             ? 'Uploaded $uploadedCount document${uploadedCount == 1 ? '' : 's'} to Storage, Ingestion, and AI Queue.'
             : 'Uploaded $uploadedCount document${uploadedCount == 1 ? '' : 's'}. Failed: ${failedFiles.join('; ')}';
-        if (uploadedCount > 0) _navigateToSubTab('Mission Document Directory');
+        if (uploadedCount > 0) _navigateToSubTab('Source Documents');
       });
     } catch (e) {
       setState(() => _error = 'Upload failed: $e');
@@ -426,6 +497,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
       if (mounted) setState(() => _uploading = false);
     }
   }
+
   bool _matchesFilters(QueryDocumentSnapshot<Map<String, dynamic>> doc) {
     final data = doc.data();
     final q = _searchCtrl.text.trim().toLowerCase();
@@ -507,8 +579,10 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             '')
         .toString()
         .toLowerCase();
-    
-    final extractionQuality = data['extractionQuality'] ?? data['latestExtractionQuality'] ?? 'UNKNOWN';
+
+    final extractionQuality = data['extractionQuality'] ??
+        data['latestExtractionQuality'] ??
+        'UNKNOWN';
     if (extractionQuality == 'FAILED') return 'OCR Quality Failed';
     if (data['reprocessStatus'] == 'QUEUED') return 'Reprocess Queued';
 
@@ -578,8 +652,8 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: rcSurface,
-        title: const Text('AI Extraction Review',
-            style: TextStyle(color: rcGold)),
+        title:
+            const Text('AI Extraction Review', style: TextStyle(color: rcGold)),
         content: SizedBox(
           width: 720,
           child: SingleChildScrollView(
@@ -600,14 +674,19 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
   void _showSentinelDraftReview(BuildContext context, String draftId) {
     showDialog(
       context: context,
-      builder: (context) => FutureBuilder<DocumentSnapshot<Map<String, dynamic>>>(
-        future: FirebaseFirestore.instance.collection('sentinel_drafts').doc(draftId).get(),
+      builder: (context) =>
+          FutureBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+        future: FirebaseFirestore.instance
+            .collection('sentinel_drafts')
+            .doc(draftId)
+            .get(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) return const RcCenteredLoader();
           final data = snapshot.data!.data() ?? {};
           return AlertDialog(
             backgroundColor: rcSurface,
-            title: Text('Sentinel Draft: $draftId', style: const TextStyle(color: rcGold, fontSize: 14)),
+            title: Text('Sentinel Draft: $draftId',
+                style: const TextStyle(color: rcGold, fontSize: 14)),
             content: SizedBox(
               width: 900,
               height: 700,
@@ -615,21 +694,315 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('RAW EXTRACTED TEXT', style: TextStyle(color: rcGold, fontSize: 10, fontWeight: FontWeight.bold)),
+                    const Text('RAW EXTRACTED TEXT',
+                        style: TextStyle(
+                            color: rcGold,
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
-                    SelectableText(data['searchableSummary'] ?? 'No text summary available.', style: const TextStyle(fontSize: 12)),
+                    SelectableText(
+                        data['searchableSummary'] ??
+                            'No text summary available.',
+                        style: const TextStyle(fontSize: 12)),
                     const Divider(height: 32, color: rcLine),
-                    const Text('STRUCTURED JSON DATA', style: TextStyle(color: rcGold, fontSize: 10, fontWeight: FontWeight.bold)),
+                    const Text('STRUCTURED JSON DATA',
+                        style: TextStyle(
+                            color: rcGold,
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold)),
                     const SizedBox(height: 8),
-                    SelectableText(data['rawData']?.toString() ?? '{}', style: const TextStyle(fontSize: 11, fontFamily: 'monospace', color: Colors.blue)),
+                    SelectableText(data['rawData']?.toString() ?? '{}',
+                        style: const TextStyle(
+                            fontSize: 11,
+                            fontFamily: 'monospace',
+                            color: Colors.blue)),
                   ],
                 ),
               ),
             ),
-            actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text('Close'))],
+            actions: [
+              TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: const Text('Close'))
+            ],
           );
         },
       ),
+    );
+  }
+
+  Future<void> _activateVerifiedSource(Map<String, dynamic> data) async {
+    final slotId = data['sourceSlotId']?.toString();
+    final versionId = data['sourceVersionId']?.toString();
+    final sha = data['sourceSha256']?.toString();
+    if (slotId == null || versionId == null || sha == null) return;
+    final slotRef = FirebaseFirestore.instance
+        .collection('mission_realms')
+        .doc(widget.missionId)
+        .collection('source_slots')
+        .doc(slotId);
+    final slot = await slotRef.get();
+    if (!mounted) return;
+    final reason = TextEditingController();
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('ACTIVATE VERIFIED SOURCE'),
+        content: Column(mainAxisSize: MainAxisSize.min, children: [
+          const Text(
+              'This switches the canonical source pointer atomically. The current verified source remains preserved for rollback.'),
+          const SizedBox(height: 12),
+          TextField(
+              controller: reason,
+              minLines: 2,
+              maxLines: 4,
+              decoration: const InputDecoration(
+                  labelText:
+                      'Founder activation reason (minimum 12 characters)',
+                  border: OutlineInputBorder())),
+        ]),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(dialogContext, false),
+              child: const Text('CANCEL')),
+          FilledButton(
+              onPressed: () {
+                if (reason.text.trim().length >= 12)
+                  Navigator.pop(dialogContext, true);
+              },
+              child: const Text('ACTIVATE')),
+        ],
+      ),
+    );
+    final activationReason = reason.text.trim();
+    reason.dispose();
+    if (confirmed != true) return;
+    try {
+      await FirebaseFunctions.instanceFor(region: 'us-central1')
+          .httpsCallable('handleSentinelAction')
+          .call({
+        'action': 'activate_canonical_source',
+        'recruitmentId': widget.missionId,
+        'payload': {
+          'sourceSlotId': slotId,
+          'sourceVersionId': versionId,
+          'sourceSha256': sha,
+          'expectedActivationEpoch': slot.data()?['activationEpoch'] ?? 0,
+          'expectedCanonicalVersionId': slot.data()?['canonicalVersionId'],
+          'reason': activationReason,
+        },
+      });
+      if (mounted)
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+            content: Text(
+                'Verified source activated. Downstream reconciliation is governed by this version.')));
+    } catch (error) {
+      if (mounted)
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Activation blocked: $error')));
+    }
+  }
+
+  Future<void> _restoreVerifiedSource(Map<String, dynamic> data) async {
+    final slotId = data['sourceSlotId']?.toString();
+    final versionId = data['sourceVersionId']?.toString();
+    final sha = data['sourceSha256']?.toString();
+    if (slotId == null || versionId == null || sha == null) return;
+    final slotRef = FirebaseFirestore.instance
+        .collection('mission_realms')
+        .doc(widget.missionId)
+        .collection('source_slots')
+        .doc(slotId);
+    final slot = await slotRef.get();
+    if (!mounted) return;
+    final reason = TextEditingController();
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('RESTORE VERIFIED VERSION'),
+        content: Column(mainAxisSize: MainAxisSize.min, children: [
+          const Text(
+              'Rollback preserves every source version and creates a new governed activation event.'),
+          const SizedBox(height: 12),
+          TextField(
+              controller: reason,
+              minLines: 2,
+              maxLines: 4,
+              decoration: const InputDecoration(
+                  labelText: 'Founder rollback reason (minimum 12 characters)',
+                  border: OutlineInputBorder())),
+        ]),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(dialogContext, false),
+              child: const Text('CANCEL')),
+          FilledButton(
+              onPressed: () {
+                if (reason.text.trim().length >= 12)
+                  Navigator.pop(dialogContext, true);
+              },
+              child: const Text('RESTORE')),
+        ],
+      ),
+    );
+    final rollbackReason = reason.text.trim();
+    reason.dispose();
+    if (confirmed != true) return;
+    try {
+      await FirebaseFunctions.instanceFor(region: 'us-central1')
+          .httpsCallable('handleSentinelAction')
+          .call({
+        'action': 'rollback_canonical_source',
+        'recruitmentId': widget.missionId,
+        'payload': {
+          'sourceSlotId': slotId,
+          'targetVersionId': versionId,
+          'targetSha256': sha,
+          'expectedActivationEpoch': slot.data()?['activationEpoch'] ?? 0,
+          'expectedCanonicalVersionId': slot.data()?['canonicalVersionId'],
+          'reason': rollbackReason,
+        },
+      });
+      if (mounted)
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+            content:
+                Text('Verified source restored through governed rollback.')));
+    } catch (error) {
+      if (mounted)
+        ScaffoldMessenger.of(context)
+            .showSnackBar(SnackBar(content: Text('Rollback blocked: $error')));
+    }
+  }
+
+  Widget _buildVersionHistory() {
+    return StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
+      stream: FirebaseFirestore.instance
+          .collection('mission_realms')
+          .doc(widget.missionId)
+          .collection('source_slots')
+          .snapshots(),
+      builder: (context, slotsSnapshot) {
+        final slots = slotsSnapshot.data?.docs ?? const [];
+        if (slots.isEmpty) return const SizedBox.shrink();
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: RcPanel(
+            child: ExpansionTile(
+              tilePadding: EdgeInsets.zero,
+              title: const Text('VERSION HISTORY',
+                  style: TextStyle(
+                      color: rcGold,
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1)),
+              subtitle: Text(
+                  '${slots.length} canonical source slot${slots.length == 1 ? '' : 's'}',
+                  style: const TextStyle(color: Colors.white54, fontSize: 11)),
+              children: slots.map((slotDoc) {
+                final slot = slotDoc.data();
+                return StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
+                  stream: slotDoc.reference
+                      .collection('source_versions')
+                      .orderBy('versionNumber', descending: true)
+                      .snapshots(),
+                  builder: (context, versionsSnapshot) {
+                    final versions = versionsSnapshot.data?.docs ?? const [];
+                    return Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          const Divider(color: rcLine),
+                          Text(
+                              (slot['documentFamily'] ?? 'OFFICIAL SOURCE')
+                                  .toString(),
+                              style: const TextStyle(
+                                  color: Colors.white70,
+                                  fontWeight: FontWeight.bold)),
+                          const SizedBox(height: 6),
+                          for (final versionDoc in versions)
+                            Builder(builder: (context) {
+                              final version = versionDoc.data();
+                              final state =
+                                  (version['activationState'] ?? 'CANDIDATE')
+                                      .toString();
+                              final verified =
+                                  version['verificationState'] == 'VERIFIED';
+                              final sha =
+                                  (version['sourceSha256'] ?? '').toString();
+                              return ListTile(
+                                dense: true,
+                                contentPadding: EdgeInsets.zero,
+                                title: Text(
+                                    'V${version['versionNumber'] ?? '?'}  $state'),
+                                subtitle: Text(
+                                    '${sha.length >= 12 ? sha.substring(0, 12) : sha}…  •  ${version['verificationState'] ?? 'PENDING'}'),
+                                trailing: state == 'CANONICAL'
+                                    ? const Chip(label: Text('STUDENT TRUTH'))
+                                    : verified && state == 'CANDIDATE'
+                                        ? TextButton(
+                                            onPressed: () =>
+                                                _activateVerifiedSource(
+                                                    version),
+                                            child: const Text('ACTIVATE'))
+                                        : verified && state == 'SUPERSEDED'
+                                            ? TextButton(
+                                                onPressed: () =>
+                                                    _restoreVerifiedSource(
+                                                        version),
+                                                child: const Text('RESTORE'))
+                                            : null,
+                              );
+                            }),
+                        ]);
+                  },
+                );
+              }).toList(),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _sourceAuthorityOverview(
+      List<QueryDocumentSnapshot<Map<String, dynamic>>> docs) {
+    int canonical = 0, candidates = 0, superseded = 0, pending = 0;
+    for (final doc in docs) {
+      final data = doc.data();
+      final activation =
+          (data['activationState'] ?? 'CANDIDATE').toString().toUpperCase();
+      final verification =
+          (data['verificationState'] ?? data['reviewStatus'] ?? 'PENDING')
+              .toString()
+              .toUpperCase();
+      if (activation == 'CANONICAL') canonical++;
+      if (activation == 'CANDIDATE') candidates++;
+      if (activation == 'SUPERSEDED') superseded++;
+      if (verification != 'VERIFIED' && verification != 'APPROVED') pending++;
+    }
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20, 12, 20, 8),
+      child: RcPanel(
+          child: Wrap(
+              spacing: 22,
+              runSpacing: 10,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              children: [
+            const Text('SOURCE AUTHORITY',
+                style: TextStyle(
+                    color: rcGold,
+                    fontSize: 11,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1)),
+            _chip('CANONICAL $canonical',
+                color: canonical > 0 ? rcGreen : rcRed),
+            _chip('CANDIDATE $candidates'),
+            _chip('VERIFICATION PENDING $pending',
+                color: pending > 0 ? rcGold : rcGreen),
+            _chip('SUPERSEDED $superseded'),
+            const Text(
+                'Upload is candidate-only. Student truth changes only after verified Founder activation.',
+                style: TextStyle(color: Colors.white54, fontSize: 11)),
+          ])),
     );
   }
 
@@ -661,21 +1034,27 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                 docs.where((doc) => _isStudentVisible(doc.data())).toList();
 
             final detailTabs = [
-              if (isFounder) const Tab(text: 'Upload Official Document'),
-              const Tab(text: 'Mission Document Directory'),
-              if (isFounder) const Tab(text: 'Student Document Review'),
-              if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms)) const Tab(text: 'Syllabus Atom Verification'),
-              if (isFounder || AdminPermissionResolver.canSeePyqReview(perms)) const Tab(text: 'PYQ Question Review'),
+              if (isFounder) const Tab(text: 'Upload Source'),
+              const Tab(text: 'Source Documents'),
+              if (isFounder) const Tab(text: 'Student Visibility'),
+              if (isFounder ||
+                  AdminPermissionResolver.canSeeSyllabusReview(perms))
+                const Tab(text: 'Syllabus Verification'),
+              if (isFounder || AdminPermissionResolver.canSeePyqReview(perms))
+                const Tab(text: 'PYQ Verification'),
             ];
 
             // Re-sync tab controller if needed or handle mismatch
             if (_tabController.length != detailTabs.length) {
-              _tabController = TabController(length: detailTabs.length, vsync: this);
+              _tabController =
+                  TabController(length: detailTabs.length, vsync: this);
             }
 
             return Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                _sourceAuthorityOverview(docs),
+                _buildVersionHistory(),
                 TabBar(
                   controller: _tabController,
                   tabs: detailTabs,
@@ -687,21 +1066,23 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                       if (isFounder) _buildUploadSection(variables),
                       _buildRegistrySection(filteredDocs, variables),
                       if (isFounder) _buildStudentReviewSection(visibleDocs),
-                      if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms))
-                      SyllabusAtomVerificationTab(
-                        missionId: widget.missionId,
-                        variables: variables,
-                        initialDocumentId: _atomDocumentIdFilter,
-                        roleMode: widget.roleMode,
-                        permissions: perms,
-                      ),
-                      if (isFounder || AdminPermissionResolver.canSeePyqReview(perms))
-                      PyqVerificationTab(
-                        missionId: widget.missionId,
-                        variables: variables,
-                        initialDocumentId: _questionDocumentIdFilter,
-                        roleMode: widget.roleMode,
-                      ),
+                      if (isFounder ||
+                          AdminPermissionResolver.canSeeSyllabusReview(perms))
+                        SyllabusAtomVerificationTab(
+                          missionId: widget.missionId,
+                          variables: variables,
+                          initialDocumentId: _atomDocumentIdFilter,
+                          roleMode: widget.roleMode,
+                          permissions: perms,
+                        ),
+                      if (isFounder ||
+                          AdminPermissionResolver.canSeePyqReview(perms))
+                        PyqVerificationTab(
+                          missionId: widget.missionId,
+                          variables: variables,
+                          initialDocumentId: _questionDocumentIdFilter,
+                          roleMode: widget.roleMode,
+                        ),
                     ],
                   ),
                 ),
@@ -715,7 +1096,8 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
 
   Widget _buildUploadSection(
       List<QueryDocumentSnapshot<Map<String, dynamic>>> variables) {
-    final isSingleTrack = widget.mission['missionStructureType'] == 'SINGLE_TRACK';
+    final isSingleTrack =
+        widget.mission['missionStructureType'] == 'SINGLE_TRACK';
     final List<MapEntry<String, String>> filteredScopes = _levelLabels.entries
         .where((e) => !isSingleTrack || e.key != 'VARIABLE_SPECIFIC')
         .toList();
@@ -726,7 +1108,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text('UPLOAD OFFICIAL DOCUMENT',
+            const Text('UPLOAD SOURCE DOCUMENT',
                 style: TextStyle(color: rcGold, fontWeight: FontWeight.bold)),
             const SizedBox(height: 16),
             DropdownButtonFormField<String>(
@@ -796,7 +1178,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             RcField(controller: _titleCtrl, label: 'Document Title (Optional)'),
             const SizedBox(height: 6),
             const Text(
-              'Leave blank to use the file name now. AI title extraction can improve it later.',
+              'Optional. If blank, the file name becomes the source title.',
               style: TextStyle(color: Colors.white38, fontSize: 11),
             ),
             if (_error != null) ...[
@@ -809,14 +1191,15 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             ],
             const SizedBox(height: 18),
             const Text(
-              'Select one or more files. Blank titles use each file name as the display title. Sample PYQ and sample questions can be uploaded as pattern references for future DigiBook planning.',
+              'Upload one or more supported official source files.',
               style: TextStyle(color: Colors.white38, fontSize: 11),
             ),
             const SizedBox(height: 8),
             FilledButton.icon(
               onPressed: _uploading ? null : _uploadDocument,
               icon: const Icon(Icons.cloud_upload_rounded),
-              label: Text(_uploading ? 'Uploading...' : 'Select File(s) & Upload'),
+              label: Text(
+                  _uploading ? 'Uploading...' : 'SELECT FILE(S) AND UPLOAD'),
             ),
           ],
         ),
@@ -962,9 +1345,14 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     final url = (data['downloadUrl'] ?? data['sourceUrl'] ?? '').toString();
     final proposalId = (data['proposalId'] ?? '').toString();
 
-    final extractionQuality = data['extractionQuality'] ?? data['latestExtractionQuality'] ?? 'UNKNOWN';
-    final structuredQuality = data['structuredDataQuality'] ?? data['latestStructuredDataQuality'] ?? 'UNKNOWN';
-    final isUnsafe = extractionQuality == 'FAILED' || structuredQuality == 'INVALID';
+    final extractionQuality = data['extractionQuality'] ??
+        data['latestExtractionQuality'] ??
+        'UNKNOWN';
+    final structuredQuality = data['structuredDataQuality'] ??
+        data['latestStructuredDataQuality'] ??
+        'UNKNOWN';
+    final isUnsafe =
+        extractionQuality == 'FAILED' || structuredQuality == 'INVALID';
     final publishStatus = (data['publishStatus'] ?? '--').toString();
 
     return RcPanel(
@@ -1004,14 +1392,23 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                 _chip('Paper: ${data['paperType'] ?? data['paperIndex']}'),
               _chip('Status: ${data['status'] ?? '--'}'),
               _chip('Review: ${data['reviewStatus'] ?? '--'}'),
-              
+              if (data['versionNumber'] != null)
+                _chip('VERSION V${data['versionNumber']}'),
+              if (data['activationState'] != null)
+                _chip(data['activationState'].toString(),
+                    color: data['activationState'] == 'CANONICAL'
+                        ? rcGreen
+                        : rcGold),
+              if ((data['sourceSha256'] ?? '').toString().length >= 10)
+                _chip(
+                    'SHA ${data['sourceSha256'].toString().substring(0, 10)}…'),
               if (publishStatus == 'published' && isUnsafe)
-                 _chip('LEGACY PUBLISHED / BLOCKED', color: rcRed)
+                _chip('LEGACY PUBLISHED / BLOCKED', color: rcRed)
               else
-                 _chip('Publish: $publishStatus'),
-
+                _chip('Publish: $publishStatus'),
               if (data['syllabusAtomStatus'] == 'persisted') ...[
-                _chip('Atoms: ${data['syllabusAtomCount'] ?? 0}', color: rcGold),
+                _chip('Atoms: ${data['syllabusAtomCount'] ?? 0}',
+                    color: rcGold),
                 _chip('Extracted: ${data['syllabusAtomExtractedCount'] ?? 0}',
                     color: rcGreen),
                 _chip('Review: ${data['syllabusAtomNeedsReviewCount'] ?? 0}',
@@ -1044,14 +1441,14 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                           setState(() {
                             _atomDocumentIdFilter = doc.id;
                           });
-                          _navigateToSubTab('Syllabus Atom Verification');
+                          _navigateToSubTab('Syllabus Verification');
                         },
                         onReviewQuestions: () {
                           Navigator.pop(context);
                           setState(() {
                             _questionDocumentIdFilter = doc.id;
                           });
-                          _navigateToSubTab('PYQ Question Review');
+                          _navigateToSubTab('PYQ Verification');
                         },
                       ),
                     );
@@ -1078,6 +1475,18 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                   label: Text(proposalId.isEmpty
                       ? 'No AI Proposal'
                       : 'Open AI Proposal')),
+              if ((data['activationState'] ?? 'CANDIDATE') == 'CANDIDATE' &&
+                  ['VERIFIED', 'APPROVED'].contains(
+                      (data['verificationState'] ?? data['reviewStatus'] ?? '')
+                          .toString()
+                          .toUpperCase()))
+                FilledButton.icon(
+                  onPressed: () => _activateVerifiedSource(data),
+                  icon: const Icon(Icons.verified_user_outlined, size: 16),
+                  label: const Text('ACTIVATE VERIFIED SOURCE'),
+                  style: FilledButton.styleFrom(
+                      backgroundColor: rcGold, foregroundColor: Colors.black),
+                ),
               OutlinedButton.icon(
                   onPressed: () => _copy(context, doc.id, 'Document ID'),
                   icon: const Icon(Icons.copy_rounded, size: 16),
@@ -1098,11 +1507,12 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                     setState(() {
                       _atomDocumentIdFilter = doc.id;
                     });
-                    _navigateToSubTab('Syllabus Atom Verification');
+                    _navigateToSubTab('Syllabus Verification');
                   },
                   icon: const Icon(Icons.fact_check_rounded, size: 16),
                   label: const Text('Review Syllabus Atoms'),
-                  style: FilledButton.styleFrom(backgroundColor: rcGold, foregroundColor: Colors.black),
+                  style: FilledButton.styleFrom(
+                      backgroundColor: rcGold, foregroundColor: Colors.black),
                 ),
               if (data['questionStatus'] == 'persisted')
                 FilledButton.icon(
@@ -1110,11 +1520,13 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                     setState(() {
                       _questionDocumentIdFilter = doc.id;
                     });
-                    _navigateToSubTab('PYQ Question Review');
+                    _navigateToSubTab('PYQ Verification');
                   },
                   icon: const Icon(Icons.quiz_rounded, size: 16),
                   label: const Text('Review PYQ Questions'),
-                  style: FilledButton.styleFrom(backgroundColor: Colors.blue, foregroundColor: Colors.white),
+                  style: FilledButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      foregroundColor: Colors.white),
                 ),
             ],
           ),
@@ -1135,7 +1547,8 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
 
   Widget _buildStudentReviewSection(
       List<QueryDocumentSnapshot<Map<String, dynamic>>> visibleDocs) {
-    final isSingleTrack = widget.mission['missionStructureType'] == 'SINGLE_TRACK';
+    final isSingleTrack =
+        widget.mission['missionStructureType'] == 'SINGLE_TRACK';
 
     if (visibleDocs.isEmpty) {
       return const Center(
@@ -1215,4 +1628,3 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     );
   }
 }
-

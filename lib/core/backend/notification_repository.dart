@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../models/notification_event.dart';
 import '../firebase/firestore_service.dart';
 
-/// 🔱 NOTIFICATION REPOSITORY
+/// NOTIFICATION REPOSITORY
 /// Access layer for tactical alerts.
 class NotificationRepository {
   static final _firestore = FirebaseFirestore.instance;

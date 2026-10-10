@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-/// 🔱 COVERAGE VALIDATION ENGINE (Audit GAP-3)
+/// COVERAGE VALIDATION ENGINE (Audit GAP-3)
 /// Ensures every Atomic Topic in a Syllabus has a corresponding DigiBook Unit.
 class CoverageValidationEngine {
   
@@ -8,7 +8,7 @@ class CoverageValidationEngine {
     required List<String> atomicTopicIds,
     required List<String> digibookUnitTopicIds,
   }) {
-    debugPrint("🔱 COVERAGE ENGINE: Validating ${atomicTopicIds.length} atomic topics against ${digibookUnitTopicIds.length} units...");
+    debugPrint("COVERAGE ENGINE: Validating ${atomicTopicIds.length} atomic topics against ${digibookUnitTopicIds.length} units...");
 
     final Set<String> atomicSet = Set.from(atomicTopicIds);
     final Set<String> unitSet = Set.from(digibookUnitTopicIds);

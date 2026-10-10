@@ -15,21 +15,45 @@ class PeopleAccessCenter extends StatelessWidget {
     return StreamBuilder<Map<String, int>>(
       stream: AccessRepository.streamAccessMetrics(),
       builder: (context, snapshot) {
-        final metrics = snapshot.data ?? {'founders': 0, 'admins': 0, 'managers': 0, 'reviewers': 0, 'total': 0};
-        
+        final metrics = snapshot.data ??
+            {
+              'founders': 0,
+              'admins': 0,
+              'managers': 0,
+              'reviewers': 0,
+              'total': 0
+            };
+
         return ListView(
           padding: const EdgeInsets.all(24),
           children: [
-            const CenterHeader(title: "PEOPLE & ACCESS", subtitle: "Manage command authority and warrior permissions."),
+            const CenterHeader(
+                title: "PEOPLE & ACCESS",
+                subtitle: "Manage command authority and warrior permissions."),
             const SizedBox(height: 24),
-            AccessRoleCard(title: "FOUNDERS", count: metrics['founders'].toString(), icon: Icons.stars_rounded, color: AppColors.gold),
+            AccessRoleCard(
+                title: "FOUNDERS",
+                count: metrics['founders'].toString(),
+                icon: Icons.stars_rounded,
+                color: AppColors.gold),
             const SizedBox(height: 12),
-            AccessRoleCard(title: "ADMINISTRATORS", count: metrics['admins'].toString(), icon: Icons.admin_panel_settings_rounded, color: Colors.blueAccent),
+            AccessRoleCard(
+                title: "ADMINISTRATORS",
+                count: metrics['admins'].toString(),
+                icon: Icons.admin_panel_settings_rounded,
+                color: Colors.blueAccent),
             const SizedBox(height: 12),
-            AccessRoleCard(title: "CONTENT MANAGERS", count: metrics['managers'].toString(), icon: Icons.edit_attributes_rounded, color: Colors.greenAccent),
+            AccessRoleCard(
+                title: "CONTENT MANAGERS",
+                count: metrics['managers'].toString(),
+                icon: Icons.edit_attributes_rounded,
+                color: Colors.greenAccent),
             const SizedBox(height: 12),
-            AccessRoleCard(title: "REVIEWERS", count: metrics['reviewers'].toString(), icon: Icons.fact_check_rounded, color: Colors.orangeAccent),
-            
+            AccessRoleCard(
+                title: "REVIEWERS",
+                count: metrics['reviewers'].toString(),
+                icon: Icons.fact_check_rounded,
+                color: Colors.orangeAccent),
             const SizedBox(height: 32),
             if (FirebaseAuth.instance.currentUser != null)
               FutureBuilder<IdTokenResult>(
@@ -37,16 +61,18 @@ class PeopleAccessCenter extends StatelessWidget {
                 builder: (context, tokenSnap) {
                   final isFounder = tokenSnap.data?.claims?['founder'] == true;
                   if (!isFounder) return const SizedBox.shrink();
-                  
+
                   return TacticalButton(
-                    title: "GRANT NEW AUTHORITY", 
+                    title: "GRANT ACCESS",
                     onTap: () => _showGrantAccessDialog(context),
                   );
                 },
               ),
             const SizedBox(height: 12),
-            Text("TOTAL AUTHENTICATED SOULS: ${metrics['total']}", 
-              style: AppTypography.label.copyWith(fontSize: 8, color: Colors.white12),
+            Text(
+              "TOTAL AUTHENTICATED SOULS: ${metrics['total']}",
+              style: AppTypography.label
+                  .copyWith(fontSize: 8, color: Colors.white12),
               textAlign: TextAlign.center,
             ),
           ],
@@ -73,7 +99,8 @@ class PeopleAccessCenter extends StatelessWidget {
               decoration: const InputDecoration(
                 labelText: "Target UID",
                 labelStyle: TextStyle(color: Colors.white38),
-                enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.white10)),
+                enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white10)),
               ),
             ),
             const SizedBox(height: 16),
@@ -82,7 +109,8 @@ class PeopleAccessCenter extends StatelessWidget {
               dropdownColor: const Color(0xFF0C121D),
               style: const TextStyle(color: Colors.white),
               items: ['founder', 'admin', 'manager', 'reviewer']
-                  .map((r) => DropdownMenuItem(value: r, child: Text(r.toUpperCase())))
+                  .map((r) =>
+                      DropdownMenuItem(value: r, child: Text(r.toUpperCase())))
                   .toList(),
               onChanged: (v) => selectedRole = v ?? 'admin',
               decoration: const InputDecoration(labelText: "Role"),
@@ -90,7 +118,9 @@ class PeopleAccessCenter extends StatelessWidget {
           ],
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(context), child: const Text("CANCEL")),
+          TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text("CANCEL")),
           TextButton(
             onPressed: () async {
               if (uidController.text.isEmpty) return;

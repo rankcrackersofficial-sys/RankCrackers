@@ -1,12 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:rank_crackers/core/models/decision_trace_node.dart';
 
-/// 🔱 EXPLAINABILITY ENGINE (Blueprint v1.0 - Document 62)
+/// EXPLAINABILITY ENGINE (Blueprint v1.0 - Document 62)
 /// Translates technical APOS traces into student-facing preparation narratives.
 class ExplainabilityEngine {
   
   static String generateExplanation(DecisionTraceNode trace) {
-    debugPrint("🔱 EXPLAINABILITY: Crafting narrative for ${trace.targetId}...");
+    debugPrint("EXPLAINABILITY: Crafting narrative for ${trace.targetId}...");
 
     final Map<String, dynamic> inputs = trace.inputs;
     final List<String> reasons = [];

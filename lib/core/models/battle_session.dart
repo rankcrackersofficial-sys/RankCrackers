@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'question_outcome.dart';
 
-/// 🔱 MISSION RESULT (Audit GAP M-3)
+/// MISSION RESULT (Audit GAP M-3)
 enum MissionResult {
   FAILED,
   PARTIAL,
@@ -9,7 +9,7 @@ enum MissionResult {
   PERFECT
 }
 
-/// 🔱 BATTLE SESSION (Blueprint v1.1 - Sprint N Ready)
+/// BATTLE SESSION (Blueprint v1.1 - Sprint N Ready)
 /// The execution instance of a Mission. Tracks real-time performance and completion.
 class BattleSession extends Equatable {
   final String sessionId;
@@ -23,11 +23,11 @@ class BattleSession extends Equatable {
   final int questionsSolved;
   final int correctAnswers;
   
-  // 🔱 Audit Sprint M: Mission satisfaction metrics
+  // Audit Sprint M: Mission satisfaction metrics
   final double coverageGained; // percentage
   final int digibookPagesRead;
 
-  // 🔱 Audit Sprint N: Granular outcomes
+  // Audit Sprint N: Granular outcomes
   final List<QuestionOutcome> questionOutcomes;
   final MissionResult result;
 

@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "1.0.0",
+  "profileStatus": "MATERIALIZATION_READY",
+  "identity": {
+    "missionId": "mock_nested_variants",
+    "canonicalExamName": "Coaching & Sports Exam",
+    "canonicalDisplayName": "Coaching & Sports Exam 2026"
+  },
+  "missionTargetYear": 2026,
+  "sourceBaselineYear": 2025,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "authority": {
+    "organization": "National Authority",
+    "officialPortals": [
+      "https://authority.gov.in"
+    ],
+    "sourceDocumentType": "Official Notification",
+    "officialNotificationTitle": "Coaching & Sports Exam Official Notification",
+    "officialPdfUrl": "https://authority.gov.in/docs/notification.pdf",
+    "sha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+    "evidenceClass": "BYTE_VERIFIED",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "paperModel": {
+    "paperCount": 1,
+    "papers": [
+      {
+        "paperId": "paper_1",
+        "paperNumber": 1,
+        "paperName": "General Paper",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "mode": "CBT",
+        "durationMinutes": 180,
+        "totalQuestions": 75,
+        "totalMarks": 300
+      }
+    ]
+  },
+  "variantModel": {
+    "hasVariants": true,
+    "variantDimension": "post_and_sport",
+    "variants": [
+      {
+        "variantId": "var_academic_english",
+        "variantName": "Lecturer English",
+        "code": "LEC_ENG",
+        "parentVariantId": null
+      },
+      {
+        "variantId": "var_coach_parent",
+        "variantName": "Coach Discipline",
+        "code": "COACH",
+        "parentVariantId": null,
+        "subvariants": [
+          {
+            "subvariantId": "sub_coach_athletics",
+            "subvariantName": "Coach Athletics",
+            "code": "ATH"
+          },
+          {
+            "subvariantId": "sub_coach_basketball",
+            "subvariantName": "Coach Basketball",
+            "code": "BB"
+          },
+          {
+            "subvariantId": "sub_coach_football",
+            "subvariantName": "Coach Football",
+            "code": "FB"
+          }
+        ]
+      }
+    ]
+  },
+  "subjectModel": {
+    "subjects": [
+      {
+        "subjectId": "subj_1",
+        "subjectName": "Subject 1",
+        "canonicalKey": "key_1"
+      }
+    ]
+  },
+  "languageModel": {
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+      "English",
+      "Hindi"
+    ],
+    "mediumPolicy": "BILINGUAL"
+  },
+  "s2DocumentProfile": {
+    "expectedPapers": [
+      "General Paper"
+    ],
+    "paperAliases": {
+      "General Paper": [
+        "Paper 1"
+      ]
+    },
+    "expectedSubjects": [
+      "Subject 1"
+    ],
+    "subjectAliases": {
+      "Subject 1": [
+        "Subj 1"
+      ]
+    },
+    "languageScripts": [
+      "Latin",
+      "Devanagari"
+    ],
+    "preferredOcrLanguages": [
+      "eng",
+      "hin"
+    ],
+    "sourceYearPolicy": "USE_2025_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+  },
+  "fieldAuthorityMap": {
+    "paperStructure": "SOURCE_VERIFIED",
+    "subjectModel": "SOURCE_VERIFIED"
+  },
+  "profileHash": "b3b6a699306ad72c9bb4c77897bc05e8079333cf89e2ad30e80e5754664ffb52"
+}

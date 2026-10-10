@@ -1,25 +1,29 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/backend/recruitment_repository.dart';
 import '../../../../core/models/recruitment.dart';
+import 'auth_provider.dart';
 
-final recruitmentsProvider = StreamProvider<List<Recruitment>>((ref) {
+final recruitmentsProvider = StreamProvider.autoDispose<List<Recruitment>>((ref) {
+  // Re-subscribe whenever authentication state transitions so same-UID or different-UID
+  // relogin hydrates freshly without requiring hot restart.
+  ref.watch(authStateChangesProvider);
   return RecruitmentRepository.streamPublished();
 });
 
 /// Student Mission Realm uses student_mission_catalog as the canonical
 /// student-facing mission source. The name is preserved for older tests/routes,
 /// but this no longer means recruitments(status == published).
-final publishedRecruitmentsProvider = Provider<List<Recruitment>>((ref) {
+final publishedRecruitmentsProvider = Provider.autoDispose<List<Recruitment>>((ref) {
   return ref.watch(recruitmentsProvider).value ?? const <Recruitment>[];
 });
 
-final publishedStatesProvider = Provider<List<String>>((ref) {
+final publishedStatesProvider = Provider.autoDispose<List<String>>((ref) {
   final published = ref.watch(publishedRecruitmentsProvider);
   return published.map((r) => r.state).toSet().toList();
 });
 
 final filteredRecruitmentsProvider =
-    Provider.family<List<Recruitment>, String>((ref, state) {
+    Provider.autoDispose.family<List<Recruitment>, String>((ref, state) {
   final published = ref.watch(publishedRecruitmentsProvider);
   return published
       .where((r) =>
@@ -29,7 +33,7 @@ final filteredRecruitmentsProvider =
 });
 
 final filteredRecruitmentsByCategoryProvider =
-    Provider.family<List<Recruitment>, ({String state, String category})>(
+    Provider.autoDispose.family<List<Recruitment>, ({String state, String category})>(
         (ref, arg) {
   final stateMissions = ref.watch(filteredRecruitmentsProvider(arg.state));
   return stateMissions

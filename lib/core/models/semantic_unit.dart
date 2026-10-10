@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 SEMANTIC UNIT (Document 50J Article 1.1)
+/// SEMANTIC UNIT (Document 50J Article 1.1)
 /// The structural atom of a source document. 
 /// Precedes Atomic Fact extraction in the Refinery Pipeline.
 class SemanticUnit extends Equatable {
@@ -12,11 +12,11 @@ class SemanticUnit extends Equatable {
   final SemanticType semanticType;
   final int structureIndex; // Sequential order in source
   
-  // 🔱 Sizing (Audit Finding 3)
+  // Sizing (Audit Finding 3)
   final int tokenCount;
   final int charCount;
 
-  // 🔱 Metadata & Lineage (Amended 50J)
+  // Metadata & Lineage (Amended 50J)
   final String workerVersion;
   final String promptVersion;
   final String? lineageId; // Reference to transformation_lineage record

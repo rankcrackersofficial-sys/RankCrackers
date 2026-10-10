@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/sentinel_draft.dart';
 import '../firebase/firestore_service.dart';
 
-/// 🔱 SENTINEL REPOSITORY (Document 50)
+/// SENTINEL REPOSITORY (Document 50)
 /// Sovereign authority for managing the Isolation Zone.
 /// Enforces Draft -> Production separation.
 class SentinelRepository {
@@ -15,13 +15,13 @@ class SentinelRepository {
   }
 
   /// Streams the list of pending drafts for validation and approval.
-  /// 🔱 Hardened: server-side filtering and ordering for scalability.
+  /// Hardened: server-side filtering and ordering for scalability.
   static Stream<List<SentinelDraft>> streamPending() {
     return FirebaseFirestore.instance
         .collection(FirestoreService.sentinelDraftCollection)
         .where('status', whereIn: ['draft', 'under_review'])
         .orderBy('audit.processedAt', descending: true)
-        .limit(50) // 🔱 Hyperscale Protection
+        .limit(50) // Hyperscale Protection
         .snapshots()
         .map((snap) => snap.docs.map((doc) => SentinelDraft.fromMap(doc.data())).toList());
   }
@@ -37,7 +37,7 @@ class SentinelRepository {
     });
   }
 
-  /// 🔱 SCOUT DOWNLOAD REGISTRY
+  /// SCOUT DOWNLOAD REGISTRY
   /// Reads from the automated scout discovery collection.
   static Stream<List<SentinelDraft>> streamScoutDownloads() {
     return FirebaseFirestore.instance
@@ -48,7 +48,7 @@ class SentinelRepository {
         .map((snap) => snap.docs.map((doc) => SentinelDraft.fromMap(doc.data())).toList());
   }
 
-  /// 🔱 REFINERY STATUS UPDATE
+  /// REFINERY STATUS UPDATE
   static Future<void> updateIngestionStatus(String recordId, String status) async {
     await FirebaseFirestore.instance
         .collection('ingestion_refinery')

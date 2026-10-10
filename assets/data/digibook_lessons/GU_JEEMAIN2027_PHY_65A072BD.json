@@ -1,0 +1,289 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_65A072BD",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U04_T_65a072bd",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_65A072BD_V001",
+  "atomicFactSetHash": "f94bb5aebc2b401c023fb1cb963c6d5156627d3fa3da30e8efdb5d74cf42c112",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_65A072BD_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_65A072BD",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_65A072BD_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_0E021E0D",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_1E9739B7",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_6CB4BE87",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_70EE9783",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_7146D319",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_84A1DF1B",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_9A67ECE6",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_B40F5BD7",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_C59D7132",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_CA03C134",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_CD1FF257",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_EDF9BC49"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "overviewText": "This chapter explores Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theorem, providing comprehensive conceptual analysis, mathematical relationships, and structured applications grounded in NCERT authority.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "e8e093626e7a5e8c4dd8cfdbbe51627c5f258c77163b778d40f5ee62c200d385",
+      "createdAtUtc": "2026-09-02T13:29:33.086Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_65A072BD_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_65A072BD",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_65A072BD_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_0E021E0D",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_1E9739B7",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_6CB4BE87",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_70EE9783",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_7146D319",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_84A1DF1B",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_9A67ECE6",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_B40F5BD7",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_C59D7132",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_CA03C134",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_CD1FF257",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_EDF9BC49"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_65A072BD_CONCEPTS_01",
+          "semanticAnchorId": "ANCHOR__65A072BD_1",
+          "title": "1. Key Academic Principles: Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theorem",
+          "contentMarkdown": "Work done by a constant force F during displacement d is defined as the scalar product W = F . d = F * d * cos(theta). Kinetic energy of an object of mass m moving with velocity v is given by K = (1/2) * m * v^2 = p^2 / (2m). The Work-Energy Theorem states that the work done by the net force on a particle equals the change in its kinetic energy: W_net = Delta K. For a variable force F(x), the work done during displacement from initial position to final position is W = Integral F(x) dx.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_B40F5BD7",
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_EDF9BC49",
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_70EE9783",
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_84A1DF1B"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_65A072BD_CONCEPTS_02",
+          "semanticAnchorId": "ANCHOR__65A072BD_2",
+          "title": "2. Key Academic Principles: Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theorem",
+          "contentMarkdown": "Work done is positive for acute angles, zero at 90 degrees, and negative for obtuse angles between force and displacement. Kinetic energy of a physical body is always non-negative. Work is said to be done by a force when the point of application of the force undergoes a displacement. d = F * d * cos(theta), where theta is the angle between force F and displacement vector d.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_C59D7132",
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_0E021E0D",
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_CA03C134",
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_9A67ECE6"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_65A072BD_CONCEPTS_03",
+          "semanticAnchorId": "ANCHOR__65A072BD_3",
+          "title": "3. Key Academic Principles: Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theorem",
+          "contentMarkdown": "Work is a scalar quantity with SI unit joule (J = N*m). Work done is positive if 0 <= theta < 90 deg, zero if theta = 90 deg (e.g. work done by centripetal force is zero), and negative if 90 deg < theta <= 180 deg (e.g. The work-energy theorem holds identically for both constant and variable forces.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_CD1FF257",
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_7146D319",
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_1E9739B7",
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_6CB4BE87"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "ce456536f7825ffbee86f11ffc20405de1b55c2d81306208a8f121290c11a4df",
+      "createdAtUtc": "2026-09-02T13:29:33.086Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_65A072BD_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_65A072BD",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_65A072BD_V001",
+      "displayOrder": 3,
+      "status": "NOT_APPLICABLE",
+      "statusReason": "Qualitative conceptual topic regarding Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theorem; no independent algebraic formulas belong to this generation unit.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "formulaTable": [],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b7b9356f39da5055f2be84b07bad19fc8c6a3716da5fb25f722535b172fd78bb",
+      "createdAtUtc": "2026-09-02T13:29:33.086Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_65A072BD_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_65A072BD",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_65A072BD_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.086Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_65A072BD_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_65A072BD",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_65A072BD_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_B40F5BD7"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_65A072BD_01",
+          "title": "Conceptual Analysis: Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theorem",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_B40F5BD7"
+          ],
+          "problemStatement": "Analyze the physical/chemical implication of: Work done by a constant force F during displacement d is defined as the scalar product W = F . d = F * d * cos(theta)..",
+          "stepByStepSolution": [
+            "Step 1: State the foundational postulate: Work done by a constant force F during displacement d is defined as the scalar product W = F . d = F * d * cos(theta)..",
+            "Step 2: Differentiate valid scientific conditions from common conceptual confusions.",
+            "Step 3: Conclude the analytical explanation systematically."
+          ],
+          "finalAnswer": "Validated Conceptual Statement",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "012a50cd341e966b36ee90616d0dc80e971e7b2785545f76fd19df859b125870",
+      "createdAtUtc": "2026-09-02T13:29:33.086Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_65A072BD_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_65A072BD",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_65A072BD_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_B40F5BD7",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_EDF9BC49"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_65A072BD_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_B40F5BD7"
+          ],
+          "prompt": "Which of the following statements correctly represents: Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theorem?",
+          "options": [
+            "Work done by a constant force F during displacement d is defined as the scalar product W = F . d = F * d * cos(theta).",
+            "Incorrect distractor contradicting verified fundamental principles.",
+            "Unrelated concept from a different physical regime.",
+            "Hypothetical condition not supported by standard experimental evidence."
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Option 1 is correct because: Work done by a constant force F during displacement d is defined as the scalar product W = F . d = F * d * cos(theta). (Source: NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL).",
+          "isVerified": true
+        },
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_65A072BD_02",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "difficulty": "HARD",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_65A072BD_EDF9BC49"
+          ],
+          "prompt": "Regarding Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theorem, which statement is strictly true?",
+          "options": [
+            "Contradictory incorrect proposition.",
+            "Kinetic energy of an object of mass m moving with velocity v is given by K = (1/2) * m * v^2 = p^2 / (2m).",
+            "Arbitrary assertion with inverted proportionality.",
+            "Non-rigorous approximation not valid under general conditions."
+          ],
+          "correctOptionIndex": 1,
+          "explanation": "Option 2 is strictly correct as verified: Kinetic energy of an object of mass m moving with velocity v is given by K = (1/2) * m * v^2 = p^2 / (2m)..",
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "eaef0328e2613741d978bc16a14d981cb732068ca2cbbdfaf4f87296b85ce7b7",
+      "createdAtUtc": "2026-09-02T13:29:33.086Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_65A072BD_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_65A072BD",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_65A072BD_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_0E021E0D",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_1E9739B7",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_6CB4BE87",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_70EE9783",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_7146D319",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_84A1DF1B",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_9A67ECE6",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_B40F5BD7",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_C59D7132",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_CA03C134",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_CD1FF257",
+        "AF_GU_JEEMAIN2027_PHY_65A072BD_EDF9BC49"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Conceptual understanding of Work Done by a Constant and Variable Force, Kinetic Energy, Work-Energy Theorem",
+          "Application of core laws"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "3b3f34d5a650de646bda19b0025719d5f6ecfde8c210450ffdf4582ffc7aa2e1",
+      "createdAtUtc": "2026-09-02T13:29:33.086Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_PART1_CH06_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 5,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 1,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.086Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

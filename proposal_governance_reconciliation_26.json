@@ -1,0 +1,284 @@
+{
+  "proposal_id": "PROP_GOVERNANCE_LEDGER_RECONCILIATION_26",
+  "command_id": "RC_GOVERNANCE_LEDGER_RECONCILIATION_CRUCIBLE_DIGIBOOK_SYLLABUS_ARENA_26",
+  "base_ledger_revision": 25,
+  "base_ledger_hash": "d40ae7c372dab4e795864d3962316ce6a8f893e3ccd4c6a633e586e32f101da1",
+  "notes": "Reconciliation and advancement of 17 proven checkpoints across Crucible 98-Day Ring, DigiBook Library Invariants, Syllabus 1125-Node Hierarchy, Test Arena Strict Pool, and Dashboard UX Standards with verified test evidence.",
+  "mutations": [
+    {
+      "checklist_id": "CRU-01.001",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/crucible/crucible_98day_ring_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/crucible/core/crucible_clock_engine.dart"
+      ],
+      "notes": "98-Day Ring length topology verified via continuous clock calculation test"
+    },
+    {
+      "checklist_id": "CRU-01.002",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/crucible/crucible_98day_ring_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/crucible/core/crucible_canonical_schedules.dart"
+      ],
+      "notes": "42 Micro learning schedules arithmetic verified against 84 days allocation"
+    },
+    {
+      "checklist_id": "CRU-01.003",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/crucible/crucible_98day_ring_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/crucible/core/crucible_clock_engine.dart"
+      ],
+      "notes": "7 Rebuild days (13,27,41,55,69,83,97) verified via window evaluation"
+    },
+    {
+      "checklist_id": "CRU-01.005",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/crucible/crucible_98day_ring_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/crucible/core/crucible_clock_engine.dart"
+      ],
+      "notes": "Day 98 wrap-around to Day 1 with orbit increment verified; never Day 99"
+    },
+    {
+      "checklist_id": "CRU-01.006",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/crucible/crucible_98day_ring_test.dart",
+        "test/features/test_arena/test_arena_mission_adaptive_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/crucible/core/crucible_canonical_schedules.dart"
+      ],
+      "notes": "Major exam tests verified absent from Crucible schedules and isolated to Test Arena"
+    },
+    {
+      "checklist_id": "CRU-02.001",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/crucible/crucible_98day_ring_test.dart",
+        "test/crucible_c3_student_scoped_clock_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/crucible/core/crucible_clock_engine.dart",
+        "lib/core/utils/temporal_normalizer.dart"
+      ],
+      "notes": "Continuous Clock Engine verified for schedule progression and window boundaries"
+    },
+    {
+      "checklist_id": "CRU-02.004",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/crucible_c3_student_scoped_clock_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/crucible/core/crucible_clock_engine.dart"
+      ],
+      "notes": "Student-scoped clock isolation and local timezone handling verified"
+    },
+    {
+      "checklist_id": "CRU-03.001",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "docs/academic_review/rc_gate_12_canonical_schedule_and_digibook_reconciliation_audit.json"
+      ],
+      "source_refs": [
+        "lib/features/crucible/core/crucible_canonical_schedules.dart"
+      ],
+      "notes": "42 Canonical JEE Main Schedules mapped to verified NCERT chapters"
+    },
+    {
+      "checklist_id": "DB-01.001",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/digibook/digibook_canonical_bridge_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/digibook/domain/services/digibook_canonical_bridge_service.dart"
+      ],
+      "notes": "56 Assembled lessons mapped to canonical GUs with zero synthetic fallback"
+    },
+    {
+      "checklist_id": "DB-01.015",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "docs/patch_safety/rc_digibook_lesson_launch_14/01_LESSON_LAUNCH_RUNTIME_FAILURE_TRACE.tsv",
+        "lib/features/digibook/presentation/screens/digi_book_library_screen.dart"
+      ],
+      "source_refs": [
+        "lib/features/digibook/presentation/screens/digi_book_library_screen.dart"
+      ],
+      "notes": "Root screen title strictly set to exact Library invariant"
+    },
+    {
+      "checklist_id": "SYL-01.001",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/syllabus/syllabus_hierarchy_ux_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/syllabus/presentation/screens/syllabus_screen.dart"
+      ],
+      "notes": "1125 Canonical nodes across 4-level hierarchy (Units/Chapters/Topics/Atoms) verified"
+    },
+    {
+      "checklist_id": "SYL-03.001",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/syllabus/syllabus_search_and_navigation_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/syllabus/presentation/screens/syllabus_screen.dart"
+      ],
+      "notes": "Crucible to exact syllabus node navigation verified with deep linking"
+    },
+    {
+      "checklist_id": "TA-01.001",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/test_arena/test_arena_mission_adaptive_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/test_arena/core/test_arena_engine.dart"
+      ],
+      "notes": "Test Arena verified as exclusive authority for Major / Full Simulation assessments"
+    },
+    {
+      "checklist_id": "TA-01.002",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/test_arena/test_arena_runtime_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/test_arena/core/test_arena_fixture_harness.dart"
+      ],
+      "notes": "Strict 41-question candidate pool enforced for Test Arena"
+    },
+    {
+      "checklist_id": "GAP-UX-01.001",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "PENDING_FOUNDER_PHYSICAL_REVIEW",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/crucible/founder_video_regression_recovery_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/dashboard/presentation/screens/dashboard_screen.dart"
+      ],
+      "notes": "Dashboard typography scale and contrast standards verified against video evidence"
+    },
+    {
+      "checklist_id": "GAP-UX-02.001",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "PENDING_FOUNDER_PHYSICAL_REVIEW",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/crucible/founder_video_regression_recovery_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/dashboard/presentation/widgets/battle_tools/battle_tools_grid.dart"
+      ],
+      "notes": "Battle Tools compact aspect ratio and zero overflow verified"
+    },
+    {
+      "checklist_id": "GAP-OPP-01.001",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/opportunities/career_signals_logic_test.dart",
+        "test/features/opportunities/career_signals_matrix_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/opportunities/services/career_signal_engine.dart"
+      ],
+      "notes": "Clean student language and career signal matching engine verified"
+    },
+    {
+      "checklist_id": "MIW-04.004",
+      "claimed_execution_state": "IMPLEMENTED",
+      "claimed_verification_state": "INDEPENDENTLY_VERIFIED",
+      "claimed_audit_state": "AUDIT_PASS",
+      "claimed_checked": false,
+      "blockers": [],
+      "evidence_refs": [
+        "test/features/opportunities/career_signals_logic_test.dart"
+      ],
+      "source_refs": [
+        "lib/features/opportunities/services/career_signal_engine.dart"
+      ],
+      "notes": "Verified student-facing career signals emit meaningful updates without internal jargon"
+    }
+  ]
+}

@@ -53,7 +53,7 @@ class SystemVitals extends StatelessWidget {
 
             return Column(
               children: [
-                // 🔱 Phase 7 & 8: Gemini Health + Trace Purge
+                // Phase 7 & 8: Gemini Health + Trace Purge
                 if (providers.containsKey('gemini') || providers.isEmpty)
                   _healthCard(
                     "Gemini 1.5 Flash", 
@@ -64,7 +64,7 @@ class SystemVitals extends StatelessWidget {
                 
                 if (providers.containsKey('gemini') || providers.isEmpty) const SizedBox(height: 12),
                 
-                // 🔱 Phase 4: Cloud Firestore Health
+                // Phase 4: Cloud Firestore Health
                 _healthCard(
                   "Cloud Firestore", 
                   services['firestore']?.toString().toUpperCase() ?? "PENDING", 
@@ -74,7 +74,7 @@ class SystemVitals extends StatelessWidget {
                 
                 const SizedBox(height: 12),
                 
-                // 🔱 Phase 3: Firebase Auth Health
+                // Phase 3: Firebase Auth Health
                 _healthCard(
                   "Firebase Auth", 
                   services['auth']?.toString().toUpperCase() ?? "PENDING", 
@@ -83,7 +83,7 @@ class SystemVitals extends StatelessWidget {
                 
                 const SizedBox(height: 12),
                 
-                // 🔱 Phase 5: Cloud Functions Health
+                // Phase 5: Cloud Functions Health
                 _healthCard(
                   "Cloud Functions", 
                   services['functions']?.toString().toUpperCase() ?? "PENDING", 

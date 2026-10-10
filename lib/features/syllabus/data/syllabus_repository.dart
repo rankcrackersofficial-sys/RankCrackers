@@ -2,7 +2,7 @@ import '../../../core/models/micro_topic_node.dart';
 
 class SyllabusRepository {
   // ===================================================
-  // DATA RETRIEVAL 🔱
+  // DATA RETRIEVAL 
   // ===================================================
 
   static List<MicroTopicNode> getNodesForExam(String examId) {
@@ -11,7 +11,7 @@ class SyllabusRepository {
         .toList();
   }
 
-  // 🔱 Audit Fix: Removed hardcoded local content (Article 3)
+  // Audit Fix: Removed hardcoded local content (Article 3)
   // These nodes now represent the Sovereign Index.
   static final List<MicroTopicNode> nodes = [
     MicroTopicNode(

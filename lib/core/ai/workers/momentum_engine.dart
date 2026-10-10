@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:rank_crackers/core/models/momentum_node.dart';
 import 'package:rank_crackers/core/models/battle_session.dart';
 
-/// 🔱 MOMENTUM ENGINE (Blueprint v1.0 - Document 50)
+/// MOMENTUM ENGINE (Blueprint v1.0 - Document 50)
 /// Analyzes long-term performance trends to determine the student's trajectory.
 class MomentumEngine {
   
@@ -11,7 +11,7 @@ class MomentumEngine {
     required String realmId,
     required List<BattleSession> recentSessions, // Last 7-30 days
   }) {
-    debugPrint("🔱 MOMENTUM ENGINE: Analyzing trajectory for $userId...");
+    debugPrint("MOMENTUM ENGINE: Analyzing trajectory for $userId...");
 
     if (recentSessions.isEmpty) {
       return MomentumNode(
@@ -26,7 +26,7 @@ class MomentumEngine {
       );
     }
 
-    // 🔱 Metric Aggregation
+    // Metric Aggregation
     int completedCount = recentSessions.where((s) => s.result != MissionResult.FAILED).length;
     double completionRate = (completedCount / recentSessions.length) * 100;
     
@@ -34,7 +34,7 @@ class MomentumEngine {
     int correctQuestions = recentSessions.fold(0, (sum, s) => sum + s.correctAnswers);
     double accuracy = totalQuestions == 0 ? 0 : (correctQuestions / totalQuestions) * 100;
 
-    // 🔱 Trend Analysis
+    // Trend Analysis
     final firstHalf = recentSessions.take(recentSessions.length ~/ 2);
     final secondHalf = recentSessions.skip(recentSessions.length ~/ 2);
     
@@ -42,7 +42,7 @@ class MomentumEngine {
     double secondHalfAccuracy = _avgAccuracy(secondHalf.toList());
     double accuracyTrend = secondHalfAccuracy - firstHalfAccuracy;
 
-    // 🔱 Trajectory Classification
+    // Trajectory Classification
     MomentumStatus status = MomentumStatus.STABLE;
     if (accuracyTrend > 10 && completionRate > 80) status = MomentumStatus.RISING;
     else if (accuracyTrend < -15 || completionRate < 40) status = MomentumStatus.COLLAPSING;

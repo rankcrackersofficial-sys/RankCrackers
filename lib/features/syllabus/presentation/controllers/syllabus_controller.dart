@@ -12,7 +12,7 @@ class SyllabusController extends ChangeNotifier {
     isLoading = true;
     notifyListeners();
 
-    // 🔱 Audit Fix: Derive from KnowledgeEngine (Article 6 & 8)
+    // Audit Fix: Derive from KnowledgeEngine (Article 6 & 8)
     final engine = KnowledgeEngine.instance;
     final nodes = engine.allNodes.where((n) => n.examId == examId).toList();
 
@@ -76,12 +76,12 @@ class SyllabusController extends ChangeNotifier {
   }
 
   double getOverallProgress() {
-    // 🔱 Audit Fix: Overall Mission Coverage (Article 9)
+    // Audit Fix: Overall Mission Coverage (Article 9)
     return KnowledgeEngine.instance.coverageState?.coveragePercent ?? 0.0;
   }
 
   double getOverallAccuracy() {
-    // 🔱 Audit Fix: Overall Mission Readiness (Article 27)
+    // Audit Fix: Overall Mission Readiness (Article 27)
     return KnowledgeEngine.instance.readinessState?.score ?? 0.0;
   }
 

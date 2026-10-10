@@ -1,4 +1,5 @@
 import 'question_difficulty.dart';
+import '../utils/temporal_normalizer.dart';
 
 /// 🔱 QUESTION MODEL (Document 27 Compliant)
 /// The constitutional source of assessment evidence.
@@ -187,11 +188,16 @@ class QuestionModel {
       version: map['version'] ?? 1,
       lastAdminId: map['lastAdminId'] ?? 'system',
       lastAction: map['lastAction'] ?? 'verified',
-      updatedAt: DateTime.fromMillisecondsSinceEpoch(map['updatedAt'] ?? 0),
+      updatedAt: TemporalNormalizer.parseRequired(
+        map['updatedAt'],
+        fallback: DateTime.fromMillisecondsSinceEpoch(0),
+        fieldName: 'updatedAt',
+      ),
       verifiedBy: map['verifiedBy'],
-      verifiedAt: map['verifiedAt'] != null 
-          ? DateTime.fromMillisecondsSinceEpoch(map['verifiedAt']) 
-          : null,
+      verifiedAt: TemporalNormalizer.parseOptional(
+        map['verifiedAt'],
+        fieldName: 'verifiedAt',
+      ),
       sourceType: map['sourceType'] ?? 'admin',
       isPYQ: map['isPYQ'] ?? false,
       questionType: map['questionType'],

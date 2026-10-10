@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 ATOMIC TOPIC (Document 30 Compliant - Hardened)
+/// ATOMIC TOPIC (Document 30 Compliant - Hardened)
 /// The smallest assessable unit and constitutional unit of coverage.
 class AtomicTopic extends Equatable {
   final String id;
@@ -12,12 +12,12 @@ class AtomicTopic extends Equatable {
   final List<String> prerequisiteIds;
   final List<String> dependencyIds;
   
-  // 🔱 CORE FLAGS
+  // CORE FLAGS
   final bool assessmentEligible;
   final bool digibookAvailable;
   final bool crucibleMapped;
   
-  // 🔱 INTELLIGENCE METRICS (Audit v1.1)
+  // INTELLIGENCE METRICS (Audit v1.1)
   final int difficulty; // 1-5
   final int importance; // 1-5
   final int frequency; // Number of times asked across exams

@@ -1,5 +1,8 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
+import { FieldValue } from 'firebase-admin/firestore';
+
+const { registerCandidateSourceVersion, isJobCurrent } = require('../../services/canonical_source_authority');
 
 if (admin.apps.length === 0) {
   admin.initializeApp();
@@ -54,6 +57,11 @@ const REVISION = 'RC-SYLLABUS-ORCH-V1.0';
 export const syllabusLifecycleWorker = functions.firestore
   .document('ai_queue/{taskId}')
   .onUpdate(async (change, context) => {
+    // 🛡️ TEST ISOLATION GATE: Avoid executing background triggers in the emulator process during Jest runs
+    if (process.env.JEST_WORKER_ID) {
+      console.log("syllabusLifecycleWorker: Bypassing background trigger execution in emulator process.");
+      return;
+    }
     const newData = change.after.data();
     const oldData = change.before.data();
     if (!newData || !oldData) return;
@@ -69,9 +77,22 @@ export const syllabusLifecycleWorker = functions.firestore
 
     if (!missionId || !docId) return;
 
+    if (newData.requiresCanonicalSource === true) {
+      const slot = await db.collection('mission_realms').doc(missionId).collection('source_slots').doc(newData.sourceSlotId).get();
+      if (!isJobCurrent(slot.data(), newData)) {
+        await change.after.ref.set({ status: 'superseded', stoppedReason: 'STALE_CANONICAL_SOURCE', stoppedAt: FieldValue.serverTimestamp() }, { merge: true });
+        return;
+      }
+    }
+
     await db.runTransaction(async (transaction) => {
         const docRef = db.collection('mission_realms').doc(missionId).collection('official_documents').doc(docId);
-        const docSnap = await transaction.get(docRef);
+        const scopeRef = db.collection('mission_realms').doc(missionId).collection('variables').doc('scope_authority');
+
+        const [docSnap, scopeSnap] = await Promise.all([
+            transaction.get(docRef),
+            transaction.get(scopeRef)
+        ]);
 
         if (!docSnap.exists) {
             console.log(`🔱 ORCHESTRATOR: Target document ${docId} not found in mission_realms. Skipping.`);
@@ -81,6 +102,14 @@ export const syllabusLifecycleWorker = functions.firestore
         const docData = docSnap.data() || {};
         const currentState = docData.lifecycle_state || 'SOURCE_REGISTERED';
         const sourceSha = docData.sourceSha256 || docData.fileHash || 'unknown';
+    const sourceBinding = {
+      sourceSlotId: docData.sourceSlotId || null,
+      sourceSlotKey: docData.sourceSlotKey || null,
+      sourceVersionId: docData.sourceVersionId || null,
+      sourceSha256: sourceSha,
+      activationEpoch: Number(docData.activationEpoch || 0),
+      requiresCanonicalSource: false,
+    };
 
         let nextState: SyllabusLifecycleState | null = null;
         let reason = '';
@@ -117,7 +146,7 @@ export const syllabusLifecycleWorker = functions.firestore
         if (nextState && nextState !== currentState) {
             transaction.update(docRef, {
                 lifecycle_state: nextState,
-                updatedAt: admin.firestore.FieldValue.serverTimestamp()
+                updatedAt: FieldValue.serverTimestamp()
             });
 
             const event: LifecycleEvent = {
@@ -130,7 +159,7 @@ export const syllabusLifecycleWorker = functions.firestore
                 worker: 'SyllabusLifecycleWorker',
                 runId: newData.runId || 'auto_run',
                 revision: REVISION,
-                timestamp: admin.firestore.FieldValue.serverTimestamp(),
+                timestamp: FieldValue.serverTimestamp(),
                 reason,
                 triggerEvent: 'TASK_COMPLETED'
             };
@@ -139,7 +168,7 @@ export const syllabusLifecycleWorker = functions.firestore
             transaction.set(eventRef, { ...event, type: 'SYLLABUS_LIFECYCLE_TRANSITION' });
 
             // Trigger side effects (creating next task)
-            await triggerNextStage(transaction, missionId, docId, nextState, docData);
+            await triggerNextStage(transaction, missionId, docId, nextState, docData, scopeSnap);
         }
     });
   });
@@ -151,31 +180,55 @@ export const syllabusLifecycleWorker = functions.firestore
 export const syllabusIngestionOrchestrator = functions.firestore
   .document('mission_realms/{missionId}/official_documents/{docId}')
   .onCreate(async (snap, context) => {
+    // 🛡️ TEST ISOLATION GATE: Avoid executing background triggers in the emulator process during Jest runs
+    if (process.env.JEST_WORKER_ID) {
+      console.log("syllabusIngestionOrchestrator: Bypassing background trigger execution in emulator process.");
+      return;
+    }
     const data = snap.data();
     if (!data) return;
 
     const { missionId, docId } = context.params;
-    const sourceSha = data.sourceSha256 || data.fileHash || 'unknown';
+    const sourceSha = data.sourceSha256 || data.fileHash || docId;
 
-    console.log(`🔱 ORCHESTRATOR: New document registered: ${docId} in ${missionId}`);
+    const sourceAuthority = await registerCandidateSourceVersion(db, {
+      ...data,
+      missionId,
+      documentId: docId,
+      sourceSha256: sourceSha,
+    });
+
+    console.log(`🔱 ORCHESTRATOR: Candidate source registered: ${sourceAuthority.sourceVersionId} in ${missionId}`);
 
     const taskType = 'page_count_detection';
     const taskId = `plan_page_count_${missionId}_${sourceSha}`;
 
-    await db.collection('ai_queue').doc(taskId).set({
-        id: taskId,
-        task_type: taskType,
-        mission_id: missionId,
-        document_id: docId,
-        source_document_id: docId,
-        source_path: data.source_path || data.storagePath,
-        expected_output: 'page_count',
-        status: 'queued',
-        priority: 'normal',
-        createdAt: admin.firestore.FieldValue.serverTimestamp(),
-        orchestratorVersion: REVISION,
-        runId: `run_${Date.now()}`
-    }, { merge: true });
+    console.log(`🔱 ORCHESTRATOR: Creating task ${taskId} for document ${docId}`);
+    try {
+        await db.collection('ai_queue').doc(taskId).set({
+            id: taskId,
+            task_type: taskType,
+            mission_id: missionId,
+            document_id: docId,
+            source_document_id: docId,
+            sourceSlotId: sourceAuthority.sourceSlotId,
+            sourceSlotKey: sourceAuthority.sourceSlotKey,
+            sourceVersionId: sourceAuthority.sourceVersionId,
+            sourceSha256: sourceAuthority.sourceSha256,
+            activationEpoch: 0,
+            requiresCanonicalSource: false,
+            source_path: data.source_path || data.storagePath || '',
+            expected_output: 'page_count',
+            status: 'queued',
+            priority: 'normal',
+            createdAt: FieldValue.serverTimestamp(),
+            orchestratorVersion: REVISION,
+            runId: `run_${Date.now()}`
+        }, { merge: true });
+        console.log(`🔱 ORCHESTRATOR: Successfully created task ${taskId}`);
+    } catch (err: any) {
+        console.error(`🔱 ORCHESTRATOR ERROR: Failed to create task ${taskId}: ${err.message}`);
+    }
 
     await db.collection('ai_audit_logs').add({
         missionId,
@@ -184,15 +237,47 @@ export const syllabusIngestionOrchestrator = functions.firestore
         toState: 'PAGE_COUNT_PLANNED',
         worker: 'SyllabusIngestionOrchestrator',
         revision: REVISION,
-        timestamp: admin.firestore.FieldValue.serverTimestamp(),
+        timestamp: FieldValue.serverTimestamp(),
         reason: 'Initial document registration trigger.',
         triggerEvent: 'DOC_CREATED',
         type: 'SYLLABUS_LIFECYCLE_TRANSITION'
     });
   });
 
-async function triggerNextStage(transaction: admin.firestore.Transaction, missionId: string, docId: string, state: SyllabusLifecycleState, docData: any) {
+/** Mirrors governed verification/delta state into the immutable source-version authority. */
+export const canonicalSourceVerificationMirror = functions.firestore
+  .document('mission_realms/{missionId}/official_documents/{docId}')
+  .onUpdate(async (change) => {
+    const before = change.before.data() || {};
+    const after = change.after.data() || {};
+    if (!after.sourceSlotId || !after.sourceVersionId) return;
+    const verificationState = String(after.verificationState || after.reviewStatus || '').toUpperCase();
+    const previousState = String(before.verificationState || before.reviewStatus || '').toUpperCase();
+    if (verificationState === previousState && after.deltaSummary === before.deltaSummary) return;
+    const versionRef = change.after.ref.parent.parent!
+      .collection('source_slots').doc(after.sourceSlotId)
+      .collection('source_versions').doc(after.sourceVersionId);
+    await versionRef.set({
+      verificationState: verificationState === 'VERIFIED' || verificationState === 'APPROVED' ? 'VERIFIED' : verificationState,
+      deltaSummary: after.deltaSummary || null,
+      deltaItems: Array.isArray(after.deltaItems) ? after.deltaItems : [],
+      deltaState: after.deltaState || null,
+      activationBlocked: after.activationBlocked === true || Number(after.deltaSummary?.AMBIGUOUS || 0) > 0,
+      verifiedAt: after.verifiedAt || FieldValue.serverTimestamp(),
+      verifiedBy: after.verifiedBy || null,
+      updatedAt: FieldValue.serverTimestamp(),
+    }, { merge: true });
+  });
+async function triggerNextStage(transaction: admin.firestore.Transaction, missionId: string, docId: string, state: SyllabusLifecycleState, docData: any, scopeSnap: admin.firestore.DocumentSnapshot) {
     const sourceSha = docData.sourceSha256 || docData.fileHash || 'unknown';
+    const sourceBinding = {
+      sourceSlotId: docData.sourceSlotId || null,
+      sourceSlotKey: docData.sourceSlotKey || null,
+      sourceVersionId: docData.sourceVersionId || null,
+      sourceSha256: sourceSha,
+      activationEpoch: Number(docData.activationEpoch || 0),
+      requiresCanonicalSource: false,
+    };
 
     if (state === 'PAGE_COUNT_COMPLETE') {
         // Trigger B1 Planning (create batch tasks)
@@ -215,12 +300,13 @@ async function triggerNextStage(transaction: admin.firestore.Transaction, missio
 
                 const taskRef = db.collection('ai_queue').doc(taskId);
                 transaction.set(taskRef, {
+                    ...sourceBinding,
                     id: taskId,
                     task_type: 'pagewise_text_extraction_batch',
                     mission_id: missionId,
                     document_id: docId,
                     source_document_id: docId,
-                    source_path: docData.source_path || docData.storagePath,
+                    source_path: docData.source_path || docData.storagePath || '',
                     page_start: start,
                     page_end: end,
                     page_batch_index: i + 1,
@@ -228,7 +314,7 @@ async function triggerNextStage(transaction: admin.firestore.Transaction, missio
                     expected_output: 'page_extractions',
                     status: 'queued',
                     priority: 'normal',
-                    createdAt: admin.firestore.FieldValue.serverTimestamp(),
+                    createdAt: FieldValue.serverTimestamp(),
                     orchestratorVersion: REVISION,
                     page_policy: { all_pages_required: true, fixed_page_limit_allowed: false, batch_size_is_not_page_limit: true },
                     runId: `run_${Date.now()}`
@@ -239,24 +325,30 @@ async function triggerNextStage(transaction: admin.firestore.Transaction, missio
         // Trigger Corpus Verification
         const taskId = `verify_corpus_${missionId}_${sourceSha}`;
         transaction.set(db.collection('ai_queue').doc(taskId), {
+                    ...sourceBinding,
             id: taskId,
             task_type: 'CORPUS_VERIFICATION',
             mission_id: missionId,
             document_id: docId,
             source_document_id: docId,
             status: 'queued',
-            createdAt: admin.firestore.FieldValue.serverTimestamp(),
+            createdAt: FieldValue.serverTimestamp(),
             orchestratorVersion: REVISION,
             runId: `run_${Date.now()}`
         }, { merge: true });
     } else if (state === 'ACADEMIC_CORPUS_VERIFIED') {
         // Trigger B3 if Scope Authority exists
-        const scopeRef = db.collection('mission_realms').doc(missionId).collection('variables').doc('scope_authority');
-        const scopeSnap = await transaction.get(scopeRef); // Transactional check for safety
-
         if (scopeSnap.exists && scopeSnap.data()?.status === 'RESOLVED') {
+            const scopeRaw = scopeSnap.data() || {};
+            const normalizedScope = {
+                ...scopeRaw,
+                papersEnabled: true,
+                allowedPaperIds: Object.keys(scopeRaw.papers || scopeRaw.paperDefinitions || {}),
+                paperDefinitions: scopeRaw.papers || scopeRaw.paperDefinitions || {}
+            };
             const taskId = `struct_${missionId}_${sourceSha}`;
             transaction.set(db.collection('ai_queue').doc(taskId), {
+                    ...sourceBinding,
                 id: taskId,
                 task_type: 'SYLLABUS_B3',
                 mission_id: missionId,
@@ -266,12 +358,12 @@ async function triggerNextStage(transaction: admin.firestore.Transaction, missio
                     missionId,
                     documentId: docId,
                     sourceSha256: sourceSha,
-                    authorizedScope: scopeSnap.data(),
+                    authorizedScope: normalizedScope,
                     documentType: 'syllabus',
                     runId: `run_${Date.now()}`
                 },
                 status: 'queued',
-                createdAt: admin.firestore.FieldValue.serverTimestamp(),
+                createdAt: FieldValue.serverTimestamp(),
                 orchestratorVersion: REVISION
             }, { merge: true });
         } else {
@@ -280,10 +372,45 @@ async function triggerNextStage(transaction: admin.firestore.Transaction, missio
             });
         }
     } else if (state === 'B3_COMPLETE') {
-        // Check if B4 Worker exists/available
-        // For now, B4 is under implementation, so we HOLD
-        transaction.update(db.collection('mission_realms').doc(missionId).collection('official_documents').doc(docId), {
-            lifecycle_state: 'B4_PLANNED' // Or B4_IMPLEMENTATION_HOLD
-        });
+        const scopeRaw = scopeSnap.exists ? scopeSnap.data() : null;
+
+        if (scopeRaw && scopeRaw.status === 'RESOLVED') {
+            const normalizedScope = {
+                ...scopeRaw,
+                papersEnabled: true,
+                allowedPaperIds: Object.keys(scopeRaw.papers || scopeRaw.paperDefinitions || {}),
+                paperDefinitions: scopeRaw.papers || scopeRaw.paperDefinitions || {}
+            };
+            const taskId = `atomic_${missionId}_${sourceSha}`;
+            transaction.set(db.collection('ai_queue').doc(taskId), {
+                    ...sourceBinding,
+                id: taskId,
+                task_type: 'SYLLABUS_B4',
+                mission_id: missionId,
+                document_id: docId,
+                source_document_id: docId,
+                source_path: docData.source_path || docData.storagePath || '',
+                run_id: docData.runId || `run_${Date.now()}`,
+                status: 'queued',
+                expected_output: 'atomic_syllabus_nodes',
+                authorizedScope: normalizedScope,
+                createdAt: FieldValue.serverTimestamp(),
+                orchestratorVersion: REVISION
+            }, { merge: true });
+
+            transaction.update(db.collection('mission_realms').doc(missionId).collection('official_documents').doc(docId), {
+                lifecycle_state: 'B4_PLANNED',
+                updatedAt: FieldValue.serverTimestamp()
+            });
+        } else {
+            transaction.update(db.collection('mission_realms').doc(missionId).collection('official_documents').doc(docId), {
+                lifecycle_state: 'SCOPE_AUTHORITY_PENDING',
+                updatedAt: FieldValue.serverTimestamp()
+            });
+        }
     }
 }
+
+
+
+

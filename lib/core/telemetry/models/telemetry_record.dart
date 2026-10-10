@@ -1,24 +1,25 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 TELEMETRY RECORD (v2 Hardened)
+/// TELEMETRY RECORD (v2 Hardened)
 /// Captures real-world performance metrics from the warrior's device.
 /// Implements Phase 6.3B (Production Analytics Readiness).
 class TelemetryRecord extends Equatable {
   final String id;
-  final String eventName; 
+  final String eventName;
   final int durationMs;
-  final bool success; // 🔱 Added: Event success state
-  final String? errorCode; // 🔱 Added: Failure analytics
+  final bool success; // Added: Event success state
+  final String? errorCode; // Added: Failure analytics
 
-  final String sessionId; // 🔱 Added: Warrior journey reconstruction
-  final String anonymizedUserId; // 🔱 Added: Privacy compliant ID
+  final String sessionId; // Added: Warrior journey reconstruction
+  final String anonymizedUserId; // Added: Privacy compliant ID
+  final String userId;
   final String? recruitmentId;
-  
+
   final String deviceModel;
   final String osVersion;
-  final String appVersion; // 🔱 Added: Deployment tracking
-  final String buildNumber; // 🔱 Added: Precision tracking
-  final String networkType; // 🔱 Added: Environmental context
+  final String appVersion; // Added: Deployment tracking
+  final String buildNumber; // Added: Precision tracking
+  final String networkType; // Added: Environmental context
 
   final DateTime timestamp;
   final Map<String, dynamic> metadata;
@@ -31,6 +32,7 @@ class TelemetryRecord extends Equatable {
     this.errorCode,
     required this.sessionId,
     required this.anonymizedUserId,
+    required this.userId,
     this.recruitmentId,
     required this.deviceModel,
     required this.osVersion,
@@ -50,6 +52,7 @@ class TelemetryRecord extends Equatable {
       'errorCode': errorCode,
       'sessionId': sessionId,
       'anonymizedUserId': anonymizedUserId,
+      'userId': userId,
       'recruitmentId': recruitmentId,
       'deviceModel': deviceModel,
       'osVersion': osVersion,
@@ -70,6 +73,7 @@ class TelemetryRecord extends Equatable {
       errorCode: map['errorCode'],
       sessionId: map['sessionId'] ?? '',
       anonymizedUserId: map['anonymizedUserId'] ?? '',
+      userId: map['userId'] ?? '',
       recruitmentId: map['recruitmentId'],
       deviceModel: map['deviceModel'] ?? 'Unknown',
       osVersion: map['osVersion'] ?? 'Unknown',
@@ -83,9 +87,21 @@ class TelemetryRecord extends Equatable {
 
   @override
   List<Object?> get props => [
-    id, eventName, durationMs, success, errorCode, 
-    sessionId, anonymizedUserId, recruitmentId, 
-    deviceModel, osVersion, appVersion, buildNumber, networkType,
-    timestamp, metadata,
-  ];
+        id,
+        eventName,
+        durationMs,
+        success,
+        errorCode,
+        sessionId,
+        anonymizedUserId,
+        userId,
+        recruitmentId,
+        deviceModel,
+        osVersion,
+        appVersion,
+        buildNumber,
+        networkType,
+        timestamp,
+        metadata,
+      ];
 }

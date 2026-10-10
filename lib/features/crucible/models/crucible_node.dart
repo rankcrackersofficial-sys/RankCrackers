@@ -1,6 +1,7 @@
 import 'package:equatable/equatable.dart';
+import '../../../core/models/canonical_academic_ref.dart';
 
-/// 🔱 CRUCIBLE NODE (Blueprint v1.0)
+/// CRUCIBLE NODE (Blueprint v1.0)
 /// Law: 1 Atomic Topic -> 1 DigiBook Unit -> N Crucible Nodes
 class CrucibleNode extends Equatable {
   final String id;
@@ -58,6 +59,14 @@ class CrucibleNode extends Equatable {
       content: Map<String, dynamic>.from(map['content'] ?? {}),
     );
   }
+
+  /// Canonical Academic Reference adapter for universal routing
+  CanonicalAcademicRef get canonicalRef => CanonicalAcademicRef(
+        canonicalMissionId: realmId,
+        canonicalNodeId: atomicTopicId,
+        generationUnitId: digibookUnitId.isNotEmpty ? digibookUnitId : atomicTopicId,
+        atomicFactIds: const [],
+      );
 
   @override
   List<Object?> get props => [id, realmId, atomicTopicId, digibookUnitId, nodeType, founderVerified];

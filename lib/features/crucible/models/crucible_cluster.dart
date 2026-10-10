@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 CRUCIBLE CLUSTER (Blueprint v1.0)
+/// CRUCIBLE CLUSTER (Blueprint v1.0)
 /// Groups all Crucible Nodes for a specific Atomic Topic.
 class CrucibleCluster extends Equatable {
   final String id;

@@ -1,0 +1,280 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_0059FC83",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U03_T_00000002",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_0059FC83_V001",
+  "atomicFactSetHash": "303aa73dcfe6b3d7597786788e449bb0f9975dd9687191e5cd64e9f9c7f04bd4",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_0059FC83_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_0059FC83",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_0059FC83_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_37D926D4",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_39C67303",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_4583C5F7",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_47406476",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_6F4A7B5E",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_7AB71087",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_7EDF8194",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_C34B2B3B",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_F7BEF1F3",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_FA49D7BF"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "overviewText": "This chapter formulates Newtons First Law, inertia, linear momentum, Newtons Second Law of Motion ($F = dp/dt$), and the definition of force in SI units.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "3954513147e30c903a7326cbd388408ecee417bfb32383e8b2f17f5a48e6aeaf",
+      "createdAtUtc": "2026-09-02T13:29:33.020Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_0059FC83_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_0059FC83",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_0059FC83_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_37D926D4",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_39C67303",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_4583C5F7",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_47406476",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_6F4A7B5E",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_7AB71087",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_7EDF8194",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_C34B2B3B",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_F7BEF1F3",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_FA49D7BF"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_0059FC83_CONCEPTS_01_FIRST_LAW_INERTIA_MOMENTUM",
+          "semanticAnchorId": "ANCHOR_FIRST_LAW_AND_MOMENTUM",
+          "title": "1. Newtons First Law, Inertia, and Linear Momentum",
+          "contentMarkdown": "Newtons First Law states that a body remains at rest or in uniform straight-line motion unless acted upon by net external force. Inertia is resistance to change in motion, measured by mass. Linear momentum is $$\\mathbf{p} = m\\\\mathbf{v}$$, a vector in the direction of velocity.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_C34B2B3B",
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_6F4A7B5E",
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_37D926D4",
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_7EDF8194",
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_4583C5F7"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_0059FC83_CONCEPTS_02_NEWTON_SECOND_LAW",
+          "semanticAnchorId": "ANCHOR_NEWTON_SECOND_LAW",
+          "title": "2. Newtons Second Law of Motion",
+          "contentMarkdown": "Newtons Second Law states that net external force equals the time rate of change of linear momentum: $$\\mathbf{F} = \\frac{d\\mathbf{p}}{dt}$$. For constant mass $m$, this simplifies to $$\\mathbf{F} = m\\mathbf{a}$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_7AB71087",
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_39C67303",
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_F7BEF1F3"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_0059FC83_CONCEPTS_03_FORCE_UNITS",
+          "semanticAnchorId": "ANCHOR_FORCE_SI_UNITS",
+          "title": "3. SI Unit of Force and the Newton Definition",
+          "contentMarkdown": "In SI units, force is measured in newtons (N). One newton is defined as the force required to produce an acceleration of $1\\text{ m/s}^2$ in a mass of $1\\text{ kg}$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_47406476",
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_FA49D7BF"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "93d5cba9c59e7f937831bf2ce1755d758928feb6ea30feffaf21e718c9925d8f",
+      "createdAtUtc": "2026-09-02T13:29:33.020Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_0059FC83_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_0059FC83",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_0059FC83_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_7EDF8194",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_7AB71087"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Linear Momentum",
+          "formula": "\\\\mathbf{p} = m \\\\mathbf{v}",
+          "constraints": "Non-relativistic regime",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_7EDF8194"
+          ]
+        },
+        {
+          "name": "Newtons Second Law",
+          "formula": "\\\\mathbf{F} = \\\\frac{d\\\\mathbf{p}}{dt} = m \\\\mathbf{a}",
+          "constraints": "Constant mass m",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_7AB71087"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "e4781755ff3c4bd19148e98a44d4ddb82b50da3e511c1c232642bd2fb2f72b6e",
+      "createdAtUtc": "2026-09-02T13:29:33.020Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_0059FC83_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_0059FC83",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_0059FC83_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.020Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_0059FC83_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_0059FC83",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_0059FC83_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_39C67303"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_0059FC83_01",
+          "title": "Force Required to Accelerate a Mass",
+          "problemStatement": "Calculate the net force required to accelerate a $2.5\\\\text{ kg}$ block at $4.0\\\\text{ m/s}^2$.",
+          "stepByStepSolution": [
+            "Step 1: Identify mass $m = 2.5\\\\text{ kg}$ and acceleration $a = 4.0\\\\text{ m/s}^2$.",
+            "Step 2: Apply Newtons Second Law: $F = ma = 2.5 \\\\times 4.0 = 10.0\\\\text{ N}$."
+          ],
+          "finalAnswer": "F = 10.0\\\\text{ N}",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_39C67303"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "e9b4866883fc51560eba505521e64adc87fb1b24d810afff63a7c4c0b7bc3d91",
+      "createdAtUtc": "2026-09-02T13:29:33.020Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_0059FC83_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_0059FC83",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_0059FC83_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_7AB71087"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_0059FC83_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "According to Newtons Second Law of Motion, what is net force directly proportional to?",
+          "options": [
+            "Rate of change of linear momentum ($dp/dt$)",
+            "Total kinetic energy",
+            "Displacement from equilibrium",
+            "Velocity squared"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Newtons Second Law states $F = dp/dt$, meaning force equals the time rate of momentum change.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_0059FC83_7AB71087"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "981a6a226b45dcafd0e0de349b8578607b19482ef09fe66b5e61c62cdad67e94",
+      "createdAtUtc": "2026-09-02T13:29:33.020Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_0059FC83_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_0059FC83",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_0059FC83_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_37D926D4",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_39C67303",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_4583C5F7",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_47406476",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_6F4A7B5E",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_7AB71087",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_7EDF8194",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_C34B2B3B",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_F7BEF1F3",
+        "AF_GU_JEEMAIN2027_PHY_0059FC83_FA49D7BF"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Momentum calculation",
+          "Newtons Second Law application"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "2b7b071d727329fb75fcd55a78fd9caea284b55f922920f100fc54058b412b80",
+      "createdAtUtc": "2026-09-02T13:29:33.020Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_CH05_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.020Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

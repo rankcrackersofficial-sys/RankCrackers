@@ -1,11 +1,11 @@
 class TestSubmitEngine {
   // ===================================================
-  // AUTO SUBMIT 🔱
+  // AUTO SUBMIT 
   // ===================================================
   static Future<void> submit({
     required String testId,
   }) async {
-    // 🔱 Logic to push test results to Firestore
+    // Logic to push test results to Firestore
     print('AUTO SUBMITTED: $testId');
   }
 }

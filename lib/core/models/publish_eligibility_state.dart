@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 PUBLISH ELIGIBILITY STATE
+/// PUBLISH ELIGIBILITY STATE
 /// Represents the validation results for a Mission before publication.
 class PublishEligibilityState extends Equatable {
   final bool isEligible;

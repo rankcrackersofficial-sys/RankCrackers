@@ -1,6 +1,10 @@
 export function buildPrompt(type: string, payload: any) {
   switch (type) {
-    case 'mcq':
+    case 'mcq': {
+      const count = payload.questionsCount || payload.count;
+      const countText = count 
+        ? `Generate exactly ${count} MCQ(s) matching the requested difficulty.`
+        : `Generate: 15 easy, 20 medium, 15 hard`;
       return `
 Generate competitive exam MCQs.
 Topic: ${payload.topic}
@@ -13,10 +17,11 @@ Rules:
 - Include difficulty level
 - Avoid vague wording
 - Human-style framing
-Generate: 15 easy, 20 medium, 15 hard
+${countText}
 Output JSON format:
 { "mcqs": [ { "question": "", "options": [], "correctIndex": 0, "explanation": "", "difficulty": 1 } ] }
 `;
+    }
 
     case 'digibook':
       return `

@@ -6,7 +6,6 @@ import 'package:rank_crackers/core/theme/app_typography.dart';
 import 'package:rank_crackers/core/widgets/dark_card.dart';
 import '../shared/center_header.dart';
 import 'mission_creation_center.dart';
-import '../../../../../web/founder/mission_control/mission_variable_authority_panel.dart';
 import '../../../../../web/founder/mission_control/founder_mission_inventory.dart';
 
 /// MISSION CONTROL CENTER (Founder-Centric v2.0)
@@ -33,22 +32,12 @@ class MissionControlCenter extends StatelessWidget {
             ),
           ),
 
-          // SECTION 1: CREATE NEW MISSION REALM (Expandable)
+          // SECTION 1: CREATE NEW MISSION (Expandable)
           const _ExpandableSection(
-            title: "CREATE NEW MISSION REALM",
+            title: "CREATE NEW MISSION",
             accentColor: AppColors.gold,
             initiallyExpanded: false,
             child: MissionCreationCenter(),
-          ),
-
-          const _ExpandableSection(
-            title: "MISSION VARIABLES",
-            accentColor: Colors.cyanAccent,
-            initiallyExpanded: false,
-            child: SizedBox(
-              height: 640,
-              child: MissionVariableAuthorityPanel(),
-            ),
           ),
 
           // SECTION 2: READY TO CREATE MISSIONS (Unlinked Verified Assets)
@@ -57,33 +46,12 @@ class MissionControlCenter extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.fromLTRB(24, 24, 24, 6),
             child: CenterHeader(
-              title: "RECONCILED MISSION INVENTORY",
+              title: "MISSION INVENTORY",
               subtitle:
                   "Student-visible missions and Founder lineage across existing canonical sources.",
             ),
           ),
           FounderMissionInventory(onMissionSelected: onMissionSelected),
-
-          // SECTION 3: ACTIVE MISSIONS (Currently Live)
-          const _MissionStatusSection(
-            title: "ACTIVE MISSIONS",
-            status: 'ACTIVE',
-            accentColor: Colors.greenAccent,
-          ),
-
-          // SECTION 3: PASSIVE MISSIONS
-          const _MissionStatusSection(
-            title: "PASSIVE MISSIONS",
-            status: 'PASSIVE',
-            accentColor: Colors.orangeAccent,
-          ),
-
-          // SECTION 4: ARCHIVED MISSIONS
-          const _MissionStatusSection(
-            title: "ARCHIVED MISSIONS",
-            status: 'ARCHIVED',
-            accentColor: Colors.white24,
-          ),
         ],
       ),
     );
@@ -124,68 +92,6 @@ class _ExpandableSection extends StatelessWidget {
           children: [child],
         ),
       ),
-    );
-  }
-}
-
-class _MissionStatusSection extends StatelessWidget {
-  final String title;
-  final String status;
-  final Color accentColor;
-
-  const _MissionStatusSection({
-    required this.title,
-    required this.status,
-    required this.accentColor,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(24, 24, 24, 12),
-          child: Text(title,
-              style: AppTypography.label
-                  .copyWith(color: accentColor, fontSize: 9)),
-        ),
-        StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance
-              .collection('mission_realms')
-              .where('status', isEqualTo: status)
-              .snapshots(),
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24),
-                child: LinearProgressIndicator(
-                    color: AppColors.gold, minHeight: 1),
-              );
-            }
-            final docs = snapshot.data?.docs ?? [];
-            if (docs.isEmpty) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: Text("NO MISSIONS IN $status STATE",
-                    style: AppTypography.label
-                        .copyWith(color: Colors.white10, fontSize: 7)),
-              );
-            }
-            return Column(
-              children: docs.map((doc) {
-                final data = doc.data() as Map<String, dynamic>;
-                return Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 24, vertical: 6),
-                  child: _MissionRealmTile(
-                      data: data, id: doc.id, accentColor: accentColor),
-                );
-              }).toList(),
-            );
-          },
-        ),
-      ],
     );
   }
 }

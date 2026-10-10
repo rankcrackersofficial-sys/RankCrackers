@@ -4,7 +4,7 @@ import 'digibook_content.dart';
 class DigiBookSession {
   final String title;
   final List<MicroTopicNode> nodes;
-  final List<DigiBookContent> payloads; // 🔱 Decoupled content
+  final List<DigiBookContent> payloads; // Decoupled content
   final int estimatedMinutes;
 
   const DigiBookSession({

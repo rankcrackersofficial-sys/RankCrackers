@@ -1,0 +1,231 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_CHE_2AF5BFC3",
+  "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000007",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_CHE_2AF5BFC3_V001",
+  "atomicFactSetHash": "75a6f052ebfe469de9269ea2e65469e70d92ca6ec77e11de8c9b0ddefe38972d",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AF5BFC3_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AF5BFC3",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AF5BFC3_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_8EFEFFCD",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9428EBD4",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9C8285E8",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_A7CCBAA5"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "overviewText": "This chapter explains the calculation of molecular mass for covalent molecules and formula mass for ionic lattice compounds.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "e7716091afbd2df8d34158cdf7de5a99b988896d0febab728311beb12d7beebc",
+      "createdAtUtc": "2026-09-02T13:29:33.162Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AF5BFC3_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AF5BFC3",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AF5BFC3_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_8EFEFFCD",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9428EBD4",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9C8285E8",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_A7CCBAA5"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_2AF5BFC3_CONCEPTS_01_MOLECULAR_FORMULA_MASS",
+          "semanticAnchorId": "ANCHOR_MOLECULAR_FORMULA_MASS",
+          "title": "1. Molecular Mass and Formula Mass",
+          "contentMarkdown": "Molecular mass is the sum of atomic masses in a covalent molecule (e.g. glucose $C_6H_{12}O_6 = 180.16\\\\text{ u}$). Formula mass is used for ionic lattices like $NaCl$ where discrete molecules do not exist ($NaCl = 58.5\\\\text{ u}$).",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9428EBD4",
+            "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_A7CCBAA5",
+            "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9C8285E8",
+            "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_8EFEFFCD"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "e6dbb70e2ee0e6feff4d04330d1a943ecd48fb5e28d1d73df0edd5d81f272a7b",
+      "createdAtUtc": "2026-09-02T13:29:33.162Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AF5BFC3_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AF5BFC3",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AF5BFC3_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9428EBD4"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Molecular Mass Definition",
+          "formula": "\\\\text{Molecular Mass} = \\\\sum (\\\\text{Atomic Masses})",
+          "constraints": "Sum over constituent elements in molecule",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9428EBD4"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "9e3acbcc9c7c809bee241b6f19b2d99f39e60141f1ef02081ffe351fb031b83c",
+      "createdAtUtc": "2026-09-02T13:29:33.162Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AF5BFC3_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AF5BFC3",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AF5BFC3_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.162Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AF5BFC3_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AF5BFC3",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AF5BFC3_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9C8285E8"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_CHE_2AF5BFC3_01",
+          "title": "Calculation of Glucose Molecular Mass",
+          "problemStatement": "Calculate the molecular mass of glucose $C_6H_{12}O_6$ given atomic masses $C=12.011\\\\text{ u}$, $H=1.008\\\\text{ u}$, $O=16.00\\\\text{ u}$.",
+          "stepByStepSolution": [
+            "Step 1: Multiply atomic masses: $6(12.011) = 72.066$, $12(1.008) = 12.096$, $6(16.00) = 96.00$.",
+            "Step 2: Sum all masses: $72.066 + 12.096 + 96.00 = 180.162\\\\text{ u}$."
+          ],
+          "finalAnswer": "180.16\\\\text{ u}",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9C8285E8"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "753ea5b337d24c864951bdc2a94c54d52e9a32cb96137bb1ff546f1215868695",
+      "createdAtUtc": "2026-09-02T13:29:33.162Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AF5BFC3_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AF5BFC3",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AF5BFC3_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_A7CCBAA5"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_CHE_2AF5BFC3_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Why is the term \"formula mass\" preferred over \"molecular mass\" for sodium chloride ($NaCl$)?",
+          "options": [
+            "Sodium chloride forms a 3D ionic crystal lattice without discrete NaCl molecules",
+            "Sodium chloride is a covalent gaseous molecule",
+            "Atomic masses cannot be added for metals",
+            "Formula mass is measured only in kilograms"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "In solid $NaCl$, each $Na^+$ ion is surrounded by six $Cl^-$ ions in an infinite lattice rather than discrete isolated molecules.",
+          "difficulty": "MEDIUM",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_A7CCBAA5"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "3ae9c250e08039a46eb10afb3eb4e4db1879029fb54eddbaa025a92e722d1100",
+      "createdAtUtc": "2026-09-02T13:29:33.162Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2AF5BFC3_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2AF5BFC3",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2AF5BFC3_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_8EFEFFCD",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9428EBD4",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_9C8285E8",
+        "AF_GU_JEEMAIN2027_CHE_2AF5BFC3_A7CCBAA5"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Molecular mass computation",
+          "Formula mass vs molecular mass distinction"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "5ef879e040ab68fc142fb224d4853935af5e55c3bf7a82a083ec42e57aacc50b",
+      "createdAtUtc": "2026-09-02T13:29:33.162Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_CHEMISTRY_CLASS_11_CH01_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.162Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

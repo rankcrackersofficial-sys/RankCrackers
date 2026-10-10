@@ -5,7 +5,7 @@ import '../../models/sentinel_metrics.dart';
 import '../../../../core/models/notification_item.dart';
 import '../../../../core/models/notification_priority.dart';
 
-/// 🔱 SENTINEL REPOSITORY INTERFACE
+/// SENTINEL REPOSITORY INTERFACE
 /// Sovereign authority for managing career intelligence and alerts.
 abstract class SentinelRepository {
   Stream<SentinelMetrics> streamMetrics(String uid);
@@ -15,7 +15,7 @@ abstract class SentinelRepository {
   void dispose();
 }
 
-/// 🔱 FIRESTORE SENTINEL REPOSITORY (Phase 9B/D Hardened)
+/// FIRESTORE SENTINEL REPOSITORY (Phase 9B/D Hardened)
 /// Physical implementation for real-time Firestore synchronization.
 class FirestoreSentinelRepository implements SentinelRepository {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -44,9 +44,9 @@ class FirestoreSentinelRepository implements SentinelRepository {
         .collection('sentinel')
         .doc('metrics')
         .set({
-      'newAlerts': metrics.newAlerts,
-      'expiringForms': metrics.expiringForms,
-      'highPriorityExams': metrics.highPriorityExams,
+      'masterySignals': metrics.masterySignals,
+      'riskAlerts': metrics.riskAlerts,
+      'missionCriticals': metrics.missionCriticals,
       'updatedAt': FieldValue.serverTimestamp(),
     }, SetOptions(merge: true));
   }
@@ -79,7 +79,7 @@ class FirestoreSentinelRepository implements SentinelRepository {
           .update({'isRead': true, 'read': true});
     } catch (e) {
       debugPrint(
-          "🔱 SENTINEL REPO ERROR: Failed update, falling back to merge set - $e");
+          "SENTINEL REPO ERROR: Failed update, falling back to merge set - $e");
       await _firestore
           .collection('users')
           .doc(uid)
@@ -112,9 +112,9 @@ class FirestoreSentinelRepository implements SentinelRepository {
 
   SentinelMetrics _mapMetrics(Map<String, dynamic> data) {
     return SentinelMetrics(
-      newAlerts: data['newAlerts'] ?? 0,
-      expiringForms: data['expiringForms'] ?? 0,
-      highPriorityExams: data['highPriorityExams'] ?? 0,
+      masterySignals: data['masterySignals'] ?? 0,
+      riskAlerts: data['riskAlerts'] ?? 0,
+      missionCriticals: data['missionCriticals'] ?? 0,
     );
   }
 
@@ -139,7 +139,7 @@ class FirestoreSentinelRepository implements SentinelRepository {
   }
 }
 
-/// 🔱 LOCAL SENTINEL REPOSITORY
+/// LOCAL SENTINEL REPOSITORY
 class LocalSentinelRepository implements SentinelRepository {
   final _notifController = StreamController<List<NotificationItem>>.broadcast();
   List<NotificationItem> _localNotifications = [];
@@ -153,9 +153,9 @@ class LocalSentinelRepository implements SentinelRepository {
   @override
   Stream<SentinelMetrics> streamMetrics(String uid) {
     return Stream.value(SentinelMetrics(
-      newAlerts: _localNotifications.where((n) => !n.read).length,
-      expiringForms: 0,
-      highPriorityExams: 0,
+      masterySignals: 0,
+      riskAlerts: 0,
+      missionCriticals: 0,
     ));
   }
 

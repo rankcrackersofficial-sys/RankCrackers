@@ -6,7 +6,7 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/widgets/dark_card.dart';
 import '../../models/tactical_schedule.dart';
 
-/// 🔱 TACTICAL SCHEDULE CARD
+/// TACTICAL SCHEDULE CARD
 /// Displays the summary of a preparation block.
 class TacticalScheduleCard extends StatelessWidget {
   final TacticalSchedule schedule;

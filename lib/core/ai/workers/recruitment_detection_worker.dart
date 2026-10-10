@@ -3,10 +3,10 @@ import 'package:flutter/foundation.dart';
 class RecruitmentDetectionWorker {
   static Future<Map<String, dynamic>> analyze(String text) async {
     debugPrint("RECRUITMENT WORKER: Extracting Mission Intelligence...");
-    // 🔱 Hardened Notification Analysis Report (Expected from Cloud)
+    // Hardened Notification Analysis Report (Expected from Cloud)
     return {
       'title': 'SSC GD Constable 2026',
-      'examName': 'SSC GD', // 🔱 Exam-Centric Identity
+      'examName': 'SSC GD', // Exam-Centric Identity
       'org': 'SSC',
       'vacancies': 39481,
       'year': 2026,

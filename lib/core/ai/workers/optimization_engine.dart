@@ -8,7 +8,7 @@ import 'package:rank_crackers/core/models/momentum_node.dart';
 import 'package:rank_crackers/core/models/recruitment_realm.dart';
 import 'scenario_simulator.dart';
 
-/// 🔱 CHIEF STRATEGIST ENGINE (Hardened v1.2 - Solver Final)
+/// CHIEF STRATEGIST ENGINE (Hardened v1.2 - Solver Final)
 /// Solves for the optimal study plan by simulating ROI per minute.
 /// Closes Audit GAP Q-1 & A-1.
 class OptimizationEngine {
@@ -23,9 +23,9 @@ class OptimizationEngine {
     required MomentumNode momentum,
     required int maxMinutesPossible,
   }) {
-    debugPrint("🔱 CHIEF STRATEGIST: Initiating Simulation-Based Solver...");
+    debugPrint("CHIEF STRATEGIST: Initiating Simulation-Based Solver...");
 
-    // 🔱 1. SIMULATION ITERATION (Audit GAP A-1)
+    // 1. SIMULATION ITERATION (Audit GAP A-1)
     // We solve for T (time) in 30-minute steps [120, 150, ..., Max]
     int optimalMinutes = 120;
     double maxROI = -1.0;
@@ -36,7 +36,7 @@ class OptimizationEngine {
       simulationSteps.add(t);
     }
 
-    // 🔱 Scenario Simulation Layer
+    // Scenario Simulation Layer
     final Map<int, ForecastNode> timeScenarios = ScenarioSimulator.simulateTimeScenarios(
       userId: userId, 
       realmId: realm.realmId, 
@@ -46,7 +46,7 @@ class OptimizationEngine {
       timeOptionsMinutes: simulationSteps,
     );
 
-    // 🔱 ROI Optimization Logic
+    // ROI Optimization Logic
     for (var minutes in simulationSteps) {
       // Projected probability for this time scenario
       double scenarioProb = (timeScenarios[minutes]?.projectedReadinessExamDay ?? 0.0) * realm.realmDifficultyScore;
@@ -61,7 +61,7 @@ class OptimizationEngine {
       }
     }
 
-    // 🔱 2. WEIGHTED RESOURCE ALLOCATION (Audit GAP Q-3)
+    // 2. WEIGHTED RESOURCE ALLOCATION (Audit GAP Q-3)
     // Redesigned to distribute time based on Readiness Gap, not flat rules.
     final Map<String, int> subjectMix = {};
     

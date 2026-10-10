@@ -1,5 +1,5 @@
 /**
- * 🔱 AAF WORKER RESULT
+ * AAF WORKER RESULT
  * Contract for worker output to the dispatcher.
  */
 export interface AafWorkerResult {

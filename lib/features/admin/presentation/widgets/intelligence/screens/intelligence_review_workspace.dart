@@ -58,10 +58,10 @@ class _IntelligenceReviewWorkspaceState extends State<IntelligenceReviewWorkspac
     return FounderSovereignScaffold(
       body: Row(
         children: [
-          // 🔱 LEFT: SOURCE PDF PREVIEW
+          // LEFT: SOURCE PDF PREVIEW
           Expanded(flex: 3, child: _buildPdfPreview()),
           
-          // 🔱 RIGHT: AI FINDINGS & VERIFICATION REPORT
+          // RIGHT: AI FINDINGS & VERIFICATION REPORT
           Expanded(flex: 2, child: _buildVerificationPanel(context)),
         ],
       ),

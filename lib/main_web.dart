@@ -5,7 +5,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:rank_crackers/core/admin/admin_guard.dart';
 import 'package:rank_crackers/shared/session/session_manager.dart';
 
 import 'firebase_options.dart';
@@ -335,7 +334,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 18,
                           child: CircularProgressIndicator(strokeWidth: 2),
                         )
-                      : Image.asset('assets/images/google.png', width: 18),
+                      : Image.asset('assets/images/Google.png', width: 18),
                   label: Text(
                     _googleBusy ? 'Connecting...' : 'Continue with Google',
                   ),
@@ -358,7 +357,6 @@ class WebShell extends StatefulWidget {
 }
 
 class _WebShellState extends State<WebShell> {
-  int _tab = 0;
   bool _isFounder = false;
   bool _isAdmin = false;
   bool _claimsLoaded = false;
@@ -435,43 +433,14 @@ class _WebShellState extends State<WebShell> {
         final roleMode =
             _isFounder ? ConsoleRoleMode.founder : ConsoleRoleMode.admin;
 
-        final destinations = [
-          const NavigationRailDestination(
-            icon: Icon(Icons.admin_panel_settings_outlined),
-            selectedIcon: Icon(Icons.admin_panel_settings),
-            label: Text('Command Center'),
-          ),
-        ];
-
-        // Only Founders see Mission Delivery Review by default
-        if (_isFounder) {
-          destinations.add(const NavigationRailDestination(
-            icon: Icon(Icons.visibility_outlined),
-            selectedIcon: Icon(Icons.visibility),
-            label: Text('Mission Delivery Review'),
-          ));
-        }
-
-        final pages = [
-          UnifiedCommandConsole(
-              roleMode: roleMode, permissions: permissions, userDoc: userDoc),
-          if (_isFounder) const UserConsole(),
-        ];
-
         return Scaffold(
           appBar: _buildCommandAppBar(roleMode),
-          body: Row(
-            children: [
-              NavigationRail(
-                backgroundColor: const Color(0xFF050A10),
-                selectedIndex: _tab,
-                onDestinationSelected: (value) => setState(() => _tab = value),
-                labelType: NavigationRailLabelType.all,
-                destinations: destinations,
-              ),
-              const VerticalDivider(width: 1, color: rcLine),
-              Expanded(child: pages[_tab]),
-            ],
+          body: UnifiedCommandConsole(
+            roleMode: roleMode,
+            permissions: permissions,
+            userDoc: userDoc,
+            founderDeliveryPreviewBuilder:
+                _isFounder ? (_) => const UserConsole() : null,
           ),
         );
       },
@@ -597,106 +566,230 @@ class UserConsole extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RcPagePad(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const RcPageTitle(
-            title: 'Mission Delivery Review',
-            subtitle:
-                'Review how published missions and variables appear in the student delivery stream.',
-          ),
-          const SizedBox(height: 16),
-          Expanded(
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                final cardWidth = constraints.maxWidth >= 1180
-                    ? (constraints.maxWidth - 32) / 3
-                    : constraints.maxWidth >= 760
-                        ? (constraints.maxWidth - 16) / 2
-                        : constraints.maxWidth;
-                return SingleChildScrollView(
-                  child: Wrap(
-                    spacing: 16,
-                    runSpacing: 16,
-                    children: [
-                      SizedBox(
-                        width: cardWidth,
-                        height: 260,
-                        child: const _DeliveryReviewCard(
-                          title: 'Notification Review',
-                          subtitle: 'How founder notices appear to students.',
-                          collection: 'notification_registry',
-                          icon: Icons.notifications_active_outlined,
-                        ),
-                      ),
-                      SizedBox(
-                        width: cardWidth,
-                        height: 260,
-                        child: const _DeliveryReviewCard(
-                          title: 'Mission Realm Review',
-                          subtitle:
-                              'Published mission cards visible in user panel.',
-                          collection: 'mission_realms',
-                          icon: Icons.account_tree_outlined,
-                        ),
-                      ),
-                      SizedBox(
-                        width: cardWidth,
-                        height: 260,
-                        child: const _DeliveryReviewCard(
-                          title: 'Recruitment Review',
-                          subtitle:
-                              'Recruitment stream as students discover it.',
-                          collection: 'recruitments',
-                          icon: Icons.work_outline_rounded,
-                        ),
-                      ),
-                      SizedBox(
-                        width: cardWidth,
-                        height: 260,
-                        child: const _DeliveryReviewCard(
-                          title: 'Syllabus Upload Review',
-                          subtitle:
-                              'Syllabus files uploaded by founder for delivery.',
-                          collection: 'ingestion_refinery',
-                          assetType: 'syllabus',
-                          icon: Icons.description_outlined,
-                        ),
-                      ),
-                      SizedBox(
-                        width: cardWidth,
-                        height: 260,
-                        child: const _DeliveryReviewCard(
-                          title: 'PYQ Upload Review',
-                          subtitle:
-                              'Previous-year papers visible after processing.',
-                          collection: 'ingestion_refinery',
-                          assetType: 'pyq',
-                          icon: Icons.history_edu_outlined,
-                        ),
-                      ),
-                      SizedBox(
-                        width: cardWidth,
-                        height: 260,
-                        child: const _DeliveryReviewCard(
-                          title: 'Study Material Review',
-                          subtitle:
-                              'Study downloads prepared for student access.',
-                          collection: 'ingestion_refinery',
-                          assetType: 'study_material',
-                          icon: Icons.menu_book_outlined,
-                        ),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        const RcPageTitle(
+          title: 'Mission Delivery Preview',
+          subtitle: 'What Students are currently receiving from each mission.',
+        ),
+        const SizedBox(height: 14),
+        Expanded(
+            child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
+          stream: FirebaseFirestore.instance
+              .collection('student_mission_catalog')
+              .snapshots(),
+          builder: (context, snapshot) {
+            if (snapshot.hasError)
+              return Center(
+                  child: Text('Delivery truth unavailable: ${snapshot.error}'));
+            if (!snapshot.hasData) return const RcCenteredLoader();
+            final docs = snapshot.data!.docs;
+            final live = docs.where((doc) {
+              final data = doc.data();
+              return data['cardVisible'] == true &&
+                  data['userPanelVisible'] == true &&
+                  data['archived'] != true;
+            }).toList();
+            final drafts = docs.where((doc) => !live.contains(doc)).toList();
+            return ListView(children: [
+              const Text('LIVE STUDENT MISSIONS',
+                  style: TextStyle(
+                      color: rcGold,
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.2)),
+              const SizedBox(height: 10),
+              _DeliveryMissionGrid(docs: live),
+              if (drafts.isNotEmpty) ...[
+                const SizedBox(height: 18),
+                const Text('FOUNDER DRAFTS',
+                    style: TextStyle(
+                        color: Colors.white54,
+                        fontSize: 11,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.2)),
+                const SizedBox(height: 10),
+                _DeliveryMissionGrid(docs: drafts),
+              ],
+              const SizedBox(height: 18),
+              ExpansionTile(
+                tilePadding: EdgeInsets.zero,
+                title: const Text('DELIVERY DETAILS',
+                    style: TextStyle(
+                        color: rcGold,
+                        fontSize: 11,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.2)),
+                subtitle: const Text(
+                    'Secondary notification and learning-asset review signals.'),
+                children: [
+                  SizedBox(
+                      height: 250,
+                      child: LayoutBuilder(builder: (context, constraints) {
+                        final width = constraints.maxWidth >= 1000
+                            ? (constraints.maxWidth - 24) / 3
+                            : constraints.maxWidth >= 650
+                                ? (constraints.maxWidth - 12) / 2
+                                : constraints.maxWidth;
+                        return SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(children: [
+                              SizedBox(
+                                  width: width,
+                                  child: const _DeliveryReviewCard(
+                                      title: 'Notification Delivery',
+                                      subtitle:
+                                          'Founder notices available to Student delivery.',
+                                      collection: 'notification_registry',
+                                      icon:
+                                          Icons.notifications_active_outlined)),
+                              const SizedBox(width: 12),
+                              SizedBox(
+                                  width: width,
+                                  child: const _DeliveryReviewCard(
+                                      title: 'Syllabus Delivery',
+                                      subtitle:
+                                          'Processed syllabus sources prepared for delivery.',
+                                      collection: 'ingestion_refinery',
+                                      assetType: 'syllabus',
+                                      icon: Icons.description_outlined)),
+                              const SizedBox(width: 12),
+                              SizedBox(
+                                  width: width,
+                                  child: const _DeliveryReviewCard(
+                                      title: 'Learning Material Delivery',
+                                      subtitle:
+                                          'Processed learning assets prepared for delivery.',
+                                      collection: 'ingestion_refinery',
+                                      assetType: 'study_material',
+                                      icon: Icons.menu_book_outlined)),
+                            ]));
+                      })),
+                ],
+              ),
+            ]);
+          },
+        )),
+      ]),
     );
   }
+}
+
+class _DeliveryMissionGrid extends StatelessWidget {
+  const _DeliveryMissionGrid({required this.docs});
+  final List<QueryDocumentSnapshot<Map<String, dynamic>>> docs;
+  @override
+  Widget build(BuildContext context) {
+    if (docs.isEmpty)
+      return const Text('No missions in this delivery state.',
+          style: TextStyle(color: Colors.white54));
+    return LayoutBuilder(builder: (context, constraints) {
+      final width = constraints.maxWidth >= 1050
+          ? (constraints.maxWidth - 24) / 3
+          : constraints.maxWidth >= 680
+              ? (constraints.maxWidth - 12) / 2
+              : constraints.maxWidth;
+      return Wrap(
+          spacing: 12,
+          runSpacing: 12,
+          children: docs
+              .map((doc) => SizedBox(
+                  width: width,
+                  child: _MissionDeliveryTruthCard(
+                      missionId: doc.id, catalog: doc.data())))
+              .toList());
+    });
+  }
+}
+
+class _MissionDeliveryTruthCard extends StatelessWidget {
+  const _MissionDeliveryTruthCard(
+      {required this.missionId, required this.catalog});
+  final String missionId;
+  final Map<String, dynamic> catalog;
+  @override
+  Widget build(BuildContext context) {
+    final title = (catalog['displayName'] ??
+            catalog['title'] ??
+            catalog['name'] ??
+            missionId)
+        .toString();
+    final live = catalog['cardVisible'] == true &&
+        catalog['userPanelVisible'] == true &&
+        catalog['archived'] != true;
+    final publication =
+        (catalog['studentPublicationState'] ?? (live ? 'LIVE' : 'DRAFT'))
+            .toString()
+            .toUpperCase();
+    return StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+      stream: FirebaseFirestore.instance
+          .collection('mission_realms')
+          .doc(missionId)
+          .snapshots(),
+      builder: (context, snapshot) {
+        final authority = snapshot.data?.exists == true;
+        return RcPanel(
+            child: Padding(
+                padding: const EdgeInsets.all(2),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(children: [
+                        Expanded(
+                            child: Text(title,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.w800))),
+                        Icon(
+                            live
+                                ? Icons.visibility
+                                : Icons.visibility_off_outlined,
+                            size: 18,
+                            color: live ? Colors.greenAccent : Colors.white38)
+                      ]),
+                      const SizedBox(height: 12),
+                      _deliveryFact('STUDENT VISIBILITY',
+                          live ? 'LIVE FOR STUDENTS' : 'NOT LIVE'),
+                      _deliveryFact(
+                          'DELIVERY STATUS', live ? 'DELIVERED' : 'DRAFT'),
+                      _deliveryFact(
+                          'PUBLICATION', publication.replaceAll('_', ' ')),
+                      _deliveryFact('MISSION AUTHORITY',
+                          authority ? 'COMPLETE' : 'AUTHORITY REPAIR REQUIRED',
+                          warn: !authority),
+                      const Divider(color: rcLine),
+                      Text(
+                          authority
+                              ? (live
+                                  ? 'Next action: Monitor delivery health.'
+                                  : 'Next action: Complete publish readiness.')
+                              : 'Next action: Repair Founder authority.',
+                          style: const TextStyle(
+                              fontSize: 11, color: Colors.white60)),
+                    ])));
+      },
+    );
+  }
+
+  Widget _deliveryFact(String label, String value, {bool warn = false}) =>
+      Padding(
+        padding: const EdgeInsets.only(bottom: 7),
+        child: Row(children: [
+          SizedBox(
+              width: 118,
+              child: Text(label,
+                  style: const TextStyle(
+                      fontSize: 9,
+                      color: Colors.white38,
+                      fontWeight: FontWeight.bold))),
+          Expanded(
+              child: Text(value,
+                  style: TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                      color: warn ? Colors.orangeAccent : Colors.white70)))
+        ]),
+      );
 }
 
 class _DeliveryReviewCard extends StatelessWidget {

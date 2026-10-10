@@ -1,18 +1,18 @@
 import 'dart:math';
 import '../../models/digibook_block.dart';
 
-/// 🔱 DISTRACTOR ENGINE
+/// DISTRACTOR ENGINE
 /// Logic for generating plausible wrong answers (distractors) without AI.
 class DistractorEngine {
   final Random _random = Random();
 
-  /// 🔱 Primary Logic: Pick distractors from siblings (same topic/context)
+  /// Primary Logic: Pick distractors from siblings (same topic/context)
   List<String> generateDistractors({
     required DigiBookBlock target,
     required List<DigiBookBlock> pool,
     int count = 3,
   }) {
-    // 🔱 Rule 1: Find blocks from the same atomic topic
+    // Rule 1: Find blocks from the same atomic topic
     final List<String> siblings = pool
         .where((b) => b.id != target.id && b.atomicTopicId == target.atomicTopicId)
         .map((b) => b.content)
@@ -25,7 +25,7 @@ class DistractorEngine {
       return siblings.take(count).toList();
     }
 
-    // 🔱 Rule 2: Fallback to general pool
+    // Rule 2: Fallback to general pool
     final List<String> generic = pool
         .where((b) => b.id != target.id && b.content != target.content)
         .map((b) => b.content)
@@ -39,7 +39,7 @@ class DistractorEngine {
       return combined.take(count).toList();
     }
 
-    // 🔱 Rule 3: Hardcoded Fallbacks: DISABLED
+    // Rule 3: Hardcoded Fallbacks: DISABLED
     // Return empty list to ensure zero fake academic content in production.
     return [];
   }

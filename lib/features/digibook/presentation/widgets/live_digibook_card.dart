@@ -6,7 +6,7 @@ import '../../models/digibook_content.dart';
 
 class LiveDigiBookCard extends StatelessWidget {
   final MicroTopicNode node;
-  final DigiBookContent payload; // 🔱 Decoupled
+  final DigiBookContent payload; // Decoupled
 
   const LiveDigiBookCard({
     super.key,
@@ -29,7 +29,7 @@ class LiveDigiBookCard extends StatelessWidget {
             height: 12,
           ),
           Text(
-            node.chapterHindi,
+            node.chapter.replaceAll('_', ' ').toUpperCase(),
             style: AppTypography.subtitle,
           ),
           const SizedBox(

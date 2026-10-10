@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:rank_crackers/core/models/drift_detection_node.dart';
 import 'package:rank_crackers/core/models/success_probability_node.dart';
 
-/// 🔱 STRATEGIC DRIFT DETECTOR (Blueprint v1.0 - Document 65)
+/// STRATEGIC DRIFT DETECTOR (Blueprint v1.0 - Document 65)
 /// Identifies scenarios where a student follows the plan but fails to gain readiness.
 class StrategicDriftDetector {
   
@@ -13,14 +13,14 @@ class StrategicDriftDetector {
     required SuccessProbabilityNode currentProbability,
     required double previousProbability,
   }) {
-    debugPrint("🔱 DRIFT DETECTOR: Auditing strategic alignment for $userId...");
+    debugPrint("DRIFT DETECTOR: Auditing strategic alignment for $userId...");
 
     final double delta = currentProbability.overallProbability - previousProbability;
     
     String status = 'STABLE';
     String reason = 'System performance within normal parameters.';
 
-    // 🔱 Drift Logic: compliance is high but probability is falling
+    // Drift Logic: compliance is high but probability is falling
     if (planCompliance > 80 && delta < -5) {
       status = 'DRIFTING';
       reason = 'High plan compliance failing to generate readiness. Strategy may be ineffective.';

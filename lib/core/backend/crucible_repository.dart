@@ -3,7 +3,7 @@ import '../../features/crucible/models/crucible_protocol_state.dart';
 import '../../features/crucible/models/crucible_schedule.dart';
 import '../firebase/firestore_service.dart';
 
-/// 🔱 CRUCIBLE REPOSITORY
+/// CRUCIBLE REPOSITORY
 /// Access layer for protocol states and tactical schedules.
 class CrucibleRepository {
   static Future<void> saveProtocolState(CrucibleProtocolState state) async {
@@ -12,10 +12,27 @@ class CrucibleRepository {
     await FirestoreService.saveProtocolState(user.uid, state);
   }
 
-  static Stream<CrucibleProtocolState?> streamProtocolState(String recruitmentId) {
+  static Stream<CrucibleProtocolState?> streamProtocolState(String recruitmentId) async* {
+    if (recruitmentId.isEmpty) {
+      print('CrucibleRepository: streamProtocolState - recruitmentId is empty (unresolved/loading state)');
+      yield null;
+      return;
+    }
     final user = FirebaseAuth.instance.currentUser;
-    if (user == null) return Stream.value(null);
-    return FirestoreService.streamProtocolState(user.uid, recruitmentId);
+    if (user == null) {
+      print('CrucibleRepository: streamProtocolState - user is null');
+      yield null;
+      return;
+    }
+    print('CrucibleRepository: streamProtocolState - uid: ${user.uid}, recruitmentId: $recruitmentId');
+    try {
+      await for (final state in FirestoreService.streamProtocolState(user.uid, recruitmentId)) {
+        yield state;
+      }
+    } catch (err) {
+      print('CrucibleRepository: streamProtocolState - caught error: $err');
+      yield null;
+    }
   }
 
   static Future<void> saveSchedule(CrucibleSchedule schedule) async {

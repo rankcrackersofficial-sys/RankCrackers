@@ -14,11 +14,7 @@ class MainNavigationShell extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final activeDashboardSection = ref.watch(dashboardActiveSectionProvider);
-    final int effectiveIndex = _calculateEffectiveIndex(
-      navigationShell.currentIndex,
-      activeDashboardSection,
-    );
+    final int effectiveIndex = navigationShell.currentIndex;
 
     return PopScope(
       canPop: false,
@@ -84,23 +80,6 @@ class MainNavigationShell extends ConsumerWidget {
         ),
       ),
     );
-  }
-
-  int _calculateEffectiveIndex(int currentIndex, DashboardSection section) {
-    if (currentIndex != 0) return currentIndex;
-
-    switch (section) {
-      case DashboardSection.crucible:
-        return 1;
-      case DashboardSection.digibook:
-        return 2;
-      case DashboardSection.syllabus:
-        return 3;
-      case DashboardSection.tools:
-        return 4;
-      default:
-        return 0;
-    }
   }
 
   Widget _navItem(

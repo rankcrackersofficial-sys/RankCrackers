@@ -10,6 +10,7 @@ plugins {
 android {
     namespace = "com.rankcrackers.app"
     compileSdk = 36
+    buildToolsVersion = "36.0.0"
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

@@ -1,5 +1,5 @@
 class SyncManager {
-  // 🔱 Orchestrates synchronization between local cache and cloud
+  // Orchestrates synchronization between local cache and cloud
   static Future<void> syncUp() async {
     // Push local changes to cloud
   }

@@ -169,6 +169,35 @@ async function main() {
     await assertSucceeds(founderDb.collection('system_config').doc('global').get());
   });
 
+  // 12.b Warrior Profiles Security Rules Tests
+  await runTestCase('Student can read their own warrior profile', async () => {
+    await testEnv.withSecurityRulesDisabled(async (context) => {
+      await context.firestore().collection('warrior_profiles').doc('student_user_123').set({ uid: 'student_user_123', gender: 'Male' });
+    });
+    await assertSucceeds(studentDb.collection('warrior_profiles').doc('student_user_123').get());
+  });
+
+  await runTestCase('Student can write their own warrior profile', async () => {
+    await assertSucceeds(studentDb.collection('warrior_profiles').doc('student_user_123').set({
+      uid: 'student_user_123',
+      educationRecords: [{ id: '1', level: 'Class 12', status: 'Completed' }]
+    }));
+  });
+
+  await runTestCase('Student cannot read another student\'s warrior profile', async () => {
+    await testEnv.withSecurityRulesDisabled(async (context) => {
+      await context.firestore().collection('warrior_profiles').doc('other_student_user').set({ uid: 'other_student_user', gender: 'Female' });
+    });
+    await assertFails(studentDb.collection('warrior_profiles').doc('other_student_user').get());
+  });
+
+  await runTestCase('Student cannot write another student\'s warrior profile', async () => {
+    await assertFails(studentDb.collection('warrior_profiles').doc('other_student_user').set({
+      uid: 'other_student_user',
+      educationRecords: [{ id: '2', level: 'Class 12', status: 'Completed' }]
+    }));
+  });
+
   // 13. Safe published_questions field allowlist checks (even for Founder!)
   await runTestCase('Founder CANNOT write published_questions document with answerIndex', async () => {
     await assertFails(founderDb.collection('published_questions').doc('pq_fail_1').set({
@@ -229,6 +258,57 @@ async function main() {
   await runTestCase('Founder CAN write to publication_registry', async () => {
     await assertSucceeds(founderDb.collection('publication_registry').doc('pub_q1').set({
       studentReady: true
+    }));
+  });
+
+  // 15. Content Payloads security checks
+  await runTestCase('Founder CAN write content_payloads with status', async () => {
+    await assertSucceeds(founderDb.collection('content_payloads').doc('cp_pub').set({
+      status: 'published',
+      nodeId: 'node_1'
+    }));
+    await assertSucceeds(founderDb.collection('content_payloads').doc('cp_draft').set({
+      status: 'draft',
+      nodeId: 'node_2'
+    }));
+    await assertSucceeds(founderDb.collection('content_payloads').doc('cp_quarantine').set({
+      status: 'quarantined',
+      nodeId: 'node_3'
+    }));
+    await assertSucceeds(founderDb.collection('content_payloads').doc('cp_archived').set({
+      status: 'archived',
+      nodeId: 'node_4'
+    }));
+  });
+
+  await runTestCase('Student CAN read published content payload cp_pub', async () => {
+    await assertSucceeds(studentDb.collection('content_payloads').doc('cp_pub').get());
+  });
+
+  await runTestCase('Student CANNOT read draft content payload cp_draft', async () => {
+    await assertFails(studentDb.collection('content_payloads').doc('cp_draft').get());
+  });
+
+  await runTestCase('Student CANNOT read quarantined content payload cp_quarantine', async () => {
+    await assertFails(studentDb.collection('content_payloads').doc('cp_quarantine').get());
+  });
+
+  await runTestCase('Student CANNOT read archived content payload cp_archived', async () => {
+    await assertFails(studentDb.collection('content_payloads').doc('cp_archived').get());
+  });
+
+  await runTestCase('Student CANNOT read non-existent content payload cp_non_existent', async () => {
+    await assertFails(studentDb.collection('content_payloads').doc('cp_non_existent').get());
+  });
+
+  await runTestCase('Unauthenticated user CANNOT read published content payload cp_pub', async () => {
+    await assertFails(anonDb.collection('content_payloads').doc('cp_pub').get());
+  });
+
+  await runTestCase('Student CANNOT write to content_payloads', async () => {
+    await assertFails(studentDb.collection('content_payloads').doc('cp_student_write').set({
+      status: 'published',
+      nodeId: 'node_1'
     }));
   });
 

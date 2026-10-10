@@ -5,19 +5,19 @@ import '../../backend/sentinel_repository.dart';
 import '../../services/truth_validation_service.dart';
 import '../refinery_ai_orchestrator.dart';
 
-/// 🔱 CANONICAL CORRECTION WORKER (v6 Hardened Authority)
+/// CANONICAL CORRECTION WORKER (v6 Hardened Authority)
 
-/// 🔱 CANONICAL CORRECTION WORKER (v6 Hardened Authority)
+/// CANONICAL CORRECTION WORKER (v6 Hardened Authority)
 /// Implements Phase 9 Step 2 & Phase 10: Semantic Repair + Truth Validation.
 class CanonicalCorrectionWorker {
   
-  /// 🔱 REPAIR PROTOCOL
+  /// REPAIR PROTOCOL
   static Future<void> repairText({
     required String sourceId,
     required String rawExtractedText,
     required String workerVersion,
   }) async {
-    debugPrint("🔱 CORRECTION WORKER: Initiating Abstracted AI Repair for $sourceId");
+    debugPrint("CORRECTION WORKER: Initiating Abstracted AI Repair for $sourceId");
 
     // 1. GEMINI REPAIR SYSTEM PROMPT
     const String systemPrompt = """
@@ -38,7 +38,7 @@ class CanonicalCorrectionWorker {
     """;
 
     try {
-      // 2. ORCHESTRATED AI CALL (Provider Abstraction) 🔱
+      // 2. ORCHESTRATED AI CALL (Provider Abstraction) 
       final orchestrated = await RefineryAIOrchestrator.repair(
         sourceId: sourceId,
         text: rawExtractedText,
@@ -51,14 +51,14 @@ class CanonicalCorrectionWorker {
       final String correctedText = repairResult['corrected_text'] ?? rawExtractedText;
       final List<dynamic> changes = repairResult['changes'] ?? [];
       
-      // 🔱 3. Phase 10: TRUTH VALIDATION LAYER
+      // 3. Phase 10: TRUTH VALIDATION LAYER
       final validation = await TruthValidationService.validate(correctedText, contextId: sourceId);
       final double confidence = validation['confidence'];
       final List<String> conflicts = List<String>.from(validation['conflicts']);
       final String recommendedAction = validation['recommendedAction'];
 
       // 4. Register in Sentinel Staging (Isolation Zone)
-      // 🔱 AUTHORITY GATE: Status is always 'draft' or 'verified_suggested'.
+      // AUTHORITY GATE: Status is always 'draft' or 'verified_suggested'.
       final draft = SentinelDraft(
         id: 'repair_draft_${DateTime.now().millisecondsSinceEpoch}_$sourceId',
         type: 'canonical_repair',
@@ -72,7 +72,7 @@ class CanonicalCorrectionWorker {
           'recommendedAction': recommendedAction,
           'system_prompt_version': '2.0',
         },
-        status: 'draft', // 🔱 ENFORCED: Must be human-approved.
+        status: 'draft', // ENFORCED: Must be human-approved.
         audit: AuditRecord(
           sourceUrl: 'rc://refinery/repair/$sourceId',
           sourceHash: 'raw_${rawExtractedText.hashCode}',
@@ -88,9 +88,9 @@ class CanonicalCorrectionWorker {
       );
 
       await SentinelRepository.injectDrafts([draft]);
-      debugPrint("🔱 CORRECTION WORKER: AI Repair Success. Confidence: $confidence. Staged for Human Approval.");
+      debugPrint("CORRECTION WORKER: AI Repair Success. Confidence: $confidence. Staged for Human Approval.");
     } catch (e) {
-      debugPrint("🔱 CORRECTION WORKER ERROR: AI Pipeline Failed - $e");
+      debugPrint("CORRECTION WORKER ERROR: AI Pipeline Failed - $e");
     }
   }
 }

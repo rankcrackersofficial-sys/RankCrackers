@@ -11,7 +11,7 @@ export const storageTrigger = functions.storage.object().onFinalize(async (objec
   // ===============================================
   if (path.includes('syllabus/')) {
     console.log('STARTING SYLLABUS BREAKDOWN WORKER');
-    // 🔱 AI Worker Logic to parse PDF/Text and insert into Firestore
+    // AI Worker Logic to parse PDF/Text and insert into Firestore
   }
 
   // ===============================================
@@ -19,6 +19,6 @@ export const storageTrigger = functions.storage.object().onFinalize(async (objec
   // ===============================================
   if (path.includes('pyq/')) {
     console.log('STARTING PYQ MAPPING WORKER');
-    // 🔱 AI Worker Logic to classify and link PYQs to MicroNodes
+    // AI Worker Logic to classify and link PYQs to MicroNodes
   }
 });

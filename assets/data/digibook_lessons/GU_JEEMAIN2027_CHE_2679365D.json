@@ -1,0 +1,252 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_CHE_2679365D",
+  "canonicalNodeId": "JEE_MAIN_2026_CHE_U01_T_00000004",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_CHE_2679365D_V001",
+  "atomicFactSetHash": "5d273898bc25a319573dd097172b2c76fa3becf05ef3c6e76b341df468295aaa",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2679365D_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2679365D",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2679365D_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8",
+        "AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "overviewText": "This Generation Unit covers the exponential representation of very large and very small chemical values using scientific notation $N \\times 10^n$, along with the algebraic rules for multiplication and division of exponents.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "4964493e2a04958bfbcdd52147ba7a018a45cd2b856252fbfe01ec634e9872a8",
+      "createdAtUtc": "2026-09-02T13:29:33.146Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2679365D_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2679365D",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2679365D_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8",
+        "AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_2679365D_CONCEPTS_01_SCIENTIFIC_NOTATION_FORMAT",
+          "semanticAnchorId": "ANCHOR_SCIENTIFIC_NOTATION_FORMAT",
+          "title": "1. Scientific Notation Format",
+          "contentMarkdown": "In chemistry, extremely large or small numbers are expressed in **scientific notation** as $N \\times 10^n$, where $N$ (the digit term) is a number between $1.000...$ and $9.999...$ and $n$ is an integer exponent (positive or negative). For example, the mass of a hydrogen atom is $1.66 \\times 10^{-24}\\text{ g}$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_CHE_2679365D_CONCEPTS_02_EXPONENTIAL_ARITHMETIC",
+          "semanticAnchorId": "ANCHOR_EXPONENTIAL_ARITHMETIC",
+          "title": "2. Exponential Arithmetic Rules",
+          "contentMarkdown": "In exponential arithmetic:\n- **Multiplication**: exponents are added: $(N_1 \\times 10^{n_1}) \\times (N_2 \\times 10^{n_2}) = (N_1 \\cdot N_2) \\times 10^{n_1 + n_2}$.\n- **Division**: exponents are subtracted: $\\frac{N_1 \\times 10^{n_1}}{N_2 \\times 10^{n_2}} = \\left(\\frac{N_1}{N_2}\\right) \\times 10^{n_1 - n_2}$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "c8c5735ee1c4b5584ba8346065ea67c8d7e93aa4513d18c9caaa3a8efb50aba6",
+      "createdAtUtc": "2026-09-02T13:29:33.146Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2679365D_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2679365D",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2679365D_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480",
+        "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Scientific Notation Canonical Form",
+          "formula": "N \\times 10^n \\quad (1.0 \\le N < 10, \\, n \\in \\mathbb{Z})",
+          "constraints": "Standard exponential notation",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480"
+          ]
+        },
+        {
+          "name": "Exponential Multiplication Rule",
+          "formula": "(N_1 \\times 10^{n_1}) \\times (N_2 \\times 10^{n_2}) = (N_1 \\cdot N_2) \\times 10^{n_1 + n_2}",
+          "constraints": "Exponents are added during multiplication",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8"
+          ]
+        },
+        {
+          "name": "Exponential Division Rule",
+          "formula": "\\frac{N_1 \\times 10^{n_1}}{N_2 \\times 10^{n_2}} = \\left(\\frac{N_1}{N_2}\\right) \\times 10^{n_1 - n_2}",
+          "constraints": "Exponents are subtracted during division",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "54cac7c769cdc130997fcfc6c214d5fdef0c587e1930f9c864a4fb99b1ae24cb",
+      "createdAtUtc": "2026-09-02T13:29:33.146Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2679365D_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2679365D",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2679365D_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No external empirical exam distractor / error telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.146Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2679365D_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2679365D",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2679365D_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480",
+        "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_CHE_2679365D_01_SCIENTIFIC_MULTIPLICATION",
+          "title": "Multiplication in Scientific Notation",
+          "problemStatement": "Evaluate $(5.6 \\times 10^5) \\times (6.9 \\times 10^8)$ in scientific notation.",
+          "stepByStepSolution": [
+            "Step 1: Multiply the digit terms: $5.6 \\times 6.9 = 38.64$.",
+            "Step 2: Add the exponents: $10^{5 + 8} = 10^{13}$.",
+            "Step 3: Combine and normalize so the digit term is between 1 and 10:\n$38.64 \\times 10^{13} = 3.864 \\times 10^{14}$."
+          ],
+          "finalAnswer": "3.864 x 10^14.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480",
+            "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "1666701a2f6371a8d2889dde269752ad2bd68f549f1a84eb4558a9392c46cde9",
+      "createdAtUtc": "2026-09-02T13:29:33.146Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2679365D_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2679365D",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2679365D_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480",
+        "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_CHE_2679365D_01_EXPONENT_DIVISION",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "What is the result of dividing $(2.7 \\times 10^{-3})$ by $(5.4 \\times 10^4)$ in scientific notation?",
+          "options": [
+            "$5.0 \\times 10^{-8}$",
+            "$0.5 \\times 10^{-7}$",
+            "$5.0 \\times 10^{-7}$",
+            "$5.0 \\times 10^1$"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Divide digit terms: $2.7 / 5.4 = 0.5$. Subtract exponents: $10^{-3 - 4} = 10^{-7}$. Normalize: $0.5 \\times 10^{-7} = 5.0 \\times 10^{-8}$.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480",
+            "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "7f8b62df90e4a16c159636518f25395d756af6c3eb800871dc035ab7e72fe27b",
+      "createdAtUtc": "2026-09-02T13:29:33.146Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_CHE_2679365D_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_CHE_2679365D",
+      "revisionId": "REV_GU_JEEMAIN2027_CHE_2679365D_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_CHE_2679365D_70D726B8",
+        "AF_GU_JEEMAIN2027_CHE_2679365D_F5D02480"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Expressing scientific measurements in standard exponential format",
+          "Performing exponential arithmetic operations in chemical calculations"
+        ],
+        "supportedQuestionFormats": [
+          "Single Choice MCQ (4 options)"
+        ],
+        "readinessStatement": "Covers essential prerequisites for scientific notation."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "c25df3f98459d777319f249099b8d9952623911e83cfb98fb951899c585d7491",
+      "createdAtUtc": "2026-09-02T13:29:33.146Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_CHEMISTRY_CLASS_11_PART1_CH01_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.146Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

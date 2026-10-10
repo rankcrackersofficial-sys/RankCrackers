@@ -77,11 +77,12 @@ final class StudentTreatmentDirective {
 }
 
 final class StudentTreatmentDecision {
-  static const int currentSchemaVersion = 2;
+  static const int currentSchemaVersion = 3;
 
   const StudentTreatmentDecision({
     required this.studentId,
     required this.targetAmtnId,
+    required this.missionId,
     required this.createdAtUtc,
     required this.directives,
     required this.schemaVersion,
@@ -89,12 +90,15 @@ final class StudentTreatmentDecision {
 
   final String studentId;
   final String targetAmtnId;
+  final String missionId;
   final DateTime createdAtUtc;
   final List<StudentTreatmentDirective> directives;
   final int schemaVersion;
 
   void validate() {
-    if (studentId.trim().isEmpty || targetAmtnId.trim().isEmpty) {
+    if (studentId.trim().isEmpty ||
+        targetAmtnId.trim().isEmpty ||
+        missionId.trim().isEmpty) {
       throw const FormatException('Decision identity must not be empty.');
     }
     if (!createdAtUtc.isUtc) {

@@ -1,28 +1,28 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 RECRUITMENT REALM (Blueprint v1.4 - Audit Hardened)
+/// RECRUITMENT REALM (Blueprint v1.4 - Audit Hardened)
 class RecruitmentRealm extends Equatable {
   final String realmId; 
-  final String examName; // 🔱 Audit GAP A-5: Exam-Centric Identity
+  final String examName; // Audit GAP A-5: Exam-Centric Identity
   final String recruitmentName;
   final String organization;
   final int examYear;
-  final String advertisementNumber; // 🔱 Primary identity linkage
-  final double realmDifficultyScore; // 🔱 Audit GAP Q-5: 0.0 to 1.0 (Competitive Factor)
+  final String advertisementNumber; // Primary identity linkage
+  final double realmDifficultyScore; // Audit GAP Q-5: 0.0 to 1.0 (Competitive Factor)
   
-  /// 🔱 STATUS FLOW: CANDIDATE -> VERIFIED -> READY -> DIGIBOOK_READY -> CRUCIBLE_READY -> ACTIVE -> LIVE
+  /// STATUS FLOW: CANDIDATE -> VERIFIED -> READY -> DIGIBOOK_READY -> CRUCIBLE_READY -> ACTIVE -> LIVE
   /// Founder Lifecycle States: ACTIVE, PASSIVE, ARCHIVED
   final String status; 
   
   final String notificationId; 
   final String syllabusId; 
 
-  // 🔱 ASSET REGISTRY (Sprint E.4)
-  final List<String> notificationIds; // 🔱 Hardened: Multiple Linkage Law
-  final List<String> syllabusIds; // 🔱 Hardened: Multiple Linkage Law
+  // ASSET REGISTRY (Sprint E.4)
+  final List<String> notificationIds; // Hardened: Multiple Linkage Law
+  final List<String> syllabusIds; // Hardened: Multiple Linkage Law
   final List<Map<String, dynamic>> assets;
   
-  // 🔱 REALM HEALTH FLAGS (Audit GAP-6 Hardening)
+  // REALM HEALTH FLAGS (Audit GAP-6 Hardening)
   final bool notificationVerified;
   final bool syllabusVerified;
   final bool pyqVerified;
@@ -44,7 +44,7 @@ class RecruitmentRealm extends Equatable {
   final Map<String, dynamic> metadata;
   final DateTime createdAt;
   final String createdBy;
-  final DateTime updatedAt; // 🔱 Audit Fix: Lifecycle Traceability
+  final DateTime updatedAt; // Audit Fix: Lifecycle Traceability
 
   const RecruitmentRealm({
     required this.realmId,
@@ -54,7 +54,7 @@ class RecruitmentRealm extends Equatable {
     required this.examYear,
     this.advertisementNumber = '',
     this.realmDifficultyScore = 0.85, 
-    this.status = 'PASSIVE', // 🔱 Default to Passive on creation
+    this.status = 'PASSIVE', // Default to Passive on creation
     required this.notificationId,
     required this.syllabusId,
     this.notificationIds = const [],

@@ -20,7 +20,7 @@ class RebuildZoneCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🔱 PREMIUM CARD DNA: Title
+          // PREMIUM CARD DNA: Title
           Text(
             'RESTORATION REQUIRED',
             style: AppTypography.cardTitle.copyWith(color: AppColors.error),
@@ -28,7 +28,7 @@ class RebuildZoneCard extends StatelessWidget {
 
           const SizedBox(height: 10),
 
-          // 🔱 PREMIUM CARD DNA: Subtitle
+          // PREMIUM CARD DNA: Subtitle
           Text(
             '$priorityTopic requires immediate reinforcement. Tactical rebuild protocol is now active.',
             style: AppTypography.subtitle,
@@ -36,7 +36,7 @@ class RebuildZoneCard extends StatelessWidget {
 
           const SizedBox(height: 18),
 
-          // 🔱 PREMIUM CARD DNA: Metric Row
+          // PREMIUM CARD DNA: Metric Row
           Row(
             children: [
               const Icon(

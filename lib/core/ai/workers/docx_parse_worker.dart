@@ -5,27 +5,27 @@ import '../../models/audit_record.dart';
 import '../../backend/sentinel_repository.dart';
 import '../../services/docx_extraction_service.dart';
 
-/// 🔱 DOCX PARSE WORKER (v2 Hardened)
+/// DOCX PARSE WORKER (v2 Hardened)
 /// Implements Phase 9: Real Structure Extraction from XML.
 class DocxParseWorker {
   
-  /// 🔱 EXTRACTION PROTOCOL
+  /// EXTRACTION PROTOCOL
   static Future<void> processDocx({
     required String recordId,
     required String fileHash,
     required String fileName,
     required String filePath,
   }) async {
-    debugPrint("🔱 DOCX WORKER: Physically parsing $fileName");
+    debugPrint("DOCX WORKER: Physically parsing $fileName");
 
     final file = File(filePath);
     if (!await file.exists()) {
-      debugPrint("🔱 DOCX WORKER ERROR: Source file not found.");
+      debugPrint("DOCX WORKER ERROR: Source file not found.");
       return;
     }
 
     try {
-      // 🔱 Step 1: Real XML Parsing
+      // Step 1: Real XML Parsing
       final extraction = await DocxExtractionService.extract(file);
       final List<Map<String, dynamic>> sections = extraction['sections'];
       final String fullText = extraction['fullText'];
@@ -63,9 +63,9 @@ class DocxParseWorker {
       );
 
       await SentinelRepository.injectDrafts([draft]);
-      debugPrint("🔱 DOCX WORKER: Physical structural extraction complete.");
+      debugPrint("DOCX WORKER: Physical structural extraction complete.");
     } catch (e) {
-      debugPrint("🔱 DOCX WORKER ERROR: $e");
+      debugPrint("DOCX WORKER ERROR: $e");
     }
   }
 }

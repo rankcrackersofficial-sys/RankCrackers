@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 CAMPAIGN TYPE (Blueprint v1.0 - Sprint N)
+/// CAMPAIGN TYPE (Blueprint v1.0 - Sprint N)
 enum CampaignType {
   RECOVERY,
   STRIKE,
@@ -8,7 +8,7 @@ enum CampaignType {
   FOUNDATION
 }
 
-/// 🔱 CAMPAIGN NODE (Blueprint v1.0 - Document 51)
+/// CAMPAIGN NODE (Blueprint v1.0 - Document 51)
 /// Represents a multi-day strategic objective (e.g., 7-Day Polity Recovery).
 class CampaignNode extends Equatable {
   final String id;
@@ -24,7 +24,7 @@ class CampaignNode extends Equatable {
   
   final Map<int, List<String>> dayWiseMissionTypes; // Day Number -> Mission Types
   
-  // 🔱 Audit Sprint Q: Evidence-Driven Tracking
+  // Audit Sprint Q: Evidence-Driven Tracking
   final List<String> completedMissionIds;
   final int totalScheduledMissions;
 

@@ -7,15 +7,15 @@ import 'package:rank_crackers/core/models/sentinel_draft.dart';
 import 'package:rank_crackers/core/models/audit_record.dart';
 import 'package:rank_crackers/core/backend/sentinel_repository.dart';
 
-/// 🔱 CRUCIBLE ASSEMBLY WORKER (Sprint H)
+/// CRUCIBLE ASSEMBLY WORKER (Sprint H)
 /// Pipeline: Verified DigiBook -> PYQ Graph -> Crucible Builder -> Crucible Nodes
 class CrucibleAssemblyWorker {
   
   static Future<void> assemble(RecruitmentRealm realm, List<DigiBookUnit> units) async {
-    debugPrint("🔱 CRUCIBLE WORKER: Initiating assembly for ${realm.realmId}...");
+    debugPrint("CRUCIBLE WORKER: Initiating assembly for ${realm.realmId}...");
 
     if (!realm.digibookVerified) {
-      debugPrint("🔱 CRUCIBLE WORKER ERROR: DigiBook not verified. Assembly blocked.");
+      debugPrint("CRUCIBLE WORKER ERROR: DigiBook not verified. Assembly blocked.");
       return;
     }
 
@@ -85,6 +85,6 @@ class CrucibleAssemblyWorker {
     );
 
     await SentinelRepository.injectDrafts([draft]);
-    debugPrint("🔱 CRUCIBLE WORKER: Assembly complete. ${nodeMaps.length} nodes staged for Founder review.");
+    debugPrint("CRUCIBLE WORKER: Assembly complete. ${nodeMaps.length} nodes staged for Founder review.");
   }
 }

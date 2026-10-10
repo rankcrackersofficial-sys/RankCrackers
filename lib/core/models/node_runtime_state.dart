@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 NODE RUNTIME STATE
+/// NODE RUNTIME STATE
 /// Separates volatile user-specific progress and live state from immutable content.
 class NodeRuntimeState extends Equatable {
   final String nodeId;
@@ -10,11 +10,11 @@ class NodeRuntimeState extends Equatable {
   final int revisionLevel;
   final int battlesWon;
   final int battlesLost;
-  final double totalStudyMinutes; // 🔱 Audit Fix: Precision recovery
+  final double totalStudyMinutes; // Audit Fix: Precision recovery
   final DateTime? lastStudiedAt;
   final DateTime? lastReviewed;
 
-  // 🔱 EVIDENCE CHAIN (Article 7 Audit Fix)
+  // EVIDENCE CHAIN (Article 7 Audit Fix)
   final double assessmentEvidence; 
   final double readingEvidence;
   final double revisionEvidence;

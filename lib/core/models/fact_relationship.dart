@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 FACT RELATIONSHIP (Document 50J Article 1.3)
+/// FACT RELATIONSHIP (Document 50J Article 1.3)
 /// Defines the connection between two Atomic Facts.
 /// Building block of the Persistent Knowledge Graph.
 class FactRelationship extends Equatable {

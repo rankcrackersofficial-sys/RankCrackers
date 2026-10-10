@@ -8,7 +8,7 @@ class BlueprintNode extends StatelessWidget {
   final String completed;
   final String running;
   final String locked;
-  final VoidCallback? onTap; // 🔱 Audit Fix: Added onTap
+  final VoidCallback? onTap; // Audit Fix: Added onTap
 
   const BlueprintNode({
     super.key,

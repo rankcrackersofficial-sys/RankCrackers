@@ -4,7 +4,7 @@ import 'package:rank_crackers/core/models/mastery_node.dart';
 import 'package:rank_crackers/core/models/coverage_node.dart';
 import 'package:rank_crackers/core/models/risk_node.dart';
 
-/// 🔱 FUSION ENGINE (Sprint K/L Hardened - Blueprint v1.1)
+/// FUSION ENGINE (Sprint K/L Hardened - Blueprint v1.1)
 /// Converts raw intelligence (Mastery/Coverage/Risk) into study actions.
 class FusionEngine {
   
@@ -13,18 +13,18 @@ class FusionEngine {
     required CoverageNode coverage,
     required RiskNode risk,
   }) {
-    debugPrint("🔱 FUSION ENGINE: Fusing intelligence for ${mastery.atomicTopicId}...");
+    debugPrint("FUSION ENGINE: Fusing intelligence for ${mastery.atomicTopicId}...");
 
     final List<String> reasons = [];
 
-    // 🔱 Priority Scoring Logic (1-100)
+    // Priority Scoring Logic (1-100)
     double priorityBase = ((100.0 - mastery.masteryScore) * 0.4) + 
                           ((100.0 - coverage.coverageScore) * 0.3) + 
                           (risk.riskScore * 0.3);
     
     int priorityScore = priorityBase.toInt().clamp(1, 100);
 
-    // 🔱 Decision Matrix & Reason Capture (Audit Sprint L)
+    // Decision Matrix & Reason Capture (Audit Sprint L)
     String action = "IGNORE";
 
     if (risk.riskScore >= 85) {

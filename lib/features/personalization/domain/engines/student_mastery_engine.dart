@@ -17,6 +17,7 @@ final class StudentMasteryEstimate {
   const StudentMasteryEstimate({
     required this.studentId,
     required this.amtnId,
+    required this.missionId,
     required this.calculatedAtUtc,
     required this.probability,
     required this.band,
@@ -27,6 +28,7 @@ final class StudentMasteryEstimate {
 
   final String studentId;
   final String amtnId;
+  final String missionId;
   final DateTime calculatedAtUtc;
   final double? probability;
   final StudentMasteryBand band;
@@ -53,11 +55,12 @@ final class StudentMasteryEngine {
   StudentMasteryEstimate calculate({
     required String studentId,
     required String amtnId,
+    required String missionId,
     required DateTime calculatedAtUtc,
     required Iterable<StudentEvidenceEvent> events,
   }) {
-    if (studentId.trim().isEmpty || amtnId.trim().isEmpty) {
-      throw const FormatException('studentId/amtnId must not be empty.');
+    if (studentId.trim().isEmpty || amtnId.trim().isEmpty || missionId.trim().isEmpty) {
+      throw const FormatException('studentId/amtnId/missionId must not be empty.');
     }
     if (!calculatedAtUtc.isUtc) {
       throw const FormatException('calculatedAtUtc must be UTC.');
@@ -70,11 +73,7 @@ final class StudentMasteryEngine {
     var excluded = 0;
 
     for (final event in events) {
-      if (event.studentId != studentId) {
-        excluded++;
-        continue;
-      }
-      if (event.amtnId != amtnId) {
+      if (event.studentId != studentId || event.missionId != missionId || event.amtnId != amtnId) {
         excluded++;
         continue;
       }
@@ -107,6 +106,7 @@ final class StudentMasteryEngine {
       return StudentMasteryEstimate(
         studentId: studentId,
         amtnId: amtnId,
+        missionId: missionId,
         calculatedAtUtc: calculatedAtUtc,
         probability: null,
         band: StudentMasteryBand.unknown,
@@ -120,6 +120,7 @@ final class StudentMasteryEngine {
     return StudentMasteryEstimate(
       studentId: studentId,
       amtnId: amtnId,
+      missionId: missionId,
       calculatedAtUtc: calculatedAtUtc,
       probability: probability,
       band: _band(probability),

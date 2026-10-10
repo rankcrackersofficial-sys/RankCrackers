@@ -1,11 +1,11 @@
 import '../../../../core/models/atomic_fact.dart';
 import '../../../../core/models/question_model.dart';
 
-/// 🔱 DIGIBOOK CONTENT PAYLOAD
+/// DIGIBOOK CONTENT PAYLOAD
 /// Decoupled heavy content layer for HyperScale performance.
 class DigiBookContent {
   final String nodeId;
-  final String learningOutcome; // 🔱 Article 30/36 Compliance
+  final String learningOutcome; // Article 30/36 Compliance
   
   // Immersive Text Layers
   final String beginnerContent;
@@ -31,7 +31,7 @@ class DigiBookContent {
   final List<QuestionModel> diagnosticMedium;
   final List<QuestionModel> diagnosticHard;
 
-  // 🔱 AUDIT TRAIL (Gap-2 Compliance)
+  // AUDIT TRAIL (Gap-2 Compliance)
   final Map<String, dynamic>? publicationAudit;
 
   const DigiBookContent({

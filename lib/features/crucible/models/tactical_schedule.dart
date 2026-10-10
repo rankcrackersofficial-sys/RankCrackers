@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import '../../../core/models/micro_topic_node.dart';
 
-/// 🔱 TACTICAL SCHEDULE (Hydrated)
+/// TACTICAL SCHEDULE (Hydrated)
 /// Represents the runtime instance of a 2-day block within the 100-Day Protocol.
 /// Contains the physically resolved MicroTopicNodes for immediate preparation.
 class TacticalSchedule extends Equatable {

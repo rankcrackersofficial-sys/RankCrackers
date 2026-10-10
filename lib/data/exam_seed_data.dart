@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 class ExamSeedData {
   static Map<String, List<Map<String, dynamic>>> get exams {
     if (!kDebugMode) {
-      // 🔱 FENCED: Seed data prohibited in release student truth.
+      // FENCED: Seed data prohibited in release student truth.
       return {};
     }
     return _exams;

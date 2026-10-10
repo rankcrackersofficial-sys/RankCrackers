@@ -3,13 +3,22 @@ import * as admin from 'firebase-admin';
 import { AafJobMetadata } from '../models/aafJob';
 
 /**
- * 🔱 AAF LIFECYCLE SERVICE
+ * AAF LIFECYCLE SERVICE
  * Governed authority for persistent state transitions.
  * Implements AAF-004C Logic.
  */
 export class AafLifecycleService {
   private repo = new AafQueueRepository();
-  private db = admin.firestore();
+  private _db?: admin.firestore.Firestore;
+
+  private get db(): admin.firestore.Firestore {
+    if (!this._db) {
+      this._db = admin.firestore();
+    }
+    return this._db;
+  }
+
+  constructor() {}
 
   /**
    * 🛡️ WAKE RETRY (retryWait -> ready)

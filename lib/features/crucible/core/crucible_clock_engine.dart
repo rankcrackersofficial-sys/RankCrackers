@@ -221,9 +221,9 @@ class CrucibleClockEngine {
     final elapsedWithinPhase = elapsedWithinCycle - phaseStartDuration;
 
     final studyDuration = Duration(hours: bp.schedulesPerPhase * bp.hoursPerSchedule);
-    final rebuildStart = studyDuration;
-    final macroStart = rebuildStart + Duration(hours: bp.rebuildDurationHours);
-    final macroEnd = macroStart + Duration(hours: bp.macroDurationHours);
+    final rebuildStart = studyDuration; // Day 13 start (288 hours)
+    final macroStart = rebuildStart + const Duration(days: 1); // Day 14 start (312 hours)
+    final phaseEnd = macroStart + const Duration(days: 1); // Phase end (336 hours)
 
     if (elapsedWithinPhase < rebuildStart) {
       final elapsedWithinSchedule = elapsedWithinPhase.inHours % bp.hoursPerSchedule;
@@ -233,7 +233,7 @@ class CrucibleClockEngine {
       return 'LEARNING';
     } else if (elapsedWithinPhase < macroStart) {
       return 'REBUILD';
-    } else if (elapsedWithinPhase < macroEnd) {
+    } else if (elapsedWithinPhase < phaseEnd) {
       return 'MACRO';
     } else {
       return 'RECOVERY';

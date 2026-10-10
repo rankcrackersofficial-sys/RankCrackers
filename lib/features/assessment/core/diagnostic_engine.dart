@@ -2,7 +2,7 @@ import '../models/cognitive_profile.dart';
 
 class DiagnosticEngine {
   // ===================================================
-  // ANALYZE TEST RESULTS 🔱
+  // ANALYZE TEST RESULTS 
   // ===================================================
   static CognitiveProfile generateProfile({
     required double memoryScore,
@@ -23,7 +23,7 @@ class DiagnosticEngine {
   }
 
   // ===================================================
-  // DETERMINE USER LEVEL 🔱
+  // DETERMINE USER LEVEL 
   // ===================================================
   static String determineLevel(CognitiveProfile profile) {
     double average = (profile.conceptualDepth + profile.analyticalAbility) / 2;

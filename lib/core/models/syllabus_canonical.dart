@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 SYLLABUS CANONICAL (Blueprint v1.0)
+/// SYLLABUS CANONICAL (Blueprint v1.0)
 /// The Constitutional Knowledge Contract for syllabus decomposition.
 class SyllabusCanonical extends Equatable {
   final String subject;

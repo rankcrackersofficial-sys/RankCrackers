@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-/// 🔱 PROFESSIONAL CREDENTIAL
+/// PROFESSIONAL CREDENTIAL
 /// Represents a dynamic professional qualification chip.
 class ProfessionalCredential extends Equatable {
   final String id;

@@ -4,51 +4,73 @@ import 'package:equatable/equatable.dart';
 import 'question_model.dart';
 import 'atomic_fact.dart';
 
-/// 🔱 MICRO TOPIC NODE (The Sovereign Index)
+/// MICRO TOPIC NODE (The Sovereign Index)
 /// Represents the pure Knowledge Index. Heavy content is decoupled.
 class MicroTopicNode extends Equatable {
   final String id;
   final String examId;
+  final String paperId;
   final String variantId;
   final String subjectId;
-  final String chapterId;
+  final String unitId;
+  final String chapterId; // Legacy alias for unitId
+  final String topicId;
   final String title;
   final String titleHindi;
-  final String learningOutcome; // 🔱 Article 35: Constitutional Learning Objective
+
+  // UNIVERSAL KNOWLEDGE IDENTITY (P1 - Additive)
+  final String? canonicalSubjectId;
+  final String? canonicalUnitId;
+  final String? canonicalTopicId;
+  final String? canonicalKnowledgeNodeId;
+
+  final String learningOutcome; // Article 35: Constitutional Learning Objective
   final String subjectHindi;
   final String chapterHindi;
   final String description;
 
-  // 🔱 THE SOVEREIGN POINTER
+  // THE SOVEREIGN POINTER
   final String contentRegistryId; // Maps to Storage/JSON payload
 
-  // 🔱 THE ATOMIC UNIT (Article 6)
+  // THE ATOMIC UNIT (Article 6)
   final List<String> atomicTopicIds; 
   final int factCount; 
 
-  // 🔱 THE RELATIONAL BACKBONE (Article 14)
+  // THE RELATIONAL BACKBONE (Article 14)
   final List<String> prerequisiteIds;
   final List<String> dependentIds;
   final List<String> relatedIds;
   final List<String> revisionChainIds;
 
-  // 🔱 METADATA
+  // METADATA
   final int difficulty;
   final int importance;
   final int weightage;
   final String status;
   
-  // 🔱 DIAGNOSTIC FIELDS (Article 15)
+  // DIAGNOSTIC FIELDS (Article 15)
   final bool isDiagnosticEligible;
   final int pyqFrequency;
 
-  // 🔱 ADMINISTRATIVE METADATA
+  // ADMINISTRATIVE METADATA
   final String sourceBook;
   final String sourcePage;
   final String sourceUploadId;
   final String? promotionBatchId;
 
-  // 🔱 DECOUPLED CONTENT PROXIES (For stability during transition)
+  // GOVERNANCE PUBLICATION CONTRACT METADATA
+  final bool studentVisibilityAuthorized;
+  final bool isSynthetic;
+  final bool isStructuralHold;
+  final bool isStale;
+  final bool sourceApproved;
+  final String verificationStatus;
+  final String? canonicalAtomId;
+  final String? canonicalMissionId;
+  final String? approvedSourceId;
+  final String? verificationId;
+
+  // DECOUPLED CONTENT PROXIES (For stability during transition)
   String get beginnerContent => '';
   String get intermediateContent => '';
   String get proContent => '';
@@ -67,11 +89,18 @@ class MicroTopicNode extends Equatable {
   const MicroTopicNode({
     required this.id,
     required this.examId,
+    this.paperId = '',
     this.variantId = '',
     required this.subjectId,
+    this.unitId = '',
     required this.chapterId,
+    this.topicId = '',
     required this.title,
     required this.titleHindi,
+    this.canonicalSubjectId,
+    this.canonicalUnitId,
+    this.canonicalTopicId,
+    this.canonicalKnowledgeNodeId,
     this.learningOutcome = '',
     required this.subjectHindi,
     required this.chapterHindi,
@@ -93,9 +122,19 @@ class MicroTopicNode extends Equatable {
     this.sourcePage = '',
     this.sourceUploadId = '',
     this.promotionBatchId,
+    this.studentVisibilityAuthorized = false,
+    this.isSynthetic = false,
+    this.isStructuralHold = false,
+    this.isStale = false,
+    this.sourceApproved = false,
+    this.verificationStatus = 'UNVERIFIED',
+    this.canonicalAtomId,
+    this.canonicalMissionId,
+    this.approvedSourceId,
+    this.verificationId,
   });
 
-  // 🔱 LEGACY GETTERS FOR STABILIZATION
+  // LEGACY GETTERS FOR STABILIZATION
   String get subject => subjectId;
   String get chapter => chapterId;
   String get topic => title;
@@ -106,11 +145,18 @@ class MicroTopicNode extends Equatable {
     return {
       'id': id,
       'examId': examId,
+      'paperId': paperId,
       'variantId': variantId,
       'subjectId': subjectId,
+      'unitId': unitId,
       'chapterId': chapterId,
+      'topicId': topicId,
       'title': title,
       'titleHindi': titleHindi,
+      'canonicalSubjectId': canonicalSubjectId,
+      'canonicalUnitId': canonicalUnitId,
+      'canonicalTopicId': canonicalTopicId,
+      'canonicalKnowledgeNodeId': canonicalKnowledgeNodeId,
       'learningOutcome': learningOutcome,
       'subjectHindi': subjectHindi,
       'chapterHindi': chapterHindi,
@@ -132,6 +178,16 @@ class MicroTopicNode extends Equatable {
       'sourcePage': sourcePage,
       'sourceUploadId': sourceUploadId,
       'promotionBatchId': promotionBatchId,
+      'studentVisibilityAuthorized': studentVisibilityAuthorized,
+      'isSynthetic': isSynthetic,
+      'isStructuralHold': isStructuralHold,
+      'isStale': isStale,
+      'sourceApproved': sourceApproved,
+      'verificationStatus': verificationStatus,
+      'canonicalAtomId': canonicalAtomId,
+      'canonicalMissionId': canonicalMissionId,
+      'approvedSourceId': approvedSourceId,
+      'verificationId': verificationId,
     };
   }
 
@@ -139,11 +195,18 @@ class MicroTopicNode extends Equatable {
     return MicroTopicNode(
       id: map['id'] ?? '',
       examId: map['examId'] ?? '',
+      paperId: map['paperId'] ?? '',
       variantId: map['variantId'] ?? '',
       subjectId: map['subjectId'] ?? '',
+      unitId: map['unitId'] ?? map['chapterId'] ?? '',
       chapterId: map['chapterId'] ?? '',
+      topicId: map['topicId'] ?? '',
       title: map['title'] ?? '',
       titleHindi: map['titleHindi'] ?? '',
+      canonicalSubjectId: map['canonicalSubjectId'],
+      canonicalUnitId: map['canonicalUnitId'],
+      canonicalTopicId: map['canonicalTopicId'],
+      canonicalKnowledgeNodeId: map['canonicalKnowledgeNodeId'],
       learningOutcome: map['learningOutcome'] ?? '',
       subjectHindi: map['subjectHindi'] ?? '',
       chapterHindi: map['chapterHindi'] ?? '',
@@ -165,17 +228,34 @@ class MicroTopicNode extends Equatable {
       sourcePage: map['sourcePage'] ?? '',
       sourceUploadId: map['sourceUploadId'] ?? '',
       promotionBatchId: map['promotionBatchId'],
+      studentVisibilityAuthorized: map['studentVisibilityAuthorized'] ?? false,
+      isSynthetic: map['isSynthetic'] ?? (map['description'] == "Materialized via RELIABILITY FF01 progressive publication."),
+      isStructuralHold: map['isStructuralHold'] ?? (map['status'] == 'structural_hold' || map['status'] == 'HOLD'),
+      isStale: map['isStale'] ?? false,
+      sourceApproved: map['sourceApproved'] ?? false,
+      verificationStatus: map['verificationStatus'] ?? 'UNVERIFIED',
+      canonicalAtomId: map['canonicalAtomId'],
+      canonicalMissionId: map['canonicalMissionId'],
+      approvedSourceId: map['approvedSourceId'],
+      verificationId: map['verificationId'],
     );
   }
 
   MicroTopicNode copyWith({
     String? id,
     String? examId,
+    String? paperId,
     String? variantId,
     String? subjectId,
+    String? unitId,
     String? chapterId,
+    String? topicId,
     String? title,
     String? titleHindi,
+    String? canonicalSubjectId,
+    String? canonicalUnitId,
+    String? canonicalTopicId,
+    String? canonicalKnowledgeNodeId,
     String? learningOutcome,
     String? subjectHindi,
     String? chapterHindi,
@@ -201,11 +281,18 @@ class MicroTopicNode extends Equatable {
     return MicroTopicNode(
       id: id ?? this.id,
       examId: examId ?? this.examId,
+      paperId: paperId ?? this.paperId,
       variantId: variantId ?? this.variantId,
       subjectId: subjectId ?? this.subjectId,
+      unitId: unitId ?? this.unitId,
       chapterId: chapterId ?? this.chapterId,
+      topicId: topicId ?? this.topicId,
       title: title ?? this.title,
       titleHindi: titleHindi ?? this.titleHindi,
+      canonicalSubjectId: canonicalSubjectId ?? this.canonicalSubjectId,
+      canonicalUnitId: canonicalUnitId ?? this.canonicalUnitId,
+      canonicalTopicId: canonicalTopicId ?? this.canonicalTopicId,
+      canonicalKnowledgeNodeId: canonicalKnowledgeNodeId ?? this.canonicalKnowledgeNodeId,
       learningOutcome: learningOutcome ?? this.learningOutcome,
       subjectHindi: subjectHindi ?? this.subjectHindi,
       chapterHindi: chapterHindi ?? this.chapterHindi,
@@ -236,11 +323,18 @@ class MicroTopicNode extends Equatable {
   List<Object?> get props => [
         id,
         examId,
+        paperId,
         variantId,
         subjectId,
+        unitId,
         chapterId,
+        topicId,
         title,
         titleHindi,
+        canonicalSubjectId,
+        canonicalUnitId,
+        canonicalTopicId,
+        canonicalKnowledgeNodeId,
         learningOutcome,
         subjectHindi,
         chapterHindi,

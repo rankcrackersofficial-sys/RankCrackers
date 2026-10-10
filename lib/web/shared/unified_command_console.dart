@@ -1,4 +1,3 @@
-import 'dart:html' as html;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:crypto/crypto.dart';
 import 'package:file_picker/file_picker.dart';
@@ -13,6 +12,7 @@ import 'package:rank_crackers/web/shared/rc_file_helpers.dart';
 
 import 'package:rank_crackers/core/admin/admin_permission_resolver.dart';
 import '../founder/mission_control/mission_control_room.dart';
+import '../founder/mission_control/mission_publish_readiness_panel.dart';
 import '../founder/study_master/study_master_library_web.dart';
 import '../founder/ingestion/ingestion_review_web.dart';
 import '../founder/intelligence/intelligence_room_web.dart';
@@ -36,6 +36,7 @@ class UnifiedCommandConsole extends StatefulWidget {
   final Map<String, dynamic> permissions;
   final Map<String, dynamic> userDoc;
   final String? initialTaskId;
+  final WidgetBuilder? founderDeliveryPreviewBuilder;
 
   const UnifiedCommandConsole({
     super.key,
@@ -43,6 +44,7 @@ class UnifiedCommandConsole extends StatefulWidget {
     required this.permissions,
     required this.userDoc,
     this.initialTaskId,
+    this.founderDeliveryPreviewBuilder,
   });
 
   @override
@@ -177,32 +179,57 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
     if (_subTab >= modules.length) _subTab = 0;
 
     final currentModule = modules[_subTab];
+    final currentGroup = currentModule.group;
+    final groupedModules =
+        modules.where((module) => module.group == currentGroup).toList();
 
     return Scaffold(
       backgroundColor: Colors.transparent,
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(60),
+        preferredSize: const Size.fromHeight(102),
         child: Container(
           decoration: const BoxDecoration(
             color: Color(0xFF050A10),
             border: Border(bottom: BorderSide(color: rcLine)),
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(
+              SizedBox(
+                height: 42,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: _moduleGroups
+                              .map((group) =>
+                                  _groupButton(group, currentGroup, modules))
+                              .toList(),
+                        ),
+                      ),
+                    ),
+                    if (MediaQuery.sizeOf(context).width >= 1180) ...[
+                      const SizedBox(width: 16),
+                      _buildIdentityHeader(),
+                    ],
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 54,
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: List.generate(modules.length, (index) {
-                      return _subTabButton(modules[index].label, index);
-                    }),
+                    children: groupedModules
+                        .map((module) => _subTabButton(
+                            module.label, modules.indexOf(module)))
+                        .toList(),
                   ),
                 ),
               ),
-              const SizedBox(width: 16),
-              _buildIdentityHeader(),
             ],
           ),
         ),
@@ -221,29 +248,44 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
 
     if (isFounder) {
       list.add(_ConsoleModule(
+          group: 'MISSION & DELIVERY',
           label: 'Mission Control',
           builder: (_) =>
               const MissionControlRoom(roleMode: ConsoleRoleMode.founder)));
+      if (widget.founderDeliveryPreviewBuilder != null) {
+        list.add(_ConsoleModule(
+            group: 'MISSION & DELIVERY',
+            label: 'Mission Delivery Preview',
+            builder: widget.founderDeliveryPreviewBuilder!));
+      }
       list.add(_ConsoleModule(
+          group: 'CONTENT PIPELINE',
           label: 'Document Command Center',
           builder: (_) => const DocumentCommandCenter()));
       list.add(_ConsoleModule(
+          group: 'CONTENT PIPELINE',
           label: 'Verification Center',
           builder: (_) => _buildVerificationCenterLanding()));
       list.add(_ConsoleModule(
-          label: 'Factory Hub', builder: (_) => _buildFactoryHubLanding()));
+          group: 'CONTENT PIPELINE',
+          label: 'Factory Hub',
+          builder: (_) => _buildFactoryHubLanding()));
       list.add(_ConsoleModule(
+          group: 'CONTENT PIPELINE',
+          label: 'Publish Gate',
+          builder: (_) => _buildPublishGateLanding()));
+      list.add(_ConsoleModule(
+          group: 'STUDENT & HEALTH',
+          label: 'Student Delivery Health',
+          builder: (_) => const FounderStudentHealthWeb()));
+      list.add(_ConsoleModule(
+          group: 'SYSTEM & GOVERNANCE',
           label: 'Admin Governance',
           builder: (_) => const AccessSecurityWeb()));
       list.add(_ConsoleModule(
-          label: 'Publish Gate', builder: (_) => _buildPublishGateLanding()));
-      list.add(_ConsoleModule(
+          group: 'SYSTEM & GOVERNANCE',
           label: 'System Ops / Dev Mode',
-          builder: (_) => const _SystemOpsWithDeliveryHealth()));
-      list.add(_ConsoleModule(
-          label: 'Study Master Library',
-          builder: (_) =>
-              const StudyMasterLibraryWeb(roleMode: ConsoleRoleMode.founder)));
+          builder: (_) => const FounderSystemOperationsWeb()));
     } else {
       // Admin Mode - Dynamic filtering using central resolver
       list.add(_ConsoleModule(
@@ -383,7 +425,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
       subtitle: 'Audit and verify academic data before Crucible linkage.',
       items: [
         _LandingItem(
-          title: 'Syllabus Atom Review',
+          title: 'Syllabus Verification',
           subtitle: 'Verify extracted topics and hierarchy.',
           icon: Icons.fact_check_rounded,
           onTap: () {
@@ -405,7 +447,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           },
         ),
         _LandingItem(
-          title: 'PYQ Question Review',
+          title: 'PYQ Verification',
           subtitle: 'Audit LaTeX, answers, and atom mapping.',
           icon: Icons.quiz_rounded,
           onTap: () {
@@ -427,7 +469,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           },
         ),
         _LandingItem(
-          title: 'Exam Rule Review',
+          title: 'Exam Rule Verification',
           subtitle: 'Verify extracted notification facts.',
           icon: Icons.gavel_rounded,
           onTap: () {
@@ -503,9 +545,14 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
   }
 
   Widget _buildPublishGateLanding() {
+    final missionId = MissionControlRoom.selectedMissionId;
+    if (missionId != null && missionId.isNotEmpty) {
+      return MissionPublishReadinessPanel(missionId: missionId);
+    }
     return _PremiumLandingPage(
       title: 'PUBLISH GATE',
-      subtitle: 'Final student visibility control and rollback.',
+      subtitle:
+          'Select a mission in Mission Control to review its release readiness and governed publication actions.',
       items: [
         _LandingItem(
           title: 'Student Visibility Gate',
@@ -551,12 +598,41 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
     );
   }
 
+  Widget _groupButton(
+      String group, String activeGroup, List<_ConsoleModule> modules) {
+    final active = group == activeGroup;
+    return Padding(
+      padding: const EdgeInsets.only(right: 6),
+      child: TextButton(
+        onPressed: () {
+          final index = modules.indexWhere((module) => module.group == group);
+          if (index >= 0) setState(() => _subTab = index);
+        },
+        style: TextButton.styleFrom(
+          foregroundColor: active ? rcGold : Colors.white54,
+          backgroundColor:
+              active ? rcGold.withValues(alpha: 0.08) : Colors.transparent,
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+        ),
+        child: Text(group,
+            style: TextStyle(
+              fontSize: 9,
+              letterSpacing: 0.7,
+              fontWeight: active ? FontWeight.w800 : FontWeight.w600,
+            )),
+      ),
+    );
+  }
+
   Widget _subTabButton(String label, int index) {
     final active = _subTab == index;
     return InkWell(
       onTap: () => setState(() => _subTab = index),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        constraints: const BoxConstraints(minHeight: 48),
+        alignment: Alignment.center,
+        padding: const EdgeInsets.fromLTRB(24, 11, 24, 10),
         decoration: BoxDecoration(
           border: Border(
             bottom: BorderSide(
@@ -570,6 +646,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           style: TextStyle(
             color: active ? rcGold : Colors.white60,
             fontWeight: active ? FontWeight.w800 : FontWeight.normal,
+            height: 1.2,
           ),
         ),
       ),
@@ -578,39 +655,19 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
 }
 
 class _ConsoleModule {
+  final String group;
   final String label;
   final WidgetBuilder builder;
-  _ConsoleModule({required this.label, required this.builder});
+  _ConsoleModule(
+      {this.group = 'OPERATIONS', required this.label, required this.builder});
 }
 
-class _SystemOpsWithDeliveryHealth extends StatelessWidget {
-  const _SystemOpsWithDeliveryHealth();
-
-  @override
-  Widget build(BuildContext context) {
-    return const DefaultTabController(
-      length: 2,
-      child: Column(
-        children: [
-          TabBar(
-            tabs: [
-              Tab(text: 'SYSTEM OPERATIONS'),
-              Tab(text: 'STUDENT DELIVERY HEALTH'),
-            ],
-          ),
-          Expanded(
-            child: TabBarView(
-              children: [
-                FounderSystemOperationsWeb(),
-                FounderStudentHealthWeb(),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
+const _moduleGroups = [
+  'MISSION & DELIVERY',
+  'CONTENT PIPELINE',
+  'STUDENT & HEALTH',
+  'SYSTEM & GOVERNANCE',
+];
 
 class _PremiumLandingPage extends StatelessWidget {
   final String title;
@@ -630,65 +687,63 @@ class _PremiumLandingPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           RcPageTitle(title: title, subtitle: subtitle),
-          const SizedBox(height: 32),
+          const SizedBox(height: 18),
           Expanded(
-            child: GridView.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 24,
-                mainAxisSpacing: 24,
-                childAspectRatio: 1.6,
-              ),
-              itemCount: items.length,
-              itemBuilder: (context, index) {
-                final item = items[index];
-                return RcPanel(
-                  child: InkWell(
-                    onTap: item.onTap,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Icon(item.icon, color: rcGold, size: 32),
-                          const Spacer(),
-                          Text(
-                            item.title,
-                            style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            item.subtitle,
-                            style: const TextStyle(
-                              color: Colors.white38,
-                              fontSize: 12,
-                            ),
-                          ),
-                          const SizedBox(height: 12),
-                          const Row(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                return GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                    maxCrossAxisExtent: 360,
+                    mainAxisExtent: 170,
+                    crossAxisSpacing: 14,
+                    mainAxisSpacing: 14,
+                  ),
+                  itemCount: items.length,
+                  itemBuilder: (context, index) {
+                    final item = items[index];
+                    return RcPanel(
+                      child: InkWell(
+                        onTap: item.onTap,
+                        child: Padding(
+                          padding: const EdgeInsets.all(16),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                'OPEN MODULE',
-                                style: TextStyle(
-                                  color: rcGold,
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1,
-                                ),
-                              ),
-                              SizedBox(width: 4),
-                              Icon(Icons.arrow_forward_rounded,
-                                  color: rcGold, size: 12),
+                              Icon(item.icon, color: rcGold, size: 24),
+                              const Spacer(),
+                              Text(item.title,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                  )),
+                              const SizedBox(height: 4),
+                              Text(item.subtitle,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    color: Colors.white54,
+                                    fontSize: 11,
+                                  )),
+                              const SizedBox(height: 10),
+                              const Row(children: [
+                                Text('OPEN',
+                                    style: TextStyle(
+                                      color: rcGold,
+                                      fontSize: 9,
+                                      fontWeight: FontWeight.bold,
+                                      letterSpacing: 1,
+                                    )),
+                                SizedBox(width: 4),
+                                Icon(Icons.arrow_forward_rounded,
+                                    color: rcGold, size: 12),
+                              ]),
                             ],
                           ),
-                        ],
+                        ),
                       ),
-                    ),
-                  ),
+                    );
+                  },
                 );
               },
             ),

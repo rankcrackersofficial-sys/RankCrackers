@@ -1,0 +1,260 @@
+{
+  "generationUnitId": "GU_JEEMAIN2027_PHY_3D48D86E",
+  "canonicalNodeId": "JEE_MAIN_2026_PHY_U06_T_00000001",
+  "canonicalMissionId": "jee_main_2027",
+  "revisionId": "REV_GU_JEEMAIN2027_PHY_3D48D86E_V001",
+  "atomicFactSetHash": "a83b24c66dd4b80d76d192eeedee7ce1367f360617a8f4651169377b640785ba",
+  "components": {
+    "overview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_3D48D86E_OVERVIEW",
+      "componentType": "overview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_3D48D86E",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_3D48D86E_V001",
+      "displayOrder": 1,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_2CD2F7CD",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_3A97E189",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_4EE99DEA",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_7EDBECE1",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_80F5B79F",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_9DE21698",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_D9FC3B34"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH08_OFFICIAL"
+      ],
+      "overviewText": "This chapter formulates Keplers three empirical laws of planetary motion, areal velocity constancy, and the Law of Periods.",
+      "verificationStatus": "VERIFIED",
+      "contentHash": "17697e8974e4f44cb910e01bee4ded26f93e605ab992756f2caf0300fae87ad6",
+      "createdAtUtc": "2026-09-02T13:29:33.064Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "concepts": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_3D48D86E_CONCEPTS",
+      "componentType": "concepts",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_3D48D86E",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_3D48D86E_V001",
+      "displayOrder": 2,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_2CD2F7CD",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_3A97E189",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_4EE99DEA",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_7EDBECE1",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_80F5B79F",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_9DE21698",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_D9FC3B34"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH08_OFFICIAL"
+      ],
+      "blocks": [
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_3D48D86E_CONCEPTS_01_FIRST_AND_SECOND_LAWS",
+          "semanticAnchorId": "ANCHOR_KEPLER_ORBITS_AREAS",
+          "title": "1. Keplers First Law (Orbits) and Second Law (Areas)",
+          "contentMarkdown": "Keplers First Law: Planets move in elliptical orbits with the Sun at one focus (closest is perihelion, farthest is aphelion). Keplers Second Law: Areal velocity is constant ($$dA/dt = L/(2m) = \\\\text{const}$$), meaning speed is maximum at perihelion and minimum at aphelion due to angular momentum conservation.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_3D48D86E_7EDBECE1",
+            "AF_GU_JEEMAIN2027_PHY_3D48D86E_9DE21698",
+            "AF_GU_JEEMAIN2027_PHY_3D48D86E_3A97E189",
+            "AF_GU_JEEMAIN2027_PHY_3D48D86E_D9FC3B34",
+            "AF_GU_JEEMAIN2027_PHY_3D48D86E_2CD2F7CD",
+            "AF_GU_JEEMAIN2027_PHY_3D48D86E_80F5B79F"
+          ]
+        },
+        {
+          "blockId": "BLK_GU_JEEMAIN2027_PHY_3D48D86E_CONCEPTS_02_THIRD_LAW",
+          "semanticAnchorId": "ANCHOR_KEPLER_PERIODS",
+          "title": "2. Keplers Third Law (Law of Periods)",
+          "contentMarkdown": "Keplers Third Law states that the square of orbital period $T$ is proportional to the cube of semi-major axis $a$: $$T^2 \\\\propto a^3$$.",
+          "boundAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_3D48D86E_4EE99DEA"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "c132d137a213c0861521a059d01212b0c5783c14354e4c54353753153169f323",
+      "createdAtUtc": "2026-09-02T13:29:33.064Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "formulaRegister": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_3D48D86E_FORMULAREGISTER",
+      "componentType": "formulaRegister",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_3D48D86E",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_3D48D86E_V001",
+      "displayOrder": 3,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_4EE99DEA",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_D9FC3B34"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH08_OFFICIAL"
+      ],
+      "formulaTable": [
+        {
+          "name": "Keplers Third Law",
+          "formula": "T^2 \\\\propto a^3",
+          "constraints": "Planetary orbital period T, semi-major axis a",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_3D48D86E_4EE99DEA"
+          ]
+        },
+        {
+          "name": "Areal Velocity Invariance",
+          "formula": "\\\\frac{dA}{dt} = \\\\frac{L}{2m} = \\\\text{Constant}",
+          "constraints": "Central gravitational force field",
+          "boundFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_3D48D86E_D9FC3B34"
+          ]
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "8f48fa57087c1b6628be067aad10cbd7bd84689c10db8012a05447f328c805dd",
+      "createdAtUtc": "2026-09-02T13:29:33.064Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "commonMisconceptions": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_3D48D86E_COMMONMISCONCEPTIONS",
+      "componentType": "commonMisconceptions",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_3D48D86E",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_3D48D86E_V001",
+      "displayOrder": 4,
+      "status": "EVIDENCE_NOT_AVAILABLE",
+      "statusReason": "No empirical exam distractor telemetry dataset bound to this GU yet. In accordance with zero-guessing policy, this component is honestly marked evidence not available.",
+      "atomicFactIds": [],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH08_OFFICIAL"
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "d4c38ea6a31f5314982233a03a222020b47aef2c4709ba8f9a51495d822884af",
+      "createdAtUtc": "2026-09-02T13:29:33.064Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "workedExamples": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_3D48D86E_WORKEDEXAMPLES",
+      "componentType": "workedExamples",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_3D48D86E",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_3D48D86E_V001",
+      "displayOrder": 5,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_4EE99DEA"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH08_OFFICIAL"
+      ],
+      "workedExamples": [
+        {
+          "exampleId": "EX_GU_JEEMAIN2027_PHY_3D48D86E_01",
+          "title": "Orbital Period Comparison using Keplers Third Law",
+          "problemStatement": "If a planet has semi-major axis $a = 4 a_E$ where $a_E$ is Earths orbit, find its period in years.",
+          "stepByStepSolution": [
+            "Step 1: From Keplers Third Law, $(T/T_E)^2 = (a/a_E)^3$.",
+            "Step 2: Substitute $a/a_E = 4$: $(T/T_E)^2 = 4^3 = 64 \\\\implies T/T_E = \\\\sqrt{64} = 8$."
+          ],
+          "finalAnswer": "T = 8\\\\text{ Earth years}",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_3D48D86E_4EE99DEA"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "b355a513bddc0781d31e191990e6b9f83abf05c07f20240e751d884d7ef0675b",
+      "createdAtUtc": "2026-09-02T13:29:33.064Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "selfChecks": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_3D48D86E_SELFCHECKS",
+      "componentType": "selfChecks",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_3D48D86E",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_3D48D86E_V001",
+      "displayOrder": 6,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_2CD2F7CD"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH08_OFFICIAL"
+      ],
+      "selfChecks": [
+        {
+          "questionId": "SC_GU_JEEMAIN2027_PHY_3D48D86E_01",
+          "questionType": "SINGLE_CHOICE_MCQ",
+          "prompt": "Keplers Second Law (constancy of areal velocity) is a direct mathematical consequence of the conservation of which quantity?",
+          "options": [
+            "Angular momentum (L)",
+            "Linear momentum (p)",
+            "Kinetic energy (K)",
+            "Total orbital distance"
+          ],
+          "correctOptionIndex": 0,
+          "explanation": "Gravity is a central force producing zero torque about the Sun, so angular momentum $L = 2m(dA/dt)$ is conserved.",
+          "difficulty": "EASY",
+          "targetAtomicFactIds": [
+            "AF_GU_JEEMAIN2027_PHY_3D48D86E_2CD2F7CD"
+          ],
+          "isVerified": true
+        }
+      ],
+      "verificationStatus": "VERIFIED",
+      "contentHash": "c7364d550ead5dea8229b79739bc72399bfcf72ef4e406a257260fdd8a34a2fc",
+      "createdAtUtc": "2026-09-02T13:29:33.064Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    },
+    "assessmentPreview": {
+      "componentId": "COMP_GU_JEEMAIN2027_PHY_3D48D86E_ASSESSMENTPREVIEW",
+      "componentType": "assessmentPreview",
+      "generationUnitId": "GU_JEEMAIN2027_PHY_3D48D86E",
+      "revisionId": "REV_GU_JEEMAIN2027_PHY_3D48D86E_V001",
+      "displayOrder": 7,
+      "status": "READY",
+      "atomicFactIds": [
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_2CD2F7CD",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_3A97E189",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_4EE99DEA",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_7EDBECE1",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_80F5B79F",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_9DE21698",
+        "AF_GU_JEEMAIN2027_PHY_3D48D86E_D9FC3B34"
+      ],
+      "sourceAuthorityIds": [
+        "NCERT_PHYSICS_CLASS_11_CH08_OFFICIAL"
+      ],
+      "assessmentPreviewSummary": {
+        "testedCompetencies": [
+          "Kepler Third Law orbital scaling",
+          "Angular momentum conservation in orbits"
+        ],
+        "supportedQuestionFormats": [
+          "SINGLE_CHOICE_MCQ",
+          "NUMERICAL_VALUE"
+        ],
+        "readinessStatement": "Assessment bank fully mapped to verified AtomicFacts with strict GU boundary governance."
+      },
+      "verificationStatus": "VERIFIED",
+      "contentHash": "bf94933612f1a8ae032f78b2ddda1844700f2f3f8ef1663cbcea028146bdcac4",
+      "createdAtUtc": "2026-09-02T13:29:33.064Z",
+      "producerVersion": "AAF-DIGIBOOK-ASSEMBLER-V1.0.0"
+    }
+  },
+  "sourceAuthorities": [
+    "NCERT_PHYSICS_CLASS_11_CH08_OFFICIAL"
+  ],
+  "verificationSummary": {
+    "totalComponents": 7,
+    "readyComponents": 6,
+    "evidenceNotAvailableComponents": 1,
+    "notApplicableComponents": 0,
+    "unverifiedComponents": 0,
+    "factualAccuracyScore": 1,
+    "zeroHallucinationVerified": true
+  },
+  "assemblyStatus": "CURRENT_PRIVATE_CANARY",
+  "createdAtUtc": "2026-09-02T13:29:33.064Z",
+  "assemblerVersion": "AAF-DIGIBOOK-ASSEMBLY-ENGINE-V1.0.0-BATCH"
+}

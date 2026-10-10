@@ -6,7 +6,7 @@ import '../../../data/repositories/sentinel_admin_repository.dart';
 import '../shared/center_header.dart';
 import 'package:intl/intl.dart';
 
-/// 🔱 FOUNDER ACTIVITY LEDGER
+/// FOUNDER ACTIVITY LEDGER
 /// The physical record of every sovereign command and system intelligence event.
 class FounderActivityLedger extends StatelessWidget {
   const FounderActivityLedger({super.key});
