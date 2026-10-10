@@ -10,6 +10,7 @@ AafPersonalizationBridgeAuthority authority(
     AafPersonalizationBridgeAuthority(
       studentId: 's',
       targetAmtnId: 'a',
+      missionId: 'jee_main_2026',
       canonicalSemanticTopicId: 'topic-a',
       canonicalKnowledgeVersion: 3,
       publicProjectionId: 'pub-a-v3',
@@ -24,8 +25,9 @@ AafPersonalizationBridgeAuthority authority(
 StudentTreatmentDecision decision(DateTime t) => StudentTreatmentDecision(
       studentId: 's',
       targetAmtnId: 'a',
+      missionId: 'jee_main_2026',
       createdAtUtc: t,
-      schemaVersion: 2,
+      schemaVersion: 3,
       directives: const [
         StudentTreatmentDirective(
           type: StudentTreatmentType.conceptRepair,

@@ -6,13 +6,14 @@ void main() {
   StudentEvidenceEvent e(int i) => StudentEvidenceEvent(
       eventId: 'e$i',
       studentId: 's',
+      missionId: 'jee_main_2026',
       source: StudentEvidenceSource.crucible,
       action: StudentEvidenceAction.answerSubmitted,
       occurredAtUtc: DateTime.utc(2026, 8, 16, 10, i),
       sourceConfidence: StudentEvidenceConfidence.high,
       difficulty: StudentEvidenceDifficulty.medium,
       answerOutcome: StudentAnswerOutcome.correct,
-      schemaVersion: 2,
+      schemaVersion: 3,
       amtnId: 'a',
       questionId: 'q$i',
       activeDurationMs: 800,
@@ -25,6 +26,7 @@ void main() {
     final r = const StudentFluencyEngine().calculate(
         studentId: 's',
         amtnId: 'a',
+        missionId: 'jee_main_2026',
         calculatedAtUtc: DateTime.utc(2026, 8, 17),
         events: [e(1), e(2), e(3)]);
     expect(r.pattern.name, 'fastAndAccurate');

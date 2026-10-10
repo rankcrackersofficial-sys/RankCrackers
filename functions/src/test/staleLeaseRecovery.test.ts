@@ -1,9 +1,7 @@
-import { AafQueueRepository } from '../academicFactory/repositories/aafQueueRepository';
-import { StaleLeaseRecoveryOrchestrator } from '../academicFactory/services/staleLeaseRecoveryOrchestrator';
 import * as admin from 'firebase-admin';
 
 // Mock Firebase Admin
-jest.mock('firebase-admin', () => {
+jest.doMock('firebase-admin', () => {
   const mockFirestore = {
     collection: jest.fn().mockReturnThis(),
     doc: jest.fn().mockReturnThis(),
@@ -25,13 +23,16 @@ jest.mock('firebase-admin', () => {
   };
 });
 
-describe('🔱 STALE LEASE RECOVERY', () => {
-  let orchestrator: StaleLeaseRecoveryOrchestrator;
+describe('STALE LEASE RECOVERY', () => {
+  let orchestrator: any;
   let mockDb: any;
 
   beforeEach(() => {
+    jest.resetModules();
+    const mockAdmin = require('firebase-admin');
+    const { StaleLeaseRecoveryOrchestrator } = require('../academicFactory/services/staleLeaseRecoveryOrchestrator');
     orchestrator = new StaleLeaseRecoveryOrchestrator();
-    mockDb = admin.firestore();
+    mockDb = mockAdmin.firestore();
     jest.clearAllMocks();
   });
 

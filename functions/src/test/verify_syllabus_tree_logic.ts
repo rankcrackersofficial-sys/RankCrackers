@@ -1,6 +1,7 @@
 import * as admin from 'firebase-admin';
 
 async function run() {
+  console.log('🔱 STARTING SCRIPT...');
   if (admin.apps.length === 0) {
     admin.initializeApp({ projectId: 'rankcrackers-55' });
   }
@@ -30,7 +31,7 @@ async function run() {
   console.log(`   - SUBJECTS_IN_FILTERED: ${subjects.length}`);
 
   for (const sId of activeSubjectIds) {
-    const sDoc = subjects.find((d: any) => d.subjectId === sId) || {};
+    const sDoc: any = subjects.find((d: any) => d.subjectId === sId) || {};
     const sTitle = sDoc.canonicalTitle || sId;
 
     const units = filteredStructured.filter((d: any) => d.nodeType === 'unit' && d.subjectId === sId);
@@ -54,6 +55,14 @@ async function run() {
     }
     console.log(`     - TOTAL_TOPICS: ${totalTopics}, TOTAL_ATOMS: ${totalAtoms}`);
   }
+
+  // Aggregate results (Phase 14)
+  console.log('🔱 AGGREGATE CENSUS:');
+  const p1 = filteredStructured.filter((n: any) => n.paperId === 'PAPER_1');
+  console.log(`   - SUBJECTS: ${p1.filter((n: any) => n.nodeType === 'subject').length}`);
+  console.log(`   - UNITS: ${p1.filter((n: any) => n.nodeType === 'unit').length}`);
+  console.log(`   - TOPICS: ${p1.filter((n: any) => n.nodeType === 'topic').length}`);
+  console.log(`   - ATOMS: ${atoms.length}`);
 
   process.exit(0);
 }

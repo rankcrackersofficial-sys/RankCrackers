@@ -8,10 +8,11 @@ void main() {
     final b = CruciblePersonalizationBlueprint(
         studentId: 's',
         targetAmtnId: 'a',
+        missionId: 'jee_main_2026',
         createdAtUtc: t,
         totalQuestionCount: 1,
         durationMinutes: 2,
-        schemaVersion: 2,
+        schemaVersion: 3,
         allocations: [
           const CruciblePersonalizationAllocation(
               bucket: CruciblePersonalizationBucketType.independent,

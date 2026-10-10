@@ -6,7 +6,7 @@ async function run() {
   }
   const db = admin.firestore();
 
-  console.log('🔱 GOVERNANCE AUDIT: PRODUCING ZERO-RESIDUAL PROOF');
+  console.log('GOVERNANCE AUDIT: PRODUCING ZERO-RESIDUAL PROOF');
 
   // 1. Unsourced Student-Ready Items (Items in content_payloads without publicationAudit or source line)
   const payloads = await db.collection('content_payloads').get();
@@ -40,7 +40,7 @@ async function run() {
   // 3. Cross-Mission Leakage (Check if any node has examId mismatch)
   // (Simple check for now)
 
-  console.log('🔱 AUDIT RESULTS:');
+  console.log('AUDIT RESULTS:');
   console.log(`- Unsourced Payloads: ${unsourced}`);
   console.log(`- Unverified/Orphaned Publications: ${unverifiedPub}`);
 

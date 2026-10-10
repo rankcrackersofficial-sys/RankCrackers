@@ -1,3 +1,4 @@
+export {};
 const { classifySyllabusDelta } = require('../../services/canonical_source_authority');
 
 describe('Governed Delta & Split / Merge / Ambiguity Authority Suite', () => {

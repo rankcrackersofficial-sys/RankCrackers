@@ -109,9 +109,10 @@ void main() {
         isStalled: false,
       );
 
-      final nowDay100 = pStart.add(const Duration(days: 99, hours: 1));
-      final day = CrucibleClockEngine.getProtocolDay(state: state, now: nowDay100);
-      expect(day, 100);
+      final nowDay98 = pStart.add(const Duration(days: 97, hours: 1));
+      final day = CrucibleClockEngine.getCycleDay(state: state, now: nowDay98);
+      expect(day, 98);
+      expect(CrucibleClockEngine.getOrbitNumber(protocolStartTime: pStart, now: nowDay98), 1);
     });
 
     test('Boundary: After Day 100 Terminal State (Clamped Sentinel)', () {
@@ -131,8 +132,9 @@ void main() {
       );
 
       final nowAfter = pStart.add(const Duration(days: 105));
-      final day = CrucibleClockEngine.getProtocolDay(state: state, now: nowAfter);
-      expect(day, CrucibleClockEngine.terminalDaySentinel); // Day 101 terminal sentinel
+      final day = CrucibleClockEngine.getCycleDay(state: state, now: nowAfter);
+      expect(day, equals(8)); // Orbit 2 Day 8
+      expect(CrucibleClockEngine.getOrbitNumber(protocolStartTime: pStart, now: nowAfter), equals(2));
     });
   });
 

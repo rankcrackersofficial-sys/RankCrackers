@@ -377,16 +377,29 @@ describe('🔱 ISOLATED EMULATOR MATERIALIZER & TRUST SNAPSHOT SUITE', () => {
 
       // 2. Materialize in emulator with Founder/Admin context
       const founderContext = testEnv.authenticatedContext('founder_test_admin', {
+        founder: true,
         admin: true,
-        email: 'founder@rankcrackers.internal'
+        email: 'founder@rankcrackers.com'
       });
       const adminDb = founderContext.firestore();
 
       const docRef = adminDb.collection('published_questions').doc(fixturePayload.questionId);
       await testing.assertSucceeds(docRef.set({
-        ...fixturePayload,
-        safeMaterialized: true,
-        materializedAt: new Date().toISOString()
+        id: fixturePayload.questionId,
+        questionLineageId: fixturePayload.questionId,
+        version: 1,
+        questionType: 'mcq_single',
+        question: fixturePayload.stem,
+        options: fixturePayload.options,
+        difficulty: 1,
+        examId: fixturePayload.missionId,
+        subjectId: 'physics',
+        nodeId: 'node_ch03_01',
+        atomicTopicIds: ['topic_ch03_01'],
+        status: 'published',
+        isPYQ: false,
+        verifiedBy: 'founder_admin_01',
+        verifiedAt: new Date().toISOString()
       }));
 
       // 3. Student can read the governed question

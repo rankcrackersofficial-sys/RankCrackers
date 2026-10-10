@@ -6,6 +6,7 @@ void main() {
   StudentEvidenceEvent e(int i, bool correct) => StudentEvidenceEvent(
         eventId: 'e$i',
         studentId: 's',
+        missionId: 'jee_main_2026',
         source: StudentEvidenceSource.crucible,
         action: StudentEvidenceAction.answerSubmitted,
         occurredAtUtc: DateTime.utc(2026, 8, 16, 10, i),
@@ -14,7 +15,7 @@ void main() {
         answerOutcome: correct
             ? StudentAnswerOutcome.correct
             : StudentAnswerOutcome.incorrect,
-        schemaVersion: StudentEvidenceEvent.currentSchemaVersion,
+        schemaVersion: 3,
         amtnId: 'a',
         questionId: 'q$i',
         hintsUsed: 0,
@@ -26,6 +27,7 @@ void main() {
     final r = const StudentMasteryEngine().calculate(
       studentId: 's',
       amtnId: 'a',
+      missionId: 'jee_main_2026',
       calculatedAtUtc: DateTime.utc(2026, 8, 17),
       events: [e(1, true), e(2, true), e(3, false)],
     );
@@ -37,6 +39,7 @@ void main() {
     final hinted = StudentEvidenceEvent(
       eventId: x.eventId,
       studentId: x.studentId,
+      missionId: x.missionId,
       source: x.source,
       action: x.action,
       occurredAtUtc: x.occurredAtUtc,
@@ -54,6 +57,7 @@ void main() {
     final r = const StudentMasteryEngine().calculate(
         studentId: 's',
         amtnId: 'a',
+        missionId: 'jee_main_2026',
         calculatedAtUtc: DateTime.utc(2026, 8, 17),
         events: [hinted]);
     expect(r.eligibleEvidenceCount, 0);

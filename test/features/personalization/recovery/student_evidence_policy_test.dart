@@ -21,6 +21,7 @@ void main() {
     return StudentEvidenceEvent(
       eventId: 'e-1',
       studentId: 's-1',
+      missionId: 'jee_main_2026',
       source: StudentEvidenceSource.crucible,
       action: action,
       occurredAtUtc: DateTime.utc(2026, 8, 16, 10),

@@ -9,10 +9,15 @@ void main() {
     test('1. CrucibleProtocolState fromMap handles all fields correctly - PASS', () {
       final map = {
         'recruitmentId': 'jee_main_2027',
-        'protocolStartTime': now.millisecondsSinceEpoch,
         'phaseIndex': 1,
-        'isTerminated': false,
-        'lastSyncTime': now.millisecondsSinceEpoch,
+        'scheduleIndex': 1,
+        'currentScheduleId': 's1',
+        'status': 'study',
+        'scheduleStartTime': now.millisecondsSinceEpoch,
+        'protocolStartTime': now.millisecondsSinceEpoch,
+        'currentBoundaryTime': now.millisecondsSinceEpoch,
+        'isVIP': false,
+        'isStalled': false,
       };
       final state = CrucibleProtocolState.fromMap(map);
       expect(state.recruitmentId, equals('jee_main_2027'));
@@ -22,12 +27,20 @@ void main() {
     test('2. CrucibleProtocolState toMap produces valid schema - PASS', () {
       final state = CrucibleProtocolState(
         recruitmentId: 'jee_main_2027',
-        protocolStartTime: now,
         phaseIndex: 2,
+        scheduleIndex: 5,
+        currentScheduleId: 's5',
+        status: 'study',
+        scheduleStartTime: now,
+        protocolStartTime: now,
+        currentBoundaryTime: now,
+        isVIP: true,
+        isStalled: false,
       );
       final map = state.toMap();
       expect(map['recruitmentId'], equals('jee_main_2027'));
       expect(map['phaseIndex'], equals(2));
+      expect(map['isVIP'], isTrue);
     });
   });
 }

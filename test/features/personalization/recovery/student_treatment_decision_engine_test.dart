@@ -10,6 +10,7 @@ void main() {
     final s = StudentLearningState(
         studentId: 's',
         amtnId: 'a',
+        missionId: 'jee_main_2026',
         calculatedAtUtc: t,
         masteryProbability: .4,
         masteryBand: StudentMasteryBand.emerging,
@@ -27,10 +28,11 @@ void main() {
         retryRate: .4,
         answerChangeRate: .1,
         totalEligibleEvidenceCount: 10,
-        schemaVersion: 2);
+        schemaVersion: 3);
     final p = StudentPrerequisiteDiagnosis(
         studentId: 's',
         targetAmtnId: 'a',
+        missionId: 'jee_main_2026',
         calculatedAtUtc: t,
         readiness: StudentPrerequisiteReadiness.blocked,
         confidence: StudentLearningStateConfidence.high,

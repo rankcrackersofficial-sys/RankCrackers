@@ -11,7 +11,7 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   SharedPreferences.setMockInitialValues({});
 
-  group('🔱 PHASE 6.2: PRODUCTION STRESS BENCHMARKS', () {
+  group('PHASE 6.2: PRODUCTION STRESS BENCHMARKS', () {
     final engine = KnowledgeEngine.instance;
 
     setUp(() {
@@ -36,7 +36,7 @@ void main() {
         lastReviewed: DateTime.now(),
       )).toList();
 
-      // 🔱 1. Hydration Benchmark
+      // 1. Hydration Benchmark
       BenchmarkUtil.start('Hydration_$label');
       await engine.loadStressData(
         recruitment: recruitment, 
@@ -45,7 +45,7 @@ void main() {
       );
       BenchmarkUtil.stop('Hydration_$label');
 
-      // 🔱 2. Verify Atomic Integrity (Triad Verification)
+      // 2. Verify Atomic Integrity (Triad Verification)
       final totalAtoms = nodeCount * atomsPerNode;
       expect(engine.allNodes.length, nodeCount);
       expect(engine.atomicMasteryStates.length, totalAtoms);
@@ -53,7 +53,7 @@ void main() {
       expect(engine.atomicRiskStates.length, totalAtoms);
       expect(engine.readinessState, isNotNull);
 
-      // 🔱 3. Delta Aggregation Benchmark O(K)
+      // 3. Delta Aggregation Benchmark O(K)
       final targetNodeId = nodes[nodeCount ~/ 2].id;
       final updatedProgress = progress[nodeCount ~/ 2].copyWith(
         battlesWon: 10,

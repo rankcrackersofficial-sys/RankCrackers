@@ -52,6 +52,8 @@ Future<void> main() async {
   });
 
   tearDownAll(() {
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMessageHandler('flutter/assets', null);
     final view =
         TestWidgetsFlutterBinding.instance.platformDispatcher.views.first;
     view.resetPhysicalSize();
@@ -184,10 +186,16 @@ Future<Map<String, Object?>> _captureCase(
 
   final boundary =
       boundaryKey.currentContext!.findRenderObject()! as RenderRepaintBoundary;
-  final image = await boundary.toImage(pixelRatio: 1);
-  final bytes = await image.toByteData(format: ui.ImageByteFormat.png);
   final output = File('$_outDir/${visualCase.name}.png');
-  output.writeAsBytesSync(bytes!.buffer.asUint8List());
+
+  await tester.runAsync(() async {
+    final image = await boundary.toImage(pixelRatio: 1);
+    final bytes = await image.toByteData(format: ui.ImageByteFormat.png);
+    output.writeAsBytesSync(bytes!.buffer.asUint8List());
+  });
+
+  await tester.pumpWidget(const SizedBox.shrink());
+  await tester.pump();
 
   return <String, Object?>{
     'name': visualCase.name,

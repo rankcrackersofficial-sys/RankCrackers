@@ -21,6 +21,7 @@ void main() {
       return AafPersonalizationBridgeAuthority(
         studentId: studentId,
         targetAmtnId: targetAmtnId,
+        missionId: 'jee_main_2026',
         canonicalSemanticTopicId: 'topic1',
         canonicalKnowledgeVersion: canonicalKnowledgeVersion,
         publicProjectionId: 'pub1',
@@ -41,6 +42,7 @@ void main() {
       return StudentTreatmentDecision(
         studentId: studentId,
         targetAmtnId: targetAmtnId,
+        missionId: 'jee_main_2026',
         createdAtUtc: time ?? t,
         schemaVersion: 2,
         directives: [
@@ -170,6 +172,7 @@ void main() {
       final dec = StudentTreatmentDecision(
         studentId: 's1',
         targetAmtnId: 'amtn1',
+        missionId: 'jee_main_2026',
         createdAtUtc: t,
         schemaVersion: 2,
         directives: [
@@ -213,6 +216,7 @@ void main() {
       final dec = StudentTreatmentDecision(
         studentId: 's1',
         targetAmtnId: 'amtn1',
+        missionId: 'jee_main_2026',
         createdAtUtc: t,
         schemaVersion: 2,
         directives: [

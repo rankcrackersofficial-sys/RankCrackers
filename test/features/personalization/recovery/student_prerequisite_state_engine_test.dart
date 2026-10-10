@@ -6,6 +6,7 @@ StudentLearningState state(String a, StudentMasteryBand band) =>
     StudentLearningState(
         studentId: 's',
         amtnId: a,
+        missionId: 'jee_main_2026',
         calculatedAtUtc: DateTime.utc(2026, 8, 16),
         masteryProbability: .3,
         masteryBand: band,
@@ -23,12 +24,13 @@ StudentLearningState state(String a, StudentMasteryBand band) =>
         retryRate: null,
         answerChangeRate: null,
         totalEligibleEvidenceCount: 3,
-        schemaVersion: 2);
+        schemaVersion: 3);
 void main() {
   test('emerging prerequisite blocks target', () {
     final d = const StudentPrerequisiteStateEngine().diagnose(
         studentId: 's',
         targetAmtnId: 'target',
+        missionId: 'jee_main_2026',
         calculatedAtUtc: DateTime.utc(2026, 8, 17),
         prerequisiteStates: {'p': state('p', StudentMasteryBand.emerging)});
     expect(d.readiness, StudentPrerequisiteReadiness.blocked);

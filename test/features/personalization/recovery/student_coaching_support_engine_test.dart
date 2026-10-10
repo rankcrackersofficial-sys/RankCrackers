@@ -148,6 +148,7 @@ AafPersonalizationBridgeAuthority _bridge({
     AafPersonalizationBridgeAuthority(
       studentId: 'student-1',
       targetAmtnId: 'amtn-1',
+      missionId: 'jee_main_2026',
       canonicalSemanticTopicId: 'topic-1',
       canonicalKnowledgeVersion: 3,
       publicProjectionId: 'pub-1',
@@ -166,6 +167,7 @@ StudentLearningState _state({
     StudentLearningState(
       studentId: 'student-1',
       amtnId: 'amtn-1',
+      missionId: 'jee_main_2026',
       calculatedAtUtc: _now,
       masteryProbability: 0.72,
       masteryBand: band,
@@ -190,6 +192,7 @@ StudentTreatmentDecision _treatment(StudentTreatmentType type) =>
     StudentTreatmentDecision(
       studentId: 'student-1',
       targetAmtnId: 'amtn-1',
+      missionId: 'jee_main_2026',
       createdAtUtc: _now,
       directives: <StudentTreatmentDirective>[
         StudentTreatmentDirective(

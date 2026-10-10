@@ -67,7 +67,7 @@ final _sampleMissions = <Recruitment>[
   ),
 ];
 
-Future<void> _loadFontsForTest() async {
+Future<List<int>?> _loadFontsForTest() async {
   GoogleFonts.config.allowRuntimeFetching = false;
   final candidates = <String>[
     'E:/Programs/Flutter/flutter/bin/cache/artifacts/material_fonts/roboto-regular.ttf',
@@ -77,9 +77,8 @@ Future<void> _loadFontsForTest() async {
         (file) => file.existsSync(),
         orElse: () => File(candidates.first),
       );
-  if (!fontFile.existsSync()) return;
-  final bytes = await fontFile.readAsBytes();
-  _installGoogleFontAssetFixture(bytes);
+  if (!fontFile.existsSync()) return null;
+  return fontFile.readAsBytes();
 }
 
 Widget _screenFor(_JourneyCase journeyCase) {
@@ -144,6 +143,8 @@ Future<void> _pumpJourneyCase(
             (ref) => Stream<SentinelMetrics>.value(SentinelMetrics())),
         notificationListProvider.overrideWith(
             (ref) => Stream<List<NotificationItem>>.value(const [])),
+        recruitmentsProvider.overrideWith(
+            (ref) => Stream<List<Recruitment>>.value(_sampleMissions)),
         publishedRecruitmentsProvider.overrideWithValue(_sampleMissions),
         publishedStatesProvider
             .overrideWithValue(const ['Rajasthan', 'Central']),
@@ -162,10 +163,7 @@ Future<void> _pumpJourneyCase(
     ),
   );
   await tester.pump(const Duration(milliseconds: 100));
-  await tester.runAsync(() async {
-    await Future<void>.delayed(const Duration(milliseconds: 150));
-  });
-  await tester.pump(const Duration(milliseconds: 100));
+  await tester.pump(const Duration(milliseconds: 250));
 
   if (journeyCase.focusFirstField) {
     final firstTextField = find.byType(TextField).first;
@@ -181,9 +179,9 @@ Future<Map<String, Object?>> _captureCase(
   _JourneyCase journeyCase,
 ) async {
   final boundaryKey = GlobalKey();
-  await tester.pumpWidget(const SizedBox.shrink());
-  await tester.pump();
+  debugPrint('--- _captureCase: calling _pumpJourneyCase');
   await _pumpJourneyCase(tester, journeyCase, boundaryKey);
+  debugPrint('--- _captureCase: _pumpJourneyCase completed');
 
   final exception = tester.takeException();
   if (exception != null) {
@@ -200,11 +198,21 @@ Future<Map<String, Object?>> _captureCase(
 
   final boundary =
       boundaryKey.currentContext!.findRenderObject()! as RenderRepaintBoundary;
-  final image = await boundary.toImage(pixelRatio: 1);
-  final bytes = await image.toByteData(format: ui.ImageByteFormat.png);
+  
+  ui.Image? image;
+  ByteData? bytes;
   final output = File('$_screenshotDir/${journeyCase.fileName}');
-  output.parent.createSync(recursive: true);
-  output.writeAsBytesSync(bytes!.buffer.asUint8List());
+
+  await tester.runAsync(() async {
+    debugPrint('--- _captureCase: calling boundary.toImage inside runAsync');
+    image = await boundary.toImage(pixelRatio: 1);
+    debugPrint('--- _captureCase: boundary.toImage completed');
+    bytes = await image!.toByteData(format: ui.ImageByteFormat.png);
+    debugPrint('--- _captureCase: image.toByteData completed');
+    output.parent.createSync(recursive: true);
+    output.writeAsBytesSync(bytes!.buffer.asUint8List());
+  });
+
   return {
     'filename': journeyCase.fileName,
     'screen': journeyCase.screen.name,
@@ -214,10 +222,12 @@ Future<Map<String, Object?>> _captureCase(
     'keyboardInset': journeyCase.keyboardInset,
     'markers': journeyCase.markers,
     'pngBytes': output.lengthSync(),
-    'dimensions': '${image.width}x${image.height}',
+    'dimensions': image != null ? '${image!.width}x${image!.height}' : 'unknown',
     'result': 'PASS',
   };
 }
+
+List<int>? _fontBytesForTest;
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -225,8 +235,19 @@ void main() {
   setUpAll(() async {
     SessionManager.disableFirebaseForTest = true;
     await ensureFirebaseInitializedForTests();
-    await _loadFontsForTest();
+    _fontBytesForTest = await _loadFontsForTest();
     Directory(_screenshotDir).createSync(recursive: true);
+  });
+
+  setUp(() {
+    if (_fontBytesForTest != null) {
+      _installGoogleFontAssetFixture(_fontBytesForTest!);
+    }
+  });
+
+  tearDown(() {
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMessageHandler('flutter/assets', null);
   });
 
   tearDownAll(() {
@@ -468,6 +489,7 @@ void _installGoogleFontAssetFixture(List<int> fontBytes) {
     final key = utf8.decode(
       message.buffer.asUint8List(message.offsetInBytes, message.lengthInBytes),
     );
+    debugPrint('--- MockAssetHandler: key = $key');
     if (key == 'AssetManifest.bin') return manifestBytes;
     final bytes = assetBytes[key];
     if (bytes == null) return null;

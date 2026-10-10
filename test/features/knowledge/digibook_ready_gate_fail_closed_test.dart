@@ -4,7 +4,7 @@ import 'package:rank_crackers/core/models/micro_topic_node.dart';
 import 'package:rank_crackers/core/models/recruitment.dart';
 
 void main() {
-  group('DigiBook READY Gate Fail-Closed Tests', () {
+  group('DigiBook READY Gate Fail-Closed Governance Matrix Tests', () {
     final engine = KnowledgeEngine.instance;
 
     final jeeRecruitment = Recruitment(
@@ -25,111 +25,130 @@ void main() {
       version: '1.0.0',
     );
 
+    MicroTopicNode createTestNode({
+      String id = 'node_01',
+      String examId = 'jee_main_2027',
+      String status = 'published',
+      bool studentVisibilityAuthorized = true,
+      bool isSynthetic = false,
+      bool isStructuralHold = false,
+      bool isStale = false,
+      bool sourceApproved = true,
+      String verificationStatus = 'VERIFIED',
+      String? canonicalAtomId = 'atom_jee_2027_001',
+      String? canonicalMissionId = 'jee_main_2027',
+      String? approvedSourceId = 'src_ncert_01',
+      String? verificationId = 'ver_991',
+      String contentRegistryId = 'payload_01',
+      String description = 'Verified governed content',
+    }) {
+      return MicroTopicNode(
+        id: id,
+        examId: examId,
+        subjectId: 'Physics',
+        chapterId: 'Chapter 1',
+        title: 'Governed Topic',
+        titleHindi: 'विषय',
+        subjectHindi: 'भौतिकी',
+        chapterHindi: 'अध्याय 1',
+        description: description,
+        contentRegistryId: contentRegistryId,
+        difficulty: 2,
+        importance: 3,
+        status: status,
+        studentVisibilityAuthorized: studentVisibilityAuthorized,
+        isSynthetic: isSynthetic,
+        isStructuralHold: isStructuralHold,
+        isStale: isStale,
+        sourceApproved: sourceApproved,
+        verificationStatus: verificationStatus,
+        canonicalAtomId: canonicalAtomId,
+        canonicalMissionId: canonicalMissionId,
+        approvedSourceId: approvedSourceId,
+        verificationId: verificationId,
+      );
+    }
+
     tearDown(() async {
       await engine.clearSessionState();
     });
 
-    test('1. Synthetic-only graph returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
-      final syntheticNode = MicroTopicNode(
-        id: 'node_synth_01',
-        examId: 'jee_main_2027',
-        subjectId: 'Physics',
-        chapterId: 'Chapter 1',
-        title: 'Synthetic Topic',
-        titleHindi: 'सिंथेटिक विषय',
-        subjectHindi: 'भौतिकी',
-        chapterHindi: 'अध्याय 1',
+    test('1. Empty graph returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
+    });
+
+    test('2. Synthetic FF01 node returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      final node = createTestNode(
+        isSynthetic: true,
         description: 'Materialized via RELIABILITY FF01 progressive publication.',
-        contentRegistryId: 'payload_01',
-        difficulty: 2,
-        importance: 3,
-        status: 'published',
       );
-
-      await engine.loadStressData(
-        recruitment: jeeRecruitment,
-        nodes: [syntheticNode],
-        progress: const [],
-      );
-
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [node], progress: const []);
       expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
     });
 
-    test('2. Structural/hold-only graph returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
-      final structuralNode = MicroTopicNode(
-        id: 'node_struct_01',
-        examId: 'jee_main_2027',
-        subjectId: 'Physics',
-        chapterId: 'Chapter 1',
-        title: 'Draft Structural Node',
-        titleHindi: 'ड्राफ्ट विषय',
-        subjectHindi: 'भौतिकी',
-        chapterHindi: 'अध्याय 1',
-        description: 'Structural node placeholder',
-        contentRegistryId: 'payload_02',
-        difficulty: 2,
-        importance: 3,
-        status: 'draft',
-      );
-
-      await engine.loadStressData(
-        recruitment: jeeRecruitment,
-        nodes: [structuralNode],
-        progress: const [],
-      );
-
+    test('3. Structural HOLD node returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      final node = createTestNode(isStructuralHold: true);
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [node], progress: const []);
       expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
     });
 
-    test('3. Mission mismatch / cross-mission node returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
-      final crossMissionNode = MicroTopicNode(
-        id: 'node_jee2026_01',
-        examId: 'jee_main_2026', // Mismatch vs active jee_main_2027
-        subjectId: 'Physics',
-        chapterId: 'Chapter 1',
-        title: 'JEE 2026 Node',
-        titleHindi: 'JEE 2026 विषय',
-        subjectHindi: 'भौतिकी',
-        chapterHindi: 'अध्याय 1',
-        description: 'Governed node for 2026',
-        contentRegistryId: 'payload_03',
-        difficulty: 2,
-        importance: 3,
-        status: 'published',
-      );
-
-      await engine.loadStressData(
-        recruitment: jeeRecruitment, // active is jee_main_2027
-        nodes: [crossMissionNode],
-        progress: const [],
-      );
-
+    test('4. Draft status node returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      final node = createTestNode(status: 'draft');
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [node], progress: const []);
       expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
     });
 
-    test('4. Governed published node matching exact mission returns READY', () async {
-      final governedNode = MicroTopicNode(
-        id: 'node_governed_01',
-        examId: 'jee_main_2027',
-        subjectId: 'Physics',
-        chapterId: 'Chapter 1',
-        title: 'Real Governed Topic',
-        titleHindi: 'वास्तविक विषय',
-        subjectHindi: 'भौतिकी',
-        chapterHindi: 'अध्याय 1',
-        description: 'Verified governed content',
-        contentRegistryId: 'payload_gov_01',
-        difficulty: 2,
-        importance: 3,
-        status: 'published',
-      );
+    test('5. studentVisibilityAuthorized = false returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      final node = createTestNode(studentVisibilityAuthorized: false);
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [node], progress: const []);
+      expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
+    });
 
-      await engine.loadStressData(
-        recruitment: jeeRecruitment,
-        nodes: [governedNode],
-        progress: const [],
-      );
+    test('6. sourceApproved = false returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      final node = createTestNode(sourceApproved: false);
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [node], progress: const []);
+      expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
+    });
 
+    test('7. verificationStatus != VERIFIED returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      final node = createTestNode(verificationStatus: 'UNVERIFIED');
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [node], progress: const []);
+      expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
+    });
+
+    test('8. Missing canonicalAtomId returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      final node = createTestNode(canonicalAtomId: null);
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [node], progress: const []);
+      expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
+    });
+
+    test('9. Missing approvedSourceId returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      final node = createTestNode(approvedSourceId: '');
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [node], progress: const []);
+      expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
+    });
+
+    test('10. Missing verificationId returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      final node = createTestNode(verificationId: null);
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [node], progress: const []);
+      expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
+    });
+
+    test('11. Stale node returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      final node = createTestNode(isStale: true);
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [node], progress: const []);
+      expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
+    });
+
+    test('12. Mission mismatch returns MISSION_CONTENT_NOT_PUBLISHED (NOT READY)', () async {
+      final node = createTestNode(examId: 'jee_main_2026', canonicalMissionId: 'jee_main_2026');
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [node], progress: const []);
+      expect(engine.getDigiBookPublicationState(), equals(PublicationState.MISSION_CONTENT_NOT_PUBLISHED));
+    });
+
+    test('13. FULL GOVERNED TEST FIXTURE returns READY', () async {
+      final governedNode = createTestNode();
+      await engine.loadStressData(recruitment: jeeRecruitment, nodes: [governedNode], progress: const []);
       expect(engine.getDigiBookPublicationState(), equals(PublicationState.READY));
     });
   });

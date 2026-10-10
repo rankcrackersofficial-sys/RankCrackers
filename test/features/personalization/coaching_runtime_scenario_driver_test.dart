@@ -12,6 +12,7 @@ void main() {
     final bridge = AafPersonalizationBridgeAuthority(
       studentId: 'student-123',
       targetAmtnId: 'amtn-456',
+      missionId: 'jee_main_2026',
       canonicalSemanticTopicId: 'topic-789',
       canonicalKnowledgeVersion: 1,
       publicProjectionId: 'pub-999',
@@ -20,12 +21,13 @@ void main() {
       treatmentDecisionVersion: 1,
       routeVersion: 1,
       createdAtUtc: now,
-      schemaVersion: 1,
+      schemaVersion: 2,
     );
 
     final state = StudentLearningState(
       studentId: 'student-123',
       amtnId: 'amtn-456',
+      missionId: 'jee_main_2026',
       calculatedAtUtc: now,
       masteryProbability: 0.85,
       masteryBand: StudentMasteryBand.proficient,
@@ -43,12 +45,13 @@ void main() {
       retryRate: 0.04,
       answerChangeRate: 0.01,
       totalEligibleEvidenceCount: 15,
-      schemaVersion: 2,
+      schemaVersion: 3,
     );
 
     final treatmentDecision = StudentTreatmentDecision(
       studentId: 'student-123',
       targetAmtnId: 'amtn-456',
+      missionId: 'jee_main_2026',
       createdAtUtc: now,
       directives: [
         StudentTreatmentDirective(

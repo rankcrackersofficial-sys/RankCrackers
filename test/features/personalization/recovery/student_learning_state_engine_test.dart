@@ -11,11 +11,13 @@ void main() {
     final s = const StudentLearningStateEngine().assemble(
         studentId: 's',
         amtnId: 'a',
+        missionId: 'jee_main_2026',
         calculatedAtUtc: t,
         rawEvents: const [],
         mastery: StudentMasteryEstimate(
             studentId: 's',
             amtnId: 'a',
+            missionId: 'jee_main_2026',
             calculatedAtUtc: t,
             probability: null,
             band: StudentMasteryBand.unknown,
@@ -25,6 +27,7 @@ void main() {
         retention: StudentRetentionEstimate(
             studentId: 's',
             amtnId: 'a',
+            missionId: 'jee_main_2026',
             calculatedAtUtc: t,
             probability: null,
             state: StudentRetentionState.unknown,
@@ -33,6 +36,7 @@ void main() {
         fluency: StudentFluencyEstimate(
             studentId: 's',
             amtnId: 'a',
+            missionId: 'jee_main_2026',
             calculatedAtUtc: t,
             score: null,
             pattern: StudentFluencyPattern.unknown,

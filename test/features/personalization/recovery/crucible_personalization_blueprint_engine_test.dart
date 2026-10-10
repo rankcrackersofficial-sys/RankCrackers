@@ -8,8 +8,9 @@ void main() {
     final d = StudentTreatmentDecision(
         studentId: 's',
         targetAmtnId: 'a',
+        missionId: 'jee_main_2026',
         createdAtUtc: t,
-        schemaVersion: 2,
+        schemaVersion: 3,
         directives: [
           const StudentTreatmentDirective(
               type: StudentTreatmentType.independentPractice,

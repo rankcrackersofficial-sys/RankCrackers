@@ -9,6 +9,7 @@ void main() {
       state: StudentLearningState(
         studentId: 'student-1',
         amtnId: 'amtn-1',
+        missionId: 'jee_main_2026',
         calculatedAtUtc: DateTime.utc(2026, 8, 18, 8),
         masteryProbability: null,
         masteryBand: StudentMasteryBand.unknown,
@@ -17,7 +18,7 @@ void main() {
         retentionState: StudentRetentionState.stable,
         retentionConfidence: StudentLearningStateConfidence.high,
         fluencyScore: 0.7,
-        fluencyPattern: StudentFluencyPattern.fastAndAccurate,
+        fluencyPattern: StudentFluencyPattern.balanced,
         fluencyConfidence: StudentLearningStateConfidence.high,
         prerequisiteReadiness: StudentPrerequisiteReadiness.ready,
         prerequisiteConfidence: StudentLearningStateConfidence.medium,
@@ -26,7 +27,7 @@ void main() {
         retryRate: null,
         answerChangeRate: null,
         totalEligibleEvidenceCount: 4,
-        schemaVersion: StudentLearningState.currentSchemaVersion,
+        schemaVersion: 3,
       ),
       nowUtc: DateTime.utc(2026, 8, 18, 9),
     );

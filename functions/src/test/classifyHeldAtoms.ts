@@ -17,7 +17,7 @@ async function run() {
     }
   }
 
-  console.log('🔱 JEE HELD ATOMS CLASSIFICATION:');
+  console.log('JEE HELD ATOMS CLASSIFICATION:');
   console.log(JSON.stringify(classification, null, 2));
 }
 

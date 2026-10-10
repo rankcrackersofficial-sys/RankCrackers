@@ -3,6 +3,8 @@ import 'package:rank_crackers/features/opportunities/services/career_signal_engi
 import 'package:rank_crackers/features/opportunities/models/opportunity.dart';
 import 'package:rank_crackers/features/deep_profile/models/warrior_profile.dart';
 
+import 'package:rank_crackers/features/deep_profile/models/education_record.dart';
+
 void main() {
   group('🔱 CareerSignalEngine Authority Logic', () {
     final baseTime = DateTime.now();
@@ -86,13 +88,13 @@ void main() {
           officialPdfUrl: '',
           status: 'published',
           eligibleMissionIds: const ['neet_ug_2027'],
-          requiredSubjects: const ['Physics', 'Chemistry', 'Biology'],
+          requiredSubjects: const ['physics', 'chemistry', 'biology'],
         );
 
         // Case A: Missing Biology
         final profileA = const WarriorProfile(
             uid: 'student_a',
-            subjectsStudied: ['Physics', 'Chemistry', 'Mathematics'], // Missing Bio
+            subjectsStudied: ['physics', 'chemistry', 'mathematics'], // Missing 'biology'
         );
 
         final signalsA = CareerSignalEngine.compute(
@@ -103,12 +105,12 @@ void main() {
         );
 
         expect(signalsA.first.relevanceState, 'More Information Needed');
-        expect(signalsA.first.reasonCodes.any((r) => r.contains('Missing required subjects')), isTrue);
+        expect(signalsA.first.reasonCodes.any((r) => r.contains('Missing required 10+2 subjects')), isTrue);
 
         // Case B: Full match
         final profileB = const WarriorProfile(
             uid: 'student_b',
-            subjectsStudied: ['Physics', 'Chemistry', 'Biology'],
+            subjectsStudied: ['physics', 'chemistry', 'biology'],
         );
 
         final signalsB = CareerSignalEngine.compute(
@@ -155,6 +157,45 @@ void main() {
 
         expect(signalsA.first.relevanceState, 'More Information Needed');
         expect(signalsA.first.reasonCodes.any((r) => r.contains('graduation degree')), isTrue);
+    });
+
+    test('5. Complete modern educationRecords with empty legacy fields matches correctly', () {
+        final opportunity = Opportunity(
+          id: 'opp_neet',
+          title: 'NEET',
+          department: 'Health',
+          state: 'Central',
+          totalPosts: 100,
+          notificationDate: baseTime,
+          lastDate: baseTime,
+          officialPdfUrl: '',
+          status: 'published',
+          eligibleMissionIds: const ['neet_ug_2027'],
+          requiredSubjects: const ['physics', 'chemistry', 'biology'],
+        );
+
+        // Empty legacy subjectsStudied, but complete Class 12 in educationRecords
+        final profile = const WarriorProfile(
+            uid: 'student_modern',
+            subjectsStudied: const [], // Empty legacy
+            educationRecords: const [
+              EducationRecord(
+                id: '12',
+                level: 'Class 12',
+                status: 'Completed',
+                subjectIds: ['physics', 'chemistry', 'biology'],
+              ),
+            ],
+        );
+
+        final signals = CareerSignalEngine.compute(
+            profile: profile,
+            recruitmentId: 'neet_ug_2027',
+            activeMissionName: 'NEET',
+            dbOpportunities: [opportunity],
+        );
+
+        expect(signals.first.relevanceState, 'Profile Matched');
     });
   });
 }

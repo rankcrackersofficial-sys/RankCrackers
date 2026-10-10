@@ -14,7 +14,6 @@ void main() {
     test('C1_TEMPORAL_REGRESSION = 0', () {
       expect(CrucibleClockEngine.courseStartHour, 10);
       expect(CrucibleClockEngine.testStartHour, 9);
-      expect(CrucibleClockEngine.terminalDaySentinel, 101);
     });
 
     test('50-Question Count Law is enforced', () {

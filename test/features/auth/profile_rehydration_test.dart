@@ -46,6 +46,7 @@ void main() {
       await SessionManager.completeProfile(
         studentName: 'Yuvraj Singh',
         studentCity: 'Jaipur',
+        consentAccepted: true,
       );
 
       expect(prefs.getBool('profile_completed'), true);

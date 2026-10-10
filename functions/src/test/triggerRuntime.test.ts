@@ -5,7 +5,7 @@ describe('Trigger Discovery & Event-Driven Trigger Runtime Suite', () => {
   const validSha = 'a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90';
 
   test('EXPECTED_NEW_TRIGGERS match DISCOVERED_NEW_TRIGGERS in compiled index.js', () => {
-    const exports = require('../../index');
+    const exports = require('../index');
 
     const expectedTriggers = [
       'queueWorker',

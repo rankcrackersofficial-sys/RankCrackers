@@ -1,3 +1,4 @@
+export {};
 const { classifySyllabusDelta, isJobCurrent } = require('../../services/canonical_source_authority');
 
 describe('Reverse Delta Rollback & Stale Invalidation Suite', () => {
@@ -20,7 +21,7 @@ describe('Reverse Delta Rollback & Stale Invalidation Suite', () => {
     expect(reverseDelta).toBeDefined();
     expect(reverseDelta.items.length).toBeGreaterThan(0);
     // Node u2 in V2 is REMOVED in target V1
-    const removedItem = reverseDelta.items.find(i => i.classification === 'REMOVED');
+    const removedItem = reverseDelta.items.find((i: any) => i.classification === 'REMOVED');
     expect(removedItem).toBeDefined();
     expect(removedItem.before.semanticKey).toBe('kinematics_2d');
   });

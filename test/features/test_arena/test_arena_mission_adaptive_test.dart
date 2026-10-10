@@ -127,7 +127,7 @@ void main() {
           ),
       ];
 
-      final result = TestArenaEngine.scoreAttempt(
+      final result = TestArenaEngine.scoreLegacyAttempt(
         event: event,
         uid: 'student_warrior_01',
         responses: responses,
@@ -180,6 +180,10 @@ void main() {
       final ranked = TestArenaEngine.computeEventRankings(
         eventId: event.eventId,
         results: [liveResultA, liveResultB, liveResultC, historicalResult],
+        cohortId: 'COHORT_2027_STAGE1',
+        rankingPolicyVersion: 'AIR_POLICY_V1',
+        isRankAuthoritative: true,
+        governedMinCohortSize: 2,
       );
 
       final studentA = ranked.firstWhere((r) => r.uid == 'student_a');
@@ -194,11 +198,9 @@ void main() {
       expect(studentC.eventRank, equals(3));
       expect(studentC.percentile, equals(0.0));
 
-      // Late attempt does NOT receive fake live rank, but gets historical benchmark percentile
+      // Late attempt does NOT receive fake live rank or unauthorized historical percentile
       expect(studentLate.eventRank, isNull);
-      expect(studentLate.historicalBenchmarkPercentile, isNotNull);
-      // Raw score 200 is above 2 out of 3 live participants => 66.67%
-      expect(studentLate.historicalBenchmarkPercentile, closeTo(66.67, 0.1));
+      expect(studentLate.percentile, isNull);
     });
 
     test('4. Test Arena feedback generation provides diagnostic signals without mutating ranking record', () {

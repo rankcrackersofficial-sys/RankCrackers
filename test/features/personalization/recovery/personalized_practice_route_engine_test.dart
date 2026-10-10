@@ -60,6 +60,7 @@ AafPersonalizationBridgeAuthority _bridge({
     AafPersonalizationBridgeAuthority(
       studentId: 'student-1',
       targetAmtnId: 'amtn-1',
+      missionId: 'jee_main_2026',
       canonicalSemanticTopicId: 'topic-1',
       canonicalKnowledgeVersion: 3,
       publicProjectionId: 'pub-1',
@@ -91,6 +92,7 @@ VerifiedPracticeItem _item(
 StudentLearningState _state() => StudentLearningState(
       studentId: 'student-1',
       amtnId: 'amtn-1',
+      missionId: 'jee_main_2026',
       calculatedAtUtc: _now,
       masteryProbability: 0.5,
       masteryBand: StudentMasteryBand.developing,

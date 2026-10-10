@@ -20,7 +20,7 @@ async function run() {
     }
   }
 
-  console.log(`🔱 SCALE MATERIALIZATION: Total verified atoms in factory: ${verifiedAtomIds.length}`);
+  console.log(`SCALE MATERIALIZATION: Total verified atoms in factory: ${verifiedAtomIds.length}`);
 
   const service = new MaterializationService();
   // Promoting in batches of 50 to avoid Firestore limits per batch
@@ -33,7 +33,7 @@ async function run() {
     totalPromoted += count;
   }
 
-  console.log(`🔱 SCALE MATERIALIZATION COMPLETE: ${totalPromoted} atoms published to mission jee_main_2027.`);
+  console.log(`SCALE MATERIALIZATION COMPLETE: ${totalPromoted} atoms published to mission jee_main_2027.`);
   process.exit(0);
 }
 

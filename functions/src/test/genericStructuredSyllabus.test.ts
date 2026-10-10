@@ -1,0 +1,30 @@
+import { materializeGenericStructure } from '../services/genericStructuredSyllabus';
+const sha='a'.repeat(64), missionId='future_mission', documentId=`hash_${sha}`;
+const page=(o:any={})=>({pageNumber:1,text:'official syllabus',verified:true,sourceSha256:sha,missionId,documentId,documentType:'official_syllabus',...o});
+const subject=(children:any[]=[])=>({title:'Mathematics',type:'subject' as const,sourcePages:[1],sourceTextAnchor:'Mathematics',children});
+const unit=()=>({title:'Algebra',type:'unit' as const,sourcePages:[1],sourceTextAnchor:'Algebra'});
+const input=(o:any={})=>({missionId,documentId,sourceSha256:sha,pages:[page()],scopeAuthorized:true,scope:[subject([unit()])],runId:'run_fixture',workerRevision:'generic-b3-v1',...o});
+
+describe('B3G-T01..T24',()=>{
+ test('B3G-T01 mission subject',()=>expect(materializeGenericStructure(input())[0].nodeType).toBe('subject'));
+ test('B3G-T02 paper subject',()=>{const scope=[{title:'Paper 1',type:'paper',sourcePages:[1],sourceTextAnchor:'Paper 1',children:[subject()]}]; expect(materializeGenericStructure(input({scope}))[1].paperId).toBeTruthy();});
+ test('B3G-T03 optional paper',()=>expect(materializeGenericStructure(input())[0].paperId).toBeNull());
+ test('B3G-T04 wrong source blocked',()=>expect(()=>materializeGenericStructure(input({pages:[page({sourceSha256:'b'.repeat(64)})]}))).toThrow('WRONG_SOURCE'));
+ test('B3G-T05 unverified blocked',()=>expect(()=>materializeGenericStructure(input({pages:[page({verified:false})]}))).toThrow('UNVERIFIED'));
+ test('B3G-T06 source order',()=>expect(materializeGenericStructure(input()).map(n=>n.sourceOrder)).toEqual([0,1]));
+ test('B3G-T07 deterministic IDs',()=>expect(materializeGenericStructure(input()).map(n=>n.nodeId)).toEqual(materializeGenericStructure(input()).map(n=>n.nodeId)));
+ test('B3G-T08 duplicate prevention',()=>expect(new Set(materializeGenericStructure(input()).map(n=>n.nodeId)).size).toBe(2));
+ test('B3G-T09 source-less blocked',()=>expect(()=>materializeGenericStructure(input({scope:[{...subject(),sourcePages:[]}]}))).toThrow('SOURCELESS'));
+ test('B3G-T10 orphan impossible',()=>{const n=materializeGenericStructure(input());expect(n.every(x=>!x.parentId||n.some(y=>y.nodeId===x.parentId))).toBe(true);});
+ test('B3G-T11 cross-paper isolation',()=>{const p=(t:string)=>({title:t,type:'paper',sourcePages:[1],sourceTextAnchor:t,children:[subject()]});const n=materializeGenericStructure(input({scope:[p('P1'),p('P2')]}));expect(new Set(n.filter(x=>x.nodeType==='subject').map(x=>x.paperId)).size).toBe(2);});
+ test('B3G-T12 cross-subject isolation',()=>{const n=materializeGenericStructure(input({scope:[subject([unit()]),{...subject([unit()]),title:'Physics'}]}));expect(new Set(n.filter(x=>x.nodeType==='unit').map(x=>x.subjectId)).size).toBe(2);});
+ test.each(['jee_main_2026','neet_(ug)-2027','rpsc_current','future_unknown'])('B3G-T13..16 generic fixture %s',m=>{const d=`hash_${sha}`;expect(materializeGenericStructure(input({missionId:m,documentId:d,pages:[page({missionId:m,documentId:d})]}))).toHaveLength(2);});
+ test('B3G-T17 no publication',()=>expect(materializeGenericStructure(input())[0]).not.toHaveProperty('published'));
+ test('B3G-T18 no atoms',()=>expect(materializeGenericStructure(input())[0]).not.toHaveProperty('atoms'));
+ test('B3G-T19 malformed provider response fails',()=>expect(()=>materializeGenericStructure(input({scope:[{bad:true}]}))).toThrow());
+ test('B3G-T20 empty provider response fails',()=>expect(materializeGenericStructure(input({scope:[]}))).toEqual([]));
+ test('B3G-T21 provenance complete',()=>expect(materializeGenericStructure(input()).every(n=>n.sourceSha256&&n.sourcePages.length&&n.sourceTextAnchor)).toBe(true));
+ test('B3G-T22 rerun idempotent',()=>expect(materializeGenericStructure(input())).toEqual(materializeGenericStructure(input())));
+ test('B3G-T23 no mission branch',()=>expect(materializeGenericStructure.toString()).not.toMatch(/jee_main|neet_|rpsc_/));
+ test('B3G-T24 non syllabus blocked',()=>expect(()=>materializeGenericStructure(input({pages:[page({documentType:'notice'})]}))).toThrow('NON_SYLLABUS'));
+});

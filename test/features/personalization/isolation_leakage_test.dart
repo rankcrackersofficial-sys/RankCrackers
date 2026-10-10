@@ -10,6 +10,7 @@ import 'package:rank_crackers/features/personalization/domain/engines/syllabus_p
 import 'package:rank_crackers/features/personalization/domain/engines/digibook_personalization_route_engine.dart';
 import 'package:rank_crackers/features/personalization/domain/engines/crucible_personalization_blueprint_engine.dart';
 import 'package:rank_crackers/features/personalization/domain/engines/student_revision_queue_engine.dart';
+import 'package:rank_crackers/features/personalization/domain/engines/student_revision_closed_loop_engine.dart';
 import 'package:rank_crackers/features/personalization/domain/engines/student_coaching_support_engine.dart';
 import 'package:rank_crackers/features/personalization/domain/models/aaf_personalization_bridge.dart';
 import 'package:rank_crackers/features/personalization/domain/models/student_evidence_event.dart';
@@ -61,6 +62,7 @@ void main() {
         studentId: 's1',
         missionId: missionA, // WRONG MISSION for bridgeB
         amtnId: 'amtn1',
+        questionId: 'q1',
         source: StudentEvidenceSource.practice,
         action: StudentEvidenceAction.answerSubmitted,
         occurredAtUtc: now.subtract(const Duration(minutes: 5)),
@@ -107,6 +109,7 @@ void main() {
         studentId: 's1',
         missionId: missionB,
         amtnId: 'amtn1',
+        questionId: 'q1',
         source: StudentEvidenceSource.practice,
         action: StudentEvidenceAction.answerSubmitted,
         occurredAtUtc: now.subtract(const Duration(minutes: 10)),
@@ -121,6 +124,7 @@ void main() {
         studentId: 's1',
         missionId: missionB,
         amtnId: 'amtn1',
+        questionId: 'q2',
         source: StudentEvidenceSource.practice,
         action: StudentEvidenceAction.answerSubmitted,
         occurredAtUtc: now.subtract(const Duration(minutes: 5)),
@@ -135,6 +139,7 @@ void main() {
         studentId: 's1',
         missionId: missionB,
         amtnId: 'amtn1',
+        questionId: 'q3',
         source: StudentEvidenceSource.practice,
         action: StudentEvidenceAction.answerSubmitted,
         occurredAtUtc: now.subtract(const Duration(minutes: 1)),

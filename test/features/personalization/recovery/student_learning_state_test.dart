@@ -6,6 +6,7 @@ void main() {
     return StudentLearningState(
       studentId: 's-1',
       amtnId: 'amtn-1',
+      missionId: 'jee_main_2026',
       calculatedAtUtc: DateTime.utc(2026, 8, 16, 10),
       masteryProbability: 0.8,
       masteryBand: StudentMasteryBand.proficient,
@@ -45,6 +46,7 @@ void main() {
     final state = StudentLearningState(
       studentId: 's',
       amtnId: 'a',
+      missionId: 'jee_main_2026',
       calculatedAtUtc: DateTime.utc(2026, 8, 16),
       masteryProbability: 1.2,
       masteryBand: StudentMasteryBand.mastered,
@@ -72,6 +74,7 @@ void main() {
     final state = StudentLearningState(
       studentId: 's',
       amtnId: 'a',
+      missionId: 'jee_main_2026',
       calculatedAtUtc: DateTime.utc(2026, 8, 16),
       masteryProbability: null,
       masteryBand: StudentMasteryBand.emerging,

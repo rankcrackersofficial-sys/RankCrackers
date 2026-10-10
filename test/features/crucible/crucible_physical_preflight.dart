@@ -2,10 +2,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-/// 🔱 CRUCIBLE PHYSICAL PREFLIGHT
+/// CRUCIBLE PHYSICAL PREFLIGHT
 /// Run this on S23/S24 to verify security rules and content read-back.
 void main() {
-  group('🔱 Crucible Physical Preflight', () {
+  group('Crucible Physical Preflight', () {
 
     test('1. Verify Protocol Write Access', () async {
       final db = FirebaseFirestore.instance;

@@ -18,6 +18,7 @@ void main() {
     return StudentEvidenceEvent(
       eventId: 'e-1',
       studentId: 's-1',
+      missionId: 'jee_main_2026',
       source: StudentEvidenceSource.crucible,
       action: action,
       occurredAtUtc: DateTime.utc(2026, 8, 16, 10),
@@ -42,6 +43,7 @@ void main() {
 
     expect(restored.eventId, original.eventId);
     expect(restored.studentId, original.studentId);
+    expect(restored.missionId, original.missionId);
     expect(restored.amtnId, original.amtnId);
     expect(restored.questionId, original.questionId);
     expect(restored.answerOutcome, StudentAnswerOutcome.correct);
@@ -63,6 +65,7 @@ void main() {
     final event = StudentEvidenceEvent(
       eventId: 'e-2',
       studentId: 's-1',
+      missionId: 'jee_main_2026',
       source: StudentEvidenceSource.practice,
       action: StudentEvidenceAction.answerSubmitted,
       occurredAtUtc: DateTime(2026, 8, 16, 10),
@@ -81,6 +84,7 @@ void main() {
     final event = StudentEvidenceEvent(
       eventId: 'e-3',
       studentId: 's-1',
+      missionId: 'jee_main_2026',
       source: StudentEvidenceSource.practice,
       action: StudentEvidenceAction.nodeOpened,
       occurredAtUtc: DateTime.utc(2026, 8, 16),

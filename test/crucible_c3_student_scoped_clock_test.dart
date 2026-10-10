@@ -61,11 +61,12 @@ void main() {
       expect(type, 'RECOVERY');
     });
 
-    test('7. getWindowType resolves MAJOR correctly', () {
-      // Day 100 is Major test (elapsed >= 99 days)
-      final now = baseState.protocolStartTime.add(const Duration(days: 99, hours: 2));
+    test('7. Continuous Rotation: Day 99 wraps into Orbit 2 Day 1 LEARNING', () {
+      // Day 99 wraps into Orbit 2 Day 1 (elapsed >= 98 days)
+      final now = baseState.protocolStartTime.add(const Duration(days: 98, hours: 2));
       final type = CrucibleClockEngine.getWindowType(state: baseState, now: now);
-      expect(type, 'MAJOR');
+      expect(type, 'LEARNING');
+      expect(CrucibleClockEngine.getOrbitNumber(protocolStartTime: baseState.protocolStartTime, now: now), 2);
     });
 
     test('8. getCurrentWindowBounds calculates correct start/end for LEARNING', () {

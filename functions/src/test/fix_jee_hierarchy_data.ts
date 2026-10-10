@@ -39,6 +39,8 @@ async function run() {
 
     batch.update(doc.ref, {
       topicId: topicId,
+      // All 1125 current nodes are confirmed Paper 1
+      paperId: 'PAPER_1',
       // Ensure unitId is synced with chapterId
       unitId: data.chapterId,
       // Tag with migration version

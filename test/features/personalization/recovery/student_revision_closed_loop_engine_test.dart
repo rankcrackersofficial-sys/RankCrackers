@@ -17,6 +17,7 @@ void main() {
       return StudentLearningState(
         studentId: 'student_1',
         amtnId: 'amtn_1',
+        missionId: 'jee_main_2026',
         calculatedAtUtc: now,
         masteryProbability: 0.64,
         masteryBand: masteryBand,
@@ -34,7 +35,7 @@ void main() {
         retryRate: 0.0,
         answerChangeRate: 0.0,
         totalEligibleEvidenceCount: 12,
-        schemaVersion: StudentLearningState.currentSchemaVersion,
+        schemaVersion: 3,
       );
     }
 
@@ -45,6 +46,7 @@ void main() {
       return StudentRevisionClosedLoopCandidate(
         studentId: 'student_1',
         amtnId: 'amtn_1',
+        missionId: 'jee_main_2026',
         canonicalSemanticTopicId: 'topic_1',
         triggerType: RevisionTriggerType.retentionDecay,
         decayFactor: 0.72,
@@ -62,6 +64,7 @@ void main() {
       return AafPersonalizationBridgeAuthority(
         studentId: 'student_1',
         targetAmtnId: 'amtn_1',
+        missionId: 'jee_main_2026',
         canonicalSemanticTopicId: 'topic_1',
         canonicalKnowledgeVersion: version,
         publicProjectionId: projectionId,
@@ -70,7 +73,7 @@ void main() {
         treatmentDecisionVersion: 1,
         routeVersion: 1,
         createdAtUtc: now,
-        schemaVersion: AafPersonalizationBridgeAuthority.currentSchemaVersion,
+        schemaVersion: 2,
       );
     }
 
@@ -84,6 +87,7 @@ void main() {
       return StudentEvidenceEvent(
         eventId: eventId,
         studentId: 'student_1',
+        missionId: 'jee_main_2026',
         source: StudentEvidenceSource.revision,
         action: action,
         occurredAtUtc: now,
@@ -96,7 +100,7 @@ void main() {
         wasExplanationOpened: explanationOpened,
         wasRetry: false,
         wasSkipped: false,
-        schemaVersion: StudentEvidenceEvent.currentSchemaVersion,
+        schemaVersion: 3,
       );
     }
 

@@ -3,6 +3,25 @@ const { completeDigiBookVerification, completeCrucibleReconciliation } = require
 describe('DigiBook & Crucible Downstream Impact Completion Suite', () => {
   const validSha = 'a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90';
 
+  function createMockDb(mockSlotData: any) {
+    const docMock = (docId: string) => ({
+      get: jest.fn().mockResolvedValue({
+        exists: true,
+        data: () => (docId.includes('slot') ? mockSlotData : { status: 'RECONCILED_COMPLETE' })
+      }),
+      set: jest.fn().mockResolvedValue(true),
+      collection: jest.fn((subColl: string) => ({
+        doc: docMock
+      }))
+    });
+
+    return {
+      collection: jest.fn((coll: string) => ({
+        doc: docMock
+      }))
+    };
+  }
+
   test('DigiBook verification completion is source guarded', async () => {
     const mockSlotData = {
       canonicalVersionId: 'srcv_v1',
@@ -10,17 +29,7 @@ describe('DigiBook & Crucible Downstream Impact Completion Suite', () => {
       activationEpoch: 1
     };
 
-    const mockDb = {
-      collection: jest.fn((coll: string) => ({
-        doc: jest.fn((docId: string) => ({
-          get: jest.fn().mockResolvedValue({
-            exists: true,
-            data: () => (docId.includes('slot') ? mockSlotData : { status: 'RECONCILED_COMPLETE' })
-          }),
-          set: jest.fn().mockResolvedValue(true)
-        }))
-      }))
-    };
+    const mockDb = createMockDb(mockSlotData);
 
     const res = await completeDigiBookVerification(mockDb as any, {
       eventId: 'evt_001',
@@ -44,17 +53,7 @@ describe('DigiBook & Crucible Downstream Impact Completion Suite', () => {
       activationEpoch: 1
     };
 
-    const mockDb = {
-      collection: jest.fn((coll: string) => ({
-        doc: jest.fn((docId: string) => ({
-          get: jest.fn().mockResolvedValue({
-            exists: true,
-            data: () => mockSlotData
-          }),
-          set: jest.fn().mockResolvedValue(true)
-        }))
-      }))
-    };
+    const mockDb = createMockDb(mockSlotData);
 
     const res = await completeDigiBookVerification(mockDb as any, {
       eventId: 'evt_001',
@@ -79,17 +78,7 @@ describe('DigiBook & Crucible Downstream Impact Completion Suite', () => {
       activationEpoch: 1
     };
 
-    const mockDb = {
-      collection: jest.fn((coll: string) => ({
-        doc: jest.fn((docId: string) => ({
-          get: jest.fn().mockResolvedValue({
-            exists: true,
-            data: () => mockSlotData
-          }),
-          set: jest.fn().mockResolvedValue(true)
-        }))
-      }))
-    };
+    const mockDb = createMockDb(mockSlotData);
 
     const res = await completeCrucibleReconciliation(mockDb as any, {
       eventId: 'evt_001',
@@ -115,17 +104,7 @@ describe('DigiBook & Crucible Downstream Impact Completion Suite', () => {
       activationEpoch: 2
     };
 
-    const mockDb = {
-      collection: jest.fn((coll: string) => ({
-        doc: jest.fn(() => ({
-          get: jest.fn().mockResolvedValue({
-            exists: true,
-            data: () => mockSlotData
-          }),
-          set: jest.fn()
-        }))
-      }))
-    };
+    const mockDb = createMockDb(mockSlotData);
 
     const res = await completeDigiBookVerification(mockDb as any, {
       eventId: 'evt_001',

@@ -4,6 +4,42 @@ describe('Student Reader V1 -> V2 Cutover Suite', () => {
   const v1Sha = 'a1b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90';
   const v2Sha = 'b2c3d4e5f60718293a4b5c6d7e8f90a1b2c3d4e5f60718293a4b5c6d7e8f90a1';
 
+  function createMockDb(mockSlotData: any, mockProjDocs: any[] = []) {
+    const docMock = (docId: string) => ({
+      get: jest.fn().mockResolvedValue({
+        exists: true,
+        data: () => mockSlotData
+      }),
+      set: jest.fn().mockResolvedValue(true),
+      collection: jest.fn((subColl: string) => ({
+        doc: docMock,
+        where: jest.fn().mockReturnValue({
+          get: jest.fn().mockResolvedValue({
+            empty: mockProjDocs.length === 0,
+            docs: mockProjDocs
+          })
+        })
+      }))
+    });
+
+    const batchSetFn = jest.fn();
+    const batchCommitFn = jest.fn().mockResolvedValue(true);
+
+    return {
+      db: {
+        collection: jest.fn((coll: string) => ({
+          doc: docMock
+        })),
+        batch: jest.fn(() => ({
+          set: batchSetFn,
+          commit: batchCommitFn
+        }))
+      },
+      batchSetFn,
+      batchCommitFn
+    };
+  }
+
   test('Cutover rejected while downstream verification is incomplete', async () => {
     const slotDataIncomplete = {
       canonicalVersionId: 'srcv_v2',
@@ -12,18 +48,9 @@ describe('Student Reader V1 -> V2 Cutover Suite', () => {
       downstreamVerificationComplete: false
     };
 
-    const mockDb = {
-      collection: jest.fn(() => ({
-        doc: jest.fn(() => ({
-          get: jest.fn().mockResolvedValue({
-            exists: true,
-            data: () => slotDataIncomplete
-          })
-        }))
-      }))
-    };
+    const { db } = createMockDb(slotDataIncomplete);
 
-    const res = await projectSyllabusToStudentReader(mockDb as any, {
+    const res = await projectSyllabusToStudentReader(db as any, {
       missionId: 'jee_main_2026',
       sourceSlotId: 'slot_001',
       sourceVersionId: 'srcv_v2',
@@ -50,31 +77,9 @@ describe('Student Reader V1 -> V2 Cutover Suite', () => {
       { id: 'top_01', data: () => ({ id: 'top_01', nodeType: 'topic', canonicalTitle: 'Motion in 1D', subjectId: 'Physics', parentId: 'unit_01' }) }
     ];
 
-    const batchSetFn = jest.fn();
-    const batchCommitFn = jest.fn().mockResolvedValue(true);
+    const { db, batchSetFn } = createMockDb(slotDataComplete, mockProjDocs);
 
-    const mockDb = {
-      collection: jest.fn((coll: string) => ({
-        doc: jest.fn(() => ({
-          get: jest.fn().mockResolvedValue({
-            exists: true,
-            data: () => slotDataComplete
-          })
-        })),
-        where: jest.fn().mockReturnValue({
-          get: jest.fn().mockResolvedValue({
-            empty: false,
-            docs: mockProjDocs
-          })
-        })
-      })),
-      batch: jest.fn(() => ({
-        set: batchSetFn,
-        commit: batchCommitFn
-      }))
-    };
-
-    const res = await projectSyllabusToStudentReader(mockDb as any, {
+    const res = await projectSyllabusToStudentReader(db as any, {
       missionId: 'jee_main_2026',
       sourceSlotId: 'slot_001',
       sourceVersionId: 'srcv_v2',
