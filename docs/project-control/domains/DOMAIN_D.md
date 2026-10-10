@@ -29,3 +29,10 @@ C→G migration closed and R39 green baseline reported. SSC CGL candidate/Hostin
 Mission `ssc_cgl`; source observation `sobs_0dfefaf28a34b5b9a1fd345f`; discovery `dlin_5f7105c581eb16e361c26ee6`; held review packet `arp_61d75c271b1b7de80c6311ba35d77b9671640c0d` pending Founder decision in earlier evidence. Historical deployed candidate `3f233037aa16dc39ccec514d31d724afa0cb1926`; hosting identity and live Gate-B remained to prove in the prior report. **Historical only; not verified live today.**
 
 **Runtime safety:** Firebase project `rankcrackers-55`, Founder Web `rankcrackers.in`, function `us-central1/handleSentinelAction`. Strict hosting identity gate; no IAM escalation or unauthorized deployment. Historical R39: Functions build PASS, Jest 0/48 failed, Flutter tests PASS; not rerun here.
+
+## DOMAIN-D bootstrap reconciliation — 2026-10-10
+**BOOTSTRAP:** COMPLETE, READ_ONLY; GitHub branch/head read at `a57657ea3c984f1b6ced4f72c34c7734b28c15ab`. **Source tier for operational history:** Domain-D historical reports, not current Firebase/live readback.
+
+**Historical successful operational evidence reported:** candidate `3f233037aa16dc39ccec514d31d724afa0cb1926` deployed to Functions `us-central1/handleSentinelAction` and Hosting `rankcrackers-55`; authenticated Firebase Console historically proved `rankcrackers.in` hosting identity; D3 42/42, local Gate-B 24/24. Thus **old hosting identity uncertainty was reportedly resolved historically**, but the **current hosting binding and independent live Gate-B remain unverified**. No current source/runtime defect proven.
+
+**Open reconciliation:** current Firebase function release/version, Hosting release identity, live authenticated `inspect_held_review_candidate` path, persisted packet/digest (old vs later packet mismatch), regeneration `functions/src → functions/lib`, PC/remote parity, historical commit-to-current-tree mapping. Human Founder decision still not established. **Next:** separate authorization for current read-only live Gate-B check after evidence-only state update; no deploy/IAM/production mutation.
