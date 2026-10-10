@@ -130,3 +130,6 @@ After deployment and reset, the following must all be true:
   production deletion was attempted and the website's live count remains to
   be verified by running the guarded census in the deployed Functions
   environment.
+- The Firebase callable integration runner was not executed because the local
+  Functions dependency `firebase-functions` is also absent; the pure backend
+  contract suites remain green.
