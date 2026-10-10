@@ -89,98 +89,186 @@ html_template = f"""<!DOCTYPE html>
 <style>
   @page {{
     size: A4 portrait;
-    margin: 20mm;
+    margin: 22mm 20mm 25mm 20mm;
   }}
   body {{
-    font-family: 'Noto Sans Devanagari', 'Segoe UI', Arial, sans-serif;
+    font-family: 'Noto Sans Devanagari', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 11pt;
-    line-height: 1.35;
-    color: #1a1a1a;
+    line-height: 1.68;
+    color: #1E293B;
     text-align: justify;
-    max-width: 860px;
+    text-justify: inter-word;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 24px;
+    padding: 32px 24px;
     background-color: #FFFFFF;
+    -webkit-font-smoothing: antialiased;
   }}
   h1 {{
     font-size: 24pt;
+    font-weight: 800;
     color: #0A0C10;
-    border-bottom: 2.5px solid #B39B5D;
-    padding-bottom: 8px;
-    margin-top: 40px;
+    border-bottom: 3px solid #B39B5D;
+    padding-bottom: 10px;
+    margin-top: 48px;
+    margin-bottom: 18px;
     page-break-before: always;
+    letter-spacing: -0.5px;
+    line-height: 1.25;
   }}
   h2 {{
     font-size: 17pt;
-    color: #1E293B;
-    margin-top: 28px;
-    border-bottom: 1px solid #CBD5E1;
-    padding-bottom: 5px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-top: 36px;
+    margin-bottom: 14px;
+    border-bottom: 1.5px solid #CBD5E1;
+    padding-bottom: 6px;
+    line-height: 1.3;
   }}
   h3 {{
-    font-size: 14pt;
-    color: #334155;
-    margin-top: 20px;
+    font-size: 13.5pt;
+    font-weight: 600;
+    color: #1E293B;
+    margin-top: 26px;
+    margin-bottom: 10px;
+    line-height: 1.35;
   }}
   h4 {{
     font-size: 11.5pt;
-    color: #475569;
-    font-weight: bold;
-    margin-top: 16px;
+    font-weight: 700;
+    color: #334155;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    line-height: 1.4;
   }}
   p {{
-    margin: 10px 0;
+    margin: 12px 0;
+    text-align: justify;
+    text-justify: inter-word;
   }}
-  pre, code {{
-    font-family: 'Consolas', 'Courier New', monospace;
-    font-size: 9.5pt;
-    background-color: #F8FAFC;
+  strong {{
+    font-weight: 700;
     color: #0F172A;
   }}
-  pre {{
-    padding: 12px;
+  ul, ol {{
+    margin: 10px 0 14px 26px;
+    padding: 0;
+  }}
+  li {{
+    margin: 6px 0;
+    line-height: 1.65;
+    text-align: justify;
+  }}
+  code {{
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Courier New', monospace;
+    font-size: 9.5pt;
+    font-weight: 600;
+    background-color: #F1F5F9;
+    color: #0F172A;
+    padding: 2px 6px;
     border: 1px solid #E2E8F0;
-    border-radius: 6px;
+    border-radius: 4px;
+  }}
+  pre {{
+    background-color: #0A0C10;
+    border: 1px solid #1E293B;
+    border-radius: 8px;
+    padding: 16px 20px;
     overflow-x: auto;
     white-space: pre-wrap;
     word-break: break-all;
-    line-height: 1.25;
-    margin: 12px 0;
+    line-height: 1.45;
+    margin: 18px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }}
+  pre code {{
+    background-color: transparent;
+    color: #E2E8F0;
+    border: none;
+    padding: 0;
+    font-size: 9.5pt;
+    font-weight: 400;
   }}
   table {{
     width: 100%;
     border-collapse: collapse;
-    margin: 16px 0;
+    margin: 22px 0;
     font-size: 10pt;
-  }}
-  th, td {{
+    background-color: #FFFFFF;
     border: 1px solid #CBD5E1;
-    padding: 8px 10px;
-    text-align: left;
-    vertical-align: top;
+    border-radius: 6px;
+    overflow: hidden;
+    page-break-inside: avoid;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  }}
+  thead {{
+    background-color: #0A0C10;
   }}
   th {{
+    background-color: #0A0C10;
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 11px 14px;
+    text-align: left;
+    border: 1px solid #1E293B;
+    letter-spacing: 0.3px;
+    font-size: 9.5pt;
+  }}
+  td {{
+    border: 1px solid #E2E8F0;
+    padding: 10px 14px;
+    text-align: justify;
+    text-justify: inter-word;
+    vertical-align: top;
+    line-height: 1.55;
+  }}
+  tbody tr:nth-child(even) {{
+    background-color: #F8FAFC;
+  }}
+  tbody tr:hover {{
     background-color: #F1F5F9;
-    font-weight: bold;
   }}
   blockquote {{
-    border-left: 4px solid #B39B5D;
-    background-color: #F8FAFC;
-    margin: 14px 0;
-    padding: 8px 16px;
-    font-style: italic;
+    border-left: 4.5px solid #B39B5D;
+    background-color: #FDFBF7;
+    margin: 16px 0;
+    padding: 12px 18px;
+    border-radius: 0 8px 8px 0;
+    color: #334155;
+    line-height: 1.6;
   }}
   hr {{
     border: none;
-    border-top: 1px solid #CBD5E1;
-    margin: 28px 0;
+    border-top: 1.5px solid #E2E8F0;
+    margin: 32px 0;
   }}
   a {{
-    color: #1E40AF;
+    color: #0284C7;
     text-decoration: none;
+    font-weight: 500;
   }}
   a:hover {{
     text-decoration: underline;
+    color: #0369A1;
+  }}
+  .figure-container {{
+    text-align: center;
+    margin: 28px 0;
+    page-break-inside: avoid;
+  }}
+  .figure-container img {{
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  }}
+  .figure-caption {{
+    font-size: 9.5pt;
+    color: #64748B;
+    margin-top: 8px;
+    font-style: italic;
   }}
 </style>
 </head>
@@ -192,46 +280,105 @@ def md_to_html(md_text):
     out = []
     in_code = False
     in_table = False
-    
+    table_header_done = False
+    in_ul = False
+    in_ol = False
+
     for line in lines:
         if line.startswith('```'):
             if in_code:
-                out.append('</pre>')
+                out.append('</code></pre>')
                 in_code = False
             else:
-                out.append('<pre><code>')
+                lang = line[3:].strip()
+                out.append(f'<pre><code class="language-{lang}">')
                 in_code = True
             continue
-        
+
         if in_code:
             out.append(line.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;'))
             continue
-            
+
+        # Check list closures
+        is_ul_item = re.match(r'^\s*[-*]\s+(.*)$', line)
+        is_ol_item = re.match(r'^\s*(\d+)\.\s+(.*)$', line)
+
+        if not is_ul_item and in_ul:
+            out.append('</ul>')
+            in_ul = False
+        if not is_ol_item and in_ol:
+            out.append('</ol>')
+            in_ol = False
+
         if line.startswith('|') and line.endswith('|'):
             if not in_table:
                 out.append('<table>')
                 in_table = True
+                table_header_done = False
             cols = [c.strip() for c in line.split('|')[1:-1]]
             if all(re.match(r'^:?-+:?$', c) for c in cols):
+                table_header_done = True
                 continue
-            row = ''.join([f'<td>{c}</td>' for c in cols])
-            out.append(f'<tr>{row}</tr>')
+
+            formatted_cols = []
+            for c in cols:
+                cell = c
+                cell = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', cell)
+                cell = re.sub(r'`(.+?)`', r'<code>\1</code>', cell)
+                cell = re.sub(r'(?<!!)\[(.*?)\]\((.*?)\)', r'<a href="\2">\1</a>', cell)
+                formatted_cols.append(cell)
+
+            if not table_header_done:
+                row = ''.join([f'<th>{c}</th>' for c in formatted_cols])
+                out.append(f'<thead><tr>{row}</tr></thead><tbody>')
+                table_header_done = True
+            else:
+                row = ''.join([f'<td>{c}</td>' for c in formatted_cols])
+                out.append(f'<tr>{row}</tr>')
             continue
         else:
             if in_table:
-                out.append('</table>')
+                out.append('</tbody></table>')
                 in_table = False
-                
+                table_header_done = False
+
+        if is_ul_item:
+            if not in_ul:
+                out.append('<ul>')
+                in_ul = True
+            item_text = is_ul_item.group(1)
+            item_text = re.sub(r'!\[(.*?)\]\((.*?)\)', r'<img src="\2" alt="\1">', item_text)
+            item_text = re.sub(r'(?<!!)\[(.*?)\]\((.*?)\)', r'<a href="\2">\1</a>', item_text)
+            item_text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', item_text)
+            item_text = re.sub(r'`(.+?)`', r'<code>\1</code>', item_text)
+            out.append(f'<li>{item_text}</li>')
+            continue
+
+        if is_ol_item:
+            if not in_ol:
+                out.append('<ol>')
+                in_ol = True
+            item_text = is_ol_item.group(2)
+            item_text = re.sub(r'!\[(.*?)\]\((.*?)\)', r'<img src="\2" alt="\1">', item_text)
+            item_text = re.sub(r'(?<!!)\[(.*?)\]\((.*?)\)', r'<a href="\2">\1</a>', item_text)
+            item_text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', item_text)
+            item_text = re.sub(r'`(.+?)`', r'<code>\1</code>', item_text)
+            out.append(f'<li>{item_text}</li>')
+            continue
+
         if line.startswith('# '):
-            out.append(f'<h1>{line[2:]}</h1>')
+            out.append(f'<h1>{line[2:].strip()}</h1>')
         elif line.startswith('## '):
-            out.append(f'<h2>{line[3:]}</h2>')
+            out.append(f'<h2>{line[3:].strip()}</h2>')
         elif line.startswith('### '):
-            out.append(f'<h3>{line[4:]}</h3>')
+            out.append(f'<h3>{line[4:].strip()}</h3>')
         elif line.startswith('#### '):
-            out.append(f'<h4>{line[5:]}</h4>')
+            out.append(f'<h4>{line[5:].strip()}</h4>')
         elif line.startswith('> '):
-            out.append(f'<blockquote>{line[2:]}</blockquote>')
+            quote_text = line[2:].strip()
+            quote_text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', quote_text)
+            quote_text = re.sub(r'`(.+?)`', r'<code>\1</code>', quote_text)
+            out.append(f'<blockquote>{quote_text}</blockquote>')
         elif line.startswith('---'):
             out.append('<hr>')
         elif line.strip() == '':
@@ -241,7 +388,7 @@ def md_to_html(md_text):
             # Format markdown images: ![alt](url)
             formatted = re.sub(
                 r'!\[(.*?)\]\((.*?)\)',
-                r'<div class="figure-container" style="text-align:center; margin:20px 0;"><img src="\2" alt="\1" style="max-width:100%; height:auto; border:1px solid #CBD5E1; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.06);"><div class="figure-caption" style="font-size:9.5pt; color:#475569; margin-top:6px; font-style:italic;"><strong>\1</strong></div></div>',
+                r'<div class="figure-container"><img src="\2" alt="\1"><div class="figure-caption"><strong>\1</strong></div></div>',
                 formatted
             )
             # Format markdown links: [text](url) - ignore if preceded by !
@@ -254,12 +401,16 @@ def md_to_html(md_text):
             formatted = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', formatted)
             formatted = re.sub(r'`(.+?)`', r'<code>\1</code>', formatted)
             out.append(f'<p>{formatted}</p>')
-            
+
     if in_code:
-        out.append('</pre>')
+        out.append('</code></pre>')
     if in_table:
-        out.append('</table>')
-        
+        out.append('</tbody></table>')
+    if in_ul:
+        out.append('</ul>')
+    if in_ol:
+        out.append('</ol>')
+
     return '\n'.join(out)
 
 html_content = html_template + md_to_html(full_md_text) + "\n</body>\n</html>"
@@ -278,12 +429,12 @@ if os.path.exists(r"I:\My Drive"):
         os.makedirs(gdrive_dir, exist_ok=True)
         gdrive_md = os.path.join(gdrive_dir, "Rank_Cracker_Book_Complete_Master.md")
         gdrive_html = os.path.join(gdrive_dir, "Rank_Cracker_Book_Complete_Master.html")
-        
+
         with open(gdrive_md, "w", encoding="utf-8") as f:
             f.write(full_md_text)
         with open(gdrive_html, "w", encoding="utf-8") as f:
             f.write(html_content)
-            
+
         # Copy assets folder to Google Drive as well
         import shutil
         src_assets = os.path.join(book_dir, "assets")
@@ -292,7 +443,7 @@ if os.path.exists(r"I:\My Drive"):
             if os.path.exists(dst_assets):
                 shutil.rmtree(dst_assets)
             shutil.copytree(src_assets, dst_assets)
-            
+
         print(f"  [Google Drive Auto-Sync] Successfully synchronized master files & assets to: {gdrive_dir}")
     except Exception as e:
         print(f"  [Google Drive Auto-Sync Notice] {e}")
