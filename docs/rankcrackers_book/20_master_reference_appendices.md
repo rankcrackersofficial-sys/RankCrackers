@@ -488,7 +488,7 @@ Rank Crackers के अकादमिक और तकनीकी अनु�
 
 ### I.1 Remote delta accepted into the book
 
-The local baseline commit `ffb20f4a19d665739a5ba16414cf427e231a0db4` is two commits behind the GitHub branch head `bfee5c70814af5c2c2c3f3ba9fd9163361441d87`. The remote comparison reports exactly one changed path across those two commits:
+Historical source-reconciliation snapshot (2026-10-10): the local baseline commit `ffb20f4a19d665739a5ba16414cf427e231a0db4` was two commits behind the then-observed GitHub branch head `bfee5c70814af5c2c2c3f3ba9fd9163361441d87`. The remote comparison reported exactly one changed path across those two commits:
 
 `docs/architecture/CANONICAL_SYLLABUS_AND_DERIVED_DECOMPOSITION_CONTRACT.md`
 

@@ -74,5 +74,5 @@ White official mark को white page पर readable रखने के लि
 - **Local Source Repository:** `G:\RankCrackers Project\RankCrackers-55\docs\rankcrackers_book`
 - **Google Docs status:** partial living draft only; native parity with the local master is not verified in this batch. Do not treat the linked document as synchronized until native write plus readback confirms parity.
 - **Working status:** source-reconciliation batch 02 plus GitHub latest-document reconciliation are compiled locally; Chapter 18 remains `AUDIT HOLD — NOT FINAL`.
-- **GitHub tracking status:** latest observed remote documentation is tracked in Chapter 23. Remote commit `bfee5c70814af5c2c2c3f3ba9fd9163361441d87` is newer than the local checkout baseline; the remote contract is not automatically treated as live code.
+- **GitHub tracking status:** latest observed remote documentation is tracked in Chapter 23. The canonical contract was observed at commit `bfee5c70814af5c2c2c3f3ba9fd9163361441d87` and is included in the current local checkout; its presence in the book is not, by itself, proof of live runtime implementation.
 - **GitHub tracking files:** `github_source_manifest.json` records source commits; `scripts/check_github_book_tracking.py --json` performs a read-only remote change check before each book compilation cycle.

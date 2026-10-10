@@ -1,7 +1,7 @@
 # Chief Author Audit — Current Book State and Antigravity 2.0 Writing Order
 
-**Audit date:** 10 October 2026 (IST)  
-**Authority:** Chief Author / Editorial Control  
+**Audit date:** 10 October 2026 (IST)
+**Authority:** Chief Author / Editorial Control
 **Scope:** Local RankCrackers repository, book sources, compiled master files, source-path references, code-evidence claims and the connected Google Docs living manuscript.
 
 > यह document किसी पुराने progress report को प्रमाण नहीं मानता। नीचे का status current repository और current Google Docs readback से निकाला गया है। इसे Antigravity 2.0 के लिए writing order और acceptance gate माना जाए।
@@ -264,7 +264,11 @@ Until that milestone passes, all delivery language must use “working manuscrip
 
 ## 7. GitHub latest-document reconciliation — 2026-10-10
 
-The remote branch `safety/rc-g2-pre-notification-schema` is two commits ahead of the local baseline `ffb20f4a19d665739a5ba16414cf427e231a0db4`, ending at `bfee5c70814af5c2c2c3f3ba9fd9163361441d87`. The remote comparison contains exactly one changed path: `docs/architecture/CANONICAL_SYLLABUS_AND_DERIVED_DECOMPOSITION_CONTRACT.md` (723 added lines across the two commits).
+Historical source-reconciliation snapshot (2026-10-10): the remote branch `safety/rc-g2-pre-notification-schema` was two commits ahead of the local baseline `ffb20f4a19d665739a5ba16414cf427e231a0db4`, ending at `bfee5c70814af5c2c2c3f3ba9fd9163361441d87`. The remote comparison contained exactly one changed path: `docs/architecture/CANONICAL_SYLLABUS_AND_DERIVED_DECOMPOSITION_CONTRACT.md` (723 added lines across the two commits).
+
+## 9. Publication-Ready Local/GitHub Parity Audit — 2026-10-10
+
+The local checkout and the GitHub branch were independently confirmed at `ba2285bc99a40268663d708ff21479d21d79ba9a` before this publication batch. The publication scope is intentionally limited to the RankCracker Book package, its generated Markdown/HTML masters, and the book compilation/tracking scripts; unrelated working-tree changes are excluded from the publication commit. After the commit is pushed, the GitHub commit SHA must be recorded in the final handoff and treated as the new book publication baseline.
 
 Chief Author treatment:
 
@@ -273,3 +277,13 @@ Chief Author treatment:
 - Earlier fixed-four-tier syllabus claims are no longer current authority claims; they remain only when clearly labelled as runtime projection or historical schema evidence.
 - The remote contract does not, by itself, prove local runtime implementation parity.
 - The Google Docs synchronization claim remains unverified; local readback currently reports Drive sync flags as `False`/unavailable.
+
+## 8. Founder Web Operations & UnifiedCommandConsole Reconciliation — 2026-10-10
+
+Chapter 13 (`13_founder_web_operations_and_mission_control.md`) को पूर्व प्रोटोटाइप विवरणों से मुक्त करके वर्तमान लाइव उत्पादन परिवेश (`UnifiedCommandConsole`) और पैच सुरक्षा विनिर्देशों (`rc_founder_web_canonical_backend_live_integration_20260831`) के अनुरूप पूरी तरह पुनर्गठित (reconciled) कर दिया गया है:
+
+1. **Authoritative Host Grounding:** `founder_dashboard.dart` को प्रारंभिक प्रायोगिक प्रोटोटाइप (`SUPERSEDED_PROTOTYPE`) के रूप में वर्गीकृत किया गया। वर्तमान लाइव प्रोडक्शन होस्ट `UnifiedCommandConsole` (`lib/web/shared/unified_command_console.dart`) को प्रामाणिक संप्रभु सतह (Sovereign Command Surface) के रूप में दर्ज किया गया।
+2. **4 Sovereign Module Groups:** संस्थापक मोड के 4 सुव्यवस्थित समूहों—`MISSION & DELIVERY` (`MissionControlRoom`, `MissionDeliveryPreview`), `CONTENT PIPELINE` (`DocumentCommandCenter`, `VerificationCenter`, `FactoryHub`, `PublishGate`), `STUDENT & HEALTH` (`FounderStudentHealthWeb`), और `SYSTEM & GOVERNANCE` (`AccessSecurityWeb`, `FounderSystemOperationsWeb`)—का सटीक डार्ट विजेट्स और कॉलबैक्स के साथ दस्तावेजीकरण किया गया।
+3. **9 Canonical Mission Pipeline Invariants:** `docs/patch_safety/rc_founder_web_canonical_backend_live_integration_20260831/` के 9 अनिवार्य सुरक्षा नियमों (Quad Identity Validation, `update_mission_variables` >=12 char reason, lifecycle fail-closed guards, official documents SHA-256 pipeline, publish readiness 5-criteria gate, और student health non-interference) को पूर्णतः संहिताबद्ध किया गया।
+4. **Live Discrepancy Heuristics:** `FounderMissionInventory` के `needsAttention` को लाइव कोडबेस (`realm == null || (!sourceReady && !sourceCandidate) || (!hasCanonicalVariables && !hasLegacyVariables)`) के अनुसार अद्यतन किया गया।
+5. **Governed Lifecycle & Deletion Preflight:** पोर्टफोलियो कार्ड के लाइफसाइकिल म्यूटेशन्स (`archive_realm`, `restore_realm`) तथा परमानेंट डिलीट प्रीफ़्लाइट (मिशन आईडी मिलान, >=12 वर्ण संस्थापक कारण, और शून्य-निर्भरता सत्यापन) को प्रामाणिक रूप से दर्ज किया गया।
