@@ -26,3 +26,7 @@ Taught Content Authority I1 reported independently accepted/closed with 15/15 de
 **LAST_VERIFIED_SHA:** Pending.
 **LAST_VERIFIED_AT:** Pending.
 **EVIDENCE_REFERENCES:** Architecture link above; I1 historical report to locate.
+
+
+## Primary historical milestone and boundary
+Taught Content Authority I1 historically accepted CLOSED (15/15 dedicated tests); fail-closed when `scope.missionActive !== true` or `scope.atomVerified !== true`, including `MISSION_INACTIVE` and `ATOM_NOT_VERIFIED`. I2 design readiness previously READY; this is **not** proof that I2 was implemented. P8B was held in the earlier Domain-B handoff. DigiBook may not self-authorize syllabus changes. Current code/merge/deploy status still requires direct verification.
