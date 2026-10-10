@@ -241,10 +241,7 @@ export class GenericB3Worker {
           isLineResolved = true;
           // Validate parent exists
           if (!currentParentId || currentSubjectId === "Unknown") {
-            // 🛡️ B3_RECOVERY: If we find a unit marker without a subject, it's likely a section heading or misplaced content.
-            // We skip it instead of rejecting the entire document to remain robust.
-            console.log(`B3_INFO: Skipping orphan unit/heading on page ${page.pageNumber}: "${line}" (Subject is Unknown)`);
-            continue;
+            throw new Error(`B3_REJECT: orphan unit/heading on page ${page.pageNumber}: "${line}"`);
           }
 
           const title = line.trim();
@@ -657,13 +654,7 @@ export class GenericB3Worker {
 
     const isPart = l.startsWith("PART");
     const hasSubjectKeyword = allowedSubjects.some(s => l.includes(s));
-    
-    const wordCount = l.split(/\s+/).length;
-    if (hasSubjectKeyword && (isPart || wordCount <= 12)) {
-      // 🛡️ B3_HARDENING: Allow combined lines like "PHYSICS UNIT 1", but NOT lines starting with UNIT (which are handled separately)
-      if (l.startsWith("UNIT") || l.startsWith("UNITS") || l.startsWith("GROUP:")) return false;
-      return true;
-    }
+    if (hasSubjectKeyword && isPart) return true;
 
     return false;
   }
@@ -726,10 +717,11 @@ export const genericB3Worker = functions.firestore
     if (task.type !== 'SYLLABUS_B3') return;
 
     const taskId = context.params.taskId;
-    const taskRef = admin.firestore().collection('ai_queue').doc(taskId);
+    const firestore = admin.firestore();
+    const taskRef = firestore.collection('ai_queue').doc(taskId);
 
     try {
-      const claimed = await admin.firestore().runTransaction(async (transaction) => {
+      const claimed = await firestore.runTransaction(async (transaction) => {
         const doc = await transaction.get(taskRef);
         if (!doc.exists) return false;
         const status = doc.data()?.status;
@@ -760,7 +752,7 @@ export const genericB3Worker = functions.firestore
       const nodes = await workerInstance.materializeSyllabusStructure(task.payload);
 
       // Write nodes and complete task in a single transaction
-      await admin.firestore().runTransaction(async (transaction) => {
+      await firestore.runTransaction(async (transaction) => {
         const doc = await transaction.get(taskRef);
         if (!doc.exists) {
           throw new Error("Task does not exist");
@@ -771,7 +763,7 @@ export const genericB3Worker = functions.firestore
         }
 
         for (const node of nodes) {
-          const nodeRef = admin.firestore()
+          const nodeRef = firestore
             .collection('mission_realms')
             .doc(node.missionId)
             .collection('structured_nodes')

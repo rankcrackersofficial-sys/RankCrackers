@@ -73,7 +73,7 @@ jest.setTimeout(60000);
 // Robust helper to clear Firestore collections in emulator using REST API
 async function clearDb() {
   try {
-    await axios.delete('http://127.0.0.1:8088/emulator/v1/projects/rankcrackers-55/databases/(default)/documents');
+    await axios.delete('http://127.0.0.1:8188/emulator/v1/projects/rankcrackers-55/databases/(default)/documents');
     await new Promise(resolve => setTimeout(resolve, 1000));
   } catch (err: any) {
     console.error('Failed to clear database via REST:', err.message);
@@ -790,4 +790,3 @@ describe('🔱 B1 PAGEWISE GENERIC AUTOMATION TEST SUITE (G01-G18)', () => {
     });
   });
 });
-

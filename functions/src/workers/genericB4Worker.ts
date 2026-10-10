@@ -46,7 +46,7 @@ export class GenericB4Worker {
   static VERSION = '1.0.0';
   static REVISION = 'RC-AUTO-B4-ATOMIC-V1';
 
-  async decomposeSyllabus(input: B4Input): Promise<AtomicNode[]> {
+  async decomposeSyllabus(input: B4Input, firestoreOverride?: admin.firestore.Firestore): Promise<AtomicNode[]> {
     if (input.authorizedScope) {
       const scope = input.authorizedScope as any;
       if (scope.papers && !scope.paperDefinitions) {
@@ -62,7 +62,7 @@ export class GenericB4Worker {
 
     this.validateInputs(input);
 
-    const db = admin.firestore();
+    const db = firestoreOverride || admin.firestore();
     const missionId = input.missionId;
     const documentId = input.documentId;
     const sourceSha256 = input.sourceSha256;
@@ -325,10 +325,11 @@ export const genericB4Worker = functions.firestore
     if (task.task_type !== 'SYLLABUS_B4' && task.type !== 'SYLLABUS_B4') return;
 
     const taskId = context.params.taskId;
-    const taskRef = admin.firestore().collection('ai_queue').doc(taskId);
+    const firestore = admin.firestore();
+    const taskRef = firestore.collection('ai_queue').doc(taskId);
 
     try {
-      const claimed = await admin.firestore().runTransaction(async (transaction) => {
+      const claimed = await firestore.runTransaction(async (transaction) => {
         const doc = await transaction.get(taskRef);
         if (!doc.exists) return false;
         const status = doc.data()?.status;
@@ -350,7 +351,7 @@ export const genericB4Worker = functions.firestore
       const runId = payload.run_id || payload.runId;
       const authorizedScope = payload.authorizedScope;
 
-      const db = admin.firestore();
+      const db = firestore;
       let parentDoc = await db.doc(`mission_realms/${missionId}/structured_syllabus/${documentId}`).get();
       if (!parentDoc.exists) {
         parentDoc = await db.doc(`mission_realms/${missionId}/official_documents/${documentId}`).get();
@@ -374,9 +375,9 @@ export const genericB4Worker = functions.firestore
         runId,
         authorizedScope
       };
-      const atomicNodes = await workerInstance.decomposeSyllabus(input);
+      const atomicNodes = await workerInstance.decomposeSyllabus(input, firestore);
 
-      await admin.firestore().runTransaction(async (transaction) => {
+      await firestore.runTransaction(async (transaction) => {
         const doc = await transaction.get(taskRef);
         if (!doc.exists) {
           throw new Error("Task does not exist");

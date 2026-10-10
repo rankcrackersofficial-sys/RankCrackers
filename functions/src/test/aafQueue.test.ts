@@ -34,7 +34,7 @@ describe('AAF Queue Repository FIX4 FINAL (AAF-004B)', () => {
   beforeEach(async () => {
     try {
       const axios = require('axios');
-      await axios.delete('http://127.0.0.1:8088/emulator/v1/projects/rankcrackers-55/databases/(default)/documents');
+      await axios.delete('http://127.0.0.1:8188/emulator/v1/projects/rankcrackers-55/databases/(default)/documents');
       await new Promise(resolve => setTimeout(resolve, 1000)); // 🛡️ Grace period for emulator
     } catch (err: any) {
       console.error('Failed to clear database via REST:', err.message);

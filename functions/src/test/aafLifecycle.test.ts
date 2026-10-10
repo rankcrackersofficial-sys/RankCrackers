@@ -53,7 +53,7 @@ describe('AAF Full Governed Orchestration (AAF-004C Hardened)', () => {
   beforeEach(async () => {
     try {
       const axios = require('axios');
-      await axios.delete('http://127.0.0.1:8088/emulator/v1/projects/rankcrackers-55/databases/(default)/documents');
+      await axios.delete('http://127.0.0.1:8188/emulator/v1/projects/rankcrackers-55/databases/(default)/documents');
       await new Promise(resolve => setTimeout(resolve, 1000)); // 🛡️ Grace period for emulator
     } catch (err: any) {
       console.error('Failed to clear database via REST:', err.message);
@@ -176,12 +176,13 @@ describe('AAF Full Governed Orchestration (AAF-004C Hardened)', () => {
     let snapRoot = await db.collection('ai_queue').doc(rootKey).get();
     await runWrappedAaf(rootKey, { after: snapRoot, before: { exists: true, data: () => ({ state: 'reviewing' }) } });
 
-    // Both should be unlocked automatically by runWrappedAaf (via aafQueueWorker)
+    // Both should be unlocked automatically by runWrappedAaf (via aafQueueWorker).
+    // The governed unlock transition is waitingDependency -> ready; dispatch is
+    // a separate worker action and is intentionally not conflated with unlock.
     const dbSnap = await db.collection('ai_queue').doc(dbKey).get();
     const mcqSnap = await db.collection('ai_queue').doc(mcqKey).get();
-    // 🛡️ Expect 'reviewing' because dispatcher.dispatch runs to completion in mock environment
-    expect(dbSnap.data()?.state).toBe('reviewing');
-    expect(mcqSnap.data()?.state).toBe('reviewing');
+    expect(dbSnap.data()?.state).toBe('ready');
+    expect(mcqSnap.data()?.state).toBe('ready');
   });
 
   test('🛡️ CONCURRENT_DOUBLE_UNLOCK: safety check', async () => {

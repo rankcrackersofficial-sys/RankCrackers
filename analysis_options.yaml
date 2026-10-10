@@ -11,6 +11,7 @@ analyzer:
   exclude:
     - "**/*.g.dart"
     - "build/**"
+    - "scratch/**"
   errors:
     prefer_single_quotes: ignore
     prefer_const_constructors: ignore

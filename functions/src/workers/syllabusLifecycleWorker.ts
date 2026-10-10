@@ -1,6 +1,7 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import { FieldValue } from 'firebase-admin/firestore';
+import { createHash } from 'crypto';
 
 const { registerCandidateSourceVersion, isJobCurrent } = require('../../services/canonical_source_authority');
 
@@ -50,6 +51,205 @@ interface LifecycleEvent {
 
 const REVISION = 'RC-SYLLABUS-ORCH-V1.0';
 
+function stableValue(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(stableValue);
+  if (value !== null && typeof value === 'object') {
+    const record = value as Record<string, unknown>;
+    return Object.keys(record).sort().reduce<Record<string, unknown>>((result, key) => {
+      if (record[key] !== undefined) result[key] = stableValue(record[key]);
+      return result;
+    }, {});
+  }
+  return value;
+}
+
+function deterministicHash(value: unknown): string {
+  return createHash('sha256').update(JSON.stringify(stableValue(value))).digest('hex');
+}
+
+function sameStringSet(left: unknown, right: unknown): boolean {
+  return Array.isArray(left)
+    && Array.isArray(right)
+    && new Set(left).size === left.length
+    && new Set(right).size === right.length
+    && [...left].sort().join('|') === [...right].sort().join('|');
+}
+
+function sameValue(left: unknown, right: unknown): boolean {
+  return JSON.stringify(stableValue(left)) === JSON.stringify(stableValue(right));
+}
+
+function rejectLifecycle(reason: string): never {
+  throw new Error(`B3_LIFECYCLE_AUTHORITY_REJECTED:${reason}`);
+}
+
+/**
+ * Completes only an AAF-owned B3 job whose sealed revision and current
+ * authority pointer still agree at commit time. This deliberately records
+ * lifecycle state only; materialization and projection remain upstream.
+ */
+export async function completeGovernedB3Lifecycle(db: any, taskId: string): Promise<'COMPLETED' | 'IDEMPOTENT'> {
+  const queueRef = db.collection('ai_queue').doc(taskId);
+  return db.runTransaction(async (transaction: any) => {
+    const queueSnap = await transaction.get(queueRef);
+    if (!queueSnap.exists) rejectLifecycle('JOB_NOT_FOUND');
+    const job = queueSnap.data() || {};
+    if (job.queueContract !== 'academic_factory_v1') rejectLifecycle('WRONG_QUEUE_CONTRACT');
+    if (job.type !== 'SYLLABUS_B3') rejectLifecycle('WRONG_JOB_TYPE');
+    if (job.state !== 'reviewing') rejectLifecycle('WRONG_JOB_STATE');
+
+    const input = job.b3ExecutorInput;
+    if (!input || !input.revisionIdentity || !input.materializationInput) {
+      rejectLifecycle('MISSING_EXECUTOR_INPUT');
+    }
+    const identity = input.revisionIdentity;
+    const proof = job.b3CompletionProof;
+    if (!proof) rejectLifecycle('MISSING_COMPLETION_PROOF');
+    if (proof.proofType !== 'B3_EXECUTOR_COMPLETION_PROOF') rejectLifecycle('MALFORMED_COMPLETION_PROOF');
+    if (job.missionId !== proof.missionId || identity.missionId !== proof.missionId) {
+      rejectLifecycle('MISSION_BINDING_MISMATCH');
+    }
+    if (proof.revisionId !== identity.revisionId) rejectLifecycle('REVISION_BINDING_MISMATCH');
+    if (proof.authoritativeSourceChainId !== identity.authoritativeSourceChainId) {
+      rejectLifecycle('SOURCE_CHAIN_BINDING_MISMATCH');
+    }
+    if (proof.contractVersion !== identity.contractVersion
+        || proof.contractVersion !== input.materializationInput.contractVersion) {
+      rejectLifecycle('CONTRACT_VERSION_MISMATCH');
+    }
+    const sourceDocumentIds = identity.orderedSources.map((source: any) => source.documentId);
+    if (!sameValue(job.sourceDocumentIds, sourceDocumentIds)) {
+      rejectLifecycle('SOURCE_DOCUMENT_BINDING_MISMATCH');
+    }
+    if (!sameValue(proof.orderedSources, identity.orderedSources)) {
+      rejectLifecycle('ORDERED_SOURCE_BINDING_MISMATCH');
+    }
+    if (!sameStringSet(proof.verifiedExtractionIds, identity.verifiedExtractionIds)) {
+      rejectLifecycle('VERIFIED_EXTRACTION_BINDING_MISMATCH');
+    }
+    if (!sameValue(proof.declaredCompletenessScope, input.materializationInput.declaredCompletenessScope)) {
+      rejectLifecycle('DECLARED_SCOPE_BINDING_MISMATCH');
+    }
+    if (job.b3CompletionProofHash !== deterministicHash(proof)) {
+      rejectLifecycle('COMPLETION_PROOF_HASH_MISMATCH');
+    }
+
+    const revisionRef = db.collection('mission_realms').doc(identity.missionId)
+      .collection('b3_materialization_revisions').doc(identity.revisionId);
+    const pointerRef = db.collection('mission_realms').doc(identity.missionId)
+      .collection('b3_materialization_authority').doc('current');
+    const officialDocumentId = identity.orderedSources[0]?.documentId;
+    if (!officialDocumentId) rejectLifecycle('MISSING_SOURCE_DOCUMENT');
+    const officialRef = db.collection('mission_realms').doc(identity.missionId)
+      .collection('official_documents').doc(officialDocumentId);
+
+    const [revisionSnap, pointerSnap, officialSnap] = await Promise.all([
+      transaction.get(revisionRef),
+      transaction.get(pointerRef),
+      transaction.get(officialRef),
+    ]);
+    if (!revisionSnap.exists) rejectLifecycle('REVISION_NOT_FOUND');
+    if (!pointerSnap.exists) rejectLifecycle('CURRENT_POINTER_NOT_FOUND');
+    if (!officialSnap.exists) rejectLifecycle('OFFICIAL_DOCUMENT_NOT_FOUND');
+    const revision = revisionSnap.data() || {};
+    const pointer = pointerSnap.data() || {};
+    const official = officialSnap.data() || {};
+    if (revision.state !== 'SEALED_AUTHORITATIVE') rejectLifecycle('REVISION_NOT_SEALED');
+    if (revision.missionId !== identity.missionId || revision.revisionId !== identity.revisionId) {
+      rejectLifecycle('REVISION_IDENTITY_MISMATCH');
+    }
+    if (!sameValue(identity, revision.revisionIdentity)
+        || !sameValue(proof.orderedSources, revision.revisionIdentity?.orderedSources)) {
+      rejectLifecycle('REVISION_SOURCE_AUTHORITY_MISMATCH');
+    }
+    if (pointer.revisionId !== identity.revisionId
+        || pointer.revisionState !== 'SEALED_AUTHORITATIVE'
+        || pointer.contentIntegrityHash !== revision.contentIntegrityHash
+        || pointer.idempotencyIdentity !== revision.idempotencyIdentity) {
+      rejectLifecycle('CURRENT_POINTER_MISMATCH');
+    }
+    if (proof.persistenceContentIntegrityHash !== revision.contentIntegrityHash
+        || proof.persistenceIdempotencyIdentity !== revision.idempotencyIdentity) {
+      rejectLifecycle('PERSISTENCE_PROOF_MISMATCH');
+    }
+    if (!revision.declaredCompletenessScope
+        || !sameValue(proof.declaredCompletenessScope, revision.declaredCompletenessScope)) {
+      rejectLifecycle('DECLARED_SCOPE_PERSISTENCE_MISMATCH');
+    }
+    if (!revision.completionEligibility?.eligible
+        || (revision.completionEligibility.unresolvedRequiredEvidenceIds || []).length !== 0) {
+      rejectLifecycle('REVISION_NOT_COMPLETION_ELIGIBLE');
+    }
+    if (!sameValue(proof.materializerCompletionEligibility, revision.completionEligibility)) {
+      rejectLifecycle('COMPLETION_ELIGIBILITY_MISMATCH');
+    }
+    if (!sameValue(proof.unresolvedEvidenceIds, (revision.unresolvedEvidenceManifest || []).map((entry: any) => entry.id))) {
+      rejectLifecycle('UNRESOLVED_EVIDENCE_BINDING_MISMATCH');
+    }
+    if (!sameValue(proof.canonicalNodeIds, (revision.canonicalNodeManifest || []).map((entry: any) => entry.id))) {
+      rejectLifecycle('CANONICAL_NODE_BINDING_MISMATCH');
+    }
+
+    const canonicalNodes: any[] = [];
+    for (const entry of revision.canonicalNodeManifest || []) {
+      const nodeRef = revisionRef.collection('canonical_nodes').doc(entry.id);
+      const nodeSnap = await transaction.get(nodeRef);
+      if (!nodeSnap.exists || deterministicHash(nodeSnap.data()) !== entry.integrityHash) {
+        rejectLifecycle(`CANONICAL_NODE_MANIFEST_MISMATCH:${entry.id}`);
+      }
+      canonicalNodes.push(nodeSnap.data());
+    }
+    const unresolvedEvidence: any[] = [];
+    for (const entry of revision.unresolvedEvidenceManifest || []) {
+      const evidenceRef = revisionRef.collection('unresolved_evidence').doc(entry.id);
+      const evidenceSnap = await transaction.get(evidenceRef);
+      if (!evidenceSnap.exists || deterministicHash(evidenceSnap.data()) !== entry.integrityHash) {
+        rejectLifecycle(`UNRESOLVED_EVIDENCE_MANIFEST_MISMATCH:${entry.id}`);
+      }
+      unresolvedEvidence.push(evidenceSnap.data());
+    }
+    const manifest = {
+      canonicalNodes: canonicalNodes.map(node => ({ nodeId: node.nodeId, integrityHash: deterministicHash(node) })),
+      unresolvedEvidence: unresolvedEvidence.map(item => ({
+        evidenceId: item.evidence.evidenceId,
+        integrityHash: deterministicHash(item),
+      })),
+      completionEligibility: revision.completionEligibility,
+    };
+    if (proof.materializationManifestHash !== deterministicHash(manifest)) {
+      rejectLifecycle('MATERIALIZATION_MANIFEST_MISMATCH');
+    }
+    const lineage = {
+      canonicalOccurrences: canonicalNodes.map(node => ({ nodeId: node.nodeId, occurrences: node.supportingOccurrences })),
+      unresolvedEvidence: unresolvedEvidence.map(item => ({ evidenceId: item.evidence.evidenceId, lineage: item.evidence.lineage })),
+    };
+    if (proof.lineageIntegrityHash !== deterministicHash(lineage)) {
+      rejectLifecycle('LINEAGE_INTEGRITY_MISMATCH');
+    }
+
+    if (official.lifecycle_state === 'B3_COMPLETE') {
+      const authority = official.b3CompletionAuthority;
+      if (authority?.revisionId === identity.revisionId
+          && authority?.contentIntegrityHash === revision.contentIntegrityHash) {
+        return 'IDEMPOTENT';
+      }
+      rejectLifecycle('CONFLICTING_EXISTING_COMPLETION');
+    }
+    if (official.lifecycle_state !== 'B3_IN_PROGRESS') rejectLifecycle('OFFICIAL_DOCUMENT_STATE_MISMATCH');
+    transaction.update(officialRef, {
+      lifecycle_state: 'B3_COMPLETE',
+      b3CompletionAuthority: {
+        revisionId: identity.revisionId,
+        contentIntegrityHash: revision.contentIntegrityHash,
+        idempotencyIdentity: revision.idempotencyIdentity,
+        proofHash: job.b3CompletionProofHash,
+      },
+      updatedAt: FieldValue.serverTimestamp(),
+    });
+    return 'COMPLETED';
+  });
+}
+
 /**
  * 🔱 SYLLABUS LIFECYCLE WORKER
  * Orchestrates the transition between syllabus automation stages.
@@ -57,11 +257,6 @@ const REVISION = 'RC-SYLLABUS-ORCH-V1.0';
 export const syllabusLifecycleWorker = functions.firestore
   .document('ai_queue/{taskId}')
   .onUpdate(async (change, context) => {
-    // 🛡️ TEST ISOLATION GATE: Avoid executing background triggers in the emulator process during Jest runs
-    if (process.env.JEST_WORKER_ID) {
-      console.log("syllabusLifecycleWorker: Bypassing background trigger execution in emulator process.");
-      return;
-    }
     const newData = change.after.data();
     const oldData = change.before.data();
     if (!newData || !oldData) return;
@@ -337,36 +532,10 @@ async function triggerNextStage(transaction: admin.firestore.Transaction, missio
             runId: `run_${Date.now()}`
         }, { merge: true });
     } else if (state === 'ACADEMIC_CORPUS_VERIFIED') {
-        // Trigger B3 if Scope Authority exists
-        if (scopeSnap.exists && scopeSnap.data()?.status === 'RESOLVED') {
-            const scopeRaw = scopeSnap.data() || {};
-            const normalizedScope = {
-                ...scopeRaw,
-                papersEnabled: true,
-                allowedPaperIds: Object.keys(scopeRaw.papers || scopeRaw.paperDefinitions || {}),
-                paperDefinitions: scopeRaw.papers || scopeRaw.paperDefinitions || {}
-            };
-            const taskId = `struct_${missionId}_${sourceSha}`;
-            transaction.set(db.collection('ai_queue').doc(taskId), {
-                    ...sourceBinding,
-                id: taskId,
-                task_type: 'SYLLABUS_B3',
-                mission_id: missionId,
-                document_id: docId,
-                source_document_id: docId,
-                payload: {
-                    missionId,
-                    documentId: docId,
-                    sourceSha256: sourceSha,
-                    authorizedScope: normalizedScope,
-                    documentType: 'syllabus',
-                    runId: `run_${Date.now()}`
-                },
-                status: 'queued',
-                createdAt: FieldValue.serverTimestamp(),
-                orchestratorVersion: REVISION
-            }, { merge: true });
-        } else {
+        // B3 launch is governed exclusively by the AAF completion proof path.
+        // This legacy lifecycle trigger may record the verified corpus state,
+        // but it must never enqueue a structural materialization task.
+        if (!scopeSnap.exists || scopeSnap.data()?.status !== 'RESOLVED') {
             transaction.update(db.collection('mission_realms').doc(missionId).collection('official_documents').doc(docId), {
                 lifecycle_state: 'SCOPE_AUTHORITY_PENDING'
             });

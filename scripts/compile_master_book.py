@@ -444,6 +444,6 @@ if os.path.exists(r"I:\My Drive"):
                 shutil.rmtree(dst_assets)
             shutil.copytree(src_assets, dst_assets)
 
-        print(f"  [Google Drive Auto-Sync] Successfully synchronized master files & assets to: {gdrive_dir}")
+        print(f"  [Local Desktop Mirror] Master files & assets copied to local drive path: {gdrive_dir} (Cloud Google Docs sync remains UNVERIFIED / PENDING)")
     except Exception as e:
-        print(f"  [Google Drive Auto-Sync Notice] {e}")
+        print(f"  [Local Desktop Mirror Notice] {e}")

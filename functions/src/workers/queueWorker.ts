@@ -126,6 +126,7 @@ async function extractPagesNatively(bytes: Buffer, start: number, end: number) {
  */
 async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.firestore.DocumentReference, data: any) {
   console.log(`🔱 B1 WORKER: Starting pagewise extraction task ${taskId} (Mission: ${data.mission_id})`);
+  const firestore = (taskRef as any).firestore || admin.firestore();
 
   try {
     // 1. 🛡️ ATOMIC CLAIM: Claim the task from status queued/pending
@@ -138,7 +139,7 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
         processingStartedAt: admin.firestore.FieldValue.serverTimestamp()
       });
     } else {
-      claimed = await admin.firestore().runTransaction(async (transaction) => {
+      claimed = await firestore.runTransaction(async (transaction: admin.firestore.Transaction) => {
         const doc = await transaction.get(taskRef);
         if (!doc.exists) return false;
         const currentStatus = doc.data()?.status;
@@ -255,7 +256,7 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
     }
 
     // 7. Duplicate Check with Page Authority Idempotency
-    const docRef = admin.firestore().collection('mission_realms').doc(data.mission_id)
+    const docRef = firestore.collection('mission_realms').doc(data.mission_id)
       .collection('official_documents').doc(data.document_id);
 
     const duplicatePages = [];
@@ -293,7 +294,7 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
     }
 
     // 8. Write Page Extractions
-    const batch = admin.firestore().batch();
+    const batch = firestore.batch();
     let pagesInBatch = 0;
     for (let p = pageStart; p <= pageEnd; p++) {
       const { text, method, ocrAudit } = pageData[p];
@@ -396,7 +397,7 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
       source_sha: ${actualSha}
       output_count: ${pagesInBatch}`);
 
-    await admin.firestore().collection('ai_audit_logs').add({
+    await firestore.collection('ai_audit_logs').add({
       taskId: taskId,
       missionId: data.mission_id,
       documentId: data.document_id,

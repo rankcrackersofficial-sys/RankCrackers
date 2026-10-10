@@ -1,5 +1,6 @@
 export { queueWorker } from './workers/queueWorker';
 export { storageTrigger } from './workers/storageTrigger';
+export { ensureEligibilityEvaluation } from './workers/careerEligibilityWorker';
 export { ingestionTrigger } from './workers/ingestionTrigger';
 export { aafQueueWorker, aafQueueScheduler } from './workers/aafQueueWorker';
 export { genericB3Worker } from './workers/genericB3Worker';

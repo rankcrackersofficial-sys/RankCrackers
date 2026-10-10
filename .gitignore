@@ -55,3 +55,34 @@ service-account.json
 
 # Project-Local Scratch & Temporary Artifacts (AG-R4 Policy)
 .local/
+
+# R39 reviewed local-only agent material
+/.agents_BACKUP/
+/.artifacts/
+/scratch/
+/$null
+/fix.dart
+/generate_48a2.js
+/generate_48cs1r1.js
+/generate_final_backend_evidence.js
+/generate_strict41_evidence.js
+/scratch_atom_details.js
+/scratch_check_neet_atoms.js
+/scratch_investigate_subcolls.js
+/screen.png
+/verify_48a3.js
+/verify_48a4.js
+/verify_48a5.js
+/verify_48a6.js
+/verify_48a6r1.js
+/verify_48a6r2.js
+/verify_48ui8.js
+
+# R39 local-only credential / sensitive test helpers
+/functions/.secret.local
+/functions/test/mission_lifecycle_emulator_roundtrip.js
+/functions/test/seed_founder_visual_emulator.js
+/functions/test/seed_mission_variable_emulator.js
+/tools/capture_founder_visual_evidence.js
+/docs/academic_review/47b5/
+/docs/academic_review/47b6/
