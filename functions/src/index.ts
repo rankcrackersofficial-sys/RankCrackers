@@ -15,3 +15,5 @@ export { ensureEligibilityEvaluation } from './workers/careerEligibilityWorker';
 export { buildCareerSignal } from './services/careerSignalAuthority';
 export { buildPersonalizedRecruitmentDossier, buildDeliveryDecision, buildDiscoverySignal } from './services/careerSignalsRuntime';
 export { deriveCanonicalLearningState, canWriteCanonicalLearningState } from './services/learningStateAuthority';
+export { resolveRevisionCandidate, compressRevisionCandidates, transitionRecovery } from './services/revisionDeskAuthority';
+export { createQualifiedEvidence, buildRankRadarProjection, compatibleTrajectory } from './services/qualifiedRankingAuthority';
