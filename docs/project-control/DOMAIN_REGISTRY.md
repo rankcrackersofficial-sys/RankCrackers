@@ -13,3 +13,7 @@
 These labels are **explicit GitHub identities**, not automatic links to existing ChatGPT conversations. A chat is linked operationally by using [CHAT_BOOTSTRAP.md](governance/CHAT_BOOTSTRAP.md) and reading its Domain State at the latest canonical Git SHA.
 
 Do not create extra Domains for features already owned by existing Domains. Changes to ownership require an authorized decision with explicit supersession and impact analysis.
+
+
+## Permanent ID and onboarding rule
+Each existing chat must display its exact **DOMAIN-A**, **DOMAIN-B**, **DOMAIN-C**, **DOMAIN-D**, or **DOMAIN-E** identifier in its opening instruction and report. These are the currently documented five primary rooms; feature ownership is not automatically a new lettered Domain. No room is linked automatically by GitHub; each must run its own bootstrap, then confirm the current branch SHA and state-file path. **Do not reassign permanent IDs when chat titles differ.**
